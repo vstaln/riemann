@@ -106,12 +106,15 @@ def run(pool, label):
         fbar = res.x[:m] @ F
         worst = np.argsort(-np.abs(fbar[:255] - np.arange(1, 256)))[:8]
         print("  worst rows:", [(int(w + 1), round(float(np.abs(fbar[w] - (w + 1))), 4)) for w in worst])
-        # min p1 at this distance
+        # min p1 at this distance (t pinned at the optimum)
         s_c = np.array([256 - 2 * sum(1 for mm in im if mm == 2) for (ip, im, hq, dh) in pool], dtype=float)
-        res2 = linprog(s_c, A_ub=A_ub, b_ub=b_ub, A_eq=A_eq, b_eq=[1.0],
-                       bounds=[(0, None)] * nvar, method='highs')
+        c2 = np.zeros(nvar); c2[:m] = s_c
+        res2 = linprog(c2, A_ub=A_ub, b_ub=b_ub, A_eq=A_eq, b_eq=[1.0],
+                       bounds=[(0, None)] * m + [(t, t)], method='highs')
         if res2.success:
             print(f"  min p1 at feasible rows = {res2.fun/256:.12f}   (recorded p0 = 0.6818286874638315)")
+        else:
+            print("  min-p1 LP failed:", res2.message)
     return t
 
 if __name__ == '__main__':
