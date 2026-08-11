@@ -4,6 +4,7 @@
 // for e >= 3 (generators -1 and 5), C2 for e=2, trivial for e=1.
 // A character is a table: value chi[a] for a = 0..q-1, stored as complex f64.
 
+#[derive(Clone)]
 pub struct Character {
     pub q: u32,
     pub table: Vec<(f64, f64)>, // chi[a] for a = 0..q-1
