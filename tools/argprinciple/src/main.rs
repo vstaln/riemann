@@ -123,116 +123,109 @@ fn arg_zeta(s_re: f64, s_im: f64, n: usize, lns: &[f64]) -> f64 {
 }
 
 fn winding(t0: f64, h: f64, ds: f64) -> (f64, f64, f64, f64, f64, f64, f64, f64, f64, f64, f64, f64) {
-    // rectangle [0,1] x [t0, t0+h], CCW: bottom (σ 0→1), right (t ↑), top (σ 1→0), left (t ↓)
+    // Numerical (UNCERTIFIED) winding number of ξ̃(s) = s(s-1)π^{-s/2}Γ(s/2)ζ(s)/2
+    // on the rectangle [0,1]×[T,T+H], counterclockwise.
+    // Per-segment Δarg is computed and adaptively subdivided (depth ≤ 12) until
+    // |Δarg| ≤ π/2 per segment, so branch-cut unwrapping is unambiguous.
     let n = ((1.6 * (t0 + h) / (2.0 * PI)).ceil().max(10.0)) as usize;
     let lns: Vec<f64> = (0..n).map(|j| if j == 0 { 0.0 } else { (j as f64).ln() }).collect();
-    let mut total = 0.0f64;
-    let mut max_d = 0.0f64;
-    let max_dz = std::cell::Cell::new(0.0f64);
-    let max_dg = std::cell::Cell::new(0.0f64);
-    let n_big = std::cell::Cell::new(0usize);
-    // we track the arg of each factor separately (product rule) and sum deltas
-    let mut prev_s: Option<f64> = None;
-    let mut prev_g: Option<f64> = None;
-    let mut prev_z: Option<f64> = None;
-    let mut prev_p: Option<f64> = None;
-    let mut total_g = 0.0f64;
-    let mut total_z = 0.0f64;
-    let mut total_s = 0.0f64;
-    let mut total_p = 0.0f64;
-    let mut edge_z = [0.0f64; 4];
-    let mut edge_i = 0usize;
-    let mut unwrap = |cur: f64, prev: &mut Option<f64>| -> f64 {
-        let d = match *prev {
-            Some(p) => {
-                let mut dd = cur - p;
-                while dd > PI {
-                    dd -= 2.0 * PI;
-                }
-                while dd <= -PI {
-                    dd += 2.0 * PI;
-                }
-                dd
-            }
-            None => 0.0,
-        };
-        *prev = Some(cur);
-        d
-    };
 
-    let unwrap_cur = std::cell::Cell::new(0.0f64);
-    let mut eval = |s_re: f64, s_im: f64,
-                    total_s: &mut f64,
-                    total_g: &mut f64,
-                    total_z: &mut f64,
-                    total_p: &mut f64,
-                    prev_s: &mut Option<f64>,
-                    prev_g: &mut Option<f64>,
-                    prev_z: &mut Option<f64>,
-                    prev_p: &mut Option<f64>,
-                    max_d: &mut f64| {
-        // arg(s(s-1)/2)
+    let arg_xi = |s_re: f64, s_im: f64| -> [f64; 4] {
         let a1 = s_im.atan2(s_re);
         let a2 = s_im.atan2(s_re - 1.0);
-        let a_s = a1 + a2; // continuous-ish; unwrap composite
-        // arg π^{-s/2} = -(t/2) ln π
-        let a_p = -0.5 * s_im * PI.ln();
-        // arg Γ(s/2)
-        let a_g = ln_gamma_im(s_re / 2.0, s_im / 2.0);
-        // arg ζ(s)
-        let a_z = arg_zeta(s_re, s_im, n, &lns);
-        let d_s = unwrap(a_s, prev_s);
-        let d_g = unwrap(a_g, prev_g);
-        let d_z = unwrap(a_z, prev_z);
-        let d_p = unwrap(a_p, prev_p);
-        unwrap_cur.set(d_z);
-        *total_s += d_s;
-        *total_g += d_g;
-        *total_z += d_z;
-        *total_p += d_p;
-        *max_d = (*max_d).max(d_z.abs()).max(d_s.abs()).max(d_g.abs());
-        max_dz.set(max_dz.get().max(d_z.abs()));
-        max_dg.set(max_dg.get().max(d_g.abs()));
-        if d_z.abs() > 0.8 * PI {
-            n_big.set(n_big.get() + 1);
-        }
+        let a_s = a1 + a2; // arg s(s-1)/2
+        let a_p = -0.5 * s_im * PI.ln(); // arg π^{-s/2}
+        let a_g = ln_gamma_im(s_re / 2.0, s_im / 2.0); // arg Γ(s/2)
+        let a_z = arg_zeta(s_re, s_im, n, &lns); // arg ζ(s)
+        [a_s, a_g, a_z, a_p]
     };
 
-    // bottom: σ 0→1 at t=t0
+    // per-segment delta with adaptive subdivision; returns [Δs, Δg, Δz, Δp]
+    let mut track = |p1: (f64, f64), p2: (f64, f64), a1: [f64; 4], a2: [f64; 4], maxd: &mut f64, depth: u32| -> [f64; 4] {
+        let mut out = [0.0f64; 4];
+        for i in 0..4 {
+            let mut d = a2[i] - a1[i];
+            while d > PI {
+                d -= 2.0 * PI;
+            }
+            while d <= -PI {
+                d += 2.0 * PI;
+            }
+            if d.abs() > 0.5 * PI && depth < 12 {
+                // subdivide
+                let mid = (0.5 * (p1.0 + p2.0), 0.5 * (p1.1 + p2.1));
+                let am = arg_xi(mid.0, mid.1);
+                let left = track(p1, mid, a1, am, maxd, depth + 1);
+                let right = track(mid, p2, am, a2, maxd, depth + 1);
+                out[i] = left[i] + right[i];
+            } else {
+                out[i] = d;
+                *maxd = (*maxd).max(d.abs());
+            }
+        }
+        out
+    };
+
+    let mut total = [0.0f64; 4];
+    let mut maxd = 0.0f64;
+    let mut edge_z = [0.0f64; 4];
+    let mut edge_i = 0usize;
+
+    // perimeter points: (σ, t).  Edges: bottom (σ 0→1), right (t ↑), top (σ 1→0), left (t ↓).
+    let mut pts: Vec<(f64, f64)> = Vec::new();
     let mut sigma = 0.0;
-    edge_i = 0;
-    while sigma <= 1.0 + 1e-9 {
-        eval(sigma, t0, &mut total_s, &mut total_g, &mut total_z, &mut total_p, &mut prev_s, &mut prev_g, &mut prev_z, &mut prev_p, &mut max_d);
-        edge_z[edge_i] += unwrap_cur.get();
+    while sigma <= 1.0 + 1e-12 {
+        pts.push((sigma, t0));
         sigma += ds;
     }
-    // right: t t0→t0+h at σ=1
     let mut tt = t0 + ds;
-    edge_i = 1;
     while tt <= t0 + h + 1e-9 {
-        eval(1.0, tt, &mut total_s, &mut total_g, &mut total_z, &mut total_p, &mut prev_s, &mut prev_g, &mut prev_z, &mut prev_p, &mut max_d);
-        edge_z[edge_i] += unwrap_cur.get();
+        pts.push((1.0, tt));
         tt += ds;
     }
-    // top: σ 1→0 at t=t0+h
     let mut sigma = 1.0 - ds;
-    edge_i = 2;
-    while sigma >= -1e-9 {
-        eval(sigma, t0 + h, &mut total_s, &mut total_g, &mut total_z, &mut total_p, &mut prev_s, &mut prev_g, &mut prev_z, &mut prev_p, &mut max_d);
-        edge_z[edge_i] += unwrap_cur.get();
+    while sigma >= -1e-12 {
+        pts.push((sigma, t0 + h));
         sigma -= ds;
     }
-    // left: t t0+h→t0 at σ=0
     let mut tt = t0 + h - ds;
-    edge_i = 3;
     while tt >= t0 - 1e-9 {
-        eval(0.0, tt, &mut total_s, &mut total_g, &mut total_z, &mut total_p, &mut prev_s, &mut prev_g, &mut prev_z, &mut prev_p, &mut max_d);
-        edge_z[edge_i] += unwrap_cur.get();
+        pts.push((0.0, tt));
         tt -= ds;
     }
-    total = total_s + total_g + total_z + total_p;
-    (total / (2.0 * PI), max_d, max_dz.get().max(max_dg.get()), n_big.get() as f64,
-     total_z, total_g, total_s, total_p, edge_z[0], edge_z[1], edge_z[2], edge_z[3])
+    // close the loop
+    pts.push(pts[0]);
+
+    // segment index → edge index: bottom [0, n_bot-1], right, top, left
+    let n_bot = ((1.0 / ds).floor() + 1.0) as usize;
+    let n_right = (h / ds).floor() as usize;
+    let n_top = n_bot;
+    let n_left = n_right;
+
+    let mut prev = arg_xi(pts[0].0, pts[0].1);
+    let mut seg = 0usize;
+    for k in 1..pts.len() {
+        let cur = arg_xi(pts[k].0, pts[k].1);
+        let d = track(pts[k - 1], pts[k], prev, cur, &mut maxd, 0);
+        for i in 0..4 {
+            total[i] += d[i];
+        }
+        if seg < n_bot - 1 {
+            edge_z[0] += d[2];
+        } else if seg < n_bot - 1 + n_right {
+            edge_z[1] += d[2];
+        } else if seg < n_bot - 1 + n_right + n_top - 1 {
+            edge_z[2] += d[2];
+        } else {
+            edge_z[3] += d[2];
+        }
+        prev = cur;
+        seg += 1;
+    }
+
+    let total_rad = total[0] + total[1] + total[2] + total[3];
+    (total_rad / (2.0 * PI), maxd, maxd, 0.0,
+     total[2], total[1], total[0], total[3], edge_z[0], edge_z[1], edge_z[2], edge_z[3])
 }
 
 // ---------------------------------------------------------------------------
