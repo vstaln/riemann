@@ -177,6 +177,23 @@ fn main() {
         // arch: (1/2pi) int h_+ H_tr^e = (1/pi) int_0^inf h_+(r) H_tr^e(r) dr
         // H_tr period in gamma = T/N; decay center T; use h = T/(2N) (2 periods/panel)
         let arch = arch_even_env(&htr_e, 100.0 * t, t / nwin as f64, t);
+        if (t - 100.0).abs() < 1e-9 {
+            // direct uniform verification (cheap for T=100): h = 0.25 over [0, 3000]
+            let direct = {
+                let g = |r: f64| h_plus(r) * htr_e(r);
+                let near = uniform_integrate(&g, 0.0, 3000.0, 0.25);
+                let tail = 2.0 * gwdict::arch_tail_power(&htr_e, 3000.0, t / nwin as f64, t);
+                (1.0 / PI) * near + tail
+            };
+            println!("  [T=100 arch verify] envelope={:.6}  direct(uniform)= {:.6}  diff={:.2e}", arch, direct, (arch - direct).abs());
+            // piecewise: int_0^100, int_100^200, int_200^3000 of h_+ htr_e
+            let g = |r: f64| h_plus(r) * htr_e(r);
+            let p1 = uniform_integrate(&g, 0.0, 100.0, 0.25);
+            let p2 = uniform_integrate(&g, 100.0, 200.0, 0.25);
+            let p3 = uniform_integrate(&g, 200.0, 3000.0, 0.25);
+            println!("  [T=100 pieces] [0,100]={:.3} [100,200]={:.3} [200,3000]={:.3}  htr_e(150)={:.4} htr_e(160)={:.4} htr_e(140)={:.4}",
+                p1, p2, p3, htr_e(150.0), htr_e(160.0), htr_e(140.0));
+        }
         let pside_all = prime.re + pole + arch;
         if (t - 100.0).abs() < 1e-9 {
             println!("  [debug T=100] prime={:.6e} pole={:.6e} arch={:.6e} band={:.6} c_ef={:.4}", prime.re, pole, arch, band, c_ef);

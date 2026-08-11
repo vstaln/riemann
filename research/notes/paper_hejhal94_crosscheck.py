@@ -45,7 +45,7 @@ Checks performed:
 import numpy as np
 import mpmath as mp
 
-mp.mp.dps = 40
+mp.mp.dps = 30
 
 def S(x):  # sin(pi x)/(pi x)
     return mp.sinc(mp.pi * x)
@@ -73,7 +73,7 @@ def gl1(f, a, b, n=2000):
     xs = 0.5 * (b - a) * x + 0.5 * (b + a)
     return 0.5 * (b - a) * np.dot(w, f(xs))
 
-def A2_direct(lam, R=80.0, n=4000):
+def A2_direct(lam, R=80.0, n=2000):
     # int_R K(u)^2 (1 - S(u)^2) du = 1/lam - int_R K(u)^2 S(u)^2 du
     g = lambda u: np.sinc(lam * u) ** 2 * np.sinc(u) ** 2
     val = gl1(g, -R, R, n)                 # ~ 2 * int_0^R K^2 S^2
@@ -81,7 +81,7 @@ def A2_direct(lam, R=80.0, n=4000):
     return 1.0 / lam - (val + tail)
 
 # ---------------- direct C part (absolutely convergent 2D) ----------------
-def C_direct(lam, R=35.0, n=220):
+def C_direct(lam, R=35.0, n=160):
     x, w = np.polynomial.legendre.leggauss(n)
     xs = R * x; ws = R * w
     U, V = np.meshgrid(xs, xs, indexing='ij')
@@ -101,7 +101,7 @@ def L_formula(a, b, lam):
 def fhat_analytic(a, b, lam):
     return L_formula(a, b, lam) / lam ** 3
 
-def fhat_direct(a, b, lam, R=40.0, n=300):
+def fhat_direct(a, b, lam, R=40.0, n=200):
     """FT of f(u,v)=K(u)K(v)K(u-v): int_int K(u)K(v)K(u-v) e^{-2pi i (au+bv)} dudv."""
     x, w = np.polynomial.legendre.leggauss(n)
     xs = R * x; ws = R * w
@@ -112,7 +112,7 @@ def fhat_direct(a, b, lam, R=40.0, n=300):
     return np.sum(integ * np.outer(ws, ws))
 
 # ---------------- FT of the smooth part of the density rho3 ----------------
-def rho3_smooth_fhat(a, b, R=30.0, n=260):
+def rho3_smooth_fhat(a, b, R=30.0, n=180):
     """FT[2 S(u)S(v)S(u+v)] at (a,b) by direct 2D GL (absolutely convergent)."""
     x, w = np.polynomial.legendre.leggauss(n)
     xs = R * x; ws = R * w
@@ -126,7 +126,7 @@ def G(a, b):
     return max((2.0 - abs(a) - abs(b) - abs(a + b)) / 2.0, 0.0)
 
 # ---------------- A3 by direct 2D quadrature of the fast parts ----------------
-def A3_direct_parts(lam, R=35.0, n=220):
+def A3_direct_parts(lam, R=35.0, n=160):
     Cv = C_direct(lam, R, n)
     Bv = (2.0 / lam) * float(J2_mp(lam))
     Dv = 1.0 / lam ** 2

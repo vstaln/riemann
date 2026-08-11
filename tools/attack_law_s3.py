@@ -39,6 +39,7 @@ What this script computes (all code-backed, all labeled):
 
 import numpy as np
 import mpmath as mp
+import re
 from fractions import Fraction
 
 mp.mp.dps = 60
@@ -86,18 +87,17 @@ def m3_diagram(lam, R=24, ng=220):
     K = lambda u: np.sinc(float(lam) * u)   # np.sinc(x) = sin(pi x)/(pi x)
     S = np.sinc
     A2 = 1 / float(lam) - 2 * float(J2(lam))   # closed form, cross-checked by quadrature below
+    x, w = np.polynomial.legendre.leggauss(ng)   # x = nodes in [-1,1], w = weights
+    uu = R * x
+    A2_direct = R * np.sum(w * (K(uu) ** 2 * (1 - S(uu) ** 2)))
     def rho3_minus_1(u, v):
         return (- S(u) ** 2 - S(v) ** 2 - S(u + v) ** 2
                 + 2 * S(u) * S(v) * S(u + v))
-    xw, xg = np.polynomial.legendre.leggauss(ng)
-    uu = R * xg; vv = R * xg
-    W = np.outer(xw, xw)
-    U, V = np.meshgrid(uu, vv, indexing='ij')
+    W = np.outer(w, w)
+    U, V = np.meshgrid(uu, uu, indexing='ij')
     integ = K(U) * K(V) * K(U + V) * rho3_minus_1(U, V)
     A3_corr = (R * R) * np.sum(W * integ)          # box integral of the (rho3-1) part
     A3 = (1.0 / lam ** 2) + A3_corr                 # + closed-form tail D = 1/lam^2
-    # cross-check A2 by direct 1-D quadrature on the same grid
-    A2_direct = R * np.sum(xw * (K(uu) ** 2 * (1 - S(uu) ** 2)))
     return 1 + 3 * A2 + A3, A2, A3, A2_direct
 
 print("\n--- (A) PROVEN sine-kernel third moments -------------------------------")
@@ -109,6 +109,57 @@ for lam in [mp.mpf(1) / 2, mp.mpf(2) / 3, mp.mpf(1)]:
     print(f"lam={mp.nstr(lam,4):>6}: closed m3 = {mp.nstr(mc,10):>10}   "
           f"diagram m3 = {md:>10.6f}   A2 = {float(A2):>8.5f} (direct {A2_direct:8.5f})   "
           f"A3 = {float(A3):>8.5f}   J2 = {mp.nstr(j2,8):>8}   ref = {mp.nstr(refs[lam],10):>10}")
+
+# ----------------------------------------------------------------------
+# A2. The law's recorded pair rows, from the Lean enclosures (read-only parse)
+# ----------------------------------------------------------------------
+print("\n--- (A2) the law's recorded pair rows (LawN256.lean enclosures) ---------")
+src = open('/home/vstaln/riemann/research/lean-zeta-23/Zeta23/PairCeiling/LawN256.lean').read()
+mrows = re.search(r'encl := \[(.*?)\]\n  tn', src, re.S)
+pairs = re.findall(r'\((-?\d+), (-?\d+)\)', mrows.group(1))
+Kbig = 2 ** 140; base = 2 ** 132
+assert len(pairs) == 256, len(pairs)
+los = [int(a) for a, b in pairs]; his = [int(b) for a, b in pairs]
+row_ok = all(abs(los[j - 1] - j * base) <= 1 for j in range(1, 256))
+below = sum(1 for j in range(1, 256) if los[j - 1] == j * base - 1)
+at = sum(1 for j in range(1, 256) if los[j - 1] == j * base)
+print(f"  rows parsed: {len(pairs)};  |lo_j - j*2^132| <= 1 for all j=1..255: {row_ok}")
+print(f"  rows below j/256 (lo = j*2^132 - 1): {below};  at/above (lo = j*2^132): {at}")
+# exact integer form: |256*S(j) - j| <= 256*|box|/K ; box deviation is at most 1 unit of 2^-140
+dev_int = max(abs(256 * los[j - 1] - j * Kbig) for j in range(1, 256))
+print(f"  max |256*S(j) - j| over boxes = {dev_int}/2^140 = 2^-{140 - dev_int.bit_length() + 1} = {dev_int / Kbig:.3e}  "
+      f"(tau = 3e-40)")
+S256 = (los[255] + his[255]) / 2 / Kbig
+print(f"  S(256) (closed-band row, box midpoint) = {S256:.9f}  (D(1) consistency: 0.82395..)")
+
+# ----------------------------------------------------------------------
+# A3. Empirical real-zero third moment at lambda = 1/2 (ties 5 to data)
+# ----------------------------------------------------------------------
+print("\n--- (A3) empirical real-zero m3(1/2) (zeros_computed_10000.txt) ---------")
+import os
+zfn = '/home/vstaln/riemann/tools/data/zeros_computed_10000.txt'
+if os.path.exists(zfn):
+    g = []
+    with open(zfn) as f:
+        for line in f:
+            p = line.split()
+            if len(p) >= 2:
+                g.append(float(p[1]))
+    g = np.array(g)
+    m = (g >= 9000) & (g <= 9880)
+    band = np.sort(g[m])
+    sp = np.diff(band).mean()
+    x = band / sp
+    d = x[:, None] - x[None, :]
+    lam = 0.5
+    G = np.sinc(lam * d)
+    n = len(x)
+    m3 = np.trace(G @ G @ G) / n
+    m2 = np.trace(G @ G) / n
+    print(f"  band [{band.min():.1f}, {band.max():.1f}], N = {n}: m2(1/2) = {m2:.4f} (closed 13/6 = 2.1667), "
+          f"m3(1/2) = {m3:.4f} (PROVEN 5; finite-height deficit pattern ~3%)")
+else:
+    print("  zeros file not found; skipping (value cited from attack-twobandwidth.md: m3 ~ 4.80)")
 
 # ----------------------------------------------------------------------
 # B. The law's marked S3 as a function of the configuration data
@@ -130,7 +181,7 @@ def per_kernel_values(x, lam, N=256):
     c, M, B = per_kernel_coeffs(lam, N)
     n = len(x)
     d = (x[:, None] - x[None, :]) % N
-    K = np.zeros((n, n))
+    K = np.zeros((n, n), dtype=complex)
     for j, cj in enumerate(c):
         if cj != 0:
             K += cj * np.exp(2j * np.pi * j * d / N)
@@ -139,33 +190,35 @@ def per_kernel_values(x, lam, N=256):
 def marked_s3(w, xs, ms, lam, N=256):
     """Exact marked third moment  S3 = D + 3P + T  of a law (w_c, x_{c,i}, m_{c,i}).
        w: array of weights (sum 1); xs: list of position arrays; ms: list of mark arrays.
-       Returns (D, 3P, T, S3)."""
-    D = 0.0; P = 0.0; T = 0.0
+       Diagram over the marked atoms (K_ij = K_lam(x_i - x_j), K(0) = 1):
+         tr((K D)^3) = sum_{i,j,k} m_i m_j m_k K_ij K_jk K_ki
+         D (i=j=k)            = sum_i m_i^3
+         pair (two-equal)     = sum_{i!=k} m_i^2 m_k K_ik^2 + sum_{i!=j} m_i m_j (m_i+m_j) K_ij^2
+                              = (3/2) sum_{i!=j} m_i m_j (m_i+m_j) K_ij^2
+         T (three-distinct)   = tr((K D)^3) - D - pair
+       S3 = (D + pair + T)/N per mark.  Returns (D/N, pair/N, T/N, S3)."""
+    Dtot = 0.0; Ptot = 0.0; Ttot = 0.0
     for wc, x, m in zip(w, xs, ms):
         K = per_kernel_values(x, lam, N)
-        n = len(x)
-        # D: diagonal (i=j=k)
-        D += wc * np.sum(m ** 3)
-        # 3P: two-equal terms; sum over i!=k of m_i m_k (m_i+m_k) K_ik^2
         MM = np.outer(m, m)
         Ms = (m[:, None] + m[None, :])
-        P += wc * np.sum(MM * Ms * K ** 2)          # includes i=k terms -> subtract
-        P -= wc * np.sum(np.diag(MM) * np.diag(Ms) * np.diag(K) ** 2)
-        # T: three-distinct; compute full tr((K diag(m))^3) then subtract 1- and 2-point parts
-        KM = K * m[None, :]                          # K . diag(m)
+        s = np.sum(MM * Ms * K ** 2)                       # ordered i!=j (incl i=j)
+        s -= np.sum(np.diag(MM) * np.diag(Ms) * np.diag(K) ** 2)   # drop i=j
+        pair = (3 / 2) * s                                 # true two-equal part
+        one = np.sum(m ** 3)
+        KM = K * m[None, :]
         full = np.trace(np.linalg.matrix_power(KM, 3)).real
-        one = np.sum(m ** 3)                          # i=j=k part of full
-        two = np.sum(MM * Ms * K ** 2) - np.sum(np.diag(MM) * np.diag(Ms) * np.diag(K) ** 2)
-        T += wc * (full - one - two)
-    D /= N; P = 3 * P / N; T /= N
-    return D, P, T, D + P + T
+        Dtot += wc * one
+        Ptot += wc * pair
+        Ttot += wc * (full - one - pair)
+    return Dtot / N, Ptot / N, Ttot / N, (Dtot + Ptot + Ttot) / N
 
 print("marked_s3(w, xs, ms, lam) -> (D, 3P, T, S3)   [one-liner once config is in hand]")
 
 # ----------------------------------------------------------------------
 # C. What the pair rows + p0 pin
 # ----------------------------------------------------------------------
-print("\n--- (C) pinned content: D and the pair-part bounds [6u, 12u] ------------")
+print("\n--- (C) pinned content: D and the pair-part bounds [3u, 6u] ------------")
 
 p0f = float(P0)
 D_pin = 4 - 3 * p0f
@@ -175,8 +228,10 @@ print(f"E sum m_i^2 / 256 = 2 - p0 = {m2:.12f}   (=> E sum m_i^2 = {256*m2:.4f})
 
 def pair_part_bounds(lam, rows_mode="ideal"):
     """u = (1/256) sum_m d_m (E|mu_hat(m)|^2 - 256(2-p0)),
-       3P in [6u, 12u].  d = circular convolution of the window kernel coefficients.
-       rows_mode='ideal': E|mu_hat(m)|^2 = m (1<=m<=255), 65536 (m=0)."""
+       pair part (two-equal) per mark  in [3u, 6u]   because (m_i+m_j) in [2,4].
+       d = circular convolution of the window-kernel Fourier coefficients.
+       rows_mode='ideal': E|mu_hat(m)|^2 = m (1<=m<=255), 65536 (m=0)  -- the law's
+       recorded near-CUE rows (enclosures, EnclOK)."""
     c, M, B = per_kernel_coeffs(lam, N)
     d = np.fft.ifft(np.fft.fft(c) ** 2).real
     E = np.zeros(N)
@@ -185,17 +240,19 @@ def pair_part_bounds(lam, rows_mode="ideal"):
     E[0] = N * N
     U = np.sum(d * (E - 256 * m2))
     u = U / 256
-    return u, 6 * u, 12 * u, (d, M, B)
+    return u, 3 * u, 6 * u, (d, M, B)
 
 for lam in [mp.mpf(1) / 2, mp.mpf(2) / 3]:
     u, lo, hi, (d, M, B) = pair_part_bounds(lam)
     print(f"\nlam = {mp.nstr(lam,4)}  (rank-B kernel: M = {M}, B = {B} modes, K(0) = 1)")
-    print(f"  u = {u:.6f}     3P in [{lo:.6f}, {hi:.6f}]   (from ideal pair rows + p0)")
+    print(f"  u = {u:.6f}      pair part in [{lo:.6f}, {hi:.6f}]   (from ideal pair rows + p0)")
     print(f"  pinned interval of S3 (pair part + diagonal, T free): "
           f"[{D_pin + lo:.6f}, {D_pin + hi:.6f}]")
     ref = float(5 if lam == mp.mpf(1) / 2 else mp.mpf(13) / 4)
-    print(f"  sine-kernel value: {ref}  ->  {'INSIDE pinned interval' if D_pin+lo <= ref <= D_pin+hi else 'OUTSIDE pinned interval'}")
-    print(f"  gap from sine value to bottom of pinned interval: {D_pin + lo - ref:+.6f}")
+    print(f"  sine-kernel value: {ref}  ->  "
+          f"{'INSIDE pinned interval' if D_pin+lo <= ref <= D_pin+hi else 'BELOW pinned interval'}")
+    print(f"  pinned bottom minus sine value: {D_pin + lo - ref:+.6f}   "
+          f"(positive => S3 >= sine value requires a NEGATIVE connected part T)")
 
 # ----------------------------------------------------------------------
 # D. Sanity checks
@@ -214,22 +271,14 @@ def family_draw():
         m[rng.choice(npos, size=nd, replace=False)] = 2.0
     return x, m
 
-# D1. CUE law (marks all 1): pair part from the same machinery vs continuum 3*A2.
-print("D1. CUE law (marks all 1, p0 = 1): pair part 6u vs continuum 3*A2 = 3(1/lam - 2 J2)")
-for lam in [mp.mpf(1) / 2, mp.mpf(2) / 3]:
-    c, M, B = per_kernel_coeffs(lam, N)
-    d = np.fft.ifft(np.fft.fft(c) ** 2).real
-    E = np.zeros(N)
-    for m in range(1, N):
-        E[m] = m
-    E[0] = N * N
-    U = np.sum(d * (E - 256 * 1.0))          # marks all 1: 256(2-p0) = 256
-    u_CUE = U / 256
-    cont = 3 * (1 / float(lam) - 2 * float(J2(lam)))
-    print(f"  lam={mp.nstr(lam,4)}: 6 u_CUE = {6*u_CUE:.5f}   continuum 3*A2 = {cont:.5f}   "
-          f"ratio = {6*u_CUE/cont:.4f}")
+# D1. NOTE on the CUE comparison: the CUE's form factor is symmetric
+#     (E|mu_hat(m)|^2 = min(m, 256-m)), which is a DIFFERENT pair datum from the law's
+#     recorded rows (E|mu_hat(m)|^2 = m for ALL m = 1..255 -- off-grid positions make
+#     S(256-j) != S(j) in general).  The CUE is therefore NOT a valid cross-check for
+#     the law's u; the valid checks are the exact algebraic identity (D2) and the
+#     bounds (D3).
 
-# D2. Exact algebraic identity: U_direct = sum_{i!=k} m_i m_k K_ik^2  ==  U_fourier = sum_m d_m (|mu_hat(m)|^2 - sum m_i^2)
+# D2. Exact algebraic identity: U_direct = sum_{i!=j} m_i m_j K_ij^2  ==  U_fourier = sum_m d_m (|mu_hat(m)|^2 - sum m_i^2)
 print("D2. algebraic identity  U_direct == U_fourier  on random marked configurations")
 for lam in [mp.mpf(1) / 2, mp.mpf(2) / 3]:
     c, M, B = per_kernel_coeffs(lam, N)
@@ -248,15 +297,15 @@ for lam in [mp.mpf(1) / 2, mp.mpf(2) / 3]:
         worst = max(worst, abs(U_direct - U_fourier))
     print(f"  lam={mp.nstr(lam,4)}: max |U_direct - U_fourier| over 6 draws = {worst:.2e}")
 
-# D3. The bound 6u <= 3P <= 12u on random marked configurations.
-print("D3. bound 6u <= 3P <= 12u on a random marked family (8 draws)")
+# D3. The bound 3u <= (pair part) <= 6u on random marked configurations.
+print("D3. bound 3u <= pair part <= 6u on a random marked family (8 draws, lam = 1/2)")
 ok = True
 for trial in range(8):
     x, m = family_draw()
     K = per_kernel_values(x, mp.mpf(1) / 2, N)
     MM = np.outer(m, m); Ms = (m[:, None] + m[None, :])
-    P3 = 3 * np.sum(MM * Ms * K ** 2) / N
-    P3 -= 3 * np.sum(np.diag(MM) * np.diag(Ms) * np.diag(K) ** 2) / N
+    s = np.sum(MM * Ms * K ** 2) - np.sum(np.diag(MM) * np.diag(Ms) * np.diag(K) ** 2)
+    pair = (3 / 2) * s / N
     # u from the actual pair rows of THIS draw
     c, M0, B0 = per_kernel_coeffs(mp.mpf(1) / 2, N)
     d = np.fft.ifft(np.fft.fft(c) ** 2).real
@@ -266,9 +315,21 @@ for trial in range(8):
     E[0] = np.sum(m) ** 2
     U = np.sum(d * (E - np.sum(m ** 2)))
     u = U / 256
-    if not (6 * u - 1e-9 <= P3 <= 12 * u + 1e-9):
+    if not (3 * u - 1e-9 <= pair <= 6 * u + 1e-9):
         ok = False
-print(f"  6u <= 3P <= 12u held on all {8} draws: {ok}")
+print(f"  3u <= pair part <= 6u held on all {8} draws: {ok}")
+
+# D4. marked_s3 on a single random configuration: verify the diagram decomposition
+#     D + pair + T = tr((K diag m)^3)/N exactly, and T is genuinely 3rd-order.
+print("D4. marked_s3 decomposition identity on a random configuration (lam = 1/2)")
+x, m = family_draw()
+w = np.array([1.0]); xs = [x]; ms = [m]
+D, P, T, S3 = marked_s3(w, xs, ms, mp.mpf(1) / 2)
+K = per_kernel_values(x, mp.mpf(1) / 2, N)
+KM = K * m[None, :]
+full = np.trace(np.linalg.matrix_power(KM, 3)).real / N
+print(f"  D = {D:.5f},  pair = {P:.5f},  T = {T:.5f},  S3 = {S3:.5f},  tr((KD)^3)/N = {full:.5f}")
+print(f"  D + pair + T == tr((KD)^3)/N : {abs(D + P + T - full) < 1e-9}")
 
 # ----------------------------------------------------------------------
 # E. Verdict
@@ -276,8 +337,12 @@ print(f"  6u <= 3P <= 12u held on all {8} draws: {ok}")
 print("\n--- (E) verdict ---------------------------------------------------------")
 print("sine-kernel values:  m3(1/2) = 5,  m3(2/3) = 13/4   (PROVEN, re-verified in (A))")
 print("law's pinned diagonal: D = 4 - 3 p0 = %.12f  (position-free)" % D_pin)
-print("pair part: 3P in [6u, 12u] computed from ideal pair rows (see (C))")
+print("pair part: in [3u, 6u] computed from ideal pair rows (see (C))")
 print("triangle part T: NOT pinned by pair rows (3rd-order datum; capacity bound needs the config)")
-print("=> the sine-kernel value lies inside the full range; NOT excluded by pair rows + p0.")
+print("=> pinned bottom D + 3u EXCEEDS the sine-kernel value at both windows:")
+print("   S3 >= D + 3u = 5.44 > 5 (lam=1/2);  S3 >= 3.98 > 13/4 (lam=2/3), UNLESS T < 0.")
+print("=> the sine-kernel value is NOT excluded (T may be negative), but matching it")
+print("   forces a NEGATIVE connected part, opposite in sign to the sine kernel's own")
+print("   A3 = +1/2 (lam = 1/2).  Structural tension, not a proof of exclusion.")
 print("=> exact S3(law) is BLOCKED-ON-DATA: needs (w_c, x_{c,i}, m_{c,i}).")
 print("=> once config is in hand: run marked_s3(w, xs, ms, 1/2 or 2/3) -> verdict LAW-EXCLUDED iff S3 != 5/13/4.")

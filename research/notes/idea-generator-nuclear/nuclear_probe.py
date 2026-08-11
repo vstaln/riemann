@@ -160,6 +160,10 @@ log("")
 log("=" * 78)
 log("PART 4 (N1.2/N4.2): CUE finite-N null model for (m2, m3)  ('are the zeros GUE at finite N?')")
 log("=" * 78)
+log("NOTE: this machine's BLAS is the reference implementation (a 200x200 complex QR takes ~20-40 s),")
+log("so full Monte Carlo at N=900 is infeasible. Running small-N CUE samples and extrapolating the")
+log("finite-N mean correction and fluctuation sigma (sigma ~ c/sqrt(N)) to N=900. Honest labels: the")
+log("small-N values are CHECKED NUMERICALLY; the N=900 extrapolation is a MODEL FIT (labeled).")
 rng = np.random.default_rng(20260812)
 
 
@@ -174,8 +178,7 @@ def cue_angles(N, rng):
     return th
 
 
-for N in (200, 500, 900):
-    S = 150 if N <= 200 else (80 if N <= 500 else 40)
+for N, S in ((40, 10), (80, 10), (120, 10), (160, 8)):
     m2s, m3s = [], []
     t0 = time.time()
     for it in range(S):
@@ -187,35 +190,33 @@ for N in (200, 500, 900):
         ev = np.linalg.eigvalsh(G)
         m2s.append(float((ev ** 2).sum()) / N)
         m3s.append(float((ev ** 3).sum()) / N)
-        if (it + 1) % 20 == 0:
-            log(f"  CUE N={N}: sample {it+1}/{S} ({(time.time()-t0):.0f}s)")
     m2s, m3s = np.array(m2s), np.array(m3s)
-    log(f"CUE N={N}: E[m2]={m2s.mean():.4f} +/- {m2s.std():.4f}   E[m3]={m3s.mean():.4f} +/- {m3s.std():.4f}")
+    log(f"CUE N={N}: E[m2]={m2s.mean():.4f} +/- {m2s.std():.4f}   E[m3]={m3s.mean():.4f} +/- {m3s.std():.4f}"
+        f"   ({time.time()-t0:.0f}s)")
 
-# z-scores of the measured line-zero values against the N=900 CUE
-N = 900
-S = 60
-m2s, m3s = [], []
-for it in range(S):
-    th = cue_angles(N, rng)
-    x = th * N / (2.0 * PI)
-    dd = np.abs(x[:, None] - x[None, :])
-    d = np.minimum(dd, N - dd)
-    G = np.sinc(d)
-    ev = np.linalg.eigvalsh(G)
-    m2s.append(float((ev ** 2).sum()) / N)
-    m3s.append(float((ev ** 3).sum()) / N)
-    if (it + 1) % 20 == 0:
-        log(f"  CUE N={N} z-score batch: sample {it+1}/{S}")
-m2s, m3s = np.array(m2s), np.array(m3s)
-z2 = (m2z - m2s.mean()) / m2s.std()
-z3 = (m3z - m3s.mean()) / m3s.std()
-log(f"\nmeasured line-zero interior (N={xi.size}): m2={m2z:.4f}, m3={m3z:.4f}")
-log(f"CUE N=900 (periodic BC): E[m2]={m2s.mean():.4f} +/- {m2s.std():.4f}; E[m3]={m3s.mean():.4f} +/- {m3s.std():.4f}")
-log(f"z-scores: z(m2) = {z2:.2f}, z(m3) = {z3:.2f}   (|z|>2 => deficit NOT explained by finite-N CUE fluctuation)")
-log("caveat: periodic (circle) vs line boundary conditions differ; the CUE gives the scale of")
-log("finite-N effects, and the measured deficit is additionally systematic in sign (same sign at")
-log("every T in Part 1), so significance is assessed with that caveat.")
+# model fits from a fresh batch at the largest feasible N:
+Nm, Sf = 160, 8
+m2f = []
+for it in range(Sf):
+    th = cue_angles(Nm, rng)
+    x = th * Nm / (2.0 * PI)
+    dd = np.abs(x[:, None] - x[None, :]); d = np.minimum(dd, Nm - dd)
+    G = np.sinc(d); ev = np.linalg.eigvalsh(G)
+    m2f.append(float((ev ** 2).sum()) / Nm)
+m2f = np.array(m2f)
+log(f"CUE N=160 refit: E[m2]={m2f.mean():.4f} sigma={m2f.std():.4f}")
+log("extrapolation model: E[m2](N) ~ 4/3 - b/N, sigma(m2)(N) ~ c/sqrt(N); at N=900:")
+if m2f.std() > 0:
+    c_est = m2f.std() * np.sqrt(Nm)
+    b_est = (4 / 3 - m2f.mean()) * Nm
+    sig900 = c_est / np.sqrt(900.0)
+    mean900 = 4 / 3 - b_est / 900.0
+    log(f"  b ~ {b_est:.2f}, c ~ {c_est:.3f}  =>  E[m2](900) ~ {mean900:.4f}, sigma(900) ~ {sig900:.4f}")
+    z2 = (m2z - mean900) / sig900
+    log(f"  measured m2={m2z:.4f}  =>  z(m2) ~ {z2:.2f}  (|z|>2 => deficit beyond finite-N CUE spread, MODEL FIT)")
+log("caveats: (i) periodic (circle) vs line boundary conditions differ; (ii) the extrapolation is a")
+log("model fit from N<=160; (iii) the measured deficit is systematic in sign (same sign at every T in")
+log("Part 1 AND in the bulk interior, chem F1 idx 51..950), so it is not a single-sample fluctuation.")
 
 log("")
 log("=" * 78)
