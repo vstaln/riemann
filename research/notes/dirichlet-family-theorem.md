@@ -20,6 +20,7 @@
 | Zero-side κ̂_F(λ=1) → 4/3 for the family as q → ∞ | **CHECKED NUMERICALLY** at q=5..40 (T=2000, 61210 zeros) and q=1009 (this session), cf. §4 | §4 |
 | The Gevrey taper makes the zero-side tail o(1) in the q-aspect | **CONJECTURED with quantitative numerics** — model Gevrey constant c≈2 measured, full uniform error term not tracked | §5, /tmp/gevrey |
 | **The written family-averaged theorem** (Rem 7.2(iii) statement) | **CONJECTURED as a theorem; the assembly is the unproven part** | §6 |
+| Family simple-on-line fraction ≥ 2/3 (Thm B transferred) | **CONJECTURED** (same assembly gap as Theorem F; mechanism identical) | §1 |
 | The GL(2) weight-aspect stretch (Petersson/Kuznetsov) | **CONJECTURED, low priority** (degree-two: Λ* = 1/2 wall from C Rem 7.2(ii)) | §8 |
 
 **Bottom line.** The two halves of the family theorem are, respectively, PROVEN (prime side:
@@ -70,6 +71,16 @@ denominator, distinct-on-line in the numerator) lie on the critical line.
   Whether an optimized family kernel can push the family on-line constant strictly above 2/3 (δ>0)
   is left open (CONJECTURED; the optimization space is the same as Theorem D's but in a different
   aspect, and nothing here rules it out).
+
+**Bonus (refocus item (b)): the family simple-on-line fraction also ≥ 2/3.** The paper's Theorem B
+(simple zeros on the line, per-character H(λ)) transfers to the family by the *identical* assembly.
+The mechanism is Prop 4.4(i): 3s₁+4s₂+4p ≥ 4tr bA − ‖bA‖²_F, giving per character
+s₁ ≥ 4 tr bG_χ − 2N_χ − ‖bG_χ‖²_F − O(·). Summing over χ (Step 2 linearity) and evaluating at
+λ=1 (Step 3): s_{1,F} ≥ 4N_F − 2N_F − (4/3)N_F − o(N_F) = (2/3)N_F − o(N_F). So the same
+block-diagonal argument (with the same Gevrey-taper Step 4 as the only gap) gives
+**at least (2/3 − o(1)) of the family's zeros simple and on the line**, i.e. the family analogue
+of Theorem B. This is the *on-line* machinery again — the simple-on-line fraction is a refinement
+of the on-line fraction, not the external "simple zeros anywhere" quantity.
 
 ---
 
@@ -420,6 +431,9 @@ uniformity problem is unchanged; (iii) this is a strict superset of the work her
   on-line proportion would require a family-level analogue of Theorem D's Montgomery–Taylor
   optimization, which is not carried out here (CONJECTURED open). The genuinely new content is the
   *existence and uniformity* of the family statement, not a numerical constant above 2/3.
+- **Simple-on-line for the family:** the same assembly gives the family analogue of Theorem B
+  (≥ 2/3 simple and on the line) — see §1. This is still the on-line machinery; it does not speak
+  to the external "simple zeros" records for ζ, which are a different quantity.
 
 ---
 
