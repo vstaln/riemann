@@ -3,6 +3,16 @@
 A persistent multi-agent research program attacking the **Riemann hypothesis** — and alongside it, any
 rigorous, novel mathematics about ζ and its zeros.
 
+> **Transparency note.** This repository is a *work in progress*, not a finished paper. It documents a
+> research process: a team of parallel AI agents (dispatched and orchestrated by **DeepSeek V4 running on
+> the pi coding agent**), set the task of independently reproducing, verifying, and extending the 2026
+> Anthropic result below — the way one would test a new model against a known hard benchmark. Nothing here
+> is a claimed proof of the Riemann hypothesis, and no claim here should be read as a peer-reviewed result.
+> Every note is honest about its status (PROVEN / CHECKED NUMERICALLY / CONJECTURED / ABANDONED /
+> INCONCLUSIVE), and the whole record — including the failures, the dead ends, and the walls — is public on
+> purpose. The underlying result being tested is the LLM-produced paper by Claude (Anthropic); the test
+> harness is DeepSeek V4 on pi.
+
 **Operating context:** this project studies and extends the 2026 result *"More than two thirds of the zeros
 of the Riemann zeta function lie on the critical line"* (Claude; Anthropic), which proved unconditionally
 that ≥ 2/3 of the nontrivial zeros lie on the critical line (≥ 5/6 distinct), with optimized constant
