@@ -401,7 +401,8 @@ pub fn arch_tail_power(f: &dyn Fn(f64) -> f64, r: f64, period: f64, center: f64)
     let er1 = f(r) + f(r + period / 2.0);
     let r2 = 4.0 * r;
     let er2 = f(r2) + f(r2 + period / 2.0);
-    let alpha = (er1 / er2).ln() / ((r - center) / (r2 - center)).ln();
+    // E(t) ~ E_r * ((r-c)/(t-c))^alpha  ->  alpha = ln(E(r)/E(r2)) / ln((r2-c)/(r-c))
+    let alpha = (er1 / er2).ln() / ((r2 - center) / (r - center)).ln();
     // smooth integral of h_+(t) * E_R * ((R-center)/(t-center))^alpha over [r, inf)
     let g = |t: f64| h_plus(t) / (t - center).powf(alpha);
     let mut s = 0.0;

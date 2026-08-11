@@ -130,7 +130,7 @@ prime powers, δ_r = exact min gap in the log coordinate. Validated: Rust ≡ nu
 | 3·10³ | 2.519634 | 0.8020 | 0.5346 | numpy Lanczos |
 | 10⁴ | 2.51987306 | 0.8021 | 0.5347 | numpy + Rust agree |
 | 3·10⁴ | 2.51991784 | 0.8021 | 0.5347 | Rust Lanczos |
-| 10⁵ | *in progress* (machine load ~60; predicted ≈ 2.5199 from the saturated trend) | | | Rust Lanczos |
+| 10⁵ | not completed — killed after 1h13m CPU under machine load ~60 (Lanczos had not reached its first Ritz checkpoint; per-iteration cost ~3× the quadratic extrapolation under contention). Predicted ≈ 2.5199 from the saturated trend (10⁴→3·10⁴ moved ‖M‖ by 4.5·10⁻⁵; the eigenvector is localized at t ≈ 9.5, away from the frequencies added beyond t ≈ 12.8). This entry cannot change the conclusion. | | | Rust Lanczos |
 
 **Calibration (equidistant, sharp π):** N=10²: 3.05194862, N=10³: 3.13062079 (→ π from below, deficit ~1/√N).
 

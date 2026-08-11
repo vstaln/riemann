@@ -327,6 +327,13 @@ def main():
     m2 = m1 ** 2 - gam[2] / gam[0]           # e2 = (m1^2 - m2)/2 = gamma(2)/(2 gamma(0))
     e3 = gam[3] / (gam[0] * 6)
     m3 = (6 * e3 - m1 ** 3 + 3 * m1 * m2) / 2
+    # independent classical identity (unconditional): sum 1/(gamma^2+1/4) = 1 + g/2 - log(4pi)/2
+    part14 = sum(1 / (z ** 2 + mp.mpf('0.25')) for z in zs)
+    tail14 = (1 / (2 * PI)) * T ** (-1) * (mp.log(T) - mp.log(2 * PI) + 1)
+    cf14 = 1 + mp.euler / 2 - mp.log(4 * PI) / 2
+    print(f"  [independent] sum 1/(g^2+1/4) partial+tail = {mp.nstr(part14 + tail14, 12)}"
+          f"   | closed form 1+g/2-log(4pi)/2 = {mp.nstr(cf14, 12)}"
+          f"   | diff = {mp.nstr(part14 + tail14 - cf14, 4)}")
     for k, (mref, name) in enumerate([(m1, 'm1'), (m2, 'm2'), (m3, 'm3')], start=1):
         part = sum(z ** (-2 * k) for z in zs)
         # tail: refined zero density N'(T) = (1/2pi) log(T/2pi):

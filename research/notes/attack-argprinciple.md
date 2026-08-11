@@ -94,6 +94,8 @@ Independent-precision check (mpmath, 40 dps, `uv run --with mpmath`): max |Z(bra
 
 N(T) exact at the strip edges from the contiguous fetched ordinates (T = 10⁴, 1.05·10⁴) and from `~/Downloads/index.db` block counts plus fetched ordinates in the inter-block range (T = 2·10⁴, 2.05·10⁴: N(19700) = 22106 + 385 = 22491; 22106 + 1028 = 23134; T = 5·10⁴, 5.05·10⁴: N(49100) = 62233 + 1286 = 63519; 62233 + 2001 = 64234). All |S| < 1, comfortably inside the classical |S(t)| ≪ ln t bound and consistent with `attack-finitet`'s independent validation of RvM against the index.db (max |Δ| = 2.08 over 14.6 M rows).
 
+Note on the tool's own printed `S(T)` line: it reads N(T) from the fetched files, which are contiguous only up to index 10 999 (the LMFDB server rate-limited the mid-range fetch — see §3); at T = 10⁴ the printed line agrees with the table, at T = 2·10⁴/5·10⁴ it undercounts and the table values above (index.db-based) are authoritative.
+
 ### 4.3 The implied p₁-type fraction vs the in-class constants
 
 Measured simple-on-line fraction in each strip: **1.0000000000** (every one of the 590/643/715 zeros is a simple on-line zero — PROVEN by Gourdon–Demichel simplicity + Platt–Trudgian RH below 3·10¹²; measured exactly 1 by the 1:1 count-match).

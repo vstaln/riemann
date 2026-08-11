@@ -1,0 +1,618 @@
+=== PAGE 1 ===
+arXiv:1206.3737v2  [math.NT]  18 Sep 2012
+DISTINCT ZEROS OF THE RIEMANN ZETA-FUNCTION
+XIAOSHENG WU
+Abstract. In this paper, we prove that there are more than 66.036% of ze ros of the Rie-
+mann zeta-function are distinct.
+1. I ntroduction
+Letζ(s) be the Riemann zeta-function, where s =σ + it. It is deﬁned for σ> 1 by
+ζ(s) =
+∑
+n≥1
+n−s.
+The Riemann-von Mangoldt formula [10] states thatN(T), the number of non-trivial zeros
+ρ =β + iγ ofζ(s) with 0<γ ≤ T, satisﬁes
+N(T) = T
+2π log T
+2πe + 7
+8 + S (T) + O( 1
+T ),
+S (T) = 1
+π argζ(1
+2 + iT) ≪ log T.
+It is generally believed that all the zeros ofζ(s) are simple (also distinct), which is known
+as the Simple Zero Conjecture. We deﬁne the number of simple z eros and the number of
+distinct zeros for the Riemann zeta-function as follows
+Nd(T) = |{ρ =β + iγ : 0<γ ≤ T,ζ (ρ) = 0}|,
+Ns(T) = |{ρ =β + iγ : 0<γ ≤ T,ζ (ρ) = 0,ζ ′(ρ) /nequal0}|.
+The Simple Zero Conjecture means Nd(T) = Ns(T) = N(T).
+Due to Levinson’s method, it is known that more than two-ﬁfths of the zeros are simple
+(see [2, 4]). In 1995, Farmer [6] introduced a combination me thod, which is based on
+proportions of simple zeros of ξ(n)(s), n ≥ 0, and proved that at least 63.9% of the zeros
+of the Riemann zeta-function are distinct.
+In this paper, by the method introduced in our work [11], we prove that there are more
+than 66.03% of zeros of the Riemann zeta-function are distinct.
+Theorem 1. For T suﬃciently large, we have
+Nd(T) ≥ 0.66036N(T).
+In this paper we always assume that T is a large parameter and L = log T. The number
+of additional zeros of a analytic function f caused by multiplicity means the number of
+zeros of f counted according to multiplicity minus one.
+2010 Mathematics Subject Classiﬁcation. 11M26, 11M06 .
+Key words and phrases. distinct zeros; Riemann zeta-function; molliﬁer.
+1
+=== PAGE 2 ===
+We note that ifρ is a non-simple zero ofζ(s), it must be a zero of
+G(s) =ζ(s)ψ1(s) +ζ′(s)ψ2(s)(1)
+with multiplicity reduced by at most one, here ψ1(s) and ψ2(s) can be any analytic func-
+tion. Thus the number of additional zeros of ζ(s) caused by multiplicity in any region is
+not more than the number of zeros of G(s) in the same region. We partition the whole
+plane into the left part (Re( s) < 1/2) and the right part (Re( s) ≥ 1/2). Then we will
+evaluate the number of additional zeros of ζ(s) caused by multiplicity in each side with
+diﬀerent G(s).
+To the left side, we choose G(s) =ξ′(s), where
+ξ(s) = H(s)ζ(s)
+with
+H(s) = 1/2s(s − 1)π−s/2Γ(s/2).(2)
+It is known that for any integer n ≥ 0 the number of zeros for ξ(n)(s) with 0 < t < T is
+N(T) + O(log T) (to see [3, 8]). The functional equation for ζ(s) says that
+ξ(s) =ξ(1 − s).(3)
+Diﬀerentiating both side of the above formula in s we have
+ξ′(s) = −ξ′(1 − s).
+Hence ifρ is a zero ofξ′(s), so is 1 −ρ. Let Nξ′,c(T) be the number of zeros ofξ′(1/2 + it)
+with 0 < t < T. Then it follows from the symmetry of zeros of ξ′(s) that the number of
+additional zeros ofζ(s) in the left side is not more than
+1
+2
+(
+N(T) − Nξ′,c(T)
+)
++ O(log T).
+To the right side, we choose G(s) as in (1) with
+ψ1(s) =
+∑
+n≤y
+µ(n)
+ns+R/L P1(log y/n
+log y ),
+ψ2(s) = 1
+L
+∑
+n≤y
+µ(n)
+ns+R/L P2(log y/n
+log y ),(4)
+whereµ is the Mobius function, y = Tθ with 0 < θ <4/7. Here P1, P2 are polynomials
+with P1(0) = P2(0), P1(1) = 1 which will be speciﬁed later (to see [2, 5, 9] for any more
+choice ofψi).
+Let D be the closed rectangle with vertices 1 /2 + it0, 3 + it0, 1/2 + iT, 3 + iT. Here
+t0 ≤ 2 is a given positive constant that is not a ordinate of any zer o of G(s) in the region
+0 < Re(s) < 3, Im(s) > 0. Let NG(D) denote the zeros of G(s) in D, including zeros on
+the left boundary.
+Since the number of additional zeros of ζ(s) caused by multiplicity is not more than
+the number of zeros ofξ′(s) in the left side and not more than NG(D) in the right side, we
+may have the following formula about the number of distinct zeros ofζ(s)
+Nd(T) ≥ 1
+2N(T) + 1
+2Nξ′,c(T) − NG(D).(5)
+2
+=== PAGE 3 ===
+It is therefore important to give an upper bound forNG(D) and a lower bound for Nξ′,c(T).
+We will obtain a an upper bound forNG(D) in section 2 and a lower bound better than the
+known result now for Nξ′,c(T) in section 3.
+2. upper bound for NG(D)
+An upper bound for NG(D) can be found in a familiar way by applying Littlewood’s
+formula (to see §9.9 of [10]). Let
+σ0 = 1/2 − R/L,
+where R is a constant to be speciﬁed precisely later. Let D1 be the closed rectangle with
+verticesσ0 + it0, 3 + it0,σ0 + iT, 3 + iT. Suppose G(3 + it) /nequal0. Determine argG(σ + iT)
+by continuation left from 3 + iT and argG(σ + it0) by continuation left from 3 + iTt 0. If
+a zero is reached on the upper edge, use lim G(σ + iT + iǫ) asǫ → +0. Make horizontal
+cuts in D1 from the left side to the zeros of G in D1. Applying the Littlewood’s formula,
+we have
+∫ T
+t0
+log |G(σ0 + it)|dt −
+∫ T
+t0
+log |G(3 + it)|dt
++
+∫ 3
+σ0
+argG(σ + iT)dσ −
+∫ 3
+σ0
+argG(σ + it0)dσ
+= 2π
+∑
+ρ∈D1
+dist(ρ),(6)
+where dist(ρ) is the distance ofρ from the left side of D1.
+Recall the deﬁnition of ψi for i = 1, 2. A direct calculation shows that ψi(s) ≪ T for
+Re(s) > 0. Hence G(s) ≪ T 2 for Re(s) > 0. Then using Jensen’s theorem in a familiar
+way as in §9.4 of [10], we have
+∫ 3
+σ0
+argG(σ + iT)dσ = O(log T).(7)
+For t0 is a given constant, it is easy to see
+∫ 3
+σ0
+argG(σ + it0)dσ = O(1).(8)
+By a direct calculation we can see
+ζ′(3 + it)ψi(3 + it) ≪ O(1/ log T).
+Hence we have from (1) that
+∫ T
+t0
+log |G(3 + it)|dt =
+∫ T
+t0
+log |ζ(3 + it)ψi(3 + it)|dt + O(T/ log T).(9)
+Since forσ> 1
+logζ(s) = −
+∑
+n≥1
+Λ(n)
+ns log n,
+3
+=== PAGE 4 ===
+it follows taking the real part that
+∫ T
+t0
+log |ζ(3 + it)|dt ≪ 1.(10)
+For the entire functionψi(s), it is easy to see, forσ ≥ 3,
+|ψi(s) − 1| ≤ 1
+2σ + 1
+3σ +
+∫ ∞
+3
+ν
+νσ ≤ 1
+2σ + 5
+2
+1
+3σ < 21−σ.
+Therefore, logψi(s) is analytic forσ ≥ 3. Integrating on the contour σ + iT, 3 ≤σ <∞;
+3 + it, t0 ≤ t ≤ T; σ + iT, 3 ≤σ< ∞ gives
+∫ T
+t0
+log |ψ1(3 + it)|dt ≤
+⏐
+⏐
+⏐
+⏐
+⏐
+∫ T
+t0
+logψ1(3 + it)dt
+⏐
+⏐
+⏐
+⏐
+⏐≤ 8
+∫ ∞
+3
+dσ
+2σ = O(1).(11)
+Substituting (10), (11) into (9) we have
+∫ T
+t0
+log |G(3 + it)|dt ≪ T/ log T.(12)
+Then using (7), (8), (12) in (6), we have
+∫ T
+t0
+log |G(σ0 + it)|dt + O(T/ log T) = 2π
+∑
+ρ∈D
+dist(ρ).
+Since all the zeros of G in closed rectangle D are at least distance 1/2 −σ0 fromσ =σ0,
+it follows that
+2π(1/2 −σ0)NG(D) ≤
+∫ T
+t0
+log |G(σ0 + it)|dt + O(T/ log T).(13)
+Using the concavity of the logarithm,
+∫ T
+t0
+log |G(σ0 + it)|dt = 1/2
+∫T
+t0
+log |G(σ0 + it)|2dt
+≤ 1
+2T log
+(1
+T
+∫ T
+t0
+|G(σ0 + it)|2dt
+)
+.
+Substitutingσ0 = 1/2 − R/L, then we have from (13) that
+NG(D) ≤ T L
+4πR log
+(1
+T
+∫ T
+t0
+|G(σ0 + it)|2dt
+)
+.(14)
+Hence an upper bound for NG(D) may be obtained by evaluating the mean value integral
+of G on theσ0-line.
+To evaluate the mean value integral of G on the σ0-line, we need the following two
+Lemmas.
+Lemma 2. Suppose thatδ> 0 and ∆ =T 1−δ. Then
+1
+T
+∫ T
+t0
+|G(σ0 + it)|2dt = 1
+∆π1/2
+∫ ∞
+−∞
+e−(t−w)2∆−2
+|G(σ0 + it)|2dt + oδ(1)
+uniformly for T ≤ w ≤ 2T.
+4
+=== PAGE 5 ===
+This lemma follows exactly as in Section 3 of Balasubramania n, Conrey, and Heath-
+Brown [1].
+Lemma 3. Let a, b ∈ C with a, b ≪ 1, and put α = a/L, β = b/L where L = log T. Let
+s0 = 1/2 + iw with T ≤ w ≤ 2T. Suppose that δ > 0, ∆ = T 1−δ and that y = Tθ with
+0<θ< 4/7. For i, j = 1, 2, let
+g(a, b, w, P1, P2)
+= 1
+i∆π1/2
+∫
+(1/2)
+e(s−s0)2∆−2
+ζ(s +α)ζ(1 − s +β)ψ1(s − R/L)ψ2(1 − s − R/L)ds,
+where (1/2) denotes the straight line path from 1/2 − i∞ to 1/2 + i∞. Then
+g(a, b, w, Pi, P j) = Σ(b, a, Pi, P j) − e−a−bΣ(−a, −b, Pi, P j)
+θ(a + b) + oδ(1).(15)
+uniformly in a, b, and w, where
+Σ(a, b, Pi, P j) =
+∫ 1
+0
+(P′
+i(x) + aθPi(x))(P′
+j(x) + bθP j(x))dx.(16)
+This lemma is the Lemma 2 of Conrey [4].
+We now evaluate the mean value integral ofG on theσ0-line . From Lemma 2 we have
+1
+T
+∫ T
+t0
+|G(σ0 + it)|2dt = 1
+∆π1/2
+∫ ∞
+−∞
+e−(t−w)2∆−2
+|G(σ0 + it)|2dt + Oδ(1)
+= 1
+i∆π1/2
+∫
+(1/2)
+e(s−s0)2∆−2
+G(s − R/L)G(1 − s − R/L)ds + oδ(1).
+Then recalling the deﬁnition of G in (1) we have
+1
+T
+∫ T
+t0
+|G(σ0 + it)|2dt = 1
+i∆π1/2
+∫
+(1/2)
+e(s−s0)2∆−2
+ζψ1(s − R/L)ζψ1(1 − s − R/L)ds
++ 1
+i∆π1/2
+∫
+(1/2)
+e(s−s0)2∆−2
+ζψ1(s − R/L)ζ′ψ2(1 − s − R/L)ds
++ 1
+i∆π1/2
+∫
+(1/2)
+e(s−s0)2∆−2
+ζ′ψ2(s − R/L)ζψ1(1 − s − R/L)ds
++ 1
+i∆π1/2
+∫
+(1/2)
+e(s−s0)2∆−2
+ζ′ψ2(s − R/L)ζ′ψ2(1 − s − R/L)ds + oδ(1).
+We may evaluate every item in the above formula by using Lemma3. Then
+1
+T
+∫ T
+t0
+|G(σ0 + it)|2dt = g(a, b, w, P1, P1)
+⏐
+⏐
+⏐a=b=−R +∂bg(a, b, w, P1, P2)
+⏐
+⏐
+⏐a=b=−R
++∂ag(a, b, w, P2, P1)
+⏐
+⏐
+⏐a=b=−R +∂a∂bg(a, b, w, P2, P2)
+⏐
+⏐
+⏐a=b=−R + oδ(1).(17)
+5
+=== PAGE 6 ===
+Takingθ = 4/7 −ǫ, R = 1.023,
+P1(x) = x − 0.064x(1 − x) + 0.112x2(1 − x),
+P2(x) = 1.305x − 0.276x2 − 0.025x3,
+and makingǫ → 0 in (17), we get from (14) that
+NG(D) ≤ 0.27442N(T).
+3. zeros ofξ′(s) on the critical line (1/2-line)
+The fact that a positive proportion of zeros for ξ′(s) are on the critical line was ﬁrst
+proved by Levinson. Using the method introduced in his work [ 7], Levinson [8] proved
+that at least 71% zeros ofξ′(s) are on the critical line.
+In 1983, Conrey [3] made a careful study of zeros of ξ(n)(s) on the critical line and
+proved that at least 81.37% zeros ofξ′(s) are on the critical line, and later, in his work [4]
+to prove more than two ﬁfths of the zeros of the Riemann zeta-function are on the critical
+line, he successfully proved that the molliﬁer with length θ = 4/7 −ǫ is available. It is
+obvious that this result can be used in [3]. Using the molliﬁe r with lengthθ = 4/7 −ǫ in
+[3], one may obtain that at least 82.402% zeros ofξ′(s) are on the critical line.
+We note that if not following the way in [3] but using the Levin son’s method general-
+ized by Conrey in [4], we may obtain a better result on this problem. From the functional
+equation (3) it is easy to see thatξ(n)(s) is real for s = 1/2 + it when n is even and is purely
+imaginary when n is odd. Let δ /nequal0 be real, gn, n ≥ 1, be complex numbers with gn real
+if n is even and gn purely imaginary if n is odd. Now deﬁne
+η(s) = (1 −δ)ξ(s) +δξ′(s)L−1 +
+N∑
+n=1
+gnξ(n)(s)L−n
+for some ﬁxed N. Then, for s = 1/2 + it,
+δξ′(s) = Imη(s),
+so thatξ′(s) = 0 onσ = 1/2 if and only if Imη(s) = 0. Observe that for every change of
+π in the argument of η(s) it must be the case that Im η(s) has at least one zero. Hence it
+follows that
+Nξ′,c(T) ≥ 1
+π∆Cargη(s),(18)
+where ∆Carg stands for the variation of the argument as s runs over the critical line from
+1/2 + it0 to 1/2 + iT passing the zeros ofη(s) from the east side.
+To estimate the change in argument ofη(s) on the critical line, we letη(s) = H(s)V(s),
+where H(s) is deﬁned in (2) and
+V(s) = (1 −δ)ζ(s) + δ
+L
+(H′
+H (s)ζ(s) +ζ′(s)
+)
++
+N∑
+n=1
+gn
+Ln
+n∑
+k=0
+(n
+k
+)H(n−k)(s)
+H(s) ζ(k)(s).
+By the Stirling formula, for |t| ≥ 2, we have
+argH(1/2 + it) = t
+2 log |t|
+2πe + O(1),
+6
+=== PAGE 7 ===
+and
+H(m)
+H (s) =
+(1
+2 log s
+2π
+)m
+(1 + O(1/|t|))
+for t ≥ 10, 0 < σ < A1, here A1 can be any positive constant. (For a proof of these
+formulas, see Lemma 1 of [3].) Hence we may have
+∆argη(1/2 + it)
+⏐
+⏐
+⏐
+T
+t0
+= T log T
+2πe + ∆argV(1/2 + it)
+⏐
+⏐
+⏐
+T
+t0
++ O(T)(19)
+and denote V(s) by
+V(s) =
+{(
+1 −δ +δ
+(log s
+2π
+2L + 1
+L
+d
+ds
+)
+Q0
+(log s
+2π
+2L + 1
+L
+d
+ds
+))
+ζ(s)
+}
+(1 + O(1/|t|))
+with
+Q0(x) = 1 +
+N∑
+n=1
+gn
+δ xn−1.
+As in (4), we use the molliﬁer
+ψ(s) =
+∑
+n≤y
+µ(n)
+ns+R/L P
+(log y/n
+log y
+)
+,(20)
+whereµ is the Mobius function, y = Tθ with 0 < θ <4/7. Here P is a polynomial with
+P(0) = 0, P(1) = 1 which will be speciﬁed later. By the Cauchy’s argument prin ciple, it
+is not diﬃcult to see ⏐
+⏐
+⏐
+⏐∆argV(1/2 + it)
+⏐
+⏐
+⏐
+T
+t0
+⏐
+⏐
+⏐
+⏐= 2πNξ′(D)(1 + o(1)).
+Here Nξ′(D) denote the number ofξ′(s) in the closed rectangle D deﬁned before. Then, if
+Q0(1/2) = 2, by applying Jenson’s theorem and Littlewood’s formula asin section 2, we
+can show that
+|∆argV(1/2 + it)|T
+t0| ≤ L
+R
+∫ T
+t0
+log |Vψ(σ0 + it)|dt(1 + o(1)),(21)
+where
+σ0 = 1/2 − R/L,
+R ≪ 1 is a positive real number. Here, the reason for requiring the condition Q0(1/2) = 2
+is to ensure the integration
+∫T
+t0
+log |Vψ(3 + it)|dt caused by using Littlewood’s formula is
+O(T/L). To evaluate the integral in the right of (21) we use the following useful approxi-
+mation to V(s),
+U(s) =
+(
+1 −δ +δ
+(
+1 + 2
+L
+d
+ds
+)
+Q
+(
+− 1
+L
+d
+ds
+))
+ζ(s),(22)
+where
+Q(x) = 1
+2Q0(1/2 − x).
+If restrict Q(x) be real polynomial, then the restriction ofgn and the condition thatQ0(1/2) =
+2 are equivalent to Q′(x) = Q′(1 − x) and Q(0) = 1. It is easy to see that the error caused
+7
+=== PAGE 8 ===
+by the substitution of V with U can be absorbed by the error term in (21). Hence we have
+from (18)-(23)that
+Nξ′,c(T) ≥ N(T) − L
+πR
+∫ T
+t0
+log |Uψ(σ0 + it)|dt(1 + o(1)) + O(L).
+Recall thatσ0 = 1/2 − R/L. From the concavity of the logarithm we have
+Nξ′,c(T) ≥ N(T) − T L
+2πR log
+(1
+T
+∫ T
+t0
+|Uψ(σ0 + it)|2dt
+)
+.(23)
+By Lemma 2 and Lemma 3 we have
+1
+T
+∫ T
+t0
+|Uψ(σ0 + it)|2 ∼
+(
+1 −δ +δ(1 + 2∂a)Q(−∂a)
+)(
+1 −δ +δ(1 + 2∂b)Q(−∂b)
+)
+×
+(g(b, a) − e−a−bg(−a, −b)
+θ(a + b)
+)⏐
+⏐
+⏐
+⏐
+⏐
+⏐a=b=−R
+,(24)
+where
+g(a, b) =
+∫ 1
+0
+(
+P′(t) + aθP(t)
+)(
+P′(t) + bθP(t)
+)
+dt.
+Letθ = 4/7 −ǫ, R = 1.104, δ= 0.869. Taking
+P(x) = x − 0.274x(1 − x) − 0.334x2(1 − x) + 0.005x3(1 − x),
+Q(x) = 1 − 0.609x − 0.572(x2/2 − x3/3) − 4.895(x3/3 − x4/2 + x5/5)
+into (24) and makingǫ → 0, then we have by (23) that
+Nξ′,c(T) ≥ 0.86957N(T).
+It is easy to see that the way in this section can also give better numerical results about
+the proportion of zeros ofξ(n)(s), n ≥ 2 on the critical line, however one may ﬁnd that this
+way is useless when consider simple zeros ofξ(n)(s), n ≥ 1 on the critical line.
+4. completion of the proof
+We have obtained that
+NG(D) ≤ 0.27442N(T)
+in section 2 and
+Nξ′,c(T) ≥ 0.86957N(T).
+in section 3. Then by (5) we have
+Nd(T) ≥ 1
+2N(T) + 1
+2Nξ′,c(T) − NG(D)
+≥ (1
+2 + 0.434785 − 0.27442)N(T)> 0.66036N(T),
+Hence we have proved Theorem 1.
+8
+=== PAGE 9 ===
+References
+[1] R. Balasubramanian, J. B. Conrey, and D. R. Heath-Brown,‘Asymptotic mean square of the product of
+the Riemann zeta-function and a Dirichlet Polynomial,’J. Reine Angew. Math., 357 (1985), 161-181.
+[2] H. Bui, J. B. Conrey, and M. Young, ‘More than 41% of the zer os of the zeta function are on the
+critical line,’Acta Arith., 150 (2011), no.1, 35-64.
+[3] J. B. Conrey, ‘Zeros of derivatives of the Riemann’sξ-function on the critical line,’J. Number Theory,
+16 (1983), 49-74.
+[4] J. B. Conrey, ‘More than two ﬁfths of the zeros of the Riema nn zeta function are on the critical line,’
+J. Reine Angew. Math., 339 (1989), 1-26.
+[5] S. Feng, ‘Zeros of the Riemann zeta function on the critic al line,’J. Number Theory, 132 (4) (2012),
+511-542.
+[6] D. Farmer, ‘Counting distinct zeros of the Riemann zeta- function,’Electron. J. Combin., 2 (1995),
+Research Paper 1, approx. 5 pp.
+[7] N. Levinson, ‘More than one third of zeros of Riemann’s ze ta-function are on σ = 1/2,’Adv. Math.,
+13 (1974), 383-436.
+[8] N. Levinson, ‘Zeros of derivative of Riemann’sξ-function,’Bull. Amer. Math. Soc., 80, No.5 (1974),
+951-954.
+[9] N. Levinson, ‘Deduction of semi-optimal molliﬁer for ob taining lower bounds for N0(T) for Rie-
+mann’s zeta function,’Proc. Natl. Acad. Sci. USA, 72 (1975), 294-297.
+[10] E. C. Tichmarsh, The theory of the Riemann zeta-functio n. revised by D. R. HeathBrown, Clarendon
+Press, Oxford, second edition, 1986.
+[11] X. Wu, ‘Distince zeros and simple zeros of Dirichlet L-function,’ available at:
+http://arxiv.org/abs/1206.1679.
+School of Mathematical Sciences, University of Science and Technology of China, Hefei 230026, P.
+R. China.
+E-mail address: xswu12@ustc.edu.cn
+9
