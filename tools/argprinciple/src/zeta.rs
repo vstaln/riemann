@@ -104,56 +104,7 @@ pub fn theta_cert(t: f64) -> (f64, f64) {
 // ---------------------------------------------------------------------------
 pub struct ZetaBudget { pub main_round: f64, pub corr_round: f64, pub rem: f64, pub term_mag: f64 }
 
-pub fn zeta_components(s_re: f64, s_im: f64, t: f64, n: usize, lns: &[f64], k_max: usize) -> (f64, f64, f64, f64, f64, f64) {
-    // (main_re, main_im, t2_re+t3_re, t2_im+t3_im, corr_re, corr_im)
-    let nf = n as f64;
-    let ln_n = nf.ln();
-    let n_pow = nf.powf(1.0 - s_re);
-    let n_neg_sig = nf.powf(-s_re);
-    let (s_ln, c_ln) = (t * ln_n).sin_cos();
-    let e_re = c_ln;
-    let e_im = -s_ln;
-    let mut re = 0.0;
-    let mut im = 0.0;
-    for j in 1..n {
-        let mag = (j as f64).powf(-s_re);
-        let x = t * lns[j];
-        let (sx, cx) = x.sin_cos();
-        re += mag * cx;
-        im += -mag * sx;
-    }
-    let main_re = re; let main_im = im;
-    let num_re = n_pow * e_re;
-    let num_im = n_pow * e_im;
-    let den_re = s_re - 1.0;
-    let den_im = s_im;
-    let d2 = den_re * den_re + den_im * den_im;
-    let q_re = (num_re * den_re + num_im * den_im) / d2;
-    let q_im = (num_im * den_re - num_re * den_im) / d2;
-    re += q_re; im += q_im;
-    let n_neg = nf.powf(-s_re);
-    re += 0.5 * n_neg * e_re; im += 0.5 * n_neg * e_im;
-    let t23_re = q_re + 0.5*n_neg*e_re;
-    let t23_im = q_im + 0.5*n_neg*e_im;
-    let mut prod_re = 1.0; let mut prod_im = 0.0;
-    let mut cr = 0.0; let mut ci = 0.0;
-    for k in 1..=k_max {
-        let start_j = if k == 1 { 0 } else { 2 * k as i64 - 3 };
-        for jj in start_j..=(2 * k as i64 - 2) {
-            let jf = jj as f64;
-            let a_re = (s_re + jf) / nf;
-            let a_im = s_im / nf;
-            let (pr, pi) = (prod_re * a_re - prod_im * a_im, prod_re * a_im + prod_im * a_re);
-            prod_re = pr; prod_im = pi;
-        }
-        let coef = abs_b_over_fact(k);
-        let sign = if k % 2 == 1 { 1.0 } else { -1.0 };
-        let scale = coef * n_neg_sig;
-        cr += sign * scale * (prod_re * e_re - prod_im * e_im);
-        ci += sign * scale * (prod_re * e_im + prod_im * e_re);
-    }
-    (main_re, main_im, t23_re, t23_im, cr, ci)
-}
+
 
 pub fn zeta_em_cert(s_re: f64, s_im: f64, t: f64, n: usize, lns: &[f64], k_max: usize) -> (f64, f64, f64) {
     let (r, i, e, _b) = zeta_em_cert_budget(s_re, s_im, t, n, lns, k_max);

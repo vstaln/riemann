@@ -7,10 +7,6 @@ edition = "2021"
 name = "argprinciple"
 path = "src/main.rs"
 
-[[bin]]
-name = "dbg"
-path = "src/dbg.rs"
-
 [profile.release]
 opt-level = 3
 lto = true

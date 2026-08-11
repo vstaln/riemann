@@ -19,7 +19,7 @@ end-effect bookkeeping of Lemma 5.4); the leading constants ((log x)²/2, (log x
 exact/optimal. Sharpening the slack constants improves the implied constant c(λ) in the finite-T error at most
 ~2×, NEVER the liminf, and never enough to matter at accessible heights: even with perfect constants the
 finite-T error has an irreducible floor ≈ 1/l + log l/(2πl) (taper + bandwidth wall), which clears the
-window-gain 0.0058 only at l ≳ 300 (T ≳ 10¹³⁰). **The real lower bound cannot move with existing inputs; only
+window-gain 0.0058 only at l ≈ 330 (T ≳ 10¹⁴⁵). **The real lower bound cannot move with existing inputs; only
 the finite-T error's implied constant can be shaved.**
 
 ---
@@ -35,7 +35,7 @@ the finite-T error's implied constant can be shaved.**
 | Lemma 5.1 third line: Σ Λ(n)/√n ≤ 3√x is loose — true PNT asymptotic ≈ 2√x (measured 0.996–0.9995 of 2√x, slack 1.50×) | **CHECKED NUMERICALLY** — §E (sieve); the 3 is a crude universal constant, but the term it bounds (Π_X, O₂, cross terms) is o(main) |
 | Σ Λ(n)² ≪ x log x (constant ~1; measured 0.912–0.938) | **CHECKED NUMERICALLY** — §E |
 | E′_T (Thm 5.8): λ=1 → 0.0701 at T=10¹⁰, 0.0588 at 10¹², 0.0363 at 10²⁰, 0.0248 at 10³⁰ (≍ log l/l); λ=1/2 → 0.0944 at 10¹⁰ (≍ 1/l); BGSTB24 1/√log T = 0.2084 at T=10¹⁰ | **CHECKED NUMERICALLY** — §F (formula evaluation; the theorem's E′_T definition is PROVEN in the paper) |
-| Irreducible finite-T floor ≈ w/L + log l/(2πl) at λ=1 (taper + bandwidth wall); perfect constant bookkeeping ≥ 0.0595 at T=10¹⁰ (vs 0.0701 actual); floor < 0.0058 only for l ≳ 300 (T ≳ 10¹³⁰) | **CHECKED NUMERICALLY** — §F decomposition (run in this round's transcript; formula-level, see §3.3) |
+| Irreducible finite-T floor ≈ w/L + log l/(2πl) at λ=1 (taper + bandwidth wall); perfect constant bookkeeping ≥ 0.0595 at T=10¹⁰ (vs 0.0701 actual); floor < 0.0058 only for l ≈ 330 (T ≳ 10¹⁴⁵) | **CHECKED NUMERICALLY** — §F decomposition (run in this round's transcript; formula-level, see §3.3) |
 | M[P_X,P_X] main term T L³/6π = (T L/2π)(L²/3) (identity, 1/6 = (1/2)(1/3)); H(λ) = 2 − 1/F(λ); 1/F(λ) = 1/λ + λ/3; ∫₀¹(1−x)x dx = 1/6; law row-sum Σ (j/65536)(1−j/256) = 21845/131072; law E(1) = −1/(6·256²) | **CHECKED NUMERICALLY** — §G, I; law E(1) and row-sum independently **PROVEN** in `close-inclass-gap.md` via `tools/lpdual/verify_exact_cert.py` |
 | MV 3π/2 (Lemma 5.2) is loose; sharp universal π; measured norm of the actual log-prime-power Hilbert matrix ≈ 2.5199 at N = 3·10⁴, saturated; sharpening has ZERO effect on 0.6725 | **CHECKED NUMERICALLY / PROVEN** — `attack-mvconstant.md` (parallel agent P7.1; Rust + numpy, dense SVD at N ≤ 10³; NOT re-derived here — used as delivered) |
 | Remark 5.9 finite-T taper factor a²(1+λ₁²/3)/(b+λ₁²J_T): model reproduction (smoothstep ramp, w=1, actual primes, exact convolution g = ϕ²⋆ϕ²) gives 0.870 at L=4.4 (paper 0.89) and 0.974 at L=16 (paper 0.975); factor < 1 and → 1 like 1 − O(1/L) | **CHECKED NUMERICALLY (model)** — §H; the exact paper values depend on the unstated ramp ϱ of §2.2, so the 0.89/0.975 are reproduced only at the 2% level (INCONCLUSIVE as exact numbers; the qualitative claim is robust) |
@@ -179,7 +179,7 @@ c(λ)·log log T/log T (λ=1), c(λ)/log T (λ<1). Quantified (CHECKED, §F deco
 E′_T = 0.0701 = 0.0472 (taper w/L, **irreducible**) + 0.0229 (bandwidth wall; MV sharpening 3π/2 → 2.52 buys
 ≤ 1.87×, i.e. ≤ 0.0123) + 10⁻⁵ (power). Even with **perfect** constants the finite-T error is ≥ 0.0595 at
 T=10¹⁰ — still 10× the window-gain 0.0058 over 2/3 and 6× the 0.0093 gap to the law ceiling 0.68183. The error
-drops below the 0.0058 window gain only at l ≳ 300, i.e. T ≳ 10¹³⁰. **Tightening constants therefore moves
+drops below the 0.0058 window gain only at l ≈ 330, i.e. T ≳ 10¹⁴⁵. **Tightening constants therefore moves
 nothing that matters; it is a constant-factor shave of an already-o(1) term.**
 
 ### 3.3 Reconciliation of "2/3 vs 0.6725" and of "0.6725 vs 0.6818"

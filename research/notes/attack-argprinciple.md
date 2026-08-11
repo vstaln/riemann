@@ -47,7 +47,7 @@ target/x86_64-unknown-linux-musl/release/argprinciple 10000 500 0.02 data
 target/x86_64-unknown-linux-musl/release/argprinciple 20000 500 0.02 data
 target/x86_64-unknown-linux-musl/release/argprinciple 50000 500 0.02 data
 ```
-Data: `tools/argprinciple/fetch_lmfdb.py` (LMFDB `zeros/zeta/list?N=&limit=`, chunks of 1000, ≥0.4 s delay); ordinates cached in `tools/argprinciple/data/lmfdb_zeros_*.txt` (indices 0–64 799, 34 digits, 51 499 ordinates fetched; gaps remain in 12 000–28 999 / 37 000–43 999 / 46 000–57 999 — the LMFDB server began rate-limiting (reCAPTCHA). The strip-covering ranges are complete; global N(T) at the strip edges is reconstructed from `~/Downloads/index.db` block counts + fetched ordinates, §5.)
+Data: `tools/argprinciple/fetch_lmfdb.py` (LMFDB `zeros/zeta/list?N=&limit=`, chunks of 1000, ≥0.4 s delay); ordinates cached in `tools/argprinciple/data/lmfdb_zeros_*.txt` (indices 0–64 799, 34 digits, 51 499 ordinates fetched; gaps remain at indices 27 000–27 999 and 46 000–57 999 — the LMFDB server began rate-limiting (reCAPTCHA). The strip-covering ranges are complete; global N(T) at the strip edges is reconstructed from `~/Downloads/index.db` block counts + fetched ordinates, §5.)
 
 Components (all in `src/zeta.rs` / `src/main.rs`):
 1. **Certified ζ(s), σ ∈ [0,1], t ≤ 5.05·10⁴** by Euler–Maclaurin, K = 40 Bernoulli corrections, N = ⌈1.6t/2π⌉, Pochhammer products in scaled form ∏((s+j)/N) (no f64 overflow; the naive (s)_{2K} overflows at t ≈ 10⁴·(K=40)).
@@ -145,4 +145,4 @@ The certificate's datum p₁ is the **simple-point fraction of the true configur
 
 - The only inputs that can move the certificate remain: (a) a proven bound on the form factor for some |α| > 1 (equivalently a Hardy–Littlewood prime-pair fragment), each unit of certified global simple fraction transferring 1:1 into the certified proportion; (b) a new *global* proof technique for N^s_0(T)/N(T) — finite strips are not it (this note).
 - The winding count could be made fully certified (Backlund's method: bound arg ζ on the contour via the explicit |ζ'|/|ζ| control from the same EM machinery, or via Platt's interval-arithmetic approach) — a genuine but modest new finite-T certificate, already subsumed by the literature below 3·10¹²; worth doing only if a *certified* (not literature-cited) finite-T theorem at one height is ever needed.
-- Independently: the LMFDB fetch script is rate-limited; re-fetching the missing index ranges (12 000–28 999, 37 000–43 999, 46 000–57 999) with long delays would complete the contiguous N(T) reconstruction at larger heights — not needed for the current claims (strip data is complete).
+- Independently: the LMFDB fetch script is rate-limited; re-fetching the missing index ranges (27 000–27 999, 46 000–57 999) with long delays would complete the contiguous N(T) reconstruction at larger heights — not needed for the current claims (strip data is complete).

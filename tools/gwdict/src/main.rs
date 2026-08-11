@@ -29,12 +29,12 @@ fn load_zeros() -> Vec<f64> {
 // The smooth integral is cheap (uniform GL, few panels per unit envelope scale).
 pub fn arch_even_env(f: &dyn Fn(f64) -> f64, r1: f64, period: f64, center: f64) -> f64 {
     let e = |r: f64| f(r) + f(r + period / 2.0);
-    // smooth integral (1/2pi) * (1/2) * int_0^r1 h_+(r) E(r) dr
+    // (1/pi)(1/2) int_0^inf h_+ E = (1/2pi) int_0^inf h_+ E  (arch for the even function f)
     let near = {
         let g = |r: f64| h_plus(r) * e(r);
-        (1.0 / (2.0 * PI)) * 0.5 * uniform_integrate(&g, 0.0, r1, period) // one period per panel; E smooth
+        (1.0 / (2.0 * PI)) * uniform_integrate(&g, 0.0, r1, period)
     };
-    let tail = arch_tail_power(f, r1, period, center); // (1/2pi)(1/2) int_{r1}^inf h_+ E, E decay power-fit
+    let tail = 2.0 * arch_tail_power(f, r1, period, center); // (1/2pi) int_{r1}^inf h_+ E
     near + tail
 }
 

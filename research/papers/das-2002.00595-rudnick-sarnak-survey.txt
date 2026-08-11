@@ -1,0 +1,775 @@
+
+===== PAGE 1 =====
+arXiv:2002.00595v1  [math.NT]  3 Feb 2020
+On the Rudnick and Sarnak’s Zeros of principal L-functions
+and Random Matrix Theory
+Madhuparna Das
+Abstract
+In this srticle we have surveyed the result of Ze´ ev Rudnick a nd Peter Sarnak on the Zeros
+of principal L-function and Random Matrix Theory.
+1 Introduction
+In this article, we will survey the results of Rudnick and Sarnak [1] on the “Zeros of Principle
+L-function and Random Matrix Theory”. The main concern of this pa per is to study about the
+zeros of Riemann zeta function as well as more general L-function s1. First we see the motivation of
+studying zeta function as well as L-functions. L-functions are ce rtain analytic functions in number
+theory which helps with the arithmetic information to study its analyt ic behaviour. Let us look at
+the Riemann zeta function ﬁrst then we can extend the idea for mor e general L-functions. Riemann
+zeta function ζ(s) is deﬁned by
+ζ(s) =
+∞∑
+n=1
+1
+ns =
+∏
+p
+1
+1 − p−s ,
+where the product runs over the primes, known as Euler product. The above series converges for
+Re(s) > 1. Analytically continued to a meromorphic function on the complex pla ne C with a simple
+pole at s = 1 and satisﬁes the functional equation relating ζ(s) and ζ(1 − s). Now we can move to
+the L-function; before going into more general L-functions we se e the simplest one which is called
+the Dirichlet L-function and deﬁned by,
+L(s, χ) =
+∞∑
+n=1
+χ(n)
+ns =
+∏
+p
+1
+1 − χ(p)p−s ,
+with Re(s) > 1 and χ is being a Dirichlet character modulo N . Observing the above equation, we
+can see that if we take χ = 1 then the function L(s, χ) leads to the ζ function and we already know
+its analytical behaviour. For χ ⁄= 1, L(s, χ) is an entire function of C with the functional equation
+which relates L(s, χ) and L(1 − s, ¯χ).
+1The Riemann zeta function ζ(s) is an especial case of L-functions.
+1
+===== PAGE 2 =====
+The motivation behind the study of zeta function as well as L-funct ion because they provide
+arithmetic information and due to their analytical behaviour. For ex ample, zeta has a simple pole
+at s = 1 which implies that there exist inﬁnitely many primes and the zeros of zeta function indicate
+the distribution of prime numbers. Similarly, for χ ⁄= 1, L(s, χ) has no pole and it is nonzero at
+s = 1, which indicates that there are inﬁnitely many primes in an arithmet ic progression with gcd
+1.
+Let us now look at the algebraic behaviour of Dirichlet L-function, wh ich provides us a new
+way to look at the L-functions and also, provides information about the Langlands program. As
+we know the Dirichlet character χ is an algebraic object. Class ﬁeld theory asserts that there is a
+correspondence between primitive Dirichlet characters and Hecke Characters of ﬁnite order. The
+Hecke character of ﬁnite order is deﬁned by
+Deﬁnition 1. Hecke Character: A Hecke charatcer of ﬁnite order χ1 = ⊗χ1v is a character
+χ1 : A×/Q× → C× whose kernel has ﬁnite index in the idele class group A×/Q×.
+Then one can deﬁne the Hecke L-function by
+L(s, χ1) =
+∏
+p
+L(s, χ1p)
+with Re(s) > 1 and L(s, χ1p) is Dirichlet L-function if χ1p is unramiﬁed and 1, if χ1p is ramiﬁed
+(means p|N ). So the correspondence between Dirichlet and Hecke L-function is given by
+L(s, χ) = L(s, χ1).
+There are other L-functions except for Hecke and Dirichlet L-fun ctions. If we look at the
+Dedekind zeta function it leads us to the Artin L-functions which gen eralize the Dirichlet L-function.
+Now the question arieses that is it possible to ﬁnd a correspondence between generalized Hecke char-
+acters and Artin L-function. Well, Laglads conjecture assures th at there is a correspondence for
+which we should look at the automorphic representation of π of GLn2 over a number ﬁeld. The
+automorphic representations are analytic objects so relatively it’s easy to study the properties of
+their L-functions. Indeed, the analogue of Artins conjecture is k nown for automorphic representa-
+tions, so if one could show Artin representations correspond to au tomorphic representations (in the
+sense that their L-functions agree), one could deduce Artin’s con jecture. The theory of principle
+L-functions was developed by Godment and Jacquet [2] for n ≥ 3 (from the case A×, where A× is
+the adeles of Q)and by Hecke and Mass for n = 2.
+The main interest of the result given by Rudnick and Sarnak was to st udy the ﬁne structure
+of the distribution of the non-trivial zeros of such primitive L(s, π). If ρπ = 1
+2 + iγ(π) denotes the
+zeros of such non trivial primitive L-functions L(s, π),then by assuming Riemann hypothesis for
+L(s, π) i.e., γ ∈ R, they have ordered γ(π)’s (with multiplicities)
+· · · ≤ γ(π)
+−2 ≤ γ(π)
+−1 < 0 ≤ γ(π)
+1 ≤ γ(π)
+2 · · ·
+The main problem of Rudnick and Sarnak’s paper is to understand the asymptotic behaviour of γ
+in an interval and their statistical distribution. In the case of Riema nn zeta function the calculation
+2where n is the dimensions of Artin representation ρ
+2
+===== PAGE 3 =====
+given by Montgomery [3] and Odlyzko [4] [5] says that the consecut ive spacings follow the Gaussian
+Unitary Ensemble (GUE) distribution from the Random Matrix Theory . In the later sections, we
+will discuss these statistical distributions and their relation with Ran dom Matrix Theory.
+2 The Correlation Sum Rn(BN , f)
+The Gaussian Unitary Enssemble (GUE) is if δn = γn+1 − γn are normalized spacings, then for any
+nice function on (0 , ∞) we can expect
+1
+N
+∑
+n≤N
+f (δn) →
+∫ ∞
+0
+f (s)P (s)ds,
+where P (s) is the distribution of consecutive spacing of the eigenvalues of a lar ge random Harmition
+matrix.
+The distribution says,
+P (s) = d2E
+ds2 (s)where E(s) = det( I − Qs),
+where Qs is the trace class operator on L2(−1, 1) with kernel Qs(ξ, η) = sinπs(ξ−η)
+πs(ξ−η) .
+The main result given by Rudnick and Sarnak is the computation of the general n-level corre-
+lation function for the zeros of a primitive principal L-function. The y have shown that the answer
+is universal and is precisely the one predicted by Dyson’s computatio ns for the GUE model [6].
+The deiﬁniton of n-level correlations says, suppose we have a set BN of N numbers,
+BN = {γi : i ∈ {1, . . . , N}}
+holds the ineqaulity,
+˜γ1 ≤ . . . ≤ ˜γN .
+The n-level correlation function measures the correlation between diﬀe rences n elements of BN .
+So this number is
+N (a, b) = # {k : ˜γk+1 − ˜γk ∈ [a, b]}
+for any interval [ a, b].
+However it is hard to calculate N (a, b) directly, because it is not easy to tell if two elements are
+consecutive or not unless we know all the numbers in the sequence. We can put
+N ′ = N ′(a, b) = # {(˜γ, ˜γ′) ∈ B2
+N |˜γ < ˜γ′, ˜γ′ − ˜γ ∈ [a, b]}
+N ′′ = N ′′(a, b) = # {(˜γ, ˜γ′, ˜γ′′) ∈ B3
+N |˜γ < ˜γ′ < ˜γ′′, ˜γ′′ − ˜γ ∈ [a, b]}
+and so on, where N (n) is the number of n tuples whose diﬀerences between the biggest and the
+smallest elements belong to [ a, b]. Using induction, we can write
+N (a, b) = N ′ − N ′′ + ....
+Since the interval is [ a, b], the above sum is ﬁnite. It is suﬃcient to obtain the numbers N (n) for
+n = 2, 3, 4, ....
+3
+===== PAGE 4 =====
+Deﬁnition 2. n level correlation Let f be a symmetric n variable function given by f (S) =
+f (a1, . . . , an) if S = {a1, . . . , an}. For the box Q ∈ Rn−1,
+Rn(BN , Q) = 1
+N #{j1, · · ·jn ≤ N distinct : (˜γj1 − ˜γj2 , . . . ,˜γjn−1 − ˜γjn ) ∈ Q}
+gives,
+Rn(BN , f) = n!
+N
+∑
+S⊂BN
+|S|=n
+f (s)
+So the function f satisﬁes the following three conditions
+1. f (x1, ..., xn) is symmetric;
+2. f (x + t(1, ..., 1)) = f (x) for t ∈ R;
+3. f (x) → 0 rapidly as |x| → ∞ in the hyperplane ∑
+j xj = 0
+Knowing the asymptotic behaviour of Rn(BN , f) as N → ∞ is equivalent to knowing that of the
+smoothed correlations
+Rn(T, f, h) =
+∑
+j1,...,jn
+h
+(γj1
+T
+)
+...h
+(γjn
+T
+)
+f
+( L
+2π γj1 , ..., L
+2π γjn
+)
+for a suﬃciently rich family of localized cut oﬀ functions h. Here L = m log T and ˜γj is normalized
+by ˜γj = γj log γj
+2π given by Riemann.
+Dyson determined the density of the limiting n-correlation sum Wn(x1, ..., xn) for GUE model.
+Wn(x) is a density satisfying 0 ≤ Wn(x) ≤ 1
+Wn(x) =
+{
+0, if xi = xj for i ⁄= j
+1, iﬀ xi − xj ∈ Z and xi ⁄= xj for all i ⁄= j
+Then Wn(x1, ..., xn) = det(k(xi − xj)), where k(x) = sin πx
+πx
+Theorem 1 (Rudnick-Sarnak). Let π be a cuspidal automorphic representation of GLn/Q. Assume
+m ≤ 3 or the hypothesis 3. Let f satisfy the all three conditions and in addition assume that ˆf (ξ)
+is supported in ∑
+j |ξj | < 2/m. Let g ∈ C∞
+c (R) and h(r) =
+∫ ∞
+−∞ g(u)eirudu (so that h and f are
+entire). Then as T → ∞
+Rn(T, f, h) ∼ m
+2π T log T
+∫ ∞
+−∞
+h(r)ndr
+∫
+Rn
+f (x)Wn(x)δ
+(x1 + ... + xn
+n
+)
+dx1...dxn
+Where δ(x) is the Dirac mass at 0.
+Before going into the proof of Theorem 1 let us discuss some more ab out the principal L-functions
+and Rankin-Selberg Convolution.
+3The hypothesis asserts that for any k ≥ 2, ∑
+p
+|aπ (pk) log p|2
+pk < ∞
+4
+===== PAGE 5 =====
+2.1 Principal L-function
+Rudnick and Sarnak focused especially on the automorphic L-funct ions on GLm for m ≥ 3. For
+the lower ranks, L-functions (e.g. Dirichlet L-function) are classic al. It can be shown that Dirichlet
+L-functions satisfy the anlytic properties using integeral repres entation which plays an important
+role in the theory of L-functions. If χ is a Dirichlet character we can write
+L(s, χ) =
+∫ ∞
+0
+Φ αts/2 dt
+t
+for a function Φ α.
+One can break the integral and by using the change of variables one can obtain the functional
+equation for L(s, χ) relating with L(s, χ − 1).
+Let π be a cuspidal automorphic representation of GLm/Q. Consider the factor π = ⊗pπp
+where π is a smooth irreducible (inﬁnite-dimensional) representation of GLm/Q for each p. Then
+we can deﬁne L(s, π) associated with Euler product,
+L(s, π) =
+∏
+p
+L(s, πp)
+which is the product of local factors and for almost all p, π is an unramiﬁed principal series.
+That means there is such a conjugacy class which is parametrized by its eigenvalues απ(j, p) (for
+j = 1, . . . , m). The local factors L(s, πp) for the unramiﬁed primes are given by,
+L(s, πp) = det(I − p−sAπ(p))−1 =
+m∏
+j=1
+(1 − απ(j, p)p−s)−1
+So, L(s, πp) should be the reciprocal of a polynomial of degree m in p−s when πp is unramiﬁed.
+In general, at any prime p, L(s, πp) should be the reciprocal of a polynomial of degree less than
+equal to m in p−s, so we will say L(s, π) is an L-function of degree m. But the case of L(s, π∞), it
+is a product of Gamma functions (or local archimedean factor) give n by
+L(s, π∞) =
+m∏
+j=1
+Γ R(s + µπ(j))
+where Γ R(s) = π−s/2Γ( s
+2 ) and {µπ(j)} is a set of m numbers associated to π∞.
+With all the local factors deﬁned one can turn to the functional eq uation given by Godement
+and Jacquet which can be deduced from the LanglandsShahidi meth od.
+Now we can write that there is pricipal L-function L(s, π) which is associated with π and entire,
+also satisﬁes the functional equation
+Φ( s, π) = ǫ(s, π)Φ(1 − s, ˜π)ǫ(s, π) = τ (π)Q−s
+π
+where Qπ > 0 is the conductor of π and Φ( s, π) satisﬁes
+Φ( s, π) = L(s, π∞)L(s, π)
+5
+===== PAGE 6 =====
+Godement and Jacquet had not computed the local factors of L(s, πp) for all the cases when
+πp is ramiﬁed. In particular, the non-archimedean case which is not rea lly needed for this article.
+Note that the non-trivisl zeros of L(s, ˜π) are realted to those of L(s, π) via s → 1 − s. According
+to the Riemann Hypothesis, Re(ρπ) = 1 /2, then we have the counting function
+Nπ(T ) = # {ρπ : |Imρ π| < T }
+is asymptotic to m
+π T log T .
+We give a brief overview of the computation. Let N ′
+π(T ) be the number of zeros of ρπ, then we
+can write
+Nπ(T ) = N ′
+π(T ) + N ′
+˜π(T ) + Error
+We can assume that Λ π(T ) does not vanish on Im(s) = T and we know that −T < |Imρ π| < T .
+From this we can get a logarithmic derivative of Λ ′
+Λ (T ). Now integrating over the rectangle and
+computing using contour integral, we can obtain the terms involving g amma factors. From the
+asymptotic behaviour of gamma (one can deduce from the Sterling f ormula), we can obtain that
+Nπ(T ) ∼ m
+π T log T . The term m/π is coming due to the degree of the L-function.
+2.2 Rankin-Selberg Convolution
+In this section, we are going to give a brief overview of two famous ma thematician’s work named
+by Rankin-Selberg Convolution by Rankin and Selberg. We start from a very basic thing from
+Calculus, a contribution of Euler,
+Euler: Euler Integral:
+∫ 1
+0
+xα−1(1 − x)β−1dx
+= Γ( α)Γ( β)
+Γ( α + β) .
+where Γ( α) =
+∫ ∞
+0 e−xxα dx
+x .
+Now we move our focus on the Selberg integral, in which he found a muc h deeper result from
+Euler and it states that
+∫ 1
+0
+. . .
+∫ 1
+0
+(x1x2 . . . xn)α−1 (
+(1 − x1)(1 − x2) . . . (1 − xn)β−1)
+|∆( x)|2γ dx1 . . . dxn
+=
+0∏
+j=1
+Γ(1 + γ + jγ )Γ( α + jγ )Γ( β + jγ )
+Γ(1 + γ)Γ( α + β + (n + j − 1)γ)
+where the term ∆( x) = ∏
+1<j≤i≤n(xj − xi).
+Proof Idea: For an integer γ ≥ 0 we can expand the multivariable integral (Λ( x))2γ and then
+apply Euler’s integral and some critical argument on symmetry. The n collect all γ using functions
+theory which proves the above equation.
+6
+===== PAGE 7 =====
+It implies Dyson-Mehta Conjecture which states that
+∫ ∞
+−∞
+. . .
+∫ ∞
+−∞
+e− ∑ ∞
+j=1 |∆( x)|2γ
+dx1 . . . dxn
+= (2π)α/2
+n∏
+j=1
+Γ(1 + jγ )Γ(1 + γ)
+Later in 1982, Macdonald generalized the Dyson-Mehta conjectur e by replacing ∆( x) with P (x),
+where P (x) is the product of the distances to the hyperplane of a ﬁnite repre sentations group Rn.
+Gauss sums involve gamma function and Jacobi sum involves β function. In 1990 Anderson
+worked on the Selberg’s sums involving Selberg integral.
+Well Rankin-Selberg L-function was followed by Ramanujan and Heck e
+∆( q) = q
+∞∏
+n=1
+(1 − q)24
+= q − 24q + 252q2 − 1472q4 . . .
+=
+∞∑
+m=1
+τ (m)qm
+where τ (m) is the Ramanujan’s Tau function. Ramanujan Tau function follows c ertain properties:
+• τ (mn) = τ (m)τ (n) if gcd(m, n) = 1.
+• | τ (p)| = 2ps/2.
+The above properties of Tau function is also known as “Ramanujan’s Conjecture”.
+In the case of classical Modular forms, if q = e2πiz and Im(z) > 0, then
+∆
+(az + b
+cz + d
+)
+= (cz + d)12∆( z)
+for the matix [
+a b
+c d
+]
+∆ is a modular form of weight 12 for SL2(Z).
+The contribution of Hecke says that
+L(s, τ) =
+∞∑
+n=1
+τ (n)
+n1/2 n−s =
+∏
+p
+(
+1 − τ (p)
+ps/2 p−s + p−2s
+) −1
+then L(s, τ) satisﬁes properties similar to Ramanujan’s tau function and its ana lytic to continuation
+functional equation.
+7
+===== PAGE 8 =====
+Rankin-Selberg:
+L(s, τ × τ ) =
+∞∑
+n=1
+τ (n)2
+n11 n−1
+has similar properties.
+Idea of Proof: Let us look at the integral:
+I(s) =
+∫
+SL2(x)z−1
+|∆( z)|2y2E(z, s) dxdy
+y2
+where E(z, s) = ∑
+(m,n)⁄=(0,0)
+ys
+(mz+n)2s . If we unfold the Rankin-Selberg integral
+I(s) = ∗ × L(s, τ × τ )
+where ∗ is some known factors. We understand the integral using Eisenstie n Series.
+The properties we can conclude are as followes:
+• The trivial upper bound of τ (p) = 2 p11/2+ǫ (an approximation of Ramanujan’s tau function).
+• Langland’s put forth a general family of L-functions in association w ith τ . Hecke and Rankin
+Selberg are the ﬁrst two in this family. The conjectured properties of these would imply
+Ramanujan’s Conjecture.
+• The Rankin-Selberg method has been developed more generally in the context of automorphic
+forms for the group of n × n matrices. GL2 is the classical case and GLn is a context test in
+the theory Jean-Perre-Serre.
+Now we move our focus to the main result of Rudnick-Sarnak.
+3 Asymptotic behaviour of the correlation sum Rn(f, T)
+In this section, we wish to study the asymptotic behaviour of n correlation function
+Rn(f, T ) = 1
+N
+∗∑
+i1,...,in≤N
+f ( ˜γi1 , . . . ˜γi1 ) (1)
+where N = N (T ) and ∑ ∗ means sums over distinct indices ij.
+It’s hard to know about the asymptotic behaviour of Rn(f, T ) directly. So, instead of a direct
+calculation, Rudnick and Sarnak broke the sum into some steps which make the calculation easy.
+As a ﬁrst step, let us look at the sum
+Cn(f, T ) =
+∑
+i1,...in≤N
+f (˜γi1 , . . . ,˜γi1 )
+8
+===== PAGE 9 =====
+Observe that the sum is no longer distinct ordered zeros as in the de ﬁnition of the correlation
+function. Rudnick-Sarnak has computed the sum Rn(f, T ) by using combinatorial sieve. It’s now
+clear that ﬁrst, we want to calculate the asymptotic behaviour of t he Cn(f, T ) sum and later the
+Rn(f, T ) sum. Adding some more steps will make the computation a bit easy. T o get the sum
+Cn(f, T ) consider the smooth sum
+Cn(f, h, T ) =
+∑
+γ1,...,γn
+h1
+(γ1
+T
+)
+. . . h1
+(γn
+T
+)
+f
+( L
+2π γ1, . . . , L
+2π γn
+)
+Set L = m log T and hj(r) is a smooth cutoﬀ. Set
+hj(r) =
+∫ ∞
+−∞
+gj(u)eirudu (2)
+with gj ∈ C∞
+c (R). Now we state and prove the theorem to deduce the asymptotic b ehaviour of the
+sum Cn(f, h, T ).
+Theorem 2. Let Φ ∈ C1 be supported in ∑ n
+j=1 |ξj| < 2/m, and let f (x) =
+∫
+Rn Φ( ξ)δ(ξ1 + · · · +
+ξn)e(−xξ)dξ. Then for hj as in equation 2 we have,
+∑
+h1
+(γ1
+T
+)
+. . . h1
+(γn
+T
+)
+f
+( L
+2π γ1, . . . , L
+2π γn
+)
+= κ(h) TL
+2π
+∫
+Rn
+Co(v)Φ( v)dv + O(T ) (3)
+with
+∫
+Rn
+Φ( v)Co(v)dv = Φ(0) +
+[n/2]∑
+r=1
+∑ ∫
+· · ·
+∫
+|v1| . . .|vr|Φ( v1ei(1)j(1) + · · · + vrei(r)j(r)dv1 . . . dvr
+where the sum over all choices of r disjoint pairs of indices i(t) < j (t) in {1,. . . ,n} and for i < j
+we set
+{
+eij = ei − ej
+ei = {0, . . . ,1, 0, . . .}the i-th standard basis vector
+This proof is one of the main parts of Rudnick-Sarnak’s result. They have given the proof in
+few steps and in each step there is a lemma. Here we give a brief overv iew of the proof along with
+the proof idea of those lemmas.
+Proof Idea: They have started the proof with the Fourier transformation of t he sum Cn(f, h, T )
+and after that it has become
+Cn(f, h, T ) =
+∫
+Rn
+n∏
+j=1
+{ ∑
+γj
+hj( γj
+T )eiLγ j ξj
+}
+Φ( ξ)δ(ξ1 + · · · ξn)dξ
+In the next step, they have changed the above equation into the s ums over primes by using the
+Explicit formula and with the help of the test functions. The Explicit fo rmula gives the the desired
+9
+===== PAGE 10 =====
+sums over primes representation of Cn(f, h, T ) and by expanding the products one can get that
+Cn(f, h, T ) is an alternating sum of terms of the form
+Cr,s =
+∑ c(n1) . . . c(nr)c(nr+1) . . . c(nr+s)√n1 . . . nr+s
+Ar,s(n, T )
+where c(n) = Λ( n)a(n) and
+Ar,s(n, T ) = T n
+∫ r∏
+j=1
+(T (Lξj + log nj))
+r+s∏
+j=r+1
+gj(T (Lξj − log nj))
+∏
+gj,T (T Lξj)Φ( ξ)δ(ξ1 + · · · ξn)dξ
+(4)
+In expressing Cn(f, h, T ) as a sum various Cr,s(T ) they have got terms from all possible choices of
+r of the factors to be S+
+j (ξj ) and S−
+j (ξj ) and the remaining k = n − (r + s) factors to be gj,T (T Lξj).
+Now we split the proof into the contribution of some lemmas.
+First Lemma: This lemma proves that the integrals deﬁning Ar,s(n, T ) are rapidly convergent.
+More mathematically it states that
+1.gT (x) =
+{
+log T, |x| ≪ log log T
+1
+|x| , |x| ≫ log log T 2.
+∫
+|gT (x)|dx ≪ log T
+Proof of the both part are similar. By assuming x > 0 and taking the expansion of the term gT (x)
+they have shifted the contour to the right. The ﬁsrt gamma facto r of the expansion of gT (x) is
+holomorphic for Re(s) > 0. One can join the both gamma factors and using Striling formula h(r)
+is rapidly decreasing and bounded, which proves the ﬁrst lemma.
+Second Lemma: It says that if Φ is supproted in |ξ1 + . . . + ξn| ≤ 2−δ
+m then Ar,s(n, T ) = 0
+unless |nj| ≪ T and n1n2 . . . nr+s ≪ T 2−δ. The proof is very simple, consider the integrand from
+Equation 4, there exist an η ∈ SuppΦ so that ∑
+j ηj = 0 such that
+{
+|T (ηjL + log nj)| ≪ 1, j = 1, . . . , r
+|T (ηjL − log nj)| ≪ 1, j+ = r + 1, . . . , r+ s (5)
+Hence, nj
+T m|η j | = 1 + O( 1
+T ) so that nj ≪ T m|ηj| ≪ T 1−δ/2 and n1n2 · · · nr+s ≪ T m ∑ |ηj | ≪ T 2−δ.
+Third Lemma: This lemma tells about the Equation 4 for j > r + s with restriction to
+|T Lξj| ≪ T δ/3. Then for suﬃciently large T ˜Ar,s(n, T ) is either 0 or it satisﬁes the second lemma.
+Also, n1n2 . . . nr = nr+1 . . . nr+s. The proof is tricky using contradiction. Since g is compactly
+supported, in order that the integrand not vanished consider som e η ∈ SuppΦ satisiﬁes equation 5,
+with |T Lηj| ≪ T δ/3 for j > r + s. Then the previous asumptions and some simple calculations
+proves the lemma. Actually in this lemma the target is to replace Ar,s(n, T ) by ˜Ar,s(n, T ) to get
+the corresponding sum ˜Cr,s(n, T ) in place of Cr,s(n, T ).
+F ourth Lemma: This lemma is very crucial. It calculates the region of integration for t he
+diﬀerence Ar,s(n, T ) and ˜Ar,s(n, T ) for N M ≪ T 2−δ. The region of the diﬀerence is a union of the
+10
+===== PAGE 11 =====
+sets F|| = {ξ : |T L|ξ ≫ T δ/∋}, k > r + s. Observe that one can estimate the integral over the
+region F . For this purpose, set
+xj =
+
+
+
+
+
+T (Lξj + log nj), 1 ≤ j ≤ r
+T (Lξj − log nj), r + 1 ≤ j ≤ r + s
+T Lξ,
+Using change of variable, previous lemmas and after some calculation s by dividing the integral in
+I1 and in I2 one can conclude that
+Ar,s(n, T ) − ˜Ar,s(n, T ) = T n
+∫
+U
+r∏
+j=1
+gj(T (Lξj + log nj))
+r+s∏
+j=r+1
+gj(T (Lξj − log nj)) (6)
+.
+∏
+j>r+s
+gj,T (T Lξj).Φ( ξ)δ(ξ1 + ... + ξn)dξ
+≪ T
+Ln−1
+∫
+{|xj |≪T L, |xn|≫T δ/ 3}
+∏
+j≤r+s
+|gj(xj )|
+∏
+r+s<j≤n−1
+|gj,T (xj)|
+.
+⏐
+⏐
+⏐
+⏐
+⏐
+⏐
+gn,T
+
+T log M − T log N −
+n−1∑
+j=1
+xj
+
+
+⏐
+⏐
+⏐
+⏐
+⏐
+⏐
+dx1...dxn−1
+After lots of computation by splitting the integral into I1 and I2 over region | ∑ xj| ≫ T | log M/N |.
+Computing and combining the integral I1 and I2 we can conclude this lemma.
+Now we move our focus to compute the diﬀerence Cr,s(T ) − ˜Cr,s(T ), by dividing into diag-
+onal and oﬀ-diagonal sum over n, which also implies that M = N , where M = n1 . . . nr and
+N = nr+1 . . . nr+s. The diagonal sum over n says that such that | log M/N | ≪ T δ/3 and the oﬀ-
+diagonal sum over n says that T | log M/N | ≫ T δ/3. Computations says that ∑
+diag ≪ T 1−δ/3 and∑
+of f ≪ 1
+Lr+s
+∑
+M N≪T 2−δ ,M ⁄=N
+ar (M)as(N )√
+M N| log M/N| .
+Our next focus is on the ak(m) sum, next lemma tells about it.
+Fifth Lemma: For k ≥ 1 ﬁixed, and any ǫ > 0
+∑
+m≤X
+ak(m)2 ≪ǫ X 1+ǫ.
+To prove the above equation Rudnick-Sarnak has used two facts C hauchy-Schwartz and the number
+of ways of writing m = m1 · · · mk is O(mǫ) for any ǫ > 0. These facts help us to conclude that
+∑
+m≤X
+ak(m)2 ≪ X ǫ ∑
+m1···mk≤X
+|c(m1)|2 . . . |c(mk)|2.
+with ∑
+n≤X |c(n)|2 ≪ X 1+ǫ, for all ǫ > 0 follows from the absolute convergence of the diﬀeren-
+tiation of the partial L-function in Re(s) > 1. By dyadic decomposition of the above equation
+they have concluded the result. From the diagonal term the main te rm contribution will come and
+11
+===== PAGE 12 =====
+the oﬀ-diangonal calculate the error term. The error term is not s o sharp but it can give a good
+approximation of the error. Likewise, Rudnick-Sarnak have calcula ted the sum I∞ and Iǫ where
+the main term is contributed by the ﬁrst sum I∞ and the second term is the error term.
+Sixth Lemma: This lemma approximate the function gi(yj). Set, k = n − (r + s), we have
+∫
+V
+r+s∏
+j=1
+gj(yj)
+∏
+j>r+s
+gj,T (yj)dy = 1
+2π κ(h)Lk + O(Lk−1)
+One can prove it by spliting the integral into two terms, ﬁrst case is o ver V and the second one is
+integrating over ∑ yj = 0. Using Parseval inequality and Striling formula one can get the des ired
+result.
+Seventh and eighth Lemma: This lemma calculates the sum Cr,s(T ) for r + s > 0. For
+r + s ≥ 3, it proves that the sum over all indices of the function c(pr) is ﬁnite. It takes the Rankin-
+Selberg integration technique to prove this result. This lemma deals w ith sums over several prime
+factors.
+Ninth Lemma: It states that, if 1 ≤ r ≤ s then
+∑
+pk1
+1 ...pkr
+r =ql1
+1 ...qls
+s
+pki
+i ,q
+lj
+j ≤x
+c(pk1
+1 ) · · · c(pkr
+r )c(ql1
+1 ) · · · c(qls
+s )
+pk1
+1 · · · pkr
+r
+=
+{
+O((log x)2r), r = s
+O((log x)2r−2),
+The proof idea is to divide the sum ﬁrst into the sub-sums according t o the number of distinct
+prime factors appearing and to collect the factors together which are corresponding to the same
+prime. Observe that, by doing this step the sum actually has become a sum of products which run
+over the primes with pi ⁄= pj. Clearly there are at most r factors, and each factors contribute a
+bounded quantity unless a = b = 1, which is the ﬁrst case of this lemma. For the second case the
+product is O(log2r−2 x) unless r = s and a = b = 1, hence prove the second part. For the case r = s
+each product contribute an error term and after multiplying them it comes a new error term which
+is the second case. Finally, the sum Cr,s(T ) = O(T ) unless r = s > 0. For another case r = s next
+lemma state and prove the result.
+T enth Lemma: It states that
+1.Cr,s(T ) = O(T ) unless r = s > 0.
+2. If r = s then Cr,r = T L
+2π κ(h) ·
+∑
+σ∈Sr
+∫ 1/m
+0
+· · ·
+∫ 1/m
+0
+v1 · · · vr·
+Φ( −v1, . . . ,−vr, vσ(1), . . . , vσ(r), 0 . . . ,0)dv1 . . . dvr + O(T )
+where Sr is the permutation group on r letters. The proof of the second equation can be done by
+summation by two parts. The distinct prime factors are going to con tribute the error term, not
+the main term. The main term will be contributed by the permutation o f distinct prime factors
+denoted by qj. Therefore the condition of summing over distinct prime factors ca n be omitted.
+12
+===== PAGE 13 =====
+For m = 1 or for the case of ζ(s) a polar term at s = 1 will come and its corresponding
+coeﬃcients λ(n) in the sum are non-negative and the polar terms can not be dominat ed. Also, the
+central diagonal terms will come. In that case, Dirichlet L-functio ns L(s, χ), the same is true but
+no longer because it has no polar term. As we have said before the dia gonal term will dominate the
+oﬀ-diagonal terms, so the main term will be contributed by the diago nal term. For the Riemann
+zeta function ζ(s) it is an exceptional case.
+Now it’s time to state another important theorem reagrding the asymptotic behaviour of Cn(f, T ).
+Theorem 3. Let Φ ∈ C2(Rn) be supported in ∑ |ξj| < 2/m, and f be given by
+f (x) =
+∫
+Rn
+Φ( ξ)δ(ξ1 + · · · + ξn)e(−x · ξ)dξ.
+Assume Riemann Hypothesis for L(s, π) then
+Cn(f, T ) ˜N (T )
+∫
+Rn
+Φ( u)Co(u)du + O(T )
+After obtatining the asymptotic behaviour of the Cn(f, T ) term Rudnick-Sarnak used the com-
+binatorial sieve argumets to get the asymptotic behaviour of the ncorrelation sum Rn(BN , f) and
+they have concluded that
+Rn(BN , f) →
+∫
+Rn
+f (x)Wn(x)δ
+(x1 + · · · xn
+n
+)
+dx1 . . . dxn.
+as N → ∞.
+Acknowledgement(s)
+This work was supported by our guide and mentor Prof. Ritabrata M unshi. We thank our guide
+from the Tata Institute of Fundamental Research, Bombay (pre sently at Indian Statistical Institute,
+Kolkata) who provided insight and expertise that greatly assisted t he research, although he may
+not agree with all of the interpretations of this article. We would also like to show our gratitude to
+the Prof. Ritabrata Munshi, (TIFR, Bombay) for sharing his pearls of wisdom with us during the
+course of this work.
+References
+[1] Z. Rudnick, P. Sarnak. “Zeros of principal L -functions and random matrix theory”. Duke Math.
+J. 81, no. 2, 269–322, 1996.
+[2] R. Godment, H. Jacquet. “Zeta functions of Simple Algebras”, L ecture Notes in Math. 260,
+Springer-Verlag 1972.
+[3] H.L. Montgomery, “The pair correlation of Zeros of the Zeta Fun ctions”, Proc. Symp. Pure
+Math 24, 181-193, American Math. Soc., providence 1973.
+[4] A.M. Odlyzko, “On the Distribution of Spacings Between Zeros of z eta Functions”, Math. of
+Comp. 48, 273-308, 1987.
+13
+===== PAGE 14 =====
+[5] A.M. Odlyzko, “The 10 20 Zero of the Riemann Zeta function and 70 Million of its neighbours”,
+A.T. & T. preprint, 1989.
+[6] F.J. Dyson, “Statistical Theory of the energy Levels of Complex Systems, III, J. Math. Phys.
+3, 166-175, 1962.
+14

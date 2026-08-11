@@ -219,7 +219,7 @@ constraint documented.
 | 11 | **TF-1 — two-form lever #{small \|ζ′M\|}** | [twoform §6] | ALIVE (no source) | 4 | 1 | 3 | 3 | **295** | Would turn the r = −0.82 complementarity into an inequality; the bound is not in any held source and is the shared mollifier wall — low probability, huge value if found |
 | 12 | **MW — Multi-window DPSS probe (V18/S2)** | [crossdomain V18]; mlec S2 | ALIVE / expected-negative | 2 | 4 | 3 | 4 | **290** | Cheap confirm that the extremal configuration re-normalizes (ratio unchanged); one run settles it |
 | 13 | **JEN — Jensen-ometer probe** | [finder-jensen] | IN FLIGHT | 2 | 3 | 3 | 4 | **265** | Corpus in hand; Farmer's critique (2008.07206) must be read first; expected no bearing on the certificate method |
-| 13 | **C1.2 — isospectral/switching classification** | [chem C1.2] | ALIVE / diagnostic | 2 | 3 | 3 | 4 | **265** | Answers "which worlds are spectrally identical at (tr, ‖·‖²)"; any switching-breaking provable input moves the wall — but no such input is known |
+| 14 | **C1.2 — isospectral/switching classification** | [chem C1.2] | ALIVE / diagnostic | 2 | 3 | 3 | 4 | **265** | Answers "which worlds are spectrally identical at (tr, ‖·‖²)"; any switching-breaking provable input moves the wall — but no such input is known |
 | 15 | **Groskin tail-budget certification (G6-adjacent)** | [cvs §7] | ALIVE (horizontal) | 2 | 3 | 3 | 3 | **255** | The actually-useful Weil-positivity certification rule (Cor 3.3); RH-horizontal, produces no proportion bound — track, don't fund for P1 |
 | 16 | **PCC-II HMH template** | [pcc2 §5.4] | ALIVE (conditional template) | 2 | 2 | 3 | 4 | **240** | "Average pair correlation ⟹ 100% simple+critical without RH" is a template; any future unconditional N^⊛(T) control converts directly; conjecture-in/100%-out only |
 | 17 | **m₃ for simple cert (V3-lane)** | [pricing §3]; tm; twbw | **PRICED-NEG** | — | — | — | — | — | −1/3 per unit m₃, caps v* at 2/3; likely-DEAD; do not fund (documented negative) |
@@ -336,8 +336,8 @@ Selberg T, and the new-target diagnostics).
   [fincinf §6]; the validator's honest label on the finite-T overshoot (Δ > 0 at all measured T; decay law
   indeterminate — all fitted asymptotes nonzero) [v001 T3].
 - **Inputs:** the error chain of N Lemma 3.3 (Paley–Wiener, Chebyshev–Mertens, Stirling, MV) [cat1 #3 L1,
-  mvc §1]; `tools/finitet` numerics (bound/N = 0.709–0.719 at T = 100–1300) [fin §3]; the cinf smoothing
-  tables [fincinf §4]; the conditioning ramp table [cond §4].
+  mvc §1]; `tools/finitet` numerics (bound/N = 0.705–0.719 over T = 100–1300) [fin §3, sandbox §3,
+  detthr §3]; the cinf smoothing tables [fincinf §4]; the conditioning ramp table [cond §4].
 - **Method:** track the constants through Lemma 3.3's error terms (each is PROVEN: Paley–Wiener O(1/K),
   Chebyshev ΣΛ² ≪ x log x, Stirling, MV o(1)), assemble an explicit E(T) (including the ramp cost 0.45·w
   at the resolution scale), validate against the finitet measurements at T = 10³–10⁶, and write the "dating"
@@ -445,6 +445,22 @@ Selberg T, and the new-target diagnostics).
 - **Definition of done:** a verified/unverifiable verdict on the 6th-moment claim; a recorded multi-window
   ratio (or the documented reason the probe is vacuous).
 
+### #10. A1.1 — α≈1.0–1.3 arithmetic feature follow-up (G3.1 R-4)
+- **Goal:** decompose the real, unexplained empirical feature near α = 1 (spike at 1.00, dip at 1.05, spike
+  at 1.10; ≥11σ under both the naive and LS estimators; cause unidentified).
+- **Why it matters:** the one genuine empirical deviation at the boundary of the beyond-1 region — the only
+  place near α > 1 where real data differs from the GUE null (G3.1 established everything else beyond 1 is
+  noise) [hot §5]; if it has a prime-arithmetic origin it is a publishable diagnostic and a hint for the
+  beyond-1 lane; if it is a Gram-point/lattice artifact of the θ-unfolding at specific rational α, that is
+  a documented negative [ls §5, hot §4].
+- **Inputs:** `tools/hot_hand_calib.py`, `tools/attack_ls_estimator.py`, `tools/data/zeros_computed_10000.txt`.
+- **Method:** τ-bin / prime-power decomposition of the periodogram at α ∈ {1.00, 1.05, 1.10}; height
+  dependence (block 1000-zero windows at increasing heights); compare against the GUE null with the same
+  unfolding; test the Gram-lattice hypothesis (x_j − j deviations).
+- **Labels:** the feature itself CHECKED NUMERICALLY (≥11σ, both estimators) [ls §5]; the cause OPEN.
+- **Definition of done:** a written decomposition: either a prime-arithmetic origin identified (finding), or
+  a lattice/unfolding artifact pinned (documented negative), with the height dependence on record.
+
 ---
 
 ## 5. Kill ledger — everything priced/dead, with source (do not re-derive, do not re-fund for the simple cert)
@@ -533,19 +549,3 @@ research result under the program's operative targets.
 - Deliberately NOT included: any claim that any vector "probably settles RH". Every funded vector is scoped
   to a rigorous, adversarial-validated increment; the search persists (hooks/agents.md), and every negative
   here is a documented result with its source, not a reason to stop.
-### #10. A1.1 — α≈1.0–1.3 arithmetic feature follow-up (G3.1 R-4)
-- **Goal:** decompose the real, unexplained empirical feature near α = 1 (spike at 1.00, dip at 1.05, spike
-  at 1.10; ≥11σ under both the naive and LS estimators; cause unidentified).
-- **Why it matters:** the one genuine empirical deviation at the boundary of the beyond-1 region — the only
-  place near α > 1 where real data differs from the GUE null (G3.1 established everything else beyond 1 is
-  noise) [hot §5]; if it has a prime-arithmetic origin it is a publishable diagnostic and a hint for the
-  beyond-1 lane; if it is a Gram-point/lattice artifact of the θ-unfolding at specific rational α, that is
-  a documented negative [ls §5, hot §4].
-- **Inputs:** `tools/hot_hand_calib.py`, `tools/attack_ls_estimator.py`, `tools/data/zeros_computed_10000.txt`.
-- **Method:** τ-bin / prime-power decomposition of the periodogram at α ∈ {1.00, 1.05, 1.10}; height
-  dependence (block 1000-zero windows at increasing heights); compare against the GUE null with the same
-  unfolding; test the Gram-lattice hypothesis (x_j − j deviations).
-- **Labels:** the feature itself CHECKED NUMERICALLY (≥11σ, both estimators) [ls §5]; the cause OPEN.
-- **Definition of done:** a written decomposition: either a prime-arithmetic origin identified (finding), or
-  a lattice/unfolding artifact pinned (documented negative), with the height dependence on record.
-
