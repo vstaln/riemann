@@ -1,3 +1,4 @@
 === B3.2: finite-T deficit vs sine-kernel null sampling noise ===
     T    N  Delta_real Delta_null mean Delta_null sd
   100   50    0.046727       -0.010103      0.039090
+  150   86    0.045773       -0.003850      0.025639
