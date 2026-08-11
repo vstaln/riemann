@@ -1,0 +1,3237 @@
+HILBER T SP ACES AND THE P AIR CORRELA TION
+OF ZEROS OF THE RIEMANN ZET A-FUNCTION
+EMANUEL CARNEIRO, VORRAPAN CHANDEE, FRIEDRICH LITTMANN AND MICAH B. MILINOVICH
+Abstract. Montgomery’s pair correlation conjecture predicts the asymptotic behavior of the function
+N(T,β ) deﬁned to be the number of pairs γ and γ′ of ordinates of nontrivial zeros of the Riemann zeta-
+function satisfying 0 < γ,γ′≤ T and 0 < γ′−γ≤ 2πβ/ logT as T →∞ . In this paper, assuming the
+Riemann hypothesis, we prove upper and lower bounds for N(T,β ), for all β > 0, using Montgomery’s
+formula and some extremal functions of exponential type. These functions are optimal in the sense that
+they majorize and minorize the characteristic function of the interval [ −β,β ] in a way to minimize the
+L1(
+R,
+{
+1−
+( sinπx
+πx
+)2}
+dx
+)
+-error. We give a complete solution for this extremal problem using the framework
+of reproducing kernel Hilbert spaces of entire functions. This extends previous work by P. X. Gallagher [19]
+in 1985, where the case β∈ 1
+2 N was considered using non-extremal majorants and minorants.
+1. Introduction
+Let ζ(s) denote the Riemann zeta-function. Understanding the distribution of the zeros of ζ(s) is an
+important problem in number theory. In this paper, assuming the Riemann hypothesis (RH), we study the
+pair correlation function
+N(T,β ) :=
+∑
+0<γ,γ ′≤T
+0<γ′−γ≤ 2πβ
+logT
+1,
+where the sum runs over two sets of nontrivial zerosρ = 1
+2 +iγ andρ′ = 1
+2 +iγ′ ofζ(s). Here and throughout
+the text, all sums involving the zeros of ζ(s) are counted with multiplicity. The pair correlation conjecture
+of H. L. Montgomery [35] asserts that
+N(T,β )∼ N(T )
+∫ β
+0
+{
+1−
+(sinπx
+πx
+)2}
+dx (1.1)
+for any ﬁxed β >0 as T→∞ , where N(T ) denotes the number of nontrivial zeros of ζ(s) with ordinates γ
+satisfying 0 <γ ≤T . It is known that
+N(T ) :=
+∑
+0<γ≤T
+1∼ T logT
+2π (1.2)
+as T →∞ . Therefore, if we let 0 < γ1≤ γ2≤ ... denote the sequence of ordinates of nontrivial zeros of
+ζ(s) in the upper half-plane, it follows that average size of γn+1−γn is about 2π/ logγn. Thus, the quantity
+N(T,β ) essentially counts the number of pairs 0 < γ,γ′≤ T of (not necessarily consecutive) ordinates of
+nontrivial zeros of ζ(s) whose diﬀerence is less than or equal to β times the average spacing. It is known
+that the function N(T,β ) is connected to the distribution of primes in short intervals, see [20, 22, 25].
+Date: June 23, 2014.
+2000 Mathematics Subject Classiﬁcation. 11M06, 11M26, 46E22, 41A30.
+Key words and phrases. Riemann zeta-function, pair correlation, extremal functions, exponential type, reproducing kernel,
+de Branges spaces.
+1
+arXiv:1406.5462v1  [math.NT]  20 Jun 2014
+Montgomery’s pair correlation conjecture is a special case of the more general conjecture that the normal-
+ized spacings between the ordinates of the nontrivial zeros of ζ(s) follow the GUE distribution from random
+matrix theory. In his original paper [35], Montgomery gave some theoretical evidence for the pair correlation
+conjecture, and later, Odlyzko [39] provided numerical evidence. Higher correlations of the zeros of ζ(s),
+and of the zeros of more general L-functions, were studied by Hejhal [26] and by Rudnick and Sarnak [41].
+If the asymptotic formula in (1.1) remains valid when β =β(T )→∞ (suﬃciently slowly) asT→∞ , one
+should expect
+N(T,β )∼N(T )
+{
+β− 1
+2 + 1
+2π2β +O
+( 1
+β2
+)}
+(1.3)
+as T→∞ , where the implied constant is independent of β. Using techniques of Selberg, Fujii [18] proved
+the unconditional estimate
+N(T,β ) =N(T )
+{
+β +O(1)
+}
+(1.4)
+for β =O(logT ). This improved upon an earlier result of Mueller (unpublished but announced in [19]).
+1.1. Montgomery’s formula and bounds for the pair correlation. For our purposes we deﬁne a class
+of admissible functions consisting of all R∈L1(R) whose Fourier transform
+ˆR(t) =
+∫ ∞
+−∞
+e−2πixtR(x) dx
+is supported in [−1, 1]. By the Paley-Wiener theorem, this class of admissible functions is exactly the class of
+entire functions of exponential type1 at most 2π whose restriction to the real axis is integrable. An important
+tool in the study of the correlation of zeros of ζ(s) is Montgomery’s formula 2, which asserts that, for an
+admissible function R, under RH, we have
+lim
+T→∞
+1
+N(T )
+∑
+0<γ,γ ′≤T
+R
+(
+(γ′−γ) logT
+2π
+)
+w(γ′−γ)
+= R(0) +
+∫ ∞
+−∞
+R(x)
+{
+1−
+(sinπx
+πx
+)2}
+dx,
+(1.5)
+where w(x) = 4/(4 +x2) is a suitable weight function.
+Following Gallagher’s [19] notation, for an admissible function R we deﬁne
+M(R) :=
+∫ ∞
+−∞
+R(x)
+{
+1−
+(sinπx
+πx
+)2}
+dx, (1.6)
+and, for β >0, we write
+U(β) := lim sup
+T→∞
+N(T,β )
+N(T ) and L(β) := lim inf
+T→∞
+N(T,β )
+N(T ) .
+Let R±
+β be a pair of admissible functions satisfying
+R−
+β (x)≤χ[−β,β](x)≤R+
+β (x) (1.7)
+for all x∈ R. Then, if we let
+N∗(T ) =
+∑
+0<γ≤T
+mγ,
+1An entire function g : C→ C has exponential type at most 2π∆ if, for all ϵ> 0, there exists a positive constant Cϵ such that
+|g(z)|≤ Cϵe(2π∆+ϵ)z for all z∈ C.
+2This is not Montgomery’s original version of his formula. For a derivation of (1.5), see the appendix of [19] or §2.1 below.
+2
+where mγ denotes the multiplicity of a zero of ζ(s) with ordinate γ, we observe that
+1
+N(T )
+∑
+0<γ,γ ′≤T
+R+
+β
+(
+(γ′−γ) logT
+2π
+)
+w(γ′−γ)
+≥R+
+β (0)N∗(T )
+N(T ) + 2N(T,β )
+N(T ) +Oβ
+( 1
+(logT )2
+) (1.8)
+and, similarly, that
+1
+N(T )
+∑
+0<γ,γ ′≤T
+R−
+β
+(
+(γ′−γ) logT
+2π
+)
+w(γ′−γ)
+≤R−
+β (0)N∗(T )
+N(T ) + 2N(T,β )
+N(T ) +Oβ
+( 1
+(logT )2
+)
+.
+(1.9)
+Observing that N(T )≤ N∗(T ) for all T > 0 and combining the estimates in (1.5), (1.6), (1.7), (1.8) and
+(1.9), we arrive at the following result.
+Theorem 1. Assume RH. For any β >0 we have
+1
+2M(R−
+β )≤L (β)≤U (β)≤ 1
+2M(R+
+β ), (1.10)
+where the lower bound holds if we assume that almost all zeros of ζ(s) are simple in the sense that
+lim
+T→∞
+N∗(T )
+N(T ) = 1. (1.11)
+This result is implicit in the work of Gallagher [19]. The diﬃcult problem here is to construct admissible
+majorants and minorants for χ[−β,β] that optimize the values of M(R±
+β ) (and to actually compute these
+values). In [19], Gallagher considered the case β∈ 1
+2 N, for which a classical construction of Beurling and
+Selberg, described in [43], produces admissible majorants and minorantsr±
+β that optimize theL1(R)-distance
+toχ[−β,β] (but not necessarily theL1(
+R,
+{
+1−
+( sinπx
+πx
+)2}
+dx
+)
+-distance). When β∈ 1
+2 N, the Fourier transforms
+ˆr±
+β have simple explicit representations as ﬁnite series, which allowed Gallagher to compute the values of
+M(r±
+β ) and to show that
+1
+2M(r±
+β ) =β− 1
+2± 1
+2 + 1
+2π2β +O
+( 1
+β2
+)
+. (1.12)
+In a second part of his paper [19], still in the case β∈ 1
+2 N, Gallagher solved the two-delta problem with
+respect to the pair correlation measure (i.e. to minimize M(R) over the class of nonnegative admissible
+functionsR satisfyingR(±β)≥ 1) and was able to quantify the error between his bounds in Theorem 1 and
+the theoretical optimal bounds achievable by this method.
+In this paper we extend Gallagher’s work [19], providing a complete solution to this problem. The three
+main features are:
+(i) We ﬁnd an explicit representation for the reproducing kernel associated to the pair correlation measure,
+which allows us to use Hilbert spaces techniques to solve the two-delta problem in the general case β >0.
+(ii) From the reproducing kernel, we ﬁnd a suitable de Branges space of entire functions [2] associated to
+the pair correlation measure. We solve the more general extremal problem of majorizing and minorizing
+characteristic functions of intervals optimizing a given de Branges metric, which provides, in particular,
+the optimal values of M(R±
+β ). It turns out that asymptotics in terms of β as in (1.12) are not easily
+obtainable for this family, since it involves nodes of interpolation that are roots of equations with algebraic
+and transcendental terms. This brings us to point (iii).
+3
+(iii) In order to obtain (non-extremal) bounds that can be easily stated in terms ofβ, we computeM(r±
+β ), for
+the family of Beurling-Selberg functions r±
+β in the general caseβ >0, and prove that Gallagher’s asymptotic
+formula in (1.12) continues to hold in this case.
+We now describe in more detail each of these three parts of the paper. We start with the third part, which
+is slightly simpler to state. Similar extremal problems in harmonic analysis have appeared in connection to
+analytic number theory, in particular to the theory of the Riemann zeta-function. For some recent results
+of this sort, see [4, 5, 10, 23].
+1.2. Explicit bounds via Beurling-Selberg majorants. Let
+H0(z) =
+(sinπz
+π
+)2{ ∞∑
+m=−∞
+sgn(m)
+(z−m)2 + 2
+z
+}
+(1.13)
+and
+H1(z) =
+(sinπz
+πz
+)2
+. (1.14)
+For the functions H± deﬁned by H±(z) =H0(z)±H1(z), Beurling [43] showed that
+H−(x)≤ sgn(x)≤H+(x)
+for all x∈ R, and that these are the unique extremal functions of exponential type 2 π for sgn(x) (with
+respect to L1(R)). Moreover, we have
+∫ ∞
+−∞
+{
+H+(x)−sgn(x)
+}
+dx =
+∫ ∞
+−∞
+{
+sgn(x)−H−(x)
+}
+dx = 1.
+Forβ >0, Selberg [43] (see also [42]) considered the functions
+r+
+β (x) := 1
+2
+{
+H+(x +β) +H+(−x +β)
+}
+≥ 1
+2
+{
+sgn(x +β) + sgn(−x +β)
+}
+=χ[−β,β](x)
+(1.15)
+and
+r−
+β (x) := 1
+2
+{
+H−(x +β) +H−(−x +β)
+}
+≤ 1
+2
+{
+sgn(x +β) + sgn(−x +β)
+}
+=χ[−β,β](x).
+(1.16)
+We remark that here and later, all the discontinuous functions we treat are normalized, i.e. at the disconti-
+nuity, the value of the function is the midpoint between the left-hand and right-hand limits. The functions
+r±
+β have exponential type 2π and are bounded and integrable on R. Therefore, they belong to L2(R) and the
+Paley-Wiener theorem implies that they have continuous Fourier transforms supported in [−1, 1]. Through-
+out the text we reserve the notation r±
+β for this particular family of functions. In Section 2 we prove the
+following result.
+Theorem 2. Letβ >0 and r±
+β be the pair of admissible functions deﬁned by (1.15) and (1.16). Then
+1
+2M(r±
+β ) =
+(
+β± 1
+2
+)
+− 1
+2π2β + sin 2πβ
+4π3β2 − 1
+4π2
+∑
+n∈Z
+sgn(n±)
+(n−β)2
+(
+2 + sin 2πβ
+π(n−β)
+)
+(1.17)
+=β− 1
+2± 1
+2 + 1
+2π2β +O
+( 1
+β2
+)
+,
+where sgn(0±) =±1.
+4
+0.2 0.4 0.6 0.8 1.0
+-0.2
+0.2
+0.4
+0.6
+0.8
+1.0
+0.5 1.0 1.5 2.0 2.5 3.0
+0.5
+1.0
+1.5
+2.0
+2.5
+3.0
+Figure 1. The above images illustrate the inequalities in Theorems 1 and 2. Montgomery’s
+conjecture for limT→∞N(T,β )/N(T ) is plotted in black, while the functions β↦→ 1
+2M(r±
+β )
+are plotted in gray.
+We note that the right-hand side of (1.17) is a continuous function of β. In Section 2 we also include a
+discussion on upper and lower bounds forN(T,β ), where the parameterβ is allowed to increase as a function
+of T .
+1.3. The reproducing kernel for the pair correlation measure. The following quantity gives a lower
+bound for the diﬀerence of the values in Theorem 1. For β >0 we deﬁne
+∆(β) = inf
+R∈Ωβ
+M(R), (1.18)
+where the inﬁmum is taken over the subclass Ωβ of nonnegative admissible functionsR such thatR(±β)≥ 1.
+If R±
+β is a pair of admissible functions satisfying (1.7) then R := (R+
+β−R−
+β )∈ Ωβ and
+M(R+
+β )−M(R−
+β ) =M(R)≥∆(β).
+Hence the gap between an upper bound forU(β) and a lower bound forL(β) in Theorem 1 cannot be smaller
+than 1
+2∆(β).
+In the case β∈ 1
+2 N, Gallagher [19, Section 2] used a variational argument to solve this two-delta problem
+and compute ∆(β). This argument was previously used by Montgomery and Taylor [36] to solve the simpler
+one-delta problem in connection to bounds for the proportion of simple zeros of ζ(s). Gallagher’s variational
+approach for the two-delta problem relies heavily on the fact thatβ∈ 1
+2 N to establish orthogonality relations
+in some passages, thus making its extension to the general case β >0 a nontrivial task. Here we revisit this
+problem and solve it in the general case using a diﬀerent technique, namely the theory of reproducing kernel
+Hilbert spaces. Proofs of the theorems in this section are given in Section 3.
+Let us write
+dµ(x) =
+{
+1−
+(sinπx
+πx
+)2}
+dx.
+We denote byB2(π,µ ) the class of entire functions f of exponential type at most π for which
+∫ ∞
+−∞
+|f(x)|2 dµ(x)<∞,
+and we writeB2(π) if dµ is replaced by the Lebesgue measure (i.e.B2(π) is the classical Paley-Wiener space).
+Using the uncertainty principle for the Fourier transform, we show that µ and the Lebesgue measure deﬁne
+equivalent norms on the class of functions of exponential type at most π for which either and hence both
+5
+norms are ﬁnite. This implies, in particular, that H =B2(π,µ ) is a Hilbert space with norm given by
+‖f‖2
+H =
+∫ ∞
+−∞
+|f(x)|2 dµ(x).
+For eachw∈ C, the functional f↦→f(w) is therefore continuous onH (since this holds for the Paley-Wiener
+spaceB2(π)). Hence, there exists a function K(w,·)∈H such that
+f(w) =⟨f,K (w,·)⟩H =
+∫ ∞
+−∞
+f(x)K(w,x ) dµ(x)
+for all f∈H . This is the so-called reproducing kernel for the Hilbert space H, and our ﬁrst goal is to ﬁnd
+an explicit representation for this kernel. For w∈ C (initially with w⁄=±1/π
+√
+2) deﬁne constants c(w) and
+d(w) by
+c(w) = cos(πw)−πw sin(πw)
+(1− 2π2w2)
+(
+cos
+(
+2− 1
+2
+)
+− 2− 1
+2 sin
+(
+2− 1
+2
+)),
+d(w) = 2πw cos(πw)
+(1− 2π2w2) 2
+1
+2 cos
+(
+2− 1
+2
+),
+(1.19)
+and functions f(w,·),g,h ∈H by
+f(w,z ) = 2π2w2
+(2π2w2− 1)
+sinπ(z−w)
+π(z−w) ,
+g(z) = 2
+1
+2 sin
+(
+2− 1
+2
+)
+cos(πz)− 2πz cos
+(
+2− 1
+2
+)
+sin(πz)
+1− 2π2z2 ,
+h(z) = 2πz sin
+(
+2− 1
+2
+)
+cos(πz)− 2
+1
+2 cos
+(
+2− 1
+2
+)
+sin(πz)
+1− 2π2z2 .
+Theorem 3. For each w∈ C we have
+K(w,z ) =f(w,z ) +c(w)g(z) +d(w)h(z). (1.20)
+At the points w =±1/π
+√
+2, this formula should be interpreted in terms of the appropriate limit.
+We exploit the Hilbert space structure and the explicit formula for the reproducing kernel to give a
+complete solution to the two-delta problem with respect to the pair correlation measure.
+Theorem 4. Letβ >0, let ∆(β) be deﬁned by (1.18), and let K be given by (1.20). Then
+∆(β) = 2
+K(β,β ) +|K(β,−β)| = 2
+{
+1−
+⏐⏐⏐⏐
+sin 2πβ
+2πβ
+⏐⏐⏐⏐
+}
++O
+( 1
+β2
+)
+. (1.21)
+The extremal functions (i.e. functions that realize the inﬁmum in (1.18)) are given by the following formulae.
+(i) If K(β,−β) = 0, then
+R(z) = 1
+K(β,β )2
+(
+c1K(β,z ) +c2K(−β,z )
+)(
+c1K(β,z ) +c2K(−β,z )
+)
+,
+wherec1,c 2∈ C with|c1| =|c2| = 1.
+(ii) If K(β,−β)⁄= 0, then
+R(z) =
+(
+K(β,−β)
+|K(β,−β)|K(β,z ) +K(−β,z )
+)2
+(
+K(β,β ) +|K(β,−β)|
+)2 .
+6
+In particular, the bounds given in Theorem 2 are optimal up to order O(β−2) when β ∈ 1
+2 N. The
+appearance of the term | sin 2πβ
+2πβ | on the right-hand side of (1.21) is not a coincidence, for this term already
+appears naturally in the work of Littmann [32] on the Beurling-Selberg extremal problem for χ[−β,β](x).
+Using the same circle of ideas, one could explicitly compute the reproducing kernels associated to other
+measures that arise naturally in the study of families of L-functions, see [28, 29].
+1.4. An extremal problem in de Branges spaces.
+1.4.1. De Branges spaces. Let us brieﬂy review the basic facts and terminology of de Branges’ theory of
+Hilbert spaces of entire functions [2, Chapters 1 and 2]. A function F analytic in the open upper half-plane
+C+ ={z∈ C; Im (z) > 0} has bounded type if it can be written as the quotient of two functions that are
+analytic and bounded in C+. If F has bounded type in C+, from its Nevanlinna factorization [2, Theorems
+9 and 10] we have
+v(F ) = lim sup
+y→∞
+y−1 log|F (iy)|<∞.
+The number v(F ) is called the mean type of F . If F : C→ C is entire, we denote by τ(F ) its exponential
+type, i.e.
+τ(F ) = lim sup
+|z|→∞
+|z|−1 log|F (z)|,
+and we deﬁne F∗ : C→ C byF∗(z) =F (z). We say that F is real entire if F restricted to R is real-valued.
+Let E : C→ C be a Hermite-Biehler function, i.e. an entire function satisfying the basic inequality
+|E(z)|<|E(z)| (1.22)
+for all z∈ C+. The de Branges spaceH(E) is the space of entire functions F : C→ C such that
+‖F‖2
+E :=
+∫ ∞
+−∞
+|F (x)|2|E(x)|−2 dx< ∞, (1.23)
+and such that F/E and F∗/E have bounded type and nonpositive mean type in C+. The remarkable
+property aboutH(E) is that it is a reproducing kernel Hilbert space with inner product
+⟨F,G⟩E =
+∫ ∞
+−∞
+F (x)G(x)|E(x)|−2 dx.
+The reproducing kernel (that we continue denoting by K(w,·)) is given by (see [2, Theorem 19])
+2πi(w−z)K(w,z ) =E(z)E∗(w)−E∗(z)E(w). (1.24)
+Associated to E, we consider a pair of real entire functions A and B such that E(z) =A(z)−iB(z). These
+functions are given by
+A(z) := 1
+2
+{
+E(z) +E∗(z)
+}
+and B(z) := i
+2
+{
+E(z)−E∗(z)
+}
+,
+and the reproducing kernel has the alternative representation
+π(z−w)K(w,z ) =B(z)A(w)−A(z)B(w).
+When z =w we have
+πK(z,z ) =B′(z)A(z)−A′(z)B(z). (1.25)
+7
+For eachw∈ C, the reproducing kernel property implies that
+0≤‖K(w,·)‖2
+E =⟨K(w,·),K (w,·)⟩E =K(w,w ),
+and it is not hard to show (see [27, Lemma 11]) that K(w,w ) = 0 if and only if w∈ R and E(w) = 0 (in
+this case we have F (w) = 0 for all F∈H (E)).
+For our purposes we consider the class of Hermite-Biehler functions E satisfying the following properties:
+(P1) E has bounded type in C+;
+(P2) E has no real zeros;
+(P3) z↦→E(iz) is a real entire function;
+(P4) A,B /∈H (E).
+By a result of M. G. Krein (see [31] or [27, Lemmas 9 and 12]) we see that if E satisﬁes (P1), then E
+has exponential type and τ(E) = v(E). Moreover, the space H(E) consists of the entire functions F of
+exponential type τ(F )≤τ(E) that satisfy (1.23).
+1.4.2. De Branges space for the pair correlation measure. We show that the Hilbert space H deﬁned in
+Section 1.3 can be identiﬁed with a suitable de Branges space H(E), where E is a Hermite-Biehler function
+satisfying properties (P1) - (P4). Deﬁne
+L(w,z ) = 2πi(w−z)K(w,z ),
+where K is given by (1.20). It follows then that the entire function
+E(z) = L(i,z )
+L(i,i )
+1
+2
+(1.26)
+is a Hermite-Biehler function such that
+L(w,z ) =E(z)E∗(w)−E∗(z)E(w). (1.27)
+For the convenience of the reader we include short proofs of these facts in Appendix A. This implies [2,
+Theorem 23] that the Hilbert space H is isometrically equal to the de Branges space H(E). In particular,
+the key identity ∫ ∞
+−∞
+|f(x)|2|E(x)|−2 dx =
+∫ ∞
+−∞
+|f(x)|2 dµ(x) (1.28)
+holds for any f∈H .
+We now verify (P1) - (P4). It is clear that E(z) has exponential type π and is bounded on R. Therefore,
+by the converse of Krein’s theorem (see [31] or [27, Lemma 9]), we have that E has bounded type in C+,
+which shows (P1). If E had a real zero w, we would have F (w) = 0 for all F∈H (E) =H. However, we
+have seen thatH is equal (as a set) to the Paley-Wiener space, which is a contradiction. This proves (P2).
+A direct computation using (1.26) and Theorem 3 shows that E(ix) is real when x is real, which shows
+(P3). For real x we have A(x) = Re (E(x)) and B(x) =−Im (E(x)). Since c(−i),id (−i),g (x) and h(x) are
+all real, a direct computation gives us
+A(x) = Re (L(i,x ))
+L(i,i )
+1
+2
+= 1
+L(i,i )
+1
+2
+4π2
+(2π2 + 1) cosπx
+{
+sinhπ + tan
+(
+2− 1
+2
+)
+coshπ
+π
+√
+2
+}
++O(x−1)
+8
+and
+B(x) =−Im (L(i,x ))
+L(i,i )
+1
+2
+= 1
+L(i,i )
+1
+2
+4π2
+(2π2 + 1) sinπx
+{
+coshπ + (coshπ +π sinhπ) cos
+(
+2− 1
+2
+)
+2π2(
+cos
+(
+2− 1
+2
+)
+− 2− 1
+2 sin
+(
+2− 1
+2
+))
+}
++O(x−1),
+for large x. This shows that A,B /∈ L2(R) and thus, by (1.28) and Lemma 12 below, A,B /∈H (E). This
+proves (P4).
+1.4.3. The extremal problem. We now return to the case of an arbitrary Hermite-Biehler functionE satisfying
+properties (P1) - (P4) above. From now on we assume, without loss of generality, that E(0)> 0 (note that
+this holds for the particular E deﬁned by (1.26)). Generalizing (1.6), let us write
+ME(R) =
+∫ ∞
+−∞
+R(x)|E(x)|−2 dx.
+Forβ >0 we deﬁne
+Λ+
+E(β) = infME(R+
+β ), (1.29)
+and
+Λ−
+E(β) = supME(R−
+β ), (1.30)
+where the inﬁmum and the supremum are taken over the entire functions R±
+β of exponential type at most
+2τ(E) such that
+R−
+β (x)≤χ[−β,β](x)≤R+
+β (x) (1.31)
+for all x∈ R.
+In its simplest version, for the Paley-Wiener space (which corresponds to E(z) = e−iπz), this is a clas-
+sical problem in harmonic analysis with numerous applications to inequalities in number theory and signal
+processing. Its sharp solution was discovered by Beurling and Selberg [43] when β∈ 1
+2 N, by Donoho and
+Logan [15] when β <1
+2, and recently by Littmann [32] for the remaining cases 3. Here we provide a complete
+solution to this optimization problem with respect to a general de Branges metric L1(R,|E(x)|−2 dx). As
+in the Paley-Wiener case, there are three distinct qualitative regimes for the solution, and these depend on
+the roots of A and B (observe that if E(z) = e−iπz, then A(z) = cos πz and B(z) = sin πz, which have
+roots exactly at β∈ 1
+2 N). Similar extremal problems in de Branges and Euclidean spaces were considered
+in [6, 8, 27, 30, 33].
+Property (P3) implies that A is even and B is odd, and by the Hermite-Biehler condition, A and B
+have only real zeros. Morever, these zeros are all simple. To see this, note that by (1.25) we see that any
+double zero w of either A or B implies that K(w,w ) = 0 which would, in turn, imply that E(w) = 0
+in contradiction to (P2). It also follows from well-known properties of Hermite-Biehler functions (see for
+instance the discussion related to the phase function in [2, Problem 48] or [27, Section 3]) that the zeros of
+A and B interlace. In our case we have B(0) = 0 and A(0) > 0. If we label the nonnegative zeros of B in
+order as 0 = b0 <b 1 <b 2 <... and the positive zeros of A as a1 <a 2 <... , then we have
+0 =b0 <a 1 <b 1 <a 2 <b 2 <...
+3B. F. Logan announced the solution for the general case in the abstract “Bandlimited functions bounded below over an
+interval”, Notices Amer. Math. Soc., 24 (1977), pp. A331. His proof, however, has never been published.
+9
+For eachβ >0 that is not a root of A or B, we deﬁne an auxiliary Hermite-Biehler function Eβ(z). The
+corresponding companion functionsAβ(z) andBβ(z) and the reproducing kernelKβ(w,z ) play an important
+role in the solution of our extremal problem. We divide this construction in two cases, depending on the
+sign of A(β)B(β). Since A(0)> 0 and B(0) = 0, from (1.25) we ﬁnd that B′(0)> 0. Then,
+(i) if bk <β <ak+1, we set γβ :=βB(β)/A(β)> 0;
+(ii) if ak <β <bk, we set γβ :=−βA(β)/B(β)> 0.
+In either case we now deﬁne Eβ by
+Eβ(z) =E(z)(γβ−iz). (1.32)
+Theorem 5. Let E be a Hermite-Biehler function satisfying properties (P1) - (P4) . Let β >0 and Λ±
+E(β)
+be deﬁned by (1.29) and (1.30).
+(i) If β∈{ai}, then
+Λ+
+E(β) =
+∑
+A(ξ)=0
+|ξ|≤β
+1
+K(ξ,ξ ) and Λ−
+E(β) =
+∑
+A(ξ)=0
+|ξ|<β
+1
+K(ξ,ξ ).
+(ii) If β∈{bi}, then
+Λ+
+E(β) =
+∑
+B(ξ)=0
+|ξ|≤β
+1
+K(ξ,ξ ) and Λ−
+E(β) =
+∑
+B(ξ)=0
+|ξ|<β
+1
+K(ξ,ξ ).
+(iii) If bk <β <ak+1, then
+Λ+
+E(β) =
+∑
+Aβ(ξ)=0
+|ξ|≤β
+ξ2 +γ2
+β
+Kβ(ξ,ξ ) and Λ−
+E(β) =
+∑
+Aβ(ξ)=0
+|ξ|<β
+ξ2 +γ2
+β
+Kβ(ξ,ξ ).
+(iv) If ak <β <bk, then
+Λ+
+E(β) =
+∑
+Bβ(ξ)=0
+|ξ|≤β
+ξ2 +γ2
+β
+Kβ(ξ,ξ ) and Λ−
+E(β) =
+∑
+Bβ(ξ)=0
+|ξ|<β
+ξ2 +γ2
+β
+Kβ(ξ,ξ ).
+In each of the cases above, there exists a pair of extremal functions R±
+β,E, i.e. functions for which (1.31)
+holds and the identities ME(R±
+β,E) = Λ±
+E(β) are valid. In particular, the values ME(R±
+β,E) are ﬁnite. These
+extremal functions interpolate the characteristic function χ[−β,β] at points ξ given by (i) A(ξ) = 0 ; (ii)
+B(ξ) = 0 ; (iii) Aβ(ξ) = 0 ; (iv) Bβ(ξ) = 0 , respectively. In the generic cases (iii) and (iv) such a pair of
+extremal functions is unique.
+Remark. In the above theorem, interpolating χ[−β,β] at the endpoints ξ =±β means taking the value 1 for
+the majorant and the value 0 for the minorant.
+We observe that Theorem 5 provides a complete solution to our original extremal problem related to the
+pair correlation measure. In fact, recall that E deﬁned by (1.26) has exponential type π. Let R±
+β be a pair
+of functions of exponential type at most 2 π that veriﬁes (1.7). Since R+
+β is nonnegative on R, a classical
+result of Krein [1, p. 154] (alternatively, see [8, Lemma 14]) gives us the representation R+
+β (z) =U(z)U∗(z),
+where U is entire of exponential type at most π. By the identity (1.28) we have
+M(R+
+β ) =
+∫ ∞
+−∞
+|U(x)|2 dµ(x) =
+∫ ∞
+−∞
+|U(x)|2|E(x)|−2 dx =ME(R+
+β )
+10
+provided either, and hence both, of the valuesM(R+
+β ) orME(R+
+β ) is ﬁnite. To prove the analogous statement
+for R−
+β , we write R−
+β as a diﬀerence of nonnegative functions (on R),
+R−
+β (z) =R+
+β,E(z)−
+(
+R+
+β,E(z)−R−
+β (z)
+)
+,
+and conclude that
+M(R−
+β ) =M(R+
+β,E)−M(R+
+β,E−R−
+β ) =ME(R+
+β,E)−ME(R+
+β,E−R−
+β ) =ME(R−
+β )
+provided either, and hence both, of the values M(R−
+β ) or ME(R−
+β ) is ﬁnite.
+1.4.4. Connection to the two-delta problem. We may consider the two-delta problem in the general de Branges
+setting, i.e. for a Hermite-Biehler function E satisfying properties (P1) - (P4) we deﬁne
+∆E(β) = inf
+R∈Ωβ,E
+ME(R) (1.33)
+where the inﬁmum is taken over the subclass Ω β,E of nonnegative functions R of exponential type at most
+2τ(E) such thatR(±β)≥ 1. SinceH(E) is a reproducing kernel Hilbert space, the solution for this problem
+is given by Theorem 4 (the proof is identical, with K being the reproducing kernel of the space H(E)).
+If R±
+β,E is a pair of extremal functions given by Theorem 5, we show in Section 4 that their diﬀerence
+R :=R+
+β,E−R−
+β,E is an extremal function for the two-delta problem (1.33), and in particular we obtain
+∆E(β) =Λ+
+E(β)−Λ−
+E(β).
+From Theorem 1 and Theorem 4 we arrive at the following result.
+Corollary 6. Assume RH and (1.11), and let K(w,z ) be deﬁned by (1.20). Then
+{
+U(β)−L (β)
+}
+≤ 1
+K(β,β ) +|K(β,−β)| = 1−
+⏐⏐⏐⏐
+sin 2πβ
+2πβ
+⏐⏐⏐⏐ +O
+( 1
+β2
+)
+. (1.34)
+1.5. Related results. Our lower bounds forN(T,β ) are only nontrivial if the left-hand side of the inequality
+in (1.10) is positive. It is natural to ask for bounds on the smallest value of β for which N(T,β ) is positive.
+For instance, in the context of Theorem 2, a straightforward numerical calculation implies that 1
+2M(r−
+β )> 0
+if β≥ 0.8163 and hence, assuming RH and (1.11), we see that N(T, 0.8163)≫ N(T ); this is illustrated in
+Figure 1. In Section 5, using Montgomery’s formula in a diﬀerent manner, we improve this estimate.
+Theorem 7. Assume RH and (1.11). Then N(T, 0.606894)≫N(T ).
+As stated, this result appears to be the best known result on small gaps coming from Montgomery’s
+formula. Theorem 7 gives a modest improvement of the previous results of Montgomery [35] and Goldston,
+Gonek, ¨Ozl¨ uk and Snyder [24] who, under the same assumptions, had shown that N(T, 0.6695...)≫ N(T )
+and N(T, 0.6072...)≫ N(T ), respectively.4 Our proof diﬀers somewhat from the proofs of these previous
+results since we actually use Montgomery’s formula twice, choosing two diﬀerent test functions.
+Theorem 7 implies that inﬁnitely often the gap between the imaginary parts of consecutive nontrivial
+zeros of ζ(s) is less than the average spacing. Deﬁne the quantity
+µ = lim inf
+n→∞
+(γn+1−γn) logγn
+2π .
+4The result in [35] is stated with 0.68 in place of 0.6695... . As is pointed out in [24], it is not diﬃcult to modify Montgomery’s
+argument to derive this sharper estimate. Moreover, it is shown in [24] that a result stronger than Theorem 7 holds assuming
+(1.11) and the generalized Riemann hypothesis for Dirichlet L-functions.
+11
+-1.5 -1.0 -0.5 0.0 0.5 1.0 1.5
+0.2
+0.4
+0.6
+0.8
+1.0
+-4 -2 0 2 4
+0.2
+0.4
+0.6
+0.8
+1.0
+Figure 2. The above images illustrate the upper bound for U(β)−L (β) given in Corollary 6.
+Since the average size of γn+1−γn is 2π/ logγn, we see that trivially µ≤ 1. Assuming RH, Theorem 7
+implies that µ≤ 0.606894. To see why, note that if (1.11) holds then the claimed inequality for µ follows
+from Theorem 7 since µ≤β ifN(T,β )≫N(T ). On the other hand, if (1.11) does not hold, then there are
+inﬁnitely many multiple zeros of ζ(s) implying that µ = 0. Hence, in either case, we have µ≤ 0.606894.
+Due to the connection to the class number problem for imaginary quadratic ﬁelds [13, 38], it is an
+interesting open problem to prove that µ< 1
+2. By a diﬀerent method, also assuming RH, Feng and Wu [17]
+have proved that µ≤ 0.5154. This improves previous estimates by a number of other authors [3, 12, 37].
+It does not appear, however, that any of these results can be applied to prove nontrivial estimates for the
+function N(T,β ).
+In Section 6, we prove a result which is an analogue of Theorems 1 and 2 for the zeros of primitive
+DirichletL-functions in q-aspect. This requires the version of Montgomery’s formula given in [9], which was
+proved using a modiﬁcation of the asymptotic large sieve of Conrey, Iwaniec and Soundararajan [14]. In
+this case, the results in [9] allow to use Beurling-Selberg majorants and minorants of χ[−β,β](x) with Fourier
+transforms supported in (−2, 2). This leads to stronger results which are stated in Theorem 18.
+2. Bounds via Beurling-Selberg majorants
+In this section we prove Theorem 2. Exploiting the fact that we have explicit expressions for the Beurling-
+Selberg functions r±
+β and their Fourier transforms, we also prove a version of Theorem 1 that allows β to
+vary with T .
+Theorem 8. Assume RH. Then, for any β =β(T )> 0 satisfying
+β
+(log logT
+logT
+)1/2
+→ 0 as T→∞, (2.1)
+we have
+1
+2M(r−
+β ) + 1
+2
+(
+1−N∗(T )
+N(T )
+)
++o(1)≤ N(T,β )
+N(T ) ≤ 1
+2M(r+
+β ) + 1
+2
+(
+1−N∗(T )
+N(T )
+)
++o(1) (2.2)
+when T is suﬃciently large.
+The condition on β in (2.1) arises from the size of the error term in (2.7) below, and it may be possible to
+weaken this condition slightly. Since it is generally believed that the zeros of ζ(s) are all simple, we expect
+12
+that N∗(T ) = N(T ) for all T >0 and hence that (1.11) should hold. Assuming RH, Montgomery [35] has
+shown that
+N∗(T )≤
+(4
+3 +o(1)
+)
+N(T ) (2.3)
+as T →∞ . Observing that N∗(T )≥ N(T ), and combining (2.2), (2.3), and Theorem 2, we deduce the
+following corollary which does not rely on the additional assumption in (1.11).
+Corollary 9. Assume RH. Then, for any β >0 satisfying (2.1), we have
+β− 7
+6 + 1
+2π2β +O
+( 1
+β2
+)
++o(1)≤ N(T,β )
+N(T ) ≤β + 1
+2π2β +O
+( 1
+β2
+)
++o(1)
+when T is suﬃciently large.
+Remark. The lower bound in Corollary 9 can be sharpened slightly using improved estimates for N∗(T )
+obtained by Montgomery and Taylor [36] (see the remark after Corollary 14 below) or by Cheer and Gold-
+ston [11] assuming RH, or by Goldston, Gonek, ¨Ozl¨ uk and Snyder [24] assuming the generalized Riemann
+hypothesis for Dirichlet L-functions.
+Our original proof of Corollary 9 was a bit diﬀerent and did not rely directly on Montgomery’s formula.
+We brieﬂy indicate the main ideas. Writing N(T,β ) as a double sum and using a more precise formula for
+N(T ), we can show that
+N(T,β ) = N(T )
+{
+β∓ 1
+2
+N∗(T )
+N(T ) +o(1)
+}
+±
+∑
+0<γ≤T
+S
+(
+γ± 2πβ
+logT
+)
+(2.4)
+forβ =o(logT ). Here, if t does not correspond to an ordinate of a zero ofζ(s), we deﬁneS(t) = 1
+π argζ( 1
+2 +it)
+and otherwise we let
+S(t) = 1
+2 lim
+ε→0
+{
+S(t+ε) +S(t−ε)
+}
+.
+Using ideas from [5], we can replace the sum involving S(t) on the right-hand side of (2.4) with a double
+sum over zeros involving the odd function f(x) = arctan(1/x)−x/(1 +x2). In [5], we construct majorants
+and minorants of exponential type 2π for f(x) using the framework for the solution of the Beurling-Selberg
+extremal problem given in [7] for the truncated (and odd) Gaussian. This allows us to prove the upper
+and lower bounds for N(T,β ) in Corollary 9 by using these majorants and minorants in the sum on the
+right-hand side of (2.4), twice applying the explicit formula, and then carefully estimating the resulting sums
+and integrals. The fact that our original proof relied on two applications of the explicit formula suggests
+using Montgomery’s formula instead, and we have chosen only to present this simpler proof here.
+2.1. Montgomery’s function F (α). In order to study the distribution of the diﬀerences of pairs of zeros
+of ζ(s), Montgomery [35] introduced the function
+F (α) :=F (α,T ) = 2π
+T logT
+∑
+0<γ,γ ′≤T
+Tiα(γ′−γ)w(γ′−γ), (2.5)
+where α is real, T≥ 2, and w(u) = 4/(4 +u2). Note that F (α) is real and that F (α) =F (−α). Moreover,
+since
+∑
+0<γ,γ ′≤T
+Tiα(γ′−γ)w(γ′−γ) = 2π
+∫ ∞
+−∞
+e−4π|u|
+⏐⏐⏐⏐⏐
+∑
+0<γ≤T
+Tiαγe2πiγu
+⏐⏐⏐⏐⏐
+2
+du,
+13
+we see that F (α)≥ 0 for α∈ R. Multiplying F (α) by a function ˆR∈L1(R) and integrating, we derive the
+convolution formula
+∑
+0<γ,γ ′≤T
+R
+(
+(γ′−γ)logT
+2π
+)
+w(γ′−γ) = T logT
+2π
+∫ ∞
+−∞
+ˆR(α)F (α) dα. (2.6)
+Assuming RH, reﬁning the original work of Montgomery [35], Goldston and Montgomery [25, Lemma 8]
+proved that
+F (α) =
+(
+T−2|α| logT +|α|
+)(
+1 +O
+(√
+log logT
+logT
+))
+, as T→∞, (2.7)
+uniformly for 0≤|α|≤ 1. Using this asymptotic formula for F (α) in the integral on the right-hand side of
+(2.6) allows for the evaluation of a large class of double sums over diﬀerences of zeros of ζ(s).
+From (2.6), (2.7), and Plancherel’s theorem, one can deduce Montgomery’s formula as stated in (1.5).
+Furthermore, Montgomery [35] conjectured that F (α) = 1 + o(1) for |α| > 1, uniformly for α in bounded
+intervals. Along with (2.7), this conjecture completely determines the behavior of F (α), and suggests that
+Montgomery’s formula in (1.5) continues to hold for any functionR(x) whose Fourier transformˆR(α) is com-
+pactly supported. Choosing R(x) to approximate the characteristic function of an interval led Montgomery
+to make the pair correlation conjecture for the zeros of ζ(s) in (1.1).
+2.2. The F ourier transforms of r±
+β . Recall the entire functions H0(z) and H1(z) deﬁned in (1.13) and
+(1.14). The Fourier transform of H1 is given by
+ˆH1(t) = max
+(
+1−|t|, 0
+)
+(2.8)
+for t∈ R, while the Fourier transform of the integrable function W (x) = H0(x)− sgn(x) is given by [43,
+Theorems 6 and 7]
+ˆW (t) =
+
+
+
+0, if t = 0,
+(πit)−1{
+(1−|t|)(πt cotπt− 1)
+}
+, if 0 <|t|< 1,
+−(πit)−1, if |t|≥ 1.
+(2.9)
+We can now compute the Fourier transforms of the functions r±
+β deﬁned in (1.15) and (1.16), which, as we
+already noted, are continuous functions supported in [−1, 1].
+Lemma 10. For−1≤t≤ 1 we have
+ˆr±
+β (t) =i sin 2πβt ˆW (t) + sin 2πβt
+πt ± (1−|t|) cos 2πβt. (2.10)
+Proof. Note that
+r±
+β (x) = 1
+2
+{
+(W (x +β)±H1(x +β)) + (W (−x +β)±H1(−x +β))
+}
++χ[−β,β](x).
+The result now follows from (2.8) and (2.9). □
+Observe from (2.10) that ˆr±
+β are Lipschitz functions, each with Lipschitz constant C =O
+(
+(1 +β)2)
+.
+2.3. Proof of Theorem 8. For any admissible function R, Plancherel’s theorem implies that
+M(R) = ˆR(0)−
+∫ 1
+−1
+ˆR(t)
+(
+1−|t|
+)
+dt. (2.11)
+14
+For simplicity, let rβ = r±
+β denote either of our Beurling-Selberg functions. Then, by (1.2), (2.6), (2.7),
+(2.11), and another application of Plancherel’s theorem, we have
+1
+N(T )
+∑
+0<γ,γ ′≤T
+rβ
+(
+(γ′−γ) logT
+2π
+)
+w(γ′−γ)
+=
+∫ 1
+−1
+ˆrβ(t)
+(
+T−2|t| logT +|t|
+)
+dt +O
+(
+(1+β)
+√
+log logT
+logT
+)
+=
+∫ ∞
+−∞
+ˆrβ
+( u
+logT
+)
+e−2|u| du +
+∫ 1
+−1
+ˆrβ(t)|t| dt +o(1)
+=ˆrβ(0) +
+∫ 1
+−1
+ˆrβ(t) dt−
+∫ 1
+−1
+ˆrβ(t)
+(
+1−|t|
+)
+dt +o(1)
+=rβ(0) +M(rβ) +o(1).
+(2.12)
+Here we have used the fact that
+|ˆrβ(t)| =O(1 +β)
+uniformly for all t∈ R, together with the assumption that β satisﬁes (2.1), to establish the error term of
+o(1) in (2.12). This error term relies, in part, on the bound (here using that ˆrβ has Lipschitz constant
+C =O(1 +β)2),
+⏐⏐⏐⏐
+∫ ∞
+−∞
+{
+ˆrβ
+( u
+logT
+)
+−ˆrβ(0)
+}
+e−2|u| du
+⏐⏐⏐⏐≤
+∫ ∞
+−∞
+C |u|
+logTe−2|u| du =O
+((1+β)2
+logT
+)
+=o(1).
+For the majorant r+
+β , noting that 1− u2
+4 ≤w(u)≤ 1, we have
+∑
+0<γ,γ ′≤T
+r+
+β
+(
+(γ′−γ) logT
+2π
+)
+w(γ′−γ)
+≥ r+
+β (0)N∗(T ) +
+∑
+0<γ,γ ′≤T
+γ⁄=γ′
+χ[−β,β]
+(
+(γ′−γ) logT
+2π
+)
+w(γ′−γ)
+= r+
+β (0)N∗(T ) +
+{
+2 +O
+((1+β)2
+log2T
+)}
+N(T,β )
+= r+
+β (0)N∗(T ) + 2N(T,β ) + o(T logT ),
+(2.13)
+where we have used (1.4) and the assumption onβ in (2.1) to estimate the error term. Using the inequalities
+N∗(T )≥N(T ) and r+
+β (0)≥ 1, we conclude from (1.2), (2.12) and (2.13) that
+N(T,β )
+N(T ) ≤ 1
+2
+{
+M(r+
+β ) +r+
+β (0)
+(
+1−N∗(T )
+N(T )
+)}
++o(1)≤ 1
+2
+{
+M(r+
+β ) +
+(
+1−N∗(T )
+N(T )
+)}
++o(1). (2.14)
+Similarly, for the minorant r−
+β , we obtain
+∑
+0<γ,γ ′≤T
+r−
+β
+(
+(γ′−γ) logT
+2π
+)
+w(γ′−γ)≤r−
+β (0)N∗(T ) + 2N(T,β ) + o(T logT ), (2.15)
+for β satisfying (2.1). In this case, since r−
+β (0)≤ 1, we conclude from (1.2), (2.12) and (2.15) that
+N(T,β )
+N(T ) ≥ 1
+2
+{
+M(r−
+β ) +r−
+β (0)
+(
+1−N∗(T )
+N(T )
+)}
++o(1)≥ 1
+2
+{
+M(r−
+β ) +
+(
+1−N∗(T )
+N(T )
+)}
++o(1).
+This concludes the proof of Theorem 8.
+2.4. Proof of Theorem 2.
+15
+2.4.1. Evaluation of M(r±
+β ). We now calculate a slightly more general version of the quantity M(r±
+β ), and
+specialize to the case of Theorem 2 at the end of this subsection. In particular, we assume the validity of
+Montgomery’s formula in (1.5) for any integrable function R with Fourier transform supported in [−∆, ∆]
+with ∆≥ 1 (this stronger version is used later in the proof of Theorem 18). The functions
+s±
+∆,β(x) =r±
+∆β(∆x)
+are a majorant and a minorant of the characteristic function of the interval [−β,β ] of exponential type 2π∆,
+and hence with Fourier transform supported in [−∆, ∆]. We evaluate the quantity
+1
+2M
+(
+s±
+∆,β
+)
+= 1
+2ˆs±
+∆,β(0)− 1
+2
+∫ 1
+−1
+ˆs±
+∆,β(t)(1−|t|) dt, (2.16)
+and deduce Theorem 2 from the case ∆ = 1.
+First observe that
+ˆs±
+∆,β(t) = 1
+∆ˆr±
+∆β
+( t
+∆
+)
+= i
+∆ sin 2πβtˆW
+( t
+∆
+)
++ sin 2πβt
+πt ± (∆−|t|)
+∆2 cos 2πβt
+= sin 2πβt
+πt
+(
+1−|t|
+∆
+)(πt
+∆ cotπt
+∆− 1
+)
++ sin 2πβt
+πt ± (∆−|t|)
+∆2 cos 2πβt
+= 1
+∆2
+(
+∆−|t|
+)
+sin 2πβt cotπt
+∆ + 1
+∆
+|t| sin 2πβt
+πt ± (∆−|t|)
+∆2 cos 2πβt,
+and note that
+1
+2ˆs±
+∆,β(0) =β± 1
+2∆. (2.17)
+Sinceˆs±
+∆,β(t) is an even function, we have
+1
+2
+∫ 1
+−1
+ˆs±
+∆,β(t)(1−|t|) dt = 1
+∆2
+∫ 1
+0
+(∆−t)(1−t) sin 2πβt cotπt
+∆ dt
++ 1
+∆
+∫ 1
+0
+sin 2πβt
+π (1−t) dt± 1
+∆2
+∫ 1
+0
+(∆−t) (1−t) cos 2πβt dt
+:=A +B±C,
+say. Integrating by parts, we ﬁnd that
+B = 1
+∆
+{ 1
+2π2β− sin 2πβ
+4π3β2
+}
+(2.18)
+and
+C = 1
+∆2
+{
+−(∆− 1) cos 2πβ
+(2πβ)2 + (∆ + 1)
+(2πβ)2 − sin 2πβ
+4π3β3
+}
+. (2.19)
+In order to evaluate A, we make use of the identity
+i
+N∑
+n=−N
+sgn(n)e−2πint = cotπt−
+(cosπ(2N + 1)t
+sinπt
+)
+,
+which implies that
+A = 1
+∆2
+∫ 1
+0
+(∆−t)(1−t) sin 2πβt
+{
+i
+N∑
+n=−N
+sgn(n)e−2πin t
+∆
+}
+dt
+16
++ 1
+∆2
+∫ 1
+0
+(∆−t)(1−t) sin 2πβt
+(cosπ(2N + 1)t
+∆
+sinπ t
+∆
+)
+dt
+:=AN +DN,
+say. The Riemann-Lebesgue lemma implies that lim
+N→∞
+DN = 0, and thus it remains to evaluate AN. Inter-
+changing summation and integration, we arrive at
+AN = 1
+∆2
+N∑
+n=−N
+sgn(n)
+∫ 1
+0
+(e2πiβt−e−2πiβt
+2
+)
+e−2πin t
+∆ (∆−t)(1−t) dt
+= 1
+4π2
+N∑
+n=−N
+sgn(n)
+{
+−(∆− 1) cos 2π(β− n
+∆)
+(∆β−n)2 + (∆ + 1)
+(∆β−n)2− sin 2π(β− n
+∆)
+π
+∆(∆β−n)3
+}
+.
+Therefore, letting N→∞ , the above estimates imply that
+A = 1
+4π2
+∞∑
+n=−∞
+sgn(n)
+{
+−(∆− 1) cos 2π(β− n
+∆)
+(∆β−n)2 + (∆ + 1)
+(∆β−n)2− sin 2π(β− n
+∆)
+π
+∆(∆β−n)3
+}
+. (2.20)
+Combining the contributions from A and C, we deﬁne the continuous functions V± : (0,∞)→ R by
+V±
+∆ (β) = 1
+4π2
+∞∑
+n=−∞
+sgn(n±)
+(∆β−n)2
+{
+−(∆− 1) cos 2π(β− n
+∆) + (∆ + 1)− sin 2π(β− n
+∆)
+π
+∆(∆β−n)
+}
+, (2.21)
+where sgn(0±) =±1. Then (2.16), (2.17), (2.18), (2.19), (2.20) and (2.21) imply that
+1
+2M
+(
+s±
+∆,β
+)
+=
+(
+β± 1
+2∆
+)
+− 1
+∆
+{ 1
+2π2β− sin 2πβ
+4π3β2
+}
+−V±
+∆ (β). (2.22)
+Specializing to the case ∆ = 1, we obtain
+1
+2M
+(
+r±
+β
+)
+=
+(
+β± 1
+2
+)
+−
+{ 1
+2π2β− sin 2πβ
+4π3β2
+}
+−V±
+1 (β),
+which is the explicit expression in Theorem 2.
+2.4.2. Asymptotic evaluation. By (2.21) we have
+V±
+∆ (β) = 1
+4π2
+∞∑
+n=−∞
+1
+(∆β−n)2
+{
+−(∆− 1) cos 2π(β− n
+∆) + (∆ + 1)− sin 2π(β− n
+∆)
+π
+∆(∆β−n)
+}
+− 2
+4π2
+∑
+n<0(or≤0)
+1
+(∆β−n)2
+{
+−(∆− 1) cos 2π(β− n
+∆) + (∆ + 1)− sin 2π(β− n
+∆)
+π
+∆(∆β−n)
+}
+= 1
+4π2
+∞∑
+n=−∞
+1
+(∆β−n)2
+{
+−(∆− 1) cos 2π(β− n
+∆) + (∆ + 1)− sin 2π(β− n
+∆)
+π
+∆(∆β−n)
+}
+− (∆ + 1)
+2π2β∆ +O
+(
+β−2)
+:=G∆(β)− (∆ + 1)
+2π2β∆ +O
+(
+β−2)
+,
+(2.23)
+say. Here we have used the estimate
+∑
+n≥0
+(∆−1) cos 2π(β+n
+∆)
+(∆β +n)2 =O
+(
+β−2)
+,
+17
+which follows summation by parts and the fact that
+N∑
+n=0
+(∆−1) cos 2π(β+n
+∆) =O(∆2)
+uniformly in N. Notice that
+G∆(β) = lim
+N→∞
+1
+2∆2
+N∑
+n=−N
+∫ 1
+0
+(
+e2πi
+(
+β−n
+∆
+)
+t +e−2πi
+(
+β−n
+∆
+)
+t
+)
+(∆−t)(1−t) dt.
+Since the series deﬁning G∆(β) in (2.23) converges uniformly for β in a compact set, Morera’s theorem can
+be used to show that G∆(β) is an analytic function of β. Thus, we can diﬀerentiate G∆(β) with respect to
+β term-by-term, and it follows from the Riemann-Lebesgue lemma that
+G′
+∆(β) = lim
+N→∞
+1
+2∆2
+N∑
+n=−N
+∫ 1
+0
+2πit
+(
+e2πi
+(
+β−n
+∆
+)
+t−e−2πi
+(
+β−n
+∆
+)
+t
+)
+(∆−t)(1−t) dt
+= lim
+N→∞
+− 1
+∆2
+∫ 1
+0
+2πt (∆−t)(1−t) sin(2πβt) sin(2π
+(
+N + 1
+2
+) t
+∆)
+sin πt
+∆
+dt
+= 0.
+Therefore G∆(β) is a constant function in β and, in order to determine its value, it suﬃces to evaluate
+G∆(0). Using the identities [34, pp. 927–930]
+∞∑
+n=1
+cosnx
+n2 = 1
+12
+(
+3x2− 6πx + 2π2)
+, 0≤x≤ 2π,
+and ∞∑
+n=1
+sinnx
+n3 = 1
+12
+(
+x3− 3πx2 + 2π2x
+)
+, 0≤x≤ 2π,
+it follows that
+G∆(0) = 1
+2∆− 1
+6∆2 + 1
+2π2
+∞∑
+n=1
+(
+−(∆− 1) cos 2πn
+∆
+n2 + (∆ + 1)
+n2 − ∆ sin 2πn
+∆
+πn3
+)
+= 1
+2.
+Inserting this estimate into (2.23), we derive that
+V±
+∆ (β) = 1
+2− (∆ + 1)
+2π2β∆ +O
+(
+β−2)
+,
+and therefore, from (2.22),
+1
+2M
+(
+s±
+∆,β
+)
+=
+(
+β− 1
+2± 1
+2∆
+)
++ 1
+2π2β +O
+(
+β−2)
+. (2.24)
+In particular, choosing ∆ = 1, we deduce that
+1
+2M
+(
+r±
+β
+)
+=
+(
+β− 1
+2± 1
+2
+)
++ 1
+2π2β +O
+(
+β−2)
+,
+and this concludes the proof of Theorem 2.
+3. Reproducing kernel Hilbert spaces
+Our objective in this section is to prove Theorems 3 and 4.
+18
+3.1. Equivalence of norms via uncertainty. In order to establish the equivalence of the norms ofB2(π,µ )
+andB2(π) we shall make use of the classical uncertainty principle for the Fourier transform. The version we
+present here is due to Donoho and Stark [16].
+Lemma 11. (cf. [16, Theorem 2]) LetT,W ⊂ R be measurable sets and let f∈L2(R) with‖f‖2 = 1. Then
+|W|1/2.|T|1/2≥ 1−‖fχ R\T‖2−‖ ˆfχ R\W‖2,
+where|W| denotes the Lebesgue measure of the set W .
+Lemma 12. Let f be entire. Then f ∈B 2(π) if and only if f ∈B 2(π,µ ). Moreover, there exists c > 0
+independent of f such that
+c‖f‖2≤‖f‖L2(dµ)≤‖f‖2
+for all f∈B 2(π).
+Proof. Since µ is absolutely continuous with respect to the Lebesgue measure, it is clear that
+‖f‖L2(dµ)≤‖f‖2
+for all f∈B 2(π), so in particular B2(π)⊆B 2(π,µ ).
+Now let f ∈B 2(π,µ ). Since f is entire, it is in particular continuous at the origin, hence ‖f‖2 <∞
+and f∈B 2(π). It remains to show that there exists c, independent of f, with c‖f‖2≤‖ f‖L2(dµ). We let
+T = [− 1
+8, 1
+8], W = [− 1
+2, 1
+2] and use Lemma 11 to get
+‖fχ R\T‖2≥ 1
+2‖f‖2.
+Let 0 <η < 1 be such that
+η2χR\T (x)≤
+{
+1−
+(sinπx
+πx
+)2}
+.
+Then
+η
+2‖f‖2≤η‖fχ R\T‖2≤‖f‖L2(dµ).
+This completes the proof of the lemma. □
+3.2. Proof of Theorem 3. We start by recording the expansions:
+f(w,x ) = 2π2w2
+(2π2w2− 1)
+∫ 1
+2
+− 1
+2
+e2πixte−2πiwt dt,
+g(x) =
+∫ 1
+2
+− 1
+2
+e2πixt cos
+(
+2
+1
+2t
+)
+dt,
+h(x) =−i
+∫ 1
+2
+− 1
+2
+e2πixt sin
+(
+2
+1
+2t
+)
+dt.
+(3.1)
+Deﬁne
+κw(x) :=f(w,x ) +c(w)g(x) +d(w)h(x),
+𝓁w(x) :=
+{
+1−
+(sinπx
+πx
+)2}
+κw(x),
+19
+and
+jw(t) :=χ[− 1
+2, 1
+2 ](t)
+{ 2π2w2
+(2π2w2− 1)e−2πiwt +c(w) cos
+(
+2
+1
+2t
+)
+−id (w) sin
+(
+2
+1
+2t
+)}
+.
+It follows from (3.1) that
+𝓁w(x) =
+{
+1−
+(sinπx
+πx
+)2}∫ ∞
+−∞
+e2πixtjw(t) dt
+=
+∫ ∞
+−∞
+e2πixt
+{
+jw(t)−
+∫ 1
+−1
+(1−|u|)jw(t−u) du
+}
+dt.
+(3.2)
+Let− 1
+2 <t< 1
+2. The following identities hold for a∈ R:
+∫ t+ 1
+2
+t− 1
+2
+cos(a(t−u)) du = 2
+a sin(a/2),
+∫ t+ 1
+2
+t− 1
+2
+|u| cos(a(t−u)) du = 2
+a2 cos(a/2)− 2
+a2 cos(at) + 1
+a sin(a/2),
+and therefore
+cos(at)−
+∫ 1
+−1
+(1−|u|)χ[− 1
+2, 1
+2 ](t−u) cos(a(t−u)) du
+=−1
+a sin(a/2) + 2
+a2 cos(a/2) +
+(
+1− 2
+a2
+)
+cos(at).
+(3.3)
+Similarly, we have
+sin(at)−
+∫ 1
+−1
+(1−|u|)χ[− 1
+2, 1
+2 ](t−u) sin(a(t−u)) du
+= 2t
+a cos(a/2) +
+(
+1− 2
+a2
+)
+sin(at).
+(3.4)
+Letting a = 2
+1
+2 in (3.3) and (3.4) gives, for |t|< 1
+2, the identities
+cos
+(
+2
+1
+2t
+)
+−
+∫ 1
+−1
+(1−|u|)χ[− 1
+2, 1
+2 ](t−u) cos
+(
+2
+1
+2 (t−u)
+)
+du = cos
+(
+2− 1
+2
+)
+− 2− 1
+2 sin
+(
+2− 1
+2
+)
+,
+sin
+(
+2
+1
+2t
+)
+−
+∫ 1
+−1
+(1−|u|)χ[− 1
+2, 1
+2 ](t−u) sin
+(
+2
+1
+2 (t−u)
+)
+du = 2
+1
+2t cos
+(
+2− 1
+2
+)
+,
+(3.5)
+while the choice a =−2πw, for|t|< 1
+2, gives
+2π2w2
+(2π2w2− 1)
+(
+e−2πiwt−
+∫ 1
+−1
+(1−|u|)χ[− 1
+2, 1
+2 ](t−u)e−2πi(t−u)w du
+)
+=e−2πiwt− (1− 2πiwt) cos(πw)−πw sin(πw)
+1− 2π2w2 .
+(3.6)
+We note that 𝓁w has exponential type at most 3 π. When inserting (1.19), (3.5) and (3.6) into (3.2), the
+linear functions (of the variable t) from (3.5) multiplied by c(w) and d(w) eliminate, for |t|< 1
+2, the linear
+function in (3.6). Hence we obtain
+𝓁w(x) =
+∫ 3/2
+−3/2
+e2πixt(
+e−2πiwt +qw(t)
+)
+dt,
+20
+where qw(t) = 0 for− 1
+2 <t< 1
+2. Therefore
+𝓁w(x) = sinπ(x−w)
+π(x−w) +Qw(x),
+where ∫ ∞
+−∞
+f(x)Qw(x) dx = 0
+for all f∈B 2(π,µ ). This implies that
+∫ ∞
+−∞
+f(x)κw(x)
+{
+1−
+(sinπx
+πx
+)2}
+dx =f(w)
+for all f ∈B 2(π,µ ). Thus κw is a reproducing kernel, and since such a kernel is unique, it follows that
+K(w,x ) =κw(x) as desired. This concludes the proof.
+Remark. The initial guess for the reproducing kernel was found in the following way. The starting point is
+the function 𝓁w introduced in the above proof. A Fourier transform leads to the identity
+e−2πitw =ˆκw(t)−
+∫ 1
+−1
+(1−|u|)ˆκw(t−u) du (3.7)
+for|t|< 1
+2, and two (formal) diﬀerentiations (using the fact that the second derivative of (1 −|u|)χ[−1,1](u)
+is a linear combination of three Dirac deltas) lead to the equation
+−4π2w2e−2πitw =ˆκ′′
+w(t)−
+(
+ˆκw(t + 1) +ˆκw(t− 1)− 2ˆκw(t)
+)
+.
+If κw has exponential type π, then for|t|< 1
+2 this equation simpliﬁes to
+−4π2w2e−2πitw =ˆκ′′
+w(t) + 2ˆκw(t),
+which can be solved explicitly. The original integral equation (3.7) determines the two free parameters c(w)
+and d(w).
+3.3. A geometric lemma. Before we proceed to the proof of Theorem 4 we present a basic lemma 5 on the
+geometry of Hilbert spaces.
+Lemma 13. Let H be a Hilbert space (over C) with norm ‖·‖ and inner product ⟨·,·⟩. Let v1,v 2∈ H be
+two nonzero vectors (not necessarily distinct) such that ‖v1‖ =‖v2‖ and deﬁne
+J =
+{
+x∈H; |⟨x,v 1⟩|≥ 1 and|⟨x,v 2⟩|≥ 1
+}
+.
+Then
+min
+x∈J
+‖x‖ =
+(
+2(
+‖v1‖2 +|⟨v1,v 2⟩|
+)
+)1/2
+. (3.8)
+The extremal vectors y∈J are given by:
+(i) If⟨v1,v 2⟩ = 0, then
+y =
+(
+2(
+‖v1‖2 +|⟨v1,v 2⟩|
+)
+)1/2
+(c1v1 +c2v2)
+‖v1 +v2‖ , (3.9)
+wherec1,c 2∈ C with|c1| =|c2| = 1.
+5A similar version of this result was independently obtained by M. Kelly and J. D. Vaaler (personal communication).
+21
+(ii) If⟨v1,v 2⟩⁄ = 0, and we write ⟨v1,v 2⟩ = e−iα|⟨v1,v 2⟩|, then
+y =
+(
+2(
+‖v1‖2 +|⟨v1,v 2⟩|
+)
+)1/2
+c (eiαv1 +v2)
+‖eiαv1 +v2‖ , (3.10)
+wherec∈ C with|c| = 1.
+Proof. If v1 and v2 are linearly dependent the result is easy to verify, so we focus on the general case. The
+veriﬁcation that each y given by (3.10) belongs to J and has norm given by the right-hand side of (3.8) is
+straightforward. Now let
+κ := min
+x∈J
+‖x‖,
+and let y∈J be such that ‖y‖ =κ (observe that such an extremal vector exists since we may restrict the
+search to the subspace span{v1,v 2}). We consider v′
+1 =eiϑ1v1 and v′
+2 =eiϑ2v2 for appropriate choices of ϑ1
+and ϑ2 such that
+⟨y,v′
+1⟩≥ 1 and ⟨y,v′
+2⟩≥ 1. (3.11)
+Since y∈ span{v′
+1,v′
+2}, we write
+y =av′
+1 +bv′
+2,
+where a,b∈ C. The fact that y satisﬁes (3.11) implies that
+y′ =bv′
+1 +av′
+2
+also satisﬁes (3.11) and thus belongs to J . Therefore z = (y +y′)/2 also satisﬁes (3.11) and belongs to J .
+If y⁄=y′, from the parallelogram law we have
+‖z‖2 <
+‖‖‖‖
+y +y′
+2
+‖‖‖‖
+2
++
+‖‖‖‖
+y−y′
+2
+‖‖‖‖
+2
+= 1
+2(‖y‖2 +‖y′‖2) =‖y‖2 =κ2,
+a contradiction. Therefore b =a and we have
+y =av′
+1 +av′
+2. (3.12)
+Having reduced our considerations to a vector y of the form (3.12), we see that the two conditions in (3.11)
+are complex conjugates, and we may work with only one of them, say ⟨y,v′
+1⟩≥ 1. Since‖y‖ =κ is minimal,
+we must have the equality⟨y,v′
+1⟩ = 1. This translates to
+a‖v′
+1‖2 +a⟨v′
+2,v′
+1⟩ = 1, (3.13)
+and we ﬁnd
+‖y‖2 =
+(
+|a|2‖v′
+1‖2 +a2⟨v′
+2,v′
+1⟩
+)
++
+(
+|a|2‖v′
+2‖2 +a2⟨v′
+1,v′
+2⟩
+)
+=a +a = 2 Re (a).
+By solving the system of equations (3.13) in the variables Re ( a) and Im (a) we arrive at
+κ2 =‖y‖2 = 2 Re (a) = 2‖v′
+1‖2− Re (⟨v′
+1,v′
+2⟩)
+‖v′
+1‖4−|⟨v′
+1,v′
+2⟩|2 ≥ 2‖v1‖2−|⟨v1,v 2⟩|
+‖v1‖4−|⟨v1,v 2⟩|2 = 2
+‖v′
+1‖2 +|⟨v′
+1,v′
+2⟩|, (3.14)
+and
+Im (a) = Im (⟨v′
+1,v′
+2⟩)
+‖v′
+1‖4−|⟨v′
+1,v′
+2⟩|2. (3.15)
+We have equality in (3.14) if and only if⟨v′
+1,v′
+2⟩≥ 0. If⟨v′
+1,v′
+2⟩ = 0, then ϑ1 andϑ2 are arbitrary and a≥ 0.
+This leads to the family in (3.9). If ⟨v′
+1,v′
+2⟩⁄ = 0, then we must have ϑ1≡ϑ2 +α (mod 2π) and a≥ 0, which
+leads to the family in (3.10). □
+22
+3.4. Proof of Theorem 4. LetR be a nonnegative admissible function such that R(±β)≥ 1. Since R has
+exponential type at most 2π, by Krein’s decomposition [1, p. 154] we have
+R(z) =S(z)S(z),
+where S is an entire function of exponential type at most π. On the real line we have R(x) =|S(x)|2 and
+thus S∈ L2(R). Therefore, the function S belongs to the reproducing kernel Hilbert space H =B2(π,µ ).
+The hypotheses imply that
+1≤|S(β)| =
+⏐⏐⟨S,K (β,·)⟩H
+⏐⏐
+and
+1≤|S(−β)| =
+⏐⏐⟨S,K (−β,·)⟩H
+⏐⏐.
+We want to minimize the quantity
+‖S‖2
+H =
+∫ ∞
+−∞
+|S(x)|2
+{
+1−
+(sinπx
+πx
+)2}
+dx.
+By the reproducing kernel property and the symmetry of the pair correlation measure (alternatively, one
+can check directly by Theorem 3), we have
+‖K(β,·)‖2
+H =K(β,β ) =K(−β,−β) =‖K(−β,·)‖2
+H.
+We are thus in position to use Lemma 13 to derive that
+‖S‖2
+H≥ 2
+K(β,β ) +|⟨K(β,·),K (−β,·)⟩H| = 2
+K(β,β ) +|K(β,−β)|. (3.16)
+The cases of equality in (3.16) follow from (3.9) and (3.10).
+It remains to verify the asymptotic behavior on the right-hand side of (1.21) as β→∞ . From Theorem
+3 we get
+K(β,β ) = 2π2β2
+(2π2β2− 1) +c(β)g(β) +d(β)h(β)
+and
+K(β,−β) = 2π2β2
+(2π2β2− 1)
+sin 2πβ
+2πβ +c(β)g(−β) +d(β)h(−β)
+= 2π2β2
+(2π2β2− 1)
+sin 2πβ
+2πβ +c(β)g(β)−d(β)h(β).
+Therefore, if K(β,−β)≥ 0 we have
+K(β,β ) +|K(β,−β)| = 2π2β2
+(2π2β2− 1)
+(
+1 + sin 2πβ
+2πβ
+)
++ 2c(β)g(β), (3.17)
+and if K(β,−β)≤ 0 we have
+K(β,β ) +|K(β,−β)| = 2π2β2
+(2π2β2− 1)
+(
+1− sin 2πβ
+2πβ
+)
++ 2d(β)h(β). (3.18)
+Observe that c(β)g(±β) = O(β−2) and that d(β)h(±β) = O(β−2). We then have two cases to consider.
+First, if for large β we have
+sin 2πβ
+2πβ =O
+(
+β−2)
+,
+23
+then the asymptotic on the right-hand side of (1.21) is trivially true. Otherwise,
+sin 2πβ
+2πβ =O
+(
+(β + 1)−1)
+.
+Hence K(β,−β) will have the sign of sin 2πβ
+2πβ , and we use (3.17) and (3.18) to get the desired asymptotic.
+This concludes the proof.
+3.5. The one-delta problem. Our methods can also be used to recover the original result of Montgomery
+and Taylor [36] concerning the optimal majorant for the delta function with respect to the pair correlation
+measure. This problem was also solved, in a more general context, by Iwaniec, Luo and Sarnak [28, Appendix
+A].
+Corollary 14 (cf. [36]) . LetR be a nonnegative admissible function such that R(0)≥ 1. Then
+M(R)≥ 1
+K(0, 0) = 2− 1
+2 cot
+(
+2− 1
+2
+)
+− 1
+2 = 0.3274992... (3.19)
+Equality in (3.19) is attained if and only if
+R(z) = 1
+(1− 2π2z2)2
+(
+cos(πz)− 2
+1
+2πz cot
+(
+2− 1
+2
+)
+sin(πz)
+)2
+.
+Proof. As in the proof of Theorem 4 we may write R(z) = S(z)S(z), where S∈H =B2(π,µ ). Using the
+Cauchy-Schwartz inequality we get
+1≤|S(0)|2 =
+⏐⏐⟨S,K (0,·)⟩H
+⏐⏐2
+≤‖S‖2
+H‖K(0,·)‖2
+H =‖S‖2
+HK(0, 0).
+Therefore, it follows that
+∫ ∞
+−∞
+R(x)
+{
+1−
+(sinπx
+πx
+)2}
+dx =
+∫ ∞
+−∞
+|S(x)|2
+{
+1−
+(sinπx
+πx
+)2}
+dx =‖S‖2
+H≥ 1
+K(0, 0),
+and equality holds if and only if S(z) =cK (0,z ), where c is a complex constant of absolute value K(0, 0)−1.
+Using the explicit representation for K given by Theorem 3 we get
+R(z) =S(z)S(z) = 1
+K(0, 0)2K(0,z )2
+= 1
+K(0, 0)2
+(
+1(
+cos
+(
+2− 1
+2
+)
+− 2− 1
+2 sin
+(
+2− 1
+2
+)) 2
+1
+2 sin
+(
+2− 1
+2
+)
+cos(πz)− 2πz cos
+(
+2− 1
+2
+)
+sin(πz)
+(1− 2π2z2)
+)2
+=
+(
+1
+2
+1
+2 sin
+(
+2− 1
+2
+) 2
+1
+2 sin
+(
+2− 1
+2
+)
+cos(πz)− 2πz cos
+(
+2− 1
+2
+)
+sin(πz)
+(1− 2π2z2)
+)2
+= 1
+(1− 2π2z2)2
+(
+cos(πz)− 2
+1
+2πz cot
+(
+2− 1
+2
+)
+sin(πz)
+)2
+.
+□
+Remark: It follows from (1.5), (1.6), and (3.19) that
+N∗(T )≤
+(
+2− 1
+2 cot
+(
+2− 1
+2
+)
++ 1
+2 +o(1)
+)
+N(T ).
+This inequality was previously proved by Montgomery and Taylor [36], and can be used in the place of (2.3)
+to give a slightly sharper version of our Corollary 9.
+24
+4. Interpolation and orthogonality in de Branges spaces
+In this section we prove Theorem 5. Recall that E is a Hermite-Biehler function that satisﬁes properties
+(P1) - (P4), and we assume without loss of generality that E(0)> 0.
+4.1. Preliminary lemmas. We start by proving the following result.
+Lemma 15. Letβ /∈{ak}∪{ bk} and consider the Hermite-Biehler function Eβ deﬁned in (1.32).
+(i) The function Eβ satisﬁes properties (P1) - (P4).
+(ii) If ak <β <bk, for k≥ 1, then Bβ(0) =Bβ(β) = 0.
+(iii) If bk < β < ak+1, for k≥ 0, then Aβ(β) = 0 . If k≥ 1, then there exists ξ∈ (0,β ) such that
+Aβ(ξ) = 0.
+Proof of (i). Properties (P1), (P2) and (P3) are clear. A direct computation shows that
+Aβ(z) =γβA(z)−zB(z) (4.1)
+and
+Bβ(z) =zA(z) +γβB(z). (4.2)
+Suppose Aβ∈H (Eβ). Then Aβ(x)|Eβ(x)|−1∈L2(R). Observe that
+Aβ(x)
+Eβ(x) =γβ
+A(x)
+(γβ−ix)E(x)− x
+(γβ−ix)
+B(x)
+E(x) =−iB(x)
+E(x) +O(x−1),
+for large x. This would imply that B∈H (E), a contradiction. In an analogous manner, we show that
+Bβ /∈H (Eβ). This establishes (P4). □
+Proof of (ii). Since Eβ satisﬁes (P3), the function Bβ is odd and thus Bβ(0) = 0. The fact that Bβ(β) = 0
+follows from (4.2) and the deﬁnition of γβ. □
+Proof of (iii). The fact that Aβ(β) = 0 follows from (4.1) and the deﬁnition of γβ. Also, from (4.1), a
+numberξ is a zero of Aβ if and only if
+ξ =γβ
+A(ξ)
+B(ξ). (4.3)
+SinceB(x)> 0 in (0,a 1] withB(0) = 0, andA(x)> 0 in [0,a 1) withA(a1) = 0, the functionx↦→A(x)/B(x)
+assumes every positive real value in the interval (0 ,a 1). In particular, there exists ξ∈ (0,a 1) satisfying
+(4.3). □
+The importance of condition (P4) lies in the fact that the sets{K(ξ,·); A(ξ) = 0} and{K(ξ,·); B(ξ) = 0}
+are orthogonal bases for H(E) (see [2, Theorem 22]). Using this fact, we establish four suitable quadrature
+formulas below. These are the key elements to prove the optimality of our approximations.
+Lemma 16. LetF be an entire function of exponential type at most 2τ(E) such that F (x)≥ 0 for all x∈ R
+and
+ME(F ) =
+∫ ∞
+−∞
+F (x)|E(x)|−2 dx< ∞. (4.4)
+(i) We have
+ME(F ) =
+∑
+A(ξ)=0
+F (ξ)
+K(ξ,ξ ) =
+∑
+B(ξ)=0
+F (ξ)
+K(ξ,ξ ). (4.5)
+25
+(ii) If β /∈{ak}∪{ bk}, then we have
+ME(F ) =
+∑
+Aβ(ξ)=0
+F (ξ)
+ξ2 +γ2
+β
+Kβ(ξ,ξ ) =
+∑
+Bβ(ξ)=0
+F (ξ)
+ξ2 +γ2
+β
+Kβ(ξ,ξ ). (4.6)
+Proof of (i). By [8, Lemma 14] (this is the corresponding version of Krein’s decomposition [1, p. 154] for
+the de Branges space H(E)) we can write F (z) = U(z)U∗(z) where U∈H (E). Part (i) then follows from
+the orthogonal basis given by [2, Theorem 22]
+ME(F ) =
+∫ ∞
+−∞
+|U(x)|2|E(x)|−2 dx =
+∑
+A(ξ)=0
+|U(ξ)|2
+K(ξ,ξ ) =
+∑
+A(ξ)=0
+F (ξ)
+K(ξ,ξ ).
+A similar representation holds at the zeros of B. □
+Proof of (ii). We now considerFβ(z) :=F (z)(z2 +γ2
+β). This is also an entire function of exponential type at
+most 2τ(E) which is nonnegative on the real axis. Since |Eβ(x)|2 =|E(x)|2(x2 +γ2
+β) we see from (4.4) that
+ME(F ) = MEβ(Fβ)<∞. We then write Fβ(z) = Uβ(z)U∗
+β(z) with Uβ∈H (Eβ) and thus, by [2, Theorem
+22], we have
+ME(F ) =MEβ(Fβ) =
+∫ ∞
+−∞
+|Uβ(x)|2|Eβ(x)|−2 dx =
+∑
+Aβ(ξ)=0
+|Uβ(ξ)|2
+Kβ(ξ,ξ ) =
+∑
+Aβ(ξ)=0
+F (ξ)
+ξ2 +γ2
+β
+Kβ(ξ,ξ ).
+A similar representation holds at the zeros of Bβ. This completes the proof of the lemma. □
+4.2. Proof of Theorem 5. This proof is divided in three distinct qualitative regimes.
+4.2.1. Case 1: Assume β /∈{ ak}∪{ bk}∪ (0,a 1). Since Eβ is a Hermite-Biehler function of bounded type
+(property (P1)), the functions Aβ andBβ belong to the Laguerre-P´ olya class (this follows from [2, Problem
+34] or [8, Lemma 13]), i.e. they are uniform limits (in compact sets) of polynomials with only real zeros.
+Moreover, from property (P3) we have that A2
+β and B2
+β are even functions.
+We consider now the case bk <β <ak+1 (k≥ 1), in which the nodes of interpolation are the zeros of Aβ
+(the proof in the case ak <β <bk proceeds along similar lines, using the zeros of Bβ as interpolation nodes).
+Since A2
+β is an even Laguerre-P´ olya function withA2
+β(β) = 0 and at least two other zeros, counted with
+multiplicity, lie in the interval [0,β ) (by Lemma 15 (iii)), the hypotheses of [32, Theorem 3.14] are fulﬁlled.
+Hence there exists a pair of real entire functions R±
+β,E such that
+R−
+β,E(x)≤χ[−β,β](x)≤R+
+β,E(x)
+for all x∈ R, with
+R±
+β,E(ξ) =χ[−β,β](ξ) (4.7)
+for all ξ⁄=±β such that Aβ(ξ) = 0, and
+R+
+β,E(±β) = 1 and R−
+β,E(±β) = 0. (4.8)
+Moreover, the functions R±
+β,E satisfy the estimate
+⏐⏐R±
+β,E(z)
+⏐⏐≪
+|A2
+β(z)|
+1 +|Re (z)|4
+for all z∈ C. This shows, in particular, that the functions R±
+β,E have exponential type at most 2 τ(E) and
+that ME(R±
+β,E)<∞.
+26
+We show next that these functions are extremal. First we consider the case of the majorant. Let R+
+β be
+an entire function of exponential type at most 2 τ(E) such that
+R+
+β (x)≥χ[−β,β](x)
+for all x∈ R. From (4.6) we obtain
+ME(R+
+β ) =
+∑
+Aβ(ξ)=0
+R+
+β (ξ)
+ξ2 +γ2
+β
+Kβ(ξ,ξ )≥
+∑
+Aβ(ξ)=0
+|ξ|≤β
+ξ2 +γ2
+β
+Kβ(ξ,ξ ),
+and, by (4.7) and (4.8), we have equality if R+
+β =R+
+β,E. The minorant case follows analogously by writing
+R−
+β as a diﬀerence of two nonnegative functions, e.g. writing R−
+β =R+
+β,E− (R+
+β,E−R−
+β ), and applying (4.6)
+to each nonnegative function separately.
+4.2.2. Case 2: Assume β∈{ak}∪{ bk}. This case follows from the work of Holt and Vaaler [27, Theorem
+15]. In this paper they construct extremal majorants and minorants for sgn( x−β) that interpolate this
+function at the zeros of A (if β∈{ak}) or B (if β∈{bk}). If we use that
+1
+2
+{
+sgn(x +β) + sgn(−x +β)
+}
+=χ[−β,β](x),
+the Holt-Vaaler construction gives us majorants and minorants for χ[−β,β] that interpolate this function at
+the right nodes (the zeros of A or B). The optimality now follows from (4.5) as in the previous case. We
+note that this is the analogous of the Beurling-Selberg construction for the Paley-Wiener case.
+4.2.3. Case 3: Assume β ∈ (0,a 1). A special case of this result was shown in [15, Lemma 10] using an
+explicit Fourier expansion and the Cauchy-Schwarz inequality. We prove ﬁrst that the zero function is an
+optimal minorant. We start by noticing, from (4.2), that the smallest positive zero of Bβ is greater than
+a1, since both A and B are positive in (0,a 1). Since the zeros of Aβ and Bβ are simple and interlace, and
+since Aβ(β) = 0, we conclude that β is the only zero of Aβ in the interval (0,a 1). Since the zero function
+interpolates χ[−β,β] at all the zeros of A (or Aβ), it must be an extremal function from the quadrature
+formula (4.5) (or (4.6)).
+To ﬁnd an extremal majorant, deﬁne the entire function Qβ by
+Qβ(z) =Cβ
+Aβ(z)
+(β2−z2), (4.9)
+where Cβ is a constant chosen so that Qβ(±β) = 1. Note that Qβ is an even Laguerre-P´ olya function,
+with no zeros in [ −β,β ]. We claim that Qβ is monotone in the intervals [ −β, 0] and [0,β ]. To see this,
+let±xβ be the smallest zeros (in absolute value) of Qβ (recall that these zeros are simple). We can then
+regard Qβ as a uniform limit in [−xβ,xβ] of even polynomials Pk with only real and simple zeros. We can
+choose the smallest zeros (in absolute value) of Pk to be ±xβ. Therefore, P′
+k has only one simple zero in
+[−xβ,xβ], which must be at the origin since Pk is even. Moreover, by Rolle’s theorem all zeros of P′
+k are real
+(and simple). Since P′
+k(x)→ Q′
+β(x) uniformly in [−xβ,xβ], the odd function Q′
+β has only one zero in the
+interval [−xβ,xβ], which must be at the origin. This implies that |Qβ| is monotone increasing in [−xβ, 0]
+and monotone decreasing in [0,xβ]. In particular, we have
+R+
+β,E(x) :=Q2
+β(x)≥χ[−β,β](x)
+27
+for all x∈ R, and this is our desired majorant of exponential type at most 2 τ(E). The optimality now
+follows from (4.6) since R+
+β,E =Q2
+β interpolates χ[−β,β] at the zeros of Aβ.
+4.2.4. Uniqueness and relation to the two-delta problem. We have constructed above extremal functionsR±
+β,E
+that interpolate χ[−β,β] at the nodes of a certain quadrature (either A, B, Aβ or Bβ). The quadrature is
+chosen in such a way to have ±β as nodes of interpolation. At these points we have R+
+β,E(±β) = 1 and
+R−
+β,E(±β) = 0. Therefore, the diﬀerence R := R+
+β,E−R−
+β,E is a majorant of the two-delta function χ{±β}
+that interpolates χ{±β} at the nodes of the same quadrature. From Lemma 16 this diﬀerence must be an
+extremal function for the two-delta problem (1.33). In particular we obtain
+∆E(β) =Λ+
+E(β)−Λ−
+E(β).
+From property (P3) we have that A is even and B is odd. Thus, for β >0 we have
+K(β,−β) = B(−β)A(β)−A(−β)B(β)
+−2πβ = A(β)B(β)
+πβ . (4.10)
+In the generic cases (iii) and (iv) we have β /∈{ ak}∪{ bk}, and (4.10) implies that K(β,−β)⁄= 0. In this
+situation, from Theorem 4, the extremal solution of the two-delta problem is unique, and therefore the pair
+of extremal functions R±
+β,E must also be unique. This concludes the proof.
+5. Small gaps between the zeros of ζ(s)
+The goal of this section is to prove Theorem 7. Our proof relies on the following estimate for Montgomery’s
+function F (α) =F (α,T ) deﬁned in (2.5).
+Lemma 17. Assume RH and let A> 1 be ﬁxed. Then, as T→∞ , we have
+∫ ξ
+1
+(
+ξ−α
+)
+F (α) dα ≥ ξ2
+2 −ξ + 1
+3 +o(1)
+uniformly for 1≤ξ≤A.
+Proof. This inequality is implicit in the work of Goldston [21, Section 7], but we sketch a proof for com-
+pleteness. We use (2.6), (2.7), and the Fourier transform pair
+Rξ(x) =
+(sinπξx
+πξx
+)2
+and ˆRξ(α) = 1
+ξ2 max
+(
+ξ−|α|, 0
+)
+.
+Observe that
+1 +o(1)≤ 2π
+T logT N∗(T )
+≤ 2π
+T logT
+∑
+0<γ,γ ′≤T
+Rξ
+(
+(γ′−γ)logT
+2π
+)
+w(γ′−γ)
+=
+∫ ξ
+−ξ
+ˆRξ(α)F (α) dα,
+(5.1)
+28
+where the last step follows from the convolution formula in (2.6). Using the fact the the integrand is even
+and applying (2.7), it follows that
+∫ ξ
+−ξ
+ˆRξ(α)F (α) dα = 1
+ξ + 2
+ξ2
+∫ 1
+0
+(
+ξ−α
+)
+α dα + 2
+ξ2
+∫ ξ
+1
+(
+ξ−α
+)
+F (α) dα +o(1)
+= 2
+ξ− 2
+3ξ2 + 2
+ξ2
+∫ ξ
+1
+(
+ξ−α
+)
+F (α) dα +o(1)
+uniformly for 1≤ξ≤A. Inserting this estimate into (5.1) and rearranging terms, the lemma follows. □
+5.1. Proof of Theorem 7. We modify an argument of Goldston, Gonek, ¨Ozl¨ uk and Snyder in [24] which
+relied on the Fourier transform pair
+G(x) =
+(sinπx
+πx
+)2( 1
+1−x2
+)
+and
+ˆG(α) =
+{
+1−|α| + sin 2π|α|
+2π , if |α|≤ 1,
+0, if |α|> 1.
+Note thatG(x) is a minorant forχ[−1,1] with (nonnegative) Fourier transform supported in [−1, 1]. Therefore,
+G(x/β) is a minorant for χ[−β,β], and it follows from (2.6) that
+N∗(T ) + 2N(T,β ) ≥
+∑
+0<γ,γ ′≤T
+G
+(
+(γ′−γ)logT
+2πβ
+)
+w(γ′−γ)
+=
+(T logT
+2π
+)∫ 1/β
+−1/β
+βˆG(βα)F (α) dα.
+Using (2.7), the assumption in (1.11), and the fact that the integrand is even we have
+N(T,β )≥
+(1
+2 +o(1)
+)T logT
+2π
+(
+β− 1 + 2β
+∫ 1
+0
+ˆG(βα)α dα + 2β
+∫ 1/β
+1
+ˆG(βα)F (α) dα
+)
+. (5.2)
+Since ˆG(α)≥ 0 for all α, Goldston, Gonek, ¨Ozl¨ uk and Snyder observed that
+N(T,β )≥
+(1
+2 +o(1)
+)T logT
+2π
+(
+β− 1 + 2β
+∫ 1
+0
+ˆG(βα)α dα
+)
+,
+and then used a numerical calculation to show that N(T, 0.607286) ≫ N(T ) under the assumptions of
+Theorem 7. In order to improve their result, we use Lemma 17 to derive a lower bound for the second
+integral on the right-hand side of (5.2).
+Following Goldston [21], we deﬁne the function
+I(ξ) =
+∫ ξ
+1
+(ξ−α)F (α) dα
+and we observe that
+I′(ξ) =
+∫ ξ
+1
+F (α) dα and I′′(ξ) =F (ξ).
+Note that Lemma 17 provides a nontrivial lower bound for I(ξ) as long as ξ≥ 1 + 1/
+√
+3. Integrating by
+parts twice, it follows that
+∫ 1/β
+1
+ˆG(βα)F (α) dα =
+∫ 1/β
+1
+ˆG(βα)I′′(α) dα =β2
+∫ 1/β
+1
+ˆG′′(βα)I(α) dα. (5.3)
+29
+By deﬁnition, for α≥ 0, we have ˆG′′(βα) = −2π sin(2πβα) which is non-negative for 1 ≤ α≤ 1/β if
+1/2≤β≤ 1. Therefore (5.3) and Lemma 17 imply that
+∫ 1/β
+1
+ˆG(βα)F (α) dα≥− 2πβ2
+∫ 1/β
+1+1/
+√
+3
+sin(2πβα)
+(α2
+2−α+ 1
+3 +o(1)
+)
+dα
+for 1/2≤β≤ 1. Inserting this estimate into (5.2), it follows that
+N(T,β )≥
+(1
+2 +o(1)
+)T logT
+2π
+(
+β−1+2β
+∫ 1
+0
+ˆG(βα)α dα− 4πβ3
+∫ 1/β
+1+1/
+√
+3
+sin(2πβα)
+(α2
+2−α+ 1
+3
+)
+dα
+)
+.
+A straightforward numerical calculation shows that the right-hand side is positive if β≥ 0.606894.
+6. q-analogues of Theorem 1 and Theorem 2
+As was suggested in Montgomery’s original paper [35], it is interesting to study the pair correlation of
+zeros of the family of Dirichlet L-functions in q-aspect. Montgomery had in mind improving the analogue
+of (2.7) for this family of L-functions (see [9, 40]), and so it is not surprising that the analogue of Theorems
+1 and 2 can also be improved. In this section, we indicate such an improvement. In order to state this
+result, we need to introduce some notation. All sums over the zeros of Dirichlet L-functions are counted
+with multiplicity and ε denotes an arbitrarily small positive constant that may vary from line to line.
+Let W be a smooth function, compactly supported in (1 , 2). Let Φ be a function which is real and
+compactly supported in (a,b ) with 0 <a<b . As usual, deﬁne its Mellin transform ~Φ by
+~Φ(s) =
+∫ ∞
+0
+Φ(x)xs−1 dx.
+Suppose that Φ(x) = Φ(x−1) for all x∈ R\{ 0} , ~Φ(it)≥ 0 for all t∈ R, and that ~Φ(it)≪| t|−2. For
+example, we may choose
+~Φ(s) =
+(es−e−s
+2s
+)2
+so that ~Φ(it) = (sint/t)2≥ 0 and the function
+Φ(x) =
+
+
+
+1
+2− 1
+4 logx, for 1≤x≤e2,
+1
+2 + 1
+4 logx, for e−2≤x≤ 1,
+0, otherwise,
+is real and compactly supported in ( a,b ) for some a,b> 0. We deﬁne the q-analogue of N(T,β ) as
+NΦ(Q,β ) :=
+∑
+q
+W (q/Q)
+ϕ(q)
+∑⋆
+χ (mod q)
+
+
+
+∑
+γχ,γ′
+χ
+0<γχ−γ′
+χ≤ 2πβ
+logQ
+~Φ(iγχ)~Φ(iγ′
+χ)
+
+
+
+.
+Here the superscript ⋆ indicates the sum is restricted to primitive characters χ (mod q), and the inner sum
+on the right-hand side runs over two sets of nontrivial zeros of the DirichletL-functionL(s,χ ) with ordinates
+γχ and γ′
+χ, respectively. Similarly, we deﬁne the q-analogues of N(T ) and N∗(T ) by
+NΦ(Q) :=
+∑
+q
+W (q/Q)
+ϕ(q)
+∑⋆
+χ (mod q)
+∑
+γχ
+|~Φ(iγχ)|2
+30
+and
+N∗
+Φ(Q) :=
+∑
+q
+W (q/Q)
+ϕ(q)
+∑⋆
+χ (mod q)
+∑
+γχ
+|~Φ(iγχ)|2mγχ,
+respectively. Here the superscript ⋆ is as above, and mγχ denotes the multiplicity of a zero of L(s,χ ) with
+ordinateγχ. Since it is generally believed that the zeros of primitive Dirichlet L-functions are all simple, we
+expect that N∗
+Φ(Q) =NΦ(Q) for all Q> 0. Moreover, analogous to (1.3), we expect that
+NΦ(Q,β )∼NΦ(Q)
+{
+β− 1
+2 + 1
+2π2β +O
+( 1
+β2
+)}
+as β→∞ suﬃciently slowly (when Q is large). In support of this, we prove the following stronger version
+of Theorems 1 and 2 for the zeros of primitive Dirichlet L-functions.
+Theorem 18. Assume the generalized Riemann hypothesis for Dirichlet L-functions, and let ε > 0 be
+arbitrary. Then, for any β >0, we have
+lim sup
+Q→∞
+NΦ(Q,β )
+NΦ(Q) ≤β− 1
+4 +ε + 1
+2π2β +O
+( 1
+β2
+)
+.
+If, in addition, N∗
+Φ(Q)∼NΦ(Q) as Q→∞ , then we also have
+lim inf
+Q→∞
+NΦ(Q,β )
+NΦ(Q) ≥β− 3
+4−ε + 1
+2π2β +O
+( 1
+β2
+)
+.
+Deﬁne the q-analogue of Montgomery’s function F (α) by
+FΦ(α) :=FΦ(α,Q ) = 1
+NΦ(Q)
+∑
+q
+W (q/Q)
+ϕ(q)
+∑⋆
+χ (mod q)
+⏐⏐⏐⏐⏐⏐
+∑
+γχ
+~Φ (iγχ)Qiαγχ
+⏐⏐⏐⏐⏐⏐
+2
+.
+Modifying the asymptotic large sieve technique in [14], Chandee, Lee, Liu and Radziwi l l have evaluated
+FΦ(α) when|α|< 2.
+Lemma 19. (cf. [9, Theorem 2]) Assume the generalized Riemann hypothesis for Dirichlet L-functions.
+Then, for any ε> 0, the estimate
+FΦ(α) =
+(
+1 +o(1)
+)
+(
+f(α) + Φ
+(
+Q−|α|)2
+logQ
+( 1
+2π
+∫ ∞
+−∞
+⏐⏐⏐~Φ(it)
+⏐⏐⏐
+2
+dt
+)−1)
++O
+(
+Φ
+(
+Q−|α|)√
+f(α) logQ
+)
+holds uniformly for |α|≤ 2−ε as Q→∞ , where f(α) :=
+
+
+
+|α|, for|α|≤ 1,
+1, for|α|> 1.
+6.1. Proof of Theorem 18. The key ingredients are Lemma 19 and the convolution identity
+1
+NΦ(Q)
+∑
+q
+W (q/Q)
+ϕ(q)
+∑⋆
+χ (mod q)
+∑
+γχ,γ′χ
+R
+((γχ−γ′
+χ) logQ
+2π
+)
+~Φ(iγχ)~Φ(iγ′
+χ) =
+∫ ∞
+−∞
+FΦ(α)ˆR(α) dα.
+To obtain the bounds for NΦ(Q,β ) in Theorem 18, we again use the functions
+s±
+∆,β(x) =r±
+∆β(∆x).
+As stated in §2.4, these functions are a majorant and a minorant of χ[−β,β] of exponential type 2π∆, and
+thus with Fourier transform supported in [−∆, ∆]. Using arguments similar to those in §2.3, for any ﬁxed
+31
+β >0, we deduce that
+lim sup
+Q→∞
+NΦ(Q,β )
+NΦ(Q) ≤ 1
+2M(s+
+∆,β)
+and, if N∗
+Φ(Q)∼NΦ(Q) as Q→∞ , that
+lim inf
+Q→∞
+NΦ(Q,β )
+NΦ(Q) ≥ 1
+2M(s−
+∆,β).
+Theorem 18 follows from these estimates by using (2.24) with ∆ = 2 −ε.
+Appendix A
+Here we prove the following result that was left open in the introduction.
+Proposition 20. The entire function E(z) deﬁned in (1.26) satisﬁes properties (1.22) and (1.27).
+Proof. We start by observing that K(w,z ) deﬁned by Theorem 3 veriﬁes the following properties:
+(i) K(w,w ) > 0 for all w∈ C. In fact, if we had K(w,w ) = 0 for some w∈ C, this would imply that
+f(w) = 0 for every f∈H . This is a contradiction.
+(ii) K(w,z ) =K(w,z) for all w,z ∈ C. This is a direct veriﬁcation.
+(iii) K(w,z ) =K(z,w ). This follows from the reproducing kernel property:
+K(w,z ) =⟨K(w,·),K (z,·)⟩H =⟨K(z,·),K (w,·)⟩H =K(z,w ).
+Wheneverf∈H has a nonreal zero w, the function z↦→f(z)(z−w)/(z−w) belongs toH and has the same
+norm as f. From the ﬁrst part of the proof of [2, Theorem 23] we have that L(w,z ) = 2πi(w−z)K(w,z )
+satisﬁes the identity
+L(w,z ) = L(α,z )L(w,α )
+L(α,α ) + L(α,z )L(w,α)
+L(α,α) (6.1)
+for all nonreal α and w,z ∈ C. From property (ii) above and the fact that K(α,α) is real, we get that
+L(α,α ) =−L(α,α). (6.2)
+Takingw =z in (6.1), and using (6.2) and properties (ii) and (iii) above, we get
+L(z,z ) =|L(α,z )|2
+L(α,α ) −|L(α,z)|2
+L(α,α ) . (6.3)
+If we consider any (ﬁxed)α∈ C+, we haveL(α,α )> 0, and we can deﬁne the entire function (of the variable
+z)
+E(α,z ) := L(α,z )
+L(α,α )
+1
+2
+.
+From (6.3) and property (i), we ﬁnd that
+|E(α,z )|2−|E(α,z)|2 =L(z,z ) = 4π Im (z)K(z,z )> 0
+for all z∈ C+. This is the Hermite-Biehler property. The identity
+L(w,z ) =E(α,z )E(α,w )−E(α,z)E(α,w)
+is equivalent to (6.1). In our particular case, we simply choose α =i. □
+32
+Acknowledgements.
+EC acknowledges support from CNPq-Brazil grant 302809/2011−2, and FAPERJ grantE−26/103.010/2012.
+MBM is supported in part by an AMS-Simons Travel Grant and the NSA Young Investigator Grant H98230-
+13-1-0217. We would like to thank IMPA – Rio de Janeiro and CRM – Montr´ eal for sponsoring research
+visits during the development of this project.
+References
+[1] N. I. Achieser, Theory of Approximation, New York, 1956.
+[2] L. de Branges, Hilbert spaces of entire functions , Prentice-Hall, 1968.
+[3] H. M. Bui, M. B. Milinovich and N. C. Ng, A note on the gaps between consecutive zeros of the Riemann zeta-function,
+Proc. Amer. Math. Soc. 138 (2010), no. 12, 4167–4175.
+[4] E. Carneiro and V. Chandee, Bounding ζ(s) in the critical strip, J. Number Theory 131 (2011), 363–384.
+[5] E. Carneiro, V. Chandee and M. B. Milinovich, Bounding S(t) and S1(t) on the Riemann hypothesis, Math. Ann., 356
+(2013), no. 3, 939–968.
+[6] E. Carneiro and F. Gon¸ calves, Extremal problems in de Branges spaces: the case of truncated and odd functions, preprint.
+[7] E. Carneiro and F. Littmann, Bandlimited approximations to the truncated Gaussian and applications, Const. Approx. 38
+(2013), no. 1, 19–57.
+[8] E. Carneiro and F. Littmann, Extremal functions in de Branges and Euclidean spaces, Adv. Math. 260 (2014), 281–349.
+[9] V. Chandee, Y. Lee, S.-C. Liu and M. Radziwi l l, Simple zeros of primitive Dirichlet L-functions and the asymptotic large
+sieve, Q. J. Math. 65 (2014), no. 1, 63–87.
+[10] V. Chandee and K. Soundararajan, Bounding|ζ( 1
+2 +it)| on the Riemann hypothesis, Bull. London Math. Soc. 43(2) (2011),
+243–250.
+[11] A. Y. Cheer and D. A. Goldston, Simple zeros of the Riemann zeta-function, Proc. Amer. Math. Soc. 118 (1993), no. 2,
+365–372.
+[12] J. B. Conrey, A. Ghosh and S. M. Gonek, A note on gaps between zeros of the zeta function, Bull. London Math. Soc. 16
+(1984), no. 4, 421–424.
+[13] J. B. Conrey and H. Iwaniec, Spacing of zeros of Hecke L-functions and the class number problem, Acta Arith. 103 (2002),
+no. 3, 259–312.
+[14] J. B. Conrey, H. Iwaniec and K. Soundararajan, Asymptotic Large Sieve, preprint at http://arxiv.org/abs/1105.1176.
+[15] D. L. Donoho and B. F. Logan, Signal recovery and the large sieve, SIAM J. Appl. Math. 52 (1992), no. 2, 577–591.
+[16] D. L. Donoho and P. Stark, Uncertainty principles and signal recovery, SIAM J. Appl. Math 49 (1989), 906–931.
+[17] S. Feng and X. Wu, On gaps between zeros of the Riemann zeta-function, J. Number Theory 132 (2012), no. 7, 1385–1397.
+[18] A. Fujii, On the pair correlation of the zeros of the Riemann zeta function, Analytic number theory (Beijing/Kyoto, 1999),
+127–142, Dev. Math., 6, Kluwer Acad. Publ., Dordrecht, 2002.
+[19] P. X. Gallagher, Pair correlation of zeros of the zeta function, J. Reine Angew. Math. 362 (1985), 72–86.
+[20] P. X. Gallagher and J. H. Mueller, Primes and zeros in short intervals, J. Reine Angew. Math. 303/304 (1978), 205–220.
+[21] D. A. Goldston, On the function S(T ) in the theory of the Riemann zeta-function, J. Number Theory 27 (1987), no. 2,
+149–177.
+[22] D. A. Goldston, On the pair correlation conjecture for zeros of the Riemann zeta-function, J. Reine Angew. Math. 385
+(1988), 24–40.
+[23] D. A. Goldston and S. M. Gonek, A note on S(t) and the zeros of the Riemann zeta-function, Bull. London Math. Soc. 39
+(2007), 482–486.
+[24] D.A. Goldston, S. M. Gonek, A. E. ¨Ozl¨ uk and C. Snyder, On the pair correlation of zeros of the Riemann zeta-function,
+Proc. London Math. Soc. (3) 80 (2000), no. 1, 31–49.
+[25] D. A. Goldston and H. L. Montgomery, Pair correlation of zeros and primes in short intervals, in Analytic number theory
+and Diophantine problems (ed. A. C. Adolphson, J. B. Conrey, A. Ghosh and R. I. Yager), Birkha¨ user, Boston (1987),
+183–203.
+[26] D. Hejhal, On the triple correlation of the zeros of the zeta function, Int. Math. Res. Not. (1994), 293–302.
+[27] J. Holt and J. D. Vaaler, The Beurling-Selberg extremal functions for a ball in the Euclidean space, Duke Math. Journal
+83 (1996), 203–247.
+33
+[28] H. Iwaniec, W. Luo and P. Sarnak, Low lying zeros of families of L-functions, Inst. Hautes ´Etudes Sci. Publ. Math. No.
+91 (2000), 55–131.
+[29] N. M. Katz and P. Sarnak, Zeroes of zeta functions and symmetry, Bull. Amer. Math. Soc. 36 (1999), 1–26.
+[30] M. Kelly, A variation on Selberg’s approximation problem, to appear in Mathematika.
+[31] M. G. Krein, A contribution to the theory of entire functions of exponential type, Bull. Acad. Sci. URSS. Ser. Math. 11
+(1947), 309–326.
+[32] F. Littmann, Quadrature and extremal bandlimited functions, SIAM J. Math. Anal. 45 (2013), no. 2, 732–747.
+[33] F. Littmann and M. Spanier, Extremal functions with vanishing condition, preprint at http://arxiv.org/abs/1311.1157.
+[34] A. V. Manzhirov and A. D. Polyanin, Handbook of Integral Equations, Second Edition, Chapman & Hall/CRC Press, Boca
+Raton, 2008.
+[35] H. L. Montgomery, The pair correlation of zeros of the zeta function, Proc. Symp. Pure Math. 24, Providence (1973),
+181–193.
+[36] H. L. Montgomery, Distribution of zeros of the Riemann zeta function, Proc. Int. Cong. Math. Vancouver (1974), 379–381.
+[37] H. L. Montgomery and A. M. Odlyzko, Gaps between zeros of the zeta function, Colloq. Math. Soc. J¨ anos Bolyai, 34.
+Topics in Classical Number Theory (Budapest, 1981), North-Holland, Amsterdam, 1984.
+[38] H. L. Montgomery and P. J. Weinberger, Notes on small class numbers, Acta Arith. 24 (1974), 529–542.
+[39] A. M. Odlyzko, On the distribution of spacings between zeros of the zeta function, Math. Comp. 48 (1987), 273–308.
+[40] A. E. ¨Ozl¨ uk, On theq-analogue of the pair correlation conjecture, J. Number Theory 59 (1996), no. 2, 319–351.
+[41] Z. Rudnick and P. Sarnak, Principal L-functions and Random Matrix Theory, Duke Math. J. 81, 2 (1996), 269–322.
+[42] A. Selberg, Lectures of sieves, Collected papers, Vol. II, Springer, Berlin, 1991.
+[43] J. D. Vaaler, Some extremal functions in Fourier analysis, Bull. Amer. Math. Soc. 12 (1985), 183–215.
+IMPA - Instituto de Matem ´atica Pura e Aplicada - Estrada Dona Castorina, 110, Rio de Janeiro, RJ, Brazil
+22460-320
+E-mail address: carneiro@impa.br
+Department of Mathematics, Burapha University, 169 Long-Hard Bangsaen Road, Saen Sook Sub-district,
+Mueang District, Chonburi 20131, Thailand
+E-mail address: vorrapan@buu.ac.th
+Department of mathematics, North Dakota State University, Fargo, ND 58105-5075 USA
+E-mail address: friedrich.littmann@ndsu.edu
+Department of Mathematics, University of Mississippi, University, MS 38677 USA
+E-mail address: mbmilino@olemiss.edu
+34

@@ -1,0 +1,8 @@
+wrote /home/vstaln/riemann/tools/argprinciple/data/lmfdb_zeros_9000-9999.txt: 1000 zeros (idx 9000..9999)
+wrote /home/vstaln/riemann/tools/argprinciple/data/lmfdb_zeros_10000-10999.txt: 1000 zeros (idx 10000..10999)
+wrote /home/vstaln/riemann/tools/argprinciple/data/lmfdb_zeros_21500-22499.txt: 1000 zeros (idx 21500..22499)
+wrote /home/vstaln/riemann/tools/argprinciple/data/lmfdb_zeros_22500-23499.txt: 1000 zeros (idx 22500..23499)
+wrote /home/vstaln/riemann/tools/argprinciple/data/lmfdb_zeros_62000-62999.txt: 1000 zeros (idx 62000..62999)
+wrote /home/vstaln/riemann/tools/argprinciple/data/lmfdb_zeros_63000-63999.txt: 1000 zeros (idx 63000..63999)
+wrote /home/vstaln/riemann/tools/argprinciple/data/lmfdb_zeros_64000-64799.txt: 800 zeros (idx 64000..64799)
+DONE. total zeros fetched: 6800

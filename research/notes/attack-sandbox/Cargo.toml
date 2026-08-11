@@ -1,0 +1,17 @@
+[package]
+name = "finitet"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+[profile.release]
+opt-level = 3
+
+[[bin]]
+name = "finitet-cinf"
+path = "src/bin_cinf.rs"
+
+[[bin]]
+name = "finitet-sandbox"
+path = "src/sandbox.rs"

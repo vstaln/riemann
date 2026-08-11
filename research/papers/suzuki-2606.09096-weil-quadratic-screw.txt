@@ -1,0 +1,2733 @@
+|     |     |     |     | WEIL’S |     | QUADRATIC |     |          | FORM |     |     |
+| --- | --- | --- | --- | ------ | --- | --------- | --- | -------- | ---- | --- | --- |
+|     |     |     |     | VIA    | THE | SCREW     |     | FUNCTION |      |     |     |
+|     |     |     |     |        |     | MASATOSHI |     | SUZUKI   |      |     |     |
+Abstract. We establish a unified framework for understanding the results on the
+Weil quadratic form obtained by Yoshida (1992), Bombieri (2001, 2003), Connes–
+Consani (2023), and Connes–Consani–Moscovici (2025+) from the perspective of the
+screw function introduced in Suzuki (2023). An advantage of the approach via the
+screwfunctionisthatitprovidesamethodtostudytheWeilquadraticform,whichis
+originally defined in terms of distributions, by means of continuous functions. Based
+6202 nuJ 8  ]TN.htam[  1v69090.6062:viXra
+onthisframework,weformulateaconjecturestatingthataself-adjointoperatorwhose
+eigenvaluesaretheimaginarypartsofthenontrivialzerosoftheRiemannzetafunction
+canbeobtainedasthelimit,asa→∞,ofself-adjointoperatorsarisingfromnonlocal
+realizations of the first-order differential operator on the finite interval [−a,a]. All
+theseresultsareobtainedwithoutassumingtheRiemannHypothesis. Thisconjecture
+may be compared with the limit formula for the Riemann zeta function expressed in
+terms of zeta-regularized products proposed by Connes, Consani, and Moscovici, and
+itshedsnewlightonthespectral-theoreticinterpretationofthenontrivialzerosofthe
+|     |     | Riemann | zeta function. |     |     |     |     |     |     |     |     |
+| --- | --- | ------- | -------------- | --- | --- | --- | --- | --- | --- | --- | --- |
+Introduction
+1.
+1.1. Historical Background and Motivation. For test functions f, the Weil func-
+| tional | f    | (cid:55)→ W(f) | is defined          |     | by  |     |          |      |          |               |     |
+| ------ | ---- | -------------- | ------------------- | --- | --- | --- | -------- | ---- | -------- | ------------- | --- |
+|        |      |                | (cid:90)            |     |     |     | ∞        |      |          | ∞             |     |
+|        |      |                | ∞                   |     |     |     | (cid:88) | Λ(n) |          | (cid:88) Λ(n) |     |
+|        | W(f) | :=             | f(x)(ex/2+e−x/2)dx− |     |     |     |          | √    | f(logn)− | √ f(−logn)    |     |
+|        |      |                |                     |     |     |     |          | n    |          | n             |     |
+−∞
+|     |     |     |     |     |     |                     | n=1 |     |     | n=1              |     |
+| --- | --- | --- | --- | --- | --- | ------------------- | --- | --- | --- | ---------------- | --- |
+|     |     |     |     |     |     | (cid:90) ∞(cid:110) |     |     |     | (cid:111) ex/2dx |     |
+f(x)+f(−x)−2e−x/2f(0)
+|     |     |     | −(log4π+C |     | 0 )f(0)− |     |     |     |     |     | ,   |
+| --- | --- | --- | --------- | --- | -------- | --- | --- | --- | --- | --- | --- |
+ex−e−x
+0
+pk
+where Λ(n) denotes the von Mangoldt function, defined as Λ(n) = logp if n = with
+k ∈ Z , and Λ(n) = 0 otherwise, and C is the Euler–Mascheroni constant. Although
+|     | >0  |     |     |     |     |     | 0   |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+the precise class of test functions will be specified as needed later, our primary object
+| of  | interest | is  | the symmetric |       | (or Hermitian) |     | quadratic  |     | form     |        |     |
+| --- | -------- | --- | ------------- | ----- | -------------- | --- | ---------- | --- | -------- | ------ | --- |
+|     |          |     | Q             | (v ,v | ) :=           | W(v | ∗v ),      | Q   | (v) := Q | (v,v), |     |
+|     |          |     |               | W 1   | 2              | 1   | (cid:101)2 | W   |          | W      |     |
+where
+(cid:90) ∞
+|     |     |     | (v ∗v | )(x) := |     | v (y)v | (x−y)dy |     | and | v(x) := v(−x). |     |
+| --- | --- | --- | ----- | ------- | --- | ------ | ------- | --- | --- | -------------- | --- |
+|     |     |     | 1 2   |         |     | 1      | 2       |     |     | (cid:101)      |     |
+−∞
+The Riemann Hypothesis (RH) states that all nontrivial zeros of the Riemann zeta
+function ζ(s) lie on the critical line ℜ(s) = 1/2. A fundamental result due to Weil [15]
+| states | that | RH  | is equivalent |     | to the | condition |     | that |     |     |     |
+| ------ | ---- | --- | ------------- | --- | ------ | --------- | --- | ---- | --- | --- | --- |
+C∞(R),
+|     |     |     |     |     | Q (v) | ≥ 0 | for all | v ∈ |     |     |     |
+| --- | --- | --- | --- | --- | ----- | --- | ------- | --- | --- | --- | --- |
+|     |     |     |     |     | W     |     |         |     | c   |     |     |
+a property known as Weil’s positivity criterion for RH (although Weil did not formulate
+the criterion in terms of compactly supported smooth test functions; see [15, 16] and
+[13, Section 3.2]). In the commentary to his Collected Works, Weil emphasized the
+|     | Date: | Version     | of June | 9, 2026.        |     |       |       |       |       |     |     |
+| --- | ----- | ----------- | ------- | --------------- | --- | ----- | ----- | ----- | ----- | --- | --- |
+|     | 2020  | Mathematics | Subject | Classification. |     | 11M26 | 42A82 | 46E22 | 47B25 | .   |     |
+Key words and phrases. Riemann Hypothesis; Weil quadratic form; screw function; de Branges
+| spaces; | Hilbert–Po´lya |     | operator |     | .   |     |     |     |     |     |     |
+| ------- | -------------- | --- | -------- | --- | --- | --- | --- | --- | --- | --- | --- |
+1
+
+| 2   |     |     |     | M.SUZUKI |     |
+| --- | --- | --- | --- | -------- | --- |
+distributionalnatureofthiscriterionandsuggestedthatitdeservedfurtherinvestigation
+by analysts. Despite this invitation, the functional W and the quadratic form Q have
+W
+not been extensively studied, with notable exceptions such as the works of Yoshida [17],
+Bombieri [1, 2], Connes and Consani [3], and Connes, Consani, and Moscovici [4].
+ThestudyofthelocalizationoftheWeilquadraticformQ W waspioneeredbyYoshida
+[17], who established that RH is equivalent to the positive definiteness of Q on the
+W
+space
+|     |     | C∞(−a,a) | := {v | ∈ C∞(R) | supp(v) | ⊂ [−a,a]} |
+| --- | --- | -------- | ----- | ----------------- | --------- |
+|     |     | c        |       | c                 |           |
+for every a > 0. In [17, Proposition 1], Yoshida further demonstrated that the condition
+Q (v) > 0 for all non-zero odd functions v ∈ C∞(R) implies RH, while a similar condi-
+| W   |     |     |     | c   |     |
+| --- | --- | --- | --- | --- | --- |
+tion for all non-zero even functions implies RH except for possible real zeros. Crucially,
+he initiated the variational study of Q by considering the infimum of the Rayleigh
+W
+| quotient | Q (v)/∥v∥2 | on the | localized | space |     |
+| -------- | ---------- | ------ | --------- | ----- | --- |
+|          | W          | L2     |           |       |     |
+C∞(R)
+K(a) := {v | v(x) = f(x)1 (x) for some f ∈ which has period 2a},
+[−a,a]
+proving that it is positive for sufficiently small a > 0 [17, Lemma 2] or for appropriate
+subspacesK (a)offinitecodimension[17,Lemma3]. Thenon-degeneracyofQ onthe
+N W
+(cid:91)
+“completion” K(a) ((cid:44)→ L2(−a,a)) was shown to be equivalent to RH in [17, Theorem
+(cid:91)
+2]. Note that the hat in K(a) does not denote the Fourier transform.
+Buildingonthisfoundation,Bombieri[1,2]addressedtheminimizationoftheRayleigh
+H1(−a,a)
+quotient on the Sobolev space [1, Problem 1] (and [2, Problem B]) and on
+0
+L2(E) for a finite union of intervals E [1, Problem 2] (and [2, Problem A]). While the
+existence of a minimizer for the lower bound on L2(E) was established in [1, Theorem 3]
+(and [2, Theorem 4.3]), the subsequent argument concerning the continuity of this lower
+bound with respect to a remains an analytically delicate issue. Specifically, although
+it was claimed in [1, Theorem 5] that the lower bound varies continuously when the
+minimization is restricted to the subspaces of either even or odd functions, this asser-
+tion calls for a more careful analysis. In view of Yoshida’s result, such continuity would
+essentially reproduce the equivalence between the failure of RH and the existence of a
+degenerating element v ∈ D(Q ) satisfying Q (v) = 0, offering a simplification of the
+|     |     |     | W   | W   |     |
+| --- | --- | --- | --- | --- | --- |
+original proof that relied on explicit formulas. See the discussion following Theorem 1.3
+| for further | details. |     |     |     |     |
+| ----------- | -------- | --- | --- | --- | --- |
+More recently, a rigorous operator-theoretic refinement has been provided by Connes
+and Consani [3] and Connes, Consani, and Moscovici [4]. They established that the
+| localized | closed | symmetric | form |     |     |
+| --------- | ------ | --------- | ---- | --- | --- |
+Qa
+|     |     |     |     | := Q W | L2(−a,a) |     |
+| --- | --- | --- | --- | ----------------- | --- |
+W
+is lower bounded and lower semicontinuous [3, Section 2], leading to the construction of
+a canonical, densely defined self-adjoint operator A on L2(−a,a) such that
+a
+Qa
+|     |     |     |     | (v) = ⟨A v,v⟩ | (1.1) |
+| --- | --- | --- | --- | ------------- | ----- |
+|     |     |     | W   | a L2          |       |
+for v ∈ D(A ) ⊂ D(Qa ) ⊂ L2(−a,a) [4, Section 3] (here we reformulate their results,
+a
+W
+originally stated on [1/λ,λ], in terms of the variable a = logλ), where the bracket is the
+L2
+| standard | inner | product |     |     |     |
+| -------- | ----- | ------- | --- | --- | --- |
+(cid:90) ∞
+|     |     |     | ⟨v ,v ⟩ | = v (x)v (x)dx. |     |
+| --- | --- | --- | ------- | --------------- | --- |
+|     |     |     | 1 2 L2  | 1 2             |     |
+−∞
+This operator A , which can be viewed as a refinement of Bombieri’s Lagrangian ([1,
+a
+Lemma 1], [2, Sections 5–6]), possesses a discrete lower bounded spectrum [4, Theorem
+3.6] and a corresponding ground state [4, Corollary 3.7]. Furthermore, it was shown in
+[4, Theorem 5.10] that, when Qa is restricted to a certain finite-dimensional subspace
+W
+of L2(−a,a), the Fourier transform of the eigenfunction corresponding to the lowest
+| eigenvalue | possesses | only real | zeros. |     |     |
+| ---------- | --------- | --------- | ------ | --- | --- |
+
+|     | WEIL’S | QUADRATIC | FORM VIA THE | SCREW FUNCTION |     | 3   |
+| --- | ------ | --------- | ------------ | -------------- | --- | --- |
+First, we aim to unify these various results through the framework of the screw func-
+tionassociatedwithζ(s), whichwasintroducedin[13]. Thisapproachnotonlyprovides
+transparent re-derivations of previous results, but also leads to more refined results pre-
+sented below. A key advantage of this screw function approach is that it enables us
+to understand Weil’s quadratic form through continuous (and well-behaved) functions,
+thereby avoiding the delicate distribution-theoretic aspects of Weil’s original formula-
+tion. The connection between the Weil quadratic form and the screw function, already
+emphasized in [13, Proposition 3.1], was expected to provide new insight into the study
+oftheWeilquadraticform. Indeed,[13]reinterpretedsomeoftheresultsbyYoshida[17],
+Bombieri [1, 2], and Connes–Consani [3] from the viewpoint of screw functions. How-
+ever, these earlier works had not yet been placed within a fully unified framework. Since
+then, the theoretical foundations of the screw-function approach to zeta functions have
+| been substantially | developed. |     |     |     |     |     |
+| ------------------ | ---------- | --- | --- | --- | --- | --- |
+In particular, [14] established a completely new picture of the Hilbert space obtained
+as the completion of C∞(R) with respect to Q under RH. This was made possible
+|     |     | c   |     | W   |     |     |
+| --- | --- | --- | --- | --- | --- | --- |
+by the favorable analytic properties of the screw function as an integral kernel, such
+as positivity and smoothness. Our main objective is to understand what new insights
+about Q can be obtained by localizing the global framework of [14] to the interval
+W
+[−a,a], thereby returning to Yoshida’s original viewpoint. This line of investigation was
+further motivated by recent results in [4, Theorem 5.10, Sections 7–8]. Let
+ξ(s) := s(s−1)π−s/2Γ(s/2)ζ(s)
+be the Riemann ξ-function, where Γ(s) is the usual gamma function. Let v be the
+a
+eigenfunctioncorrespondingtothelowesteigenvalueofA a (denotedbyξ λ witha = logλ
+| in their notation). | Denote | by  |     |     |     |     |
+| ------------------- | ------ | --- | --- | --- | --- | --- |
+(cid:90) ∞
+|     |     | f(cid:98)(z) | := f(x)eizxdx |     |     |     |
+| --- | --- | ------------ | ------------- | --- | --- | --- |
+−∞
+the Fourier transform of f. Motivated by the Hilbert–P´olya operator constructed in [14,
+Section 6], we next formulate an analogue of the conjectural limiting formula discussed
+| in [4, Section | 7], |     |                      |     |     |       |
+| -------------- | --- | --- | -------------------- | --- | --- | ----- |
+|                |     | lim | c v (z) = ξ(1/2+iz). |     |     | (1.2) |
+a(cid:98)a
+a→∞
+This line of investigation led to a unified perspective on the earlier works mentioned
+aboveandultimatelytoCorollary1.6, whichconstitutesthemainconjecturalstatement
+| of the present | paper. |     |     |     |     |     |
+| -------------- | ------ | --- | --- | --- | --- | --- |
+1.2. Main Results. Before presenting the main results, we emphasize that none of
+them depends on RH. The first step in the study of the Weil quadratic form via screw
+functions is to obtain an explicit description of the self-adjoint operator A in (1.1).
+a
+While the existence of A was established abstractly in [4, Section 3] via the theory of
+a
+quadratic forms, the use of screw functions provides a constructive and explicit formula
+for A a .
+| Let g(t) | be a continuous | real-valued | even function | on R, defined | by  |     |
+| -------- | --------------- | ----------- | ------------- | ------------- | --- | --- |
+(cid:88) Λ(n)
+| g(t) = | −4(et/2+e−t/2−2)+ |     | √   | (|t|−logn) |     |     |
+| ------ | ----------------- | --- | --- | ---------- | --- | --- |
+n
+|     |     |     | n≤exp(|t|) |     |          | (1.3) |
+| --- | --- | --- | ---------- | --- | -------- | ----- |
+|     | |t| |     | 1 (cid:16) |     | (cid:17) |       |
+Φ(1,2,1/4)−e−|t|/2Φ(e−2|t|,2,1/4)
+|     | − (ψ(1/4)−logπ)− |     |     |     | ,   |     |
+| --- | ---------------- | --- | --- | --- | --- | --- |
+|     | 2                |     | 4   |     |     |     |
+where ψ(s) is the digamma function and Φ(z,s,a) = (cid:80)∞ (n+a)−szn is the Hurwitz–
+n=0
+Lerch zeta function. A function g on R satisfying g(t) = g(−t) is called a screw function
+R.
+on the real line if the kernel g(t−u)−g(t)−g(−u)+g(0) is nonnegative for all t,u ∈
+As shown in [13, Theorem 1.2], the above function g is a screw function in the sense of
+
+| 4   |     |     |     |     | M.SUZUKI |     |     |     |     |
+| --- | --- | --- | --- | --- | -------- | --- | --- | --- | --- |
+Krein–Langer [8, Section 5] if and only if RH holds. For this reason, we shall refer to it
+as the screw function associated with ζ(s). We define the integral operator G by
+(cid:90)
+∞
+|     |     |     | (Gu)(x) |     | :=  | g(x−y)u(y)dy. |     |     | (1.4) |
+| --- | --- | --- | ------- | --- | --- | ------------- | --- | --- | ----- |
+−∞
+The integral on the right-hand side converges absolutely for u ∈ C∞(R), since g is
+c
+continuous. However, as noted immediately after Theorem 1.6 in [13], g(t) does not
+tend to zero as |t| → ∞, and hence the integral does not necessarily converge for a
+general u ∈ L2(R). Within the theory of screw functions, it would be more natural
+to consider the integral operator G(cid:101) with the kernel g(t−u)−g(t)−g(−u)+g(0) (cf.
+Section 8); nevertheless, for applications to Q W , the simpler operator G is sufficient.
+Throughout this paper, for each a > 0, we view L2(−a,a) as a closed subspace of
+L2(R)byextendingfunctionstobezerooutside(−a,a). LetL2(−a,a)denotetheclosed
+0 (cid:82)a
+subspace of L2(−a,a) consisting of functions u satisfying u(0) = u(x)dx = 0. We
+(cid:98)
+−a
+denotebyP theorthogonalprojectionfromL2(R)ontoL2(−a,a)(see(2.1)),anddefine
+|     | a   |     |      |      |          |     | 0         |     |       |
+| --- | --- | --- | ---- | ---- | -------- | --- | --------- | --- | ----- |
+|     |     |     |      |      | L2(−a,a) |     | L2(−a,a). |     |       |
+|     |     |     | G := | P GP | :        |     | →         |     | (1.5) |
+|     |     |     | a    | a    | a 0      |     | 0         |     |       |
+The self-adjointness of the operator G follows immediately from the fact that g is real-
+a
+valued and even. By [13, Proposition 3.1], the integral operator G associated with the
+a
+screw function is directly related to Weil’s quadratic form Q W via differentiation of test
+functions. Let D = id/dx denote the differential operator on L2(−a,a) with Dirichlet
+D∗
+| boundary | conditions, | and | let          | be  | its adjoint. |           | We then define |               |       |
+| -------- | ----------- | --- | ------------ | --- | ------------ | --------- | -------------- | ------------- | ----- |
+|          | B :=        | D∗G | D : L2(−a,a) |     | →            | L2(−a,a), | D(B            | ) = H1(−a,a). | (1.6) |
+|          | a           |     | a            |     |              |           |                | a 0           |       |
+This operator is symmetric but fails to be self-adjoint. Then, the operator A in (1.1)
+a
+| can be | characterized | as  | follows. |     |     |     |     |     |     |
+| ------ | ------------- | --- | -------- | --- | --- | --- | --- | --- | --- |
+Theorem 1.1. For each a > 0, the self-adjoint operator A defined by (1.1) is the
+a
+| Friedrichs | extension | of  | the symmetric |     | operator |     | B defined | by (1.6). |     |
+| ---------- | --------- | --- | ------------- | --- | -------- | --- | --------- | --------- | --- |
+a
+This result provides a concrete operator-theoretic realization of the spectral interpre-
+tation of Qa established in [4] through the use of screw functions, thereby clarifying the
+W
+connection between this spectral interpretation and the classical variational approach of
+| Yoshida | [17]. |     |     |     |     |     |     |     |     |
+| ------- | ----- | --- | --- | --- | --- | --- | --- | --- | --- |
+Moreover,asshownin[4,Theorem3.6],foreacha > 0,thespectrumoftheself-adjoint
+operator A a is bounded from below and discrete, with +∞ as its only accumulation
+point. In particular, the largest lower bound of the spectrum of A , denoted by λ , is an
+|     |     |     |     |     |     |     |     | a   | a   |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+eigenvalue. Therefore, there exists a nonzero function v ∈ D(A ) attaining the infimum
+a
+Qa (v)
+W
+|     |     |     |     | λ a | = inf     |     | .    |     | (1.7) |
+| --- | --- | --- | --- | --- | --------- | --- | ---- | --- | ----- |
+|     |     |     |     |     | 0̸=v∈D(Qa |     | ∥v∥2 |     |       |
+|     |     |     |     |     |           | W ) | L2   |     |       |
+H1(−a,a)
+Furthermore, the domain D(A ) is strictly larger than D(B ) = and contains
+|     |     |     |     | a   |     |     |     | a 0 |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+functions such as constants. As will be shown later (Lemma 3.1), we have
+|     |     | Qa  | (v) | = ⟨B | v,v⟩ | for | v ∈ H1(−a,a). |     | (1.8) |
+| --- | --- | --- | --- | ---- | ---- | --- | ------------- | --- | ----- |
+|     |     |     | W   |      | a L2 |     | 0             |     |       |
+Since the form-norm closure of C∞(−a,a) (⊂ H1(−a,a)) with respect to Qa contains
+c
+|     |     |     |     |     |     |     | 0   | W   |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+thecoreofthequadraticformQa asintheproofofTheorem1.1,weobtainthefollowing
+W
+result.
+Corollary 1.2. For each a > 0, any function attaining the infimum in (1.7) belongs
+to the closure of C∞(−a,a) with respect to the form norm associated with Qa . In
+|             |            | c       |     |        |          |          |     |     | W   |
+| ----------- | ---------- | ------- | --- | ------ | -------- | -------- | --- | --- | --- |
+| particular, | λ a is the | infimum |     | of the | Rayleigh | quotient |     |     |     |
+|             |            |         |     |        | ⟨B       | v,v⟩     |     |     |     |
+|             |            |         |     |        | a        | L2       |     |     |     |
+∥v∥2
+L2
+over C∞(−a,a).
+c
+
+WEIL’S QUADRATIC FORM VIA THE SCREW FUNCTION 5
+This is analogous to [1, Problem 2] (and [2, Problem A]) and [4, Theorem 3.6], but
+here the class over which the infimum is taken is made explicit. For the relation between
+the Rayleigh quotient in [1, Problem 1] (and [2, Problem B]) and the operator G , see
+a
+Section 8.4.
+One expects that the eigenvalues of the self-adjoint operator A vary continuously in
+a
+a. However, because A is unbounded and its domain is difficult to describe explicitly,
+a
+it is not straightforward to prove such continuity. Indeed, in [1, Theorem 5] (and [2,
+Theorem 4.4]), analogues of the infimum in (1.7) are considered on the spaces of even
+and odd functions, and their continuity with respect to a is asserted, but the details of
+the proof are not fully provided there.
+In contrast, by exploiting the asymptotic expansion (2.2) of the screw function near
+the origin, which involves a logarithmic singularity, one can prove the continuity of the
+lowest eigenvalue λ without imposing any parity restriction.
+a
+Theorem 1.3. The lowest eigenvalue λ is continuous in a.
+a
+Since the continuity of λ can be established without assuming RH, Theorem 1.3
+a
+immediately yields, as a corollary, another proof of Yoshida’s result [17] that RH is
+equivalent to the nondegeneracy of Qa for every a > 0. Indeed, the failure of RH is
+W
+equivalent to the existence of some a > 0 for which λ < 0. Since λ > 0 for sufficiently
+a a
+small a > 0 [17, Lemma 2], it follows that if RH is false, then Qa must be degenerate
+W
+for some value of a by continuity of λ .
+a
+We now turn to the eigenfunction corresponding to the lowest eigenvalue, following
+the approach of [4]. Roughly speaking, [4, Theorem 5.10] (see also [4, Section 7]) shows
+that if the lowest eigenvalue λ is simple and its eigenfunction v ∈ D(A ) is even,
+a a a
+then all zeros of the Fourier transform v
+(cid:98)a
+(z) (corresponding to ξ(cid:98)λ (z) in [4]) are real.
+More precisely, they study restrictions of Qa to suitable finite-dimensional subspaces
+W
+of L2(−a,a), obtaining the corresponding reality result at each finite-dimensional level.
+In our framework, however, the simplicity of λ and the evenness of the correspond-
+a
+ing eigenfunction follow naturally for sufficiently small a by once again exploiting the
+asymptotic expansion (2.2) of the screw function.
+Theorem 1.4. For sufficiently small a > 0, the lowest eigenvalue λ is positive, simple,
+a
+and satisfies
+1
+λ = log +µ −log(2π)+ψ(2)−1+O(a)
+a 1
+a
+as a → 0+, for some constant µ > 0. Furthermore, the corresponding eigenfunction is
+1
+even.
+Let us return to the eigenfunction v corresponding to the lowest eigenvalue. The
+a
+fact that all zeros of its Fourier transform v (z) are real follows from the property that
+(cid:98)a
+it serves as the characteristic function (given by a zeta-regularized product) of a self-
+adjointperturbationofthedifferentialoperatord/dxwith periodicboundaryconditions
+[4, Theorem 5.10]. However, since such a differential operator cannot be defined directly
+as an operator on L2(−a,a), the authors of [4] instead consider restrictions of Qa to
+W
+finite-dimensional subspaces V. Consequently, what is actually established there is not
+directly the reality of the zeros of v (z) itself, but rather the reality of the zeros of the
+(cid:98)a
+Fourier transform of a function minimizing the Rayleigh quotient of Qa | .
+W V
+Instead of considering perturbations of the differential operator d/dx with periodic
+boundary conditions, we construct an analogue of v (z) by considering self-adjoint ex-
+(cid:98)a
+tensionsoftheminimaloperatorD inaHilbertspacedifferentfromtheusualL2 space.
+a
+Choose λ such that λ > λ, and define T = T := A −λI. Since T is positive,
+a a a,λ a a
+∥v∥2 := ⟨T v,v⟩ = Qa (v)−λ∥v∥2 (1.9)
+Ta a L2 W L2
+
+| 6   |     |     |     |     |     | M.SUZUKI |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | -------- | --- | --- | --- | --- | --- |
+defines a norm on C∞(−a,a). Let H(T ) denote the corresponding completion. Then
+|     |     |     | c   |     |     | a   |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+C∞(−a,a)embedsinjectivelyintoH(T
+). Wethereforeconsiderthedifferentialoperator
+| c    |       |        |        |        |     | a    |           |     |     |     |        |
+| ---- | ----- | ------ | ------ | ------ | --- | ---- | --------- | --- | --- | --- | ------ |
+| D := | id/dx | on H(T | ) with | domain |     |      |           |     |     |     |        |
+| a    |       |        | a      |        |     |      |           |     |     |     |        |
+|      |       |        |        |        | D(D | ) := | C∞(−a,a). |     |     |     | (1.10) |
+|      |       |        |        |        |     | a    | c         |     |     |     |        |
+D
+It turns out that a is a symmetric operator with deficiency indices (1,1) (Lemmas 6.1
+and 6.2). Hence D admits a family of self-adjoint extensions D parametrized by
+|     |     |     | a   |     |     |     |     |     | a,θ |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+D∗
+θ ∈ [0,2π). A function arising from the boundary form of the adjoint operator
+a
+| provides | a counterpart |     | to  | v (z) | in [4], | as follows. |     |     |     |     |     |
+| -------- | ------------- | --- | --- | ----- | ------- | ----------- | --- | --- | --- | --- | --- |
+(cid:98)a
+Theorem 1.5. Let a > 0 and θ ∈ [0,2π). Let v (a,x) be eigenfunctions of the ad-
+±
+joint operator D∗ corresponding respectively to the eigenvalues ±i, normalized so that
+a
+| ∥v + (a,·)∥ | Ta  | = ∥v − (a,·)∥ |     | Ta . Then | the | function |     |     |          |     |     |
+| ----------- | --- | ------------- | --- | --------- | --- | -------- | --- | --- | -------- | --- | --- |
+|             |     |               |     | (cid:90)  |     |          |     |     | (cid:90) |     |     |
+|             |     |               |     | a         |     |          |     |     | a        |     |     |
+W(a,θ;z) := (z−i) v (a,x)eizxdx+eiθ(z+i) v (a,x)eizxdx (1.11)
+|     |     |     |     |     | +   |     |     |     | −   |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|     |     |     |     | −a  |     |     |     |     | −a  |     |     |
+D
+is entire in z. The eigenvalues of the self-adjoint operator are precisely the zeros
+a,θ
+| of W(a,θ;z). |          | Furthermore, |          | all        | zeros         | of W(a,θ;z) | are                      | real. |             |          |     |
+| ------------ | -------- | ------------ | -------- | ---------- | ------------- | ----------- | ------------------------ | ----- | ----------- | -------- | --- |
+| The          | equation | W(a,θ;z)     |          | = 0        | is equivalent |             | to                       |       |             |          |     |
+|              |          |              | (cid:18) | (cid:90) a |               |             | (cid:19)(cid:30)(cid:18) |       | (cid:90) a  | (cid:19) |     |
+|              | eiθ      | = −          | (z−i)    |            | v (x)eizxdx   |             | (z+i)                    |       | v (x)eizxdx | .        |     |
+|              |          |              |          |            | +             |             |                          |       | −           |          |     |
+|              |          |              |          | −a         |               |             |                          |       | −a          |          |     |
+eiθ
+This is analogous to the equation = exp(iza)/exp(−iza), which characterizes the
+eigenvalues of the self-adjoint extension ∂ of the minimal operator ∂ = id/dx on
+θ
+L2(−a,a)
+|     | through |     | the boundary |     | values | of  | its eigenfunctions. |     |     |     |     |
+| --- | ------- | --- | ------------ | --- | ------ | --- | ------------------- | --- | --- | --- | --- |
+LetuscompareTheorem1.5with[4,Theorem5.10]. First,thetworesultsareparallel
+in that both establish the reality of the zeros of a certain function through its relation to
+the self-adjointness of a differential operator. However, whereas the result in [4] requires
+strong assumptions, such as the simplicity of λ and the evenness of the corresponding
+a
+eigenfunction, our Theorem 1.5 has the advantage of being proved unconditionally. In
+fact, its proof does not require detailed information on the arithmetic terms appearing
+in the Weil form Qa . It relies essentially only on the fact that the prime contribution
+W
+to Qa involves only finitely many primes for fixed a > 0. Moreover, they obtain
+W
+a determinant representation of v (z) in terms of a zeta-regularized determinant (by
+(cid:98)a
+restrictingtofinite-dimensionalsubspaces),therebyinterpretingv (cid:98)a (z)asacharacteristic
+function. By contrast, our expression (1.11) arises from a Lagrangian condition.
+A further difference appears in the approach to RH, as discussed in [4, Sections 7 and
+8]. While their function v (z) is expected to approximate ξ(1/2−iz) in the limit a → ∞
+(cid:98)a
+through the conjectural formula (1.2), our function W(a,θ;z) is expected, as explained
+| below, | to approximate |     | the | reciprocal |     | of its | logarithmic | derivative. |     |     |     |
+| ------ | -------------- | --- | --- | ---------- | --- | ------ | ----------- | ----------- | --- | --- | --- |
+C)
+Corollary 1.6. If one can choose θ = θ(a) and ϕ(a,z) (̸= ∞ for any a > 0 and z ∈
+such that
+ξ(1/2−iz)
+|     |     |     |     | eϕ(a,z)W(a,θ;z) |     |     | z2         |     |     |     |        |
+| --- | --- | --- | --- | --------------- | --- | --- | ---------- | --- | --- | --- | ------ |
+|     |     |     |     | lim             |     |     | =          |     | ,   |     | (1.12) |
+|     |     |     | a→∞ |                 |     |     | ξ′(1/2−iz) |     |     |     |        |
+C,
+| holds uniformly |     | on  | every | compact | subset | K   | ⊂ then | RH  | holds. |     |     |
+| --------------- | --- | --- | ----- | ------- | ------ | --- | ------ | --- | ------ | --- | --- |
+D
+A direct computation of the eigenfunctions shows that every eigenvalue of has
+a,θ
+multiplicity one. The right-hand side of (1.12) is consistent with this simplicity of
+the spectrum. The exponential factor exp(ϕ(a,z)) is included to allow for a possible
+normalization in the limit process. It is plausible that no such correction is actually
+| needed, | but | we do | not pursue |     | this question |     | here. |     |     |     |     |
+| ------- | --- | ----- | ---------- | --- | ------------- | --- | ----- | --- | --- | --- | --- |
+The reason why the limit formula (1.12) is expected to hold will be discussed in
+Section 7. Briefly speaking, it is motivated by the determination of the structure of
+
+|     |     | WEIL’S | QUADRATIC |     | FORM | VIA | THE SCREW | FUNCTION |     |     | 7   |
+| --- | --- | ------ | --------- | --- | ---- | --- | --------- | -------- | --- | --- | --- |
+H(A ) := H(T ) under RH in [14, Theorem 1.1], together with the construction of
+| ∞                  |     | ∞,0      |     |           |     |                 |     |     |     |     |     |
+| ------------------ | --- | -------- | --- | --------- | --- | --------------- | --- | --- | --- | --- | --- |
+| the Hilbert–P´olya |     | operator |     | described |     | in [14, Section | 6]. |     |     |     |     |
+Under RH, one has A > 0, so that λ = 0 may be chosen in T for every a > 0. The
+|     |     |     | a   |     |     |     |     |     | a   |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+limit formula (1.12) is formulated with the situation T = A (i.e. λ = 0) in mind, and
+|     |     |     |     |     |     |     | a   | a   |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+indeed Section 7 proceeds under the assumption A a > 0. Nevertheless, when A a > 0,
+bothH(T )andH(A )aredefinedandareisomorphicasHilbertspaces. Hencethezeros
+|     | a   |     | a   |     |     |     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+of W(a,θ;z) are expected to be independent of the choice of λ used in the definition of
+T . However, in any attempt to prove the limit formula (1.12), control of λ (< λ ) will
+| a   |     |     |     |     |     |     |     |     |     |     | a   |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+likely play an important role. Such control is expected to require a detailed analysis
+of the arithmetic contribution coming from the prime terms in Qa , which lies beyond
+W
+the arguments used in the proof of Theorem 1.5, where only the finiteness of the prime
+| contribution | for | fixed | a plays | a   | role. |     |     |     |     |     |     |
+| ------------ | --- | ----- | ------- | --- | ----- | --- | --- | --- | --- | --- | --- |
+Since the reality of the zeros of W(a,θ;z) for each a > 0 has already been established
+in Theorem 1.5, it would suffice to prove (1.12) as an identity of complex functions in
+order to deduce RH. As explained in Section 8, the eigenfunctions v (a,x) are solutions
+±
+of Fredholm integral equations of the first kind associated with the integral operator
+G a whose kernel is the continuous function g(x − y). Consequently, the conjectural
+limit formula (1.12) in Corollary 1.6 can be formulated as a purely analytic statement,
+| independently |     | of H(T | ).  |     |     |     |     |     |     |     |     |
+| ------------- | --- | ------ | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+a
+The organization of this paper is as follows. In Section 2, we study the asymptotic
+expansion of the screw function g near the origin and derive from it several formulas for
+the quadratic form ⟨B v,v⟩. The latter formulas will be used repeatedly in the proofs
+a
+of the main results. Using the results of Section 2, we prove Theorem 1.1 in Section 3
+and Theorem 1.3 in Section 4. In both proofs, the compactness of the embedding
+D(Qa ) → L2(−a,a) plays an essential role. Theorem 1.4 is proved in Section 5. In
+W
+addition to the results of Section 2, the proof relies on the theory of Dirichlet forms. In
+Section 6, we prove Theorem 1.5 using von Neumann’s theory of self-adjoint extensions.
+Section 7 explains the motivation for the limit formula in Corollary 1.6 by relating it to
+the results of [14]. The main tool there is the theory of de Branges spaces. Finally, in
+Section 8, we relate the theory of the quadratic forms Qa (v) = ⟨A v,v⟩ developed in
+|     |     |     |     |     |     |     |     | W   | a L2 |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | ---- | --- | --- |
+this paper to the theory of the quadratic forms ⟨G u,u⟩ . While the former belongs to
+a L2
+thetheoryofdistributionsandisanalyticallymoredelicate, thelatterhastheadvantage
+of being treatable within the theory of integral operators with continuous kernels.
+Preliminaries
+2.
+| 2.1. Precise |     | definition | of       | operators. |      | Let        |          |       |     |     |     |
+| ------------ | --- | ---------- | -------- | ---------- | ---- | ---------- | -------- | ----- | --- | --- | --- |
+|              |     |            | L2(−a,a) |            | = {u | ∈ L2(−a,a) | | u(0)   | = 0}, |     |     |     |
+|              |     |            | 0        |            |      |            | (cid:98) |       |     |     |     |
+as in Section 1. Then D = id/dx denotes the differentiation operator on L2(−a,a)
+with Dirichlet boundary conditions v(±a) = 0, whose domain and range are D(D) =
+| H1(−a,a) |     |      | L2(−a,a), |     |               |     | D∗  |        |             |     |        |
+| -------- | --- | ---- | --------- | --- | ------------- | --- | --- | ------ | ----------- | --- | ------ |
+|          | and | R(D) | =         |     | respectively. |     | Let | denote | the adjoint | of  | D with |
+| 0        |     |      |           | 0   |               |     |     |        |             |     |        |
+respect to the standard L2 inner product. While D∗ acts as the same differential op-
+erator id/dx, its domain is D(D∗) = H1(−a,a) and its range is R(D∗) = L2(−a,a).
+Consequently, D is not self-adjoint. Define the projection P : L2(R) → L2(−a,a) by
+a
+0
+(cid:90) a
+|     |     |     |       |          |     | 1        |       | 1   |        |     |       |
+| --- | --- | --- | ----- | -------- | --- | -------- | ----- | --- | ------ | --- | ----- |
+|     |     | (P  | u)(x) | := u(x)− |     | u(0) =   | u(x)− |     | u(y)dy |     | (2.1) |
+|     |     |     | a     |          |     | (cid:98) |       |     |        |     |       |
+|     |     |     |       |          |     | 2a       | 2a    |     |        |     |       |
+−a
+| for x ∈ | (−a,a), | and | (P u)(x) | =   | 0 otherwise. | Then, |     |     |     |     |     |
+| ------- | ------- | --- | -------- | --- | ------------ | ----- | --- | --- | --- | --- | --- |
+a
+|     |     |           |     |          |     | 1 (cid:90) a |            |     |           |     |     |
+| --- | --- | --------- | --- | -------- | --- | ------------ | ---------- | --- | --------- | --- | --- |
+|     |     | (P Ku)(x) | =   | (Ku)(x)− |     |              | (Ku)(t)dt, | x   | ∈ (−a,a). |     |     |
+|     |     | a         |     |          |     | 2a           |            |     |           |     |     |
+−a
+This defines the operator G in (1.5). The kernel function g is continuous, and its
+a
+first derivative is piecewise continuous with only a discrete set of discontinuities at
+
+8 M.SUZUKI
+which finite one-sided limits exist. It follows that for any u ∈ L2(−a,a), we have
+0
+G u ∈ D(D∗) = H1(−a,a). Consequently, the operator B on L2(−a,a) with domain
+a a
+D(B ) := H1(−a,a) is well-defined by (1.6). Since G is self-adjoint, the relation
+a 0 a
+⟨B v,w⟩ = ⟨v,B w⟩ holds for all v,w ∈ D(B ). Thus, B is a symmetric operator,
+a L2 a L2 a a
+but it is not self-adjoint. Indeed, the domain of the adjoint operator, D(B∗), consists
+a
+of all w such that the functional v (cid:55)→ ⟨B v,w⟩ is L2-continuous, which also includes
+a
+functions w ∈ H1(−a,a) that do not vanish on the boundary. That is, D(B ) ⊊ D(B∗).
+a a
+2.2. Expansion near the origin. We derive an asymptotic formula for the screw
+function g in a neighborhood of the origin. The resulting asymptotic formula will be
+used repeatedly throughout the paper. [6, 9.554] with z = e−2t, m = 2, and v = 1/4
+yields
+e−t/2Φ(e−2t,2,1/4) = 2t(log(2t)+ψ(1/4)−ψ(2))
+(cid:88)
+∞ (−2t)n
++ζ(2,1/4)+ ζ(2−n,1/4)
+n!
+n=2
+for t → 0+, where ζ(s,a) denotes the Hurwitz zeta function. By definition (1.3),
+g(t) = −4(et/2+e−t/2−2)−(|t|/2)(ψ(1/4)−logπ)−(1/4)(F(0)−F(t))
+(cid:88) Λ(n)
++ √ (|t|−logn),
+n
+n≤exp(|t|)
+where
+(cid:88)
+∞ (−2|t|)n
+F(t) := 2|t|(log(2|t|)+ψ(1/4)−ψ(2))+ζ(2,1/4)+ ζ(2−n,1/4) .
+n!
+n=2
+We have ψ(2) = 1 − C [6, (8.365), (8.366)] and ψ(1/4) = −(π/2) − 3log2 − C [6,
+0 0
+(8.366)], where C denotes the Euler–Mascheroni constant. It follows from the defining
+0
+series that Φ(1,2,1/4) = ζ(2,1/4). Using also ζ(0,1/4) = 1/4 [6, (9.523)], we obtain
+1 (cid:88) Λ(n)
+g(t) = |t|log|t|+A|t|+ √ (|t|−logn)+r(t)
+(2.2)
+2 n
+n≤exp(|t|)
+in a neighbourhood of t = 0, where r is an even C2-function satisfying r(t) = O(t2), and
+1 1
+A = (log(2π)−ψ(2)) = (log(2π)+C −1) = 0.707546....
+0
+2 2
+The sum involving the von Mangoldt function in (2.2) is understood to be zero if |t| <
+(1/2)log2.
+2.3. Quadratic form formulas. For the quadratic form
+Q (v) := ⟨B v,v⟩ , v ∈ D(B ) = H1(−a,a)
+Ba a L2 a 0
+we compute the quadratic forms corresponding to each term on the right-hand side of
+(2.2). First, for the first term on the right-hand side, we have
+(cid:90) a (cid:90) a
+|x−y|v′(y)v′(x)dxdy = −2∥v∥2 , v ∈ D(B ).
+L2 a
+−a −a
+Next, for the second term on the right-hand side, if we define
+1 (cid:90) a (cid:90) a |v(x)−v(y)|2 1 (cid:90) a
+L (v) := dxdy− log(a2−x2)|v(x)|2dx (2.3)
+a
+4 |x−y| 2
+−a −a −a
+for v ∈ D(B ) (to ensure the convergence of the second term), then we obtain
+a
+(cid:90) a (cid:90) a
+|x−y|log|x−y|v′(y)v′(x)dxdy = 2L (v)−2∥v∥2 , v ∈ D(B ). (2.4)
+a L2 a
+−a −a
+
+|     |     |     | WEIL’S | QUADRATIC |     |     | FORM VIA | THE SCREW | FUNCTION |     |     | 9   |
+| --- | --- | --- | ------ | --------- | --- | --- | -------- | --------- | -------- | --- | --- | --- |
+We verify this relation. Let I(v) denote the left-hand side. Applying integration by
+| parts | with | respect              |     | to y, we | have |     |                                 |     |     |     |     |     |
+| ----- | ---- | -------------------- | --- | -------- | ---- | --- | ------------------------------- | --- | --- | --- | --- | --- |
+|       |      | (cid:90) a           |     |          |      |     | (cid:90) a                      |     |     |     |     |     |
+|       |      | |x−y|log|x−y|v′(y)dy |     |          |      |     | = − sgn(y−x)(log|x−y|+1)v(y)dy. |     |     |     |     |     |
+|       |      | −a                   |     |          |      |     | −a                              |     |     |     |     |     |
+Substituting this into I(v), we introduce an ϵ-cutoff to handle the singularity of the
+kernel rigorously:
+|     |     |        |      |            | (cid:32) |          |                            |     |     |     | (cid:33) |     |
+| --- | --- | ------ | ---- | ---------- | -------- | -------- | -------------------------- | --- | --- | --- | -------- | --- |
+|     |     |        |      | (cid:90) a |          | (cid:90) |                            |     |     |     |          |     |
+|     |     | I(v) = | −lim |            | v′(x)    |          | sgn(y−x)(log|x−y|+1)v(y)dy |     |     |     | dx.      |     |
+ϵ→0
+|     |     |     |     | −a  |     | |y−x|>ϵ |     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | ------- | --- | --- | --- | --- | --- | --- |
+Let F ϵ (x) denote the inner integral inside the brackets. Differentiating it by Leibniz’s
+| rule, | we  | obtain |     |     |     |     |     |     |          |      |     |     |
+| ----- | --- | ------ | --- | --- | --- | --- | --- | --- | -------- | ---- | --- | --- |
+|       |     |        |     |     |     |     |     |     | (cid:90) | v(y) |     |     |
+F′(x)
+|     |     |     |     | = −(logϵ+1)v(x−ϵ)+v(x+ϵ)− |     |     |     |     |     | dy.   |     |     |
+| --- | --- | --- | --- | ------------------------- | --- | --- | --- | --- | --- | ----- | --- | --- |
+|     |     |     | ϵ   |                           |     |     |     |     |     | |x−y| |     |     |
+|y−x|>ϵ
+Using this, we integrate by parts with respect to x. Taking into account the boundary
+conditions v(±a) = 0 and the fact that v(x±ϵ) → v(x) as ϵ → 0, we find
+|     |     |     |     |          | (cid:34) |     |     |          |     | (cid:35) |     |     |
+| --- | --- | --- | --- | -------- | -------- | --- | --- | -------- | --- | -------- | --- | --- |
+|     |     |     |     | (cid:90) | a        |     |     | (cid:90) |     |          |     |     |
+v(x)v(y)
+|     |     | I(v) | =   | −lim | 2(logϵ+1)|v(x)|2+ |     |     |         |     | dy    | dx. |     |
+| --- | --- | ---- | --- | ---- | ----------------- | --- | --- | ------- | --- | ----- | --- | --- |
+|     |     |      |     | ϵ→0  | −a                |     |     | |y−x|>ϵ |     | |x−y| |     |     |
+Here, we usetheidentity2Re(v(x)v(y)) = |v(x)|2+|v(y)|2−|v(x)−v(y)|2 toconvertthe
+product into a difference of squares (the imaginary part vanishes due to the symmetry
+of the double integral). Evaluating the integral concerning |v(x)|2 yields
+|     |     |     | (cid:90) |     |     |     | 1   |     |     |     |     |     |
+| --- | --- | --- | -------- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+−2logϵ+log(a2−x2).
+|     |     |     |     |     |     |     | dy = |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | ---- | --- | --- | --- | --- | --- |
+|x−y|
+y∈(−a,a),|y−x|>ϵ
+Substitutingthisandsimplifyingthecoefficientof|v(x)|2,thecontributionfromthefirst
+−2logϵ+log(a2−x2).
+| term          | is 2logϵ+2,         |     | while      | the            | contribution |            | from the  | second   | term         | is           |             |     |
+| ------------- | ------------------- | --- | ---------- | -------------- | ------------ | ---------- | --------- | -------- | ------------ | ------------ | ----------- | --- |
+| Consequently, |                     |     | logϵ       | is cancelled   |              | out, and   | we obtain |          |              |              |             |     |
+|               |                     |     | (cid:90) a |                |              |            |           | (cid:90) | a (cid:90) a | |v(x)−v(y)|2 |             |     |
+|               |                     |     |            | |v(x)|2(cid:0) |              |            | (cid:1)   | 1        |              |              |             |     |
+|               | I(v)                | =   | −          |                | 2+log(a2−x2) |            | dx+       |          |              |              | dxdy.       |     |
+|               |                     |     |            |                |              |            |           | 2        |              | |x−y|        |             |     |
+|               |                     |     | −a         |                |              |            |           |          | −a −a        |              |             |     |
+| Rearranging   |                     | the | terms      | yields         | (2.4).       |            |           |          |              |              |             |     |
+|               |                     |     |            |                |              | (cid:80)   | n−1/2Λ(n) |          | (cid:0)      | (cid:1)      |             |     |
+|               | Furthermore,        |     | setting    | g              | (t) =        |            |           |          | |t| −        | logn and     | calculating | the |
+|               |                     |     |            |                | 0            | n≤exp(|t|) |           |          |              |              |             |     |
+| corresponding |                     |     | integral,  |                |              |            |           |          |              |              |             |     |
+|               | (cid:90) a (cid:90) | a   |            |                |              |            |           |          |              |              |             |     |
+g (x−y)v′(y)v′(x)dxdy
+0
+−a −a
+|     |     |     |      | (cid:32) |        |     |     |     |            |     |     | (cid:33) |
+| --- | --- | --- | ---- | -------- | ------ | --- | --- | --- | ---------- | --- | --- | -------- |
+|     |     |     | Λ(n) | (cid:90) | a−logn |     |     |     | (cid:90) a |     |     |          |
+(cid:88)
+|     | = − |     | √   |     |     | v(x+logn)v(x)dx+ |     |     |     | v(x−logn)v(x)dx |     | .   |
+| --- | --- | --- | --- | --- | --- | ---------------- | --- | --- | --- | --------------- | --- | --- |
+n
+|     |     |     |     | −a  |     |     |     |     | −a+logn |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | ------- | --- | --- | --- |
+n≤exp(2a)
+| Computing |     | Q   | (v) | by using | the | asymptotic | expansion |     | (2.2), | we get |     |     |
+| --------- | --- | --- | --- | -------- | --- | ---------- | --------- | --- | ------ | ------ | --- | --- |
+Ba
+(v)−(2A+1)∥v∥2
+|     |     | Q   | Ba (v) | = L a |     |     |     |     |     |     |     |     |
+| --- | --- | --- | ------ | ----- | --- | --- | --- | --- | --- | --- | --- | --- |
+L2
+(cid:32)
+|     |     |     |     |     |          |      | (cid:90) a−logn |                 |     |     |     |     |
+| --- | --- | --- | --- | --- | -------- | ---- | --------------- | --------------- | --- | --- | --- | --- |
+|     |     |     |     |     | (cid:88) | Λ(n) |                 |                 |     |     |     |     |
+|     |     |     |     | −   |          | √    |                 | v(x+logn)v(x)dx |     |     |     |     |
+n
+|     |     |     |     |     | n≤exp(2a) |     | −a  |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --------- | --- | --- | --- | --- | --- | --- | --- |
+(cid:33) (2.5)
+(cid:90) a
+|     |     |     |     |     |     |     | +   | v(x−logn)v(x)dx |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --------------- | --- | --- | --- | --- |
+−a+logn
+|     |     |     |     |     | (cid:90) a (cid:90) | a   |     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | ------------------- | --- | --- | --- | --- | --- | --- | --- |
+r′′(x−y)v(y)v(x)dxdy
+−
+−a −a
+for v ∈ H1(−a,a).
+0
+
+| 10  |     |     |     |     |     | M.SUZUKI |     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | -------- | --- | --- | --- | --- | --- | --- |
+2.4. Formulas in Fourier transforms. Expanding the numerator of
+(cid:90)(cid:90)
+|     |     |     |     | 1   |     |     | |v(x)−v(y)|2 |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | ------------ | --- | --- | --- | --- | --- |
+dxdy.
+|     |     |     |     | 4   |     |     |     | |x−y| |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | --- | --- |
+(−a,a)2,|x−y|>ϵ
+|v(x)|2+|v(y)|2−2Re(v(x)v(y))
+| as  |              |     |          |     |     | and | using    | symmetry, |                  | it equals |          |     |
+| --- | ------------ | --- | -------- | --- | --- | --- | -------- | --------- | ---------------- | --------- | -------- | --- |
+|     |              |     | (cid:32) |     |     |     | (cid:33) |           |                  |           |          |     |
+|     | 1 (cid:90) a |     | (cid:90) |     |     | 1   |          | 1         | (cid:90)(cid:90) |           | v(x)v(y) |     |
+|v(x)|2
+|     |     |     |                  |     |     |       | dy  | dx− |          |         |       | dxdy. |
+| --- | --- | --- | ---------------- | --- | --- | ----- | --- | --- | -------- | ------- | ----- | ----- |
+|     | 2   |     |                  |     |     | |x−y| |     | 2   |          |         | |x−y| |       |
+|     | −a  |     | (−a,a)\(x−ϵ,x+ϵ) |     |     |       |     |     | (−a,a)2, | |x−y|>ϵ |       |       |
+Since
+|     |     |     | (cid:90) x−ϵ | 1   |     | (cid:90) a | 1   |     |     |     |     |     |
+| --- | --- | --- | ------------ | --- | --- | ---------- | --- | --- | --- | --- | --- | --- |
+log(a2−x2)−2logϵ,
+|     |     |     |     |     | dy+ |     | dy  | =   |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|     |     |     |     | x−y |     | y−x |     |     |     |     |     |     |
+|     |     |     | −a  |     |     | x+ϵ |     |     |     |     |     |     |
+we obtain
+|     |     |       | (cid:34)  |     |            |     |     |                  |     |          | (cid:35) |     |
+| --- | --- | ----- | --------- | --- | ---------- | --- | --- | ---------------- | --- | -------- | -------- | --- |
+|     |     |       |           |     | (cid:90) a |     |     | (cid:90)(cid:90) |     |          |          |     |
+|     |     |       |           |     |            |     | 1   |                  |     | v(x)v(y) |          |     |
+|     | L   | (v) = | lim −logϵ |     | |v(x)|2dx− |     |     |                  |     |          | dxdy     | .   |
+a
+|     |     |     | ϵ→0 |     |     |     | 2   | (−a,a)2, |         | |x−y| |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | -------- | ------- | ----- | --- | --- |
+|     |     |     |     |     | −a  |     |     |          | |x−y|>ϵ |       |     |     |
+The second term may be rewritten, by Plancherel’s theorem, as the quadratic form
+|x|−11
+associated with the convolution kernel K ϵ (x) = {|x|>ϵ} (x). Its Fourier transform
+is
+|     |     |     |     |     | (cid:90) | e−izx |     | (cid:90) | ∞   |     |     |     |
+| --- | --- | --- | --- | --- | -------- | ----- | --- | -------- | --- | --- | --- | --- |
+cosu
+|     |     |     |     | K(cid:99)ϵ (z) | =     |     | dx  | = 2 |      | du. |     |     |
+| --- | --- | --- | --- | -------------- | ----- | --- | --- | --- | ---- | --- | --- | --- |
+|     |     |     |     |                |       | |x| |     |     |      | u   |     |     |
+|     |     |     |     |                | |x|>ϵ |     |     |     | ϵ|z| |     |     |     |
+Using the asymptotic expansion of the cosine integral [6, (8.230)], we obtain
+(cid:90) ∞ cosu
+|     |     |     |     | du  | = −logϵ−log|z|−C |     |     |     | +o(1) | (ϵ  | → 0). |     |
+| --- | --- | --- | --- | --- | ---------------- | --- | --- | --- | ----- | --- | ----- | --- |
+|     |     |     |     | u   |                  |     |     | 0   |       |     |       |     |
+ϵ|z|
+| Substituting |     | this | into | the Fourier |     | representation |     | yields |     |     |     |     |
+| ------------ | --- | ---- | ---- | ----------- | --- | -------------- | --- | ------ | --- | --- | --- | --- |
+(cid:90)
+|     |     |     |     |       | 1   | ∞   |                           |     |     |                    |     |     |
+| --- | --- | --- | --- | ----- | --- | --- | ------------------------- | --- | --- | ------------------ | --- | --- |
+|     |     |     | L   | (v) = | lim |     | (cid:0) −2logϵ−K(cid:99)ϵ |     | (z) | (cid:1) |v (z)|2dz |     |     |
+|     |     |     | a   |       |     |     |                           |     |     | (cid:98)           |     |     |
+ϵ→0 4π
+−∞
+|     |     |     |     |     | (cid:90) |                  |     |                    |     |     |     | (2.6) |
+| --- | --- | --- | --- | --- | -------- | ---------------- | --- | ------------------ | --- | --- | --- | ----- |
+|     |     |     |     |     | 1        | ∞                |     |                    |     |     |     |       |
+|     |     |     |     | =   |          | (cid:0) log|z|+C |     | (cid:1) |v(z)|2dz. |     |     |     |       |
+0 (cid:98)
+2π
+−∞
+Using the Fourier transform v of v (defined as the zero-extension of v outside (−a,a))
+(cid:98)
+|     |     |     | (cid:90) | ∞   |     |     |     | (cid:90) ∞ |     |     |     |     |
+| --- | --- | --- | -------- | --- | --- | --- | --- | ---------- | --- | --- | --- | --- |
+1
+|     |     |     |     | v(x∓τ)v(x)dx |     |     | =   |     | |v(z)|2e±izτdz, |     |     |     |
+| --- | --- | --- | --- | ------------ | --- | --- | --- | --- | --------------- | --- | --- | --- |
+(cid:98)
+2π
+|     |     |     |     | −∞  |     |     |     | −∞  |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+which yields
+|     |     | (cid:90) | a−logn |                  |     |     | (cid:90) | a       |                 |     |     |     |
+| --- | --- | -------- | ------ | ---------------- | --- | --- | -------- | ------- | --------------- | --- | --- | --- |
+|     |     |          |        | v(x+logn)v(x)dx+ |     |     |          |         | v(x−logn)v(x)dx |     |     |     |
+|     |     |          | −a     |                  |     |     |          | −a+logn |                 |     |     |     |
+(cid:90) ∞
+1
+|     |     |     |     |     |     |     | =   |     | |v(z)|2cos(zlogn)dz. |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | -------------------- | --- | --- | --- |
+(cid:98)
+π
+−∞
+Furthermore, noting that ∥v∥2 = (2π)−1∥v∥2 , we obtain from (2.5) that
+|     |     |     |     |     | L2  |     | (cid:98) | L2  |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | -------- | --- | --- | --- | --- | --- |
+(cid:90) ∞
+1
+|     |     | Q   | (v) | =   | (log|z|−log(2π))|v(z)|2dz |     |     |          |     |     |     |     |
+| --- | --- | --- | --- | --- | ------------------------- | --- | --- | -------- | --- | --- | --- | --- |
+|     |     |     | Ba  |     |                           |     |     | (cid:98) |     |     |     |     |
+2π
+−∞
+|     |     |     |     |     |            |          |    |          |                  |     |    |       |
+| --- | --- | --- | --- | --- | ---------- | -------- | --- | -------- | ---------------- | --- | --- | ----- |
+|     |     |     |     | 1   | (cid:90) ∞ |          |     |          | Λ(n)             |     |     |       |
+|     |     |     |     |     |            | |vˆ(z)|2 |     | (cid:88) |                  |     |     |       |
+|     |     |     |     | −   |            |          |    |          | √ 2cos(zlogn)dz |     |     | (2.7) |
+|     |     |     |     | 2π  |            |          |     |          | n                |     |     |       |
+−∞
+n≤exp(2a)
+(cid:90) ∞
+1
+|     |     |     |     | +   |     | r(cid:98) ′′(z)|v | (z)|2dz |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | ----------------- | ------- | --- | --- | --- | --- | --- |
+a (cid:98)
+2π
+−∞
+
+WEIL’S QUADRATIC FORM VIA THE SCREW FUNCTION 11
+forv ∈ H
+0
+1(−a,a). Tointerpretthetermr(cid:98)
+a
+′′(z),wedecomposer(t)asr(t) = r
+0
+(t)+r
+1
+(t),
+where
+1 (cid:88) ∞ (−2|t|)n
+r (t) = −4(et/2+e−t/2−2) and r (t) = ζ(2−n,1/4) .
+0 1
+4 n!
+n=2
+Since r(cid:98)′′(z) cannot be defined directly, we define r(cid:98)′′(z) by treating these two parts
+a
+separately. Forr , wetaketheFouriertransformofr′′ (x) := r′′(x)1 (x),whereas
+0 0,a 0 (−2a,2a)
+forr
+1
+wecomputer(cid:98)
+1
+′′(z)explicitly. Wethensetr(cid:98)
+a
+′′(z) := r(cid:100)
+0
+′′
+,a
+(z)+r(cid:98)
+1
+′′(z).Asshownbelow,
+all resulting terms except those arising from the polar factor s(s−1) coincide with the
+explicit formula.
+Using ζ(2 − n,a) = −B (a)/(n − 1) [10, (25.11.14)] and the generating series
+n−1
+yeay/(ey −1) = (cid:80)∞ B (a)yn/n! [6, (9.621)], we have
+n=0 n
+e−|t|/2 1
+r′′(t) = − .
+1 1−e−2|t| 2|t|
+Hence, the Fourier transform is given by
+(cid:32) (cid:33) (cid:32) (cid:33)
+(cid:90) ∞ e−t/2 1 (cid:90) ∞ e−u/4 1
+r(cid:98)′′(z) = 2 − cos(zt)dt = − cos(zu/2)du
+1 1−e−2t 2t 1−e−u u
+0 0
+(cid:34) (cid:32) (cid:33) (cid:35)
+(cid:90) R e−u/4cos(zu/2) e−u (cid:90) R e−u−cos(zu/2)
+= lim − du+ du .
+ϵ→+0 ϵ 1−e−u u ϵ u
+R→∞
+Differentiating [6, (8.341.3)] with respect to z, we obtain
+(cid:90) ∞(cid:18) e−u e−su (cid:19)
+ψ(s) = − du (Re(s) > 0).
+u 1−e−u
+0
+By taking the real part for s = 1/4+iz/2, we find
+(cid:32) (cid:33)
+(cid:90) ∞ e−u/4cos(zu/2) e−u (cid:20) (cid:18) 1 iz (cid:19)(cid:21)
+− du = −Re ψ +
+1−e−u u 4 2
+0
+for real z. On the other hand, we have
+(cid:90) ∞ e−u (cid:90) ∞ cos(zu/2)
+du− du = E (ϵ)+Ci(|z/2|ϵ) = log|z|−log2+O(ϵ)
+1
+u u
+ϵ ϵ
+for real z by E (ϵ) = −C −logϵ+O(ϵ) [10, (6.6.2)] and Ci(z) = C +logz+O(|z|) [10,
+1 0 0
+(6.6.6)]. Therefore,
+(cid:20) (cid:18) (cid:19)(cid:21)
+1 iz
+r(cid:98)′′(z) = −Re ψ + +log|z|−log2 = O(|z|−2) |z| → ∞.
+1 4 2
+It follows that
+1 (cid:90) ∞ (cid:18) (cid:20) (cid:18) 1 iz (cid:19)(cid:21) (cid:19)
+Q (v) = Re ψ + −logπ |v(z)|2dz
+Ba
+2π 4 2
+(cid:98)
+−∞
+ 
+1 (cid:90) ∞ (cid:88) Λ(n)
+− |vˆ(z)|2  √ 2cos(zlogn)dz
+2π n
+−∞
+n≤exp(2a)
+1 (cid:90) ∞
++ r(cid:100)′′ (z)|v(z)|2dz.
+2π 0,a (cid:98)
+−∞
+
+| 12  |     |     |     |     | M.SUZUKI |     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | -------- | --- | --- | --- | --- | --- | --- |
+This formula precisely reflects the structure of the explicit formula. From the explicit
+| formula | [1, Lemma | 3     | and its      | proof],  | we         | have                |                |     |            |     |     |
+| ------- | --------- | ----- | ------------ | -------- | ---------- | ------------------- | -------------- | --- | ---------- | --- | --- |
+|         |           |       | 1 (cid:90) ∞ | (cid:20) | (cid:18) 1 | iz (cid:19)(cid:21) |                |     | (cid:90) a |     |     |
+|         | Qa        |       |              |          |            |                     | |v(z)|2dz−logπ |     | |v(x)|2dx  |     |     |
+|         |           | (v) = |              | ℜ        | ψ +        |                     |                |     |            |     |     |
+|         | W         |       | 2π           |          | 4          | 2                   | (cid:98)       |     |            |     |     |
+|         |           |       | −∞           |          |            |                     |                |     | −a         |     |     |
++O(a)·∥v∥2
+,
+L2
+| where | O(a) denotes |     | a bounded              | quantity |     | depending |     | on a. Since |            |     |     |
+| ----- | ------------ | --- | ---------------------- | -------- | --- | --------- | --- | ----------- | ---------- | --- | --- |
+|       | Re[ψ(s/2)]   |     | = log|s|−log2+O(|s|−2) |          |     |           |     | (ℜ(s)       | > 0) |s| → | ∞,  |     |
+we obtain
+(cid:90)
+|     |     |     | 1   | ∞                                   |     |     |          |     |     |     |       |
+| --- | --- | --- | --- | ----------------------------------- | --- | --- | -------- | --- | --- | --- | ----- |
+|     |     | Qa  |     | (log|z|−log(2π))|v(z)|2dz+O(a)·∥v∥2 |     |     |          |     |     |     |       |
+|     |     | (v) | =   |                                     |     |     | (cid:98) |     |     | .   | (2.8) |
+|     |     | W   | 2π  |                                     |     |     |          |     |     | L2  |       |
+−∞
+| This perfectly |     | matches | the | result | obtained | from | (2.7). |     |     |     |     |
+| -------------- | --- | ------- | --- | ------ | -------- | ---- | ------ | --- | --- | --- | --- |
+2.5. Distributional formulas. Since g is continuous, the distributional second deriv-
+−g′′
+ative is a tempered distribution. By (1.8) and integration by parts,
+|     |     |     |     | (cid:90) | (cid:90) |     |     |     |     |     |     |
+| --- | --- | --- | --- | -------- | -------- | --- | --- | --- | --- | --- | --- |
+a a
+|     |     |     | Qa  |     |     | g(x−y)v′(y)v′(x)dxdy |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | -------------------- | --- | --- | --- | --- | --- |
+|     |     |     | (v) | =   |     |                      |     |     |     |     |     |
+W
+|     |     |     |     |          | −a −a    |     |     |     |     |     |       |
+| --- | --- | --- | --- | -------- | -------- | --- | --- | --- | --- | --- | ----- |
+|     |     |     |     | (cid:90) | (cid:90) |     |     |     |     |     | (2.9) |
+a a
+(−g′′(x−y))v(y)v(x)dxdy
+=
+|     |     |     |     |     | −a −a |     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | ----- | --- | --- | --- | --- | --- | --- |
+C∞(−a,a).
+for v ∈ This was already observed in [13, Section 3.5]. Combining this with
+c
+| (1.1), | we obtain |     |     |       |          |                   |     |     |     |     |        |
+| ------ | --------- | --- | --- | ----- | -------- | ----------------- | --- | --- | --- | --- | ------ |
+|        |           |     |     |       | (cid:90) | a                 |     |     |     |     |        |
+|        |           |     | (A  | v)(x) | =        | (−g′′(x−y))v(y)dy |     |     |     |     | (2.10) |
+a
+−a
+for v ∈ C∞(−a,a). Since g′′ is a tempered distribution, the right-hand side is well-
+c
+defined. Formula (2.10) provides an alternative representation of Bombieri’s Lagrangian
+([1, Lemma 1], [2, Sections 5–6]). Let us compute the right-hand side of (2.10). Since
+(cid:18) (cid:19)
+|        |          |                |     | d2          |          |       | 1    |        |     |     |     |
+| ------ | -------- | -------------- | --- | ----------- | -------- | ----- | ---- | ------ | --- | --- | --- |
+|        |          |                |     | (|t|log|t|) |          | = Pf  |      | +2δ(t) |     |     |     |
+|        |          |                |     | dt2         |          |       | |t|  |        |     |     |     |
+| in the | sense of | distributions, |     | it follows  | from     | (2.2) | that |        |     |     |     |
+|        |          |                |     | (cid:18)    | (cid:19) |       |      |        |     |     |     |
+|        |          |                |     | 1           | 1        |       |      |        |     |     |     |
+−g′′(t)
+|     |     |     | = − | Pf         | −(2A+1)δ(t)         |     |     |     |                  |     |     |
+| --- | --- | --- | --- | ---------- | ------------------- | --- | --- | --- | ---------------- | --- | --- |
+|     |     |     |     | 2          | |t|                 |     |     |     |                  |     |     |
+|     |     |     |     | (cid:88) Λ | (n)(cid:0)          |     |     |     |                  |     |     |
+|     |     |     |     |            |                     |     |     |     | (cid:1) −r′′(t). |     |     |
+|     |     |     | −   | √          | δ(t−logn)+δ(t+logn) |     |     |     |                  |     |     |
+n
+n≥2
+Hence
+|     | (cid:90) a        |     |     |     |          | (cid:90) a  |                     |               |     |         |     |
+| --- | ----------------- | --- | --- | --- | -------- | ----------- | ------------------- | ------------- | --- | ------- | --- |
+|     |                   |     |     |     | 1        | v(y)        |                     |               |     |         |     |
+|     | (−g′′(x−y))v(y)dy |     |     | =   | − Pf     |             |                     | dy−(2A+1)v(x) |     |         |     |
+|     | −a                |     |     |     | 2        | −a |x−y|    |                     |               |     |         |     |
+|     |                   |     |     |     | (cid:88) | Λ(n)(cid:0) |                     |               |     | (cid:1) |     |
+|     |                   |     |     |     | −        | √           | v(x−logn)+v(x+logn) |               |     |         |     |
+(2.11)
+n
+n≤e2a
+(cid:90) a
+|     |     |     |     |     | −   | r′′(x−y)v(y)dy. |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --------------- | --- | --- | --- | --- | --- |
+−a
+| Here we | note       | that              |        |     |          |     |     |     |     |     |     |
+| ------- | ---------- | ----------------- | ------ | --- | -------- | --- | --- | --- | --- | --- | --- |
+|         | (cid:90) a | (cid:18) (cid:90) | a v(y) |     | (cid:19) |     |     |     |     |     |     |
+|         |            | Pf                |        | dy  | v(x)dx   |     |     |     |     |     |     |
+|x−y|
+|     | −a  |     | −a                  |                |     |     |     |            |     |     |     |
+| --- | --- | --- | ------------------- | -------------- | --- | --- | --- | ---------- | --- | --- | --- |
+|     |     |     | (cid:90) a (cid:90) | a |v(x)−v(y)|2 |     |     |     | (cid:90) a |     |     |     |
+1
+|     |     | = − |       |     |       | dxdy+ |     | log(a2−x2)|v(x)|2dx |     |     |     |
+| --- | --- | --- | ----- | --- | ----- | ----- | --- | ------------------- | --- | --- | --- |
+|     |     | 2   |       |     | |x−y| |       |     |                     |     |     |     |
+|     |     |     | −a −a |     |       |       |     | −a                  |     |     |     |
+
+|     |     |     | WEIL’S | QUADRATIC |     | FORM | VIA | THE SCREW | FUNCTION |     | 13  |
+| --- | --- | --- | ------ | --------- | --- | ---- | --- | --------- | -------- | --- | --- |
+whichfollowsbyadirectsymmetrizationargument. Usingthisidentity, oneverifiesthat
+| (2.9) follows |     | from | (2.5). |     |     |     |     |     |     |     |     |
+| ------------- | --- | ---- | ------ | --- | --- | --- | --- | --- | --- | --- | --- |
+Forageneralelementv ∈ D(A ) ⊂ D(Qa ),pointwisevaluesneednotbewelldefined,
+|     |     |     |     |     | a   |     | W   |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+so an expression such as (2.11) is not meaningful. However, by (2.7), identity (2.9)
+|     |     |     | D(A |     |     |     |     |     |     | C∞(−a,a) |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | -------- | --- |
+remains valid for v ∈ a ) in the sense of limits of values on elements of
+c
+| with respect |     | to the | form | norm | of Qa | .   |     |     |     |     |     |
+| ------------ | --- | ------ | ---- | ---- | ----- | --- | --- | --- | --- | --- | --- |
+W
+|     |     |     |     |     | Proof | of  | Theorem | 1.1 |     |     |     |
+| --- | --- | --- | --- | --- | ----- | --- | ------- | --- | --- | --- | --- |
+3.
+3.1. The Relation between A and B . To compare the operators A and B , we
+|     |     |     |     |     | a   |     | a   |     |     | a   | a   |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+begin by recalling some basic facts concerning the quadratic form Qa . For general
+W
+background on quadratic forms, we refer to Schmu¨dgen [12, Chapter 10].
+Let Γ denote the set of all zeros of the function z (cid:55)→ ξ(1/2−iz). For each γ ∈ Γ,
+let m be the multiplicity of γ as a zero of ξ(1/2 −iz). By the functional equations
+γ
+ξ(1−s) = ξ(s) and ξ(s) = ξ(s¯), the set Γ is invariant under γ (cid:55)→ −γ and γ (cid:55)→ γ¯. It is
+R),
+customary to write the zeros of ξ(s) as ρ = β +iγ (β,γ ∈ but our notation differs
+from this convention. In particular, an element γ ∈ Γ may be non-real. RH is equivalent
+R.
+to the inclusion Γ ⊂ In this notation, the Weil explicit formula yields
+(cid:88)
+|     |     |     |     | Q   | (v ,v | ) = | m   | v (γ)v (γ¯)          |     |     | (3.1) |
+| --- | --- | --- | --- | --- | ----- | --- | --- | -------------------- | --- | --- | ----- |
+|     |     |     |     |     | W 1   | 2   |     | γ(cid:98)1 (cid:98)2 |     |     |       |
+γ∈Γ
+Qa
+(cf. [14, (1.2), (3.3)]). The form domain of the closed symmetric quadratic form is
+W
+defined by
+|             |     |           | D(Qa  | )    | := {v        | ∈ L2(−a,a) |        | | |Qa (v)| | < ∞}, |     |     |
+| ----------- | --- | --------- | ----- | ---- | ------------ | ---------- | ------ | ---------- | ----- | --- | --- |
+|             |     |           |       | W    |              |            |        | W          |       |     |     |
+| and becomes |     | a Hilbert | space |      | with respect |            | to the | form norm  |       |     |     |
+|             |     |           |       | ∥v∥2 |              | Qa         |        | )∥v∥2      |       |     |     |
+|             |     |           |       |      | :=           | (v)+(1−λ   |        |            | ,     |     |     |
+|             |     |           |       |      | Qa           | W          |        | a          | L2    |     |     |
+W
+where λ is the constant defined in (1.7). By (2.6) and (2.8), if we define
+a
+|     |     |     |     | (cid:26) |     |     | (cid:12) |     |     | (cid:27) |     |
+| --- | --- | --- | --- | -------- | --- | --- | -------- | --- | --- | -------- | --- |
+(cid:90) ∞
+|     | Hlog(−a,a) |     |     |     | L2(−a,a) |     | (cid:12) | (1+log+|z|)|v | (z)|2dz  |     |     |
+| --- | ---------- | --- | --- | --- | -------- | --- | -------- | ------------- | -------- | --- | --- |
+|     |            |     | :   | = v | ∈        |     | (cid:12) |               |          | < ∞ |     |
+|     |            |     |     |     |          |     | (cid:12) |               | (cid:98) |     |     |
+−∞
+L2(−a,a)
+|     |     |     |     | ⊃ {v | ∈   |     | | L a (v) | < ∞}, |     |     |     |
+| --- | --- | --- | --- | ---- | --- | --- | --------- | ----- | --- | --- | --- |
+then
+|     |     |     |     |     | D(Qa |     | Hlog(−a,a). |     |     |     |     |
+| --- | --- | --- | --- | --- | ---- | --- | ----------- | --- | --- | --- | --- |
+) ⊂
+W
+In [2, Theorem 5.1], Bombieri appears to state implicitly that D(Qa ) coincides with
+W
+L2(−a,a)
+| the set | of all | v ∈ |          | such         | that         |     |     |            |     |     |     |
+| ------- | ------ | --- | -------- | ------------ | ------------ | --- | --- | ---------- | --- | --- | --- |
+|         |        |     | (cid:90) | a (cid:90) a | |v(x)−v(y)|2 |     |     | (cid:90) a |     |     |     |
+|v(x)|2dx
+dxdy+
+|x−y|
+|     |     |     | −a  | −a  |     |     |     | −a  |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+isfinite. However, takingintoaccounttheequivalencebetween(2.3)and(2.6), onefinds
+| that this | space | is  | in fact | slightly | larger | than | D(Qa | ).  |     |     |     |
+| --------- | ----- | --- | ------- | -------- | ------ | ---- | ---- | --- | --- | --- | --- |
+W
+The fact that Qa (v) is lower bounded and lower semicontinuous on L2(−a,a) was
+W
+proved in [3, Proposition 2.1]. It is also mentioned in the proof of [1, Lemma 3] and is
+implicitly contained in [17, Section 2]. All of these arguments are based on the formula
+(2.8). The lower semicontinuity follows immediately from an application of Fatou’s
+lemma.
+We now recall the self-adjoint operator A associated with Qa through (1.1). Such
+|     |     |     |     |     |     |     | a   |     | W   |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+D(Qa
+a self-adjoint operator is uniquely determined. Moreover, v ∈ D(A a ) ⊂ ) if and
+W
+only if the map w (cid:55)−→ Qa (v,w) is continuous on D(Qa ) with respect to the L2-norm.
+|     |     |     |     | W   |     |     |     | W   |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+By the Riesz representation theorem, this is equivalent to [12, Definition 10.4]. In this
+case, A v is uniquely characterized by Qa (v,w) = ⟨A v,w⟩ (w ∈ D(Qa )).
+|     | a   |     |     |     |     |     |     | a   | L2  |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|     |     |     |     |     |     |     | W   |     |     | W   |     |
+Lemma 3.1. B ⊂ A . In particular, A is a self-adjoint extension of B .
+|     |     | a   | a   |     |     |     | a   |     |     | a   |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+
+| 14     |     |     |          |        |                | M.SUZUKI |     |           |      |     |     |
+| ------ | --- | --- | -------- | ------ | -------------- | -------- | --- | --------- | ---- | --- | --- |
+| Proof. | Let | E ⊂ | L2(−a,a) | be the | linear         | subspace |     | generated | by   |     |     |
+|        |     |     |          | e (x)  | = exp(iπnx/a), |          |     | n         | ∈ Z. |     |     |
+n
+The space E is a core for the quadratic form Qa [3, Proposition 2.3]. On the other
+W
+hand, if v ∈ D(B ) = H1(−a,a), then v(z) = O(|z|−1) as |z| → ∞. Hence, by (3.1),
+|     |     |     | a   | 0   |     | (cid:98) |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | -------- | --- | --- | --- | --- | --- |
+D(Qa
+| D(B | a ) ⊂ |     | ). Moreover, |     |     |     |     |     |     |     |     |
+| --- | ----- | --- | ------------ | --- | --- | --- | --- | --- | --- | --- | --- |
+W
+2sin(az+nπ)
+|     |     |     |     |     | e (z) | =   |     | ,   |     |     |     |
+| --- | --- | --- | --- | --- | ----- | --- | --- | --- | --- | --- | --- |
+(cid:98)n
+z+nπ/a
+|     |     |     | O(|z|−1) |     |     |     |     |     |     | z−1u(z). |     |
+| --- | --- | --- | -------- | --- | --- | --- | --- | --- | --- | -------- | --- |
+so that w(z) = for every w ∈ E. If u = Dv, then v(z) = Therefore,
+|     | (cid:98) |     |     |     |     |     |     |     | (cid:98) | (cid:98) |     |
+| --- | -------- | --- | --- | --- | --- | --- | --- | --- | -------- | -------- | --- |
+by (3.1) and [13, (3.1)], Qa (v,w) = ⟨B v,w⟩ for all v ∈ H1(−a,a) = D(B ) and
+|     |     |     |     | W   |     | a   | L2  |     |     | 0   | a   |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+□
+| w ∈ | E. It | follows | from | [12, Proposition |     | 10.5(v)] |     | that B | ⊂ A | .   |     |
+| --- | ----- | ------- | ---- | ---------------- | --- | -------- | --- | ------ | --- | --- | --- |
+|     |       |         |      |                  |     |          |     | a      | a   |     |     |
+3.2. Completion of the proof. For simplicity, we write A = A , B = B , Q (v) =
+|     |     |     |          |     |     |     |       |     |     | a   | a B |
+| --- | --- | --- | -------- | --- | --- | --- | ----- | --- | --- | --- | --- |
+|     |     | Qa  | ,and∥v∥2 |     |     |     | )∥v∥2 |     |     |     |     |
+⟨Bv,v⟩ L2 ,Q = = Q(v)+(1−λ a . NotethatQ = Q B onD(B a ). The
+|     |     |     | W   | Q   |     |     |     | L2  |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+Friedrichs extension of the operator B is the uniquely determined self-adjoint extension
+associated with the closure Q of the quadratic form Q . The domain D(Q ) of Q is
+|     |     |     |     | B   |     |     |     | B   |     |     | B B |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+definedasthecompletionoftheformdomainD(Q ) := D(B) = H1(−a,a)withrespect
+B
+0
+to the form norm ∥·∥ . Since B ⊂ A (Lemma 3.1), we have D(Q ) ⊂ D(Q ) = D(Q).
+|     |     |     | Q   |     |     |     |     |     |     | B   | A   |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+Hence, D(Q ) is a closed subspace of D(Q) with respect to the form norm. On the
+B
+other hand, the space E (in the proof of Lemma 3.1) is a core for the quadratic form Q
+|       | ∥·∥Q |          |       | C∞(−a,a) |     | H1(−a,a), |     |     |     |     |     |
+| ----- | ---- | -------- | ----- | -------- | --- | --------- | --- | --- | --- | --- | --- |
+| (i.e. | E    | = D(Q)). | Since |          |     | ⊂         |     | if  |     |     |     |
+|       |      |          |       | c        |     |           | 0   |     |     |     |     |
+∥·∥Q,
+|     |     |     |     |     | E ⊂ | C∞(−a,a) |     |     |     |     | (3.2) |
+| --- | --- | --- | --- | --- | --- | -------- | --- | --- | --- | --- | ----- |
+c
+then D(Q ) = D(Q). It follows that the Friedrichs extension of B coincides with A.
+B
+Indeed, by [12, Corollary 10.8], on a given Hilbert space, lower bounded self-adjoint op-
+eratorsareinone-to-onecorrespondencewithlowerboundedclosedsymmetricquadratic
+| forms | having | dense | domains. |     |     |     |     |     |     |     |     |
+| ----- | ------ | ----- | -------- | --- | --- | --- | --- | --- | --- | --- | --- |
+To prove the inclusion (3.2), it suffices to show that each function e ∈ E belongs
+n
+to the closure of C∞(−a,a) with respect to the form norm ∥·∥ . In other words, we
+|     |     |     | c   |     |     |     |     |     |     | Q   |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+must construct a sequence v ∈ C∞(−a,a) such that ∥e −v ∥ → 0 as ϵ → 0. For a
+|     |     |     |     | ϵ   | c   |     |     |     | n ϵ | Q   |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+sufficiently small parameter ϵ > 0, we define a cutoff function η ϵ (x) which decays to 0
+near the boundary of the interval [−a,a]. More precisely, η (x) = 1 on [−a+ϵ,a−ϵ],
+ϵ
+and η (±a) = 0. On the boundary intervals [−a,−a+ϵ] and [a−ϵ,a], η is chosen as a
+|     | ϵ   |     |     |     |     |     |     |     |     |     | ϵ   |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+smooth monotone cutoff interpolating between these values, with |η′(x)| ≪ ϵ−1. Define
+ϵ
+v (x) := e (x)η (x). Then v belongs to C∞(−a,a). It therefore remains to show that
+| ϵ   | n   | ϵ   |     | ϵ   |     |     | c   |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+the form norm of the error function w ϵ (x) = e n (x)(1−η ϵ (x)) tends to zero as ϵ → 0.
+The function w is supported only on the two intervals [−a,−a+ϵ] and [a−ϵ,a], each
+ϵ
+| of length | ϵ.  | Moreover, |     | |w (x)| ≤ | 1. Therefore, |     |     |     |     |     |     |
+| --------- | --- | --------- | --- | --------- | ------------- | --- | --- | --- | --- | --- | --- |
+ϵ
+|       |     |     |        |       | (cid:90) −a+ϵ |      | (cid:90) | a   |       |     |     |
+| ----- | --- | --- | ------ | ----- | ------------- | ---- | -------- | --- | ----- | --- | --- |
+|       |     |     |        | ∥w ∥2 | ≤             | 1dx+ |          | 1dx | = 2ϵ. |     |     |
+|       |     |     |        | ϵ L2  |               |      |          |     |       |     |     |
+|       |     |     |        |       | −a            |      |          | a−ϵ |       |     |     |
+| Hence | ∥w  | ∥ → | 0 as ϵ | → 0.  |               |      |          |     |       |     |     |
+ϵ L2
+| By  | (2.7) | and | Plancherel’s | theorem, |     | we have |     |     |     |     |     |
+| --- | ----- | --- | ------------ | -------- | --- | ------- | --- | --- | --- | --- | --- |
+(cid:90) ∞
+|     |     |     | ∥2   | (1+log+|z|)|w |     |     | (z)|2dz+O(a)·∥w |     |     | ∥2  |     |
+| --- | --- | --- | ---- | ------------- | --- | --- | --------------- | --- | --- | --- | --- |
+|     |     |     | ∥w ϵ | =             |     |     | (cid:99)ϵ       |     |     | ϵ . |     |
+|     |     |     | Q    |               |     |     |                 |     |     | L2  |     |
+−∞
+| Therefore, |     | the principal |     | term in | ∥w ∥2 | is  |     |     |     |     |     |
+| ---------- | --- | ------------- | --- | ------- | ----- | --- | --- | --- | --- | --- | --- |
+ϵ Q
+|     |     |     |     |     | (cid:90) ∞ |              |     |           |     |     |     |
+| --- | --- | --- | --- | --- | ---------- | ------------ | --- | --------- | --- | --- | --- |
+|     |     |     |     | I = |            | log(3+|z|)|w |     | (z)|2dz.  |     |     |     |
+|     |     |     |     | ϵ   |            |              |     | (cid:99)ϵ |     |     |     |
+−∞
+
+|     |     |     | WEIL’S | QUADRATIC |     | FORM | VIA | THE | SCREW | FUNCTION | 15  |
+| --- | --- | --- | ------ | --------- | --- | ---- | --- | --- | ----- | -------- | --- |
+To estimate it, we examine the behavior of w . First, it follows immediately from the
+(cid:99)ϵ
+| definition |     | of the | Fourier | transform |     | that |     |     |     |     |     |
+| ---------- | --- | ------ | ------- | --------- | --- | ---- | --- | --- | --- | --- | --- |
+(cid:90)
+|     |     |     |     |     | |w (cid:99)ϵ | (z)| ≤ | |w  | ϵ (x)|dx | ≤ 2ϵ. |     | (3.3) |
+| --- | --- | --- | --- | --- | ------------ | ------ | --- | -------- | ----- | --- | ----- |
+R
+On the other hand, |w (z)| = O(|z|−1) as |z| → ∞, uniformly in ϵ. Indeed, integrating
+(cid:99)ϵ
+(cid:82)a
+| by  | parts | in w      | (z) = | w         | (x)eizxdx, | we            | obtain |          |       |      |     |
+| --- | ----- | --------- | ----- | --------- | ---------- | ------------- | ------ | -------- | ----- | ---- | --- |
+|     |       | (cid:99)ϵ |       | −a        | ϵ          |               |        |          |       |      |     |
+|     |       |           |       |           | (cid:20)   | eizx(cid:21)a |        | (cid:90) |       |      |     |
+|     |       |           |       |           |            |               |        |          | a     | eizx |     |
+|     |       |           |       | w (z)     | =          | w (x)         |        | −        | w′(x) | dx.  |     |
+|     |       |           |       | (cid:99)ϵ |            | ϵ             |        |          | ϵ     |      |     |
+|     |       |           |       |           |            |               | iz     |          |       | iz   |     |
+|     |       |           |       |           |            |               | −a     | −a       |       |      |     |
+Here, w (a) = e (a) = (−1)n and w (−a) = e (−a) = (−1)n. Moreover, w′(x) =
+|     | ϵ   |     | n   |     |     |     | ϵ   | n   |     |     | ϵ   |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+e′ (x)(1−η (x))−e (x)η′(x). Since |η′(x)| ≪ ϵ−1 on intervals of total length 2ϵ, we have
+| n   |     | ϵ   | n   | ϵ   |     | ϵ   |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+(cid:82) |η′(x)|dx
+|     |     | =   | O(1). | Hence |     |     |     |     |     |     |     |
+| --- | --- | --- | ----- | ----- | --- | --- | --- | --- | --- | --- | --- |
+ϵ
+|     |     |     |     |     | ∥w′∥ | ≤    | C ϵ+O(1) |     | ≤ C , |     |     |
+| --- | --- | --- | --- | --- | ---- | ---- | -------- | --- | ----- | --- | --- |
+|     |     |     |     |     |      | ϵ L1 | 1        |     | 2     |     |     |
+where C is independent of ϵ. Consequently, there exists a constant M > 0 independent
+2
+| of ϵ | such | that |     |     |     |     |     |     |     |     |     |
+| ---- | ---- | ---- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+(−a)|+∥w′∥
+|     |     |     |     |         |     | |w (a)|+|w |     |     |      | M   |       |
+| --- | --- | --- | --- | ------- | --- | ---------- | --- | --- | ---- | --- | ----- |
+|     |     |     |     | |w (z)| | ≤   | ϵ          | ϵ   |     | ϵ L1 | ≤ . | (3.4) |
+(cid:99)ϵ
+|     |     |     |     |     |     |     |     | |z| |     | |z| |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+Finally, we show that I → 0. We split the domain of integration into two parts at
+ϵ
+| |z| | = 1/ϵ.   | For | |z| ≤        | 1/ϵ, (3.3) | gives   |     |         |              |              |              |     |
+| --- | -------- | --- | ------------ | ---------- | ------- | --- | ------- | ------------ | ------------ | ------------ | --- |
+|     | (cid:90) |     |              |            |         |     |         | (cid:90) 1/ϵ |              |              |     |
+|     |          |     | log(3+|z|)|w |            | (z)|2dz |     | ≤ (2ϵ)2 |              | log(3+|z|)dz | ≪ ϵlog(1/ϵ). |     |
+(cid:99)ϵ
+|     |       | |z|≤1/ϵ  |             |     |     |     |          | −1/ϵ |     |     |     |
+| --- | ----- | -------- | ----------- | --- | --- | --- | -------- | ---- | --- | --- | --- |
+| For | |z| > | 1/ϵ,     | (3.4) gives |     |     |     |          |      |     |     |     |
+|     |       | (cid:90) |             |     |     |     | (cid:90) | ∞    |     | M2  |     |
+(z)|2dz
+|           |     |         | log(3+|z|)|w |     |           |        | ≤ 2 | log(3+z)  |     | dz ≪ ϵlog(1/ϵ). |     |
+| --------- | --- | ------- | ------------ | --- | --------- | ------ | --- | --------- | --- | --------------- | --- |
+|           |     |         |              |     | (cid:99)ϵ |        |     |           |     | z2              |     |
+|           |     | |z|>1/ϵ |              |     |           |        |     | 1/ϵ       |     |                 |     |
+| Combining |     | these   | estimates,   |     | we        | obtain |     |           |     |                 |     |
+|           |     |         | ∥e −v        | ∥2  | = I       | +∥w ∥2 | ≪   | ϵlog(1/ϵ) | → 0 | (ϵ → 0).        |     |
+|           |     |         | n            | ϵ Q | ϵ         | ϵ      | L2  |           |     |                 |     |
+C∞(−a,a)
+Therefore, v ϵ ∈ converges to e n with respect to the form norm ∥·∥ Q . Hence
+c
+∥·∥Q(⊂
+every e ∈ E belongs to C∞(−a,a) D(Q )), and the inclusion (3.2) follows. □
+|     | n   |     |     |     | c   |       |     | B       |     |     |     |
+| --- | --- | --- | --- | --- | --- | ----- | --- | ------- | --- | --- | --- |
+|     |     |     |     |     | 4.  | Proof | of  | Theorem | 1.3 |     |     |
+4.1. Compact embedding result. The following proposition is the main analytic
+| ingredient |     | in the | proof | of  | Theorem | 1.3. |     |     |     |     |     |
+| ---------- | --- | ------ | ----- | --- | ------- | ---- | --- | --- | --- | --- | --- |
+Proposition 4.1. For a bounded interval I, the embedding Hlog(I) (cid:44)→ L2(I) is compact.
+In other words, every bounded sequence in Hlog(I) admits a subsequence converging in
+L2(I).
+Proof. The proof is essentially the same as that of [4, Theorem 3.6]. □
+This compact embedding is also the key ingredient in the proof of the discreteness of
+the spectrum of A in [4, Theorem 3.6]. By [12, Proposition 10.6], it suffices to prove
+a
+|     |     |     |     |     | a   |     | (L2(−1,1),∥·∥ |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | ------------- | --- | --- | --- | --- |
+that the embedding (D(Q ),∥·∥ Q a ) (cid:44)→ L2 ) is compact. This follows
+|         |      |             |     |     | W    | W   |     |     |     |     |     |
+| ------- | ---- | ----------- | --- | --- | ---- | --- | --- | --- | --- | --- | --- |
+| readily | from | Proposition |     |     | 4.1. |     |     |     |     |     |     |
+
+16 M.SUZUKI
+4.2. Scaling transformation of the Rayleigh quotient. Using (1.8), we transfer
+the Rayleigh quotient in (1.7) to the fixed interval [−1,1] by a scaling transformation.
+From definition (1.6), the Rayleigh quotient associated with B for v ∈ H1(−a,a) is
+a 0
+given by
+(cid:90) a (cid:90) a
+g(x−y)v′(y)v′(x)dxdy
+⟨B v,v⟩ ⟨G Dv,Dv⟩
+a L2 = a L2 = −a −a .
+∥v∥2 ∥v∥2 (cid:90) a
+L2 L2 |v(x)|2dx
+−a
+Setting w(t) = v(at) on the fixed interval [−1,1], we define
+(cid:90) 1 (cid:90) 1 1
+q (w) := g(a(x−y))w′(x)w′(y)dxdy. (4.1)
+a
+a
+−1 −1
+Then a change of variables gives
+⟨B v,v⟩ q (w)
+a L2 = a , w(t) = v(at) ∈ H1(−1,1). (4.2)
+∥v∥2 ∥w∥2 0
+L2 L2
+We write
+q (w)
+a
+R(a,w) := . (4.3)
+∥w∥2
+L2
+For the second term on the right-hand side of (2.3), we have
+(cid:90) a (cid:90) 1
+|v(x)|2log(a2−x2)dx = 2∥v∥2 loga+ |v(ax)|2log(1−x2)dx.
+L2
+−a −1
+Thus, defining
+1 (cid:90) 1 (cid:90) 1 |w(x)−w(y)|2 1 (cid:90) 1
+L(w) := dxdy− |w(x)|2log(1−x2)dx (4.4)
+4 |x−y| 2
+−1 −1 −1
+for v ∈ H1(−1,1) (which should not be confused with the case a = 1 of (2.3)), we
+0
+deduce from (2.5) that
+L(w)
+R(a,w) = −loga−(2A+1)+
+∥w∥2
+L2
+1 (cid:88) Λ(n)
+(cid:32) (cid:90) 1−lo
+a
+gn (cid:18)
+logn
+(cid:19)
+− √ w t+ w(x)dx
+∥w∥2 n a
+L2 n≤e2a −1
+(4.5)
+(cid:33)
+(cid:90) 1 (cid:18) logn (cid:19)
++ w x− w(x)dx
+−1+logn a
+a
+a (cid:90) 1 (cid:90) 1
+− r′′(a(x−y))w(y)w(x)dxdy
+∥w∥2
+L2 −1 −1
+for w ∈ H1(−1,1).
+0
+For the quadratic form L defined by (4.4) for w ∈ D(L) := H1(−1,1), one can show
+0
+in the same way as in the proof of (2.6) that
+L(w) = 1 (cid:90) ∞ (cid:0) log|z|+C (cid:1) |w(z)|2dz. (4.6)
+0 (cid:98)
+2π
+−∞
+Hencetheformnorm∥w∥2 := L(w)+∥w∥2 isequivalentto (cid:82)∞ (1+log+|z|)|w(z)|2dz.
+L L2 −∞ (cid:98)
+Therefore,thecompletionofD(L)withrespectto∥·∥ canbeidentifiedwithasubspace
+L
+of Hlog(−1,1). In particular, formula (4.6) is valid not only for w ∈ D(L), but also for
+w ∈ D(L).
+
+WEIL’S QUADRATIC FORM VIA THE SCREW FUNCTION 17
+To prove Theorem 1.3, it remains to establish the upper semicontinuity
+limsupλ ≤ λ . (4.7)
+a a0
+a→a0
+and lower semicontinuity
+liminfλ ≥ λ . (4.8)
+n→∞
+an a0
+From (4.2) and Theorem 1.1, we obtain for the Rayleigh quotient associated with the
+closure q¯ of q that
+a a
+Qa (v) q¯ (w)
+W = a , v(at) = w(t) ∈ D(q¯ ). (4.9)
+∥v∥2 ∥w∥2 a
+L2 L2
+By (4.5), (4.6), and the definition of Hlog(−1,1), we obtain D(q¯ ) ⊂ Hlog(−1,1) for
+a
+every a > 0. Hence, by (1.7) and (4.9), it suffices to study the infimum of
+q¯ (w)
+R¯(a,w) := a .
+∥w∥2
+L2
+4.3. Proof of upper semicontinuity. Let q be the quadratic form defined in (4.1),
+a
+and let R(a,w) be the Rayleigh quotient defined in (4.3). We choose w ∈ D(q¯ ) ⊂
+0 a0
+Hlog(−1,1) such that λ = R¯(a ,w ), and normalize it by ∥w ∥ = 1. To avoid
+a0 0 0 0 L2
+referring to pointwise values of w and w , we choose a sequence w ∈ C∞(−1,1)
+0 (cid:99)0 n c
+such that w → w with respect to the form norm ∥ · ∥ (the form norm associated
+n 0 0
+with q ), and ∥w ∥ = 1. Such a sequence exists by the proof of Theorem 1.1. Since
+a0 n L2
+C∞(−1,1) ⊂ D(q ),eachw belongstoD(q )foreverya,andR(a,w )canbeexpressed
+c a n a n
+in terms of w and w .
+n (cid:99)n
+Fix n. By the definition of the infimum λ ≤ R(a,w ) for every a. Moreover, (4.5)
+a n
+implies that R(a,w ) → R(a ,w ) as a → a . Since ∥w ∥ = 1, we obtain
+n 0 n 0 n L2
+limsupλ ≤ R(a ,w ) = q (w ).
+a 0 n a0 n
+a→a0
+Passing to the limit as n → ∞, we obtain
+limsupλ ≤ lim q (w ) = q¯ (w ) = R¯(a ,w ) = λ .
+a→a0
+a
+n→∞
+a0 n a0 0 0 0 a0
+Thus, (4.7) holds. □
+4.4. Proof of lower semicontinuity. By (4.5), we decompose q¯ = q¯0 + q¯1, where
+a a
+q¯0(w) = L(w)−(2A+1)∥w∥2 and q¯1 denotes the remaining terms in (4.5). Let (a ) be
+L2 a n
+a sequence with a → a , and let w ∈ D(q¯ ) ⊂ Hlog(−1,1) be a sequence such that
+n 0 n an
+λ = R¯(a ,w ) and ∥w ∥ = 1. We first show that there exists a subsequence of (w )
+an n n n L2 n
+which converges in L2 to some limit w . Fix an arbitrary w ∈ H1(−1,1) ⊂ Hlog(−1,1).
+∗ 0
+Then λ ≤ R(a ,w), and since R(a,w) is continuous in a by the formula (4.5), the
+an n
+sequence (λ ) is bounded above.
+an
+Since λ = q¯ (w ) by λ = R¯(a ,w ) and ∥w ∥ = 1, the sequence q¯ (w )
+an an n an n n n L2 an n
+is bounded above. As (a ) remains in a compact neighborhood of a , the estimate
+n 0
+q¯1(v) = O(∥v∥2 ) holds uniformly in a. It follows that the terms other than L(w )
+a L2 n
+in (4.5) are uniformly bounded. Consequently, L(w ) is bounded above. Since L is
+n
+bounded below by definition, the sequence L(w ) is bounded. Together with (4.6), this
+n
+shows that (w ) is bounded in Hlog(−1,1). Proposition 4.1 therefore implies that (w )
+n n
+is relatively compact in L2, and we may extract a subsequence converging in L2. We
+relabel it again as (w ) and denote its limit by w .
+n ∗
+Theexplicitexpressionforq¯1 showsthatitisafinitesumofquadraticformsassociated
+a
+with translation operators and integral operators with continuous kernels. Thus q¯1(w)
+a
+depends continuously on (a,w) near (a ,w ), and therefore
+0 ∗
+lim q¯1 (w ) = q¯1 (w ).
+n→∞
+an n a0 ∗
+
+18 M.SUZUKI
+On the other hand, q¯0 is an a-independent lower bounded closed quadratic form on
+L2(−1,1). Hence, by [12, Proposition 10.1], it is lower semicontinuous with respect to
+L2-convergence:
+liminfq¯0(w ) ≥ q¯0(w ).
+n ∗
+n→∞
+Combining these estimates, we obtain
+liminfλ = liminf (cid:0) q¯0(w )+q¯1 (w ) (cid:1) ≥ q¯0(w )+q¯1 (w ) = q¯ (w ).
+n→∞
+an
+n→∞
+n an n ∗ a0 ∗ a0 ∗
+Since w → w in L2(−1,1) and ∥w ∥ = 1 for all n, we have ∥w ∥ = 1. Therefore,
+n ∗ n L2 ∗ L2
+R¯(a ,w ) = q¯ (w ), and by the definition of λ as the infimum of R¯(a ,·), q¯ (w ) =
+0 ∗ a0 ∗ a0 0 a0 ∗
+R¯(a ,w ) ≥ λ . Consequently,
+0 ∗ a0
+liminfλ ≥ q¯ (w ) ≥ λ ,
+n→∞
+an a0 ∗ a0
+which proves (4.8). □
+4.5. Aremarkonthecontinuityofλ viaparitydecomposition. Sincethekernel
+a
+g(x−y) is even, G commutes with the parity operator (Ju)(x) = u(−x), i.e. G J =
+a a
+JG . It follows that both B = D∗G D and its Friedrichs extension A commute with
+a a a a
+J. In particular, each eigenspace E(λ) of A admits a decomposition into even and odd
+a
+subspaces: E(λ) = E+(λ)⊕E−(λ). For the lowest eigenvalue space E(λ ) = E+(λ )⊕
+a a
+E−(λ ), the assumption in [4, Theorem 5.10] amounts to requiring that dimE+(λ ) = 1
+a a
+and E−(λ ) = {0}.
+a
+In view of the parity decomposition and Corollary 1.2, we define
+⟨B v,v⟩
+λ• := inf a L2 , • ∈ {+,−}.
+a
+0̸=v∈H • 1(−a,a)
+∥v∥2
+L2
+Then the global infimum λ in (1.7) can be expressed as
+a
+λ = min(λ+,λ−). (4.10)
+a a a
+Thus the continuity of λ follows from that of λ±, since the minimum of two continuous
+a a
+functions is continuous. The continuity of λ± is asserted in [1, Theorem 5], although
+a
+the details of the proof are not fully provided there.
+Wenowverifythat(4.10)holds. Everyv ∈ H1(−a,a)admitsauniquedecomposition
+0
+into even and odd components: v = v+ +v−. Since differentiation reverses parity and
+G preserves it, Dv+ and G (Dv+) are odd, whereas Dv− and G (Dv−) are even.
+a a a
+Expanding the quadratic form in the numerator,
+⟨G Dv,Dv⟩ = ⟨G (Dv+),Dv+⟩+⟨G (Dv−),Dv−⟩,
+a a a
+since the cross terms vanish due to the orthogonality. Similarly, ∥v∥2 = ∥v+∥2 +
+L2 L2
+∥v−∥2 for the denominator. Hence the Rayleigh quotient on H1(−a,a) can be written
+L2 0
+as
+⟨G Dv,Dv⟩ ⟨G (Dv+),Dv+⟩+⟨G (Dv−),Dv−⟩
+a a a
+= .
+∥v∥2 ∥v+∥2+∥v−∥2
+L2
+For each component we have ⟨G (Dv•),Dv•⟩ ≥ λ•∥v•∥2 for • ∈ {+,−} by definition.
+a a
+Therefore,
+⟨G Dv,Dv⟩ λ+∥v+∥2+λ−∥v−∥2
+a ≥ a a ≥ min(λ+,λ−),
+∥v∥2 ∥v+∥2+∥v−∥2 a a
+L2
+whichyieldsλ ≥ min(λ+,λ−). Conversely,restrictingtheRayleighquotienttoH1(−a,a)
+a a a +
+and H1(−a,a) immediately yields λ ≤ min(λ+,λ−). Thus, (4.10) is established.
+− a a a
+
+|     |     | WEIL’S |     | QUADRATIC | FORM | VIA THE    | SCREW | FUNCTION |     | 19  |
+| --- | --- | ------ | --- | --------- | ---- | ---------- | ----- | -------- | --- | --- |
+|     |     |        |     | 5. Proof  |      | of Theorem |       | 1.4      |     |     |
+5.1. Positivity of the lower bound. By (4.9), the behavior of λ for small a > 0 is
+a
+determined by the asymptotics of the Rayleigh quotient R(a,w) in (4.3) as a → 0+.
+| From (4.5), |     | we have |        |           |          |     |      |       |            |       |
+| ----------- | --- | ------- | ------ | --------- | -------- | --- | ---- | ----- | ---------- | ----- |
+|             |     |         |        |           | 1        |     | L(v) |       |            |       |
+|             |     |         | R(a,v) | = log     | −(2A+1)+ |     |      | +O(a) |            | (5.1) |
+|             |     |         |        |           | a        |     | ∥v∥2 |       |            |       |
+|             |     |         |        | H1(−1,1), |          |     |      |       | L(v)/∥v∥2. |       |
+for 0 < a < (1/2)log2 and v ∈ so it suffices to study Note that
+0
+thisquantityisindependentofa. Ingeneral,theinfimumofL(v)/∥v∥2 neednotcoincide
+with that of R(a,v), and hence their minimizers need not agree, but this distinction will
+not be relevant in what follows. By (4.6), the domain D(L¯) of the closure L¯is contained
+L¯
+in Hlog(−1,1). Furthermore, the self-adjoint operator T associated with has discrete
+spectrum. This can be proved by the same argument as in the proof of [4, Theorem
+| 3.6], using | Proposition |     | 4.1. |     |     |     |     |     |     |     |
+| ----------- | ----------- | --- | ---- | --- | --- | --- | --- | --- | --- | --- |
+The term log(1/a) on the right-hand side of (5.1) diverges to +∞ as a → 0+. Since
+the closure L¯ is a lower bounded closed quadratic form, it is lower semicontinuous [12,
+L¯(v)
+Proposition 10.1]. We claim that inf > 0. Indeed, it follows directly from the
+∥v∥=1
+definition that L(v) ≥ 0. If there existed a sequence (v n ) such that L(v n ) → 0, then
+the first term in (4.4) would also tend to 0, hence a subsequence of (v ) converges in
+n
+L2(−1,1)toaconstantfunctionby
+|     |     |     |     |     | (4.6)andProposition4.1. |     |     | However, | thesecondterm |     |
+| --- | --- | --- | --- | --- | ----------------------- | --- | --- | -------- | ------------- | --- |
+in (4.4) is strictly positive for constant functions. Therefore, for sufficiently small a > 0,
+| we obtain | λ   | = inf | R(a,w) | > 0. |     |     |     |     |     |     |
+| --------- | --- | ----- | ------ | ---- | --- | --- | --- | --- | --- | --- |
+a w
+5.2. Positivity improving property. The positivity improving property of the semi-
+group associated with L¯ established in this subsection will play a key role in proving
+the simplicity of the lowest eigenvalue. From (4.4), it is easy to see that L(|v|) ≤ L(v)
+holds for all v ∈ D(L). Hence a minimizer v of the Rayleigh quotient L¯(v)/∥v∥2 may
+0
+| be chosen | to  | be nonnegative. |     |     |     |     |     |     |     |     |
+| --------- | --- | --------------- | --- | --- | --- | --- | --- | --- | --- | --- |
+To show that v 0 is positive, rather than merely nonnegative, we apply the theory of
+Dirichlet forms [5]. A symmetric closed quadratic form E with domain F is called a
+Dirichlet form if it satisfies the Markov property. That is, for every v ∈ F, the function
+v♯ := ϕ◦v = (0∨v)∧1,ϕ(t) := min(1,max(0,t)),belongstoF andsatisfiesE(v♯) ≤ E(v).
+| Note that | ϕ   | is Lipschitz |     | continuous. |     |     |     |     |     |     |
+| --------- | --- | ------------ | --- | ----------- | --- | --- | --- | --- | --- | --- |
+We claim that v♯ ∈ D(L¯) and L¯(v♯) ≤ L¯(v) for every v ∈ D(L¯). As the domain
+D(L) is dense in D(L¯), it suffices to verify these properties on D(L) using the Beurling–
+L¯
+Deny representation (4.4) of [5, Theorem 3.2.1]. For the jumping part, the Lipschitz
+| continuity  | of      | ϕ yields            |                  |         |                    |              |            |                 |            |      |
+| ----------- | ------- | ------------------- | ---------------- | ------- | ------------------ | ------------ | ---------- | --------------- | ---------- | ---- |
+|             |         | |v♯(x)−v♯(y)|2      |                  | =       | |ϕ(v(x))−ϕ(v(y))|2 |              |            | ≤ |v(x)−v(y)|2. |            |      |
+| Multiplying |         | by the              | kernel           | |x−y|−1 | and                | integrating, | we         | obtain          |            |      |
+|             |         | (cid:90) 1 (cid:90) | 1 |v♯(x)−v♯(y)|2 |         |                    | (cid:90)     | 1 (cid:90) | 1 |v(x)−v(y)|2  |            |      |
+|             | 1       |                     |                  |         |                    | 1            |            |                 |            |      |
+|             |         |                     |                  |         | dxdy               | ≤            |            |                 | dxdy.      |      |
+|             | 2       |                     |                  | |x−y|   |                    | 2            |            | |x−y|           |            |      |
+|             |         | −1                  | −1               |         |                    |              | −1 −1      |                 |            |      |
+|             |         |                     | |v♯(x)|2         | |v(x)|2 |                    |              |            |                 | −log(1−x2) |      |
+| For the     | killing | part,               |                  | ≤       |                    | by |ϕ(a)|    | ≤ |a|,     | and κ(x)        | :=         | ≥ 0. |
+Hence
+|     |     |     | (cid:90) | 1              |     | (cid:90) 1 |                |     |     |     |
+| --- | --- | --- | -------- | -------------- | --- | ---------- | -------------- | --- | --- | --- |
+|     |     |     |          | κ(x)|v♯(x)|2dx |     | ≤          | κ(x)|v(x)|2dx. |     |     |     |
+|     |     |     |          | −1             |     | −1         |                |     |     |     |
+Combiningtheseestimates,weobtainv♯ ∈ D(L¯)andL¯(v♯) ≤ L¯(v). Therefore(L¯,D(L¯))
+| satisfies | the | Markov | property | and | hence | defines | a Dirichlet | form. |     |     |
+| --------- | --- | ------ | -------- | --- | ----- | ------- | ----------- | ----- | --- | --- |
+We next show that (L¯,D(L¯)) is irreducible. Recall that a Dirichlet form is called
+irreducibleifeveryinvariantsetistrivial,thatis,eitheritoritscomplementhasmeasure
+zero. Let A ⊂ (−1,1) be an L¯-invariant set. By the characterization of invariant sets in
+
+20 M.SUZUKI
+[9, p. 173], L¯(1 u,1 u) = 0 for all u ∈ D(L¯), where Ac = (−1,1)\A. Since D(L) is a
+A Ac
+core of D(L¯), it suffices to test the condition on D(L). We have
+(cid:90) (cid:90)
+1 u(x)u(y)
+L(1 u,1 u) = − dxdy = 0
+A Ac
+2 |x−y|
+A Ac
+for all u ∈ D(L), since
+1 (cid:90) 1 (cid:90) 1 (u(x)−u(y))(v(x)−v(y)) 1 (cid:90) 1
+L(u,v) = dxdy− u(x)v(x)log(1−x2)dx.
+4 |x−y| 2
+−1 −1 −1
+Because the jumping kernel |x−y|−1 is positive on (−1,1)2, the above identity cannot
+hold when both A and Ac have positive measure. Thus either A or Ac has measure zero,
+and L¯ is irreducible.
+By [9, Theorem 1.4], the irreducibility implies that the associated semigroup {e−tT |
+t > 0} is positivity improving. In other words, for every nonnegative function f ∈
+L2(−1,1) with f ̸≡ 0, one has (e−tTf)(x) > 0 for a.e. x ∈ (−1,1). In particular, the
+nonnegative eigenfunction v of T is positive almost everywhere.
+0
+5.3. Simplicity of the lowest eigenvalue and parity of eigenfunctions. Suppose
+thatthelowesteigenvalueofT admitstwoorthogonaleigenfunctions. Then,bytheresult
+of the previous subsection, eigenfunctions corresponding to the lowest eigenvalue may
+be chosen to be positive almost everywhere. However, two functions that are positive
+almost everywhere cannot be orthogonal to each other, which leads to a contradiction.
+Hence the eigenspace corresponding to the lowest eigenvalue of T is one-dimensional,
+and the lowest eigenvalue is simple.
+Next, decompose the quadratic form q¯ (v) according to (5.1). The term (log(1/a)−
+a
+(2A+1))∥v∥2 merely shifts the spectrum, so the asymptotic behavior of λ is governed
+L2 a
+by the operator associated with L¯(v) + O(a)∥v∥2 . By [7, Chapter VIII, Section 3,
+L2
+Theorems 3.6 and 3.15], as a → 0+, this operator has the same multiplicity for its
+lowest eigenvalue as T. Therefore, the lowest eigenvalue of the perturbed operator, and
+hence λ , is simple for sufficiently small a > 0.
+a
+As discussed in Section 4.5, the eigenspaces of the self-adjoint operator associated
+with q¯ decompose into even and odd parts. In particular, since the lowest eigenvalue is
+a
+simple, its eigenfunction must be either even or odd. However, since the eigenfunction
+corresponding to the lowest eigenvalue has a fixed sign, it must be even.
+6. Proof of Theorem 1.5
+6.1. Symmetry of the minimal operator. Choose λ < λ , and let H(T ) denote the
+a a
+Hilbert space obtained as the completion of C∞(−a,a) with respect to the norm ∥·∥
+c Ta
+defined by (1.9). Define
+⟨v ,v ⟩ := ⟨T v ,v ⟩
+1 2 Ta a 1 2 L2
+so that ∥v∥2 = ⟨v,v⟩ . Let D be the operator on H(T ) with domain (1.10) acting as
+Ta Ta a a
+D = id/dx. Since the canonical map C∞(−a,a) → H(T ) is injective and the image is
+a c a
+dense, the operator D is densely defined.
+a
+Lemma 6.1. The operator D is symmetric on H(T ).
+a a
+Proof. We show that ⟨D u,v⟩ = ⟨u,D v⟩ for all u,v ∈ D(D ). By the definition of
+a Ta a Ta a
+the inner product on H(T ) and the self-adjointness of A , we have
+a a
+⟨D u,v⟩ = ⟨A (iu′),v⟩ −λ⟨iu′,v⟩ = ⟨iu′,A v⟩ −λ⟨iu′,v⟩ .
+a Ta a L2 L2 a L2 L2
+According to the distribution kernel representation (2.10), the function A v is the con-
+a
+volution of v with the tempered distribution k := −g′′. Hence, by the general theory
+of tempered distributions, A v ∈ C∞(R) whenever v ∈ D(D ). Using this fact to-
+a a
+gether with the boundary conditions u(a) = u(−a) = 0, integration by parts gives
+
+WEIL’S QUADRATIC FORM VIA THE SCREW FUNCTION 21
+⟨iu′,A v⟩ = ⟨u,i(A v)′⟩ , and ⟨iu′,v⟩ = ⟨u,iv′⟩ . Furthermore, using (2.10) and
+a L2 a L2 L2 L2
+the boundary conditions v(a) = v(−a) = 0, we obtain by integration by parts that
+d (cid:90) a (cid:90) a d (cid:90) a
+(A v)′(x) = k(x−y)v(y)dy = − k(x−y)v(y)dy = k(x−y)v′(y)dy.
+a
+dx dy
+−a −a −a
+Therefore, ⟨u,i(A v)′⟩ = ⟨u,A (iv′)⟩ , and hence
+a L2 a L2
+⟨D u,v⟩ = ⟨u,A (iv′)⟩ −λ⟨u,iv′⟩ = ⟨A u,iv′⟩ −λ⟨u,iv′⟩ = ⟨u,D v⟩ .
+a Ta a L2 L2 a L2 L2 a Ta
+This proves the desired identity. □
+6.2. Adjoint of the minimal operator. We now derive the adjoint operator D∗ of
+a
+D on H(T ). For a vector v ∈ H(T ) to belong to the domain D(D∗) of D∗, the linear
+a a a a a
+functional u (cid:55)→ ⟨D u,v⟩ must be continuous on D(D ) with respect to the norm of
+a Ta a
+H(T ). Since D is symmetric, D(D ) ⊂ D(D∗). Moreover, by the calculation in the
+a a a a
+previous section, we have ⟨D u,v⟩ = ⟨u,i(A v)′⟩ − λ⟨u,iv′⟩ for u ∈ D(D ). If
+a Ta a L2 L2 a
+this functional is continuous with respect to ∥·∥ , then it is in particular continuous
+Ta
+with respect to the L2-norm. Hence it is necessary that v′ ∈ L2(−a,a) and (A v)′ ∈
+a
+L2(−a,a). Therefore,
+D(D∗) ⊂ {v ∈ H(T ) | v ∈ H1(−a,a), A v ∈ H1(−a,a)}.
+a a a
+The condition that v ∈ D(D∗) and D∗v = g ∈ H(T ) means that
+a a a
+⟨D u,v⟩ = ⟨u,g⟩ (= ⟨T u,g⟩ = ⟨u,T g⟩ )
+a Ta Ta a L2 a L2
+holds for every u ∈ D(D ). By the calculation in the previous section, we have
+a
+⟨D u,v⟩ = ⟨u,i(T v)′⟩
+a Ta a L2
+for u ∈ D(D ). Since D(D ) is dense in H(T ), it follows that
+a a a
+T (D∗v) = i(T v)′.
+a a a
+If v ∈ D(D ), then this identity becomes
+a
+T (D∗v) = i(T v)′ = T (iv′) = T (D v),
+a a a a a a
+and hence D∗ agrees with D . The eigenvalue equations D∗v = ±iv are equivalent to
+a a a
+i(T v)′ = ±i(T v). Hence
+a a
+(T v)(x) = C ex, (T v)(x) = C e−x,
+a + a −
+andthesefunctionsspantheeigenspacescorrespondingtotheeigenvalues±i. Therefore
+we obtain the following result.
+Lemma 6.2. D has the deficiency indices (1,1).
+a
+6.3. Self-adjointextensionsoftheminimaloperator. Wecomputetheself-adjoint
+extensionsofD usingvonNeumann’stheoryofdeficiencyindices([11,SectionX.1],[12,
+a
+Section3.2]). Bytheresultsoftheprevioussubsection,thedeficiencyspacesKer(D∗∓i)
+a
+areone-dimensionalandarespannedbyvectorsv satisfying(T v )(x) = exp(±x). Itis
+± a ±
+immediate that ∥v ∥ = ∥v ∥ . Thus, every self-adjoint extension D parametrized
++ Ta − Ta a,θ
+by θ ∈ [0,2π) has domain
+D(D ) = {v +c(v +eiθv ) | v ∈ D(D ),c ∈ C}
+a,θ 0 + − 0 a
+⊂ D(D∗) = {v +av +bv | v ∈ D(D ),a,b ∈ C}.
+a 0 + − 0 a
+These domains are characterized by the boundary form
+W(u,v) = ⟨D∗u,v⟩ −⟨u,D∗v⟩ ,
+a Ta a Ta
+namely, v ∈ D(D∗) belongs to D(D ) if and only if W(v,w ) = 0 for w = v +eiθv .
+a a,θ θ θ + −
+The action of D is given by
+a,θ
+(cid:16) (cid:17)
+D v +c(v +eiθv ) := D v +ic(v −eiθv ).
+a,θ 0 + − a 0 + −
+
+| 22  |     |     |     |     |     |     | M.SUZUKI |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | -------- | --- | --- | --- | --- | --- |
+6.4. Proof of Theorem 1.5. Let v be an eigenfunction of D∗ corresponding to an
+|     |     |     |     |     |     | z   |     |     |     | a   |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|     |     | R.  |     |     |     | D∗v |     |     |     |     |     |     |
+eigenvalue z ∈ The equation = zv implies that (T v )(x) = exp(−izx). The
+|     |     |     |     |     |     | a z | z   |     | a   | z   |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+basis vectors of the deficiency spaces satisfy D∗v = ±iv and (T v )(x) = exp(±x).
+|              |     |             |            |        |      |              |      | a ±    | ±            | a   | ±   |     |
+| ------------ | --- | ----------- | ---------- | ------ | ---- | ------------ | ---- | ------ | ------------ | --- | --- | --- |
+| On           | the | other hand, | applying   |        | D∗   | to w         | = v  | +eiθv  | yields       |     |     |     |
+|              |     |             |            |        | a    | θ            | +    | −      |              |     |     |     |
+|              |     |             |            |        |      | D∗w          |      | −ieiθv |              |     |     |     |
+|              |     |             |            |        |      |              | = iv |        | .            |     |     |     |
+|              |     |             |            |        |      | a θ          | +    |        | −            |     |     |     |
+| Substituting |     | these       | equalities |        | into | the boundary |      | form   | W, we obtain |     |     |     |
+|              |     |             | W(v        | ,w ) = | ⟨zv  | ,v +eiθv     |      | ⟩ −⟨v  | ,iv −ieiθv   | ⟩   | .   |     |
+|              |     |             | z          | θ      |      | z +          | −    | Ta     | z +          | −   | Ta  |     |
+Expanding the right-hand side by linearity of the inner product and collecting the terms
+| involving |     | the inner | products |     | with    | v + and | v −  | , we obtain  |     |      |     |       |
+| --------- | --- | --------- | -------- | --- | ------- | ------- | ---- | ------------ | --- | ---- | --- | ----- |
+|           |     | W(v       | ,w       | ) = | (z+i)⟨v | ,v      | ⟩    | +(z−i)e−iθ⟨v | ,v  | ⟩ =  | 0.  | (6.1) |
+|           |     |           | z        | θ   |         | z       | + Ta |              | z   | − Ta |     |       |
+UsingthedefinitionoftheinnerproductonthespaceH(T )andtheidentity(T v )(x) =
+|            |     |           |     |     |     |     |     |     | a   |     | a   | z   |
+| ---------- | --- | --------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| exp(−izx), |     | we obtain |     |     |     |     |     |     |     |     |     |     |
+(cid:90)
+a
+e−izxv
+|     |     |     | ⟨v  | z ,v ± ⟩ | Ta = | ⟨T a v z | ,v ± ⟩ L2 | =   | ± (x)dx. |     |     |     |
+| --- | --- | --- | --- | -------- | ---- | -------- | --------- | --- | -------- | --- | --- | --- |
+−a
+|     |     |     |     | L2(−a,a) |     | L1(−a,a), |     |     |     |     |     |     |
+| --- | --- | --- | --- | -------- | --- | --------- | --- | --- | --- | --- | --- | --- |
+Because v ∈ H(T ) ⊂ ⊂ the above Fourier integrals define entire
+|     |     | ±   | a   |     |     |     |     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+functions of z. Consequently, upon rewriting the orthogonality condition (6.1), we find
+thattheeigenvaluez mustsatisfytheequationW(a,θ;z) = 0,whereW(a,θ;z)isdefined
+| in  | (1.11). | This | proves | the first | assertion |     | of the | theorem. |     |     |     |     |
+| --- | ------- | ---- | ------ | --------- | --------- | --- | ------ | -------- | --- | --- | --- | --- |
+Next, we show that all zeros of W(a,θ;z) are real. Even when λ ∈ C is not real, the
+function (T v )(x) = exp(−iλx) is infinitely differentiable on the interval (−a,a) and
+a λ
+belongstoH1(−a,a). SinceT isinjective, therelation(T v )(x) = exp(−iλx)uniquely
+|     |     |     |     |     | a   |     |     |     | a λ |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+determines an element v ∈ H(T ), which belongs to D(D∗). Applying D∗ to v , and
+|      |          |        |          | λ       |      | a               |     |     | a          |     | a        | λ   |
+| ---- | -------- | ------ | -------- | ------- | ---- | --------------- | --- | --- | ---------- | --- | -------- | --- |
+| then | applying | T      | a to the | result, | we   | obtain          |     |     |            |     |          |     |
+|      |          | T (D∗v | ) =      | i(T v   | )′ = | i(−iλexp(−iλx)) |     | =   | λexp(−iλx) | =   | T (λv ). |     |
+|      |          | a a    | λ        | a       | λ    |                 |     |     |            |     | a λ      |     |
+It follows that D∗v = λv . Thus, v serves as an eigenfunction of D∗ even for λ ∈ C.
+|     |     |     | a λ | λ   |     | λ   |     |     |     |     | a   |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+C
+Suppose that a complex number λ 0 ∈ satisfies W(a,θ;λ 0 ) = 0. By the character-
+ization established above, this means that the corresponding v is orthogonal to the
+λ0
+deficiency vector w with respect to the boundary form, that is, W(v ,w ) = 0. By
+|     |     |     | θ   |     |     |     |     |     |     |     | λ0 θ |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ---- | --- |
+D(D
+definition, every element satisfying this condition belongs to a,θ ). Consequently,
+v is a nonzero element of the domain of the self-adjoint extension D and satis-
+| λ0  |     |     |     |     |     |     |     |     |     |     | a,θ |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+fies D v = λ v . Hence v is a genuine eigenvector of the self-adjoint operator
+|     | a,θ | λ0  | 0 λ0 |     | λ0  |     |     |     |     |     |     |     |
+| --- | --- | --- | ---- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+D with eigenvalue λ . However, λ must be real, since every eigenvalue of a self-
+|     | a,θ |     |     | 0   |     |     | 0   |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+adjoint operator is real. This contradiction shows that any complex number λ satisfying
+| W(a,θ;λ) |     | = 0 must     | lie | on the        | real | axis. |        |         |              |     |     | □   |
+| -------- | --- | ------------ | --- | ------------- | ---- | ----- | ------ | ------- | ------------ | --- | --- | --- |
+|          |     | 7. Heuristic |     | justification |      |       | of the | formula | in Corollary |     | 1.6 |     |
+In this section, we assume RH. By Weil’s positivity criterion, we have Q ≥ 0 and
+W
+hence A a > 0 for all a > 0. Under this assumption, for each a > 0 we may take λ = 0
+in the definition (1.9) of T = T . Hence we work with A in place of T , and consider
+|     |         |        |     | a    | a,λ |     |     |     | a   |     | a   |     |
+| --- | ------- | ------ | --- | ---- | --- | --- | --- | --- | --- | --- | --- | --- |
+| the | Hilbert | spaces | H(A | ) := | H(T | ).  |     |     |     |     |     |     |
+|     |         |        |     | a    |     | a,0 |     |     |     |     |     |     |
+7.1. The Hilbert Space H(A ). In order to study the behavior of the differential
+∞
+D
+operator on the Hilbert space H(A ) as a → ∞, we first introduce the Hilbert space
+|     |     | a   |     |     |     |     | a   |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+H(A ) and the corresponding differential operator D . Here A is only a formal
+|        | ∞   |          |     |        |           |     |           |     | ∞   | ∞   |     |     |
+| ------ | --- | -------- | --- | ------ | --------- | --- | --------- | --- | --- | --- | --- | --- |
+| symbol |     | and does | not | denote | an actual |     | operator. |     |     |     |     |     |
+C∞(R)
+Let D(Q W ) denote the completion of with respect to the form norm
+c
+|     |     |     |     |     | ∥v∥2 | :=  | Q   | (v)+∥v∥2 | .   |     |     |     |
+| --- | --- | --- | --- | --- | ---- | --- | --- | -------- | --- | --- | --- | --- |
+|     |     |     |     |     |      | QW  | W   |          | L2  |     |     |     |
+
+WEIL’S QUADRATIC FORM VIA THE SCREW FUNCTION 23
+This space is a Hilbert space with respect to the form norm. N := {v ∈ D(Q ) |
+W
+Q (v) = 0} is a closed subspace of D(Q ) with respect to the form norm. We then
+W W
+consider the quotient space
+H(A ) := D(Q )/N.
+∞ W
+For v ∈ D(Q ), we denote its equivalence class by [v] ∈ H(A ). We define the norm
+W ∞
+of [v] by
+∥[v]∥2 := Q (v).
+A∞ W
+The Hilbert space H(A ) can be identified with the completion H of C∞(R) with
+∞ W c
+respect to Q (v) studied in [14].
+W
+Since Q (v) ̸= 0 for any nonzero v ∈ C∞(R), the map v (cid:55)→ [v] embeds C∞(R)
+W c c
+injectively into H(A ), and its image is dense. Hence, by fixing representatives on
+∞
+C∞(R), we define a densely defined operator D on H(A ) by D [v] := [D v] = [iv′].
+c ∞ ∞ ∞ ∞
+This is well-defined since [u] = [v] for u,v ∈ C∞(R) implies u = v.
+c
+We now verify that D is symmetric on H(A ) and hence closable. If Q (w) = 0, it
+∞ ∞ W
+follows that Q (w,v) = 0 for all v by the assumption Q ≥ 0 and the Cauchy-Schwarz
+W W
+inequality |Q (u,v)|2 ≤ Q (u)Q (v). This implies Q (u + w,v) = Q (u,v) and
+W W W W W
+Q (u,v+w) = Q (u,v). Hence the sesquilinear form
+W W
+(cid:90) ∞ (cid:90) ∞
+Q ([u],[v]) = Q (u,v) = (−g′′(x−y))u(y)v(x)dxdy (7.1)
+W W
+−∞ −∞
+is well-defined (cf. (2.9)). Moreover, the translation operator τ (t ∈ R) defined by
+t
+τ [u] := [τ u], (τ u)(x) = u(x−t)
+t t t
+is well-defined, since τ [u+w] = [τ (u+w)] = [τ u]+[τ w] and Q ([τ w]) = Q (τ w) =
+t t t t W t W t
+Q (w) = 0 if Q (w) = 0. Furthermore, by (7.1), the norm in H(A ) is invariant
+W W ∞
+under translations:
+∥[v]∥ = ∥τ [v]∥ . (7.2)
+A∞ t A∞
+Since D commutes with convolution, it follows from (7.1) that
+∞
+Q (D [u],[v]) = Q ([u],D [v])
+W ∞ W ∞
+for u,v ∈ C∞(R). Hence D is symmetric with respect to ⟨·,·⟩ . Since every symmet-
+c ∞ A∞
+ric operator is closable, its closure will be denoted by D¯ . Thus, for [v] ∈ D(D¯ ), one
+∞ ∞
+can choose a sequence v ∈ C∞(R) such that [v ] → [v] and D [v ] = [iv′] → D¯ [v] in
+n c n ∞ n n ∞
+H(A ).
+∞
+7.2. Isomorphism with a de Branges space. We now recall the isometric isomor-
+phism between H(A ) (denoted by H in [14]) and a certain de Branges space B
+∞ W
+established in [14]. Here it is sufficient to understand B as a reproducing kernel Hilbert
+space consisting of entire functions.
+Let M be the operator of multiplication by an independent variable on B defined by
+D(M) = {F ∈ B | zF(z) ∈ B} and (MF)(z) = zF(z). The operator M is a densely
+defined closed symmetric operator with deficiency indices (1,1), and it admits a one-
+parameterfamilyofself-adjointextensionsparametrizedbyψ ∈ [0,π). Inparticular,the
+self-adjointextensionM haspurelydiscretespectrumΓ, thesetofzerosofξ(1/2−iz)
+π/2
+in Section 3, and one can choose an orthonormal basis of B consisting of the correspond-
+ing eigenfunctions F for γ ∈ Γ [14, Section 6]. In this setting, defining U : H(A ) → B
+γ ∞
+by
+(cid:88)√
+U([v]) := m v(γ)F (7.3)
+γ(cid:98) γ
+γ∈Γ
+yields an isometric isomorphism of Hilbert spaces [14, Theorems 1.1 and 1.4]:
+(Q (v) =) ∥[v]∥2 = ∥U([v])∥2. (7.4)
+W A∞ B
+This U is precisely the operator denoted by π−1/2P(cid:99)D = π−1/2P(cid:98)D in [14].
+
+| 24  |     |     |     |     |     |     | M.SUZUKI |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | -------- | --- | --- | --- | --- | --- |
+7.3. Correspondence between D and M. Via the isomorphism U : H(A ) → B,
+|     |     |     |     |     |     | ∞   |     |     |     |     | ∞   |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+the operator M induces a self-adjoint operator on H(A ). However, its relation to
+∞
+the differential operator D¯ is not immediately clear. On the other hand, the relation
+∞
+D¯
+between the differential operator and the self-adjoint extension M of M can be
+|           |     |     |          |     |             | ∞   |     |     |     |     | π/2 |     |
+| --------- | --- | --- | -------- | --- | ----------- | --- | --- | --- | --- | --- | --- | --- |
+| described |     | in  | a simple | way | as follows. |     |     |     |     |     |     |     |
+If v ∈ C∞(R), then v is rapidly decreasing. Hence [v] belongs to the domain of M .
+|     |     | c   |     | (cid:98) |     |     |     |     |     |     |     | π/2 |
+| --- | --- | --- | --- | -------- | --- | --- | --- | --- | --- | --- | --- | --- |
+For each γ ∈ Γ, F γ is an eigenfunction of M with eigenvalue γ, and therefore
+π/2
+|     |     |     |        | (cid:88) |          | (cid:88)  |                    |     |            |      |           |       |
+| --- | --- | --- | ------ | -------- | -------- | --------- | ------------------ | --- | ---------- | ---- | --------- | ----- |
+|     |     | M   | U([v]) | =        | γv(γ)F   | =         | ((cid:100)iv′)(γ)F |     | = U([iv′]) | =    | U(D [v]). |       |
+|     |     | π/2 |        |          | (cid:98) | γ         |                    | γ   |            |      | ∞         |       |
+|     |     |     |        |          | γ        |           | γ                  |     |            |      |           |       |
+|     |     |     | U−1M   |          |          |           |                    |     |            |      |           | [iv′] |
+| Let | D   | :=  |        | U.       | Then     | the above | computation        |     | shows      | that | D [v] =   | =     |
+|     | π/2 |     |        | π/2      |          |           |                    |     |            |      | π/2       |       |
+D [v] for v ∈ C∞(R). Since D is closed and extends D , it follows that
+| ∞   |     |     | c   |     | π/2 |     |     |     | ∞   |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+D¯
+|     |     |     |     |     |     | D   | [v] = | ∞ [v] |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | ----- | ----- | --- | --- | --- | --- |
+π/2
+|     |         | D(D¯ |     |          |     |                   |     |           |     | D¯   |     |     |
+| --- | ------- | ---- | --- | -------- | --- | ----------------- | --- | --------- | --- | ---- | --- | --- |
+| for | all [v] | ∈    |     | ). Thus, | D   | is a self-adjoint |     | extension |     | of . |     |     |
+|     |         |      | ∞   |          | π/2 |                   |     |           |     | ∞    |     |     |
+Remark.Moregenerally, foranyself-adjointextensionM ψ ofM, onemaydefineD ψ :=
+U−1M U. Since M is unitarily equivalent to D , the operator D is self-adjoint. It is
+|     | ψ   |     |     | ψ   |     |     |     | ψ   |     |     | ψ   |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+natural to ask whether D can be characterized directly as a self-adjoint extension of
+ψ
+D¯
+| ∞   | . We | do  | not pursue | this | question | here. |     |     |     |     |     |     |
+| --- | ---- | --- | ---------- | ---- | -------- | ----- | --- | --- | --- | --- | --- | --- |
+7.4. An operator unitarily equivalent to M. We now consider the operator on
+| H(A | )   | induced | by  | M through |     | U. More | precisely, | we  | define |     |     |     |
+| --- | --- | ------- | --- | --------- | --- | ------- | ---------- | --- | ------ | --- | --- | --- |
+∞
+|     |     |     |     |     |     | D   | := U−1MU. |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --------- | --- | --- | --- | --- | --- |
+By construction, D and M are unitarily equivalent via U, and have the same deficiency
+| indices. |     | In particular, |     | the | deficiency | indices |     | of D are | (1,1). |     |     |     |
+| -------- | --- | -------------- | --- | --- | ---------- | ------- | --- | -------- | ------ | --- | --- | --- |
+L2(0,∞)
+Writing the Fourier transform as Fv = v, (cid:98) there exists a subspace V(0) ⊂
+such that the maps B ∋ F (cid:55)→ v := F−1F ∈ V(0) and V(0) ∋ v (cid:55)→ [v] ∈ H(A )
+|     |     |     |     |     |     | F   |     |     |     |     |     | ∞   |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+are isomorphisms [14, Theorem 5.5]. In this setting, the operator on V(0) unitarily
+equivalent to M via F−1 : B → V(0) is denoted by D = F−1MF. Then, via the
+isomorphismι : V(0) → H(A ),theoperatorcorrespondingtoDisgivenbyD = ιDι−1.
+∞
+|           |             |     |         |       | Fι−1. |         |        |          | Fv,    |      |     |     |
+| --------- | ----------- | --- | ------- | ----- | ----- | ------- | ------ | -------- | ------ | ---- | --- | --- |
+| In        | particular, |     | we have | U     | =     | If F    | ∈ D(M) | and      | F =    | then |     |     |
+|           |             |     |         |       |       | F−1(MF) |        | F−1(zF)  | iv′.   |      |     |     |
+|           |             |     |         |       | Dv =  |         | =      |          | =      |      |     |     |
+| Moreover, |             | for | v ∈     | V(0), |       |         |        |          |        |      |     |     |
+|           |             |     |         |       | D[v]  | = ι(Dv) | =      | ι(iv′) = | [iv′]. |      |     |     |
+We claim that for a given function u, the decomposition u = v+w with v ∈ V(0) and
+[w] = 0 is uniquely determined. Once this is established, we may define D[u] := D[v] by
+writing u = v+w with v ∈ V(0) for [u] ∈ D(D) (defined via the unitary correspondence
+with D(M)).
+The uniqueness of v in the above decomposition is as follows. If u = v + w and
+u = v˜+w˜ are two such decompositions, then v−v˜= w˜−w. Hence, if v := v−v˜̸= 0,
+0
+then 0 ̸= v 0 ∈ V(0) and [v 0 ] = 0. It follows from (7.3) and (7.4) that v (cid:98)0 (γ) = 0 for all
+γ. Since F : V(0) → B is an isomorphism, we obtain v = 0, a contradiction.
+0
+|     | With | this | definition, | the | relation | between |     |      |     |     |     |     |
+| --- | ---- | ---- | ----------- | --- | -------- | ------- | --- | ---- | --- | --- | --- | --- |
+|     |      |      |             |     |          | C∞(R)   | and | D(D) |     |     |     |     |
+c
+is not clear. Indeed, for u ∈ C∞(R) decomposed as u = v + w with v ∈ V(0) and
+c
+Fv
+| [w] | = 0, | it is | not clear | whether |     | ∈ D(M) |     | holds. |     |     |     |     |
+| --- | ---- | ----- | --------- | ------- | --- | ------ | --- | ------ | --- | --- | --- | --- |
+
+|     |     |     | WEIL’S | QUADRATIC |     | FORM | VIA | THE | SCREW FUNCTION |     |     | 25  |
+| --- | --- | --- | ------ | --------- | --- | ---- | --- | --- | -------------- | --- | --- | --- |
+7.5. Infinitesimal generator of translations (a = ∞). The previously defined fam-
+ily(τ ) t∈R formsastronglycontinuousone-parameterunitarygroup. Indeed, τ τ = τ
+|     | t   |     |     |     |     |     |     |     |     |     | t s | t+s |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+is clear from the definition, and each τ is a unitary operator by (7.2). It remains to ver-
+t
+ifystrongcontinuity, namelylim ∥τ [v]−[v]∥ = 0. Tothisend, usingtheisometric
+|          |     |       |          |     | t→0 | t   |     | A∞  |     |     |     |     |
+| -------- | --- | ----- | -------- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| property | of  | U, we | estimate |     |     |     |     |     |     |     |     |     |
+(cid:88)
+|     |     |     | ∥U(τ | [v]−[v])∥2 |     | =   | m   | |e−itγ | −1|2|v(γ)|2. |     |     |     |
+| --- | --- | --- | ---- | ---------- | --- | --- | --- | ------ | ------------ | --- | --- | --- |
+|     |     |     |      | t          |     | B   |     | γ      | (cid:98)     |     |     |     |
+γ∈Γ
+Since|e−itγ−1|2
+SinceA ∞ > 0impliesRH,allelementsofΓarereal. ≤ 4,thedominated
+convergence theorem implies that the right-hand side tends to 0 as t → 0. Hence τ is
+t
+| strongly | continuous |     | with | respect |     | to the | norm | of H(A | ).  |     |     |     |
+| -------- | ---------- | --- | ---- | ------- | --- | ------ | ---- | ------ | --- | --- | --- | --- |
+∞
+Therefore, there exists a self-adjoint operator D on H(A ) such that
+∞
+|     |     |     |     |     |     | τ = | eitD | (t ∈ R) |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | ---- | ------- | --- | --- | --- | --- |
+t
+| by Stone’s |     | theorem, | where |     |     |     |     |     |     |     |     |     |
+| ---------- | --- | -------- | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+(cid:12)
+|     |             |     | (cid:26) |     |              | τ [v]−[v] |         | (cid:27) |           | τ [v]−[v] |     |     |
+| --- | ----------- | --- | -------- | --- | ------------ | --------- | ------- | -------- | --------- | --------- | --- | --- |
+|     | D(D)        |     |          |     | (cid:12)     | ϵ         |         |          | D[v]      | ϵ         |     |     |
+|     |             | =   | [v] ∈    | H   | (cid:12) lim |           | exists  |          | , = −ilim |           | .   |     |
+|     |             |     |          | ∞   | (cid:12)     | ϵ         |         |          |           | ϵ         |     |     |
+|     |             |     |          |     | ϵ→0          |           |         |          |           | ϵ→0       |     |     |
+| For | [v] ∈ D(D), | we  | have     |     |              |           |         |          |           |           |     |     |
+|     |             |     |          |     |              | D[v]      | = [iv′] | = D[v]   |           |           |     |     |
+by considering the action on the B side. Thus, the self-adjoint operator D extends the
+closed symmetric operator D, whose deficiency indices are (1,1). Moreover,
+U(D[v])
+|     |     |     |     |     |     |     | = M | U([v]) |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | ------ | --- | --- | --- | --- |
+π/2
+D
+| holds, | that | is, | = D | . Indeed, |     |     |     |     |     |     |     |     |
+| ------ | ---- | --- | --- | --------- | --- | --- | --- | --- | --- | --- | --- | --- |
+π/2
+(Uτ [v])(z)−(U[v])(z)
+|     |     |     | (UD[v])(z) |     |     |     | ϵ   |     |     |     |     |     |
+| --- | --- | --- | ---------- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+= −ilim
+ϵ
+ϵ→0
+|     |     |     |     |     |     |       | (cid:88)√ | eiγϵ−1 |                  |     |     |     |
+| --- | --- | --- | --- | --- | --- | ----- | --------- | ------ | ---------------- | --- | --- | --- |
+|     |     |     |     |     | =   | −ilim |           | m γ    | v(γ)F (cid:98) γ |     |     |     |
+|     |     |     |     |     |     | ϵ→0   |           |        | ϵ                |     |     |     |
+γ∈Γ
+(cid:88)√
+|     |     |     |     |     | =   |     | m γv(γ)F   |     | = (M U[v])(z). |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | ---------- | --- | -------------- | --- | --- | --- |
+|     |     |     |     |     |     |     | γ (cid:98) | γ   | ψ              |     |     |     |
+γ∈Γ
+Viewed on H(A ), D is characterized as the unique self-adjoint extension of D that
+∞
+D
+commutes with the (usual) translation. Moreover, the equality = D asserts that a
+π/2
+Hilbert–P´olya operator is realized as the infinitesimal generator of the translation group
+| under | the | assumption |     | A > | 0 (RH). |     |     |     |     |     |     |     |
+| ----- | --- | ---------- | --- | --- | ------- | --- | --- | --- | --- | --- | --- | --- |
+∞
+|     | D   |     |     | iv′ | C∞(−a,a), |     |     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --------- | --- | --- | --- | --- | --- | --- | --- |
+Since acts as v (cid:55)→ on to approximate the behavior as a → ∞, it is
+c
+naturalto consider theminimal operatorD for eacha > 0. Consideringthe self-adjoint
+a
+|     |     | D   | D   |     |     |     |     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+extensions of , it is expected that by choosing θ = θ(a) appropriately,
+|        |       | a,θ       | a   |           |              |       |     |      |     |     |     |     |
+| ------ | ----- | --------- | --- | --------- | ------------ | ----- | --- | ---- | --- | --- | --- | --- |
+|        |       |           |     |           | D            |       | D   |      |     |     |     |     |
+|        |       |           |     |           |              | a,θ → |     | (a → | ∞)  |     |     |     |
+| in the | sense | of strong |     | resolvent | convergence. |       |     |      |     |     |     |     |
+7.6. Operator picture via embedding. We denote by H(A ) the completion of
+a
+| C∞(−a,a) |     |     |     |     |     |     |     | Qa  |     |     |     |     |
+| -------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+with respect to (Q W | L2(−a,a) )(v) = (v) = ⟨A a v,v⟩ L2 . Since U(v) ̸= 0
+| c   |     |     |     |     |     |     |     | W   |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+for every nonzero v ∈ C∞(−a,a), the space C∞(−a,a) embeds injectively into H(A )
+|     |     |     |     | c   |     |     |     | c   |     |     |     | ∞   |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+C∞(R).
+via v (cid:55)→ [v] as in the case of This embedding extends to an injective map
+c
+|     |     |     |     |     |     | H(A | ) (cid:44)→ | H(A | ).  |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | ----------- | --- | --- | --- | --- | --- |
+|     |     |     |     |     |     | a   |             | ∞   |     |     |     |     |
+Through this embedding, we may regard D and D as operators on H(A ), although
+|     |     |     |     |     |     |     | a   |     | a,θ | ∞   |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+they are no longer densely defined in H(A ∞ ). However, we still have
+|     |     |     |     |     |     | D   | = D | |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | --- | --- |
+|     |     |     |     |     |     | a   | ∞   | H(Aa) |     |     |     |     |
+
+| 26  |     |     |     |     | M.SUZUKI |     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | -------- | --- | --- | --- | --- | --- | --- |
+|     |     |     |     |     | D¯ ⊂     | D   | = D |     |     |     |     |
+|     |     |     |     |     | ∞        | π/2 |     |     |     |     |     |
+D
+and thus, as a → ∞, it is natural to expect that approximates the self-adjoint
+a,θ
+|     |     | D   | D¯  |     |     |     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+extension D π/2 = of ∞ . Since the spectrum of D π/2 is given by Γ, one further
+D
+| expects that       | the | eigenvalues |        | of   | a,θ approximate |         | Γ as | a → ∞.     |     |     |     |
+| ------------------ | --- | ----------- | ------ | ---- | --------------- | ------- | ---- | ---------- | --- | --- | --- |
+| 7.7. Factorization |     |             | of A ∞ | . By | (7.4),          |         |      |            |     |     |     |
+|                    |     | Q           | (v) =  | ⟨A   | v,v⟩ =          | ⟨Uv,Uv⟩ |      | = ⟨U∗Uv,v⟩ | .   |     |     |
+|                    |     | W           |        | ∞    | L2              |         | L2   |            | L2  |     |     |
+Using the notation of [14] and the factorization U = π−1/2P(cid:98)D, we obtain
+|     |     |     |     | U∗U | π−1D∗P(cid:98) | ∗P(cid:98)D, |     | π−1P(cid:98) | ∗P(cid:98) |     |     |
+| --- | --- | --- | --- | --- | -------------- | ------------ | --- | ------------ | ---------- | --- | --- |
+|     |     |     | A = |     | =              |              | G   | =            |            |     |     |
+∞
+underRH.Conversely,ifonecouldshowunconditionallythatthekernelofU∗U coincides
+with −g′′(x−y), or equivalently that the kernel of π−1P(cid:98) ∗P(cid:98) coincides with the kernel
+g(x−y)−g(x)−g(−y)+g(0)ofG,thenitwouldfollowthatA > 0,andhenceRHwould
+∞
+follow immediately. More precisely, using the notation of [14], one has unconditionally
+(cid:90) ∞
+|     |     |     | (Uv)(z) |     | = π−1/2 |     | S (z¯)v′(x)dx, |     |     |     |     |
+| --- | --- | --- | ------- | --- | ------- | --- | -------------- | --- | --- | --- | --- |
+x
+−∞
+and therefore RH would follow if one could establish unconditionally that
+(cid:90)
+∞
+S (z)S
+|     |     |     | x   | y (z)dz | = g(x−y)−g(x)−g(−y)+g(0). |     |     |     |     |     |     |
+| --- | --- | --- | --- | ------- | ------------------------- | --- | --- | --- | --- | --- | --- |
+−∞
+We note that, as in [14, (1.5), (1.6)], the function S (z) can also be represented without
+x
+| reference | to Γ, | just as | g can.       |     |         |     |               |     |         |     |     |
+| --------- | ----- | ------- | ------------ | --- | ------- | --- | ------------- | --- | ------- | --- | --- |
+|           |       | From    | distribution |     | kernels |     | to continuous |     | kernels |     |     |
+8.
+Sofar,wehavedevelopedthetheoryofQa
+| 8.1. Passing | from | A   | a to G | a . |     |     |     |     |     | andA | a using |
+| ------------ | ---- | --- | ------ | --- | --- | --- | --- | --- | --- | ---- | ------- |
+W
+the screw function associated with ζ(s). However, in the theory of screw functions, as
+presentedforexamplein[8,Section5],itismorenaturaltoconsidertheintegraloperator
+| G(cid:101) defined | by  |     |     |     |     |     |     |     |     |     |     |
+| ------------------ | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+(cid:90) ∞
+|     |     | (G(cid:101)u)(x) | :=  | (g(x−y)−g(x)−g(−y)+g(0))u(y)dy |     |     |     |     |     |     | (8.1) |
+| --- | --- | ---------------- | --- | ------------------------------ | --- | --- | --- | --- | --- | --- | ----- |
+−∞
+rather than the integral operator G in (1.4). As shown in [13, Theorem 1.3], if Q (v) :=
+G(cid:101)
+⟨G(cid:101)v,v⟩ denotes the quadratic form associated with G(cid:101), then the condition Q (u) ≥ 0
+L2
+G(cid:101)
+for all u ∈ C∞(R) ∩ L2(−a,a) is equivalent to RH. This follows from the relation
+|     |     | c   | 0   |     |     |     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+C∞(R)
+Q (v) = Q (Dv), v ∈ [13, Proposition 3.1]. Note that if u = Dv with v ∈
+| W      | G(cid:101) |           |     | c   |     |     |     |     |     |     |     |
+| ------ | ---------- | --------- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| C∞(R), |            | L2(−a,a). |     |     |     |     |     |     |     |     |     |
+then u ∈ If Q G (v) := ⟨Gv,v⟩ L2 denotes the quadratic form associ-
+| c   |     | 0   |     |     |     |     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+atedwiththeintegraloperatorGin(1.4), thenQ (u) = Q (u)foreveryu ∈ L2(−a,a),
+|     |     |     |     |     |     |     | G(cid:101) | G   |     |     | 0   |
+| --- | --- | --- | --- | --- | --- | --- | ---------- | --- | --- | --- | --- |
+and hence Q (v) = Q (Dv) = Q (Dv). Motivated by this relation, we chose to study
+|     | W   |     | G(cid:101) |     | G   |     |     |     |     |     |     |
+| --- | --- | --- | ---------- | --- | --- | --- | --- | --- | --- | --- | --- |
+Q through the quadratic form Q , whose kernel is considerably simpler.
+| W   |     |     |     |     | G   |     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+To represent Q directly on the finite interval (−a,a), one must use the operator
+W
+A a as in (1.1). However, if one is interested only in the positivity of Q W , there is no
+essential difference in working with G , since Q (v) = Q (Dv) and the restriction of
+|     |     |     |     |     | a   |     | W   | G   |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+Q to (−a,a) is represented by the operator G a through (Q | )(u) = ⟨G a u,u⟩ .
+| G   |     |     |     |     |     |     |     | G   | L2(−a,a) |     | L2  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | -------- | --- | --- |
+Moreover, G is an integral operator with a continuous kernel and is therefore much
+a
+easier to handle than the unbounded operator A . As we shall see below, the Hilbert
+a
+space obtained by completing with respect to ⟨A u,u⟩ and the Hilbert space obtained
+|     |     |     |     |     |     |     | a   | L2  |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+by completing with respect to ⟨G u,u⟩ are related through the identity Q (v) =
+|     |     |     |     |     | a   | L2  |     |     |     |     | W   |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+Q G (Dv), and Theorem 1.5 can be interpreted within the framework of G a .
+Although A and G are very different as operators, the former being an unbounded
+|     |     | a   | a   |     |     |     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+operator with discrete spectrum accumulating at +∞ and the latter being a compact
+operator with discrete spectrum accumulating at 0, the situation is analogous from the
+
+WEIL’S QUADRATIC FORM VIA THE SCREW FUNCTION 27
+viewpointofpositivityofquadraticforms,sinceinbothcasestherelevantquantityisthe
+bottom of the spectrum. (There is, of course, the distinction that the infimum may or
+may not be attained.) Furthermore, as we shall see below, this difference does not affect
+the spectrum of the corresponding self-adjoint extensions of the differential operator.
+To discuss these matters, we first review the relation between the norms arising
+through the differential operator D.
+8.2. The Inverse Neumann Laplacian. The operator D : H1(−a,a) → L2(−a,a) is
+0 0
+bijective. Therefore, if u = Dv with v ∈ H1(−a,a), then v = D−1u, and hence
+0
+∥v∥2 = ⟨D−1u,D−1u⟩ = ⟨(DD∗)−1u,u⟩ .
+L2 L2 L2
+Note that −∆ = DD∗ coincides with the Neumann Laplacian, which is the operator
+N
+acting as −∆ = −d2/dx2 with domain D(−∆ ) = {u ∈ H2(−a,a) | u′(a) = u′(−a) =
+N N
+0}, and its range is L2(−a,a). Its inverse (−∆ )−1 : L2(−a,a) → L2(−a,a) is a
+0 N 0
+compact, self-adjoint, and positive integral operator with kernel
+x2+y2 |x−y| a
+N(x,y) = − + .
+4a 2 6
+On the other hand, if u = Dv with v ∈ H1(−a,a), then v(x) = (cid:82)x u(t)dt, and therefore
+0 −a
+(cid:90) a (cid:90) a (cid:18)(cid:90) a (cid:19)(cid:18)(cid:90) a (cid:19)
+∥v∥2 = |v(x)|2dx = u(t)1 dt u(s)1 ds dt
+L2 t≤x s≤x
+−a −a −a −a
+(cid:32) (cid:33)
+(cid:90) a (cid:90) a (cid:90) a (cid:90) a (cid:90) a
+= dx u(t)u(s)dtds = (a−max(t,s))u(t)u(s)dtds.
+−a −a max(t,s) −a −a
+Accordingly, defining
+(cid:90) a
+(K(cid:101)a u)(x) := (a−max(x,y))u(y)dy,
+−a
+we obtain
+∥v∥2
+L2
+= ⟨K(cid:101)a u,u⟩
+L2
+.
+The operator K(cid:101)a is compact, self-adjoint, and positive. Moreover, the identity
+∥v∥2
+L2
+= ⟨K(cid:101)a u,u⟩
+L2
+= ⟨(−∆
+N
+)−1u,u⟩
+L2
+(8.2)
+holds as an equality of quadratic forms on L2(−a,a). Since the operator-theoretic prop-
+0
+erties of (−∆ )−1 are more transparent, we shall henceforth write
+N
+x2+y2 |x−y| a
+K := (−∆ )−1, with integral kernel N(x,y) = − + ,
+a N
+4a 2 6
+and work with K
+a
+rather than K(cid:101)a .
+8.3. The Hilbert Space H(S ). Let λ < λ . Motivated by (8.2) and by the operator
+a a
+T = A −λI considered earlier, we define
+a a
+S := G −λ(−∆ )−1.
+a a N
+Since both G and (−∆ )−1 are self-adjoint with respect to the L2 inner product, so is
+a N
+S , and
+a
+∥u∥2 = ⟨S u,u⟩ = ⟨T v,v⟩ = ∥v∥2 , u = Dv ∈ L2(−a,a).
+Sa a L2 a L2 Ta 0
+Furthermore,
+(cid:104) (cid:105)
+H(S ) := the completion of C∞(−a,a)∩L2(−a,a) with respect to ∥u∥
+a c 0 Sa
+
+28 M.SUZUKI
+is isometrically isomorphic to H(T ), since D : C∞(−a,a) → C∞(−a,a)∩L2(−a,a) is
+a c c 0
+bijective. The operator D therefore extends to an isometric isomorphism
+D¯ : H(T ) → ∼ H(S ).
+a a
+The operator G extends naturally to a bounded operator on H(S ). Using the same
+a a
+notation for this extension, we have
+A = (D¯)∗G D¯.
+a a
+Note that H(T ) (cid:44)→ L2(−a,a), whereas H(S ) ̸⊂ L2(−a,a). It should also be noted
+a a
+that 1 ∈ H(A )\D(D ), while D¯(1 ) ̸= 0.
+(−a,a) a a (−a,a)
+Through the isomorphism D¯, operators on H(T ) can be transferred to operators on
+a
+H(S a ). Accordingly, we define an operator D (cid:101)a on H(S a ) by
+D (cid:101)a := DD a D−1
+with domain C∞(−a,a)∩L2(−a,a). For u ∈ C∞(−a,a)∩L2(−a,a),
+c 0 c 0
+(cid:90) x
+(D−1u)(x) = −i u(t)dt, DD (D−1u)(x) = iu′(x),
+a
+−a
+and hence D (cid:101)a may be regarded as the operator with domain C
+c
+∞(−a,a) ∩ L2
+0
+(−a,a)
+acting by D (cid:101)a = id/dx. By construction, D (cid:101)a on H(S a ) is unitarily equivalent to D a on
+H(T a ). Therefore, D (cid:101)a has deficiency indices (1,1), and its self-adjoint extensions have
+the same spectra as those of D .
+a
+The eigenvalue equation for the adjoint D (cid:101) ∗ is determined by
+a
+0 = ⟨u,(D (cid:101) a ∗−z)v⟩ Sa = ⟨u,S a (D (cid:101) a ∗−z)v⟩ L2
+for every u ∈ C∞(−a,a)∩L2(−a,a). Here u ranges not over all of C∞(−a,a), but only
+c 0 c
+over those functions satisfying u(0) = 0. Since the orthogonal complement in L2(−a,a)
+(cid:98)
+of the subspace of functions satisfying u(0) = 0 is spanned by the constant function 1,
+(cid:98)
+it follows that
+1 = S a (D (cid:101) a ∗−z)v = i(S a v)′−z(S a v).
+using S a (D (cid:101) a ∗v) = i(S a v)′ (which is derived exactly as in the case of T a ). Hence
+1
+(S v)(x) = Ce−izx− , (z ̸= 0),
+a
+z
+and
+(S v)(x) = −ix+C, (z = 0).
+a
+On the other hand,
+(cid:90) a
+(S v)(x) = (g(x−y)−λr(x,y))v(y)dy.
+a
+−a
+Here r(x,y) may be taken to be either of the kernels considered in Section 8.2, since in
+either case
+d2 (cid:90) a
+− r(x,y)u(y)dy = u(x).
+dx2
+−a
+Therefore,
+d2 (cid:90) a (cid:90) a
+− (g(x−y)−λr(x,y))v(y)dy = (−g′′(x−y))v(y)dy−λv(x) = T v.
+dx2 a
+−a −a
+It follows from the injectivity of S (equivalently, of T ) that the eigenfunctions cor-
+a a
+responding to z = ±i coincide with those for D∗ up to multiplication by the constant
+a
+
+|     |     | WEIL’S |     | QUADRATIC |     | FORM | VIA | THE SCREW | FUNCTION |     |     | 29  |
+| --- | --- | ------ | --- | --------- | --- | ---- | --- | --------- | -------- | --- | --- | --- |
+−λ2. Consequently, the boundary form determining the eigenvalues should also be the
+same for D (cid:101) ∗ and D∗. Therefore, it may be advantageous to work with the equation
+a a
+(cid:90) a
+e±x±i,
+|     |     | (S v | (x) | =)  | (g(x−y)−λr(x,y))v |     |     |     | (y)dy = |     |     |     |
+| --- | --- | ---- | --- | --- | ----------------- | --- | --- | --- | ------- | --- | --- | --- |
+|     |     | a    | ±   |     |                   |     |     |     | ±       |     |     |     |
+−a
+| whose kernel |     | is an | ordinary | function |     | rather | than | a distribution. |     |     |     |     |
+| ------------ | --- | ----- | -------- | -------- | --- | ------ | ---- | --------------- | --- | --- | --- | --- |
+Assume RH. Then G > 0, so one may take λ = 0 and hence S = G . Extending
+|     |     |     | a   |     |     |     |     |     |     | a   | a   |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+v byzerooutside[−a,a], weobtainG v = g∗v , andtheright-handsideextends
+| a,± |     |     |     |     |     | a   | a,± | a,± |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|     |     |     |     | R.  |     |     |     |     | e±x |     |     |     |
+naturally to a function on Thus the equation S a v a,± = ±i may be written as
+g ∗ v = h , where h (x) = e±x ± i for x ∈ [−a,a]. Taking Fourier transforms
+| a,± | a,± |     |     | a,± |     |     |     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+yields
+|     |     |     |     |     |     |     | h(cid:100)a,± | (z) |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | ------------- | --- | --- | --- | --- | --- |
+|     |     |     |     |     | v   | (z) | =             | .   |     |     |     |     |
+(cid:100)a,±
+g(z)
+(cid:98)
+Since g(z) = z−2ξ′(1/2−iz)/ξ(1/2−iz) by [13, (1.2), (1.8)], we obtain
+(cid:98)
+|               |          |              |     | ξ(1/2−iz)(cid:16) |         |        |     |               |     |              | (cid:17) |     |
+| ------------- | -------- | ------------ | --- | ----------------- | ------- | ------ | --- | ------------- | --- | ------------ | -------- | --- |
+|               |          |              |     | z2                |         |        |     | (z)+eiθ(z+i)v |     |              |          |     |
+|               | W(a,θ;z) |              | =   |                   |         | (z−i)v |     |               |     | (z)          | .        |     |
+|               |          |              |     | ξ′(1/2−iz)        |         |        |     | (cid:100)a,+  |     | (cid:100)a,− |          |     |
+| This suggests |          | the limiting |     | relation          | (1.12). |        |     |               |     |              |          |     |
+8.4. Relation to Bombieri’s Problem 1. Using G(cid:101) in (8.1) and P in (2.1), define
+a
+|             |     |     |     | G(cid:101)a := | P G(cid:101)P | : L2 | (−a,a) | →   | L2 (−a,a).     |     |     |     |
+| ----------- | --- | --- | --- | -------------- | ------------- | ---- | ------ | --- | -------------- | --- | --- | --- |
+|             |     |     |     |                | a             | a 0  |        |     | 0              |     |     |     |
+| Recall that | G   | = P | GP  | in (1.5),      | and           | B    | = D∗G  | D   | in (1.6). Then |     |     |     |
+|             |     | a   | a a |                |               | a    |        | a   |                |     |     |     |
+⟨G(cid:101)a Dv,Dv⟩ = ⟨G Dv,Dv⟩ = ⟨B v,v⟩ = Q (v), v ∈ C ∞(−a,a), (8.3)
+|                         |     | L2  |     | a                                        | L2  |     | a L2 |     | W   | c   |       |       |
+| ----------------------- | --- | --- | --- | ---------------------------------------- | --- | --- | ---- | --- | --- | --- | ----- | ----- |
+|                         |     |     |     | Forfinitea,thenormonH1(−a,a)definedby∥v∥ |     |     |      |     |     |     | +∥v′∥ |       |
+| see[13,Proposition3.1]. |     |     |     |                                          |     |     |      |     |     |     | L2    | L2 is |
+0
+equivalent to that defined by ∥v′∥ . Adopting the latter, the linear map H1(−a,a) →
+|     |     |     |     |     | L2  |     |     |     |     |     | 0   |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+L2(−a,a) given by v (cid:55)→ Dv becomes an isometric isomorphism. Hence the Rayleigh
+0
+quotient Q (v)/∥v∥2 on H1(−a,a) appearing in [1, Problem 1] (and [2, Problem B])
+|     | W   |     |     | 0   |     |     |     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+H1
+| can be rewritten |     | as  | the Rayleigh |     | quotient |     | on L2(−a,a) |     |     |     |     |     |
+| ---------------- | --- | --- | ------------ | --- | -------- | --- | ----------- | --- | --- | --- | --- | --- |
+0
+|     |     |     |     | Q    | (v) | Q    | (u) |     |       |     |     |     |
+| --- | --- | --- | --- | ---- | --- | ---- | --- | --- | ----- | --- | --- | --- |
+|     |     |     |     |      | W   | = G  | ,   | u   | = Dv, |     |     |     |
+|     |     |     |     | ∥v∥2 |     | ∥u∥2 |     |     |       |     |     |     |
+|     |     |     |     |      | H1  |      | L2  |     |       |     |     |     |
+by [13, Proposition 3.1]. In other words, [1, Problem 1] (and [2, Problem B]) is nothing
+but the eigenvalue problem for G = P GP = P G(cid:101)P on L2 (−a,a). [1, Theorem
+|     |     |     |     |     | a   |     | a a | a   | a   | 0   |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+4] asserts that if this infimum is negative, then it is attained in L2(−a,a). From the
+| viewpoint | of  | the eigenvalue |     | problem |     | for G | a , this | is immediate. |     |     |     |     |
+| --------- | --- | -------------- | --- | ------- | --- | ----- | -------- | ------------- | --- | --- | --- | --- |
+Since Q is bounded with respect to the H1-norm, the Riesz representation theorem
+W
+impliesthatitisrepresentedbyaboundedoperator. ThatoperatorispreciselyG(cid:101)a = G
+a
+L2(−a,a)).
+(they coincide on Problem 1 in [1] corresponds to this formulation.
+0
+8.5. Reformulation as a generalized eigenvalue problem. By (8.2),
+∥v∥2
+|     |     |     |     |     |     | =   | ⟨K u,u⟩ |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | ------- | --- | --- | --- | --- | --- |
+|     |     |     |     |     |     | L2  | a       | L2  |     |     |     |     |
+)−1.
+with u = Dv and K a = (−∆ N Combining this with (8.3), the Rayleigh quotient in
+| (1.7) can | be rewritten |     | as  |     |     |     |     |     |     |     |     |     |
+| --------- | ------------ | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+Qa
+|     |     |     |     |     |     | (v) | ⟨G a | u,u⟩ L2 |     |     |     |       |
+| --- | --- | --- | --- | --- | --- | --- | ---- | ------- | --- | --- | --- | ----- |
+|     |     |     |     |     | W   | =   |      |         |     |     |     | (8.4) |
+∥v∥2
+|     |     |     |     |     |     |     | ⟨K a | u,u⟩ L2 |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | ---- | ------- | --- | --- | --- | --- |
+L2
+for v ∈ H1(−a,a) and u = Dv ∈ L2(−a,a). The right-hand side of (8.4) leads to the
+|             | 0          |     |         |     |     | 0     |     |         |     |     |     |     |
+| ----------- | ---------- | --- | ------- | --- | --- | ----- | --- | ------- | --- | --- | --- | --- |
+| generalized | eigenvalue |     | problem |     |     |       |     |         |     |     |     |     |
+|             |            |     |         | G   | u = | λK u, |     | u ∈ H(S | ).  |     |     |     |
+|             |            |     |         |     | a   | a     |     |         | a   |     |     |     |
+
+| 30  |     |     |     |     | M.SUZUKI |     |     |
+| --- | --- | --- | --- | --- | -------- | --- | --- |
+The spectrum of this generalized eigenvalue problem coincides with that of A . Hence
+a
+it is discrete, bounded from below, and accumulates only at +∞. (The case λ = 0 is
+exceptional: then the contribution of K disappears, and one is simply looking at the
+a
+| kernel (the | 0-eigenspace) |     | of  | G .) |     |     |     |
+| ----------- | ------------- | --- | --- | ---- | --- | --- | --- |
+a
+Although A a is unbounded, both G a and K a are compact operators with continuous
+integral kernels. In the generalized eigenvalue problem, one must analyze not only the
+spectra of G a and K a individually but also the interaction between them. Thus it
+cannot be said a priori that the spectral analysis of A becomes simpler. Nevertheless,
+a
+the availability of compact-operator techniques may provide certain advantages.
+Acknowledgment
+This work was supported by JSPS KAKENHI Grant Number JP23K03050. This work
+wasalsosupportedbytheResearchInstituteforMathematicalSciences,anInternational
+| Joint Usage/Research |     |     | Center | located | in Kyoto | University. |     |
+| -------------------- | --- | --- | ------ | ------- | -------- | ----------- | --- |
+References
+[1] E.Bombieri,RemarksonWeil’squadraticfunctionalinthetheoryofprimenumbers.I,AttiAccad.
+Naz.LinceiCl.Sci.Fis.Mat.Natur.Rend.Lincei(9)Mat.Appl.11(2000),no.3,183–233(2001).
+[2] E. Bombieri, A variational approach to the explicit formula, Comm. Pure Appl. Math. 56 (2003),
+| no. 8, | 1151–1164. |     |     |     |     |     |     |
+| ------ | ---------- | --- | --- | --- | --- | --- | --- |
+[3] A. Connes, C. Consani, Spectral triples and ζ-cycles, Enseign. Math. 69 (2023), no. 1-2, 93–148.
+[4] A. Connes, C. Consani, H. Moscovici, Zeta spectral triples, https://arxiv.org/abs/2511.22755
+[5] M. Fukushima, Y. Oshima, M. Takeda, Dirichlet forms and symmetric Markov processes, Second
+revised and extended edition, De Gruyter Studies in Mathematics, 19, Walter de Gruyter & Co.,
+| Berlin, | 2011. |     |     |     |     |     |     |
+| ------- | ----- | --- | --- | --- | --- | --- | --- |
+[6] I. S. Gradshteyn, I. M. Ryzhik, Table of integrals, series, and products. Seventh edition, Else-
+| vier/Academic |     | Press, | Amsterdam, | 2007. |     |     |     |
+| ------------- | --- | ------ | ---------- | ----- | --- | --- | --- |
+[7] T. Kato, Perturbation theory for linear operators. Reprint of the 1980 edition. Classics in Mathe-
+| matics, | Springer-Verlag, |     | Berlin, | 1995. |     |     |     |
+| ------- | ---------------- | --- | ------- | ----- | --- | --- | --- |
+[8] M.G.Kre˘ın,H.Langer,Continuationofhermitianpositivedefinitefunctionsandrelatedquestions,
+| Integral | Equations | Operator | Theory |     | 78 (2014), | no. 1, | 1–69. |
+| -------- | --------- | -------- | ------ | --- | ---------- | ------ | ----- |
+[9] D. Lenz, P. Stollmann, I. Veseli´c, The Allegretto-Piepenbrink theorem for strongly local Dirichlet
+| forms, | Doc. | Math. 14 | (2009), | 167–189. |     |     |     |
+| ------ | ---- | -------- | ------- | -------- | --- | --- | --- |
+[10] F.Olver, D.Lozier, R.Boisvert, C.Clark(eds), NISThandbookofmathematicalfunctions, Cam-
+| bridge | University | Press, | Cambridge, |     | 2010. |     |     |
+| ------ | ---------- | ------ | ---------- | --- | ----- | --- | --- |
+[11] M.Reed,B.Simon,Methodsofmodernmathematicalphysics.II.Fourieranalysis,self-adjointness,
+Academic Press [Harcourt Brace Jovanovich, Publishers], New York-London, 1975.
+[12] K.Schmu¨dgen,Unboundedself-adjointoperatorsonHilbertspace,GraduateTextsinMathematics
+| 265, | Springer, | Dordrecht, | 2012. |     |     |     |     |
+| ---- | --------- | ---------- | ----- | --- | --- | --- | --- |
+[13] M. Suzuki, Aspects of the screw function corresponding to the Riemann zeta function, J. Lond.
+| Math. | Soc. | 108 (2023), | no.4, | 1448-1487. |     |     |     |
+| ----- | ---- | ----------- | ----- | ---------- | --- | --- | --- |
+[14] M. Suzuki, On the Hilbert space derived from the Weil distribution, Canadian Journal of Mathe-
+| matics | (FirstView). |     |     |     |     |     |     |
+| ------ | ------------ | --- | --- | --- | --- | --- | --- |
+[15] A.Weil,Surles“formulesexplicites”delath´eoriedesnombrespremiers,Comm.S´em.Math.Univ.
+Lund [Medd. Lunds Univ. Mat. Sem.], 1952 (1952), Tome Suppl´ementaire, 252–265.
+[16] A.Weil,Surlesformulesexplicitesdelath´eoriedesnombres,Izv. Akad. Nauk SSSR Ser. Mat.,36
+| (1972), | 3–18.. |     |     |     |     |     |     |
+| ------- | ------ | --- | --- | --- | --- | --- | --- |
+[17] H. Yoshida, On Hermitian forms attached to zeta functions, Zeta functions in geometry (Tokyo,
+| 1990),           | 281–325,   | Adv.         | Stud. Pure | Math., | 21, Kinokuniya, |     | Tokyo, 1992. |
+| ---------------- | ---------- | ------------ | ---------- | ------ | --------------- | --- | ------------ |
+| Department       | of         | Mathematics, |            |        |                 |     |              |
+| School of        | Science,   |              |            |        |                 |     |              |
+| Institute        | of Science | Tokyo        |            |        |                 |     |              |
+| 2-12-1 Ookayama, |            | Meguro-ku,   |            |        |                 |     |              |
+| Tokyo 152-8551,  |            | Japan        |            |        |                 |     |              |
+Email: msuzuki@math.sci.isct.ac.jp

@@ -1,0 +1,23 @@
+# Rust build artifacts
+target/
+**/target/
+Cargo.lock
+**/Cargo.lock
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+uv.lock
+
+# Local / scratch
+.pi/
+scratch/
+tmp/
+*.log
+nohup.out
+
+# Editor
+.idea/
+.vscode/
+*.swp

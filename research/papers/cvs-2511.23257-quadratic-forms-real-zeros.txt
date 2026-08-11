@@ -1,0 +1,2007 @@
+|     |     | QUADRATIC  | FORMS, REAL     | ZEROS  |     |
+| --- | --- | ---------- | --------------- | ------ | --- |
+|     |     | AND ECHOES | OF THE SPECTRAL | ACTION |     |
+ALAINCONNESANDWALTERD.VANSUIJLEKOM
+5202 voN 82  ]AO.htam[  1v75232.1152:viXra
+DedicatedtoHuzihiroAraki
+withgratitudeandadmiration
+ForarealdistributionDontheinterval[0,L]withD(cid:101)theassociatedevendistributionontheinterval
+ABSTRACT.
+[−L,L],weprovethatiftheassociatedquadraticformwithSchwartzkernelD(cid:101)(x−y)definesalower-bounded
+selfadjointoperatoron L2([−L,L]), whoselowestspectralvalueλ isasimple, isolatedeigenvaluewitheven
+2 2
+eigenfunctionξ,thenallthezerosoftheentirefunctionξ(cid:98)(z),theFouriertransformofξ,lieontherealline.
+Theproofproceedsinfivesteps.(1)WegiveaC∗-algebraicproofofacorollaryofCarathéodory–Fejér’s1911
+structuretheoremforToeplitzmatrices:ifT∈Mn (C)isaHermitian,positivesemidefiniteToeplitzmatrixofrank
+n−1,andξ ∈kerT,thenthepolynomialP(z)=∑ξ jzjhasallitszerosontheunitcircle.(2)Weformulateand
+proveacontinuousanalogueofthisresult,replacingtheToeplitzmatrixwithaconvolutionoperatorwithcontin-
+uouskernelh(x−y),andthepolynomialP(z)withtheFouriertransformoftheeigenfunctioncorrespondingto
+thelargesteigenvalue.(3)Weanalyzefinite-dimensionaltruncationsofthequadraticformsdefinedbyreal,even
+distributionsDon[−L,L],andobservethattheresultingmatricesexhibitastructurepreviouslyencounteredin
+perturbativeexpansionsofthespectralaction.(4)WeestablishananalogueofCarathéodory–Fejér’scorollaryfor
+matricesofthisspecificstructure,therebyextendingthezerolocalizationresultbeyondtheclassicalToeplitzset-
+ting. (5)Finally,weapplyaclassicaltheoremofHurwitzconcerningthezerosofuniformlimitsofholomorphic
+functionstodeducethegeneralresultstatedabove.
+CONTENTS
+| 1. Introduction                            |                                |     |     |     | 2   |
+| ------------------------------------------ | ------------------------------ | --- | --- | --- | --- |
+| Acknowledgements                           |                                |     |     |     | 3   |
+| Conflictofintereststatement                |                                |     |     |     | 3   |
+| Dataavailabilitystatement                  |                                |     |     |     | 3   |
+| 2. Toeplitzcase                            |                                |     |     |     | 3   |
+| 3. Thecontinuouskernelcase                 |                                |     |     |     | 4   |
+| 4. QuadraticformQassociatedtoadistribution |                                |     |     |     | 6   |
+| 4.1. MatrixofthequadraticformQ             |                                |     |     |     | 7   |
+| 4.2. Thediagonalvalues                     |                                |     |     |     | 8   |
+| 4.3. Relationtothespectralaction           |                                |     |     |     | 9   |
+| 5. Finitedimensionalevencase               |                                |     |     |     | 9   |
+| 5.1. GeneralfinitedimensionaloperatorD     |                                |     |     |     | 12  |
+| 6. Infinitedimensionalcase                 |                                |     |     |     | 13  |
+| 7. Spectralactionanddivideddifferences     |                                |     |     |     | 14  |
+| AppendixA.                                 | Aninstanceoftruncationmatrices |     |     |     | 15  |
+=1,2
+| AppendixB.                          | ExplicitchecksforN |     |     |     | 18  |
+| ----------------------------------- | ------------------ | --- | --- | --- | --- |
+| B.1. CaseN                          | =1                 |     |     |     | 19  |
+| B.2. ConvexityproofofPropositionB.1 |                    |     |     |     | 20  |
+| B.3. ThecaseN                       | =2                 |     |     |     | 21  |
+| References                          |                    |     |     |     | 26  |
+1
+
+|     |     |     | 1. INTRODUCTION |     |     |
+| --- | --- | --- | --------------- | --- | --- |
+TheCarathéodory-Fejértheoremfrom1911[5](seealso[4,Theorem1.3.6])describesthestructureofHer-
+| mitian,positivesemidefiniteToeplitzmatricesasfollows. |     |     | Let     |     |     |
+| ----------------------------------------------------- | --- | --- | ------- | --- | --- |
+|                                                       |     |    |         |    |     |
+|                                                       |     | c   | c c ··· | c   |     |
+|                                                       |     | 0   | 1 2     | n   |     |
+···
+|     |     | c 1  | c 0 c 1 | c n−1  |     |
+| --- | --- | ----- | ------- | ------- | --- |
+|     |     |      |         |        |     |
+|     |     | =c   | c c ··· | c n−2. |     |
+|     |     | T  2 | 1 0     |        |     |
+|     |     | .     | . . ... | .       |     |
+|     |     |  .   | . .     | .      |     |
+|     |     |  .   | . .     | .      |     |
+|     |     | c     | c c ··· | c       |     |
+|     |     | n     | n−1 n−2 | 0       |     |
+T C(theunitcircle),
+Then, if T ispositivesemidefiniteofrankr, thereexistdistinctpoints z ,...,z ∈ ⊂
+1 r
+| andpositiveweightsα | ,...,α | >0,suchthat |          |     |     |
+| ------------------- | ------ | ----------- | -------- | --- | --- |
+|                     | 1 r    |             |          |     |     |
+|                     |        |             | T =VDV ∗ |     |     |
+,
+∈C(n+1)×r
+| whereV | istheVandermondematrix |      |               |       |     |
+| ------ | ---------------------- | ---- | ------------- | ----- | --- |
+|        |                        |      |  ···         |      |     |
+|        |                        |      | 1 1           | 1     |     |
+|        |                        |      | z z ···      | z r  |     |
+|        |                        |      |  1 2         |      |     |
+|        |                        |      | z2 z2 ···     | z 2  |     |
+|        |                        | V = | 1 2           | r ,   |     |
+|        |                        |      |              |      |     |
+|        |                        |      |  . . . . ... | . .  |     |
+|        |                        |      |  . .         | .    |     |
+|        |                        |      | zn zn ···     | zn    |     |
+r
+1 2
+| andD =diag(α | ,...,α r )isadiagonalmatrixwithpositiverealentries. |     |     |     |     |
+| ------------ | --------------------------------------------------- | --- | --- | --- | --- |
+1
+In our work on operator systems [10], we showed how the above theorem can be derived from the dual-
+ity theory of operator systems. This factorization also plays a central role in the proof of truncated Weil
+positivityin[7].
+AdirectcorollaryoftheCarathéodory-Fejértheoremisthefollowing:
+(C)beaHermitian,positivesemidefiniteToeplitzmatrixofrankn,andletξ
+| Corollary1.1. | LetT ∈ M n+1 |     |     |     | ∈kerT. |
+| ------------- | ------------ | --- | --- | --- | ------ |
+Thenallthezerosofthepolynomial
+n
+|     |     |     | P(z):= ∑ξ zj |     |     |
+| --- | --- | --- | ------------ | --- | --- |
+j
+j=0
+lieontheunitcircle.
+Thiscorollaryexhibitsastrikingnumber-theoreticflavor,resonatingwiththeanalogueoftheRiemannHy-
+pothesisforfunctionfields;see[12]forafurtherdiscussionofthisconnection. Innumbertheory,Toeplitz
+matrices of this kind naturally arise, and Corollary 1.1 applies to show that the zeros of the polynomial
+P(z),
+associated to an eigenvector for the smallest eigenvalue of such a matrix, all lie on the unit circle.
+The key difficulty in this context, then, becomes the verification that zero is indeed the (simple) minimal
+eigenvalueofT.
+In the present paper, we investigate a distributional analogue of Corollary 1.1, motivated by its potential
+relevancetotheRiemannHypothesisitself. Ourapproachproceedsthroughseveralstages:
+WegiveaC∗-algebraicproofofCorollary1.1.
+(1)
+(2) We formulate and prove a continuous analogue of Corollary 1.1, in which the Toeplitz matrix is
+replaced by a convolution operator with continuous kernel h(x−y), and the polynomial P(z) by
+theFouriertransformoftheeigenfunctioncorrespondingtothelargesteigenvalue.
+WeanalyzethefinitetruncationsofquadraticformsdefinedbyrealevendistributionsDsupported
+(3)
+on [−L,L], and observe that the resulting matrices exhibit a structure previously encountered in
+perturbativeexpansionsofthespectralaction.
+(4) WeproveananalogueofCorollary1.1formatricesofthisspecialtype.
+(5) Finally,usingaclassicalresultofHurwitzonthezerosofuniformlimitsofholomorphicfunctions,
+wededucethefollowinggeneraltheorem:
+Theorem 1.2. Let L > 0, D be a real distribution on the interval [0,L] and D(cid:101) the associated even distri-
+butionon[−L,L]. AssumethatthequadraticformwithSchwartzkernelD(cid:101)(x−y)definesalower-bounded
+2
+
+selfadjointoperatorAonL2([−L, L]),andthattheminimumofitsspectrumisasimple,isolatedeigenvalue
+2 2
+∈C,Fouriertransformofξ
+λ,witheveneigenfunctionξ. Thenallthezerosoftheentirefunctionξ(cid:98)(z),z lie
+ontherealline.
+WerefertoTheorem6.1forthepreciseformulation,theaboveformulationisslightlyunpreciseasshown
+inRemark4.3. Inthecourseoftheproof,weencounteranumberofillustrativeexamplesandspecialcases.
+Adetailedmatrix-basedverificationofthetheoremisgiveninanappendix.
+Acknowledgements. WvSthanksTeunvanNulandforusefuldiscussions. Theauthorsareindebtedtoan
+anonymousrefereefornumeroussuggestionsandcomments.
+Conflictofintereststatement. Theauthorsdeclarethatthereisnoconflictofinterest.
+Dataavailabilitystatement. Notapplicable: nodatahasbeencreatedoranalysedinthisstudy.
+2. TOEPLITZCASE
+Recall the operator system C∗(Z) ⊆ C∗(Z) given by Fourier truncations on the interval [−n,n] ⊂ Z
+(n+1)
+from [10] It is the dual operator system of the operator system of Toeplitz matrices, which in particular
+allowstoassociateapositivelinearformL toanypositiveToeplitzmatrixT:
+T
+n
+|     |     |     |     | ∗(Z) |       | →C; |             | ∑     |     |     |
+| --- | --- | --- | --- | ---- | ----- | --- | ----------- | ----- | --- | --- |
+|     |     |     | L   | :C   | (n+1) |     | f (cid:55)→ | f c . |     |     |
+|     |     |     |     | T    |       |     |             | k k   |     |     |
+k=−n
+NotethatapositiverealToeplitzmatrixTofsizen+1canbewritteninthefollowingform:
+|     |     |     |     |    |       |     |      |      |     |     |
+| --- | --- | --- | --- | --- | ----- | --- | ----- | ---- | --- | --- |
+|     |     |     |     |     | c c   | ... | c     |      |     |     |
+|     |     |     |     |     | 0 1   |     | n     |      |     |     |
+|     |     |     |     |     |       | .   | .     |      |     |     |
+|     |     |     |     |    |       | .   | .    |      |     |     |
+|     |     |     |     |    | c c   | .   | .    | ∈R). |     |     |
+|     |     |     | T   | =  | 1 0   |     |  ;   | (c   |     |     |
+|     |     |     |     |    | . .   | .   |      | k    |     |     |
+|     |     |     |     |     | . . . | . . |       |      |     |     |
+|     |     |     |     |    | .     |     | c 1  |      |     |     |
+|     |     |     |     |     | c ... | c   | c     |      |     |     |
+|     |     |     |     |     | n     | 1   | 0     |      |     |     |
+ThestartingpointforourproofofCorollary1.1isthefollowingpurely∗-algebraicresult:
+= (c )beapositive(n+1)-dimensionalrealToeplitzmatrixofranknandlet(a )n
+| Proposition2.1. | LetT | k   |     |     |     |     |     |     |     | j j=0 bea |
+| --------------- | ---- | --- | --- | --- | --- | --- | --- | --- | --- | --------- |
+realvectorinkerT.
+(1) TheidealJofA =C[X,X−1]generatedbyP =∑na Xjisstableunderthecanonicalinvolution,(aXn)∗ :=
+0 j
+aX−n,ofC[X,X−1].
+| (2) | ThemonomialsXj                             | (j  | =0,...,n−1)formabasisof |         |     |                  | A/J.        |     |     |     |
+| --- | ------------------------------------------ | --- | ----------------------- | ------- | --- | ---------------- | ----------- | --- | --- | --- |
+| (3) | Thereexistsauniquelinearformφonthequotient |     |                         |         |     |                  | A/Jsuchthat |     |     |     |
+| (1) |                                            |     |                         | φ(Xj)=c |     | ,∀j ∈{0,...,n−1} |             |     |     |     |
+j
+| (4) | Thelinearformφispositiveonthe∗-algebra |     |     |     |     | A/J. |     |     |     |     |
+| --- | -------------------------------------- | --- | --- | --- | --- | ---- | --- | --- | --- | --- |
+Proof. (1) We have that J∗ = J since P(X) is either palendromic, or anti-palendromic, i.e. a = ±a for
+|     |     |     |     |     |     |     |     |     | n−j | j   |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+all j = 0,...,n. Indeed, because of the structure of T as a Toeplitz matrix, it follows that if (a j ) j is in the
+kernelofT,sois(a ) .Sincefurthermorethiskernelisone-dimensional,itfollowsthata =λa ,hence
+|        | n−j            | j    |     |         |     |     |     |     | n−j | j   |
+| ------ | -------------- | ---- | --- | ------- | --- | --- | --- | --- | --- | --- |
+| a =λ2a | ,whichimpliesλ | =±1. |     | Butthen |     |     |     |     |     |     |
+j j
+n
+|     |     |     |     | ∗(X)= |     | −j  |     | −nP(X) |     |     |
+| --- | --- | --- | --- | ----- | --- | --- | --- | ------ | --- | --- |
+|     |     |     |     | P     | ∑   | a X | =±X |        |     |     |
+j
+j=0
+asclaimed.
+|     |     |     |     | ̸=  |     |     |     |     | =   | (a )n |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ----- |
+(2)Since T isofrank n onehas a 0 0 (see[12,Lemma33]orshowdirectlythatif a 0 0 then j+1 j=0
+a ≡ 0isalsoinkerT). X isinvertibleinC[X]/J′ J′ = PC[X]sincemodulo Ponehas
+| with n+1 |     |     | Thus |     |     |     |     | where |     |     |
+| -------- | --- | --- | ---- | --- | --- | --- | --- | ----- | --- | --- |
+C[X,X−1]isthelocalisationofC[X]atXandlocalisation
+| a +XQ | = 0forQ = | (P−a | )/X. | Thering | A   | =   |     |     |     |     |
+| ----- | --------- | ---- | ---- | ------- | --- | --- | --- | --- | --- | --- |
+| 0     |           |      | 0    |         |     |     |     |     |     |     |
+commutes with quotients [2, Proposition 3.3 and Corollary 3.4], since X is not a zero divisor modulo J′.
+|     |     | C[X]/J′ |     |     |     |     |     | C[X]/J′ |     |     |
+| --- | --- | ------- | --- | --- | --- | --- | --- | ------- | --- | --- |
+Since X is invertible in localization at X does not change and one thus gets the equality
+| A/J =C[X]/J′ | andtheclaimfollows. |     |     |     |     |     |     |     |     |     |
+| ------------ | ------------------- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+3
+
+(3)Followsfrom(2).
+(4)Letφ : A →Cbetheuniquelinearformwhichvanishesontheideal J andfulfills(1). Inordertoshow
+thatφispositive,wefirstshowthatφ(X−j)=c
+|     |     |     |     |     |     |     | forall j =1,...,n−1. |     | Wehave |     |     |
+| --- | --- | --- | --- | --- | --- | --- | -------------------- | --- | ------ | --- | --- |
+j
+|     |     |        |     |      |      |     | n         |     |       | n         |     |
+| --- | --- | ------ | --- | ---- | ---- | --- | --------- | --- | ----- | --------- | --- |
+|     |     | −1P)=0 |     |      | −1)+ |     | φ(Xj−1)=0 |     | −1)+  |           |     |
+|     | φ(X |        |     | =⇒ a | φ(X  | ∑   | a         | =⇒  | a φ(X | ∑ a c =0. |     |
+|     |     |        |     | 0    |      |     | j         |     | 0     | j j−1     |     |
+|     |     |        |     |      |      | j=1 |           |     |       | j=1       |     |
+Since(a )∈kerTwehaveintermsofthesecondrowofTthat
+j
+n
+|     |     |     |     |     |     |     | ∑ =0      |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --------- | --- | --- | --- | --- |
+|     |     |     |     |     |     |     | c j−1 a j |     |     |     |     |
+j=0
+and hence φ(X−1) = c−1 = c . This argument can be repeated by considering subsequent rows in T
+1
+φ(X−k)
+to obtain by induction that = c −k = c . Note that from the first row of T it also follows that
+k
+| φ(Xn)=c | .   | Weconcludethatφ(Xj)=c |     |     |     | forall | j =−n,...,n. |     |     |     |     |
+| ------- | --- | --------------------- | --- | --- | --- | ------ | ------------ | --- | --- | --- | --- |
+|         | n   |                       |     |     |     | |j|    |              |     |     |     |     |
+Toshowthatφispositive,i.e.thatφ(f∗∗ f) ≥0forall f ∈ A,notethatthevalueofφ(f∗∗g)onlydepends
+|                |     |          |     | A/J.           |     |     | =∑n−1 | Xj,onethengets |     |     |     |
+| -------------- | --- | -------- | --- | -------------- | --- | --- | ----- | -------------- | --- | --- | --- |
+| ontheclassesof |     | f andgin |     | Thusonecantake |     |     | f     | f j            |     |     |     |
+0
+|                |     |     | φ(f | ∗∗ f)=∑ |     | φ(Xj−k)=∑ |     |               | =⟨f | Tf⟩≥0 |     |     |
+| -------------- | --- | --- | --- | ------- | --- | --------- | --- | ------------- | ----------- | --- | --- |
+|                |     |     |     |         |     | f j f k   | f   | j f k c |j−k| |             |     |     |
+| whichshows(4). |     |     |     |         |     |           |     |               |             |     | □   |
+Proposition2.2. LetT = (c )beapositive(n+1)-dimensionalToeplitzmatrixofrankn. If(a )n isavectorin
+|                           |     |     |     | k   |      |                             |     |     |     | j j=0 |     |
+| ------------------------- | --- | --- | --- | --- | ---- | --------------------------- | --- | --- | --- | ----- | --- |
+| kerTthenthepolynomialP(z) |     |     |     | =∑  | a zj | hasallzerosonunitcircleinC. |     |     |     |       |     |
+j j
+Proof. The positive linear formφ on A vanishing on J defines a positive linear form on the envelopping
+C∗-algebraC∗(Z)oftheinvolutivealgebra A,i.e.apositivemeasureonthePontrjagindualU(1)ofZ. This
+measureissupportedbytheneigenvaluesoftheunitaryπ(X)associatedto
+|     |     |     |     |     |     |     |     |     |     | X intheGNSrepresentation |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------------------------ | --- |
+π of(A,φ)whichisofdimensionnbyconstruction. SinceP ∈ J ⊂ kerπ,theseeigenvaluescorrespondto
+| therootsofthegeneratorPof |     |     |     | Jwhicharehenceallofmodulusone. |     |     |     |     |     |     | □   |
+| ------------------------- | --- | --- | --- | ------------------------------ | --- | --- | --- | --- | --- | --- | --- |
+Remark 2.3. In general, when the kernel of T is more than one-dimensional —in other words, when the extreme
+eigenvalueisnotsimple—itfollowsfromtheCarathéodory-Fejérdecompositionthatthereisanequivalencebetween
+beinginthekernelandthevanishingofthecorrespondingpolynomialonthecomplexnumbersofmodulusonethat
+appearinthisdecomposition. Soifithappensthatthenumberofthesecomplexnumbersisstrictlylessthann,then
+thisconditionwillbefulfilledbypolynomialswhichwillhavetheseparticularcomplexnumbersaszeros,butwhich
+otherwisecanhavearbitraryotherzeros. Thismeansthatitisnottrueingeneraliftheeigenvalueisnotsimple,that
+thetheoremholds. Thecorrectformulationofthetheoremisthatifyoutaketheintersectionofthezerosofthevarious
+eigenfunctions,thentheyareallontheunitcircle. Thisisreminiscenttothenotionoftheradicalofaquadraticform.
+3. THECONTINUOUSKERNELCASE
+InthissectionweshallextendtheToeplitzcasetothecontinuouscase.
+Theorem3.1. Leth ∈C([−L,L])beanevenrealcontinuousfunction. LetKbetheoperatoronL2([0,L])givenby
+(cid:90)
+| (2) |     |     |     |     | (Kf)(x)= |     | h(x−y)f(y)dy. |     |     |     |     |
+| --- | --- | --- | --- | --- | -------- | --- | ------------- | --- | --- | --- | --- |
+Then K is a compact selfadjoint operator. Assume that its eigenvalue of largest modulus is simple and let ξ ∈
+L2(R)tobezerooutside[0,L]thenallthezerosofthe
+| L2([0,L])beitseigenvector. |     |     |     | Ifweextendξ |     | toanelementof |     |     |     |     |     |
+| -------------------------- | --- | --- | --- | ----------- | --- | ------------- | --- | --- | --- | --- | --- |
+entirefunctionξ(cid:98)belongtoR⊂C.
+Proof. TheoperatorKof(2)isofHilbert-Schmidtclasssinceh(x−y)issquareintegrable. Wefirstapprox-
+Sincethefunctionhisrealcontinuousandevenon[−L,L]we
+imateKbyfiniterankoperatorsasfollows.
+canfind,givenϵ >0anα >0andscalarsh ∈Rfor j =0,...,L/α = N ∈N,suchthat,with j(x)denoting
+j
+theintegerpartofx/α,onehas
+|     |     |     |     | |h(x−y)−h |     |     | |≤ϵ, | ∀x,y | ∈[0,L]. |     |     |
+| --- | --- | --- | --- | --------- | --- | --- | ---- | ---- | ------- | --- | --- |
+|j(x)−j(y)|
+4
+
+Theapproximationofh(|x−y|)andthereflectedToeplitzmatrix(bysymmetry
+FIGURE1.
+withrespecttothexaxis).
+|     |     |     |     |     | λ   |     |     | K+1 |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | --- |
+FIGURE2. ThecontourofintegrationforthedefinitionoftheprojectionPinEquation(3).
+|                                |     |     |         | >0andthescalarsh |      |     | ∈Rsuchthat∀x |          |     | ∈[0,L] |     |
+| ------------------------------ | --- | --- | ------- | ---------------- | ---- | --- | ------------ | -------- | --- | ------ | --- |
+| Thisfollowsprovidedonechoosesα |     |     |         |                  |      |     | j            |          |     |        |     |
+|                                |     |     | |h(x)−h |                  | |≤ϵ, | ∀j  | ||j−         | j(x)|≤1, |     |        |     |
+j
+as one gets by comparing j(|x− y|) with |j(x)− j(y)|. Let then χ be the characteristic function of the
+j
+|          | :={x | j(x)= | j}andTtheToeplitzmatrixT |     |     |        |         | :=  |                                      |         |     |     |
+| -------- | ------------ | ------------------------ | --- | --- | ------ | ------- | --- | ------------------------------------ | ------- | --- | --- |
+| interval | I j          |                          |     |     |        |         | n,m | h |n−m| ,onethusobtainstheinequality |         |     |     |
+|          |              | |h(x−y)−∑T               |     |     | χ (x)χ | (y)|≤ϵ, |     | ∀x,y                                 | ∈[0,L]. |     |     |
+|          |              |                          |     | n,m | n      | m       |     |                                      |         |     |     |
+It follows from the Hilbert-Schmidt control of the norm that one obtains in this manner a sequence R of
+n
+finite rank operators converging in norm to K, each of the form, with T a real symmetric Toeplitz matrix
+andχ j characteristicfunctionsofintervals,
+|     |     |     |     | =∑T | |χ    | ⟩⟨χ |, | ∥K−R | ∥ →0. |     |     |     |
+| --- | --- | --- | --- | --- | ----- | ------ | ---- | ----- | --- | --- | --- |
+|     |     |     | R   | n   | i,j i | j      |      | n     |     |     |     |
+Letthenξ beaneigenvectorofnorm1fortheeigenvalueλofKoflargestmodulus;withoutlossofgener-
+alityweassumethat λ > 0. Thespectralprojection P obtainedasaCauchyintegraloftheresolventof K
+alongthecontourC(seeFigure2),isolatingλfromtherestofSpecK,
+|     |     |     |     |     | 1   | (cid:90)  |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --------- | --- | --- | --- | --- | --- |
+| (3) |     |     |     | P   | =   | (z−K)−1dz |     |     |     |     |     |
+|     |     |     |     |     | 2πi | C         |     |     |     |     |     |
+isofrankoneandfulfillsPξ =ξ. LetP n bedefinedbythesameformulausingR n inplaceofK. Thismakes
+sense for n large enough since ∥K−R ∥ → 0 when n → ∞. One has P → P in norm and thus P is of
+|     |     |      |     | n   |         |     |     |     | n   |     | n   |
+| --- | --- | ---- | --- | --- | ------- | --- | --- | --- | --- | --- | --- |
+|     |     | Letξ | =   | ξ.  | Onehasξ |     | →ξ  |     |     |     |     |
+rankonefornlargeenough. n P n n innorm. Letusshowthatfornlargeenough,
+ξ is an eigenvectorof R for the largesteigenvalue. By construction, for n large enough, itis a non-zero
+| n   |     | n   |     |     |     |     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+eigenvector of R and is the only one for the interval between the lower part of C and its highest part.
+n
+∥K∥+1,
+Since we have chosen this highest part to be it follows that, for n large enough, it is the highest
+eigenvalueof R . Wecanthusassertthatξ isthenormlimitofthesequenceξ where,foreachn,ξ isof
+|     | n   |     |     |     |     |     |     |     |     | n   | n   |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+theform,
+|     |     |     | ξ   | =∑a | χ , | ∑a zj | =0 ⇒ | |z|=1 |     |     |     |
+| --- | --- | --- | --- | --- | --- | ----- | ---- | ----- | --- | --- | --- |
+|     |     |     | n   |     | j j | j     |      |       |     |     |     |
+5
+
+andwheretheχ arethecharacteristicfunctionsof N = L/α intervals I = I + jα,0 ≤ j < N forminga
+|     | j   |     |     |     |     |     |     |     | j   | 0   |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+partitionof[0,L). WenowcomputetheFouriertransformofξ TheFouriertransformofχ
+|     |     |     |     |     |     |     |     | n . |     | 0   | is  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+(cid:0) −1+e−iαs(cid:1)
+|     |     |     |           |      | (cid:90) α  |     | i   |     |     |     |     |
+| --- | --- | --- | --------- | ---- | ----------- | --- | --- | --- | --- | --- | --- |
+|     |     |     | χ         | (s)= | exp(−isx)dx |     | =   |     |     |     |     |
+|     |     |     | (cid:98)0 |      |             |     |     |     | .   |     |     |
+|     |     |     |           |      | 0           |     |     | s   |     |     |     |
+Onehasχ j (x)=χ (x− jα),andthisgivesχ (cid:98)j (s)=exp(−isαj)χ (cid:98)0 (s)sothatweobtain
+0
+|     |              |     |            | (s)= | P(exp(−isα))χ |       | (s), P(z):=∑a |       | zj  |     |     |
+| --- | ------------ | --- | ---------- | ---- | ------------- | ----- | ------------- | ----- | --- | --- | --- |
+|     |              |     | ξ(cid:98)n |      |               |       | (cid:98)0     |       | j   |     |     |
+|     | ofξ(cid:98)n |     |            |      |               | {2 nπ | | ∈ Z,n       | ̸= 0} |     | χ   |     |
+Thus the zeros are the union of the set n of zeros of (cid:98)0 with the set of complex
+α
+numbersssuchthatexp(−isα)isoneoftherootsofP(z).Butweknow(fromtheToeplitzcase,Proposition
+2.2)thatalltheserootsareofmodulus1. Foreachrootz ofP(z)=0,lets ∈Rbesuchthatexp(−is α)=
+|                               |     |     |        |     |     |     | k   |     | k   |     | k   |
+| ----------------------------- | --- | --- | ------ | --- | --- | --- | --- | --- | --- | --- | --- |
+| z ,thesetZofzerosofξ(cid:98)n |     |     | isthen |     |     |     |     |     |     |     |     |
+k
+|     |     |     | 2nπ  |     |      |       |      | 2nπ |     |     |     |
+| --- | --- | --- | ---- | --- | ---- | ----- | ---- | --- | --- | --- | --- |
+|     |     |     | Z ={ | |n  | ∈Z,n | ̸=0}∪ | {s + | |n  | ∈Z} | ⊂R. |     |
+k k
+|     |     |     |     | α   |     |     |     | α   |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+Nowsincethesequenceξ convergestoξ inL2[0,L],wefindfortheentirefunctionsξ(cid:98)n (s)andξ(cid:98)(s)that
+n
+(cid:90) L
+|     |     |     |     | |ξ(cid:98)(s)−ξ(cid:98)n | (s)|≤∥ξ−ξ |     | ∥    | e2ℑ(s)x. |     |     |     |
+| --- | --- | --- | --- | ------------------------ | --------- | --- | ---- | -------- | --- | --- | --- |
+|     |     |     |     |                          |           |     | n L2 |          |     |     |     |
+0
+Weconcludefromthisthatthesequenceξ(cid:98)n (s)convergesuniformlytoξ(cid:98)(s)oncompactsubsetsofC. Thus
+theHurwitz’stheoremshowsthatallthezerosofξ(cid:98)(s)arereal. □
+4. QUADRATICFORMQASSOCIATEDTOADISTRIBUTION
+∞([0,L])
+Let L > 0. WestartwithadistributionD ontheinterval[0,L],i.e.acontinuouslinearformonC
+writtenformallyas
+|     |     |     |     |      | (cid:90) L |           |       | ∞       |     |     |     |
+| --- | --- | --- | --- | ---- | ---------- | --------- | ----- | ------- | --- | --- | --- |
+|     |     |     |     | D(f) | =          | f(x)D(x), | ∀f ∈C | ([0,L]) |     |     |     |
+0
+andweuseittodefineanevendistributionD(cid:101) on[−L,L]bysymmetrization,
+(4) D(cid:101)(f):=D(f)+D(f(cid:101)), f(cid:101)(x):= f(−x), ∀x ∈[−L,L].
+NotethatD(cid:101)(f)continuestomakesensewhen f issmoothwhenrestrictedtoboth[0,L]and[−L,0]butnot
+|     |     |     | WeconsidertheHilbertspaceH |     |     |     | := L2([0,L],dx)withorthonormalbasis |     |     |     |     |
+| --- | --- | --- | -------------------------- | --- | --- | --- | ----------------------------------- | --- | --- | --- | --- |
+necessarilysmoothat0.
+|     |     |     | U (x):= |     | L −1 exp(2πinx/L), |     | ∀x  | ∈[0,L], | n ∈Z. |     |     |
+| --- | --- | --- | ------- | --- | ------------------ | --- | --- | ------- | ----- | --- | --- |
+| (5) |     |     | n       |     | 2                  |     |     |         |       |     |     |
+R
+These functions are extended to x ∈ so that they vanish for x ∈/ [0,L]. One then uses the involution
+| f∗(x):= | f(−x)andtheconvolution |     |     |     |     |     |     |     |     |     |     |
+| ------- | ---------------------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+(cid:90)
+|     |     |     |     | (f  | ∗g)(y):= |     | f(x)g(y−x)dx. |     |     |     |     |
+| --- | --- | --- | --- | --- | -------- | --- | ------------- | --- | --- | --- | --- |
+WethenuseDtogetadenselydefinedhermitianformQontrigonometricpolynomialsby
+|     |     |       |                |      |     | (cid:90) L |            |                |     |     |     |
+| --- | --- | ----- | -------------- | ---- | --- | ---------- | ---------- | -------------- | --- | --- | --- |
+|     |     | ⟨f|g⟩ | :=D(cid:101)(f | ∗∗g) | =   | ((f        | ∗∗g)(x)+(f | ∗∗g)(−x))D(x), |     |     |     |
+| (6) |     |       | Q              |      |     |            |            |                |     |     |     |
+0
+| whosematrixintheorthonormalbasisU |     |     |       |          | n isgivenby |      |           |                  |     |     |     |
+| --------------------------------- | --- | --- | ----- | -------- | ----------- | ---- | --------- | ---------------- | --- | --- | --- |
+|                                   |     |     |       | (cid:90) | L           |      |           |                  |     |     |     |
+| (7)                               |     | ⟨U  | |U ⟩  | :=       | ((U         | ∗ ∗U | )(y)+(U ∗ | ∗U )(−y))D(y)dy. |     |     |     |
+|                                   |     |     | m n Q |          |             | m n  | m         | n                |     |     |     |
+0
+Weassumethatthisdefinesalower-boundedself-adjointquadraticformwithspectrumhavinganisolated
+eigenvalue at its minimum and are interested in the eigenvector η for this lowest eigenvalue (assumed
+simple).
+| ForD =δ    |                  |     | =0,onehas |     |     |     |     |     |            |     |     |
+| ---------- | ---------------- | --- | --------- | --- | --- | --- | --- | --- | ---------- | --- | --- |
+|            | 0 theDiracmassat |     | y         |     |     |     |     |     |            |     |     |
+| (cid:90) L |                  |     |           |     |     |     |     |     | (cid:90) L |     |     |
+((U ∗ ∗U )(y)+(U ∗ ∗U )(−y))D(y)dy =2(U ∗ ∗U )(0)=2 U (x)U (x)dx =2⟨U |U ⟩
+|     | m n |     | m   | n   |     |     | m n |     |     | n m | m n |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 0   |     |     |     |     |     |     |     |     | 0   |     |     |
+6
+
+whichshowsthatbyaddingtoDamultipleofδ onecanassumethatthequadraticformQispositiveand
+0
+theeigenvectorηisintheradicalofthequadraticform,i.e.thatonehas
+|     |     |     |     |     |     | ⟨U  | |η⟩ | =0, ∀n | ∈Z. |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | ------ | --- | --- | --- | --- | --- | --- |
+n Q
+By analogy with the Toeplitz case, one would like to obtain a positive linear form on the quotient of the
+convolution algebra of functions on R by the ideal generated by η allowing one to extend the quadratic
+formQ. ThiswouldthenyieldananalogueofCorollary1.1byshowingthatthezerosoftheentirefunction
+η (cid:98)areallreal.
+Instead of working directly with this infinite dimensional situation, our strategy is to first compute the
+matrix(7),observethatitisofaparticularformalreadymetinperturbationtheoryofthespectralaction,
+and prove a matrix form of the reality of zeros of Fourier transforms of lowest eigenvectors. The infinite
+dimensionalresultwillthenfollowbyapproximationusingHurwitztheoremasintheproofofTheorem
+3.1.
+4.1. Matrix of the quadratic form Q. For y ∈ [0,L] one has, for n ̸= m, using U m (t) = 0 for t < 0 and
+| U (x)=0forx |     |     | > L, |     |     |     |     |     |     |     |     |     |     |     |
+| ----------- | --- | --- | ---- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+n
+|     |     |     | (cid:90) |     |     | (cid:90) |     |     |     | 1 (cid:90) L |     |     |     |     |
+| --- | --- | --- | -------- | --- | --- | -------- | --- | --- | --- | ------------ | --- | --- | --- | --- |
+(U ∗ ∗U )(y)= ∗(y−x)U (x)dx = (x−y)U (x)dx = exp(2πim(y−x)/L+2πinx/L)dx =
+|     | n   |     | U   |     | n   | U m |     | n   |     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| m   |     |     | m   |     |     |     |     |     |     | L   |     |     |     |     |
+y
+|     | exp(2πimy/L) |     |     | (cid:90) L |     |     |     | exp(2πimy/L) |     |     |     |     |     |     |
+| --- | ------------ | --- | --- | ---------- | --- | --- | --- | ------------ | --- | --- | --- | --- | --- | --- |
+(exp(2πi(n−m)x/L))L
+|     |     |     |     | exp(2πi(n−m)x/L)dx |     |     |     | =        |     |     |     |     | =   |     |
+| --- | --- | --- | --- | ------------------ | --- | --- | --- | -------- | --- | --- | --- | --- | --- | --- |
+|     |     |     | L   |                    |     |     |     | 2πi(n−m) |     |     |     |     | y   |     |
+y
+exp(2πimy/L)−exp(2πiny/L)
+|     |     |     |     |     | =   |     |     |     |     |     | .   |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+2πi(n−m)
+y ∈[0,L]onehas
+Moreoverandstillwith
+∗
+|     |     |     |     | (U  | ∗U )(−y) | =(U∗ |     | ∗U )∗(y)=(U∗∗U |     |     | )(y). |     |     |     |
+| --- | --- | --- | --- | --- | -------- | ---- | --- | -------------- | --- | --- | ----- | --- | --- | --- |
+|     |     |     |     |     | m n      |      | m   | n              |     | n   | m     |     |     |     |
+exp(2πimy/L)−exp(2πiny/L)
+Thussincetheformula issymmetricinn,m,oneobtainsforn ̸=mand y ∈[0,L],
+2πi(n−m)
+(8)
+(cid:18) exp(2πimy/L)−exp(2πiny/L)(cid:19)
+sin(2πmy/L)−sin(2πny/L)
+| (U ∗ | ∗U )(y)+(U |     | ∗ ∗U | )(−y) | =2ℜ |     |          |     |     |     | =   |        |     | .   |
+| ---- | ---------- | --- | ---- | ----- | --- | --- | -------- | --- | --- | --- | --- | ------ | --- | --- |
+| m    | n          |     | m n  |       |     |     | 2πi(n−m) |     |     |     |     | π(n−m) |     |     |
+Form =nthesamecomputationgives
+|     |     |        |       | 1 (cid:90) | L                          |     |     |     |     |                      |     |     |     |     |
+| --- | --- | ------ | ----- | ---------- | -------------------------- | --- | --- | --- | --- | -------------------- | --- | --- | --- | --- |
+|     |     | (U ∗∗U | )(y)= |            | exp(2πin(y−x)/L+2πinx/L)dx |     |     |     |     | =(1−y/L)exp(2πiny/L) |     |     |     |     |
+|     |     | n      | n     |            |                            |     |     |     |     |                      |     |     |     |     |
+|     |     |        |       | L          | y                          |     |     |     |     |                      |     |     |     |     |
+and
+(9) (U ∗∗U )(y)+(U ∗∗U )(−y) =2ℜ((1−y/L)exp(2πiny/L))=2(1−y/L)cos(2πny/L).
+|     | n   | n   |     | n   | n   |     |     |     |     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+Wecansummarizetheabovecomputationasfollows
+Proposition 4.1. Let D be as above and Q be the quadratic form Q of (7). Let ψ(x) := 1 (cid:82)Lsin(2πx(1−
+|              |     |                    |     |     |     |                      |     |     |     |     |     | π   | 0   |     |
+| ------------ | --- | ------------------ | --- | --- | --- | -------------------- | --- | --- | --- | --- | --- | --- | --- | --- |
+| y/L))D(y)dy. |     | Thematrixelementsq |     |     | m,n | ofQaregivenasfollows |     |     |     |     |     |     |     |     |
+(cid:40)
+|     |     |     |     |     |     |     | ψ(m)−ψ(n) |     | ̸=m, |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --------- | --- | ---- | --- | --- | --- | --- | --- |
+ifn
+| (10) |     |     |     |     | q   | =   | m−n    |     |     |     |     |     |     |     |
+| ---- | --- | --- | --- | --- | --- | --- | ------ | --- | --- | --- | --- | --- | --- | --- |
+|      |     |     |     |     |     | m,n | ψ′(n), |     | =m. |     |     |     |     |     |
+ifn
+Proof. Onehas,forn ̸=m,using(7),(8)andtheequalitysin(2πx(1−y/L)= −sin(2πxy/L)forx ∈Z,
+|     |     |     |     |      | (cid:90) L |     |            |     |     |              |     |     |     |     |
+| --- | --- | --- | --- | ---- | ---------- | --- | ---------- | --- | --- | ------------ | --- | --- | --- | --- |
+|     |     |     |     |      |            | ∗   |            |     | ∗   |              |     |     |     |     |
+|     |     |     | ⟨U  | |U ⟩ | =          | ((U | ∗U )(y)+(U |     | ∗U  | )(−y))D(y)dy |     | =   |     |     |
+|     |     |     |     | m n  | Q          | m   | n          |     | m   | n            |     |     |     |     |
+0
+|     |     |     |     | (cid:90) L sin(2πmy/L)−sin(2πny/L) |        |     |     |     |        | ψ(n)−ψ(m) |     |     |     |     |
+| --- | --- | --- | --- | ---------------------------------- | ------ | --- | --- | --- | ------ | --------- | --- | --- | --- | --- |
+|     |     |     |     |                                    |        |     |     |     | D(y)dy | =         |     | .   |     |     |
+|     |     |     |     |                                    | π(n−m) |     |     |     |        |           | n−m |     |     |     |
+0
+Forn =m,onehasusing(7),(9)
+|     |     |     |     |       | (cid:90) | L                        |     |     |     |     |          |     |     |     |
+| --- | --- | --- | --- | ----- | -------- | ------------------------ | --- | --- | --- | --- | -------- | --- | --- | --- |
+|     |     |     | ⟨U  | |U ⟩  | =2       | (1−y/L)cos(2πny/L)D(y)dy |     |     |     |     | =∂ ψ(x)| |     |     |     |
+|     |     |     |     | n n Q |          |                          |     |     |     |     | x        | x=n |     |     |
+0
+7
+
+□
+whichgivestherequiredequality.
+4.2. Thediagonalvalues. Proposition4.1givesthediagonalvaluesofthematrixofthequadraticformQ,
+butunliketheoff-diagonalvalueswhichonlydependuponthefirstFouriercomponentsofthedistribution
+D,thediagonalvaluesinvolvealltheFouriercomponentsofD. Thisfollowsfromtheequalities
+(cid:90) 1
+ik
+|     |     | 2 (1−x)exp(2πikx)cos(2πnx)dx |     |     |     |     | =   |     | ,   | ∀k ̸=±n; |     |     |
+| --- | --- | ---------------------------- | --- | --- | --- | --- | --- | --- | --- | -------- | --- | --- |
+πk2−πn2
+0
+|     |     | (cid:90) 1 |                            |     |     |     |     | 1   | i   |         |     |     |
+| --- | --- | ---------- | -------------------------- | --- | --- | --- | --- | --- | --- | ------- | --- | --- |
+|     |     | 2          | (1−x)exp(2πinx)cos(2πnx)dx |     |     |     | =   | +   | ,   | ∀n ̸=0. |     |     |
+|     |     | 0          |                            |     |     |     |     | 2   | 4πn |         |     |     |
+ofD(x)appearsinthediagonaltermq
+IndeedtheseequalitiesshowthattheFouriercoefficienta k n,n as,for
+n ̸=0,
+|     |     |     |     |          | ik  | 1    |      |     | 1 i  | i        |     |     |
+| --- | --- | --- | --- | -------- | --- | ---- | ---- | --- | ---- | -------- | --- | --- |
+|     |     | q   | = ∑ | a        |     | + (a | +a−n | )+  | ( a  | − a−n ). |     |     |
+|     |     | n,n |     | kπk2−πn2 |     |      | n    |     |      | n        |     |     |
+|     |     |     |     |          |     | 2    |      |     | 4π n | n        |     |     |
+k̸=±n
+| SincethedistributionD(x)isrealvalued,onehasa |     |     |     |     |     |     | =   |                   |     | andi(−k)a | =   |           |
+| -------------------------------------------- | --- | --- | --- | --- | --- | --- | --- | ----------------- | --- | --------- | --- | --------- |
+|                                              |     |     |     |     |     | −k  | a k | sothatthetermsika |     | k         | −k  | ika k add |
+uptoarealcontributionfork ̸= ±n. Witha = x +iy fork >0,onegetsfork ̸=n,
+|                                   |     |     |     |     | k           | k   | k     |     |     |     |     |     |
+| --------------------------------- | --- | --- | --- | --- | ----------- | --- | ----- | --- | --- | --- | --- | --- |
+|                                   |     |     |     |     | ika +i(−k)a |     | =−2ky |     |     |     |     |     |
+|                                   |     |     |     |     | k           |     | −k    | k   |     |     |     |     |
+| whichgivesthefirstcontributiontoq |     |     |     | n,n | as          |     |       |     |     |     |     |     |
+2k
+|     |     |     |     |     | ∑   | y   |     | .   |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+kπn2−πk2
+k>0,k̸=n
+Fork =nonegetsthetwoterms
+|     |     |     | 1   |      | 1   | i   | i   |     |     | 1   |     |     |
+| --- | --- | --- | --- | ---- | --- | --- | --- | --- | --- | --- | --- | --- |
+|     |     |     | (a  | +a−n | )+  | (   | −   | )=  | −y  |     |     |     |
+|     |     |     |     | n    |     | a n | a−n | x   | n n | .   |     |     |
+|     |     |     | 2   |      | 4π  | n   | n   |     |     | 2πn |     |     |
+=0
+Forn
+|     |     |     |     |       |        | ik  |     |     | 2       |     |     |     |
+| --- | --- | --- | --- | ----- | ------ | --- | --- | --- | ------- | --- | --- | --- |
+|     |     |     |     | =     | ∑      | +a  | =   | − ∑ |         |     |     |     |
+|     |     |     |     | q 0,0 | a kπk2 |     | 0 x | 0   | y kπk . |     |     |     |
+|     |     |     |     |       | k̸=0   |     |     | k>0 |         |     |     |     |
+Proposition4.2. LetN ∈N. Thematrices(q ),i,j ∈{−N,...,N}obtainedfromdistributionsDbyProposition
+i,j
+4.1, are all matrices of the following form, where a i and b j are real numbers with a−i = a i and b−i = −b i , ∀i ∈
+{−N,...,N}
+b −b
+i j
+| (11) |     | q = | a , | ∀i, q | =   | ,    | ∀j ̸=i; |     | i,j ∈{−N,...,N}. |     |     |     |
+| ---- | --- | --- | --- | ----- | --- | ---- | ------- | --- | ---------------- | --- | --- | --- |
+|      |     | i,i | i   |       | i,j | i− j |         |     |                  |     |     |     |
+Moreover given a matrix Q = (q ), i,j ∈ {−N,...,N} of the above form there exists a unique real distribution
+i,j
+D(x)allofwhoseFouriercomponentsa =0forn ∈/ {−N,...,N}andwhoseassociatedmatrixisQ.
+n
+|     |     |     |     |     |     | (q ), | ∈ {−N,...,N} |     |     |     |     | D   |
+| --- | --- | --- | --- | --- | --- | ----- | ------------ | --- | --- | --- | --- | --- |
+Proof. Proposition4.1showsthatthematrices i,j i,j obtainedfromdistributions by
+Proposition4.1areoftheformgivenby(11). Letusshowthatconverselyanymatrixoftheform(11)ap-
+pears.
+(cid:82)Lsin(2πx(1−y/L))D(y)dyofProposition4.1,gives,intermsoftheFouriercoef-
+| Theequalityψ(x) |     | = 1 |     |     |     |     |     |     |     |     |     |     |
+| --------------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+π 0
+|           | =     | +iy ofD(x),forn |     | ∈Z,takingL      |     | =1forsimplicity, |     |     |     |           |     |     |
+| --------- | ----- | --------------- | --- | --------------- | --- | ---------------- | --- | --- | --- | --------- | --- | --- |
+| ficientsa | k x k | k               |     |                 |     |                  |     |     |     |           |     |     |
+|           |       |                 |     | 1 (cid:90) 1    |     |                  |     | 1   | 1   | 1         |     |     |
+|           |       | ψ(n)=−          |     | sin(2πny)D(y)dy |     |                  | =   | a   | −   | a−n = y . |     |     |
+|           |       |                 |     |                 |     |                  |     | n   |     | n         |     |     |
+|           |       |                 |     | π 0             |     |                  |     | 2πi | 2πi | π         |     |     |
+Thus the matrix entries q for i ̸= j determine the real numbers y which are the imaginary parts of the
+|     |     |     | i,j |     |     |     |     |     | j   |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+Fourier coefficients a of D. These imaginary parts then give the following contributions to the diagonal
+k
+| value,forn | ̸=0, |     |     |         |     |     |     |            |     |     |     |     |
+| ---------- | ---- | --- | --- | ------- | --- | --- | --- | ---------- | --- | --- | --- | --- |
+|            |      |     |     |         |     | 1   |     |            | 2k  |     |     |     |
+|            |      |     |     | =       | −y  | +   | ∑   |            |     |     |     |     |
+| (12)       |      |     |     | q n,n x | n n |     |     | y kπn2−πk2 |     |     |     |     |
+2πn
+k>0,k̸=n
+and we can choose the real part x n of the Fourier coefficients a n of D to obtain arbitrary diagonal values
+a asrequired. Moreovertheoff-diagonalvaluesdetermineuniquelytheimaginaryparts y oftheFourier
+| i   |     |     |     |     |     |     |     |     |     |     | n   |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+8
+
+coefficientsof D(x) for n ∈ {−N,...,N} andthediagonalvaluesthendetermineuniquelytherealparts
+| x oftheFouriercoefficientsofD(x)forn |     |     |     |     |     | ∈{−N,...,N}. |     |     |     |     |     |     | □   |
+| ------------------------------------ | --- | --- | --- | --- | --- | ------------ | --- | --- | --- | --- | --- | --- | --- |
+n
+Remark 4.3. It is important to take as a starting point a distribution D on [0,L] and then define the associated
+quadratic form using(6), rather than starting from aneven distribution on [−L,L]. For instance the derivativeδ′
+0
+oftheDiracdistributionat 0 ∈ [0,L] givesrisetoanon-zeroquadraticformwhiletheassociatedevendistribution
+obtainedbysymmetrisationisequalto0.
+4.3. Relation to the spectral action. There is a close analogy between the quadratic form in (11) and the
+secondderivativewithrespecttoperturbationsinthespectralaction[6],aswewillnowexplain. Suppose
+we are given a linear self-adjoint operator D in a finite-dimensional Hilbert space, which is assumed to
+havesimplespectrumlabeledby{λ }N ,withcorrespondingeigenvectors{e }. Supposethatwehave
+|                               |     |     |     |     | j j=−N |       |                      |     |     |     | j   |     |     |
+| ----------------------------- | --- | --- | --- | --- | ------ | ----- | -------------------- | --- | --- | --- | --- | --- | --- |
+| arealsymmetricpositivematrixQ |     |     |     |     | = (q   | ),i,j | ∈{−N,...,N}definedas |     |     |     |     |     |     |
+ij
+|      |     |     |     |     |     |      | (cid:40) | bi −bj |        |     |     |     |     |
+| ---- | --- | --- | --- | --- | --- | ---- | -------- | ------ | ------ | --- | --- | --- | --- |
+|      |     |     |     |     |     |      |          |        | i ̸= j |     |     |     |     |
+|      |     |     |     |     |     |      | =        | λ −λ   |        |     |     |     |     |
+| (13) |     |     |     |     |     | q ij |          | i j    |        |     |     |     |     |
+|      |     |     |     |     |     |      |          | a      | i = j  |     |     |     |     |
+i
+∈R.
+forsomea i ,b i ThequadraticformQisgivenintermsoftheHilbertspaceinnerproductas
+| (14) |     |     |     |     | Q(f,g) |     | =⟨Qf | | g⟩ =⟨f | | Qg⟩. |     |     |     |     |
+| ---- | --- | --- | --- | --- | ------ | --- | ---- | -------- | ------ | --- | --- | --- | --- |
+Considernowanevensmoothfunction f : R → R. Underperturbations D (cid:55)→ D+Aitcanbecomputed
+thatthequadraticformgivenbythesecondGâteauxderivativeofthespectralactionisoftheform[13,15,
+16,19,20]
+d2
+1
+|     |     |     |     |     |      | (trf(D+tA))| |     | t=0 | =∑A | A q   |     |     |     |
+| --- | --- | --- | --- | --- | ---- | ------------ | --- | --- | --- | ----- | --- | --- | --- |
+|     |     |     |     |     | 2dt2 |              |     |     | ij  | ji ij |     |     |     |
+i,j
+|     |     |     |     |     |     | f′(λ |     | f′′(λ |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | ---- | --- | ----- | --- | --- | --- | --- | --- |
+where q is exactly as in (11) for b = ),a = ) and λ = i, the spectrum of the Dirac operator
+|     | ij             |     |     |     | i   | i   | i   | i   | i   |     |     |     |     |
+| --- | -------------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| D = | D onthecircle. |     |     |     |     |     |     |     |     |     |     |     |     |
+S1
+5. FINITEDIMENSIONALEVENCASE
+Inthissectionwedealwiththegeneralfinitedimensionalevencase.Wearegivenarealsymmetricpositive
+|         | =(q | ),i,j | ∈{−N,...,N}oftheform(11),i.e. |     |     |       |      |      |      |             |     |     |     |
+| ------- | --- | ----- | ----------------------------- | --- | --- | ----- | ---- | ---- | ---- | ----------- | --- | --- | --- |
+| matrixQ | i,j |       |                               |     |     |       |      |      |      |             |     |     |     |
+|         |     |       |                               |     |     |       | b −b |      |      |             |     |     |     |
+|         |     |       | =                             | ∀i, |     | =     | i    | j ∀j | ̸=i; | ∈{−N,...,N} |     |     |     |
+|         |     | q     | i,i a                         | i , |     | q i,j |      | ,    |      | i,j         |     |     |     |
+i− j
+| wherethescalarsa |     | fulfilla−j |     | = a | andb−j | =−b | forall | j   | ∈{−N,...,N}. |     |     |     |     |
+| ---------------- | --- | ---------- | --- | --- | ------ | --- | ------ | --- | ------------ | --- | --- | --- | --- |
+|                  |     | i          |     |     | j      |     | j      |     |              |     |     |     |     |
+We let e , j ∈ {−N,...,N}, be the canonical orthonormal basis given by the vectors (δ(k,j)) whose all
+j
+componentsare0exceptone. Usingthecanonicalinnerproduct⟨α |β⟩,thequadraticformQisgivenby
+|     |     |     |     |     | Q(f,g) |     | =⟨Qf | | g⟩ =⟨f | | Qg⟩. |     |     |     |     |
+| --- | --- | --- | --- | --- | ------ | --- | ---- | -------- | ------ | --- | --- | --- | --- |
+(15)
+Lemma5.1. (i)Letγbesuchthatγ(e ):=e−j forall j ∈{−N,...,N}. Onehasγ2 =IdandQγ =γQ.
+j
+(ii)LetDbedefinedbyD(e ):= je forall j ∈{−N,...,N}. OnehasDγ =−γDand
+|        |                 |     | j     |           | j               |              |     |     |     |       |     |     |     |
+| ------ | --------------- | --- | ----- | --------- | --------------- | ------------ | --- | --- | --- | ----- | --- | --- | --- |
+|        |                 |     | DQ−QD |           | =|β⟩⟨η|−|η⟩⟨β|, |              |     | β   | =∑b | η =∑e |     |     |     |
+| (16)   |                 |     |       |           |                 |              |     |     | j   | e j , | j . |     |     |
+| Proof. | (i)Onehasq−i,−j |     | =q    | foralli,j |                 | ∈{−N,...,N}. |     |     |     |       |     |     |     |
+i,j
+(ii) The diagonal elements of the diagonal matrix D are antisymmetric which gives Dγ = −γD. Let
+us prove (16). One has (DQ) = iq , (QD) = jq so that (DQ−QD) = b −b for all i,j ∈
+|             |     |                 |     | i,j      |      | i,j | i,j | i,j        |      |     | i,j i | j   |     |
+| ----------- | --- | --------------- | --- | -------- | ---- | --- | --- | ---------- | ---- | --- | ----- | --- | --- |
+| {−N,...,N}. |     | Similarlyonehas |     |          |      |     |     |            |      |     |       |     |     |
+|             |     |                 |     | (|β⟩⟨η|) | =|β⟩ | ⟨η| | =b  | , (|η⟩⟨β|) | =|η⟩ | ⟨β| | =b    |     |     |
+|             |     |                 |     |          | i,j  | i   | j   | i          | i,j  | i j | j     |     |     |
+□
+whichgivestherequiredequality.
+| Lemma5.2.    | AssumeQ |      | ≥0andQξ |     | =0whereγξ |     | =ξ  | and⟨ξ | |η⟩=1. |     |     |     |     |
+| ------------ | ------- | ---- | ------- | --- | --------- | --- | --- | ----- | ------ | --- | --- | --- | --- |
+| (i)OnehasQDξ |         | =−β. |         |     |           |     |     |       |        |     |     |     |     |
+(ii)TheoperatorD′ := D−|Dξ⟩⟨η|isselfadjointwithrespecttotheinnerproductdefinedbyQ.
+9
+
+Proof. (i)Weapply(16)andget,usingQξ =0and⟨β|ξ⟩=0sincethetwoeigenspacesofγareorthogonal,
+|     |     |     | −QDξ | =(DQ−QD)ξ |     |     | =|β⟩⟨η|ξ⟩−|η⟩⟨β|ξ⟩ |     |     | =β. |     |     |     |     |
+| --- | --- | --- | ---- | --------- | --- | --- | ------------------ | --- | --- | --- | --- | --- | --- | --- |
+(ii)TheinnerproductdefinedbyQisgivenby(15),i.e.
+|     |     |     |     |     | ⟨f  | | g⟩ | =⟨Qf | | g⟩. |     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | ---- | ---- | ----- | --- | --- | --- | --- | --- | --- |
+Q
+| Thuswewanttoshowthat⟨D′f |     |     |     | | g⟩     | =⟨f  | | D′g⟩ |          |           |              |     | =−|Dξ⟩⟨η| |     |     |     |
+| ------------------------ | --- | --- | --- | -------- | ---- | ------ | -------- | --------- | ------------ | --- | --------- | --- | --- | --- |
+|                          |     |     |     |          | Q    |        | Q forall | f,g.      | Onehas,withR |     |           |     |     |     |
+|                          |     |     | ⟨D  | ′ f | g⟩ | =⟨QD | ′ f |  | g⟩=⟨QDf  | | g⟩+⟨QRf |              | |   | g⟩.       |     |     |     |
+Q
+By(i),onehasQR =−|QDξ⟩⟨η|= |β⟩⟨η|. Moreoverby(16),onehasQD−DQ =−|β⟩⟨η|+|η⟩⟨β|.
+Thus
+|     |     |     |     | ′      |       |     |       | ′       | ′          |     |     |     |     |     |
+| --- | --- | --- | --- | ------ | ----- | --- | ----- | ------- | ---------- | --- | --- | --- | --- | --- |
+|     |     |     | ⟨D  | f | g⟩ | =⟨DQf | |   | g⟩+⟨R | f | g⟩, | R =|η⟩⟨β|. |     |     |     |     |     |
+Q
+Moreover,usingthatbothQandDareselfadjoint,
+′
+|     |     | ⟨f  | | D g⟩ | =⟨Qf | | Dg⟩+⟨Qf |     | | Rg⟩ | =⟨DQf | | g⟩+⟨f |     | | QRg⟩ |     |     |     |
+| --- | --- | --- | ------ | ---- | --------- | --- | ----- | ----- | ------- | --- | ------ | --- | --- | --- |
+Q
+andtherequiredequalityfollowsfrom
+′
+|     |     |     |     | ⟨f  | | QRg⟩ | =⟨f | |β⟩⟨η|g⟩ | =⟨R | f | g⟩. |     |     |     |     |     |
+| --- | --- | --- | --- | --- | ------ | --- | -------- | --- | ------- | --- | --- | --- | --- | --- |
+□
+LetQ,D,ξ,ηandD′
+| Lemma5.3.              |     |     |      | beasinLemma5.2. |        |     | Then |     |       |     |     |     |     |     |
+| ---------------------- | --- | --- | ---- | --------------- | ------ | --- | ---- | --- | ----- | --- | --- | --- | --- | --- |
+| (i)Lets ∈/ {−N,...,N}. |     |     | Then |                 |        |     |      |     |       |     |     |     |     |     |
+|                        |     |     |      |                 |        |     |      | N   | ξ     |     |     |     |     |     |
+| (17)                   |     |     |      | Det(D           | ′−s)=0 |     | ⇐⇒   | ∑   | j =0. |     |     |     |     |     |
+|                        |     |     |      |                 |        |     |      | s−  | j     |     |     |     |     |     |
+j=−N
+| (ii)OnehasDet(D′)=0,andfor |     |     |     |                |     |     | ̸=0,Det(D′− |     |      |     |     |     |     |     |
+| -------------------------- | --- | --- | --- | -------------- | --- | --- | ----------- | --- | ---- | --- | --- | --- | --- | --- |
+|                            |     |     |     | j ∈{−N,...,N}, |     |     | j           |     | j)=0 | ⇐⇒  | ξ   | =0. |     |     |
+j
+| Proof. (i)Westartbywriting,intermsofR |     |     |     |     | =     | −⟨Dξ⟩⟨η|: |     |             |     |     |          |     |     |     |
+| ------------------------------------- | --- | --- | --- | --- | ----- | --------- | --- | ----------- | --- | --- | -------- | --- | --- | --- |
+|                                       |     |     |     |     |       |           |     | (cid:16)    |     |     | (cid:17) |     |     |     |
+|                                       |     |     |     | ′−s |       |           |     | Id+(D−s)−1R |     |     |          |     |     |     |
+|                                       |     |     | D   | =   | D+R−s | =(D−s)    |     |             |     |     |          |     |     |     |
+Consequently
+|     |     |     | Det(D | ′−s)=Det(D−s)Det(Id+(D−s)−1R). |     |     |     |     |     |     |     |     |     |     |
+| --- | --- | --- | ----- | ------------------------------ | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+Tocomputetheseconddeterminantweusetheidentity
+∞
+|     |     |     |     |     |            |     |     | (cid:16) | (cid:17) |     |     |     |     |     |
+| --- | --- | --- | --- | --- | ---------- | --- | --- | -------- | -------- | --- | --- | --- | --- | --- |
+|     |     |     |     |     | Det(Id+A)= |     | ∑   | tr ∧kA   |          |     |     |     |     |     |
+k=0
+|                             |                       |              |     |     | (D−s)−1R. |                | Thehigherexteriorpowers∧kAvanishfork |     |                  |     |     |     |        |     |
+| --------------------------- | --------------------- | ------------ | --- | --- | --------- | -------------- | ------------------------------------ | --- | ---------------- | --- | --- | --- | ------ | --- |
+| appliedtotherankoneoperator |                       |              |     | A = |           |                |                                      |     |                  |     |     |     | >1thus |     |
+|                             |                       |              |     |     |           | (cid:16)       |                                      |     | (cid:17)         |     |     |     |        |     |
+|                             | Det(Id+(D−s)−1R)=1−tr |              |     |     |           | |(D−s)−1Dξ⟩⟨η| |                                      |     | =−s⟨η|(D−s)−1ξ⟩, |     |     |     |        |     |
+| using(D−s)−1Dξ              |                       | =ξ+s(D−s)−1ξ |     |     | and⟨η|ξ⟩  | =1.            | Hence,                               |     |                  |     |     |     |        |     |
+|                             |                       |              |     |     |           |                |                                      |     | N                |     | N   |     |        |     |
+(18) Det(D ′−s)= −sDet(D−s)⟨η|(D−s)−1ξ⟩ =−s ∏ (i−s) ∑ (j−s)−1ξ .
+j
+|                   |     |     |            |                              |     |     |     |     | i=−N |          | j=−N |     |     |     |
+| ----------------- | --- | --- | ---------- | ---------------------------- | --- | --- | --- | --- | ---- | -------- | ---- | --- | --- | --- |
+|                   |     |     |            | −N,...,NthenDet(D′−s)=0iff∑N |     |     |     |     |      | (j−s)−1ξ |      |     |     |     |
+| Weconcludethatifs |     | ̸=  | jfor       | j =                          |     |     |     |     |      |          |      | =0. |     |     |
+|                   |     |     |            |                              |     |     |     |     |      | j=−N     |      | j   |     |     |
+|                   |     | D′ξ | 0soDet(D′) |                              |     |     |     |     |      |          |      |     |     |     |
+For(ii)wehavethat = = 0. Fors = j ̸= 0wefindthattheonlynon-vanishingtermon
+| theright-handsideof(18)is |     |     |     | j∏ (i− | j)ξ whichiszeroiffξ |     |     | =0. |     |     |     |     |     | □   |
+| ------------------------- | --- | --- | --- | ------ | ------------------- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|                           |     |     |     | i̸=j   | j                   |     |     | j   |     |     |     |     |     |     |
+Remark5.4. Theexpression(18)for Det(D′−s) isrelatedtotheordinaryLagrangeinterpolationpolynomialfor
+f(λ)atthepointsλ
+| thefunction |     |     |     | 0 ,λ 1 ,...,λ | n :   |       |     |       |     |     |     |     |     |     |
+| ----------- | --- | --- | --- | ------------- | ----- | ----- | --- | ----- | --- | --- | --- | --- | --- | --- |
+|             |     |     |     |               |       | n     |     | n x−λ |     |     |     |     |     |     |
+|             |     |     |     |               | P(x)= | ∑ f(λ | )·∏ |       | j   |     |     |     |     |     |
+|             |     |     |     |               |       |       | k   |       | .   |     |     |     |     |     |
+λ −λ
+|     |     |     |     |     |     | k=0 | j=0 | k   | j   |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+j̸=k
+10
+
+WenowcomputetheFouriertransformoffunctionson[0,L]translatedto[−L, L]andextendedby0tothe
+2 2
+fulllineR. TheFouriertransformisdefinedby
+(cid:90)
+F(f)(s):= f(x)exp(−isx)dx.
+R
+ThenextPropositionisareformulationoftheShannonsamplingtheorem([18]).
+Proposition5.5. Let f ∈ L2([0,L])and fσ(x):= f(x+ L)for|x|≤ L beextendedby0onR.
+2 2
+(i) The restriction of the Fourier transform of fσ to 2πZ is given by the Fourier transform f(cid:98)of f ∈ L2(R/LZ) as
+L
+follows
+2π
+(19) F(fσ)( n)= (−1)n f(cid:98)(n), ∀n ∈Z.
+L
+(ii)TheFouriertransformof fσ isgivenby
+1
+(20) F(fσ)(s)=sin(Ls/2)∑ f(cid:98)(n) .
+Ls/2−nπ
+Z
+Proof. (i)Letn ∈Z. Onehasbydefinition f(cid:98)(n) =(cid:82)L f(x)exp(−2πinx/L)dxand
+0
+F(fσ)( 2π n)= (cid:90) fσ(x)exp(−2πinx/L)dx = (cid:90) L 2 f(x+ L )exp(−2πinx/L)dx =
+L R −L 2
+2
+(cid:90) L
+(−1)n f(x)exp(−2πinx/L)dx =(−1)n f(cid:98)(n).
+0
+(ii)Onehas f(x) = 1 ∑Z f(cid:98)(n)exp(2πinx/L),thusitisenoughtotreatthecase f(x)=exp(2πinx/L).Then
+L
+F(fσ)(s)= (cid:90) fσ(x)exp(−isx)dx = (cid:90) L 2 exp(2πin(x+ L )/L)exp(−isx)dx =
+R −L 2
+2
+=(−1)n (cid:90) L 2 exp(i( 2π n−s)x)dx =(−1)n 1 (exp(i( 2π n−s)x)) L 2 =2L sin(Ls/2)
+−L
+2
+L i(2
+L
+πn−s) L −L
+2
+Ls−2πn
+whichgives(20)using f(x) = 1 ∑Z f(cid:98)(n)exp(2πinx/L). □
+L
+Afterthesepreliminariesweobtain
+Theorem5.6. LetQbearealsymmetricpositivematrixoftheform(11)withonedimensionalkernelwhichiseven
+withrespecttoγ. Letξ ∈ker Q.
+(i)Alltherootsofthefollowingpolynomialarereal:
+ 
+(21) P(s)= ∑ ξ
+k
+× ∏ (j−s).
+k∈{−N,...,N} j∈{−N,...,N},j̸=k
+(ii)TheFouriertransformξ(cid:98)(z)ofthefunction
+ξ(x):=∑ξ exp(2πikx), ∀x ∈[0,1], ξ(x)=0, ∀x ∈/ [0,1]
+k
+isentireandhasallitszerosontherealline.
+Proof. (i)RecallD,γfromLemma5.1andnotethatDhasone-dimensionalkernel.Ife ∈ker Qonechecks
+0
+(i)and(ii)directly. Thusweassumethate ∈/ ker Q. Letξ ∈ ker Q,ξ ̸= 0. Therealsymmetricpositive
+0
+matrixQdefinesaninnerproductonR2N+1 anditsradicalconsistsoftheonedimensionalsubspacegen-
+eratedbyξ. OnehasDξ ̸= 0sinceotherwisee ∈ ker Q. OnehasQDξ ̸= 0sinceDξ isoddandtherefore
+0
+linearlyindependentofξ whileker Qisone-dimensional. By(16)onehas
+0 ̸=(DQ−QD)(ξ) =|β⟩⟨η|ξ⟩−|η⟩⟨β|ξ⟩ =|β⟩⟨η|ξ⟩.
+Thus one can normalize ξ so that ⟨η|ξ⟩ = 1. Let then D′ := D−|Dξ⟩⟨η| as in Lemma 5.2. One has
+D′(ξ) =0andthusD′inducesanoperatorD”ontheEuclideanspaceEobtainedastheseparatedquotient
+of(R2N+1,Q).ByLemma5.2,(ii),theoperatorD”isselfadjointinE.Thustherealspectraltheorem(see[3],
+11
+
+R.
+Theorem 7.29) applies and shows that the characteristic polynomial of D” has all its roots in Let v be
+j
+R2N+1
+an orthonormal basis of E of eigenvectors for D” with eigenvalues λ j . Let w j ∈ be lifts of the v j .
+OnehasD”(v ) = λ v andhenceD′(w ) = λ w +s ξ forsomerealscalarss ThusinthebasisofR2N+1
+|     | j   | j j |     |     | j   | j   | j j |     |     | j . |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+formedbyξ andthew ,thematrixofD′ istriangular,with0andtheλ onthediagonal. Thusonegets
+|     |     | j   |     |     |     |     |     |     | j   |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+′−s)=
+|     |     |     |     |     | Det(D |     | −s∏(λ | −s). |     |     |
+| --- | --- | --- | --- | --- | ----- | --- | ----- | ---- | --- | --- |
+j
+Comparingthisformulawith(18)oneobtainsthatthepolynomialP(s)of(21)hasallitszerosinR.
+(ii)TheFouriertransformofthefunctionwithsupportin[0,1]giventherebyexp(2πikx)is
+|     |     |     |     |                       |     |     |     | 2e−i | s (cid:0)s(cid:1) |     |
+| --- | --- | --- | --- | --------------------- | --- | --- | --- | ---- | ----------------- | --- |
+|     |     |     |     | (cid:90) 1            |     |     |     |      | 2 sin             |     |
+|     |     |     |     | exp(2πikx)exp(−isx)dx |     |     |     | =    | 2                 | .   |
+|     |     |     |     | 0                     |     |     |     |      | s−2πk             |     |
+ThustheFouriertransformofξ(x)is
+|     |     |     |     |              |     |                   |    |       |    |     |
+| --- | --- | --- | --- | ------------ | --- | ----------------- | --- | ----- | --- | --- |
+|     |     |     |     |              |     | (cid:16)z(cid:17) |     |       | ξ   |     |
+|     |     |     |     |              | −i  | z                 |     | ∑     | j   |     |
+|     |     |     |     | ξ(cid:98)(z) | =2e | 2 sin             |    |       | .  |     |
+|     |     |     |     |              |     |                   | 2   | z−2πj |     |     |
+{−N,...,N}
+(cid:0) z(cid:1)
+Thezerosz ∈ 2πZofsin cancelthepoleat2πjwhichoccurswhenξ ̸= 0andremainaszerosofξ(cid:98)(z)
+|     |     |     | 2   |     |     |     |     |     | j   |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+TheotherzerosaregivenbytherootsofP(z/2π)=0whereP(z)isdefinedin(21). Thusby(i),
+otherwise.
+allthesezerosarereal. □
+5.1. GeneralfinitedimensionaloperatorD. Considerasbeforethemoregeneralsituationofalinearself-
+adjointoperatorDinafinite-dimensionalHilbertspace,whichisassumedtohavesimplespectrumlabeled
+by{λ }N ,withcorrespondingeigenvectors{e }. Wethenconsidertherealsymmetricpositivematrix
+| j j=−N |                                 |     |     |     |     |     | j   |     |     |     |
+| ------ | ------------------------------- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Q =(q  | ),i,j ∈{−N,...,N}definedin(13). |     |     |     |     |     |     |     |     |     |
+ij
+ThefollowingLemma’saretheanaloguesofLemmas5.1,5.2and5.3,whoseproofsfollowmutatismutandis.
+| Lemma5.7. | Supposethatλ |     | =−λ |     | andb−i | =−b | foralli | ∈{−N,...,N}. |     |     |
+| --------- | ------------ | --- | --- | --- | ------ | --- | ------- | ------------ | --- | --- |
+|           |              |     | −i  | i   |        |     | i       |              |     |     |
+(i)Letγbesuchthatγ(e ):=e−i foralli ∈{−N,...,N}. Onehasγ2 =IdandQγ =γQ.
+i
+| (ii)OnehasDγ | =−γDand |     |       |     |                 |     |     |       |           |     |
+| ------------ | ------- | --- | ----- | --- | --------------- | --- | --- | ----- | --------- | --- |
+| (22)         |         |     | DQ−QD |     | =|β⟩⟨η|−|η⟩⟨β|, |     |     | β =∑b | e , η =∑e | ,   |
+|              |         |     |       |     |                 |     |     |       | i i       | i   |
+sothatβisoddandandηisevenwithrespecttotheZ
+-gradinggivenbyγ.
+2
+LetD,Q,γbeasinLemma5.7,assumeQ ≥0andQξ =0whereγξ =ξ and⟨ξ |η⟩=1.
+Lemma5.8.
+| (i)OnehasQDξ |     | =−β. |     |     |     |     |     |     |     |     |
+| ------------ | --- | ---- | --- | --- | --- | --- | --- | --- | --- | --- |
+(ii)TheoperatorD′ := D−|Dξ⟩⟨η|isself-adjointwithrespecttotheinnerproductdefinedbyQ.
+Lemma5.9. LetQ,D,ξ,ηandD′ beasinLemmas5.7and5.8,andassumethatDhassimplespectrum. Then
+| (i) Lets | ∈C\{−λ | ,...,λ |     | }ands | ̸=0. | Then |     |     |     |     |
+| -------- | ------ | ------ | --- | ----- | ---- | ---- | --- | --- | --- | --- |
+|          |        | N      | N   |       |      |      |     |     |     |     |
+|          |        |        |     |       |      |      |     | N ξ |     |     |
+j
+| (23) |     |     |     | Det(D | ′−s)=0 |     | ⇐⇒  | ∑   | =0. |     |
+| ---- | --- | --- | --- | ----- | ------ | --- | --- | --- | --- | --- |
+s−λ
+j
+j=−N
+| OnehasDet(D′)=0,andifλ |     |     |     |     | ̸=0wehaveDet(D′−λ |     |     |     |      |     |
+| ---------------------- | --- | --- | --- | --- | ----------------- | --- | --- | --- | ---- | --- |
+| (ii)                   |     |     |     |     |                   |     |     | )=0 | ⇐⇒ ξ | =0. |
+|                        |     |     |     | j   |                   |     |     | j   | j    |     |
+Asaresult,wealsohavethefollowinganalogueofTheorem5.6(i):
+Proposition5.10. Let D havesimplespectrumandlet Qbearealsymmetricpositivematrixoftheform(13)with
+onedimensionalevenkernel. Letξ ∈ker Q. Thenalltherootsofthefollowingpolynomialarereal:
+|      |     |     |       |     |              |     |                  |     |          |    |
+| ---- | --- | --- | ----- | --- | ------------ | --- | ----------------- | --- | -------- | --- |
+|      |     |     | P(s)= |     | ∑            |     | ×                | ∏   | (λ −s). |     |
+| (24) |     |     |       |     |              | ξ k |                   |     | j        |     |
+|      |     |     |       |     | k∈{−N,...,N} |     | j∈{−N,...,N},j̸=k |     |          |     |
+WethenobtainTheorem5.6(ii)asacorollarytothisresult,whenitisappliedtothecase D = D S1 sothat
+λ = j.
+j
+12
+
+|     |     |     | 6.  | INFINITEDIMENSIONALCASE |     |     |     |     |     |     |
+| --- | --- | --- | --- | ----------------------- | --- | --- | --- | --- | --- | --- |
+InthissectionweprovetheresultannouncedintheIntroduction,
+Theorem6.1. Let L > 0,andletDbearealdistributionontheinterval[0,L]. LetQbethequadraticformdefined
+ontrigonometricpolynomialsby(6). AssumethatQdefinesalower-boundedessentiallyselfadjointoperatorandthat
+theminimumofitsspectrumisasimple,isolatedeigenvalueλ,witheveneigenfunction1ξ.
+Thenallthezerosofthe
+| entirefunctionξ(cid:98)(z),z |     | ∈C,theFouriertransformofξ |     |     |     |     |     |     |     |     |
+| ---------------------------- | --- | ------------------------- | --- | --- | --- | --- | --- | --- | --- | --- |
+lieontherealline.
+Proof. Byhypothesisthetrigonometricpolynomialsformacorefortheoperator Awhichisdefinedby
+|     |     |     |     | ⟨α | | Aβ⟩=⟨α | |β⟩ | .   |     |     |     |
+| --- | --- | --- | --- | ---- | ------ | --- | --- | --- | --- | --- |
+Q
+Wenormalizetheeigenvectorξ by∥ξ∥ = Givenϵ > 0thereexistsaneventrigonometricpolynomialη
+|     |     |     |     | 1.  |     |     |     |     |     | ϵ   |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+with
+| (25) |     |     | ∥η ∥ =1, | ∥ξ−η | ∥ <ϵ, | ⟨η |η | ⟩ <λ+ϵ. |     |     |     |
+| ---- | --- | --- | -------- | ---- | ----- | ----- | ------- | --- | --- | --- |
+|      |     |     | ϵ        |      | ϵ     | ϵ     | ϵ Q     |     |     |     |
+Let N be a finite integer such that the support of η ϵ is contained in {−N,...,N}. By Proposition 4.1 the
+matrix of the restriction Q of the quadratic form Q to the space E of trigonometric polynomials with
+|     |     |     | N   |     |     |     | N   |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+{−N,...,N}
+support in is of the form (11). Since Q N is a restriction of Q to a subspace, its minimum is
+≥ λ and the above inequalities show that it is between λ and λ+ϵ. By hypothesis the spectrum of the
+operator Aiscontained,exceptforthesimpleeigenvalueλintheinterval[λ+δ,∞)forsomeδ > 0. Thus
+| therestrictionofQtotheorthogonalcomplementofξ |     |     |        |             |     | fulfills |           |     |     |     |
+| --------------------------------------------- | --- | --- | ------ | ----------- | --- | -------- | --------- | --- | --- | --- |
+|                                               |     |     | ⟨α |α⟩ | ≥(λ+δ)∥α∥2, |     | ∀α |     | ⟨α |ξ⟩=0. |     |     |     |
+Q
+This holds in particular in the codimension one subspace F of E defined by ⟨α | ξ⟩ = 0 (note that
+|     |     |     |     |     |     | N   | N   |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+F cannot be all of E since then we also would have hadξ ⊥ η which contradicts (25)). The smallest
+| N   |     | N   |     |     |     |     | ϵ   |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+fulfillsλ ≤ λ ≤ λ+ϵ. Bythemin-maxtheorem,thenexteigenvalueµ ≥ λ
+| eigenvalueofQ | N   |     | N   |     |     |     |     |     | N N | ofQ N is |
+| ------------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | -------- |
+givenby
+|     |     |     | µ   | =    |           |     | (x) |     |     |     |
+| --- | --- | --- | --- | ---- | --------- | --- | --- | --- | --- | --- |
+|     |     |     | N   | max  |           | min | Q N |     |     |     |
+|     |     |     |     | M⊂EN | x∈M,∥x∥=1 |     |     |     |     |     |
+codim(M)=1
+sothat,usingM= onegetsµ ≥λ+δ. Thisshowsthatforϵ <δ/2theeigenvalueλ
+|     |     | F N | N   |     |     |     |     |     | N ofQ N issimple |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | ---------------- | --- |
+and the only one in the interval [λ,λ+δ]. Let then P be the spectral projection of Q for the eigenspace
+N
+| associatedtotheminimaleigenvalueλ |     |     |     | . Decomposing |     |     |     |     |     |     |
+| --------------------------------- | --- | --- | --- | ------------- | --- | --- | --- | --- | --- | --- |
+N
+|      |              | η   | = Pη +(1−P)η | =α+β |     | ⇒ Q(η | )=λ ∥α∥2+Q(β) |     |      |     |
+| ---- | ------------ | --- | ------------ | ---- | --- | ----- | ------------- | --- | ---- | --- |
+|      |              | ϵ   | ϵ            | ϵ    |     | ϵ     | N             |     |      |     |
+| Q(β) | ≥ (λ+δ)∥β∥2. |     |              |      |     |       |               |     | ∥α∥2 |     |
+where Thus by (25), one gets that the convex combination with weights and
+∥β∥2 ofλandQ(β)/∥β∥2 ≥ (λ+δ)islessthanλ+ϵ. Itfollowsthat∥β∥2 = 1−∥α∥2 ≤ϵ/δ. Letthenξ
+N
+| betheeigenvectorofQ |     | fortheeigenvalueλ |                |      | givenbyPη | ϵ. Onecontrols |         |           |     |     |
+| ------------------- | --- | ----------------- | -------------- | ---- | --------- | -------------- | ------- | --------- | --- | --- |
+|                     |     | N                 |                | N    |           |                |         |           |     |     |
+|                     |     |                   | (cid:113)      |      |           |                |         | (cid:113) |     |     |
+|                     |     | ∥η ϵ              | −Pη ϵ ∥ ≤ ϵ/δ, | ∥ξ−η | ϵ ∥       | <ϵ ⇒ ∥ξ−ξ      | N ∥ ≤ϵ+ | ϵ/δ.      |     |     |
+SincetheevenfunctionsformaclosedsubspaceinL2[0,L],andξ
+iseven,forϵsmallenoughthevectorξ
+N
+transformξ(cid:98)N
+is even as well. Thus, it follows from Theorem 5.6 that all the zeros of the Fourier are real.
+Moreoverwhenϵ → 0thevectorsξ convergeinnormtoξ sothatthesequenceξ(cid:98)N (z)convergestoξ(cid:98)(z)
+N
+uniformlyoncompactsubsetsinC(asintheproofofTheorem3.1).
+ButthentheHurwitztheoremapplies,
+| allowingustoconcludethatallzerosofξ(cid:98)(z)arereal. |     |     |     |     |     |     |     |     |     | □   |
+| ------------------------------------------------------ | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+1i.e.invariantunderthesymmetryx(cid:55)→L−xof[0,L]
+13
+
+7. SPECTRALACTIONANDDIVIDEDDIFFERENCES
+trf(D)
+As already observed there is a close relation of the quadratic form in (15) and the spectral action
+introducedin[6]. Wewillnowanalyzethisinmoredetailforperturbationsofthetype D (cid:55)→ D+R with
+R =−|Dξ⟩⟨η|asinLemma5.2,extendingtheTaylorexpansionsderivedin[13,15,16,19,20]tothiscase.
+First, in order to make sense of the spectral action for (not necessarily self-adjoint or normal) bounded
+perturbations of a self-adjoint operator we write f(x) as a Fourier transform, and then invoke Araki’s
+|     |     |     |     |     |     |     |     | ei(H0 | +V) |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | --- | --- | --- |
+expansionals [1] —or Dyson series— to give meaning to for bounded perturbation V of a self-
+| adjointoperatorH |     |     | (tobeprecise,thisis[1,Eq. |     |     | 5.16]): |     |     |     |     |     |     |     |
+| ---------------- | --- | --- | ------------------------- | --- | --- | ------- | --- | --- | --- | --- | --- | --- | --- |
+0
+|     |     |     |     | (cid:18)(cid:90) 1 |     |     | (cid:19) |     | (cid:90) |     |     |     |     |
+| --- | --- | --- | --- | ------------------ | --- | --- | -------- | --- | -------- | --- | --- | --- | --- |
+ei(H0 +V) ;ieisH0Ve −isH0ds eiH0 ∑ in eis0H0Veis1H0···VeisnH0dns.
+| (26) |     |     | :=Exp |     |     |     | :=  |     |     |     |     |     |     |
+| ---- | --- | --- | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+r
+|     |     |     |     | 0   |     |     |     | n≥0 | ∆n  |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+wherethe n-simplex ∆ isparametrizedbytuples (s ,...,s ) ∈ Rn + 1 satisfying ∑ s = 1. Inourcaseof
+|     |     |     | n   |     |     |     | 0   | n   | ≥   | 0   | k k |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+interest,theseexpansionalsaregivenbyseriesofthefollowingform:
+(cid:90)
+|      |     |     |     | eiξ(D+tR) | ∑(itξ)n |     | eis0 ξDReis1 |     | ξD···ReisnξDdns. |     |     |     |     |
+| ---- | --- | --- | --- | --------- | ------- | --- | ------------ | --- | ---------------- | --- | --- | --- | --- |
+| (27) |     |     |     |           | :=      |     |              |     |                  |     |     |     |     |
+|      |     |     |     |           | n≥0     |     | ∆n           |     |                  |     |     |     |     |
+Note that since |∆ | = 1/n! the n’th summand in the expansional is norm bounded by tn|ξ|n∥R∥n/n! so
+n
+f:
+thattheseriesexpansionisnormconvergent. Thissuggesttodefineforsuitablefunctions
+(cid:90)
+|     |     |     |     |     | f(D+tR):= |     | f(cid:98)(ξ)eiξ(D+tR) |     | dξ. |     |     |     |     |
+| --- | --- | --- | --- | --- | --------- | --- | --------------------- | --- | --- | --- | --- | --- | --- |
+(28)
+R
+Moreprecisely,wehave
+Lemma 7.1. Let D be a self-adjoint operator on H, R bounded operator on H and let f be such that ∥(cid:100)f(n)∥ ≤
+1
+| Cn+1n!foralln |     | ≥   |     | ≥   |     |     |     |     |     |     |     |     |     |
+| ------------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+0andsomeC 1. Thenforsufficientlysmallttheexpressionin(28)isaboundedoperatoron
+H.
+Proof. Weestimate:
+|     |     |     |     |           |     | tn∥R∥n | (cid:90)           |     |     | C       |     |     |     |
+| --- | --- | --- | --- | --------- | --- | ------ | ------------------ | --- | --- | ------- | --- | --- | --- |
+|     |     |     |     | ∥f(D+tR)∥ | ≤ ∑ |        | |f(cid:98)(ξ)ξn|dξ |     | ≤   |         |     |     |     |
+|     |     |     |     |           |     | n!     | R                  |     |     | 1−tC∥R∥ |     |     |     |
+n≥0
+| whichisboundedfort |     |     | <1/(C∥R∥). |     |     |     |     |     |     |     |     |     | □   |
+| ------------------ | --- | --- | ---------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+Inordertodefinethespectralactionasthetraceofthisoperator,weneedamorerestrictiveclassoffunc-
+tions. Namely,asin[16]wedefine
+|     |     | (cid:26) |     |                |        |     | (cid:92) |         |     |         |        | (cid:27) |     |
+| --- | --- | -------- | --- | -------------- | ------ | --- | -------- | ------- | --- | ------- | ------ | -------- | --- |
+|     | Es  |          | ∞   |                |        |     | um)(n)∥  | ≤Cn+1n! |     |         |        |          |     |
+|     |     | := f     | ∈C  | : thereexistsC | ≥1s.t. |     | ∥(f      |         |     | forallm | ≤sandn | ≥0 ,     |     |
+1
+| whereu(x)= |     | x−i. |     |     |     |     |     |     |     |     |     |     |     |
+| ---------- | --- | ---- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+(D−i)−s
+Lemma 7.2. If D is s-summable, i.e. is trace-class for some s ≥ 0, and f ∈ Es then f(D+tR) is
+trace-classforsufficientlysmallt.
+Proof. The proof of the required estimates follows line-by-line the proof of [16, Theorem 6] after having
+giventhemeaning(27)totheexponentialsappearinginthemultipleoperatorintegrals(i.e. Definition2in
+□
+loc. cit.).
+|                                            |     |     |     |     |     |     | f R | → Randlet |     | x ,x ,...x | bedistinctpointsinR. |     |     |
+| ------------------------------------------ | --- | --- | --- | --- | --- | --- | --- | --------- | --- | ---------- | -------------------- | --- | --- |
+| Werecallthedefinitionofdivideddifferences. |     |     |     |     |     | Let | :   |           |     | 0 1        | n                    |     |     |
+Thedivideddifferenceofordernisdefinedbytherecursiverelations
+|     |     |     |     |     | f[x          | ]= f(x | ),    |        |          |     |     |     |     |
+| --- | --- | --- | --- | --- | ------------ | ------ | ----- | ------ | -------- | --- | --- | --- | --- |
+|     |     |     |     |     | 0            |        | 0     |        |          |     |     |     |     |
+|     |     |     |     |     |              | f[x    | ,...x | ]− f[x | ,x ,...x | ]   |     |     |     |
+|     |     |     |     | f[x |              | ]=     | 1 n   |        | 0 1      | n−1 |     |     |     |
+|     |     |     |     | 0   | ,x 1 ,...x n |        |       |        |          | .   |     |     |     |
+x −x
+|     |     |     |     |     |     |     |     | n   | 0   |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+∈R,
+Alsonotethefollowingusefulrepresentation,duetoHermite[14]: foranyx ,...,x
+|     |     |     |     |     |     |     |     |     |     | 0   | n   |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+(cid:90)
+|     |     |     |     | f[x ,x ,...,x | ]=  | f   | (n)(s x | +s x | +···+s | x )dns. |     |     |     |
+| --- | --- | --- | --- | ------------- | --- | --- | ------- | ---- | ------ | ------- | --- | --- | --- |
+|     |     |     |     | 0 1           | n   |     | 0 0     | 1    | 1      | n n     |     |     |     |
+∆n
+14
+
+Thisalsoallowstoextendthedefinitionofdivideddifferencetocoincidingpoints.
+Lemma7.3. LetDbeaself-adjointoperatorinHsuchthat(D−i)−s istraceclassforsomes ≥ 0,Risabounded
+operatorinHand f ∈Es. Thent (cid:55)→trf(D+tR)issmoothinaneighborhoodof0withn’thderivative
+dn
+dtn trf(D+tR)| t=0 =n!∑R i1i2 ···R ini1 f ′[λ i1 ,...,λ in ].
+intermsoftheeigenvaluesλ ofD.
+i
+Proof. Since f(D+tR)isdefinedintermsofAraki’sexpansionalformula,wehave
+dn (cid:90) dn
+dtn
+trf(D+tR)|
+t=0
+=
+dtn
+tr(f(cid:98)(ξ)eiξ(D+tR))|
+t=0
+dξ
+(cid:90)
+=n! ∑ R ···R (iξ)nexp[iξλ ,...,iξλ ,iξλ ]f(cid:98)(ξ)dξ
+i1i2 ini1 i1 in i1
+i1,i2,...,in
+=n! ∑ R ···R f[λ ,...,λ ,λ ]. □
+i1i2 ini1 i1 in i1
+i1,i2,...,in
+Remark 7.4. It would be interesting to extend the above definition of the spectral action for not necessarily self-
+adjointperturbationstothecasewherealsotheassumptiononself-adjointnessontheoperatorDisrelaxed. Thishas
+potentialapplicationstoLorentzianspectraltriples,
+Letusnowtakeafunction f suchthat f′′(λ ) = a and f′(λ ) = b ,where a ,b arethecoefficientsofthe
+j j j j j j
+quadraticformasin13. Wethenhave
+d d2
+dt trf(D+tR)| t=0 =∑R jj b j ; dt2 trf(D+tR)| t=0 =∑R ij R ji q ij .
+Proposition7.5. LetH befinite-dimensional. InthenotationofLemma5.7,assume Q = (q ) ≥ 0and Qξ = 0
+ij
+whereγξ =ξ and⟨ξ|η⟩ =1. LetR =−|Dξ⟩⟨η|sothatR =−(Dξ). Thenwehave
+ij i
+d d2
+dt trf(D+tR)| t=0 =⟨Dξ,Dξ⟩ Q ; dt2 trf(D+tR)| t=0 =⟨Dξ,Dξ⟩ Q .
+Proof. The second derivative is reduced to the first derivative because QDξ = −β (cf. Lemma 5.8(i)).
+Indeed,thisyields:
+∑R f ′[λ ,λ ]=−∑ f ′[λ ,λ ](Dξ) =−(QDξ) =b = f ′(λ ).
+ji i j i j j i i i
+j j
+Fromthisitfollowsthat
+∑R R f ′[λ ,λ ]=∑R f ′(λ )= −∑(Dξ) f ′(λ )=∑(Dξ) (QDξ) =⟨Dξ,Dξ⟩ . □
+ij ji i j ii i i i i i Q
+i i i
+APPENDIXA. ANINSTANCEOFTRUNCATIONMATRICES
+Inthisappendixwedescribeanexamplewherethetruncationmatricesadmitsimplemaximalandminimal
+eigenvaluesbutthispropertyfailsinthelimitwherethemaximalandminimaleigenvalueshavemultiplic-
+ity2. WeletL =1andtakethedistributionDoftheform
+(29) D(x) =δ (x)+2πbsin(2πx).
+0
+Wethencomputeψ(x):= 1 (cid:82)1sin(2πx(1−y))D(y)dyas
+π 0
+1 (cid:90) 1 1 sin(2πx) sin(2πx) (cid:18) b (cid:19)
+ψ(x)= sin(2πx)+2b sin(2πy)sin(2πx(1−y))dy = sin(2πx)+b = 1+ .
+π
+0
+π π−πx2 π 1−x2
+Thusonehasψ(n) = 0 forall n ∈ Z, exceptfor n = ±1. Moreoveronegetsψ(−1) = b andψ(1) = −b.
+Thederivativeis
+2bxsin(2πx) 2bcos(2πx)
+ψ′(x)= + +2cos(2πx).
+π(1−x2)2 1−x2
+15
+
+∈Z,notequalto±1,onehas
+Onefindsthatforn
+|     |     |     |     |     |     | ψ′(n)=2+ |     | 2b  |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | -------- | --- | --- | --- | --- | --- | --- |
+1−n2
+=±1onehasψ′(n)=
+| whileforn |     |     |     | b   | +2. |     |     |     |     |     |     |     |
+| --------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+2
+Lemma A.1. Let L = 1 and D be given by (29), Q be the quadratic form Q of (10). The matrix elements q of
+n,m
+Q are given by q = 2δ +bµ , where the matrixµ is independent of b and given byµ = 0, ∀n,m ∈/
+|           |     | n,m    | n,m | n,m |     |     |     |     |     |     |     | n,m |
+| --------- | --- | ------ | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| {−1,0,1}, |     | ̸=mand |     |     |     |     |     |     |     |     |     |     |
+n
+|     |     |     |              |     |  1 | −1  | −1  |     |      |     |                 |     |
+| --- | --- | --- | ------------ | --- | --- | --- | --- | ---- | ---- | --- | --------------- | --- |
+|     |     |     |              |     | 2   |     |     |      |      | 2   |                 |     |
+|     |     | (µ  | )            | =  | −1  | 2   | −1  | , µ | =    | ,   | ∀n ∈/ {−1,0,1}, |     |
+|     |     | n,m | n,m∈{−1,0,1} |     |     |     |     | n,n  | 1−n2 |     |                 |     |
+|     |     |     |              |     | −1  | −1  | 1   |      |      |     |                 |     |
+2
+|     |     |      |      | 1    |         |           |     |      |     | 1    |                   |     |
+| --- | --- | ---- | ---- | ---- | ------- | --------- | --- | ---- | --- | ---- | ----------------- | --- |
+|     | µ   | =µ   | =    |      | , ∀n ∈/ | {−1,0,1}, |     | µ =µ | =   |      | , ∀n ∈/ {−1,0,1}. |     |
+|     |     | n,−1 | −1,n | −1−n |         |           |     | n,1  | 1,n | −1+n |                   |     |
+ThisfollowsfromProposition4.1andtheabovedeterminationofψ(n)andψ′(n). □
+Proof.
+| Thematrixelementsµ |     |     | ofµ,for|n|≤4and|m| |     |     |     | ≤4arethefollowing |     |     |     |     |     |
+| ------------------ | --- | --- | ------------------ | --- | --- | --- | ----------------- | --- | --- | --- | --- | --- |
+n,m
+|     |     |     |    |        |      |     |     |       |      |     |     |     |
+| --- | --- | --- | --- | ------ | ---- | --- | --- | ----- | ---- | --- | ---- | --- |
+|     |     |     | −   | 2      | 0 0  | 1   | 0   | −1    | 0    | 0   | 0    |     |
+|     |     |     |     | 15     |      | 3   |     | 5     |      |     |      |     |
+|     |     |     |    | 0 −1   | 0    | 1   | 0   | −1    | 0    | 0   | 0   |     |
+|     |     |     |    |        | 4    | 2   |     | 4     |      |     |     |     |
+|     |     |     |    | 0      | 0 −2 | 1   | 0   | −1    | 0    | 0   | 0   |     |
+|     |     |     |    |        |      |     |     |       |      |     |     |     |
+|     |     |     |     |        |      | 3   |     | 3     |      |     |      |     |
+|     |     |     |    | 1      | 1 1  | 1   | −1  | −1 −1 | −1   | −1  |     |     |
+|     |     |     |    | 3      | 2    | 2   |     |       | 3    | 4   | 5   |     |
+|     |     |     |    | 0      | 0 0  | −1  | 2   | −1    | 0    | 0   | 0 . |     |
+|     |     |     |    |        |      |     |     |       |      |     |     |     |
+|     |     |     |    |        |      |     |     |       |      |     |     |     |
+|     |     |     |     | − 1 −1 | −1   | −1  | −1  | 1     | 1    | 1   | 1    |     |
+|     |     |     |    | 5      | 4    | 3   |     | 2     |      | 2   | 3   |     |
+|     |     |     |    |        |      | −1  |     | −2    |      |     |     |     |
+|     |     |     |    | 0      | 0 0  |     | 0   | 1     |      | 0   | 0   |     |
+|     |     |     |    |        |      |     | 3   |       | 3    |     |     |     |
+|     |     |     |    | 0      | 0 0  | −1  | 0   | 1     | 0 −1 |     | 0   |     |
+|     |     |     |     |        |      |     | 4   | 2     |      | 4   |      |     |
+|     |     |     |     |        |      | −1  |     | 1     |      | −   | 2    |     |
+|     |     |     |     | 0      | 0 0  |     | 0   |       | 0    | 0   |      |     |
+|     |     |     |     |        |      |     | 5   | 3     |      |     | 15   |     |
+1 1
+Letthenξbethevectorwithcoordinatesξ(n)= forn ̸=−1whileξ(−1)=0,andηwithη(n) =
+1+n −1+n
+forn ̸=1,whileη(1)=0. AlsolettheU formthecanonicalorthonormalbasis. Thusonehas
+n
+|     |     |     |     |     |       | 1   |       |      | 1   |     |     |     |
+| --- | --- | --- | --- | --- | ----- | --- | ----- | ---- | --- | --- | --- | --- |
+|     |     |     |     | ξ = | ∑     |     | U , η | = ∑  |     | U . |     |     |
+|     |     |     |     |     |       | 1+n | n     | −1+n |     | n   |     |     |
+|     |     |     |     |     | n̸=−1 |     |       | n̸=1 |     |     |     |     |
+Thefunctionscorrespondingtothesevectorsare
+|            |     |        |       | (cid:18) | (cid:19)    |     |         |           | (cid:18) |     | (cid:19)   |     |
+| ---------- | --- | ------ | ----- | -------- | ----------- | --- | ------- | --------- | -------- | --- | ---------- | --- |
+|            |     |        |       |          | 1           |     |         |           |          |     | 1          |     |
+|            |     | ξ(x)   | =−2πi | x−       | exp(−2πix), |     |         | η(x)=−2πi |          | x−  | exp(2πix). |     |
+|            |     |        |       |          | 2           |     |         |           |          |     | 2          |     |
+| Onehasξ(x) |     | =−η(x) |       |          |             |     |         |           |          |     |            |     |
+|            |     |        |       | k        |             |     | k2−3k−2 |           |          |     |            |     |
+1
+|     |     |     |     | ∑ξ(n)η(n)= |     |     |         | , ⟨ξ | |η⟩= | .   |     |     |
+| --- | --- | --- | --- | ---------- | --- | --- | ------- | ---- | ---- | --- | --- | --- |
+|     |     |     |     |            |     |     | 2k(k+1) |      |      | 2   |     |     |
+−k
+Weconsidertherank4matrixgivenby
+|                    |     |     |              | R :=|η⟩⟨U |     | |+|U    | ⟩⟨η|−|ξ⟩⟨U−1 |         | |−|U−1 | ⟩⟨ξ|. |         |     |
+| ------------------ | --- | --- | ------------ | --------- | --- | ------- | ------------ | ------- | ------ | ----- | ------- | --- |
+|                    |     |     |              |           | 1   |         | 1            |         |        |       |         |     |
+| ItsmatrixelementsR |     |     | n,m fulfillR | n,m       | =0, | ∀n,m ∈/ | {−1,1},while |         |        |       |         |     |
+|                    |     |     | =            | =η(n),    |     |         | =            | =−ξ(n), |        | ∀n ∈/ | {−1,1}. |     |
+|                    |     |     | R n,1        | R 1,n     |     | R n,−1  | R−1,n        |         |        |       |         |     |
+ThecorrespondingSchwartzkernelr(x,y)isgivenby
+r(x,y) =η(x)exp(−2πiy)−exp(2πix)ξ(y)−ξ(x)exp(2πiy)+exp(−2πix)η(y).
+16
+
+LemmaA.2. (i)LetDbethediagonalmatrixwithdiagonalelementsd = 2 forn2 ̸=1andd = 1 forn2 =1.
+|     |     |     |     |     |     |     | n 1−n2 n 2 |     |
+| --- | --- | --- | --- | --- | --- | --- | ---------- | --- |
+Onethenhasµ = D+R.
+(ii)TheoperatorDisgivenbytheconvolutionamongperiodicfunctionswithperiod1bythefunction
+1
+|     |     | α(x):=−4π(x− |     |     | )sin(2πx), |     | ∀x ∈[0,1). |     |
+| --- | --- | ------------ | --- | --- | ---------- | --- | ---------- | --- |
+2
+Proof. (i)ThisfollowsfromLemmaA.1.
+∈Z,n
+(ii)Onehas,forn ̸=±1,
+|     |     |            | (cid:18) | (cid:19)            |     |     |     |     |
+| --- | --- | ---------- | -------- | ------------------- | --- | --- | --- | --- |
+|     |     | (cid:90) 1 |          | 1                   |     |     | 1   |     |
+|     |     | 2π         | x−       | sin(2πx)cos(2πnx)dx |     |     | = . |     |
+n2−1
+|     |     | 0   |     | 2   |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+□
+| whilethevalueofthisintegralis−1 |     |     | forn | =±1. |     |     |     |     |
+| ------------------------------- | --- | --- | ---- | ---- | --- | --- | --- | --- |
+4
+functionα(x)
+Note that the needs to be viewed as a periodic function of period 1 and this requires rein-
+terpretingtheterm x− 1 as x−E(x)− 1 where E(x)istheintegerpartof x ∈ R. Thisplaysaroleinthe
+|     | 2   |     | 2   |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+formulafortheconvolution,whichis
+(cid:90) 1
+|     |     |     | D(f)(x)= |     | α(x−y)f(y)dy. |     |     |     |
+| --- | --- | --- | -------- | --- | ------------- | --- | --- | --- |
+0
+Onehas
+|     | sin(2π(x−y))= |     |     | −cos(2πx)sin(2πy)+sin(2πx)cos(2πy) |     |     |     |     |
+| --- | ------------- | --- | --- | ---------------------------------- | --- | --- | --- | --- |
+sothat
+1
+α(x−y) =−4π(x−y−E(x−y)− )(−cos(2πx)sin(2πy)+sin(2πx)cos(2πy))
+2
+and the only term which does not separate as a product of functions of x by a function of y is the term
+involving E(x−y)whichisequalto0if y ≤ xandto−1if y > x. Infactitismoresymmetrictoaddthe
+| 1 E(x−y)whichcoincideswith |     |     | 1Sign(x−y). |     |     |     |     |     |
+| -------------------------- | --- | --- | ----------- | --- | --- | --- | --- | --- |
+to Theothercontributionsaregivenbythe4termswhich
+2 2
+are,uptotheoverallfactor−2π,
+|     | (−i)xe | −2iπ(y−x)+ixe2iπ(y−x)−iye2iπ(y−x)+iye |     |     |     |     | −2iπ(y−x) |     |
+| --- | ------ | ------------------------------------- | --- | --- | --- | --- | --------- | --- |
+which,takingintoaccountthefactor−2π canberewrittenas
+−η(x)exp(−2iπy)+ξ(x)exp(2iπy)−exp(−2iπx)η(y)+exp(2iπx)ξ(y)
+We thus see that these terms cancell the rank 4 additional contribution R and thus we get the following
+simpleformulafortheSchwartzkernelµ(x,y)oftheoperatorµ,
+PropositionA.3. (i)Theoperatorµisgivenbytheformula
+(cid:90) 1
+|     |     | µ(f)(x)=2π |     | Sign(x−y)sin(2π(x−y))f(y)dy. |     |     |     |     |
+| --- | --- | ---------- | --- | ---------------------------- | --- | --- | --- | --- |
+0
+(ii) In general the Schwartz kernel of the operator associated to the distribution D is equal to the restriction to
+x,y ∈[0,L]ofD(|x−y|).
+Proof. (i)Followsfromtheabovecomputation.
+(ii)By(7)onehasforsmooth f,gwithsupportin[0,L],
+|     | (cid:90) | L   |     |     |     |     | (cid:90) L |     |
+| --- | -------- | --- | --- | --- | --- | --- | ---------- | --- |
+Q(f,g) = ((g ∗∗ f)(y)+(g ∗∗ f)(−y))D(y)dy = (g ∗∗ f)(y)D(|y|)dy
+|     | 0   |     |     |     |     |     | −L  |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+whereoneneedstobecarefulindoublingthecoefficientofδ 0 inD(|y|).Thisformuladoesnotchangeifone
+replaces f(x)by f(x+ 1)and g(x)by g(x+ 1),shiftingtheirsupportstothesymmetricinterval[−L, L].
+|     | 2   |     |     | 2   |     |     |     | 2 2 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+ThenQ(f,g) = 0when f andghaveoppositeparity. Onethenusestheformulaforthreefunctions f,g,h,
+heven
+| (cid:90) L |              |          | (cid:90)        |     |                 |         | (cid:90)           |     |
+| ---------- | ------------ | -------- | --------------- | --- | --------------- | ------- | ------------------ | --- |
+| (g ∗∗      | f)(y)h(−y)dy |          | =               |     | g ∗(x)f(y)h(z)ω |         | = g(x)f(y)h(z)dxdy |     |
+| −L         |              |          | x+y+z=0         |     |                 |         | x=y+z              |     |
+|            |              | (cid:90) | (cid:90)        |     |                 |         |                    |     |
+|            |              | = g(x)   | k(x,y)f(y)dydx, |     |                 | k(x,y)= | h(x−y)             |     |
+whereωisthemeasureontheplanex+y+z =0givenby|dx∧dz|= |dx∧dy|. □
+17
+
+OnecantheninvestigatenumericallythezerosofthepolynomialsP±(s)associatedby(21)totheeigenvec-
+n
+torsforthelargestandsmallesteigenvaluesofthematrixµ(n)ofsize2n+1,whichisthecompressionof
+thematrixµ,
+|     |     |     |     | µ(n) | :=µ | , ∀i,j | ∈{−n,...,n}. |     |     |     |
+| --- | --- | --- | --- | ---- | --- | ------ | ------------ | --- | --- | --- |
+|     |     |     |     |      | i,j | i,j    |              |     |     |     |
+Forn =1,thismatrixissimply
+|     |     |     |     |     |     |  1 |     |    |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|     |     |     |     |     |     |     | −1  | −1  |     |     |
+2
+|     |     |     |     | µ(1)= |     | −1  | 2   | −1 . |     |     |
+| --- | --- | --- | --- | ------ | --- | --- | --- | ----- | --- | --- |
+1
+|     |     |     |     |     |     | −1  | −1  |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+2
+Itsthreeeigenvaluesare
+|     |     |     |     | (cid:26) |           |          |              |     | (cid:17)(cid:27) |     |
+| --- | --- | --- | --- | -------- | --------- | -------- | ------------ | --- | ---------------- | --- |
+|     |     |     |     | 1        | (cid:16)√ | (cid:17) | 3 1 (cid:16) | √   |                  |     |
+|     |     |     |     |          | 57+3      |          |              | 3−  |                  |     |
+|     |     |     |     |          |           |          | , ,          | 57  |                  |     |
+|     |     |     |     | 4        |           |          | 2 4          |     |                  |     |
+andthecorrespondingeigenvectorsare
+|     |     |     |     |     |    |     | √   |    |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+−3√−
+|     |     |     |     |     | 1   |     | 57  | 1   |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+57−9
+|     |     |     |     |     |     |     |      |     |     |     |
+| --- | --- | --- | --- | --- | ---- | --- | ---- | ---- | --- | --- |
+|     |     |     |     |     |  −1 |     | 0    | 1 . |     |     |
+|     |     |     |     |     |     |     | √    |     |     |     |
+|     |     |     |     |     |      | −−√ | 57−3 |      |     |     |
+|     |     |     |     |     | 1    |     |      | 1    |     |     |
+57+9
+±(s)aregivenby
+ThepolynomialsP
+1
+|     |          | (cid:16)√ |      |          | √     |     |          |     | (cid:16)√ | √    |
+| --- | -------- | --------- | ---- | -------- | ----- | --- | -------- | --- | --------- | ---- |
+|     |          |           |      | (cid:17) |       |     |          |     | (cid:17)  |      |
+|     | P +(s)=3 |           | 57−7 | s2−      | 57+3, |     | P −(s)=3 |     | 57+7 s2−  | 57−3 |
+|     | 1        |           |      |          |       |     | 1        |     |           |      |
+andtheirrootsarerealandarealgebraicnumbers.
+The numerical study of the eigenvalues and eigenvectors of µ(n) indicates that the largest and smallest
+eigenvaluesaresimpleforfiniten,andthatinthelimitwhenn → ∞thefollowingoccurs:
+| FactA.4. (i)Thefunctionsrealizingthemaximumofthematrixµare |     |     |                 |     |     |                 |     |     |            |     |
+| ---------------------------------------------------------- | --- | --- | --------------- | --- | --- | --------------- | --- | --- | ---------- | --- |
+|                                                            |     |     | f +(x)=sin(πx), |     |     | f −(x)=cos(πx), |     |     | ∀x ∈[0,1]. |     |
+(ii)Thefunctionsrealizingtheminimumofthematrixµare
+|     |     |     | g +(x)=sin(3πx), |     |     | g −(x)=cos(3πx), |     |     | ∀x ∈[0,1]. |     |
+| --- | --- | --- | ---------------- | --- | --- | ---------------- | --- | --- | ---------- | --- |
+OnecanthendeducetherelevantpropertiesoftheFouriertransformsasfollows.
+|     | (i)TheFouriertransformsh± |     |     |     |     | ofthefunctions |     | f±(x+ | 1)aregivenby |     |
+| --- | ------------------------- | --- | --- | --- | --- | -------------- | --- | ----- | ------------ | --- |
+PropositionA.5.
+2
+|                            |     |     |                     |     |       | (cid:0)s(cid:1) |              |        | (cid:0)s(cid:1) |     |
+| -------------------------- | --- | --- | ------------------- | --- | ----- | --------------- | ------------ | ------ | --------------- | --- |
+|                            |     |     |                     |     | 2πcos |                 |              | 2iscos |                 |     |
+|                            |     |     | h +(s)=             |     |       | 2 ,             | h −(s)=      |        | 2 .             |     |
+|                            |     |     |                     |     | π2−s2 |                 |              | π2−s2  |                 |     |
+| (ii)TheFouriertransformsk± |     |     | ofthefunctionsg±(x+ |     |       |                 | 1)aregivenby |        |                 |     |
+2
+|     |     |     |       |     | 6πcos  | (cid:0)y(cid:1) |        |        | (cid:0)y(cid:1) |     |
+| --- | --- | --- | ----- | --- | ------ | --------------- | ------ | ------ | --------------- | --- |
+|     |     |     | +(y)= |     |        |                 | −(y)=− | 2iycos |                 |     |
+|     |     |     | k     |     |        | 2 ,             | k      |        | 2 .             |     |
+|     |     |     |       |     | 9π2−y2 |                 |        | y2−9π2 |                 |     |
+(iii)Thefunctionsh±,k± areentirefunctionsallofwhosezerosarereal,andgivenbyalloddmultiplesofπ except
+| forh+,±3π | fork+ | andincluding0forh− |     |     | andk−. |     |     |     |     |     |
+| --------- | ----- | ------------------ | --- | --- | ------ | --- | --- | --- | --- | --- |
+±π
+| (iv)Themaximalandminimaleigenvaluesofthematrixµare |     |     |     |     |     |     | 8   | and−8. |     |     |
+| -------------------------------------------------- | --- | --- | --- | --- | --- | --- | --- | ------ | --- | --- |
+|                                                    |     |     |     |     |     |     | 3   |        | 5   |     |
+=1,2
+|                                                     |     |     | APPENDIXB. |     | EXPLICITCHECKSFOR |     |     |       | N   |     |
+| --------------------------------------------------- | --- | --- | ---------- | --- | ----------------- | --- | --- | ----- | --- | --- |
+| WegiveconcreteproofsofTheorem5.6inthesimplestcasesN |     |     |            |     |                   |     |     | =1,2. |     |     |
+18
+
+∈R,
+B.1. CaseN =1. ForN =1itisenoughtotreatthefollowingmatrix M(c)forc
+|      |     |     |     |     |        |      |    |     |     |
+| ---- | --- | --- | --- | --- | ------ | ----- | --- | --- | --- |
+|      |     |     |     |     |        | 0 −1  | −1  |     |     |
+|      |     |     |     |     | M(c)= | −1    | −1  |     |     |
+| (30) |     |     |     |     |        | c     | .  |     |     |
+|      |     |     |     |     |        | −1 −1 | 0   |     |     |
+Thethreeeigenvaluesare
+|     |     |     | (cid:26) 1 | (cid:16) (cid:112) |     | (cid:17) 1 | (cid:16)(cid:112) | (cid:17)(cid:27) |     |
+| --- | --- | --- | ---------- | ------------------ | --- | ---------- | ----------------- | ---------------- | --- |
+|     |     |     |            | − c2+2c+9+c−1      |     |            | c2+2c+9+c−1       |                  |     |
+|     |     |     | 1,         |                    |     | ,          |                   |                  |     |
+|     |     |     | 2          |                    |     | 2          |                   |                  |     |
+andtheirdependenceoncisasfollows:
+4
+2
+|     |     |     |     | -4  |     | -2  | 2 4 |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+-2
+-4
+-6
+Thecorrespondingeigenvectorsare
+|     |    | −1  |    |     | √   |     |     | √   |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+0 1
+|     |     |        |      |        | −           | c2+2c+9+c−3 |          | − c2+2c+9−c+3 |     |
+| --- | --- | ------ | ---- | ------ | ----------- | ----------- | -------- | ------------- | --- |
+|     |    | 1 X(c) | 1 , | X(c)=− | √           |             | , Y(c)=− | √             |     |
+|     |     | 1 Y(c) | 1    |        | c2+2c+9+c+3 |             |          | c2+2c+9−c−3   |     |
+andthedependenceofX(c),Y(c)oncisasfollows:
+4
+2
+|     |     |     |     | -4  |     | -2  | 2 4 |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+-2
+-4
+-6
+TheFouriertransformofthevector(1,x,1)isgivenbythefunctionofsequaltos2(−x)−2s2+4π2x,and
+thusitsrootsarerealexactlywhenx(x+2) ≥ 0. Thisfailswhen−2 < x < 0,andthisisrealizedbyY(c)
+| forc | <0. |     |     |     |     | y(c)fulfillsforc | <0  |     |     |
+| ---- | --- | --- | --- | --- | --- | ---------------- | --- | --- | --- |
+Butthecorrespondingeigenvalue
+|     |     | 1 (cid:16) | (cid:112)     |     | (cid:17) |              | 1 (cid:16)(cid:112) |     | (cid:17) |
+| --- | --- | ---------- | ------------- | --- | -------- | ------------ | ------------------- | --- | -------- |
+|     |     |            | − c2+2c+9+c−1 |     | =        | x(c) < y(c)= | c2+2c+9+c−1         |     | <1       |
+|     |     | 2          |               |     |          |              | 2                   |     |          |
+asshownbythegraphsforc <0,wherex(c)appearsinblue,and y(c)remainsbetweenx(c)and1.
+1
+|     |     |     |     | -5  | -4  | -3 -2 | -1  |     |     |
+| --- | --- | --- | --- | --- | --- | ----- | --- | --- | --- |
+-1
+-2
+-3
+-4
+-5
+19
+
+Wethusget
+ForanydistributionD the3×3matrixq ∈ {−1,0,1}hasthepropertythatthe
+PropositionB.1. n,m wheren,m
+zerosoftheFouriertransformsoftheeigenvectorscorrespondingtotheextremaleigenvaluesarereal.
+Proof. Notefirstthatitisenoughtoprovetheresultforthespecificmatrix M(c)of(30). Indeedingeneral
+the3×3matrix R = q wheren,m ∈ {−1,0,1}hasallitsoff-diagonalentriesgivenbyProposition4.1,
+n,m
+andtheyonlydependuponψ(1)=: asinceψ(0) =0andψ(−1) =−ψ(1) =−a.
+Thisshows
+ψ(n)−ψ(m)
+|     |     |     | = a, ∀n,m | ∈{−1,0,1},|n |     |     | ̸=m. |     |
+| --- | --- | --- | --------- | ------------ | --- | --- | ---- | --- |
+n−m
+Ifa =0theeigenvectorscorrespondingtotheextremaleigenvaluesofRareelementsofthebasis,andtheir
+Fouriertransformis,by(20)amultipleof
+sin(s/2)
+, n ∈{−1,0,1}
+s/2−nπ
+=−1.
+whosezerosareallreal. Wecanthusassumethata ThediagonalvaluesofRareanevenfunctionof
+n ∈ {−1,0,1}andthusbyaddingascalarmultipleoftheidentitymatrixonecanassumethattheyareof
+theform{0,c,0}forsomec ∈R. LetusnowprovetheresultforthespecificmatrixM(c)of(30). Thevalue
+of X(c)isalwayspositiveandthustheFouriertransformofthevector(1,X(c),1)hasallitsrootsrealfor
+anyvalueofc. ThevalueofY(c)belongstotheforbiddeninterval(−2,0)exactlywhenc < 0,butinthis
+y(c) x(c)
+casethecorrespondingeigenvalue failstobeextremalsinceitisstrictlybetweenthetwoothers
+□
+and1.
+B.2. ConvexityproofofPropositionB.1. WeconsiderthepositiveconeC+inthelinearspaceCofmatrices
+oftheform
+|     |     |            |     |    |       |     |     |     |
+| --- | --- | ---------- | --- | --- | ------ | --- | --- | --- |
+|     |     |            |     | a   | c c    |     |     |     |
+|     |     | µ(a,b,c)= |     | c   | b c . |     |     |     |
+|     |     |            |     | c   | c a    |     |     |     |
+Wefirstrewritethismatrixintermsofthetwoorthogonalprojections
+|     |     |    |       |     |    |     |    |     |
+| --- | --- | --- | ------ | --- | --- | --- | --- | --- |
+|     |     | 0   | 0 0    |     | 1   | 1 1 |     |     |
+|     |     |     |        |     | 3   | 3 3 |     |     |
+|     | =  |     |        | =  | 1   | 1 1 |     |     |
+|     | P   | 0   | 1 0 , | Q   |     |     |    |     |
+|     |     |     |        |     | 3   | 3 3 |     |     |
+|     |     | 0   | 0 0    |     | 1   | 1 1 |     |     |
+|     |     |     |        |     | 3   | 3 3 |     |     |
+andtheidentitymatrix1 . Onegets
+3
+|     | (b−a)P+3cQ+(a−c)1 |     |     |     | =µ(a,b,c) |     |     |     |
+| --- | ----------------- | --- | --- | --- | --------- | --- | --- | --- |
+3
+TherangesoftheprojectionsP,Qgeneratethetwodimensionalsubspace Swhichistheorthogonalofthe
+vector v = (1,0,−1) which belongs to the kernel of P and Q. The angle of the two projections P,Q is
+determinedbyitssinesquare,
+|        |     |  1 | 0 1  |      |      |  1 | 0 1   |     |
+| ------ | --- | --- | ----- | ---- | ---- | --- | ------ | --- |
+|        |     | 3   | 3     |      |      |     |        |     |
+| (P−Q)2 |     |     |       | 2    |      | 2   | 2      |     |
+|        | =  | 0   | 2 0  | = E, | E = | 0   | 1 0 , |     |
+|        |     |     | 3     | 3    |      |     |        |     |
+|        |     | 1   | 0 1   |      |      | 1   | 0 1    |     |
+|        |     |     |       |      |      | 2   | 2      |     |
+|        |     | 3   | 3     |      |      |     |        |     |
+where we denote by E the orthogonal projection on E. By construction E commutes with µ(a,b,c). We
+|     |     |     |     | =   | (0,1,0) |     | = (√1 | √1 ). |
+| --- | --- | --- | --- | --- | ------- | --- | ----- | ----- |
+taketheorthonormalbasisof E givenbythevectors v 1 and v 2 ,0, Inthisbasisthe
+|     |     |     |     |     |     |     | 2   | 2   |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+projectionsP,Qaregivenbythematrices
+|     |     |          |          | (cid:32) | √   | (cid:33) |     |     |
+| --- | --- | -------- | -------- | -------- | --- | -------- | --- | --- |
+|     |     | (cid:18) | (cid:19) |          | 1   | 2        |     |     |
+1 0
+|     | p   | =   |     | , q = | √3  | 3 . |     |     |
+| --- | --- | --- | --- | ----- | --- | --- | --- | --- |
+|     |     |     | 0 0 |       | 2   | 2   |     |     |
+|     |     |     |     |       | 3   | 3   |     |     |
+Anyrealsymmetric2×2matrixcanbewrittenas
+| (cid:18) | (cid:19) | (cid:16) | √     | (cid:17) |      |       | √      |     |
+| -------- | -------- | -------- | ----- | -------- | ---- | ----- | ------ | --- |
+| x        | y        | 1        |       |          | 3y   |       |        |     |
+|          | =        | 2x+      | 2y−2z |          | p+ √ | q+(z− | 2y)1 . |     |
+| y        | z        | 2        |       |          |      |       | 2      |     |
+2
+20
+
+LemmaB.2. (i) Themapρ : C → End(E) givenbyρ(T) := ETE isanisomorphismof C withthelinearspace
+S(E)ofselfadjointrealmatricesinE.
+(ii)Theimageρ(C+ )istheintersectionoftheconeS(E) + ofpositiveelementsofS(E),withthehalfspaceH,
+|       |     | (cid:18) | (cid:19) | √          |     |     |      |
+| ----- | --- | -------- | -------- | ---------- | --- | --- | ---- |
+|       |     |          | x y      |            |     |     |      |
+|       |     | H :={    |          | | z ≥ 2y}. |     |     |      |
+|       |     |          | y z      |            |     |     |      |
+| (iii) |     |          |          | ρ          |     |     | S(E) |
+The extreme rays of C+ are transformed by the isomorphism into those extreme rays of + which are
+includedinH.
+∂H
+o
+|     |     |     | (C ) |     |     |     |     |
+| --- | --- | --- | ---- | --- | --- | --- | --- |
++
+PropositionB.3. TheelementsT =µ(a,b,c)∈C+ whichhaveanon-zerokernelareofthreekinds:
+(1) Ifa > 0,thenTisonanextremerayofC+,itsrestrictiontoEisapositivemultipleofarankoneprojection
+whosekernelcoincideswiththekernelofT.
+(2) Ifa =0andTisnotonanextremerayofC+,thekernelofTisonedimensional,equaltoRv,v =(1,0,−1).
+(3) Ifa =0andTisonanextremerayofC+,thekernelofTis2-dimensional,
+UsingthispropositiononeobtainsanotherproofofPropositionB.1.
+B.3. ThecaseN =2. WeareconsideringthelinearspaceCofrealsymmetricmatricesoftheform
+|     |              |      |       |       |     |    |     |
+| --- | ------------ | ----- | ----- | ----- | --- | --- | --- |
+|     |              | t+z   | b−a   | b a+b | b   |     |     |
+|     |              |       |       | 2 3   | 2   |     |     |
+|     |              |  b−a | t+y   | a a   | a+b |    |     |
+|     |              |      |       |       | 3   |    |     |
+|     |              | =    | b     |       | b   | .  |     |
+|     | µ(a,b,y,z,t) |       | a     | t a   |     |     |     |
+|     |              |      | 2     |       | 2   |    |     |
+|     |              |  a+  | b a   | a t+y | b−a |    |     |
+|     |              |      |       |       |     |    |     |
+|     |              |       | 3 a+b |       |     |     |     |
+|     |              |       | b     | b b−a | t+z |     |     |
+|     |              |       | 2 3   | 2     |     |     |     |
+TheblockdecompositionusingthesubspaceEfor N = 1worksingeneralandcorrespondstotherestric-
+tiontoevenandoddvectors,comingfromthecommutativityofµ(a,b,y,z,t)withthesymmetry
+|     |     |      |       |     |      |     |     |
+| --- | --- | ----- | ----- | ---- | ---- | --- | --- |
+|     |     | 0 0   | 0 0 1 |      |      |     |     |
+|     |     |  0 0 | 0 1 0 |     |      |     |     |
+|     |     | =    |       |  J2 | =Id. |     |     |
+|     | J   |  0 0 | 1 0 0 | ,   |      |     |     |
+|     |     |      |       |     |      |     |     |
+|     |     |  0 1 | 0 0 0 |     |      |     |     |
+|     |     | 1 0   | 0 0 0 |      |      |     |     |
+Wetaketheorthonormalbasisofevenvectors,i.e.E :={ξ | Jξ =ξ}givenby
+|     |                 |        | 1       | 1      | 1           | 1   |     |
+| --- | --------------- | ------ | ------- | ------ | ----------- | --- | --- |
+|     | e =(0,0,1,0,0), | e =(0, | √ ,0, √ | ,0), e | =(√ ,0,0,0, | √ ) |     |
+|     | 1               | 2      |         | 3      |             |     |     |
+|     |                 |        | 2       | 2      | 2           | 2   |     |
+21
+
+andobtainthefollowingmatrixfortherestrictionofµ(a,b,y,z,t)toE,
+√
+ t 2a √b 
+√ 2
+σ(a,b,y,z,t) = 2a a+y+t −2(a−2b) .
+ 3 
+√b −2(a−2b) b +z+t
+2 3 2
+Fortheoddvectorswetaketheorthonormalbasisgivenby
+1 1 1 1
+n =(√ ,0,0,0,−√ ), n =(0, √ ,0,−√ ,0)
+1 2
+2 2 2 2
+andobtainthefollowingmatrixfortherestrictionofµ(a,b,y,z,t)
+(cid:18) 1(2z−b)+t −2(2a−b) (cid:19)
+α(a,b,y,z,t) = 2 3 .
+−2(2a−b) −a+t+y
+3
+Wenowinvestigatepositivematricesµ(a,b,y,z,t)whosekernelcontainsthevectorξ =ue +ve +we ∈
+1 2 3
+E. Thisconditionspecifiesa2-dimensionalsubspaceK(u,v,w)ofCoftheform
+(cid:16) √ (cid:17) (cid:16) √ √ (cid:17)
+bw 3 2v−8u a 3 2u2+3uv−2uw−3 2v2
+K ={η =(a,b,y,z,t) | y → − ,
+6uv 3uv
+(cid:16) √ (cid:17) (cid:16) √ √ (cid:17) √
+av 2u+3 2w b 3 2u2+8uv+3uw−3 2w2
+2av bw
+z → − ,t → − − √ }
+3uw 6uw u 2u
+and one needs to decide if this subspace contains a positive element of C. A 2×2 hermitian matrix is
+positiveifandonlyifitstworealeigenvaluesarepositive,andthisisequivalenttothepositivityofitstrace
+andofitsdeterminant. Oneappliesthistothematrixα(η)andtotherestrictionofσ(η)totheorthogonal
+ofthevectorξ. Oneobtainsinthismannerthefollowing4"positivityconditions":
+(1) Traceofα≥0
+√ √
+3 2au+6av−2aw+4bw −4av+3 2bu+8bv+6bw
+− − ≥0
+3v 6w
+.
+(2) Detofα≥0.
+(cid:16)√ (cid:17) (cid:16) √ (cid:17) (cid:16)√ (cid:17)
+−2a2v 2u+2(v+w) +ab 3u2+ 2u(7v+2w)+8v2+6vw−2w2 +2b2w 2u+2(v+w)
+≥0
+3vw
+(3) Traceofσ ≥0
+(cid:16) √ (cid:0) (cid:1) (cid:17) (cid:16) √ (cid:0) (cid:1) (cid:17)
+2a −3u2w+ 2u v2+w2 −3v2w −b 3u2v+4 2u v2+w2 +3vw2
+√ ≥0
+3 2uvw
+.
+(4) Detofσ ≥0.
+(cid:0) (cid:1)(cid:16) √ (cid:16)√ (cid:17) √ (cid:17)
+u2+v2+w2 2 2a2v+ab 2(w−4v)−3u −2 2b2w
+− ≥0
+3uvw
+.
+Ontheotherhandthepolynomialassociatedtoξ =ue +ve +we ∈ Eis
+1 2 3
+√ √ √ √
+P(s)=s4u+ 2s4v+ 2s4w−20π2s2u−16 2π2s2v−4 2π2s2w+64π4u
+whichdependsonlyons2 andhasrealrootswhenthedegree2polynomial
+√ √ √ √
+ux2−20π2ux+64π4u+ 2vx2−16 2π2vx+ 2wx2−4 2π2wx
+22
+
+haspositiveroots,i.e.equivalentlythatthesumandproductoftherootsarepositive,whichgivesthetwo
+conditions2
+|     |     |     |     | √   |         |     | √   | √   |     |     |     |     |     |
+| --- | --- | --- | --- | --- | ------- | --- | --- | --- | --- | --- | --- | --- | --- |
+|     |     |     |     | 5u+ | 2(4v+w) |     | u+  | 2v+ |     |     |     |     |     |
+2w
+| (31) |     |     |     |     |     | >0, |     |     | >0. |     |     |     |     |
+| ---- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|      |     |     |     |     | u   |     |     | u   |     |     |     |     |     |
+Infactwecanassumethat w ̸= 0 sinceotherwiseoneisreducedtothecase n = 1. Thuswetake w = 1,
+and(31)isreducedtothefollowingcases:
+|      |          |     | √   |                   |      |        |      | √   |                   |          |     | √   |          |
+| ---- | -------- | --- | --- | ----------------- | ---- | ------ | ---- | --- | ----------------- | -------- | --- | --- | -------- |
+|      | (cid:32) |     |     | (cid:33) (cid:32) |      | √      |      |     | (cid:33) (cid:32) | √        |     |     | (cid:33) |
+|      |          | −u− |     | 2                 |      |        | −5u− |     | 2                 |          | −u− |     | 2        |
+| (32) | u <0∧v   | <   | √   | ∨                 | 0 <u | <3 2∧v | >    | √   | ∨                 | u ≥3 2∧v | >   | √   | .        |
+|      |          |     | 2   |                   |      |        |      | 4 2 |                   |          |     | 2   |          |
+4
+u≥0
+|     |     |     |     | 2 v=-1-u/ |     | 2   |     |     |     |     |     |     |     |
+| --- | --- | --- | --- | --------- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+2,0)
+|     |     |     |     | 0   | (-  |     |     |     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+1 5u
+|     |     |     | -2  |     |     | v=- | -   |     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+4
+|     |     |     |     |     |     |     | 4 2 |     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+u≤0
+|     |     |     | -4  |     |     |     | (3      | 2,-4) |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | ------- | ----- | --- | --- | --- | --- | --- |
+|     |     |     |     |     |     |     | v=-1-u/ |       | 2   |     |     |     |     |
+-6
+-8
+|     |     |     |     | -4  | -2  | 0   | 2 4 |     | 6 8 |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+This shows the region of the (u,v) plane near the origin which ensures that the zeros of the associated
+polynomialParereal.
+Wenowreducetheabove4positivityconditions,andcomparethemwith(32).
+√
+u ≤− 2. Inthiscasethereductionoftheabove4positivityconditionsgives
+|     |     |     | (cid:18) |     |     | (cid:16)√ | (cid:17)(cid:19)(cid:13) |     | √   |     |     |     |     |
+| --- | --- | --- | -------- | --- | --- | --------- | ------------------------ | --- | --- | --- | --- | --- | --- |
+1
+|     |     |     | v <0∨0 |     | <v < | 2(−u)−2 |     | (cid:13)u =− | 2∧v | <0  |     |     |     |
+| --- | --- | --- | ------ | --- | ---- | ------- | --- | ------------ | --- | --- | --- | --- | --- |
+(cid:13)
+2
+whichimplies(32).
+√
+| −   | <u <0. |                                                            |     |     |     |     |           |     |          |     |     |     |     |
+| --- | ------ | ---------------------------------------------------------- | --- | --- | --- | --- | --------- | --- | -------- | --- | --- | --- | --- |
+|     | 2      | Inthiscasethereductionoftheabove4positivityconditionsgives |     |     |     |     |           |     |          |     |     |     |     |
+|     |        |                                                            |     |     | √   |     | (cid:16)√ |     | (cid:17) |     |     |     |     |
+1
+|     |     |     |     | −   | 2 <u | <0∧v < |     | 2(−u)−2 |     |     |     |     |     |
+| --- | --- | --- | --- | --- | ---- | ------ | --- | ------- | --- | --- | --- | --- | --- |
+2
+whichimplies(32).
+2 Weusethereciprocalpolynomial
+23
+
+√
+0 <u <3 2. Inthiscasethereductionoftheabove4positivityconditionsgives
+(cid:32) √ (cid:32) √ √ (cid:33)(cid:33) (cid:32) √ (cid:33)
+2 1 (cid:16) √ (cid:17) 3 u 2
+0 <u < ∧ −3 2u−2 + √ <v <0∨v >0 ∨ u = ∧v >0
+3 8 24 2 3
+(cid:32)√ (cid:32) √ √ (cid:33)(cid:33)
+2 √ 1 (cid:16) √ (cid:17) 3 u
+∨ <u ≤3 2∧ −3 2u−2 + √ <v <0∨v >0
+3 8 24 2
+andthesolutionsformtheuppergraphofthefunction
+√ √
+1 (cid:16) √ (cid:17) 3 u
+f(u) = −3 2u−2 + √ .
+8 24 2
+√
+Thustocomparewith(32)weneedtoseeifthegraphof f intheinterval[0,3 2]isabovethegraphofthe
+functionv =− 5√u − 1. Thisisshownbythefollowing
+4 2 4
+1 2 3 4
+v=f(u)
+-1
+1 5u
+v=- -
+-2
+4 4 2
+-3
+-4
+√
+u >3 2. Inthiscasethereductionoftheabove4positivityconditionsgives
+(cid:32) √ √ √ √ (cid:33)
+1 (cid:16)√ (cid:17) 1 (cid:16) √ (cid:17) 3 u 1 (cid:16) √ (cid:17) 3 u
+2(−u)−2 <v < −3 2u−2 − √ ∨ −3 2u−2 + √ <v <0∨v >0 .
+2 8 24 2 8 24 2
+√
+Inthefirstpart,thecondition−1−u/ 2 < vimplies(32). Thesecondconditionmeansthatoneisabove
+√
+thegraphofthefunction f(u). Thusweneedtoshowthatforu > 3 2thegraphof f isabovethegraph
+√
+of−1−u/ 2. Thisfollowsfromtheinequalityoftheslopes
+√ √
+−3 2/8 >−1/ 2
+andthefollowing
+-1 5 6 7 8 9 10
+v=f(u)
+-2
+-3
+-4
+u
+v=-1-
+-5
+2
+-6
+-7
+-8
+Wecanthusconcludethatifanevenvectorξ = ue +ve +we ∈ E isinthekernelofapositivematrix
+1 2 3
+µ(a,b,y,z,t)thenthezerosoftheassociatedpolynomialarereal. Butweneedtolookatthepossibilityof
+anontrivialoddvectorinthekernelofapositivematrixµ(a,b,y,z,t).
+Wenowconsiderthecasewhereanoddvectorη =un +vn isinthekernelofapositivematrixµ(a,b,y,z,t).
+1 2
+24
+
+InthiscasetherestrictiontotheoddpartwillbeamultipleofaonedimensionalprojectionP andwethus
+1
+needtofirstsolvetheequation
+|     |     |     |              |     |     | (cid:18)     |     |              |     | (cid:19) |     |     |
+| --- | --- | --- | ------------ | --- | --- | ------------ | --- | ------------ | --- | -------- | --- | --- |
+|     |     |     |              |     |     | cos2(β)      |     | sin(β)cos(β) |     |          |     |     |
+|     |     |     | α(a,b,y,z,t) |     | =   |              |     |              |     |          |     |     |
+|     |     |     |              |     |     | sin(β)cos(β) |     | sin2(β)      |     |          |     |     |
+Thesolutionisgivenby
+| (cid:26) | 3              |     |     | 1 (cid:16)                       |     |     |     |     |     | (cid:17) |             | (cid:27) |
+| -------- | -------------- | --- | --- | -------------------------------- | --- | --- | --- | --- | --- | -------- | ----------- | -------- |
+|          |                |     |     | −4sin2(β)+4cos2(β)+3sin(β)cos(β) |     |     |     |     |     |          | a+sin2(β)−y |          |
+| b →2a+   | sin(β)cos(β),z |     |     | →                                |     |     |     |     |     | +y,t     | →           |          |
+|          | 2              |     |     | 4                                |     |     |     |     |     |          |             |          |
+Wethenconsidertherestrictionofthesolutionmatrixtotheevenpart
+|     |     |    |             |         |            | √   |     |                  |         |     |    |     |
+| --- | --- | --- | ----------- | ------- | ---------- | --- | --- | ---------------- | ------- | --- | --- | --- |
+|     |     |     | a+sin2(β)−y |         |            |     |     | 2a+3             | sin(2β) |     |     |     |
+|     |     |     |             |         |            | 2a  |     |                  | 4√      |     |     |     |
+|     |     |     |             | √       |            |     |     |                  | 2       |     |     |     |
+|     |     |    |             |         |            |     |     |                  |         |     |    |     |
+|     |     |    |             | 2a      | 2a+sin2(β) |     |     | 2a+sin(2β)       |         |     |    |     |
+|     |     |    |             |         |            |     |     |                  |         |     |    |     |
+|     |     |     | 2a+3        | sin(2β) |            |     |     |                  |         |     |     |     |
+|     |     |     |             | 4√      | 2a+sin(2β) |     | 2a+ | 3sin(2β)+cos2(β) |         |     |     |     |
+4
+2
+| andcomputeitscharacteristicpolynomial. |          |       |     |                                             | Wethenapplythefollowing |     |     |     |     |                           |     |     |
+| -------------------------------------- | -------- | ----- | --- | ------------------------------------------- | ----------------------- | --- | --- | --- | --- | ------------------------- | --- | --- |
+|                                        |          | xn+∑a |     | xn−jbeamonicpolynomialwhoseallrootsarereal. |                         |     |     |     |     |                           |     |     |
+| FactB.4.                               | LetP(x)= |       |     |                                             |                         |     |     |     |     | Thenalltherootsare≥0ifand |     |     |
+j
+| onlyif(−1)ja | ≥0forall |     | ∈{1,...,n}. |     |     |     |     |     |     |     |     |     |
+| ------------ | -------- | --- | ----------- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|              | j        |     | j           |     |     |     |     |     |     |     |     |     |
+Oneobtainsinthismannerthefollowing3"positivityconditions":
+| (1) −a | ≥0  |     |     |     |     |     |     |     |     |     |     |     |
+| ------ | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+3
+(cid:16) (cid:16) (cid:17)(cid:17)(cid:16) (cid:16) (cid:17)(cid:17)
+| 1               |     |     | 3sin2(β)−2a |     |     | 4sin3(β)−4ysin(β)+cos(β) |     |     |     | 8y−11sin2(β) |     |     |
+| --------------- | --- | --- | ----------- | --- | --- | ------------------------ | --- | --- | --- | ------------ | --- | --- |
+| 4asin(β)+cos(β) |     |     |             |     |     |                          |     |     |     |              | ≥0  |     |
+8
+,
+| (2) a | ≥0  |     |     |     |     |     |     |     |     |     |     |     |
+| ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+2
+|     | (cid:18) |     | (cid:19) |     |     |     |     |     |     |     |     |     |
+| --- | -------- | --- | -------- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 13  |          | 1   |          |     |     | 3   |     | 3   | 33  |     | 3   | 1   |
+− asin(2β)− 2a+ cos(2β)−4ay+5a+ sin(2β)− sin(4β)+ cos(4β)− ysin(2β)−y− ≥0
+| 4   |     | 2   |     |     |     | 4   |     | 8   | 64  |     | 4   | 64  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+,
+| (3) −a | ≥0  |     |     |     |     |     |     |     |     |     |     |     |
+| ------ | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+1
+3
+|     |     |     | 5a+2sin2(β)+cos2(β)+ |     |     |     | sin(β)cos(β)−y |     |     | ≥0  |     |     |
+| --- | --- | --- | -------------------- | --- | --- | --- | -------------- | --- | --- | --- | --- | --- |
+2
+.
+Thesolutionoftheexistenceof(a,y)fulfillingtheseinequalitiesforagivenβisgivenbythefollowingthree
+cases. Ineachofthemweplotthevalueof−cot(β)whichgivesthecomponentvofthevectorn +vn in
+1 2
+thekernelofthepositivematrixµ(a,b,y,z,t). Wefindthatallvaluesofvariseexceptthoseintheinterval
+(−2,−1).
+|     | Theassociatedpolynomialtothevectorun |     |     |     |     |     | +vn | is  |     |     |     |     |
+| --- | ------------------------------------ | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 2   |                                      |     |     |     |     |     | 1   | 2   |     |     |     |     |
+√
+|     |     |     |        |     | (cid:16)                 |     |     |     |     | (cid:17) |     |     |
+| --- | --- | --- | ------ | --- | ------------------------ | --- | --- | --- | --- | -------- | --- | --- |
+|     |     |     | Q(s)=2 |     | 2 −2πs2u−πs2v+8π3u+16π3v |     |     |     |     |          |     |     |
+anditsrootsarerealifandonlyif
+8π2(u+2v)
+≥0
+2u+v
+=1isrealizedifandonlyifv ∈/ (−2,−1)asshownbythegraphofthefunction 2v+1.
+whichforu
+|     |     |     |     |     |     | 2   |     |     |     |     | v+2 |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+Finallythecasebycasediscussionoftheallowedvaluesofβisgivenbelow.
+25
+
+| -3.1 -3.0 | -2.9 | -2.8 -2.7 |     | 5   |     |     |     |
+| --------- | ---- | --------- | --- | --- | --- | --- | --- |
+6
+-5
+|     |     | -10 | -2.0 -1.5 -1.0 | -0.5 | 0.5 4 |     |     |
+| --- | --- | --- | -------------- | ---- | ----- | --- | --- |
+-15
+|     |     |     |     | -5  | 2   |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+-20
+|     |     | -25 |     |     |     | 1.5 2.0 | 2.5 3.0 |
+| --- | --- | --- | --- | --- | --- | ------- | ------- |
+√
+(cid:32) (cid:33)
+|                 |          |                                                       |           | − 5 −1     |          | (cid:32)√ |          |
+| --------------- | -------- | ----------------------------------------------------- | --------- | ---------- | -------- | --------- | -------- |
+|                 |          |                                                       | 2ArcTan   | <β         |          |           | (cid:33) |
+|                 |          | (cid:16)√ (cid:17)                                    |           |            |          | 5−1       |          |
+|                 |          |                                                       |           | 2          |          |           | <β ≤π    |
+| −π <β <−2ArcTan |          | 5+2                                                   |           |            | 2ArcTan  |           |          |
+|                 |          |                                                       |           | (cid:16) √ | (cid:17) |           | 2        |
+|                 |          |                                                       | <−2ArcTan | 2− 5       |          |           |          |
+|                 | FIGURE3. | Threeconditionsonβillustratedwithcorrespondinggraphs. |           |            |          |           |          |
+REFERENCES
+[1] H.Araki.Expansionalinbanachalgebras.Annalesscientifiquesdel’ÉcoleNormaleSupérieure,Serie4,Volume6(1973)67–84.
+[2] M.F.Atiyah,I.G.MacDonald-IntroductiontoCommutativeAlgebraAddison-Wesley(1969).
+[3] S.Axler,LinearAlgebraDoneRight.Fourthedition.UndergraduateTextsinMathematics.Springer,Cham,2024.
+[4] M.Bakonyi,H.Woerdeman,MatrixCompletions,Moments,andSumsofHermitianSquares.PrincetonUniversityPress,Princeton
+(2011)
+[5] C.CarathéodoryundL.Fejér,überdenZusammenhangderExtremevonHarmonischenFunktionenmitihrenKoeffizientenundüberden
+Picard-LandauschenSatz.Rend.Circ.Mat.Palermo32(1911)218-239.
+[6] A.H.ChamseddineandA.Connes.Universalformulafornoncommutativegeometryactions: Unificationsofgravityandthe
+StandardModel.Phys.Rev.Lett.77(1996)4868–4871.
+[7] A.Connes,C.Consani,Weilpositivityandtraceformula,thearchimedeanplace.SelectaMath.(N.S.)27(2021),no.4,PaperNo.77.
+[8] A.Connes,C.Consani,Spectraltriplesandζ-cycles.Enseign.Math.69(2023),no.1-2,93-148.
+[9] A.Connes,C.ConsaniandH.Moscovici,Zetazerosandprolatewaveoperators: semilocaladelicoperators,Ann.Funct.Anal.
+15(2024),no.4,PaperNo.87.
+[10] A.ConnesandW.D.vanSuijlekom,Spectraltruncationsinnoncommutativegeometryandoperatorsystems.Comm.Math.Phys.383
+(2021),no.3,2021-2067.
+[11] W.F.Donoghue,Jr.Monotonematrixfunctionsandanalyticcontinuation.Springer-Verlag,NewYork,1974.DieGrundlehrender
+mathematischenWissenschaften,Band207.
+[12] E.Hallouin,M.Perret,AunifiedviewpointforupperboundsforthenumberofpointsofcurvesoverfinitefieldsviaEuclideangeometry
+andsemi-definitesymmetricToeplitzmatrices.Trans.Amer.Math.Soc.372(2019),no.8,5409–5451.
+[13] F.Hansen.TracefunctionsasLaplacetransforms.J.Math.Phys.47(2006)043504,11.
+[14] C.Hermite.Surlaformuled’interpolationdelagrange.J.ReineAngew.Math.84(1878)70–79.
+[15] T.D.H.vanNulandandA.Skripka.SpectralshiftforrelativeSchattenclassperturbations.J.Spectr.Theory12(2022)1347–1382.
+[16] T.D.H.vanNulandandW.D.vanSuijlekom.Cycliccocyclesinthespectralaction.J.Noncommut.Geom.(online22December
+2021),(arXiv:2104.09899).
+[17] K.Schmudgen,Unboundedself-adjointoperatorsonHilbertspace.Grad.TextsinMath.265,Springer,Dordrecht,2012.
+[18] C.E.Shannon,Communicationinthepresenceofnoise,Proc.IRE37,(1949),10-21.
+[19] A.Skripka.Asymptoticexpansionsfortracefunctionals.J.Funct.Anal.266(2014)2845–2866.
+[20] W.D.vanSuijlekom.Perturbationsandoperatortracefunctions.J.Funct.Anal.260(2011)2483–2496.
+COLLEGEDEFRANCE,3RUEULM,F75005,PARIS,FRANCE,I.H.E.S.F-91440BURES-SUR-YVETTE,FRANCE
+Emailaddress:alain@connes.org
+INSTITUTE FOR MATHEMATICS, ASTROPHYSICS AND PARTICLE PHYSICS, RADBOUD UNIVERSITY NIJMEGEN, HEYENDAALSEWEG
+135,6525AJNIJMEGEN,THENETHERLANDS.
+Emailaddress:waltervs@math.ru.nl
+26

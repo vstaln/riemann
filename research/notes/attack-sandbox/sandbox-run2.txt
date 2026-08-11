@@ -1,0 +1,55 @@
+int psi^2 = 0.849227999318304
+c (HS) = 1.327499296320588  bound const 2 - c = 0.672500703679412
+
+[pair-check T=200 beta=0.3] nonzero eig of M: -0.151694, +1.817579 (expect +1.817579, -0.151694); in W units (x/int psi^2): -0.1786, +2.1403
+
+===== WORLD (a): REAL, all on-line (zeros_1_1000.txt) =====
+real T= 100 N=50 | tr/N=0.992343 HS2/N=1.265459 (diag 1.1222 + offdiag 0.1432) | bound_rank/N=0.719228 bound_s1/N=0.703914 | Delta_rank=+0.046727 Delta_s1=+0.031414 | rank(1e-6)=50 (1e-8)=50 n+/n-=50/0 sweeps=9 | tr-chk=3.6e-13 HS2-chk=7.6e-13 | eigmin/lamax=1.08e-6 | t=0.0s
+real T= 200 N=123 | tr/N=0.988856 HS2/N=1.261182 (diag 1.1131 + offdiag 0.1481) | bound_rank/N=0.716530 bound_s1/N=0.694241 | Delta_rank=+0.044029 Delta_s1=+0.021741 | rank(1e-6)=121 (1e-8)=122 n+/n-=122/0 sweeps=9 | tr-chk=2.3e-12 HS2-chk=5.3e-12 | eigmin/lamax=1.63e-15 | t=0.0s
+real T= 300 N=203 | tr/N=0.994489 HS2/N=1.275443 (diag 1.1278 + offdiag 0.1477) | bound_rank/N=0.713534 bound_s1/N=0.702511 | Delta_rank=+0.041033 Delta_s1=+0.030010 | rank(1e-6)=200 (1e-8)=200 n+/n-=201/0 sweeps=11 | tr-chk=7.1e-12 HS2-chk=1.9e-11 | eigmin/lamax=1.24e-17 | t=0.0s
+real T= 400 N=289 | tr/N=0.995801 HS2/N=1.280378 (diag 1.1217 + offdiag 0.1587) | bound_rank/N=0.711225 bound_s1/N=0.702828 | Delta_rank=+0.038724 Delta_s1=+0.030327 | rank(1e-6)=284 (1e-8)=285 n+/n-=285/0 sweeps=12 | tr-chk=1.4e-11 HS2-chk=3.9e-11 | eigmin/lamax=-3.27e-17 | t=0.1s
+real T= 500 N=380 | tr/N=0.996327 HS2/N=1.280708 (diag 1.1088 + offdiag 0.1719) | bound_rank/N=0.711945 bound_s1/N=0.704598 | Delta_rank=+0.039444 Delta_s1=+0.032098 | rank(1e-6)=374 (1e-8)=375 n+/n-=376/0 sweeps=12 | tr-chk=2.7e-11 HS2-chk=7.0e-11 | eigmin/lamax=6.86e-18 | t=0.3s
+real T= 600 N=472 | tr/N=0.998163 HS2/N=1.287259 (diag 1.1371 + offdiag 0.1501) | bound_rank/N=0.709068 bound_s1/N=0.705395 | Delta_rank=+0.036567 Delta_s1=+0.032894 | rank(1e-6)=465 (1e-8)=466 n+/n-=466/0 sweeps=13 | tr-chk=4.4e-11 HS2-chk=1.2e-10 | eigmin/lamax=-1.03e-16 | t=0.7s
+real T= 700 N=569 | tr/N=0.997518 HS2/N=1.283776 (diag 1.1317 + offdiag 0.1521) | bound_rank/N=0.711259 bound_s1/N=0.706294 | Delta_rank=+0.038758 Delta_s1=+0.033793 | rank(1e-6)=561 (1e-8)=561 n+/n-=562/0 sweeps=12 | tr-chk=6.4e-11 HS2-chk=1.8e-10 | eigmin/lamax=-2.13e-16 | t=1.2s
+
+===== WORLD (a'): REAL, all on-line, larger T (zeros_computed_10000.txt) =====
+real T= 900 N=766 | tr/N=0.999009 HS2/N=1.290625 (diag 1.1395 + offdiag 0.1511) | bound_rank/N=0.707393 bound_s1/N=0.705412 | Delta_rank=+0.034893 Delta_s1=+0.032911 | rank=(eig skipped) | t=3.5s
+real T=1100 N=972 | tr/N=0.999128 HS2/N=1.291160 (diag 1.1366 + offdiag 0.1545) | bound_rank/N=0.707096 bound_s1/N=0.705352 | Delta_rank=+0.034596 Delta_s1=+0.032851 | rank=(eig skipped) | t=5.9s
+real T=1300 N=1183 | tr/N=0.999522 HS2/N=1.294078 (diag 1.1432 + offdiag 0.1509) | bound_rank/N=0.704966 bound_s1/N=0.704010 | Delta_rank=+0.032465 Delta_s1=+0.031509 | rank=(eig skipped) | t=8.4s
+
+===== WORLD (b): FORCED OFF-LINE (pairs at beta, fractions f of N) =====
+offline T= 200 f=0.01 beta=0.1 N=123 | tr/N=0.992825 HS2/N=1.272204 (diag 1.1218 + offdiag 0.1504) | bound_rank/N=0.713446 bound_s1/N=0.699096 | Delta_rank=+0.040945 Delta_s1=+0.026595 | rank(1e-6)=121 (1e-8)=122 n+/n-=122/0 sweeps=10 | tr-chk=2.1e-12 HS2-chk=5.3e-12 | eigmin/lamax=-2.65e-14 | t=0.0s
+    truth s1/N = 0.983740 (off-line fraction 0.0163);  bound_s1/N = 0.699096  ->  OK
+offline T= 200 f=0.02 beta=0.1 N=123 | tr/N=0.992527 HS2/N=1.280895 (diag 1.1218 + offdiag 0.1591) | bound_rank/N=0.704160 bound_s1/N=0.689215 | Delta_rank=+0.031660 Delta_s1=+0.016715 | rank(1e-6)=120 (1e-8)=121 n+/n-=121/1 sweeps=10 | tr-chk=2.4e-12 HS2-chk=6.0e-12 | eigmin/lamax=-4.61e-3 | t=0.0s
+    truth s1/N = 0.967480 (off-line fraction 0.0325);  bound_s1/N = 0.689215  ->  OK
+offline T= 200 f=0.05 beta=0.1 N=123 | tr/N=0.992344 HS2/N=1.329912 (diag 1.1349 + offdiag 0.1950) | bound_rank/N=0.654775 bound_s1/N=0.639463 | Delta_rank=-0.017725 Delta_s1=-0.033038 | rank(1e-6)=117 (1e-8)=117 n+/n-=117/5 sweeps=11 | tr-chk=2.3e-12 HS2-chk=7.1e-12 | eigmin/lamax=-1.47e-2 | t=0.0s
+    truth s1/N = 0.902439 (off-line fraction 0.0976);  bound_s1/N = 0.639463  ->  OK
+offline T= 200 f=0.01 beta=0.3 N=123 | tr/N=0.993496 HS2/N=1.275343 (diag 1.1235 + offdiag 0.1519) | bound_rank/N=0.711648 bound_s1/N=0.698640 | Delta_rank=+0.039148 Delta_s1=+0.026139 | rank(1e-6)=121 (1e-8)=122 n+/n-=122/0 sweeps=9 | tr-chk=2.3e-12 HS2-chk=5.6e-12 | eigmin/lamax=-4.73e-13 | t=0.0s
+    truth s1/N = 0.983740 (off-line fraction 0.0163);  bound_s1/N = 0.698640  ->  OK
+offline T= 200 f=0.02 beta=0.3 N=123 | tr/N=0.993006 HS2/N=1.290035 (diag 1.1235 + offdiag 0.1665) | bound_rank/N=0.695977 bound_s1/N=0.681989 | Delta_rank=+0.023476 Delta_s1=+0.009488 | rank(1e-6)=120 (1e-8)=121 n+/n-=121/1 sweeps=10 | tr-chk=2.3e-12 HS2-chk=5.7e-12 | eigmin/lamax=-8.04e-2 | t=0.0s
+    truth s1/N = 0.967480 (off-line fraction 0.0325);  bound_s1/N = 0.681989  ->  OK
+offline T= 200 f=0.05 beta=0.3 N=123 | tr/N=0.992785 HS2/N=1.366560 (diag 1.1462 + offdiag 0.2203) | bound_rank/N=0.619011 bound_s1/N=0.604581 | Delta_rank=-0.053490 Delta_s1=-0.067919 | rank(1e-6)=116 (1e-8)=117 n+/n-=117/5 sweeps=10 | tr-chk=2.3e-12 HS2-chk=5.3e-12 | eigmin/lamax=-1.27e-1 | t=0.0s
+    truth s1/N = 0.902439 (off-line fraction 0.0976);  bound_s1/N = 0.604581  ->  OK
+offline T= 500 f=0.01 beta=0.1 N=380 | tr/N=0.996364 HS2/N=1.294020 (diag 1.1145 + offdiag 0.1796) | bound_rank/N=0.698709 bound_s1/N=0.691438 | Delta_rank=+0.026208 Delta_s1=+0.018937 | rank(1e-6)=372 (1e-8)=373 n+/n-=373/2 sweeps=12 | tr-chk=2.6e-11 HS2-chk=6.6e-11 | eigmin/lamax=-2.22e-2 | t=0.4s
+    truth s1/N = 0.978947 (off-line fraction 0.0211);  bound_s1/N = 0.691438  ->  OK
+offline T= 500 f=0.02 beta=0.1 N=380 | tr/N=0.996429 HS2/N=1.310087 (diag 1.1268 + offdiag 0.1832) | bound_rank/N=0.682770 bound_s1/N=0.675627 | Delta_rank=+0.010270 Delta_s1=+0.003127 | rank(1e-6)=368 (1e-8)=369 n+/n-=370/6 sweeps=12 | tr-chk=2.7e-11 HS2-chk=6.9e-11 | eigmin/lamax=-2.34e-2 | t=0.3s
+    truth s1/N = 0.957895 (off-line fraction 0.0421);  bound_s1/N = 0.675627  ->  OK
+offline T= 500 f=0.05 beta=0.1 N=380 | tr/N=0.996387 HS2/N=1.355808 (diag 1.1386 + offdiag 0.2172) | bound_rank/N=0.636966 bound_s1/N=0.629739 | Delta_rank=-0.035535 Delta_s1=-0.042761 | rank(1e-6)=358 (1e-8)=359 n+/n-=359/16 sweeps=12 | tr-chk=2.7e-11 HS2-chk=7.4e-11 | eigmin/lamax=-2.38e-2 | t=0.3s
+    truth s1/N = 0.900000 (off-line fraction 0.1000);  bound_s1/N = 0.629739  ->  OK
+offline T= 500 f=0.01 beta=0.3 N=380 | tr/N=0.996366 HS2/N=1.305811 (diag 1.1183 + offdiag 0.1875) | bound_rank/N=0.686920 bound_s1/N=0.679652 | Delta_rank=+0.014420 Delta_s1=+0.007152 | rank(1e-6)=371 (1e-8)=372 n+/n-=373/3 sweeps=12 | tr-chk=2.7e-11 HS2-chk=6.7e-11 | eigmin/lamax=-1.86e-1 | t=0.3s
+    truth s1/N = 0.978947 (off-line fraction 0.0211);  bound_s1/N = 0.679652  ->  OK
+offline T= 500 f=0.02 beta=0.3 N=380 | tr/N=0.996463 HS2/N=1.335324 (diag 1.1387 + offdiag 0.1967) | bound_rank/N=0.657601 bound_s1/N=0.650527 | Delta_rank=-0.014900 Delta_s1=-0.021974 | rank(1e-6)=368 (1e-8)=368 n+/n-=369/7 sweeps=12 | tr-chk=2.6e-11 HS2-chk=7.4e-11 | eigmin/lamax=-1.93e-1 | t=0.4s
+    truth s1/N = 0.957895 (off-line fraction 0.0421);  bound_s1/N = 0.650527  ->  OK
+offline T= 500 f=0.05 beta=0.3 N=380 | tr/N=0.996394 HS2/N=1.422578 (diag 1.1622 + offdiag 0.2604) | bound_rank/N=0.570209 bound_s1/N=0.562997 | Delta_rank=-0.102291 Delta_s1=-0.109504 | rank(1e-6)=358 (1e-8)=358 n+/n-=359/17 sweeps=12 | tr-chk=2.7e-11 HS2-chk=7.5e-11 | eigmin/lamax=-1.93e-1 | t=0.3s
+    truth s1/N = 0.900000 (off-line fraction 0.1000);  bound_s1/N = 0.562997  ->  OK
+
+===== WORLD (c): SYNTHETIC all-on-line =====
+lattice  T= 200 N=122 | tr/N=0.989875 HS2/N=1.012061 (diag 0.9819 + offdiag 0.0301) | bound_rank/N=0.967689 bound_s1/N=0.947439 | Delta_rank=+0.295188 Delta_s1=+0.274939 | rank(1e-6)=122 (1e-8)=122 n+/n-=122/0 sweeps=12 | tr-chk=2.8e-12 HS2-chk=5.8e-12 | eigmin/lamax=5.62e-2 | t=0.0s
+lattice  T= 500 N=379 | tr/N=0.996328 HS2/N=1.019170 (diag 0.9934 + offdiag 0.0258) | bound_rank/N=0.973487 bound_s1/N=0.966143 | Delta_rank=+0.300986 Delta_s1=+0.293643 | rank(1e-6)=379 (1e-8)=379 n+/n-=379/0 sweeps=14 | tr-chk=3.6e-11 HS2-chk=7.0e-11 | eigmin/lamax=4.31e-2 | t=0.4s
+jitter   T= 200 N=122 | tr/N=0.988973 HS2/N=1.084617 (diag 1.0458 + offdiag 0.0388) | bound_rank/N=0.893328 bound_s1/N=0.871273 | Delta_rank=+0.220827 Delta_s1=+0.198772 | rank(1e-6)=122 (1e-8)=122 n+/n-=122/0 sweeps=9 | tr-chk=2.7e-12 HS2-chk=5.5e-12 | eigmin/lamax=2.66e-2 | t=0.0s
+jitter   T= 500 N=379 | tr/N=0.996872 HS2/N=1.090390 (diag 1.0552 + offdiag 0.0352) | bound_rank/N=0.903354 bound_s1/N=0.897098 | Delta_rank=+0.230854 Delta_s1=+0.224598 | rank(1e-6)=379 (1e-8)=379 n+/n-=379/0 sweeps=11 | tr-chk=3.1e-11 HS2-chk=7.1e-11 | eigmin/lamax=2.58e-2 | t=0.3s
+poisson  T= 200 s=1 N=122 | tr/N=0.990201 HS2/N=1.770034 (diag 1.5210 + offdiag 0.2490) | bound_rank/N=0.210369 bound_s1/N=0.190772 | Delta_rank=-0.462131 Delta_s1=-0.481729 | rank(1e-6)=111 (1e-8)=113 n+/n-=114/0 sweeps=12 | tr-chk=2.8e-12 HS2-chk=8.6e-12 | eigmin/lamax=-1.62e-17 | t=0.0s
+poisson  T= 500 s=1 N=379 | tr/N=0.998954 HS2/N=1.897908 (diag 1.6134 + offdiag 0.2846) | bound_rank/N=0.099999 bound_s1/N=0.097906 | Delta_rank=-0.572502 Delta_s1=-0.574595 | rank(1e-6)=339 (1e-8)=348 n+/n-=354/0 sweeps=21 | tr-chk=3.3e-11 HS2-chk=1.3e-10 | eigmin/lamax=-1.36e-17 | t=0.2s
+poisson  T= 500 s=2 N=379 | tr/N=0.999047 HS2/N=2.042455 (diag 1.6983 + offdiag 0.3442) | bound_rank/N=-0.044361 bound_s1/N=-0.046266 | Delta_rank=-0.716861 Delta_s1=-0.718767 | rank(1e-6)=329 (1e-8)=340 n+/n-=346/0 sweeps=21 | tr-chk=3.5e-11 HS2-chk=1.5e-10 | eigmin/lamax=-8.93e-17 | t=0.4s
+lattice  T=1100 N=972 | tr/N=0.998435 HS2/N=1.021443 (diag 0.9971 + offdiag 0.0243) | bound_rank/N=0.975427 bound_s1/N=0.972296 | Delta_rank=+0.302926 Delta_s1=+0.299796 | rank=(eig skipped) | t=5.3s
+poisson  T=1100 s=1 N=972 | tr/N=0.999550 HS2/N=1.982879 (diag 1.6620 + offdiag 0.3209) | bound_rank/N=0.016220 bound_s1/N=0.015320 | Delta_rank=-0.656280 Delta_s1=-0.657181 | rank=(eig skipped) | t=5.8s

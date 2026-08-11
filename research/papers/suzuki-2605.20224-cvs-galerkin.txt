@@ -1,0 +1,1803 @@
+High-Precision Approximation of Riemann Zeros
+via the Truncated Weil Form
+Akiva Groskin
+May 2026
+MSC 2020:11M26 (primary), 65F15, 65N25 (secondary).
+Keywords:Riemann zeta function, Weil quadratic form, Connes–van Suijlekom truncation,
+Galerkin method, Sobolev regularity, DirichletL-functions, arbitrary-precision computation, in-
+dependent reproduction.
+Abstract
+The Connes–van Suijlekom truncated Weil quadratic form, indexed by a cutoff parameterc
+that controls the primesp≤centering the operator, produces a ground state whose Fourier–
+Mellin zeros provably lie on the critical line; whether they converge to the Riemann zeros as
+c→ ∞is open (Connes 2026; Connes–Consani–Moscovici 2025). We present, to our knowledge,
+the first independent public implementation of the Connes–van Suijlekom Galerkin matrix at
+sixteen cutoffs (c= 13 through 67, plusc= 100). Across the in-sample windowc= 13 through
+c= 67 atN= 100, the first-zero absolute error|γ 1 −γ Riemann
+1 |shrinks monotonically from
+∼2×10 −55 to∼1.5×10 −168 — a 113-OOM convergence across fifteen cutoffs (Table 3). The
+smallest-positive even-sector eigenvalueλ even
+min separately reaches∼10 −334 atc= 100,N= 250
+(275-OOM span fromc= 13).
+Out-of-sample test atc= 100.On the four-pointN-sweepN∈ {100,150,200,250}at
+dps = 500, consecutive first-difference ratios 0.837 and 0.836 match to two decimal places.
+Aitken-∆2 on the two overlapping triples yields log 10 |λeven
+∞ | ≈ −536.8 and≈ −533.7, ap-
+proaching the Connes 2026§6.4 heuristic prediction (≈ −530.4) monotonically withN(6.4
+and 3.3 OOM gaps out of|x ∞| ∼530). The same eigenvector recoversγ 1, . . . , γ10 to 307–329
+matching digits atN= 250, dps = 500. Under the unitary equivalence with Connes–Consani–
+Moscovici Lemma 5.1, this is the deepest such Galerkin-truncation recovery in the public
+Connes–van Suijlekom/Connes–Consani–Moscovici literature. Thesmallest-positiveeven-sector
+eigenvalue is the genuine smallest eigenvalue: a small block of negative-sign eigenvalues seen at
+the finite archimedean cutoffT= 800 is an artifact of that cutoff and is absent onceTis in-
+creased (continuum positivity ofQW λ is RH-equivalent and is not assumed atλ=
+√
+100). The
+fit|log 10 λmin| ≈13.24c0.634 onc≤67 atN= 100 is shown to be a finite-Nrate, falsified at
+c= 100, N= 200 by 49 OOM in the direction of faster decay.
+Structural observationsinclude approximate eigenvectorc-invariance (overlap≥0.9498 on all
+105 cutoff pairs despite eigenvalues differing by 113 OOM), multi-zero convergence universality
+(all ten detectable zeros within 3.8% of each other), an empirical Galerkin-convergence exponent
+s(c)≈55 logc−128, un-rescaled Galerkin bulk-spectrum Poisson statistics (β <0.05; this is a
+structural diagnostic of the truncated operator, not a test of Montgomery’s conjecture, which
+applies to locally-rescaled zero spacings), and tight bulk invariants log|detQ c| ≈ −65.6c+ 542
+(R2 = 0.997).
+We make no claim of proof; the contribution is reproducible numerical data and its careful
+interpretation under the existing CvS/CCM framework.
+All code, data, and ancillary files are publicly available.
+1
+arXiv:2605.20224v2  [math.NT]  26 Jun 2026
+Note added in revision (2026 June).The negative-sign eigenvalue blocks reported atc= 100
+(Section 6.6) and forL(s, χ 3) atc= 23,29 (Section 8.10) are artifacts of the finite archimedean
+integration cutoffT: they are stable in working precision but vanish onceTis increased, so cutoff-
+free the relevant even sectors are non-negative and the smallest-positive branch is the genuine
+smallest eigenvalue. No quantitative result changes; theγ k extractions, the Aitken extrapolation,
+and all convergence data are unaffected. We thank A. Connes, whose questions about thec=
+100 spectrum prompted this investigation; the cutoff sensitivity was independently identified by
+B. W. A. Silva, consistent with the naturally even, positive ground state reported by R. Andrews
+(full attributions in the Acknowledgments).
+1 Introduction
+In February 2026, Connes published “Past, Present and a Letter Through Time” [4], revisiting the
+spectral interpretation of the Riemann zeros within the framework of noncommutative geometry.
+Section 6 of that paper presents what is, in effect, an open question: for each value of a cutoff
+parameterc(controlling the primesp≤centering the operator;citself need not be prime),
+the truncated Weil quadratic form onL 2([0,logc]) admits a unique even-sector ground state whose
+Fourier–Mellin zeros provably lie on the critical line. Do these zeros converge to the actual Riemann
+zeros asc→ ∞?
+The criticality statement is a theorem. Connes–van Suijlekom [9] establish (Theorem 6.1) that
+the zeros of ˆηc are real for every finitec, so the open question is specifically about convergence, not
+about criticality. If the convergence holds, RH follows by Hurwitz’s theorem applied to the Mellin
+transforms — but the convergence itself is unproven.
+Connes reports numerical data for the first fifty zeros atc= 13, with errors ranging from
+approximately 2.6×10 −55 (first zero) to approximately 10 −3 (fiftieth zero); the first-zero error
+relative toγ 1 = 14.134725. . .is the datum reproduced in this work. Connes–Consani–Moscovici [8]
+report the related number 2.44×10 −55 at the same cutoff, withN= 120 and 200-digit precision.
+As of April 2026, no independent public reproduction of these numbers exists. No public code
+implementing the Connes–van Suijlekom Galerkin matrix has been located in a literature sweep
+encompassing arXiv, GitHub, MathOverflow, and seminar recordings (see Section 9).
+Contributions
+This paper makes five primary contributions:
+1.Independent reproduction and extension.We provide, to our knowledge, the
+first public implementation of the Connes–van Suijlekom Proposition 4.1 Galerkin matrix
+(Python/mpmath); reproduce thec= 13 first-zero error within a factor of 1.3 of the value
+reported by Connes 2026; cross-validate against Connes–Consani–Moscovici atc= 14; and
+extend the measurements to fifteen cutoffs (c= 13 through 67) spanning 113 orders of mag-
+nitude in|γ 1 error|, plus a sixteenth cutoff atc= 100.
+2.Out-of-sample empirical test of Connes 2026§6.4 atc= 100.Atc= 100 we measure
+log10 |λeven
+min |on a four-pointN-sweepN∈ {100,150,200,250}at dps = 500 (with a dps = 1000
+retest atN= 150), with values−190.92,−247.19,−294.31,−333.68. The consecutive first-
+difference ratios 0.8373 and 0.8355 match to two decimal places, evidence for a local geometric
+model of the convergence sequence. Aitken-∆ 2 applied to the two consecutive overlapping
+triples gives log 10 |λeven
+∞ (c= 100)| ≈ −536.76 (from{100,150,200}) and≈ −533.70 (from
+2
+{150,200,250}); the Connes 2026§6.4 heuristic continuum prediction is≈ −530.38, giving
+gaps of 6.39 and 3.32 orders of magnitude respectively, out-of-sample (the in-sample fit window
+wasc≤67). Section 6 presents the computation.
+3.Recognition that the numerical pipeline measures the Connes–Consani–Moscovici
+operator’s spectrum.Under the unitary equivalence established in§2.4 with Connes–
+Consani–Moscovici (2025) Lemma 5.1, ourF even test function is, up to a positive scaling
+constant, the Fourier–Mellin transform bξN (z) appearing in Connes–Consani–Moscovici The-
+orem 1.1(iii); we recognize — we do not claim to discover — that our extracted zeros are,
+modulo the hypothesis status atc= 100 (Remark 2.1), eigenvalues of the Connes–Consani–
+Moscovici rank-one operatorD (λ,N)
+log atλ= √c. This makes our fifteen-cutoff sweep plus
+thec= 100 datum, to our knowledge, the first independent multi-csurvey of that spectrum
+at trigonometric-Galerkin matching-digit precision, beyond Connes–Consani–Moscovici’s own
+reported values atc∈ {9,12,13,14}; the deepestγ 1 extraction atc= 100 reaches 329 match-
+ing digits atN= 250, dps = 500.
+4.Structural characterization of the finite-Noperator.We identify quantitative proper-
+ties that constrain theoretical work: (a) the Sobolev regularity scales ass(c)≈55·logc−128
+at six cutoffs; (b) all ten detectable zeros converge at rates within 3.8% of each other; (c) the
+eigenvector is approximatelyc-invariant (>0.950 overlap across all 105 pairs); (d) the nor-
+malized zero-crossing shape varies by only 3.3%; (e) interval extension, not prime identity,
+drives convergence (r=−0.96); (f) the spectral trace decays asc −0.116 while the Frobenius
+norm is constant; (g) the bulk spectrum is Poisson (no level repulsion); (h) nine convergence
+models fail (Section 5); (i) the empirical|log 10 λ| ≈13.24c0.634 fit is a finite-N= 100 rate,
+not the continuum asymptote, falsified atc= 100, N= 200 by 49 OOM and corroborated
+by ac= 67, N= 150 rerun showing a 46 OOM drop versus the same-c,N= 100 datum;
+(j) a block of negative-sign eigenvalues atc= 100 is an artifact of the finite archimedean
+cutoffT= 800: it is stable in working precision (dps∈ {500,1000}) but not inT, vanishing
+onceTis increased, so cutoff-free thec= 100 even sector carries no negative eigenvalues
+(Section 6.6).
+5.Partial extension to DirichletL-functions.A port toL(s, χ 3) converges atc= 13,17,37
+(16–28 digits); an apparent positivity breakdown atc= 23,29 is an artifact of the finite
+archimedean cutoffT= 400, absent onceTis increased (Section 8.10).
+Explicit non-claims
+We do not claim to validate Connes’ convergence conjecture. We do not claim a proof of the Rie-
+mann Hypothesis. We do not claim that the Aitken extrapolation atc= 100 proves a convergence
+rate. The agreement atc= 13 is a consistency check against published values, not a comparison
+against an independent prediction. The agreement atc= 100 between our Aitken extrapolation
+and the Connes 2026§6.4 prediction is an empirical consistency test, not a theorem; we are explicit
+that Aitken acceleration carries assumptions about the local form of the convergence sequence,
+and the Connes 2026§6.4 prediction is itself a heuristic statement based on the agreement (their
+Figure 1) between 1−χ 2(λ) andε(λ) onλ≤14. We report the agreement; we do not promote it.
+3
+2 Mathematical Setup
+2.1 The Weil quadratic form and its truncation
+We follow the notation of Connes–van Suijlekom [9] and Connes–Consani [5]. For a cutoff param-
+eterc(controlling the primesp≤cin the prime-sum piece below;citself need not be prime, as in
+ourc= 14 andc= 100 cells), setL= logc. The quadratic form acts onL 2([0, L]) and decomposes
+as
+D=D ∞ +D pole +D prime,(1)
+whereD ∞ is the archimedean contribution,D pole is the pole contribution from the zeta function,
+andD prime sums over primesp≤c.
+The archimedean Mellin multiplier is
+h+(τ) =−logπ+ Re Ψ
+
+1
+4 + iτ
+2
+
+,(2)
+where Ψ denotes the digamma function. This follows from Connes–Consani [5] (Equation 153) and
+has been independently fact-checked against the derivation chain in Connes–Consani Appendix B.
+2.2 The Connes–van Suijlekom Proposition 4.1 Galerkin matrix
+Connes–van Suijlekom Proposition 4.1 defines a functionψ:Z→Rvia
+ψ(x) = 1
+π
+Z L
+0
+sin
+ 
+2πx(1−y/L)
+
+D(y)dy,(3)
+and the Galerkin matrix entries
+qm,n = ψ(m)−ψ(n)
+m−n , q n,n =ψ ′(n).(4)
+The basis is the complex Fourier system{U n(x) =L −1/2 exp(2πinx/L)}n∈Z per Connes–van Sui-
+jlekom Proposition 4.1 / eq. (5); the sin functions appearing in the kernel ofψ(x) above are the
+integrand, not the basis. The even-sector projection under the involutiony7→L−yis described
+in Section 3.4; only that sector is diagonalized.
+2.3 Unitary equivalence with the Connes–Consani–Moscovici matrix
+Connes–Consani–Moscovici [8] (Lemma 5.1) define a matrixτ i,j in terms of a functionb n:
+bn =− 1
+π
+Z L
+0
+sin(2πny/L)D(y)dy, τ i,j = bi −b j
+i−j .(5)
+The key identity connecting the two formulations is, for integern:
+sin
+ 
+2πn(1−y/L)
+
+=−sin(2πny/L),(6)
+which follows from the 2πn-periodicity of sine. Substituting into (3) at integer argument:
+ψ(n) = 1
+π
+Z L
+0
+−sin(2πny/L)D(y)dy=− 1
+π
+Z L
+0
+sin(2πny/L)D(y)dy=b n.
+Thereforeb n =ψ(n) andτ i,j = (bi −b j)/(i−j) = (ψ(i)−ψ(j))/(i−j) =q i,j as matrices. The two
+matrices coincide identically (no sign flip): the eigenvalues and eigenvectors ofτandqagree, and
+the present work and the Connes–Consani–Moscovici numerics are computing the same operator
+via two equivalent matrix presentations.
+4
+2.4 Spectral-triple interpretation ofF even
+A direct consequence of the unitary equivalence in§2.3 connects theF even test function used
+throughout this work to the rank-one spectral-triple construction of Connes–Consani–Moscovici
+[8]. In their Section 5, Connes–Consani–Moscovici define a self-adjoint rank-one perturbation of
+the scaling operator
+D(λ,N)
+log :=D (λ)
+log −
+D(λ)
+log ξN
+
+δN
+,(7)
+acting onL 2([λ−1, λ], du/u) as a rank-one perturbation ofD (λ)
+log , supported on the (2N+1)-
+dimensional subspaceE N , withλ 2 =c. Connes–Consani–Moscovici Theorem 1.1(iii) establishes
+that the spectrum ofD (λ,N)
+log coincides with the zeros of
+bξN (z) =
+Z
+ξN (u)u −iz du
+u ,(8)
+the Fourier–Mellin transform of the ground-state eigenvectorξ N of the truncated Weil quadratic
+form, taken with Connes–Consani–Moscovici’s duality convention⟨R ∗
++ |R⟩. Positivity of the con-
+tinuum quadratic formQW λ for allλ >1 is equivalent to the Riemann Hypothesis (Connes 2026 [4]
+§4.1, citing Weil) and is proved only for small values ofλ(Yoshida, see [4] and references therein).
+We do not assume continuum positivity atλ=
+√
+100. Throughout this paperξ N denotes theem-
+pirically distinguished smallest-positive eigenvectorof the finite-Neven-sector matrixQ even
+c (c, N)
+— a selection criterion, not a theorem-derived ground-state identification. 1
+Remark2.1 (Hypothesis status atc= 100).Connes–Consani–Moscovici Theorem 1.1 takes its
+starting point asϵ N , thesmallest eigenvalueofQW N
+λ , assumed simple and with even eigenvector.
+At the cutoffsc≤67 studied in Section 5, the finite-NGalerkin matrixQ even
+c is observed positive
+on every cell atN= 100, its smallest eigenvalue is numerically simple and coincides with its
+smallest-positive eigenvalue, and the corresponding eigenvector projects predominantly onto the
+even sector — so the finite-dimensional data are consistent with the Connes–Consani–Moscovici
+Theorem 1.1 ground-state hypotheses (as numerical conditions, not as analytically established
+hypotheses of the continuum theorem). Atc= 100 withN≥100 (Section 6), the raw finite-N
+spectrum computed at the finite archimedean cutoffT= 800 carries a small block of negative-sign
+eigenvalues (Section 6.6). These are an artifact of that cutoff: they are absent onceTis increased,
+so cutoff-free thec= 100 even sector is non-negative and its smallest eigenvalue coincides with the
+smallest-positivebranch we report, whose eigenvector gives the zero-extraction of Table 11. The
+c= 100 data are therefore consistent with the Connes–Consani–Moscovici Theorem 1.1 ground-
+state hypotheses on the same footing as thec≤67 cells. Empirically, the positive branch is
+well-behaved: its eigenvector extractsγ 1, . . . , γ10 to 307–329 matching digits atc= 100,N= 250.
+Thec= 67 corroborative datum (Section 6.7) atN= 150 remains in the matrix-positive regime,
+providing a same-Ncontrol where the corresponding finite-dimensional positivity, simplicity, and
+even-sector numerical conditions remain satisfied.
+TheF even test function defined for zero-extraction (§3.4) is, up to a positive scaling constant and
+the change of variableu=e x, the Fourier–Mellin transform of the same eigenvectorξN that appears
+in equation (8); the zero sets of the two transforms agree on the real line by reality ofξN . We identify
+the two via this construction and adopt the conventionλ 2 =cfrom Connes–Consani–Moscovici
+1Atc≤67 withN= 100 the matrix is observed positive on every cell, so the smallest eigenvalue coincides with
+the smallest-positive one and ourξ N coincides with the Connes–Consani–Moscovici Theorem 1.1 ground state; the
+same holds cutoff-free atc= 100 once the finite-Tartifact of Remark 2.1 is removed, soξ N refers throughout to this
+smallest-positive ground state.
+5
+throughout. Under this identification, and modulo the hypothesis-status caveat of Remark 2.1
+atc= 100, everyγ k extracted in this paper is, equivalently, a zero of bξN , and via Connes–
+Consani–Moscovici Theorem 1.1(iii) an eigenvalue ofD (λ,N)
+log at (λ=√c, N). The multi-cutoff data
+presented in Sections 5, 6, and 8 thereby provide measurements of this spectrum at the cutoffs
+c∈ {13, . . . ,67,100}, beyond Connes–Consani–Moscovici’s reported values atc∈ {9,12,13,14}
+withN= 120.
+2.5 Decomposition of the kernel
+The integral definingψ(x) decomposes into three pieces corresponding to the three terms ofD:
+1.Archimedean piece(D ∞): involves the Mellin-multiplier integral
+R T
+0 h+(τ)K(x, τ)dτ
+whereKis a trigonometric kernel. This piece admits a closed-form expression for the−logπ
+component and requires numerical quadrature for the digamma component.
+2.Pole piece(D pole): a rank-one correction arising from the simple pole ofζ(s) ats= 1.
+3.Prime piece(D prime): a finite sum over primesp≤cinvolving logpand the von Mangoldt-
+type kernel.
+The reader needs to see these explicit pieces because the precision characteristics of each —
+the archimedean piece dominates the quadrature cost, the pole piece is exact, and the prime piece
+involves a finite sum — determine the implementation strategy described in Section 3.
+3 Numerical Implementation
+3.1 Software stack and precision
+The implementation uses Python 3 with mpmath for arbitrary-precision arithmetic. The 15-cutoff
+c≤67 sweep of Section 5 uses dps = 80 at the early cutoffs, dps = 150 across the bulk, and
+dps = 200 atc≥41 to stay clear of the backward-error floor (see Section 7). Thec= 100
+measurements of Section 6 use dps = 500 with a dps = 1000 retest atN= 150. Parallelism is
+achieved via Python’smultiprocessingmodule with 12-way process parallelism.
+The production entry points for the 15-cutoff sweep and thec= 100 experiment are ancillary
+filesA_extended_c_sweep.pyandc100_experiment_optimized.py, both included with this sub-
+mission. The python-flintacb.digammaprimitive provides an∼11×speedup over pure mpmath
+in the archimedean quadrature. All ancillary scripts run against the publicconnes-cvspackage
+on PyPI (version 0.2.2 at the time of submission); see Section 12.
+3.2 Stable kernel evaluation
+The trigonometric kernel arising in the quadrature of the archimedean piece involves expressions
+of the form
+eiβL −1
+iβ (9)
+which suffer catastrophic cancellation when|β|is small. We replace this with the numerically stable
+identity
+eiβL −1
+iβ = sin(βL)
+β + 2isin 2(βL/2)
+β ,(10)
+6
+together with a Taylor-series fallback (5 terms at dps = 80, 7 terms at dps = 150) when|β|falls
+below a thresholdε. The stable kernel has been verified against analytic values to 10 −136 accuracy
+atβ= 10 −55.
+3.3 Quadrature strategy
+The Mellin-multiplier integral overτ∈[0, T] withT= 800 is evaluated using mpmath’s adaptive
+tanh–sinh quadrature (mp.quad, Takahasi–Mori 1974). The−logπcomponent ofh + admits a
+closed-form antiderivative, eliminating quadrature error for that piece. The digamma component
+Re Ψ(1/4 +iτ /2) is the dominant cost: each evaluation requires one mpmath digamma call at
+approximately 4.5 ms/call at dps = 150.
+The cutoffT= 800 was chosen based onT-convergence testing (see Section 5.2). The−logπ
+component is handled analytically (exact), and the remaining digamma component decays as
+O(logτ /τ) against the oscillatory kernel; the Riemann–Lebesgue lemma ensures convergence. The
+agreement with Connes’ and Connes–Consani–Moscovici’s independently computedc= 13 datum
+(within a factor of 1.3) provides empirical evidence thatT= 800 is sufficient, as anyO(1) trun-
+cation error in the matrix would produceO(1) eigenvalue errors incompatible with the observed
+agreement.
+3.4 Even-sector projection and eigensolver
+The implementation uses the full Fourier basis{e 2πiky/L }N
+k=−N (dimension 2N+ 1 = 201 atN=
+100), which decomposes into even (cosine-type) and odd (sine-type) sectors under the involution
+y7→L−y. The even sector comprises the constant mode (k= 0) and theNcosine combinations
+(ek +e −k)/
+√
+2 fork= 1, . . . , N, yielding dimensionN+ 1 = 101 atN= 100. Only the even sector
+is diagonalized. The matrix parity error is zero by construction (the off-diagonal blocks between
+even and odd sectors vanish identically for the Connes–van Suijlekom quadratic form).
+The eigenvalue decomposition usesmpmath.eigsyin symmetric mode. The smallestpositive
+eigenvalueλ even
+min of the even-sector matrix is the quantity of primary interest: it is the empirically
+distinguished positive branch whose eigenvector gives the zero-extraction reported throughout (see
+Remark 2.1 for the hypothesis-status discussion). At all fifteen cutoffs in Section 5 atN= 100
+the matrix is observed positive on every cell, so smallest-overall and smallest-positive coincide. At
+c= 100,N≥100 (Section 6) the raw matrix computed at the finite cutoffT= 800 carries a
+small block of negative-sign eigenvalues (Section 6.6) that are absent at largerT, so cutoff-free the
+smallest-positive selection coincides with the matrix-level smallest eigenpair.
+3.5 Root extraction
+The first Riemann zeroγ 1 = 14.134725141734693790. . .is located as the first zero of the Mellin
+transform of the ground-state eigenvector. Root extraction usesmp.findrootwith the Anderson
+solver and explicit tolerance tol = 10 −140 for the generalc≤67 sweep; thec= 100 headline
+extraction atN= 250, dps = 500 uses the retightened tolerance 10 −380 reported in Table 11,
+sufficient to certify the 307–329 matching-digit counts. The absolute error is|γ exact
+1 −γ computed
+1 |.
+7
+4 Results: Reproduction atc= 13
+4.1 Primary measurement
+Atc= 13,N= 100,T= 800, dps = 200, the even-sector minimum eigenvalue and first-zero error
+are:
+λeven
+min = 2.865×10 −59,|γ 1 error|= 2.005×10 −55.(11)
+The measurement is stable across iterations: the Iteration 4 (N= 100, stable kernel) and Iteration 5
+(c= 13 cell) results agree to leading digits. The dps = 150 and dps = 200 retests reproduce this
+cell, indicating that dps = 80 is fully sufficient atc= 13.
+4.2 Comparison with published values
+Table 1: Comparison of|γ 1 error|atc= 13 across sources.
+Source|γ 1 error|BasisNPrecision
+Connes 2026, Section 6 [4]≈2.6×10 −55 trigonometric — —
+CCM 2511.22755, Intro [8]≈2.5×10 −55 trigonometric — —
+CCM 2511.22755,§6 (λ=
+√
+13) [8] 2.44×10 −55 trigonometric 120 200 digits
+This work 2.005×10 −55 trigonometric 100 150 digits
+All four measurements cluster within a factor of 1.3. The three values from the Connes/CCM
+group cluster around 2.5×10 −55; this work’s value differs by at most that factor of 1.3 from any
+of them, and by approximately 1.2 from the most precisely-reported Connes–Consani–Moscovici
+datum 2.44×10 −55.
+4.3 Discussion of the factor-of-1.3 discrepancy in the size of the|γ 1 error|
+To be explicit: the factor of 1.3 refers to a discrepancy in thesize of the error term|γ 1 −γ Riemann
+1 |,
+not to a discrepancy inγ 1 itself nor inλ min. All four cited measurements report the same Riemann
+zeroγ 1 to far more than the leading digits of the error magnitude; the factor of 1.3 quantifies
+how much the implementations differ in how small the residual error becomes after the Galerkin
+truncation.
+The discrepancy is consistent with the differences in implementation:
+•Basis consistency with CCM.The Connes–Consani–Moscovici Galerkin computation and
+this work both use the trigonometric basis: Connes–Consani–Moscovici Lemma 5.1 defines
+the matrix entries via the kernel sin(2πny/L), and Connes 2026§6 describes the truncation as
+acting on the “trigonometric orthonormal basis.” The factor-1.3 spread in the size of|γ1 error|
+across the four measurements is therefore not attributable to a basis-choice difference; it
+reflects differences inN, precision, integration cutoffT, and normalization conventions, as
+detailed below. A prolate-basis implementation of the CvS Galerkin would be a genuinely
+distinct path in the literature — potentially valuable as an independent cross-check — but is
+not yet reported by any group.
+•T runcation parameterN.Connes–Consani–Moscovici usesN= 120; this work uses
+N= 100. Differences inNat the same basis choice produce different Galerkin truncation
+errors; atc= 13, the data suggest thatN= 100 at 150-digit precision is sufficient to reach
+the precision floor.
+8
+•Precision.Connes–Consani–Moscovici uses 200-digit precision; this work uses 200 digits
+for the final sweep. Atc= 13, the agreement to all reported digits between dps = 80 and
+dps = 150 shows that the result is not precision-limited.
+•Quadrature cutoffTand integration method.This work usesT= 800; the Connes–
+Consani–Moscovici quadrature details are not fully specified. Differences in quadrature strat-
+egy could contribute.
+We emphasize that all four numbers are measurements of the same quantity — the distance
+between the first Fourier–Mellin zero ofη 13 andγ 1 — via the same operator (up to the sign
+equivalence of Section 2) computed in the same trigonometric basis, with differentN, precision,
+and integration parameters. The factor-of-1.3 spread in the size of|γ 1 error|is the current state of
+the art for this measurement.
+4.4 Convergence inNatc= 13
+The project’s iteration history provides a convergence sequence inN:
+Table 2:|γ 1 error|atc= 13,T= 400, dps = 80, varyingN.
+N|γ 1 error|λ even
+min
+30 3.355×10 −44 —
+60 4.22×10 −55 —
+100 1.455×10 −55 2.077×10 −59
+(This measurement usedT= 400 quadrature; theT= 800 value in Table 3 (2.865×10 −59)
+supersedes it.)
+TheN= 30→60 step yields an 11-order-of-magnitude improvement; theN= 60→100
+step yields a factor of approximately 2.9. This rapid initial convergence followed by saturation is
+consistent with the eigenvector’s effective support being concentrated in approximately 45 modes
+(see Section 8): onceNexceedsk eff ≈45, additional basis functions contribute diminishing im-
+provements.
+5 Extension to Fifteen Cutoffs
+5.1 Primary measurements atT= 800,dps = 200
+The initial three-point sweep (c∈ {13,17,19}) was performed at dps = 80 (Iteration 5) and retested
+at dps = 150 (Iteration 6). An 11×speed optimization (via python-flint’sacb.digamma) enabled
+the full sweep at dps = 150 in Iteration 7. Cutoffsc≥41 were computed at dps = 200 to avoid
+precision-floor contamination. The final dataset usesT= 800 at all fifteen cutoffs.
+The data spans 113 orders of magnitude in|γ 1 error|fromc= 13 (10 −55) toc= 67 (10 −168).
+The convergence is monotone (every increase incproduces a decrease in|γ 1 error|) but the step
+sizes are non-uniform — see Section 5.3 and Figure 1.
+Remark5.1 (Precision-floor warning forc= 43).At dps = 150, log 10 |γ1 error|=−144.63 is only
+approximately 1 order of magnitude above the dps = 150 backward-error floorε· ∥Q∥2 ≈6×10 −150
+(log10 ≈ −149.2). The dps = 200 spot-check (Section 7) correctedλ min from 1.836×10 −149 to
+2.519×10 −149 and the|γ 1 err|/λmin ratio from 12900 to 13412, indicating that the dps = 150 datum
+9
+Table 3: Complete 15-pointc-sweep atN= 100,T= 800, dps = 150 (c≤37) or dps = 200
+(c≥41). Rowsc≥17 have no prior published data we have located; thec= 14 datum is, to our
+knowledge, the first independent measurement (CCM report a value atλ=
+√
+14).
+c L= logc λ even
+min |γ1 error| |γ 1 err|/λmin log10 |γ1 err|
+13 2.565 2.865×10 −59 2.005×10 −55 6999−54.70
+14 2.639 4.835×10 −65 3.541×10 −61 7324−60.45
+17 2.833 2.030×10 −80 1.634×10 −76 8047−75.79
+19 2.944 1.265×10 −90 1.070×10 −86 8457−85.97
+23 3.135 5.959×10 −107 5.520×10 −103 9262−102.26
+29 3.367 4.366×10 −124 4.587×10 −120 10507−119.34
+31 3.434 1.045×10 −128 1.141×10 −124 10919−123.94
+37 3.611 4.670×10 −140 5.686×10 −136 12177−135.25
+41 3.714 2.122×10 −146 2.760×10 −142 13004−141.56
+43 3.761 2.519×10 −149 3.379×10 −145 13412−144.47
+47 3.850 2.994×10 −154 4.270×10 −150 14260−149.37
+53 3.970 9.615×10 −161 1.493×10 −156 15529−155.83
+59 4.078 2.328×10 −166 3.911×10 −162 16800−161.41
+61 4.111 5.063×10 −168 8.722×10 −164 17226−163.06
+67 4.205 7.993×10 −173 1.478×10 −168 18489−167.83
+2.50 2.75 3.00 3.25 3.50 3.75 4.00 4.25
+L = logc
+¡160
+¡140
+¡120
+¡100
+¡80
+¡60
+log10 j°1 errorj
+c = 13
+c = 23
+c = 67
+Convergence of CvS eigenvalue approximation (T = 800)
+dps=80 floor
+dps=150 floor
+Figure 1: First-zero absolute error|γ 1 error|across fifteen cutoffs. The data spans 113 orders of
+magnitude. Dashed lines indicate the backward-error floors at dps = 80 and dps = 150.
+was mildly contaminated. Thec= 41 datum at log 10 |γ1 error|=−141.56 has approximately
+7 orders of magnitude of headroom and is clean.
+10
+5.1.1 Cross-validation with Connes–Consani–Moscovici atc= 14
+Connes–Consani–Moscovici [8] (Section 6) report|γ 1 error| ≈1.07×10−60 atλ=
+√
+14 (equivalently
+c= 14), withN= 120 and 200-digit precision. This work measures 3.541×10 −61 at the same
+cutoff — a factor of approximately 3 smaller. This is the first row-for-row external cross-validation
+beyondc= 13.
+The discrepancy is wider than the factor-of-1.3 observed atc= 13. The source of this discrep-
+ancy is not fully understood; plausible contributions includeN, precision, normalization conven-
+tions, and integration parameters.
+5.2T-convergence atc= 13
+To verify that the quadrature cutoffTis sufficient, we compare results atc= 13 across two values
+ofT:
+Table 4:T-convergence atc= 13,N= 100, dps = 200.
+T λ even
+min |γ1 error|log 10 |γ1 err|
+400 2.077×10 −59 1.455×10 −55 −54.84
+800 2.865×10 −59 2.005×10 −55 −54.70
+The shift fromT= 400 toT= 800 is less than 0.14 units in log 10 |γ1 error|, indicating that
+the quadrature is well-converged. Both values remain within the factor-of-1.3 envelope of the
+Connes/CCM measurements, indicating that theT= 800 result is not dominated by quadrature
+truncation error.
+5.3 Pre-registered smooth-convergence model fits
+Eight two-parameter smooth-convergence models were tested. M1–M3 were pre-registered and fit
+to the initial 3-point dps = 80 data (Iteration 5); M4–M5 were added for the 10-point sweep;
+M6–M8, using prime-counting independent variables, were added for the full 15-point dataset. All
+eight were fit to the 15-pointT= 800 data. The pre-registered acceptance criterion was max
+residual≤0.5 (in log 10 units), corresponding to a factor of∼3.2 in the original error magnitude
+— approximately 0.4% of the 113-OOM dynamic range. All conclusions are robust to relaxing the
+threshold to 2.0, at which point only M5 would pass.
+M1 (linear inL): log 10 |err|=a·L+b,(12)
+M2 (quadratic inL): log 10 |err|=a·L 2 +b,(13)
+M3 (LlogL): log 10 |err|=a·LlogL+b,(14)
+M4 (mixed linear + log): log 10 |err|=a·L+b·logL,(15)
+M5 (exponential): log 10 |err|=a·exp(b·L),(16)
+M6 (linear inπ(c)): log 10 |err|=a·π(c) +b,(17)
+M7 (linear inϑ(c)): log 10 |err|=a·ϑ(c) +b,(18)
+M8 (prime powers): log 10 |err|=a·#pp(c) +b.(19)
+All eight models are rejected. M5 (exponential-in-L) is the best among theL-based models at
+1.77, but still exceeds the threshold by a factor of 3.5. M6–M8, which use prime-counting indepen-
+dent variables (π(c), Chebyshevϑ(c), and the number of prime powers≤c), perform substantially
+11
+Table 5: Two-parameter smooth-convergence model fits to the 15-point data.
+Model Form Max residual Pass≤0.5?
+M1a·L+b2.66 F AIL
+M2a·L 2 +b4.71 F AIL
+M3a·LlogL+b3.63 F AIL
+M4a·L+b·logL2.66 F AIL
+M5a·exp(b·L) 1.77 F AIL
+M6a·π(c) +b10.28 F AIL
+M7a·ϑ(c) +b12.09 F AIL
+M8a·#pp(c) +b10.20 F AIL
+worse (max residuals 10–12), indicating that the convergence is not simply proportional to any
+standard prime-counting function.
+We emphasize that this failure doesnotbear on the question of whether the zeros converge
+asc→ ∞— it bears only on whether the rate of convergence, if it exists, can be captured by a
+two-parameter smooth model fit to fifteen points in the intervalc∈[13,67].
+5.4 Structural observations
+Two structural features of the computation are worth recording.
+Effective support invariance.Definek eff (ϵ) as the smallestksuch that the cumulative squared
+eigenvector weightS k = Pk
+j=1 |vj|2 satisfies 1−S k < ϵ. Atϵ= 10 −50:
+Table 6: Effective supportk eff (10−50) across cutoffs.
+cdpsk eff (10−50)
+13 80/150 45
+17 150 45
+19 150 44
+The ground-state eigenvector’s effective support is approximately 44–47 modes regardless of
+cutoff. This is approximatelyc-invariant: the “physical mode” occupies a fixed number of basis
+functions, and the remaining modes (approximatelyk >75 atN= 100) form a boundary-layer
+residual.
+Eigenvector near-invariance across cutoffs.The overlap parameterq=|⟨η c1|ηc2⟩|between
+ground-state eigenvectors at different cutoffs satisfiesq >0.950 for all 105 measured cutoff pairs
+(see Section 8 for the full analysis), despite eigenvalues differing by up to 113 orders of magnitude.
+Three representative pairs from the initial sweep:
+What changes between cutoffs is predominantly the eigenvalueλ min (which shifts by up to
+113 orders of magnitude), while the eigenvector structure remains more than 95% the same (the
+minimum pairwise overlap across all 105 pairs is 0.950).
+12
+Table 7: Eigenvector overlaps across cutoff pairs.
+Pair|⟨η c1|ηc2⟩|
+(c= 13, c= 17) 0.9977
+(c= 13, c= 19) 0.9956
+(c= 17, c= 19) 0.9997
+5.5 Convergence inNat fixedc= 23
+To characterize the Galerkin truncation error independently of the prime-cutoff effect, we fixc= 23
+and vary the basis sizeN∈ {40,60,80,100,120,140}at dps = 150.
+Table 8:N-convergence atc= 23,T= 400, dps = 150.
+N λ even
+min |γ1 error|k eff (10−50) log 10 |γ1 err|
+40 6.628×10 −72 1.033×10 −67 37−67.0
+60 2.761×10 −88 3.044×10 −84 43−83.5
+80 1.143×10 −99 1.113×10 −95 45−95.0
+100 4.182×10 −107 3.876×10 −103 46−102.4
+120 3.137×10 −111 2.854×10 −107 46−106.5
+140 9.036×10 −113 8.179×10 −109 46−108.1
+The convergence inNis rapid forN≤80 (+16.5 and +11.4 orders of magnitude per 20-step
+increase) but saturates sharply: theN= 100→140 range gains only 5.7 OOM total. The effective
+support k eff stabilizes at 46 fromN= 100 onward, indicating that the ground-state eigenvector
+occupies approximately 46 even-sector basis functions regardless of the total basis size. AtN= 140,
+the marginal improvement is only 1.5 OOM per 20-step — the Galerkin truncation has essentially
+converged, and the remaining error of 8.18×10 −109 is controlled by the finite cutoffc= 23, not
+the finite basis.
+5.6 Log-periodic blind test
+An empirical log-periodic model
+log10 |γ1 error|=−66.95·L+ 110.98 + 5.50 sin(3.08·L+ 6.57) (20)
+was fit to the 10-point training data (c= 13 through 43), yielding a maximum training residual
+of 0.74 — the first model to beat the best two-parameter result of 1.77. Pre-registered blind
+predictions were made forc= 47 andc= 53 before computation.
+Table 9: Log-periodic model blind test.
+cPredicted Actual|residual|Verdict
+47−150.9−149.4 1.5 pass (<2.0)
+53−150.3−155.8 5.5fail(>2.0)
+The model predicted thatc= 53 would yieldlessprecision thanc= 47 (due to the oscillation
+swinging positive). In reality,c= 53 showed 6.4 OOM more precision. The 5-parameter model
+13
+was overfitting the non-uniform step sizes in the training range; the anti-monotone prediction was
+the tell. This clean falsification strengthens the negative result: no parametric model tested —
+including models with up to 5 free parameters — captures thec-dependence of|γ 1 error|over the
+measured range.
+5.7 Blind prediction test atc= 67
+Before computing thec= 67 cell, an ensemble prediction (weighted average of four independent
+prediction methods) was pre-registered:
+log10 |γ1 error|pred =−169.4±2.0.(21)
+The prediction was sealed via SHA-256 hash before computation (see ancillary filepreregistered_
+predictions_2026-04-12.md).
+The actual result was log10 |γ1 error|=−167.83. The residual|−167.83−(−169.4)|= 1.57 falls
+within the pre-registered±2.0 threshold: the blind prediction passes.
+This is evidence that the convergence behavior is sufficiently regular to permit out-of-sample
+predictions at 1.6-OOM accuracy. This isnota proof of convergence; it is an empirical observation
+that the convergence behavior is smooth and predictable within the measured range.
+6 Out-of-Sample Empirical Test atc= 100
+Operating atcwell above the precision floor enables a separate test of the convergence behavior
+outside the in-sample window of Section 5. The fifteen-cutoff sweep (c≤67,N= 100) established
+the empirical pattern log10 |λeven
+min (c)| ≈ −13.24c0.634 from a least-squares fit. Two natural questions
+arise. First, does that fit, taken as an asymptotic, extrapolate correctly to largerc? Second, is it
+consistent with the heuristic continuum asymptotic of Connes 2026 [4]§6.4? This section addresses
+both through a measurement atc= 100 withN-sweep atN∈ {100,150,200,250}at dps = 500
+and a precision retest atN= 150, dps = 1000.
+6.1 Connes 2026 Section 6.4 heuristic asymptotic
+Connes 2026 [4]§6.4 gives a heuristic continuum asymptotic for the angular function 1−χ 2(λ),
+motivated by the agreement of 1−χ 2(λ) with the smallest eigenvalueε(λ) of the operatorA λ for
+λ≤14 (their Figure 1). The expression is
+1−χ 2(λ)∼ 214
+3
+√
+2π 5 e−4πeL+9L/2,(22)
+where, as defined in [4]§6.4,L= 2 logλis the length of the support interval [λ −1, λ] of the
+admissible test functions for the truncated Weil formQW λ. Withλ 2 =c, this isL= logc, so
+eL =c.
+Evaluating equation (22) atc= 100 (L= log 100≈4.6052,e L = 100) in base-10 logarithm:
+log10
+ 
+1−χ 2(c= 100)
+
+≈log 10
+214 √
+2π 5
+3 − 4π·100
+ln 10 + 9 log 100
+2 ln 10
+≈6.37−545.75 + 9.00≈ −530.38.
+(23)
+The prediction, treating the agreement ofε(λ) with 1−χ 2(λ) onλ≤14 as continuing toc= 100,
+is log10 |ε(c= 100)| ≈ −530.38.
+14
+6.2 Methodology
+We computed the Galerkin matrixQ even
+c atc= 100,T= 800, working precision dps = 500,
+with python-flintflint prec= 2000, using the v0.2.0 fused-kernel math core from the public
+connes-cvsPyPI package, forN∈ {100,150,200,250}. A precision retest at dps = 1000 with
+flint prec= 4000 was run atN= 150.
+The retest provides three independent stability checks: (i) agreement ofλeven
+min between dps = 500
+and dps = 1000 to 25 leading significant digits; (ii) agreement of the absolute log-magnitudes of the
+five smallest negative eigenvalues across dps = 500 and dps = 1000 to two decimal places (these
+negatives are stable in dps but, as Section 6.6 establishes, are a finite-Tcutoff artifact); (iii)γ k
+extraction at dps = 1000 providing∼219–242 matching digits, doubling the depth at dps = 500.
+Wall-clock atc= 100, N= 150,dps = 500 was 21.0 minutes on twelve workers of an Ap-
+ple M2 Max; at dps = 1000, 111 minutes.
+6.3 Measurement:N-sweep atc= 100
+Table 10:N-sweep atc= 100,T= 800. Working precision dps = 500 forN∈ {100,150,200,250};
+retest at dps = 1000 forN= 150. The # negative column counts finite-T(T= 800) artifact
+eigenvalues (Section 6.6), absent at largerT.
+Ndpsλ even
+min (smallest-positive) log 10 |λmin|∆ in log 10 # negative
+100 500 1.22×10 −191 −190.92 — 3
+150 500 6.42×10 −248 −247.19−56.28 5
+200 500 4.87×10 −295 −294.31−47.12 8
+250 500 2.08×10 −334 −333.68−39.37 11
+150 1000 6.42×10 −248 −247.19 — 5
+The observed positive-branch values log 10 |λeven
+min (N)|decrease monotonically withNat fixed
+c= 100. We note that the ordinary Galerkin/Rayleigh–Ritz min-max monotonicity assumes a
+coercive self-adjoint setup with an isolated ordered ground state; because the negative-sign block
+atc= 100 is a finite-Tartifact (Section 6.6), cutoff-free the smallest-positive selection is the min-
+max ground state of the matrix; we nonetheless report the monotonicity as an empirical observation,
+not as an invocation of that theorem. The successive first differences|∆ 1|= 56.28,|∆ 2|= 47.12,
+|∆3|= 39.37 form a geometric-looking sequence with consecutive ratios|∆ 2/∆1|= 0.837 and
+|∆3/∆2|= 0.836, matching to two decimal places — evidence for a local geometric model of the
+convergence sequence, which the three-point sweep{100,150,200}alone could not distinguish from
+a forced fit (Section 6.4).
+6.4 Aitken∆ 2 extrapolation and match to Connes 2026§6.4
+Definex N := log10 |λeven
+N (c= 100)|on the positive branch, with measured valuesx 100 =−190.92,
+x150 =−247.19,x 200 =−294.31,x 250 =−333.68 (Table 10). First differences ∆ i :=x Ni+1 −x Ni
+on the step gridN∈ {100,150,200,250}are ∆ 1 =−56.28, ∆ 2 =−47.12, ∆ 3 =−39.37, with
+consecutive ratios
+|∆2/∆1|= 0.837,|∆ 3/∆2|= 0.836,(24)
+matching to two decimal places. This consistency is the data signature of a locally geometric
+convergencex N =x ∞ +C rN ; with four points and one shared ratio, the geometric hypothesis is
+15
+over-determined and therefore testable on the data (in contrast to the three-point case, where any
+single ratio fits both gaps by construction).
+The Aitken-∆2 acceleration [1] applied to two consecutive overlapping triples yields two inde-
+pendent extrapolations:
+from{x 100, x150, x200}:x ∞ ≈x 100 − (∆1)2
+∆2 −∆ 1
+=−190.92− (−56.28)2
+9.16 ≈ −536.76,
+from{x 150, x200, x250}:x ∞ ≈x 150 − (∆2)2
+∆3 −∆ 2
+=−247.19− (−47.12)2
+7.75 ≈ −533.70.
+(25)
+The Aitken anchors in equation (25) are computed from the full-precision log 10 |λeven
+min |values
+recorded in the released JSON; the rounded table values in Table 10 reproduce them only to the
+displayed precision.
+The two Aitken anchors agree to|−536.76−(−533.70)| ≈3.1 orders of magnitude; the second
+(using the deeper triple) is closer to the Connes 2026§6.4 heuristic prediction of−530.38 in equa-
+tion (23). The gap of the first anchor to the Connes prediction is 6.39 OOM and the gap of the
+second anchor is 3.32 OOM, out of a magnitude range|x ∞| ∼530. The trend withNis monotone
+toward the prediction (Aitken anchored atN= 100:−536.76; anchored atN= 150:−533.70;
+Connes 2026:−530.38). Figure 2 summarizes the four-point sweep, the two consecutive Aitken
+anchors, and the Connes 2026§6.4 reference together with the consecutive-ratio consistency check.
+We make no claim that this constitutes a proof of the asymptotic. Connes 2026§6.4 itself is
+a heuristic statement based on the empirical agreement (their Figure 1) between 1−χ 2(λ) and
+ε(λ) forλ≤14; the prefactor (2 14/3)
+√
+2π 5 is derived from Fuchs’s prolate-spheroidal eigenvalue
+theorem and is therefore rigorous, while theidentificationofεwith 1−χ 2 at largeλis the heuristic
+step. On our side, the consistency of the two ratios in equation (24) is evidence for a local geometric
+model of the convergence sequence, but four points do not rule out alternative convergence-model
+fits (stretched-exponentiala N =a ∞ +Ce −aN β
+withβ̸= 1, or polynomial 1/N p); such alternatives
+fit the same four points less tightly than the geometric form, but are not eliminated, and they
+yield extrapolated limits outside the Aitken band. The extrapolation remains an inference about
+theN→ ∞limit of an empirically distinguished positive branch (Remark 2.1). We report the
+consistency with the Connes 2026§6.4 heuristic; we do not promote it to a statistical test.
+6.5γ k extraction up to 307–329 matching digits
+The eigenvector corresponding toλ even
+min (c= 100) on the empirically distinguished positive branch
+(see Remark 2.1) extractsγ k via theF even test function defined in§3.4, equivalently (under the
+unitary equivalence of§2.4) the zero set of bξN (z).
+Atc= 100,N= 150, dps = 1000 the first ten Riemann zeros are reproduced to 219–242
+matching digits; atN= 250, dps = 500 the same extraction reaches 307–329 matching digits. For
+reference, Connes–Consani–Moscovici [8] Section 6 reportsγ 1 matching to∼55 digits atc= 13,
+N= 120; ourc= 67,N= 100, dps = 200 datum gives 168 digits (see Table 20).
+The doubling in dps (500→1000) at fixedN= 150 adds 95–115 matching digits acrossγ 1
+throughγ 10; the increment inN(150→250) at dps = 500 adds 179–201 matching digits at the
+sameγ k. TheN-direction therefore gives more matching digits per compute-time unit than the
+dps direction atc= 100: increasingNboth deepens the Galerkin truncationandprovides cheaper
+accuracy than the dps quadrature cost. This identifies the Galerkin truncationNas the binding
+accuracy parameter atc= 100, with dps secondary once it is comfortably above the backward-error
+floor. Figure 3 visualizes the three precision cells; the gap between theN= 150,dps = 500 and
+N= 150,dps = 1000 curves isolates the precision-floor effect at fixedN, and the gap between
+16
+¡350
+¡325
+¡300
+¡275
+¡250
+¡225
+¡200
+¡175
+log10 j¸ evenj
+¡190:92
+¡247:19
+¡294:31
+¡333:68
+c = 100 four-point N-sweep with Aitken-¢2 anchors
+j¢2=¢1j j¢3=¢2j
+0.83
+0.84
+ 0:8373 0:8355
+avg = 0:836
+ratio over-determination
+log10 j¸ even
+min (c = 100; N)j at dps = 500
+100 150 200 250
+Galerkin basis size N
+¡540
+¡535
+¡530
+log10 j¸ evenj (extrap.)
+©
+100; 150; 200
+ª
+: ¡536:76
+©
+150; 200; 250
+ª
+: ¡533:70
+Connes Sec. 6.4: ¡530:38
+Figure 2: Broken-axisN-sweep atc= 100, dps = 500 (smallest-positive even-sector eigenvalue).
+Top panel:the four measured data points log 10 |λeven
+min |=−190.92,−247.19,−294.31,−333.68 at
+N= 100,150,200,250, shown at their full∼140-OOM range.Bottom panel(note the y-axis break
+and the change of scale): the two consecutive Aitken-∆ 2 extrapolations (−536.76,−533.70) and
+the Connes 2026§6.4 heuristic continuum prediction (−530.38), at their natural∼10-OOM scale.
+The trend withNis monotone toward the Connes prediction; the deeper-anchored Aitken triple
+(N∈ {150,200,250}) is within 3.32 OOM of the heuristic.Inset (top panel):consecutive first-
+difference ratios|∆ i+1/∆i|from equation (24). Both ratios lie within 0.002 of the dotted reference
+line at 0.836 (the average), evidence for a local geometric model of the convergence sequence (not
+a proof that alternatives are ruled out; see Section 6.4 discussion).
+17
+Table 11: Extraction ofγ k atc= 100 from the smallest-positive eigenvector. Matching-digit counts
+⌊−log 10 |γk −mpmath.zetazero(k).imag|⌋, with findroot tolerance 10 −380 at the working precision
+shown. Detectedγ k values are deposited in the ancillary file listed in Section 12 for independent
+verification.
+k N=150, dps=500N=150, dps=1000N=250, dps=500
+1 128 242329
+2 122 239 325
+3 126 236 323
+4 117 233 320
+5 128 231 318
+6 119 228 316
+7 118 226 313
+8 128 224 312
+9 111 221 309
+10 126 219 307
+N= 150,dps = 1000 andN= 250,dps = 500 isolates theN-extension effect at fixed working
+precision.
+1 2 3 4 5 6 7 8 9 10
+Riemann-zero index k
+150
+200
+250
+300
+matching digits = b ¡ log10 j°k ¡ °exact
+k jc
+329 325 323 320 318 316 313 312 309 307
+°k recovery at c = 100:  three precision cells
+N = 150, dps = 500 (retight) N = 150, dps = 1000 N = 250, dps = 500 (headline cell)
+Figure 3: Matching-digit recovery ofγ 1, . . . , γ10 atc= 100 from three precision cells.N= 150 at
+dps = 500 (retight-tolerance baseline) gives 111–128 digits;N= 150 at dps = 1000 gives 219–242
+digits (precision-doubling at fixedN);N= 250 at dps = 500 gives 307–329 digits (the headline
+cell of Table 11). Each annotation on the headline curve is the floor of−log 10 |γk −zetazero(k)|
+recomputed independently from the deposited 400-digit reference strings.
+18
+6.6 The dps-stable negative block atc= 100is a finite-cutoff artifact
+Atc= 100,N= 150,T= 800, dps = 500, the even-sector matrixQ even
+c has five eigenvalues
+with negative sign at log 10 |e| ∈ {−40.66,−59.75,−96.75,−165.15,−223.69}. The dps = 1000
+retest reproduces all five at log-magnitudes identical to two decimal places, indicating they are not
+precision-floor noise (the topmost negative at 10 −41 lies hundreds of orders of magnitude above the
+dps = 1000 working-precision floor).
+Continuum positivity ofQW λ for allλ >1 is equivalent to the Riemann Hypothesis (Connes
+2026 [4]§4.1) and is proved only for smallλ; we therefore do not assume continuum positivity at
+λ=
+√
+100. The block is dps-stable but notT-stable: it is an artifact of truncating the archimedean
+integral at the finite cutoffT= 800. Increasing the cutoff toT= 1200 removes it, and a cutoff-free
+evaluation of the archimedean entries leaves thec= 100 even sector with no negative eigenvalues;
+the correct diagnostic of a deep-spectrum value is agreement between two values ofT, not stability
+in dps. AtT= 800 the archimedean entries carry a truncation error far larger than the reported
+negative magnitudes, so those signs are not informative about the operator.
+The count of negative-sign eigenvalues grows withNat fixedc= 100 ({3,5,8,11}forN∈
+{100,150,200,250}, see Table 10), consistent with this mechanism: at fixedTthe higher-index
+basis functions added asNgrows carry archimedean entries that require a larger cutoff to resolve,
+so more of the lowest eigenvalues fall below the finite-Tentry-error floor. We do not infer anything
+about the continuum operator from these signs. This is distinct from spectral pollution proper
+(spurious eigenvalues arising from gaps in the essential spectrum), studied for self-adjoint operators
+in [10, 11, 13]; in the modern operator-theoretic framework spectral inclusion holds for the self-
+adjoint Galerkin sequence, but freedom from spectral pollution has not been proved, and we do
+not claim it.
+This finite-basis observation does not affect the smallestpositiveeigenvalueλ even
+min = 6.42×10 −248
+atN= 150 reported in Table 10. That value is the corroborated positive branch on which the
+γ1 extraction of Section 6.5 operates and the quantity participating in the Aitken extrapolation of
+Section 6.4. We flag this finite-Tartifact here for completeness; the same mechanism accounts for
+the apparentχ 3 positivity breakdown observed atc= 23,29 in Section 8.10, where the even-sector
+negative is likewise removed onceTis increased, and in both cases we report the positive-branch
+observable without claiming a theorem-level interpretation of the negative block.
+6.7 Reframing of theN= 100empirical fit
+Section 5 established the empirical fit|log 10 λeven
+min (c)| ≈13.24c0.634 on thec≤67,N= 100 data.
+Extrapolating that fit toc= 100 predicts|log 10 λmin| ≈245.4. OurN= 200 observation at
+c= 100 is 294.31, exceeding the prediction by 49 OOM in the direction offasterdecay. Refitting
+|log 10 λ|=A c B on{c≤67} ∪ {c= 100}data degrades the RMS residual from 9.0 OOM (in-
+sample atN= 100) to 13.9 OOM once thec= 100 point is included — a clean falsification of the
+pure-power-law functional form.
+The natural interpretation, consistent with the data, is that|log 10 λ| ∼13.24c0.634 describes
+thefinite-N= 100rateforc≤67, not the continuum rate. The continuum rate, per Connes 2026
+§6.4 and the Aitken extrapolation in Section 6.4, is super-exponential inc(∼e −4πc+9 logc/2 ).
+This interpretation is independently corroborated by an additional measurement at the deepest
+in-sample cutoffc= 67 at the same extended basisN= 150. Re-running the operator atc= 67,
+T= 800,N= 150, dps = 500 givesλ even
+min (c=67, N=150) = 5.329×10 −219, i.e. log 10 |λmin|=
+−218.27. This is 46 OOM smaller than theN= 100 value of log 10 |λmin(c=67, N=100)|=−172.10
+reported in Section 5. The N-dependence atc= 67 (−172.10→ −218.27 overN= 100→150, a
+19
+drop of 46 OOM) is qualitatively the same as atc= 100 (−190.92→ −247.19, a drop of 56 OOM).
+TheN= 100 data of Section 5 across the entirec≤67 sweep are, like theN= 100 datum
+atc= 100, Galerkin upper bounds rather than near-continuum values. This is the structural
+mechanism underlying the failure of the 13.24c 0.634 extrapolation atc= 100: the empirical fit
+captures a sequence of upper bounds rather than the limit they approximate from above.
+TheN= 100 finite-Nfit of Section 5 and Connes’ continuum asymptotic measure different
+quantities; the present work makes that distinction explicit, with both quantities now empirically
+tested atc= 100.
+The four observations of this section — the two consecutive Aitken anchors at−536.76 and
+−533.70 approaching the Connes 2026§6.4 heuristic of−530.38 with gaps 6.39 and 3.32 OOM re-
+spectively, the 307–329 digit reproduction ofγ 1–γ10 from theN= 250 smallest-positive eigenvector
+at dps = 500 (with theN= 150,dps = 1000 retest giving 219–242 digits at the sameγ k), the
+finite-Tnegative-sign artifact block (counts{3,5,8,11}atT= 800, removed at largerT), and the
+falsification of the finite-Npower-law extrapolation by 49 OOM atN= 200 — are the substantive
+new content of this work relative to thec≤67 data of Section 5. They constrain theoretical work on
+the convergence question through structural quantities (Sobolev exponent, eigenvector universality)
+which the subsequent Section 8 examines in detail.
+7 Precision-Floor Analysis and thedps = 150Retest
+7.1 The backward-error precision floor
+At dps = 80, the unit roundoff isε≈10 −80. The backward-error bound for symmetric eigenvalue
+computation gives
+|δλ| ≤ε· ∥Q∥2,(26)
+where∥Q∥ 2 is the spectral norm of the Galerkin matrix. Direct computation gives∥Q∥ 2 ≈5.7–6.0
+across the cutoffs tested. The backward-error floor is therefore
+ε· ∥Q∥2 ≈6×10 −80.(27)
+Atc= 13,λ even
+min = 2.865×10 −59 is 21 orders of magnitude above this floor — comfortably
+resolved. Atc= 17,λ even
+min = 2.030×10 −80 isat or belowthe floor. Atc= 19,λ even
+min = 1.265×10 −90
+is firmly below the floor at dps = 80.
+7.2 Pre-registered five-bin classification rule
+Before the dps = 150 retest was executed, a five-bin classification rule was frozen based on the
+quantity
+∆150
+17-19 = log10 |γ1 error atc= 19,dps = 150| −log 10 |γ1 error atc= 17,dps = 150|.
+1.5A confirmed(∆<−15): Thec= 19 datum was entirely an artifact of the precision floor.
+2.Ambiguous partial floor(−15≤∆<−5.29): Some floor contamination, but the step
+pattern is not fully explained.
+3.5B live(−5.29≤∆<−1): The non-smooth step pattern is largely genuine.
+4.5B strong(−1≤∆<0): Near-stalling atc= 19 is real.
+5.Reversal(∆≥0): The error increases fromc= 17 toc= 19.
+20
+7.3 Retest results
+The dps = 150 retest completed in approximately 118 minutes of wall-clock time.
+Table 12: dps = 80 versus dps = 150 comparison.
+Quantity dps = 80 dps = 150 Shift
+λmin atc= 13 2.077×10 −59 2.077×10 −59 <10 −59 shift
+|γ1 error|atc= 13 1.455×10 −55 1.455×10 −55 <10 −59 shift
+λmin atc= 17 1.215×10 −80 1.401×10 −80 +15%
+|γ1 error|atc= 17 1.117×10 −76 1.128×10 −76 +1%
+λmin atc= 19 1.327×10 −81 8.777×10 −91 9 OOM drop
+|γ1 error|atc= 19 5.809×10 −80 7.426×10 −87 7 OOM drop
+Thec= 19 cell was substantially contaminated at dps = 80: the eigenvalue dropped by 9 orders
+of magnitude and|γ 1 error|dropped by 7 orders of magnitude under the precision increase. The
+c= 13 cell is unaffected (agreement to all reported digits).
+7.4 Classifier verdict
+At dps = 150:
+∆150
+17-19 = log10(7.426×10 −87)−log 10(1.128×10 −76) =−10.18.(28)
+This falls inBin 2: Ambiguous partial floor(−15≤ −10.18<−5.29). The classifier fires
+without post-hoc adjustment.
+Interpretation.Thec= 19 dps = 80 datum was substantially contaminated (the 7-OOM
+drop in|γ 1 error|is direct evidence), but the step fromc= 17 toc= 19 at dps = 150 (∆ =−10.18)
+is still smaller than the step fromc= 13 toc= 17 (∆ =−21.11).
+7.5 The|γ 1 err|/λmin coupling
+The ratio|γ 1 err|/λmin ranges from approximately 6999 atc= 13 to 18489 atc= 67 (atT= 800,
+dps = 200), exhibiting a slow upward drift with increasingc. This ratio is an empirical observation
+consistent with standard Babuˇ ska–Osborn / Rayleigh–Ritz spectral approximation theory [2]; the
+prefactorC(c) grows slowly, approximately linearly in log(c) (see Figure 4).
+A linear fit to the 15-pointT= 800 data gives
+C(c) =|γ 1 err|/λmin ≈6730·logc−11268, R 2 = 0.956.
+The coupling is also visible in cross-cutoff log-ratio scaling:
+The eigenvalue and first-zero error scale in near-perfect lockstep in log space: the ra-
+tio of logs is within 0.4% of unity across the full 113-OOM span. This log-space coupling
+log(γ1 ratio)/log(λratio)≈1.003 held across all measured pairs.
+For reference, thec= 19 dps = 80 ratio was 44, an obvious artifact; at dps = 150 it restores to
+8461, consistent with floor contamination.
+21
+2.50 2.75 3.00 3.25 3.50 3.75 4.00 4.25
+logc
+6000
+8000
+10000
+12000
+14000
+16000
+18000
+°1=¸
+Ratio °1=¸ vs cutoff (T = 800)
+fit: slope = 6730
+Figure 4: The ratio|γ 1 err|/λmin as a function of logc, showing slow monotone growth consistent
+with standard spectral approximation theory. The dashed line is the linear fitC(c)≈6730·logc−
+11268.
+22
+Table 13: Cross-cutoff log-ratio coupling (T= 800, dps = 200).
+Pair log 10(λratio) log 10(γ1 ratio) Ratio of logs
+(c= 13, c= 17) 21.150 21.089 1.003
+(c= 17, c= 19) 10.206 10.184 1.002
+(c= 13, c= 19) 31.355 31.273 1.003
+(c= 13, c= 43) 89.943 89.725 1.002
+(c= 13, c= 67) 113.555 113.131 1.004
+7.6 Eigenvector robustness to eigenvalue contamination
+An initially surprising feature of the retest is that|γ 1 error|atc= 17 shifted by only 1% under
+the dps = 80→150 transition, even thoughλ min shifted by 15%. The explanation follows from
+standard eigenvector perturbation theory (Davis–Kahan): the eigenvector perturbation depends on
+the spectral gap, which atc= 17 is approximately 10 8. The eigenvector is therefore well-conditioned
+even when the eigenvalue is at the precision floor, andγ1 — computed from the eigenvector’s Fourier
+transform — inherits this stability.
+This observation has a practical consequence:|γ 1 error|is a more reliable observable thanλ min
+when operating near the precision floor.
+8 Structural Analysis
+8.1 Empirical Galerkin convergence exponent (Sobolev interpretation)
+Standard Galerkin approximation theory [2] predicts|λ exact −λ N | ∼C·N−2s wheresis the Sobolev
+regularity exponent of the target eigenfunction. TheN-convergence data atc= 23 (Table 8) allow a
+directempiricalmeasurement of the convergence-rate exponent, which under the Babuˇ ska–Osborn
+identificationwouldequalsif the standard hypotheses hold (smooth coercive bilinear form, isolated
+simple eigenvalue, target eigenfunction inH s). We do not establish those hypotheses analytically
+here; the valuess(c) below should be read asempirical Galerkin-convergence rateson the measured
+N-range, not a proof thatη c ∈H s.
+Linear regression of log10 |λeven
+min |against log 10 NforN∈ {40,60,80}(the pre-saturation regime)
+yields slopea=−92.28 withR 2 = 0.99997. Since|λ| ∼N a anda=−2s, this gives
+s≈46.1 (fromλ min), s≈46.5 (from|γ 1 error|),
+both withR 2 >0.9999. The two independent estimates agree to within 0.7%.
+AtN≥100, the data fall above the power-law prediction by 1.6–9.4 decades (Figure 5),
+indicating that the dps = 150 precision floor has been reached and the Galerkin truncation error
+is no longer the dominant error source. The crossover occurs atN≈100, consistent with the
+observation thatk eff ≈46 modes carry the ground-state eigenvector.
+Under the Babuˇ ska–Osborn identification, this would correspond toH46([0, L])-type regularity
+for the CvS ground-state eigenvector atc= 23; in this paper we uses(c) only as an empirical
+Galerkin-convergence exponent on the measuredN-range, not as an established Sobolev statement.
+Repeating theN-convergence measurement at five additional cutoffs reveals that the empirical
+exponent isnota universal constant — it grows withc:
+A linear fit in logcgives
+s(c)≈55·logc−128, R 2 = 0.992.
+23
+1.6 1.7 1.8 1.9 2.0 2.1 2.2
+log10 N
+¡120
+¡110
+¡100
+¡90
+¡80
+¡70
+log10 j¸evenj
+4.8
+9.5
+fit region (N ∙ 80)
+saturation (N ¸ 100)
+s ¼ 46,  R 2 > 0:9999
+saturation region
+Figure 5: Sobolev regularity measurement atc= 23. The power-law fit throughN= 40,60,80
+yieldss≈46 withR 2 >0.9999. Saturation atN≥100 (shaded) indicates the dps = 150 precision
+floor has been reached.
+The empirical exponents(c) increases from≈9 atc= 13 to≈75 atc= 43 — under the Babuˇ ska–
+Osborn identification, thiswouldcorrespond to a substantial increase in Sobolev regularity, but
+again, we uses(c) here as a Galerkin-rate measurement, not as a regularity proof. The scaling
+has a direct implication for the observed convergence rate: atc= 43 withs(c)≈75, the rate
+N −2s(c) =N −150 is so rapid thatN= 100 basis functions reach the precision floor.
+The lowR 2 = 0.87 atc= 13 reflects the fact that evenN= 60 andN= 80 are approaching
+saturation at dps = 150 for this cutoff; the pre-saturation regime is narrower whensis small. For
+c≥17, all fits haveR 2 >0.98.
+8.2 Sobolev–Paley–Wiener connection and testable prediction
+The Sobolev scalings(c)≈55·logc−128 admits a plausible mechanism via the classical Paley–
+Wiener theorem. The CvS kernel involves the digamma function Ψ(1/4 +iτ /2), which is analytic
+in a strip of widthσ= 1/2 around the real axis. For a Galerkin method on [0, T], the Paley–Wiener
+theorem predicts
+s= σeff ·T
+2π ,
+whereσ eff is the effective analyticity strip width of the full kernel. The bare digamma strip width
+(σ= 1/2) is independent ofc, but the prime-sum kernel — a sum over primesp≤cweighted by
+(logp) 2/p— smooths the kernel beyond the analyticity strip of any single term. By the explicit
+formula for the prime-counting remainder, the fluctuations have amplitude∼ √c/logc, and the
+effective strip width grows asσ eff ∼A·logcfor some constantA.
+24
+Table 14: Sobolev regularity exponents(c) at six cutoffs, each measured from the pre-saturation
+regimeN∈ {40,60,80}at dps = 150.
+c s(c)R 2
+13 9.4 0.87
+17 27.8 0.99
+23 46.1 1.00
+29 57.6 1.00
+37 68.8 1.00
+43 75.0 1.00
+WithT= 800 and the measured slope 55, this givesA= 55·2π/800 = 0.432, implying
+σeff ≈0.43·logcat any given cutoff.
+T estable prediction.If this mechanism is correct, thens(c, T)∼(A/T 0)·T·logc. Doubling
+Tfrom 400 to 800 should double the slope ofs(c) versus logcfrom∼28 to∼55. This prediction
+is directly testable with existing code and would distinguish the Paley–Wiener mechanism from
+alternatives.
+8.3 Approximate eigenvector universality across cutoffs
+The full 15×15 overlap matrix|⟨η c1|ηc2⟩|was computed from the saved eigenvectors at all fifteen
+cutoffs. All 105 pairwise overlaps are at least 0.9498 (Figure 6), with 104 of 105 strictly exceeding
+0.950 and the minimum 0.94985 attained at the most-separated pair (c= 13, c= 67). The closest-
+neighbor pairs (c= 41,43) and (c= 29,31) achieve overlaps of 0.99997 and 0.99992 respectively.
+For fixed prime gap, the convergence rate follows a clean power law (Figure 7):
+1− |⟨ηc1|ηc2⟩| ∼A·c−α
+min, c min = min(c1, c2), α∈[1.8,2.7], R 2 >0.999.
+This is consistent with standard rank-one perturbation theory: each primepcontributes a rank-
+one correction of magnitude Λ(p)/ √p∼logp/ √pto the operator, and the cumulative effect on the
+eigenvector scales as a power ofc.
+The eigenvector profile broadens slowly withc: atc= 13, components decay below 10 −5 by
+k= 6, while atc= 53 this threshold is not reached untilk≈12. Despite this broadening, the
+dominant components (k= 1 through 5) are stable across all cutoffs, and the effective support
+keff ≈46 is essentiallyc-invariant forc≥23.
+8.4 Multi-zero convergence universality
+The pickle files store the first ten detected zeros (γ 1 throughγ 10) at each cutoff. This allows a test
+of whether higher zeros converge at the same rate asγ 1.
+Linear regression of log10 |γk error|against log 10 |γ1 error|across cutoffs yields near-unity slopes
+for allk:
+All ten zeros converge at rates within 3.8% of each other (Figure 8). Theγ 2 regression
+againstγ 1 hasR 2 = 0.9999998. This near-universality means that the convergence question —
+does|γ 1 error| →0 asc→ ∞? — effectively subsumes the corresponding question for all higher
+zeros. Ifγ 1 converges, the data strongly suggest thatγ 2 throughγ 10 converge as well, at essentially
+the same rate.
+25
+13 14 17 19 23 29 31 37 41 43 47 53 59 61 67
+Cutoff c
+13
+14
+17
+19
+23
+29
+31
+37
+41
+43
+47
+53
+59
+61
+67 Cutoff c
+Eigenvector overlap j
+­
+´c1 j´c2
+®
+j
+0.94
+0.95
+0.96
+0.97
+0.98
+0.99
+1.00
+Overlap
+Figure 6: Eigenvector overlap matrix|⟨η c1|ηc2⟩|across all fifteen cutoffs. All 105 pairwise overlaps
+are at least 0.9498 (the minimum, 0.94985, occurs at the maximally-separated pair (c= 13, c= 67);
+104 of 105 pairs strictly exceed 0.950), indicating approximate eigenvector universality despite
+eigenvalues differing by up to 113 orders of magnitude.
+26
+2 £ 101 3 £ 101 4 £ 101 6 £ 101
+cmin = min(c1; c2)
+10¡5
+10¡4
+10¡3
+10¡2
+1 ¡ j
+­
+´c1 j´c2
+®
+j
+Eigenvector deviation by prime-cutoff gap
+gap 2: ® = 2:7, R 2 = 1:0000
+gap 4: ® = 2:5, R 2 = 0:9998
+gap 6: ® = 2:5, R 2 = 0:9998
+gap 10: ® = 2:3, R 2 = 0:9996
+gap 18: ® = 2:1, R 2 = 0:9990
+gap 30: ® = 1:8, R 2 = 0:9990
+Figure 7: Eigenvector deviation 1− |⟨ηc1|ηc2⟩|versusc min = min(c 1, c2), grouped by prime-cutoff
+gap. At fixed gap, each series follows a clean power law∼c −α
+min withR 2 >0.999. The exponent
+ranges fromα≈2.7 (gap 2) toα≈1.8 (gap 30).
+The rate ratio decreases approximately linearly: each successive zero converges about 0.42%
+more slowly thanγ 1. Fork≥8 at the largest cutoffs (c≥47), the errors show anomalous behavior
+consistent with finite-basis (N= 100) truncation artifacts.
+Heuristic8.1 (Empirical mechanism for multi-zero universality). Working hypothesis:letQ c be a
+family of self-adjoint operators indexed by a cutoffc, with ground-state eigenvectorsv c satisfying
+∥vc −v c′∥2 < ϵfor all consecutive cutoff pairs (a property we measure here; we do not assert
+existence of a limitv ∞). Letγ j[v] denote thej-th zero of the Fourier–Mellin transform FM(γ;v) =P
+k vk ϕk(γ), defined implicitly by FM(γ j;v) = 0. Suppose|∂ γFM(γj;v)| ≥δ >0 at the tested
+zeros and cutoffs (verified numerically here; not established analytically).Under bound saturation,
+that is, when the perturbationδv c has a leading-order component in the sensitivity direction at
+eachγ j, one expects the relative-rate identity
+|γj(c)−γ j(∞)|
+|γ1(c)−γ 1(∞)| ≲1 +O
+ ∥ϕ(γj)∥2/|FM′(γj)|
+∥ϕ(γ1)∥2/|FM′(γ1)| −1
+
+to hold to leading order inϵ.
+Sketch (heuristic, not a formal proof ).The Fourier–Mellin transform is linear inv, hence Lipschitz
+with constant∥ϕ(γ)∥ 2. By the implicit function theorem,
+dγj
+dvk
+=− ϕk(γj)
+∂γFM(γj;v) .
+The error|γ j(c)−γ j(∞)|is therefore bounded by∥δv c∥ · ∥ϕ(γj)∥2/|FM′(γj)|. Sinceδv c is thesame
+vectorfor all zerosj, the ratio of upper bounds reduces to the ratio of the sensitivity coefficients
+27
+2.6 2.8 3.0 3.2 3.4 3.6 3.8 4.0
+L = logc
+¡200
+¡175
+¡150
+¡125
+¡100
+¡75
+¡50
+log10 j°k errorj
+dps=150 floor
+dps=200 floor
+°1 = 14:13…
+°2 = 21:02…
+°3 = 25:01…
+°4 = 30:42…
+°5 = 32:94…
+13 19 29 41 53
+cutoff c
+Figure 8: Multi-zero convergence curves forγ 1 throughγ 5 across all fifteen cutoffs (the curves for
+γ6 throughγ 10 are visually indistinguishable from these and are omitted for legibility; per-zero rate
+ratios forγ 1 throughγ 5 and forγ 10 are tabulated in Table 15). All ten zeros converge at rates
+within 3.8% of each other, consistent with Heuristic 8.1.
+28
+Table 15: Convergence-rate ratio slope k/slope1 for the first five zeros.
+Zero Rate ratio Comment
+γ1 1.000 (reference)
+γ2 0.996 99.6% ofγ 1 rate
+γ3 0.993
+γ4 0.988
+γ5 0.985
+γ10 0.962 96.2% ofγ 1 rate
+∥ϕ(γj)∥2/|FM′(γj)|. The measured Fourier–Mellin slopes vary by only 3.3% across cutoffs, so these
+coefficients are comparable across zeros, which would yield the claimed universalityprovidedthe
+bound saturates (i.e., the actual rate equals the upper bound to leading order). This saturation
+step is the heuristic content of the argument: it is plausible at smallϵbut is not proved here.
+Monotonicity ofF c in a neighborhood of eachγ k is verified numerically:F ′
+c(γk) is strictly positive
+at all tested cutoffs and zeros.
+8.5 Eigenvector PCA: a two-dimensional manifold
+Principal component analysis of the fifteen normalized eigenvectors — stacked as rows of a 15×101
+matrix (15 eigenvectors, each with 101 components) — reveals that they lie on an essentially two-
+dimensional manifold:
+Table 16: PCA of the fifteen CvS ground-state eigenvectors.
+Component Variance explained Cumulative
+PC1 98.73% 98.73%
+PC2 1.25% 99.98%
+PC3 0.02% 100.00%
+Two principal components capture 99.98% of the variance. The PC1 score is nearly perfectly
+correlated with logc(r= 0.997), meaning the eigenvector evolution fromc= 13 toc= 67 follows a
+one-parameter curve in the 101-dimensional basis space. Despite eigenvalues differing by 113 orders
+of magnitude, the eigenvector’s trajectory through Hilbert space is effectively one-dimensional.
+This is consistent with the existence of a limiting eigenvectorη∞: the eigenvectors are converging
+along a fixed curve, not wandering through a high-dimensional space.
+8.6 Frobenius-norm stability of the bulk spectrum
+The full CvS Galerkin matrix atN= 100 has dimension 101. While the even-sectorλ min varies
+by 113 orders of magnitude across cutoffs, the Frobenius norm∥Q even∥F = (P
+i λ2
+i )1/2 is stable: it
+ranges from 30.74 (c= 31) to 31.44 (c= 41), a variation of only 2.3%. This stability reflects the
+dominance of the bulk eigenvaluesλ 2 throughλ 101, which remainO(1), in the Frobenius norm;
+only the ground stateλ 1 decreases across the 113-OOM range. The bulk trace P101
+i=2 λi shows a
+slow monotonic decay well-described by a power law Tr(Q)∝c −0.116 (R2 = 0.994, measured across
+15 cutoffs), a total drift of∼13% fromc= 13 toc= 67. The eigenvalue distribution shifts but
+29
+theL 2 norm of the operator is approximately preserved. The spectral gapλ 2/λ1 ∼10 7–8 indicates
+that the ground state is extremely well-isolated from the bulk spectrum at all cutoffs.
+Two further bulk invariants are tightly linear incandL= logcrespectively. The log-
+determinant log
+detQ even
+c
+ = P101
+k=1 log|λ k|islinear inc: across eight cutoffs with available full
+spectra (c∈ {13,14,23,29,31,37,41,43}),
+log
+detQ even
+c
+ ≈ −65.6c+ 542, R 2 = 0.997.(29)
+The slope−65.6 is a finite-matrix determinantal invariant: each unit increment incremoves approx-
+imately 65.6 natural-log units of measure from the product spectrum, dominated by the exponential
+decay ofλ min relative to the bulk.
+Complementarily, the heat-kernel trace Tr
+ 
+e−tQeven
+c
+
+= P101
+k=1 e−tλk is well-described by an affine
+function ofL= logcfor fixedt:
+log Tr
+ 
+e−tQeven
+c
+
+≈A(t)L+B(t),(30)
+with linear-fit RMS residual 1.4×10 −4 att= 10 −2 and 1.2×10 −3 att= 10 −1 across the same
+eight cutoffs. The smoothness inLis two orders of magnitude tighter than the log-eigenvalue mean
+(whose smallest-eigenvalue contribution is itself non-smooth inc); only the ground-state eigenvalue
+contributes the non-smooth behavior, while the bulk integrand contributes a controllable analytic
+function ofL.
+8.7 Random-matrix statistics of the bulk spectrum
+Montgomery’s pair correlation conjecture [12] predicts GUE statistics for the non-trivial zeros of
+the Riemann zeta function, but only afterlocal rescaling: forγ n at heightTone rescalesγ n 7→
+γn log(γn/2π)/(2π) so that the mean spacing is unity, and the GUE signature appears in thelocal
+pair correlation of the rescaled zeros. The conjecture is not expected to manifest at the un-rescaled
+(infrared) level, where the zero density itself grows like logTand is highly non-uniform. A direct
+numerical test of Montgomery in this framework would therefore require computing manyγ k zeros
+at a single large cutoff and rescaling them locally before measuring spacings; that is beyond the
+scope of the present sweep.
+Instead, we examine here thebulkeigenvalues of the CvS Galerkin matrix (eigenvaluesλ 2
+throughλ 101, excluding the exponentially small ground state) at the un-rescaled level, as a struc-
+tural diagnostic of the truncated operator. No GUE behavior is expected at this level; we record
+the bulk-spectrum statistics for structural interest only, not as a test of Montgomery.
+We analyze the even-sector Galerkin matrix (dimension 101) rather than the odd sector or
+a smaller subset, to maximize the sample size for spacing statistics. After polynomial unfolding
+(degree 5) to unit mean spacing, we compute the nearest-neighbor spacing distribution (NNSD)
+and fit the Brody parameterβ, which interpolates Poisson (β= 0, no level repulsion) and GOE
+(β= 1, linear repulsion).
+The result is uniform across the ten cutoffs tested (c= 13 throughc= 53; thec= 59,c= 61,
+andc= 67 eigenvectors were computed after this analysis):β <0.05 (consistent with Poisson,
+negligible level repulsion) at every cutoff (Figure 9 shows a representative histogram atc= 23).
+KS tests indicate that the Poisson distribution is the best fit at every cutoff, with GOE second and
+GUE worst.
+The Brody parameter is reported asβ <0.05 at all cutoffs, likely reflecting the limited sample
+size (Nbulk = 100 eigenvalues) rather than exact Poisson statistics.
+The Poisson classification indicates that the bulk eigenvalues behave as uncorrelated levels —
+characteristic of an integrable system. This is physically consistent with the enormous spectral
+30
+Table 17: Kolmogorov–Smirnov distance to theoretical distributions and Brody parameter for bulk
+eigenvalues (λ2 throughλ 101).
+c β Brody KS(Poisson) KS(GOE) KS(GUE)
+13<0.05 0.125 0.253 0.210
+23<0.05 0.108 0.174 0.232
+37<0.05 0.106 0.145 0.305
+43<0.05 0.108 0.126 0.326
+53<0.05 0.152 0.162 0.263
+gapλ 2/λ1 ∼10 7–8 isolating the ground state from the bulk: the bulk eigenmodes are essentially
+independent of the prime-sum perturbation that drives the ground-state convergence.
+0.0 0.5 1.0 1.5 2.0 2.5 3.0 3.5 4.0
+Normalised spacing s
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+P(s)
+Brody ¯ < 0:05
+Best fit: Poisson
+Nearest-neighbour spacing distribution
+CvS bulk (c = 23)
+Poisson
+GOE (Wigner)
+GUE
+Figure 9: Nearest-neighbor spacing distribution of the 100 bulk eigenvalues (λ 2 throughλ 101) at
+c= 23, after degree-5 polynomial unfolding to unit mean spacing. The histogram matches the
+Poisson distribution (no level repulsion), consistent with Brodyβ <0.05 at all tested cutoffs.
+We emphasize three caveats: (i) withN= 100 bulk eigenvalues, these are small-sample esti-
+mates; (ii) the bulk eigenvalues are properties of thefinite-dimensional Galerkin truncation, not of
+the Riemann zeros themselves; and (iii) per Montgomery, GUE statistics forζ-zeros are a property
+of thelocally-rescaledzeros and are not expected to manifest in the un-rescaled bulk Galerkin spec-
+trum studied here. A proper random-matrix test of Montgomery in this framework would require
+many extractedγ k zeros at a single large cutoff, locally rescaled by the mean zero density, which
+we do not undertake.
+31
+8.8 Per-prime convergence decomposition
+The 15-point dataset permits a decomposition of the convergence gain at each step into contribu-
+tions from interval extension versus new prime inclusion. Thec= 13→14 step is particularly
+informative:c= 14 is not prime, soπ(14) =π(13) = 6 and no new prime enters the operator. Yet
+the error improves by 5.8 OOM (from 10 −54.70 to 10 −60.45), purely from the increase in interval
+lengthL= logc. This step has the highest normalized efficiency of the entire sweep.
+For the 11 prime-adding steps (c= 14→17 throughc= 61→67), the per-step gain
+∆ log10 |γ1 error|varies by a factor of 10 (from−1.65 to−17.08). However, this variation is almost
+entirely explained by the interval length change ∆L:
+Pearsonr(per-step gain,∆L) =−0.96 (n= 14, p <10 −5).
+(Some degree of correlation between step size and gain is expected for any monotone process sampled
+at unequal intervals; the high|r|reflects the dominance of this geometric effect over prime-specific
+contributions.) After normalizing by ∆L, the efficiency ∆ log 10 |error|/∆ log10 chas coefficient of
+variation 0.17, compared to 0.52 for the raw gains — a threefold reduction. The efficiency declines
+monotonically, consistent with diminishing marginal returns at higher cutoffs.
+Neither the von Mangoldt weight logp/ √pnor the prime-counting functionπ(c) significantly
+predicts per-step gains after controlling for ∆L. The convergence gain at each step is driven by
+how much the interval [0, L] grows, not by intrinsic properties of the newly included prime.
+8.9 Step-size power law and asymptotic behavior
+Analyzing the per-step convergence gains as a function ofcreveals a power-law decay in the marginal
+gain per unit of cutoff. In the late regime (c≥31), the gain per step is well described by
+|∆ log10 |error|| ≈381·gap(c)·c −1.48, R 2 = 0.996,
+where gap(c) =c−c prev is the gap to the previous cutoff.
+Since the exponentα= 1.48>1, the sum of all future step sizes P
+p>67 gap(p)·p −1.48 converges
+by the integral test. This raises the possibility that log 10 |γ1 error|approaches afinite limitas
+c→ ∞. Integrating the power law fromc= 67 onward gives a rough estimate of∼106 remaining
+orders of magnitude, suggesting an asymptotic limit near 10−274. This extrapolation rests on 8 data
+points in the late regime (c≥31) and should be treated as a speculative estimate, not a prediction.
+The power law may break at higher cutoffs.
+Two interpretations.
+1.Finite limit.Ifαremains above 1, the first-zero error converges to a nonzero value (∼
+10−274). The CvS operator would converge to a function whose first zero is extremely close
+to, but not exactly at,γ 1.
+2.Exponent drift.The exponentα= 1.48 is measured over onlyc∈[31,67]. At larger
+cutoffs,αcould decrease below 1, in which case the series diverges and|γ 1 error| →0 (full
+convergence). With 15 data points, these scenarios cannot be distinguished.
+Both interpretations are presented here for completeness. The distinction is directly testable by
+extending the computation toc≥71.
+32
+8.10χ 3 odd-sector analysis
+Atc= 23 andc= 29, computed at the archimedean cutoffT= 400, the even sector of theχ 3
+CvS operator shows a single negative eigenvalue. As atc= 100 (Section 6.6), this is a finite-cutoff
+artifact: increasing the cutoff removes it (the−6.46×10 −23 atc= 23 becomes positive byT= 800,
+the−5.82×10 −17 atc= 29 byT= 1200), leaving the even sector non-negative. AtT= 400 the
+full 101-eigenvalue spectrum shows a sharp sector dichotomy:
+Table 18: Negative eigenvalue count in theχ 3 CvS operator atT= 400. Thec= 23,29 even-sector
+negatives are finite-cutoff artifacts, absent at largerT.
+c#negative Negative eigenvalue Odd sector Status
+13 0 — all positive positive
+17 0 — all positive positive
+23 1−6.46×10 −23 all positive even-sector only
+29 1−5.82×10 −17 all positive even-sector only
+37 0 — all positive positive
+At every cutoff, the odd sector (50 eigenvalues) is strictly positive. AtT= 400 this sign change
+is confined to a single even-sector eigenvalue. The negative eigenvalues atc= 23 andc= 29 are
+17–23 orders of magnitude smaller than the typical bulk eigenvalue scale (∼1–7), far below the
+T= 400 archimedean truncation error in the matrix entries, which is why the finite cutoff tips their
+sign; both become positive onceTis increased.
+The genuine sector pattern is that the odd sector is strictly positive at every cutoff tested. The
+apparent even-sector positivity breakdown atc= 23,29 is a finite-cutoff artifact, not a character-
+dependent feature of the CvS framework.
+9 Related Work
+9.1 The Connes program
+The spectral interpretation of the Riemann zeros has been a central theme in Connes’ program
+since the late 1990s [3]. The present work sits within the specific thread initiated by Connes’ 2026
+paper [4], which revisits the connection between the Weil explicit formula and the spectral action
+principle.
+9.2 Connes–van Suijlekom (2025)
+Connes–van Suijlekom [9] provide the mathematical foundation: Theorem 6.1 establishes that the
+zeros of ˆηc lie on the critical line for every finitec. The Galerkin matrixq m,n of Proposition 4.1 is
+the object we implement.
+9.3 Connes–Consani–Moscovici (2025)
+Connes–Consani–Moscovici [8] present a rank-one perturbation of the scaling spectral triple with
+Euler products over primesp≤λ 2 =c. As established in Section 2, the Connes–Consani–Moscovici
+matrixτ i,j is unitarily equivalent to the Connes–van Suijlekom matrixq m,n. Connes–Consani–
+Moscovici Section 8 explicitly names the absence of a convergence rate as the central open problem
+— the same problem addressed by the measurements in the present work.
+33
+9.4 Connes–Consani (2020)
+Connes–Consani [5] provide the explicit formula for the archimedean Mellin multiplierh +(τ) used
+in our implementation.
+9.5 Connes–Consani–Moscovici (2023)
+Connes–Consani–Moscovici [7] introduce the prolate wave operator, which appears in the Connes-
+program framework as the approximation construction for the limitk λ (Connes 2026 [4]§6.3–§6.4
+and the “educated guess” of Connes–Consani–Moscovici [8]§7). The Connes–Consani–Moscovici
+2025 Galerkin computations themselves use the trigonometric basis, as is evident from Connes–
+Consani–Moscovici [8] Lemma 5.1.
+9.6 Montgomery (1973)
+Montgomery [12] conjectured that the local pair correlation of the non-trivial zeros of the Riemann
+zeta function,after local rescaling by the mean zero density, follows GUE statistics. Our bulk-
+spectrum analysis (Section 8.7) isnota test of Montgomery’s conjecture: we record un-rescaled
+finite-dimensional Galerkin bulk-spectrum statistics as a structural diagnostic of the truncated op-
+erator, at a regime (the un-rescaled, infrared level) where Montgomery’s conjecture is not expected
+to manifest.
+9.7 ´Sliwi´ nski (2026): a complementary numerical regime
+After our April 2026 literature sweep, ´Sliwi´ nski [14] independently studied the spectra of the
+Connes–Consani–Moscovici rank-one operatorD (λ,N)
+log , deriving an inverse-logarithmic lower bound
+on the dissonance between those spectra and Riemann zeros in the joint regimeλ=N→ ∞
+(roughlyc=λ 2 =N 2). His implementation operates at approximately seven-digit GPU precision
+and reachesNup to several thousand; his target statistic is an averaged dissonance metric over
+many zeros, not the per-cutoff matching-digit accuracy on a fixedγ k studied here. The two works
+cover disjoint regimes (jointλ=Ngrowth at low precision versus theN→ ∞-first-then-cGalerkin
+sweep at high precision) and test different quantities. We are aware of no other independent
+public numerical study of the Connes–van Suijlekom Galerkin matrix at the trigonometric-basis
+matching-digit-precision regime explored in this paper.
+9.8 Absence of independent matching-digit reproductions
+A literature sweep conducted in April 2026 and refreshed in May 2026 — encompassing arXiv,
+Google Scholar, MathOverflow, GitHub, and seminar video recordings — found no independent
+public reproduction of Connes’c= 13 first-zero error at matching-digit precision beyond ´Sliwi´ nski’s
+complementary work just discussed. The only matching-digit corroborating data outside this
+project is from the Connes–Consani–Moscovici author group itself. No public code implement-
+ing the Connes–van Suijlekom Proposition 4.1 Galerkin matrix at arbitrary precision was found in
+any language.
+10 Limitations and Honest Non-Claims
+We list the limitations of this work explicitly:
+34
+•W e do not claim to validate Connes’ conjecture.The agreement atc= 13 is a
+consistency check, not a comparison against an independent prediction.
+•W e do not claim to measure a convergence rate.All eight two-parameter smooth-
+convergence fits failed at 15 data points, and a five-parameter log-periodic model was falsified
+out-of-sample. Whether this reflects genuine non-smoothness or the need for different model
+families is unresolved.
+•W e do not claim any progress on RH.The Connes–van Suijlekom framework’s Hurwitz-
+type convergence argument is a conjecture. We compute some numbers in the neighborhood
+of that conjecture without bearing on its truth.
+•The factor-of-1.3 discrepancy atc= 13is unresolved.Plausible sources include preci-
+sion,N, normalization conventions, integration cutoffT, and root-finding tolerance.
+•W e compute the even sector only .The odd-sector zero, if any, is not probed.
+•TheN= 100multi-cutoff sweep is atc≤67.The cross-extension — anN= 100 datum
+atc≥71 that would separate thec-dependent andN-dependent finite-Neffects more cleanly
+at the lower end of the sweep — is left to future work. Thec= 100 measurements include
+N∈ {100,150,200,250}at dps = 500, providing four points on theN-sweep, sufficient to
+test the geometric-convergence hypothesis on consecutive Aitken triples (Section 6.4).
+•The Galerkin truncation bias at fixedNis not independently measurable.We
+cannot distinguish the “true eigenvalue at infiniteN” from ourN= 100 eigenvalue without
+either a theoretical bound or a prolate-basis implementation (which, as noted in Section 9,
+would be a genuinely distinct direction not yet reported by any group).
+•The pre-registered five-bin classifier fired “Ambiguous partial floor.”This is an
+intermediate verdict.
+•The step-size power law (α= 1.48) is measured over a limited range.Whether
+αremains above 1 at larger cutoffs is unknown; the finite-limit interpretation is one of two
+possibilities.
+•CCM Theorem 1.1 is applied to an empirically distinguished positive branch
+atc= 100, not to the raw matrix spectrum.Atc≤67,N= 100 the finite-N
+Galerkin matrix is observed positive on every cell with the smallest eigenvalue numerically
+simple and an even-dominant eigenvector, consistent with the Connes–Consani–Moscovici
+Theorem 1.1 “ϵ N simple,ξeven” hypotheses as numerical conditions (not as analytically
+established hypotheses of the continuum theorem). Atc= 100 withN≥100, the raw
+Galerkin spectrum computed at the finite archimedean cutoffT= 800 contains negative-sign
+eigenvalues (Section 6.6); these are an artifact of that cutoff, absent onceTis increased, so
+cutoff-free thec= 100 even sector is non-negative and its smallest eigenvalue coincides with
+the smallest-positivebranch whose eigenvector gives the reported zero extraction (Table 11).
+Thec= 100 data are therefore consistent with the Connes–Consani–Moscovici Theorem 1.1
+ground-state hypotheses on the same footing as thec≤67 cells. Continuum positivity of
+QWλ is RH-equivalent and is not assumed atλ=
+√
+100. See Remark 2.1. Thec= 67,
+N= 150 corroborative measurement remains in the matrix-positive regime where the formal
+hypothesis still holds.
+35
+•The independence claim requires calibration.This implementation was drafted with
+AI assistance under continuous human supervision (see the Statement on use of AI tools,
+p. 39). It is independent of the Connes/Connes–Consani–Moscovici codebase in the sense
+that no part was derived from non-public code. It is not independent in the sense of a second
+human research group replicating the computation from scratch.
+•No part of this paper constitutes a proof of anything.This is experimental mathe-
+matics in the literal sense.
+11 Future Directions
+Extension to DirichletL-functions.We extended the CvS pipeline toL(s, χ 3), whereχ 3 is
+the non-principal character modulo 3, at five cutoffs (c= 13,17,23,29,37). The archimedean piece
+shifts fromψ( 1
+4 +iτ /2) toψ( 3
+4 +iτ /2) for this odd character, and the prime-piece weights are
+multiplied byχ 3(n).
+The results show a non-monotonic first-zero error:
+Table 19:L(s, χ 3): first-zero error across cutoffs. Theλ min signs are computed atT= 400; the
+negatives atc= 23,29 are finite-cutoff artifacts (Section 8.10).
+c λ min sign|γ 1(χ3) err|digits
+13 + 4.18×10 −17 16
+17 + 7.09×10 −25 24
+23−2.00×10 −23 22
+29−5.37×10 −18 17
+37 + 7.30×10 −29 28
+Atc= 13,17,37 the even-sector minimum eigenvalue is positive; the first-zero error is non-
+monotonic inc(16, 24, 22, 17, 28 digits atc= 13,17,23,29,37). Theλ min sign shown is the
+T= 400 value: the negatives atc= 23,29 are a finite-cutoff artifact (Section 8.10), positive once
+Tis increased, the same archimedean-truncation mechanism that produces thec= 100 block of
+Section 6.6. Whether the modest convergence dips atc= 23,29 reflect a genuine character effect
+or the finite-Tentry error is not settled here, and is a natural question for extending the CvS
+framework to general DirichletL-functions.
+Predictions for future cutoffs.At dps = 200, the backward-error floor permits clean mea-
+surements to approximatelyc= 97 before dps = 300 would be required. We predict continued
+monotone improvement in|γ 1 error|with each new cutoff, with the|γ 1 err|/λmin ratio continuing
+its slow upward drift. TheN-convergence data suggest thatN= 100 is sufficient for cutoffs up to
+at leastc= 53; whether largerNis needed atc≥59 is an open empirical question.
+Multi-zero convergence at higher cutoffs.The multi-zero universality established in Sec-
+tion 8.4 (all ten zeros within 3.8% of theγ 1 rate) should be tested at cutoffs beyondc= 67 and
+with larger basis sizes (N >100) to determine whether the slight systematic slowdown (∼0.42%
+per zero index) persists or saturates.
+36
+T ransition from Poisson to GUE?The uniformly Poisson bulk spectrum observed atN= 100
+raises the question of whether GUE statistics emerge at largerNor higher cutoffs. Montgomery’s
+conjecture predicts GUE for the Riemann zeros themselves; whether the finite-dimensional CvS
+Galerkin truncation approaches GUE statistics in any limit is unknown.
+Theoretical bound onC(c).The ratio|γ 1 err|/λmin ≈C(c) withC(c)≈6730 logc−11268
+is an empirical fit. A theoretical derivation of the growth rate ofC(c) from the structure of the
+Connes–van Suijlekom operator would constitute a substantive step in understanding the conver-
+gence mechanism.
+T esting the Sobolev–Paley–Wiener prediction.The testable prediction of Section 8.2 —
+that the Sobolev slope should scale linearly withT— can be verified by repeating theN-convergence
+measurement atT= 1600. If the slope doubles from∼55 to∼110, the Paley–Wiener mechanism
+is supported; if it remains constant, the mechanism is incorrect.
+Resolving the step-size exponent.Computingc= 71,73,79 would test whether the step-size
+power-law exponentα≈1.48 remains above 1, which would support the finite-limit interpretation,
+or drifts below 1, which would support full convergence to zero error.
+12 Code and Data Availability
+A complete reference implementation is available as the open-source Python packageconnes-cvs
+(version 0.2.2 at the time of submission), installable viapip install connes-cvsfrom PyPI.
+Source:https://github.com/akivag613/connes-cvs-. The ancillary files attached to this arXiv
+submission contain the principal result JSONs and the driver scripts that reproduce each table and
+figure in this paper.
+Ancillary files.All files are deposited at the top level of the Zenodo record (flat layout, individ-
+ually previewable). The L ATEX source of this manuscript is distributed by the arXiv submission,
+not by this Zenodo deposit; figures are embedded in the PDF above and need not be regenerated
+for reproduction of the numerical claims.
+Numerical results.
+•results_15pt_T800.json— the 15-cutoff sweep (Table 3),c= 13 through 67 atN= 100,
+T= 800.
+•results_N_sweep_c23.json—N-convergence atc= 23 (Table 8).
+•results_c100_N100_T800_dps500_v020.json,
+results_c100_N150_T800_dps500_v020.json,
+results_c100_N200_T800_dps500_v020.json,
+results_c100_N250_T800_dps500_v020.json,
+results_c100_N150_T800_dps1000_v020.json— the four-pointN-sweep atc= 100 plus
+the dps = 1000 retest atN= 150 (Table 10).
+•c100_N150_dps500_gamma_extraction.json,
+c100_N150_dps1000_gamma_extraction.json,
+c100_N250_dps500_gamma_extraction.json—γ 1, . . . , γ10 extractions for the three
+37
+precision cells of Table 11; theN= 250 file stores both detected and reference values to 400
+significant digits for independent verification.
+•c100_full_spectrum_diagnosis.json— all 151 eigenvalues atc= 100,N= 150,
+dps = 500, with signs; source for the finite-T(T= 800) negative-sign artifact block of
+Section 6.6.
+•power_law_refit.json— the 13.24c 0.634 in-sample fit onc≤67, thec= 100 residual of
+49 OOM that falsifies it, and the four-parameter refit includingc= 100 (Section 6.7).
+•richardson_n_extrapolation.json— legacy 3-point Aitken/Richardson analysis at
+N∈ {100,150,200}; the 4-point analysis is recomputed byc100_aitken_check.py.
+•results_c67_N150_T800_dps500_v020.json— thec= 67,N= 150 corroborative datum
+of Section 6.7.
+•eigenvector_overlaps.json— 15×15 pairwise eigenvector overlap matrix (Section 8).
+•results_rmt_analysis.json— bulk-spectrum random-matrix statistics (Section 8.7).
+•results_L_multi_zero.json— multi-zero convergence data across cutoffs (Section 8.4,
+Figure 8).
+•results_A_c23.pickle— fullc= 23 even-sector eigenspectrum and supporting metadata;
+source for the nearest-neighbour spacing distribution of Figure 9.
+•preregistered_predictions_2026-04-12.md— the Section 5.7 blind-prediction
+document, locked by SHA-256 hash before thec= 67 computation was performed.
+Driver scripts.
+•c100_experiment_optimized.py—c= 100 cell-based runner for the five cells in Table 10
+(c100-N100,c100-N150-dps500,c100-N200,c100-N250-dps500,c100-N150-dps1000).
+Uses thev0.2.0 fused-kernel math core from the publicconnes-cvsPyPI package with
+multiprocessing.imap unorderedfor theψ-cache phase.
+•A_extended_c_sweep.py,U_T800_full_sweep.py— 15-cutoffc-sweep atT= 800
+(Section 5); thin wrappers aroundconnes cvs.sweep.run sweep.
+•X_c67_blind_test.py— single-cellc= 67 runner (Section 5.7 blind-prediction cell at
+N= 100, dps = 200; Section 6.7 corroborative cell atN= 150, dps = 500).
+•c100_aitken_check.py—<1-second headline reproducer. Loads the fourc= 100 JSONs
+and recomputes the Aitken-∆ 2 extrapolation on both overlapping triples, prints the
+under-1%-of-exponent agreement on the deeper triple with the Connes 2026§6.4 heuristic
+continuum prediction.
+Package requirements(frompyproject.toml):mpmath≥1.3,python-flint≥0.5,gmpy2;
+Python 3.10+. The specific environment used for the runs reported here wasmpmath1.4.1,
+python-flint0.8.0 on macOS with a 12-core Apple M2 Max. Thepython-flintdigamma prim-
+itive provides an∼11×speedup over pure mpmath for the archimedean quadrature dominant in
+single-cell runs.
+38
+Reproducing the headline results.
+pip install connes-cvs
+python examples/basic_compute.py # c=13, ~5 min with python-flint
+python examples/c100_aitken_check.py # c=100 Aitken match, < 1 s
+The first command produces|γ 1 error| ≈1.5×10 −55 atc= 13; the second loads the ancillary
+c= 100 data and recomputes the Aitken-∆ 2 extrapolation and the Connes 2026§6.4 prediction,
+printing the under-1%-of-exponent agreement on the deeper-anchored triple reported in Section 6.4.
+Reproducibility certification.The example scripts above useT= 400, dps = 80 for speed
+(single-process wall-clock∼5 minutes on Apple M-series with python-flint installed), and produce
+|γ1 err| ≈1.455×10 −55 atc= 13 (Table 4,T= 400 row). The paper’s headlinec= 13 value
+|γ1 err|= 2.005×10 −55 (Table 3) is theT= 800, dps = 200 datum; the shift fromT= 400 to
+T= 800 is 0.14 units in log 10 |γ1 err|(Table 4), within the factor-of-1.3 envelope of the Connes–
+van Suijlekom/Connes–Consani–Moscovici measurements. Thec= 100 cell-based runnerc100_
+experiment_optimized.pyproduces a JSON file whoselambda_evenfield, taken as a decimal
+string and passed through log 10(·), reproduces the rows of Table 10 bit-identically to working
+precision. Theγ k-extraction JSON atN= 250, dps = 500 stores both the detectedγ k and the
+referencempmath.zetazero(k)value to 400 significant digits, sufficient to independently recompute
+⌊−log 10 |γk −γ exact
+k |⌋and verify the 307–329 matching-digit counts of Table 11 without rerunning
+the diagonalization.
+Statement on use of AI tools
+In accordance with the arXiv policy on authors’ use of generative AI language tools, the author
+reports that Anthropic’s Claude was used as a text-to-text assistant for the drafting of L ATEX
+exposition and Python implementation code, to specifications written by the author. No mathe-
+matical proof, theorem, or definition appearing in this paper was originated by the language model;
+load-bearing mathematical claims were verified by the author before inclusion. The author con-
+ceived, directed, and verified all computational experiments and mathematical claims, and takes
+full responsibility for the contents of this manuscript.
+13 Acknowledgments
+I am grateful to Professor Alain Connes for substantive correspondence in 2026 that confirmed
+the trigonometric-basis convention used in the Connes–Consani–Moscovici Galerkin computations
+cited throughout this paper, identified Connes–Consani [6]§3 as the qualitative motivation under-
+lying thek λ construction of Connes 2026 [4]§6.4 and its open-status approximation step in§6.6,
+offered to assist with the arXiv submission, and provided specific formulation comments on the
+manuscript that improved the abstract, the discussion of thec= 13 cross-validation in Section 4.3,
+and the framing of the bulk-spectrum analysis in Section 8.7. The manuscript benefited materi-
+ally from his comments; the contents and any remaining errors are the author’s own. I further
+thank Professor Connes, whose questions about thec= 100 spectrum prompted the precision in-
+vestigation behind the correction recorded in the note added in revision; B. W. A. Silva (Zenodo
+10.5281/zenodo.20650146), who independently identified the finite-cutoff sensitivity of the deep
+spectrum; and R. Andrews (Zenodo10.5281/zenodo.20427500), whose computation exhibits the
+naturally even, positive ground state consistent with that finding.
+39
+The mathematical foundation of this work is entirely due to Connes, van Suijlekom, Consani,
+and Moscovici, through the papers cited in Section 9. No part of the implementation was derived
+from non-public code held by any of these authors, and no public code for the Connes–van Suijlekom
+Galerkin matrix was located in the literature sweep described in Section 9.
+I am also grateful for substantive correspondence on the underlying mathematics or on the
+code with Dr. Pascal Molin (Universit´ e Paris Cit´ e, author ofArb’sacb dirichletprimitive),
+Dr. Teun van Nuland (TU Delft), and Dr. Sabine Boegli (Durham), whose readings prompted
+clarifications throughout. I am separately grateful to Professor Nigel Higson (Penn State) for the
+warm referral that opened the line of correspondence with Professor Connes, and to Professor
+Klaas Landsman (Radboud) for a kind referral when the topic fell outside his own area.
+References
+[1] A. C. Aitken. On Bernoulli’s numerical solution of algebraic equations.Proceedings of the
+Royal Society of Edinburgh, 46:289–305, 1926.
+[2] Ivo Babuˇ ska and John E. Osborn. Eigenvalue problems. In P. G. Ciarlet and J. L. Lions, editors,
+Handbook of Numerical Analysis, volume II, pages 641–787. North-Holland, Amsterdam, 1991.
+[3] Alain Connes. Trace formula in noncommutative geometry and the zeros of the Riemann zeta
+function.Selecta Mathematica, New Series, 5:29–106, 1999.
+[4] Alain Connes. The Riemann Hypothesis: Past, present and a letter through time.arXiv
+preprint arXiv:2602.04022 [math.NT], 2026.
+[5] Alain Connes and Caterina Consani. Weil positivity and trace formula, the archimedean place.
+arXiv preprint arXiv:2006.13771 [math.NT], 2020.
+[6] Alain Connes and Caterina Consani. Spectral triples andζ-cycles.L’Enseignement
+Math´ ematique, 69:93–148, 2023. arXiv:2106.01715 [math.NT].
+[7] Alain Connes, Caterina Consani, and Henri Moscovici. Zeta zeros and prolate wave operators.
+arXiv preprint arXiv:2310.18423 [math.NT], 2023.
+[8] Alain Connes, Caterina Consani, and Henri Moscovici. Zeta spectral triples.arXiv preprint
+arXiv:2511.22755 [math.NT], 2025.
+[9] Alain Connes and Walter D. van Suijlekom. Quadratic forms, real zeros and echoes of the
+spectral action.arXiv preprint arXiv:2511.23257 [math.OA], 2025.
+[10] E. B. Davies and M. Plum. Spectral pollution.IMA Journal of Numerical Analysis, 24(3):417–
+438, 2004.
+[11] Michael Levitin and Eugene Shargorodsky. Spectral pollution and second-order relative spectra
+for self-adjoint operators.IMA Journal of Numerical Analysis, 24(3):393–416, 2004.
+[12] Hugh L. Montgomery. The pair correlation of zeros of the zeta function. In Harold G. Diamond,
+editor,Analytic Number Theory, volume 24 ofProceedings of Symposia in Pure Mathematics,
+pages 181–193. American Mathematical Society, 1973.
+[13] Beresford N. Parlett.The Symmetric Eigenvalue Problem, volume 20 ofClassics in Applied
+Mathematics. SIAM, Philadelphia, 1998.
+40
+[14] Dominik ´Sliwi´ nski. Spectral analysis of thed(λ,N)
+log operators.arXiv preprint arXiv:2601.12133
+[math.SP], 2026.
+41
+A Summary of Numerical Results
+For reference, we collect the final precision-resolved measurements in a single table. All rows use
+T= 800,N= 100, dps = 150 (c≤37) or dps = 200 (c≥41).
+Table 20: Complete 15-point results atN= 100,T= 800, dps = 150 (c≤37) / dps = 200 (c≥41).
+c L= logc λ even
+min |γ1 error| |γ 1 err|/λmin log10 |γ1 err|
+13 2.565 2.865×10 −59 2.005×10 −55 6999−54.70
+14 2.639 4.835×10 −65 3.541×10 −61 7324−60.45
+17 2.833 2.030×10 −80 1.634×10 −76 8047−75.79
+19 2.944 1.265×10 −90 1.070×10 −86 8457−85.97
+23 3.135 5.959×10 −107 5.520×10 −103 9262−102.26
+29 3.367 4.366×10 −124 4.587×10 −120 10507−119.34
+31 3.434 1.045×10 −128 1.141×10 −124 10919−123.94
+37 3.611 4.670×10 −140 5.686×10 −136 12177−135.25
+41 3.714 2.122×10 −146 2.760×10 −142 13004−141.56
+43 3.761 2.519×10 −149 3.379×10 −145 13412−144.47
+47 3.850 2.994×10 −154 4.270×10 −150 14260−149.37
+53 3.970 9.615×10 −161 1.493×10 −156 15529−155.83
+59 4.078 2.328×10 −166 3.911×10 −162 16800−161.41
+61 4.111 5.063×10 −168 8.722×10 −164 17226−163.06
+67 4.205 7.993×10 −173 1.478×10 −168 18489−167.83
+The step sizes are non-uniform, ranging from−1.65 (c= 59→61) to−17.08 (c= 23→29).
+Thec= 13→14 step is notable:c= 14 is not prime, so no new prime enters the operator, yet the
+error improves by 5.8 OOM purely from the increase in interval lengthL= logc. The variation
+in step sizes is strongly correlated with ∆L= ∆ logc(Pearsonr=−0.96). The normalized slope
+∆ log10 |error|/∆Lis far more uniform than the raw steps (coefficient of variation 0.17 vs 0.52).
+B Pre-Registered Convergence Model Residuals
+The original three models (M1–M3) were pre-registered and fit to 3-point dps = 80 data in Iter-
+ation 5; all failed with max residuals 2.44–2.68. Two additional models (M4, M5) were added for
+the 10-point sweep; three prime-counting models (M6–M8) were added for the 15-point dataset. A
+five-parameter log-periodic model was fit to the 10-point training data and tested out-of-sample at
+c= 47 andc= 53.
+M5 (exponential-in-L) is the best-performing two-parameter model but still exceeds the≤0.5
+threshold by a factor of 3.5. M6–M8, which use prime-counting independent variables, perform
+substantially worse (max residuals 10–12), indicating that the convergence is not proportional to
+any standard prime-counting function.
+The log-periodic model (5 parameters on 10 training points) achieved max residual 0.74 on
+training data — the first model to beat the≤1.77 threshold. However, pre-registered blind predic-
+tions atc= 47 andc= 53 yielded residuals of 1.5 and 5.5 respectively: the model predicted that
+c= 53 would belessprecise thanc= 47, contradicting the observed monotone improvement. The
+model was overfitting noise in the training range. This clean out-of-sample falsification strengthens
+the negative result: no parametric model tested — including models with up to 5 free parameters
+42
+Table 21: Log-scale steps between consecutive cutoffs (T= 800).
+Pair ∆ log 10 |γ1 error|New prime
+c= 13→14−5.75 (none)
+c= 14→17−15.34 17
+c= 17→19−10.18 19
+c= 19→23−16.29 23
+c= 23→29−17.08 29
+c= 29→31−4.60 31
+c= 31→37−11.31 37
+c= 37→41−6.31 41
+c= 41→43−2.91 43
+c= 43→47−4.90 47
+c= 47→53−6.46 53
+c= 53→59−5.58 59
+c= 59→61−1.65 61
+c= 61→67−4.77 67
+Table 22: Full model-fit comparison: 15-point, 10-point, and 3-point residuals. All models use
+2 free parameters except the log-periodic model (5 parameters).
+Model Form Max res. (15-pt) Max res. (10-pt) Max res. (3-pt)
+M1a·L+b2.66 2.66 2.44
+M2a·L 2 +b4.71 4.71 2.68
+M3a·LlogL+b3.63 3.63 2.56
+M4a·L+b·logL2.66 2.66 —
+M5a·exp(b·L) 1.77 1.77 —
+M6a·π(c) +b10.28 — —
+M7a·ϑ(c) +b12.09 — —
+M8a·#pp(c) +b10.20 — —
+Higher-parameter models:
+Log-periodic (5-param)a·L+b+Asin(ωL+ϕ)5.710.74 —
+— captures thec-dependence of|γ 1 error|.
+C Reproducibility Discipline
+This appendix collects the procedural rules enforced across the project’s iterations. These are
+reproducibility-hygiene practices, not mathematical claims; they are recorded here for transparency
+about how the numerical results in the body were produced and verified.
+•Pre-registration.Each iteration’s experimental plan, including success/failure criteria and
+gate rules, is written and frozen before code execution.
+•Regression checking.Thec= 13 row is verified to all reported digits against the prior
+iteration’s result at each new iteration.
+•Banned-phrase discipline.A cumulative list of banned phrases (including “validates,”
+43
+“confirms conjecture,” “proof,” “reached the mathematical limit”) is maintained and enforced
+across all writeups.
+•Adversarial review loop.Each iteration undergoes a structured adversarial review during
+development.
+•Structured output.All numerical results are stored in machine-readable JSON with full-
+precision strings. No result is reported from terminal output alone.
+44

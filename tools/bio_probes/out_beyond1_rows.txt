@@ -1,0 +1,16 @@
+=== B6.2: beyond-1 sampled rows vs periodicity of the 256-law ===
+
+Identity: for a 256-periodic marked law with total mark mass 256,
+S(j+256) = S(j) + 256 for all j  (periodicity + normalization),
+so if rows 1..255 are near-CUE (256*S(j)/256 ~ j) then rows 257..512 are
+automatically near-CUE as well.  The beyond-1 *sampled* rows add no new
+constraint on the law; its simple fraction p1 is unchanged.
+Check at j = 5:  S(5+256)/256 - (5+256)/256 = (S(5)+256)/256 - 261/256
+               = S(5)/256 - 5/256  -> same deviation as at j=5.  (exact)
+
+law_data.json: 256 masses; sum = 1.323953
+256*cumsum(s)[j] - j : first 5 = [-0.99609375 -1.98828125 -2.9765625  -3.9609375  -4.94140625]
+                       max |dev| over j=1..255 = 1.275e+02
+                       at j=255 = -1.275e+02
+normalized-CDF check 256*C(j/256) - j: max |.| = 1.587e+02
+(if sum(s) ~ 1 then s_mid are masses summing to 1; if 256*C(j) ~ j then they are near-CUE masses)

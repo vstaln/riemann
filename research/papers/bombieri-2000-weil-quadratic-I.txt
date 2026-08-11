@@ -1,0 +1,4028 @@
+ATTI ACCADEMIA NAZIONALE LINCEI CLASSE SCIENZE FISICHE MATEMATICHE NATURALI
+RENDICONTI LINCEI
+MATEMATICA E APPLICAZIONI
+Enrico Bombieri
+Remarks on Weil’s quadratic functional in the
+theory of prime numbers, I
+Atti della Accademia Nazionale dei Lincei. Classe di Scienze Fisiche,
+Matematiche e Naturali. Rendiconti Lincei. Matematica e
+Applicazioni, Serie 9 , Vol. 11 (2000), n.3, p. 183–233.
+Accademia Nazionale dei Lincei
+<http://www.bdim.eu/item?id=RLIN_2000_9_11_3_183_0>
+L’utilizzo e la stampa di questo documento digitale è consentito liberamente per mo-
+tivi di ricerca e studio. Non è consentito l’utilizzo dello stesso per motivi commerciali.
+Tutte le copie di questo documento devono riportare questo avvertimento.
+Articolo digitalizzato nel quadro del programma
+bdim (Biblioteca Digitale Italiana di Matematica)
+SIMAI & UMI
+http://www.bdim.eu/
+Atti della Accademia Nazionale dei Lincei. Classe di Scienze Fisiche, Matematiche e
+Naturali. Rendiconti Lincei. Matematica e Applicazioni, Accademia Nazionale dei
+Lincei, 2000.
+Rend. Mat. Acc. Lincei
+s. 9, v. 11:183-233 (2000)
+Remarks on Weil’s quadratic functional
+in the theory of prime numbers, I
+Memoria (*) di Enrico Bombieri
+Abstract. — This Memoir studies Weil’s well-known Explicit Formula in the theory of prime numbers
+and its associated quadratic functional, which is positive semidefinite if and only if the Riemann Hypothesis
+is true. We prove that this quadratic functional attains its minimum in the unit ball of the L2-space of
+functions with support in a given interval [ −t; t], and prove again Yoshida’s theorem that it is positive
+definite if t is sufficiently small. The Fourier transform of the functional gives rise to a quadratic form
+in infinitely many variables and we then study its finite truncations and corresponding eigenvalues. In
+particular, if the Riemann Hypothesis is false but only with finitely many non-trivial zeros off the critical
+line we show that the number of negative eigenvalues is precisely one-half of the number of zeros failing to
+satisfy the Riemann Hypothesis, provided the truncation is big enough.
+Key words: Prime number theory; Riemann Hypothesis; Explicit Formula.
+Riassunto. — Osservazioni sul funzionale quadratico di Weil nella teoria dei numeri primi, I. Questa
+Memoria studia la nota Formula Esplicita di Weil nella teoria dei numeri primi e il funzionale quadratico
+associato ad essa. Questo funzionale `e positivo semidefinito se e solo se l’Ipotesi di Riemann `e valida.
+Dimostriamo qui che il minimo di questo funzionale nello spazio delle funzioniL
+2 con supporto compatto
+nell’intervallo [−t; t] `e raggiunto, e dimostriamo nuovamente il risultato di Yoshida che d `al a positivit`a
+per t sufficientemente piccolo. La trasformata di Fourier del funzionale d `a luogo ad una forma quadratica
+in un numero infinito di variabili, e ne studiamo i suoi troncamenti finiti e gli autovalori corrispondenti.
+In particolare, se l’Ipotesi di Riemann`e falsa ma solamente con un numero finito di eccezioni, si dimostra
+che il numero di autovalori negativi `el am e t`a del numero di eccezioni all’Ipotesi di Riemann, purch ´ei l
+troncamento sia abbastanza grande.
+1. Introduction
+The Explicit Formula in the theory of prime numbers is a generalization of Rie-
+mann’s famous exact formula of 1859 expressing the number of primes up to a given
+limit in terms of a sum of a certain Mellin transform, evaluated at the zeros of the
+Riemann zeta function. Since then, it has found wide use in analytic number the-
+ory. However, most applications found in the literature involve the use of well-chosen
+explicit test functions and use only approximations, not exact evaluations.
+In 1942, A.P. Guinand [2] studied for the first time the Explicit Formula in a
+general setting, viewing it as a transformation formula not unlike Poisson Summation
+Formula.
+In 1952, A. Weil [6] (
+1) put forward a more general Explicit Formula which had
+(*) Pervenuta in forma definitiva all’Accademia il 7 settembre 2000.
+(1)I t appears that Weil was either unaware of Guinand’s work or dismissed it as uninteresting. Certainly
+Weil’s aim in his paper was entirely different from Guinand’s.
+184 e. bombieri
+an identical formulation both in the classical case and the so-called function field case.
+The main point of Weil’s paper was to highlight the deep analogies between classical
+zeta functions and congruence zeta functions arising from function fields of curves over
+a finite field of positive characteristic.
+Since Weil had already proved the analogue of the Riemann Hypothesis in the
+function field case, it was natural to ask if the classical Riemann Hypothesis could also
+be interpreted in the same light. Thus in the same paper Weil formulated the Riemann
+Hypothesis as the positivity of a certain quadratic functional arising from the Explicit
+Formula.
+Even if Weil’s work has since then been vastly generalized and reinterpreted in the
+framework of adeles, nothing of consequence in prime number theory has emerged
+so far from a direct study of Weil’s functional, which unfortunately appears to be as
+intractable as the Riemann Hypothesis itself. A first study of Weil’s functional was
+done by H. Yoshida [5] in 1992. In his paper, Yoshida studies the behaviour of the
+associated hermitian form in certain Hilbert spaces of functions supported in an interval
+[
+−t; t], obtaining several interesting results. Besides reproving Weil’s criterion for the
+validity of the Riemann hypothesis, he shows that the positivity of the functional in
+the class of smooth even functions with compact support is equivalent to the validity
+of the Riemann hypothesis excluding real zeros. Moreover, he shows how the positivity
+of this functional for functions supported in a fixed interval [
+−t; t] can be reduced to
+a finite calculation (depending on t), and verifies this positivity for t = (log 2)=2.
+In this paper, we study the Weil functional from a variational point of view, restricted
+to two classes of Hilbert spaces each of which is sufficiently wide for testing the validity
+of the Riemann Hypothesis. We verify that the infimum of the Weil functional in the
+unit sphere of spaces in the second class is always attained, and also in spaces of the
+first class if the infimum in question is negative. It is noteworthy that the proof of the
+first result hinges on the special structure of the term for the «prime at infinity» in the
+Explicit Formula.
+Next, we examine the Fourier transform of the functional, which is easily interpreted
+as a quadratic form in infinitely many variables. This leads to the study of the eigen-
+values of certain infinite matrices, as well as of their finite dimensional truncations. In
+view of the special structure of these matrices, it turns out that the eigenvalue 0 cannot
+occur for the finite dimensional approximations. From this result, which appears to
+be new, we deduce the invariance of the number of negative eigenvalues under cer-
+tain deformations of the matrices, thereby determining the exact number of negative
+eigenvalues.
+The results obtained for the finite dimensional case carry over to the infinite di-
+mensional case, provided we deal with negative eigenvalues bounded away from 0 and
+provided their number remains bounded. For the applications we have in mind, the lat-
+ter condition follows from the assumption that there are only finitely many non-trivial
+zeros of
+ζ(s) not on the critical line. The existence of a negative eigenvalue follows
+again from our stability result in the finite dimensional case, and the main question
+here is to decide whether or not this negative eigenvalue stays bounded away from zero,
+remarks on weil ’s quadratic functional in the theory of prime numbers, I 185
+as we approximate the infinite dimensional matrix by its finite dimensional truncations.
+The upshot is that if the negative eigenvalue stays bounded away from zero then the
+Weil functional, restricted to the Hilbert space determining the infinite matrix, is not
+positive definite there, while on the other hand if the negative eigenvalue tends to 0
+then we obtain in the limit a non-trivial linear relation among monomials x
+−ρ, where
+ρ ranges over the non-trivial zeros of the Riemann zeta function.
+Rather than giving in this introduction a summary of every result, the following
+corollary of one of our theorems best illustrates what is obtained here in the end. We
+show that one of the following statements holds:
+(i) the Riemann Hypothesis is true ;
+(ii) there are infinitely many complex zeros
+ρ of the Riemann zeta function withℜ(ρ) ⁄= 1
+2 ;
+(iii) there is a linear combination
+∑
+ρ
+cρ
+ρ(1 − ρ) x−ρ + A + Bx −1
+with∑|cρ|2 = 1 and vanishing identically for 1 ≤ x ≤ M0, where M0 > 1 is an explicitly
+computable constant. Moreover, at least 1=2 of the ‘2-mass of the coefficients is supported on the
+non-trivial zeros of ζ(s) off the critical line.
+More precise results of this type are contained in §10, Theorem 10 and §11, The-
+orem 11.
+The question of linear independence which arises in ( iii)i so f some interest and,
+although probably quite difficult, deserves study. Linear relations such as in ( iii) above
+do occur, but what we obtain here are well-determined relations arising from a specific
+limiting process, and they may carry interesting information about consequences of a
+hypothetical failure of the Riemann Hypothesis.
+The content of this paper is as follows. In Sections 2 and 3 we restate the Guinand-
+Weil Explicit Formula and Weil’s formulation of the Riemann Hypothesis as the posi-
+tivity of a certain quadratic functional. Section 4 introduces two variational eigenvalue
+problems associated to Weil’s quadratic functional and proves the existence of extremals
+for the second problem. Sections 5 and 6 study the structure of extremals and a re-
+formulation of the eigenvalue problems, obtained by taking Fourier transforms. Section
+7 shows that the first eigenvalue problem admits a resolvent and determines some of
+its properties, although results in this section are not used anywhere else in this paper.
+Section 8 introduces finite approximations, odd and even eigenfunctions and proves a
+key result (Theorem 8) about eigenvalues of finite matrices in the approximation of the
+first eigenvalue problem. The main result of this section is quite general and does not
+depend on properties of zeta functions or arithmetic. Section 9 obtains corresponding
+results for the second eigenvalue problem. Section 10 shows how to pass to the limit
+from the finite approximations to the case of interest, namely zeta functions. However,
+the possibility that in the limiting process a negative eigenvalue may have limit 0 gives
+rise to linear dependence relations, as in alternative ( iii) above. Section 11 carries the
+same limiting process for the second eigenvalue problem and gives an example of how
+186 e. bombieri
+linear relations may arise in the case of zeta functions. Finally, Section 12 proves again
+Yoshida’s result of the positivity of Weil’s quadratic functional for test functions with
+sufficiently small compact support.
+In this paper we have not attempted to achieve maximum generality or the sharpest
+possible statements. All results of this paper extend, mutatis mutandis,t o Dedekind zeta
+functions of number fields. It should also be possible to replace the assumption that
+there are only finitely many non-trivial zeros of
+ζ(s) off the critical line, which is used
+in several places, by a suitable density hypothesis.
+2. The Guinand-Weil Explicit Formula
+We state the Explicit Formula, in the special case of the Riemann zeta function, in
+the following form.
+For a function f (x)o n( 0 ; ∞)w e define f ∗ by the formula
+f ∗(x) = 1
+x f
+( 1
+x
+)
+;
+and say that f is even if f = f ∗ and odd if f = −f ∗.
+Explicit Formula. Let f (x) ∈ C ∞
+0 ((0; ∞)) be a smooth complex-valued function with
+compact support in (0; ∞).
+Let
+f~(s) =
+∫∞
+0
+f (x) xs−1 dx
+be the Mellin transform of f . Then we have (2)
+∑
+ρ
+f~(ρ) =
+∫∞
+0
+f (x)d x +
+∫∞
+0
+f ∗(x)d x −
+∞∑
+n=1
+Λ(n) {f (n) + f ∗(n)}−
+− (log 4π + γ)f (1) −
+∫∞
+1
+{
+f (x) + f ∗(x) − 2
+x f (1)
+} x dx
+x2 − 1
+where the first sum ranges over all complex zeros of the Riemann zeta function.
+Moreover, the last two terms in the right-hand side of the Explicit Formula can be
+written as
+−(logπ)f (1) + 1
+2πi
+∫
+( 1
+2 )
+ℜ
+[Γ′
+Γ
+( w
+2
+)]
+f~(w)d w:
+Proof. The proof is an application of the calculus of residues. An elementary treat-
+ment is as follows.
+We write as usual σ = ℜ(s) and t = ℑ(s) for the real and imaginary part of the
+complex variable s. Let
+Z (s) = π−s=2Γ(s=2)ζ(s)
+(2) Here γ is Euler’s constantγ = 0:5772156649 ::: .
+remarks on weil ’s quadratic functional in the theory of prime numbers, I 187
+and consider the integral
+(2.1) I (f ) = 1
+2πi
+∫
+(c)
+Z ′
+Z (w) f~(w)d w
+where the integration is over the line ( c −i∞;c + i∞) and c> 1. Since f (x)i s smooth
+with compact support, its Mellin transform f~(s)i sa n entire function of s of order 1
+and exponential type, rapidly decreasing in every fixed vertical strip.
+The logarithmic derivative of Z (s)i s holomorphic for σ > 1 and has logarithmic
+growth on any vertical line ( c − i∞;c + i∞) with c> 1, hence the above integral is
+absolutely convergent.
+For ℜ(w) > 1w e have
+Z ′
+Z (w) = − 1
+2(logπ) + 1
+2
+Γ′
+Γ
+( w
+2
+)
+−
+∞∑
+n=1
+Λ(n)
+nw ;
+whence
+I (f ) = − 1
+2 (logπ) 1
+2πi
+∫
+(c)
+f~(w)d w + 1
+4πi
+∫
+(c)
+Γ′
+Γ
+( w
+2
+)
+f~(w)d w−
+−
+∞∑
+n=1
+Λ(n) 1
+2πi
+∫
+(c)
+f~(w) n−w dw;
+because term-by-term integration is justified by total convergence. The inverse Mellin
+transform formula is
+f (x) = 1
+2πi
+∫
+(c)
+f~(w) x−w dw
+and the formula for I (f ) becomes
+(2.2) I (f ) = − 1
+2 (logπ) f (1) + 1
+4πi
+∫
+(c)
+Γ′
+Γ
+( w
+2
+)
+f~(w)d w −
+∞∑
+n=1
+Λ(n) f (n):
+Now we compute I (f )i n another way. In (2.1), we move the line of integration
+to the left, to a line ( c′− i∞;c ′+ i∞) with c′ < 0. This requires some justification,
+namely integrating over a rectangle with vertices at ( −c′− iT; c − iT; c + iT; c′+ iT )
+and showing that the integral over the horizontal sides tends to 0 if we let T go to
+infinity along a well-chosen sequence {Tν }. For this step, which is very classical, we
+refer to Ingham’s excellent Cambridge Tract [3].
+In moving the line of integration to the left we encounter the residues of Z ′=Z (w)
+due to the simple poles of Z (w)a t w = 0 and w = 1 and to the zeros of Z (w) inside
+the critical strip 0 ≤ℜ (w) ≤ 1. It follows that
+(2.3) I (f ) = −f~(0) − f~(1) +
+∑
+ρ
+f~(ρ) + 1
+2πi
+∫
+(c′)
+Z ′
+Z (w) f~(w)d w:
+Now we use the functional equation Z (w) = Z (1 − w), which for ℜ(w) < 0 gives us
+Z ′
+Z (w) = − Z ′
+Z (1 − w) = 1
+2 (logπ) − 1
+2
+Γ′
+Γ
+( 1 − w
+2
+)
++
+∞∑
+n=1
+Λ(n)
+n1−w :
+188 e. bombieri
+We substitute into (2.3) and obtain
+I (f ) = −f~(0) − f~(1) +
+∑
+ρ
+f~(ρ) +
++ 1
+2 (logπ) 1
+2πi
+∫
+(c′)
+f~(w)d w − 1
+4πi
+∫
+(c′)
+Γ′
+Γ
+( 1 − w
+2
+)
+f~(w)d w +
++
+∞∑
+n=1
+Λ(n) 1
+2πi
+∫
+(c′)
+f~(w) n−1+w dw =
+= −f~(0) − f~(1) +
+∑
+ρ
+f~(ρ) +
++ 1
+2 (logπ) f (1) − 1
+4πi
+∫
+(c′)
+Γ′
+Γ
+( 1 − w
+2
+)
+f~(w)d w +
+∞∑
+n=1
+Λ(n) f ∗(n);
+again because term-by-term integration is justified by total convergence.
+We compare this formula with formula (2.2) for I (f ) and find
+(2.4)
+∑
+ρ
+f~(ρ) = f~(0) + f~(1) −
+∞∑
+n=1
+Λ(n) {f (n) + f ∗(n)}− (logπ) f (1) +
++ 1
+4πi
+∫
+(c)
+Γ′
+Γ
+( w
+2
+)
+f~(w)d w + 1
+4πi
+∫
+(c′)
+Γ′
+Γ
+( 1 − w
+2
+)
+f~(w)d w:
+In order to obtain the explicit formula we compute the last two integrals as follows.
+First of all, we move the line of integration in the last two integrals to c = 1
+2 and
+c′= 1
+2 , which we may without encountering any pole of the integrand. Thus the sum
+of the two integrals becomes
+1
+2π
+∫∞
+−∞
+ℜ
+[Γ′
+Γ
+( 1
+4 + i
+2 v
+)]
+f~
+( 1
+2 + iv
+)
+dv:
+This already proves the Explicit Formula with the last two terms expressed in the
+alternative way by means of a complex integral.
+Now we recall that [7, Ch. XII, §12.16, p. 241]
+Γ′
+Γ (z) = −γ − 1
+z +
+∞∑
+n=1
+{1
+n − 1
+n + z
+}
+and
+1 + 1
+2 + ::: + 1
+N = log N + γ + O
+( 1
+N
+)
+;
+remarks on weil ’s quadratic functional in the theory of prime numbers, I 189
+thus
+Γ′
+Γ (z) = log N −
+N∑
+n=0
+1
+n + z + O
+( 1 + |z|
+N
+)
+uniformly for ℜ(z) ≥− N=2, z not a negative integer or 0. This gives
+ℜ
+[Γ′
+Γ
+( 1
+4 + i
+2 v
+)]
+= log N −
+N∑
+n=0
+4n + 1
+(2n + 1
+2 )2 + v2 + O
+( 1 + |v|
+N
+)
+and
+1
+2π
+∫∞
+−∞
+ℜ
+[Γ′
+Γ
+( 1
+4 + i
+2 v
+)]
+f~
+( 1
+2 + iv
+)
+dv =
+= 1
+2π
+∫∞
+−∞
+(
+log N −
+N∑
+n=0
+4n + 1(2n + 1
+2
+)2
++ v2
+)
+f~
+( 1
+2 + iv
+)
+dv +
++ O
+(∫∞
+−∞
+1 + |v|
+N
+⏐⏐f~
+( 1
+2 + iv
+)⏐⏐dv
+)
+:
+Since f~is rapidly decreasing on any vertical line, the last integral converges and the
+O() term is indeed O(1=N ). Also
+1
+2π
+∫∞
+−∞
+f~(1
+2 + iv)d v = f (1);
+whence
+(2.5)
+1
+2π
+∫∞
+−∞
+ℜ
+[Γ′
+Γ
+( 1
+4 + i
+2 v
+)]
+f~
+( 1
+2 + iv
+)
+dv =
+= (log N ) f (1) −
+N∑
+n=0
+1
+2π
+∫∞
+−∞
+4n + 1
+(2n + 1
+2 )2 + v2 f~
+( 1
+2 + iv
+)
+dv + O
+( 1
+N
+)
+:
+We have by Fubini’s theorem
+(2.6)
+1
+2π
+∫∞
+−∞
+2a
+a2 + v2 f~
+( 1
+2 + iv
+)
+dv = 1
+2π
+∫∞
+−∞
+2a
+a2 + v2
+∫∞
+0
+f (x)x−1=2+iv dx dv =
+=
+∫∞
+0
+f (x)x−1=2 1
+2πi
+∫∞
+−∞
+( 1
+v − ia − 1
+v + ia
+)
+xiv dv dx:
+An easy application of the calculus of residues [7, Ch. VI, §6.22, pp. 113-114] shows
+that for ℜ(a) > 0w e have
+1
+2πi
+∫∞
+−∞
+( 1
+v − ia − 1
+v + ia
+)
+xiv dv = min(x; 1=x)a
+190 e. bombieri
+hence by (2.5) and (2.6) we find
+(2.7)
+1
+2π
+∫∞
+−∞
+ℜ
+[Γ′
+Γ
+( 1
+4 + i
+2 v
+)]
+f~
+( 1
+2 + iv
+)
+dv =
+= −
+∫∞
+1
+( N∑
+n=0
+x−2n
+)
+f (x) dx
+x −
+∫1
+0
+( N∑
+n=0
+x2n
+)
+f (x)d x +
++ (log N ) f (1) + O
+( 1
+N
+)
+=
+= −
+∫∞
+1
+( N∑
+n=0
+x−2n
+)
+(f (x) + f ∗(x))dx
+x + (log N ) f (1) + O
+( 1
+N
+)
+:
+Finally, we have
+∫∞
+1
+( N∑
+n=0
+x−2n
+)
+(f (x)+ f ∗(x))dx
+x =
+∫∞
+1
+( N∑
+n=0
+x−2n
+){
+f (x)+ f ∗(x)− 2
+x2 f (1)
+}dx
+x +
++
+(
+1 + 1
+2 + ::: + 1
+N + 1
+)
+f (1):
+We substitute into (2.7), getting
+1
+2π
+∫∞
+−∞
+ℜ
+[Γ′
+Γ
+( 1
+4 + i
+2 v
+)]
+f~
+( 1
+2 + iv
+)
+dv =
+= −
+∫∞
+1
+1 − x−2N −2
+1 − x−2
+{
+f (x) + f ∗(x) − 2
+x2 f (1)
+}dx
+x +
++
+(
+log N −
+N+1∑
+n=1
+1
+n
+)
+f (1) + O
+( 1
+N
+)
+:
+Now we take the limit for N →∞ and deduce
+(2.8)
+1
+2π
+∫∞
+−∞
+ℜ
+[Γ′
+Γ
+( 1
+4 + i
+2 v
+)]
+f~
+( 1
+2 + iv
+)
+dv =
+= −
+∫∞
+1
+{
+f (x) + f ∗(x) − 2
+x2 f (1)
+} x dx
+x2 − 1
+− γ f (1) =
+= −(log 4+ γ)f (1) −
+∫∞
+1
+{
+f (x) + f ∗(x) − 2
+x f (1)
+} x dx
+x2 − 1 :
+If we substitute into (2.4) and note that
+f~(0) =
+∫∞
+0
+f ∗(x)d x; f ~(1) =
+∫∞
+0
+f (x)d x
+we get the Explicit Formula in the form stated here.
+remarks on weil ’s quadratic functional in the theory of prime numbers, I 191
+3. A necessary and sufficient condition for the Riemann Hypothesis
+As Weil [6] showed, one obtains from the Explicit Formula a necessary and sufficient
+condition for the validity of the Riemann Hypothesis, expressed through the positivity
+of a certain quadratic functional. Let us consider test functions f (x)
+∈ C ∞
+0 ((0; ∞))
+which are the multiplicative convolution of a function g and its transpose conjugate g ∗,
+hence
+f (x) =
+∫∞
+0
+g(x=y) g ∗(y) dy
+y =
+∫∞
+0
+g(xy) g(y)d y:
+We have
+f~(s) = g~(s) g~(1 − s):
+We have the following strengthening of Weil’s criterion.
+Theorem 1. The Riemann Hypothesis holds if and only if
+(3.1)
+∑
+ρ
+g~(ρ) g~(1 − ρ) > 0
+for every complex-valued g(x) ∈ C ∞
+0 ((0; ∞)), not identically 0.
+Proof. The Riemann Hypothesis is the statement that 1 −ρ = ρ for every non-trivial
+zero ρ of ζ(s). Thus on the Riemann Hypothesis we have
+(3.2)
+∑
+ρ
+g~(ρ) g~(1 − ρ) =
+∑
+ρ
+g~(ρ) g~(ρ) =
+∑
+ρ
+|g~(ρ)|2 ≥ 0:
+It is also easy to show that equality holds only if g(x)i s identically 0. In fact equality
+can hold only if g~(ρ) = 0 for every ρ, whence g~(s) has at least (1 =π + o(1))R log R
+zeros in a disk |s|≤ R.O n the other hand, g~(s)i sa n entire function of exponential
+type, thus if g~is not identically 0 it can have at most O(R) zeros in the disk |s|≤ R.
+This proves our claim about equality in (3.2) and shows that the Riemann Hypothesis
+implies (3.1).
+The proof of the converse statement can be obtained by a modification of Weil’s
+proof. We shall sketch here another argument in [1], based on a criterion due to X.-J.
+Li [4], namely that the Riemann Hypothesis is equivalent to the statement
+(3.3)
+∑
+ρ
+{[1 − (1 − 1=ρ)n]+[1 − (1 − 1=(1 − ρ))n]}
+> 0
+for n = 1; 2; 3;::: .A quick proof is as follows [1]. Let β = ℜ(ρ) and notice that
+|1 − 1=ρ|2 = 1 + (1 − 2β)=|ρ|2:
+This proves that (3.3) holds if ℜ(ρ) = 1
+2 for every ρ.
+Conversely, suppose there is ρ with ℜ(ρ) < 1
+2 . Since (1 − 2β)=|1 − ρ|2 tends to 0
+as |ρ|→∞ , the maximum of this quantity as ρ varies is attained and there are finitely
+many zeros ρk , k = 1;::: ;K such that |1 − 1=ρ| = 1 + t = max > 1. For any other
+192 e. bombieri
+ρ we have |1 − 1=ρ|≤ 1 + t − δ for a fixed small δ > 0. Let φk be the argument of
+1 − 1=ρk . Then
+1 − (1 − 1=ρk )n = 1 − (1 + t)neinφk :
+For ρ ⁄= ρk we have |1 − 1=ρ|n = O((1 + t − δ)n)and also
+1 − (1 − 1=ρ)n = n=ρ + O(n2=|ρ|2)
+as soon as |ρ| >n ,a sa n easy calculation shows. Hence the sum over |ρ| >n is O(n2),
+because ∑1=|ρ|2 is convergent. The number of zeros with |ρ|≤ n is O(n2), again
+because ∑1=|ρ|2 is convergent. Hence the contribution of terms in (3.3) other than
+those arising from ρk , k = 1;::: ;K is O(n2(1 + t − δ)n). The contribution of the
+zeros ρk , k = 1;::: ;K is O(K ) − 2(1 + t)n∑cos(nφk ), and we have shown that
+∑
+ρ
+{[1 − (1 − 1=ρ)n]+[1 − (1 − 1=(1 − ρ))n]}
+=
+= −2(1 + t)n
+K∑
+k=1
+cos(nφk ) + O(K ) + O(n2(1 + t − δ)n):
+By Dirichlet’s theorem on simultaneous diophantine approximations we can find arbi-
+trarily large values of n such that the sum of cosines is arbitrarily close to K , making
+it plain that the sum in (3.3) takes negative values infinitely often if the Riemann
+Hypothesis does not hold.
+Now we have the identity
+[1 − (1 − 1=s)n]+[1 − (1 − 1=(1 − s))n]=[1 − (1 − 1=s)n]
+·
+[1 − (1 − 1=(1 − s))n]:
+Hence if gn(x)i s the inverse Mellin transform of 1 − (1 − 1=s)n, the sum in (3.1) is
+simply ∑g~n(ρ) g~n(1 − ρ), which, at least formally, is the left-hand side of the Explicit
+Formula for gn ∗ g ∗
+n, because gn is real.
+The function gn is
+gn(x) =
+
+
+
+Pn(log x) if 0 <x< 1
+n=2 if x = 1
+0 if x > 1
+where Pn(x)i s the polynomial
+Pn(x) =
+n∑
+j=1
+( n
+j
+) xj−1
+(j − 1)! :
+Since gn is not a smooth function with compact support, we cannot apply the Explicit
+Formula directly. Thus we replace gn by its truncation
+gn;ε(x) =
+
+
+
+gn(x) if ε <x ≤∞
+1
+2 gn(ε) if x = ε
+0 if x < ε
+remarks on weil ’s quadratic functional in the theory of prime numbers, I 193
+where ε > 0 and note that
+(3.4) lim
+ε→+0
+∑
+ρ
+g~n;ε(ρ) g~n;ε(1 − ρ) =
+∑
+ρ
+g~n(ρ) g~n(1 − ρ):
+This can be proved easily using a zero-free region for ζ(s), because
+⏐⏐g~n;ε(s) g~n;ε(1 − s) − g~n(s) g~n(1 − s)
+⏐⏐= O(εmin(ℜ(s);ℜ(1−s))(log 1=ε)n−1=|s|2)
+for 0 ≤ℜ (s) ≤ 1 and |s|≥ 1. Then using De la Vall ´ee-Poussin’s zero-free region
+c
+log(|ρ| + 2) ≤ℜ (ρ) ≤ 1 − c
+log(|ρ| + 2)
+it is easy to verify (3.4).
+Finally, if n is such that ∑g~n(ρ) g~n(1 − ρ) < 0, by (3.4) we see that we still have∑g~n;ε(ρ) g~n;ε(1 − ρ) < 0 for ε > 0 small enough. The function gn;ε is real-valued
+with compact support, and the proof of Theorem 1 is completed by replacing gn;ε by
+a multiplicative convolution with a smooth approximation with compact support to a
+Dirac at 1.
+By the Explicit Formula and Theorem 1 we have
+Theorem 2. Let T [f ] be the linear functional (3)
+T [f ] =
+∫∞
+0
+f (x)d x +
+∫∞
+0
+f ∗(x)d x −
+∞∑
+n=1
+Λ(n) {f (n) + f ∗(n)}−
+− (log 4π + γ)f (1) −
+∫∞
+1
+{
+f (x) + f ∗(x) − 2
+x f (1)
+} x dx
+x2 − 1
+on the space C ∞
+0 ((0; ∞)) of complex-valued smooth functions with compact support in(0; ∞).
+Then we have
+T [f ] = T [f ∗] =
+∑
+ρ
+f~(ρ);
+where the sum ranges over all complex zeros of the Riemann zeta function.
+Moreover, the Riemann Hypothesis is equivalent to the statement that
+T [f ∗ f
+∗
+] ≥ 0
+on C ∞
+0 ((0; ∞)), with equality only if f is identically 0.
+We have in fact proved a little more, namely that the positivity of the Weil quadratic
+functional is equivalent to the statement that T [gn;ε] > 0 for every positive integer n
+and ε > 0.
+(3)W e use the symbol T because we regard T [f ]a sa n analogue of Weil’s definition of trace of a
+correspondence.
+194 e. bombieri
+4. The variational equation
+It is easily seen that the functional T [f ∗f
+∗
+]i s invariant by the translation operator ( 4)
+τa f (x) = a−1=2f (x=a). This means however that if we try to minimize this functional in
+the unit sphere of a translation invariant Hilbert space we obtain too many extremals.
+Thus our Hilbert space cannot be translation invariant by
+τa.
+On the other hand, we want to keep the definition of the norm in our Hilbert
+space as simple as possible. Hence a first attempt consists in killing the translations τa
+by fixing the support of f . This works fine to some extent, and one readily shows that
+T [f ∗ f
+∗
+]i s bounded below in the unit sphere of the space L2(E)o f square-integrable
+functions with compact support in E, where E is a finite union of bounded closed
+intervals in (0 ; ∞).
+However, one may also consider the infinitesimal translation given by the differential
+operator D = x(d = dx), and one way to kill it is to work in the space of functions
+f for which Df is square-integrable with compact support in [ M −1;M ], because in
+general Df will have a jump at M ±1 and D2f will have a Dirac point mass there, so
+it will no longer be square-integrable.
+These considerations motivate the two problems below.
+Problem 1. Minimize T [f ∗ f
+∗
+] in the unit sphere of the Hilbert space W0 =
+= W 1;2
+0 ([M −1;M ]) of functions f with f , Df in L2((0; ∞)) and compact support
+in [M −1;M ], with norm
+‖f ‖2
+W0
+=
+∫M
+M −1
+|Df (x)|2 dx;
+with D the translation invariant differential operator D = x (d=dx).
+Problem 2. Let E be a finite union of intervals in (0; ∞). Minimize T [f ∗ f
+∗
+] in the
+unit sphere of the space L2(E) of functions f with compact support in E, with norm
+‖f ‖2 =
+∫
+E
+|f (x)|2 dx:
+Remark. There is some evidence that it may also be of interest to consider a variant
+of Problem 1 in which instead of a Dirichlet condition f (1=M ) = f (M ) = 0 one works
+with odd functions f (x) = −f ∗(x) and imposes a Neumann condition
+(Df + 1
+2 f )(1=M ) = (Df + 1
+2 f )(M ) = 0:
+The analysis of this problem will not be done in this paper.
+Remark. It may be useful, in studying regularity of solutions in Problem 2, to
+consider also viscosity solutions, namely minimizers of the regularized functional T [f ∗
+f
+∗
+] + ε‖Df ‖2 for ε > 0, and their limits in L2(E)a s ε → 0.
+(4)W e view this as the analogue of a normalized Frobenius operator.
+remarks on weil ’s quadratic functional in the theory of prime numbers, I 195
+Lemma 1. The variational equation for Problem 1 is
+(4.1) λDf (a) −L [f ](a) = 0 for a ∈ (M −1;M )
+where D is the Laplacian D = −D − D2 and L[f ] is the Euler-Lagrange linear operator
+L[f ](a) =
+∫∞
+0
+f (ay)d y +
+∫∞
+0
+1
+y f
+( a
+y
+)
+dy −
+∞∑
+n=1
+Λ(n)
+{
+f (an) + 1
+n f
+( a
+n
+)}
+−
+− (log 4π + γ)f (a) −
+∫∞
+1
+{
+f (ax) + 1
+x f
+( a
+x
+)
+− 2
+x f (a)
+} x dx
+x2 − 1 :
+The eigenvalue λ is given by
+λ = T [f ∗ f
+∗
+]
+‖Df ‖2 :
+The variational equation for Problem 2 is
+(4.2) λ f (a) −L [f ](a) = 0 for a ∈E
+and the eigenvalue λ is given by
+λ = T [f ∗ f
+∗
+]
+‖f ‖2 :
+Proof. Let
+⟨u; v⟩=
+∫∞
+0
+u(x) v(x)d x
+be the scalar product in L2((0; ∞)), so that ⟨v; u⟩= ⟨u; v⟩. Let us make a variation
+f + εϕ of f , where ϕ is a complex-valued smooth function with compact support. We
+have
+T [(f + εϕ) ∗ (f + εϕ)
+∗
+] = T [f ∗ f
+∗
+] + 2ε ℜ[⟨L[f ];ϕ⟩] + ε2T [ϕ ∗ ϕ∗]
+and
+‖D(f + εϕ)‖2 = ‖Df ‖2 + 2ε ℜ[⟨Df;ϕ⟩] + ε2‖Dϕ‖2:
+Hence the vanishing of the first variation of T [f ∗ f
+∗
+]=‖Df ‖2 gives the equation
+ℜ[⟨L[f ];ϕ⟩−λ⟨Df;ϕ⟩] = 0
+for every complex-valued smooth ϕ with compact support in (0 ; ∞), with λ = T [f ∗
+f
+∗
+]=‖Df ‖2. This completes the proof for the first assertion of the lemma. The proof
+of the second assertion is identical, mutatis mutandis.
+We shall prove that the infimum for the preceding two variational problems is
+attained. We need some simple preliminary results.
+Lemma 2. If f ∈W 0 then f is H¨older continuous with exponent 1=2, and verifies the
+pointwise inequality
+⏐⏐f (y) − f (x)
+⏐⏐≤‖Df ‖
+⏐
+⏐
+⏐
+⏐
+1
+x − 1
+y
+⏐
+⏐
+⏐
+⏐
+1=2
+196 e. bombieri
+for 0 <x<y< ∞.I n particular, f is bounded as |f (x)|≤ M 1=2‖Df ‖ and ‖f ‖≤
+≤ (2 logM )1=2‖Df ‖.
+Moreover, for any f; g ∈ L2((0; ∞)) we have the pointwise bound
+⏐⏐(f ∗ g ∗)(x)
+⏐⏐≤ ‖f ‖·‖g ‖√x :
+Proof. We have
+f (y) − f (x) =
+∫y
+x
+(Df )(t) dt
+t
+and the first statement of the lemma follows from Cauchy’s inequality.
+The second statement is also clear, because
+(f ∗ g ∗)(x) =
+∫∞
+0
+f (xy) g(y)d y
+and ∫
+|f (xy)|2 dy = x−1‖f ‖2.
+Lemma 3. For f ∈ L2 with compact support in [M −1;M ] we have
+T [f ∗ f
+∗
+] = 1
+2π
+∫∞
+−∞
+ℜ
+[Γ′
+Γ
+( 1
+4 + i
+2 v
+)]⏐⏐f~
+( 1
+2 + iv
+)⏐⏐2
+dv + O(M ) ‖f ‖2:
+The constant involved in the O() symbol is absolute.
+Proof. Since f is supported in [ M −1;M ]w e see that F = f ∗ f
+∗
+is supported in
+[M −2;M 2]. Hence by the last estimate of Lemma 2 we have
+⏐⏐
+⏐
+⏐
+∫
+∞
+0
+F (x) dx
+x
+⏐⏐
+⏐
+⏐=
+⏐⏐
+⏐
+⏐
+∫
+∞
+0
+F (x)d x
+⏐⏐
+⏐
+⏐
+≤
+∫M 2
+M −2
+‖f ‖2 dx√x < 2M ‖f ‖2:
+Again by Lemma 2, we get in a similar way
+⏐⏐
+⏐
+⏐
+⏐
+2
+∞∑
+n=1
+Λ(n)F (n)
+⏐⏐
+⏐
+⏐
+⏐
+≤ 2 ‖f ‖2
+M 2
+∑
+n=1
+Λ(n)√n = O(M ) ‖f ‖2:
+Also,
+F (1) = ‖f ‖2:
+Finally, by the Explicit Formula the last two terms in T [f ∗ f
+∗
+] are
+−(logπ)F (1) + 1
+2π
+∫∞
+−∞
+ℜ
+[Γ′
+Γ
+( 1
+4 + i
+2 v
+)]⏐⏐f~
+( 1
+2 + iv
+)⏐⏐2
+dv:
+This proves Lemma 3.
+Lemma 4. Let f ∈ L2 be with compact support in [M −1;M ]. Then we have the pointwise
+bound ⏐⏐
+⏐
+⏐
+⏐
+(
+d
+dt
+)k
+f~
+( 1
+2 + it
+)⏐⏐
+⏐
+⏐
+⏐
+≤
+√
+2 (log M )k+1=2 ‖f ‖:
+remarks on weil ’s quadratic functional in the theory of prime numbers, I 197
+Proof. We have⏐⏐
+⏐
+⏐
+⏐
+(
+d
+dt
+)k
+f~
+( 1
+2 + it
+)⏐⏐
+⏐
+⏐
+⏐=
+⏐⏐
+⏐
+⏐
+ik
+∫M
+1=M
+f (x) (log x)k x− 1
+2+it dx
+⏐⏐
+⏐
+⏐
+≤
+≤ (log M )k
+∫M
+1=M
+|f (x)|√x dx ≤ (log M )k
+(∫M
+1=M
+dx
+x
+)1
+2
+‖f ‖:
+This proves the lemma.
+Theorem 3. Let E be a finite union of closed finite intervals in (0; ∞). Then the infimum
+of T [f ∗ f
+∗
+] in the unit sphere of the space L2(E) of L2-functions with compact support in E
+is attained.
+Proof. Let {fν } be a minimizing sequence for this problem and let λ = inf T [f ∗f
+∗
+].
+Let E⊂ [M −1;M ].
+For 0 < ℜ(w)w e have
+(4.3) ℜ
+[Γ′
+Γ
+( w
+2
+)]
+= log |w| + O(1)
+and
+1
+2π
+∫∞
+−∞
+⏐⏐⏐⏐f~
+( 1
+2 + iv
+)⏐⏐⏐⏐
+2
+dv = ‖f ‖2
+by Plancherel’s formula. Hence Lemma 3 shows that
+T [fν ∗ f
+∗
+ν ] ≥− C1M ‖fν ‖2
+and in particular the functional T [f ∗ f
+∗
+]i s bounded below in L2(E). Since this
+functional is automatically bounded above along a minimizing sequence, Lemma 3 and
+(4.3) also shows that
+(4.4)
+∫∞
+−∞
+(1 + log
++
+|v|)
+⏐⏐
+⏐
+⏐
+f~
+ν
+( 1
+2 + iv
+)⏐⏐
+⏐
+⏐
+2
+dv = O(1)
+uniformly in ν as ν →∞ .
+By Lemma 4, the coefficients aν;m of the Taylor expansion with center 1
+2 + it of
+the entire function f~
+ν (s) are bounded by C (δ)δm, m = 0; 1;::: , for any δ > 0, for
+a suitable constant C (δ) depending only on δ. Hence by a standard diagonal selection
+process there is a subsequence of the functions fν , which we still denote by {fν } for
+simplicity, such that the limits
+lim
+ν→∞
+aν;m = am
+exist and again |am|≤ C (δ)δm. Therefore, setting
+f~(s) =
+∞∑
+m=0
+amsm
+198 e. bombieri
+we see that f~(s)i sa n entire function and that the sequence {f~
+ν (s)} converges to f~(s)
+uniformly on compact subsets of C.I t follows that for any fixed T we have
+(4.5) lim
+ν→∞
+∫T
+−T
+⏐⏐
+⏐
+⏐
+f~
+ν
+( 1
+2 + iv
+)
+− f~
+( 1
+2 + iv
+)⏐⏐
+⏐
+⏐
+2
+dv = 0:
+For the remaining integral over |v| >T ,w e note that by lower semicontinuity we have
+(4.6)
+∫∞
+−∞
+(1+log
++
+|v|)
+⏐⏐
+⏐
+⏐
+f~
+( 1
+2 + iv
+)⏐⏐
+⏐
+⏐
+2
+dv ≤ lim inf
+ν→∞
+∫∞
+−∞
+(1 + log
++
+|v|)
+⏐⏐
+⏐
+⏐
+f~
+ν
+( 1
+2 + iv
+)⏐⏐
+⏐
+⏐
+2
+dv:
+In conjunction with (4.4), this proves
+∫
+|v|>T
+⏐⏐
+⏐
+⏐
+f~
+ν
+( 1
+2 + iv
+)
+− f~
+( 1
+2 + iv
+)⏐⏐
+⏐
+⏐
+2
+dv = O
+( 1
+log T
+)
+and by (4.5) it follows that
+lim
+ν→∞
+∫∞
+−∞
+⏐⏐
+⏐
+⏐
+f~
+ν
+( 1
+2 + iv
+)
+− f~
+( 1
+2 + iv
+)⏐⏐
+⏐
+⏐
+2
+dv = 0:
+Therefore, by Plancherel’s formula we get lim ν ‖fν − f ‖ = 0 and the sequence {fν }
+converges to f strongly in L2(E).
+Finally, we have
+lim
+ν→∞
+T [fν ∗ f
+∗
+ν ] = T [f ∗ f
+∗
+]:
+This is verified as follows. Let us abbreviate Fν = fν ∗ f
+∗
+ν and F = f ∗ f
+∗
+. Then by
+Lemma 2 we see that
+⏐⏐Fν (x) − F (x)
+⏐⏐=
+⏐⏐
+⏐
+⏐
+∫
+∞
+0
+fν (xy) fν (y)d y −
+∫∞
+0
+f (xy) f (y)d y
+⏐⏐
+⏐
+⏐
+≤
+≤
+⏐⏐
+⏐
+⏐
+∫
+∞
+0
+(fν (xy) − f (xy))fν (y)d y
+⏐⏐
+⏐
+⏐+
+⏐⏐
+⏐
+⏐
+∫
+∞
+0
+f (xy)(fν (y) − f (y))dy
+⏐⏐
+⏐
+⏐
+≤
+≤‖fν ‖
+(∫∞
+0
+|fν (xy) − f (xy)|2 dy
+)1
+2
++ ‖fν − f ‖
+(∫∞
+0
+|f (xy)|2 dy
+)1
+2
+=
+= 2√x ‖fν − f ‖:
+Since {fν } converges strongly to f in L2, this proves that {Fν (x)} converges uniformly
+to F (x)a s ν →∞ . This suffices to show that in the right-hand side of the Explicit
+Formula for T [fν ∗ f
+∗
+ν ] all terms converge to the corresponding terms for T [f ∗ f
+∗
+],
+except possibly for the last term. However, by (4.3), (4.5) and lower semicontinuity
+we have
+∫∞
+−∞
+ℜ
+[Γ′
+Γ
+( 1
+4 + i
+2 v
+)]⏐⏐
+⏐
+⏐
+f~
+( 1
+2 + iv
+)⏐⏐
+⏐
+⏐
+2
+dv ≤
+≤ lim inf
+ν→∞
+1
+2π
+∫∞
+−∞
+ℜ
+[Γ′
+Γ
+( 1
+4 + i
+2 v
+)]⏐⏐
+⏐
+⏐
+f~
+ν
+( 1
+2 + iv
+)⏐⏐
+⏐
+⏐
+2
+dv:
+remarks on weil ’s quadratic functional in the theory of prime numbers, I 199
+Therefore, we obtain
+T [f ∗ f
+∗
+] ≤ lim
+ν→∞
+T [fν ∗ f
+∗
+ν ]
+and our assertion follows because {fν } is a minimizing sequence.
+This completes the proof of Theorem 3.
+We can prove the corresponding result for Problem 1 only in the hypothetical case
+in which T [f ∗ f
+∗
+]i s negative for some f ∈W 0.
+Theorem 4. Let λ be the infimum of T [f ∗ f
+∗
+] in the unit sphere of the space W0 =
+= W 1;2
+0 ([M −1;M ]).
+If λ < 0, then this infimum is attained.
+Proof. The proof follows the same pattern as for Theorem 3. Let again {fν } be a
+minimizing sequence and f a weak limit in W0 of a subsequence of {fν }.
+This time, the normalization ‖Dfν ‖= 1 means that
+1
+2π
+∫∞
+−∞
+( 1
+4 + v2
+)⏐⏐
+⏐
+⏐
+f~
+ν
+( 1
+2 + iv
+)⏐⏐
+⏐
+⏐
+2
+dv = 1;
+and the proof that T [fν ∗ f
+∗
+ν ] →T [f ∗ f
+∗
+]i s immediate.
+The trouble here is that there is no immediate reason why ‖Df ‖ should continue
+to have norm 1, and we have only ‖Df ‖≤ 1b y semicontinuity.
+However, suppose that λ < 0. Then T [f ∗ f
+∗
+] = λ < 0 and in particular f
+cannot be identically 0. Thus 0 < ‖Df ‖≤ 1. Now f0 = f=‖Df ‖ has ‖Df0‖= 1 and
+T [f0 ∗ f
+∗
+0] = λ=‖Df ‖2.I f w e had ‖Df ‖ < 1 then the assumption λ < 0 shows that
+λ=‖Df ‖2 < λ, contradicting the fact that λ is the infimum of T [f ∗ f
+∗
+]i n W0.I t
+follows that ‖Df ‖= 1 and, by well-known results, fν converges strongly to f in W0,
+proving the theorem.
+We conclude this section with
+Theorem 5. Let µ+(M ) and µ−(M ) be the infimum of T [f ∗ f ∗] in the class of even
+and odd functions in L2([M −1;M ]) of norm 1. Then µ+(M ) and µ−(M ) are continuous
+decreasing functions of M .
+Proof. It is clear that the functions µ±(M ) are decreasing functions of M ,s ow e
+need to prove continuity.
+Let f (x)b e even or odd and a minimizer for T [f ∗ f ∗]. Consider, for ε > 0, the
+variation
+fε(x) = (1 + ε)1=2x
+ε
+2 f (x1+ε):
+Then fε(x) ∈ L2([M −1=(1+ε);M 1=(1+ε)]), has norm 1 and has the same parity as f .
+It follows that, with the sign ± according to the parity of f :
+lim inf
+ε→0
+µ±(M 1=(1+ε)) ≤ lim inf
+ε→0
+T [fε ∗ f ∗
+ε ] = T [f ∗ f ∗] = µ±(M ):
+200 e. bombieri
+Here the equality lim T [fε ∗ f ∗
+ε ] = T [f ∗ f ∗] can be verified directly without much
+trouble, because fε converges strongly in L2([M −1;M ]) to f and because
+f~
+ε(s) = (1 + ε)− 1
+2 f~
+(
+s + ε
+2(1 + ε)
+)
+;
+this formula being used to show that
+∫∞
+−∞
+(1 + log
++
+|v|)
+⏐⏐
+⏐
+⏐
+f~
+ε
+( 1
+2 + iv
+)⏐⏐
+⏐
+⏐
+2
+dv
+is a continuous function of ε as ε → 0. This completes the proof.
+5. The first eigenvalue problem
+In this section we do a formal calculation which will suggest the structure of solutions
+of the eigenvalue problem of the preceding sections.
+We assume a priori throughout this section that we have f (x) ∈W 0 such that
+(5.1) λDf (x) = L[f ](x);x ∈ (M −1;M ):
+Lemma 5. The distribution D2f is the sum of a bounded function and two Dirac distributions
+at x = M ±1. Hence the Mellin transform f~(s) satisfies a bound f~(s) = O((|s| + 1)−2)in
+any fixed vertical strip a ≤ℜ (s) ≤ b. The constant implied in the O() symbol depends on M
+and a; b.
+We also have
+L[f ](x) = O(M )x− 1
+2 ‖Df ‖ for x ∈ (M −1;M ):
+Proof. Consider L[f ](x) for x ∈ (M −1;M ). By Lemma 2, |f (x)|≤ x− 1
+2 ‖Df ‖.
+For x ∈ (M −1;M ), the functions f (xy) and f (x=y) are supported in y ∈ (M −2;M 2).
+Hence ∫∞
+0
+f (xy)d y +
+∫∞
+0
+1
+y f
+( x
+y
+)
+dy = O(M )x− 1
+2 ‖Df ‖:
+The next term in L[f ]i s
+−
+∞∑
+n=1
+Λ(n)
+{
+f (nx) + 1
+n f
+( x
+n
+)}
+and, by the same argument as before, it is majorized by O(M )x− 1
+2 ‖Df ‖.
+Also it is clear that −(logπ)f (x) = O(x− 1
+2 ‖Df ‖). The remaining contribution to
+L[f ]i s
+1
+2πi
+∫
+(1
+2 )
+ℜ
+[Γ′
+Γ
+( w
+2
+)]
+x−w f~(w)d w:
+remarks on weil ’s quadratic functional in the theory of prime numbers, I 201
+Since f ∈ W 1;2 we have by Plancherel’s formula
+1
+2πi
+∫
+( 1
+2 )
+|w|2|f~(w)|2 dw = ‖Df ‖2 < ∞;
+and since Γ′=Γ= O(log |w|)w e see from Cauchy’s inequality that the contribution
+coming from this last term is again O(x−1=2‖Df ‖). This proves the last statement of
+Lemma 5.
+By (5.1), we see that
+Df (x) = −(D + D2)f (x) = −(x2f ′(x))′
+is bounded in ( M −1;M ). It follows that f (x)i so f differentiability class C 1;1 in
+(M −1;M ). Since Df is 0 outside [ M −1;M ]w e see that Df (x) has right and left
+limits for x → M ±1 and the first statement of the lemma follows. The second statement
+now is clear from
+s2f~(s) =
+∫∞
+0
+D2f (x)xs−1 dx:
+This completes the proof.
+Lemma 6. For a solution f (x) we have
+L[f ](x) =
+∑
+f~(ρ)x−ρ
+where the sum ranges over all non-trivial zeros of ζ(s).I n particular, the sum is absolutely
+convergent because f~(ρ) = O(|ρ|−2).
+Proof. Since L[f ](a) = T [f (ax)] and the Mellin transform of f (ax)i s a−s f~(s),
+Lemma 6 follows from Theorem 2 and Lemma 5.
+We write the equation λDf = L[f ]i n the form
+(5.2) −λ(x2f ′(x))′=
+∑
+ρ
+f~(ρ)x−ρ
+for x ∈ (M −1;M ), with the boundary condition f (M ) = f (1=M ) = 0.
+Lemma 7. Suppose λ ⁄= 0. Then for x ∈ (1=M; M) we have
+λ f (x) =
+∑
+ρ
+f~(ρ)
+ρ(1 − ρ) x−ρ − A − Bx−1
+where the constants A and B are determined by the boundary conditionf (1=M ) = f (M ) = 0.
+Moreover, for every α < 1 the function f is of differentiability class C 2;α in the open
+interval (M −1;M ).
+Proof. We recall that by Lemma 3 we have f~(ρ) = O(|ρ|−2), where the constant
+implied in the O() symbol depends only on M .I t follows that the function
+f0(x) = λ−1∑
+ρ
+f~(ρ)
+ρ(1 − ρ) x−ρ
+202 e. bombieri
+is for α < 1a C 2;α((0; ∞)) solution of
+−λ(x2f ′
+0 (x))′=
+∑
+ρ
+f~(ρ)x−ρ;x ∈ (0; ∞);
+as one verifies directly.
+The associated homogeneous equation −(x2u′)′= 0 has general solution u(x) = A +
++ B=x. Thus we have f (x) = f0(x) + u(x), and A, B are determined by the boundary
+condition. This completes the proof of the lemma.
+6. The dual eigenvalue problem
+Let φ(x)b e the characteristic function of (1 =M; M). Consider complex-valued
+functions f ∈W 0 given by
+(6.1) f (x) =
+∑
+ρ
+Xρφ(x)x−ρ + X0φ(x) + X1φ(x)x−1 if x ∈ (M −1;M )
+and f (x) = 0i f x=∈ (M −1;M ). Here the sum runs over all complex zeros ρ of ζ(s),
+repeated according to their multiplicity m(ρ).
+The coefficients X0 and X1 are determined by the condition f (M ) = f (1=M ) = 0.
+An easy calculation shows that
+(6.2)
+X0 = −
+∑
+ρ
+M 1−ρ − M ρ−1
+M − M −1 Xρ;
+X1 = −
+∑
+ρ
+M ρ − M −ρ
+M − M −1 Xρ:
+We have
+(6.3) f~(s) =
+∑
+ρ
+Xρφ~(s − ρ) + X0φ~(s) + X1φ~(s − 1):
+By Lemma 7, for f (x)t ob ea formal solution of our eigenvalue problem it will be
+sufficient (5)
+Xρ = f~(ρ)
+λρ(1 − ρ) :
+In view of (6.3), this yields the eigenvalue equation
+(6.4)
+λρ(1 − ρ)Xρ =
+=
+∑
+ρ′
+[
+φ~(ρ − ρ′) − M 1−ρ′
+− M ρ′−1
+M − M −1 φ~(ρ) − M ρ′
+− M −ρ′
+M − M −1 φ~(ρ − 1)
+]
+Xρ′:
+(5) This condition is only sufficient because there may be lack of uniqueness in the expansion (6.1).
+remarks on weil ’s quadratic functional in the theory of prime numbers, I 203
+7. The resolvent
+We investigate here directly the linear system (6.4). We make a change of variables
+by setting ρ = 1
+2 + iγ, M = et with t> 0, Λ= 1=λ and defining the multiplicity m(γ)
+of γ as m(γ) = m(ρ). We also abbreviate
+K (x) = sin(x)
+x
+and
+K ∗(x; y; t) = K(t(x − y))
+− t
+sinh(t)
+( 1
+2 + iy
+)
+K
+(
+t
+( i
+2 − y
+))
+K
+(
+t
+( i
+2 + x
+))
+−
+− t
+sinh(t)
+( 1
+2 − iy
+)
+K
+(
+t
+( i
+2 + y
+))
+K
+(
+t
+( i
+2 − x
+))
+:
+It is easily verified that
+(7.1)
+( 1
+4 + x2
+)
+K ∗(x; y; t) =
+( 1
+4 + y2
+)
+K ∗(y; x; t) =
+=
+( 1
+4 + xy
+)
+K(t(x − y))
+− cosh(t) cos(t(x − y))
+− cos(t(x + y))
+2t sinh(t) :
+After the change of variables and setting
+(7.2) zγ = Xρ;w γ =
+( 1
+4 + γ2
+)
+zγ ; Λ= 1=λ
+and
+(7.3) H (x; y; t) = 2tK ∗(x; y; t)
+(1
+4 + y2)
+equation (6.4) becomes
+(7.4) wγ =Λ
+∑
+γ′
+H (γ;γ′;t ) wγ′:
+We write
+H(Γ; t) =
+[
+H (γ;γ′;t )
+]
+γ;γ′∈Γ
+and D(Λ;t ) for the resolvent determinant
+(7.5) D(Λ;t ) = det[I − ΛH(Γ; t)]:
+We have
+Theorem 6. The resolvent (7:5) is well defined and is an entire function of the complex
+variable Λ,a t most of order 1 and finite exponential type.
+Moreover,
+D(Λ;t ) = 1 +
+∞∑
+n=1
+(−1)n∆n(t) Λn
+n!
+204 e. bombieri
+where
+∆n(t) =
+∑
+γ1;::: ;γn ∈Γ
+det
+[
+H (γj ;γk ;t )
+]
+j;k=1;::: ;n
+:
+Finally, as N →∞ the truncations DN (Λ;t ) given by
+det
+[
+δγ;γ′− Λ H (γ;γ′;t )
+]
+γ;γ′∈ΓN
+with ΓN =Γ ⋂{|γ|≤ N }, converge to D(Λ;t ) uniformly for Λ in compact subsets of C.
+Proof. We claim that
+(7.6)
+∑
+γ;γ′
+⏐⏐H (γ;γ′;t )
+⏐⏐<+ ∞:
+To see this, we start with the inequality
+(7.7) H (x; y; t) ≪ 1
+(1 + |x|)(1 + |y|) min
+(
+1; 1
+|x − y|
+)
+valid for fixed t and x, y in a fixed horizontal strip excluding a neighborhood of
+x = ±i=2 (this last restriction is inconsequential in what follows). Thus (7.6) is implied
+by the convergence of the series
+∑
+γ;γ′
+1
+(1 + |γ|)(1 + |γ′|)
+1
+1 + |γ − γ′| :
+We split the summation over γ′ into subsums where γ′ ranges over n ≤| γ′− γ| <
+<n + 1, for n = 0; 1; 2;::: . Hence the series is majorized by
+(7.8)
+∑
+γ
+1
+1 + |γ|
+∞∑
+n=1
+1
+n
+∑
+n−1≤|γ′−γ|<n
+1
+1 + |γ′| :
+In (7.8), we split the sum over n into the three ranges n ≤ [|γ|=2], [ |γ|=2] <n<
+< [3|γ|=2] and n ≥ [3|γ|=2]. In the first range, γ′ is of order γ and (6)
+∑
+n≤|γ′−γ|<n+1
+1 ≪ log(|γ| + 2):
+Thus the sum over the first range contributes to (7.8), up to a constant factor, an
+amount
+∑
+γ
+1
+1 + |γ|
+( [|γ|=2]∑
+n=1
+log(|γ| + 2)
+(1 + |γ|)n
+)
+≪
+∑
+γ
+(log(|γ| + 2))2
+(1 + |γ|)2 <+ ∞:
+The contribution of the sum over the third range is computed in a similar way. This
+time γ′ is of precise order n and the number of points γ′ in the range n−1 ≤| γ′−γ| <n
+(6)W e use Vinogradov’s notation a ≪ b to indicate an inequality |a|≤ Cb for some unspecified
+positive constant C .
+remarks on weil ’s quadratic functional in the theory of prime numbers, I 205
+is O(log(n + 2)). Thus the sum over the third range contributes to (7.8), up to a
+constant factor, an amount
+∑
+γ
+1
+1 + |γ|
+( ∑
+n>[3|γ|=2]
+log(n + 2)
+n2
+)
+≪
+∑
+γ
+log(|γ| + 2)
+(1 + |γ|)2 <+ ∞:
+In the second range |γ′|,u pt oa constant factor, is at least 1 +
+⏐⏐n −| γ|
+⏐
+⏐
+and the
+number of points γ′ in the range n − 1 ≤| γ′− γ| <n is O(log(|γ| + 2)). Thus the
+sum over the second range contributes to (7.8), up to a constant factor, an amount
+∑
+γ
+log(|γ| + 2)
+(1 + |γ|)2
+∑
+[|γ|=2]<n<[3|γ|=2]
+1
+1 +
+⏐⏐n −| γ|
+⏐
+⏐
+≪
+∑
+γ
+log(|γ| + 2)2
+(1 + |γ|)2 <+ ∞:
+This completes the proof of (7.8) and, with it, of (7.6).
+Once we have (7.6), the convergence of DN (Λ;t )t oa limit is an application of von
+Koch’s criterion [7, Ch. II, §2.81, p. 36] for the convergence of an infinite determinant.
+We have a Taylor expansion
+DN (Λ;t ) = 1 +
+J+1∑
+n=1
+(−1)n∆n;N (t) Λn
+n!
+where J + 1i s the cardinality of ΓN and
+(7.9) ∆n;N (t) =
+∑
+γ1;::: ;γn ∈ΓN
+det
+[
+H (γj ;γk ;t )
+]
+j;k=1;::: ;n
+:
+Now, using (7.7), we apply Lord Kelvin’s inequality (also more widely known as
+Hadamard’s inequality) to each determinant and find
+(7.10)
+n∑
+k=1
+⏐⏐H (γj ;γk ;t )
+⏐⏐2
+≪
+n∑
+k=1
+1
+1 + (|γj |−| γk |)2
+1
+(1 + |γj |)2(1 + |γk |)2 :
+Since the number of γk in an interval ( m; m + 1) is O(log(m + 2)), the right-hand
+side of (7.10) is majorized, up to a constant factor, by
+1
+(1 + |γj |)2
+∞∑
+m=1
+log(m + 2)
+m2(1 +
+⏐⏐m −| γ|
+⏐
+⏐
+)2 ≪
+log(|γj | + 2)
+(1 + |γj |)4 :
+Thus the application of Lord Kelvin’s inequality yields
+⏐⏐
+⏐
+det
+[
+H (γj ;γk ;t )
+]
+j;k=1;::: ;n
+⏐⏐
+⏐
+≤ A(t)n
+n∏
+j=1
+( log(|γj | + 2)
+(1 + |γj |)4
+)1=2
+for some constant A(t) depending only on t.W e also have
+∑
+γ1;::: ;γn
+n∏
+j=1
+( log(|γj | + 2)
+(1 + |γj |)4
+)1=2
+=
+( ∑
+γ
+√
+log(|γ| + 2)
+(1 + |γ|)2
+)n
+:
+206 e. bombieri
+This proves that
+|∆n;N (t)|≤
+(A(t)B)n
+with B =∑√
+log(|γ| + 2) (1 + |γ|)−2 <+ ∞. This bound, uniform in N , continues
+to hold for ∆n(t).
+It is now obvious that D(Λ;t )i sa n entire function of Λ,a t most of order 1 and
+exponential type bounded by log( A(t)B).
+This completes the proof of Theorem 6.
+Our next result shows that zeros of the resolvent give rise to solutions f ∈W 0 of
+the eigenvalue problem λDf = L[f ] for x ∈ (1=M; M).
+Theorem 7. Let Λ0 be a zero of D(Λ;t ) = 0,o f multiplicity m. Define
+D(γ;γ0;Λ;t ) =Λ
+∞∑
+n=0
+(−1)n∆n(γ;γ0; t) Λn
+n!
+where ∆0(γ;γ0) = H (γ;γ0;t ) and in general
+∆n(γ;γ0; t) =
+∑
+γ1;::: ;γn ∈Γ
+det
+[H (γ;γ0;t ) H (γ;γk ;t )
+H (γj ;γ0;t ) H (γj ;γk ;t )
+]
+j;k=1;::: ;n
+:
+Then D(γ;γ0;Λ;t ) is an entire function of Λ,a t most of order 1 and finite exponential type.
+There exist γ0 and an integer l , 0 ≤ l ≤ m −1, such that the vector {wγ } with components
+wγ = 1
+l !(@=@Λ)l D(γ;γ0;Λ0;t )
+is a solution, not identically 0,o f the linear system (7:6).
+We also have
+wγ ≪
+√
+log(|γ| + 2)=(1 + |γ|)2 :
+Moreover, the function f (x) defined by (6:1), (6:2), M = et and Xρ = zγ is a solution in
+W0 of
+Df (x) =Λ 0 L[f ](x);x ∈ (1=M; M)
+with Dirichlet boundary conditions f (1=M ) = f (M ) = 0.
+Proof. This is obtained (see the discussion in the continuous case in [7, Ch. XI,
+§11.23, pp. 219-220]) by solving first the finite linear system (7.4) restricted to ΓN and
+then going to the limit as N →∞ .
+Let J + 1b e the number of points γ ∈ ΓN and define
+∆n;N (γ;γ0; t) =
+∑
+γ1;::: ;γn ∈ΓN
+det
+[H (γ;γ0;t ) H (γ;γk ;t )
+H (γj ;γ0;t ) H (γj ;γk ;t )
+]
+j;k=1;::: ;n
+:
+remarks on weil ’s quadratic functional in the theory of prime numbers, I 207
+Then we set
+DN (γ;γ0;Λ;t ) =Λ
+J∑
+n=0
+(−1)n∆n;N (γ;γ0; t) Λn
+n! :
+Consider the ( J + 1) × (J + 1) matrix
+[
+δjk − Λ H (γj ;γk ;t )
+]
+j;k=0;1;::: ;J
+where δjk is Kronecker’s delta. Then for j = 1;::: ;J the cofactor of the ( j + 1)-th
+element of the first row of this matrix turns out to be DN (γ;γ0;Λ;t ). If j = 0 the
+cofactor is given by a modified formula, namely
+DN (γ0;γ0;Λ;t ) + DN (Λ;t ) − (−1)J+1∆J+1;N (t) ΛJ+1
+(J + 1)! :
+By Laplace’s identity, it follows that if
+(7.11) Wγ;N = DN (γ;γ0;Λ;t ) +
+{
+DN (Λ;t ) − (−1)J+1∆J+1;N (t) ΛJ+1
+(J + 1)!
+}
+δγ;γ0
+;
+where δγ;γ0
+is Kronecker’s delta, then
+(7.12) Wγ;N =Λ DN (Λ;t ) +Λ
+∑
+γ′∈ΓN
+H (γ;γ′;t )Wγ′;N :
+Now we let N →∞ .B y Theorem 5, DN (Λ;t ) converges uniformly in compact
+subsets to the entire function D(Λ;t ). Moreover, the same proof as in Theorem 5
+shows that DN (γ;γ0;Λ;t ) → D(γ;γ0;Λ;t ), an entire function of Λ of order at most
+1 and finite exponential type. Thus we can pass to the limit as N →∞ in the above
+equation, and notationwise its effect is to drop the suffix N .I n the limit as N →∞ ,w e
+modify the definition of Wγ0
+by omitting the term −(−1)J+1∆J+1;N (t)ΛJ+1=(J + 1)!,
+because it tends to 0 as N →∞ .
+We have the Fredholm identity
+(7.13)
+∑
+γ
+D(γ;γ;Λ;t ) = −Λ @D(Λ;t )
+@Λ :
+Since D(Λ;t ) has a zero of multiplicity m at Λ=Λ 0, the above formula shows that
+there is γ0 such that D(γ0;γ0;Λ;t ) has a zero of multiplicity exactly l ≤ m − 1a t
+Λ=Λ 0 and every D(γ;γ0;Λ;t ) vanishes at Λ=Λ 0 with multiplicity not less than l .
+By differentiating (7.13) l times and setting
+wγ = 1
+l !( @
+@Λ)l D(γ;γ0;Λ0;t )
+we get
+wγ =Λ 0
+∑
+γ′∈Γ
+H (γ;γ′;t ) wγ
+and wγ0
+⁄= 0.
+208 e. bombieri
+The application of Lord Kelvin’s inequality shows that
+1
+l !( @
+@Λ)l D(γ;γ0;Λ0;t ) ≪
+√
+log(|γ| + 2)
+(1 + |γ|)2 :
+This proves that Xρ = zγ ≪
+√
+log(|γ| + 2)=(1 + |γ|)4; thus the series for f (x) and
+Df (x) are both absolutely convergent. Since f (1=M ) = f (M ) = 0i s assured by the
+structure of the linear system (6.4), we conclude that f ∈W 0 and with it the proof of
+Theorem 7.
+8. The eigenvalues of finite approximations
+In this section we analyse more closely the case in which the set of points ρ is a
+finite set with the same symmetries as the set of zeros of the Riemann zeta function.
+The main result of this section, namely Theorem 8, shows that the matrix
+[H (γ;γ′;t )]
+has only real eigenvalues and determines the number of negative eigenvalues and the
+multiplicity of 0 as an eigenvalue.
+It proves to be notationally convenient to state all our results in terms of the complex
+Fourier transform rather than the Mellin transform.
+Let Z be a finite multiset ( 7)o f complex numbers, repeated according to their
+multiplicity. We assume that if ρ ∈Z then ρ and 1 − ρ are again elements of Z, with
+the same multiplicity as ρ. For ρ ∈Z we write ρ = 1
+2 + iγ and denote by Γ the
+corresponding set of points γ.
+We denote by Φ(x) the characteristic function of the closed interval [ −t; t] and let
+V be the C-vector space generated by linear combinations of the functions Φ(x)ex=2,
+Φ(x)e−x=2 and Φ(x)e−iγx for γ ∈ Γ.W e also denote by V ◦ the subspace of codimension
+2 consisting of functions F (x) ∈ V satisfying the additional condition
+F (−t) = F (t) = 0:
+Finally by ( P; Q)w e denote the usual inner product in L2(R) given by
+(P; Q) =
+∫∞
+−∞
+P(x) Q(x)d x:
+Consider the linear functional on V given by ( 8)
+(8.1) L[F ](x) =
+∑
+γ∈Γ
+∫∞
+−∞
+F (x + u) eiγu du:
+We have
+Lemma 8. If F ∈ V then the inner product (L[F ];F ) is real.
+(7)B ya multiset we mean a set whose elements have positive integral multiplicity.
+(8) Here and in what follows the sum is understood to be over the multisetΓ,s o that each term appears
+according to its proper multiplicity.
+remarks on weil ’s quadratic functional in the theory of prime numbers, I 209
+Proof. For F ∈ V we have, using Γ= −Γ,
+(L[F ];F ) =
+∫∞
+−∞
+( ∑
+γ∈Γ
+∫∞
+−∞
+F (u) eiγ(u−x) du
+)
+F (x)d x =
+=
+∑
+γ∈Γ
+∫∞
+−∞
+∫∞
+−∞
+F (u)F (x) eiγ(u−x) dx du =
+=
+∑
+γ∈Γ
+∫∞
+−∞
+∫∞
+−∞
+F (u)F (x) eiγ(x−u) dx du =
+=
+∑
+γ∈Γ
+∫∞
+−∞
+∫∞
+−∞
+F (u)F (x) e−iγ(u−x) dx du =
+=
+∑
+γ∈Γ
+∫∞
+−∞
+∫∞
+−∞
+F (u)F (x) eiγ(u−x) dx du = (L[F ];F ):
+All steps are justified by Fubini’s theorem, because F is bounded with compact support,
+concluding the proof.
+Let ∆= −(d=dx)2.I f P(x)i sa smooth function on [ −t; t] and P(−t) = P(t) = 0
+we have by integration by parts
+(8.2)
+∫t
+−t
+∆P(x) P(x)d x =
+∫t
+−t
+⏐⏐P ′(x)
+⏐⏐2
+dx:
+A first consequence is the following result.
+Lemma 9. Suppose that F (x) ∈ V ◦ is not identically 0 and satisfies the eigenvalue equation
+(8.3) λ
+( 1
+4 +∆
+)
+F (x) = L[F ](x) for − t<x<t :
+Then λ is real.
+Proof. We take the inner product of (8.3) with F . Since F ∈ V ◦ we verify by
+integration by parts that
+(( 1
+4 +∆
+)
+F; F
+)
+= 1
+4
+∫∞
+−∞
+|F (x)|2 dx +
+∫∞
+−∞
+|F ′(x)|2 dx> 0:
+The lemma follows because ( L[F ];F )i s real.
+Corollary. With the notation of the preceding section, the resolvent
+(8.4) DN (Λ;t ) = det[I − Λ H(ΓN ; t)]
+has only real roots.
+Lemma 10. The matrix H(Γ; t) admits the eigenvalue 0 if and only if there is γ ∈ Γ
+with multiplicity greater than 1,i n which case the multiplicity of 0 as an eigenvalue is exactly∑′
+[m(γ) − 1], where ∑′
+ranges over all distinct γ ∈ Γ.
+Moreover if every γ is real all eigenvalues of H(Γ; t) are non-negative.
+210 e. bombieri
+Proof. We have
+( 1
+4 + y2
+)
+H (x; y; t) =
+∫t
+−t
+eixu e−iyu du − e( 1
+2 −iy)t − e−( 1
+2 −iy)t
+et − e−t
+e( 1
+2+ix)t − e−( 1
+2+ix)t
+1
+2 + ix −
+− e( 1
+2+iy)t − e−( 1
+2+iy)t
+et − e−t
+e( 1
+2 −ix)t − e−( 1
+2 −ix)t
+1
+2 − ix :
+Therefore, the eigenvalue equation det
+[
+Iλ −H (Γ; t)
+]
+= 0i s equivalent to the solubility
+of the linear system
+λ
+( 1
+4 + γ2
+)
+zγ =
+∫t
+−t
+eiγu
+( ∑
+γ′
+e−iγ′u zγ′
+)
+du−
+− e( 1
+2+iγ)t − e−( 1
+2+iγ)t
+(1
+2 + iγ)(et − e−t )
+[∑
+γ′
+(
+e( 1
+2 −iγ′)t − e−( 1
+2 −iγ′)t
+)
+zγ′
+]
+−
+− e( 1
+2 −iγ)t − e−( 1
+2 −iγ)t
+(1
+2 − iγ)(et − e−t )
+[∑
+γ′
+(
+e( 1
+2+iγ′)t − e−( 1
+2+iγ′)t
+)
+zγ′
+]
+:
+We write for simplicity
+(8.5) Z (u) =
+∑
+γ
+e−iγu zγ
+and then the above linear system takes the form
+(8.6)
+λ
+( 1
+4 + γ2
+)
+zγ =
+∫t
+−t
+eiγu Z (u)d u − e( 1
+2+iγ)t −e−( 1
+2+iγ)t
+(1
+2 + iγ)(et − e−t )
+[
+et=2Z (t) − e−t=2Z (−t)
+]
+−
+− e( 1
+2 −iγ)t − e−( 1
+2 −iγ)t
+(1
+2 − iγ)(et − e−t )
+[
+et=2Z (−t) − e−t=2Z (t)
+]
+:
+We note that since Γ= Γ we have
+(8.7)
+∑
+γ∈Γ
+eiγu (zγ ) =
+∑
+γ∈Γ
+eiγu (zγ ) =
+( ∑
+γ∈Γ
+e−iγu zγ
+)
+= Z (u):
+By differentiating (8.7), we see that
+(8.8)
+∑
+γ∈Γ
+iγ eiγu (zγ ) = Z ′(u)
+and
+(8.9)
+∑
+γ∈Γ
+γ2 eiγu (zγ ) = ∆Z (u):
+We multiply both sides of (8.6) by ( 1
+4 + γ2) (zγ ) and sum over γ.I n view of
+remarks on weil ’s quadratic functional in the theory of prime numbers, I 211
+equations (8.7), (8.8) and (8.9) we find
+(8.10)
+λ
+∑
+γ∈Γ
+( 1
+4 + γ2
+)2
+zγ (zγ ) =
+∫t
+−t
+Z (u)
+( 1
+4 +∆
+)
+Z (u)d u +
++ Z ′(t) Z (t) − Z ′(−t) Z (−t)−
+− et + e−t
+2(et − e−t )
+[
+|Z (t)|2 + |Z (−t)|2]+
++ 1
+et − e−t
+[Z (t) Z (−t) − Z (t) Z (−t)]:
+Integration by parts shows that
+∫t
+−t
+Z (u)∆Z (u)d u = −Z ′(t) Z (t) + Z ′(−t) Z (−t) +
+∫t
+−t
+⏐⏐Z ′(u)
+⏐⏐2
+du
+and (8.10) becomes
+(8.11)
+λ
+∑
+γ∈Γ
+( 1
+4 + γ2
+)2
+zγ (zγ ) = 1
+4
+∫t
+−t
+⏐⏐Z (u)
+⏐⏐2
+du +
+∫t
+−t
+⏐⏐Z ′(u)
+⏐⏐2
+du−
+− et + e−t
+2(et − e−t )
+[⏐⏐Z (t)
+⏐⏐2
++
+⏐⏐Z (−t)
+⏐⏐2]+
++ 1
+et − e−t
+[Z (t) Z (−t) − Z (t) Z (−t)]:
+A further simplification is achieved if we decompose Z (u) into its even and odd
+parts, namely
+Z ±(u) = 1
+2
+[Z (u) ± Z (−u)]:
+Then we verify that
+et + e−t
+2(et − e−t )
+[⏐⏐Z (t)
+⏐⏐2
++
+⏐⏐Z (−t)
+⏐⏐2]
+− 1
+et − e−t
+[Z (t) Z (−t) − Z (t) Z (−t)]=
+= et=2 − e−t=2
+et=2 + e−t=2
+⏐⏐Z+(t)
+⏐⏐2
++ et=2 + e−t=2
+et=2 − e−t=2
+⏐⏐Z −(t)
+⏐⏐2
+:
+Also, for any function g we have
+∫t
+−t
+|g(u)|2 du =
+∫t
+−t
+|g+(u)|2 du +
+∫t
+−t
+|g −(u)|2 du:
+Finally, since
+( 1
+4 + γ2
+)2
+zγ (zγ ) = wγ (wγ ) ;
+212 e. bombieri
+we can transform (8.11) into
+(8.12)
+λ
+∑
+γ∈Γ
+wγ (wγ ) =
+∑
+±
+{1
+4
+∫t
+−t
+⏐⏐Z ±(u)
+⏐⏐2
+du +
+∫t
+−t
+⏐⏐(Z ±)′(u)
+⏐⏐2
+du
+}
+−
+− et=2 − e−t=2
+et=2 + e−t=2
+⏐⏐Z+(t)
+⏐⏐2
+− et=2 + e−t=2
+et=2 − e−t=2
+⏐⏐Z −(t)
+⏐⏐2
+:
+Now we prove that
+(8.13) et=2 ∓ e−t=2
+et=2 ± e−t=2
+⏐⏐Z ±(t)
+⏐⏐2
+≤ 1
+4
+∫t
+−t
+⏐
+⏐
+Z ±(u)
+⏐⏐2
+du +
+∫t
+−t
+⏐⏐(Z ±)′(u)
+⏐⏐2
+du
+for any continuously differentiable even or odd function Z ±(u). Furthermore, equality
+holds if and only if
+Z ±(u) = Z ±(t) eu=2 ± e−u=2
+et=2 ± e−t=2 :
+We verify this statement as follows. By direct calculation, equality holds in (8.13)
+if Z ±(u) = eu=2 ± e−u=2. Let
+F ±(u) = Z ±(u) − Z ±(t) eu=2 ± e−u=2
+et=2 ± e−t=2 :
+Then using the fact that eu=2 ± e−u=2 yields equality in (8.13), and that F ±(u)i s even
+or odd we verify by integration by parts the equation
+1
+4
+∫t
+−t
+⏐⏐F ±(u)
+⏐⏐2
+du +
+∫t
+−t
+⏐⏐(F ±)′(u)
+⏐⏐2
+du =
+= 1
+4
+∫t
+−t
+⏐⏐Z ±(u)
+⏐⏐2
+du +
+∫t
+−t
+⏐⏐(Z ±)′(u)
+⏐⏐2
+du − et=2 ∓ e−t=2
+et=2 ± e−t=2
+⏐⏐Z ±(t)
+⏐⏐2
+:
+In conclusion, we have
+(8.14) λ
+∑
+γ∈Γ
+wγ (wγ ) = 1
+4
+∫t
+−t
+⏐⏐F (u)
+⏐⏐2
+du +
+∫t
+−t
+⏐⏐F ′(u)
+⏐⏐2
+du
+with
+(8.15) F (u) = Z (u) − Aeu=2 − Be−u=2
+and A, B determined by the condition F (t) = F (−t) = 0.
+This proves our statement.
+The proof of Lemma 10 follows from (8.14). Suppose first that every
+γ has multi-
+plicity 1. If we had λ = 0 then (8.14) and (8.15) show that F (u) vanishes identically
+in the interval ( −t; t). On the other hand, the functions eu=2, e−u=2 and e−iγu are
+linearly independent over any finite interval because here Γ is a finite set; hence, we
+would have zγ = 0 for every γ,a contradiction.
+remarks on weil ’s quadratic functional in the theory of prime numbers, I 213
+The general case can be treated much in the same way. It is easy to show that the
+spectrum of H(Γ; t) consists of the point 0 with multiplicity ∑′
+[m(γ) − 1] together
+with the spectrum of the matrix
+[
+H (γj ;γk ;t )m(γk )
+]
+where now {γj } is the set of all distinct γ ∈ Γ. The same argument as before goes
+through, provided we count each zγ with its multiplicity m(γ).
+The last conclusion of Lemma 10 is obvious from (8.14), because if every γ is real
+then (8.14) becomes
+λ
+∑
+γ∈Γ
+|wγ |2 = 1
+4
+∫t
+−t
+⏐⏐F (u)
+⏐⏐2
+du +
+∫t
+−t
+⏐⏐F ′(u)
+⏐⏐2
+du:
+Theorem 8. The number of negative eigenvalues of the matrix H(Γ; t) equals the number
+of distinct complex conjugate pairs (γ;γ) in Γ.
+Proof. Suppose first that all elements of Γ are distinct and consider a continuous
+deformation of Γ into a new set Γ~, such that during the deformation the elements
+of the set remain distinct and the invariance of the set by complex conjugation and
+multiplication by
+−1 remains preserved. By Lemma 10 all eigenvalues remain real and
+not 0, while moving continuously during the deformation; in particular, the number of
+negative and positive eigenvalues remains constant.
+Thus Theorem 8 for a multiset
+Γ with distinct elements will follow, once it has been
+verified for any other set Γ~with distinct elements, invariant by complex conjugation
+and multiplication by −1, with the same number of complex conjugate pairs of elements
+as Γ. The general case then is an immediate consequence of Lemma 10.
+Now we verify Theorem 8, for a multiset Γ with distinct elements, by induction
+on the number of complex conjugate pairs. Note that, according to our preceding
+discussion, to complete the induction step it suffices to verify it adding to
+Γ some new
+element γ0 and its transforms by complex conjugation and by multiplication by −1.
+This element γ0 is otherwise at our disposal.
+By Lemma 10, Theorem 8 is true if every γ is real. We examine separately the case
+in which we increase our multiset by {γ0;γ0; −γ0; −γ0} with γ0 complex and not
+purely imaginary, or by {γ0;γ0} with γ0 purely imaginary.
+Suppose Theorem 8 holds for Γ and let us show that it remains true for the new
+set Γ⋃{γ0;γ0; −γ0; −γ0} where γ0 = a + ib, provided a and b are large enough.
+In what follows, we keep Γ fixed and consider γ0 as a variable quantity, so our
+estimates will be uniform only with respect to γ0.I n the end, we let
+a=b → 0;b →+ ∞:
+A simple asymptotic calculation shows that with the above choice of γ0 the matrix
+214 e. bombieri
+[H (γ;γ′;t )]for γ;γ′∈{ γ0;γ0; −γ0; −γ0} is (9)
+
+
+o(B) B + o(B) o(B) o(B)
+B + o(B) o(B) o(B) o(B)
+o(B) o(B) o(B) B + o(B)
+o(B) o(B) B + o(B) o(B)
+
+
+where for simplicity we have written
+B = sinh(2tb)
+2tb |γ0|2 :
+The eigenvalue equation is obtained by equating to 0 the determinant of
+
+
+o(B) − xB + o(B) o(B) o(B) H~(γ0;γ′;t )
+B + o(B) o(B) − xo (B) o(B) H~(γ0;γ′;t )
+o(B) o(B) o(B) − xB + o(B) H~(−γ0;γ′;t )
+o(B) o(B) B + o(B) o(B) − xH ~(−γ0;γ′;t )
+H (γ;γ0;t ) H~(γ;γ0;t ) H (γ; −γ0;t ) H (γ; −γ0;t ) H (γ;γ′;t ) − δγ;γ′x
+
+
+:
+We know already that this matrix has only real eigenvalues.
+Let D(x) denote this determinant. We expand D(x) according to a block Laplace
+expansion using the first four rows of the matrix. The entries of the matrix (save for
+the term x) are of order
+(8.16)
+O(B) for the entries in the 4
+× 4 upper-left corner ;
+o(B) for the other entries in the first four rows or columns ;
+O(1) for all other entries.
+If M × M is the size of our matrix, we obtain using (8.16) the approximation
+(8.17) D(x) = (x2 − B2)2 det[Ix −H (Γ; t)]+ o((B + |x|)4(1 + |x|)M −4):
+Suppose first that x = O(1). Then (8.17) shows that
+B−4D(x) = det[Ix −H (Γ; t)] + o(1):
+It follows that D(x) has, for a=b → 0, b →+ ∞, M − 4 real roots arbitrarily close to
+the eigenvalues of H(Γ; t), and in particular of the same sign.
+If instead x is of order B we have
+det[Ix −H (Γ; t)]
+∼ xM −4
+and setting x = By we get
+B−4x−M+4D(x) = (y2 − 1)2 + o(1):
+Therefore, D(x) has, for a=b → 0, b →+ ∞, two real roots asymptotic to −B and
+two real roots asymptotic to B. Since we have accounted for all roots of D(x), the set
+(9)W e write o(B)t o indicate suitable entries of that order of magnitude.
+remarks on weil ’s quadratic functional in the theory of prime numbers, I 215
+Γ⋃{γ0;γ0; −γ0; −γ0} again satisfies the conclusion of Theorem 8, completing the
+induction step.
+It remains for consideration the case in which γ0 = ib is purely imaginary. This
+time the determinant equation is
+D(x) = det
+
+
+o(B) − xB + o(B) H (γ0;γ′;t )
+B + o(B) o(B) − xH (γ0;γ′;t )
+H (γ;γ0;t ) H (γ;γ0;t ) H (γ;γ′;t ) − δγ;γ′x
+
+ = 0:
+The same argument as before shows that, as a=b → 0, b →+ ∞, besides the roots
+asymptotic to the eigenvalues of H(Γ; t)w e acquire one real root asymptotic to B and
+another real root asymptotic to −B, completing the proof of Theorem 8.
+9. The second eigenvalue problem: even and odd eigenfunctions
+We will need the analogue of Theorem 8 for the second eigenvalue problem. Our
+problem is
+(9.1) λ zγ =
+∑
+γ′
+( ∫
+E
+ei(γ−γ′)u du
+)
+zγ′:
+We shall assume that E is a finite union of bounded closed intervals. We say that E
+is symmetric if
+(9.2) E = −E:
+The associated eigenfunction is
+(9.3) F (u) =
+∑
+γ
+zγ e−iγu for u ∈ E
+and F (u) = 0 for u=∈ E .
+If E is symmetric then
+∫
+E
+ei(γ−γ′)u du =
+∫
+E
+ei(γ′−γ)u du;
+and since Γ= −Γ we see that if {zγ } is a solution of the linear system (9.1) then {z−γ }
+is another solution, for the same eigenvalue. Therefore, by considering { 1
+2 (zγ ± z−γ )}
+we see that we have a basis of solutions which are either even or odd, namely such that
+(9.4) zγ = ±z−γ for γ ∈ Γ:
+Accordingly, the corresponding eigenfunction is even or odd in the usual sense
+(9.5) F (
+−u) = ±F (u):
+Hence
+Lemma 11. If E is symmetric there is a basis of solutions of (9:1) consisting of even or
+odd eigenvectors {zγ } satisfying zγ = ±z−γ . The associated eigenfunctions satisfy F (−u) =
+= ±F (u).
+216 e. bombieri
+We can separate the space of solutions of (9.1) into its even and odd parts as follows.
+Let us define
+(9.6) K ±
+E (x; y) =
+∫
+E
+ei(x−y)u du ±
+∫
+E
+ei(x+y)u du
+and define
+(9.7) Γ0 ={γ : γ ∈ Γ; ℜ(γ) > 0}⋃{γ : γ ∈ Γ; ℜ(γ) = 0; ℑ(γ) > 0}:
+Then Γ −{ 0} =Γ 0 ∪− Γ0.
+If 0 =∈ Γ the linear system (9.1) splits into two new linear systems
+(9.8) λ zγ =
+∑
+γ′∈Γ0
+K ±
+E (γ;γ′)zγ′; γ ∈ Γ0;
+where if 0 ∈ Γ one should add a term 1
+2 K +
+E (γ; 0)z0 to the right-hand side of the
+equation in the + case.
+We have the following analogue and strengthening of Lemma 10 for the second
+eigenvalue problem.
+Lemma 12. Suppose that E is symmetric and suppose for simplicity that 0 =∈ Γ. Then the
+matrix KE (Γ) is equivalent to the direct sum of the matrices
+K±
+E (Γ) =
+[
+K ±
+E (γ;γ′)
+]
+γ;γ′∈Γ0
+:
+A matrix K±
+E (Γ) admits the eigenvalue 0 if and only if there is γ ∈ Γ0 with multiplicity
+greater than 1,i n which case the multiplicity of 0 as an eigenvalue is exactly ∑′
+[m(γ) − 1],
+where ∑′
+ranges over all distinct γ ∈ Γ0.
+Moreover if every γ is real all eigenvalues of K±
+E (Γ) are non-negative.
+Remark. If 0 ∈ Γ the result continues to hold, modifying the definition of K+
+E (Γ)
+when γ or γ′ equal 0.
+Proof. Consider first the even case. Let {zγ } be an even solution of (9.1), hence
+z−γ = zγ :
+For γ ∈ Γ0 we have
+λ zγ =
+∑
+γ′∈Γ
+KE (γ;γ′) zγ′ =
+=
+∑
+γ′∈Γ0
+KE (γ;γ′) zγ′ +
+∑
+γ′∈−Γ0
+KE (γ;γ′) zγ′ =
+=
+∑
+γ′∈Γ0
+[KE (γ;γ′) zγ′ + KE (γ; −γ′) z−γ′
+]=
+=
+∑
+γ′∈Γ0
+[KE (γ;γ′) zγ′ + KE (γ; −γ′) zγ′
+]=
+∑
+γ′∈Γ0
+K +
+E (γ;γ′) zγ′:
+remarks on weil ’s quadratic functional in the theory of prime numbers, I 217
+Exactly the same argument works in the odd case. This proves the first part of the
+lemma.
+The proof of the second part is equally easy. For γ ∈ Γ we have
+λ
+∑
+γ∈Γ
+zγ (zγ ) =
+∫
+E
+( ∑
+γ
+(zγ ) eiγu
+)
+F (u)d u =
+=
+∫
+E
+( ∑
+γ
+zγ e−iγu
+)
+F (u)d u =
+=
+∫
+E
+( ∑
+γ
+zγ e−iγu
+)
+F (u)d u =
+∫
+E
+⏐⏐F (u)
+⏐⏐2
+du:
+If {zγ } is either even or odd we have
+∑
+γ∈Γ
+zγ (zγ ) = 2
+∑
+γ∈Γ0
+zγ (zγ ):
+Hence
+2λ
+∑
+γ∈Γ0
+zγ (zγ ) =
+∫
+E
+⏐⏐F (u)
+⏐⏐2
+du
+and we conclude as in Lemma 10.
+Theorem 9. Let E be a finite union of bounded closed intervals. Then the number of
+negative eigenvalues of KE (Γ) equals the number of distinct complex conjugate pairs {γ;γ}
+in Γ.
+Suppose also that E is symmetric. Then the number of negative eigenvalues of K+
+E (Γ) equals
+the number of distinct complex conjugate pairs (γ;γ) with ℜ(γ) > 0, and the number of
+negative eigenvalues of K−
+E (Γ) equals the number of distinct complex conjugate pairs (γ;γ)
+with ℜ(γ) ≥ 0.
+Proof. The proof follows the proof of Theorem 8, with some minor modifications.
+It suffices to prove it in the case in which all γ’s are distinct, proceeding by induction
+on the number of complex conjugate pairs in Γ,o r Γ0 if we are dealing with the
+symmetric case. We give some details only in the symmetric case.
+Suppose Theorem 9 holds for Γ0 and let us show that it continues to hold for the
+new set Γ0
+⋃{γ0;γ0}, for some γ0 = a + ib with a ≥ 0 and b> 0.
+Suppose first that a> 0. As in the proof of Theorem 8, it suffices to study the
+zeros of the determinant
+D±(x) = det
+
+
+K ±
+E (γ0;γ0) − xK ±
+E (γ0;γ0) K ±
+E (γ0;γ′)
+K ±
+E (γ0;γ0) K ±
+E (γ0;γ0) − xK ±
+E (γ0;γ′)
+K ±
+E (γ;γ0) K ±
+E (γ;γ0) K ±
+E (γ;γ′) − δγ;γ′x
+
+ :
+We already know that the zeros of D±(x) are all real.
+218 e. bombieri
+Let t be the largest element in E .W e let b →+ ∞ and a=b → 0. Then
+K ±
+E (γ0;γ0) =
+∫
+E
+(1 ± e(2ia−2b)u)du = o(e2bt =b)
+K ±
+E (γ0;γ0) =
+∫
+E
+(e−2bu ± e2iau)du ∼ e2bt
+2b
+K ±
+E (γ0;γ0) =
+∫
+E
+(e2bu ± e2iau)du ∼ e2bt
+2b
+K ±
+E (γ0;γ0) =
+∫
+E
+(1 ± e(2ia+2b)u)du = o(e2bt =b):
+If we write B = e2bt =(2b) and M is the cardinality of Γ0 we see that
+D±(x) = (x2 − B2) det[Ix −K ±
+E (Γ)] + o((B + |x|)2(1 + |x|)M −2)
+and we argue as in the proof of Theorem 8.
+If however γ0 = ib is purely imaginary we have
+K ±(γ0;γ0) =
+∫
+E
+(1 ± e−2bu)du ∼± e2bt =(2b) = ±B:
+The same argument shows that D+(x) has a real root asymptotic to B while D−(x) has a
+real root asymptotic to −B; all other roots are asymptotic to the roots of det[ Ix −K±
+E (Γ)].
+This completes the proof.
+10. The passage to the limit
+In this section we pass to the limit from the finite sets ΓN to infinite sets Γ. The
+simplest situation is when the set of complex pairs of ΓN is finite.
+Thus let Γ be an infinite multiset of complex numbers, satisfying as always the
+convergenge condition ∑1=(1 + |γ|)1+ε <+ ∞ for every ε > 0 and the symmetry
+conditions Γ= Γ, Γ= −Γ.B y ΓN we denote the truncations of Γ at |γ|≤ N .
+Suppose that Γ has finitely many, but at least one, complex pairs of elements and
+let N be so large that ΓN contains all complex pairs of Γ. Then H(ΓN ; t) has at least
+one negative eigenvalue λN < 0, which we may choose to be the largest in absolute
+value.
+Let {wγ;N } be a solution of the corresponding eigenvalue equation
+λN wγ;N =
+∑
+γ′∈ΓN
+H (γ;γ′;t ) wγ′;N
+normalized so that
+(10.1)
+∑
+γ∈Γ
+|wγ;N |2 = 1:
+remarks on weil ’s quadratic functional in the theory of prime numbers, I 219
+Then equation (8.14) shows that
+(10.2) λN
+∑
+γ∈Γ
+wγ;N (wγ;N ) = 1
+4
+∫t
+−t
+|FN (u)|2 du +
+∫t
+−t
+|F ′
+N (u)|2 du
+where
+(10.3) FN (u) =
+∑
+γ∈ΓN
+zγ;N e−iγu − Aeu=2 − Be−u=2;
+zγ;N = wγ;N =(1
+4 + γ2) and FN (t) = FN (−t) = 0.
+Now we note that, since λN < 0, we have
+λN
+∑
+γ∈R
+wγ;N (wγ;N ) = λN
+∑
+γ∈R
+|wγ;N |2 = −|λN |
+∑
+γ∈R
+|wγ;N |2:
+Therefore, after division by |λN |, (10.2) becomes
+−
+∑
+γ =∈R
+wγ;N (wγ;N ) =
+∑
+γ∈R
+|wγ;N |2 + 1
+|λN |
+{1
+4
+∫t
+−t
+⏐⏐FN (u)
+⏐⏐2
+du +
+∫t
+−t
+⏐⏐F ′
+N (u)
+⏐⏐2
+du
+}
+and in particular
+−
+∑
+γ =∈R
+wγ;N (wγ;N ) ≥
+∑
+γ∈R
+|wγ;N |2:
+Hence by Cauchy’s inequality we infer
+∑
+γ =∈R
+|wγ;N |2 ≥
+∑
+γ∈R
+|wγ;N |2
+and conclude with the lower bound
+2
+∑
+γ =∈R
+|wγ;N |2 ≥
+∑
+γ∈Γ
+|wγ;N |2:
+This inequality, in conjunction with (10.1), shows that
+Lemma 13. If λN < 0 we have
+1
+2 ≤
+∑
+γ =∈R
+|wγ;N |2 ≤ 1
+and |wγ;N |≤ 1 for every γ ∈ ΓN .
+Now we recall that zγ;N = wγ;N =(1
+4 + γ2) and that ∑1=(1 + |γ|)2 <+ ∞.I t
+follows that the sum
+ZN (u) =
+∑
+γ∈ΓN
+zγ;N e−iγu
+is uniformly bounded and majorized by an absolutely convergent series. In fact, more
+than this is true, because
+⏐⏐(1
+4 + γ2) zγ;N
+⏐⏐is uniformly bounded by 1; therefore, there is
+220 e. bombieri
+a subsequence of N →∞ such that each zγ;N converges to a limit zγ , again satisfying⏐⏐(1
+4 + γ2) zγ
+⏐⏐≤ 1. It follows that ZN (u) converges pointwise and uniformly to the limit
+Z (u) =
+∑
+γ∈Γ
+zγ e−iγu
+in compact subsets of R.I n particular, Z (t) and Z (−t) are bounded and the functions
+FN (u) converge pointwise and uniformly to a limit
+F (u) =
+∑
+γ∈Γ
+zγ e−iγu − Aeu=2 − Be−u=2
+with A and B determined by the condition F (t) = F (−t) = 0.
+Now note that the eigenvalue λN is uniformly bounded from below.
+This is seen as follows. By Lemma 13, if there are J complex γ ∈ Γ then for one
+of them we have |wγ;N |≥ 1=
+√
+2J . Thus the equation
+λN wγ;N =
+∑
+γ′∈ΓN
+H (γ;γ′;t ) wγ′;N
+shows that
+|λN |≤
+√
+2J max
+( ∑
+γ′∈Γ
+⏐⏐H (γ;γ′;t )
+⏐⏐2
+)1=2
+where the maximum runs over the finitely many complex γ ∈ Γ, proving our claim.
+The basic equation (10.2) also shows that
+(10.4) 1
+4
+∫t
+−t
+⏐⏐FN (u)
+⏐⏐2
+du +
+∫t
+−t
+⏐⏐F ′
+N (u)
+⏐⏐2
+du ≤| λN |
+∑
+γ∈ΓN
+|wγ;N |2 = |λN |:
+By semicontinuity, from (10.4) we deduce
+(10.5) 1
+4
+∫t
+−t
+|F (u)|2 du +
+∫t
+−t
+|F ′(u)|2 du ≤ lim inf
+N →∞
+|λN | <+ ∞:
+Suppose that F (u)i s not identically 0 in ( −t; t). Then λ = lim infN →∞ λN < 0
+and, keeping in mind the rapid decay of H (γ;γ′;t ) with γ′,w e see that
+(10.6) λ wγ =
+∑
+γ′∈Γ
+H (γ;γ′;t ) wγ′
+with wγ = (1
+4 + γ2) zγ .
+We have verified already that a solution of (10.6) yields a solution of the eigenvalue
+problem
+λDf (x) = L[f ](x)
+for x ∈ (M −1;M ), M = et , with f ∈W 0. Indeed, F (u) = eu=2f (eu). Moreover, for
+any α < 1w e have Df ∈ C 1;α in the interval ( M −1;M ) and Df is not identically 0
+because F (u)i s not identically 0 by hypothesis. It follows that
+(10.7) T [f ∗ f
+∗
+] = λ ‖Df ‖2 < 0:
+remarks on weil ’s quadratic functional in the theory of prime numbers, I 221
+On the other hand, since this holds for any t> 0, we can choose t< 1
+2 log 2, hence
+M<
+√
+2. It follows that f ∗ f
+∗
+has compact support in (1 =2; 2) and in particular in
+Weil’s Explicit Formula the terms involving Λ(n) are absent.
+It is possible ( 10)t o prove directly the positivity of Weil’s Explicit Formula in this
+restricted case where the support of f is [ M −1
+0 ;M 0], with M0 > 1a n explicitly com-
+putable constant. This contradicts (10.7). Therefore, we conclude with
+Theorem 10. Suppose ζ(s) has only finitely many non-trivial zeros 1
+2 + iγ with γ =∈ R,
+and at least one such zero.
+Then for t> 0 there are complex coefficients wγ and λ ≤ 0 such that
+∑
+γ∈Γ
+|wγ |2 = 1;
+∑
+γ =∈R
+|wγ |2 ≥−
+∑
+γ =∈R
+wγ (wγ ) ≥ 1
+2 ;
+λ wγ =
+∑
+γ′∈Γ
+H (γ;γ′;t ) wγ′ for every γ ∈ Γ;
+and with the following property. Let
+Z (u) =
+∑
+γ
+wγ
+1
+4 + γ2 e−iγu
+and
+F (u) = Z (u) − et=2Z (t) − e−t=2Z (−t)
+et − e−t eu=2 − et=2Z (−t) − e−t=2Z (t)
+et − e−t e−u=2:
+Now define
+f (x) = φ(x) x−1=2F (log x)
+where φ(x) is the characteristic function of [e−t ;e t ]. Then either
+T [f ∗ f
+∗
+] = λ ‖Df ‖2 < 0
+or f (x) is identically 0.I n addition, if 0 <t<t 0 where t0 is a suitable explicitly computable
+constant, the function f (x) must be identically 0.
+11. The second eigenvalue problem: linear independence
+The considerations of the preceding two sections can also be done in the setting in
+which we minimize the quadratic functional T [f ∗ f
+∗
+]=‖f ‖2 in L2(E) rather than with
+respect to the norm ‖Df ‖= 1.
+Let E ⊂ R be a finite union of disjoint intervals and consider the eigenvalue problem
+(11.1) λF (u) = L[F ](u) for u ∈ E:
+(10)W e defer the proof to §12, Theorem 12.
+222 e. bombieri
+As in Section 8, we get the equation
+F (u) =
+∑
+γ∈Γ
+zγ e−iγuΦE (u)
+where ΦE is the characteristic function of E , and the eigenvalue equation
+(11.2) λ zγ =
+∑
+γ′∈Γ
+zγ′
+∫
+E
+eiγu e−iγ′u du:
+Again, this yields
+(11.3) λ
+∑
+γ∈Γ
+zγ (zγ ) =
+∫
+E
+⏐⏐F (u)
+⏐⏐2
+du:
+Thus λ ⁄= 0i f Γ is a finite set. Suppose λ < 0 and normalize {zγ } to have ‘2-norm
+equal to 1. Then, exactly as in the preceding section, we have
+(11.4)
+∑
+γ =∈R
+|zγ |2 ≥ 1
+2 :
+We apply this to the finite set ΓN and the negative eigenvalue λN and let N →∞ ,
+keeping λN < 0 largest in absolute value. Let {zγ;N } be the corresponding eigenvector
+as in (11.2). We may assume by going to a subsequence that
+zγ = lim
+N →∞
+zγ;N
+exists for every γ, and now (11.4) continues to hold. The limit F (u) = ∑zγ e−iγu
+exists as an L2-function and is a weak limit of the sequence
+FN (u) =
+∑
+γ∈ΓN
+zγ;N e−iγu :
+Note that (11.3) implies ‖FN ‖≤
+√
+−λN , hence
+(11.5) ‖F ‖2 ≤− λ;
+with λ = limλN . Hence if λ = 0w e must have F (u) = 0 identically on E .
+Next, we note that (11.2) continues to remain true in the limit. We have, for
+K ≥ 1 and N> (K + 1)|γ|, the bound
+⏐⏐
+⏐
+⏐
+∑
+(K +1)|γ|<|γ′|≤N
+zγ′;N
+∫
+E
+ei(γ−γ′)u du
+⏐⏐
+⏐
+⏐
+2
+≤
+( ∑
+K |γ|<|γ′−γ|
+|zγ′;N |·
+⏐⏐
+⏐
+⏐
+∫
+E
+ei(γ−γ′)u du
+⏐⏐
+⏐
+⏐
+)
+2
+≤
+≤‖ {zγ;N }‖2
+‘2 ·
+∑
+|γ′−γ|>K |γ|
+⏐⏐
+⏐
+⏐
+∫
+E
+ei(γ−γ′)u du
+⏐⏐
+⏐
+⏐
+2
+≪
+≪
+∑
+|γ′−γ|>K |γ|
+1
+(1 + |γ − γ′|)2 ≪
+≪
+∑
+n>K |γ|
+log(n + 1 + |γ|)
+(n + 1)2 ≪ log(K |γ| + 2)
+K |γ| + 2 :
+remarks on weil ’s quadratic functional in the theory of prime numbers, I 223
+Hence if N> (K + 1)|γ| we have
+0 = λN zγ;N −
+∑
+|γ′|≤N
+zγ′;N
+∫
+E
+ei(γ−γ′)u du =
+= λN zγ;N −
+∑
+|γ′|≤(K +1)|γ|
+zγ′;N
+∫
+E
+ei(γ−γ′)u du +
++ O
+(⏐⏐
+⏐
+⏐
+∑
+(K +1)|γ|<|γ′|≤N
+zγ′;N
+∫
+E
+ei(γ−γ′)u du
+⏐⏐
+⏐
+⏐
+)
+=
+= λ
+N zγ;N −
+∑
+|γ′|≤(K +1)|γ|
+zγ′;N
+∫
+E
+ei(γ−γ′)u du + O
+(( log(K |γ| + 2)
+K |γ| + 2
+)1=2)
+:
+This estimate is uniform in N and the sum over |γ′|≤ (K + 1)|γ| is a finite sum
+indexed independently of N . Thus for fixed γ and K we can pass to the limit as
+N →∞ , obtaining
+0 = λ zγ −
+∑
+|γ′|≤(K +1)|γ|
+zγ′
+∫
+E
+ei(γ−γ′)u du + O
+(( log(K |γ| + 2)
+K |γ| + 2
+)1=2)
+:
+Now we let K →∞ and conclude that
+λ zγ =
+∑
+γ′
+zγ′
+∫
+E
+eiγu e−iγ′u du
+for every γ,a s asserted.
+This equation can be rewritten as
+∫
+E
+eiγu F (u)d u = λzγ ;
+hence noting that |ℑ(γ)|≤ 1
+2 we infer
+∫
+E
+e|u|=2⏐⏐F (u)
+⏐⏐du ≥| λ| max |zγ | :
+Therefore, by (11.4) we find
+(11.6)
+∫
+E
+⏐⏐F (u)
+⏐⏐du ≥ (2J )−1e−m(E )=2|λ|
+where J is the number of complex zeros of ζ(s) off the critical line and m(E ) = maxE |x|.
+In particular, in view of (11.5) we have shown
+Lemma 14. We have F (u) = 0 identically in E if and only if λ = lim infλN = 0.
+This gives the analogue of Theorem 8 in this setting.
+Theorem 11. Suppose that
+ζ(s) has only finitely many non-trivial zeros 1
+2 + iγ with
+γ =∈ R, and at least one such zero. Then for any finite union of intervals E there are complex
+224 e. bombieri
+coefficients zγ = zγ (E ) and λ = λ(E ) ≤ 0 such that
+∑
+γ∈Γ
+|zγ |2 = 1;
+∑
+γ =∈R
+|zγ |2 ≥−
+∑
+γ =∈R
+zγ (zγ ) ≥ 1
+2
+and with the following property. Let
+F (u) =
+∑
+γ
+zγ e−iγu :
+Then F (u) is locally in L2 and
+λ zγ =
+∫
+E
+eiγu F (u)d u for every γ ∈ Γ:
+Moreover, if
+f (x) = φ(x) x−1=2F (log x)
+where φ(x) is the characteristic function of E = eE ,w e have either
+T [f ∗ f
+∗
+] = λ ‖f ‖2 < 0
+or λ = 0 and f (x) is identically 0.
+As before, we have
+Corollary. Let
+E⊂ (0; ∞) be a finite union of bounded closed intervals and suppose that
+T [f ∗ f
+∗
+] ≥ 0 for every smooth function f with compact support in E.
+Then either the Riemann Hypothesis is true, or ζ(s) has infinitely many zeros off the critical
+line, or the functions x−ρ are linearly dependent over E, for a suitable sequence of coefficients
+{cρ}∈ ‘2 such that at least half of its ‘2-mass is supported on the set of zeros ρ with ℜ(ρ) ⁄= 1
+2 .
+One may ask if linear dependence relations occur at all. The following example
+shows that they may occur for Dedekind zeta functions.
+An Example. Consider two Dirichlet L-functions L(s;χ) and L(s;χ′) for a same
+modulus q> 1 and two distinct primitive characters with the same parity, hence
+χ(−1) = χ′(−1). Let also p0 ≥ 2b e the first prime for which χ(p0) ⁄= χ′(p0).
+These two Dirichlet L-functions have the same conductor and Gamma factors in
+their functional equations. Consequently, the Explicit Formula associated with these two
+functions will have the same contribution from the «prime at infinity». Moreover, if we
+evaluate the Explicit Formula for a function f (x) with compact support in (1 =p
+0;p 0),
+the contribution arising from the primes p<p 0 is the same in both cases, and it is 0
+for the primes p ≥ p0 because of the condition imposed on the support of f (x). By
+taking the difference, we obtain the relation
+∑
+ρ
+f~(ρ) −
+∑
+ρ′
+f~(ρ′) = 0
+remarks on weil ’s quadratic functional in the theory of prime numbers, I 225
+where ρ runs over the non-trivial zeros of L(s;χ) and ρ′ runs over those of L(s;χ′).
+Now fix f0(x) with compact support in ( e−ε;e ε) and let f (x) = f0(ax) with eε=p0 <
+<a<e −εp0. Then f~(s) = a−s f~0(s) and we get the relation
+∑
+ρ
+f~0(ρ) a−ρ −
+∑
+ρ′
+f~0(ρ′) a−ρ′
+= 0
+for a ∈ (eε=p0;e −εp0).
+As pointed out by J. Bourgain, the existence of linear relations over intervals of
+arbitrary length also follows from the fact that the gap between consecutive γ’s tends
+to 0 as γ →∞ .I n any case, it should be noted that the coefficients of the relations
+in question are obtained as limits of eigenvectors of reasonably well-behaved matrices.
+Computer experiments (
+11) suggest that if a negative eigenvalue λN for the problem
+above approaches 0 as N →∞ , then it does so at an exponential or nearly exponential
+rate and also the corresponding eigenvector seems to converge rapidly to a limit. Thus
+a deeper study of the eigenvectors associated to finite approximations may shed some
+light on this question of linear independence.
+We suggest that splitting the eigenvalue problem into its even and odd components
+and complexifying it with the help of Cram ´er’s function
+V (z)
+=
+∑
+ℜ(γ)>0
+eiγz
+may bring the problem to a form amenable to the extraordinarily powerful Riemann-
+Hilbert techniques recently introduced in other contexts. An examination of these
+possibilities may prove to be a valuable undertaking in studying the structure of the
+limiting linear relations.
+12. Sets of positivity
+In this section we prove the positivity statement needed for the proof of the Corollary
+to Theorem 8. Another proof can be found in Yoshida’s paper [5]. Let T [F ]b e the
+linear form
+(12.1) T [F ]
+=
+∑
+γ∈Γ
+ˆF (γ)
+where ˆF denote the Fourier transform.
+Definition. We say that a closed subset E ⊂ R is a set of positivity for T if
+T [F (x) ∗ F (−x)] > 0 for every smooth function F with compact support in E
+where
+(F ∗ G)(x) =
+∫∞
+−∞
+F (u)G(x − u)d u
+(11) The experiments were done by adding a «fake zero» ρ0 off the critical line, together with its
+symmetric images, to the first k non-trivial zeros of ζ(s), with k up to 320.
+226 e. bombieri
+is the additive convolution, hence
+(12.2) F (x) ∗ F (−x) =
+∫∞
+−∞
+F (x + u)F (u)d u:
+In this setting, the Explicit Formula becomes
+T [F ] =
+∫∞
+−∞
+2 cosh(x=2) F (x)d x −
+∞∑
+n=1
+Λ(n)√n
+[F (log n) + F (− log n)]
+−
+− (log 4π + γ) F (0) −
+∫∞
+0
+[
+ex=2(F (x) + F (−x))
+− 2F (0)
+] dx
+ex − e−x :
+Moreover, the last two terms in this formula can be written as
+−(logπ)F (0) + 1
+2π
+∫∞
+−∞
+ℜ
+[Γ′
+Γ (1
+4 + i v
+2)
+]
+ˆF (v)d v;
+as one verifies using Theorem 2 and a change of variables.
+Theorem 12. If F (x) has compact support in an interval I of length |I | < log 2 we have
+T [F (x) ∗ F (−x)] =
+∑
+γ
+ˆF (γ)ˆF (γ) ≥
+(
+log 1
+|I | − log
++
+log 1
+|I | − O(1)
+)
+‖F ‖2:
+Proof. Since G(x) = F (x)∗F (−x) remains unchanged if we replace F (x)b ya trans-
+lation F (x + c), we may assume that F (x)i s supported in the interval [ −a=2;a =2] with
+a< log 2. Then G(x)i s supported in [ −a; a] ⊂ (− log 2; log 2). Thus in the Explicit
+Formula as above for T [G], the contribution of the sum involving Λ(n) vanishes. It
+follows that
+(12.3)
+T [G] =
+∫∞
+−∞
+2 cosh(x=2) G(x)d x−
+− (logπ) G(0) + 1
+2π
+∫∞
+−∞
+ℜ
+[Γ′
+Γ (1
+4 + i v
+2)
+]
+ˆG(v)d v:
+We have
+(12.4) G(0) = ‖F ‖2; ˆG(v) = |ˆF (u)|2
+and by Plancherel’s Formula
+(12.5) 1
+2π
+∫∞
+−∞
+|ˆF (v)|2 dv = ‖F ‖2:
+Now
+(12.6)
+⏐⏐
+⏐
+⏐
+∫
+a
+−a
+2 cosh(x=2) G(x)d x
+⏐⏐
+⏐
+⏐
+≤
+≤ 2 cosh(a=2)
+∫a
+−a
+⏐⏐
+⏐
+⏐
+∫
+∞
+−∞
+F (x + u)F (u)d u
+⏐⏐
+⏐
+⏐
+dx ≤ 4a cosh(a=2) ‖F ‖2:
+Since a< log 2 and
+ℜ
+[Γ′
+Γ (1
+4 + i v
+2)
+]
+= log
++
+|v| + O(1);
+remarks on weil ’s quadratic functional in the theory of prime numbers, I 227
+we infer from (12.3) to (12.6) that
+(12.7) T [G] ≥− O(1) ‖F ‖2 + 1
+2π
+∫∞
+−∞
+(log
++
+|v|) |ˆF (v)|2 dv:
+For any K> 1w e have
+(12.8)
+1
+2π
+∫∞
+−∞
+(log
++
+|v|) |ˆF (v)|2 dv ≥ log K
+2π
+∫
+|v|>K
+|ˆF (v)|2 dv =
+= (log K ) ‖F ‖2 − log K
+2π
+∫
+|v|≤K
+|ˆF (v)|2 dv ≥
+≥ (log K ) ‖F ‖2 − (4K 2 log K ) 1
+2π
+∫∞
+−∞
+⏐⏐
+⏐
+⏐
+sin(v=K )
+v
+ˆF (v)
+⏐⏐
+⏐
+⏐
+2
+dv;
+because | sin(v=K )|≥| v|=(2K ) for |v|≤ K .
+The function (sin( v=K )=v)ˆF (v)i s the Fourier Transform of the convolution
+∫1=K
+−1=K
+F (x − y)d y;
+which is supported in the interval I = [− a
+2 − 1
+K ; a
+2 + 1
+K ].
+Therefore, by Plancherel’s Formula and Cauchy’s inequality we get
+(12.9)
+1
+2π
+∫∞
+−∞
+⏐⏐
+⏐
+⏐
+sin(v=K )
+v
+ˆF (v)
+⏐⏐
+⏐
+⏐
+2
+dv =
+∫∞
+−∞
+⏐⏐
+⏐
+⏐
+∫
+1=K
+−1=K
+F (x − y)d y
+⏐⏐
+⏐
+⏐
+2
+dx ≤
+≤
+∫
+I
+( ∫a=2
+−a=2
+|F (y)| dy
+)2
+dx ≤ (a + 2=K )a ‖F ‖2:
+By (12.7), (12.8), (12.9) we infer
+T [G] ≥
+[log K − O(1) − 4(a + 2=K )aK 2 log K]
+·‖F ‖2:
+Theorem 12 follows by choosing
+K = 1
+a
+(
+1 + log 1
+a
+)−1
+:
+13. Some numerical experiments
+It is easy to follow numerically the behaviour of eigenvalues and eigenfunctions of
+finite approximations, as the number of zeros increases.
+In this section we consider finite approximations to Problem 2, where the set of
+points consists of the first N zeros of ζ(s) with positive imaginary parts and a fictitious
+zero ρ0 off the critical line, together with their images by complex conjugation and
+reflection about the point 1 =2.
+The set E is the interval [ −t; t] with various ranges of t and the number N of
+zeros ranges up to N = 160. The fictitious zero off the line has been arbitrarily set at
+ρ0 = 0:52 + i3:14.
+228 e. bombieri
+In the symmetric case considered here there is a natural division of eigenvalues and
+eigenfunctions into even and odd eigenfunctions. The numerical evidence gathered
+here indicates in each case the existence of a critical value t
+±
+c > 0 such that the unique
+negative eigenvalue λ±
+N (t) tends to 0 if t<t ±
+c ,a s N →∞ . The rate of convergenge
+is quite fast, suggesting an exponential rate. For t>t ±
+c this eigenvalue converges,
+albeit less rapidly so, to a strictly negative value. The behaviour of the corresponding
+eigenfunctions is markedly different for t<t
+±
+c and t>t ±
+c , although even and odd
+eigenfunctions behave rather similarly.
+1
+2
+3 4 5
+-10
+-8
+-6
+-4
+-2
+Fig. 1. – The negative even eigenvalue, ρ0=:52+i3:14, N=10, 0<t<5:5.
+1
+2
+3 4 5
+-10
+-8
+-6
+-4
+-2
+Fig. 2. – The negative odd eigenvalue, ρ0=:52+i3:14, N=10, 0<t<0:55.
+remarks on weil ’s quadratic functional in the theory of prime numbers, I 229
+The two plots together:
+1
+2
+3 4 5
+-10
+-8
+-6
+-4
+-2
+Fig. 3. – The two negative eigenvalues, ρ0=:52+i3:14, N=10, 0<t<0:55.
+Normalized eigenfunctions, ‖f ‖= 1, for t<t +
+c .
+-0.4 -0.2 0.2 0.4
+-2
+2
+4
+6
+8
+10
+Fig. 4. – The eigenfunction for the negative even eigenvalue, ρ0=:52+i3:14, N=20, t=0:48.
+230 e. bombieri
+-0.4 -0.2 0.2
+0.4
+-5
+-2.5
+2.5
+5
+7.5
+10
+12.5
+Fig. 5. – The eigenfunction for the negative even eigenvalue, ρ0=:52+i3:14, N=40, t=0:48.
+-0.4 -0.2 0.2 0.4
+-5
+5
+10
+15
+Fig. 6. – The eigenfunction for the negative even eigenvalue, ρ0=:52+i3:14, N=80, t=0:48.
+remarks on weil ’s quadratic functional in the theory of prime numbers, I 231
+Normalized eigenfunctions, ‖f ‖= 1, for t>t +
+c .
+-2 -1 1 2
+-0.75
+-0.5
+-0.25
+0.25
+0.5
+0.75
+Fig. 7. – The eigenfunction for the negative even eigenvalue, ρ0=:52+i3:14, N=40, t=2:3.
+-2 -1 1 2
+-0.75
+-0.5
+-0.25
+0.25
+0.5
+0.75
+Fig. 8. – The eigenfunction for the negative even eigenvalue, ρ0=:52+i3:14, N=80, t=2:3.
+232 e. bombieri
+-2 -1 1 2
+-0.75
+-0.5
+-0.25
+0.25
+0.5
+0.75
+Fig. 9. – The eigenfunction for the negative even eigenvalue, ρ0=:52+i3:14, N=160, t=2:3.
+Further computer experiments for t<t +
+c and large N , both for the negative eigen-
+value and a sequence of positive eigenvalues tending to 0 as N increases, point out to
+a marked difference in behaviour for eigenvectors belonging to the negative eigenvalue
+compared with eigenvectors belonging to positive eigenvalues.
+In the case t<t ±
+c , normalized eigenfunctions f (x) with ‖f ‖= 1 converge weakly
+to 0. The numerical experiments indicate that the L2-mass of the function gets more
+and more concentrated at the boundary of the interval ( −t; t), as N →∞ , and one
+should study the asymptotic behaviour of eigenfunctions at the boundary, after the
+appropriate rescaling. This should be of particular interest at the critical value t
+= t ±
+c ,
+which represent the transition from weak convergence to 0 to strong convergence in L2.
+Acknowledgements
+The author wishes to thank here Tom Spencer, Percy Deift, Henryk Iwaniec and Jean Bourgain for
+several interesting conversations. Theorem 8 was first discovered experimentally with the help of the
+Mathematica computer package.
+References
+[1] E. Bombieri - J.C. Lagarias, Complements to Li’s criterion for the Riemann Hypothesis.J . Number Theory,
+77, 1999, 274-287.
+[2] A.P. Guinand, Summation Formulae and Self-reciprocal Functions (III). Quarterly J. Math., 13, 1942,
+30-39.
+[3] A.E. Ingham, The distribution of prime numbers. Cambridge Tracts, 30, Cambridge 1932.
+[4] X.-J. Li, The positivity of a sequence of numbers and the Riemann Hypothesis .J . Number Theory, 65,
+1997, 325-333.
+remarks on weil ’s quadratic functional in the theory of prime numbers, I 233
+[5] H. Yoshida, On Hermitian Forms attached to Zeta Functions . In: N. Kurokawa - T. Sunada (eds.),
+Zeta Fuctions in Geometry. Advanced Studies in Pure Mathematics, 21, Mathematical Society of Japan,
+Kinokuniya, Tokyo 1992, 281-325.
+[6] A. Weil, Sur les “formules explicites’’ de la th´eorie des nombres premiers. Meddelanden Från Lunds Univ.
+Mat. Sem. (dedi´eaM . Riesz), 1952, 252-265.
+[7] E.T. Whittaker - G.N. Watson, A Course of Modern Analysis. Fourth edition, Cambridge University
+Press, Cambridge 1952.
+Pervenuta il 15 giugno 2000,
+in forma definitiva il 7 settembre 2000.
+Institute for Advanced Study
+Princeton,N J 08540 (U.S.A.)
+eb@ias.edu

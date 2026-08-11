@@ -1,0 +1,16 @@
+[package]
+name = "zeta-rs"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "zeta-rs"
+path = "src/main.rs"
+
+[profile.release]
+opt-level = 3
+lto = true
+
+[[bin]]
+name = "xiprime"
+path = "src/xiprime.rs"

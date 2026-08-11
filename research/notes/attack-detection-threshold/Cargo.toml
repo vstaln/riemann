@@ -1,0 +1,33 @@
+[package]
+name = "finitet"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+[profile.release]
+opt-level = 3
+
+[[bin]]
+name = "finitet-cinf"
+path = "src/bin_cinf.rs"
+
+[[bin]]
+name = "finitet-sandbox"
+path = "src/sandbox.rs"
+
+[[bin]]
+name = "finitet-e4sweep"
+path = "src/e4sweep.rs"
+
+[[bin]]
+name = "finitet-pairdiag"
+path = "src/pairdiag.rs"
+
+[[bin]]
+name = "finitet-e4probe"
+path = "src/e4probe.rs"
+
+[[bin]]
+name = "finitet-e4nminus"
+path = "src/e4nminus.rs"

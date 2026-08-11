@@ -1,0 +1,61 @@
+loaded 10000 zeros, gamma_1=14.135, gamma_N=9879.037
+U=  0.150  n=  0.162  V_fluct=   0.1381  V_raw=   0.1383  GUE=   0.1613  Vf/GUE= 0.856  Fujii=   0.0781  Poisson=  0.162  beyond1_wgt= 0.686
+U=  0.200  n=  0.215  V_fluct=   0.1692  V_raw=   0.1694  GUE=   0.1904  Vf/GUE= 0.888  Fujii=   0.0806  Poisson=  0.215  beyond1_wgt= 0.591
+U=  0.250  n=  0.269  V_fluct=   0.1964  V_raw=   0.1968  GUE=   0.2130  Vf/GUE= 0.922  Fujii=   0.0830  Poisson=  0.269  beyond1_wgt= 0.502
+U=  0.300  n=  0.323  V_fluct=   0.2199  V_raw=   0.2201  GUE=   0.2315  Vf/GUE= 0.950  Fujii=   0.0854  Poisson=  0.323  beyond1_wgt= 0.422
+U=  0.350  n=  0.377  V_fluct=   0.2387  V_raw=   0.2391  GUE=   0.2471  Vf/GUE= 0.966  Fujii=   0.0877  Poisson=  0.377  beyond1_wgt= 0.351
+U=  0.400  n=  0.431  V_fluct=   0.2565  V_raw=   0.2572  GUE=   0.2607  Vf/GUE= 0.984  Fujii=   0.0900  Poisson=  0.431  beyond1_wgt= 0.290
+U=  0.450  n=  0.485  V_fluct=   0.2720  V_raw=   0.2728  GUE=   0.2726  Vf/GUE= 0.998  Fujii=   0.0922  Poisson=  0.485  beyond1_wgt= 0.239
+U=  0.500  n=  0.538  V_fluct=   0.2814  V_raw=   0.2822  GUE=   0.2833  Vf/GUE= 0.993  Fujii=   0.0944  Poisson=  0.538  beyond1_wgt= 0.198
+U=  0.550  n=  0.592  V_fluct=   0.2877  V_raw=   0.2888  GUE=   0.2929  Vf/GUE= 0.982  Fujii=   0.0965  Poisson=  0.592  beyond1_wgt= 0.165
+U=  0.600  n=  0.646  V_fluct=   0.2931  V_raw=   0.2943  GUE=   0.3017  Vf/GUE= 0.971  Fujii=   0.0986  Poisson=  0.646  beyond1_wgt= 0.140
+U=  0.650  n=  0.700  V_fluct=   0.2999  V_raw=   0.3017  GUE=   0.3099  Vf/GUE= 0.968  Fujii=   0.1006  Poisson=  0.700  beyond1_wgt= 0.122
+U=  0.700  n=  0.754  V_fluct=   0.3001  V_raw=   0.3016  GUE=   0.3174  Vf/GUE= 0.946  Fujii=   0.1026  Poisson=  0.754  beyond1_wgt= 0.111
+U=  0.800  n=  0.861  V_fluct=   0.3058  V_raw=   0.3081  GUE=   0.3309  Vf/GUE= 0.924  Fujii=   0.1065  Poisson=  0.861  beyond1_wgt= 0.099
+U=  0.900  n=  0.969  V_fluct=   0.3106  V_raw=   0.3139  GUE=   0.3428  Vf/GUE= 0.906  Fujii=   0.1103  Poisson=  0.969  beyond1_wgt= 0.097
+U=  0.930  n=  1.001  V_fluct=   0.3148  V_raw=   0.3185  GUE=   0.3462  Vf/GUE= 0.909  Fujii=   0.1114  Poisson=  1.001  beyond1_wgt= 0.097
+U=  1.000  n=  1.077  V_fluct=   0.3239  V_raw=   0.3284  GUE=   0.3535  Vf/GUE= 0.916  Fujii=   0.1139  Poisson=  1.077  beyond1_wgt= 0.097
+U=  1.100  n=  1.184  V_fluct=   0.3322  V_raw=   0.3370  GUE=   0.3632  Vf/GUE= 0.915  Fujii=   0.1174  Poisson=  1.184  beyond1_wgt= 0.094
+U=  1.200  n=  1.292  V_fluct=   0.3405  V_raw=   0.3477  GUE=   0.3720  Vf/GUE= 0.916  Fujii=   0.1207  Poisson=  1.292  beyond1_wgt= 0.088
+U=  1.300  n=  1.400  V_fluct=   0.3365  V_raw=   0.3443  GUE=   0.3801  Vf/GUE= 0.885  Fujii=   0.1240  Poisson=  1.400  beyond1_wgt= 0.078
+U=  1.400  n=  1.507  V_fluct=   0.3380  V_raw=   0.3455  GUE=   0.3876  Vf/GUE= 0.872  Fujii=   0.1271  Poisson=  1.507  beyond1_wgt= 0.068
+U=  1.500  n=  1.615  V_fluct=   0.3407  V_raw=   0.3501  GUE=   0.3946  Vf/GUE= 0.864  Fujii=   0.1302  Poisson=  1.615  beyond1_wgt= 0.060
+U=  1.600  n=  1.723  V_fluct=   0.3501  V_raw=   0.3599  GUE=   0.4011  Vf/GUE= 0.873  Fujii=   0.1332  Poisson=  1.723  beyond1_wgt= 0.054
+U=  1.800  n=  1.938  V_fluct=   0.3713  V_raw=   0.3852  GUE=   0.4131  Vf/GUE= 0.899  Fujii=   0.1389  Poisson=  1.938  beyond1_wgt= 0.050
+U=  2.000  n=  2.153  V_fluct=   0.3840  V_raw=   0.4024  GUE=   0.4237  Vf/GUE= 0.906  Fujii=   0.1443  Poisson=  2.153  beyond1_wgt= 0.050
+U=  2.200  n=  2.369  V_fluct=   0.3738  V_raw=   0.3973  GUE=   0.4334  Vf/GUE= 0.863  Fujii=   0.1494  Poisson=  2.369  beyond1_wgt= 0.045
+U=  2.500  n=  2.692  V_fluct=   0.3683  V_raw=   0.3970  GUE=   0.4463  Vf/GUE= 0.825  Fujii=   0.1566  Poisson=  2.692  beyond1_wgt= 0.036
+U=  3.000  n=  3.230  V_fluct=   0.3948  V_raw=   0.4372  GUE=   0.4648  Vf/GUE= 0.849  Fujii=   0.1676  Poisson=  3.230  beyond1_wgt= 0.033
+U=  3.500  n=  3.768  V_fluct=   0.3921  V_raw=   0.4477  GUE=   0.4804  Vf/GUE= 0.816  Fujii=   0.1776  Poisson=  3.768  beyond1_wgt= 0.026
+U=  4.000  n=  4.306  V_fluct=   0.3880  V_raw=   0.4635  GUE=   0.4940  Vf/GUE= 0.785  Fujii=   0.1866  Poisson=  4.306  beyond1_wgt= 0.024
+U=  5.000  n=  5.383  V_fluct=   0.3608  V_raw=   0.4789  GUE=   0.5166  Vf/GUE= 0.698  Fujii=   0.2026  Poisson=  5.383  beyond1_wgt= 0.019
+U=  6.000  n=  6.460  V_fluct=   0.3609  V_raw=   0.5293  GUE=   0.5350  Vf/GUE= 0.675  Fujii=   0.2164  Poisson=  6.460  beyond1_wgt= 0.016
+U=  7.000  n=  7.536  V_fluct=   0.3317  V_raw=   0.5570  GUE=   0.5507  Vf/GUE= 0.602  Fujii=   0.2285  Poisson=  7.536  beyond1_wgt= 0.013
+U=  8.000  n=  8.613  V_fluct=   0.3179  V_raw=   0.6285  GUE=   0.5642  Vf/GUE= 0.563  Fujii=   0.2393  Poisson=  8.613  beyond1_wgt= 0.012
+U= 10.000  n= 10.766  V_fluct=   0.3100  V_raw=   0.7920  GUE=   0.5868  Vf/GUE= 0.528  Fujii=   0.2580  Poisson= 10.766  beyond1_wgt= 0.009
+U= 12.000  n= 12.918  V_fluct=   0.3290  V_raw=   1.0046  GUE=   0.6053  Vf/GUE= 0.544  Fujii=   0.2738  Poisson= 12.918  beyond1_wgt= 0.008
+U= 15.000  n= 16.147  V_fluct=   0.3684  V_raw=   1.4254  GUE=   0.6279  Vf/GUE= 0.587  Fujii=   0.2937  Poisson= 16.147  beyond1_wgt= 0.006
+U= 20.000  n= 21.529  V_fluct=   0.3362  V_raw=   2.2180  GUE=   0.6570  Vf/GUE= 0.512  Fujii=   0.3200  Poisson= 21.529  beyond1_wgt= 0.005
+U= 30.000  n= 32.289  V_fluct=   0.3979  V_raw=   4.6126  GUE=   0.6981  Vf/GUE= 0.570  Fujii=   0.3582  Poisson= 32.289  beyond1_wgt= 0.003
+U= 40.000  n= 43.048  V_fluct=   0.3640  V_raw=   7.8285  GUE=   0.7272  Vf/GUE= 0.501  Fujii=   0.3858  Poisson= 43.048  beyond1_wgt= 0.002
+U= 60.000  n= 64.557  V_fluct=   0.4404  V_raw=  17.2041  GUE=   0.7683  Vf/GUE= 0.573  Fujii=   0.4254  Poisson= 64.557  beyond1_wgt= 0.002
+U= 80.000  n= 86.057  V_fluct=   0.3537  V_raw=  29.9580  GUE=   0.7974  Vf/GUE= 0.444  Fujii=   0.4537  Poisson= 86.057  beyond1_wgt= 0.001
+
+=== corrected-dictionary windows  U = 1/(alpha*rho), alpha in {0.5,0.9,1.1,1.5,2.0} ===
+rho_avg over [2000, 9876] = 1.0767  ->  alpha=1 boundary U* = 1/rho = 0.929
+ alpha        U       n   V_fluct       GUE  Vf/GUE     Fujii  Poisson beyond1wgt
+  0.50    1.857   2.000    0.3775    0.4163   0.907    0.1405    2.000      0.050
+  0.90    1.032   1.111    0.3285    0.3567   0.921    0.1150    1.111      0.096
+  1.10    0.844   0.909    0.3087    0.3364   0.918    0.1082    0.909      0.098
+  1.50    0.619   0.667    0.2956    0.3049   0.969    0.0994    0.667      0.133
+  2.00    0.464   0.500    0.2758    0.2758   1.000    0.0928    0.500      0.226
+
+=== B10 dictionary windows  U = alpha*T_ref  (T_ref = geometric mean height) ===
+T_ref = 5450
+alpha=0.5: U =    2724.8  (window longer than the whole zero range [14,9879] for alpha>=1.5; count variance there is mean-drift dominated, not a beyond-1 probe)
+alpha=0.9: U =    4904.6  (window longer than the whole zero range [14,9879] for alpha>=1.5; count variance there is mean-drift dominated, not a beyond-1 probe)
+alpha=1.1: U =    5994.5  (window longer than the whole zero range [14,9879] for alpha>=1.5; count variance there is mean-drift dominated, not a beyond-1 probe)
+alpha=1.5: U =    8174.3  (window longer than the whole zero range [14,9879] for alpha>=1.5; count variance there is mean-drift dominated, not a beyond-1 probe)
+alpha=2.0: U =   10899.1  (window longer than the whole zero range [14,9879] for alpha>=1.5; count variance there is mean-drift dominated, not a beyond-1 probe)
+
+alpha=1 boundary: U* = 1/rho_avg = 0.9287217229804084  (one mean spacing at height ~T_ref)

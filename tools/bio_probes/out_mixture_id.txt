@@ -1,0 +1,20 @@
+=== B3.1 (a) count-level mixture model ===
+mixture family from (tr,HS2)=(N,4N/3) with c=1: a2 in [0,1.00], p = (N/3 - 2*a2)/2 >= 0
+  m3/N ranges over [1.0000, 2.0000] across the family (all-simple a2=0 -> m3/N=1 ; extremal a2=N/6 -> m3/N=2)
+  -> two moments leave a 1-parameter family; the third moment (skewness)
+     completes identification: this is the mixture-identifiability structure.
+  -> but note: in the IDEAL model m3 is blind to p (planes cancel); the
+     off-diagonal cross-terms are exactly what the real data add (part b).
+
+=== B3.1 (b) empirical Gram-matrix moments, first 1000 LMFDB zeros ===
+N=1000, x in [0.45, 999.42], mean spacing 1.0000
+flat window lam=1:  m2=1.284052  m3=1.836814  m4=2.819817
+cosine window:     m2=0.926520  m3=1.115415  m4=1.427635
+
+predictions:  ideal-model all-simple m3 = 1 ; extremal law m3 = 2 ;
+              GUE/HL* m2 = 4/3 = 1.3333, m3 = 2, m4 = 13/4 = 3.25
+empirical excess of m3 over the all-simple ideal value 1:
+  flat:    m3 - 1 = 0.8368   (fraction of the m3=1..2 gap: 0.8368)
+  cosine:  m3 - 1 = 0.1154
+empirical m4 vs extremal law m4 = 10/3 = 3.333333 and GUE 13/4 = 3.250000:
+  flat:    2.8198   cosine: 1.4276

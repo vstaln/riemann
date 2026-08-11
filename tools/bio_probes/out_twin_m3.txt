@@ -1,0 +1,27 @@
+=== B4.1 twin-moment arithmetic ===
+Extremal-law moment sequence m_k = 2/3 + 2^k/6 (k=1..5): [1.0, 1.333333, 2.0, 3.333333, 6.0]
+GUE/HL* sequence (k=1..4, from [AM]): [1, 4/3, 2, 13/4]  (m5 not in our notes)
+
+N=6: 1 integer spectra of (tr,HS2)=(N,4N/3); 1 distinct (m1..m5) profiles:
+   profile (1.0, 1.3333333333, 2.0, 3.3333333333, 6.0)  x1   e.g. nonzero spec (2, 1, 1, 1, 1)
+   m3 values: [2.0]   m4 values: [3.3333333333]
+   extremal profile present (m3=2, m4=10/3)? True
+
+N=12: 1 integer spectra of (tr,HS2)=(N,4N/3); 1 distinct (m1..m5) profiles:
+   profile (1.0, 1.3333333333, 2.0, 3.3333333333, 6.0)  x1   e.g. nonzero spec (2, 2, 1, 1, 1, 1, 1, 1, 1, 1)
+   m3 values: [2.0]   m4 values: [3.3333333333]
+   extremal profile present (m3=2, m4=10/3)? True
+
+N=24: 2 integer spectra of (tr,HS2)=(N,4N/3); 2 distinct (m1..m5) profiles:
+   profile (1.0, 1.3333333333, 2.0, 3.3333333333, 6.0)  x1   e.g. nonzero spec (2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+   profile (1.0, 1.3333333333, 2.25, 4.8333333333, 12.25)  x1   e.g. nonzero spec (3, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+   m3 values: [2.0, 2.25]   m4 values: [3.3333333333, 4.8333333333]
+   extremal profile present (m3=2, m4=10/3)? True
+
+N=48: 4 integer spectra of (tr,HS2)=(N,4N/3); 4 distinct (m1..m5) profiles:
+   profile (1.0, 1.3333333333, 2.0, 3.3333333333, 6.0)  x1   e.g. nonzero spec (2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+   profile (1.0, 1.3333333333, 2.125, 4.0833333333, 9.125)  x1   e.g. nonzero spec (3, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+   profile (1.0, 1.3333333333, 2.25, 4.8333333333, 12.25)  x1   e.g. nonzero spec (3, 3, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+   profile (1.0, 1.3333333333, 2.5, 6.8333333333, 23.5)  x1   e.g. nonzero spec (4, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+   m3 values: [2.0, 2.125, 2.25, 2.5]   m4 values: [3.3333333333, 4.0833333333, 4.8333333333, 6.8333333333]
+   extremal profile present (m3=2, m4=10/3)? True

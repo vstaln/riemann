@@ -1,0 +1,159 @@
+=== C-LY3 probe: Gabor frame kernel real-rootedness + Caratheodory-Fejer condition ===
+Phi(0) = (0.8492279993183041799212983516285479483653+0j)   (expect int psi^2 = 0.849227999318304)
+Psi(0) = (0.9187253698655684377842315251246617518102+0j)   Psi at pole = 0.8492279993183041799212983516285479483653
+--- Phi (frame kernel, box [-40,40]x[-20,20]) ---
+zeros in box [-40,40]x[-20,20] (argument principle): 12
+found 13 distinct roots (|f|<1e-15):
+  re=+19.106031  im=-0.000000  |f|=9.0e-44
+  re=+7.042241  im=-0.000000  |f|=3.6e-42
+  re=+44.092208  im=-0.000000  |f|=4.2e-42
+  re=-37.827344  im=-0.000000  |f|=2.9e-42
+  re=-7.042241  im=-0.000000  |f|=3.6e-42
+  re=-19.106031  im=-0.000000  |f|=9.0e-44
+  re=+12.950871  im=-0.000000  |f|=2.5e-42
+  re=+37.827344  im=-0.000000  |f|=2.9e-42
+  re=-25.325100  im=-0.000000  |f|=5.4e-43
+  re=+31.569809  im=-0.000000  |f|=7.2e-43
+  re=-31.569809  im=+0.000000  |f|=7.2e-43
+  re=+25.325100  im=+0.000000  |f|=5.4e-43
+  re=-12.950871  im=+0.000000  |f|=2.5e-42
+max |Im(root)| = 1.467e-56  ->  real-rooted: True
+--- Psi (finite-T Gabor kernel, box [-40,40]x[-20,20]) ---
+zeros in box [-40,40]x[-20,20] (argument principle): 78
+found 81 distinct roots (|f|<1e-15):
+  re=+15.004080  im=-0.000000  |f|=1.2e-42
+  re=+3.020243  im=-0.000000  |f|=7.2e-43
+  re=+4.015236  im=-0.000000  |f|=7.2e-43
+  re=-38.001611  im=-0.000000  |f|=2.7e-42
+  re=+5.012208  im=-0.000000  |f|=7.5e-42
+  re=+12.005099  im=-0.000000  |f|=2.3e-42
+  re=+27.002267  im=-0.000000  |f|=3.9e-42
+  re=+10.006118  im=-0.000000  |f|=3.8e-42
+  re=+25.002449  im=-0.000000  |f|=1.5e-42
+  re=+19.003222  im=-0.000000  |f|=3.9e-42
+  re=+41.001493  im=-0.000000  |f|=4.0e-42
+  re=+28.002186  im=-0.000000  |f|=1.1e-42
+  re=+21.002915  im=-0.000000  |f|=6.0e-42
+  re=-28.002186  im=-0.000000  |f|=1.1e-42
+  re=+8.007644  im=-0.000000  |f|=3.0e-42
+  re=+32.001913  im=-0.000000  |f|=6.3e-43
+  re=-26.002354  im=-0.000000  |f|=6.4e-42
+  re=-25.002449  im=-0.000000  |f|=1.5e-42
+  re=-22.002782  im=-0.000000  |f|=4.7e-66
+  re=+13.004707  im=-0.000000  |f|=2.9e-42
+  re=+26.002354  im=-0.000000  |f|=6.4e-42
+  re=-30.002041  im=-0.000000  |f|=4.0e-43
+  re=+23.002661  im=-0.000000  |f|=6.0e-42
+  re=-39.001570  im=-0.000000  |f|=4.6e-42
+  re=+24.002551  im=-0.000000  |f|=3.3e-42
+  re=+37.001655  im=-0.000000  |f|=1.0e-42
+  re=-27.002267  im=-0.000000  |f|=3.9e-42
+  re=-29.002111  im=-0.000000  |f|=2.4e-42
+  re=+31.001975  im=-0.000000  |f|=5.3e-42
+  re=-17.003600  im=-0.000000  |f|=3.5e-42
+  re=+38.001611  im=-0.000000  |f|=2.7e-42
+  re=-33.001855  im=-0.000000  |f|=4.1e-42
+  re=-24.002551  im=-0.000000  |f|=3.3e-42
+  re=+34.001801  im=-0.000000  |f|=1.4e-42
+  re=-14.004371  im=-0.000000  |f|=2.8e-42
+  re=-31.001975  im=-0.000000  |f|=5.3e-42
+  re=-8.007644  im=-0.000000  |f|=3.0e-42
+  re=-13.004707  im=-0.000000  |f|=2.9e-42
+  re=-5.012208  im=-0.000000  |f|=7.5e-42
+  re=-4.015236  im=-0.000000  |f|=7.2e-43
+  re=-12.005099  im=-0.000000  |f|=2.3e-42
+  re=-1.057278  im=+0.000000  |f|=2.0e-70
+  re=+6.010183  im=+0.000000  |f|=6.1e-42
+  re=+1.057278  im=+0.000000  |f|=1.9e-67
+  re=-35.001749  im=+0.000000  |f|=9.4e-43
+  re=-2.030068  im=+0.000000  |f|=6.5e-42
+  re=+2.030068  im=+0.000000  |f|=6.5e-42
+  re=-11.005562  im=+0.000000  |f|=6.3e-42
+  re=+35.001749  im=+0.000000  |f|=9.4e-43
+  re=-7.008733  im=+0.000000  |f|=7.2e-43
+  re=-15.004080  im=+0.000000  |f|=1.2e-42
+  re=+36.001700  im=+0.000000  |f|=3.9e-42
+  re=-10.006118  im=+0.000000  |f|=3.8e-42
+  re=-6.010183  im=+0.000000  |f|=6.1e-42
+  re=-3.020243  im=+0.000000  |f|=7.2e-43
+  re=-36.001700  im=+0.000000  |f|=3.9e-42
+  re=-16.003825  im=+0.000000  |f|=4.5e-43
+  re=-32.001913  im=+0.000000  |f|=6.3e-43
+  re=-37.001655  im=+0.000000  |f|=1.0e-42
+  re=+40.001530  im=+0.000000  |f|=2.1e-42
+  re=+18.003400  im=+0.000000  |f|=4.3e-42
+  re=-34.001801  im=+0.000000  |f|=1.4e-42
+  re=-19.003222  im=+0.000000  |f|=3.9e-42
+  re=+11.005562  im=+0.000000  |f|=6.3e-42
+  re=-18.003400  im=+0.000000  |f|=4.3e-42
+  re=-20.003061  im=+0.000000  |f|=3.0e-42
+  re=+39.001570  im=+0.000000  |f|=4.6e-42
+  re=-9.006796  im=+0.000000  |f|=2.3e-42
+  re=+33.001855  im=+0.000000  |f|=4.1e-42
+  re=+29.002111  im=+0.000000  |f|=2.4e-42
+  re=+30.002041  im=+0.000000  |f|=4.0e-43
+  re=+42.001458  im=+0.000000  |f|=7.8e-42
+  re=+20.003061  im=+0.000000  |f|=3.0e-42
+  re=-21.002915  im=+0.000000  |f|=6.0e-42
+  re=-23.002661  im=+0.000000  |f|=6.0e-42
+  re=+22.002782  im=+0.000000  |f|=1.0e-65
+  re=+14.004371  im=+0.000000  |f|=2.8e-42
+  re=+17.003600  im=+0.000000  |f|=3.5e-42
+  re=+16.003825  im=+0.000000  |f|=4.5e-43
+  re=+9.006796  im=+0.000000  |f|=2.3e-42
+  re=+7.008733  im=+0.000000  |f|=7.2e-43
+max |Im(root)| = 2.049e-55  ->  real-rooted: True
+--- CF check: Toeplitz T[j,k]=Phi(j-k), d=12 ---
+Traceback (most recent call last):
+  File "/home/vstaln/riemann/tools/control_probe_kernel.py", line 147, in <module>
+    cf_check(d)
+    ~~~~~~~~^^^
+  File "/home/vstaln/riemann/tools/control_probe_kernel.py", line 121, in cf_check
+    v = float(Phi(mp.mpc(j - k)))
+TypeError: float() argument must be a string or a real number, not 'mpc'
+Traceback (most recent call last):
+  File "<string>", line 7, in <module>
+    cf_check(d)
+    ~~~~~~~~^^^
+  File "<string>", line 124, in cf_check
+  File "/home/vstaln/.cache/uv/archive-v0/R_i87KZh5kbK1NpV/lib/python3.13/site-packages/numpy/linalg/_linalg.py", line 1643, in eigh
+    t, result_t = _commonType(a)
+                  ~~~~~~~~~~~^^^
+  File "/home/vstaln/.cache/uv/archive-v0/R_i87KZh5kbK1NpV/lib/python3.13/site-packages/numpy/linalg/_linalg.py", line 215, in _commonType
+    raise TypeError(f"array type {a.dtype.name} is unsupported in linalg")
+TypeError: array type float128 is unsupported in linalg
+--- CF check: Toeplitz T[j,k]=Phi(j-k), d=12 ---
+--- CF check: Toeplitz T[j,k]=Phi(j-k), d=12 ---
+smallest 5 eigenvalues: [4.73198550e-17 2.51724760e-16 8.06024119e-14 2.60496944e-11
+ 5.21887144e-09]
+largest  eigenvalue:    5.657492
+min eigenvalue:         4.731986e-17  (PSD: True)
+ground-state eigenvector polynomial: 11 roots, max |Im| = 4.668e-01  -> real-rooted: False
+ratio eig[1]/eig[0] = 5.320e+00 (rank-(n-1) proximity)
+--- CF check: Toeplitz T[j,k]=Phi(j-k), d=24 ---
+smallest 5 eigenvalues: [-3.20839367e-16 -2.74281256e-16 -1.81531164e-16 -7.90076947e-17
+ -3.23645715e-17]
+largest  eigenvalue:    6.100134
+min eigenvalue:         -3.208394e-16  (PSD: True)
+ground-state eigenvector polynomial: 23 roots, max |Im| = 8.384e-01  -> real-rooted: False
+ratio eig[1]/eig[0] = -2.743e+284 (rank-(n-1) proximity)
+--- CF check: Toeplitz T[j,k]=Phi(j-k), d=48 ---
+smallest 5 eigenvalues: [-1.73927027e-15 -1.67145582e-15 -1.54574100e-15 -1.27391312e-15
+ -1.19278551e-15]
+largest  eigenvalue:    6.233523
+min eigenvalue:         -1.739270e-15  (PSD: True)
+ground-state eigenvector polynomial: 47 roots, max |Im| = 1.105e+00  -> real-rooted: False
+ratio eig[1]/eig[0] = -1.671e+285 (rank-(n-1) proximity)
+=== done part B ===
+Traceback (most recent call last):
+  File "<string>", line 19, in <module>
+    print(f'  x={x:.6f} u={float(u):.6f} N={float(N(mp.mpc(u))):.2e}')
+                                            ~~~~~^^^^^^^^^^^^^^
+TypeError: float() argument must be a string or a real number, not 'mpc'
+x=    1.000000  Phi=8.190038e-01  closed=8.190038e-01  diff=0.0e+00
+x=    3.000000  Phi=6.015302e-01  closed=6.015302e-01  diff=3.4e-41
+x=    7.042241  Phi=-2.764757e-08  closed=-2.764757e-08  diff=3.9e-18
+x=   12.950871  Phi=1.097765e-08  closed=1.097765e-08  diff=3.9e-19
+x=   19.106031  Phi=-5.792455e-09  closed=-5.792455e-09  diff=2.0e-19
+x=   25.325100  Phi=1.033551e-08  closed=1.033551e-08  diff=2.3e-19
+N roots near expected (u=alpha/2):

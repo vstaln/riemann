@@ -20,6 +20,28 @@ This project pursues a proof of RH — and alongside it, any rigorous, novel mat
 4. Never weaken a validator to make a result pass.
 5. A wrong, confident result is worse than no result — it poisons the whole search.
 
+## Keep trying — always (the persistence hook)
+
+- **The search is possible. Do not stop.** A failure is a documented result, not a reason to stop. This hook binds on every model in every session, forever.
+- When a computation fails, times out, or disagrees with expectations, that is the start of work, not the end: (1) record what was attempted and what actually happened; (2) find the root cause — a bug in the code, a wrong assumption, a real mathematical obstacle, or a broken claim; (3) try again by a different route: a different language or precision (Rust/f64 where Python/mpmath is slow, arbitrary precision where f64 is too coarse), a different formulation, a smaller or larger case, a different attack direction.
+- When a proof attempt stalls, do not conclude "impossible". Re-derive from the contract, weaken the claim (prove less), transport the method from a neighboring problem, or decompose the blocker into sub-blockers. Consult the s4h skills (creativity, analogy, constraint, investigation, strategy) for cross-domain routes.
+- Escalate through the round protocol: PLANNER → EXECUTIONER → VALIDATOR → JUDGE → SYNTHESIZER → CRITIQUE LOOP. A rejected piece goes back to the loop, not to the trash.
+- Only the honesty guardrails can stop a line of work: a claim may be labeled ABANDONED (with the documented reason) but the *search* is never abandoned.
+- Compute is scarce on this machine: prefer Rust or other compiled languages for anything CPU-bound, fetch data in bulk and cache it, and only run a computation when it changes what we believe. Network I/O can be done in Python.
+
+## Code-backed verification + documentation (mandatory protocol)
+
+**Every numeric claim must be produced by code, and every finding must be written down. No exceptions.**
+
+1. **Confirm/deny only with code.** A "checked numerically" claim with no script behind it is not checked — it is a claim. For ANY quantitative statement (a constant, a moment, an eigenvalue, a correlation, a comparison, an empirical trend):
+   - Write the code FIRST, then run it, then report its output. Never report a number that a script did not produce.
+   - CPU-bound work goes in Rust (musl+rust-lld: `export PATH=$HOME/.cargo/bin:$PATH RUSTFLAGS="-C linker=rust-lld"`, `cargo build --release --target x86_64-unknown-linux-musl`). High-precision / exploratory work goes through `uv run --quiet python` (mpmath, numpy, scipy — pip is disabled). No bare `python3` with unmanaged dependencies.
+   - Do NOT edit canonical `tools/` when another agent may own it: copy to a scratch dir (`/tmp/...`) or a NEW self-contained directory, and say in the note where the code lives.
+2. **Save the code with the note.** Every deliverable note in `research/notes/` must reference the exact script(s) and the exact command(s) that produced every number it reports (e.g. `uv run --with numpy python tools/qi_sweep.py`). If the code lives in a scratch dir, copy the final version into `tools/` or alongside the note before finishing (unless another agent owns that path — then say so).
+3. **Document every finding.** Every agent task ends with a deliverable note in `research/notes/` — including negatives, dead ends, refuted inputs, and blocker reports. A negative with a script is a result; a negative with no script is a rumor. Label every claim PROVEN / CHECKED NUMERICALLY (script + command cited) / CONJECTURED / ABANDONED (reason) / INCONCLUSIVE (blocker stated).
+4. **Disagreements between agents are adjudicated with code.** When two agents' numbers disagree, both must re-derive side by side in code (as P6.5 vs the third-moment closed forms did), and the resolution — including which side was wrong and why — is written into both notes. Never leave an ambiguity standing in a deliverable.
+5. **Verification tools are first-class artifacts.** `tools/verify_enclok.py`, `tools/qi_sweep.py`, `tools/nevanlinna_check.py`, `tools/lpdual/verify_exact_cert.py` are the model: a standalone script any future agent can rerun to re-verify a headline claim. New verification scripts follow the same pattern (self-contained, parse sources directly, print verdicts).
+
 ## Method: multi-agent research protocol
 
 Each round: PLANNERS decompose the problem → EXECUTIONERS attack components → VALIDATORS (adversarial) try to break every claim → JUDGES score surviving pieces → SYNTHESIZER merges → CRITIQUE LOOP repeats until no movement. Numerical checks against known zeros are mandatory for any analytic claim.

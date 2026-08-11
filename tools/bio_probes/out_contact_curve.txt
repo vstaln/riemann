@@ -1,0 +1,17 @@
+=== B1.2 contact-order / bandwidth curve ===
+data (A, v): [(np.float64(1.04), np.float64(0.7)), (np.float64(1.26), np.float64(0.8)), (np.float64(1.7), np.float64(0.9))]
+incremental slopes: 0.4545, 0.2273  -> decreasing? True  (concave prior: yes if decreasing)
+monotone increasing: True
+
+saturating fit v = 1 - 0.3307*A^(-2.2425):
+  fit residuals: 0.003065
+  implied v(1)      = 0.6693   (two-moment bandwidth-1: 0.6725/0.6818)
+  implied v(2)      = 0.9301
+  implied v(4)      = 0.9852
+  A needed for 0.99 = 4.76
+
+log fit v = 0.4006*log(A) + 0.6930:  max res 0.014371
+  implied v(1) = 0.6930  ;  v(4) = 1.2484
+  (log model is NOT saturating -> violates the prior at large A)
+
+linear back-extrapolation of first segment to A=1: v(1) ~ 0.6818

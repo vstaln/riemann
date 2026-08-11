@@ -1,0 +1,45 @@
+int psi^2 = 0.849227999318304
+c_hs = 1.327499296320588 | bound const = 0.672500703679412 | ceiling p0 = 0.6818286874638
+
+===== 0. FIDELITY (must reproduce finitet / attack-sandbox numbers) =====
+             zeta-real T=200 | N=123 | tr/N=0.988856 | HS2/N=1.261182 | HS2_an/N=1.274002 | bound/N=+0.716530 | d_0.6725=+0.044029 d_0.6818=+0.034701 | rank=121 n+/n-=122/0 | truth s1/N=1.0000 OK
+             zeta-real T=500 | N=380 | tr/N=0.996327 | HS2/N=1.280708 | HS2_an/N=1.285953 | bound/N=+0.711945 | d_0.6725=+0.039444 d_0.6818=+0.030116 | rank=374 n+/n-=376/0 | truth s1/N=1.0000 OK
+               lattice N=122 | N=122 | tr/N=0.989875 | HS2/N=1.012061 | HS2_an/N=1.022890 | bound/N=+0.967689 | d_0.6725=+0.295188 d_0.6818=+0.285860 | rank=122 n+/n-=122/0 | truth s1/N=1.0000 OK
+               lattice N=379 | N=379 | tr/N=0.996328 | HS2/N=1.019170 | HS2_an/N=1.023028 | bound/N=+0.973487 | d_0.6725=+0.300986 d_0.6818=+0.291658 | rank=379 n+/n-=379/0 | truth s1/N=1.0000 OK
+               poisson N=122 | N=122 | tr/N=0.990201 | HS2/N=1.770034 | HS2_an/N=1.783593 | bound/N=+0.210369 | d_0.6725=-0.462131 d_0.6818=-0.471459 | rank=111 n+/n-=114/0 | truth s1/N=1.0000 OK
+               poisson N=379 | N=379 | tr/N=0.998954 | HS2/N=1.897908 | HS2_an/N=1.900045 | bound/N=+0.099999 | d_0.6725=-0.572502 d_0.6818=-0.581830 | rank=339 n+/n-=354/0 | truth s1/N=1.0000 OK
+                jitter N=122 | N=122 | tr/N=0.988973 | HS2/N=1.084617 | HS2_an/N=1.096103 | bound/N=+0.893328 | d_0.6725=+0.220827 d_0.6818=+0.211499 | rank=122 n+/n-=122/0 | truth s1/N=1.0000 OK
+                jitter N=379 | N=379 | tr/N=0.996872 | HS2/N=1.090390 | HS2_an/N=1.093417 | bound/N=+0.903354 | d_0.6725=+0.230854 d_0.6818=+0.221526 | rank=379 n+/n-=379/0 | truth s1/N=1.0000 OK
+
+===== 1. THEORY: what the certificate predicts per pair-correlation law =====
+theory: c_GUE = 1.332558551 -> cert 2-c = 0.667441
+theory: c_pois = 2.022976200 -> cert 2-c = -0.022976
+theory: c_lat  = 1.023093529 -> cert 2-c = 0.976906
+paper:  c_hs = 1.327499296320588 -> cert 0.672500703679412
+ceiling p0 = 0.6818286874638
+
+===== 2. IHARA ZEROS of Ramanujan graphs (RH PROVEN; zeros on |u|=1/sqrt q) =====
+graph K4                 d=3 V=4 | spectrum verified: YES | Ramanujan (|lambda|<=2sqrt(d-1)=2.828): max|nontriv|=1.000 YES | #angles N=3 | Ihara-RH |u|=1/sqrt q err=0.0e0
+                          K4 | N=  3 | tr/N=0.979659 | HS2/N=2.879193 | HS2_an/N=3.000000 | bound/N=-0.919876 | d_0.6725=-1.592376 d_0.6818=-1.601704 | rank=  1 n+/n-=1/0 | truth s1/N=1.0000 OK
+graph K5                 d=4 V=5 | spectrum verified: YES | Ramanujan (|lambda|<=2sqrt(d-1)=3.464): max|nontriv|=1.000 YES | #angles N=4 | Ihara-RH |u|=1/sqrt q err=5.6e-17
+                          K5 | N=  4 | tr/N=0.926725 | HS2/N=3.435274 | HS2_an/N=4.000000 | bound/N=-1.581825 | d_0.6725=-2.254326 d_0.6818=-2.263654 | rank=  1 n+/n-=1/0 | truth s1/N=1.0000 OK
+graph K8                 d=7 V=8 | spectrum verified: YES | Ramanujan (|lambda|<=2sqrt(d-1)=4.899): max|nontriv|=1.000 YES | #angles N=7 | Ihara-RH |u|=1/sqrt q err=5.6e-17
+                          K8 | N=  7 | tr/N=0.999385 | HS2/N=6.991392 | HS2_an/N=7.000000 | bound/N=-4.992622 | d_0.6725=-5.665123 d_0.6818=-5.674451 | rank=  1 n+/n-=1/0 | truth s1/N=1.0000 OK
+graph Petersen           d=3 V=10 | spectrum verified: YES | Ramanujan (|lambda|<=2sqrt(d-1)=2.828): max|nontriv|=2.000 YES | #angles N=9 | Ihara-RH |u|=1/sqrt q err=1.1e-16
+                    Petersen | N=  9 | tr/N=0.973086 | HS2/N=4.312063 | HS2_an/N=4.565254 | bound/N=-2.365890 | d_0.6725=-3.038391 d_0.6818=-3.047719 | rank=  2 n+/n-=2/0 | truth s1/N=1.0000 OK
+graph CubeQ3             d=3 V=8 | spectrum verified: YES | Ramanujan (|lambda|<=2sqrt(d-1)=2.828): max|nontriv|=1.000 YES | #angles N=6 | Ihara-RH |u|=1/sqrt q err=1.1e-16
+                      CubeQ3 | N=  6 | tr/N=0.966630 | HS2/N=2.831859 | HS2_an/N=3.050978 | bound/N=-0.898599 | d_0.6725=-1.571099 d_0.6818=-1.580427 | rank=  2 n+/n-=2/0 | truth s1/N=1.0000 OK
+graph Clebsch            d=5 V=16 | spectrum verified: YES | Ramanujan (|lambda|<=2sqrt(d-1)=4.000): max|nontriv|=3.000 YES | #angles N=15 | Ihara-RH |u|=1/sqrt q err=5.6e-17
+                     Clebsch | N= 15 | tr/N=0.982825 | HS2/N=8.086436 | HS2_an/N=8.338404 | bound/N=-6.120785 | d_0.6725=-6.793286 d_0.6818=-6.802614 | rank=  2 n+/n-=2/0 | truth s1/N=1.0000 OK
+graph Icosa              d=5 V=12 | spectrum verified: YES | Ramanujan (|lambda|<=2sqrt(d-1)=4.000): max|nontriv|=2.236 YES | #angles N=11 | Ihara-RH |u|=1/sqrt q err=5.6e-17
+                       Icosa | N= 11 | tr/N=0.974196 | HS2/N=3.720245 | HS2_an/N=3.917290 | bound/N=-1.771853 | d_0.6725=-2.444354 d_0.6818=-2.453682 | rank=  3 n+/n-=3/0 | truth s1/N=1.0000 OK
+graph Q4                 d=4 V=16 | spectrum verified: YES | Ramanujan (|lambda|<=2sqrt(d-1)=3.464): max|nontriv|=2.000 YES | #angles N=14 | Ihara-RH |u|=1/sqrt q err=5.6e-17
+                          Q4 | N= 14 | tr/N=0.993160 | HS2/N=4.833685 | HS2_an/N=4.889816 | bound/N=-2.847365 | d_0.6725=-3.519866 d_0.6818=-3.529194 | rank=  3 n+/n-=3/0 | truth s1/N=1.0000 OK
+graph Hoffman-Singleton  d=7 V=50 | spectrum verified: YES | Ramanujan (|lambda|<=2sqrt(d-1)=4.899): max|nontriv|=3.000 YES | #angles N=49 | Ihara-RH |u|=1/sqrt q err=2.8e-17
+           Hoffman-Singleton | N= 49 | tr/N=0.998673 | HS2/N=24.943889 | HS2_an/N=25.001016 | bound/N=-22.946544 | d_0.6725=-23.619045 d_0.6818=-23.628373 | rank=  2 n+/n-=2/0 | truth s1/N=1.0000 OK
+
+===== 3. RANDOM REGULAR graph (near-Ramanujan; a few zeros slightly off the circle) =====
+random 4-regular V=200 seed=7 | components=1 deg check: true | V'=199 nontriv, 199 on-circle, 0 off-circle | lambda2=3.4453 (2 sqrt q = 3.4641) | min s-sep=0.0838 pairs<0.5=57 edge-s=0 min-lambda-gap=0.002978 | s-hist: [4, 14, 23, 29, 28, 30, 28, 25, 16, 2]
+              rand d=4 V=200 | N=199 | tr/N=0.999070 | HS2/N=1.642180 | HS2_an/N=1.643786 | bound/N=+0.355959 | d_0.6725=-0.316541 d_0.6818=-0.325869 | rank=158 n+/n-=161/0 | truth s1/N=1.0000 OK
+random 5-regular V=120 seed=11 | components=1 deg check: true | V'=119 nontriv, 119 on-circle, 0 off-circle | lambda2=3.9945 (2 sqrt q = 4.0000) | min s-sep=0.0758 pairs<0.5=37 edge-s=0 min-lambda-gap=0.004883 | s-hist: [1, 7, 13, 19, 19, 19, 18, 14, 8, 1]
+              rand d=5 V=120 | N=119 | tr/N=0.998588 | HS2/N=1.675585 | HS2_an/N=1.678059 | bound/N=+0.321592 | d_0.6725=-0.350909 d_0.6818=-0.360237 | rank= 92 n+/n-=95/0 | truth s1/N=1.0000 OK

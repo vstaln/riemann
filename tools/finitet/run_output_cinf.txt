@@ -1,0 +1,79 @@
+== finitet-cinf: C^infty chi-smoothed phi_T ==
+Hermite smoothstep order k = 8 (C^8)
+HS const c = 1/2+(1/sqrt2)cot(1/sqrt2) = 1.327499296320588
+bound const = 3/2-(1/sqrt2)cot(1/sqrt2) = 0.672500703679412
+loaded 1000 zeros, gamma_max = 1419.42 (covers windows [T,2T) for T <= 600)
+sigma(0)=0.000e0 sigma(1)=0.999999999971 sigma'(0)=2.431e-44 sigma'(1)=9.212e-6
+
+-- closed-form vs Simpson (cos kernel) --
+  [closed form validated at sigma order 8]
+eps=0.10: max|Phi_cf - Phi_simpson| = 7.391e-12 (at s=4),  max|Phi2_cf - Phi2_simpson| = 2.493e-5 (at s=6)
+eps=0.50: max|Phi_cf - Phi_simpson| = 4.848e-8 (at s=4),  max|Phi2_cf - Phi2_simpson| = 6.994e-2 (at s=4)
+eps=2.00: max|Phi_cf - Phi_simpson| = 5.001e-9 (at s=1),  max|Phi2_cf - Phi2_simpson| = 6.181e23 (at s=1)
+  [closed form validated at sigma order 2]
+eps=0.10: max|Phi_cf - Phi_simpson| = 2.349e-13 (at s=0),  max|Phi2_cf - Phi2_simpson| = 1.147e-13 (at s=0)
+eps=0.50: max|Phi_cf - Phi_simpson| = 1.009e-12 (at s=4),  max|Phi2_cf - Phi2_simpson| = 3.935e-12 (at s=4)
+eps=2.00: max|Phi_cf - Phi_simpson| = 5.755e-16 (at s=1),  max|Phi2_cf - Phi2_simpson| = 2.844e-15 (at s=1)
+
+-- moments (Simpson) --
+eps=0.10 sqrtkern=false  int phi^2 = 0.779369217  int phi^4 = 0.689999052
+eps=0.10 sqrtkern=true  int phi^2 = 0.829884379  int phi^4 = 0.772355775
+eps=0.50 sqrtkern=false  int phi^2 = 0.419618468  int phi^4 = 0.361522255
+eps=0.50 sqrtkern=true  int phi^2 = 0.427105436  int phi^4 = 0.371179152
+eps=2.00 sqrtkern=false  int phi^2 = 0.000000005  int phi^4 = 0.000000000
+eps=2.00 sqrtkern=true  int phi^2 = 0.000000005  int phi^4 = 0.000000000
+
+-- Claim 2.1 (Poisson) truncation error --
+hard-cos   K=+-   50: max err = 2.457e-3
+hard-cos   K=+-  200: max err = 4.920e-4
+hard-cos   K=+- 2000: max err = 4.931e-5
+sm-cos eps=0.1             K=+-   50: max err = 9.357e-4
+sm-cos eps=0.1             K=+-  200: max err = 2.711e-9
+sm-cos eps=1.48 (T/N,T=300) K=+-   50: max err = 3.930e-19
+sm-cos eps=1.48 (T/N,T=300) K=+-  200: max err = 3.896e-20
+
+-- main: trW/N, ||W||^2_HS/N, bound/N, delta = bound/N - 0.67250070... --
+config                                     N     trW/N      HS2/N   HS2_an/N    bound/N      delta
+T=100    hard-cos (C^0 ref)                50  0.992343   1.265459   1.274689   0.719228  +0.046727
+T=100    c^inf-cos eps=T/N=2.000            50  0.987621   3.564258   3.615155  -1.589017  -2.261517
+T=100    c^inf-cos eps=0.10                50  0.995534   1.355086   1.360182   0.635983  -0.036518
+T=100    c^inf-cos eps=0.50                50  0.993811   2.137935   2.152646  -0.150314  -0.822815
+T=100    c^inf-sqrtcos eps=2.000           50  0.987723   3.545128   3.595369  -1.569682  -2.242183
+T=200    hard-cos (C^0 ref)               123  0.988856   1.261182   1.274002   0.716530  +0.044029
+T=200    c^inf-cos eps=T/N=1.626           123  0.991149   3.649905   3.680971  -1.667608  -2.340109
+T=200    c^inf-cos eps=0.10               123  0.991080   1.347975   1.357973   0.634186  -0.038315
+T=200    c^inf-cos eps=0.50               123  0.992433   2.135076   2.147464  -0.150210  -0.822711
+T=200    c^inf-sqrtcos eps=1.626          123  0.991180   3.630307   3.661044  -1.647948  -2.320449
+T=300    hard-cos (C^0 ref)               203  0.994489   1.275443   1.282785   0.713534  +0.041033
+T=300    c^inf-cos eps=T/N=1.478           203  0.995160   3.724316   3.742290  -1.733996  -2.406497
+T=300    c^inf-cos eps=0.10               203  0.995652   1.361906   1.368514   0.629397  -0.043104
+T=300    c^inf-cos eps=0.50               203  0.995770   2.153940   2.164170  -0.162400  -0.834900
+T=300    c^inf-sqrtcos eps=1.478          203  0.995176   3.704465   3.722288  -1.714113  -2.386614
+T=600    hard-cos (C^0 ref)               472  0.998163   1.287259   1.289874   0.709068  +0.036567
+T=600    c^inf-cos eps=T/N=1.271           472  0.998094   3.813672   3.821366  -1.817484  -2.489985
+T=600    c^inf-cos eps=0.10               472  0.998684   1.371298   1.373753   0.626071  -0.046430
+T=600    c^inf-cos eps=0.50               472  0.998461   2.166620   2.170804  -0.169698  -0.842198
+T=600    c^inf-sqrtcos eps=1.271          472  0.998101   3.793855   3.801489  -1.797653  -2.470153
+
+-- consistency checks (Parseval |Phi_hat|^2 ~ int phi^2; tr(W^2) vs (VV^T)^2 decomposition) --
+hard-cos T= 100: Parseval sum|Psi|^2 ds = 0.856693 vs int psi^2 = 0.849228;  trW-chk 2.4e-15
+c^inf-cos eps=0.1 T= 100: Parseval = 0.786431 vs int phi^2 = 0.779369 (rel 9.06e-3);  tr(W^2)-vs-HS2 rel err 2.7e-15
+c^inf-cos eps=T/N T= 600: Parseval = 0.000213 vs int phi^2 = 0.000213 (rel 3.67e-3);  tr(W^2)-vs-HS2 rel err 7.8e-15
+c^inf-sqrtcos eps=T/N T= 600: Parseval = 0.000215 vs int phi^2 = 0.000214 (rel 3.69e-3);  tr(W^2)-vs-HS2 rel err 9.7e-15
+
+-- window functional Q(v) = (int v^2 + 2 int_0^1 w (v*v)(w) dw)/(int v)^2  (v = phi^2) --
+Q(cos^2 1_{|u|<=1/2}) = 1.332970409   (target 1/2+(1/sqrt2)cot(1/sqrt2) = 1.327499296)
+c^inf-cos eps=0.1: Q(window) = 1.415359   (target for this window shape)
+c^inf-cos eps=0.5: Q(window) = 2.204492   (target for this window shape)
+c^inf-cos eps=T/N(T=600): Q(window) = 3.858794   (target for this window shape)
+c^inf-sqrtcos eps=T/N(T=600): Q(window) = 3.838813   (target for this window shape)
+
+-- spectral check T=600, c^inf-cos eps=T/N --
+lambda_max = 0.999978, trW/N = 0.998094, lambda_max/N = 0.002119
+(rank = N expected; power iteration only gives lambda_max; min eig not computed here)
+
+-- paper-realistic eps = T/N per T --
+T= 100  N/T = 0.5000  eps = T/N = 2.0000
+T= 200  N/T = 0.6150  eps = T/N = 1.6260
+T= 300  N/T = 0.6767  eps = T/N = 1.4778
+T= 600  N/T = 0.7867  eps = T/N = 1.2712

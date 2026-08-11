@@ -1,0 +1,5735 @@
+
+
+===== PAGE 1 =====
+
+arXiv:2412.20099v1  [math.NT]  28 Dec 2024
+THE THIRD MOMENT OF THE LOGARITHM OF ZETA AND A
+TWISTED PAIR CORRELATION CONJECTURE
+ALESSANDRO F AZZARI AND MAXIM GERSPACH
+Abstract. We prove precise conditional estimates for the third moment of the logarithm
+of the Riemann zeta function, reﬁning what is implied by the Selberg ce ntral limit theorem,
+both for the real and imaginary parts. These estimates match pre dictions made in work of
+Keating and Snaith. We require the Riemann Hypothesis, a conjectu re for the triple corre-
+lation of Riemann zeros and another “twisted” pair correlation conj ecture which explains
+the interaction of a prime power with Montgomery’s pair correlation f unction. We believe
+this to be of independent interest, and devote substantial eﬀort to its justiﬁcation. Namely,
+we prove this conjecture on a certain range unconditionally, and on a larger range under the
+assumption of a variant of the Hardy-Littlewood conjecture with g ood uniformity.
+1. Introduction
+In the seminal work of Keating and Snaith [KS00], the authors provid e a precise conjecture
+for the moments of the Riemann zeta function. More speciﬁcally, th ey predict that
+(1.1) 1
+T
+∫ 2T
+T
+⏐
+⏐ζ
+(1
+2 +it
+) ⏐
+⏐2s
+dt ∼g(s)a(s)(logT )s2
+(ℜs> − 1
+2 ).
+Here,
+a(s) =
+∏
+p
+(
+(1 − 1/p)s2∑
+m≥0
+(Γ(s +m)
+m!Γ(s)
+) 2 1
+pm
+)
+is an absolutely convergent Euler product and
+g(s) = G2(s + 1)
+G(2s + 1)
+is a ratio of Barnes G-functions. While the Euler product part was fairly well-understood
+before, the random matrix part g(s) was previously of a much more mysterious nature.
+Roughly speaking, the values of g(s) were derived as follows. Denote by U(N) the set of
+unitary N ×N matrices and by EU (N ) the expected value with respect to the probability
+Haar measure on U(N). For a unitary matrix U, write
+Z(U,θ ) := det
+(
+1 −Ue −iθ)
+Date: December 31, 2024.
+2020 Mathematics Subject Classiﬁcation. Primary 11M06; Secondary 11M26.
+1
+
+===== PAGE 2 =====
+
+2 ALESSANDRO F AZZARI AND MAXIM GERSPACH
+for the characteristic polynomial of U evaluated at e−iθ. Then they prove that we have
+(1.2) MN (s) := EU (N )[|Z(U,θ )|2s] =
+N∏
+j=1
+Γ(j)Γ(j + 2s)
+Γ(j +s)2 (ℜs> − 1
+2 ).
+In the large N limit, one can then show that
+lim
+N →∞
+N −s2
+MN (s) = g(s).
+In other words, MN (s) is well-approximated by g(s)Ns2
+, and with the translation N = log T
+2π
+this yields the random matrix part of ( 1.1).
+In the context of the logarithm of the Riemann zeta function on the critical line, a cele-
+brated result of Selberg [Sel46, Sel92] tells us the following distributio nal result. Let T be a
+(large) real parameter, and τ be a uniformly distributed random variable on [ T, 2T ]. Then
+we have convergence in law
+logζ
+(1
+2 +iτ
+)
+√log logT
+d
+→ N C(0, 1),
+a standard complex Gaussian. Selberg (see also Tsang [Tsa84]) prov ed more precisely that,
+assuming the Riemann Hypothesis (RH), for any positive integer k we have
+E
+[
+ℜ logζ
+(1
+2 +iτ
+) 2k]
+=µk
+(1
+2 log logT
+) k(
+1 +Ok
+( 1
+log logT
+))
+whereµk = (2k)!
+k!2k denotes the 2k-th Gaussian moment. Moreover, he proved a similar estimate
+for the imaginary part, and a slightly weaker estimate unconditionally .
+Based on this central limit theorem, one might be led to believe that th e real and imaginary
+parts of log ζ follow essentially the same distribution. While this is true at a leading ord er,
+Odlyzko observed numerically that this does not seem to be the case on a ﬁner level; see
+e.g. [Odl, p. 51]. A perhaps slightly lesser-known conjecture made by Keating and Snaith
+makes this observation more precise. Setting N = log T
+2π , they conjecture [KS00, (97)] that
+E
+[ (
+ℜ logζ
+(1
+2 +iτ
+) ) k]
+∼ dk
+dsk [MN (s/2)a(s/2)]
+⏐
+⏐
+⏐
+s=0
+,
+and it seems conceivable that this should hold to a higher level of prec ision. They provide
+a similar conjecture for the imaginary part (see [KS00, (98)]), whic h exhibits a diﬀerent
+behaviour. In particular, it implies that all the odd moments of ℑ logζ( 1
+2 +iτ ) are of size
+o(1).
+Specialising to the second moment, this would suggest that
+(1.3) E
+[ (
+ℜ logζ
+(1
+2 +iτ
+) ) 2]
+= 1
+2 log logT + γ + 1
+2 + 1
+2
+∑
+p prime
+∑
+m≥2
+1 −m
+m2
+1
+pm +o(1)
+
+===== PAGE 3 =====
+
+THE THIRD MOMENT OF THE LOGARITHM OF ZETA 3
+and the same estimate for the imaginary part. This was proved by Go ldston [Gol87] for the
+imaginary part assuming RH and the pair correlation conjecture (co mpare Conjecture 1.2).
+For the real part, the same estimate was obtained much more rece ntly by Lugar, Milinovich
+and Quesada-Herrera [LMQH23] under the same assumptions.
+The main objective of this work is to prove an analogous conditional e stimate for the third
+moment of the real and imaginary parts of log ζ.
+For brevity, let us denote cZ := −π2
+4 and
+cP := 3
+4
+∑
+p,m≥2
+1
+mpm
+∑
+k+ℓ=m
+1
+kℓ.
+Note that cZ = 1
+8M ′′′
+N (0) and cP = 1
+8a′′′(0). We have the following
+Theorem 1.1. Assume RH, the pair and triple correlation Conjectures 1.2 and 1.3, and the
+“twisted pair correlation ” Conjecture 1.5. Then we have
+M ℜ
+3 (T ) := 1
+T
+∫ 2T
+T
+(ℜ logζ(1/2 +it))3 dt =cP +cZ +O
+( 1
+logT
+)
+(1.4)
+and
+M ℑ
+3 (T ) := 1
+T
+∫ 2T
+T
+(ℑ logζ(1/2 +it))3 dt =O
+( 1
+logT
+)
+.(1.5)
+Before we delve deeper into the assumptions of this theorem, let us ﬁrst discuss the re-
+quirements for the second moment made in [Gol87, LMQH23]. There, t he authors require
+RH and a conjecture concerning the pair correlation of zeros of th e Riemann zeta function.
+Recall that Montgomery [Mon73] studied the pair correlation throu gh the function
+(1.6) F (α) :=
+(T logT
+2π
+) −1 ∑
+T<γ,γ ′≤2T
+Tiα(γ−γ′)ω(γ −γ′),
+where α ∈ R and
+ω(x) = 4
+4 +x2.
+The function F is essentially the Fourier transform of the distribution function of γ −γ′.
+Namely, for a wide class of functions r, the deﬁnition ( 1.6) immediately implies that
+(1.7)
+∑
+T<γ,γ ′≤2T
+r
+(
+(γ −γ′) logT
+2π
+)
+ω(γ −γ′) = T logT
+2π
+∫
+R
+F (α)ˆr(α)dα,
+where we use the convention
+ˆr(α) =
+∫
+R
+r(t)e−2πiαtdt.
+Montgomery proved that
+F (α) = (1 + o(1))T −2|α| logT + |α| +o(1)
+
+===== PAGE 4 =====
+
+4 ALESSANDRO F AZZARI AND MAXIM GERSPACH
+for |α|< 1 −ε. He moreover conjectured that one should more generally have
+F (α) = (1 + o(1))T −2|α| logT + min{|α|, 1} +o(1)
+uniformly for α in bounded intervals. Through Fourier transform, this suggests, writing
+˜γ = logT
+2π γ, that one should have
+Conjecture 1.2 (Pair Correlation Conjecture, Montgomery). For any continuous, integrable
+function r such that ˆr is Lipschitz continuous and integrable, we have
+(T logT
+2π
+) −1 ∑
+T ≤γ,γ ′≤2T
+r(˜γ − ˜γ′) =
+∫
+R
+ˆr(a)
+(
+δ(a) + min{|a|, 1}
+)
+da +O
+( 1
+logT
+)
+.
+We note that the size 1
+logT of the error term makes crucial use of the Lipschitz continuity
+of ˆr, as discussed e.g. in the introduction of Hejhal [Hej94]. Assuming t his conjecture, the
+error term in the estimate ( 1.3) of Goldston [Gol87], and the analogous one of [LMQH23]
+for the real part, could be improved to 1
+logT .
+Vast generalisations of this conjecture have since been derived fo r the n-point correla-
+tions of the zeros, coming from the n-point correlations of eigenvalues of the characteristic
+polynomial of a random unitary matrix. We refer the reader to the s eminal work of Rud-
+nick and Sarnak [RS96] for a detailed discussion of this. In there, th e authors prove the
+n-point correlations under certain support assumptions on the Fou rier transform of the
+function one integrates against. This bears similarity to the fact th at Montgomery managed
+to prove the estimate for F (α) in the range |α| < 1 −ε. In order to do so, they need in
+particular to compute the Fourier transform of the n-dimensional sine kernel determinant,
+compare [RS96, Theorem 4.1]. For n = 3, this was previously worked out explicitly by
+Hejhal [Hej94, (11)]. His work suggests that one should have
+Conjecture 1.3 (Triple Correlation Conjecture, Hejhal) . For any continuous, integrable
+function r such that ˆr is Lipschitz continuous and integrable, we have
+(T logT
+2π
+) −1 ∑
+T ≤γ,γ ′,γ′′≤2T
+r(˜γ − ˜γ′, ˜γ − ˜γ′′) =
+∫
+R
+∫
+R
+ˆr(a,b )H(a,b )dadb +O
+( 1
+logT
+)
+,
+where
+H(a,b ) = Hδ(a,b ) +H∗(a,b ),
+with
+Hδ(a,b ) := δ(a)δ(b) +δ(a) min{|b|, 1} +δ(b) min{|a|, 1} +δ(a +b) min{|a|, 1}
+H∗(a,b ) := 2G(a,b ) + min{|a|, 1} + min{|b|, 1} + min{|a +b|, 1} − 2,(1.8)
+and
+G(a,b ) = max
+{ 1
+2 (2 − |a| − |b| − |a +b|), 0
+}
+.
+
+===== PAGE 5 =====
+
+THE THIRD MOMENT OF THE LOGARITHM OF ZETA 5
+For our purposes, it appears to be insuﬃcient to require only this co njecture (and RH) in
+order to deduce Theorem 1.1. The reason for this is the fact that we need to understand the
+following modiﬁcation to Montgomery’s pair correlation, which we refe r to as the “twisted”
+pair correlation function.
+Let n be a prime power. For α ∈ R, we deﬁne
+(1.9) Fn(α) := −
+(T
+2π
+Λ(n)√n
+) −1 ∑
+T ≤γ,γ ′≤2T
+niγTiα(γ−γ′)ω(γ −γ′).
+Note that Fn(α) = Fn(−α − logn
+logT ). A priori, it may not be obvious that the normalisation
+we have chosen turns out to be reasonable. One of the main eﬀorts of the present work is
+to reason that this is indeed the case, and attempt to evaluate the functionsFn. As another
+reference point for understanding this function, we would like to po int to Landau’s formula
+in the version of Gonek [Gon85] for sums of niγ, see Lemma 2.2.
+In order to state more precisely what we believe to be the correct e stimate for Fn(α), let
+us ﬁrst introduce the following notation:
+r1(α,n ) := 1
+Λ(n)
+∑
+m
+Λ(mn)Λ(m)
+m min
+{ m
+Tα,Tα
+m
+} 2
+r2(α,n ) := 1
+Λ(n)
+∑
+m
+Λ(m)Λ(n/m) min
+{ nTα
+m , m
+nTα
+} 2
+.
+Conjecture 1.4 (Strong Twisted Pair Correlation Conjecture) . Fix ε > 0. Uniformly for
+all prime powers n ≤T 1−ε, we have
+Fn(α) =
+
+
+
+
+
+T 2α(logT +O(1)) + logT +O(1)
+(nT α )2 −r2(α,n ) +O( 1
+logT ) α ∈ [− logn
+logT, 0]
+T −2α(logT + logT
+n2 +O(1)) −r1(α,n ) +O( 1
+logT ) α ∈ (0, 1 − logn
+logT )
+min{1, logT
+Λ(n) (α − 1 + logn
+logT )} +O( 1
+logT ) α ∈ [1 − logn
+logT, ∞)
+At ﬁrst glance, this may seem overwhelming. Firstly, we would like to po int out that,
+similar to the pair correlation setting, the summand T −2|α| logT only matters near α = 0 and
+essentially acts like a δ-distribution when integrating Fn against another function. Similarly
+the second term, which can be written as T −2|α+ log n
+log T | logT , acts as a δ-distribution at − logn
+logT .
+Next, the summands r1 and r2 are small at most points, and the reader may choose to
+ignore them at ﬁrst reading. They only produce spikes near integer multiples of Λ(n)
+logT , whose
+sizes are negligible as soon as Λ( n) is moderately large. Moreover, these spikes are small
+enough that they do not contribute when integrating Fn against a suﬃciently nice function.
+To elaborate on that, for n =qa prime power, let us denote
+En = En(T ) = (a − 1) logq
+logT + 1
+logT.
+
+===== PAGE 6 =====
+
+6 ALESSANDRO F AZZARI AND MAXIM GERSPACH
+The above will appear as an error term in the following. Note that the ﬁrst term in the
+deﬁnition of En vanishes when n is a prime.
+Additionally, let us denote by C(R) the set of functions r ∈ L1(R) that are continuous,
+and such that its Fourier transform ˆr is integrable, Lipschitz continuous, and ˆr′(a) ≪ |a|−3.
+Then we believe that the following should hold.
+Conjecture 1.5 (Twisted Pair Correlation Conjecture) . Fix ε >0 and let r ∈ C(R). Uni-
+formly for all prime powers n =qa ≤T 1−ε, we have
+−
+(T
+2π
+Λ(n)√n
+) −1 ∑
+T ≤γ,γ ′,2T
+niγr(˜γ − ˜γ′) =
+∫
+R
+ˆr(α) + ˆr(−α − logn
+logT )
+2
+(
+δ(α) +mn(α)
+)
+dα +O(En),
+where
+mn(α) =
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1, if α< −1 − Λ(n)
+logT,
+logT
+Λ(n) (−α − 1), if − 1 − Λ(n)
+logT ≤α< −1,
+0, if − 1 ≤α< 1 − logn
+logT,
+logT
+Λ(n) (α − 1 + logn
+logT ), if 1 − logn
+logT ≤α< 1 − logn−Λ(n)
+logT ,
+1, if α ≥ 1 − logn−Λ(n)
+logT .
+Note that one has mn(α) = mn(−α − logn
+logT ). Moreover, we would like to point out that if
+n is a prime then we have
+Λ(n)
+logTmn(α) = H∗
+(
+α, Λ(n)
+logT
+)
+.
+It would be very interesting to understand this identity beyond the fact that it is what is
+needed in order for the contribution related to the twisted pair cor relation to cancel with
+the triple correlation contribution in the expected way.
+Unsurprisingly, Conjecture 1.5 follows from Conjecture 1.4 by convolving with a suitable
+kernel, as in the classical case of Montgomery’s pair correlation. In fact, one can show that
+−1 − Λ(n)
+logT
+-1 1 − logn
+logT 1 − logn−Λ(n)
+logT
+0
+1
+Figure 1. The function mn(α)
+
+===== PAGE 7 =====
+
+THE THIRD MOMENT OF THE LOGARITHM OF ZETA 7
+Proposition 1.6. Conjecture 1.4 implies Conjecture 1.5.
+In support of Conjecture 1.4, we prove it in restricted ranges for α. DeﬁningδT := 10 log logT
+logT ,
+we ﬁrst obtain an analogue of Montgomery’s formula for F (α) corresponding to |α|< 1 −δT .
+Namely, for small values of α, we prove the asymptotic formulae of Conjecture 1.4 assuming
+RH only.
+Proposition 1.7. Assume RH. Fix ε > 0 and let n = qa ≤ T 1−ε be a prime power. For
+0<α< 1 − logn
+logT −δT , we have
+Fn(α) = T −2α
+(
+logT + logT
+n2 +O(1)
+)
+−r1(α,n ) +O
+( 1
+logT
+)
+.
+Moreover, for − logn
+logT ≤α ≤ 0, we have
+Fn(α) = T 2α(logT +O(1)) + logT +O(1)
+(nTα)2 −r2(α,n ) +O
+( 1
+logT
+)
+.
+Due to the symmetry of Fn(α) discussed above, Theorem 1.7 provides an asymptotic
+formula for Fn(α) when −1 +δT <α< 1 − logn
+logT −δT .
+For biggerα, we prove Conjecture 1.4 conditionally on the following version of the Hardy-
+Littlewood conjecture.
+Set
+S := 2
+∏
+p>2
+(
+1 − 1
+(p − 1)2
+)
+and for any integer h ⁄= 0, let
+S(h) :=
+
+
+
+0, if h is odd,
+S∏
+p |h
+p>2
+p−1
+p−2, if h is even.
+This function is often referred to as the singular series. Let us fur ther deﬁne
+Sn(h) := δ((n,h ) = 1) S(nh).
+Conjecture 1.8 (A uniform version of Hardy-Littlewood) . For any ε> 0,
+∑
+m≤x
+Λ
+(m
+n
+)
+Λ(m ±h) = Sn(h)
+n x +Oε(x1/2+ε)
+uniformly for 1 ≤h,n ≤x1−ε.
+We recall that, in the classical case, Montgomery [Mon73] suggest ed that assuming the
+Hardy-Littlewood conjecture one should be able to prove that F (α) ∼ 1 for 1 ≤α ≤ 2 −δ.
+This was carried out by Bolanz [Bol87] for 1 ≤α ≤ 3
+2 −δ, and by Goldston and Gonek [GG98,
+Example 4] in the full range 1 ≤ α ≤ 2 −δ. In the following, we seek for an analogue of
+
+===== PAGE 8 =====
+
+8 ALESSANDRO F AZZARI AND MAXIM GERSPACH
+these results for the twisted pair correlation function Fn(α). Roughly speaking, we consider
+the range 1 − logn
+logT ≤α ≤ 2 −C logn
+logT for some positive constant C, and we assume Conjecture
+1.8. We show that Conjecture 1.4 holds for a smoothing of Fn(α). Namely, we deﬁne
+(1.10) ωψU (γ,γ ′) = 2
+π
+∫
+R
+1
+1 + (t −γ)2
+1
+1 + (t −γ′)2ψU
+(t
+T
+)
+dt.
+Here, U is a real parameter of size (log T )B for some B > 0, and ψU (t) is a real-valued
+weight function such that: ψU is supported on [1 , 2], ψU (t) = 1 if 1 + U −1 ≤ t ≤ 2 −U −1,
+and ψ(j)
+U (t) ≪Uj for all j ∈ N. In these notations, we deﬁne
+Fn(α;ψU ) := −
+(T
+2π
+Λ(n)√n
+) −1 ∑
+T ≤γ,γ ′≤2T
+niγTiα(γ−γ′)ωψU (γ,γ ′).
+The eﬀect of the factor ψU is that of smoothing the range of summation for the zeros γ
+and γ′, see e.g. Lemma 9.1. In practice, this boils down to computing smoothed moments
+of long Dirichlet polynomials. In the setting of [GG98, Example 4], it is str aightforward to
+pass between the smooth and the sharp cut-oﬀ. In our setup for the twisted pair correlation,
+the transition from Fn(α) to Fn(α;ψU ) seems to incur an extra factor of size √n in the error
+term. This appears to cause trouble as soon as n is moderately large.
+Theorem 1.9. Assume RH and Conjecture 1.8. Uniformly for all prime powers n and
+uniformly for α such that
+(1.11) 1 − logn
+logT ≤α ≤ 2 − 48 logn
+logT,
+we have
+Fn(α;ψU ) = min
+{
+1, logT
+Λ(n)
+(
+α − 1 + logn
+logT
+)}
++O
+(log logT
+Λ(n)
+)
+.
+We remark that the constant 48 appearing in Equation ( 1.11) is not particularly mean-
+ingful; we refer the reader to Remark 9.5 for further details.
+The paper is structured as follows. Section 2 records various preliminary results. In Sections
+3-6, we prove Theorem 1.1 assuming the conjectures about the correlation of zeros. Finally,
+Proposition 1.6, Theorem 1.7, and Theorem 1.9 are proven in Sections 7, 8, and 9 respectively.
+Acknowledgments. The authors would like to thank S. Bettin, W. Heap, and J. Keat-
+ing for several inspiring conversations. This material is based upon work supported by the
+Swedish Research Council under grant no. 2021-06594 while the au thors were at the Insti-
+tut Mittag-Leﬄer during the spring semester of 2024. The ﬁrst au thor is a member of the
+INdAM group GNAMPA and is supported by the Fonds de recherche d u Qu´ ebec - Nature
+et technologies, Projet de recherche en ´ equipe 300951. The sec ond author was supported by
+the Swiss National Science Foundation (SNSF) grant no. P400P2 199303. He would like to
+thank KTH and the University of Oxford for hosting him while this work was created.
+
+===== PAGE 9 =====
+
+THE THIRD MOMENT OF THE LOGARITHM OF ZETA 9
+2. Preliminary estimates
+2.1. Elementary bounds.
+Lemma 2.1. For ﬁxed k ∈ N0, we have
+(2.1) 1
+T
+∫ 2T
+T
+cos(ρt)
+(
+log t
+2π
+) k
+dt =
+{
+(logT )k +O
+(
+(logT )k−1)
+, if ρ = 0,
+O
+(
+(logT )k
+|ρ|T
+)
+, if ρ ⁄= 0.
+Proof. Integration by parts. □
+2.2. Estimates involving zeros of the Riemann zeta function. We will make use of
+the following version of Landau’s formula due to Gonek [Gon85].
+Lemma 2.2 (Landau-Gonek). Assume RH and let 2 ≤ x ≤ T . Uniformly for all integers
+b<a ≤x, we have
+(2.2) 1
+T
+∑
+T<γ ≤2T
+(a
+b
+) iγ
+= −Λ(a/b)
+2π
+√
+b
+a +O
+(x(logT )2
+T
+)
+.
+Proof. This is an immediate application of [Gon85, Theorem 1], with the adaptat ion of the
+Theorem from 0 < γ ≤ T to T < γ ≤ 2T going through without diﬃculty. Denoting, as
+there, by ⟨a
+b ⟩ the distance of a
+b to the nearest prime power other than a
+b , note that
+a
+b⟨a
+b ⟩ ≤a ≤x.
+Moreover, one has
+1
+log a
+b
+≫ 1
+x.
+This gives the claim. □
+We will often make use of the following technical Lemma.
+Lemma 2.3. Let φ : R → R ∪ {∞} be a function such that φ(v) ≪ v−2 for |v| > 1, and
+φ ∈ Lp(R) for all 1 ≤ p <∞. Uniformly for all functions b : R → C such that |b(x)| ≤ 1,
+denoting L := logT , we have
+∫ 2T
+T
+b(t)
+∑
+γ
+φ((t −γ) logx)dt =
+∫
+R
+b(t)
+∑
+T ≤γ≤2T
+φ((t −γ) logx)dt +O(
+√
+TL ) (a)
+∫ 2T
+T
+b(t)
+(∑
+γ
+φ((t −γ) logx)
+) 2
+dt =
+∫
+R
+b(t)
+( ∑
+T ≤γ≤2T
+φ((γ −t) logx)
+) 2
+dt +O(
+√
+TL 2) (b)
+∫ 2T
+T
+(∑
+γ
+φ((t −γ) logx)
+) 3
+dt =
+∫
+R
+( ∑
+T ≤γ≤2T
+φ((γ −t) logx)
+) 3
+dt +O(
+√
+TL 3).(c)
+
+===== PAGE 10 =====
+
+10 ALESSANDRO F AZZARI AND MAXIM GERSPACH
+In most of our applications, we will arrive at expressions of the shap e on the left-hand
+side. Restricting the range of summation of zeros and extending th e range of integration then
+allows us to interpret the result as a Fourier transform, especially if we think of the function
+b as a phase.
+One could certainly generalise the Lemma to any number of zeros with out much trouble.
+Proof. This is a natural generalization of [LMQH23, Lemma 3.2.1]. We only prov e (c), as the
+other two can be proven in the same way with easier calculations, and the presence of the
+1-bounded function b does not change the argument. First we show how to truncate the sums
+over zeros to the range [ T, 2T ], then we will extend the range of integration. For starters, we
+write
+(∑
+γ
+φ((γ −t) logx)
+) 3
+=
+( ∑
+T ≤γ≤2T
+φ((γ −t) logx)
+) 3
++O
+((∑
+γ
+φ((γ −t) logx)
+) 2 ∑
+γ′′⁄∈[T,2T ]
+φ((γ′′ −t) logx)
+)
+.
+(2.3)
+Since φ is such that φ(v) ≪ v−2 for |v| > 1, we have that (see [LMQH23, Equations (3.6)
+and (3.7)]), for t ⁄=γ
+(2.4)
+∑
+γ
+φ((γ −t) logx) =
+∑
+|γ−t|≤ 1
+log x
+φ((γ −t) logx) +O(log(|t| + 2)) =: A +B,
+and
+(2.5)
+∑
+γ⁄∈[T,2T ]
+φ((γ −t) logx) =
+∑
+γ∈I
+φ((γ −t) logx) +O
+( logT
+2T −t + 1 + logT
+t −T + 1
+)
+:=C +D,
+where I := {γ : 2T ≤γ ≤ 2T + 1
+logx or T − 1
+logx ≤γ ≤T }. Integrating over t both sides of
+(2.3), by ( 2.4), ( 2.5), and the Cauchy-Schwarz inequality, we get
+∫ 2T
+T
+(∑
+γ
+φ((γ −t) logx)
+) 3
+dt =
+∫ 2T
+T
+( ∑
+T ≤γ≤2T
+φ((γ −t) logx)
+) 3
+dt
++O(EA2C) +O(EA2D) +O(EB2C) +O(EB2D).
+(2.6)
+
+===== PAGE 11 =====
+
+THE THIRD MOMENT OF THE LOGARITHM OF ZETA 11
+with
+EB2D ≪
+∫ 2T
+T
+(logt)2
+( logT
+2T −t + 1 + logT
+t −T + 1
+)
+dt ≪ (logT )4,
+EB2C ≪
+∫ 2T
+T
+(logt)2
+∑
+γ∈I
+|φ((γ −t) logx)|dt ≪ (logT )2
+∑
+γ∈I
+∫
+R
+|φ(y)| dy
+logx ≪ (logT )3
+logx ,
+EA2D ≪
+∫ 2T
+T
+( ∑
+|γ−t|≤ 1
+log x
+|φ((γ −t) logx)|
+) 2( logT
+2T −t + 1 + logT
+t −T + 1
+)
+dt =:S1 +S2 +S3,
+EA2C ≪
+∫ 2T
+T
+( ∑
+|γ−t|≤ 1
+log x
+|φ((γ −t) logx)|
+) 2∑
+γ′′∈I
+|φ((γ′′ −t) logx)|dt =:R1 +R2 +R3.
+Here S1,S 2 and S3 are deﬁned by splitting the range of integration in the intervals ( T +√
+T, 2T −
+√
+T ), (2T −
+√
+T, 2T ), (T,T +
+√
+T ) respectively, and R1,R 2,R 3 by splitting the
+integral in the ranges ( T + 1, 2T − 1), (2T − 1, 2T ), and (T,T + 1) respectively. Let’s bound
+all these contributions:
+S1 =
+∫ 2T −
+√
+T
+T +
+√
+T
+( ∑
+|γ−t|≤ 1
+log x
+|φ((γ −t) logx)|
+) 2( logT
+2T −t + 1 + logT
+t −T + 1
+)
+dt
+≪ logT√
+T
+∫ 2T −
+√
+T
+T +
+√
+T
+( ∑
+|γ−t|≤ 1
+log x
+|φ((γ −t) logx)|
+) 2
+dt ≪ logT√
+T
+∑∑
+T
+2 ≤γ,γ ′≤ 5T
+2 :
+|γ−γ′|≤1
+1 ≪
+√
+T (logT )3
+since φ ∈L2(R) and ∑
+|γ−v|≤1 1 ≪ log(|v| + 2). Similarly,
+S2 =
+∫ 2T
+2T −
+√
+T
+( ∑
+|γ−t|≤ 1
+log x
+|φ((γ −t) logx)|
+) 2( logT
+2T −t + 1 + logT
+t −T + 1
+)
+dt
+≪ logT
+∑∑
+2T −
+√
+T −1≤γ,γ ′≤2T +1
+|γ−γ′|≤1
+1 ≪ (logT )2
+∑
+2T −
+√
+T −1≤γ≤2T +1
+1 ≪
+√
+T (logT )3
+and
+S3 =
+∫ T +
+√
+T
+T
+( ∑
+|γ−t|≤ 1
+log x
+|φ((γ −t) logx)|
+) 2( logT
+2T −t + 1 + logT
+t −T + 1
+)
+dt ≪
+√
+T (logT )3.
+Therefore,
+(2.7) EA2D ≪
+√
+T (logT )3.
+
+===== PAGE 12 =====
+
+12 ALESSANDRO F AZZARI AND MAXIM GERSPACH
+Finally, we need to bound EA2C, i.e. R1,R 2 and R3. For t ∈ (T + 1, 2T − 1) and γ′′ ∈
+(2T, 2T + 1
+logx ), we have φ((γ′′ −t) logx) ≪ 1
+2T −t+1 . A similar consideration for the case
+γ′′ ∈ (T − 1
+logx,T ) leads to
+R1 =
+∫ 2T −1
+T +1
+( ∑
+|γ−t|≤ 1
+log x
+|φ((γ −t) logx)|
+) 2∑
+γ′′∈I
+|φ((γ′′ −t) logx)|dt ≪ EA2D ≪
+√
+T (logT )3
+by ( 2.7). We now turn to R2:
+R2 =
+∫ 2T
+2T −1
+( ∑
+|γ−t|≤ 1
+log x
+|φ((γ −t) logx)|
+) 2 ∑
+2T ≤γ′′≤2T + 1
+log x
+|φ((γ′′ −t) logx)|dt +O
+((logT )3
+T 2
+)
+since the contribution from the case T − 1
+logx ≤γ′′ ≤T is ≪ (logT )3/T 2. Then the above is
+bounded by
+≪
+∑∑∑
+2T −2≤γ,γ ′,γ′′≤2T +1
+∫ 2T
+2T −1
+|φ((γ −t) logx)||φ((γ′ −t) logx)||φ((γ′′ −t) logx)|dt ≪ (logT )3
+since φ ∈L3(R). The same argument gives R3 ≪ (logT )3 and therefore
+EA2C ≪
+√
+T (logT )3.
+All these considerations show that the error terms in ( 2.6) are ≪
+√
+T (logT )3.
+To extend the range of integration on the left hand-side of Equatio n ( 2.6), it suﬃces to
+bound the integral over (2T, +∞); the other range ( −∞,T ) is analogous. If t> 2T + 1, then∑
+T ≤γ≤2T |φ((γ −t) logx)| ≪ logT/ (t − 2T + 1) and therefore
+∫ +∞
+2T +1
+( ∑
+T ≤γ≤2T
+h((γ −t) logx)
+) 3
+dt ≪ (logT )3.
+For 2T ≤t ≤ 2T + 1, applying ( 2.4) we get
+∫ 2T +1
+2T
+( ∑
+T ≤γ≤2T
+φ((γ −t) logx)
+) 3
+dt ≪
+∫ 2T +1
+2T
+( ∑
+|γ−t|≤ 1
+log x
+|φ((γ −t) logx)|
+) 3
+dt + (logT )3
+≪
+∑∑∑
+2T −1≤γ,γ ′,γ′′≤2T +2
+∫ 2T +1
+2T
+|φ((γ −t) logx)||φ((γ′ −t) logx)||φ((γ′′ −t) logx)|dt + (logT )3
+that is ≪ (logT )3 since φ ∈L3(R). □
+
+===== PAGE 13 =====
+
+THE THIRD MOMENT OF THE LOGARITHM OF ZETA 13
+2.3. Approximation of the third moment in terms of sums of primes a nd zeros.
+We borrow from [LMQH23] the following auxiliary functions:
+f (u) := u
+∫ ∞
+0
+sinh(y(1 −u))
+coshy dy, for u ∈ (0, 2)
+g(u) :=
+∫ ∞
+0
+e−y cosh(uy)
+coshy dy, for u ∈ (−2, 2)
+h(u) := cos u
+∫ ∞
+0
+y
+coshy
+dy
+y2 +u2, for u ∈ R \ {0}.
+(2.8)
+The main properties of f,g,h are summarized in [LMQH23, Lemma 2.1.1]. In particular, we
+recall that g and h are even functions such that
+(2.9) g(u) = 1 −f (u)
+u and ˆh(a) =
+{
+πg(2πa) if |a| ≤ 1
+2π
+1
+2|a| if |a|> 1
+2π.
+Proposition 2.4. Deﬁne
+P (t) :=
+∑
+n≤x
+Λ(n) cos(t logn)√n logn f
+(logn
+logx
+)
+and
+Z(t) := −
+∑
+γ
+h((γ −t) logx) +
+ˆh(0) log t
+2π
+2π logx .
+Assuming RH, for any 2 ≤x ≤T we have
+M ℜ
+3 (T ) = 1
+T
+∫ 2T
+T
+(ℜ logζ(1/2 +it))3 dt = 1
+T
+∫ 2T
+T
+(P (t) +Z(t))3dt +O
+(√x log logT
+T log2x
+)
+.
+Proof. By [LMQH23, Lemma 2.2.1], assuming RH we have
+ℜ logζ(1/2 +it) = P (t) +Z(t) +O
+( √x
+t log2x
+)
+.
+Hence, we obtain (bringing the O factor to the left-hand side and expanding) that
+M ℜ
+3 (T ) = 1
+T
+∫ 2T
+T
+(P (t) +Z(t))3dt +O
+( √x
+T 2 log2x
+∫ 2T
+T
+(ℜ logζ(1/2 +it))2dt
+)
++O
+( x
+T 3 log4x
+∫ 2T
+T
+|ℜ logζ(1/2 +it)| dt
+)
++O
+( x3/2
+T 3 log6x
+)
+.
+(2.10)
+Next, by the Selberg Central Limit Theorem [Sel46, Sel92], we have
+∫ 2T
+T
+(ℜ logζ(1/2 +it))2dt ≪T log logT,
+
+===== PAGE 14 =====
+
+14 ALESSANDRO F AZZARI AND MAXIM GERSPACH
+which also implies, using Cauchy-Schwarz inequality, that
+∫ 2T
+T
+|ℜ logζ(1/2 +it)| dt ≪T (log logT )1/2.
+The claim follows upon plugging these bounds into (
+2.10) and noting that 2 ≤x ≤T . □
+Similarly, one can approximate the imaginary part of log-zeta. The au xiliary functions are:
+f(u) := π
+2 cot
+(π
+2u
+)
+, for u ∈ (0, 2)
+h(u) := sin u
+∫ ∞
+0
+y
+sinhy
+dy
+y2 +u2, for u ∈ R \ {0}.
+(2.11)
+We note that f is an even function such that f(u) = 1 + O(u2) as u → 0, and h is an odd
+function.
+Proposition 2.5. Deﬁne
+P(t) := −
+∑
+n≤x
+Λ(n) sin(t logn)
+√n logn f
+(logn
+logx
+)
+and
+Z(t) :=
+∑
+γ
+h((t −γ) logx).
+Assuming RH, for any 2 ≤x ≤T we have
+M ℑ
+3 (T ) = 1
+T
+∫ 2T
+T
+(ℑ logζ(1/2 +it))3 dt = 1
+T
+∫ 2T
+T
+(P(t) + Z(t))3dt +O
+(√x log logT
+T log2x
+)
+.
+Proof. Assume RH and let 2 ≤ x ≤ T . Work of Goldston (see [Gol87], Equation (2.9) and
+(2.12)) implies
+ℑ logζ(1/2 +it) = πS(t) = P(t) + Z(t) +O
+( √x
+t log2x
+)
+.
+The claim follows from the same argument as in the last proof, by an ap plication of Selberg’s
+central limit theorem. □
+2.4. Estimates for singular series averages. We will later require estimates for averages
+of the singular series Sn, which we collect below. None of these estimates are particularly
+novel, and most of them are not stated in the strongest possible wa y.
+For simplicity we will assume in the proofs throughout this section tha t n = qa is the
+power of an odd prime q >2. The case q = 2 can be obtained with little modiﬁcation.
+
+===== PAGE 15 =====
+
+THE THIRD MOMENT OF THE LOGARITHM OF ZETA 15
+Lemma 2.6. Assume RH. For any 0<ε< 1
+2, we have
+(2.12) Sn(y) :=
+∑
+h≤y
+(y −h)Sn(h) =
+
+
+
+
+
+y2
+2 − logy
+2 y +Ay +O
+(
+y2
+q
+)
++Oε
+(
+y1/2+ε)
+, if y <q,
+y2
+2 − Λ(n)
+2 y +O
+(
+y
+(
+q
+y
+) 1/2−ε)
+, if y ≥q,
+where
+A = 1 −γ − log 2π
+2 .
+Proof. Forq > y, we have ( h,n ) = 1 for all h ≤ y and hence Sn(h) = q−1
+q−2S(h). The claim
+then follows immediately from [FG95, Proposition 2], which states that
+∑
+h≤y
+(y −h)S(h) = y2
+2 − logy
+2 y +O(y1/2+ε).
+So suppose now that q ≤ y. The claim is a consequence of fairly standard contour inte-
+gration arguments, and as such, we will conﬁne ourselves to a sket ch of proof following the
+lines of [GS20, GS21, Rod13].
+Note that we may as well restrict to the case when n =q is a prime, since all the quantities
+involved depend only on q.
+For ℜs> 1, let
+(2.13) Fn(s) :=
+∑
+h≥1
+Sn(h)
+hs
+be the Dirichlet series associated to Sn. Then we have [Rod13, (6.5)]
+(2.14) Fn(s) =
+(
+1 − 1
+2s+1
+)
+SAq(s)ζ(s)ζ(s + 1)G(s)
+with
+(2.15) G(s) :=
+∏
+p>2
+(
+1 + 2
+(p − 2)ps+1 − 1
+(p − 2)p2s+1
+)
+and
+(2.16) Aq(s) :=
+(
+1 − 1
+q − 1 + 1
+qs − 1
+) −1
+.
+This provides a meromorphic continuation of Fn to ℜs> − 1
+2 . Note that since we are assuming
+the Riemann Hypothesis, one could continue meromorphically to ℜs >− 3
+4 (by pulling out
+ζ(2s + 2) −1 essentially), but this is not necessary for our purposes and would c ause small
+complications later.
+
+===== PAGE 16 =====
+
+16 ALESSANDRO F AZZARI AND MAXIM GERSPACH
+Perron’s formula for the Ces` aro mean gives
+(2.17) Sn(y) = 1
+2πi
+∫
+(2)
+Fn(s)ys+1 ds
+s(s + 1) =: 1
+2πi
+∫
+(2)
+˜Fn(s)ds.
+One veriﬁes that the only poles of ˜Fn in the region ℜs >− 1
+2 are simple poles located at
+s = 1 and s = 0. At s = 0, this is because the double pole coming from ζ(s+1)
+s is compensated
+by a simple zero of the factor Aq(s). Consequently it is somewhat diﬀerent from the situation
+in [GS21] where Aq(s) is not present, resulting in a double pole at s = 0 that ultimately
+gives an additional term of order y logy.
+Next, note that
+(2.18) Res s=1 ˜Fn(s) = y2
+2
+and
+(2.19) Res s=0 ˜Fn(s) = −Λ(n)
+2 y.
+Cutting oﬀ the integral in ( 2.17) at height T for some large parameter T , we obtain
+(2.20) Sn(y) = 1
+2πi
+∫ 2+iT
+2−iT
+˜Fn(s)ds +O
+(y3
+T
+)
+since Fn(2 +it) ≪ 1 uniformly in n and t.
+Now we want to shift the contour to ℜs = σε := − 1
+2 +ε. Using the residue theorem, we
+deduce
+(2.21) Sn(y) = y2
+2 − Λ(n)
+2 y + 1
+2πi
+(∫ σε −iT
+2−iT
++
+∫ σε +iT
+σε −iT
++
+∫ 2+iT
+σε +iT
++
+)
+˜Fn(s)ds +O
+(y3
+T
+)
+.
+In order to bound these three integrals, recall (see e.g. [Tit87, (5 .1.6)]) that under RH we
+haveζ(σ +it) ≪ (|t| + 1)µ(σ)+ε/4 with
+(2.22) µ(σ) =
+{
+1
+2 −σ, if σ ≤ 1
+2,
+0, if σ >1
+2
+as long as (say) |σ +it − 1| ≥ 1. Moreover, one veriﬁes that
+(2.23) Aq(σ +it) ≪
+{
+1, if σ ≥ 0,
+q−σ, if σ <0
+and that
+G(σ +it) ≍ 1
+uniformly for σ ≥σε.
+
+===== PAGE 17 =====
+
+THE THIRD MOMENT OF THE LOGARITHM OF ZETA 17
+For the horizontal parts, we can simply bound
+(2.24) ˜Fn(σ ±iT ) ≪ y3√q
+T
+uniformly for σε ≤σ ≤ 2. On the vertical parts, we need to be slightly more precise, namely
+we estimate
+(2.25) ˜Fn(σε +it) ≪ε
+y1+σε
+(|t| + 1)2 (|t| + 1)1−ε+2ε/4q−σε =y
+(q
+y
+) 1/2−ε
+(|t| + 1)−1−ε/2.
+Plugging these bounds into ( 2.21) and integrating, we arrive at
+(2.26) Sn(y) = y2
+2 − Λ(n)
+2 y +O
+(
+y
+(q
+y
+) 1/2−ε)
++O
+(y3√q
+T
+)
+.
+Taking say T =y3√q gives the claim. □
+We will also make use of the following auxiliary functions. Roughly followin g notation
+of [Cha04], for α ≥ 0, set
+(2.27) Sα,n(y) :=
+∑
+h≤y
+Sn(h)hα − yα+1
+α + 1.
+Moreover, for α> 1 deﬁne
+(2.28) Tα,n(y) :=
+∑
+h>y
+Sn(h)
+hα − 1
+(α − 1)yα−1.
+Lemma 2.7. Uniformly in y and n, we have
+(2.29) S0,n(y) = −min{Λ(n), logy}
+2 +O((logy)2/3).
+In particular, for (ﬁxed) α> 0 we have
+Sα,n(y) = Oα
+(
+yα(logy)2/3)
+(2.30)
+and for (ﬁxed) α> 1
+Tα,n(y) = Oα
+((logy)2/3
+yα
+)
+.(2.31)
+Proof. Equation (
+2.29) will follow fairly quickly from [FG95, Proposition 1]. The other two
+claims are immediate consequences by means of summation by parts.
+Following the notation of [FG95], set
+Hq(h) :=
+∏
+p |h
+(p,2q)=1
+p − 1
+p − 2.
+
+===== PAGE 18 =====
+
+18 ALESSANDRO F AZZARI AND MAXIM GERSPACH
+We then have
+S0,n(2y) = q − 1
+q − 2
+∑
+h≤2y
+(h,q)=1
+S(h) − 2y = q − 1
+q − 2S
+
+∑
+h≤y
+Hq(h) −
+∑
+h′≤y/q
+Hq(h′)
+
+ − 2y.
+Note that the second sum is empty if q > y. The statement then follows upon employing
+[FG95, (2.2)] after a short calculation. □
+Lemma 2.8. Let
+(2.32) fn(y) := yT2,n(y) + S2,n(y)
+y3 .
+We have
+(2.33) fn(y) =
+
+
+
+− 1
+2y +O
+(
+y−5/4)
++O (q−1), if y <q,
+O
+(
+q1/ 4
+y5/ 4
+)
+, if y ≥q.
+Proof. Integration by parts implies
+S2,n(y)
+y3 = S0,n(y)
+y − 2
+y3
+∫ y
+1
+S0,n(t)tdt +O(y−3)
+and similarly
+yT2,n(y) = −S0,n(y)
+y + 2y
+∫ ∞
+y
+S0,n(t)
+t3 dt.
+Inspired by Lemma 2.7, we deﬁne εn via the equality
+S0,n(y) = −1
+2 min{Λ(n), logy} +εn(y).
+Plugging this expression in and integrating, we deduce that
+fn(y) = 2y
+∫ ∞
+y
+εn(t)
+t3 dt − 2
+y3
+∫ y
+1
+εn(t)tdt +
+
+
+
+− 1
+2y +O
+(
+y
+q2
+)
++O
+(
+1
+y3
+)
+, if y <q,
+O
+(
+q2
+y3
+)
+, if y ≥q.
+The claim will thus follow once we can show that
+(2.34) 2 y
+∫ ∞
+y
+εn(t)
+t3 dt − 2
+y3
+∫ y
+1
+εn(t)tdt =
+
+
+
+O
+(
+1
+q
+)
++O
+(
+1
+y5/ 4
+)
+, if y <q,
+O
+(
+q1/ 4
+y5/ 4
+)
+, if y ≥q.
+
+===== PAGE 19 =====
+
+THE THIRD MOMENT OF THE LOGARITHM OF ZETA 19
+In order to achieve this we begin by noting that, by application of Lem ma 2.6, we have
+En(y) :=
+∫ y
+1
+εn(t)dt =
+∫ y
+1
+(∑
+h≤t
+Sn(h) −t + 1
+2 min{Λ(n), logt}
+)
+dt
+=
+∑
+h≤y
+(y −h)Sn(h) −y2
+2 + 1
+2 (y min{Λ(n), logy} − min{q,y }) +O(1)
+=
+{(
+A − 1
+2
+)
+y +O
+(
+y2
+q
+)
++O(y3/4), if y <q,
+O
+(
+y3/4q1/4)
+, if y ≥q.
+(2.35)
+Another integration by part gives
+(2.36) 2 y
+∫ ∞
+y
+εn(t)
+t3 dt − 2
+y3
+∫ y
+1
+εn(t)tdt = −4En(y)
+y2 + 6y
+∫ ∞
+y
+En(t)
+t4 dt + 2
+y3
+∫ y
+1
+En(t)dt.
+Inserting ( 2.35) implies ( 2.34) after a routine calculation. □
+3. The contribution from three prime powers
+We begin by estimating the contribution to M ℜ
+3 (T ) in Proposition 2.4 that comes from
+integratingP (t)3. This case turns out to be the most straight-forward, and gives r ise to the
+prime constant cP in ( 1.4). We have not attempted to maximise the range of x, since the
+subsequent sections will pose more strict requirements.
+Proposition 3.1. For any 2 ≤x ≤T 1/3, we have
+1
+T
+∫ 2T
+T
+P (t)3dt =cP +O
+( 1
+logx
+)
+.
+Proof. Note that
+1
+T
+∫ 2T
+T
+P (t)3dt = 1
+8
+∑
+a,b,c≤x
+Λ(a)Λ(b)Λ(c)√
+abc loga logb logc
+f
+(loga
+logx
+)
+f
+(logb
+logx
+)
+f
+(logc
+logx
+)
+× 1
+T
+∫ 2T
+T
+(ait +a−it)(bit +b−it)(cit +c−it)dt.
+(3.1)
+From the fact that the length of the respective sums is rather sho rt, we might expect the
+only contribution to come from the “diagonal” terms where ab =c or a permutation thereof,
+and that is indeed what we will see now.
+We will deal as an example with the case where the integrand is
+(ab
+c
+) it
+. There are 5 further
+cases where the integrand is of essentially the same shape, and it is s traight-forward to see
+that they give the same contribution. We will then explain how to boun d the part with
+integrand (abc)it and remark that ( abc)−it can be dealt with in the same way (and is in fact
+simply the conjugate).
+
+===== PAGE 20 =====
+
+20 ALESSANDRO F AZZARI AND MAXIM GERSPACH
+Fora,b,c ≤x with ab ⁄=c, we can use the rather crude bound
+∫ 2T
+T
+(ab
+c
+) it
+dt ≪ 1⏐
+⏐log ab
+c
+⏐
+⏐ ≪x
+to deduce that
+1
+8
+∑
+a,b,c≤x
+Λ(a)Λ(b)Λ(c)√
+abc loga logb logc
+f
+(loga
+logx
+)
+f
+(logb
+logx
+)
+f
+(logc
+logx
+) 1
+T
+∫ 2T
+T
+(ab
+c
+) it
+dt
+= 1
+8
+∑
+ab≤x
+Λ(a)Λ(b)Λ(ab)
+ab loga logb log(ab)f
+(loga
+logx
+)
+f
+(logb
+logx
+)
+f
+(logab
+logx
+)
++O
+(
+x
+T
+∑
+a,b,c≤x
+Λ(a)Λ(b)Λ(c)√
+abc loga logb logc
+)
+= 1
+8
+∑
+ab≤x
+Λ(a)Λ(b)Λ(ab)
+ab loga logb log(ab)f
+(loga
+logx
+)
+f
+(logb
+logx
+)
+f
+(logab
+logx
+)
++O
+(x5/2
+T
+)
+.
+Here, we used the fact that f is bounded, and in the last step we simply bounded Λ( n) ≤
+logn. In the main term, note that the appearance of the factor Λ( ab) means that we can
+assume a =pα and b =pβ to be powers of the same prime p. Thus, we can write the main
+term as
+= 1
+8
+∑
+p,α,β:pα +β ≤x
+1
+αβ(α +β)pα+βf
+(α logp
+logx
+)
+f
+(β logp
+logx
+)
+f
+((α +β) logp
+logx
+)
+= 1
+8
+∑
+p,γ:pγ ≤x
+1
+γpγf
+(γ logp
+logx
+) ∑
+α+β=γ
+1
+αβf
+(α logp
+logx
+)
+f
+(β logp
+logx
+)
+.
+Simply writing f (x) = 1 + O(x), one veriﬁes that this equates to
+= 1
+8
+∑
+p,γ≥2
+1
+γpγ
+∑
+α+β=γ
+1
+αβ +O
+( 1
+logx
+)
+.
+Summarising the estimates so far, we have seen that the six contrib utions to ( 3.1) com-
+ing from the six terms involving the integrand
+(ab
+c
+) it
+together with its permutations and
+conjugates combine to
+=cP +O
+( 1
+logx
+)
+.
+It remains to bound the contribution coming from ( abc)it (and its conjugate), which is even
+more direct. We can simply note that
+∫ 2T
+T
+(abc)itdt ≪ 1
+
+===== PAGE 21 =====
+
+THE THIRD MOMENT OF THE LOGARITHM OF ZETA 21
+for any prime powers a,b and c, so that
+∑
+a,b,c≤x
+Λ(a)Λ(b)Λ(c)√
+abc loga logb logc
+f
+(loga
+logx
+)
+f
+(logb
+logx
+)
+f
+(logc
+logx
+) 1
+T
+∫ 2T
+T
+(abc)itdt
+≪ 1
+T
+(∑
+a≤x
+1√a
+) 3
+≪ x3/2
+T .
+The claim follows. □
+Proposition 3.2. For any 2 ≤x ≤T 1/3, we have
+1
+T
+∫ 2T
+T
+P(t)3dt =O
+( 1
+logx
+)
+.
+Proof. We will not give the proof details, which are a straight-forward adap tation of the
+previous argument. We simply note that due to the appearance of s ine in place of cosine,
+the six terms that contribute will consist of three each with opposit e signs, thus cancelling
+in the end. □
+4. The contribution from two prime powers and a zero
+Proposition 4.1. Assume RH. Uniformly for 2 ≤x ≤T 1/4, we have
+1
+T
+∫ 2T
+T
+P (t)2Z(t)dt =O
+( 1
+logx
+)
+.
+Proof. Write
+1
+T
+∫ 2T
+T
+P (t)2Z(t)dt = IP 2ˆh − IP 2γ
+with
+IP 2ˆ
+h =
+ˆ
+h(0)
+2π logx
+∑
+a,b≤x
+Λ(a)Λ(b)√
+ab(loga)(logb)
+f
+(loga
+logx
+)
+f
+( logb
+logx
+)
+×
+1
+T
+∫ 2T
+T
+cos(t loga) cos(t logb) log t
+2πdt
+(4.1)
+and
+IP 2γ =
+∑
+a,b≤x
+Λ(a)Λ(b)
+√
+ab(loga)(logb)
+f
+(loga
+logx
+)
+f
+(logb
+logx
+)
+×
+∑
+γ
+1
+T
+∫ 2T
+T
+cos(t loga) cos(t logb)h((γ −t) logx)dt.
+(4.2)
+
+===== PAGE 22 =====
+
+22 ALESSANDRO F AZZARI AND MAXIM GERSPACH
+By Lemma
+2.1 combined with standard trigonometric identities, we have
+1
+T
+∫ 2T
+T
+cos(t loga) cos(t logb) log t
+2πdt =
+{
+1
+2 (logT +C) +O
+(logT
+T
+)
+, if a =b,
+O
+(x logT
+T
+)
+, if a ⁄=b
+with C = log 2/π − 1. Therefore, we see that
+IP 2ˆh =
+(
+logT +C +O
+(logT
+T
+)) ˆh(0)
+4π logx
+∑
+n≤x
+Λ(n)2
+n(logn)2f 2
+(logn
+logx
+)
++O
+(
+x logT
+T logx
+∑
+a,b≤x
+Λ(a)Λ(b)√
+ab(loga)(logb)
+f
+(loga
+logx
+)
+f
+( logb
+logx
+) )
+.
+(4.3)
+Following the same strategy as before, one obtains that the last er ror term here is O
+(
+x2 logT
+T logx
+)
+,
+which is certainly acceptable. Furthermore, we have
+∑
+n≤x
+Λ(n)2
+n(logn)2f 2
+(logn
+logx
+)
+≪
+∑
+n≤x
+Λ(n)2
+n(logn)2 ≪ log logx,
+so that
+(4.4) IP 2ˆ
+h = (logT +C)
+ˆh(0)
+4π logx
+∑
+n≤x
+Λ(n)2
+n(logn)2f 2
+(logn
+logx
+)
++O
+(x2 logT
+T
+)
+.
+We now turn our attention to the right-hand side of ( 4.2). First of all, by Lemma 2.3 (a),
+we have
+∑
+γ
+∫ 2T
+T
+cos(t loga) cos(t logb)h((γ −t) logx)dt
+=
+∑
+T<γ ≤2T
+∫
+R
+cos(t loga) cos(t logb)h((γ −t) logx)dt +O
+(√
+T logT
+)
+.
+(4.5)
+Writing cos(t loga) cos(t logb) = 1
+2ℜ
+(a
+b
+) it
++ 1
+2ℜ(ab)it and substituting y = (γ −t) logx, this
+is in turn
+= 1
+2 logxℜ
+[( ∑
+T<γ ≤2T
+(a
+b
+) iγ) ∫
+R
+h(y)e−iy loga/b/ logxdy
+]
++ 1
+2 logxℜ
+[( ∑
+T<γ ≤2T
+(ab)iγ
+) ∫
+R
+h(y)e−iy logab/ logxdy
+]
++O
+(√
+T logT
+)
+=
+ˆh
+(
+loga/b
+2π logx
+)
+2 logx ℜ
+∑
+T<γ ≤2T
+(a
+b
+) iγ
++
+ˆh
+(
+logab
+2π logx
+)
+2 logx ℜ
+∑
+T<γ ≤2T
+(ab)iγ +O
+(√
+T logT
+)
+.
+(4.6)
+
+===== PAGE 23 =====
+
+THE THIRD MOMENT OF THE LOGARITHM OF ZETA 23
+Now, we continue by isolating the contribution of the diagonal a = b of the ﬁrst summand
+here to IP 2γ. Since
+1
+T
+∑
+T<γ ≤2T
+1 = logT +C
+2π +O
+(logT
+T
+)
+,
+this contribution matches exactly the main term in ( 4.4). Hence, it now suﬃces to show that
+the remaining contributions to IP 2γ are small, that is to say we need
+(4.7) 1
+T
+∑
+a⁄=b≤x
+Λ(a)Λ(b)√
+ab(loga)(logb)
+f
+(loga
+logx
+)
+f
+( logb
+logx
+)
+ˆh
+(loga/b
+logx
+)
+ℜ
+∑
+T<γ ≤2T
+(a
+b
+) iγ
+≪ 1
+and
+(4.8) 1
+T
+∑
+a,b≤x
+Λ(a)Λ(b)√
+ab(loga)(logb)
+f
+(loga
+logx
+)
+f
+( logb
+logx
+)
+ˆ
+h
+(logab
+logx
+)
+ℜ
+∑
+T<γ ≤2T
+(ab)iγ ≪ 1
+as well as
+(4.9) logT
+√
+T
+∑
+a,b≤x
+Λ(a)Λ(b)√
+ab(loga)(logb)
+f
+(loga
+logx
+)
+f
+( logb
+logx
+)
+≪ 1
+logx.
+This last claim is obvious by using our usual bound, which in fact gives th at the left-hand
+side is ≪ x(logT )√
+T .
+As for ( 4.7), we will restrict to b < a, the other range follows in the same way. Then
+Lemma 2.2 gives that
+(4.10) 1
+T ℜ
+∑
+T<γ ≤2T
+(a
+b
+) iγ
+= −Λ(a/b)
+2π
+√
+b
+a +O
+(x(logT )2
+T
+)
+.
+Firstly, the error term in this bound gives a contribution to ( 4.7) of at most
+≪ x(logT )2
+T
+∑
+a,b≤x
+Λ(a)Λ(b)√
+ab(loga)(logb)
+≪ x2(logT )2
+T ,
+which is acceptable. The main term of ( 4.10) only contributes when a
+b is a prime power,
+but since each of them are themselves prime powers, we must have a =pα,b =pβ for some
+α>β ≥ 1. This gives a contribution to ( 4.7) of
+≪
+∑
+p,α,β
+α>β≥1
+logp
+αβpα ≪ 1,
+so that ( 4.7) follows. The proof of ( 4.8) works in the same way, the only diﬀerence being
+that we apply Lemma 2.2 with numerator ab ≤x2 and denominator 1. □
+Arguing similarly, we get the analogous result for the imaginary part.
+
+===== PAGE 24 =====
+
+24 ALESSANDRO F AZZARI AND MAXIM GERSPACH
+Proposition 4.2. Assume RH. Uniformly for 2 ≤x ≤T 1/4, we have
+1
+T
+∫ 2T
+T
+P(t)2Z(t)dt =O
+( 1
+logx
+)
+.
+Proof. The proof follows closely that of Proposition 4.1. With the same strategy we used
+above to handle IP 2γ, by applying Lemma 2.3 part ( a), we obtain
+1
+T
+∫ 2T
+T
+P(t)2Z(t)dt = 1
+T
+∑
+a,b≤x
+Λ(a)Λ(b)√
+ab loga logb
+f
+(loga
+logx
+)
+f
+(logb
+logx
+)
+×
+∫
+R
+∑
+T ≤γ≤2T
+h((t −γ) logx) sin(t loga) sin(t logb)dt +O
+(x logT√
+T
+)
+.
+Using the identity sin(t loga) sin(t logb) = 1
+2ℜ(ab)it − 1
+2ℜ(a
+b )it, we can then perform the same
+calculations as in the previous proof, and the claim follows. □
+5. The contribution from one prime power and two zeros
+We introduce the following notation:
+(5.1) L(b) := (b + 1) log(1 +b) + (1 −b) log(1 −b)
+b .
+Proposition 5.1. Assume RH and Conjecture 1.5. Uniformly for 2 ≤x ≤T 1/3, we have
+1
+T
+∫ 2T
+T
+P (t)Z(t)2dt = 1
+2
+∫ β
+0
+(g(b
+β )
+β − 1
+b
+)
+L(b)db +O
+( 1
+logx
+)
+,
+whereg is deﬁned in (2.8) and L in (5.1).
+Proof. According to the deﬁnition of Z(t) in the statement of Proposition 2.4, we write
+(5.2) 1
+T
+∫ 2T
+T
+P (t)Z(t)2dt = IP ˆh2 − 2IP ˆhγ + IPγ 2
+with
+IP ˆh2 =
+ˆh(0)2
+(2πβ)2
+∑
+n≤x
+Λ(n)√n lognf
+(logn
+logx
+) 1
+T
+∫ 2T
+T
+cos(t logn)
+(log t
+2π
+logT
+) 2
+dt
+IP ˆhγ =
+ˆh(0)
+2πβ
+∑
+n≤x
+Λ(n)√n lognf
+(logn
+logx
+) 1
+T
+∫ 2T
+T
+cos(t logn) log t
+2π
+logT
+∑
+γ
+h((γ −t) logx)dt
+IPγ 2 =
+∑
+n≤x
+Λ(n)√n lognf
+(logn
+logx
+) 1
+T
+∫ 2T
+T
+cos(t logn)
+∑
+γ,γ ′
+h((γ −t) logx)h((γ′ −t) logx)dt.
+
+===== PAGE 25 =====
+
+THE THIRD MOMENT OF THE LOGARITHM OF ZETA 25
+A direct application of Lemma 2.1 yields
+(5.3) IP ˆh2 ≪ 1
+T
+∑
+n≤x
+Λ(n)√n(logn)2 ≪
+√x(logT )2
+T .
+We now turn to IP ˆhγ. Let ϕ be a function such that ϕ(t) = log( t
+2π )/ logT for T ≤t ≤ 2T ,
+ϕ(t) = 1 + O(1/ logT ) for any t, and ϕ′(t) ≪ 1/((1 + |t|) logT ) uniformly for t ∈ R. For
+example, we can take a (ﬁxed) smooth function ˜ ϕ with
+˜ϕ(s) = log s
+2π for s ∈ [1, 2] and ˜ϕ(s) = 0 for s ⁄∈
+[ 1
+2, 5
+2
+]
+and set
+ϕ(t) = 1 + ˜ϕ(t/T )
+logT .
+We then write
+IP ˆhγ =
+ˆh(0)
+2πβ
+∑
+n≤x
+Λ(n)√n lognf
+(logn
+logx
+) 1
+T
+∫ 2T
+T
+ℜ(nit)ϕ(t)
+∑
+γ
+h((γ −t) logx)dt
+= ℜ
+(ˆh(0)
+2πβ
+1
+T logx
+∑
+n≤x
+Λ(n)√n lognf
+(logn
+logx
+) ∫
+R
+h(y)n− iy
+log x
+∑
+T ≤γ≤2T
+niγϕ
+(
+γ − y
+logx
+)
+dy
+)
++O
+(√x logT√
+T
+)
+by Lemma 2.3 part ( a), and the change of variable ( γ −t) logx =y. Using Lemma 2.2 and
+partial summation, one has
+∑
+T ≤γ≤2T
+niγϕ
+(
+γ − y
+logx
+)
+= −T
+2π
+Λ(n)√n +O(x(logT )2) +O
+( T Λ(n)√n logT
+)
+uniformly for y ∈ R. Hence, since x ≤T 1/3
+IP ˆhγ = −
+ˆh(0)
+(2πβ)2
+1
+logT
+∑
+n≤x
+Λ(n)2
+n lognf
+(logn
+logx
+)
+ˆh
+( logn
+2π logx
+)
++O
+( 1
+logT
+)
+.(5.4)
+Finally, we deal with IPγ 2. By Lemma
+2.3 part (b) and the change of variable (γ−t) logx =y,
+we obtain
+IPγ 2 = ℜ
+( 1
+T logx
+∑
+n≤x
+Λ(n)√n lognf
+(logn
+logx
+) ∑
+T ≤γ,γ ′≤2T
+niγ
+×
+∫
+R
+n− iy
+log xh(y)h(y + (γ′ −γ) logx)dy
+)
++O
+(√x(logT )2
+√
+T
+)
+.
+
+===== PAGE 26 =====
+
+26 ALESSANDRO F AZZARI AND MAXIM GERSPACH
+The error term is clearly ≪T −1/4, say. By introducing the Fourier pair
+ˆkn(u) =
+∫
+R
+n− iy
+log xh(y)h(y +u)dy, k n(a) = ˆh(a)ˆh
+(
+−a + logn
+2π logx
+)
+,
+we write
+IPγ 2 = ℜ
+( 1
+T logx
+∑
+n≤x
+Λ(n)√n lognf
+(logn
+logx
+) ∑
+T ≤γ,γ ′≤2T
+niγ ˆkn((γ′ −γ) logx)
+)
++O(T −1/4).
+Now we appeal to the Twisted Pair Correlation Conjecture to evalua te the double sum over
+zeros. Namely, we apply Conjecture 1.5 with r(u) = ˆkn(2πβu ) and ˆr(a) = 1
+2πβkn( −a
+2πβ ), and
+obtain
+IPγ 2 = −(logT )−1
+(2πβ)2
+∑
+n≤x
+Λ(n)2
+n lognf
+(logn
+logx
+)(
+2kn(0) +
+∫
+R
+kn
+( −a
+2πβ
+)
+mn(a)da
+)
++O
+( 1
+logx
+)(5.5)
+since kn is real over reals. We highlight the fact the contributions from the ﬁ rst term of the
+error En can be clearly absorbed in the error term O(1/ logx), as it becomes small on average
+overn. Putting together Equations (
+5.2)-(5.5), we notice that the kn(0)-term above cancels
+the main term in IP ˆhγ, and we have
+1
+T
+∫ 2T
+T
+P (t)Z(t)2dt = −(logT )−1
+(2πβ)2
+∑
+n≤x
+Λ(n)2
+n lognf
+(logn
+logx
+) ∫
+R
+kn
+( −a
+2πβ
+)
+mn(a)da +O
+( 1
+logx
+)
+.
+Since mn(a) = 0 if a ∈ (−1, 1 − logn/ logT ), in the integral above we can replace kn( −a
+2πβ )
+by (πβ)2
+|a||a+logn/ logT | , in view of ( 2.9). Moreover, for any 1 < n < T1/2, by direct computation
+one can see that
+∫
+R
+mn(a)
+|a||a + logn
+logT |da = 2
+( logn
+logT + 1) log(1 + logn
+logT ) + (1 − logn
+logT ) log(1 − logn
+logT )
+( logn
+logT )2 =
+2L( logn
+logT )
+logn
+logT
+.
+Hence,
+1
+T
+∫ 2T
+T
+P (t)Z(t)2dt = −1
+2
+∑
+n≤x
+Λ(n)2
+n(logn)2f
+(logn
+logx
+)
+L
+(logn
+logT
+)
++O
+( 1
+logx
+)
+.
+Integrating by parts twice, and using in between the well-known for mula (conditional on
+RH)
+∑
+n≤v
+Λ(n)2
+n(logn)2 = log logv +C +O(v−1/2+ε)
+for an explicit constant C and any small ε> 0, we obtain
+1
+T
+∫ 2T
+T
+P (t)Z(t)2dt = −1
+2
+∫ x
+2
+f
+(logv
+logx
+)
+L
+( logv
+logT
+) dv
+v logv +O
+( 1
+logx
+)
+.
+
+===== PAGE 27 =====
+
+THE THIRD MOMENT OF THE LOGARITHM OF ZETA 27
+The claim follows by change of variable log v =b logT , and using f (x) = 1 −xg(x). □
+The analogous result for the imaginary part reads:
+Proposition 5.2. Assume RH and Conjecture 1.5. Uniformly for 2 ≤x ≤T 1/3, we have
+1
+T
+∫ 2T
+T
+P(t)Z(t)2dt ≪ 1
+logx.
+Proof. With a now familiar strategy, we write
+1
+T
+∫ 2T
+T
+P(t)Z(t)2dt = ℑ
+( −1
+T logx
+∑
+n≤x
+Λ(n)√n lognf
+(logn
+logx
+) ∑
+T ≤γ,γ ′≤2T
+niγ ˆκn((γ−γ′) logx)
+)
++O(T −1/4),
+with
+ˆκn(u) =
+∫
+R
+n
+iy
+log x h(y)h(y +u)dy, κ n(a) = ˆh(−a)ˆh
+(
+a − logn
+2π logx
+)
+.
+The claim then follows from an application of Conjecture 1.5. Indeed the resulting main
+term is real (and then disappears when we take the imaginary part) , and the error term
+contributes ≪ 1/ logx. □
+6. The contribution from three zeros
+Proposition 6.1. Assume RH, Conjecture 1.2, and Conjecture 1.3. Then, uniformly for
+2 ≤x ≤T , we have
+1
+T
+∫ 2T
+T
+Z(t)3dt = −π2
+4 − 3
+2
+∫ β
+0
+(g(b
+β )
+β − 1
+b
+)
+L(b)db +O
+( 1
+logx
+)
+whereg is deﬁned in (2.8) and L in (5.1).
+Proof. With our now standard procedure, in view of Proposition 2.4 we write
+(6.1) 1
+T
+∫ 2T
+T
+Z(t)3dt = Iˆh3 − 3Iˆh2γ + 3Iˆhγ2 − Iγ3
+
+===== PAGE 28 =====
+
+28 ALESSANDRO F AZZARI AND MAXIM GERSPACH
+with
+Iˆh3 =
+ˆh(0)3
+(2πβ)3
+1
+T
+∫ 2T
+T
+(log t
+2π
+logT
+) 3
+dt =
+ˆh(0)3
+(2πβ)3 +O
+( 1
+logT
+)
+(6.2)
+Iˆh2γ =
+ˆh(0)2
+(2πβ)2
+1
+T
+∫ 2T
+T
+(log t
+2π
+logT
+) 2∑
+γ
+h((γ −t) logx)dt
+Iˆhγ2 =
+ˆ
+h(0)
+2πβ
+1
+T
+∫ 2T
+T
+log t
+2π
+logT
+(∑
+γ
+h((γ −t) logx)
+) 2
+dt
+Iγ3 = 1
+T
+∫ 2T
+T
+(∑
+γ
+h((γ −t) logx)
+) 3
+dt.
+We start by Iˆhγ, for which we use the trivial estimate log t
+2π = logT +O(1), for T ≤t ≤ 2T .
+Applying Lemma 2.3 part ( a) with φ =h and φ = |h|, we have
+Iˆh2γ =
+ˆh(0)2
+(2πβ)2
+1
+T
+∫
+R
+(
+1 +O
+( 1
+logT
+)) ∑
+T ≤γ≤2T
+h((γ −t) logx)dt +O
+(logT√
+T
+)
+.
+The ﬁrst error term above contributes
+≪ 1
+T logT
+∫
+R
+∑
+T ≤γ≤2T
+|h((γ −t) logx)|dt ≪ 1
+T logT
+∫
+R
+∑
+T ≤γ≤2T
+|h(y)| dy
+logx ≪ 1
+logx.
+sinceh ∈L1(R). Therefore, by the change of variable ( γ −t) logx =y and an application of
+the Riemann–von Mangoldt formula, we get
+(6.3) Iˆh2γ =
+ˆh(0)2
+(2πβ)2
+logT
+2π logx
+∫
+R
+h(y)dy +O
+( 1
+logx
+)
++O
+(logT√
+T
+)
+=
+ˆh(0)3
+(2πβ)3 +O
+( 1
+logx
+)
+.
+Arguing similarly, by Lemma 2.3 part ( b), one gets
+Iˆhγ2 =
+ˆh(0)
+2πβ
+1
+T
+∫
+R
+h(y)
+∑
+T ≤γ,γ ′≤2T
+h(y + (γ′ −γ) logx) dy
+logx
++O
+( 1
+T logx
+∫
+R
+|h(y)|
+∑
+T ≤γ,γ ′≤2T
+|h(y + (γ′ −γ) logx)| dy
+logx
+)
++O
+((logT )2
+√
+T
+)
+.
+To write the main term of Iˆhγ2 more concisely, we denote
+ˆk(u) =
+∫
+R
+h(y)h(y +u)dy, k (a) = ˆh(a)ˆh(−a) = ˆh(a)2
+since h is even. Similarly, to deal with the ﬁrst error term we introduce
+ˆk∗(u) =
+∫
+R
+|h(y)||h(y +u)|dy, k ∗(a) = ˆ|h|(a)ˆ|h|(−a) = ˆ|h|(a)2.
+
+===== PAGE 29 =====
+
+THE THIRD MOMENT OF THE LOGARITHM OF ZETA 29
+In these notations, we have
+Iˆhγ2 =
+ˆh(0)
+2πβ
+1
+T logx
+∑
+T ≤γ,γ ′≤2T
+ˆk((γ′ −γ) logx)
++O
+( 1
+T (logx)2
+∑
+T ≤γ,γ ′≤2T
+ˆk∗((γ′ −γ) logx)
+)
++O
+((logT )2
+√
+T
+)
+.
+By applying of Conjecture 1.2 with r(u) = ˆk(2πβu ), ˆr(a) = 1
+2πβk( −a
+2πβ ) and with r(u) =
+ˆk∗(2πβu ), ˆr(a) = 1
+2πβk∗( −a
+2πβ ), we obtain
+Iˆhγ2 =
+ˆh(0)
+(2πβ)3
+∫
+R
+k
+( −a
+2πβ
+)(
+δ(a) + min{|a|, 1}
+)
+da +O
+( 1
+logx
+)
+=
+ˆh(0)3
+(2πβ)3 +
+ˆh(0)
+(2πβ)3
+∫
+R
+ˆh
+( a
+2πβ
+) 2
+min{|a|, 1}da +O
+( 1
+logx
+)
+.
+(6.4)
+Finally, by assuming Conjecture
+1.3 we deal with Iγ3. Denote
+ˆk(u,v ) =
+∫
+R
+h(y)h(y +u)h(y +v)dy, k (a,b ) = ˆh(−a)ˆh(−b)ˆh(a +b).
+By Lemma 2.3 part ( c) and the usual manipulations, we write
+Iγ3 = 1
+T logx
+∑
+T ≤γ,γ ′,γ′′≤2T
+ˆk((γ′ −γ) logx, (γ′′ −γ) logx) +O
+((logT )3
+√
+T
+)
+Now we apply Conjecture 1.3 with r(u,v ) = ˆk(2πβu, 2πβv ), ˆr(a,b ) = 1
+(2πβ)2k( −a
+2πβ, −b
+2πβ ), we
+have
+Iγ3 = 1
+(2πβ)3
+∫
+R
+∫
+R
+k
+( −a
+2πβ, −b
+2πβ
+)
+H(a,b )dadb +O
+( 1
+logx
+)
+.
+According to the notations used in ( 1.8), we write
+(6.5) Iγ3 = Iγ3,δ + Iγ3,∗ +O
+( 1
+logx
+)
+with
+Iγ3,δ = 1
+(2πβ)3
+∫
+R
+∫
+R
+ˆh
+( a
+2πβ
+)
+ˆh
+( b
+2πβ
+)
+ˆh
+(a +b
+2πβ
+)
+Hδ(a,b )dadb
+and
+Iγ3,∗ = 1
+(2πβ)3
+∫
+R
+∫
+R
+ˆh
+( a
+2πβ
+)
+ˆh
+( b
+2πβ
+)
+ˆh
+(a +b
+2πβ
+)
+H∗(a,b )dadb.
+
+===== PAGE 30 =====
+
+30 ALESSANDRO F AZZARI AND MAXIM GERSPACH
+Evaluating the integrals involving Dirac delta functions and using the p arity of h, one easily
+sees that
+(6.6) Iγ3,δ =
+ˆh(0)3
+(2πβ)3 + 3ˆh(0)
+(2πβ)3
+∫
+R
+ˆh
+( a
+2πβ
+) 2
+min{|a|, 1}da.
+Plugging Equations ( 6.2)-(6.6) into ( 6.1), we notice that second term in above expression
+cancels the second term on the second line of ( 6.4). Similarly, all the terms
+ˆ
+h(0)3(2πβ)3 cancel.
+Namely, we obtain
+(6.7) 1
+T
+∫ 2T
+T
+Z(t)3dt = −Iγ3,∗ +O
+( 1
+logx
+)
+.
+Evaluating Iγ3,∗ is the last step of the proof. For starters, we note that by the va rious
+symmetries of the functions involved, one sees that
+(6.8) Iγ3,∗ = 6
+(2πβ)3
+∫ ∞
+0
+∫ ∞
+0
+ˆh
+( a
+2πβ
+)
+ˆh
+( b
+2πβ
+)
+ˆh
+(a +b
+2πβ
+)
+H∗(a,b )dbda.
+To prove ( 6.8), it suﬃces to split the plane into the six regions delimited by the axes a nd
+the bisector of second and fourth quadrant. Since the integrand function in the deﬁnition
+of Iγ3,∗ is invariant under the transformations ( a,b ) → (−a, −b), (a,b ) → (−a −b,b ), and
+(a,b ) → (−a −b,b ), the integrals over each region equals (say) the integral over th e ﬁrst
+quadrant, and ( 6.8) is then veriﬁed. Now we note that in the ﬁrst quadrant H∗(a,b ) = 0
+if a +b < 1; in the complementary sub-region a +b > 1 we have G(a,b ) = 0 and then
+H∗(a,b ) = min {a, 1}+min{b, 1}− 1. With ( 2.9) in mind, we integrate the function πβ
+· instead
+of ˆh( ·
+2πβ ) and then we correct this discrepancy. The correction terms invo lve integrals over
+Ra = {(a,b ) : 0 < b < βand a > 1 −b} and Rb = {(a,b ) : 0 < a < βand b > 1 −a}.
+Namely:
+Iγ3,∗ = 6
+(2πβ)3
+∫ ∞
+0
+∫ ∞
+0
+πβ
+a
+πβ
+b
+πβ
+a +bH∗(a,b )dbda
++ 6
+(2πβ)3
+∫∫
+Ra
+πβ
+a
+(
+πg
+(b
+β
+)
+−πβ
+b
+) πβ
+a +bH∗(a,b )dbda
++ 6
+(2πβ)3
+∫∫
+Rb
+(
+πg
+(a
+β
+)
+− πβ
+a
+) πβ
+b
+πβ
+a +bH∗(a,b )dbda.
+By symmetry, the integrals over Ra and Rb are the same, so
+Iγ3,∗ = 3
+4
+∫ ∞
+0
+∫ ∞
+0
+H∗(a,b )
+ab(a +b)dbda + 3
+2
+∫∫
+Ra
+(g(b
+β )
+β − 1
+b
+) H∗(a,b )
+a(a +b)dbda.(6.9)
+The ﬁrst integral is straightforward:
+∫ ∞
+0
+∫ ∞
+0
+H∗(a,b )
+ab(a +b)dbda = π2
+3 .
+
+===== PAGE 31 =====
+
+THE THIRD MOMENT OF THE LOGARITHM OF ZETA 31
+For the second integral in ( 6.9), we notice that on Ra we have H∗(a,b ) = b + min{a, 1} − 1,
+and we get
+Iγ3,∗ = π2
+4 + 3
+2
+∫ β
+0
+(g(b
+β )
+β − 1
+b
+) ∫ ∞
+1−b
+b + min{a, 1} − 1
+a(a +b) dadb
+= π2
+4 + 3
+2
+∫ β
+0
+(g(b
+β )
+β − 1
+b
+)
+L(b)db.
+Plugging the above into ( 6.7), we conclude the proof. □
+Proposition 6.2. Assume RH and Conjecture 1.3. Then, uniformly for 2 ≤x ≤T , we have
+1
+T
+∫ 2T
+T
+Z(t)3dt ≪ 1
+logx.
+Proof. We write
+1
+T
+∫ 2T
+T
+Z(t)3dt = 1
+T logx
+∑
+T ≤γ,γ ′,γ′′≤2T
+ˆκ((γ −γ′) logx, (γ −γ′′) logx) +O(T −1/4),
+with
+ˆκ(u,v ) =
+∫
+R
+h(y)h(y +u)h(y +v)dy, κ (a,b ) = ˆh(−a)ˆh(−b)ˆh(a +b).
+We apply Conjecture 1.3 and get
+1
+T
+∫ 2T
+T
+Z(t)3dt = 1
+(2πβ)3
+∫
+R
+∫
+R
+κ
+( a
+2πβ, b
+2πβ
+)
+H(a,b )dadb +O
+( 1
+logx
+)
+.
+The main term above is 0 because of the symmetry of the integrand. Indeed,
+H(a,b ) = H(−a −b)
+and (since h is odd)
+κ
+( a
+2πβ, b
+2πβ
+)
+= −κ
+( −a
+2πβ, −b
+2πβ
+)
+.
+□
+7. Proof of Proposition 1.6
+To prove the result, we convolve the twisted pair correlation funct ion Fn with an appro-
+priate kernel. More precisely, let g ∈L1(R) be such that ˆg ∈L1(R) is Lipschitz continuous
+and ˆg(α) ≪ |α|−3 as |α| → ∞ . We multiply Fn(α) times ˆg(α), and then integrate over α,
+obtaining
+(7.1)
+∫
+R
+ˆg(α)Fn(α)dα = −
+(T
+2π
+Λ(n)√n
+) −1 ∑
+T ≤γ,γ ′≤2T
+niγω(γ −γ′)g
+(logT
+2π (γ −γ′)
+)
+.
+
+===== PAGE 32 =====
+
+32 ALESSANDRO F AZZARI AND MAXIM GERSPACH
+First, we analyze the left hand side of (
+7.1). We split the range of integration, and write
+(7.2)
+∫
+R
+ˆg(α)Fn(α)dα =
+[ ∫ −1
+−∞
++
+∫ − log n
+log T
+−1
++
+∫ 0
+− log n
+log T
++
+∫ 1− log n
+log T
+0
++
+∫ +∞
+1− log n
+log T
+]
+ˆg(α)Fn(α)dα.
+The ﬁve integrals above can be computed by applying Conjecture 1.4. Since ˆg ∈L1(R), we
+immediately have
+(7.3)
+∫ +∞
+1− log n
+log T
+ˆg(α)Fn(α)dα =
+∫ +∞
+1− log n
+log T
+ˆg(α) min
+{
+1, logT
+Λ(n)
+(
+α − 1 + logn
+logT
+)}
+dα +O
+( 1
+logT
+)
+and, recalling Fn(α) = Fn(−α − logn
+logT ),
+∫ −1
+−∞
+ˆg(α)Fn(α)dα =
+∫ +∞
+1− log n
+log T
+ˆg
+(
+−α − logn
+logT
+)
+Fn(α)dα
+=
+∫ +∞
+1− log n
+log T
+ˆg
+(
+−α − logn
+logT
+)
+min
+{
+1, logT
+Λ(n)
+(
+α − 1 + logn
+logT
+)}
+dα +O
+( 1
+logT
+)
+.
+(7.4)
+As for the range (0 , 1 − logn
+logT ), an application of Conjecture 1.4 gives
+∫ 1− log n
+log T
+0
+ˆg(α)Fn(α)dα =
+(
+1 + 1
+n2 +O
+( 1
+logT
+)) ∫ 1− log n
+log T
+0
+ˆg(α)T −2α logTdα
+−
+∫ 1− log n
+log T
+0
+ˆg(α)r1(α,n )dα +O
+( 1
+logT
+)
+.
+(7.5)
+The ﬁrst integral can be evaluated by Taylor expanding ˆ g around zero. Doing so, one gets
+∫ 1− log n
+log T
+0
+ˆg(α)T −2α logTdα = ˆg(0)
+∫ 1− log n
+log T
+0
+T −2α logTdα +O
+(∫ 1− log n
+log T
+0
+αT −2α logTdα
+)
+= ˆg(0)
+2 +O
+(n2
+T 2
+)
++O
+( 1
+logT
+)
+= ˆg(0)
+2 +O
+( 1
+logT
+)
+.
+Moreover, the second integral in ( 7.5) is small. Precisely, for n =qa
+r1(α,n ) = T −2α
+Λ(n)
+∑
+m≤T α
+mΛ(mn)Λ(m) + T 2α
+Λ(n)
+∑
+m>T α
+Λ(mn)Λ(m)
+m3
+=T −2α logq
+∑
+b≤α log T
+log q
+qb +T 2α logq
+∑
+b>α log T
+log q
+q−3b,
+
+===== PAGE 33 =====
+
+THE THIRD MOMENT OF THE LOGARITHM OF ZETA 33
+and then
+∫ 1− log n
+log T
+0
+ˆg(α)r1(α,n )dα ≪ logq
+∑
+b≤
+log T
+n
+log q
+qb
+∫ 1− log n
+log T
+b log q
+log T
+T −2αdα + logq
+∞∑
+b=1
+q−3b
+∫ b log q
+log T
+0
+T 2αdα
+≪ logq
+logT
+∞∑
+b=1
+q−b ≪ logq
+q logT ≪ 1
+logT.
+Therefore, ( 7.5) reads
+∫ 1− log n
+log T
+0
+ˆg(α)Fn(α)dα = ˆg(0)
+2
+(
+1 + 1
+n2
+)
++O
+( 1
+logT
+)
+.(7.6)
+Arguing similarly, one has
+∫ − log n
+log T
+−1
+ˆg(α)Fn(α)dα =
+∫ 1− log n
+log T
+0
+ˆg
+(
+−α − logn
+logT
+)
+Fn(α)dα
+=
+ˆg(− logn
+logT )
+2
+(
+1 + 1
+n2
+)
++O
+( 1
+logT
+)
+.
+(7.7)
+Finally, we deal with the integral between − logn
+logT and 0. Conjecture 1.4 leads to
+∫ 0
+− log n
+log T
+ˆg(α)Fn(α)dα =
+(
+1 +O
+( 1
+logT
+)) ∫ 0
+− log n
+log T
+ˆg(α)
+(
+T 2α + T −2α
+n2
+)
+logTdα
+−
+∫ 0
+− log n
+log T
+ˆg(α)r2(α,n )dα +O
+( 1
+logT
+)
+.
+The ﬁrst term above can be computed by Taylor expanding ˆ g. Namely, for the T 2α-term in
+the ﬁrst integral, one expands around 0. Similarly, for the T −2α-term, it suﬃces to expand
+around − logn
+logT . By doing so one gets
+∫ 0
+− log n
+log T
+ˆg(α)Fn(α)dα =
+ˆg(0) + ˆg(− logn
+logT )
+2
+(
+1 − 1
+n2
+)
+−
+∫ 0
+− log n
+log T
+ˆg(α)r2(α,n )dα +O
+( 1
+logT
+)
+.
+To bound the remaining integral term above, we use a similar strateg y as for r1(α,n ). Since
+n =qa, the factors Λ( m) and Λ( n/m) force m to be of the form qb for some 1 ≤b ≤a − 1.
+As a consequence,
+r2(α,n ) = logq
+(nTα)2
+∑
+1≤b<a
+qb≤qaT α
+q2b + (nTα)2 logq
+∑
+1≤b<a
+qb>qaT α
+q−2b.
+
+===== PAGE 34 =====
+
+34 ALESSANDRO F AZZARI AND MAXIM GERSPACH
+Hence, we have
+∫ 0
+− log n
+log T
+ˆg(α)r2(α,n )dα =
+∫ 0
+− log n
+log T
+ˆg(α)
+( logq
+(nTα)2
+∑
+1≤b<a
+qb≤qaT α
+q2b + (nTα)2 logq
+∑
+1≤b<a
+qb>qaT α
+q−2b
+)
+dα
+≪ logq
+n2
+∑
+1≤b<a
+q2b
+∫ 0
+− (a−b) log q
+log T
+T −2αdα +n2 logq
+∑
+1≤b<a
+q−2b
+∫ − (a−b) log q
+log T
+− a log q
+log T
+T 2αdα
+≪ logq
+n2
+∑
+1≤b<a
+q2b n2
+q2b logT +n2 logq
+∑
+1≤b<a
+q−2b q2b
+n2 logT ≪ logq
+logT
+∑
+1≤b<a
+1 ≪ (a − 1) logq
+logT
+when n =qa with a ≥ 2. Clearly, r2(α,n ) = 0 if n is a prime, i.e. if a = 1. Therefore,
+∫ 0
+− log n
+log T
+ˆg(α)Fn(α)dα =
+ˆg(0) + ˆg(− logn
+logT )
+2
+(
+1 − 1
+n2
+)
++O
+( 1
+logT
+)
++O(En).(7.8)
+Plugging (
+7.3)-(7.8) into ( 7.2), we obtain
+∫
+R
+ˆg(α)Fn(α)dα =ˆg(0) + ˆg(− logn
+logT ) +O(En)
++
+∫ +∞
+1− log n
+log T
+(
+ˆg(α) + ˆg(−α − logn
+logT )
+)
+min
+{
+1, logT
+Λ(n)
+(
+α − 1 + logn
+logT
+)}
+dα,
+which in turn implies
+∫
+R
+ˆg(α)Fn(α)dα = ˆg(0) + ˆg(− logn
+logT ) +
+∫
+R
+ˆg(α) + ˆg(−α − logn
+logT )
+2 mn(α)dα +O(En).(7.9)
+The ﬁnal step of the proof consists of removing the weight functio n ω on the right hand
+side of ( 7.1). We denote r(x) = ω( 2πx
+logT )g(x), a Lipschitz continuous integrable function. We
+want to show that ˆr is approximately ˆg. By the convolution theorem and the well-known
+formula ˆω(α) = 2πe−4π|α|, we have
+ˆr(α) =
+( ˆω( · logT
+2π )
+2π/ logT ∗ ˆg
+)
+(α) =
+∫
+R
+T −2|y| logT ˆg(α −y)dy.
+Since ˆg is such that ˆg′(α) ≪ min{1, |α|−3}, by an integration by parts we obtain
+ˆr(α) = ˆg(α) +O
+(∫
+R
+T −2|y||ˆg′(α −y)|dy
+)
+= ˆg(α) +O
+( 1
+(1 + |α|3) logT
+)
+.(7.10)
+Equations (
+7.1), ( 7.9), and ( 7.10) yield the claim.
+
+===== PAGE 35 =====
+
+THE THIRD MOMENT OF THE LOGARITHM OF ZETA 35
+8. Proof of Proposition 1.7
+We ﬁrst state an explicit formula, essentially due to Montgomery [Mon 73].
+Lemma 8.1. Assume RH. For y ≥ 1 and T ≤t ≤ 2T , we have
+2
+∑
+γ
+yiγ
+1 + (t −γ)2 = − 1√y
+∑
+m
+Λ(m)am(y)
+(y
+m
+) it
++y−1+it
+(
+log t
+2π + ζ ′
+ζ (3/2 −it)
+)
++O
+(√y
+T 2
+)
++O
+( 1
+yT
+)
+where
+am(y) =
+{
+(m
+y )1/2 if m ≤y
+(y
+m)3/2 if m>y.
+Proof. We take σ = 3
+2 in [Mon73, Equation (22)] and bound trivially the last two terms for
+T ≤t ≤ 2T :
+2
+∑
+γ
+yiγ
+1 + (t −γ)2 = − 1√y
+∑
+m
+Λ(m)am(y)
+(y
+m
+) it
+−y−1+itζ ′
+ζ (−1/2 +it)
++O
+(√y
+T 2
+)
++O
+( 1
+y2T
+)
+.
+We now apply the functional equation in the form
+−ζ ′
+ζ (−1
+2 +it) = ζ ′
+ζ
+(3
+2 −it
+)
++ 1
+2
+Γ ′
+Γ
+(
+− 1
+4 + it
+2
+)
++ 1
+2
+Γ ′
+Γ
+(3
+4 − it
+2
+)
+− logπ.
+Since Stirling’s formula yields
+1
+2
+Γ ′
+Γ
+(
+− 1
+4 + it
+2
+)
++ 1
+2
+Γ ′
+Γ
+(3
+4 − it
+2
+)
+= 1
+2 log
+(t2
+4
+)
++O
+(1
+t
+)
+,
+the proof is concluded. □
+We introduce the following notation; for any δ >0, we denote
+R = 1
+logT +
+√n(logT )3
+T + n2
+T 2 + n1+δ(logT )2
+T .
+Note that R ≪ 1/ logT , if n ≤T 1−ε for some ε>δ .
+
+===== PAGE 36 =====
+
+36 ALESSANDRO F AZZARI AND MAXIM GERSPACH
+8.1. Positive alpha. We start by handling the case 0 < α <1 − logn
+logT −δT , where δT =
+10 log logT/ logT . In this range, nTα and Tα are both between 1 and T . So we can use
+classical methods to compute averages of short Dirichlet polynomia ls. We recall the integral
+expression for the function ω, namely:
+ω(γ −γ′) = 2
+π
+∫
+R
+1
+[1 + (t −γ)2][1 + (t −γ′)2]dt.
+Arguing like in [Mon73, p. 187-188] (in the other direction), one can e xtend the range of
+summation over zeros and restrict the range of integration in the d eﬁnition of Fn(α) (1.9) at
+a cost of an acceptable error term, getting
+Fn(α) = −
+√n
+T Λ(n)
+∫ 2T
+T
+(
+2
+∑
+γ
+(nTα)iγ
+1 + (t −γ)2
+)(
+2
+∑
+γ′
+(T −α)iγ′
+1 + (t −γ′)2
+)
+dt +O
+(√n(logT )3
+T
+)
+.
+By applying Lemma 8.1 for both sums over zeros, we write
+(8.1) Fn(α) = F 1−1
+n (α) +F 1−2
+n (α) +F 1−2
+n (α) +F 2−2
+n (α) +O(R)
+with
+F 1−1
+n (α) = −T −α
+Λ(n)
+1
+T
+∫ 2T
+T
+∑
+m
+∑
+l
+Λ(m)Λ(l)am(nTα)al(Tα)
+(nl
+m
+) it
+dt
+F 1−2
+n (α) = T −3α/2
+Λ(n)
+1
+T
+∫ 2T
+T
+∑
+m
+Λ(m)am(nTα)
+(n
+m
+) it(
+log t
+2π + ζ ′
+ζ (3/2 +it)
+)
+dt
+F 2−1
+n (α) = T −3α/2
+√nΛ(n)
+1
+T
+∫ 2T
+T
+∑
+l
+Λ(l)al(Tα)(nl)it
+(
+log t
+2π + ζ ′
+ζ (3/2 −it)
+)
+dt
+F 2−2
+n (α) = − T −2α
+√nΛ(n)
+1
+T
+∫ 2T
+T
+nit
+⏐
+⏐
+⏐
+⏐log t
+2π + ζ ′
+ζ (3/2 −it)
+⏐
+⏐
+⏐
+⏐
+2
+dt.
+To handle the error terms from Lemma
+8.1, we used the crude bound
+∫ 2T
+T |∑
+mamm−it|2dt ≪∑
+m |am|2(T +m) and the prime number theorem to obtain
+∫ 2T
+T
+⏐
+⏐
+⏐
+⏐
+∑
+m
+Λ(m)am(y)
+(y
+m
+) it⏐
+⏐
+⏐
+⏐dt ≪
+√
+T
+∑
+m
+Λ(m)2am(y)2(T +m) ≪T
+√
+y logy +y
+√
+T logy.
+First we analyze F 1−1
+n (α). For starters, we notice that if nl ⁄=m then
+∫ 2T
+T
+(nl
+m
+) it
+dt ≪ 1
+| log nl
+m | ≪ m
+|nl −m|.
+
+===== PAGE 37 =====
+
+THE THIRD MOMENT OF THE LOGARITHM OF ZETA 37
+Therefore, the “oﬀ-diagonal”contribution of F 1−1
+n (α) is
+≪ T −α
+Λ(n)
+1
+T
+∑
+m,l
+m⁄=ln
+Λ(m)Λ(l)am(nTα)al(Tα) m
+|nl −m| ≪ nTα(logT )3
+T ,
+since
+(8.2)
+∑
+m,l
+m⁄=ln
+Λ(m)Λ(l)am(nTα)al(Tα) m
+|nl −m| ≪ (logT )3nT 2α.
+The proof of ( 8.2) is standard. One splits the double sum into four terms, according t o
+the deﬁnition of am(nTα) and al(Tα). For each piece, one splits again into two cases: 0 <
+|nl −m| < nl
+2 and |nl −m| > nl
+2 . We show all the details for one of the four terms, as the
+other three can be handled analogously. For (say) m ≤nTα and l ≤Tα, the left hand side
+of ( 8.2) is bounded by
+≪ (logT )2
+√nTα
+∑
+l≤T α
+m≤nT α
+m⁄=ln
+m
+√
+ml
+|nl −m|.
+We now split into two cases. If |nl −m| =: |h|< nl
+2 , then the sum above is
+∑
+l≤T α
+m≤nT α
+0<|nl−m|< nl
+2
+m3/2l1/2
+|nl −m| ≪
+∑
+l≤T α
+0<|h|< nl
+2
+(nl ±h)3/2l1/2
+|h| ≪n3/2∑
+l≤T α
+h< nl
+2
+l2
+|h| ≪n3/2T 3α logT.
+If instead |nl −m|> nl
+2 then |nl −m| ≫ nl, so
+∑
+l≤T α
+m≤nT α
+|nl−m|> nl
+2
+m3/2l1/2
+|nl −m| ≪ 1
+n
+∑
+l≤T α
+m≤nT α
+m1/2
+l1/2 ≪ (nTα)5/2(Tα)1/2
+n ≪n3/2T 3α,
+and ( 8.2) is proven in this case. Hence, since 0 <α< 1 − logn
+logT −δT ,
+F 1−1
+n (α) = −T −α
+Λ(n)
+∑
+l
+Λ(nl)Λ(l)anl(nTα)al(Tα) +O(T −δT/2)
+= − 1
+Λ(n)
+∑
+m
+Λ(nm)Λ(m)
+m min
+{ m
+Tα,Tα
+m
+} 2
++O(T −δT/2).
+(8.3)
+Now we move to F 1−2
+n (α). We isolate the term m =n, for which an(nTα) = T −α/2. Since
+log t
+2π + ζ ′
+ζ (3/2 +it) = log T +O(1) for T ≤t ≤ 2T , we get
+F 1−2
+n (α) =T −2α(logT +O(1)) +O(E1) +O(E2)(8.4)
+
+===== PAGE 38 =====
+
+38 ALESSANDRO F AZZARI AND MAXIM GERSPACH
+with
+E1 ≪ T −3α/2
+Λ(n)
+1
+T
+∑
+m⁄=n
+Λ(m)am(nTα)
+⏐
+⏐
+⏐
+⏐
+∫ 2T
+T
+(n
+m
+) it
+log t
+2πdt
+⏐
+⏐
+⏐
+⏐
+and
+E2 ≪ T −3α/2
+Λ(n)
+1
+T
+∑
+m
+Λ(m)am(nTα)
+⏐
+⏐
+⏐
+⏐
+∫ 2T
+T
+(n
+m
+) itζ ′
+ζ (3/2 +it)dt
+⏐
+⏐
+⏐
+⏐.
+We start by bounding E1. Using the ﬁrst derivative test for oscillating integrals (see e.g.
+[Tit87, Lemma 4.3]), we obtain
+E1 ≪ T −3α/2
+Λ(n)
+logT
+T
+∑
+m⁄=n
+Λ(m)am(nTα)
+| log(m/n)| ≪ T −3α/2
+Λ(n)
+logT
+T
+∑
+m⁄=n
+mΛ(m)am(nTα)
+|m −n| .
+The remaining sum can be bounded with a similar strategy as in the proo f of ( 8.2). Namely,
+one splits in two cases: if m ≥ 2n then |m −n| ≫ m, so the sum is clearly ≪nTα. If instead
+m < 2n, we do the change of variable h = m −n, and we get a contribution bounded by
+≪nTα(logn)2, because the sum over h is short (i.e. 0 < |h|<n ). Arguing as described, one
+gets
+E1 ≪ nT −α/2 logT (logn)2
+Λ(n)T ≪ n(logn)2 logT
+T ≪ R.
+Now we deal with E2. To bound the integral, we open the log-derivative of zeta as a Dirich let
+series and integrate over t term by term, getting:
+∫ 2T
+T
+(n
+m
+) itζ ′
+ζ (3/2 +it)dt ≪ Λ(n/m)T
+(n/m)3/2 +
+∑
+bm⁄=n
+Λ(b)
+b3/2
+m
+|bm −n|.
+Therefore,
+E2 ≪ T −3α/2
+Λ(n)
+∑
+m
+Λ(m)Λ(n/m)am(nTα)
+(n/m)3/2 + T −3α/2
+T
+∑
+m
+Λ(m)am(nTα)
+∑
+bm⁄=n
+Λ(b)
+b3/2
+n
+|bm −n|.
+The ﬁrst term above can be bounded easily. Since n =qa, the factor Λ( n/m) forces m to be
+a power of q smaller than n. Then, the sum over m can be restricted to the range m<n , in
+which case am(nTα) = √m/
+√
+nTα. Hence, the ﬁrst term is
+≪ T −2α
+Λ(n)n2
+∑
+m<n
+Λ(m)Λ(n/m)m2 ≪ T −2αΛ(n)
+n2
+∑
+c<a
+q2c ≪ T −2αΛ(n)
+n2
+n2
+q2 ≪T −2α.
+For the second term, one can apply our now familiar machinery for th is kind of sums, and
+show that it is ≪ R. The proof works exactly as the similar ones described above: if |bm −n|
+is (say) ≥ n
+2 , then the sum is clearly smaller than n/T . If instead |bm −n| < n
+2 , we do the
+change of variable h =bm −n and we still win because the sum over h is short. This yields
+E2 ≪T −2α + R.
+
+===== PAGE 39 =====
+
+THE THIRD MOMENT OF THE LOGARITHM OF ZETA 39
+Therefore ( 8.4) reads
+(8.5) F 1−2
+n (α) = T −2α(logT +O(1)) +O(R).
+Arguing similarly, we can show that
+(8.6) F 2−1
+n (α) ≪T −2α + R.
+The computation follows closely that of F 1−2
+n (α). The main diﬀerence is the phase of the
+oscillating integral, which is now ( nl)it. Since n and l are prime powers, the phase is never
+close to 1, and therefore the integral has no diagonal contributio n, i.e. no main term.
+Also F 2−2
+n (α) can be handled with similar techniques. For starters, we expand
+⏐
+⏐
+⏐
+⏐log t
+2π + ζ ′
+ζ (3/2 −it)
+⏐
+⏐
+⏐
+⏐
+2
+=
+(
+log t
+2π
+) 2
++ log t
+2π
+∑
+b
+Λ(b)
+b3/2 (bit +b−it) +O(1).
+The contribution of the error term above to F 2−2
+n (α) is clearly ≪T −2α. Moreover, the term
+(log t
+2π )2 contributes ≪ (logT )2/T , by an application of the ﬁrst derivative test [Tit87,
+Lemma 4.3]. The same lemma also provides a bound for the term involving bit, which turns
+out to be ≪ logT/T . Therefore,
+F 2−2
+n (α) = T −2α
+√nΛ(n)
+1
+T
+∑
+b
+Λ(b)
+b3/2
+∫ 2T
+T
+(n
+b
+) it
+log t
+2πdt +O(T −2α) +O
+((logT )2
+T
+)
+.
+As usual, we isolate the main term coming from the diagonal term n =b, getting
+F 2−2
+n (α) = T −2α logT
+n2 +O
+(T −2α
+√nT
+∑
+b⁄=n
+Λ(b)
+b3/2
+logT
+| log(n/b)|
+)
++O(T −2α) +O
+((logT )2
+T
+)
+= T −2α logT
+n2 +O(R) +O(T −2α)
+(8.7)
+since
+T −2α
+√nT
+∑
+b⁄=n
+Λ(b)
+b3/2
+logT
+| log(n/b)| ≪ logT√nT
+∑
+b⁄=n
+Λ(b)
+b3/2
+n
+|n −b| ≪
+√n logT
+T ≪ R.
+Plugging ( 8.3), ( 8.5), ( 8.6), and ( 8.7) into ( 8.1), we conclude the proof.
+8.2. Negative alpha. The case − logn
+logT ≤α ≤ 0 is similar to the case of positive α. In this
+range 1 ≤ T −α ≤ n and 1 ≤ nTα ≤ n. Therefore, arguing as in [Mon73, p. 187-188] and
+applying Lemma 8.1, we have
+Fn(α) = − 4√n
+T Λ(n)
+∫ 2T
+T
+(∑
+γ
+(nTα)iγ
+1 + (t −γ)2
+)( ∑
+γ′
+(T −α)iγ′
+1 + (t −γ′)2
+)
+dt +O
+(√n(logT )3
+T
+)
+=F 1−1
+n (α) +F 1−2
+n (α) +F 2−1
+n (α) +F 2−2
+n (α) +O
+(√n(logT )3
+T
+)(8.8)
+
+===== PAGE 40 =====
+
+40 ALESSANDRO F AZZARI AND MAXIM GERSPACH
+where
+F 1−1
+n (α) = − 1
+T Λ(n)
+∑
+m
+∑
+l
+Λ(m)Λ(l)am(nTα)al(T −α)
+∫ 2T
+T
+( n
+ml
+) it
+dt
+F 1−2
+n (α) = Tα/2
+T Λ(n)
+∑
+m
+Λ(m)am(nTα)
+∫ 2T
+T
+(n
+m
+) it(
+log t
+2π + ζ ′
+ζ (3/2 −it)
+)
+dt
+F 2−1
+n (α) = 1
+T
+√
+nTαΛ(n)
+∑
+l
+Λ(l)al(T −α)
+∫ 2T
+T
+(
+log t
+2π + ζ ′
+ζ (3/2 −it)
+)( n
+l
+) it
+dt
+F 2−2
+n (α) = − 1
+T √nΛ(n)
+∫ 2T
+T
+nit
+(
+log t
+2π + ζ ′
+ζ (3/2 −it)
+) 2
+dt.
+As in the previous proof, we now analyze the four terms one by one. We start by F 1−1
+n ;
+we isolate the contribution of the diagonal ml = n, for which we use the trivial identity
+am(nTα)an/m(T −α) = min {nT α
+m , m
+nT α }2. The oﬀ-diagonal terms ml ⁄= n can be bounded by
+≪ (logT )2n1+δ/T for any δ >0, in a similar (and easier) way as in ( 8.2). For example, when
+m ≤nTα and l ≤T −α, the oﬀ-diagonal contribution can be bounded by
+(logT )2
+√nT
+∑
+m≤nT α
+l≤T −α
+(ml)3/2
+n −ml ≪ (logT )2
+√nT
+∑
+ml≤ n
+2
+(ml)3/2
+n −ml + (logT )2
+√nT
+∑
+n
+2<ml<n
+(ml)3/2
+n −ml
+≪ (logT )2
+n√nT
+∑
+ml≤ n
+2
+(ml)3/2 + n(logT )2
+T
+∑
+0<h< n
+2
+d(n −h)
+h ≪ n1+δ(logT )2
+T .
+Hence, we obtain
+(8.9) F 1−1
+n (α) = − 1
+Λ(n)
+∑
+m
+Λ(m)Λ(n/m) min
+{ nTα
+m , m
+nTα
+} 2
++O(R).
+To analyze F 1−2
+n (α), we apply the same machinery as in the previous section. For the
+log t
+2π term, we isolate the diagonal term n = m, for which an(nTα) = T 3α/2. As for the
+ζ ′
+ζ (3/2 −it)-term, we expand the log-derivative of zeta as a Dirichlet series ind exed by the
+parameter b, and we isolate the contribution from b =m/n. This yields
+F 1−2
+n (α) = T 2α(logT +O(1)) − Tα/2n3/2
+Λ(n)
+∑
+m
+Λ(m)Λ(m/n)am(nTα)
+m3/2
++O
+(Tα/2
+T
+∑
+m⁄=n
+Λ(m)am(nTα)n logT
+|n −m|
+)
++O
+(Tα/2
+T
+∑
+bn⁄=m
+Λ(m)Λ(b)
+b3/2 am(nTα) m
+|bn −m|
+)
+.
+
+===== PAGE 41 =====
+
+THE THIRD MOMENT OF THE LOGARITHM OF ZETA 41
+Bounding the error terms above by ≪n logT (logn)2/T ≪ R is now a routine calculation.
+Moreover, the second term on the ﬁrst line in the display above is also small. Indeed, since
+n =qa, the sum is supported on values of m such that m is a power of q, and m>n ≥nTα.
+For these m, we have am(nTα) = (nTα/m)3/2, and we therefore obtain
+Tα/2n3/2
+Λ(n)
+∑
+m
+Λ(m)Λ(m/n)am(nTα)
+m3/2 = T 2αn3
+Λ(n)
+∑
+c>a
+Λ(n)2
+q3c ≪T 2α logq
+q3 ≪T 2α.
+As a consequence,
+F 1−2
+n (α) = T 2α(logT +O(1)) +O(R).(8.10)
+An analogous argument leads to
+F 2−1
+n (α) = logT +O(1)
+(nTα)2 +O(R).(8.11)
+Finally, we handle F 2−2
+n (α) with similar techniques as in the previous section. We ﬁrst
+expand the square
+(
+log t
+2π + ζ ′
+ζ (3/2 −it)
+) 2
+=
+(
+log t
+2π
+) 2
+− 2 log t
+2π
+∑
+b
+Λ(b)
+b3/2−it +
+∑
+b,c
+Λ(b)Λ(c)
+(bc)3/2−it.
+We plug the above equation in the deﬁnition of F 2−2
+n (α). The contribution from the term
+(log t
+2π )2 toF 2−2
+n (α) is certainly ≪ (logT )2/T , by a standard application of the ﬁrst deriva-
+tive test [Tit87, Lemma 4.3]. The second and third term can be bounde d similarly, since the
+oscillating terms ((nb)it and (nbc)it respectively) are never close to 1. Doing so, we obtain
+(8.12) F 2−2
+n (α) ≪ R.
+The desired claim follows from Equations ( 8.8)-(8.12)
+9. Proof of Proposition 1.9
+Following [GG98], we introduce some convenient notations:
+A(s) :=
+∑
+m≤N
+Λ(m)
+ms , B (s) :=
+∑
+m≤N
+Λ(m/n)
+ms ,
+A∗(s) :=
+∑
+m>N
+Λ(m)
+ms , B ∗(s) :=
+∑
+m>N
+Λ(m/n)
+ms .
+(9.1)
+
+===== PAGE 42 =====
+
+42 ALESSANDRO F AZZARI AND MAXIM GERSPACH
+and
+A(t) := 1
+N
+(
+A
+(
+−1
+2 +it
+)
+−
+∫ N
+1
+u1/2−itdu
+)
+,
+A∗(t) := N
+(
+A∗
+(3
+2 +it
+)
+−
+∫ ∞
+N
+u−3/2−itdu
+)
+,
+B(t) := 1
+N
+(
+B
+(
+−1
+2 +it
+)
+− 1
+n
+∫ N
+1
+u1/2−itdu
+)
+,
+B∗(t) := N
+(
+B∗
+(3
+2 +it
+)
+− 1
+n
+∫ ∞
+N
+u−3/2−itdu
+)
+.
+The ﬁrst lemma we prove is an application of the explicit formula. For co nvenience, we
+introduce the notation
+S := n logT
+NT
+∫
+R
+(√n|A(t)| + √n|A∗(t)| + |B(t)| + |B∗(t)|
+)
+ψU
+(t
+T
+)
+dt
++
+√n(logT )3
+T + n3/2(logT )2
+N 2 ,
+(9.2)
+which will appear as an error term in the following.
+Lemma 9.1. Assume RH. Let n be a prime power and denote N =nTα. Also, suppose that
+α> 0. Then we have
+(9.3) Fn(α;ψU ) = − n
+T Λ(n)
+∫
+R
+(A(t) + A∗(t)) (B(t) + B∗(t))ψU
+(t
+T
+)
+dt +O(S),
+where S is deﬁned in (9.2).
+Proof. By deﬁnition of ωψU (1.10), we have
+Fn(α;ψU ) = −
+√n
+T Λ(n)
+∫
+R
+(
+2
+∑
+T ≤γ≤2T
+(nTα)iγ
+1 + (t −γ)2
+)(
+2
+∑
+T ≤γ′≤2T
+(Tα)−iγ′
+1 + (t −γ′)2
+)
+ψU
+(t
+T
+)
+dt
+= −
+√n
+T Λ(n)
+∫
+R
+(
+2
+∑
+γ
+(nTα)iγ
+1 + (t −γ)2
+)(
+2
+∑
+γ′
+(Tα)−iγ′
+1 + (t −γ′)2
+)
+ψU
+(t
+T
+)
+dt +O(S).
+The second line is obtained by arguing like in [Mon73, p. 187-188], since ψU is a smooth
+function supported on [1 , 2]. It suﬃces to note that the conditions restricting the sums over
+zeros can be removed up to an error term ≪ √n(logT )3/T ≪ S . We now employ a formula
+
+===== PAGE 43 =====
+
+THE THIRD MOMENT OF THE LOGARITHM OF ZETA 43
+due to Montgomery [Mon73] in the following version (see e.g. [GGOS0 0, (4.5)]):
+−2
+∑
+γ
+xiγ
+1 + (t −γ)2 =xit
+x
+(∑
+m≤x
+Λ(m)
+m−1/2+it − x3/2−it
+3
+2 −it
+)
++x1+it
+(∑
+m>x
+Λ(m)
+m3/2+it − x−1/2−it
+1
+2 +it
+)
++O
+(log(|t| + 2)
+x
+)
+for x ≥ 1. In the notations we introduced in the beginning of the section, by a double
+application of the above formula and some trivial manipulations, we ob tain
+Fn(α;ψU ) = − n
+T Λ(n)
+∫
+R
+(
+A(t) + A∗(t) +O
+(logT
+N
+))
+×
+(
+B(t) + B∗(t) +O
+(√n logT
+N
+))
+ψU
+(t
+T
+)
+dt +O(S)
+= − n
+T Λ(n)
+∫
+R
+(A(t) + A∗(t)) (B(t) + B∗(t))ψU
+(t
+T
+)
+dt +O(S1) + (S),
+where
+S1 ≪ n logT
+NT
+∫
+R
+(√n|A(t)| + √n|A∗(t)| + |B(t)| + |B∗(t)|
+)
+ψU
+(t
+T
+)
+dt +O
+(n3/2(logT )2
+N 2
+)
+.
+□
+Lemma 9.2. Assume RH and Conjecture 1.8. Letn be a prime power, and denote N :=nTα.
+Suppose that T ≤N ≤T 2. Then, for any ν ∈ (0, 1
+2), we have
+Fn(α;ψU ) = − 2
+Λ(n)
+∫ ∞
+1
+fn(y)ℜ ˆψU
+( yT
+2πN
+)
+dy
++O
+( 1
+Λ(n)
+)
++O
+(nN 1+5ν
+T 2 + nN
+1
+2 + 11
+2 ν
+T +nT − ν
+2
+)
++O(S),
+where S is deﬁned in (9.2).
+Proof. According to Lemma 9.1, we write
+(9.4) Fn(α;ψU ) = F AB
+n (α;ψU ) +F AB∗
+n (α;ψU ) +F A∗B
+n (α;ψU ) +F A∗B∗
+n (α;ψU ) +O(S),
+
+===== PAGE 44 =====
+
+44 ALESSANDRO F AZZARI AND MAXIM GERSPACH
+with
+F A
+B
+n (α;ψU ) = − n
+T Λ(n)
+∫
+R
+A(t)B(t)ψU
+(t
+T
+)
+dt
+F AB∗
+n (α;ψU ) = − n
+T Λ(n)
+∫
+R
+A(t)B∗(t)ψU
+(t
+T
+)
+dt
+F A∗B
+n (α;ψU ) = − n
+T Λ(n)
+∫
+R
+A∗(t)B(t)ψU
+(t
+T
+)
+dt
+F A∗B∗
+n (α;ψU ) = − n
+T Λ(n)
+∫
+R
+A∗(t)B∗(t)ψU
+(t
+T
+)
+dt.
+In the range of α we are considering, we have T <N <T 2. Therefore, the above quantities
+involve mean values of long Dirichlet polynomial . To evaluate them, we appeal to work of
+Goldston and Gonek [GG98]. In order to apply their results, we note t hat
+∑
+m≤x
+Λ(m) = x +O(x1/2+ε)
+∑
+m≤x
+Λ(m/n) = x
+n +O
+((x
+n
+) 1/2+ε)
+by RH. Moreover, by the assumption of Conjecture 1.8, uniformly for h ≤x1−ε and for any
+n, we have
+∑
+m≤x
+Λ(m)Λ
+(m +h
+n
+)
+=
+∑
+h+1≤m≤x+h
+Λ
+(m
+n
+)
+Λ(m −h) = Sn(h)x
+n +O(x1/2+ε)
+∑
+m≤x
+Λ
+(m
+n
+)
+Λ(m +h) = Sn(h)x
+n +O(x1/2+ε).
+We remark that the above formulas follow from Conjecture 1.8 if (say) n ≤ √x. Moreover,
+they become trivial in the complementary range n >√x. Hence, the two equations above
+do hold uniformly for every n.
+We start by looking at F AB
+n (α;ψU ). For any 0 <ν < 1
+2, an application of [GG98, Corollary
+1] yields
+F AB
+n (α;ψU ) = −T −2α
+Λ(n)
+ˆψ(0)
+∑
+l≤T α
+Λ(l)Λ(ln)l
+− 2
+Λ(n)
+T 2
+(2πN )2
+(∫ ∞
+T/ 2πN
+∑
+1≤h≤2πNv/T
+Sn(h)h2 × ℜ ˆψU (v)dv
+v3
+−
+∫ ∞
+T/ 2πτN
+1
+3
+(2πNv
+T
+) 3
+× ℜ ˆψU (v)dv
+v3
+)
++O
+(nN 1+5ν
+T 2 + nN
+1
+2 + 11
+2 ν
+T
+)
+,
+(9.5)
+
+===== PAGE 45 =====
+
+THE THIRD MOMENT OF THE LOGARITHM OF ZETA 45
+where τ =T 1−ν. Moreover, since n =qa is a prime power, we have
+−T −2α
+Λ(n)
+∑
+l≤T α
+Λ(l)Λ(ln)l = −Λ(n)
+T 2α
+∑
+b≤α log T
+log q
+qb = −Λ(n)
+T 2α
+q(Tα − 1)
+q − 1 ≪ Λ(n)
+Tα ≪ 1√
+T
+.
+Finally, we can restrict the integral on the last line of ( 9.5) to the interval (T/ 2πN, ∞), at the
+cost of an error bounded by ≪ (N/T )2. Therefore, with the change of variable y = 2πNv/T ,
+Equation ( 9.5) reads
+F AB
+n (α;ψU ) = − 2
+Λ(n)
+∫ ∞
+1
+( ∑
+1≤h≤y
+Sn(h)h2 − y3
+3
+)
+× ℜ ˆψ
+( yT
+2πN
+) dy
+y3
++O
+( 1
+Λ(n)
+)
++O
+(nN 1+5ν
+T 2
+)
++O
+(nN
+1
+2 + 11
+2 ν
+T
+)
+.
+(9.6)
+We bound F A
+B∗
+n (α;ψU ) and F A∗B
+n (α;ψU ) by a direct application of [GG98, Theorem 3];
+namely,
+F AB∗
+n (α;ψU ) ≪ n
+T Λ(n)
+N 2− 3
+2 + 1
+2 +5ν
+T ≪ nN 1+5ν
+T 2 and F A∗B
+n (α;ψU ) ≪ nN 1+5ν
+T 2 .(9.7)
+Finally, we turn to F A∗
+B∗
+n (α;ψU ). Applying Corollary 2 of [GG98], we have
+F A∗B∗
+n (α;ψU ) = − nN 2
+T Λ(n)
+{
+ˆψU (0)T
+∑
+m>N
+Λ(m)Λ(m/n)
+m3
++ 2 (2π)2
+nT
+∫ T/ 2πN
+0
+∑
+1≤h≤H ∗
+Sn(h)
+h2 × ℜ ˆψU (v)vdv
++ 2 (2π)2
+nT
+∫ TH ∗/2πN
+T/ 2πN
+∑
+2πN v
+T <h≤H ∗
+Sn(h)
+h2 × ℜ ˆψU (v)vdv
+− 2 (2π)2
+nT
+∫ TH ∗/2πN
+0
+∫ H ∗
+2πNv/T
+dx
+x2 × ℜ ˆψU (v)vdv +O
+(N −1+5ν
+T +N − 3
+2 + 11
+2 ν + T 1− ν
+2
+N 2
+)}
+with H ∗ = N 2/ (1−ν )
+T 2(1−ν ) . We perform the change of variable 2 πNv/T = y, and we note that (if
+n =qa)
+nN 2
+Λ(n)
+∑
+m>N
+Λ(m)Λ(m/n)
+m3 = T 2α
+Λ(n)
+∑
+b>α log T
+log q
+Λ(n)2
+q3b ≪ T 2α logq
+q3
+1
+T 3α ≪T −α ≪ 1√
+T
+.
+
+===== PAGE 46 =====
+
+46 ALESSANDRO F AZZARI AND MAXIM GERSPACH
+Doing so, we obtain
+F A∗
+B∗
+n (α;ψ) = − 2
+Λ(n)
+∫ 1
+0
+( ∑
+1≤h≤H ∗
+Sn(h)
+h2 −
+∫ H ∗
+y
+dx
+x2
+)
+ℜ ˆψU
+( yT
+2πN
+)
+ydy
+− 2
+Λ(n)
+∫ H ∗
+1
+( ∑
+y≤h≤H ∗
+Sn(h)
+h2 −
+∫ H ∗
+y
+dx
+x2
+)
+ℜ ˆψU
+( yT
+2πN
+)
+ydy
++O
+(nN 1+5ν
+T 2 + nN
+1
+2 + 11
+2 ν
+T +nT − ν
+2
+)
+.
+Trivially, one sees that
+∫ 1
+0
+( ∑
+1≤h≤H ∗
+Sn(h)
+h2 −
+∫ H ∗
+y
+dx
+x2
+)
+ℜ ˆψU
+( yT
+2πN
+)
+ydy ≪
+∫ 1
+0
+(
+1 + 1
+H ∗ + 1
+y
+)
+ydy ≪ 1.
+Finally, using
+∑
+y≤h≤H ∗
+Sn(h)
+h2 −
+∫ H ∗
+y
+dx
+x2 =T2,n(y) +O
+((logH ∗)2/3
+(H ∗)2
+)
+and
+T2,n(y) ≪ (logy)2/3
+y2 ,
+together with the fast decay of ˆψU , we deduce
+F A∗B∗
+n (α;ψ) = − 2
+Λ(n)
+∫ ∞
+1
+T2,n(y) × ℜ ˆψU
+( yT
+2πN
+)
+ydy
++O
+(nN 1+5ν
+T 2 + nN
+1
+2 +6ν
+T +nT − ν
+2
+)
++O
+( 1
+Λ(n)
+)
+.
+(9.8)
+Plugging (
+9.6),(9.7), and ( 9.8) into ( 9.4), we get
+Fn(α;ψ) = − 2
+Λ(n)
+∫ ∞
+1
+S2,n(y)×ℜ ˆψ
+( uT
+2πN
+) dy
+y3 − 2
+Λ(n)
+∫ ∞
+1
+T2,n(y) × ℜ ˆψU
+( yT
+2πN
+)
+ydy
++O
+( 1
+Λ(n)
+)
++O
+(nN 1+5ν
+T 2 + nN
+1
+2 + 11
+2 ν
+T +nT − ν
+2
+)
++O(S)
+as desired. □
+Lemma 9.3. Assume RH and Conjecture 1.8. If n is a prime power smaller than ≤T 1/2−ε
+for some ﬁxed 0 < ε < 1
+2, and T ≤ N ≤ T 2, then the error term S deﬁned in (9.2) is
+≪T −1/4.
+
+===== PAGE 47 =====
+
+THE THIRD MOMENT OF THE LOGARITHM OF ZETA 47
+Proof. By applying Cauchy-Schwarz inequality, we have
+S ≪ n logT
+N
+√
+T
+(∫
+R
+(
+n|A(t)|2 +n|A∗(t)|2 + |B(t)|2 + |B∗(t)|2
+)
+ψU
+(t
+T
+)
+dt
+) 1/2
++T −1/4.
+We will bound each term above separately, by using the same techniq ue as in the proof of
+Lemma 9.2. The calculation for the ﬁrst two terms can also be found in [GG98, Ex ample
+4] and with more details in [GGOS00, Section 7]. We also remark that th e second moments
+above can be even evaluated asymptotically; however, an upper bo und is enough for our
+purposes. As for the second moment of A(t), [GG98, Corollary 1] yields
+(9.9)
+∫
+R
+|A(t)|2ψU
+(t
+T
+)
+dt = 2T
+∫ ∞
+1
+(∑
+h≤y
+S(h)h2 − y3
+3
+)
+ℜ ˆψU
+( yT
+2πN
+) dy
+y3 +O(T 1+ε).
+since the diagonal term from Goldston-Gonek’s formula is
+T ˆψU (0)
+N 2
+∑
+m≤N
+Λ(m)2m ≪T 1+ε.
+Note that Conjecture 1.8 for n = 1 guarantees that the assumptions of [GG98, Corollary 1]
+are satisﬁed. Moreover, the term involving the singular series in ( 9.9) can be evaluated with
+the same strategy as in the proof of 9.2, or as in [GG98, p. 191]. Doing so, one gets
+n logT
+N
+√
+T
+(∫
+R
+n|A(t)|2ψU
+(t
+T
+)
+dt
+) 1/2
+≪ n logT
+N
+√
+T
+√
+nT 1+ε ≪ n3/2Tε
+N ≪T −1/4.
+With little modiﬁcation to the previous argument, one also shows that
+n logT
+N
+√
+T
+(∫
+R
+|B(t)|2ψU
+(t
+T
+)
+dt
+) 1/2
+≪T −1/4.
+The second moment of A∗ and B∗ can be obtained by the same strategy, invoking Corollary
+2 of [GG98] in place of Corollary 1. The claim follows. □
+Lemma 9.4. Letn =qa be a prime power, and Q a parameter. Then,
+− 2
+Λ(n)
+∫ ∞
+1
+fn(y)ℜ ˆψU
+( y
+2πQ
+)
+dy = min
+{
+1, logQ
+Λ(n)
+}
++O
+(logQ
+U
+)
++O
+(1 + logU
+Λ(n)
+)
+.
+Proof. Abbreviating the left-hand side as LHS and applying Lemma 2.8, we obtain
+LHS = 1
+Λ(n)
+∫ q
+1
+ℜ ˆψU
+( y
+2πQ
+) dy
+y +O
+( 1
+Λ(n)
+∫ q
+1
+1
+y5/4
+⏐
+⏐
+⏐
+⏐ˆψU
+( y
+2πQ
+) ⏐
+⏐
+⏐
+⏐dy
+)
++O
+( 1
+qΛ(n)
+∫ q
+1
+⏐
+⏐
+⏐
+⏐ˆψU
+( y
+2πQ
+)
+dy
+⏐
+⏐
+⏐
+⏐
+)
++O
+(q1/4
+Λ(n)
+∫ ∞
+q
+1
+y5/4
+⏐
+⏐
+⏐
+⏐ˆψU
+( y
+2πQ
+) ⏐
+⏐
+⏐
+⏐dy
+)
+.
+
+===== PAGE 48 =====
+
+48 ALESSANDRO F AZZARI AND MAXIM GERSPACH
+Since ˆψU (x) ≪ 1, the error terms can be bounded trivially, and the above reads
+LHS = 1
+Λ(n)
+∫ q
+1
+ℜ ˆψU
+( y
+2πQ
+) dy
+y +O
+( 1
+Λ(n)
+)
+.
+As for the main term, we split into two cases. If q ≤Q, we Taylor expand ˆψU around 0, and
+write
+(9.10) ℜ ˆψU
+( y
+2πQ
+)
+= ℜ ˆψU (0) +O
+(y
+Q
+)
+= 1 + O
+( 1
+U
+)
++O
+(y
+Q
+)
+,
+since ℜ ˆψU (0) = 1 + O(1/U ). Hence, for q ≤Q,
+LHS = 1
+Λ(n)
+∫ q
+1
+dy
+y +O
+( 1
+UΛ(n)
+∫ q
+1
+dy
+y
+)
++O
+( T
+NΛ(n)
+∫ q
+1
+dy
+)
++O
+( 1
+Λ(n)
+)
+= 1 + O
+( 1
+U
+)
++O
+( 1
+Λ(n)
+)
+.
+In the case q >Q, we truncate the integral at height Q as follows:
+LHS = 1
+Λ(n)
+∫ Q
+1
+ℜ ˆψU
+( y
+2πQ
+) dy
+y +O
+( 1
+Λ(n)
+∫ QU
+Q
+⏐
+⏐
+⏐
+⏐ˆψU
+( y
+2πQ
+) ⏐
+⏐
+⏐
+⏐
+dy
+y
+)
++O
+( 1
+Λ(n)
+∫ q
+QU
+⏐
+⏐
+⏐
+⏐ˆψU
+( y
+2πQ
+) ⏐
+⏐
+⏐
+⏐
+dy
+y
+)
++O
+( 1
+Λ(n)
+)
+.
+The ﬁrst term can be evaluated by using Equation ( 9.10). For the error terms, we use
+ˆψU (x) ≪ min{1,U/x }, and get
+LHS = logQ
+Λ(n) +O
+( logQ
+UΛ(n)
+)
++O
+(logU
+Λ(n)
+)
++O
+( 1
+Λ(n)
+)
+for q ≤Q. The claim follows. □
+Putting together the previous lemmas, we now prove Proposition 1.9.
+Proof of Proposition 1.9. We start by Lemma 9.2. A bound for S is given by Lemma 9.3. As
+for the main term, we apply Lemma 9.4 with Q =N/T . This yields
+Fn(α;ψU ) = min
+{
+1, log(N/T )
+Λ(n)
+}
++O
+(log(N/T )
+U
+)
++O
+(1 + logU
+Λ(n)
+)
++O(T −1/4)
++O
+( 1
+Λ(n)
+)
++O
+(nN 1+5ν
+T 2 + nN
+1
+2 + 11
+2 ν
+T +nT − ν
+2
+)
+,
+We take U = (logT )2 so that
+log(N/T )
+U + 1 + logU
+Λ(n) ≪ log logT
+Λ(n) .
+
+===== PAGE 49 =====
+
+THE THIRD MOMENT OF THE LOGARITHM OF ZETA 49
+If
+(9.11) T ≤N ≤T
+1−ν/ 2
+1/ 2+11ν/ 2 i.e. 1 − logn
+logT ≤α ≤ 1 −ν/2
+1/2 + 11ν/2 − logn
+logT,
+the two error terms nN 1+5ν/T 2 and nN 1/2+11ν/2/T are both ≪nT −ν/2. Hence,
+Fn(α;ψU ) = min
+{
+1, log(N/T )
+Λ(n)
+}
++O
+(log logT
+Λ(n)
+)
++O(nT − ν
+2 ).
+To control the last error term, it suﬃces to take ν = (2 + ε) logn
+logT with ε = 1
+100 , say. This
+guarantees that nT −ν/2 ≪n−ε/2 ≪ 1/ logn. With these choices, the range in ( 9.11) becomes
+1 − logn
+logT ≤α ≤
+2 − (2 +ε) logn
+logT
+1 + 11(2 +ε) logn
+logT
+− logn
+logT,
+Since the range above is contained in the range in ( 1.11), this concludes the proof. □
+Remark 9.5. We note that the most restrictive error term in terms of the range ofn andN
+considered in Proposition 1.9 is given by the last error term of [GG98, Corollary 2]. It seems
+plausible that one could make this error term smaller by choosing the p arameter H ∗ there
+bigger. This in turn is possible as long as the parameter η, which controls the uniformity in
+the shift h, is strictly bigger than 1
+2, compare [GG98, p. 174]. We have assumed this to be
+the case through Conjecture 1.8. Following this approach, one may be able to improve upon
+Proposition 1.9. In particular, this may allow one to choose α up to essentially 2 − 3 logn
+logT on
+a range of n ≤Tβ for some ﬁxed β >0.
+References
+[Bol87] J. Bolanz. ¨Uber die Montgomery’sche Paarvermutung . PhD thesis, Universit¨ at Freiburg, 1987.
+[Cha04] T. Chan. More precise Pair Correlation Conjecture on the z eros of the Riemann zeta function.
+Acta Arithmetica, 114:199–214, 01 2004.
+[FG95] J.B. Friedlander and D. A. Goldston. Some singular series aver ages and the distribution of
+Goldbach numbers in short intervals. Illinois Journal of Mathematics , 39(1):158 – 180, 1995.
+[GG98] D. A. Goldston and S. M. Gonek. Mean value theorems for long Dirichlet polynomials and tails
+of Dirichlet series. Acta Arithmetica, 1998.
+[GGOS00] D. A. Goldston, S. M. Gonek, A. E. ¨Ozl¨ uk, and C. Snyder. On the pair correlation of zeros of
+the Riemann zeta-function. Proc. London Math. Soc. (3) , 80(1):31–49, 2000.
+[Gol87] D. A. Goldston. On the function S(T ) in the theory of the Riemann zeta-function. Journal of
+Number Theory, 27(2):149–177, 1987.
+[Gon85] S. M. Gonek. A formula of Landau and Mean Values of ζ(s). In Topics in Analytic Number
+Theory, pages 92–96, 1985.
+[GS20] D. A. Goldston and A. I. Suriajaya. A singular series average and the zeros of the Riemann
+zeta-function. Acta Arithmetica, 2020.
+[GS21] D. A. Goldston and A. I. Suriajaya. The error term in the Ces ` aro mean of the prime pair singular
+series. Journal of Number Theory , 227:144–157, 2021.
+
+===== PAGE 50 =====
+
+50 ALESSANDRO F AZZARI AND MAXIM GERSPACH
+[Hej94] D. A. Hejhal. On the triple correlation of zeros of the zeta f unction. International Mathematics
+Research Notices, 1994(7):293–302, 04 1994.
+[KS00] J. Keating and N Snaith. Random matrix theory and ζ(1/2+it). Commun. Math. Phys. ,
+214:57–89, 2000.
+[LMQH23] M. M. Lugar, M. B. Milinovich, and E. Quesada-Herrera. On the number variance of zeta zeros
+and a conjecture of Berry. Mathematika, 69(2):303–348, 2023.
+[Mon73] H. L. Montgomery. The pair correlation of zeros of the zet a function. In Analytic number theory
+(Proc. Sympos. Pure Math., Vol. XXIV, St. Louis Univ., St. Lo uis, Mo., 1972) , volume Vol.
+XXIV of Proc. Sympos. Pure Math. , pages 181–193. Amer. Math. Soc., Providence, RI, 1973.
+[Odl] A. M. Odlyzko. The 10 20-th zero of the riemann zeta function and 70 million of its neighbors.
+Preprint, 1989.
+[Rod13] B. Rodgers. The statistics of the zeros of the Riemann zeta-function and related topics . PhD
+thesis, UCLA, 2013.
+[RS96] Z. Rudnick and P. Sarnak. Zeros of principal L-functions and random matrix theory. Duke
+Mathematical Journal , 81(2):269 – 322, 1996.
+[Sel46] A. Selberg. Contributions to the theory of the Riemann zeta -function. Arch. Math. Naturvid. ,
+48(5):89–155, 1946.
+[Sel92] A. Selberg. Old and new conjectures and results about a clas s of Dirichlet series. In Proceedings
+of the Amalﬁ Conference on Analytic Number Theory , page 367–385, 1992.
+[Tit87] E. C. Titchmarsh. The Theory of the Riemann Zeta-Function . Oxford University Press, 2nd
+edition, 1987. Revised by D. R. Heath-Brown.
+[Tsa84] K. M. Tsang. The distribution of the values of the Riemann zeta function . PhD thesis, Princeton
+University, 1984.
+D´
+epartement de math´
+ematiques et de statistique, Universit ´
+e de Montr ´
+eal. CP 6128, succ.
+Centre-ville. Montreal, QC H3C 3J7, Canada
+Email address : alessandro.fazzari@umontreal.ca
+Department of Mathematics, KTH Royal Institute of Technolo gy, Lindstedtsv ¨agen 25,
+Stockholm, Sweden
+Email address : maxim.gerspach@gmail.com
