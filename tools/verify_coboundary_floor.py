@@ -1,0 +1,455 @@
+#!/usr/bin/env python3
+"""Exact interval verification of 7-point (and coboundary) floor inequalities.
+
+Re-implements the branch-and-bound verification of
+    F(g1..g6) >= target   for all g_i >= 0
+in Arb (python-flint), following the ainta/trmdy/tawanerguo design:
+  * kernel table: rigorous binary64 lower bounds for w(x)=k(x)^2 on
+    cells [i/grid, (i+1)/grid] via Arb interval enclosure of k on the cell;
+  * range-minimum sparse table;
+  * branch-and-bound over 6D cell boxes, pruning by the one-coordinate
+    term U(g)=p g + q w(g), the interval lower bound, and the
+    convex-tangent lower bound (arb, exact LDL) when convexity certifies.
+
+This is a *re-implementation* from the published formulas (not a copy of any
+repo verifier).  It is intended to certify F_B at candidate parameters where
+the float probe found a higher floor.
+
+Usage:
+    uv run --with mpmath --with python-flint python tools/verify_coboundary_floor.py
+"""
+
+from __future__ import annotations
+
+import hashlib
+import itertools
+import math
+import struct
+import sys
+import time
+
+from flint import arb, fmpq, ctx
+
+
+def configure(prec: int = 128) -> None:
+    ctx.prec = prec
+
+
+# ---------------------------------------------------------------------------
+# Kernel in Arb
+# ---------------------------------------------------------------------------
+
+def _sinc(z):
+    return z.sinc()
+
+
+class KernelArb:
+    """K(x) = sum_j c_j (sinc((w_j-2pi x)/2)+sinc((w_j+2pi x)/2))/2."""
+
+    def __init__(self, coeffs, omegas):
+        self.coeffs = [arb(c) for c in coeffs]
+        self.omegas = [arb(w) for w in omegas]
+        k0 = arb(0)
+        for c, w in zip(self.coeffs, self.omegas):
+            k0 += c * 2 * (w / 2).sin() / w
+        self.k0 = k0
+        self.k0sq = k0 * k0
+
+    def K(self, x):
+        pi = arb.pi()
+        total = arb(0)
+        for c, w in zip(self.coeffs, self.omegas):
+            a = (w - 2 * pi * x) / 2
+            b = (w + 2 * pi * x) / 2
+            total += c * (_sinc(a) + _sinc(b)) / 2
+        return total
+
+    def w_lower_on_cell(self, index, grid):
+        """Rigorous lower bound of w = (K/K0)^2 on cell index."""
+        cell = arb(fmpq(2 * index + 1, 2 * grid), fmpq(1, 2 * grid))
+        k = self.K(cell)
+        ratio = (k / self.k0).abs_upper() if False else (k / self.k0)
+        low = ratio.abs_lower()
+        if low <= 0:
+            return 0.0
+        return math.nextafter(low * low, -math.inf)
+
+    def w_second_lower_on_cell(self, index, grid):
+        """Rigorous lower bound of w'' = (k^2/k0^2)'' on cell index."""
+        cell = arb(fmpq(2 * index + 1, 2 * grid), fmpq(1, 2 * grid))
+        pi = arb.pi()
+        # k, k', k''
+        k, k1, k2 = self.kernel_derivatives(cell)
+        # w = k^2/k0^2; w'' = 2(k1^2 + k k2)/k0^2
+        second = 2 * (k1 * k1 + k * k2) / self.k0sq
+        return math.nextafter(float(second.lower()), -math.inf)
+
+    def kernel_derivatives(self, x):
+        """Arb enclosures of K, K', K'' at ball x."""
+        pi = arb.pi()
+        two_pi_x = 2 * pi * x
+        value = arb(0)
+        first = arb(0)
+        second = arb(0)
+        for c, w in zip(self.coeffs, self.omegas):
+            z_minus = (w - two_pi_x) / 2
+            z_plus = (w + two_pi_x) / 2
+            v_m, d1_m, d2_m = sinc_derivatives(z_minus)
+            v_p, d1_p, d2_p = sinc_derivatives(z_plus)
+            value += c * (v_m + v_p) / 2
+            first += c * pi * (d1_p - d1_m) / 2
+            second += c * pi * pi * (d2_m + d2_p) / 2
+        return value, first, second
+
+    def w_point(self, x):
+        k = self.K(arb(x))
+        return (k / self.k0) ** 2
+
+
+def sinc_derivatives(z):
+    """sinc, sinc', sinc'' via Arb's built-in sinc and its closed forms."""
+    value = z.sinc()
+    z2 = z * z
+    first = (z * z.cos() - z.sin()) / z2
+    second = ((2 - z2) * z.sin() - 2 * z * z.cos()) / (z2 * z)
+    return value, first, second
+
+
+def cosine_kernel(alpha):
+    return KernelArb([1.0], [float(alpha)])
+
+
+def mt_kernel():
+    return KernelArb([1.0], [math.sqrt(2)])
+
+
+def trmdy_kernel():
+    c = [1_000_000_000, 3_322_500, -7_609_135, 1_190_194, -731_476, -1_680_572, 1_141_360]
+    oms = [math.sqrt(2)] + [2 * math.pi * j for j in range(1, 7)]
+    return KernelArb(c, oms)
+
+
+# ---------------------------------------------------------------------------
+# Range minimum
+# ---------------------------------------------------------------------------
+
+class RangeMinimum:
+    def __init__(self, values):
+        self.length = len(values)
+        self._levels = [list(values)]
+        width = 1
+        while 2 * width <= self.length:
+            prev = self._levels[-1]
+            half = width
+            width *= 2
+            self._levels.append([min(prev[i], prev[i + half]) for i in range(self.length - width + 1)])
+
+    def query(self, left, right):
+        if left < 0 or right < left or right >= self.length:
+            raise IndexError((left, right, self.length))
+        level = (right - left + 1).bit_length() - 1
+        width = 1 << level
+        row = self._levels[level]
+        return min(row[left], row[right - width + 1])
+
+
+def table_sha256(values):
+    d = hashlib.sha256()
+    for v in values:
+        d.update(struct.pack(">d", v))
+    return d.hexdigest()
+
+
+# ---------------------------------------------------------------------------
+# Branch-and-bound verifier
+# ---------------------------------------------------------------------------
+
+def _down(v):
+    return math.nextafter(v, -math.inf)
+
+
+def _up(v):
+    return math.nextafter(v, math.inf)
+
+
+def verify_floor(kernel, weights, pressure, q, target, grid=4000,
+                 precision=128, cap_scheme="h", use_tangent=True,
+                 pressure_coeffs=None, nearest_coeffs=None, max_nodes=None,
+                 progress_every=0):
+    """Verify F(g) >= target.
+
+    weights: dict (i,j) -> a_ij (float, exact rationals as floats)
+    pressure: float p in the one-gap term p*sum g
+    q: number of gaps (6)
+    cap_scheme: 'h' (uniform 7-pt block cap) or 'coboundary' (use
+                pressure_coeffs/nearest_coeffs redistributed design)
+    pressure_coeffs: list of 6 floats for the redistributed p_i
+    nearest_coeffs:  list of 6 floats for the redistributed q_i (w(g_i) terms)
+    """
+    configure(precision)
+    q = int(q)
+    cutoff_units = target / pressure
+    cutoff_cells = int(math.ceil(_up(cutoff_units) * grid)) + 1
+    cell_count = cutoff_cells + 8
+    print(f"  grid={grid} cutoff_cells={cutoff_cells} cell_count={cell_count}")
+
+    t0 = time.time()
+    table = [kernel.w_lower_on_cell(i, grid) for i in range(cell_count)]
+    print(f"  kernel table built in {time.time()-t0:.1f}s sha={table_sha256(table)[:16]}")
+    ranges = RangeMinimum(table)
+    t0 = time.time()
+    second_table = [kernel.w_second_lower_on_cell(i, grid) for i in range(cell_count)]
+    print(f"  second-derivative table built in {time.time()-t0:.1f}s")
+    second_ranges = RangeMinimum(second_table)
+
+    target_upper = _up(target)
+    pressure_lower = _down(pressure)
+
+    # One-coordinate pruning: U(g) = p g + a_{i,i+1} w(g) or the
+    # redistributed p_i g + q_i w(g).
+    def one_body(i, gcell):
+        if cap_scheme == "coboundary":
+            p_i = pressure_coeffs[i]
+            q_i = nearest_coeffs[i]
+        else:
+            p_i = pressure
+            q_i = weights.get((i, i + 1), 0.0)
+        val = _down(p_i * gcell / grid)
+        wl = table[gcell] if gcell < len(table) else 0.0
+        val = _down(val + _down(q_i * wl))
+        return val
+
+    components = []
+    for i in range(q):
+        surviving = []
+        for index in range(cutoff_cells):
+            if one_body(i, index) < target_upper:
+                surviving.append(index)
+        # group into contiguous components
+        comps = []
+        for idx in surviving:
+            if comps and idx == comps[-1][1] + 1:
+                comps[-1][1] = idx
+            else:
+                comps.append([idx, idx])
+        components.append([(a, b) for a, b in comps])
+        print(f"  coord {i}: {len(components[i])} components: "
+              f"{[(a,b) for a,b in components[i][:4]]}...")
+
+    # Build initial boxes: cartesian product of components (may be large;
+    # cap at some number for the probe).
+    pair_list = sorted(weights)
+    initial = list(itertools.product(*components))
+    print(f"  initial boxes: {len(initial)}")
+
+    def box_lower(box):
+        low_prefix = [0]
+        high_prefix = [0]
+        for low, high in box:
+            low_prefix.append(low_prefix[-1] + low)
+            high_prefix.append(high_prefix[-1] + high)
+        result = _down(pressure_lower * low_prefix[-1] / grid)
+        for i, j in pair_list:
+            span = j - i
+            left = low_prefix[j] - low_prefix[i]
+            right = high_prefix[j] - high_prefix[i] + span - 1
+            if right >= ranges.length:
+                continue
+            result = _down(result + _down(weights[(i, j)] * ranges.query(left, right)))
+        return result
+
+    stack = initial
+    nodes = pruned_interval = pruned_pressure = pruned_tangent = splits = 0
+    depth = 0
+    t_start = time.time()
+    while stack:
+        box = stack.pop()
+        nodes += 1
+        if max_nodes and nodes > max_nodes:
+            return {"verified": False, "nodes": nodes, "status": "node-limit",
+                    "reason": f"node limit {max_nodes} hit"}
+        if progress_every and nodes % progress_every == 0:
+            print(f"  nodes={nodes} splits={splits} depth={depth} "
+                  f"pruned_i={pruned_interval} pruned_p={pruned_pressure} "
+                  f"pruned_t={pruned_tangent} pending={len(stack)}", flush=True)
+
+        # pressure prune: sum of gap lower bounds beyond cutoff
+        if sum(part[0] for part in box) >= cutoff_cells:
+            pruned_pressure += 1
+            continue
+
+        low = box_lower(box)
+        if low >= target_upper:
+            pruned_interval += 1
+            continue
+
+        # convex tangent prune (only if enabled; uses arb, exact LDL)
+        if use_tangent:
+            tl = tangent_lower(box, kernel, weights, pressure, grid,
+                               pressure_coeffs, nearest_coeffs, cap_scheme,
+                               second_ranges)
+            if tl is not None and tl >= arb(target):
+                pruned_tangent += 1
+                continue
+
+        widths = [r - l for l, r in box]
+        if max(widths) == 0:
+            return {"verified": False, "nodes": nodes, "status": "terminal-cell",
+                    "reason": f"unresolved terminal cell {box} low={low}"}
+        splits += 1
+        coord = max(range(q), key=widths.__getitem__)
+        left, right = box[coord]
+        mid = (left + right) // 2
+        lo_box = list(box); hi_box = list(box)
+        lo_box[coord] = (left, mid)
+        hi_box[coord] = (mid + 1, right)
+        stack.append(tuple(lo_box))
+        stack.append(tuple(hi_box))
+
+    elapsed = time.time() - t_start
+    return {"verified": True, "nodes": nodes, "splits": splits,
+            "pruned_interval": pruned_interval, "pruned_pressure": pruned_pressure,
+            "pruned_tangent": pruned_tangent, "elapsed": elapsed}
+
+
+def tangent_lower(box, kernel, weights, pressure, grid,
+                  pressure_coeffs, nearest_coeffs, cap_scheme,
+                  second_ranges=None):
+    """Arb convex-tangent lower bound; None if convexity not certified.
+
+    Certifies the Hessian of F as positive definite (exact LDL in arb),
+    then lower-bounds F by its tangent plane at the box midpoint minus the
+    gradient-radius Lipschitz term.
+    """
+    q = len(box)
+    pair_list = sorted(weights)
+    low_prefix = [0]
+    high_prefix = [0]
+    for low, high in box:
+        low_prefix.append(low_prefix[-1] + low)
+        high_prefix.append(high_prefix[-1] + high)
+
+    # --- Hessian: F = sum_i p_i g_i + sum_{i<j} a_ij w(y_j-y_i)
+    #     (plus q_i w(g_i) in coboundary mode).
+    #     d^2/dg_a dg_b of w(y_j - y_i) contributes w''(y_j-y_i) on the
+    #     block a,b in [i, j-1].
+    terms = []
+    heuristic = [[0.0] * q for _ in range(q)]
+    for i, j in pair_list:
+        span = j - i
+        left = low_prefix[j] - low_prefix[i]
+        right = high_prefix[j] - high_prefix[i] + span - 1
+        if second_ranges is None or right >= second_ranges.length:
+            return None
+        s2 = second_ranges.query(left, right)
+        if s2 == float("-inf"):
+            return None
+        scalar = _down(weights[(i, j)] * (s2 if s2 >= 0 else 0.0))
+        # For signed second derivatives we need upper bounds too; simplify:
+        # use the lower bound of w'' times the weight (weight >= 0), but
+        # for negative w'' the scalar is negative -> use weight * s2.
+        scalar = _down(weights[(i, j)] * s2)
+        terms.append((i, span, scalar))
+        for row in range(i, i + span):
+            for column in range(i, i + span):
+                heuristic[row][column] += scalar
+    if cap_scheme == "coboundary":
+        for i in range(q):
+            if second_ranges is None or i >= second_ranges.length:
+                return None
+            s2 = second_ranges.query(i, i)
+            if s2 == float("-inf"):
+                return None
+            scalar = _down(nearest_coeffs[i] * s2)
+            terms.append((i, 1, scalar))
+            heuristic[i][i] += scalar
+
+    # exact positive-definite LDL in arb
+    if not _arb_ldl_positive(terms, q):
+        return None
+
+    # tangent plane at midpoint
+    midpoints = [fmpq(low + high + 1, 2 * grid) for low, high in box]
+    radii = [fmpq(high - low + 1, 2 * grid) for low, high in box]
+    value = arb(0)
+    gradient = [arb(0) for _ in range(q)]
+    # linear pressure terms
+    if cap_scheme == "coboundary":
+        for i in range(q):
+            value += arb(pressure_coeffs[i]) * arb(midpoints[i])
+            gradient[i] += arb(pressure_coeffs[i])
+    else:
+        for i in range(q):
+            value += arb(pressure) * arb(midpoints[i])
+            gradient[i] += arb(pressure)
+    for i, j in pair_list:
+        coeff = arb(weights[(i, j)])
+        point = sum(midpoints[i:j], fmpq(0))
+        potential, derivative, _ = squared_kernel_derivatives(arb(point), kernel)
+        value += coeff * potential
+        for coordinate in range(i, j):
+            gradient[coordinate] += coeff * derivative
+    if cap_scheme == "coboundary":
+        for i in range(q):
+            q_i = arb(nearest_coeffs[i])
+            potential, derivative, _ = squared_kernel_derivatives(arb(midpoints[i]), kernel)
+            value += q_i * potential
+            gradient[i] += q_i * derivative
+
+    lower = value
+    for derivative, radius in zip(gradient, radii):
+        lower -= derivative.abs_upper() * arb(radius)
+    return lower
+
+
+def _arb_ldl_positive(terms, q):
+    matrix = [[arb(0) for _ in range(q)] for _ in range(q)]
+    for start, span, coefficient in terms:
+        exact = arb(coefficient) if not isinstance(coefficient, arb) else coefficient
+        for row in range(start, start + span):
+            for column in range(start, start + span):
+                matrix[row][column] += exact
+    lower = [[arb(0) for _ in range(q)] for _ in range(q)]
+    diagonal = [arb(0) for _ in range(q)]
+    for column in range(q):
+        lower[column][column] = arb(1)
+        pivot = matrix[column][column]
+        for previous in range(column):
+            pivot -= lower[column][previous] * lower[column][previous] * diagonal[previous]
+        if not (pivot > 0):
+            return False
+        diagonal[column] = pivot
+        for row in range(column + 1, q):
+            value = matrix[row][column]
+            for previous in range(column):
+                value -= lower[row][previous] * lower[column][previous] * diagonal[previous]
+            lower[row][column] = value / pivot
+    return True
+
+
+def squared_kernel_derivatives(x, kernel):
+    k, k1, k2 = kernel.kernel_derivatives(x)
+    value = k * k / kernel.k0sq
+    first = 2 * k * k1 / kernel.k0sq
+    second = 2 * (k1 * k1 + k * k2) / kernel.k0sq
+    return value, first, second
+
+
+# ---------------------------------------------------------------------------
+# Main: probe candidates
+# ---------------------------------------------------------------------------
+
+def main():
+    # sanity: ainta 7-pt (MT kernel, uniform weights, p=1/3000, target 19/5000)
+    print("=" * 70)
+    print("SANITY: ainta 7-pt (uniform, MT)")
+    print("=" * 70)
+    kmt = mt_kernel()
+    w_uniform = {(i, j): 2.0 / (7 - (j - i)) for i in range(7) for j in range(i + 1, 7)}
+    r = verify_floor(kmt, w_uniform, 1.0 / 3000, 6, 19.0 / 5000,
+                     grid=4000, max_nodes=5_000_000)
+    print(r)
+
+
+if __name__ == "__main__":
+    main()
