@@ -122,54 +122,54 @@ fn arg_zeta(s_re: f64, s_im: f64, n: usize, lns: &[f64]) -> f64 {
     im.atan2(re)
 }
 
+fn args_at(s_re: f64, s_im: f64, n: usize, lns: &[f64]) -> [f64; 4] {
+    // [arg s(s-1)/2, arg Γ(s/2), arg ζ(s), arg π^{-s/2}]
+    let a1 = s_im.atan2(s_re);
+    let a2 = s_im.atan2(s_re - 1.0);
+    let a_s = a1 + a2;
+    let a_p = -0.5 * s_im * PI.ln();
+    let a_g = ln_gamma_im(s_re / 2.0, s_im / 2.0);
+    let a_z = arg_zeta(s_re, s_im, n, lns);
+    [a_s, a_g, a_z, a_p]
+}
+
+fn track_delta(p1: (f64, f64), p2: (f64, f64), a1: [f64; 4], a2: [f64; 4],
+               n: usize, lns: &[f64], maxd: &mut f64, depth: u32) -> [f64; 4] {
+    let mut out = [0.0f64; 4];
+    for i in 0..4 {
+        let mut d = a2[i] - a1[i];
+        while d > PI {
+            d -= 2.0 * PI;
+        }
+        while d <= -PI {
+            d += 2.0 * PI;
+        }
+        if d.abs() > 0.5 * PI && depth < 12 {
+            let mid = (0.5 * (p1.0 + p2.0), 0.5 * (p1.1 + p2.1));
+            let am = args_at(mid.0, mid.1, n, lns);
+            let left = track_delta(p1, mid, a1, am, n, lns, maxd, depth + 1);
+            let right = track_delta(mid, p2, am, a2, n, lns, maxd, depth + 1);
+            out[i] = left[i] + right[i];
+        } else {
+            out[i] = d;
+            *maxd = (*maxd).max(d.abs());
+        }
+    }
+    out
+}
+
 fn winding(t0: f64, h: f64, ds: f64) -> (f64, f64, f64, f64, f64, f64, f64, f64, f64, f64, f64, f64) {
     // Numerical (UNCERTIFIED) winding number of ξ̃(s) = s(s-1)π^{-s/2}Γ(s/2)ζ(s)/2
     // on the rectangle [0,1]×[T,T+H], counterclockwise.
-    // Per-segment Δarg is computed and adaptively subdivided (depth ≤ 12) until
-    // |Δarg| ≤ π/2 per segment, so branch-cut unwrapping is unambiguous.
+    // Per-segment Δarg is adaptively subdivided (depth ≤ 12) until |Δarg| ≤ π/2
+    // per segment, so branch-cut unwrapping is unambiguous even when the contour
+    // passes close to an on-line zero (the horizontal edges at heights T, T+H).
     let n = ((1.6 * (t0 + h) / (2.0 * PI)).ceil().max(10.0)) as usize;
     let lns: Vec<f64> = (0..n).map(|j| if j == 0 { 0.0 } else { (j as f64).ln() }).collect();
-
-    let arg_xi = |s_re: f64, s_im: f64| -> [f64; 4] {
-        let a1 = s_im.atan2(s_re);
-        let a2 = s_im.atan2(s_re - 1.0);
-        let a_s = a1 + a2; // arg s(s-1)/2
-        let a_p = -0.5 * s_im * PI.ln(); // arg π^{-s/2}
-        let a_g = ln_gamma_im(s_re / 2.0, s_im / 2.0); // arg Γ(s/2)
-        let a_z = arg_zeta(s_re, s_im, n, &lns); // arg ζ(s)
-        [a_s, a_g, a_z, a_p]
-    };
-
-    // per-segment delta with adaptive subdivision; returns [Δs, Δg, Δz, Δp]
-    let mut track = |p1: (f64, f64), p2: (f64, f64), a1: [f64; 4], a2: [f64; 4], maxd: &mut f64, depth: u32| -> [f64; 4] {
-        let mut out = [0.0f64; 4];
-        for i in 0..4 {
-            let mut d = a2[i] - a1[i];
-            while d > PI {
-                d -= 2.0 * PI;
-            }
-            while d <= -PI {
-                d += 2.0 * PI;
-            }
-            if d.abs() > 0.5 * PI && depth < 12 {
-                // subdivide
-                let mid = (0.5 * (p1.0 + p2.0), 0.5 * (p1.1 + p2.1));
-                let am = arg_xi(mid.0, mid.1);
-                let left = track(p1, mid, a1, am, maxd, depth + 1);
-                let right = track(mid, p2, am, a2, maxd, depth + 1);
-                out[i] = left[i] + right[i];
-            } else {
-                out[i] = d;
-                *maxd = (*maxd).max(d.abs());
-            }
-        }
-        out
-    };
 
     let mut total = [0.0f64; 4];
     let mut maxd = 0.0f64;
     let mut edge_z = [0.0f64; 4];
-    let mut edge_i = 0usize;
 
     // perimeter points: (σ, t).  Edges: bottom (σ 0→1), right (t ↑), top (σ 1→0), left (t ↓).
     let mut pts: Vec<(f64, f64)> = Vec::new();
@@ -193,20 +193,18 @@ fn winding(t0: f64, h: f64, ds: f64) -> (f64, f64, f64, f64, f64, f64, f64, f64,
         pts.push((0.0, tt));
         tt -= ds;
     }
-    // close the loop
-    pts.push(pts[0]);
+    pts.push(pts[0]); // close the loop
 
-    // segment index → edge index: bottom [0, n_bot-1], right, top, left
     let n_bot = ((1.0 / ds).floor() + 1.0) as usize;
     let n_right = (h / ds).floor() as usize;
     let n_top = n_bot;
     let n_left = n_right;
 
-    let mut prev = arg_xi(pts[0].0, pts[0].1);
+    let mut prev = args_at(pts[0].0, pts[0].1, n, &lns);
     let mut seg = 0usize;
     for k in 1..pts.len() {
-        let cur = arg_xi(pts[k].0, pts[k].1);
-        let d = track(pts[k - 1], pts[k], prev, cur, &mut maxd, 0);
+        let cur = args_at(pts[k].0, pts[k].1, n, &lns);
+        let d = track_delta(pts[k - 1], pts[k], prev, cur, n, &lns, &mut maxd, 0);
         for i in 0..4 {
             total[i] += d[i];
         }

@@ -21,10 +21,21 @@ fn load_zeros() -> Vec<f64> {
 }
 
 // arch integral of an EVEN function f: (1/2pi) int_R f = (1/pi) int_0^inf h_+(r) f(r) dr
-fn arch_even(f: &dyn Fn(f64) -> f64, r1: f64, h: f64, period: f64, center: f64) -> f64 {
-    let near = uniform_integrate(f, 0.0, r1, h);
-    let tail = 2.0 * arch_tail_power(f, r1, period, center); // (1/pi) on the half line
-    (1.0 / PI) * near + tail
+//
+// Envelope method: f(r) = E0(r) + E1(r) cos(2 pi (r-center)/period + phi) + higher,
+// where E0 is smooth.  The half-period average E(r) = f(r) + f(r+period/2) = 2 E0(r)
+// kills the oscillation, and (1/2pi) int h_+ f = (1/2pi)(1/2) int h_+ E + O(1/omega^2)
+// when the integration range is an integer number of periods (boundary sines vanish).
+// The smooth integral is cheap (uniform GL, few panels per unit envelope scale).
+pub fn arch_even_env(f: &dyn Fn(f64) -> f64, r1: f64, period: f64, center: f64) -> f64 {
+    let e = |r: f64| f(r) + f(r + period / 2.0);
+    // smooth integral (1/2pi) * (1/2) * int_0^r1 h_+(r) E(r) dr
+    let near = {
+        let g = |r: f64| h_plus(r) * e(r);
+        (1.0 / (2.0 * PI)) * 0.5 * uniform_integrate(&g, 0.0, r1, period) // one period per panel; E smooth
+    };
+    let tail = arch_tail_power(f, r1, period, center); // (1/2pi)(1/2) int_{r1}^inf h_+ E, E decay power-fit
+    near + tail
 }
 
 fn main() {
