@@ -121,8 +121,8 @@ max is 1). δ = Q(perturbed) − c; the certificate constant becomes 0.6725007 �
 linear term), with relative coefficient 1.19–1.50 and spread (condition number) 1.05–1.25. This is
 flatness in the genuine sense: not a "valley" (that would be a near-flat direction, κ ≫ 1) and not a
 needle (κ ≈ 1 with O(1) coefficient). Concretely: 1% → ≤0.02%; 0.1% → ≤2e-4%; 10% → ~1–2%; a
-qualitatively different but still admissible window (box: 0.58%; (1−4u²): 13%) is *not* covered —
-the flatness is local, quadratic, around the cosine.
+qualitatively different but still admissible window (box: δ = 0.0058, constant drops to 2/3, −0.87%;
+(1−4u²): δ = 0.130, −19%) is *not* covered — the flatness is local, quadratic, around the cosine.
 
 **The one non-quadratic caveat — the boundary ramp (NEW finding, quantified).** The cosine does NOT
 vanish at ±1/2 (cos(1/√2) = 0.7602 ≠ 0), so any C∞ compactly-supported window — exactly what the
@@ -200,5 +200,8 @@ the constant is load-bearing is the boundary ramp, which is a *structural* requi
 support) not a numerical accident, and its cost is exactly linear in ramp width (≈ 0.45·w) — keep
 the ramp at the resolution scale and it is O(1/L), consistent with the attack-kernel note. This
 closes the E5.4 cheap probe: the bottleneck for the 0.6725 certificate is arithmetic (finite-height
+pair correlation and the Poisson truncation, per validation-001 target 3), **not** fragility of the
+window choice.
+tic (finite-height
 pair correlation and the Poisson truncation, per validation-001 target 3), **not** fragility of the
 window choice.

@@ -1,0 +1,8 @@
+arXiv: http://arxiv.org/abs/1512.09065v3
+Title: Limiting eigenvalue distribution of random matrices of Ihara zeta function of long-range percolation graphs
+Authors: Oleksiy Khorunzhiy
+Published: 2015-12-30
+Primary category: math-ph
+
+ABSTRACT (fetched from arXiv export API):
+We consider the ensemble of $N\times N$ real random symmetric matrices $H_N^{(R)}$ obtained from the determinant form of the Ihara zeta function associated to random graphs $Γ_N^{(R)}$ of the long-range percolation radius model with the edge probability determined by a function $φ(t)$. We show that the normalized eigenvalue counting function of $H_N^{( R)}$ weakly converges in average as $N,R\to\infty$, $R=o(N)$ to a unique measure that depends on the limiting average vertex degree of $Γ_N^{(R)}$ given by $φ_1 = \int φ(t) dt$. This measure converges in the limit of infinite $φ_1$ to a shift of the Wigner semi-circle distribution. We discuss relations of these results with the properties of the Ihara zeta function and weak versions of the graph theory Riemann Hypothesis.

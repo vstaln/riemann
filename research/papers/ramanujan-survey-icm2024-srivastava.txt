@@ -1,0 +1,8 @@
+arXiv: http://arxiv.org/abs/2412.20721v1
+Title: Ramanujan Graphs and Interlacing Families
+Authors: Nikhil Srivastava
+Published: 2024-12-30
+Primary category: math.CO
+
+ABSTRACT (fetched from arXiv export API):
+This survey accompanies a lecture on the paper ``Interlacing Families I: Bipartite Ramanujan Graphs of All Degrees'' by A. Marcus, D. Spielman, and N. Srivastava at the 2024 International Congress of Basic Science (ICBS) in July, 2024. Its purpose is to explain the developments surrounding this work over the past ten or so years, with an emphasis on connections to other areas of mathematics. Earlier surveys about the interlacing families method by the same authors focused on applications in functional analysis, whereas the focus here is on applications in spectral graph theory.

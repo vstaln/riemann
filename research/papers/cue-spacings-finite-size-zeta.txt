@@ -1,0 +1,8 @@
+arXiv: http://arxiv.org/abs/2507.10193v1
+Title: Distributions of consecutive level spacings of circular unitary ensemble and their ratio: finite-size corrections and Riemann $ζ$ zeros
+Authors: Shinsuke M. Nishigaki
+Published: 2025-07-14
+Primary category: math-ph
+
+ABSTRACT (fetched from arXiv export API):
+We compute the joint distribution of two consecutive eigenphase spacings and their ratio for Haar-distributed $\mathrm{U}(N)$ matrices (the circular unitary ensemble) using our framework for Jánossy densities in random matrix theory, formulated via the Tracy-Widom system of nonlinear PDEs. Our result shows that the leading finite-$N$ correction in the gap-ratio distribution relative to the universal sine-kernel limit is of $\mathcal{O}(N^{-4})$, reflecting a nontrivial cancellation of the $\mathcal{O}(N^{-2})$ part present in the joint distributions of consecutive spacings. This finding suggests the potential to extract subtle finite-size corrections from the energy spectra of quantum-chaotic systems and explains why the deviation of the gap-ratio distribution of the Riemann zeta zeros $\{1/2+iγ_n\}, γ_n\approx T\gg1$ from the sine-kernel prediction scales as $\left(\log(T/2π)\right)^{-3}$.

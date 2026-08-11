@@ -1,0 +1,8 @@
+arXiv: http://arxiv.org/abs/1302.4644v1
+Title: Heat kernels on regular graphs and generalized Ihara zeta function formulas
+Authors: Gautam Chinta, Jay Jorgenson, Anders Karlsson
+Published: 2013-02-19
+Primary category: math.CO
+
+ABSTRACT (fetched from arXiv export API):
+We establish a new formula for the heat kernel on regular trees in terms of classical I-Bessel functions. Although the formula is explicit, and a proof is given through direct computation, we also provide a conceptual viewpoint using the horocyclic transform on regular trees. From periodization, we then obtain a heat kernel expression on any regular graph. From spectral theory, one has another expression for the heat kernel as an integral transform of the spectral measure. By equating these two formulas and taking a certain integral transform, we obtain several generalized versions of the determinant formula for the Ihara zeta function associated to finite or infinite regular graphs. Our approach to the Ihara zeta function and determinant formula through heat kernel analysis follows a similar methodology which exists for quotients of rank one symmetric spaces.

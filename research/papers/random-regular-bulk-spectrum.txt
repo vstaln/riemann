@@ -1,0 +1,8 @@
+arXiv: http://arxiv.org/abs/1505.06700v3
+Title: Bulk eigenvalue statistics for random regular graphs
+Authors: Roland Bauerschmidt, Jiaoyang Huang, Antti Knowles, Horng-Tzer Yau
+Published: 2015-05-25
+Primary category: math.PR
+
+ABSTRACT (fetched from arXiv export API):
+We consider the uniform random $d$-regular graph on $N$ vertices, with $d \in [N^α, N^{2/3-α}]$ for arbitrary $α> 0$. We prove that in the bulk of the spectrum the local eigenvalue correlation functions and the distribution of the gaps between consecutive eigenvalues coincide with those of the Gaussian Orthogonal Ensemble.

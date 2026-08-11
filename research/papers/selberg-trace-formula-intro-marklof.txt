@@ -1,0 +1,8 @@
+arXiv: http://arxiv.org/abs/math/0407288v2
+Title: Selberg's trace formula: an introduction
+Authors: Jens Marklof
+Published: 2004-07-16
+Primary category: math.SP
+
+ABSTRACT (fetched from arXiv export API):
+These lecture notes provide a basic introduction to Selberg's trace formula. We discuss the simplest possible case: the spectrum of the Laplacian on a compact Riemannian surface of constant negative curvature. (To appear in Springer LNP.)

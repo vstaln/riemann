@@ -1,0 +1,8 @@
+arXiv: http://arxiv.org/abs/2301.00685v1
+Title: On the Central Limit Theorem for linear eigenvalue statistics on random surfaces of large genus
+Authors: Zeév Rudnick, Igor Wigman
+Published: 2023-01-02
+Primary category: math.SP
+
+ABSTRACT (fetched from arXiv export API):
+We study the fluctuations of smooth linear statistics of Laplace eigenvalues of compact hyperbolic surfaces lying in short energy windows, when averaged over the moduli space of surfaces of a given genus. The average is taken with respect to the Weil-Petersson measure. We show that first taking the large genus limit, then a short window limit, the distribution tends to a Gaussian. The variance was recently shown to be given by the corresponding quantity for the Gaussian Orthogonal Ensemble (GOE), and the Gaussian fluctuations are also consistent with those in Random Matrix Theory, as conjectured in the physics literature for a fixed surface.

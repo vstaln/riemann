@@ -1,0 +1,8 @@
+arXiv: http://arxiv.org/abs/2507.04150v1
+Title: Selberg's Central Limit Theorem weighted by Linear Statistics of Zeta Zeros
+Authors: Alessandro Fazzari, Maxim Gerspach, Paolo Minelli
+Published: 2025-07-05
+Primary category: math.NT
+
+ABSTRACT (fetched from arXiv export API):
+We consider the value distribution of the logarithm of the Riemann zeta function on the critical line, weighted by the local statistics of zeta zeros. We show that, with appropriate normalization, it satisfies a complex Central Limit Theorem, provided that the Fourier support of the test function in the linear statistics is sufficiently small. For the imaginary part, we extend this support condition up to its natural barrier under the Riemann Hypothesis. Finally, we prove that the correlation between $\log ζ$ and the one-level density, while negligible on the level of Selberg's Central Limit Theorem, only decays at a rather slow rate if the Riemann Hypothesis is assumed. Our results can be viewed as a combination of Selberg's Central Limit Theorem with work of Hughes and Rudnick on mock-Gaussian behavior of the local statistics.

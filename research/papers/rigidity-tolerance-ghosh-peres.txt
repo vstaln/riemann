@@ -1,0 +1,8 @@
+arXiv: http://arxiv.org/abs/1211.2381v3
+Title: Rigidity and Tolerance in point processes: Gaussian zeroes and Ginibre eigenvalues
+Authors: Subhro Ghosh, Yuval Peres
+Published: 2012-11-11
+Primary category: math.PR
+
+ABSTRACT (fetched from arXiv export API):
+Let X be a translation invariant point process on the complex plane and let D be a bounded open set whose boundary has zero Lebesgue measure. We ask what does the point configuration obtained by taking the points of X outside D tell us about the point configuration inside D? We show that for the Ginibre ensemble, it determines the number of points in D. For the translation-invariant zero process of a planar Gaussian Analytic Function, we show that it determines the number as well as the centre of mass of the points in D. Further, in both models we prove that the outside says "nothing more" about the inside, in the sense that the conditional distribution of the inside points, given the outside, is mutually absolutely continuous with respect to the Lebesgue measure on its supporting submanifold.

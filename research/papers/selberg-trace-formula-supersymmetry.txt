@@ -1,0 +1,8 @@
+arXiv: http://arxiv.org/abs/2306.13636v3
+Title: Supersymmetry and trace formulas II. Selberg trace formula
+Authors: Changha Choi, Leon A. Takhtajan
+Published: 2023-06-23
+Primary category: hep-th
+
+ABSTRACT (fetched from arXiv export API):
+By extending the new supersymmetric localization principle introduced in \cite{Choi:2021yuz}, we present a path integral derivation of the Selberg trace formula on arbitrary compact Riemann surfaces, including the case of vector-valued automorphic forms of arbitrary half-integer weight corresponding to Maass Laplacian. We also generalize the method to formulate the Selberg trace formula on generic compact locally symmetric space.

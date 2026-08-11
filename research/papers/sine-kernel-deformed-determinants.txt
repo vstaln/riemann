@@ -1,0 +1,8 @@
+arXiv: http://arxiv.org/abs/2309.03803v1
+Title: On the integrable structure of deformed sine kernel determinants
+Authors: Tom Claeys, Sofia Tarricone
+Published: 2023-09-07
+Primary category: math-ph
+
+ABSTRACT (fetched from arXiv export API):
+We study a family of Fredholm determinants associated to deformations of the sine kernel, parametrized by a weight function w. For a specific choice of w, this kernel describes bulk statistics of finite temperature free fermions. We establish a connection between these determinants and a system of integro-differential equations generalizing the fifth Painlevé equation, and we show that they allow us to solve an integrable PDE explicitly for a large class of initial data.

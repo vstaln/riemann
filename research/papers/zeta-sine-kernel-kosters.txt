@@ -1,0 +1,8 @@
+arXiv: http://arxiv.org/abs/0803.1141v2
+Title: The Riemann Zeta-Function and the Sine Kernel
+Authors: H. Kösters
+Published: 2008-03-07
+Primary category: math.NT
+
+ABSTRACT (fetched from arXiv export API):
+We point out an interesting occurrence of the sine kernel in connection with the shifted moments of the Riemann zeta function along the critical line. We discuss rigorous results in this direction for the shifted second moment and for the shifted fourth moment. Furthermore, we conjecture that the sine kernel also occurs in connection with the higher (even) shifted moments and show that this conjecture is closely related to a recent conjecture by Conrey, Farmer, Keating, Rubinstein, and Snaith.

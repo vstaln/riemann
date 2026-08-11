@@ -1,0 +1,8 @@
+arXiv: http://arxiv.org/abs/1302.5928v2
+Title: On the distribution of zeros of the derivative of Selberg's zeta function associated to finite volume Riemann surfaces
+Authors: Jay Jorgenson, Lejla Smajlovic
+Published: 2013-02-24
+Primary category: math.NT
+
+ABSTRACT (fetched from arXiv export API):
+W. Luo has investigated the distribution of zeros of the derivative of the Selberg zeta function associated to compact hyperbolic Riemann surfaces. In essence, the main results in Luo's article involve the following three points: Finiteness for the number of zeros in the half plane to the left of the critical line; an asymptotic expansion for the counting function measuring the vertical distribution of zeros; and an asymptotic expansion for the counting function measuring the horizontal distance of zeros from the critical line. In the present article, we study the more complicated setting of distribution of zeros of the derivative of the Selberg zeta function associated to a non-compact, finite volume hyperbolic Riemann surface. There are numerous difficulties which exist in the non-compact case that are not present in the compact setting, beginning with the fact that in the non-compact case the Selberg zeta function does not satisfy the analogue of the Riemann hypothesis. To be more specific, we actually study the zeros of the derivative of ZH, where Z is the Selberg zeta function and H is the Dirichlet series component of the scattering matrix, both associated to an arbitrary finite-volume hyperbolic Riemann surface. Our main results address finiteness of zeros in the half plane to the left of the critical line, an asymptotic count for the vertical distribution of zeros, and an asymptotic count for the horizontal distance of zeros.

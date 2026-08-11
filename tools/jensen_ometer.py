@@ -316,8 +316,10 @@ def main():
     m3 = (6 * e3 - m1 ** 3 + 3 * m1 * m2) / 2
     for k, (mref, name) in enumerate([(m1, 'm1'), (m2, 'm2'), (m3, 'm3')], start=1):
         part = sum(z ** (-2 * k) for z in zs)
-        # tail:  (1/2pi) * T^{1-2k} [ log T/(2k-1) + 1/(2k-1)^2 ]
-        tail = (1 / (2 * PI)) * T ** (1 - 2 * k) * (mp.log(T) / (2 * k - 1) + 1 / (2 * k - 1) ** 2)
+        # tail: refined zero density N'(T) = (1/2pi) log(T/2pi):
+        #   tail_k = (1/2pi) T^{1-2k} [ (log T - log 2pi)/(2k-1) + 1/(2k-1)^2 ]
+        tail = (1 / (2 * PI)) * T ** (1 - 2 * k) * (
+            (mp.log(T) - mp.log(2 * PI)) / (2 * k - 1) + 1 / (2 * k - 1) ** 2)
         print(f"  {name} from gamma: {mp.nstr(mref, 12)}   | partial(gamma<=gamma_1000) + tail: "
               f"{mp.nstr(part + tail, 12)}   | diff = {mp.nstr(mref - (part + tail), 4)}")
 

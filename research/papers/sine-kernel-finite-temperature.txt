@@ -1,0 +1,8 @@
+arXiv: http://arxiv.org/abs/2403.06722v3
+Title: Asymptotics of the finite-temperature sine kernel determinant
+Authors: Shuai-Xia Xu
+Published: 2024-03-11
+Primary category: math-ph
+
+ABSTRACT (fetched from arXiv export API):
+In the present paper, we study the asymptotics of the Fredholm determinant $D(x,s)$ of the finite-temperature deformation of the sine kernel, which represents the probability that there is no particles on the interval $(-x/π,x/π)$ in the bulk scaling limit of the finite-temperature fermion system. The variable $s$ in $D(x,s)$ is related to the temperature. The determinant also corresponds to the finite-temperature correlation function of one dimensional Bose gas. We derive the asymptotics of $D(x,s)$ in several different regimes in the $(x,s)$-plane. A third-order phase transition is observed in the asymptotic expansions as both $x$ and $s$ tend to positive infinity at certain related speed. The phase transition is then shown to be described by an integral involving the Hastings-McLeod solution of the second Painlevé equation.

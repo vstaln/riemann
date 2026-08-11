@@ -1,0 +1,8 @@
+arXiv: http://arxiv.org/abs/1912.13454v1
+Title: The sine-process has excess one
+Authors: Alexander I. Bufetov
+Published: 2019-12-31
+Primary category: math.PR
+
+ABSTRACT (fetched from arXiv export API):
+The main result of this paper is that almost every realization of the sine-process with one particle removed is a uniqueness set for the Paley-Wiener space; with two particles removed, a zero set for the Paley-Wiener space.

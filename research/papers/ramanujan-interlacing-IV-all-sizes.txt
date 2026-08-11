@@ -1,0 +1,8 @@
+arXiv: http://arxiv.org/abs/1505.08010v1
+Title: Interlacing Families IV: Bipartite Ramanujan Graphs of All Sizes
+Authors: Adam W. Marcus, Nikhil Srivastava, Daniel A. Spielman
+Published: 2015-05-29
+Primary category: math.CO
+
+ABSTRACT (fetched from arXiv export API):
+We prove that there exist bipartite Ramanujan graphs of every degree and every number of vertices. The proof is based on analyzing the expected characteristic polynomial of a union of random perfect matchings, and involves three ingredients: (1) a formula for the expected characteristic polynomial of the sum of a regular graph with a random permutation of another regular graph, (2) a proof that this expected polynomial is real rooted and that the family of polynomials considered in this sum is an interlacing family, and (3) strong bounds on the roots of the expected characteristic polynomial of a union of random perfect matchings, established using the framework of finite free convolutions we recently introduced.

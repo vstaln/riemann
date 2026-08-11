@@ -1,0 +1,8 @@
+arXiv: http://arxiv.org/abs/2011.14162v3
+Title: A note on the Grover walk and the generalized Ihara zeta function of the one-dimensional integer lattice
+Authors: Takashi Komatsu, Norio Konno, Iwao Sato
+Published: 2020-11-28
+Primary category: math.CO
+
+ABSTRACT (fetched from arXiv export API):
+Chinta, Jorgenson and Karlsson introduced a generalized version of the determinant formula for the Ihara zeta function associated to finite or infinite regular graphs. On the other hand, Konno and Sato obtained a formula of the characteristic polynomial of the Grover matrix by using the determinant expression for the second weighted zeta function of a finite graph. In this paper, we focus on a relationship between the Grover walk and the generalized Ihara zeta function. That is to say, we treat the generalized Ihara zeta function of the one-dimensional integer lattice as a limit of the Ihara zeta function of the cycle graph.

@@ -1,0 +1,8 @@
+arXiv: http://arxiv.org/abs/1508.07839v5
+Title: On eigenvalue distribution of random matrices of Ihara zeta function of large random graphs
+Authors: O. Khorunzhiy
+Published: 2015-08-31
+Primary category: math-ph
+
+ABSTRACT (fetched from arXiv export API):
+We consider the ensemble of real symmetric random matrices $H^{(n,ρ)}$ obtained from the determinant form of the Ihara zeta function of random graphs that have $n$ vertices with the edge probability $ρ/n$. We prove that the normalized eigenvalue counting function of $H^{(n,ρ)}$ weakly converges in average as $n,ρ\to\infty$ and $ρ=o(n^α)$ for any $α>0$ to a shift of the Wigner semi-circle distribution. Our results support a conjecture that the large Erdos-Rényi random graphs satisfy in average the weak graph theory Riemann Hypothesis.

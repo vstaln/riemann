@@ -1,0 +1,8 @@
+arXiv: http://arxiv.org/abs/2204.08218v1
+Title: Zeros of the Selberg zeta function for symmetric infinite area hyperbolic surfaces
+Authors: Mark Pollicott, Polina Vytnova
+Published: 2022-04-18
+Primary category: math.DS
+
+ABSTRACT (fetched from arXiv export API):
+In the present paper we give a simple mathematical foundation for describing the zeros of the Selberg zeta functions $Z_X$ for certain very symmetric infinite area surfaces $X$. For definiteness, we consider the case of three funneled surfaces. We show that the zeta function is a complex almost periodic function which can be approximated by complex trigonometric polynomials on large domains (in Theorem 4.2). As our main application, we provide an explanation of the striking empirical results of Borthwick (arXiv:1305.4850) (in Theorem 1.5) in terms of convergence of the affinely scaled zero sets to standard curves $\mathcal C$.

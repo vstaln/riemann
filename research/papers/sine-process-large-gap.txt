@@ -1,0 +1,8 @@
+arXiv: http://arxiv.org/abs/1906.11079v2
+Title: Large gap asymptotics for the generating function of the sine point process
+Authors: Christophe Charlier
+Published: 2019-06-25
+Primary category: math-ph
+
+ABSTRACT (fetched from arXiv export API):
+We consider the generating function of the sine point process on $m$ consecutive intervals. It can be written as a Fredholm determinant with discontinuities, or equivalently as the convergent series \begin{equation*} \sum_{k_{1},...,k_{m} \geq 0} \mathbb{P}\Bigg(\bigcap_{j=1}^{m} \#\{\mbox{points in j-th interval}\}=k_{j}\Bigg)\prod_{j=1}^{m} s_{j}^{k_{j}}, \end{equation*} where $s_{1},\ldots,s_{m} \in [0,1]$. In particular, we can deduce from it joint probabilities of the counting function of the process. In this work, we obtain large gap asymptotics for the generating function, which are asymptotics as the size of the intervals grows. Our results are valid for an arbitrary integer $m$, in the cases where all the parameters $s_{1},\ldots,s_{m}$, except possibly one, are positive. This generalizes two known results: 1) a result of Basor and Widom, which corresponds to $m=1$ and $s_{1}>0$, and 2) the case $m=1$ and $s_{1} = 0$ for which many authors have contributed. We also present some applications in the context of thinning and conditioning of the sine process.

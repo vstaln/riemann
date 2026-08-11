@@ -1,0 +1,8 @@
+arXiv: http://arxiv.org/abs/1509.04323v2
+Title: The Selberg trace formula as a Dirichlet series
+Authors: Andrew R. Booker, Min Lee
+Published: 2015-09-14
+Primary category: math.NT
+
+ABSTRACT (fetched from arXiv export API):
+We explore an idea of Conrey and Li of expressing the Selberg trace formula as a Dirichlet series. We describe two applications, including an interpretation of the Selberg eigenvalue conjecture in terms of quadratic twists of certain Dirichlet series, and a formula for an arithmetically weighted sum of the complete symmetric square L-functions associated to cuspidal Maass newforms of squarefree level N>1.

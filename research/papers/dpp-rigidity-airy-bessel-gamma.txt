@@ -1,0 +1,8 @@
+arXiv: http://arxiv.org/abs/1506.07581v1
+Title: Rigidity of Determinantal Point Processes with the Airy, the Bessel and the Gamma Kernel
+Authors: Alexander I. Bufetov
+Published: 2015-06-24
+Primary category: math.PR
+
+ABSTRACT (fetched from arXiv export API):
+A point process is said to be rigid if for any bounded domain in the phase space, the number of particles in the domain is almost surely determined by the restriction of the configuration to the complement of our bounded domain. The main result of this paper is that determinantal point processes with the Airy, the Bessel and the Gamma kernels are rigid. The proof follows the scheme of Ghosh [6], Ghosh and Peres [7]: the main step is the construction of a sequence of additive statistics with variance going to zero.

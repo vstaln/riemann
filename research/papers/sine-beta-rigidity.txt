@@ -1,0 +1,8 @@
+arXiv: http://arxiv.org/abs/1804.01216v1
+Title: Rigidity of the $\operatorname{Sine}_β$ process
+Authors: Reda Chhaibi, Joseph Najnudel
+Published: 2018-04-04
+Primary category: math.PR
+
+ABSTRACT (fetched from arXiv export API):
+We show that the $\operatorname{Sine}_β$ point process, defined as the scaling limit of the Circular Beta Ensemble when the dimension goes to infinity, and generalizing the determinantal sine-kernel process, is rigid in the sense of Ghosh and Peres: the number of points in a given bounded Borel set $B$ is almost surely equal to a measurable function of the position of the points outside $B$.

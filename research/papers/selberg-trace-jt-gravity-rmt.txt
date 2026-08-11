@@ -1,0 +1,8 @@
+arXiv: http://arxiv.org/abs/1911.10493v1
+Title: Quantum Jackiw-Teitelboim gravity, Selberg trace formula, and random matrix theory
+Authors: Antonio M. García-García, Salomón Zacarías
+Published: 2019-11-24
+Primary category: hep-th
+
+ABSTRACT (fetched from arXiv export API):
+We show that the partition function of quantum Jackiw-Teitelboim (JT) gravity, including topological fluctuations, is equivalent to the partition function of a Maass-Laplace operator of large -- imaginary -- weight acting on non-compact, infinite area, hyperbolic Riemann surfaces of arbitrary genus. The resulting spectrum of this open quantum system is semiclasically exact and given by a regularized Selberg trace formula, namely, it is expressed as a sum over the lengths of primitive periodic orbits of these hyperbolic surfaces. By using semiclassical techniques, we compute analytically the spectral form factor and the variance of the Wigner time delay in the diagonal approximation. We find agreement with the random matrix theory (RMT) prediction for open quantum chaotic systems. Our results show that full quantum ergodicity is a distinct feature of quantum JT gravity.

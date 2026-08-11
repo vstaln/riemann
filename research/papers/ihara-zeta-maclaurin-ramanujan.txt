@@ -1,0 +1,8 @@
+arXiv: http://arxiv.org/abs/1905.13485v4
+Title: Ihara zeta function, coefficients of Maclaurin series, and Ramanujan graphs
+Authors: Hau-Wen Huang
+Published: 2019-05-31
+Primary category: math.CO
+
+ABSTRACT (fetched from arXiv export API):
+Let $X$ denote a connected $(q+1)$-regular undirected graph of finite order $n$. The graph $X$ is called Ramanujan whenever $$ |λ|\leq 2q^{\frac{1}{2}} $$ for all nontrivial eigenvalues $λ$ of $X$. We consider the variant $Ξ(u)$ of the Ihara zeta function $Z(u)$ of $X$ defined by \begin{gather*} Ξ(u)^{-1} = \left\{ \begin{array}{ll} (1-u)(1-qu)(1-q^{\frac{1}{2}} u)^{2n-2}(1-u^2)^{\frac{n(q-1)}{2}} Z(u) \qquad &\hbox{if $X$ is nonbipartite}, (1-q^2u^2) (1-q^{\frac{1}{2}} u)^{2n-4} (1-u^2)^{\frac{n(q-1)}{2}+1} Z(u) \qquad &\hbox{if $X$ is bipartite}. \end{array} \right. \end{gather*} The function $Ξ(u)$ satisfies the functional equation $Ξ(q^{-1} u^{-1})=Ξ(u)$. Let $\{h_k\}_{k=1}^\infty$ denote the number sequence given by $$ \frac{d}{du}\ln Ξ(q^{-\frac{1}{2}}u) =\sum_{k=0}^\infty h_{k+1} u^k. $$ In this paper we establish the equivalence of the following statements: (i) $X$ is Ramanujan; (ii) $h_k\geq 0$ for all $k\geq 1$; (iii) $h_{k}\geq 0$ for infinitely many even $k\geq 2$. Furthermore we derive the Hasse--Weil bound for the Ramanujan graphs.

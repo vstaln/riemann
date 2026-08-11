@@ -1,0 +1,8 @@
+arXiv: http://arxiv.org/abs/1410.8010v2
+Title: Spectral zeta functions of graphs and the Riemann zeta function in the critical strip
+Authors: Fabien Friedli, Anders Karlsson
+Published: 2014-10-29
+Primary category: math.NT
+
+ABSTRACT (fetched from arXiv export API):
+We initiate the study of spectral zeta functions $ζ_{X}$ for finite and infinite graphs $X$, instead of the Ihara zeta function, with a perspective towards zeta functions from number theory and connections to hypergeometric functions. The Riemann hypothesis is shown to be equivalent to an approximate functional equation of graph zeta functions. The latter holds at all points where Riemann's zeta function $ζ(s)$ is non-zero. This connection arises via a detailed study of the asymptotics of the spectral zeta functions of finite torus graphs in the critcal strip and estimates on the real part of the logarithmic derivative of $ζ(s)$. We relate $ζ_{\mathbb{Z}}$ to Euler's beta integral and show how to complete it giving the functional equation $ξ_{\mathbb{Z}}(1-s)=ξ_{\mathbb{Z}}(s)$. This function appears in the theory of Eisenstein series although presumably with this spectral intepretation unrecognized. In higher dimensions $d$ we provide a meromorphic continuation of $ζ_{\mathbb{Z}^{d}}(s)$ to the whole plane and identify the poles. From our aymptotics several known special values of $ζ(s)$ are derived as well as its non-vanishing on the line $Re(s)=1$. We determine the spectral zeta functions of regular trees and show it to be equal to a specialization of Appell's hypergeometric function $F_{1}$ via an Euler-type integral formula due to Picard.

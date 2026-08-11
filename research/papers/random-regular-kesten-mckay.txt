@@ -1,0 +1,8 @@
+arXiv: http://arxiv.org/abs/1609.09052v3
+Title: Local Kesten--McKay law for random regular graphs
+Authors: Roland Bauerschmidt, Jiaoyang Huang, Horng-Tzer Yau
+Published: 2016-09-28
+Primary category: math.PR
+
+ABSTRACT (fetched from arXiv export API):
+We study the adjacency matrices of random $d$-regular graphs with large but fixed degree $d$. In the bulk of the spectrum $[-2\sqrt{d-1}+\varepsilon, 2\sqrt{d-1}-\varepsilon]$ down to the optimal spectral scale, we prove that the Green's functions can be approximated by those of certain infinite tree-like (few cycles) graphs that depend only on the local structure of the original graphs. This result implies that the Kesten--McKay law holds for the spectral density down to the smallest scale and the complete delocalization of bulk eigenvectors. Our method is based on estimating the Green's function of the adjacency matrices and a resampling of the boundary edges of large balls in the graphs.

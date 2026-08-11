@@ -1,0 +1,8 @@
+arXiv: http://arxiv.org/abs/1703.02349v2
+Title: Universality for conditional measures of the sine point process
+Authors: Arno B. J. Kuijlaars, Erwin Miña-Díaz
+Published: 2017-03-07
+Primary category: math.PR
+
+ABSTRACT (fetched from arXiv export API):
+The sine process is a rigid point process on the real line, which means that for almost all configurations $X$, the number of points in an interval $I = [-R,R]$ is determined by the points of $X$ outside of $I$. In addition, the points in $I$ are an orthogonal polynomial ensemble on $I$ with a weight function that is determined by the points in $X \setminus I$. We prove a universality result that in particular implies that the correlation kernel of the orthogonal polynomial ensemble tends to the sine kernel as the length $|I|=2R$ tends to infinity, thereby answering a question posed by A.I. Bufetov.

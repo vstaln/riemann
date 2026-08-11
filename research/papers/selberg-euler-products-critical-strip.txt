@@ -1,0 +1,8 @@
+arXiv: http://arxiv.org/abs/1809.10140v2
+Title: Euler products of Selberg zeta functions in the critical strip
+Authors: Ikuya Kaneko, Shin-ya Koyama
+Published: 2018-09-24
+Primary category: math.NT
+
+ABSTRACT (fetched from arXiv export API):
+For any congruence subgroup of the modular group, we extend the region of convergence of the Euler products of the Selberg zeta functions beyond the boundary Re s = 1, if they are attached with a nontrivial irreducible unitary representation. The region is determined by the size of the lowest eigenvalue of the Laplacian, and it extends to Re s $\geqslant$ 3/4 under Selberg's eigenvalue conjecture. More generally, for any unitary representation we establish the relation between the behavior of partial Euler products in the critical strip and the estimate of the error term in the prime geodesic theorem. For the trivial representation, the proof essentially exploits the idea of the celebrated work of Ramanujan.

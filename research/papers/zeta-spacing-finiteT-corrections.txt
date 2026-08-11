@@ -1,0 +1,8 @@
+arXiv: http://arxiv.org/abs/math/0602270v1
+Title: On the spacing distribution of the Riemann zeros: corrections to the asymptotic result
+Authors: E. Bogomolny, O. Bohigas, P. Leboeuf, A. G. Monastra
+Published: 2006-02-13
+Primary category: math.NT
+
+ABSTRACT (fetched from arXiv export API):
+It has been conjectured that the statistical properties of zeros of the Riemann zeta function near $z = 1/2 + \ui E$ tend, as $E \to \infty$, to the distribution of eigenvalues of large random matrices from the Unitary Ensemble. At finite $E$ numerical results show that the nearest-neighbour spacing distribution presents deviations with respect to the conjectured asymptotic form. We give here arguments indicating that to leading order these deviations are the same as those of unitary random matrices of finite dimension $N_{\rm eff}=\log(E/2π)/\sqrt{12 Λ}$, where $Λ=1.57314 ...$ is a well defined constant.

@@ -1,0 +1,8 @@
+arXiv: http://arxiv.org/abs/2202.06379v5
+Title: GOE statistics on the moduli space of surfaces of large genus
+Authors: Zeév Rudnick
+Published: 2022-02-13
+Primary category: math.SP
+
+ABSTRACT (fetched from arXiv export API):
+For a compact hyperbolic surface, we define a smooth linear statistic, mimicking the number of Laplace eigenvalues in a short energy window. We study the variance of this statistic, when averaged over the moduli space $\mathcal M_g$ of all genus $g$ surfaces with respect to the Weil-Petersson measure. We show that in the double limit, first taking the large genus limit and then the high energy limit, we recover GOE statistics. The proof makes essential use of Mirzakhani's integration formula.

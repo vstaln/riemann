@@ -1,0 +1,8 @@
+arXiv: http://arxiv.org/abs/1112.0346v1
+Title: Statistics on Riemann zeros
+Authors: Ricardo Perez Marco
+Published: 2011-12-01
+Primary category: math.NT
+
+ABSTRACT (fetched from arXiv export API):
+We numerically study the statistical properties of differences of zeros of Riemann zeta function and L-functions predicted by the theory of the eñe product. In particular, this provides a simple algorithm that computes any non-real Riemann zeros from very large ones ("self-replicating property of Riemann zeros"). Also the algorithm computes the full sequence of non-real zeros of Riemann zeta function from the sequence of non-real zeros of any Dirichlet L-function ("zeros of L-functions know about Riemann zeros"). We also check that the first error to the convergence to the classical GUE statistic near 0 is a Fresnel distribution.

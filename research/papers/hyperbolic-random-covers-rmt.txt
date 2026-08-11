@@ -1,0 +1,8 @@
+arXiv: http://arxiv.org/abs/2310.18663v3
+Title: Smooth linear eigenvalue statistics on random covers of compact hyperbolic surfaces -- A central limit theorem and almost sure RMT statistics
+Authors: Yotam Maoz
+Published: 2023-10-28
+Primary category: math.SP
+
+ABSTRACT (fetched from arXiv export API):
+We study smooth linear spectral statistics of twisted Laplacians on random $n$-covers of a fixed compact hyperbolic surface $X$. We consider two aspects of such statistics. The first is the fluctuations of such statistics in a small energy window around a fixed energy level when averaged over the space of all degree $n$ covers of $X$. The second is the energy variance of a typical surface. In the first case, we show a central limit theorem. Specifically, we show that the distribution of such fluctuations tends to a Gaussian with variance given by the corresponding quantity for the Gaussian Orthogonal/Unitary Ensemble (GOE/GUE). In the second case, we show that the energy variance of a typical random $n$-cover is that of the GOE/GUE. In both cases, we consider a double limit where first we let $n$, the covering degree, go to $\infty$ then let $L\to \infty$ where $1/L$ is the window length.

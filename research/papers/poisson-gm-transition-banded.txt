@@ -1,0 +1,8 @@
+arXiv: http://arxiv.org/abs/1703.06985v1
+Title: Evidence of the Poisson/Gaudin-Mehta phase transition for banded matrices on global scales
+Authors: Sheehan Olver, Andrew Swan
+Published: 2017-03-20
+Primary category: math.PR
+
+ABSTRACT (fetched from arXiv export API):
+We prove that the Poisson/Gaudin--Mehta phase transition conjectured to occur when the bandwidth of an $N \times N$ symmetric banded matrix grows like $\sqrt N$ is observable as a critical point in the fourth moment of the level density for a wide class of symmetric banded matrices. A second critical point when the bandwidth grows like ${2 \over 5} N$ leads to a new conjectured phase transition in the eigenvalue localization, whose existence we demonstrate in numerical experiments.

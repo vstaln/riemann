@@ -1,0 +1,8 @@
+arXiv: http://arxiv.org/abs/1907.03391v3
+Title: Band-limited mimicry of point processes by point processes supported on a lattice
+Authors: Jeffrey C. Lagarias, Brad Rodgers
+Published: 2019-07-08
+Primary category: math.PR
+
+ABSTRACT (fetched from arXiv export API):
+We say that one point process on the line $\mathbb{R}$ mimics another at a bandwidth $B$ if for each $n \ge 1$ the two point processes have $n$-level correlation functions that agree when integrated against all bandlimited test functions on bandwidth $[-B, B]$. This paper asks the question of for what values $a$ and $B$ can a given point process on the real line be mimicked at bandwidth $B$ by a point process supported on the lattice $a\mathbb{Z}$. For Poisson point processes we give a complete answer for allowed parameter ranges $(a,B)$, and for the sine process we give existence and nonexistence regions for parameter ranges. The results for the sine process have an application to the Alternative Hypothesis regarding the scaled spacing of zeros of the Riemann zeta function, given in a companion paper.

@@ -1,0 +1,8 @@
+arXiv: http://arxiv.org/abs/2304.01281v2
+Title: The limit points of the top and bottom eigenvalues of regular graphs
+Authors: Noga Alon, Fan Wei
+Published: 2023-04-03
+Primary category: math.CO
+
+ABSTRACT (fetched from arXiv export API):
+We prove that for each $d \geq 3$ the set of all limit points of the second largest eigenvalue of growing sequences of $d$-regular graphs is $[2\sqrt{d-1},d]$. A similar argument shows that the set of all limit points of the smallest eigenvalue of growing sequences of $d$-regular graphs with growing (odd) girth is $[-d, -2 \sqrt{d-1}]$. The more general question of identifying all vectors which are limit points of the vectors of the top $k$ eigenvalues of sequences of $d$-regular graphs is considered as well. As a by product, in the study of discrete counterpart of the "scarring" phenomenon observed in the investigation of quantum ergodicity on manifolds, our technique provides a method to construct $d$-regular almost Ramanujan graphs with large girth and localized eigenvectors corresponding to eigenvalues larger than $2\sqrt{d-1}$, strengthening a result of Alon, Ganguly, and Srivastava.

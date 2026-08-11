@@ -1,0 +1,8 @@
+arXiv: http://arxiv.org/abs/1410.1440v3
+Title: The Circular Unitary Ensemble and the Riemann zeta function: the microscopic landscape and a new approach to ratios
+Authors: Reda Chhaibi, Joseph Najnudel, Ashkan Nikeghbali
+Published: 2014-10-06
+Primary category: math.PR
+
+ABSTRACT (fetched from arXiv export API):
+We show in this paper that after proper scalings, the characteristic polynomial of a random unitary matrix converges almost surely to a random analytic function whose zeros, which are on the real line, form a determinantal point process with sine kernel. Our scaling is performed at the so-called "microscopic" level, that is we consider the characteristic polynomial at points which are of order $1/n$ distant. We prove this in the framework of virtual isometries to circumvent the fact that the rescaled characteristic polynomial does not even have a moment of order one, hence making the classical techniques of random matrix theory difficult to apply. The strong convergence results in this setup provide us with a new approach to ratios: we are able to solve open problems about the limiting distribution of ratios of characteristic polynomials evaluated at points of the form $\exp(2 i πα/n)$ and related objects (such as the logarithmic derivative). We also explicitly describe the dependence relation for the logarithm of the characteristic polynomial evaluated at several points on the microscopic scale. On the number theory side, inspired by the Keating-Snaith philosophy, we conjecture some new limit theorems for the value distribution of the Riemann zeta function on the critical line at the stochastic process level.

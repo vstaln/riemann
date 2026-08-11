@@ -1,0 +1,8 @@
+arXiv: http://arxiv.org/abs/1502.04482v4
+Title: A new proof of Friedman's second eigenvalue Theorem and its extension to random lifts
+Authors: Charles Bordenave
+Published: 2015-02-16
+Primary category: math.CO
+
+ABSTRACT (fetched from arXiv export API):
+It was conjectured by Alon and proved by Friedman that a random $d$-regular graph has nearly the largest possible spectral gap, more precisely, the largest absolute value of the non-trivial eigenvalues of its adjacency matrix is at most $2\sqrt{d-1} +o(1)$ with probability tending to one as the size of the graph tends to infinity. We give a new proof of this statement. We also study related questions on random $n$-lifts of graphs and improve a recent result by Friedman and Kohler.

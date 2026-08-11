@@ -1,0 +1,8 @@
+arXiv: http://arxiv.org/abs/1110.2150v4
+Title: An Algorithm for the Computation of Eigenvalues, Spectral Zeta Functions and Zeta-Determinants on Hyperbolic Surfaces
+Authors: Alexander Strohmaier, Ville Uski
+Published: 2011-10-10
+Primary category: math.SP
+
+ABSTRACT (fetched from arXiv export API):
+We present a rigorous scheme that makes it possible to compute eigenvalues of the Laplace operator on hyperbolic surfaces within a given precision. The method is based on an adaptation of the method of particular solutions to the case of locally symmetric spaces and on explicit estimates for the approximation of eigenfunctions on hyperbolic surfaces by certain basis functions. It can be applied to check whether or not there is an eigenvalue in an ε-neighborhood of a given number λ>0. This makes it possible to find all the eigenvalues in a specified interval, up to a given precision with rigorous error estimates. The method converges exponentially fast with the number of basis functions used. Combining the knowledge of the eigenvalues with the Selberg trace formula we are able to compute values and derivatives of the spectral zeta function again with error bounds. As an example we calculate the spectral determinant and the Casimir energy of the Bolza surface and other surfaces.

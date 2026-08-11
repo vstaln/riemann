@@ -1,0 +1,8 @@
+arXiv: http://arxiv.org/abs/2202.04284v2
+Title: Convergence of random holomorphic functions with real zeros and extensions of the stochastic zeta function
+Authors: Joseph Najnudel, Ashkan Nikeghbali
+Published: 2022-02-09
+Primary category: math.PR
+
+ABSTRACT (fetched from arXiv export API):
+In this article, we provide a unified framework for studying the convergence of rescaled characteristic polynomials of random matrices from various classical ensembles as well as functional convergence results for the Riemann zeta function. To this end, we consider the more general viewpoint of converging point processes (a special case of which is the sequence of converging eigenvalue point processes from random matrix ensembles), and we identify sufficient conditions under which the convergence of random point processes on the real line implies the convergence in law, for the topology of uniform convergence on compact sets, of suitable random holomorphic functions whose zeros are given by the point processes which are considered. Our results extend convergence results for rescaled characteristic polynomials obtained by various authors (in the case of the circular unitary ensemble, the limiting random analytic function is called the stochasic zeta function). We also show that for a wide class of point processes associated with these limiting random holomorphic functions (we can often interpret these points as the spectrum of some random operator), their Stieltjes transform follows for almost all points of the real line the standard Cauchy distribution, reminiscent of the results by Aizenman and Warzel (\cite{AW15}) in the case of the sine kernel point process.

@@ -1,0 +1,8 @@
+arXiv: http://arxiv.org/abs/2101.03338v5
+Title: Asymptotic absence of poles of Ihara zeta function of large Erdos-Renyi random graphs
+Authors: O. Khorunzhiy
+Published: 2021-01-09
+Primary category: math.PR
+
+ABSTRACT (fetched from arXiv export API):
+Using recent results on the concentration of the largest eigenvalue and maximal vertex degree of large random graphs, we show that the infinite sequence of Erd\H os-Rényi random graphs $G(n,ρ_n/n)$ such that $ρ_n/\log n$ infinitely increases as $n\to\infty$ verifies a version of the graph theory Riemann Hypothesis.

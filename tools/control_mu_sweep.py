@@ -144,7 +144,7 @@ def test1_sharp():
         print(f"    gains over L: CS {u['Lp']-u['L']:+.4f}  Perron {u['Lper']-u['L']:+.4f}  "
               f"Glover-top {u['Lglo']-u['L']:+.4f}")
     print("    -> at the sharp crystal: L == ||A||^2 (exact); CS gain = 0;")
-    print("       Perron gain = 4-4b < 0 for b >= 2; Glover-top gain = -4b < 0.")
+    print("       Perron gain = 4-4b < 0 for b >= 2; Glover-top gain = -b < 0 for r >= b")
 
 
 # --------------------------------------------------------------------------
