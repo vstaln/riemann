@@ -1,18 +1,22 @@
 #!/usr/bin/env python3
-"""B3.2 + B1.4 (biology note): GUE null baseline for the finite-T deficit, and
-decoy-discrimination statistics (real zeros vs GUE null at matched N).
+"""B3.2 + B1.4 (biology note): sine-kernel (determinantal) null baseline for the
+finite-T deficit, and decoy-discrimination statistics (real zeros vs null).
 
-(a) B3.2: the finite-T deficit Delta(T) = bound/N - 0.6725007 (attack-finitet)
-    compared against Delta_null(N) for a GUE (sine-kernel) null process with the
-    SAME cosine-window construction and the SAME N.  If Delta ~ Delta_null, the
-    whole finite-T deficit is construction/sampling artifact (the "repertoire
-    sampling noise"); the excess is the arithmetic signal.
+Null process: the determinantal sine process (unit density, sine-kernel
+repulsion) -- the correct null with the SAME asymptotic pair correlations as
+zeta's zeros (F=1 on [0,1]), sampled via the kernel's spectral expansion
+(Bernoulli inclusion of eigenvectors; algorithm as in tools/sine_sim.py,
+reimplemented here self-contained).
 
-(b) B1.4: decoy-discrimination screen -- candidate statistics computed on real
-    zeros vs GUE-null samples at matched N, z = (mean_real - mean_null)/std_null:
-      spacing ratio, counting variance, gap skewness, max gap, spacing entropy.
+(a) B3.2: Delta(T) = bound/N - 0.6725007 for real zeros vs Delta_null(N) for
+    the sine process at matched N, same cosine-window construction.  If
+    Delta ~ Delta_null, the finite-T deficit is construction/sampling artifact
+    ("repertoire sampling noise"); the excess is the arithmetic signal.
 
-Run:  uv run --quiet --with numpy --with scipy python null_baseline.py
+(b) B1.4: decoy-discrimination z-scores (spacing ratio, counting variance, gap
+    skewness, max gap, spacing entropy) between real zeros and null samples.
+
+Run:  uv run --quiet --with numpy --with scipy python -u null_baseline.py
 """
 import numpy as np
 
@@ -21,9 +25,8 @@ I2 = 0.5 + np.sin(SQRT2) / (2 * SQRT2)
 C = 1.0 / (SQRT2 * np.pi)
 TARGET = 3/2 - (1/SQRT2) * (np.cos(1/SQRT2) / np.sin(1/SQRT2))  # 0.6725007...
 
-# ---------- shared W construction ----------
+# ---------------- shared W construction (cosine window) ----------------
 def build_W(s, N):
-    # Psi(s) = (1/2)[sinc(C-s) + sinc(C+s)]  (Rust main.rs: sin(a)/(sqrt2 - 2 pi s) = sin(a)/(2a))
     V = np.empty((s.size, N))
     for k in range(N):
         t = s - k
@@ -35,13 +38,48 @@ def bound_of(W):
     HS2 = np.einsum('ij,ij->', W, W)
     return (2 * tr - HS2) / W.shape[0]
 
-# ---------- GUE null points ----------
-def gue_points(N, rng):
-    """N GUE eigenvalues mapped to unit density on [0, N)."""
-    A = (rng.standard_normal((N, N)) + 1j * rng.standard_normal((N, N))) / np.sqrt(2)
-    A = (A + A.conj().T) / 2
-    ev = np.linalg.eigvalsh(A)
-    return np.sort(N * (ev / (2 * np.sqrt(N)) + 1) / 2)
+# ---------------- determinantal sine process sampler ----------------
+class SineDPP:
+    """Sine-kernel DPP on [0, L] via spectral expansion (density 1)."""
+    def __init__(self, L, rng):
+        M = 2 * int(L)              # grid resolution dx = 1/2
+        xs = np.linspace(0, L, M, endpoint=False)
+        dx = L / M
+        K = np.sinc((xs[:, None] - xs[None, :])) * dx
+        evals, evecs = np.linalg.eigh(K)
+        mask = evals > 1e-10
+        self.xs = xs
+        self.evals = evals[mask]
+        self.Psi = evecs[:, mask] * np.sqrt(dx)
+        self.rng = rng
+
+    def sample(self):
+        Psi, evals, rng, M = self.Psi, self.evals, self.rng, self.xs.size
+        r_max = Psi.shape[1]
+        inc = rng.random(r_max) < evals
+        if not inc.any():
+            return np.zeros(0)
+        PsiJ = Psi[:, inc]
+        r = PsiJ.shape[1]
+        Pmm = np.einsum('ij,ij->i', PsiJ, PsiJ)
+        chosen = []
+        while len(chosen) < r:
+            if chosen:
+                X = np.array(chosen)
+                PX = PsiJ[X, :]
+                A = PX @ PX.T
+                PmX = PsiJ @ PX.T
+                sol = np.linalg.solve(A, PmX.T)
+                corr = np.einsum('mk,mk->m', PmX, sol.T)
+                diag = np.clip(Pmm - corr, 0, None)
+            else:
+                diag = Pmm
+            tot = diag.sum()
+            if tot < 1e-9:
+                break
+            m = rng.choice(M, p=diag / tot)
+            chosen.append(m)
+        return self.xs[np.array(chosen)]
 
 def stats(s):
     g = np.diff(np.sort(s))
@@ -60,39 +98,46 @@ def stats(s):
     return np.array([np.mean(r), np.var(counts), skew, maxg, ent])
 
 def main():
-    print(f"0.6725007 = {TARGET:.10f}")
     zs = np.loadtxt('/home/vstaln/riemann/tools/data/zeros_1_1000.txt')[:, 1]
     AF = {100: 50, 150: 86, 200: 123, 250: 161, 300: 203, 350: 245,
-          400: 289, 500: 380, 600: 472, 700: 569}
-    # real deficits recomputed here (should match attack-finitet table)
-    print("\n=== B3.2: finite-T deficit vs GUE-null sampling noise ===")
+          400: 289, 500: 380}
+    NSAMP = {50: 24, 86: 20, 123: 18, 161: 16, 203: 14, 245: 12, 289: 10, 380: 8}
+
+    print("=== B3.2: finite-T deficit vs sine-kernel null sampling noise ===")
     print(f"{'T':>5} {'N':>4} {'Delta_real':>11} {'Delta_null mean':>15} {'Delta_null sd':>13}")
     rng = np.random.default_rng(20260217)
+    cache = {}
     for T, N in AF.items():
         sel = (zs >= T) & (zs < 2 * T)
         s_real = (zs[sel] - T) * N / T
         d_real = bound_of(build_W(s_real, N)) - TARGET
-        nsamp = 10 if N > 300 else 16
-        dnull = np.empty(nsamp)
-        for i in range(nsamp):
-            dnull[i] = bound_of(build_W(gue_points(N, rng), N)) - TARGET
-        print(f"{T:>5} {N:>4} {d_real:>11.6f} {dnull.mean():>15.6f} {dnull.std():>13.6f}")
+        if N not in cache:
+            cache[N] = SineDPP(N, rng)
+        dpp = cache[N]
+        dnull = np.empty(NSAMP[N])
+        for i in range(NSAMP[N]):
+            pts = dpp.sample()
+            n = pts.size
+            if n < 8:
+                dnull[i] = np.nan
+                continue
+            dnull[i] = bound_of(build_W(pts, n)) - TARGET
+        print(f"{T:>5} {N:>4} {d_real:>11.6f} {np.nanmean(dnull):>15.6f} {np.nanstd(dnull):>13.6f}")
 
-    # ---------- B1.4 discrimination ----------
-    print("\n=== B1.4 decoy-discrimination: real zeros vs GUE null (matched N) ===")
-    for (T, N, ns) in [(500, 380, 20), (300, 203, 24), (700, 569, 14)]:
+    print("\n=== B1.4 decoy-discrimination: real zeros vs sine null (matched N) ===")
+    for (T, N, ns) in [(500, 380, 8), (300, 203, 10), (700, 569, 6)]:
         sel = (zs >= T) & (zs < 2 * T)
         s_real = (zs[sel] - T) * N / T
         sr = stats(s_real)
         rng2 = np.random.default_rng(7)
-        sn = np.array([stats(gue_points(N, rng2)) for _ in range(ns)])
+        sn = np.array([stats(SineDPP(N, rng2).sample()) for _ in range(ns)])
         names = ["spacing ratio", "counting var", "gap skewness", "max gap", "spacing entropy"]
         print(f"\nT={T}, N={N}, null samples n={ns}:")
         print(f"{'stat':>16} {'real':>10} {'null mean':>10} {'null sd':>10} {'z':>8}")
         for i, nm in enumerate(names):
-            z = (sr[i] - sn[:, i].mean()) / (sn[:, i].std() + 1e-30)
-            print(f"{nm:>16} {sr[i]:>10.4f} {sn[:, i].mean():>10.4f} "
-                  f"{sn[:, i].std():>10.4f} {z:>8.2f}")
+            z = (sr[i] - np.nanmean(sn[:, i])) / (np.nanstd(sn[:, i]) + 1e-30)
+            print(f"{nm:>16} {sr[i]:>10.4f} {np.nanmean(sn[:, i]):>10.4f} "
+                  f"{np.nanstd(sn[:, i]):>10.4f} {z:>8.2f}")
 
 if __name__ == '__main__':
     main()

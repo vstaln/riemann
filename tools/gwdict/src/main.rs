@@ -59,7 +59,13 @@ fn main() {
     let delta = dict.delta;
     let qq = prime_powers(c);
     let arch_f = |r: f64| dict.gv(C::real(r)).re;
-    let arch_val = arch_even_env(&arch_f, 20000.0, 1.0 / delta, 0.0);
+    let arch_val = {
+        // direct uniform quadrature: g_v has shortest period 1/Delta and decays ~1/r^2
+        let g = |r: f64| dict.gv(C::real(r)).re;
+        let near = uniform_integrate(&g, 0.0, 20000.0, 0.05);
+        let tail = 2.0 * arch_tail_power(&g, 20000.0, 1.0 / delta, 0.0);
+        (1.0 / PI) * near + tail
+    };
     let zero_1000 = {
         let mut s = 0.0;
         for i in 0..1000 {
