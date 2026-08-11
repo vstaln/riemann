@@ -215,6 +215,7 @@ def verify_floor(kernel, weights, pressure, q, target, grid=4000,
             p_i = pressure
             q_i = weights.get((i, i + 1), 0.0)
         val = _down(p_i * gcell / grid)
+        # w(g) lower bound over cell gcell
         wl = table[gcell] if gcell < len(table) else 0.0
         val = _down(val + _down(q_i * wl))
         return val
@@ -248,6 +249,26 @@ def verify_floor(kernel, weights, pressure, q, target, grid=4000,
         for low, high in box:
             low_prefix.append(low_prefix[-1] + low)
             high_prefix.append(high_prefix[-1] + high)
+        if cap_scheme == "coboundary":
+            # F_B = sum_i p_i g_i + sum_i q_i w(g_i)
+            #       + sum_{i<j} a_ij w(y_j - y_i)   (uniform a_ij)
+            result = 0.0
+            for i in range(q):
+                p_i = pressure_coeffs[i]
+                result = _down(result + _down(p_i * (low_prefix[i + 1] - low_prefix[i]) / grid))
+            for i in range(q):
+                q_i = nearest_coeffs[i]
+                low_i, high_i = box[i]
+                if high_i < ranges.length:
+                    result = _down(result + _down(q_i * ranges.query(low_i, high_i)))
+            for i, j in pair_list:
+                span = j - i
+                left = low_prefix[j] - low_prefix[i]
+                right = high_prefix[j] - high_prefix[i] + span - 1
+                if right >= ranges.length:
+                    continue
+                result = _down(result + _down(weights[(i, j)] * ranges.query(left, right)))
+            return result
         result = _down(pressure_lower * low_prefix[-1] / grid)
         for i, j in pair_list:
             span = j - i
@@ -448,6 +469,21 @@ def main():
     w_uniform = {(i, j): 2.0 / (7 - (j - i)) for i in range(7) for j in range(i + 1, 7)}
     r = verify_floor(kmt, w_uniform, 1.0 / 3000, 6, 19.0 / 5000,
                      grid=4000, max_nodes=5_000_000)
+    print(r)
+
+    # --- tawan baseline: cosine 1.47, redistributed F_B, target 577/1e5 ---
+    print("=" * 70)
+    print("TAWAN BASELINE: cosine 1.47, coboundary, target 577/1e5")
+    print("=" * 70)
+    ktw = cosine_kernel(1.47)
+    p_coeff = [946, 1177, 877, 877, 1177, 946]
+    p_coeff = [c / 1_920_000 for c in p_coeff]
+    q_coeff = [31343 / 100_000, 1 / 3, 105971 / 300_000, 105971 / 300_000,
+               1 / 3, 31343 / 100_000]
+    r = verify_floor(ktw, w_uniform, 1.0 / 3000, 6, 577.0 / 100_000,
+                     grid=4000, cap_scheme="coboundary",
+                     pressure_coeffs=p_coeff, nearest_coeffs=q_coeff,
+                     max_nodes=5_000_000)
     print(r)
 
 
