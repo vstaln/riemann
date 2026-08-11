@@ -203,6 +203,17 @@ for lam in [mp.mpf(1) / 2, mp.mpf(2) / 3]:
 print("\n--- (D) sanity checks ---------------------------------------------------")
 rng = np.random.default_rng(0)
 
+def family_draw():
+    """A random 256-periodic marked configuration: ~192 distinct positions on the
+    grid (density ~1), marks in {1,2}, total mark mass ~256."""
+    npos = 192
+    x = rng.permutation(np.arange(N))[0:npos].astype(float)
+    m = np.ones(npos)
+    nd = int(rng.integers(0, 40))
+    if nd > 0:
+        m[rng.choice(npos, size=nd, replace=False)] = 2.0
+    return x, m
+
 # D1. CUE law (marks all 1): pair part from the same machinery vs continuum 3*A2.
 print("D1. CUE law (marks all 1, p0 = 1): pair part 6u vs continuum 3*A2 = 3(1/lam - 2 J2)")
 for lam in [mp.mpf(1) / 2, mp.mpf(2) / 3]:
@@ -218,37 +229,27 @@ for lam in [mp.mpf(1) / 2, mp.mpf(2) / 3]:
     print(f"  lam={mp.nstr(lam,4)}: 6 u_CUE = {6*u_CUE:.5f}   continuum 3*A2 = {cont:.5f}   "
           f"ratio = {6*u_CUE/cont:.4f}")
 
-# D2. Monte-Carlo CUE: verify E|mu_hat(m)|^2 = m and the direct pair part.
-def cue_draw(n=256):
-    # eigenvalues of a random CUE matrix (Haar)
-    A = (rng.standard_normal((n, n)) + 1j * rng.standard_normal((n, n))) / np.sqrt(2 * n)
-    Q, _ = np.linalg.qr(A)
-    ev = np.linalg.eigvals(Q)
-    return np.sort(np.angle(ev)) % (2 * np.pi) / (2 * np.pi) * 256   # in [0,256)
+# D2. Exact algebraic identity: U_direct = sum_{i!=k} m_i m_k K_ik^2  ==  U_fourier = sum_m d_m (|mu_hat(m)|^2 - sum m_i^2)
+print("D2. algebraic identity  U_direct == U_fourier  on random marked configurations")
+for lam in [mp.mpf(1) / 2, mp.mpf(2) / 3]:
+    c, M, B = per_kernel_coeffs(lam, N)
+    d = np.fft.ifft(np.fft.fft(c) ** 2).real
+    worst = 0.0
+    for trial in range(6):
+        x, m = family_draw()
+        K = per_kernel_values(x, lam, N)
+        MM = np.outer(m, m)
+        U_direct = np.sum(MM * K ** 2) - np.sum(np.diag(MM) * np.diag(K) ** 2)
+        E = np.zeros(N)
+        for jj in range(1, N):
+            E[jj] = np.abs(np.sum(m * np.exp(2j * np.pi * jj * x / N))) ** 2
+        E[0] = np.sum(m) ** 2
+        U_fourier = np.sum(d * (E - np.sum(m ** 2)))
+        worst = max(worst, abs(U_direct - U_fourier))
+    print(f"  lam={mp.nstr(lam,4)}: max |U_direct - U_fourier| over 6 draws = {worst:.2e}")
 
-nc = 60
-muh2 = np.zeros(N)
-for _ in range(nc):
-    x = cue_draw()
-    m = np.ones(N)
-    for jj in range(1, N):
-        muh2[jj] += np.abs(np.sum(m * np.exp(2j * np.pi * jj * x / N))) ** 2
-muh2 /= nc
-print("D2. Monte-Carlo CUE (60 draws): E|mu_hat(m)|^2 = m ?")
-err = np.max(np.abs(muh2[1:] - np.arange(1, N)))
-print(f"  max |E|mu_hat(m)|^2 - m| over m=1..255 = {err:.4f}   (should be small)")
-
-# D3. The bound 6u <= 3P <= 12u on a random marked family (any law, any pair rows).
-from fractions import Fraction as _F
-def family_draw():
-    x = rng.permutation(np.arange(N))[0:192]          # 192 distinct positions
-    m = np.ones(len(x))
-    nd = int(rng.integers(0, 40))
-    if nd > 0:
-        m[rng.choice(len(x), size=nd, replace=False)] = 2.0
-    return x.astype(float), m
-
-print("D3. bound 6u <= 3P <= 12u on a random marked family (8 draws, lam = 1/2)")
+# D3. The bound 6u <= 3P <= 12u on random marked configurations.
+print("D3. bound 6u <= 3P <= 12u on a random marked family (8 draws)")
 ok = True
 for trial in range(8):
     x, m = family_draw()
