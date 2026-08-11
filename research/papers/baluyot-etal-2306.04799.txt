@@ -1,0 +1,1252 @@
+arXiv:2306.04799v1  [math.NT]  7 Jun 2023
+AN UNCONDITIONAL MONTGOMERY THEOREM FOR P AIR CORRELA TION O F
+ZEROS OF THE RIEMANN ZET A FUNCTION
+SIEGFRED ALAN C. BALUYOT, DANIEL ALAN GOLDSTON, ADE IRMA SUR IAJAYA,
+AND CAROLINE L. TURNAGE-BUTTERBAUGH
+Dedicated to Henryk Iwaniec on the occasion of his 75th birth day
+Abstract. Assuming the Riemann Hypothesis (RH), Montgomery proved a t heorem concerning pair cor-
+relation of zeros of the Riemann zeta-function. One consequ ence of this theorem is that, assuming RH,
+at least 67 . 9% of the nontrivial zeros are simple. Here we obtain an uncon ditional form of Montgomery’s
+theorem and show how to apply it to prove the following result on simple zeros: Assuming all the zeros
+ρ = β + iγ of the Riemann zeta-function such that T 3/ 8 < γ ≤ T satisfy |β − 1/ 2| < 1/ (2 log T ), then, as T
+tends to inﬁnity, at least 61 . 7% of these zeros are simple. The method of proof neither requ ires nor provides
+any information on whether any of these zeros are on or not on t he critical line where β = 1 / 2. W e also
+obtain the same result under the weaker assumption of a stron g zero-density hypothesis.
+1. Introduction and Statement of Results
+Let ρ = β + iγ denote a nontrivial zero of the Riemann zeta-function ζ(s) with β, γ ∈ R, that is, a zero
+satisfying β > 0. The Riemann Hypothesis (RH) states that β = 1/2 for all ρ. To study the pair correlation
+of zeros of the zeta-function, Montgomery [Mon73] assumed RH and considered, for x > 0 and T ≥ 3, the
+sum
+(1.1)
+∑
+0<γ,γ ′≤T
+xi(γ−γ′) 4
+4 + (γ − γ′)2 .
+The ﬁrst goal of this paper is to generalize Montgomery’s pair corre lation method so that it is unconditional.
+To this end, deﬁne, for x > 0 and T ≥ 3,
+(1.2) F (x, T ) :=
+∑
+ρ,ρ′
+0<γ,γ ′≤T
+xρ−ρ′
+w(ρ − ρ′), where w(u) := 4
+4 − u2 ,
+where here and throughout the paper, zeros are counted with mu ltiplicity. Note that if RH holds then (1.2)
+agrees with (1.1).
+Following Montgomery, we normalize F (x, T ) by deﬁning, for real α,
+(1.3) F (α) :=
+( T
+2π log T
+) −1
+F (T α, T ) =
+( T
+2π log T
+) −1 ∑
+ρ,ρ′
+0<γ,γ ′≤T
+T α(ρ−ρ′)w(ρ − ρ′).
+The ﬁrst result of this paper is the following unconditional theorem.
+Theorem 1. The function F (α) is real, even, and nonnegative. Moreover, as T → ∞, we have
+(1.4) F (α) = T −2α(log T + O(1)) + α + O
+( 1
+√log T
+)
+uniformly for 0 ≤ α ≤ 1.
+Date: June 9, 2023.
+Key words and phrases. Riemann zeta-function, zeros, pair correlation, simple ze ros, zero-density.
+1
+Theorem 1 is nearly identical to Montgomery’s theorem in [Mon73] and [GM87, Lemma 8] except it does
+not assume RH, and it includes the improvements from [GM87, Lemma 8] where (1.4) holds up to α = 1 with
+explicit error terms. The proof is also nearly identical. See also [IK04]. A simple application of Theorem 1
+concerns the multiplicities of the zeros of ζ(s). We use a slight modiﬁcation of a kernel due to Tsang [Tsa93]
+to prove the following result.
+Theorem 2. Suppose that all the zeros ρ = β + iγ of the Riemann zeta-function with T 3/8 < γ ≤ T lie
+within the thin box
+(1.5) 1
+2 − 1
+2 log T < β < 1
+2 + 1
+2 log T .
+Then for any suﬃciently large T > 0, at least 61.7% of the nontrivial zeros are simple.
+Remark. The pair correlation method developed in this paper neither requires nor provides any information
+as to whether or not the nontrivial zeros of ζ(s) satisfy β = 1/2.
+There are many results concerning the proportion of nontrivial ze ros of the Riemann zeta-function that
+are simple. Pratt, Robles, Zaharescu, and Zeindler [PRZZ20] have proved that more than 41 .7% of the zeros
+are on the critical line, and also that more than 40 .7% of the zeros are on the critical line and simple. Conrey,
+Iwaniec, and Soundararajan [CIS13] have proved that more than 14/25 = 56% of the nontrivial zeros of all
+Dirichlet L-functions are on the critical line and are simple. Going back to the ca se of the Riemann zeta-
+function, assuming RH, Montgomery [Mon73] obtained from Theore m 1 that more than 2 /3 = 66 .6% of the
+zeros are simple, and soon after, Montgomery and Taylor [Mon74] im proved this to prove more than 67 .2%
+of the zeros are simple. Recently Chirre, Gon¸ calves, and de Laat [C GdL20] obtained by this method 67 .9%.
+By a molliﬁer method Conrey, Ghosh, and Gonek [CGG98] showed on RH and an additional hypothesis that
+at least 19 /27 = 70 .3703% of the zeros are simple, and later Bui and Heath-Brown [BHB13 ] showed that
+this result holds on RH alone.
+We can weaken the assumption that there are no zeros outside the box (1.5) by using a strong zero-density
+hypothesis. Let N (σ, T) denote the number of zeros ρ = β + iγ with β ≥ σ and 0 < γ ≤ T .
+Theorem 3. Assuming that
+(1.6) N (σ, T) = o
+(
+T 2(1−σ)
+)
+for 1
+2 + 1
+2 log T ≤ σ ≤ 25
+32 + η,
+for any ﬁxed η > 0, then as T → ∞, at least 61.7% of the nontrivial zeros of ζ(s) are simple.
+Selberg [Sel91] made the conjecture that for all σ > 1/2, we have
+(1.7) N (σ, T) = O
+(
+T 1−c(σ− 1
+2 ) log T√log log T
+)
+,
+where c > 0 is some constant, and he stated that (1.7) can often be used as a replacement for RH in the
+Selberg class. To see this, note that the conjecture is expected t o hold for all σ > 1/2 and thus implies
+that almost all the nontrivial zeros are on the critical line {s ∈ C : Re(s) = 1 /2}. In a recent paper, Aryan
+[Ary22] used this type of conjecture as a replacement of RH to obt ain Montgomery’s result on simple zeros.
+Our density conjecture (1.6) implies all except o(T ) of the zeros are in the box (1.5), and if we extend this
+conjecture to all σ > 1/2 we also obtain Montgomery’s simple zero results. Iwaniec and Kowals ki [IK04, p.
+249] made a weaker Density Conjecture that N (σ, T) ≪ T 2(1−σ) log T for 1 /2 ≤ σ ≤ 1 and T ≥ 3, which,
+however, is too weak to be used in Theorem 3.
+2. Proof of Theorem 1
+Recall that if ρ is a zero of ζ(s), then 1 − ρ, ρ, and 1 − ρ are also zeros. Write
+ρ = β + iγ := 1/2 + δ + iγ,
+where −1/2 < δ < 1/2. If δ ̸= 0 and γ > 0, then there is another zero in the upper half-plane given by
+1 − ρ = 1/2 − δ + iγ.
+2
+Therefore we may rewrite (1.2) as
+(2.1)
+F (x, T ) =
+∑
+ρ,ρ′
+0<γ,γ ′≤T
+xρ+
+ρ′−1w(ρ + ρ′ − 1) =
+∑
+ρ,ρ′
+0<γ,γ ′≤T
+xδ+δ′+i(γ−γ′)w(δ + δ′ + i(γ − γ′)).
+Lemma 1 (Montgomery). Let ρ = 1/2 + δ + iγ. Then for x ≥ 1 and all t we have
+∑
+ρ
+2xδ+i(γ−t)
+1 + ((t − γ) + iδ)2 = −
+∞∑
+n=1
+Λ( n)
+n1/2+it min
+{ n
+x , x
+n
+}
++ x−1 (log(|t| + 2) + O(1))
++ O
+( x1/2
+1 + t2
+)
++ O
+( x−5/2
+|t| + 2
+)
+.
+(2.2)
+Proof of Lemma 1. This is the Lemma from [Mon73] if one takes σ = 3/2 and δ = 0. The starting point for
+proving this lemma is the explicit formula due to Landau [Lan09] that, for x > 1 and x ̸= pm,
+(2.3)
+∑
+ρ
+xρ−s
+s − ρ =
+∑
+n≤x
+Λ( n)
+ns + ζ′
+ζ (s) − x1−s
+1 − s −
+∞∑
+n=1
+x−2n−s
+2n + s ,
+provided s ̸= 1, s ̸= ρ, s ̸= −2n, which we henceforth assume. When s = 0 this is the usual explicit formula
+for primes. Writing s = σ + it and ρ = 1/2 + δ + iγ, we obtain
+∑
+ρ=1/2+δ+iγ
+x1/2+δ−σ+i(γ−t)
+σ − 1/2 − δ + i(t − γ) = R(σ + it),
+where R(σ + it) is the right-hand side of (2.3) which does not depend on ρ and is treated exactly as in
+[Mon73]. Multiplying both sides by xσ−1/2, we obtain
+∑
+ρ
+xδ+i(γ−t)
+σ − 1/2 − δ + i(t − γ) = xσ−1/2R(σ + it).
+Next, replace σ with 1 − σ in the equation above which adds the conditions s ̸= 0 and s ̸= 2n + 1 and gives
+∑
+ρ
+xδ+i(γ−t)
+1/2 − σ − δ + i(t − γ) = x1/2−σR(1 − σ + it).
+Subtract this equation from the previous one and simplify to obtain
+∑
+ρ
+(2σ − 1)xδ+i(γ−t)
+(σ − 1
+2 )2 + ((t − γ) + iδ)2 = xσ−1/2R(σ + it) − x1/2−σR(1 − σ + it).
+Taking σ = 3/2 gives the left-hand side of the lemma, and the right-hand side is obt ained exactly as in the
+original proof. □
+Lemma 2. Letting N (T ) denote the number of zeros in the upper half plane up to height T , we have
+(2.4) N (T ) :=
+∑
+0<γ≤T
+1 = T
+2π log T
+2π − T
+2π + O(log T ).
+This is proved in many books, for instance [Ing90, Theorem 25], [Tit8 6, Theorem 9.4], or [MV07, Corollary
+14.3]. In particular, we have
+(2.5) N (T ) ∼ T
+2π log T, and N (T + 1) − N (T ) ≪ log T.
+Lemma 3. We have, for x > 0 and T ≥ 3,
+(2.6) F (x, T ) = 2
+π
+∫ ∞
+−∞
+⏐
+⏐
+⏐
+⏐
+⏐
+⏐
+⏐
+∑
+ρ
+0<γ≤T
+xρ−1/2
+1 − (ρ − (1/2 + it))2
+⏐
+⏐
+⏐
+⏐
+⏐
+⏐
+⏐
+2
+dt.
+3
+Proof of Lemma 3. We will make use of the formula, with a ∈ C and −1 < Im(a) < 1,
+(2.7)
+∫ ∞
+−∞
+dt
+(1 + t2)(1 + (t + a)2) = 2πi
+( 1
+2i(1 + (a + i)2) + 1
+2i(1 + (−a + i)2)
+)
+= 2π
+4 + a2 ,
+which is easily obtained by residues or Mathematica. Now, multiplying ou t the right-hand side of (2.6), we
+obtain
+2
+π
+∑
+ρ,ρ′
+0<γ,γ ′≤T
+xρ+ρ′−1
+∫ ∞
+−∞
+dt
+(
+1 − (ρ − (1/2 + it))2)(
+1 −
+(
+ρ′ − (1/2 − it)
+) 2)
+= 2
+π
+∑
+ρ,ρ′
+0<γ,γ ′≤T
+xρ+ρ′−1
+∫ ∞
+−∞
+dt
+(
+1 + (t + i(ρ − 1/2))2)(
+1 +
+(
+t − i(ρ′ − 1/2)
+) 2)
+= 2
+π
+∑
+ρ,ρ′
+0<γ,γ ′≤T
+xρ+ρ′−1
+∫ ∞
+−∞
+dt
+(
+1 + t2)(
+1 +
+(
+t − i(ρ + ρ′ − 1)
+) 2)
+=
+∑
+ρ,ρ′
+0<γ,γ ′≤T
+xρ+ρ′−1 4
+4 +
+(
+i(ρ + ρ′ − 1)
+) 2
+= F (x, T )
+by (2.1). □
+We now rewrite (2.6) with ρ = 1/2 + δ + iγ so that
+(2.8) F (x, T ) = 2
+π
+∫ ∞
+−∞
+⏐
+⏐
+⏐
+⏐
+⏐
+⏐
+⏐
+∑
+ρ
+0<γ≤T
+xδ+iγ
+1 + ((t − γ) + iδ)2
+⏐
+⏐
+⏐
+⏐
+⏐
+⏐
+⏐
+2
+dt.
+Deﬁne
+(2.9) Θ( t) := max {β : ρ = β + iγ, 0 < |γ| ≤ t} .
+If RH is false then Θ( t) is a step function, and we often replace it with the “zero-free” re gion in the complex
+s = σ + it plane
+(2.10) σ > 1 − η(t) ≥ Θ( t), t ≥ 3,
+where 0 < η (t) ≤ 1/2 and η(t) is a continuous decreasing but not necessarily strictly decreasing function.
+Clearly we can make η(t) as close to 1 − Θ( t) as we wish pointwise except at the jumps of Θ( t). We will
+often make use of this with ρ = 1/2 + δ + iγ in the form
+(2.11) δ ≤ Θ( t) − 1/2 ≤ 1/2 − η(t) for 0 < γ ≤ t.
+Our next lemma gives the unconditional version of Montgomery’s res ult that relates F (x, T ) to the explicit
+formula in Lemma 1.
+Lemma 4. For x ≥ 1 and T ≥ 3, let
+(2.12) L(x, T ) :=
+∫ T
+0
+⏐
+⏐
+⏐
+⏐
+⏐
+∑
+ρ
+2xδ+iγ
+1 + ((t − γ) + iδ)2
+⏐
+⏐
+⏐
+⏐
+⏐
+2
+dt.
+Then
+(2.13) F (x, T ) = 1
+2π L(x, T ) + O
+(
+x1−2η(T log2 T ) log3 T
+)
++ O(x).
+4
+Proof of Lemma 4. We ﬁrst truncate the sum over zeros in (2.12) using trivial estimate s, which then allows
+us to apply Montgomery’s argument without modiﬁcation to the trun cated sum. For x ≥ 1, since |δ| < 1/2,
+we have the trivial estimate
+(2.14)
+⏐
+⏐
+⏐
+⏐
+⏐
+∑
+ρ
+2xδ+iγ
+1 + ((t − γ) + iδ)2
+⏐
+⏐
+⏐
+⏐
+⏐ ≪ x1/2∑
+γ
+1
+1 + (t − γ)2 ≪ x1/2 log(|t| + 2),
+where the last estimate is well known and follows from the second est imate in (2.5). In the same way we
+have, for 0 ≤ t ≤ T and Z ≥ 2T ,
+(2.15)
+⏐
+⏐
+⏐
+⏐
+⏐
+⏐
+⏐
+∑
+ρ
+|γ|≥Z
+2xδ+iγ
+1 + ((t − γ) + iδ)2
+⏐
+⏐
+⏐
+⏐
+⏐
+⏐
+⏐
+≪ x1/2∑
+γ≥Z
+1
+γ2 ≪ x1/2 log Z
+Z .
+Next, on squaring we have
+L(x, T ) = 4
+∑
+ρ,ρ′
+xδ+δ′+i(γ−γ′)
+∫ T
+0
+dt
+(1 + ((t − γ) + iδ)2)(1 + ((t − γ′) − iδ′)2)
+.
+By (2.14) and (2.15) we can exclude the terms with γ ̸∈[−Z, Z] in the sum above with an error
+≪
+∫ T
+0
+⏐
+⏐
+⏐
+⏐
+⏐
+⏐
+⏐
+∑
+ρ
+|γ|≥Z
+xδ+iγ
+1 + ((t − γ) + iδ))2
+⏐
+⏐
+⏐
+⏐
+⏐
+⏐
+⏐
+⏐
+⏐
+⏐
+⏐
+⏐
+⏐
+∑
+ρ′
+xδ′−iγ′
+1 + ((t − γ′) − iδ′)2
+⏐
+⏐
+⏐
+⏐
+⏐
+⏐
+dt ≪ xT log2 Z
+Z .
+Taking Z = T log2 T , we conclude that
+L(x, T ) = 4
+∑
+ρ,ρ′
+|γ|≤Z,|γ′|≤Z
+xδ+δ′+i(γ−γ′)
+∫ T
+0
+dt
+(1 + ((t − γ) + iδ)2)(1 + ((t − γ′) − iδ′)2)
++ O(x).
+Montgomery, arguing unconditionally except for taking δ = δ′ = 0 in L(x, T ) and with no truncation, showed
+the terms with γ ̸∈[0, T ] can be excluded with an error O(log3 T ), and then the range of integration can
+be extended to R with an error O(log2 T ). Here we apply the same argument where we need to include the
+factor
+(2.16) xδ+δ′+i(γ−γ′) ≪ x2Θ( Z)−1 ≤ x1−2η(T log2 T )
+in the error term, at which point the bound for these error terms is majorized by dropping the truncation
+at Z which then exactly matches Montgomery’s argument. Thus we obta in by (2.8)
+L(x, T ) = 4
+∑
+ρ,ρ′
+0≤γ,γ ′≤T
+xδ+δ′+i(γ−γ′)
+∫ ∞
+−∞
+dt
+(1 + ((t − γ) + iδ)2)(1 + ((t − γ′) − iδ′)2)
++ O(x1−2η(T log2 T ) log3 T ) + O(x)
+= 2πF (x, T ) + O(x1−2η(T log2 T ) log3 T ) + O(x).
+□
+Proof of Theorem 1. Since w(u) is even, we see from (1.2) that F (1/x, T ) = F (x, T ), and therefore F (α) is
+even. That F (α) is real and nonnegative follows immediately from Lemma 3.
+We write (2.2) as l(x, T ) = r(x, T ), and deﬁne
+(2.17) L(x, T ) :=
+∫ T
+0
+|l(x, T )|2 dt =
+∫ T
+0
+|r(x, T )|2 dt =: R(x, T ).
+As we just saw in Lemma 4,
+L(x, T ) = 2 πF (x, T ) + O(x1−2η(T log2 T ) log3 T ) + O(x).
+5
+The current widest known zero-free region σ ≥ 1 − η(t) was obtained independently by Korobov and Vino-
+gradov with
+η(t) = c
+(log t)2/3(log log t)1/3 , for t ≥ 3,
+for some constant c > 0. Thus we see that, for 1 ≤ x ≤ T 1/2,
+x1−2η(T log2 T ) log3 T ≪ T 1/2 log3 T,
+while for T 1/2 ≤ x ≤ T
+x1−2η(T log2 T ) log3 T ≪ x exp
+(
+−c log x
+(log T )2/3(log log T )1/3
+)
+log3 T ≪ x.
+We conclude for 1 ≤ x ≤ T
+(2.18) L(x, T ) = 2 πF (x, T ) + O(T ) + O(x).
+Next, R(x, T ) does not depend on RH, and Montgomery[Mon73] proved uncond itionally that
+R(x, T ) = (1 + o(1))T x−2 log2 T + T (log x + O(1)) + O(x log x).
+From [GM87] this was improved, so that for 0 ≤ x ≤ T ,
+(2.19) R(x, T ) = x−2T log T (log T + O(1)) + T (log x + O(
+√
+log T )).
+Since L(x, T ) = R(x, T ), (2.18) and (2.19) prove Theorem 1 on using (1.3) to convert F (x, T ) to F (α). □
+Remark. In (2.19) we have removed an extraneous factor of log log T from [GM87] which can be avoided
+using Lemma 6 there in place of Lemma 7. The statement there has als o been corrected slightly. See also
+[Gol81] and [LPZ17]. Montgomery and Vaughan in the forthcoming boo k Multiplicative Number Theory II
+have obtained a signiﬁcantly reﬁned version of Montgomery’s theor em.
+3. Sums over Differences of Zeros
+Let g(α) ∈ L1(R), and, for z = x + iy, x, y ∈ R, deﬁne the Fourier transform ˆg(z) of g(α) by
+(3.1) ˆg(z) =
+∫ ∞
+−∞
+g(α)e(−zα) dα, where e(w) = e2πiw.
+Thusˆg(z) is an analytic function for all z. Taking z = i(ρ − ρ′) log T
+2π , we have
+ˆg
+(
+i(ρ − ρ′) log T
+2π
+)
+=
+∫ ∞
+−∞
+g(α)T α(ρ−ρ′) dα.
+Multiplying both sides of this equation by w(ρ − ρ′) and summing over 0 < γ, γ ′ ≤ T , we obtain
+(3.2)
+∑
+ρ,ρ′
+0<γ,γ ′≤T
+ˆg
+(
+i(ρ − ρ′) log T
+2π
+)
+w(ρ − ρ′) =
+( T
+2π log T
+) ∫ ∞
+−∞
+F (α)g(α) dα.
+We now apply Theorem 1 to obtain the following unconditional version o f Montgomery’s result on eval-
+uating sums over pairs of zeros for even kernels with Fourier trans forms supported in [ −1, 1]. If we assume
+RH this agrees with the earlier version in [Mon73].
+Lemma 5. Suppose α ∈ R and z ∈ C. Suppose r(α) is a real-valued even function in L1(R) with support in
+[−1, 1], and also r(α) is Lipschitz continuous at α = 0. Then ˆr(z) is an even analytic function,
+(3.3) ˆr(z) = 2
+∫ 1
+0
+r(α) cos(2πzα) dα,
+and we have
+(3.4)
+∑
+ρ,ρ′
+0<γ,γ ′≤T
+ˆr
+(
+i(ρ − ρ′) log T
+2π
+)
+w(ρ − ρ′) = T
+2π log T
+(
+r(0) + 2
+∫ 1
+0
+αr(α) dα + O
+( 1√log T
+))
+.
+6
+Recall that a function f (x) is Lipschitz continuous at a point x = a if there are constants C > 0 and
+δ > 0 such that |f (x) − f (a)| ≤ C|x − a| for all x in a neighborhood |x − a| < δ of a.
+Proof of Lemma 5. In (3.2) we take g(α) = r(α), and see that (3.3) follows from (3.1) by the evenness of r.
+For the integral in (3.2), we apply Theorem 1 and have
+∫ ∞
+−∞
+F (α)r(α) dα = 2
+∫ 1
+0
+(
+T −2α(log T + O(1)) + α + O
+( 1√log T
+))
+r(α) dα
+= 2
+∫ 1
+0
+T −2α(log T + O(1))r(α) dα + 2
+∫ 1
+0
+αr(α) dα + O
+( 1√log T
+)
+.
+To complete the proof, we use of the Lipschitz condition on r(α) at α = 0 to see the ﬁrst integral is
+= 2
+∫ log log T / log T
+0
+T −2α(log T + O(1))r(α) dα + O
+( ∫ 1
+log log T / log T
+T −2α log T |r(α)| dα
+)
+= 2
+(
+r(0) + O
+( log log T
+log T
+)) ∫ log log T / log T
+0
+T −2α(log T + O(1)) dα + O
+( 1
+log T
+∫ 1
+0
+|r(α)| dα
+)
+= 2
+(
+r(0) + O
+( log log T
+log T
+))( 1
+2 + O
+( 1
+log T
+))
++ O
+( 1
+log T
+)
+= r(0) + O
+( log log T
+log T
+)
+.
+□
+4. Tsang’s Kernel
+We deﬁne the Tsang kernel K(z) through its Fourier transform by
+(4.1) ˆK(t) := j(2πt)sech(2πt),
+where j(α) is an even, non-negative, bounded function supported on |α| ≤ 1, and we also assume j is twice
+diﬀerentiable on [0 , 1] with one-sides derivatives at the endpoints. We also require, for all w ∈ R,
+0 ≤ˆj(w) ≪ 1
+1 + w2 .
+Thus the Tsang kernel K(z) is
+(4.2) K(z) =
+∫ ∞
+−∞
+ˆK(t)e(zt) dt = 2
+∫ ∞
+0
+j(2πt)sech(2πt) cos(2πzt) dt = 1
+π
+∫ 1
+0
+j(α)sech(α) cos(zα) dα.
+Tsang took the function ˆj to be the Fej´ er kernel, that is,
+(4.3) jF (α) = max {0, 1 − |α|}, ˆjF (w) =
+( sin πw
+πw
+) 2
+,
+and we will also take ˆj to be the Montgomery-Taylor kernel [Mon74], [CG93] given by
+(4.4) jM (α) = 1
+1 − cos
+√
+2
+( 1
+2
+√
+2
+sin
+( √
+2jF (α))
+)
++ 1
+2 jF (α) cos
+( √
+2α
+) )
+,
+where jF (α) is given in (4.3), and
+(4.5) ˆjM (w) = 1
+1 − cos
+√
+2
+(
+sin( 1
+2 (
+√
+2 − 2πw))√
+2 − 2πw + sin( 1
+2 (
+√
+2 + 2πw))√
+2 + 2πw
+) 2
+.
+Using the properties of j, Tsang proved that K has the following properties [Tsa93, Lemma 1].
+Lemma 6 (K.-M. Tsang) . The kernel K(z) is an even entire function such that:
+(a) K(x) > 0 for all x ∈ R,
+(b) For z ∈ C − {0}, K(z) ≪ e|Im(z)|
+|z|2 ,
+(c) For z = x + iy, x, y ∈ R, then when |y| < 1, we have Re K(x + iy) > 0.
+7
+5. Application to sums over differences of zeros
+Applying the Tsang kernel in Lemma 5 we obtain the following result.
+Lemma 7. We have
+(5.1)
+2π
+∑
+ρ,ρ′
+0<γ,γ ′≤T
+|β−β′|< 1
+log T
+Re K (−i(ρ − ρ′) log T ) + S(T ) =
+(
+ˆK(0) + 2
+∫ 1
+0
+αˆK
+( α
+2π
+)
+dα + O
+( 1√log T
+)) T
+2π log T,
+where
+(5.2) S(T ) := 2 πRe
+∑
+ρ,ρ′
+0<γ,γ ′≤T
+|β−β′|≥ 1
+log T
+K (−i(ρ − ρ′) log T ) w(ρ − ρ′),
+and K and ˆK are given in (4.1) and (4.2). Here Re K > 0 for every term in the sum in (5.1), and ˆK ≥ 0.
+Proof of Lemma 7. In Lemma 5 we take, for α ∈ R,
+r(α) = ˆK
+( α
+2π
+)
+= j(α)sech(α),
+so that supp r ⊂ [−1, 1] and
+ˆr(z) = 2 πK (−2πz).
+Thus (3.4) becomes
+(5.3) 2 π
+∑
+ρ,ρ′
+0<γ,γ ′≤T
+K (−i(ρ − ρ′) log T ) w(ρ − ρ′) =
+(
+ˆK(0) + 2
+∫ 1
+0
+αˆK
+( α
+2π
+)
+dα + O
+( 1√log T
+)) T
+2π log T.
+From Lemma 6 we have
+(5.4) Re K (−i(ρ − ρ′) log T ) = Re K ((γ − γ′ − i(β − β′)) log T ) > 0 if |β − β′| < 1/ log T.
+Since w(ρ − ρ′) is complex-valued for zeros oﬀ the half-line, we ﬁrst need to remov e this weight when
+|β−β′| < 1
+log T before applying (5.4). This is easily done since, noting w(z)−1 = 1
+4 z2w(z) and so w(0)−1 = 0,
+and using (b) of Lemma 6,
+(5.5)
+∑
+ρ,ρ′
+0<γ,γ ′≤T
+|β−β′|< 1
+log T
+K (−i(ρ − ρ′) log T ) (w(ρ − ρ′) − 1) =
+∑
+ρ̸=ρ′
+0<γ,γ ′≤T
+|β−β′|< 1
+log T
+K (−i(ρ − ρ′) log T ) (w(ρ − ρ′) − 1)
+≪
+∑
+ρ̸=ρ′
+0<γ,γ ′≤T
+|β−β′|< 1
+log T
+T |β−β′|
+|ρ − ρ′|2 log2 T
+|ρ − ρ′|2
+|4 − (ρ − ρ′)2|
+≤ 1
+log2 T
+∑
+ρ̸=ρ′
+0<γ,γ ′≤T
+T 1/ log T
+|4 − (ρ − ρ′)2|
+≪ 1
+log2 T
+∑
+0<γ,γ ′≤T
+1
+1 + (γ − γ′)2 ≪ T,
+where the last line uses Lemma 2 as is done for the sum over zeros in (2 .14). We now remove w(ρ − ρ′) from
+the terms in (5.3) with |β − β′| < 1
+log T and take real parts to complete the proof. □
+Remark. In applications we only need the bound in (5.5) to be o(T log T ), which is obtained if we sum over
+all pairs of nontrivial zeros ρ, ρ′ with |β − β′| < (1−ǫ) log log T
+log T for any ǫ > 0.
+8
+6. Assumptions on Zeros
+In Theorem 2 we assume all the zeros ρ = β + iγ of the Riemann zeta-function with T 3/8 < γ ≤ T lie
+within the thin box
+(6.1) 1
+2 − 1
+2 log T < β < 1
+2 + 1
+2 log T ,
+and in Theorem 3 we assume the strong density hypothesis
+(6.2) N (σ, T) = o
+(
+T 2(1−σ)
+)
+for 1
+2 + 1
+2 log T ≤ σ ≤ 25
+32 + η,
+for any ﬁxed η > 0.
+We now prove that either of these assumptions implies that, for any suﬃciently large T ,
+(6.3) S(T ) = 2 πRe
+∑
+ρ,ρ′
+0<γ,γ ′≤T
+|β−β′|≥ 1
+log T
+K (−i(ρ − ρ′) log T ) w(ρ − ρ′) = o(T log T ).
+To do this, we ﬁrst prove that the density hypothesis (6.2) implies (6 .3), and next show that the essentially
+stronger hypothesis (6.1) implies (6.2), and thus (6.3) by the ﬁrst s tep. We use standard results and methods
+for applying zero-density results to explicit formulas, see [Ivi85, C hapter 12] and [IK04, Chapter 10].
+By property (b) of Lemma 6, we have
+K(z) ≪ e|Im(z)|
+|z|2 ,
+and therefore
+K(−i(ρ − ρ′) log T ) ≪ T |β−β′|
+((β − β′) log T )2 + ((γ − γ′) log T )2 .
+Hence since |w(ρ − ρ′)| ≪ 1, we have
+S(T ) ≪
+∑
+ρ,ρ′
+0<γ,γ ′≤T
+|β−β′|≥ 1
+log T
+T |β−β′|
+((β − β′) log T )2 + ((γ − γ′) log T )2 .
+By the inequality |ab| ≤ 1
+2 (a2 + b2), we have
+T |β−β′| = T |(β−1/2)+(1/2−β′)| ≤ T |β−1/2|T |β′−1/2| ≤ 1
+2
+(
+T |2β−1| + T |2β′−1|
+)
+.
+Thus
+S(T ) ≪
+∑
+ρ,ρ′
+0<γ,γ ′≤T
+|β−β′|≥ 1
+log T
+T |2β−1| + T |2β′−1|
+((β − β′) log T )2 + ((γ − γ′) log T )2 .
+Since |β − β′| ≥ 1
+log T , at least one of β or β′ must be outside the interval
+( 1
+2 − 1
+2 log T , 1
+2 + 1
+2 log T
+)
+.
+By relabeling if necessary, we may assume that β is outside this interval and that T |2β′−1| ≤ T |2β−1|. Hence
+S(T ) ≪
+∑
+ρ=β+iγ
+|β−1/2|≥ 1
+2 log T
+0<γ≤T
+T |2β−1| ∑
+0<γ ′≤T
+|β−β′|≥1/ log T
+1
+((β − β′) log T )2 + ((γ − γ′) log T )2
+≪
+∑
+|β−1/2|≥ 1
+2 log T
+0<γ≤T
+T |2β−1| ∑
+0<γ ′≤T
+1
+1 + ((γ − γ′) log T )2 .
+9
+If ρ is a zero of zeta then so is 1 − ρ, and |2β − 1| = |2(1 − β) − 1|. Hence
+S(T ) ≪
+∑
+1
+2 + 1
+2 log T ≤β<1
+0<γ≤T
+T |2β−1| ∑
+0<γ ′≤T
+1
+1 + ((γ − γ′) log T )2 .
+By (2.5) we have
+(6.4)
+∑
+0<γ ′≤T
+1
+1 + ((γ − γ′) log T )2 ≪
+∫ T
+3
+log t
+1 + ((t − γ) log T )2 dt
+≤
+∫ ∞
+−∞
+1
+1 + v2 dv = π,
+and therefore we have
+S(T ) ≪
+∑
+1
+2 + 1
+2 log T ≤β≤1
+0<γ≤T
+T 2β−1.
+Applying Bourgain’s zero-density estimate [Bou00]
+(6.5) N (σ, T) = o(T 2(1−σ)) for 25 /32 + η ≤ σ ≤ 1,
+which is the hypothesis (6.2) in the remaining range. Hence
+S(T ) ≪
+∫ 1
+1
+2 + 1
+2 log T
+T 2u−1 dN (u, T )
+= T 2/ log T N
+( 1
+2 + 1
+2 log T , T
+)
+− 2 log T
+∫ 1
+1
+2 + 1
+2 log T
+N (u, T )T 2u−1 du
+= o(T log T ),
+which proves (6.3).
+We now prove that the assumption (6.1) implies (6.2). Let 0 < η < 1
+32 be arbitrary and ﬁxed, and suppose
+that
+1
+2 + 1
+2 log T ≤ σ ≤ 25
+32 + η.
+Then by our hypothesis we have
+N (σ, T) = # {ρ = β + iγ : β ≥ σ and T 3/8 < γ ≤ T } + #{ρ = β + iγ : β ≥ σ and 0 < γ ≤ T 3/8}
+= #{ρ = β + iγ : β ≥ σ and 0 < γ ≤ T 3/8}
+≤ #{ρ = β + iγ : 0 < γ ≤ T 3/8}.
+The number on the last line is N (T 3/8) which is O(T 3/8 log T ) by Lemma 2. Thus
+N (σ, T) ≪ T
+3
+8 +ε = T 2(1− 26
+32 )+ε = o(T 2(1−σ))
+as T → ∞, since
+1 − 26
+32 < 1 − 25
+32 − η ≤ 1 − σ.
+Hence
+N (σ, T) = o(T 2(1−σ)) for 1
+2 + 1
+2 log T ≤ σ ≤ 25
+32 + η and ﬁxed 0 < η < 1
+32 ,
+as T → ∞. The estimate N (σ, T) = o(T 2(1−σ)) also holds for σ ≥ 25
+32 + ε, for any ε > 0, by [Bou00, p. 146].
+Therefore
+N (σ, T) = o(T 2(1−σ)) for 1
+2 + 1
+2 log T ≤ σ ≤ 25
+32 + η and ﬁxed η > 0,
+as T → ∞, which is (6.2).
+10
+7. Proof of Theorem 2 and Theorem 3
+Letting mρ denote the multiplicity of a zero ρ of ζ(s), then
+∑
+ρ
+0<γ≤T
+mρ =
+∑
+ρ,ρ′
+0<γ,γ ′≤T
+ρ=ρ′
+1 = 1
+K(0)
+∑
+ρ=ρ′
+0<γ,γ ′≤T
+Re K (−i(ρ − ρ′) log T ) .
+Next note trivially that if ρ = ρ′, then the zeros are within the range |β − β′| < 1
+log T . By (c) of Lemma 6,
+we also have that Re K (−i(ρ − ρ′) log T ) > 0 in the same range. Therefore we may upper bound the sum
+on the right-hand side above by extending the sum to all zeros with |β − β′| < 1
+log T and obtain
+∑
+ρ
+0<γ≤T
+mρ ≤ 1
+K(0)
+∑
+ρ,ρ′
+|β−β′|< 1
+log T
+0<γ,γ ′≤T
+Re K (−i(ρ − ρ′) log T ) .
+We proved in the last section that the assumption on zeros used in eit her one of Theorem 2 or Theorem
+3 implies that S(T ) = o(T log T ). Therefore (5.1) of Lemma 7 gives
+1
+K(0)
+∑
+ρ,ρ′
+|β−β′|< 1
+log T
+0<γ,γ ′≤T
+Re K (−i(ρ − ρ′) log T ) ∼ 1
+2πK (0)
+(
+ˆK(0) + 2
+∫ 1
+0
+αˆK
+( α
+2π
+)
+dα
+) T
+2π log T,
+which implies
+(7.1)
+∑
+ρ
+0<γ≤T
+mρ ≤ 1
+2πK (0)
+(
+ˆK(0) + 2
+∫ 1
+0
+αˆK
+( α
+2π
+)
+dα + o(1)
+) T
+2π log T,
+as T → ∞ . Following Montgomery’s [Mon73] argument, we see that the number of zeros which are simple
+satisﬁes ∑
+ρ: simple
+0<γ≤T
+1 ≥
+∑
+ρ
+0<γ≤T
+(2 − mρ).
+Hence, the proportion of simple zeros of ζ(s) is
+1
+N (T )
+∑
+ρ: simple
+0<γ≤T
+1 ≥ 2 − 1
+N (T )
+∑
+ρ
+0<γ≤T
+mρ
+which, since N (T ) ∼ T
+2π log T by Lemma 2 gives from (7.1)
+(7.2) 1
+N (T )
+∑
+ρ: simple
+0<γ≤T
+1 ≥ 2 − 1
+2πK (0)
+(
+ˆK(0) + 2
+∫ 1
+0
+αˆK
+( α
+2π
+)
+dα + o(1)
+)
+.
+Suppose ﬁrst we take the Fejer kernel j(α) = jF (α). Then ˆK(0) = 1 and computation gives
+2
+∫ 1
+0
+αˆK
+( α
+2π
+)
+dα = 2
+∫ 1
+0
+α (1 − α) sech α dα = 0.2913876354 . . . .
+Further, applying (4.2), we have upon computation that
+πK (0) =
+∫ 1
+0
+j(u)sech(u) du =
+∫ 1
+0
+(1 − u)sech(u) du = 0.4640648392 . . . .
+Substituting these into (7.2) we have
+1
+N (T )
+∑
+ρ: simple
+0<γ≤T
+1 ≥ 2 − 1.291387636 + o(1)
+2 × 0.464064839 = 0.608612927 . . .+ o(1).
+11
+Thus if all the nontrivial zeros ρ of ζ(s) lie within the box |β − 1/2| < 1
+2 log T , T 3/8 < γ ≤ T , then at least
+60.8% of them are simple.
+We improve the above proportion to 61 .7% using the Montgomery-Taylor kernel j(α) = jM (α). Compu-
+tation gives
+ˆK(0) = jM (0) = 1 .0061271908 . . . ,
+2
+∫ 1
+0
+αˆK
+( α
+2π
+)
+dα = 2
+∫ 1
+0
+αjM (α)sech α dα = 0.2832624869 . . . ,
+and
+πK (0) =
+∫ 1
+0
+jM (u)sech(u) du = 0.4663199124 . . . .
+Hence substituting these values into (7.2) as before, we have
+1
+N (T )
+∑
+ρ: simple
+0<γ≤T
+1 ≥ 2 − 1.289389678 + o(1)
+2 × 0.466319912 = 0.617483786 . . .+ o(1).
+Acknowledgement and Funding
+The authors thank the American Institute of Mathematics for its h ospitality and for providing a pleasant
+research environment where most of the research was conducte d. The ﬁrst author is supported by NSF
+DMS-1854398 FRG. The third author was supported by JSPS KAKEN HI Grant Number 22K13895. The
+fourth author is partially supported by NSF DMS-1902193 and NSF D MS-1854398 FRG.
+References
+[Ary22] F. Aryan. On an extension of the Landau-Gonek formul a. J. Number Theory , 233:389–404, 2022.
+[BHB13] H. M. Bui and D. R. Heath-Brown. On simple zeros of the riemann zeta-function. Bull. London Math. Soc. , 45(5):953–
+961, 2013.
+[Bou00] Jean Bourgain. On large values estimates for Dirich let polynomials and the density hypothesis for the Riemann z eta
+function. Internat. Math. Res. Notices , 2000(3):133–146, 2000.
+[CG93] A. Y. Cheer and D. A. Goldston. Simple zeros of the Riem ann zeta-function. Proc. Amer. Math. Soc., 118(2):365–372,
+1993.
+[CGdL20] Andr´ es Chirre, Felipe Gon¸ calves, and David de Laat. Pair correlation estimates for the zeros of the zeta func tion via
+semideﬁnite programming. Adv. Math. , 361(106926):22 pp., 2020.
+[CGG98] J. B. Conrey, A. Ghosh, and S. M. Gonek. Simple zeros o f the riemann zeta-function. Proc. London Math. Soc. ,
+76(3):497–522, 1998.
+[CIS13] J. Brian Conrey, Henryk Iwaniec, and Kannan Soundar arajan. Critical zeros of Dirichlet L-functions. J. Reine
+Angew. Math. , 681:175–198, 2013.
+[GM87] D. A. Goldston and H. L. Montgomery. Pair correlation of zeros and primes in short intervals. In Analytic Number
+Theory and Diophantine Problems (A. C. Adolphson and et al., eds.), volume 70 of Progr. Math., Proc. of a
+Conference at Oklahoma State University (1984) , pages 183–203. Birkhauser Verlag, 1987.
+[Gol81] D. A. Goldston. Large diﬀerences between consecuti ve prime numbers. Thesis, U. C. Berkeley:1–75, 1981.
+[IK04] H. Iwaniec and E. Kowalski. Analytic number theory , volume 53 of Amer. Math. Soc. Colloq. Publ. American
+Mathematical Society, Providence, RI, 2004.
+[Ing90] A. E. Ingham. The Distribution of Prime Numbers . Cambridge Mathematical Library, Cambridge University Pr ess,
+Cambridge, 1990. Reprint of the 1932 original; With a forewo rd by R. C. Vaughan.
+[Ivi85] A. Ivi´ c. The Riemann zeta-function . John Wiley & Sons, New York, 1985.
+[Lan09] Edmund Landau. Handbuch der Lehre von der Verteilung der Primzahlen . Teubner, Berlin, 1909.
+[LPZ17] A. Languasco, A. Perelli, and A. Zaccagnini. An exte nded pair correlation conjecture and primes in short interv als.
+Trans. Amer. Math. Soc. , 369:4235–4250, 2017.
+[Mon73] H. L. Montgomery. The Pair Correlation of Zeros of th e Zeta Function. In Analytic Number Theory (Proc. Sympos.
+Pure Math., Vol. XXIV, St. Louis Univ., St. Louis, Mo., 1972) , pages 181–193. Amer. Math. Soc., Providence, R.I.,
+1973.
+[Mon74] H. L. Montgomery. Distribution of zeros of the riema nn zeta function. In Proc. Int. Cong. Math. Vancouver, 1974 ,
+pages 379–381. IMU, 1974.
+[MV07] H. L. Montgomery and R. C. Vaughan. Multiplicative Number Theory I: Classical Theory , volume 97 of Cambridge
+Studies in Advanced Mathematics . Cambridge University Press, Cambridge, 2007.
+[PRZZ20] Kyle Pratt, Nicolas Robles, Alexandru Zaharescu, and Dirk Zeindler. More than ﬁve-twelfths of the zeros of ζ are
+on the critical line. Res. Math. Sci. , 7(2):74pp, 2020.
+[Sel91] A. Selberg. Old and new conjectures and results about a class of Dirichle t series, Collected papers. Vol. II . Springer-
+Verlag, Berlin, 1991. With a foreword by K. Chandrasekharan .
+12
+[Tit86] E. C. Titchmarsh. The theory of the Riemann zeta-function . The Clarendon Press, Oxford University Press, New
+York, second edition, 1986. Edited and with a preface by D. R. Heath-Brown.
+[Tsa93] K.-M. Tsang. The large values of the Riemann zeta-fu nction. Mathematika, 40(2):203–214, 1993.
+American Institute of Mathematics
+Email address : sbaluyot@aimath.org
+Department of Mathematics and Statistics, San Jose State Uni versity
+Email address : daniel.goldston@sjsu.edu
+F aculty of Mathematics, Kyushu University
+Email address : adeirmasuriajaya@math.kyushu-u.ac.jp
+Carleton College
+Email address : cturnageb@carleton.edu
+13
