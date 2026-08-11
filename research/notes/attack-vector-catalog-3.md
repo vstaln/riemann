@@ -302,6 +302,29 @@ Selberg T, and the new-target diagnostics).
 - **Definition of done:** the written family-averaged theorem (or the documented taper obstruction), with
   q-aspect numerics to 10³–10⁴ on record; Lean-ization if the assembly survives.
 
+### #3. E-OK — EnclOK / S₃ regeneration closure [task (b)]
+- **Goal:** close the ceiling's last non-Lean link (EnclOK) — or document all three routes exhausted — and,
+  if the family is recovered, run the S₃ probe (V4's moment-capacity question).
+- **Why it matters:** EnclOK is the SINGLE displayed hypothesis of the 0.68185 ceiling; a regeneration match
+  makes the ceiling fully Lean; a mismatch collapses it (that is the one live way the ceiling could be
+  wrong) [ceil §4, enclok §6]. The blocker is documented and precise: the authors' configuration family is
+  private (cert_N256_blk_b128m.json), and every reconstructed family is infeasible at N = 256 (Chebyshev
+  distance 6.3–1915) [rgl §4]. The S₃ probe (would pinning S₃(j,k) = GUE move the ceiling?) is V4's question
+  and rides on the same family [cat1 #5].
+- **Inputs:** `tools/regen_law/` (LP machinery, valid families); `tools/verify_enclok.py`; the LP-dual
+  signature (≈244 integer + ≈12 half-integer marks; f_c(256) ∈ {53824, 54756}) [rgl §6]; the off-grid
+  lower-bound question (Re G(Δ) < 0 on (0.45, 1)) [rgl §3.4].
+- **Method (routes in priority):** (1) obtain cert_N256_blk_b128m.json (external correspondence — minutes of
+  compute once in hand, per the enclok recipe); (2) reconstruct the family from the LP-dual structure seeded
+  by the marks signature; (3) prove a min-p₁ lower bound valid for off-grid configurations (genuine open
+  math). If any route yields the family: recompute S(j) at ≥45 digits, verify the 256 enclosures, re-run
+  checkRows; then add the S₃ = GUE constraint to the config LP and record whether the ceiling moves.
+- **Labels:** EnclOK INCONCLUSIVE-not-refuted [enclok]; the blocker HARD (distribution decision) [rgl §5];
+  the off-grid lower bound OPEN.
+- **Definition of done:** EnclOK resolved to CHECKED NUMERICALLY (independent regeneration) or REFUTED, or
+  all three routes documented exhausted with the blocker standing; S₃ price recorded if the family is in
+  hand (a V4 capacity point).
+
 ### #4. V20 — Effective finite-T version of the 67.25% theorem [task (a)]
 - **Goal:** produce the explicit effective statement "≥ 0.6725·N(T,2T) − E(T)" with a written, numerically
   validated E(T), and the honest verdict on where it is non-vacuous.
@@ -325,6 +348,35 @@ Selberg T, and the new-target diagnostics).
 - **Definition of done:** a written effective theorem with explicit E(T), a validation table against the
   finitet data, and the verdict (non-vacuous range identified, or the documentation-only conclusion with the
   precise T threshold).
+
+### #5. SCT-L — Selberg-class T Lean-ization
+- **Goal:** formalize the axiomatic degree-one theorem T (whose corollaries are Thms A–E) in Lean.
+- **Why it matters:** a guaranteed Lean deliverable that consolidates the whole method into one statement and
+  surfaces any axiom the method silently exploits [cat1 #10]; the GL(2) death becomes a class-level statement
+  [lf §4, sct §0]; the adversarial audit found no kill [sct §0].
+- **Inputs:** selberg-class-theorem.md (axioms A1–A5, proof assembly, corollaries); the existing
+  zeta-23-lean modules (the analytic inputs are formalized for ζ and L(s,χ); the linear algebra is
+  separate) [sct §9].
+- **Method:** build the abstraction layer (a structure type carrying A1–A5 + ζ/L(s,χ) instances); derive
+  Thms A–E as instances; record the class-level GL(2) bandwidth-1/2 statement.
+- **Labels:** T WRITTEN (CONJECTURED as an axiomatization, PROVEN ingredients); Lean-ization LOW-RISK per
+  the audit [sct §9].
+- **Definition of done:** the Lean structure + A–E instances compile; the axiom-ingredient map and the
+  GL(2) corollary recorded.
+
+### #6. IPR — spectral-slack diagnostics (C4.1/C4.3, C6.1)
+- **Goal:** measure the real spectrum's distance from the crystal via eigenvector participation ratios.
+- **Why it matters:** the cleanest realized-world slack measurement — the crystal's eigenvectors are
+  delta-localized (IPR ~ O(1)), GUE bulk eigenvectors have IPR ~ 3/N; where W_T's spectrum sits tells us
+  whether the 0.6818 ceiling is "far from tight" in the realized world (delocalized ⇒ real slack exists)
+  [chem C4.1]; the energy-resolved IPR asks whether there is a mobility edge (two-phase spectrum) [chem C4.3];
+  the localized-fraction scaling (n₋/N vs T) is the off-line-rate readout [chem C6.1].
+- **Inputs:** `tools/finitet` W_T spectra; the sandbox harness.
+- **Method:** IPR of each eigenvector of W_T at T = 200–600; compare with 3/N and O(1); plot IPR(λ);
+  n₋/N scaling.
+- **Labels:** measurement, CHECKED NUMERICALLY by construction; interpretation CONJECTURED.
+- **Definition of done:** a table + interpretation (delocalized ⇒ the ceiling is not tight in the realized
+  world — redirects toward new targets; crystal-like ⇒ the realized world sits near the extremal law).
 
 ### #7. B1-R — Beyond-1-range conditional-input program (the only positive-priced input) [task (e)]
 - **Goal:** convert the pricing sheet's one positive price (dv*/dA = 0.6363/A³ for F ≡ 1 on [1, 1+ε]) into a
@@ -353,29 +405,6 @@ Selberg T, and the new-target diagnostics).
   attribution; plus a status paragraph on the FG twisted route (the strongest documented conditional
   statement in the library).
 
-### #3. E-OK — EnclOK / S₃ regeneration closure [task (b)]
-- **Goal:** close the ceiling's last non-Lean link (EnclOK) — or document all three routes exhausted — and,
-  if the family is recovered, run the S₃ probe (V4's moment-capacity question).
-- **Why it matters:** EnclOK is the SINGLE displayed hypothesis of the 0.68185 ceiling; a regeneration match
-  makes the ceiling fully Lean; a mismatch collapses it (that is the one live way the ceiling could be
-  wrong) [ceil §4, enclok §6]. The blocker is documented and precise: the authors' configuration family is
-  private (cert_N256_blk_b128m.json), and every reconstructed family is infeasible at N = 256 (Chebyshev
-  distance 6.3–1915) [rgl §4]. The S₃ probe (would pinning S₃(j,k) = GUE move the ceiling?) is V4's question
-  and rides on the same family [cat1 #5].
-- **Inputs:** `tools/regen_law/` (LP machinery, valid families); `tools/verify_enclok.py`; the LP-dual
-  signature (≈244 integer + ≈12 half-integer marks; f_c(256) ∈ {53824, 54756}) [rgl §6]; the off-grid
-  lower-bound question (Re G(Δ) < 0 on (0.45, 1)) [rgl §3.4].
-- **Method (routes in priority):** (1) obtain cert_N256_blk_b128m.json (external correspondence — minutes of
-  compute once in hand, per the enclok recipe); (2) reconstruct the family from the LP-dual structure seeded
-  by the marks signature; (3) prove a min-p₁ lower bound valid for off-grid configurations (genuine open
-  math). If any route yields the family: recompute S(j) at ≥45 digits, verify the 256 enclosures, re-run
-  checkRows; then add the S₃ = GUE constraint to the config LP and record whether the ceiling moves.
-- **Labels:** EnclOK INCONCLUSIVE-not-refuted [enclok]; the blocker HARD (distribution decision) [rgl §5];
-  the off-grid lower bound OPEN.
-- **Definition of done:** EnclOK resolved to CHECKED NUMERICALLY (independent regeneration) or REFUTED, or
-  all three routes documented exhausted with the blocker standing; S₃ price recorded if the family is in
-  hand (a V4 capacity point).
-
 ### #8. M4 — m₄(λ<1/2) lane + m₄(1) adjudication [task (c)]
 - **Goal:** (1) pin m₄(1) among the competing values; (2) evaluate the quartic-weight (m⁴) DISTINCT-count
   certificate at λ < 1/2.
@@ -400,51 +429,6 @@ Selberg T, and the new-target diagnostics).
 - **Definition of done:** m₄(1) pinned with a code-backed verdict (one value survives adversarial
   re-derivation, with the others' status recorded); the λ<1/2 quartic distinct certificate value recorded
   with its admissibility argument (likely ≤ 5/6, documented).
-
-### #5. SCT-L — Selberg-class T Lean-ization
-- **Goal:** formalize the axiomatic degree-one theorem T (whose corollaries are Thms A–E) in Lean.
-- **Why it matters:** a guaranteed Lean deliverable that consolidates the whole method into one statement and
-  surfaces any axiom the method silently exploits [cat1 #10]; the GL(2) death becomes a class-level statement
-  [lf §4, sct §0]; the adversarial audit found no kill [sct §0].
-- **Inputs:** selberg-class-theorem.md (axioms A1–A5, proof assembly, corollaries); the existing
-  zeta-23-lean modules (the analytic inputs are formalized for ζ and L(s,χ); the linear algebra is
-  separate) [sct §9].
-- **Method:** build the abstraction layer (a structure type carrying A1–A5 + ζ/L(s,χ) instances); derive
-  Thms A–E as instances; record the class-level GL(2) bandwidth-1/2 statement.
-- **Labels:** T WRITTEN (CONJECTURED as an axiomatization, PROVEN ingredients); Lean-ization LOW-RISK per
-  the audit [sct §9].
-- **Definition of done:** the Lean structure + A–E instances compile; the axiom-ingredient map and the
-  GL(2) corollary recorded.
-
-### #10. A1.1 — α≈1.0–1.3 arithmetic feature follow-up (G3.1 R-4)
-- **Goal:** decompose the real, unexplained empirical feature near α = 1 (spike at 1.00, dip at 1.05, spike
-  at 1.10; ≥11σ under both the naive and LS estimators; cause unidentified).
-- **Why it matters:** the one genuine empirical deviation at the boundary of the beyond-1 region — the only
-  place near α > 1 where real data differs from the GUE null (G3.1 established everything else beyond 1 is
-  noise) [hot §5]; if it has a prime-arithmetic origin it is a publishable diagnostic and a hint for the
-  beyond-1 lane; if it is a Gram-point/lattice artifact of the θ-unfolding at specific rational α, that is
-  a documented negative [ls §5, hot §4].
-- **Inputs:** `tools/hot_hand_calib.py`, `tools/attack_ls_estimator.py`, `tools/data/zeros_computed_10000.txt`.
-- **Method:** τ-bin / prime-power decomposition of the periodogram at α ∈ {1.00, 1.05, 1.10}; height
-  dependence (block 1000-zero windows at increasing heights); compare against the GUE null with the same
-  unfolding; test the Gram-lattice hypothesis (x_j − j deviations).
-- **Labels:** the feature itself CHECKED NUMERICALLY (≥11σ, both estimators) [ls §5]; the cause OPEN.
-- **Definition of done:** a written decomposition: either a prime-arithmetic origin identified (finding), or
-  a lattice/unfolding artifact pinned (documented negative), with the height dependence on record.
-
-### #6. IPR — spectral-slack diagnostics (C4.1/C4.3, C6.1)
-- **Goal:** measure the real spectrum's distance from the crystal via eigenvector participation ratios.
-- **Why it matters:** the cleanest realized-world slack measurement — the crystal's eigenvectors are
-  delta-localized (IPR ~ O(1)), GUE bulk eigenvectors have IPR ~ 3/N; where W_T's spectrum sits tells us
-  whether the 0.6818 ceiling is "far from tight" in the realized world (delocalized ⇒ real slack exists)
-  [chem C4.1]; the energy-resolved IPR asks whether there is a mobility edge (two-phase spectrum) [chem C4.3];
-  the localized-fraction scaling (n₋/N vs T) is the off-line-rate readout [chem C6.1].
-- **Inputs:** `tools/finitet` W_T spectra; the sandbox harness.
-- **Method:** IPR of each eigenvector of W_T at T = 200–600; compare with 3/N and O(1); plot IPR(λ);
-  n₋/N scaling.
-- **Labels:** measurement, CHECKED NUMERICALLY by construction; interpretation CONJECTURED.
-- **Definition of done:** a table + interpretation (delocalized ⇒ the ceiling is not tight in the realized
-  world — redirects toward new targets; crystal-like ⇒ the realized world sits near the extremal law).
 
 ### #9. 6M — 6th-moment literature verification (LM1-ADD) [+ MW — multi-window DPSS probe (V18/S2), cheap slot]
 - **Goal (6M):** verify the Heap–Lindqvist 2024 sixth-moment asymptotic (the source is NOT in our library);
@@ -549,3 +533,19 @@ research result under the program's operative targets.
 - Deliberately NOT included: any claim that any vector "probably settles RH". Every funded vector is scoped
   to a rigorous, adversarial-validated increment; the search persists (hooks/agents.md), and every negative
   here is a documented result with its source, not a reason to stop.
+### #10. A1.1 — α≈1.0–1.3 arithmetic feature follow-up (G3.1 R-4)
+- **Goal:** decompose the real, unexplained empirical feature near α = 1 (spike at 1.00, dip at 1.05, spike
+  at 1.10; ≥11σ under both the naive and LS estimators; cause unidentified).
+- **Why it matters:** the one genuine empirical deviation at the boundary of the beyond-1 region — the only
+  place near α > 1 where real data differs from the GUE null (G3.1 established everything else beyond 1 is
+  noise) [hot §5]; if it has a prime-arithmetic origin it is a publishable diagnostic and a hint for the
+  beyond-1 lane; if it is a Gram-point/lattice artifact of the θ-unfolding at specific rational α, that is
+  a documented negative [ls §5, hot §4].
+- **Inputs:** `tools/hot_hand_calib.py`, `tools/attack_ls_estimator.py`, `tools/data/zeros_computed_10000.txt`.
+- **Method:** τ-bin / prime-power decomposition of the periodogram at α ∈ {1.00, 1.05, 1.10}; height
+  dependence (block 1000-zero windows at increasing heights); compare against the GUE null with the same
+  unfolding; test the Gram-lattice hypothesis (x_j − j deviations).
+- **Labels:** the feature itself CHECKED NUMERICALLY (≥11σ, both estimators) [ls §5]; the cause OPEN.
+- **Definition of done:** a written decomposition: either a prime-arithmetic origin identified (finding), or
+  a lattice/unfolding artifact pinned (documented negative), with the height dependence on record.
+
