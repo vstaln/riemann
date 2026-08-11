@@ -1,0 +1,1996 @@
+|     | THE | ALTERNATIVE |     |     | HYPOTHESIS |     |     | FOR ZEROS | OF THE | RIEMANN |
+| --- | --- | ----------- | --- | --- | ---------- | --- | --- | --------- | ------ | ------- |
+ZETA-FUNCTION
+SIEGFRED ALAN C. BALUYOT, DANIEL ALAN GOLDSTON, ADE IRMA SURIAJAYA,
+|     |     |     |     | AND | CAROLINE | L.  | TURNAGE-BUTTERBAUGH |     |     |     |
+| --- | --- | --- | --- | --- | -------- | --- | ------------------- | --- | --- | --- |
+Abstract. In2016,thefirst-namedauthorintroducedaformulationoftheAlternativeHypothesis
+5202 guA 41  ]TN.htam[  1v75801.8052:viXra thatassumesthatconsecutivezerosoftheRiemannzeta-functionarespacedatmultiplesofhalfof
+the average spacing, but does not assume that the zeros are simple. In this paper, we assume the
+Riemann Hypothesis and a similar formulation of the Alternative Hypothesis, and for each integer
+k we obtain constraints on the density of pairs of zeros whose normalized differences are at k/2
+times the average spacing. These constraints, in turn, restrict the density of (possible) multiple
+zeros. WealsoformulateastrongerversionoftheAlternativeHypothesisandshowthatitimplies
+|     |     | the Essential | Simplicity | Hypothesis. |                 |     |     |              |     |     |
+| --- | --- | ------------- | ---------- | ----------- | --------------- | --- | --- | ------------ | --- | --- |
+|     |     |               |            |             | 1. Introduction |     | and | Main Results |     |     |
+The Alternative Hypothesis (AH) is an alternative to the pair correlation conjecture for zeros of
+the Riemann zeta-function and arose as a consequence of the (possible) existence of Landau-Siegel
+zeros. In a 1996 lecture, Heath-Brown [HB96] discussed that if there is a sequence of real Dirichlet
+L-functions with Landau-Siegel zeros, then (i) there exist infinitely many extremely long ranges in
+the critical strip where all the zeros of the Riemann zeta-function are on the critical line, i.e., the
+Riemann Hypothesis is true in this range, (ii) the zeros are all simple, and (iii) the zeros all occur
+at spacings that are nearly exactly integer multiples of half the average spacing between zeros.
+These hypothetical properties of the zeros of the Riemann zeta-function, however, need not depend
+on the existence of Landau-Siegel zeros, and the spacing hypothesis was later referred to as the
+Alternative Hypothesis. The value of AH is that it provides a simple distribution of zeros that is
+completely counter to the experimental evidence supporting the pair correlation conjecture, and
+| yet | cannot | be  | disproved | at present. |     |     |     |     |     |     |
+| --- | ------ | --- | --------- | ----------- | --- | --- | --- | --- | --- | --- |
+In this introduction we discuss our main results and their associated formulations of the Alter-
+native Hypothesis. In Section 2 we present a more detailed description of the main results. To
+begin, let ρ = β +iγ, β,γ ∈ R denote a non-trivial zero of the Riemann zeta-function. For T ≥ 3,
+we have
+|       |     |     |     |      | (cid:88) |     | T   | T T         |     |     |
+| ----- | --- | --- | --- | ---- | -------- | --- | --- | ----------- | --- | --- |
+| (1.1) |     |     |     | N(T) | :=       | 1 = | log | − +O(logT), |     |     |
+|       |     |     |     |      |          |     | 2π  | 2π 2π       |     |     |
+0<γ≤T
+where the zeros are counted with multiplicity. We almost always assume the Riemann Hypothesis
+(RH) in this paper, i.e. we often assume that ρ = 1/2+iγ. Consider the sequence of ordinates
+|     |     |     |     |     | 0 < | γ < γ | < ··· | < γ < ··· , |     |     |
+| --- | --- | --- | --- | --- | --- | ----- | ----- | ----------- | --- | --- |
+|     |     |     |     |     |     | 1     | 2     | n           |     |     |
+where we only consider zeros in the upper half-plane since the zeros are symmetric about the real
+line. By (1.1), the average spacing between the zero 1/2+iγ and the next higher zero is 2π/logγ.
+|     | Date:            | August | 15, 2025. |                 |     |        |        |     |     |     |
+| --- | ---------------- | ------ | --------- | --------------- | --- | ------ | ------ | --- | --- | --- |
+|     | 2010 Mathematics |        | Subject   | Classification. |     | 11M06, | 11M26. |     |     |     |
+Key words and phrases. Riemann zeta-function, zeros, Alternative Hypothesis, pair correlation, zero multiplicity.
+1
+
+| Therefore, | we  | may | denote | the | normalized | ordinate | of a | zero by |     |     |     |     |
+| ---------- | --- | --- | ------ | --- | ---------- | -------- | ---- | ------- | --- | --- | --- | --- |
+γ
+|     |     |     |     |     |     | γ :=         | logγ, |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | ------------ | ----- | --- | --- | --- | --- | --- |
+|     |     |     |     |     |     | (cid:101) 2π |       |     |     |     |     |     |
+and note that the average spacing between consecutive γ’s is asymptotic to 1. Within this frame-
+(cid:101)
+work,thefirst-namedauthorgavethefollowingformulationoftheAlternativeHypothesisin[Bal16].
+The Alternative Hypothesis (AH). For each integer n ≥ 1 there exists an integer k n ≥ 0 with
+1
+|     |     |     |     |              |            |        | (cid:0) |          |     | (cid:1) |     |     |
+| --- | --- | --- | --- | ------------ | ---------- | ------ | ------- | -------- | --- | ------- | --- | --- |
+|     |     |     |     | γ            | −γ         | = k +O | |γ      | −γ |·ψ(γ |     | ) ,     |     |     |
+|     |     |     |     | (cid:101)n+1 | (cid:101)n | 2 n    | n+1     | n        | n   |         |     |     |
+where ψ(γ) is a positive function such that ψ(γ) → ∞ and ψ(γ) = o(logγ) as γ → ∞.
+One goal of [Bal16] was to determine consequences of this hypothesis on the pair correlation of
+zeros. For that purpose, AH was reformulated in [Bal16, Lemma 5.1] for pairs of zeros that are
+not necessarily consecutive. In this paper, we use the following modified version of the Alternative
+Hypothesis for differences of zeros. This version of the Alternative Hypothesis is implied by the
+statement of AH given above and is similar to [Bal16, Lemma 5.1], which we state as Lemma 1 in
+| the next | section. |     |     |     |     |     |     |     |     |     |     |     |
+| -------- | -------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+The Alternative Hypothesis for Differences of Zeros (AH-Pairs). Suppose M is a positive
+real number that we can take as large as we wish, and let R(T) be a positive decreasing function
+| such that | R(T) | →      | 0 as T | → ∞.     | Define |          |      |            |     |          |          |     |
+| --------- | ---- | ------ | ------ | -------- | ------ | -------- | ---- | ---------- | --- | -------- | -------- | --- |
+|           |      |        |        | (cid:26) |        |          |      | (cid:12)   | −γ′ | (cid:12) | (cid:27) |     |
+|           |      |        |        |          |        | T        |      | (cid:12) γ |     | (cid:12) |          |     |
+| (1.2)     |      | P(T,M) |        | :=       | (γ,γ′) | : < γ,γ′ | ≤ T, |            |     | logT ≤   | M .      |     |
+|           |      |        |        |          |        | log2T    |      | (cid:12)   |     | (cid:12) |          |     |
+|           |      |        |        |          |        |          |      | (cid:12)   | 2π  | (cid:12) |          |     |
+(γ,γ′)
+| Then for | every |       | ∈ P(T,M) |       | there     | is an integer | k such           | that |      |     |     |     |
+| -------- | ----- | ----- | -------- | ----- | --------- | ------------- | ---------------- | ---- | ---- | --- | --- | --- |
+|          |       |       |          |       |           | logT k        |                  |      |      |     |     |     |
+| (1.3)    |       |       |          | (γ    | −γ′)      | =             | +O((|k|+1)R(T)). |      |      |     |     |     |
+|          |       |       |          |       |           | 2π 2          |                  |      |      |     |     |     |
+| We see   | that  | k ≪ M | since    | (1.2) | and (1.3) | imply         | M ≫ k+o(k)       |      | ≫ k. |     |     |     |
+Remark 1. The case k = 0 is of particular interest independent of AH. This can occur in two ways.
+First, it occurs for pairs (γ,γ′) when γ = γ′, which for a simple zero occurs once, and in general
+m2
+times for a zero of multiplicity m . Second, k = 0 can occur for different distinct zeros which
+| γ        |       |           |     |     |     | γ   |     |     |     |     |     |     |
+| -------- | ----- | --------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| are very | close | together. |     |     |     |     |     |     |     |     |     |     |
+Remark 2. Our results are asymptotic, and therefore would still hold if the statement of AH was
+modified to allow for an exceptional set of zeros that do not satisfy AH.
+Remark 3. NoticethatAHandAH-PairsdonotdirectlydependonRHsincetheyarestatements
+on the imaginary part of the zeros alone. Without RH, in Remark 1, γ = γ′ can also occur for zeros
+(γ,γ′)
+on the same horizontal line, and further, for B defined below in (1.4), ∈ B refers to
+|     |     |     |     |     |     | k/2 |     |     |     |     |     | k/2 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+pairs of zeros in a horizontal strip. One needs to interpret such unconditional results carefully since
+γ = γ′ for different zeros does not require the existence of multiple zeros. In stating our results
+concerning AH-Pairs we will be careful to only assume RH in places where it is needed.
+We aim to count the number of pairs of zeros in P(T,M) with normalized difference closest to
+the half-integer k/2. Following [Bal16], we define B for any fixed number 0 < δ ≤ 1/2 by
+k/2
+|       |     |     |         |     | (cid:26)  |          |     |     | −γ′ |      |     | (cid:27) |
+| ----- | --- | --- | ------- | --- | --------- | -------- | --- | --- | --- | ---- | --- | -------- |
+|       |     |     |         |     |           |          | k   | δ   | γ   |      | k   | δ        |
+| (1.4) | B   | = B | (T,M,δ) |     | := (γ,γ′) | ∈ P(T,M) | :   | −   | <   | logT | ≤   | + ,      |
+k/2 k/2
+|     |     |     |     |     |     |     | 2   | 2   | 2π  |     | 2   | 2   |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+2
+
+which by (1.3) for large enough T is well-defined and partitions P(T,M) over the half-integers
+| |k/2| ≤ | M +δ/2. | We  | define | the “density” |     | of pairs | closest  | to         | k/2 by |     |
+| ------- | ------- | --- | ------ | ------------- | --- | -------- | -------- | ---------- | ------ | --- |
+|         |         |     |        |               |     |          | (cid:18) | (cid:19)−1 |        |     |
+T
+|     |     |     |     | P = | P   | (T) := | logT |     | |B |. |     |
+| --- | --- | --- | --- | --- | --- | ------ | ---- | --- | ----- | --- |
+|     |     |     |     | k/2 | k/2 |        |      |     | k/2   |     |
+2π
+Z
+| Note that | for all | k ∈            | we have |     |     |     |      |     |     |     |
+| --------- | ------- | -------------- | ------- | --- | --- | --- | ---- | --- | --- | --- |
+|           |         |                |         |     |     | P = | P    | .   |     |     |
+|           |         |                |         |     |     | k/2 | −k/2 |     |     |     |
+| Our first | result  | is as follows. |         |     |     |     |      |     |     |     |
+Theorem 1. Assume the Riemann Hypothesis and AH-Pairs. As T → ∞, we have
+|       |     |     |     |        |     |     | 3   | 2      |     |     |
+| ----- | --- | --- | --- | ------ | --- | --- | --- | ------ | --- | --- |
+| (1.5) |     |     |     | 1+o(1) |     | ≤ P | ≤ − | +o(1), |     |     |
+|       |     |     |     |        |     | 0   |     | π2     |     |     |
+2
+Z
+| and for | k ∈ and | k ̸= | 0 we | have |     |     |     |     |     |     |
+| ------- | ------- | ---- | ---- | ---- | --- | --- | --- | --- | --- | --- |
+(cid:40)
+|       |     |     |     |       | P − | 1,   |     | if k ̸= 0 | is even, |     |
+| ----- | --- | --- | --- | ----- | --- | ---- | --- | --------- | -------- | --- |
+|       |     |     |     |       | 0   | 2    |     |           |          |     |
+| (1.6) |     |     | P   | k/2 ∼ |     |      |     |           |          |     |
+|       |     |     |     |       | 3 − | 2 −P | ,   | if k is   | odd.     |     |
+|       |     |     |     |       | 2   | π2k2 | 0   |           |          |     |
+Remark 4. We see on RH and AH-Pairs that limsup P ≤ 3/2−2/π2 = 1.29735... while on
+|     |     |     |     |     |     |     |     | T→∞ | 0   |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+RH alone the best result known [CGdL20] is that limsup P ≤ 1.3208.
+|         |           |     |         |        |               |        |            | T→∞ | 0   |     |
+| ------- | --------- | --- | ------- | ------ | ------------- | ------ | ---------- | --- | --- | --- |
+| Theorem | 1 implies |     | that if | one of | the “limiting |        | densities” |     |     |     |
+| (1.7)   |           |     |         |        | p             | := lim | P          | (T) |     |     |
+|         |           |     |         |        | k/2           |        | k/2        |     |     |     |
+T→∞
+exists, then all of them exist. In other words, one limiting density p for a specific k determines
+k0/2 0
+Z.
+the values of p for all k ∈ We state this precisely as Corollary 1 in the next section.
+k/2
+We expect that p = 1, which under RH, is a reformulation of the following conjecture, see
+0
+[Mue83].
+The Essential Simplicity Hypothesis (ESH). Almost all the zeros of the Riemann zeta-
+function are simple. Moreover, almost all of the distinct zeros are not spaced arbitrarily closer
+| together | than the | average | spacing. |     |     |     |     |     |     |     |
+| -------- | -------- | ------- | -------- | --- | --- | --- | --- | --- | --- | --- |
+Without RH, the term spacing in the statement of ESH refers to the vertical difference between
+two zeros, which may be far apart from one another horizontally. Therefore, without RH, the
+statement of ESH immediately implies p 0 = 1, however the converse is not necessarily true. Our
+second main result addresses this and shows that RH and a stronger form of AH-Pairs imply that
+p = 1, which in turn implies ESH . The required stronger form of AH-Pairs is as follows.
+0
+The Strong Alternative Hypothesis for Differences of Zeros (Strong AH-Pairs). Suppose
+M is a positive real number which we can take as large as we wish, and let R(T) be a positive
+| decreasing | function | such   | that | R(T)logT  |     | → 0 as | T →    | ∞. Define |                      |          |
+| ---------- | -------- | ------ | ---- | --------- | --- | ------ | ------ | --------- | -------------------- | -------- |
+|            |          |        |      | (cid:26)  |     |        |        |           |                      | (cid:27) |
+|            |          |        |      |           |     | T      |        |           | (cid:12) −γ′(cid:12) |          |
+|            |          | Q(T,M) |      | := (γ,γ′) | :   |        | < γ,γ′ | ≤ T,      | (cid:12)γ            | ≤ M .    |
+(cid:12)
+log2T
+(γ,γ′)
+Then for every ∈ Q(T,M) there is an integer k ≪ MlogT such that
+|     |     |     |     |     | logT | k   |     |     |     |     |
+| --- | --- | --- | --- | --- | ---- | --- | --- | --- | --- | --- |
+−γ′)
+|     |     |     |     | (γ  |     | =   | +O((|k|+1)R(T)). |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | ---------------- | --- | --- | --- |
+|     |     |     |     |     | 2π  | 2   |                  |     |     |     |
+(γ,γ′)
+We extend the definition of B in (1.4) to pairs ∈ Q(T,M) with the same conditions,
+k/2
+| and partition | Q(T,M) |     | over | half-integers |     | |k/2| ≪ | MlogT. |     |     |     |
+| ------------- | ------ | --- | ---- | ------------- | --- | ------- | ------ | --- | --- | --- |
+3
+
+Theorem 2. Assume that the Riemann Hypothesis and the Strong AH-Pairs hold. Then
+|     |     |     |     |     |     | p   | = lim P | = 1, |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | ------- | ---- | --- | --- | --- |
+|     |     |     |     |     |     | 0   |         | 0    |     |     |     |
+T→∞
+| and | thus | the Essential | Simplicity |     | Hypothesis |     | is true. |     |     |     |     |
+| --- | ---- | ------------- | ---------- | --- | ---------- | --- | -------- | --- | --- | --- | --- |
+Our results are based on Montgomery’s work on pair correlation of zeros of the Riemann zeta-
+| function. |     | Montgomery | [Mon73]  |            | assumed | RH,          | and defined, |       | for real | α,   |      |
+| --------- | --- | ---------- | -------- | ---------- | ------- | ------------ | ------------ | ----- | -------- | ---- | ---- |
+|           |     |            | (cid:18) | (cid:19)−1 |         |              |              |       |          |      |      |
+|           |     |            | T        |            |         | (cid:88)     |              |       |          |      | 4    |
+|           |     |            |          |            |         | Tiα(γ−γ′)w(γ |              | −γ′), |          |      |      |
+| (1.8)     |     | F(α)       | := logT  |            |         |              |              |       | where    | w(u) | = .  |
+|           |     |            | 2π       |            |         |              |              |       |          |      | 4+u2 |
+0<γ,γ′≤T
+|     |     |     |     |     |     |     |     |     |     |     | ρ′ 1/2+iγ′ |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ---------- |
+Here the sum is over the imaginary parts of pairs of zeros ρ = 1/2+iγ and = in the
+critical strip. Montgomery evaluated F(α) for |α| ≤ 1 and conjectured its asymptotic behavior
+for |α| > 1. We now state Montgomery’s theorem which incorporates some improvements from
+| [GM87], | see | also | [BGSTB25, | Montgomery |     |     | Theorem | (MT)]. |     |     |     |
+| ------- | --- | ---- | --------- | ---------- | --- | --- | ------- | ------ | --- | --- | --- |
+Montgomery Theorem (MT). Assume the Riemann Hypothesis. The function F(α) is real,
+| even,     | and | nonnegative. | Moreover, |          | as  | T →      | ∞, we have |                  |      |          |          |
+| --------- | --- | ------------ | --------- | -------- | --- | -------- | ---------- | ---------------- | ---- | -------- | -------- |
+|           |     |              |           |          |     | (cid:18) | (cid:18)   | (cid:19)(cid:19) |      | (cid:18) | (cid:19) |
+|           |     |              |           |          |     |          | 1          |                  |      | 1        |          |
+| (1.9)     |     |              | F(α) =    | T−2αlogT |     | 1+O      | √          |                  | +α+O | √        |          |
+|           |     |              |           |          |     |          | logT       |                  |      | logT     |          |
+| uniformly |     | for 0        | ≤ α ≤ 1.  |          |     |          |            |                  |      |          |          |
+Remark 5. We have removed an extraneous factor of loglogT from [GM87] which can be avoided
+using Lemma 6 there in place of Lemma 7. The statement there has also been corrected slightly.
+See also [Gol81] and [LPZ17]. Montgomery and Vaughan in the forthcoming book Multiplicative
+NumberTheoryIIIhaveobtainedasignificantlyrefinedversionofMT.Ofparticularinterest,when
+√
+α = 1, they prove that the error term O(1/ logT) above can be replaced with O(loglogT/logT).
+Remark 6. In our previous paper [BGSTB24], we proved that MT holds unconditionally without
+| assuming |      | RH for | a generalization |            | of       | F(α)             | defined by |     |       |     |           |
+| -------- | ---- | ------ | ---------------- | ---------- | -------- | ---------------- | ---------- | --- | ----- | --- | --------- |
+|          |      |        | (cid:18) T       | (cid:19)−1 |          |                  |            |     |       |     | 4         |
+|          |      |        |                  |            | (cid:88) | Tα(ρ−ρ′)W(ρ−ρ′), |            |     |       |     |           |
+|          | F(α) | :=     | logT             |            |          |                  |            |     | where |     | W(u) := . |
+|          |      |        | 2π               |            |          |                  |            |     |       |     | 4−u2      |
+ρ,ρ′
+0<γ,γ′≤T
+γ,γ′
+The result remains the same even if we modify the summation to be over T < ≤ 2T, see
+[BGSTB25].
+We note that AH-Pairs is consistent with MT, however it determines a completely different
+| behavior |     | of F(α) | when |α| | > 1, | as shown | below | in Figure | 1.  |     |     |     |
+| -------- | --- | ------- | -------- | ---- | -------- | ----- | --------- | --- | --- | --- | --- |
+4
+
+1
+|     |     | -4  | -3  | -2  | -1  | 0   | 1   | 2 3 | 4   |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+1
+|     |     | -4  | -3  | -2  | -1  | 0   | 1   | 2 3 | 4   |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+1
+|     |        | -4  | -3  | -2  | -1  | 0   | 1   | 2 3 | 4   |
+| --- | ------ | --- | --- | --- | --- | --- | --- | --- | --- |
+|     | Figure | 1.  |     |     |     |     |     |     |     |
+Three plots of F(α) under different assumptions. The top plot assumes
+the GUE model, the middle plot assumes AH with p = 1, and the bottom plot
+0
+|     | assumes | AH with | P > | 1 and | that | if p exists | then | p > 1. |     |
+| --- | ------- | ------- | --- | ----- | ---- | ----------- | ---- | ------ | --- |
+|     |         |         | 0   |       |      | 0           |      | 0      |     |
+In recent work, Lagarias and Rodgers [LR20] proved that AH is compatible not only with
+Montgomery’sunconditionalresultsonF(α)for|α| ≤ 1,butforallband-limitedhighercorrelations.
+Their work uses the theory of point processes, and they work under the assumption that almost
+all of the points of the point process are distinct. This assumption corresponds to assuming p = 1
+0
+| and | the middle | plot of | F(α) given | in  | Figure | 1.  |     |     |     |
+| --- | ---------- | ------- | ---------- | --- | ------ | --- | --- | --- | --- |
+If p 0 > 1 then F(α) behaves as depicted in the bottom plot in Figure 1, which is obtained by
+modifying the middle plot to include delta functions with mass 2(P −1) at the odd integers. The
+0
+precise behavior of F(α) in this setting is stated in the next section as Theorem 3.
+We now formulate the following conjecture which, upon assuming the limiting densities p in
+k/2
+| (1.7) | exist, is | a consequence | of  | RH and | AH-Pairs. |     |     |     |     |
+| ----- | --------- | ------------- | --- | ------ | --------- | --- | --- | --- | --- |
+The Alternative Hypothesis for Density of Zeros Spacings (AH-Density). The limiting
+| densities | p   | exist and | satisfy |     |     |     |     |     |     |
+| --------- | --- | --------- | ------- | --- | --- | --- | --- | --- | --- |
+k/2
+|     |     |     |     |     |     |       | 3 2 |     |     |
+| --- | --- | --- | --- | --- | --- | ----- | --- | --- | --- |
+|     |     |     |     |     | 1   | ≤ p ≤ | −   | ,   |     |
+0
+|     |     |     |     |     |     |     | 2 π2 |     |     |
+| --- | --- | --- | --- | --- | --- | --- | ---- | --- | --- |
+Z
+| and | for k ∈ |     |     |     |     |     |     |     |     |
+| --- | ------- | --- | --- | --- | --- | --- | --- | --- | --- |
+(cid:40)
+|     |     |     |     |     | p − | 1,  | if k | ̸= 0 is even, |     |
+| --- | --- | --- | --- | --- | --- | --- | ---- | ------------- | --- |
+0 2
+p k/2 =
+|     |     |     |     |     | 3 − | 2 −p | , if k | is odd. |     |
+| --- | --- | --- | --- | --- | --- | ---- | ------ | ------- | --- |
+|     |     |     |     |     | 2   | π2k2 | 0      |         |     |
+5
+
+As we see in Corollary 1 below, if p exists then all of the densities p exist. AH-Density thus
+|     |     |     |     |     | 0   |     |     |     | k/2 |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+contains nearly the same information provided by MT and AH-Pairs. As an example of this, in
+| Theorem | 4 we | prove | a version | of       | MT from     | AH-Density. |        |      |         |     |     |
+| ------- | ---- | ----- | --------- | -------- | ----------- | ----------- | ------ | ---- | ------- | --- | --- |
+|         |      |       |           | Detailed | Description |             | of the | Main | Results |     |     |
+2.
+We begin with the following lemma from [Bal16, Lemma 5.1] which is a reformulation of AH for
+| pairs of | zeros | which | may | not be | consecutive. |     |     |     |     |     |     |
+| -------- | ----- | ----- | --- | ------ | ------------ | --- | --- | --- | --- | --- | --- |
+Lemma 1. Suppose M is a positive real number which we can take as large as we wish, and let
+P(T,M) be as defined in (1.2). Suppose the Alternative Hypothesis is true. Let Ψ(T) be a function
+(γ,γ′)
+with Ψ(T) → ∞ as T → ∞ and Ψ(T) = o(logT). Then for every ∈ P(T,M) there is an
+| integer | k such | that    |      |           |          |              |          |        |          |     |                  |
+| ------- | ------ | ------- | ---- | --------- | -------- | ------------ | -------- | ------ | -------- | --- | ---------------- |
+|         |        |         |      |           | (cid:18) |              | (cid:18) |        |          |     | (cid:19)(cid:19) |
+|         |        |         | logT |           | k        |              |          | M logT |          |     |                  |
+|         |        | (γ −γ′) |      | =         | +O       | |γ −γ′|      | Ψ(T)+    |        | +loglogT |     | .                |
+|         |        |         |      | 2π        | 2        |              |          | T      |          |     |                  |
+| Here we | may    | choose  | the  | integer k | so that  | it satisfies |          |        |          |     |                  |
+| (2.1)   |        |         |      |           |          | k            | ≪ M.     |        |          |     |                  |
+Except for (2.1), this is [Bal16, Lemma 5.1]. To see that (2.1) holds, observe that for γ,γ′ ∈
+| P(T,M), | if  |     |     |     |     |                        |          |     |     |     |     |
+| ------- | --- | --- | --- | --- | --- | ---------------------- | -------- | --- | --- | --- | --- |
+|         |     |     |     |     |     | (cid:12) (cid:12)γ −γ′ | (cid:12) |     |     |     |     |
+(cid:12)
+|     |     |     |     |     |     | (cid:12) | logT(cid:12) ≤ | T,  |     |     |     |
+| --- | --- | --- | --- | --- | --- | -------- | -------------- | --- | --- | --- | --- |
+2π
+|     |     |     |     |     |     | (cid:12) | (cid:12) |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | -------- | -------- | --- | --- | --- | --- |
+−γ′|logT
+| then since | Ψ(T) | =    | o(logT)  | and |γ |          | ≪   | M we have |          |        |        |          |
+| ---------- | ---- | ---- | -------- | ------ | -------- | --- | --------- | -------- | ------ | ------ | -------- |
+|            |      |      | (cid:18) | M logT |          |     | (cid:19)  | (cid:18) |        | M logT | (cid:19) |
+|            |      | −γ′| |          |        |          |     |           | −γ′|     |        |        |          |
+|            | |γ   |      | Ψ(T)+    |        | +loglogT |     | ≪ |γ      |          | logT + |        |          |
+|            |      |      |          | T      |          |     |           |          |        | T      |          |
+M
+|     |     |     |     |     |     |     | −γ′|logT |     |      | −γ′|logT) |     |
+| --- | --- | --- | --- | --- | --- | --- | -------- | --- | ---- | --------- | --- |
+|     |     |     |     |     |     |     | = |γ     |     | +(|γ |           |     |
+T
+M
+|     |     |     |     |     |     |     | ≪ M | +T · | ≪ M. |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | ---- | ---- | --- | --- |
+T
+| Thus any | k   | satisfying |     |     |     |          |          |     |     |     |                  |
+| -------- | --- | ---------- | --- | --- | --- | -------- | -------- | --- | --- | --- | ---------------- |
+|          |     |            |     |     |     | (cid:18) | (cid:18) |     |     |     | (cid:19)(cid:19) |
+M logT
+|     |     |     | −γ′)logT |        |     | −γ′| |       |     |          |     |     |
+| --- | --- | --- | -------- | ------ | --- | ---- | ----- | --- | -------- | --- | --- |
+|     |     | (γ  |          | = πk+O |     | |γ   | Ψ(T)+ |     | +loglogT |     |     |
+T
+| must also | satisfy | k   | ≪ M. | On the | other | hand,    | if       |     |     |     |     |
+| --------- | ------- | --- | ---- | ------ | ----- | -------- | -------- | --- | --- | --- | --- |
+|           |         |     |      |        |       | (cid:12) | (cid:12) |     |     |     |     |
+(cid:12)γ −γ′
+(cid:12)
+|          |        |     |            |     |        | (cid:12)    | logT(cid:12) ≥ | T,  |     |     |                  |
+| -------- | ------ | --- | ---------- | --- | ------ | ----------- | -------------- | --- | --- | --- | ---------------- |
+|          |        |     |            |     |        | (cid:12) 2π | (cid:12)       |     |     |     |                  |
+| then any | choice | of  | an integer | k ≪ | M must | also        | satisfy        |     |     |     |                  |
+|          |        |     |            |     |        | (cid:18)    | (cid:18)       |     |     |     | (cid:19)(cid:19) |
+M logT
+|     |     |     | −γ′)logT |        |     | −γ′| |       |     |          |     |     |
+| --- | --- | --- | -------- | ------ | --- | ---- | ----- | --- | -------- | --- | --- |
+|     |     | (γ  |          | = πk+O |     | |γ   | Ψ(T)+ |     | +loglogT |     |     |
+T
+| because | in this | case |          |        |          |     |           |     |      |       |      |
+| ------- | ------- | ---- | -------- | ------ | -------- | --- | --------- | --- | ---- | ----- | ---- |
+|         |         |      | (cid:18) |        |          |     | (cid:19)  |     |      |       |      |
+|         |         |      |          | M logT |          |     |           | M   | logT |       | M    |
+|         | |γ      | −γ′| | Ψ(T)+    |        | +loglogT |     | ≥ |γ −γ′| |     | ≥    | (2πT) | ≫ M. |
+|         |         |      |          | T      |          |     |           |     | T    |       | T    |
+Lemma 1 is the basis of our formulation of AH-Pairs. Note that by Lemma 1, AH implies
+|     |     |     |     |     |        | Ψ(T) | M loglogT |      |     |     |     |
+| --- | --- | --- | --- | --- | ------ | ---- | --------- | ---- | --- | --- | --- |
+|     |     |     |     |     | R(T) = |      | + +       |      | .   |     |     |
+|     |     |     |     |     |        | logT | T         | logT |     |     |     |
+6
+
+Since Ψ(T) = o(logT), without further information on Ψ(T) this matches the requirement in AH-
+Pairs that R(T) → 0 as T → ∞. In addition, unlike Lemma 1, AH-Pairs treats the case when
+| k = 0 the | same | as  | the cases | when | k   | ̸= 0. |     |     |     |     |     |     |
+| --------- | ---- | --- | --------- | ---- | --- | ----- | --- | --- | --- | --- | --- | --- |
+In proving our results we do not directly use MT, but rather the following nearly immediate
+consequence of MT. Recall that a function f(x) is Lipschitz continuous at a point x = a if there
+are constants C > 0 and δ > 0 such that |f(x) − f(a)| ≤ C|x − a| for all x in a neighborhood
+|x−a| < δ of a. We can also define left or right Lipschitz continuous at x = a in neighborhoods
+| a−δ < | x ≤ | a or a | ≤ x | < a+δ | respectively. |     |     |     |     |     |     |     |
+| ----- | --- | ------ | --- | ----- | ------------- | --- | --- | --- | --- | --- | --- | --- |
+Montgomery Theorem for Sums over Pairs (MT-Pairs). Let g(α) ∈ L1(R), and define the
+| Fourier | transform |     | g(t) | of g(α) | by  |     |     |     |     |     |     |     |
+| ------- | --------- | --- | ---- | ------- | --- | --- | --- | --- | --- | --- | --- | --- |
+(cid:98)
+|     |     |     |     | (cid:90) | ∞   |     |     |     |     |     |     |     |
+| --- | --- | --- | --- | -------- | --- | --- | --- | --- | --- | --- | --- | --- |
+e2πiθ.
+| (2.2) |     |     | g(t) | =   | g(α)e(−tα)dα, |     |     |     | where | e(θ) = |     |     |
+| ----- | --- | --- | ---- | --- | ------------- | --- | --- | --- | ----- | ------ | --- | --- |
+(cid:98)
+−∞
+| Assuming | the | Riemann |          | Hypothesis,   |      | we have  |      |          |      |                  |     |     |
+| -------- | --- | ------- | -------- | ------------- | ---- | -------- | ---- | -------- | ---- | ---------------- | --- | --- |
+|          |     |         |          |               |      |          |      | (cid:18) |      | (cid:19)(cid:90) |     |     |
+|          |     |         | (cid:88) | (cid:16)γ −γ′ |      | (cid:17) |      |          | T    | ∞                |     |     |
+| (2.3)    |     |         |          | g             | logT | w(γ      | −γ′) | =        | logT | F(α)g(α)dα.      |     |     |
+(cid:98)
+|     |     |          |     | 2π  |     |     |     |     | 2π  |     |     |     |
+| --- | --- | -------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|     |     | 0<γ,γ′≤T |     |     |     |     |     |     |     | −∞  |     |     |
+If we assume in addition that g(α) is even with support in |α| ≤ 1, and g(α) is Lipschitz continuous
+| at α = | 0, then |     |     |     |      |     |          |              |     |     |     |     |
+| ------ | ------- | --- | --- | --- | ---- | --- | -------- | ------------ | --- | --- | --- | --- |
+|        |         |     |     |     |      |     | (cid:90) | 1            |     |     |     |     |
+| (2.4)  |         |     |     |     | g(t) | =   | 2Re      | g(α)e(tα)dα, |     |     |     |     |
+(cid:98)
+0
+and
+|       |          |     |               |      |          |      |     |      | (cid:18) | (cid:90) 1 | (cid:18) | (cid:19)(cid:19) |
+| ----- | -------- | --- | ------------- | ---- | -------- | ---- | --- | ---- | -------- | ---------- | -------- | ---------------- |
+|       | (cid:88) |     | (cid:16)γ −γ′ |      | (cid:17) |      | T   |      |          |            | 1        |                  |
+| (2.5) |          | g   |               | logT | w(γ      | −γ′) | =   | logT | g(0)+2   | αg(α)dα+O  | √        | .                |
+(cid:98)
+|     |          |     | 2π  |     |     |     | 2π  |     |     |     | logT |     |
+| --- | -------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ---- | --- |
+|     | 0<γ,γ′≤T |     |     |     |     |     |     |     |     | 0   |      |     |
+Remark 7. While (2.5) is only true if we assume RH, we can evaluate the sum over pairs of zeros on
+the left-hand side of (2.5) by using AH-Pairs without assuming RH, but then we cannot conclude
+the result agrees with the right-hand side of (2.5) without assuming RH.
+Turningnowtotheevaluationoftheleft-handsideof (2.5)usingAH-Pairs,by(1.1)theaverage
+spacing between consecutive zeros of height ≤ T is 2π/logT, and thus the AH-Pairs conjecture
+implies all the pairs of zeros in P(T,M) are extremely close to multiples of half of the average
+spacing. Theorem 1 is obtained by making use of MT in the form of MT-Pairs. As a corollary
+to Theorem 1, AH-Pairs allows us to determine the limiting behavior of the density functions.
+| Recall | the “limiting |     | densities” |     |     |       |     |           |     |     |     |     |
+| ------ | ------------- | --- | ---------- | --- | --- | ----- | --- | --------- | --- | --- | --- | --- |
+|        |               |     |            |     |     | p k/2 | =   | lim P k/2 | (T) |     |     |     |
+T→∞
+| as defined | in  | (1.7). |     |     |     |     |     |     |     |     |     |     |
+| ---------- | --- | ------ | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+Corollary 1. AssumetheRiemannHypothesisandAH-Pairs. Inaddition, assumethatthelimiting
+| density | p exists. |     | Then |     |     |     |     |     |     |     |     |     |
+| ------- | --------- | --- | ---- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+0
+|     |     |     |     |     |     |     |     | 3   | 2   |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|     |     |     |     |     |     | 1   | ≤ p | ≤ − | ,   |     |     |     |
+|     |     |     |     |     |     |     | 0   | 2   | π2  |     |     |     |
+Z,
+| and for | k ∈ | the | limiting | densities |     | p k/2 | all exist, | and |     |     |     |     |
+| ------- | --- | --- | -------- | --------- | --- | ----- | ---------- | --- | --- | --- | --- | --- |
+(cid:40)
+|     |     |     |     |     |     | p − | 1,  |     | if k ̸= | 0 is even, |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | ------- | ---------- | --- | --- |
+|     |     |     |     | p   | =   | 0   | 2   |     |         |            |     |     |
+k/2
+|     |     |     |     |     |     | 3 − | 2 −p | ,   | if k is | odd. |     |     |
+| --- | --- | --- | --- | --- | --- | --- | ---- | --- | ------- | ---- | --- | --- |
+|     |     |     |     |     |     | 2   | π2k2 | 0   |         |      |     |     |
+The assumption that p exists may be replaced with the assumption that p exists for any one
+|          |       |      | 0    |            |     |     |           |       |     | k/2    |     |     |
+| -------- | ----- | ---- | ---- | ---------- | --- | --- | --------- | ----- | --- | ------ | --- | --- |
+| value of | k and | that | will | then imply | all | the | densities | exist | for | all k. |     |     |
+7
+
+This corollary follows immediately from Theorem 1 since the bounds onp follow from (1.5), and
+0
+by taking limits in (1.6) the existence of p implies the existence of each p , while the existence
+|     |     |     |     |     |     | 0   |     |     |     |     | k/2 |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+on one p implies the existence of p and thus the remaining p . We also give two further
+|             | k/2 |         |     |        |             | 0   |          |           |     | k/2 |     |     |
+| ----------- | --- | ------- | --- | ------ | ----------- | --- | -------- | --------- | --- | --- | --- | --- |
+| corollaries | to  | Theorem | 1   | as the | two extreme |     | cases of | AH-Pairs. |     |     |     |     |
+Corollary 2. Assuming the Riemann Hypothesis, AH-Pairs, and p = 1, we have
+0
+
+|     |     |     |     |     |     |  1, |     | if k = | 0,  |     |     |     |
+| --- | --- | --- | --- | --- | --- | ---- | --- | ------ | --- | --- | --- | --- |
+
+1,
+|     |     |     |     | p   | =   |      |      | if k ̸= | 0 is even, |     |     |     |
+| --- | --- | --- | --- | --- | --- | ---- | ---- | ------- | ---------- | --- | --- | --- |
+|     |     |     |     |     | k/2 | 2    |      |         |            |     |     |     |
+|     |     |     |     |     |     |  1 | 2    |         |            |     |     |     |
+|     |     |     |     |     |     | −    | ,    | if k is | odd.       |     |     |     |
+|     |     |     |     |     |     | 2    | π2k2 |         |            |     |     |     |
+Corollary 3. Assume the Riemann Hypothesis, AH-Pairs, and that p = 3 − 2 . Then we have
+|     |     |     |     |     |     |     |     |     |     |     | 0 2 π2 |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | --- |
+
+|      |           |     |      |     |      | 3 −          | 2 ,         | if k | = 0,    |       |     |     |
+| ---- | --------- | --- | ---- | --- | ---- | ------------ | ----------- | ---- | ------- | ----- | --- | --- |
+|      |           |     |      |     |  2 |              | π2          |      |         |       |     |     |
+|      |           |     |      | p   | =    | 1−           | 2 ,         | if k | ̸= 0 is | even, |     |     |
+|      |           |     |      | k/2 |      | π2           |             |      |         |       |     |     |
+|      |           |     |      |     |    | 2 (cid:0) 1− | 1 (cid:1) , | if k | is odd. |       |     |     |
+|      |           |     |      |     |      | π2           | k2          |      |         |       |     |     |
+| Note | here that | p   | = 0. |     |      |              |             |      |         |       |     |     |
+1/2
+We now outline the proof of Theorem 1. We need to evaluate the sum over γ−γ′ in MT-Pairs
+(γ,γ′)
+using AH-Pairs. Since AH-Pairs applies to terms ∈ P(T,M), we first need to estimate
+| the error | in  | removing | the | terms | where | (γ,γ′) | ̸∈ P(T,M). |     |     |     |     |     |
+| --------- | --- | -------- | --- | ----- | ----- | ------ | ---------- | --- | --- | --- | --- | --- |
+Lemma 2. Let b > 1 be a constant, and suppose r(t) ∈ L1(R), |r(t)| ≪ 1 for all t, and that there
+| is a constant |     | C(r) | depending | on  | r for | which |     |     |     |     |     |     |
+| ------------- | --- | ---- | --------- | --- | ----- | ----- | --- | --- | --- | --- | --- | --- |
+C(r)
+|     |     |     |     |     | |r(t)| | ≪   | ,   | for | |t| ≥ M. |     |     |     |
+| --- | --- | --- | --- | --- | ------ | --- | --- | --- | -------- | --- | --- | --- |
+|t|b
+| Then | we have  |     |          |      |          |      |               |          |          |      |          |      |
+| ---- | -------- | --- | -------- | ---- | -------- | ---- | ------------- | -------- | -------- | ---- | -------- | ---- |
+|      |          |     | (cid:18) |      | (cid:19) |      |               |          | (cid:18) |      | (cid:19) |      |
+|      | (cid:88) |     | γ −γ′    |      |          |      |               | (cid:88) | γ        | −γ′  |          |      |
+|      |          | r   |          | logT | w(γ      | −γ′) | =             |          | r        | logT | w(γ      | −γ′) |
+|      |          |     | 2π       |      |          |      |               |          |          | 2π   |          |      |
+|      | 0<γ,γ′≤T |     |          |      |          |      | (γ,γ′)∈P(T,M) |          |          |      |          |      |
+(2.6)
+|     |     |     |     |     |     |     |     |     |     | (cid:18) | C(r)T logT | (cid:19) |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | -------- | ---------- | -------- |
+|     |     |     |     |     |     |     |     |     |     | +O       |            | +O(T).   |
+Mb−1
+−γ′)
+We may delete the factor w(γ from the sum on the right-hand side if we wish.
+Nextweevaluatethesumontheright-handsideof (2.6)withw(γ−γ′)removedusingAH-Pairs.
+Lemma 3. With r(t) as in Lemma 2, we have assuming AH-Pairs that
+|       |     |          |     | (cid:18) −γ′ |      | (cid:19) |      |          |         |            |     |        |
+| ----- | --- | -------- | --- | ------------ | ---- | -------- | ---- | -------- | ------- | ---------- | --- | ------ |
+|       |     | (cid:88) |     | γ            |      |          | T    | (cid:88) |         |            |     |        |
+| (2.7) |     |          | r   |              | logT | =        | logT |          | r(k/2)P | +O(M2R(T)T |     | logT). |
+k/2
+|     |               |     |     | 2π  |     |     | 2π  |     |     |     |     |     |
+| --- | ------------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|     | (γ,γ′)∈P(T,M) |     |     |     |     |     |     | k∈Z |     |     |     |     |
+k≪M
+To complete the proof of Theorem 1 we make use of a special Fourier transform pair.
+| Lemma | 4.  | For n ≥ | 1 a | positive | integer, | let |     |     |     |     |     |     |
+| ----- | --- | ------- | --- | -------- | -------- | --- | --- | --- | --- | --- | --- | --- |
+
+|     |     |     |     |     |     | sin2(nπα), |     | |α| ≤ | 1, n | even, |     |     |
+| --- | --- | --- | --- | --- | --- | ---------- | --- | ----- | ---- | ----- | --- | --- |
+|     |     |     |     |     |    |            | 2   |       |      |       |     |     |
+
+|     |     |     |     | g (α) | =   | cos2(nπα), |     | |α| ≤ | 1, n | odd, |     |     |
+| --- | --- | --- | --- | ----- | --- | ---------- | --- | ----- | ---- | ---- | --- | --- |
+|     |     |     |     | n     |     |            | 2   |       |      |      |     |     |
+
+|         |       |         |     |           | 0, |     |      | |α| > | 1.  |     |     |     |
+| ------- | ----- | ------- | --- | --------- | --- | --- | ---- | ----- | --- | --- | --- | --- |
+| Clearly | g (α) | is even | and | in L1(R), | and | we  | have |       |     |     |     |     |
+n
+|     |     |     |     |     |     |     |     | (cid:18) n2 | (cid:19) |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | ----------- | -------- | --- | --- | --- |
+sin(2πt)
+|     |     |     |     |     | g (t) | =   |     |     |     | ,   |     |     |
+| --- | --- | --- | --- | --- | ----- | --- | --- | --- | --- | --- | --- | --- |
+(cid:98)n
+|     |     |     |     |     |     |     | 2πt | n2−4t2 |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | ------ | --- | --- | --- | --- |
+8
+
+and thus
+|     |     |     |     |     |     |    | 1    |     |            |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | ---- | --- | ---------- | --- | --- | --- | --- |
+|     |     |     |     |     |     |     | , if | 0 ≤ | |t| ≤ n/4, |     |     |     |     |
+ |t|+1
+| (2.8) |     |     |     |     | |g (t)| ≪ | 1,  | if  | n/4 | < |t| < | n,  |     |     |     |
+| ----- | --- | --- | --- | --- | --------- | --- | --- | --- | ------- | --- | --- | --- | --- |
+(cid:98)n
+ n2
+|     |     |     |     |     |     |     | if  | |t| | ≥ n. |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | ---- | --- | --- | --- | --- |
+|t|3
+| Therefore | g (t) | ∈ L1(R). |     | Finally, | for k | ∈ Z, | we have |     |     |     |     |     |     |
+| --------- | ----- | -------- | --- | -------- | ----- | ---- | ------- | --- | --- | --- | --- | --- | --- |
+(cid:98)n
+
+|     |     |     |     |     |     |     | 1,  | if  | k = 0, |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | --- | --- | --- | --- |
+
+|       |     |     |     |     |         |    | (−1)n+1 |      |         |     |     |     |     |
+| ----- | --- | --- | --- | --- | ------- | --- | ------- | ---- | ------- | --- | --- | --- | --- |
+| (2.9) |     |     |     |     | g (k/2) | =   |         | , if | k = ±n, |     |     |     |     |
+(cid:98)n
+|     |     |     |     |     |     |    | 2   |            |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | ---------- | --- | --- | --- | --- | --- |
+|     |     |     |     |     |     | 0  |     | otherwise. |     |     |     |     |     |
+The middle bound in (2.8) is crude but suffices for our needs, and by (2.9) cannot be improved
+| when t = | n/2. |     |     |     |     |     |     |     |     |     |     |     |     |
+| -------- | ---- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+In our proof of Theorem 1 we use the Fourier transform pairs from Lemma 4 in MT-Pairs,
+where both g (α) and g (t) are in L1(R), g (α) has support in |α| ≤ 1, and g (t) vanishes for all
+|     | n   |     | (cid:98)n |     |     | n   |     |     |     |     |     | (cid:98)n |     |
+| --- | --- | --- | --------- | --- | --- | --- | --- | --- | --- | --- | --- | --------- | --- |
+half integers k/2 except the three values k/2 = 0,±n/2. This allows us to determine P in terms
+0
+of P = P . Turning now to Theorem 2, this suggests that if we had a similar kernel which
+| n/2 | −n/2 |     |     |     |     |     |     |     |     |     |     |     |     |
+| --- | ---- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+vanished on all half-integers except k/2 = 0 we would be able to determine P , which formally
+0
+could be done by taking n → ∞ for g (t) in Lemma 4. Proceeding directly, Montgomery’s first
+(cid:98)n
+example of a kernel used in MT-Pairs was the Fourier transform pair
+(cid:40)
+|     |     |     |     |     | sin(2πβt) |     |     |     | 1 , if | |α| ≤ | β,  |     |     |
+| --- | --- | --- | --- | --- | --------- | --- | --- | --- | ------ | ----- | --- | --- | --- |
+2β
+| (2.10) |     |     |     | (cid:98)k(t) = |      | ,   | k(α) | =   |       |       |     |     |     |
+| ------ | --- | --- | --- | -------------- | ---- | --- | ---- | --- | ----- | ----- | --- | --- | --- |
+|        |     |     |     |                | 2πβt |     |      |     | 0, if | |α| > | β.  |     |     |
+From (2.5) of MT-Pairs, Montgomery [Mon73, Corollary 1] obtained, assuming RH and fixed
+| 0 < β ≤ | 1,  |          |          |          |     |          |      |          |      |          |         |                    |          |
+| ------- | --- | -------- | -------- | -------- | --- | -------- | ---- | -------- | ---- | -------- | ------- | ------------------ | -------- |
+|         |     |          | (cid:18) |          |     | (cid:19) |      | (cid:18) |      | (cid:19) |         |                    |          |
+|         |     | (cid:88) | sinβ(γ   | −γ′)logT |     |          |      |          | 1 β  | T        |         | (cid:16) (cid:112) | (cid:17) |
+| (2.11)  |     |          |          |          |     | w(γ      | −γ′) | =        | +    |          | logT +O | T logT             | .        |
+|         |     |          | β(γ      | −γ′)logT |     |          |      |          | 2β 2 | 2π       |         |                    |          |
+0<γ,γ′≤T
+L1(R)
+While the kernels in (2.10) have the desired properties, unfortunately (cid:98)k(t) ̸∈ and the sum
+on the left-hand side of (2.11) is only conditionally convergent without the weight w(γ−γ′). This
+is why all applications of MT-Pairs use Fourier transform pairs g and g where both g and g are
+|     |     |     |     |     |     |     |     |     |     |     | (cid:98) | n   | (cid:98) |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | -------- | --- | -------- |
+L1(R).
+in However, in proving Theorem 2 we have available Strong AH-Pairs which handle the
+difference γ−γ′ up to bounded size, at which point the weight w(γ−γ′) damps out the remaining
+| part of the | sum. |     |     |     |     |     |     |     |     |     |     |     |     |
+| ----------- | ---- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+We next turn to determining the shape of F(α) as illustrated in Section 1, where we assume
+RH and AH-Pairs and do not restrict ourselves to |α| ≤ 1. Our results follow the same method
+used in [Bal16] where the assumption that P 0 = p 0 = 1 was applied. The proof there can be easily
+| modified | to also | handle | the | case | where | limsupP | >   | 1.  |     |     |     |     |     |
+| -------- | ------- | ------ | --- | ---- | ----- | ------- | --- | --- | --- | --- | --- | --- | --- |
+0
+| We now | define | the | delta | function | δ   | (x) intuitively |     | by  |     |     |     |     |     |
+| ------ | ------ | --- | ----- | -------- | --- | --------------- | --- | --- | --- | --- | --- | --- | --- |
+a
+(cid:90) a+η
+|     |     | δ   | (x) = | 0 if | x ̸= | a,  |     | δ (x)dx | = 1 | for any | η > | 0.  |     |
+| --- | --- | --- | ----- | ---- | ---- | --- | --- | ------- | --- | ------- | --- | --- | --- |
+|     |     | a   |       |      |      |     |     | a       |     |         |     |     |     |
+a−η
+We may also have additional one-sided information on a delta function; here we consider three
+types of such delta functions δ=(x), δ+(x), δ−(x), where for any η > 0,
+|     |     |     |     | a          | a       |     | a            |              |         |      |     |     |     |
+| --- | --- | --- | --- | ---------- | ------- | --- | ------------ | ------------ | ------- | ---- | --- | --- | --- |
+|     |     |     |     | (cid:90)   | a       |     | (cid:90) a+η |              |         |      |     |     |     |
+|     |     |     |     |            | δ=(x)dx |     | =            | δ=(x)dx      | =       | 1/2, |     |     |     |
+|     |     |     |     |            | a       |     |              | a            |         |      |     |     |     |
+|     |     |     |     |            | a−η     |     | a            |              |         |      |     |     |     |
+|     |     |     |     | (cid:90) a |         |     |              | (cid:90) a+η |         |      |     |     |     |
+|     |     |     |     |            | δ+(x)dx | =   | 0,           |              | δ+(x)dx | = 1, |     |     |     |
+|     |     |     |     |            | a       |     |              |              | a       |      |     |     |     |
+|     |     |     |     | a−η        |         |     |              | a            |         |      |     |     |     |
+9
+
+|     |     |     |     | (cid:90) |     |      | (cid:90) |         |      |     |
+| --- | --- | --- | --- | -------- | --- | ---- | -------- | ------- | ---- | --- |
+|     |     |     |     | a        |     |      | a+η      |         |      |     |
+|     |     |     |     | δ−(x)dx  |     |      |          | δ−(x)dx |      |     |
+|     |     |     |     |          |     | = 1, |          |         | = 0. |     |
+|     |     |     |     | a        |     |      |          | a       |      |     |
+|     |     |     |     | a−η      |     |      | a        |         |      |     |
+Define
+|        |     | F(α) := | s(α)+δ=(α)+δ+(α)+δ− |          |     |          | (α) |          |          |       |
+| ------ | --- | ------- | ------------------- | -------- | --- | -------- | --- | -------- | -------- | ----- |
+|        |     |         |                     | 0        | 1   |          | −1  |          |          |       |
+|        |     |         |                     | ∞        |     |          |     | ∞        |          |       |
+| (2.12) |     |         |                     | (cid:88) |     |          |     | (cid:88) |          |       |
+|        |     |         | +                   | (δ (α)+δ |     | (α))+2(P | −1) |          | (δ (α)+δ | (α)), |
+|        |     |         |                     | 2n       | −2n |          | 0   |          | 2n−1     | 1−2n  |
+|        |     |         |                     | n=1      |     |          |     | n=2      |          |       |
+where
+| (2.13) |     | s(α) | =   | |α| for |α| | ≤ 1, |     | and s(α+2) |     | = s(α) | for all α. |
+| ------ | --- | ---- | --- | ----------- | ---- | --- | ---------- | --- | ------ | ---------- |
+If we only make use of the ordinary delta function then (2.12) is equivalent to
+| (2.14)   |      | F(α)           | = min(α,2−α)+δ |         |     | (α)+2(P | −1)δ    | (α) | for     | 0 ≤ α ≤ 2, |
+| -------- | ---- | -------------- | -------------- | ------- | --- | ------- | ------- | --- | ------- | ---------- |
+|          |      |                |                |         |     | 0       | 0       | 1   |         |            |
+| together | with | the properties |                |         |     |         |         |     |         |            |
+| (2.15)   |      |                | F(−α)          | = F(α), |     | F(α+2)  | = F(α), |     | for α ≥ | 0.         |
+Theorem 3. Let g be a Riemann integrable function on a closed interval [a,b], where a,b ̸∈
+| Z   |     |     |     |     |     |     |     |     | Z   |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+\ {−1,0,1}. Suppose in addition that g is Lipschitz continuous at \ {−1,1} and also right-
+Lipschitz continuous at 1 and left-Lipschitz continuous at −1. Assuming the Riemann Hypothesis
+| and    | AH-Pairs, | we       | have   | as T → ∞   | that       |      |                  |     |     |     |
+| ------ | --------- | -------- | ------ | ---------- | ---------- | ---- | ---------------- | --- | --- | --- |
+|        |           |          |        | (cid:90) b |            |      | (cid:90) b       |     |     |     |
+| (2.16) |           |          |        | F(α)g(α)dα |            | =    | F(α)g(α)dα+o(1), |     |     |     |
+|        |           |          |        | a          |            |      | a                |     |     |     |
+| where  | F is      | given in | (2.12) | and is     | the bottom | plot | in Figure        | 1.  |     |     |
+Remark 8. Because of MT, we are able to determine on RH the one-sided delta functions at
+α = −1,0,1. Beyond this range we use AH, but our method only allows one to determine averages
+of F on short intervals around a given point, and thus we cannot determine the one-sided delta
+functions at any other integers. Since in applications we often want to take a or b to be selected
+from{−1,0,1},wehavegonetothetroubletoincludethelimitedinformationwehaveonone-sided
+| delta | functions | in Theorem |     | 3.  |     |     |     |     |     |     |
+| ----- | --------- | ---------- | --- | --- | --- | --- | --- | --- | --- | --- |
+ItisofteneasytodocalculationsusingTheorem3. Oneexampleisthefollowingresultconcerning
+‡
+a constant that has occurred in an application of pair correlation to the second moment of S(T)
+[Gol87].
+| Corollary |     | 4. Let |     |     |     |     |     |     |     |     |
+| --------- | --- | ------ | --- | --- | --- | --- | --- | --- | --- | --- |
+(cid:90) ∞
+F(α)
+|     |     |     |     |     | C := | lim |     | dα  |     |     |
+| --- | --- | --- | --- | --- | ---- | --- | --- | --- | --- | --- |
+α2
+|         |       |         |      |               |            | T→∞ | 1     |     |     |     |
+| ------- | ----- | ------- | ---- | ------------- | ---------- | --- | ----- | --- | --- | --- |
+| if this | limit | exists. | Then | the following | statements |     | hold. |     |     |     |
+(a) Assuming the Riemann Hypothesis and Montgomery’s conjecture that F(α) ∼ 1 for 1 ≤
+|     | α ≤ | U for | arbitrarily | large | U. Then | C   | = 1. |     |     |     |
+| --- | --- | ----- | ----------- | ----- | ------- | --- | ---- | --- | --- | --- |
+(b) Suppose that the limiting density p exists, then assuming the Riemann Hypothesis and
+0
+|     | AH-Pairs | we  | obtain |     |          |         |          |      |     |     |
+| --- | -------- | --- | ------ | --- | -------- | ------- | -------- | ---- | --- | --- |
+|     |          |     |        |     | (cid:18) |         | (cid:19) |      |     |     |
+|     |          |     |        |     |          | 3       | 1        | π2   | 2   |     |
+|     |          |     |        | C = | 1+       | (p −1)+ |          | +log | .   |     |
+0
+|     |     |     |     |     |     | 2   | 4   | 6   | π   |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+• In the particular case when p = 1, the Riemann Hypothesis and AH-Pairs imply
+0
+|     |     |     |     |     |      | π2   | 2             |     |     |     |
+| --- | --- | --- | --- | --- | ---- | ---- | ------------- | --- | --- | --- |
+|     |     |     |     | C   | = 1+ | +log | = 0.95965.... |     |     |     |
+|     |     |     |     |     |      | 24   | π             |     |     |     |
+‡
+| David | Farmer | suggested |     | to us that we | compute | this | constant. |     |     |     |
+| ----- | ------ | --------- | --- | ------------- | ------- | ---- | --------- | --- | --- | --- |
+10
+
+• In the other extreme case p = 3 − 2 , the Riemann Hypothesis and AH-Pairs then
+0 2 π2
+imply
+1 π2 2
+C = + +log = 1.69335....
+2 6 π
+We conclude with an application of AH-Density.
+Theorem 4. Suppose both r(t) and r(α) are even L1(R) functions with bounded variation, and
+(cid:98)
+suppose further that r(α) has support in |α| ≤ 1. Then assuming AH-Density, we have
+(cid:90) 1
+(cid:88)
+(2.17) r(k/2)p = r(0)+2 αr(α)dα.
+(cid:98) k/2
+k∈Z 0
+Combining this result with Lemma 3 we thus obtain a version of MT-Pairs making use of AH-
+Pairs and AH-Density but not RH or explicit formulas. One could view this as using a false
+assumption to prove a true theorem, but it also indicates that the conditions on AH-Density that
+were imposed by MT-Pairs and AH-Pairs using the special kernel in Lemma 4 are very close to
+optimal over a wide range of kernels.
+3. Proof of Theorem 1
+Proof of MT-Pairs. To prove (2.3), letting t =
+γ−γ′
+logT in (2.2), we have
+2π
+(cid:16)γ −γ′ (cid:17) (cid:90) ∞
+g logT =
+g(α)Tiα(γ′−γ)dα.
+(cid:98)
+2π
+−∞
+Multiplying both sides of this equation by w(γ −γ′) and summing over 0 < γ,γ′ ≤ T we obtain
+(cid:88) g (cid:16)γ −γ′ logT (cid:17) w(γ −γ′) = (cid:90) ∞ g(α) (cid:88) Tiα(γ′−γ)w(γ −γ′)dα
+(cid:98)
+2π
+0<γ,γ′≤T −∞ 0<γ,γ′≤T
+(cid:18) T (cid:19)(cid:90) ∞
+= logT F(α)g(α)dα,
+2π
+−∞
+since w is even. To obtain (2.5), we see by MT that
+(cid:90) ∞ (cid:90) 1 (cid:18) (cid:18) 1 (cid:19)(cid:19)
+F(α)r(α)dα = 2 T−2αlogT 1+O √ g(α)dα
+logT
+−∞ 0
+(cid:90) 1 (cid:18) 1 (cid:19)
++2 αg(α)dα+O √ .
+logT
+0
+Using the Lipschitz condition on g(α) at α = 0, we see that the first integral on the right-hand side
+is
+(cid:32) (cid:33)
+(cid:90) loglogT/logT (cid:90) 1
+(cid:112)
+= 2 T−2α(logT + logT)g(α)dα+O T−2αlogT|g(α)|dα
+0 loglogT/logT
+(cid:18) (cid:18) loglogT (cid:19)(cid:19)(cid:90) loglogT/logT (cid:112)
+= 2 g(0)+O T−2α(logT + logT)dα
+logT
+0
+(cid:18) 1 (cid:90) 1 (cid:19)
++O |g(α)|dα
+logT
+0
+(cid:18) (cid:18) (cid:19)(cid:19)(cid:18) (cid:18) (cid:19)(cid:19) (cid:18) (cid:19)
+loglogT 1 1 1
+= 2 g(0)+O +O √ +O
+logT 2 logT logT
+(cid:18) (cid:19)
+1
+= g(0)+O √ .
+logT
+11
+
+□
+To prove Lemma 2, we need some estimates for zeros. Note first from (1.1) that
+(cid:88)
+N(t+1)−N(t) = 1 ≪ log(|t|+2),
+t<γ≤t+1
+which easily implies (or see [Dav00, Chapter 15 p. 98])
+(cid:88) 1
+(3.1) ≪ log(|t|+2).
+1+(t−γ)2
+γ
+We will also need the following result from [GM87, Lemma 9]. If 0 ≤ h ≤ T, then
+(cid:88) (cid:88)
+(3.2) |{(γ,γ′) : 0 < γ ≤ T,|γ −γ′| ≤ h}| = 1 ≪ (1+hlogT)T logT.
+γ′ 0<γ≤T,
+|γ−γ′|≤h
+One immediate consequence of the above estimate is that recalling P(T,M) from (1.2), we have on
+taking h = M/logT in (3.2) that
+(3.3) P(T,M) ≪ MT logT.
+Proof of Lemma 2. We first note that, on using (1.1), (3.1), and that r(t) ≪ 1,
+(cid:88) (cid:18) γ −γ′ (cid:19)
+r logT w(γ −γ′)
+2π
+0<γ,γ′≤T
+ 
+(cid:88) (cid:88) (cid:88) (cid:88) (cid:88) (cid:18) γ −γ′ (cid:19)
+=  + + r logT w(γ −γ′)
+  2π
+T <γ,γ′≤T 0<γ′≤ T 0<γ≤T T <γ′≤T0<γ≤ T
+log2T log2T log2T log2T
+ 
+(cid:88) (cid:18) γ −γ′ (cid:19) (cid:88) (cid:88) 1
+= r logT w(γ −γ′)+O 
+(3.4) 2π  4+(γ −γ′)2
+T <γ,γ′≤T 0<γ′≤ T 0<γ≤T
+log2T log2T
+ 
+(cid:88) (cid:18) γ −γ′ (cid:19) (cid:88)
+= r logT w(γ −γ′)+O logT
+2π  
+T <γ,γ′≤T 0<γ′≤ T
+log2T log2T
+(cid:88) (cid:18) γ −γ′ (cid:19)
+= r logT w(γ −γ′)+O(T).
+2π
+T <γ,γ′≤T
+log2T
+The sum here is over (γ,γ′) ∈ P(T,M) plus terms with |(γ −γ′)logT/2π| > M, which we may
+remove using (3.2) with an error
+(cid:88) (cid:12) (cid:12) (cid:18) γ −γ′ (cid:19)(cid:12) (cid:12)
+≪ (cid:12)r logT (cid:12)
+(cid:12) 2π (cid:12)
+0<γ,γ′≤T
+M<
+(cid:12) (cid:12)γ−γ′
+logT
+(cid:12)
+(cid:12)
+(cid:12) 2π (cid:12)
+(cid:88) ∞ (cid:88) (cid:12) (cid:12) (cid:18) γ −γ′ (cid:19)(cid:12) (cid:12)
+≪ (cid:12)r logT (cid:12)
+(cid:12) 2π (cid:12)
+ℓ=0 0<γ,γ′≤T
+2ℓM<
+(cid:12) (cid:12)γ−γ′
+logT
+(cid:12)
+(cid:12)≤2ℓ+1M
+(cid:12) 2π (cid:12)
+12
+
+|     |     |     |     |     | ∞        | C(r) |     |          |     |     |     |     |     |
+| --- | --- | --- | --- | --- | -------- | ---- | --- | -------- | --- | --- | --- | --- | --- |
+|     |     |     |     |     | (cid:88) |      |     | (cid:88) |     |     |     |     |     |
+|     |     |     |     |     | ≪        |      |     |          | 1   |     |     |     |     |
+(2ℓM)b
+|     |     |     |     |     | ℓ=0 |     | 0<γ,γ′≤T |     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | -------- | --- | --- | --- | --- | --- | --- |
+|γ−γ′|≤2ℓ+2πM/logT
+∞
+|     |     |     |     |     | (cid:88) | C(r) |     |     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | -------- | ---- | --- | --- | --- | --- | --- | --- | --- |
+(2ℓMT
+|     |     |     |     |     | ≪   |     |     | logT) |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | --- | --- | --- |
+(2ℓM)b
+ℓ=0
+|     |     |     |     |     | C(r)T | logT |     |     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | ----- | ---- | --- | --- | --- | --- | --- | --- | --- |
+|     |     |     |     |     | ≪     |      | .   |     |     |     |     |     |     |
+Mb−1
+Thus we have proved (2.6). By (3.3) we can now remove the factor w(γ −γ′) in the sum on the
+| right-hand |     | side | of (2.6) | with     | an  | error |                    |     |          |           |     |      |     |
+| ---------- | --- | ---- | -------- | -------- | --- | ----- | ------------------ | --- | -------- | --------- | --- | ---- | --- |
+|            |     |      |          | (cid:12) |     |       | (cid:12)           |     | (cid:18) | (cid:19)2 | M3T |      |     |
+|            |     |      |          | (cid:12) | 4   |       | (cid:12)           |     | M        |           |     |      |     |
+|            | ≪   |      | max      |          |     |       | −1(cid:12)|P(T,M)| |     | ≪        | MT logT   | ≪   | ≪ T, |     |
+(cid:12)
+|       |        | |(γ−γ′)|≤2πM/logT(cid:12)4+(γ |      |           |     | −γ′)2    | (cid:12) |     | logT |     | logT |     |     |
+| ----- | ------ | ----------------------------- | ---- | --------- | --- | -------- | -------- | --- | ---- | --- | ---- | --- | --- |
+| which | proves | the                           | last | statement |     | in Lemma | 2.       |     |      |     |      |     | □   |
+Proof of Lemma 3. With r(t) as in MT-Pairs and Lemma 2, we have first
+|     |     |     |     |     |     |     | (cid:12) |     |     | (cid:12) |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | -------- | --- | --- | -------- | --- | --- | --- |
+(cid:12)(cid:90) 1
+|     |     |     |     |               |     |     |                | (cid:16)        |                    | (cid:17) (cid:12) |     |     |     |
+| --- | --- | --- | --- | ------------- | --- | --- | -------------- | --------------- | ------------------ | ----------------- | --- | --- | --- |
+|     |     |     |     | |r(t+h)−r(t)| |     | =   | (cid:12) rˆ(α) | e((t+h)α)−e(tα) |                    | dα(cid:12)        |     |     |     |
+|     |     |     |     |               |     |     | (cid:12)       |                 |                    | (cid:12)          |     |     |     |
+|     |     |     |     |               |     |     | (cid:12) −1    |                 |                    | (cid:12)          |     |     |     |
+|     |     |     |     |               |     |     |                |                 | (cid:12)(cid:90) 1 |                   |     |     |     |
+(cid:12)
+|     |     |     |     |     |     | ≤   | max | (cid:12)e(hα)−1(cid:12) | |rˆ(α)|dα |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | ----------------------- | --------- | --- | --- | --- | --- |
+|     |     |     |     |     |     |     |     | (cid:12)                | (cid:12)  |     |     |     |     |
+−1≤α≤1
+−1
+|     |     |     |     |     |     | ≪   | min{1,|h|}. |     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | ----------- | --- | --- | --- | --- | --- | --- |
+(γ,γ′)
+| Hence | by  | AH-Pairs, |     | for | ∈   | B   | ⊂ P(T,M), |     |     |     |     |     |     |
+| ----- | --- | --------- | --- | --- | --- | --- | --------- | --- | --- | --- | --- | --- | --- |
+k/2
+|       |          | (cid:18)              | −γ′ |         | (cid:19) (cid:18) |                 |       |      | (cid:19)                 |            |     |        |     |
+| ----- | -------- | --------------------- | --- | ------- | ----------------- | --------------- | ----- | ---- | ------------------------ | ---------- | --- | ------ | --- |
+|       |          | γ                     |     |         |                   | k               |       |      |                          |            |     |        |     |
+|       |          | r                     |     | logT    | = r               | +O((|k|+1)R(T)) |       |      | = r(k/2)+O((|k|+1)R(T)). |            |     |        |     |
+|       |          |                       | 2π  |         |                   | 2               |       |      |                          |            |     |        |     |
+| Thus, | the      | left-hand             |     | side of | (2.7)             | is by (3.3)     | equal | to   |                          |            |     |        |     |
+|       | (cid:88) | (cid:16)              |     |         |                   | (cid:17)        |       | T    | (cid:88)                 |            |     |        |     |
+|       |          | r(k/2)+O((|k|+1)R(T)) |     |         |                   | |B              | | =   | logT | r(k/2)P                  | +O(M2R(T)T |     | logT), |     |
+|       |          |                       |     |         |                   |                 | k/2   |      |                          | k/2        |     |        |     |
+2π
+|     | k∈Z   |     |     |     |     |     |     |     | k∈Z   |     |     |     |     |
+| --- | ----- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | --- | --- |
+|     | |k|≪M |     |     |     |     |     |     |     | |k|≪M |     |     |     |     |
+since
+(cid:88)
+|     |     |     |     |     |     | B   | ≪ P(T,M) |     | ≪ MT logT |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | -------- | --- | --------- | --- | --- | --- | --- |
+k/2
+k∈Z
+|k|≪M
+| by    | (3.3). |       |          |     |     |     |     |     |     |     |     |     | □   |
+| ----- | ------ | ----- | -------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Proof | of     | Lemma | 4. Since |     |     |     |     |     |     |     |     |     |     |
+
+1+(−1)n+1cos(nπα)
+
+|       |     |     |     |     |       |     |     |     | , |α| | ≤ 1, |     |     |     |
+| ----- | --- | --- | --- | --- | ----- | --- | --- | --- | ----- | ---- | --- | --- | --- |
+| (3.5) |     |     |     |     | g (α) | =   |     | 2   |       |      |     |     |     |
+n
+0,
+|     |      |          |     |     |     |     |     |     | |α| | > 1, |     |     |     |
+| --- | ---- | -------- | --- | --- | --- | --- | --- | --- | --- | ---- | --- | --- | --- |
+| we  | have | by (2.2) |     |     |     |     |     |     |     |      |     |     |     |
+(cid:90) 1
+|     |     |     |       | (cid:0)           |     |     |     | (cid:1)      |     |     |     |     |     |
+| --- | --- | --- | ----- | ----------------- | --- | --- | --- | ------------ | --- | --- | --- | --- | --- |
+|     |     | g   | (t) = | 1+(−1)n+1cos(nπα) |     |     |     | )cos(2πtα)dα |     |     |     |     |     |
+(cid:98)n
+0
+|     |     |     |     |          |     | (−1)n+1 | (cid:90) 1(cid:16) |                             |     |     |          |     |     |
+| --- | --- | --- | --- | -------- | --- | ------- | ------------------ | --------------------------- | --- | --- | -------- | --- | --- |
+|     |     |     |     | sin(2πt) |     |         |                    |                             |     |     | (cid:17) |     |     |
+|     |     |     | =   |          | +   |         |                    | cos(πα(n+2t))+cos(πα(n−2t)) |     |     | dα       |     |     |
+|     |     |     |     | 2πt      |     | 2       |                    |                             |     |     |          |     |     |
+0
+13
+
+sin(2πt) (−1)n+1 (cid:18) sinπ(n+2u) sinπ(n−2t) (cid:19)
+= + +
+2πt 2 π(n+2t) π(n−2t)
+sin(2πt) (−1)n+1 (cid:18) (−1)nsin2πt (−1)nsin2πt (cid:19)
+= + −
+2πt 2π n+2t n−2t
+(cid:18) (cid:19)
+sin(2πt) sin2πt 1 1
+= − −
+2πt 2π n+2t n−2t
+sin(2πt) (cid:18) 4t2 (cid:19)
+= 1+
+2πt n2−4t2
+sin(2πt) (cid:18) n2 (cid:19)
+= .
+2πt n2−4t2
+Clearly both g (t) and g (α) are even and g (α) ∈ L1(R).
+n (cid:98)n (cid:98)n
+We now prove (2.8). Making use of |(sinx)/x| ≤ min(1,1/|x|), we see that for 0 ≤ |t| ≤ n/4
+4 1
+|g (t)| ≤ min(1,1/t) ≪ ,
+(cid:98)n
+3 t+1
+and for |t| ≥ n that
+n2
+|g (t)| ≤ .
+(cid:98)n 6πt3
+Finally for n/4 < |t| < n we have
+(cid:12) (cid:12)sinπ(2t−n) (cid:12) (cid:12) (cid:12) (cid:12) n2 (cid:12) (cid:12) 4
+|g (cid:98)n (t)| = (cid:12) (cid:12)(cid:12) (cid:12) ≤ .
+(cid:12) π(2t−n) (cid:12)(cid:12)2t(2t+n)(cid:12) 3
+To prove (2.9), for k ∈ Z, we clearly have g (0) = 1 and g (k/2) = 0 if k ̸= ±n. For k = ±n, we
+(cid:98)n (cid:98)n
+have by L’Hˆopital’s rule
+n sin(2πt) (−1)n+1
+g (±n/2) = ± lim = .
+(cid:98)n π t→±n/2 n2−4t2 2
+□
+Proof of Theorem 1. In Lemma 2 and Lemma 3 we take r(t) = g (t) from Lemma 4. We take M
+(cid:98)n
+large enough so that n ≪ M and note from (2.8) that we can take C(r) = n2 and b = 3. Thus,
+(cid:88) (cid:18) γ −γ′ (cid:19)
+g logT w(γ −γ′)
+(cid:98)n
+2π
+0<γ,γ′≤T
+ 
+=    (cid:88) g (cid:98)n (k/2)P k/2 +O (cid:18) M n2 2 (cid:19) +O (cid:0) M2R(T) (cid:1) +O (cid:18) log 1 T (cid:19)    2 T π logT
+k∈Z
+|k|≪M
+= (cid:18) P +(−1)n+1P +O (cid:18) n2 (cid:19) +O (cid:0) M2R(T) (cid:1) +O (cid:18) 1 (cid:19)(cid:19) T logT.
+0 n/2 M2 logT 2π
+By MT-Pairs we have the sum on the left above is
+T (cid:18) (cid:90) 1 (cid:19)
+= (1+o(1)) logT g (0)+2 αg (α)dα
+n n
+2π
+0
+1
+ , for n even,
+T 
+2
+= (1+o(1)) logT
+2π 3 2
+  − , for n odd,
+2 π2n2
+14
+
+byanelementarycalculationusing(3.5). WenowtakeT andthenM largeinthelasttwoequations
+and conclude
+1
+|     |     |     |     |     |     |  , |     | when n is | even, |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --------- | ----- | --- | --- |
+
+|     |     |     | +(−1)n+1P |     |     | 2   |     |           |      |     |     |
+| --- | --- | --- | --------- | --- | --- | --- | --- | --------- | ---- | --- | --- |
+|     |     | P 0 |           |     | ∼   |     |     |           |      |     |     |
+|     |     |     |           |     | n/2 | 3   | 2   |           |      |     |     |
+|     |     |     |           |     |     |  − | ,   | when n is | odd, |     |     |
+
+|     |     |     |     |     |     | 2 π2n2 |     |     |     |                |     |
+| --- | --- | --- | --- | --- | --- | ------ | --- | --- | --- | -------------- | --- |
+|     |     |     |     |     |     |        | 3−  | 2   |     | (T logT)−1N(T) |     |
+proving(1.6). For(1.5),notewhenn = 1thatP 0 +P ∼ ,andthatP 0 ≥ ≥
+|            |     |           |     |     |     | 1/2 | 2   | π2  |     | 2π  |     |
+| ---------- | --- | --------- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1+o(1) and | P   | ≥ 0. Thus |     |     |     |     |     |     |     |     |     |
+1/2
+|                 |     |            |     |       | 3 2   |            |       | 3 2  |        |     |     |
+| --------------- | --- | ---------- | --- | ----- | ----- | ---------- | ----- | ---- | ------ | --- | --- |
+|                 |     | 1+o(1)     | ≤   | P 0 ≤ | −     | −P 1/2     | +o(1) | ≤ −  | +o(1), |     |     |
+|                 |     |            |     |       | 2 π2  |            |       | 2 π2 |        |     |     |
+| which completes |     | the proof. |     |       |       |            |       |      |        |     | □   |
+|                 |     |            |     | 4.    | Proof | of Theorem |       | 2    |        |     |     |
+Proof of Theorem 2. Assuming RH, we obtain from (2.11) with β = 1 that
+|     |     | (cid:18)        |     |           |     | (cid:19) |     |     |           |     |     |
+| --- | --- | --------------- | --- | --------- | --- | -------- | --- | --- | --------- | --- | --- |
+|     |     | (cid:88) sin((γ |     | −γ′)logT) |     |          |     | T   | (cid:112) |     |     |
+−γ′)
+|     |     |     |             |     |     | w(γ | =   | logT +O(T |     | logT). |     |
+| --- | --- | --- | ----------- | --- | --- | --- | --- | --------- | --- | ------ | --- |
+|     |     |     | (γ −γ′)logT |     |     |     |     | 2π        |     |        |     |
+0<γ,γ′≤T
+| By (3.4), | we have, | since |sint| | ≤   | 1,  |     |     |     |     |     |     |     |
+| --------- | -------- | ------------ | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+t
+|     |     | (cid:18) |        |           |     | (cid:19) |     |     |     |           |     |
+| --- | --- | -------- | ------ | --------- | --- | -------- | --- | --- | --- | --------- | --- |
+|     |     | (cid:88) | sin((γ | −γ′)logT) |     |          |     | T   |     | (cid:112) |     |
+−γ′)
+|     |     |     |     |          |     | w(γ |     | = logT | +O(T | logT). |     |
+| --- | --- | --- | --- | -------- | --- | --- | --- | ------ | ---- | ------ | --- |
+|     |     |     | (γ  | −γ′)logT |     |     |     | 2π     |      |        |     |
+T <γ,γ′≤T
+log2T
+We now discard the terms with |γ −γ′| > M which by (3.2) contributes an error
+∞
+|     |     |     |     | (cid:88) | (cid:88) |     |     | 1   |     |     |     |
+| --- | --- | --- | --- | -------- | -------- | --- | --- | --- | --- | --- | --- |
+≪
+|     |     |     |     |     |          |     | (γ −γ′)3logT |     |     |     |     |
+| --- | --- | --- | --- | --- | -------- | --- | ------------ | --- | --- | --- | --- |
+|     |     |     |     | ℓ=0 | 0<γ,γ′≤T |     |              |     |     |     |     |
+2ℓM<|γ−γ′|≤2ℓ+1M
+∞
+|     |     |     |     | (cid:88) | 1   |     | (cid:88) |     |     |     |     |
+| --- | --- | --- | --- | -------- | --- | --- | -------- | --- | --- | --- | --- |
+|     |     |     | ≪   |          |     |     |          | 1   |     |     |     |
+23ℓM3logT
+0<γ,γ′≤T
+ℓ=0
+|γ−γ′|≤2ℓ+1M
+|     |     |     |     | ∞ 2ℓMT | log2T |     |     |     |     |     |     |
+| --- | --- | --- | --- | ------ | ----- | --- | --- | --- | --- | --- | --- |
+(cid:88)
+≪
+23ℓM3logT
+ℓ=0
+T logT
+|     |     |     | ≪   |     | .   |     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+M2
+| Hence we | have |     |          |     |          |           |     |          |     |     |     |
+| -------- | ---- | --- | -------- | --- | -------- | --------- | --- | -------- | --- | --- | --- |
+|          |      |     |          |     | (cid:18) | −γ′)logT) |     | (cid:19) |     |     |     |
+|          |      |     | (cid:88) |     | sin((γ   |           |     |          |     |     |     |
+|          |      |     |          |     |          |           |     | w(γ −γ′) |     |     |     |
+−γ′)logT
+(γ
+(γ,γ′)∈Q(T,M)
+(4.1)
+|     |     |     |     |      |      |           |     | (cid:18) | (cid:19) |     |     |
+| --- | --- | --- | --- | ---- | ---- | --------- | --- | -------- | -------- | --- | --- |
+|     |     |     |     | T    |      | (cid:112) |     | T logT   |          |     |     |
+|     |     |     | =   | logT | +O(T | logT)+O   |     |          | .        |     |     |
+|     |     |     |     | 2π   |      |           |     | M2       |          |     |     |
+By Strong AH-Pairs and the comment on how B in (1.4) is defined for Q(T,M), the sum
+k/2
+above is
+|     |     |          | (cid:18) sin((γ | −γ′)logT) |     | (cid:19) |      |     |     |     |     |
+| --- | --- | -------- | --------------- | --------- | --- | -------- | ---- | --- | --- | --- | --- |
+|     |     | (cid:88) |                 |           |     |          | −γ′) |     |     |     |     |
+|     |     | =        |                 |           |     | w(γ      |      |     |     |     |     |
+(γ −γ′)logT
+(γ,γ′)∈B0
+15
+
+|     |     |     |     |           |          |                         |     |     |     |          |     |
+| --- | --- | --- | --- | ---------- | -------- | ----------------------- | --- | --- | --- | -------- | ---- |
+|     |     |     |     |            | (cid:18) |                         |     |     |     | (cid:19) |      |
+|     |     |     |     |  (cid:88) |          | |sin(πk+O((|k|+1)R(T))| |     |     |     |          |     |
+|     |     |     | +O |            |          |                         |     |     |     | |B       | | . |
+k/2
+|     |     |     |     |    |     | πk+O((|k|+1)R(T)) |     |     |     |     |    |
+| --- | --- | --- | --- | --- | --- | ----------------- | --- | --- | --- | --- | --- |
+k∈Z
+0<|k|≪MlogT
+|     |     | 1+O(x2) |     |     |     |     | 1+O(u2) |     |     |     |     |
+| --- | --- | ------- | --- | --- | --- | --- | ------- | --- | --- | --- | --- |
+Since (sinx)/x = if x → 0 and w(u) = if u → 0, the first term above is
+T
+|     | =   | (1+O(R(T)2))(1+O(R(T)2/log2T))|B |     |     |     |     |     | | = (1+O(R(T)2))P |     |     | logT. |
+| --- | --- | -------------------------------- | --- | --- | --- | --- | --- | ----------------- | --- | --- | ----- |
+|     |     |                                  |     |     |     |     |     | 0                 |     |     | 0     |
+2π
+Using |sin(πk+x)| = |sinx| ≤ |x|, we bound the second term above by
+|       |         |        |       | ≪ R(T)|Q(T,M)| |     |     | ≪ MR(T)T |     | log2T     |     |                   |
+| ----- | ------- | ------ | ----- | -------------- | --- | --- | -------- | --- | --------- | --- | ----------------- |
+| where | we used | (3.2). | Hence | (4.1) becomes  |     |     |          |     |           |     |                   |
+|       |         |        |       |                |     |     |          |     |           |     | (cid:18) (cid:19) |
+|       |         | T      |       |                |     |     | T        |     | (cid:112) |     | T logT            |
+log2T)
+|     | P 0 | logT | +O(MR(T)T |     |     | =   | logT | +O(T | logT)+O |     |     |
+| --- | --- | ---- | --------- | --- | --- | --- | ---- | ---- | ------- | --- | --- |
+|     |     | 2π   |           |     |     | 2π  |      |      |         |     | M2  |
+which implies
+|     |     |     |     | (cid:18) | (cid:19) | (cid:18) |     | (cid:19)       |     |     |     |
+| --- | --- | --- | --- | -------- | -------- | -------- | --- | -------------- | --- | --- | --- |
+|     |     |     |     |          | 1        |          | 1   |                |     |     |     |
+|     |     |     | P   | = 1+O    |          | +O √     |     | +O(MR(T)logT). |     |     |     |
+|     |     |     | 0   |          | M2       |          |     |                |     |     |     |
+logT
+LettingT → ∞, wehaveR(T)logT → 0, andontakingMlargewehavep = lim P = 1. □
+|     |     |     |     |       |     |         |     |             |     |     | 0 T→∞ 0 |
+| --- | --- | --- | --- | ----- | --- | ------- | --- | ----------- | --- | --- | ------- |
+|     |     |     |     | Proof | of  | a Lemma | of  | Heath-Brown |     |     |         |
+5.
+R
+| Following | Heath-Brown |       |          | [HB96],         | define | for α ∈ | and | λ >        | 0              |     |     |
+| --------- | ----------- | ----- | -------- | --------------- | ------ | ------- | --- | ---------- | -------------- | --- | --- |
+|           |             |       |          | 1 (cid:90) λ    |        |         |     | 1 (cid:90) | ∞              |     |     |
+| (5.1)     |             | G (α) | :=       | (λ−|β|)F(α+β)dβ |        |         | =   |            | k (β)F(α+β)dβ, |     |     |
+|           |             | λ     |          | λ2              |        |         |     | λ2         | λ              |     |     |
+|           |             |       |          | −λ              |        |         |     |            | −∞             |     |     |
+| where     | k (β) is    | the   | triangle | function        |        |         |     |            |                |     |     |
+λ
+| (5.2) |     |     |     |     | k (β) | := max(λ−|β|,0). |     |     |     |     |     |
+| ----- | --- | --- | --- | --- | ----- | ---------------- | --- | --- | --- | --- | --- |
+λ
+| Making | use of | the | Fej´er | kernel   |          |              |          |     |            |     |     |
+| ------ | ------ | --- | ------ | -------- | -------- | ------------ | -------- | --- | ---------- | --- | --- |
+|        |        |     |        |          | (cid:32) | λy (cid:33)2 | (cid:90) |     |            |     |     |
+|        |        |     |        |          | sin      |              | 1        | ∞   |            |     |     |
+| (5.3)  |        |     |        | K (y) := |          | 2            | =        | k   | (β)eiyβdβ, |     |     |
+|        |        |     |        | λ        |          |              |          | λ   |            |     |     |
+|        |        |     |        |          | λy       |              | λ2       |     |            |     |     |
+−∞
+2
+| we have | from | (5.1) | that     |            |          |            |     |     |              |     |       |
+| ------- | ---- | ----- | -------- | ---------- | -------- | ---------- | --- | --- | ------------ | --- | ----- |
+|         |      |       | (cid:18) | (cid:19)−1 |          |            |     |     |              |     |       |
+|         |      |       |          | T          | (cid:88) |            |     |     |              |     |       |
+| (5.4)   |      | G (α) | =        | logT       |          | Tiα(γ−γ′)K |     | ((γ | −γ′)logT)w(γ |     | −γ′). |
+|         |      | λ     |          |            |          |            |     | λ   |              |     |       |
+2π
+0<γ,γ′≤T
+To state our first results on G (α), it is convenient to condense our main error terms in applying
+λ
+| AH-Pairs | into | the | form |     |     |     |     |     |     |     |     |
+| -------- | ---- | --- | ---- | --- | --- | --- | --- | --- | --- | --- | --- |
+|          |      |     |      |     | 1   |     |     |     |     | 1   |     |
++(|α|+1)M2R(T)+
+| (5.5) |       |          |     | E (λ,α)        | :=  |     |     |     |      | ,   |     |
+| ----- | ----- | -------- | --- | -------------- | --- | --- | --- | --- | ---- | --- | --- |
+|       |       |          |     | G              | λ2M |     |     |     | logT |     |     |
+| where | M, T, | and R(T) | are | from AH-Pairs. |     |     |     |     |      |     |     |
+Lemma 5 (Heath-Brown). For α ∈ R and 0 < λ < 1 the function G (α) is even and non-negative.
+λ
+Let λ satisfy 0 < λ ≤ 1/2. Assuming the Riemann Hypothesis, we have
+|     |       |       |     |         | (cid:18) | (cid:19) | (cid:18) |     | (cid:19) |     |          |
+| --- | ----- | ----- | --- | ------- | -------- | -------- | -------- | --- | -------- | --- | -------- |
+|     |       | λ−|α| |     |         |          | 1        |          | 1   |          |     |          |
+| (i) | G (α) | =     |     | +O(λ)+O | √        |          | +O       |     | ,        | for | |α| < λ, |
+λ
+|      |       |         | λ2  |                   | λ        | logT |          | λ2logT |     |       |      |
+| ---- | ----- | ------- | --- | ----------------- | -------- | ---- | -------- | ------ | --- | ----- | ---- |
+|      |       |         |     | (cid:18) (cid:19) | (cid:18) |      | (cid:19) |        |     |       |      |
+|      |       |         |     | 1                 |          | 1    |          |        |     |       |      |
+| (ii) | G (α) | = |α|+O |     | √                 | +O       |      | ,        | for    | λ ≤ | |α| ≤ | 1−λ. |
+λ
+|          |           |     |     | logT |     | λ2logT |     |     |     |     |     |
+| -------- | --------- | --- | --- | ---- | --- | ------ | --- | --- | --- | --- | --- |
+| Assuming | AH-Pairs, |     | we  | have |     |        |     |     |     |     |     |
+16
+
+(cid:32) (cid:33)2
+(cid:88) sin λπk
+(iii) G (α) = eiπkα 2 P +O(E (λ,α)),
+λ λπk k/2 G
+k∈Z 2
+and for L ∈ Z,
+(iv) G (α+2L) = G (α)+O(E (λ,|α|+2L)).
+λ λ G
+Assuming RH and AH-Pairs, Lemma 5 determines G (α) for all α except when α is an odd
+λ
+integer. We will determine G (2L+1) asymptotically in Lemma 6 (v), but it is easy to prove here
+λ
+as a first step the following average result.
+Corollary 5. Assuming the Riemann Hypothesis and AH-Pairs, we have, for 0 < λ ≤ 1/4,
+(cid:90) 1+λ (cid:18) 1 (cid:19)
+(5.6) G (α)dα = 2(P −1)+O(λ)+O(E (λ,1))+O √ .
+λ 0 G λ2 logT
+1−λ
+Proof of Lemma 5. G (α) is even since in (5.4) γ and γ′ can be interchanged in the sum, and
+λ
+G (α) ≥ 0 on using F ≥ 0 in (5.1).
+λ
+For (i), by the evenness of G (α), we only need to consider the range 0 ≤ α < λ ≤ 1/2. Then
+λ
+by MT we have from (5.1) that
+(5.7)
+(cid:18) (cid:18) (cid:19)(cid:19)
+1
+G (α) = 1+O √
+λ
+logT
+(cid:18) 1 (cid:90) λ 1 (cid:90) λ (cid:19) (cid:18) 1 (cid:19)
+× (λ−|β|)T−2|α+β|logT dβ+ (λ−|β|)|α+β|dβ +O √ .
+λ2 λ2 logT
+−λ −λ
+Note since |β| ≤ λ, we have that |α+β| ≤ 2λ ≤ 1 as required in MT. The first integral in (5.7) is
+logT (cid:18)(cid:90) −α (cid:90) 0 (cid:90) λ (cid:19)
+= (λ+β)T2(α+β)dβ+ (λ+β)T−2(α+β)dβ+ (λ−β))T−2(α+β)dβ .
+λ2
+−λ −α 0
+The integrals here are all elementary and we obtain that this expression is
+(cid:32) (cid:33)
+logT λ−α T−2(λ−α)−2T−2α+T−2(λ+α) λ−α (cid:18) 1 (cid:19)
+= + = +O .
+λ2 logT 4log2T λ2 λ2logT
+The second integral in (5.7) is
+1 (cid:90) λ
+≪ λ2dβ ≪ λ,
+λ2
+−λ
+and substituting these results into (5.7) proves (i).
+For (ii), by evenness we only need to consider the range λ ≤ α ≤ 1−λ. By MT and (5.1)
+(cid:18) (cid:18) 1 (cid:19)(cid:19)(cid:18) 1 (cid:90) λ (cid:16) (cid:17) (cid:19) (cid:18) 1 (cid:19)
+G (α) = 1+O √ (λ−|β|) T−2(α+β)logT +(α+β) dβ +O √ ,
+λ logT λ2 logT
+−λ
+where we note MT applies here because 0 ≤ α+β ≤ 1. Since
+1 (cid:90) λ T−2αlogT (cid:18)(cid:90) 0 (cid:90) λ (cid:19)
+(λ−|β|)T−2(α+β)logT dβ = (λ+β)T−2βdβ + (λ−β)T−2βdβ
+λ2 λ2
+−λ −λ 0
+T−2(α−λ)−2T−2α+T−2(α+λ) (cid:18) 1 (cid:19)
+= = O ,
+4λ2logT λ2logT
+and
+1 (cid:90) λ (cid:18) 2 (cid:90) λ (cid:19)
+(λ−|β|)(α+β)dβ = α (λ−β)dβ = α,
+λ2 λ2
+−λ 0
+we obtain (ii).
+17
+
+For (iii), we note K (y) ≪ min(1,1/(λy)2) and apply Lemma 2 with r(y/2π) = eiαyK (y), b = 2
+λ λ
+and C(K ) = 1/λ2. Thus by (5.4)
+λ
+G (α) =
+(cid:18)
+T logT
+(cid:19)−1
+(cid:88) Tiα(γ−γ′)K ((γ −γ′)logT)+O
+(cid:18)
+1
+(cid:19)
++O
+(cid:18)
+1
+(cid:19)
+.
+λ 2π λ λ2M logT
+(γ,γ′)∈P(T,M)
+Now as in the proof of Lemma 3,
+|K λ (y+h)−K λ (y)| = (cid:12) (cid:12) (cid:12) (cid:12)λ 1 2 (cid:90) λ (λ−|β|) (cid:16) ei(y+h)β −eiyβ (cid:17) dβ (cid:12) (cid:12) (cid:12) (cid:12)
+−λ
+(cid:12) (cid:12) 1 (cid:90) λ
+≤ max(cid:12)eihβ −1(cid:12) (λ−|β|) dβ
+|β|≤λ
+(cid:12) (cid:12) λ2
+−λ
+≪ min{1,λh}.
+By AH-Pairs, we have, for |(γ −γ′)logT| ≪ M,
+eiα(γ−γ′)logTK ((γ −γ′)logT) = eiα(kπ+O((|k|+1)R(T))K (kπ+O((|k|+1)R(T)))
+λ λ
+(cid:16) (cid:17)
+= eiπkα 1+O (cid:0) |α|(|k|+1)R(T) (cid:1)
+(cid:16) (cid:17)
+(cid:0) (cid:1)
+× K (kπ)+O min{1,λ(|k|+1)R(T)}
+λ
+= eiπkαK (kπ)+O((|α|+λ)(|k|+1)R(T)).
+λ
+Thus
+(cid:88)
+(cid:32)
+sin λπk
+(cid:33)2
+(cid:18) 1 (cid:19) (cid:18) 1 (cid:19)
+G (α) = eiπkα 2 P +O +O((|α|+λ)M2R(T))+O .
+λ λπk k/2 λ2M logT
+k∈Z 2
+k≪M
+We now extend the summation to all k ∈ Z with an error O(1/λ2M), and for simplicity degrade
+slightly the middle error term to O((|α|+1)M2R(T)). We have defined in (5.5) these error terms
+as E (λ,α) and have obtained (iii).
+G
+Clearly (iv) follows immediately from (iii).
+□
+Proof of Corollary 5. Assuming AH-Pairs, we note for k ∈ Z that (cid:82)2 eiπkαdα = 2 · 1 , and
+0 k=0
+therefore from Lemma 5 (iii)
+(cid:90) 2
+(5.8) G (α)dα = 2P +O(E (λ,1)).
+λ 0 G
+0
+On the other hand,
+(cid:90) 2 (cid:18)(cid:90) λ (cid:90) 1−λ (cid:90) 1+λ (cid:90) 2−λ (cid:90) 2 (cid:19)
+G (α)dα = + + + + G (α)dα
+λ λ
+0 0 λ 1−λ 1+λ 2−λ
+(5.9)
+(cid:18)(cid:90) λ (cid:90) 1−λ (cid:90) 1+λ(cid:19)
+= +2 + G (α)dα+O(E (λ,1)),
+λ G
+−λ λ 1−λ
+where we have used the evenness and periodicity of G (α) from Lemma 5 (iv). From Lemma 5 (i)
+λ
+we have assuming RH
+(cid:90) λ (cid:90) λ λ−|α| (cid:18) 1 (cid:19) (cid:18) 1 (cid:19)
+G (α)dα = dα+O(λ2)+O √ +O
+λ λ2 logT λlogT
+(5.10) −λ −λ
+(cid:18) (cid:19) (cid:18) (cid:19)
+1 1
+= 1+O(λ2)+O √ +O .
+logT λlogT
+18
+
+From Lemma 5 (ii) and assuming RH
+(cid:90) 1−λ (cid:90) 1−λ(cid:18) (cid:18) 1 (cid:19) (cid:18) 1 (cid:19)(cid:19)
+G (α)dα = α+O √ +O dα
+λ logT λ2logT
+(5.11) λ λ
+(cid:18) (cid:19) (cid:18) (cid:19)
+1 1 1
+= −λ+O √ +O .
+2 logT λ2logT
+Using (5.8)–(5.11) and for simplicity slightly degrading the error terms proves Corollary 5. □
+6. Average of F(α) over short intervals
+NoticethatG (α)inLemma5isasmoothedaverageofF(α)overshortintervals. Wenowprove
+λ
+a lemma that makes the transition to the unweighted average of F(α) over short intervals. Let [α]
+denote the integer part of α, and ∥α∥ denote the distance from α to the closest integer. Also recall
+the sawtooth function s(α) from (2.13).
+Lemma 6. Assume the Riemann Hypothesis and AH-Pairs. Then for L ∈ Z and 0 < λ ≤ 1/4 we
+have
+(cid:90) 2L+λ (cid:18) 1 (cid:19)
+(i) F(β)dβ = 1+O(λ2)+O(λE (λ,L))+O √ .
+G
+λ logT
+2L−λ
+For any fixed α ∈ R\Z, choose λ so that 0 < λ ≤ 1∥α∥. Then [α]+2λ ≤ α ≤ [α]+1−2λ, and
+2
+we have that
+1 (cid:90) α+λ (cid:18) 1 (cid:19) 1
+(ii) F(β)dβ = s(α)+O(λ)+O √ +O( E (λ,L)).
+G
+2λ λ5 logT λ
+α−λ
+Let K = 2L+1 be an odd integer. Then for 0 < λ ≤ 1/4 we have
+(cid:90) K+λ (cid:18) 1 (cid:19)
+(iii) F(β)dβ = 2(P −1)+O(λ)+O(E (λ2,K))+O √ .
+0 G
+λ4 logT
+K−λ
+If K = ±1, then in addition to (iii) we have for 0 < λ ≤ 1/4
+(cid:90) 1+λ (cid:90) 1+λ (cid:90) −1+λ (cid:90) −1
+(iv) F(β)dβ = F(β)dβ+O(λ) and F(β)dβ = F(β)dβ +O(λ).
+1−λ 1 −1−λ −1−λ
+For K an odd integer,
+2(P −1) (cid:18) E (λ2,K) (cid:19) (cid:18) 1 (cid:19)
+(v) G (K) = 0 +O(1)+O G +O √ .
+λ λ λ λ5 logT
+With regard to Lemma 6 (v), note by Lemma 5 (i) and (iv) that for even integers 2K we have
+(cid:18) (cid:19)
+1 1
+G (2K) = G (0)+O(E (λ,2K)) = +O(λ)+O(E (λ,2K))+O √ .
+λ λ G λ G λ2 logT
+For fixed α, from (5.1) define
+(cid:90) ∞
+(6.1) H (α) := λ2G (α) = k (β)F(α+β)dβ.
+λ λ λ
+−∞
+For 0 < h ≤ λ/2, we have
+H (α)−H (α) (cid:90) λ H (α)−H (α)
+λ λ−h λ+h λ
+(6.2) ≤ F(α+β)dβ ≤ ,
+h h
+−λ
+which follows immediately from
+1 1
+(k (β)−k (β)) ≤ 1 (β) ≤ (k (β)−k (β)).
+h λ λ−h [−λ,λ] h λ+h λ
+19
+
+Proof of Lemma 6 (i). From Lemma 5 (i) and (iv), we have for fixed 0 < λ ≤ 1/4
+H (2L) = H (0)+O(λ2E (λ,L))
+λ λ G
+(cid:18) (cid:18) (cid:19) (cid:18) (cid:19) (cid:19)
+1 1 1
+= λ2 +O(λ)+O √ +O +O(E (λ,L))
+λ λ logT λ2logT G
+(cid:18) (cid:19)
+1
+= λ+O(λ3)+O √ +O(λ2E (λ,L)),
+G
+logT
+where we have combined and slightly degraded the middle error terms. Taking λ/4 ≤ h ≤ λ/2, we
+have
+(cid:18) (cid:19)
+H (2L)−H (2L) 1
+λ±h λ = 1+O(λ2)+O(λE (λ,L))+O √ .
+G
+±h λ logT
+Hence by (6.2) we have
+(cid:90) 2L+λ (cid:18) 1 (cid:19)
+F(β)dβ = 1+O(λ2)+O(λE (λ,L))+O √ .
+G
+λ logT
+2L−λ
+□
+Proof of Lemma 6 (ii). Take a fixed α ∈ R\Z, and choose λ so that 0 < λ ≤ 1∥α∥, and thus
+2
+[α]+2λ ≤ α ≤ [α]+1−2λ.
+We now define
+(cid:40)
+[α], if [α] is even,
+2L :=
+[α]+1, if [α] is odd.
+and let α∗ := α−2L, so that −1+2λ ≤ α∗ ≤ −2λ if [α] is odd and 2λ ≤ α∗ ≤ 1−2λ if [α] is even.
+Then Lemma 5 (iv) and (ii) implies
+G (α) = G (α∗)+O(E (λ,L))
+λ λ G
+(6.3) (cid:18) 1 (cid:19) (cid:18) 1 (cid:19)
+= |α∗|+O √ +O +O(E (λ,L)),
+logT λ2logT G
+and thus by (6.1) and recalling s(α) from (2.13),
+(cid:18) λ2 (cid:19) (cid:18) 1 (cid:19)
+H (α) = λ2s(α)+O √ +O +O(λ2E (λ,L)).
+λ logT λ2logT G
+Hence, taking 0 < h ≤ λ/2,
+H (α)−H (α) ((λ±h)2−λ2)s(α)
+λ±h λ
+=
+±h ±h
+(cid:18) λ2 (cid:19) (cid:18) 1 (cid:19) (cid:18) λ2 (cid:19)
++O √ +O +O E (λ,L)
+h logT hλ2logT h G
+(cid:18) λ2 (cid:19) (cid:18) 1 (cid:19) (cid:18) λ2 (cid:19)
+= 2λs(α)+O(h)+O √ +O +O E (λ,L) .
+h logT hλ2logT h G
+We conclude by (6.2) that
+1 (cid:90) α+λ h (cid:18) λ (cid:19) (cid:18) 1 (cid:19) (cid:18) λ (cid:19)
+F(β)dβ = s(α)+O( )+O √ +O +O E (λ,L) .
+2λ λ h logT hλ3logT h G
+α−λ
+We complete the proof by choosing h = λ2 and degrade slightly the two middle error terms to
+obtain
+1 (cid:90) α+λ (cid:18) 1 (cid:19) (cid:18) 1 (cid:19)
+F(β)dβ = s(α)+O(λ)+O √ +O E (λ,L) .
+G
+2λ λ5 logT λ
+α−λ
+20
+
+□
+Proof of Lemma 6 (iii), (iv), and (v). The steps in this proof are to first prove (iii) when K = 1,
+which then almost immediately gives (iv). Using this result we prove (v) when K = 1. Next, by
+Lemma 5 (iv) we obtain (v) for all odd K, and then we obtain from this (iii) for all odd K. The
+idea here is the average of G (α) in the interval (1−λ,1+λ) is just the unweighted average of
+λ
+F(α) in (1−2λ,1+2λ) which we then obtain from Corollary 5, which then allows us to obtain
+G (1). Next, we obtain G (K) immediately from Lemma 5 (iv), and then a differencing argument
+λ λ
+recovers the unweighted average of F(α) in an interval around K.
+We first recall from Corollary 5 that
+(cid:90) 1+λ (cid:18) 1 (cid:19)
+G (α)dα = 2(P −1)+O(λ)+O(E (λ,1))+O √ .
+λ 0 G λ2 logT
+1−λ
+By (5.1)
+(cid:90) 1+λ (cid:90) 1+λ 1 (cid:90) λ
+G (α)dα = (λ−|β|)F(α+β)dβdα
+λ λ2
+1−λ 1−λ −λ
+1 (cid:90) 1+λ(cid:90) α+λ
+= (λ−|w−α|)F(w)dwdα
+λ2
+1−λ α−λ
+1 (cid:90) 1+2λ (cid:18)(cid:90) w+λ (cid:19)
+= F(w) (λ−|w−α|)dα dw
+λ2
+1−2λ w−λ
+(cid:90) 1+2λ
+= F(w)dw,
+1−2λ
+and therefore
+(cid:90) 1+2λ (cid:18) 1 (cid:19)
+F(w)dw = 2(P −1)+O(λ)+O(E (λ,1))+O √ .
+0 G
+λ2 logT
+1−2λ
+On replacing 2λ by λ we obtain a slightly stronger version of (iii) when K = 1 since E (λ,α) is a
+G
+decreasing function of λ. By MT we have F(w) ≪ 1 for 1−λ ≤ w ≤ 1 and therefore
+(cid:90) 1+λ (cid:90) 1+λ
+F(w)dw = F(w)dw+O(λ),
+1−λ 1
+which proves (iv) when K = 1. We thus conclude that
+(cid:90) 1+λ (cid:18) 1 (cid:19)
+(6.4) F(w)dw = 2(P −1)+O(λ)+O(E (λ,1))+O √ .
+0 G
+λ2 logT
+1
+Similarly for K = −1 by MT the corresponding result in Lemma 6 (iv) also follows.
+We now prove (v) for K = 1. Taking 0 < η ≤ λ/2, we have as above by (5.1), MT, and F ≥ 0
+that
+1 (cid:90) 1+λ
+G (1) = (λ−|w−1|)F(w)dw
+λ λ2
+1−λ
+1 (cid:90) 1+λ
+= (λ−|w−1|)F(w)dw+O(1)
+λ2
+1
+λ+O(η) (cid:90) 1+η (cid:18) 1 (cid:90) 1+λ (cid:19)
+= F(w)dw+O F(w)dw +O(1)
+λ2 λ
+1 1+η
+λ+O(η) (cid:90) 1+η (cid:18) 1 (cid:18)(cid:90) 1+λ (cid:90) 1+η (cid:19)(cid:19)
+= F(w)dw+O F(w)dw− F(w)dw +O(1).
+λ2 λ
+1 1 1
+21
+
+Using (6.4) and that E(λ,α) is a decreasing function of λ, we have
+(cid:18) (cid:18) (cid:19)(cid:19)
+λ+O(η) 1
+G (1) = 2(P −1)+O(η)+O(E (η,1))+O √
+λ λ2 0 G η2 logT
+(cid:18) (cid:18) (cid:19)(cid:19)
+1 1
++O λ+E (η,1)+ √ +O(1)
+G
+λ η2 logT
+(cid:18) (cid:19) (cid:18) (cid:19)
+2(P −1) (cid:16) η (cid:17) E (η,1) 1
+= 0 +O +O(1)+O G +O √ .
+λ λ2 λ η2λ logT
+With the choice η = λ2, we have
+2(P −1) (cid:18) E (λ2,1) (cid:19) (cid:18) 1 (cid:19)
+G (1) = 0 +O(1)+O G +O √ ,
+λ λ λ λ5 logT
+which proves (v) when K = 1. By Lemma 5 (iv)
+G (K) = G (2L+1) = G (1)+O(E (λ,K))
+λ λ λ G
+2(P −1) (cid:18) E (λ2,K) (cid:19) (cid:18) 1 (cid:19)
+= 0 +O(1)+O G +O √ ,
+λ λ λ5 logT
+which completes the proof of (v).
+It remains to prove (iii) when K ̸= 1. From the last equation and (6.1) we have
+(cid:18) (cid:19)
+1
+H (K) = λ2G (K) = 2(P −1)λ+O(λ2)+O(λE (λ2,K))+O √ ,
+λ λ 0 G λ3 logT
+and therefore, for 0 < h ≤ λ/2,
+H (K)−H (K)
+(cid:18) λ2(cid:19) (cid:18)
+λ
+(cid:19) (cid:18)
+1
+(cid:19)
+λ±h λ = 2(P −1)+O +O E (λ2,K) +O √ .
+0 G
+±h h h hλ3 logT
+Hence, choosing h = λ/2, we conclude by (6.2) that
+(cid:90) λ (cid:18) 1 (cid:19)
+F(K +β)dβ = 2(P −1)+O(λ)+O(E (λ2,K))+O √ ,
+0 G
+λ4 logT
+−λ
+which completes the proof. □
+7. Proof of Theorem 3 and Corollary 4
+Proof of Theorem 3. In this proof we are taking T → ∞ and then making M large and λ appro-
+priately small in Lemma 6. First, using Lemma 6 (i) and (iii), we have for L ∈ Z and the definition
+of F in (2.12),
+(cid:90) 2L+λ (cid:90) 2L+λ (cid:90) 2L+λ
+F(α)dα = 1+o(1) ∼ δ (α)dα ∼ F(α)dα,
+2L
+2L−λ 2L−λ 2L−λ
+and similarly with K = 2L+1
+(cid:90) K+λ (cid:90) K+λ (cid:90) K+λ
+F(α)dα = 2(P −1)+o(1) ∼ 2(P −1) δ (α)dα ∼ F(α)dα.
+0 0 K
+K−λ K−λ K−λ
+We now consider the results with the one-sided delta functions contained in F. For L = 0, we have,
+since F is even,
+(cid:90) λ (cid:90) 0 (cid:90) λ
+F(β)dβ = 2 F(β)dβ = 2 F(β)dβ,
+−λ −λ 0
+22
+
+and assuming only RH we apply MT and have
+(cid:90) λ 1 (cid:90) λ
+F(β)dβ = +O(λ)+o(1) = δ=(β)dβ+O(λ)+o(1),
+2 0
+0 0
+and similarly for the left-side integral. Similarly, for K = ±1, the results with the one-sided delta
+functions contained in F follow immediately from Lemma 6 (iii) and (iv).
+Next consider a function g(α) which is Lipschitz continuous at α = N ∈ Z. Then
+(cid:90) N+λ (cid:90) N+λ
+F(α)g(α)dα ∼ g(N) F(α)dα,
+N−λ N−λ
+and the corresponding one-sided results hold when N = 0,±1.
+Next, by Lemma 6 (ii) for an interval [a−λ,a+λ] ⊂ (N +λ,N +1−λ) for N ∈ Z, we have
+(cid:90) a+λ (cid:90) a+λ (cid:90) a+λ
+F(α)dα ∼ s(α)dα ∼ F(α)dα.
+a−λ a−λ a−λ
+Now suppose [a,b] ⊂ (N +λ,N +1−λ) for N ∈ Z. For a step function r(α) in this interval, we
+pick λ smaller than the mesh of this step function and can write r as a step function over intervals
+of the form (c −λ,c +λ), and conclude
+j j
+(cid:90) b (cid:90) b (cid:90) b
+F(α)r(α)dα ∼ s(α)r(α)dα ∼ F(α)r(α)dα.
+a a a
+Thus by approximation this also holds for any Riemann integrable function g(α).
+Now for a general interval [a,b], a,b ̸∈ Z, we have writing [a] = N − 1, [b] = M, and taking
+λ < min(∥a∥,∥b∥),
+(cid:90) b (cid:90) N−λ (cid:90) j+λ (cid:90) j+1−λ (cid:90) b
+(cid:88) (cid:88)
+F(α)g(α)dα = Fg+ Fg+ Fg+ Fg
+a a j−λ j+λ M+λ
+N≤j≤M N≤j≤M−1
+(cid:90) b
+∼ F(α)g(α)dα,
+a
+since each integral in the middle step has been evaluated above to give the right-hand side. If a or
+b are equal to 0 or ±1 we use the one-sided delta functions to obtain the same result. □
+Proof of Corollary 4. Assuming Montgomery’s conjecture, we have for any large U > 0,
+(cid:90) ∞ F(α) (cid:90) U 1+o(1) (cid:90) ∞ F(α)
+dα = dα+ dα.
+α2 α2 α2
+1 1 U
+By [Gol87, Lemma A], we have uniformly for all a = a(T),
+(cid:90) a+1
+F(α)dα ≪ 1.
+a
+Hence we have
+(cid:90) ∞ F(α) (cid:88) ∞ 1 (cid:90) n+1 (cid:88) ∞ 1 1
+0 ≤ dα ≤ F(α)dα ≪ ≪ .
+α2 n2 n2 U
+U n
+n=[U] n=[U]
+and therefore
+(cid:90) ∞ F(α)
+dα = 1+O(U−1)+o(1),
+α2
+1
+which upon letting U = U(T) → ∞ as T → ∞ gives
+(cid:90) ∞ F(α)
+dα = 1+o(1).
+α2
+1
+23
+
+Thus
+(cid:90) ∞ F(α)
+C = lim dα = 1.
+T→∞ 1 α2
+Now assume RH and AH-Pairs. We obtain as above
+(cid:90) ∞ F(α) (cid:90) U F(α) (cid:90) U F(α)
+(7.1) dα = dα+O(U−1) ∼ dα+O(U−1).
+α2 α2 α2
+1 1 1
+Applying Theorem 3 to the interval [1,U], with U ̸∈ Z, we have
+(cid:90) U F(α) (cid:88) (cid:18)(cid:90) 2n 2n−α (cid:90) 2n+1 α−2n 2(P 0 −1) 1 (cid:19)
+dα = dα+ dα+ +
+α2 α2 α2 (2n−1)2 (2n)2
+1 n 2n−1 2n
+2n+1<U
++O(U−2)
+(cid:88) ∞ (cid:18)(cid:90) 2n 2n (cid:90) 2n+1 2n 2n 2n+1 (cid:19)
+= dα− dα−log +log
+α2 α2 2n−1 2n
+2n−1 2n
+n=1
+∞
+(cid:88) 1 1
+(7.2) +2(P −1) + ζ(2)+O(U−1)
+0 (2n−1)2 4
+n=1
+∞ (cid:18) (cid:19) ∞ (cid:18) (cid:19) (cid:18) (cid:19)
+(cid:88) 1 1 (cid:88) 1 3 1
+= − + log 1− + (P −1)+ ζ(2)
+2n−1 2n+1 4n2 2 0 4
+n=1 n=1
++O(U−1)
+(cid:18) 3 1 (cid:19) π2 (cid:88) ∞ (cid:18) 1 (cid:19)
+= 1+ (P −1)+ + log 1− +O(U−1).
+2 0 4 6 4n2
+n=1
+Recalling
+sinz (cid:89) ∞ (cid:18) z2 (cid:19)
+= 1− ,
+z (nπ)2
+n=1
+we have
+(cid:88)
+∞ (cid:18)
+1
+(cid:19)
+(cid:89)
+∞ (cid:18)
+1
+(cid:19)
+(cid:89)
+∞ (cid:18) (π/2)2(cid:19)
+2
+log 1− = log 1− = log 1− = log .
+4n2 4n2 n2π2 π
+n=1 n=1 n=1
+Hence substituting this into (7.1) and (7.2), we obtain
+(cid:90) ∞ F(α) (cid:18) 3 1 (cid:19) π2 2
+dα = 1+ (P −1)+ +log +o(1)
+α2 2 0 4 6 π
+1
+on letting U = U(T) → ∞ as T → ∞. If the limiting density
+p = lim P (T)
+0 0
+T→∞
+exists, then the above asymptotic implies that
+(cid:90) ∞ F(α) (cid:18) 3 1 (cid:19) π2 2
+C = lim dα = 1+ (p −1)+ +log .
+T→∞ 1 α2 2 0 4 6 π
+□
+24
+
+8. Proof of Theorem 4
+Proof of Theorem 4. Let p = p −1. Then we see by AH-Density that
+(cid:101)0 0
+(cid:18) (cid:19) (cid:18) (cid:19)
+(cid:88) (cid:88) 1 (cid:88) 3 2
+S(r) := r(k/2)p = p − r(k/2)+ − −p r(k/2)
+(cid:98) k/2 0 2 (cid:98) 2 π2k2 0
+k∈Z k∈Z k∈Z
+k even k odd
+ 
+(cid:88) (cid:88)
+= p  r(k/2)− r(k/2)
+(cid:101)0 (cid:98) (cid:98) 
+k∈Z k∈Z
+k even k odd
+ 
+1 (cid:88) 2 (cid:88) 1
++ r(k/2)− r(k/2).
+2 (cid:98) π2 k2(cid:98) 
+k∈Z k∈Z
+k odd
+We first use the Poisson Summation Formula (PSF) to show that
+(cid:88) (cid:88)
+(8.1) r(k/2) = r(k/2),
+(cid:98) (cid:98)
+k∈Z k∈Z
+k even k odd
+and therefore
+1 (cid:88) 2 (cid:88) 1
+(8.2) S(r) = r(k/2)− r(k/2).
+2 (cid:98) π2 k2(cid:98)
+k∈Z k∈Z
+k odd
+The PSF states that with certain conditions on f ∈ L1(R) we have, for any real number λ > 0,
+that
+(cid:88) (cid:88)
+(8.3) λf(λk) = f(cid:98)(k/λ).
+k∈Z k∈Z
+We use [MV07, Appendix D.2] from which it follows that PSF holds as stated above if f ∈ L1(R)
+is even and of bounded variation, and f(cid:98)∈ L1(R). † Thus, taking λ = 1 in (8.3), we have
+(cid:88) (cid:88)
+r(k) = r(k).
+(cid:98)
+k∈Z k∈Z
+Since r(α) is continuous and supported in |α| ≤ 1, we have r(k) = 0 for k ̸= 0, and therefore
+(cid:88) (cid:88)
+r(k/2) = r(k) = r(0).
+(cid:98) (cid:98)
+k∈Z k∈Z
+k even
+Next, taking λ = 2 in (8.3), we have
+(cid:88) (cid:88) (cid:88) (cid:88)
+r(k/2)+ r(k/2) = r(k/2) = 2 r(2k) = 2r(0),
+(cid:98) (cid:98) (cid:98)
+k∈Z k∈Z k∈Z k∈Z
+k even k odd
+and (8.1) follows from these last two equations.
+We now expand r(α) formally into a Fourier series in |α| ≤ 1. Thus
+(cid:88)
+r(α) = a e(kα/2), for |α| ≤ 1 ,
+k
+k∈Z
+† It is shown in [Kat76, Ch 6, Section 1, Pr. 15] that PSF may not hold even when both f,f(cid:98)∈ L1(R) and thus
+f,f(cid:98)are both continuous and both series in PSF are absolutely convergent.
+25
+
+where
+|         |           |     | (cid:90) 1     |     |                |     | (cid:90) ∞ |                |     |           |     |
+| ------- | --------- | --- | -------------- | --- | -------------- | --- | ---------- | -------------- | --- | --------- | --- |
+|         |           | 1   |                |     |                | 1   |            |                |     | 1         |     |
+|         | a         | =   | r(α)e(−kα/2)dα |     |                | =   |            | r(α)e(−kα/2)dα |     | = r(k/2). |     |
+|         | k         |     |                |     |                |     |            |                |     | (cid:98)  |     |
+|         |           | 2   |                |     |                | 2   |            |                |     | 2         |     |
+|         |           |     | −1             |     |                |     | −∞         |                |     |           |     |
+| Thus we | have that |     |                |     |                |     |            |                |     |           |     |
+|         |           |     |                |     | 1 (cid:88)     |     |            |                |     |           |     |
+|         |           |     | r(α)           | =   | r(k/2)e(kα/2), |     |            | for |α|        | ≤ 1 | ,         |     |
+(cid:98)
+2
+k∈Z
+| where | the series converges |     | to         | r(α) | by bounded | variation. |     | Thus     |            |            |     |
+| ----- | -------------------- | --- | ---------- | ---- | ---------- | ---------- | --- | -------- | ---------- | ---------- | --- |
+|       |                      |     | (cid:90) 1 |      |            |            |     |          | (cid:90) 1 |            |     |
+|       |                      |     |            |      | 1          | (cid:88)   |     | (cid:88) |            |            |     |
+|       | r(0)+2               |     | αr(α)dα    |      | =          | r(k/2)+    |     | r(k/2)Re |            | αe(kα/2)dα |     |
+|       |                      |     |            |      |            | (cid:98)   |     | (cid:98) |            |            |     |
+2
+|     |     |     | 0   |     |     | k∈Z      |     | k∈Z           | 0       |     |     |
+| --- | --- | --- | --- | --- | --- | -------- | --- | ------------- | ------- | --- | --- |
+|     |     |     |     |     | 1   |          |     | 2 1           |         |     |     |
+|     |     |     |     |     |     | (cid:88) |     | (cid:88)      |         |     |     |
+|     |     |     |     |     | =   | r(k/2)−  |     |               | r(k/2), |     |     |
+|     |     |     |     |     | 2   | (cid:98) |     | π2 k2(cid:98) |         |     |     |
+|     |     |     |     |     |     | k∈Z      |     | k∈Z           |         |     |     |
+k odd
+| which | by (8.2) completes |     | the | proof.         |     |     |     |         |     |     | □   |
+| ----- | ------------------ | --- | --- | -------------- | --- | --- | --- | ------- | --- | --- | --- |
+|       |                    |     |     | Acknowledgment |     |     | and | Funding |     |     |     |
+The authors thank the American Institute of Mathematics for their hospitality and for providing
+a pleasant environment where work on this research began. The third author was supported
+by JSPS KAKENHI Grant Numbers 18K13400 and 22K13895, and also by MEXT Initiative for
+Realizing Diversity in the Research Environment during the beginning of this work, and later was
+also supported by the Inamori Research Grant 2024 when we completed this work. The fourth
+author was partially supported by NSF DMS-1902193 and NSF DMS-1854398 FRG during the
+beginning of this work and is currently partially supported by NSF CAREER DMS-2239681.
+References
+[Bal16] Siegfred Alan C. Baluyot. On the pair correlation conjecture and the alternative hypothesis. J. Number
+|     | Theory, | 169:183–226, |     | 2016. |     |     |     |     |     |     |     |
+| --- | ------- | ------------ | --- | ----- | --- | --- | --- | --- | --- | --- | --- |
+[BGSTB24] Siegfred Alan C. Baluyot, Daniel Alan Goldston, Ade Irma Suriajaya, and Caroline L. Turnage-
+Butterbaugh. An unconditional Montgomery theorem for pair correlation of zeros of the Riemann zeta-
+|     | function. | Acta | Arith., | 214:357–376, |     | 2024. |     |     |     |     |     |
+| --- | --------- | ---- | ------- | ------------ | --- | ----- | --- | --- | --- | --- | --- |
+[BGSTB25] Siegfred Alan C. Baluyot, Daniel Alan Goldston, Ade Irma Suriajaya, and Caroline L. Turnage-
+Butterbaugh. Pair correlation of zeros of the Riemann zeta function I: Proportions of simple zeros and
+|     | critical | zeros. | arXiv:2501.14545, |     | 2025. |     |     |     |     |     |     |
+| --- | -------- | ------ | ----------------- | --- | ----- | --- | --- | --- | --- | --- | --- |
+[CGdL20] Andr´esChirre,FelipeGonc¸alves,andDaviddeLaat.Paircorrelationestimatesforthezerosofthezeta
+|     | function | via semidefinite |     | programming. |     | Adv. | Math., | 361:106926, | 22, 2020. |     |     |
+| --- | -------- | ---------------- | --- | ------------ | --- | ---- | ------ | ----------- | --------- | --- | --- |
+[Dav00] HaroldDavenport.Multiplicativenumbertheory,volume74ofGraduateTextsinMathematics.Springer-
+Verlag, New York, third edition, 2000. Revised and with a preface by Hugh L. Montgomery.
+[GM87] DanielA.GoldstonandHughL.Montgomery.Paircorrelationofzerosandprimesinshortintervals.In
+Analytic number theory and Diophantine problems (Stillwater, OK, 1984), volume 70 of Progr. Math.,
+|     | pages 183–203. |     | Birkha¨user | Boston, |     | Boston, MA, | 1987. |     |     |     |     |
+| --- | -------------- | --- | ----------- | ------- | --- | ----------- | ----- | --- | --- | --- | --- |
+[Gol81] Daniel Alan Goldston. LARGE DIFFERENCES BETWEEN CONSECUTIVE PRIME NUMBERS.
+ProQuest LLC, Ann Arbor, MI, 1981. Thesis (Ph.D.)–University of California, Berkeley.
+[Gol87] D. A. Goldston. On the function S(T) in the theory of the Riemann zeta-function. J. Number Theory,
+|     | 27(2):149–177, |     | 1987. |     |     |     |     |     |     |     |     |
+| --- | -------------- | --- | ----- | --- | --- | --- | --- | --- | --- | --- | --- |
+[HB96] D. R. Heath-Brown. Small class numbers and the pair correlation of zeros. https://vimeo.com/
+showcase/4967015/video/287694279, 1996. A talk given at the AIM Conference “Riemann Hypoth-
+|     | esis”, Seattle, |     | 1996. |     |     |     |     |     |     |     |     |
+| --- | --------------- | --- | ----- | --- | --- | --- | --- | --- | --- | --- | --- |
+[Kat76] YitzhakKatznelson.Anintroductiontoharmonicanalysis.DoverPublications,Inc.,NewYork,corrected
+edition, 1976.
+[LPZ17] A.Languasco,A.Perelli,andA.Zaccagnini.Anextendedpair-correlationconjectureandprimesinshort
+|     | intervals. | Trans. | Amer. | Math. | Soc., | 369(6):4235–4250, |     | 2017. |     |     |     |
+| --- | ---------- | ------ | ----- | ----- | ----- | ----------------- | --- | ----- | --- | --- | --- |
+26
+
+[LR20] Jeffrey C. Lagarias and Brad Rodgers. Higher correlations and the alternative hypothesis. Q. J. Math.,
+|     | 71(1):257–280, | 2020. |     |     |     |     |
+| --- | -------------- | ----- | --- | --- | --- | --- |
+[Mon73] H. L. Montgomery. The pair correlation of zeros of the zeta function. In Analytic number theory (Proc.
+Sympos. Pure Math., Vol. XXIV, St. Louis Univ., St. Louis, Mo., 1972), volume Vol. XXIV of Proc.
+|     | Sympos. Pure | Math., | pages 181–193. | Amer. Math. Soc., | Providence, | RI, 1973. |
+| --- | ------------ | ------ | -------------- | ----------------- | ----------- | --------- |
+[Mue83] Julia Mueller. Arithmetic equivalent of essential simplicity of zeta zeros. Trans. Amer. Math. Soc.,
+|     | 275(1):175–183, | 1983. |     |     |     |     |
+| --- | --------------- | ----- | --- | --- | --- | --- |
+[MV07] Hugh L. Montgomery and Robert C. Vaughan. Multiplicative number theory. I. Classical theory, vol-
+ume97ofCambridge Studies in Advanced Mathematics.CambridgeUniversityPress,Cambridge,2007.
+| Department | of Mathematics,                               |     | Eastern Carolina  | University       |            |     |
+| ---------- | --------------------------------------------- | --- | ----------------- | ---------------- | ---------- | --- |
+| Email      | address: baluyots24@ecu.edu                   |     |                   |                  |            |     |
+| Department | of Mathematics                                |     | and Statistics,   | San Jose State   | University |     |
+| Email      | address: daniel.goldston@sjsu.edu             |     |                   |                  |            |     |
+| Faculty    | of Mathematics,                               |     | Kyushu University |                  |            |     |
+| Email      | address: adeirmasuriajaya@math.kyushu-u.ac.jp |     |                   |                  |            |     |
+| Department | of Mathematics                                |     | and Statistics,   | Carleton College |            |     |
+| Email      | address: cturnageb@carleton.edu               |     |                   |                  |            |     |
+27

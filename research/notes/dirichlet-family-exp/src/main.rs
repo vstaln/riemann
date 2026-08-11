@@ -274,8 +274,96 @@ fn qaspect_cmd(q: u32) {    let t = ((q as f64).ln()).powi(2).ceil();
     }
 }
 
-fn ortho_cmd(q: u32, t: f64) {
-    let all = characters::all_characters(q);
+/// Family HS-norm from CACHED zero files (no recomputation): loads the files
+/// zeros_q<q>_c<i>_t<t1>_<t2>.txt for i in 0..nchars, builds the family matrix,
+/// reports kappa_F, C_F/N, H at the given lambda. Used to re-derive the q=101
+/// (and any larger cached) family numbers without re-running the zero finder.
+fn famcache_cmd(q: u32, t1: f64, t2: f64, nchars: usize, lam: f64) {
+    let d0 = 2.0 * t1.sqrt();
+    let mut sum_tr = 0.0f64;
+    let mut sum_tr2 = 0.0f64;
+    let mut sum_n = 0.0f64;
+    let mut per: Vec<(usize, usize, f64)> = Vec::new();
+    for ci in 0..nchars {
+        let path = cache_path(q, t1, t2, ci);
+        let s = match std::fs::read_to_string(&path) {
+            Ok(s) => s,
+            Err(_) => break, // fewer characters cached than nchars
+        };
+        let mut z: Vec<f64> = s
+            .lines()
+            .filter_map(|l| l.trim().parse::<f64>().ok())
+            .collect();
+        z.sort_by(|a, b| a.partial_cmp(b).unwrap());
+        let win = hsnorm::window(q, t1, lam, 0.1);
+        let (tr_g, tr2_g, _k, _c) = hsnorm::hs_from_zeros(&z, &win, t1, 6.0, 2.0);
+        let norm = win.a * win.L * win.L;
+        let tb = tr_g / norm;
+        let tb2 = tr2_g / (norm * norm);
+        if tb > 0.0 {
+            sum_tr += tb;
+            sum_tr2 += tb2;
+            sum_n += z.len() as f64;
+            per.push((ci, z.len(), tb2 / tb));
+        }
+    }
+    println!(
+        "famcache q={} T1={} T2={} lambda={}: {} cached chars, {} zeros total",
+        q, t1, t2, lam, per.len(), sum_n as usize
+    );
+    if per.is_empty() {
+        println!("  no cached data");
+        return;
+    }
+    let mut kappas: Vec<f64> = per.iter().map(|p| p.2).collect();
+    kappas.sort_by(|a, b| a.partial_cmp(b).unwrap());
+    let med = kappas[kappas.len() / 2];
+    let kappa_f = sum_tr2 / sum_tr;
+    let c_f = sum_tr * sum_tr / sum_tr2;
+    let asym = 1.0 / lam + lam / 3.0;
+    let win = hsnorm::window(q, t1, lam, 0.1);
+    let (kp, cn) = hsnorm::prediction(&win, q);
+    println!(
+        "  per-char kappa: min={:.4} med={:.4} max={:.4}",
+        kappas[0], med, kappas[kappas.len() - 1]
+    );
+    println!(
+        "  FAMILY kappa_F = {:.4}  (taper-pred {:.4}, asym {:.4});  C_F/N = {:.4} (pred {:.4});  H = 2-kappa_F = {:.4} (asym 2/3 = {:.4})",
+        kappa_f, kp, asym, c_f / sum_n, cn, 2.0 - kappa_f, 2.0 - asym
+    );
+}
+
+/// Exact family-averaged prime second moment at large prime q by DIRECT
+/// character construction (all q-1 chars mod the prime q), avoiding the CRT
+/// enumeration's brute-force discrete log. Verifies Q_all/D = 1 for X < q.
+fn ortho_prime_cmd(q: u32, t: f64) {
+    assert!(q >= 5 && q % 2 == 1, "ortho-prime needs an odd prime modulus");
+    let chars = characters::all_prime_chars(q);
+    let all: Vec<characters::Character> = chars.iter().map(|(_, c)| c.clone()).collect();
+    println!(
+        "\n=== ortho-prime q={} (prime) T={}: all {} chars mod q ===",
+        q,
+        t,
+        all.len()
+    );
+    let alphas = [0.3f64, 0.5, 0.7, 0.8, 0.9, 0.95, 0.99, 1.02, 1.1];
+    println!(
+        "  Q(X) = (1/|F|) sum_chi |sum_{{n<=X}} Lambda(n) chi(n) n^(-1/2-i T)|^2, D(X) = sum_{{n<=X,(n,q)=1}} Lambda(n)^2/n"
+    );
+    println!("    {:>7} {:>11} {:>11} {:>11} {:>11}", "X", "D(X)", "Q_all/D", "Q_even/D", "Q_prim/D");
+    for &a in &alphas {
+        let x = (q as f64).powf(a);
+        let d = ortho::q_diag(x, q);
+        let qall = ortho::q_family(x, t, &all) / d;
+        let even: Vec<characters::Character> = chars.iter().filter(|(k, _)| k % 2 == 0).map(|(_, c)| c.clone()).collect();
+        let qeven = ortho::q_family(x, t, &even) / d;
+        let prim: Vec<characters::Character> = chars.iter().filter(|(k, _)| *k != 0).map(|(_, c)| c.clone()).collect();
+        let qprim = ortho::q_family(x, t, &prim) / d;
+        println!("    {:7.2} {:11.3} {:11.4} {:11.4} {:11.4}", x, d, qall, qeven, qprim);
+    }
+}
+
+fn ortho_cmd(q: u32, t: f64) {    let all = characters::all_characters(q);
     let all_even = characters::all_even(q);
     let pe = primitive_even_chars(q);
     println!(
@@ -486,6 +574,19 @@ fn main() {
             let q: u32 = args[2].parse().unwrap();
             let t: f64 = args[3].parse().unwrap();
             ortho_cmd(q, t);
+        }
+        "ortho-prime" => {
+            let q: u32 = args[2].parse().unwrap();
+            let t: f64 = args[3].parse().unwrap();
+            ortho_prime_cmd(q, t);
+        }
+        "famcache" => {
+            let q: u32 = args[2].parse().unwrap();
+            let t1: f64 = args[3].parse().unwrap();
+            let t2: f64 = args[4].parse().unwrap();
+            let nchars: usize = args.get(5).and_then(|s| s.parse().ok()).unwrap_or(100);
+            let lam: f64 = args.get(6).and_then(|s| s.parse().ok()).unwrap_or(1.0);
+            famcache_cmd(q, t1, t2, nchars, lam);
         }
         "pool" => {
             // pooled family: union of primitive even chars over several moduli, lambda=1, T fixed

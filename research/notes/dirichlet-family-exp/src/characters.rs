@@ -411,6 +411,15 @@ pub fn character_prime(q: u32, g: u32, idx: &[u32], k: u32) -> Character {
     }
 }
 
+/// ALL characters mod the odd prime q via direct construction (k = 0..q-2).
+/// Used for the exact orthogonality experiment at large q, where the CRT
+/// enumeration's brute-force discrete log is too slow. O(q^2) total.
+pub fn all_prime_chars(q: u32) -> Vec<(u32, Character)> {
+    let g = primitive_root_prime(q);
+    let idx = index_table_prime(q, g);
+    (0..(q - 1)).map(|k| (k, character_prime(q, g, &idx, k))).collect()
+}
+
 /// Deterministic sample of `s` distinct even characters mod the odd prime q:
 /// k = 2 and s-1 evenly spread even exponents. Returns (k, character) pairs;
 /// all have conductor q.
