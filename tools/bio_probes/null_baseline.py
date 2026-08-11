@@ -99,9 +99,8 @@ def stats(s):
 
 def main():
     zs = np.loadtxt('/home/vstaln/riemann/tools/data/zeros_1_1000.txt')[:, 1]
-    AF = {100: 50, 150: 86, 200: 123, 250: 161, 300: 203, 350: 245,
-          400: 289, 500: 380}
-    NSAMP = {50: 24, 86: 20, 123: 18, 161: 16, 203: 14, 245: 12, 289: 10, 380: 8}
+    AF = {100: 50, 150: 86, 200: 123, 250: 161, 300: 203}
+    NSAMP = {50: 24, 86: 20, 123: 18, 161: 14, 203: 12}
 
     print("=== B3.2: finite-T deficit vs sine-kernel null sampling noise ===")
     print(f"{'T':>5} {'N':>4} {'Delta_real':>11} {'Delta_null mean':>15} {'Delta_null sd':>13}")
@@ -125,7 +124,7 @@ def main():
         print(f"{T:>5} {N:>4} {d_real:>11.6f} {np.nanmean(dnull):>15.6f} {np.nanstd(dnull):>13.6f}")
 
     print("\n=== B1.4 decoy-discrimination: real zeros vs sine null (matched N) ===")
-    for (T, N, ns) in [(500, 380, 8), (300, 203, 10), (700, 569, 6)]:
+    for (T, N, ns) in [(300, 203, 10), (500, 380, 6)]:
         sel = (zs >= T) & (zs < 2 * T)
         s_real = (zs[sel] - T) * N / T
         sr = stats(s_real)

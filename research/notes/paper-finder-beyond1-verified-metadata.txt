@@ -1,0 +1,240 @@
+ID: 2212.06867v1
+TITLE: Explicit zero-free regions for the Riemann zeta-function
+AUTHORS: Michael J. Mossinghoff, Timothy S. Trudgian, Andrew Yang
+PUBLISHED: 2022-12-13  UPDATED: 2022-12-13
+SUMMARY: We prove that the Riemann zeta-function $ζ(σ+ it)$ has no zeros in the region $σ\geq 1 - 1/(55.241(\log|t|)^{2/3} (\log\log |t|)^{1/3})$ for $|t|\geq 3$. In addition, we improve the constant in the classical zero-free region, showing that the zeta-function has no zeros in the region $σ\geq 1 - 1/(5.558691\log|t|)$ for $|t|\geq 2$. We also provide new bounds that are useful for intermediate values of $|t|$. Combined, our results improve the largest known zero-free region within the critical strip for $3\cdot10^{12} \leq |t|\leq \exp(64.1)$ and $|t| \geq \exp(1000)$.
+
+ID: 2310.07360v1
+TITLE: A note on simple zeros related to Dedekind zeta functions
+AUTHORS: Wei Zhang
+PUBLISHED: 2023-10-11  UPDATED: 2023-10-11
+SUMMARY: We give a conditional lower bound on the number of non-trivial simple zeros for the Dedekind zeta function $ζ_{K}(s)$, where $K$ is a quadratic number field. The conditional result is given by assuming a Lindelöf on average (in the $L^{6}$ sense) for both $ζ(s)$ and $L(s,χ)$, which can be seen as a stronger version of Conrey-Gonek-Ghosh's \cite{c} conditional result. This improves upon the work of Wu and Zhao \cite{Zhao}, who had a similar result.
+
+ID: 2205.00641v1
+TITLE: Twisted $2k$th moments of primitive Dirichlet $L$-functions: beyond the diagonal
+AUTHORS: Siegfred Baluyot, Caroline L. Turnage-Butterbaugh
+PUBLISHED: 2022-05-02  UPDATED: 2022-05-02
+SUMMARY: We study the family of Dirichlet $L$-functions of all even primitive characters of conductor at most $Q$, where $Q$ is a parameter tending to $\infty$. For an arbitrary positive integer $k$, we approximate the twisted $2k$th moment of this family by using Dirichlet polynomial approximations of $L^k(s,χ)$ of length $X$, with $Q<X<Q^2$. Assuming the Generalized Lindelöf Hypothesis, we prove an asymptotic formula for these approximations of the twisted moments. Our result agrees with the prediction of Conrey, Farmer, Keating, Rubinstein, and Snaith for this family of $L$-functions, and provides the first rigorous evidence beyond the diagonal terms for their conjectured asymptotic formula for the general $2k$th moment of this family.
+
+ID: 2505.23795v1
+TITLE: The Error in a Smooth Weighted Prime Number Formula and Zero-free Regions for the Riemann Zeta Function
+AUTHORS: Songlin Han
+PUBLISHED: 2025-05-26  UPDATED: 2025-05-26
+SUMMARY: We study the error bound for a smooth weighted prime number theorem, and its implication to the zero-free region for the Riemann zeta function using the method of Pintz. We also give an application to the average number of smooth weighted Goldbach representations and generalize the result to the case of smooth weighted average k-Goldbach representations.
+
+ID: 2605.22059v1
+TITLE: Closed geodesics in short intervals for random hyperbolic surfaces
+AUTHORS: Zeev Rudnick
+PUBLISHED: 2026-05-21  UPDATED: 2026-05-21
+SUMMARY: We study the distribution of closed geodesics in short intervals on random hyperbolic surfaces of large genus, and compare it with the classical problem of primes in short intervals. Viewing the surface $M$ as a random point in moduli space equipped with the Weil--Petersson measure, we investigate the random variable $Ψ_M(x;H)$ counting closed geodesics with norms in the interval $[X, X+H]$, weighted by primitive length, where $H=o(X)$. This is analogous to the Chebyshev function in prime number theory. Our main result establishes that in the large genus limit, \[ \lim_{g\to \infty}\mathrm{Var}(Ψ_M(X;H)) \sim 2\,H \log X, \] when $X\to \infty$, $H=o(X)$. Goldston and Montgomery related the variance for primes in short intervals to the form factor associated with zeros of the Riemann zeta function, and conjectured that it is asymptotic to \[ H\log(X/H). \] We show that for automorphic L-functions of degree $d>1$, the early-time GUE form factor already follows from the Riemann Hypothesis, thereby recovering the variance $H\log X$ in the very short interval regime predicted by Bui, Keating and Smith. In the geometric setting, the appearance of $\log X$ reflects the much higher spectral density of Laplace eigenvalues relative to zeros of finite-degree $L$-functions, while the additional factor of $2$ is explained by the expected GOE statistics for the Laplace spectrum of generic hyperbolic surfaces.
+
+ID: 1908.04876v1
+TITLE: Pair correlation for Dedekind zeta functions of abelian extensions
+AUTHORS: David de Laat, Larry Rolen, Zack Tripp, Ian Wagner
+PUBLISHED: 2019-08-13  UPDATED: 2019-08-13
+SUMMARY: Here we study problems related to the proportions of zeros, especially simple and distinct zeros on the critical line, of Dedekind zeta functions. We obtain new bounds on a counting function that measures the discrepancy of the zeta functions from having all zeros simple. In particular, for quadratic number fields, we deduce that more than 45% of the zeros are distinct. This extends work based on Montgomery's pair correlation approach for the Riemann zeta function. Our optimization problems can be interpreted as interpolants between the pair correlation bound for the Riemann zeta function and the Cohn-Elkies sphere packing bound in dimension 1. We compute the bounds through optimization over Schwartz functions using semidefinite programming and also show how semidefinite programming can be used to optimize over functions with bounded support.
+
+ID: 1907.03391v3
+TITLE: Band-limited mimicry of point processes by point processes supported on a lattice
+AUTHORS: Jeffrey C. Lagarias, Brad Rodgers
+PUBLISHED: 2019-07-08  UPDATED: 2020-02-04
+SUMMARY: We say that one point process on the line $\mathbb{R}$ mimics another at a bandwidth $B$ if for each $n \ge 1$ the two point processes have $n$-level correlation functions that agree when integrated against all bandlimited test functions on bandwidth $[-B, B]$. This paper asks the question of for what values $a$ and $B$ can a given point process on the real line be mimicked at bandwidth $B$ by a point process supported on the lattice $a\mathbb{Z}$. For Poisson point processes we give a complete answer for allowed parameter ranges $(a,B)$, and for the sine process we give existence and nonexistence regions for parameter ranges. The results for the sine process have an application to the Alternative Hypothesis regarding the scaled spacing of zeros of the Riemann zeta function, given in a companion paper.
+
+ID: 2211.14918v1
+TITLE: On the number variance of zeta zeros and a conjecture of Berry
+AUTHORS: Meghann Moriah Lugar, Micah B. Milinovich, Emily Quesada-Herrera
+PUBLISHED: 2022-11-27  UPDATED: 2022-11-27
+SUMMARY: Assuming the Riemann hypothesis, we prove estimates for the variance of the real and imaginary part of the logarithm of the Riemann zeta-function in short intervals. We give three different formulations of these results. Assuming a conjecture of Chan for how often gaps between zeros can be close to a fixed nonzero value, we prove a conjecture of Berry (1988) for the number variance of zeta zeros in the non-universal regime. In this range, GUE statistics do not describe the distribution of the zeros. We also calculate lower-order terms in the second moment of the logarithm of the modulus of the Riemann zeta-function on the critical line. Assuming Montgomery's pair correlation conjecture, this establishes a special case of a conjecture of Keating and Snaith (2000).
+
+ID: 2208.02359v1
+TITLE: Small gaps and small spacings between zeta zeros
+AUTHORS: Hung M. Bui, Daniel A. Goldston, Micah B. Milinovich, Hugh L. Montgomery
+PUBLISHED: 2022-08-03  UPDATED: 2022-08-03
+SUMMARY: We show assuming RH that phenomena concerning pairs of zeros established $via$ pair correlations occur with positive density (with at most a slight adjustment of the constants). Also, while a double zero is commonly considered to be a close pair, we consider the difference between two $distinct$ zeros.
+
+ID: 2308.11704v3
+TITLE: What is the Simplest Linear Ramp?
+AUTHORS: Suman Das, Sumit K. Garg, Chethan Krishnan, Arnab Kundu
+PUBLISHED: 2023-08-22  UPDATED: 2024-01-27
+SUMMARY: We discuss conditions under which a deterministic sequence of real numbers, interpreted as the set of eigenvalues of a Hamiltonian, can exhibit features usually associated to random matrix spectra. A key diagnostic is the spectral form factor (SFF) -- a linear ramp in the SFF is often viewed as a signature of random matrix behavior. Based on various explicit examples, we observe conditions for linear and power law ramps to arise in deterministic spectra. We note that a very simple spectrum with a linear ramp is $E_n \sim \log n$. Despite the presence of ramps, these sequences do $not$ exhibit conventional level repulsion, demonstrating that the lore about their concurrence needs refinement. However, when a small noise correction is added to the spectrum, they lead to clear level repulsion as well as the (linear) ramp. We note some remarkable features of logarithmic spectra, apart from their linear ramps: they are closely related to normal modes of black hole stretched horizons, and their partition function with argument $s=β+it$ is the Riemann zeta function $ζ(s)$. An immediate consequence is that the spectral form factor is simply $\sim |ζ(it)|^2$. Our observation that log spectra have a linear ramp, is closely related to the Lindelöf hypothesis on the growth of the zeta function. With elementary numerics, we check that the slope of a best fit line through $|ζ(it)|^2$ on a log-log plot is indeed $1$, to the fourth decimal. We also note that truncating the Riemann zeta function sum at a finite integer $N$ causes the would-be-eternal ramp to end on a plateau.
+
+ID: 2306.10680v1
+TITLE: Explicit bounds for the Riemann zeta function and a new zero-free region
+AUTHORS: Chiara Bellotti
+PUBLISHED: 2023-06-19  UPDATED: 2023-06-19
+SUMMARY: We prove that $|ζ(σ+it)|\le 70.7 |t|^{4.438 (1-σ)^{3/2}}\log^{2/3}|t|$ for $1/2\leσ\le 1$ and $|t|\ge 3$. As a consequence, we improve the explicit zero-free region for $ζ(s)$, showing that $ζ(σ+it)$ has no zeros in the region $σ\geq 1-1 /\left(54.004(\log |t|)^{2 / 3}(\log \log |t|)^{1 / 3}\right)$ for $|t| \geq 3$ and asymptotically in the region $σ\geq 1-1 /\left(48.0718(\log |t|)^{2 / 3}(\log \log |t|)^{1 / 3}\right)$ for $|t|$ sufficiently large.
+
+ID: 2411.18492v1
+TITLE: The Epstein zeta-function contains a positive proportion of non-trivial zeros on the critical line
+AUTHORS: I. S. Rezvyakova
+PUBLISHED: 2024-11-27  UPDATED: 2024-11-27
+SUMMARY: It is proved that the Epstein zeta-function corresponding to a binary positive definite quadratic form with integer coefficients has a positive proportion of its non-trivial zeros on the critical line.
+
+ID: 1910.02408v2
+TITLE: A new approach to gaps between zeta zeros
+AUTHORS: Farzad Aryan
+PUBLISHED: 2019-10-06  UPDATED: 2020-09-27
+SUMMARY: We study the value-distribution of Dirichlet polynomials on the critical line $\Re(s)=\tfrac{1}{2}$. As a consequence, we prove a corollary on small consecutive gaps between zeros of the Riemann zeta function. We also examine the distribution of zeros under the so-called alternative hypothesis and present a new approach to the problem of gaps between the zeros.
+
+ID: 2301.03165v2
+TITLE: Explicit bounds on $ζ(s)$ in the critical strip and a zero-free region
+AUTHORS: Andrew Yang
+PUBLISHED: 2023-01-09  UPDATED: 2024-01-16
+SUMMARY: We derive explicit upper bounds for the Riemann zeta-function $ζ(σ+ it)$ on the lines $σ= 1 - k/(2^k - 2)$ for integer $k \ge 4$. This is used to show that the zeta-function has no zeroes in the region $$σ> 1 - \frac{\log\log|t|}{21.233\log|t|},\qquad |t| \ge 3.$$ This is the largest known zero-free region for $\exp(171) \le t \le \exp(5.3\cdot 10^{5})$. Our results rely on an explicit version of the van der Corput $A^nB$ process for bounding exponential sums.
+
+ID: 2602.14340v2
+TITLE: Minimal zero-free regions for results on primes between consecutive perfect $k$th powers
+AUTHORS: Ethan Simpson Lee
+PUBLISHED: 2026-02-15  UPDATED: 2026-03-03
+SUMMARY: We compute minimal zero-free regions for the Riemann zeta-function of the Littlewood form which ensure there is always a prime between consecutive perfect $k$th powers. Our computations cover powers $k\geq 65$ and quantify how far we are away from proving certain milestones toward an infamous open problem (Legendre's conjecture). In addition, we prove there is always a prime between consecutive perfect $86$th powers, and identify an integer sequence (that is a subset of the positive integers) for which there is always a prime between consecutive $70$th powers.
+
+ID: 1802.03413v1
+TITLE: Small zeros of Dirichlet $L$-functions of quadratic characters of prime modulus
+AUTHORS: Julio Andrade, Siegfred Baluyot
+PUBLISHED: 2018-02-09  UPDATED: 2018-02-09
+SUMMARY: In this paper, we investigate the distribution of the imaginary parts of zeros near the real axis of Dirichlet $L$-functions associated to the quadratic characters $χ_{p}(\cdot)=(\cdot |p)$ with $p$ a prime number. Assuming the Generalized Riemann Hypothesis (GRH), we compute the one-level density for the zeros of this family of $L$-functions under the condition that the Fourier transform of the test function is supported on a closed subinterval of $(-1,1)$. We also write down the ratios conjecture for this family of $L$-functions a la Conrey, Farmer and Zirnbauer and derive a conjecture for the one-level density which is consistent with the main theorem of this paper and with the Katz-Sarnak prediction and includes lower order terms. Following the methods of Özlük and Snyder, we prove that GRH implies $L(\frac{1}{2},χ_p)\neq 0$ for at least $75\%$ of the primes.
+
+ID: 2506.19319v1
+TITLE: New zero-free regions for Dedekind zeta-functions at small and large ordinates
+AUTHORS: Sourabhashis Das, Swati Gaba, Ethan Simpson Lee, Aditi Savalia, Peng-Jie Wong
+PUBLISHED: 2025-06-24  UPDATED: 2025-06-24
+SUMMARY: Given a number field $L\neq \mathbb{Q}$, we obtain new and explicit zero-free regions for Dedekind zeta-functions of $L$, which refine the previous works of Ahn--Kwon, Kadiri, and Lee. In particular, for low-lying zeros, we extend Kadiri's result to all number fields while improving the main constant.
+
+ID: 2505.09865v2
+TITLE: Finite size corrections in the bulk for circular $β$ ensembles
+AUTHORS: Peter J. Forrester, Bo-Jian Shen
+PUBLISHED: 2025-05-15  UPDATED: 2025-09-04
+SUMMARY: The circular $β$ ensemble for $β=1,2$ and 4 corresponds to circular orthogonal, unitary and symplectic ensemble respectively as introduced by Dyson. The statistical state of the eigenvalues is then a determinantal point process ($β= 2$) and Pfaffian point process ($β= 1,4$). The explicit functional forms of the correlation kernels then imply that the general $n$-point correlation functions exhibit an asymptotic expansion in $1/N^2$, which moreover can be lifted to an asymptotic in $1/N^2$ for the spacing distributions and their generating function. We use $σ$-Painlevé characterisations to show that the functional form of the first correction is related to the leading term via a second derivative. In the case $β= 2$ this finding has immediate consequence in interpreting the empirical Riemann zeros spacing distribution at large height, and that of their thinning. Explicit functional forms are used to show that the spectral form factors for $β=1,2$ and 4 also admit an asymptotic expansion in $1/N^2$. Differential relations are identified expressing the first and second correction in terms of the limiting functional form, and evidence is presented that they hold for general $β$. For even $β$ it is proved that the two-point correlation function permits an asymptotic expansion in $1/N^2$, and moreover that the leading correction relates to the limiting functional form via a second derivative.
+
+ID: 2603.21490v1
+TITLE: Zero-free regions inspired by work of Heath-Brown
+AUTHORS: Chiara Bellotti, Tim Trudgian, Andrew Yang
+PUBLISHED: 2026-03-23  UPDATED: 2026-03-23
+SUMMARY: We prove a new explicit zero-free region for the Riemann zeta-function, drawing substantially on Heath-Brown's seminal work on Linnik's constant. Using these ideas we are able to prove that $ζ(σ+ it)\ne 0$ whenever $t\geq 3$ and $σ\geq 1- 1/(4.896\log t)$.
+
+ID: 2502.20569v2
+TITLE: Pair correlation for sums of two ordinates of zeros of the Riemann zeta function
+AUTHORS: William D. Banks
+PUBLISHED: 2025-02-27  UPDATED: 2026-07-13
+SUMMARY: Assuming the Riemann Hypothesis, we extend Montgomery's pair correlation method to study the distribution of differences between sums $γ_1+γ_2$ of two ordinates of nontrivial zeros of the Riemann zeta function. For the associated pair correlation function we prove that $G_2(α,T)=\{\log T/T^{2α}+4α^3/(3T^α)\} \{1+O(1/\log\log T)\}$ uniformly for $0\leα\le 2/3-2\log\log T/\log T$. In contrast with the conjectured GUE statistics of the ordinates themselves, this result points to an absence of level repulsion among sums of two ordinates, the two-point correlation function of the sums being identically one, as for a Poisson process.
+
+ID: 2310.03949v1
+TITLE: Negative discrete moments of the derivative of the Riemann zeta-function
+AUTHORS: Hung M. Bui, Alexandra Florea, Micah B. Milinovich
+PUBLISHED: 2023-10-05  UPDATED: 2023-10-05
+SUMMARY: We obtain conditional upper bounds for negative discrete moments of the derivative of the Riemann zeta-function averaged over a subfamily of zeros of the zeta function which is expected to have full density inside the set of all zeros. For $k\leq 1/2$, our bounds for the $2k$-th moments are expected to be almost optimal. Assuming a conjecture about the maximum size of the argument of the zeta function on the critical line, we obtain upper bounds for these negative moments of the same strength while summing over a larger subfamily of zeta zeros.
+
+ID: 1806.01959v2
+TITLE: Quantitative estimates for simple zeros of L-functions
+AUTHORS: Andrew R. Booker, Micah B. Milinovich, Nathan Ng
+PUBLISHED: 2018-06-05  UPDATED: 2018-11-10
+SUMMARY: We generalize a method of Conrey and Ghosh (Invent. Math. 94 (1988)) to prove quantitative estimates for simple zeros of modular form L-functions of arbitrary conductor.
+
+ID: 2005.02393v3
+TITLE: Primes in arithmetic progressions and semidefinite programming
+AUTHORS: Andrés Chirre, Valdir José Pereira Júnior, David de Laat
+PUBLISHED: 2020-05-05  UPDATED: 2021-01-10
+SUMMARY: Assuming the generalized Riemann hypothesis, we give asymptotic bounds on the size of intervals that contain primes from a given arithmetic progression using the approach developed by Carneiro, Milinovich and Soundararajan [Comment. Math. Helv. 94, no. 3 (2019)]. For this we extend the Guinand-Weil explicit formula over all Dirichlet characters modulo $q \geq 3$, and we reduce the associated extremal problems to convex optimization problems that can be solved numerically via semidefinite programming.
+
+ID: 2108.03716v1
+TITLE: A dynamic approach for the zeros of the Riemann zeta function - collision and repulsion
+AUTHORS: Yochay Jerby
+PUBLISHED: 2021-08-08  UPDATED: 2021-08-08
+SUMMARY: For $N \in \mathbb{N}$ consider the $N$-th section of the approximate functional equation $$ ζ_N(s)= \sum_{n =1 }^N B_n(s),$$ where $$ B_n(s)= \frac{1}{2} \left [ n^{-s} + χ(s) \cdot n^{s-1} \right ].$$ Our aim in this work is to introduce a new approach for the Riemann hypothesis by studying the way pairs of consecutive zeros of $ζ_N(s)$ change with respect to $N$. For the initial stage, it is known that the non-trivial zeros of $ζ_1(s)$ all lie on the critical line $Re(s)=\frac{1}{2}$. In the region $2N \leq Im(s) \leq 2 π(N+1)$ the function $ζ_N(s)$ serves as an approximation of $ζ(s)$ itself, and it was conjectured by Spira that in this region $ζ_N(s)$ also admits zeros only on the critical line. We show that the appearance of zeros of a section off the critical line can be realized as the result of two consecutive zeros meeting and pushing each other off the critical line as $N$ changes, a process to which we refer to as a collision of zeros. Based on a study of the properties of $ζ_N(s)$, we suggest a way of re-arranging the order of summation of the elements $B_n(s)$ in $ζ_{N}(s)$ with $N=\left [ \frac{Im(s)}{2} \right ]$ that is expected to avoid collisions altogether, we refer to such a re-arrangement as a repelling re-arrangement. In particular, establishing that the suggested repelling re-arrangement indeed avoids collisions for any pair of zeros would imply RH.
+
+ID: 2101.04418v2
+TITLE: Correlations of sieve weights and distributions of zeros
+AUTHORS: Aled Walker
+PUBLISHED: 2021-01-12  UPDATED: 2022-05-06
+SUMMARY: In this note we give two small results concerning the correlations of the Selberg sieve weights. We then use these estimates to derive a new (conditional) lower bound on the variance of the primes in short intervals, and also on the so-called `form factor' for the pair correlations of the zeros of the Riemann zeta function. Our bounds ultimately rely on the estimates of Bettin--Chandee for trilinear Kloosterman fractions.
+
+ID: 1503.00955v1
+TITLE: A note on the zeros of zeta and $L$-functions
+AUTHORS: Emanuel Carneiro, Vorrapan Chandee, Micah B. Milinovich
+PUBLISHED: 2015-03-03  UPDATED: 2015-03-03
+SUMMARY: Let $πS(t)$ denote the argument of the Riemann zeta-function at the point $s=\tfrac12+it$. Assuming the Riemann hypothesis, we give a new and simple proof of the sharpest known bound for $S(t)$. We discuss a generalization of this bound for a large class of $L$-functions including those which arise from cuspidal automorphic representations of GL($m$) over a number field. We also prove a number of related results including bounding the order of vanishing of an $L$-function at the central point and bounding the height of the lowest zero of an $L$-function.
+
+ID: 2310.10119v1
+TITLE: The Uniform Distribution Modulo One of Certain Subsequences of Ordinates of Zeros of the Zeta Function
+AUTHORS: Fatma Çiçek, Steven M. Gonek
+PUBLISHED: 2023-10-16  UPDATED: 2023-10-16
+SUMMARY: On the assumption of the Riemann hypothesis and a spacing hypothesis for the nontrivial zeros $\frac12+iγ$ of the Riemann zeta function, we show that the sequence \[ Γ_{[a, b]} =\Bigg\{ γ: γ>0 \quad \mbox{and} \quad \frac{ \log\big(| ζ^{(m_γ)} (\frac12+ iγ) | / (\logγ)^{m_γ}\big)}{\sqrt{\frac12\log\logγ}} \in [a, b] \Bigg\}, \] where the $γ$ are arranged in increasing order, is uniformly distributed modulo one. Here $a$ and $b$ are real numbers with $a<b$, and $m_γ$ denotes the multiplicity of the zero $\frac12+iγ$. The same result holds when the $γ$'s are restricted to be the ordinates of simple zeros. With an extra hypothesis, we are also able to show an equidistribution result for the scaled numbers $γ(\log T)/2π$ with $γ\in Γ_{[a, b]}$ and $0<γ\leq T$.
+
+ID: 2411.01385v2
+TITLE: Optimal Cosine Polynomials for Riemann Zeta Zero-Free Region
+AUTHORS: Hong Sheng Tan
+PUBLISHED: 2024-11-03  UPDATED: 2025-02-06
+SUMMARY: The zero-free region of the Riemann zeta function plays a pivotal role in understanding the distribution of prime numbers. Historically, E. Landau used a particular type of non-negative cosine polynomial to construct this region. Subsequent research by various mathematicians sought the optimal cosine polynomial that provides the largest zero-free region under this construction. In 1992, V. V. Arestov identified the optimal polynomial for all degrees up to 6. This article employs numerical methods to determine the optimal polynomials of degrees 7 and 8, as well as the corresponding zero-free region of the Riemann zeta function.
+
+ID: 1506.03741v1
+TITLE: On the variance of sums of arithmetic functions over primes in short intervals and pair correlation for L-functions in the Selberg class
+AUTHORS: H. M. Bui, J. P. Keating, D. J. Smith
+PUBLISHED: 2015-06-11  UPDATED: 2015-06-11
+SUMMARY: We establish the equivalence of conjectures concerning the pair correlation of zeros of $L$-functions in the Selberg class and the variances of sums of a related class of arithmetic functions over primes in short intervals. This extends the results of Goldston & Montgomery [7] and Montgomery & Soundararajan [11] for the Riemann zeta-function to other $L$-functions in the Selberg class. Our approach is based on the statistics of the zeros because the analogue of the Hardy-Littlewood conjecture for the auto-correlation of the arithmetic functions we consider is not available in general. One of our main findings is that the variances of sums of these arithmetic functions over primes in short intervals have a different form when the degree of the associated $L$-functions is 2 or higher to that which holds when the degree is 1 (e.g. the Riemann zeta-function). Specifically, when the degree is 2 or higher there are two regimes in which the variances take qualitatively different forms, whilst in the degree-1 case there is a single regime.
+
+ID: 2601.15610v1
+TITLE: On the Zeros of the Riemann Zeta Function with Two Ordinate Shifts
+AUTHORS: Ali Ebadi
+PUBLISHED: 2026-01-22  UPDATED: 2026-01-22
+SUMMARY: We prove that for any fixed real numbers y_1, y_2 not equal to 0, and constant C > 0, there exists a threshold T_* = T_*(y_1, y_2, C) > 0 such that for all T >= T_*, the interval [T, T(1 + epsilon)], with epsilon = exp(-C sqrt(log T)), contains at least one gamma satisfying zeta(1/2 + i gamma) = 0, zeta(1/2 + i (gamma + y_1)) != 0, and zeta(1/2 + i (gamma + y_2)) != 0. This extends earlier work by Banks (for a single shift y) to two distinct shifts y_1, y_2. Our argument is based on the behavior of zeta and L functions in zero-free regions via Perron's formula.
+
+ID: 1002.1616v1
+TITLE: Landau-Siegel zeros and zeros of the derivative of the Riemann zeta function
+AUTHORS: David W. Farmer, Haseo Ki
+PUBLISHED: 2010-02-08  UPDATED: 2010-02-08
+SUMMARY: We show that if the derivative of the Riemann zeta function has sufficiently many zeros close to the critical line, then the zeta function has many closely spaced zeros. This gives a condition on the zeros of the derivative of the zeta function which implies a lower bound of the class numbers of imaginary quadratic fields.
+
+ID: 2102.02280v5
+TITLE: Prime zeta function statistics and Riemann zero-difference repulsion
+AUTHORS: Gordon Chavez, Altan Allawala
+PUBLISHED: 2021-02-03  UPDATED: 2021-10-27
+SUMMARY: We present a derivation of the numerical phenomenon that differences between the Riemann zeta function's nontrivial zeros tend to avoid being equal to the imaginary parts of the zeros themselves, a property called statistical "repulsion" between the zeros and their differences. Our derivation relies on the statistical properties of the prime zeta function, whose singularity structure specifies the positions of the Riemann zeros. We show that the prime zeta function on the critical line is asymptotically normally distributed with a covariance function that is closely approximated by the logarithm of the Riemann zeta function's magnitude on the 1-line. This creates notable negative covariance at separations approximately equal to the imaginary parts of the Riemann zeros. This covariance function and the singularity structure of the prime zeta function combine to create a conditional statistical bias at the locations of the Riemann zeros that predicts the zero-difference repulsion effect. Our method readily generalizes to describe similar effects in the zeros of related L-functions.
+
+ID: 1910.08205v5
+TITLE: Zero-free regions for the Riemann zeta function
+AUTHORS: Kevin Ford
+PUBLISHED: 2019-10-18  UPDATED: 2025-02-18
+SUMMARY: We improve existing explicit bounds of Vinogradov-Korobov type for zero-free regions of the Riemann zeta function, both for large height t and for every t. A primary input is an explicit bound of the author (Proc. London Math. Soc. 85 (2002), 565-633) for the growth of $ζ(σ+it)$ for $σ$ near 1. Another ingredient is a kind of Jensen formula (Lemma 2.2) relating the growth of a function on vertical lines to a weighted count of its zeros inside a vertical strip. The latter was used recently in the weak subconvexity work of Soundararajan and Thorner (arXiv:1804.03654, Duke Math. J. 168, no. 7 (2019), 1231-1268).
+
+ID: 2607.21532v1
+TITLE: Simultaneous non-vanishing of Dirichlet $L$--functions, II: Weighted central limit theorem
+AUTHORS: Hung M. Bui, Alexandra Florea, Micah B. Milinovich
+PUBLISHED: 2026-07-23  UPDATED: 2026-07-23
+SUMMARY: Under the Generalized Riemann Hypothesis, we prove a weighted central limit theorem for the joint distribution of four Dirichlet $L$--functions at the central point, twisted by the family of primitive characters to a large prime modulus. As an application, we show that a positive proportion of the characters in the family yield four central values that are simultaneously large, and a positive proportion yield values that are simultaneously nonzero and small.
+
+ID: 2411.19259v1
+TITLE: Maximal order for divisor functions and zeros of the Riemann zeta-function
+AUTHORS: Hirotaka Akatsuka
+PUBLISHED: 2024-11-28  UPDATED: 2024-11-28
+SUMMARY: Ramanujan investigated maximal order for the number of divisors function by introducing some notion such as (superior) highly composite numbers. He also studied maximal order for other arithmetic functions including the sum of powers of divisors function. In this paper we relate zero-free regions for the Riemann zeta-function to maximal order for the sum of powers of divisors function. In particular, we give equivalent conditions for the Riemann hypothesis in terms of the sum of the $1/2$-th powers of divisors function. As a by-product, we also give equivalent conditions for the Riemann hypothesis in terms of the partial Euler product for the Riemann zeta-function.
+
+ID: 2404.05928v3
+TITLE: A note on trigonometric polynomials for lower bounds of $ζ(s)$
+AUTHORS: Nicol Leong, Michael J. Mossinghoff
+PUBLISHED: 2024-04-09  UPDATED: 2024-12-03
+SUMMARY: Non-negative trigonometric polynomials satisfying certain properties are employed when studying a number of aspects of the Riemann zeta function. When establishing zero-free regions in the critical strip, the classical polynomial $3+4\cos(θ)+\cos(2θ)$ used by de la Vallée Poussin has since been replaced by more beneficial polynomials with larger degree. The classical polynomial was also employed by Titchmarsh to provide a lower bound on $|ζ(σ+it)|$ when $σ>1$. We show that this polynomial is optimal for this purpose.
+
+ID: 1109.0224v3
+TITLE: Zero repulsion in families of elliptic curve L-functions and an observation of S. J. Miller
+AUTHORS: Simon Marshall
+PUBLISHED: 2011-09-01  UPDATED: 2011-10-20
+SUMMARY: We provide a theoretical explanation for an observation of S. J. Miller that if L(s,E) is an elliptic curve L-function for which L(1/2, E) is nonzero, then the lowest lying zero of L(s,E) exhibits a repulsion from the critical point which is not explained by the standard Katz-Sarnak heuristics. We establish a similar result in the case of first-order vanishing.
+
+ID: 1311.0597v4
+TITLE: An extended pair-correlation conjecture and primes in short intervals
+AUTHORS: A. Languasco, A. Perelli, A. Zaccagnini
+PUBLISHED: 2013-11-04  UPDATED: 2015-07-30
+SUMMARY: In this paper we extend the well-known investigations of Montgomery and Goldston & Montgomery, concerning the pair-correlation function and its relations with the distribution of primes in short intervals, to a more general version of the pair-correlation function.
+
+ID: 1308.3934v3
+TITLE: An extension of the pair-correlation conjecture and applications
+AUTHORS: Alessandro Languasco, Alberto Perelli, Alessandro Zaccagnini
+PUBLISHED: 2013-08-19  UPDATED: 2014-08-24
+SUMMARY: We study an extension of Montgomery's pair-correlation conjecture and its relevance in some problems on the distribution of prime numbers.
+
+ID: 2605.17012v1
+TITLE: One-level densities of large even and odd orthogonal families of automorphic L-functions
+AUTHORS: Vorrapan Chandee, Xiannan Li, Micah B. Milinovich
+PUBLISHED: 2026-05-16  UPDATED: 2026-05-16
+SUMMARY: We prove one-level density results for L-functions attached to primitive forms of level q, averaged over square-free q, conditional on the Generalized Riemann Hypothesis (GRH). We treat the even and odd orthogonal families separately and extend the support of the Fourier transform of the test function to (-3,3). This extended support yields the strongest known non-vanishing results for these families of L-functions and their derivatives at the central point, conditional on GRH.
+

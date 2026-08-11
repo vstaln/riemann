@@ -123,7 +123,7 @@ def main():
     print("JENSEN-POLYNOMIAL RH-OMETER  (C-RH2)   -- explicit-formula, no zero data")
     print("=" * 78)
 
-    nmax = 6
+    nmax = 8
     gam, L, F = xi_coeffs(nmax)
     print(f"\n[dps {mp.mp.dps}] explicit-formula log-derivative tower at s = 1/2")
     print(f"  L(1/2)      = {mp.nstr(L[0], 30)}")
@@ -163,17 +163,17 @@ def main():
     print("  (proven unconditionally for ALL n: CNV/Dimitrov-Lucas d<=3, Chasse d<=2e17,"
           " GORTTW Cor 1.3 d<=9.36e20)")
     print(f"  {'n':>2} {'shift-window':>12} {'Delta':>28} {'r=g(n)g(n+2)/g(n+1)^2':>24} {'margin=1-r':>16}")
-    for n in range(4):
+    for n in range(7):
         D = quad_disc(gam[n], gam[n + 1], gam[n + 2])
         r = gam[n] * gam[n + 2] / gam[n + 1] ** 2
         win = "xi" if n == 0 else (f"xi' (n>=1)" if n == 1 else f"xi'' (n>=2)" if n == 2 else "n>=3")
         print(f"  {n:>2} {win:>12} {mp.nstr(D, 26):>28} {mp.nstr(r, 22):>24} {mp.nstr(1 - r, 15):>16}")
 
     # margin asymptotic vs 1/n
-    print("\n[degree-2 margin asymptotics: 1 - r_n vs 1/n (Hermite limit r_n ~ e^{-1/n})]")
+    print("\n[degree-2 margin asymptotics: margin_n = 1 - r_n = 2*Delta(n+2)^2 ~ 1/(n+2)]")
     for n in range(1, nmax - 1):
         r = gam[n] * gam[n + 2] / gam[n + 1] ** 2
-        print(f"  n={n}: margin = {mp.nstr(1 - r, 12)}   1/n = {1 / n}   ratio = {mp.nstr((1 - r) * n, 6)}")
+        print(f"  n={n}: margin = {mp.nstr(1 - r, 12)}   1/(n+2) = {1 / (n + 2):.4f}   ratio = {mp.nstr((1 - r) * (n + 2), 6)}")
 
     # GORTTW uniformizer Delta(M) ~ 1/sqrt(2M)
     print("\n[GORTTW uniformizer  Delta(M) = sqrt((1/2)(1 - g(M-2)g(M)/g(M-1)^2)) ~ 1/sqrt(2M)]")
@@ -188,15 +188,16 @@ def main():
     for n in range(3):
         A, B, C, D = gam[n + 3], 3 * gam[n + 2], 3 * gam[n + 1], gam[n]
         D3 = cubic_disc(A, B, C, D)
-        rts = mp.polyroots([A, B, C, D], maxsteps=200)
-        rts = sorted([mp.re(r) for r in rts])
+        rts = sorted([mp.re(r) for r in mp.polyroots([A, B, C, D], maxsteps=200)])
         gaps = [rts[i + 1] - rts[i] for i in range(2)]
-        scale = max(abs(c) for c in (A, B, C, D))
+        spread = rts[-1] - rts[0]
         print(f"  n={n}:  Delta_3 = {mp.nstr(D3, 24)}")
         print(f"         roots  = {[mp.nstr(x, 12) for x in rts]}")
-        print(f"         min gap/scale = {mp.nstr(min(gaps) / scale, 12)}  (Hermite limit H3(X/2)=X^3-6X: 0.5*scale)")
-    # Hermite limit comparison for d=3
-    print("  Hermite limit:  J_{3,n}((Delta X - 1)/...) -> X^3 - 6X, roots {0, +/-sqrt(6) ~ +/-2.449}")
+        print(f"         margin = min gap / spread = {mp.nstr(min(gaps) / spread, 12)}  "
+              f"(Hermite limit X^3-6X, roots 0,+/-2.449: 0.5)")
+    print("  Degree-3 margin is O(1) and already ~0.49 at n=0 (essentially the Hermite-limit 0.5),")
+    print("  unlike degree 2 where the margin -> 0 like 1/n.  d>=3 sits away from the boundary;")
+    print("  d=2 sits asymptotically ON it (log-concavity becomes near-equality).")
 
     # ---- derivative-tower discriminants in the paper sense (shifts n >= m) ----
     print("\n" + "=" * 78)

@@ -178,6 +178,9 @@ fn main() {
         // H_tr period in gamma = T/N; decay center T; use h = T/(2N) (2 periods/panel)
         let arch = arch_even_env(&htr_e, 100.0 * t, t / nwin as f64, t);
         let pside_all = prime.re + pole + arch;
+        if (t - 100.0).abs() < 1e-9 {
+            println!("  [debug T=100] prime={:.6e} pole={:.6e} arch={:.6e} band={:.6} c_ef={:.4}", prime.re, pole, arch, band, c_ef);
+        }
         let recompute = pside_all - far;
         let agree = (recompute - tr_win).abs();
         println!(

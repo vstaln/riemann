@@ -1,0 +1,1222 @@
+=== PAGE 1 ===
+arXiv:1206.1679v4  [math.NT]  17 Nov 2013
+DISTINCT ZEROS AND SIMPLE ZEROS OF DIRICHLET L-FUNCTIONS
+XIAOSHENG WU
+Abstract. In this paper, we study the number of additional zeros of Dir ichlet L-function
+caused by multiplicity by using Asymptotic Large Sieve. The n in asymptotic terms we
+prove that there are more than 80.13% of zeros of the family of Dirichlet L-functions
+are distinct and more than 60.261% of zeros of the family of Di richlet L-functions are
+simple. In addition, assuming the Generalized Riemann Hypo thesis, we improve these
+proportions to 83.216% and 66.433%.
+1. I ntroduction
+Let L(s,χ ) be a Dirichlet L-function, where s = σ + it,χ (mod q) is a character. It is
+deﬁned forσ> 1 by
+L(s,χ ) =
+∞∑
+n=1
+χ(n)n−s.(1)
+Letχ (mod q) be a primitive character. The total number of zeros ρ = β + iγ of L(s,χ )
+with 0<β< 1 and |γ| ≤ T, say N(T,χ ), is known asymptotically very precisely
+N(T,χ ) = T
+π log qT
+2πe + O(log qT), T ≥ 3.(2)
+We deﬁne the number of distinct zeros and the number of simple zeros of a single
+L(s,χ ) as follows
+Nd(T,χ ) = |{ρ =β + iγ : −T <γ ≤ T, L(ρ,χ ) = 0}|,
+Ns(T,χ ) = |{ρ =β + iγ : −T <γ ≤ T, L(ρ,χ ) = 0, L′(ρ,χ ) /nequal0}|.
+It is believed that Nd(T,χ ) = Ns(T,χ ) = N(T,χ ), which means that all zeros of Dirichlet
+L-function are simple. This is known as the Simple Zero Conjecture.
+As a special case, for the Riemann zeta-function, there is a l ong history of the study
+of the Simple Zero Conjecture, and the topic has been studied by a lot of papers (to see
+[1, 4, 5, 10, 11] for example).
+In 1995, Farmer [10] proved that at least 63.952% of zeros of the Riemann zeta-function
+are distinct. Farmer proved this by using a combination meth od which was based on
+proportions of simple zeros ofξ(n)(s, 1).
+It is known that more than 40.58% of zeros of the Riemann zeta- function are simple,
+which was proved in 2011 by Bui, Conrey and Young’s work [2]. T his work was based
+on Levinson’s method (to see [3, 4, 5, 12]) with a more general molliﬁer. If assumed
+2010 Mathematics Subject Classiﬁcation. 11M26, 11M06 .
+Key words and phrases. simple zeros; distinct zeros; Dirichlet L-function.
+1
+=== PAGE 2 ===
+the Riemann Hypothesis, Cheer and Goldston proved in 1993 that more than 67.275% of
+zeros of the Riemann zeta-function are simple.
+In 1998, under the assumption of the Riemann Hypothesis and the Generalized Lindel¨ of
+Hypothesis, Conrey, Ghosh and Gonek proved in [6] that more t han 84.56% of zeros of
+the Riemann zeta-function are distinct and more than 70.37% of zeros of the Riemann
+zeta-function are simple. Their starting point is the observation that
+⏐
+⏐
+⏐
+⏐
+⏐
+∑
+−T ≤γ≤T
+M(1
+2 + iγ)ζ′(1
+2 + iγ)
+⏐
+⏐
+⏐
+⏐
+⏐
+2
+≤ Ns(T, 1)
+∑
+−T ≤γ≤T
+⏐
+⏐
+⏐M(1
+2 + iγ)ζ′(1
+2 + iγ)|2
+by Cauchy’s inequality. The functionM(s) is taken to be a molliﬁer
+M(s) =
+∑
+n≤y
+µ(n)P
+(log y/n
+log y
+)
+n−s,
+where y = T 1/2−ǫ and P(x) is a suitable polynomial.
+For general Dirichlet L-function with χ /nequal1, there was few similar result. In Conrey,
+Iwaniec and Soundararajan’s recent work [8], they proved that at least 58.65% of zeros of
+the family of Dirichlet L-functions are on the critical line (1 /2-line) and simple by using
+Asymptotic Large Sieve (to see [7]) and Levinson’s method.
+In this work, we introduce a new way to work on the number of dis tinct zeros and
+simple zeros of the family of Dirichlet L-functions. Here we do not care about the rela-
+tionship among zeros of diﬀerent Dirichlet L-functions. In other words, if ρ1 is a zero of
+L(s,χ 1) andρ2 is a zero of L(s,χ 2) withχ1 /nequalχ2, we say thatρ1, ρ2 are two diﬀerent zeros
+of the family of Dirichlet L-functions even thoughρ1 =ρ2 numerically.
+Let Ψ(x) be a non-negative function deﬁned as in [8], which is smooth , compactly
+supported on R+. Put
+N(T, Q) =
+∑
+q≤Q
+Ψ(q/Q)
+φ(q)
+∑ ∗
+χ(modq)
+N(T,χ ),(3)
+where Q ≥ 3 and T ≥ 3. Here the superscript ∗ restricts the summation to the primitive
+characters. Accordingly, we also deﬁne
+Nd(T, Q) =
+∑
+q≤Q
+Ψ(q/Q)
+φ(q)
+∑ ∗
+χ(modq)
+Nd(T,χ ),
+and
+Ns(T, Q) =
+∑
+q≤Q
+Ψ(q/Q)
+φ(q)
+∑ ∗
+χ(modq)
+Ns(T,χ )
+for Q ≥ 3 and T ≥ 3.
+In the following we will ﬁrst study the number of additional z eros of Dirichlet L-
+function caused by multiplicity. Here the number of additio nal zeros caused by multi-
+plicity is the number of zeros with each zero counted according to multiplicity minus one.
+Then we will obtain that there are more than 80.13% of zeros of the family of Dirich-
+let L-functions are distinct and more than 60.261% of zeros of the family of Dirichlet
+L-functions are simple. In addition, if assume that the Gener alized Riemann Hypothesis
+2
+=== PAGE 3 ===
+holds, we can obtain better results both on distinct zeros an d simple zeros. For conve-
+nience, we state our main results as follows.
+Theorem 1. For Q and T with (log Q)6 ≤ T ≤ (log Q)A we have
+Nd(T, Q) ≥ 0.8013N(T, Q), Ns(T, Q) ≥ 0.60261N(T, Q),(4)
+where A ≥ 6 is any constant, provided Q is suﬃciently large in terms of A.
+If the Riemann Hypothesis for the family of these Dirichlet L-functions holds, we ob-
+tain the following result.
+Theorem 2. Assume the Generalized Riemann Hypothesis. For Q and T with (log Q)6 ≤
+T ≤ (log Q)A we have
+Nd(T, Q) ≥ 0.83216N(T, Q), Ns(T, Q) ≥ 0.66433N(T, Q),(5)
+where A ≥ 6 is any constant, provided Q is suﬃciently large in terms of A.
+2. sketch of the proof
+To study the number of distinct zeros and simple zeros of Diri chlet L-function, we
+ﬁrstly focus on the number of the additional zeros caused by m ultiplicity. We note that if
+ρ, a zero of L(s,χ ), is a non-simple zero, it must be a zero of
+G(s,χ ) = L(s,χ )ψ1(s,χ ) +λL′(s,χ )ψ2(s,χ )(6)
+with multiplicity reduced by at most one. Here ψ1(s,χ ), ψ2(s,χ ) can be any analytic
+functions and λ can be any constant. Hence the number of additional zeros of L(s,χ )
+caused by multiplicity in any region is not more than the number of zeros of G(s,χ ) in the
+same region.
+It is therefore important to ﬁnd a such G(s,χ ) that has less zeros in the critical area
+(0< Re(s)< 1), but this is very hard. A more feasible way is to partition the critical area
+into some sub areas, and for each sub area we may ﬁnd a G(s,χ ) that has less zeros in the
+area. Then we have the number of additional zeros ofL(s,χ ) caused by multiplicity in the
+critical area are not more than the sum of zeros of these G(s,χ ) in the corresponding sub
+area.
+In this paper, we actually partition the critical area into t he left part (Re( s) < 1/2)
+and the right part (Re( s) ≥ 1/2). The partition used here may be not good enough, it is
+possible for one to ﬁnd a more useful partition and the work will be worthy.
+Firstly, let us consider the left side (Re( s) < 1/2). Actually, the estimate of additional
+zeros in the left side is only required in the proof of Theorem 1. In this side, we choose
+G(s,χ ) =ξ′(s,χ ), where
+ξ(s,χ ) = H(s,χ )L(s,χ )
+with
+H(s,χ ) = 1
+2 s(s − 1)
+(q
+π
+)s
+2
+Γ
+(s + (1 −χ(−1))/2
+2
+)
+.(7)
+About the number of zeros of ξ( j)(s,χ ) for primitive character χ, we may have the
+following lemma, which can be proved similarly as Lemma 2 in [3].
+3
+=== PAGE 4 ===
+Lemma 3. Let χ be a primitive character. For any integer j ≥ 0, all zeros of ξ( j)(s,χ )
+satisfy 0<σ< 1. Let Nξ( j)(T,χ ) denote the number of zeros ofξ( j)(s,χ ) with −T ≤ t ≤ T,
+then
+Nξ( j)(T,χ ) = T
+π log qT
+2πe + O j(log qT).
+The functional equation for L(s,χ ) says
+h(χ)ξ(s,χ ) = ¯h(χ)ξ(1 − s, ¯χ),(8)
+where
+¯h(χ)
+h(χ) = τ(χ)
+i(1−χ(−1))q1/2
+with |h(χ)| = 1,τ(χ) = ∑q
+n=1χ(n) exp(2πin/q).
+From (8) we may ﬁnd that ifρ is a zero ofξ′(s,χ ), then 1 −ρ is a zero ofξ′(s,
+χ). From
+this and Lemma 3 with j = 1, we can see that Nξ′,l(T,χ ), the number of zeros ofξ′(s,χ ) ,
+and Nξ′,l(T,χ), the number of zeros ofξ′(s,χ) in the left side, satisfy
+Nξ′,l(T,χ ) + Nξ′,l(T,χ) = N(T,χ ) − Nξ′,c(T,χ ).(9)
+Here Nξ′,c(T,χ ) denotes the number of zeros ofξ′(s,χ ) on the critical line, which satisﬁes
+Nξ′,c(T,χ ) = Nξ′,c(T,
+χ). In particular for χ is a real character, it follows
+Nξ′,l(T,χ ) = 1
+2
+(
+N(T,χ ) − Nξ′,c(T,χ )
+)
+.
+Hence it is important for us to obtain a lower bound for the number of zeros ofξ′(s,χ ) on
+the critical line.
+We now come to the right side. Let q = q/π as in [8] and R > 0 be a constant to be
+speciﬁed later. Choosingλ = 1/(r log q), let G(s,χ ) be deﬁned by (6) with
+ψ1(s,χ ) =
+∑
+n≤X
+µ(n)χ(n)
+ns+R/ log q P1
+(log X/n
+log X
+)
+,
+ψ2(s,χ ) =
+∑
+n≤X
+µ(n)χ(n)
+ns+R/ log q P2
+(log X/n
+log X
+)
+,(10)
+whereµ is the M¨ obius function,X = qθ with 0 < θ <1. Here P1, P2 are polynomials
+with P1(0) = P2(0) = 0, P1(1) = P2(1) = 1, which will be speciﬁed later. It is worth
+remarking that this choice of ψi is not the best, some other possible choices of ψi can be
+found in [1, 2, 9, 13].
+Let D be the closed rectangle with vertices 1 /2 − iT, 3 − iT, 1/2 + iT, 3 + iT. Let
+NG(D,χ ) denote the number of zeros ofG(s,χ ) in D, including zeros on the left boundary.
+It is obvious that zeros of G(s,χ ) in the right side of the critical area are not more than
+zeros of it inD, and so the the number of additional zeros ofL(s,χ ) caused by multiplicity
+in the right side is not more than NG(D,χ ).
+From the above discussion, it follows that the number of addi tional zeros of L(s,χ )
+caused by multiplicity in the left side is not more than the nu mber of zeros of ξ′(s,χ ) in
+4
+=== PAGE 5 ===
+the left side, and in the right side is not more than NG(D,χ ). So, by (9) we may have the
+following formula about the number of distinct zeros of L(s,χ )
+Nd(T,χ ) + Nd(T,χ) ≥ N(T,χ ) + Nξ′,c(T,χ ) − NG(D,χ ) − NG(D,χ).(11)
+In addition, the number of all non-simple zeros counted according to multiplicity are not
+more than 2Nξ′,l(T,χ ) + 2NG(D,χ ) since each non-simple zero has multiplicity at least 2.
+Thus for simple zeros we have
+Ns(T,χ ) + Ns(T,
+χ) ≥ 2N(T,χ ) − 2Nξ′,l(T,χ ) − 2NG(D,χ ) − 2Nξ′,l(T,χ) − 2NG(D,χ)
+= 2Nξ′,c(T,χ ) − 2NG(D,χ ) − 2NG(D,χ).(12)
+If assume the Riemann Hypothesis for thisL(s,χ ), we do not need to care about the left
+side since there is no zero in this side. Then we have
+Nd(T,χ ) ≥ N(T,χ ) − NG(D,χ ).
+Similarly, for simple zero we have
+Ns(T,χ ) ≥ N(T,χ ) − 2NG(D,χ ).
+As we have seen, it is important therefore to obtain a lower bo und for Nξ′,c(T,χ ) and
+an upper bound for NG(D,χ ). Unfortunately, at the present state of technology we are
+unable to obtain a useful evaluation of them for individual charactersχ (modq). However,
+by averaging over the conductors q and the primitive characters χ, we are able to get a
+useful evaluation of them by using Asymptotic Large Sieve.
+As the deﬁnition of N(T, Q) in (3) we deﬁne
+NG(D, Q) =
+∑
+q≤Q
+Ψ(q/Q)
+φ(q)
+∑ ∗
+χ(modq)
+NG(D,χ ),
+and
+Nξ′,c(T, Q) =
+∑
+q≤Q
+Ψ(q/Q)
+φ(q)
+∑ ∗
+χ(modq)
+Nξ′,c(T,χ ),
+for Q ≥ 3 and T ≥ 3. Then we have from (11) and (12) that
+Nd(T, Q) ≥ 1
+2N(T, Q) + 1
+2Nξ′,c(T, Q) − NG(D, Q),(13)
+Ns(T, Q) ≥ Nξ′,c(T, Q) − 2NG(D, Q).(14)
+If assume Generalized Riemann Hypothesis, we have
+Nd(T, Q) ≥ N(T, Q) − NG(D, Q),(15)
+Ns(T, Q) ≥ N(T, Q) − 2NG(D, Q).(16)
+In the following, we will ﬁrst introduce an asymptotic large sieve result in section 3.
+Then we will obtain a upper bound for NG(D, Q) in section 4 and a lower bound for
+Nξ′,c(T, Q) in section 5.
+5
+=== PAGE 6 ===
+3. asymptotic large sieve result
+To evaluate NG(D, Q) and Nξ′,c(T, Q), we need to evaluate the following sum
+∑
+q≤Q
+Ψ(q/Q) logq
+φ(q)
+×
+∑ ∗
+χ(modq)
+∫ T
+−T
+L(σ0 +α + it,χ )L(σ0 +β − it, ¯χ)ψi1(σ0 + it,χ )ψi2(σ0 − it, ¯χ)dt
+for α, β ≪ 1/ log Q. We will evaluate this sum from the following lemma, which wa s
+implied in the work of Conrey, Iwaniec and Soundararajan [8].
+Lemma 4. Suppose that ψ1(s,χ ), ψ2(s,χ ) are deﬁned by (10). For su ﬃciently large Q,
+T with log6 Q ≤ T ≤ logA Q and constant A ≥ 6, let X = qθ with 0 < θ < 1, σ0 =
+1/2 − R/ log q,α,β ≪ 1/ log Q and h1 = h/(h, k), k1 = k/(h, k). Then, for i1, i2 = 1, 2,
+∑
+q≤Q
+Ψ(q/Q) logq
+φ(q)
+×
+∑ ∗
+χ(modq)
+∫ T
+−T
+L(σ0 +α + it,χ )L(σ0 +β − it, ¯χ)ψi1(σ0 + it,χ )ψi2(σ0 − it, ¯χ)dt
+∼ 2T
+(∑
+q≤Q
+Ψ( q
+Q) logqφ∗(q)
+φ(q)
+)∑
+h≤X
+∑
+k≤X
+µ(h)µ(k)
+(hh1kk1)1/2 F(α,β, h1, k1)Pi1
+(log X/h
+log X
+)
+Pi2
+(log X/k
+log X
+)
+,
+(17)
+where
+F(α,β, h1, k1) = h1/2−σ0−β
+1 k1/2−σ0−α
+1 ζ(2σ0 +α +β) + hα+σ0−1/2
+1 kβ+σ0−1/2
+1
+q2σ0+α+β−1 ζ(2 − 2σ0 −α −β),
+(18)
+andφ∗(q) denotes the number of primitive characters (mod q) as in [8].
+We now evaluate the sum over h and k in the right side of (17). Making the following
+variable changes
+a = (σ0 +α − 1/2) logq ≪ 1,
+b = (σ0 +β − 1/2) logq ≪ 1,
+we ﬁnd that the formula (18) becomes to
+f (a, b, h1, k1) = h−b/ log q
+1 k−a/ log q
+1 ζ
+(
+1 + a + b
+log q
+)
++ ha/ log q
+1 kb/ log q
+1
+ea+b ζ
+(
+1 − a + b
+log q
+)
+.
+We also approximateζ(s) near 1 by (s − 1)−1 getting the following asymptotic values
+ζ
+(
+1 + a + b
+log q
+)
+∼ log q
+a + b, ζ
+(
+1 − a + b
+log q
+)
+∼ − log q
+a + b.
+6
+=== PAGE 7 ===
+Then we get
+f (a, b, h1, k1) ∼ log q
+a + b
+(
+h−b/ log q
+1 k−a/ log q
+1 − e−a−bha/ log q
+1 kb/ log q
+1
+)
+.(19)
+Substituting (19) into the right side of (17) we have
+∑
+h≤X
+∑
+k≤X
+µ(h)µ(k)
+(hh1kk1)1/2 F(α,β, h1, k1)Pi1
+(log X/h
+log X
+)
+Pi2
+(log X/k
+log X
+)
+∼ log q
+a + b
+{∑
+h≤X
+∑
+k≤X
+µ(h)µ(k)
+h1/2k1/2h1/2+b/ log q
+1 k1/2+a/ log q
+1
+Pi1
+(log X/h
+log X
+)
+Pi2
+(log X/k
+log X
+)
+− e−a−b
+∑
+h≤X
+∑
+k≤X
+µ(h)µ(k)
+h1/2k1/2h1/2−a/ log q
+1 k1/2−b/ log q
+1
+Pi1
+(log X/h
+log X
+)
+Pi2
+(log X/k
+log X
+)}
+.(20)
+To evaluate the sum overh and k within the brackets we appeal to Lemma 1 of [4], which
+says that
+∑
+h≤X
+∑
+k≤X
+µ(h)µ(k)
+h1/2k1/2h1/2+ω1
+1 k1/2+ω2
+1
+Pi1
+(log X/h
+log X
+)
+Pi2
+(log X/k
+log X
+)
+∼ 1
+log X
+∫ 1
+0
+(
+P′
+i1(t) +ω1 log XPi1(t)
+)(
+P′
+i2(t) +ω2 log XPi2(t)
+)
+dt(21)
+holds uniformly in complex numbersω1,ω 2 ≪ (log X)−1. Recall that X = qθ. Substituting
+(21) into (20) we get
+∑
+h≤X
+∑
+k≤X
+µ(h)µ(k)
+(hh1kk1)1/2 F(α,β, h1, k1)Pi1
+(log X/h
+log X
+)
+Pi2
+(log X/k
+log X
+)
+∼ 1
+(a + b)θ
+(
+gi1,i2(b, a) − e−a−bgi1,i2(−a, −b)
+)
+(22)
+with
+gi1,i2(a, b) =
+∫ 1
+0
+(
+P′
+i1(t) + aθPi1(t)
+)(
+P′
+i2(t) + bθPi2(t)
+)
+dt.(23)
+Substituting (22) into (17) we have
+∑
+q≤Q
+Ψ(q/Q) logq
+φ(q)
+×
+∑ ∗
+χ(modq)
+∫ T
+−T
+L(σ0 +α + it,χ )L(σ0 +β − it, ¯χ)ψi1(σ0 + it,χ )ψi2(σ0 − it, ¯χ)dt
+∼ 2T
+(a + b)θ
+(∑
+q≤Q
+Ψ( q
+Q) logqφ∗(q)
+φ(q)
+)(
+gi1,i2(b, a) − e−a−bgi1,i2(−a, −b)
+)
+(24)
+holds uniformly in complex numbers α,β ≪ (log q)−1, where a = (σ0 +α − 1/2) logq,
+b = (σ0 +β − 1/2) logq. Moreover (24) admits diﬀerentiations inα,β .
+7
+=== PAGE 8 ===
+4. upper bound for NG(D, Q)
+Let D1 be the closed rectangle with vertices σ0 − iT, 3 − iT, σ0 + iT, 3 + iT, where
+σ0 = 1/2 − R/ log q. Suppose G(3 + it,χ ) /nequal0. Determine argG(σ + iT,χ ) by continuation
+left from 3+iT and argG(σ−iT,χ ) by continuation left from 3−iT. If a zero is reached on
+the upper edge, use limG(σ + iT + iǫ,χ ) asǫ → +0 and limG(σ − iT − iǫ,χ ) on the lower
+edge. Make horizontal cuts in D1 from the left side to the zeros of G in D1. Applying the
+Littlewood’s formula (to see [14]), we have
+∫ T
+−T
+log |G(σ0 + it,χ )|dt −
+∫ T
+−T
+log |G(3 + it,χ )|dt
++
+∫ 3
+σ0
+argG(σ + iT,χ )dσ −
+∫ 3
+σ0
+argG(σ − iT,χ )dσ
+= 2π
+∑
+ρ∈D1
+dist(ρ),(25)
+where dist(ρ) is the distance ofρ from the left side of D1.
+Recall the deﬁnition of ψi for i = 1, 2. A direct calculation shows that ψi(s,χ ) ≪ q for
+Re(s)> 0. Hence G(s,χ ) ≪ (Tq)2 for Re(s)> 0. Then we have
+∫ 3
+σ0
+argG(σ + iT,χ )dσ = O(log(Tq))(26)
+by using Jensen’s theorem in a familiar way as in§9.4 of [17]. Similarly, we may have
+∫ 3
+σ0
+argG(σ − iT,χ )dσ = O(log(Tq)).(27)
+By a direct calculation we can see
+λL′(3 + it,χ )ψ2(3 + it,χ ) ≪ O(1/ log q)
+and
+|L(3 + it,χ )ψ1(3 + it,χ )| ≥ 1 − 2
+∞∑
+2
+n−3 −
+( ∞∑
+2
+n−3)2
+> 1/3.
+Hence, from (6) we have
+∫ T
+−T
+log |G(3 + it,χ )|dt =
+∫ T
+−T
+log |L(3 + it,χ )ψ1(3 + it,χ )|dt + O(T/ log q).(28)
+Since forσ> 1
+log L(s,χ ) = −
+∑ Λ(n)χ(n)
+ns log n ,
+it follows taking the real part that
+∫ T
+−T
+log |L(3 + it,χ )|dt ≪ 1.(29)
+8
+=== PAGE 9 ===
+For the entire functionψ1(s), it is easy to see, forσ ≥ 3,
+|ψ1(s) − 1| ≤ 1
+2σ + 1
+3σ +
+∫ ∞
+3
+ν
+νσ ≤ 1
+2σ + 5
+2
+1
+3σ < 21−σ.
+Therefore, logψ1(s) is analytic forσ ≥ 3. Integrating on the contourσ + iT, 3 ≤σ< ∞;
+3 + it, −T ≤ t ≤ T; σ + iT, 3 ≤σ< ∞ gives
+∫ T
+−T
+log |ψ1(3 + it,χ )|dt ≤
+⏐
+⏐
+⏐
+⏐
+⏐
+∫ T
+−T
+logψ1(3 + it,χ )dt
+⏐
+⏐
+⏐
+⏐
+⏐≤ 8
+∫ ∞
+3
+dσ
+2σ = O(1).(30)
+Substituting (29), (30) into (28), we have
+∫ T
+−T
+log |G(3 + it,χ )|dt ≪ T/ log q.(31)
+From the above discussion, it is easy to seeG(3 + it,χ ) /nequal0. Then using (26), (27), (31) in
+(25) and by the condition that (log Q)6 ≤ T ≤ (log Q)A for some constant A ≥ 6, we have
+∫ T
+−T
+log |G(σ0 + it,χ )|dt + O(T/ log q) = 2π
+∑
+ρ∈D1
+dist(ρ).
+Since D ⊂ D 1 and all zeros of G in closed rectangle D are at least distance 1/2 −σ0 =
+R/ log q from the lineσ =σ0, it follows that
+NG(D,χ ) ≤ log q
+2πR
+∫ T
+−T
+log |G(σ0 + it,χ )|dt + O(T).(32)
+It would be important if one can give a useful evaluation of the right side of (32). However,
+at the present state of technology we are unable to obtain a us eful evaluation. It is not
+until recently, due to Conrey, Iwaniec and Soundararajan’simportant work on Asymptotic
+Large Sieve, we can get a useful evaluation of this by averaging over the conductorsq and
+the primitive charactersχ.
+Summing both sides of (32) over q ≤ Q and primitive charactersχ, we have
+NG(D, Q) ≤ 1
+4πR
+∑
+q≤Q
+Ψ(q/Q) logq
+φ(q)
+∑ ∗
+χ(modq)
+∫ T
+−T
+log |G(σ0 + it,χ )|2dt + o(N(T, Q)).
+By the concavity of the Logarithm function we get
+NG(D, Q) ≤
+( 1
+2R log c(θ, r, R) + o(1)
+)
+N(T, Q),(33)
+where c(θ, r, R) is deﬁned by
+c(θ, r, R)
+∑
+q≤Q
+Ψ( q
+Q) logqφ∗(q)
+φ(q) = 1
+2T
+∑
+q≤Q
+Ψ(q/Q) logq
+φ(q)
+∑ ∗
+χ(modq)
+∫ T
+−T
+|G(σ0 + it,χ )|2dt.(34)
+Hereφ∗(q) denotes the number of primitive characters (mod q). In the process to obtain
+(33), we have used log qT to replace log q. We can make this replacement because we
+have assumed that (log Q)6 ≤ T ≤ (log Q)A for some constant A ≥ 6.
+9
+=== PAGE 10 ===
+It is obvious that Ψ( q
+Q) logq in (34) still satisﬁes the condition ofΨ( q
+Q) given in the def-
+inition of N(T, Q). Hence we can evaluate the right side of (34) by using the Asy mptotic
+Large Sieve result. Recalling the deﬁnition of G(s,χ ) in (6),λ = 1/(r log q), we have
+|G(σ0 + it,χ )|2 = L(σ0 + it,χ )L(σ0 − it, ¯χ)ψ1(σ0 + it,χ )ψ1(σ0 − it, ¯χ)
++ 1
+r log qL′(σ0 + it,χ )L(σ0 − it, ¯χ)ψ2(σ0 + it,χ )ψ1(σ0 − it, ¯χ)
++ 1
+r log qL(σ0 + it,χ )L′(σ0 − it, ¯χ)ψ1(σ0 + it,χ )ψ2(σ0 − it, ¯χ)
++ 1
+r2 log2 q
+L′(σ0 + it,χ )L′(σ0 − it, ¯χ)ψ2(σ0 + it,χ )ψ2(σ0 − it, ¯χ).
+Substituting this into (34), we have
+c(θ, r, R)
+∑
+q≤Q
+Ψ( q
+Q) logqφ∗(q)
+φ(q) = 1
+2T
+(
+D11 + 1
+r log qD21 + 1
+r log qD12 + 1
+r2 log2 q
+D22
+)
+,
+(35)
+where
+Di1i2 =
+∑
+q≤Q
+Ψ(q/Q) logq
+φ(q)
+×
+∑ ∗
+χ(modq)
+∫ T
+−T
+L(i1−1)(σ0 + it,χ )L(i2−1)(σ0 − it, ¯χ)ψi1(σ0 + it,χ )ψi2(σ0 − it, ¯χ)dt.
+Choosingα =β = 0 in (24), we get
+D11 ∼ 2T
+(∑
+q≤Q
+Ψ( q
+Q) logqφ∗(q)
+φ(q)
+)(g1,1(b, a) − e−a−bg1,1(−a, −b)
+(a + b)θ
+)⏐
+⏐
+⏐
+⏐
+⏐a=b=−R
+(36)
+with gi1,i2(a, b) deﬁned by (23). Di ﬀerentiating (24) inα and choosingα =β = 0, we get
+D21 ∼ 2T log q
+(∑
+q≤Q
+Ψ( q
+Q) logqφ∗(q)
+φ(q)
+)
+∂a
+(g2,1(b, a) − e−a−bg2,1(−a, −b)
+(a + b)θ
+)⏐
+⏐
+⏐
+⏐
+⏐a=b=−R
+.(37)
+Diﬀerentiating (24) inβ and choosingα =β = 0, we get
+D12 ∼ 2T log q
+(∑
+q≤Q
+Ψ( q
+Q) logqφ∗(q)
+φ(q)
+)
+∂b
+(g1,2(b, a) − e−a−bg1,2(−a, −b)
+(a + b)θ
+)⏐
+⏐
+⏐
+⏐
+⏐a=b=−R
+.(38)
+Diﬀerentiating (24) both inα, βand choosingα =β = 0, we get
+D22 ∼ 2T log2 q
+(∑
+q≤Q
+Ψ( q
+Q) logqφ∗(q)
+φ(q)
+)
+∂a,b
+(g2,2(b, a) − e−a−bg2,2(−a, −b)
+(a + b)θ
+)⏐
+⏐
+⏐
+⏐
+⏐a=b=−R
+.(39)
+Substituting (36)-(39) into (35), we have
+c(θ, r, R) ∼h1,1(a, b)
+⏐
+⏐
+⏐a=b=−R + 1
+r∂ah2,1(a, b)
+⏐
+⏐
+⏐a=b=−R
++ 1
+r∂bh1,2(a, b)
+⏐
+⏐
+⏐a=b=−R + 1
+r2∂a,bh2,2(a, b)
+⏐
+⏐
+⏐a=b=−R,(40)
+10
+=== PAGE 11 ===
+where
+hi1,i2(a, b) = 1
+θ(a + b)
+{∫ 1
+0
+(
+P′
+i1(t) + bθPi1(t)
+)(
+P′
+i2(t) + aθPi2(t)
+)
+dt
+− e−a−b
+∫ 1
+0
+(
+P′
+i1(t) − aθPi1(t)
+)(
+P′
+i2(t) − bθPi2(t)
+)
+dt
+}
+.(41)
+Takingθ = 1 −ǫ, r = 1.154, R = 0.617,
+P1(x) = x − 0.158x(1 − x) + 0.25x2(1 − x),
+P2(x) = x − 0.492x(1 − x) + 0.075x2(1 − x),
+and makingǫ → 0, we get c(θ, r, R) = 1.230108 · · ·, then from (33) we have
+NG(D, Q) ≤ 0.167835N(T, Q).
+5. zeros ofξ′ on the critical line
+In this section, we will study the number of zeros of the family ofξ′(s,χ ) on the critical
+line by using Asymptotic Large Sieve and Levinson’s method.Actually, we do not follow
+the way in [3], which studied the proportions of zeros of ξ(n)(s, 1), n ≥ 0, on the critical
+line, but use the Levinson’s method generalized by Conrey in [4]. One may see that the
+way in this section will give a better result about the propor tion of zeros of the family of
+ξ′(s,χ ) on the critical line than the way in [3].
+From the functional equation (8) it is easy to see thath(χ)ξ(n)(s,χ ) is real for s = 1/2+it
+when n is even and is purely imaginary when n is odd. Let δ /nequal0 be real, gn, n ≥ 1, be
+complex numbers with gn real if n is even and gn purely imaginary if n is odd. Let T be a
+large parameter and
+L = log(Tq).
+Now deﬁne
+η(s,χ ) = (1 −δ)ξ(s,χ ) +δξ′(s,χ )L−1 +
+N∑
+n=1
+gnξ(n)(s,χ )L−n
+for some ﬁxed N. Then, for s = 1/2 + it,
+δh(χ)ξ′(s,χ ) = Im
+(
+h(χ)η(s,χ )
+)
+,
+so that ξ′(s) = 0 on σ = 1/2 if and only if Im
+(
+h(χ)η(s,χ )
+)
+= 0. Observe that for every
+change ofπ in the argument of h(χ)η(s,χ ) it must be the case that Im
+(
+h(χ)η(s,χ )
+)
+has at
+least one zero. Hence it follows that
+Nξ′,c(T,χ ) ≥ 1
+π∆Carg
+(
+h(χ)η(s,χ )
+)
+= 1
+π ∆Cargη(s,χ ),(42)
+where ∆Carg stands for the variation of the argument as s runs over the critical line from
+1/2 − iT to 1/2 + iT passing the zeros ofη(s,χ ) from the east side.
+11
+=== PAGE 12 ===
+To estimate the change in argument of η(s,χ ) on the critical line, we let η(s,χ ) =
+H(s,χ )V(s,χ ), where H(s,χ ) is deﬁned in (7) and
+V(s,χ ) =(1 −δ)L(s,χ ) + δ
+L
+(H′
+H (s,χ )L(s,χ ) + L′(s,χ )
+)
++
+N∑
+n=1
+gn
+Ln
+n∑
+k=0
+(n
+k
+)H(n−k)(s,χ )
+H(s,χ ) L(k)(s,χ ).
+By the Stirling formula, for |t| ≥ 2, we have
+argH(1/2 + it) = t
+2 log |qt|
+2πe + O(1),
+and
+H(m)
+H (s,χ ) = (1/2 log qs
+2π)m(1 + O(1/|t|))
+for t ≥ 10, 0 < σ < A1, here A1 can be any positive constant. (For a proof of these
+formulas, see Lemma 1 of [3].) Hence we may have
+∆argη(1/2 + it,χ )
+⏐
+⏐
+⏐
+T
+−T = T log qT
+2πe + ∆argV(1/2 + it,χ )
+⏐
+⏐
+⏐
+T
+−T + O(T)(43)
+and denote V(s,χ ) by
+V(s,χ ) =
+{(
+1 −δ +δ
+(log qs
+2π
+2L + 1
+L
+d
+ds
+)
+Q0
+(log qs
+2π
+2L + 1
+L
+d
+ds
+))
+L(s,χ )
+}
+(1 + O(1/|t|))
+with
+Q0(x) = 1 +
+N∑
+n=1
+gn
+δ xn−1.
+As in (10), we use the molliﬁer
+ψ(s,χ ) =
+∑
+n≤X
+µ(n)χ(n)
+ns+R/L P
+(log X/n
+log X
+)
+,
+where µ is the M¨ obius function,X = qθ with 0 < θ <1. Here P is a polynomial with
+P(0) = 0, P(1) = 1 which will be speciﬁed later. By the Cauchy’s argument principle and
+using Jenson’s theorem as in section 4, we may have⏐
+⏐
+⏐
+⏐∆argV(1/2 + it,χ )
+⏐
+⏐
+⏐
+T
+−T
+⏐
+⏐
+⏐
+⏐= 2πNξ′(D,χ ) + O(L).
+Here Nξ′(D,χ ) denote the number of ξ′(s,χ ) in the closed rectangle D deﬁned before.
+Then, if Q0(1/2) = 2, by applying Jenson’s theorem and Littlewood’s formula asin sec-
+tion 4, we can show that
+⏐
+⏐
+⏐
+⏐∆argV(1/2 + it,χ )
+⏐
+⏐
+⏐
+T
+−T
+⏐
+⏐
+⏐
+⏐≤ log q
+R
+∫ T
+−T
+log
+⏐
+⏐
+⏐Vψ(σ0 + it,χ )
+⏐
+⏐
+⏐dt + O(T),(44)
+where
+σ0 = 1/2 − R/ log q,
+12
+=== PAGE 13 ===
+R ≪ 1 is a positive real number. Here, the reason for requiring the condition Q0(1/2) = 2
+is to ensure the integration
+∫T
+−T log |Vψ(3 + it,χ )|dt caused by using Littlewood’s formula
+is O(T/ log q). To evaluate that the integration in the right of (44) we use the following
+useful approximation to V(s,χ ),
+U(s,χ ) =
+(
+1 −δ +δ
+(
+1 + 2
+L
+d
+ds
+)
+Q
+(
+− 1
+L
+d
+ds
+))
+L(s,χ ),(45)
+where
+Q(x) = 1
+2Q0(1/2 − x).
+It is easy to see that the error caused by the substitution of V with U can be absorbed
+into the error term in (44). If restrict Q(x) to be a real polynomial, we can see that the
+restriction of gn and the condition that Q0(1/2) = 2 are equivalent to Q′(x) = Q′(1 − x)
+and Q(0) = 1. Hence by Lemma 3 and (42)-(45),
+Nξ′,c(T,χ ) ≥ N(T,χ )(1 + o(1)) − log q
+πR
+∫ T
+−T
+log |Uψ(σ0 + it,χ )|dt.
+Summing both sides of the above formula overq ≤ Q and primitive charactersχ, we have
+Nξ′,c(T, Q) ≥ N(T, Q)(1 + o(1)) − 1
+2πR
+∑
+q≤Q
+Ψ( q
+Q) logq
+φ(q)
+∑ ∗
+χ(modq)
+∫ T
+−T
+log |Uψ(σ0 + it,χ )|2dt.
+(46)
+Recall that (log Q)6 ≤ T ≤ (log Q)A for some constant A ≥ 6. We reﬁne the deﬁnition
+of U which was previously deﬁned in (45) to
+U(s,χ ) =
+(
+1 −δ +δ
+(
+1 + 2
+log q
+d
+ds
+))
+Q
+(
+− 1
+log q
+d
+ds
+)
+L(s,χ )(47)
+with Q deﬁned as before. Then, in (46), the error caused by this reﬁn ement can be ab-
+sorbed by the error term. Substituting this reﬁned U into (46) and using the concavity of
+the Logarithm function, we get
+Nξ′,c(T, Q) ≥
+(
+1 − 1
+R log c1(θ, R) + o(1)
+)
+N(T, Q),(48)
+where c1(θ, R) satisﬁes
+c1(θ, R)
+∑
+q≤Q
+Ψ( q
+Q) logqφ∗(q)
+φ(q) = 1
+2T
+∑
+q≤Q
+Ψ( q
+Q) logq
+φ(q)
+∑ ∗
+χ(modq)
+∫ T
+−T
+|Uψ(σ0 + it,χ )|2dt.(49)
+Then, using formula (24) in (49) as in section 4, we get
+c1(θ, R) ∼
+(
+1 −δ +δ(1 + 2∂a)Q(−∂a)
+)(
+1 −δ +δ(1 + 2∂b)Q(−∂b)
+)
+×
+(g(b, a) − e−a−bg(−a, −b)
+θ(a + b)
+)⏐
+⏐
+⏐
+⏐
+⏐
+⏐a=b=−R
+,(50)
+13
+=== PAGE 14 ===
+where
+g(a, b) =
+∫ 1
+0
+(
+P′(t) + aθP(t)
+)(
+P′(t) + bθP(t)
+)
+dt.
+Takingθ = 1 −ǫ, R = 0.746,δ = 0.771,
+P(x) = x − 0.482x(1 − x) − 0.392x2(1 − x) − 0.262x3(1 − x),
+Q(x) = 1 − 0.673x + 0.369(x2/2 − x3/3) − 4.635(x3/3 − x4/2 + x5/5)
+into (50) and makingǫ → 0, we have by (49) that
+Nξ′,c(T, Q) ≥ 0.93828N(T, Q).
+By now we have proved that more than 93.828% of zeros of the family of ξ′(s,χ ) are
+on the critical line, which gives a lower bound for Nξ′,c(T, Q). We note that the result
+obtained by the method in [3] is actually equal to the case δ = 1 here. In [3], it proved
+that more than 81.37% of zeros ofξ′(s, 1) are on the critical line with a molliﬁer of length
+T 1/2−ǫ. To obtain a lower bound for Nξ′,c(T, Q), we can also follow the way in [3] with
+a molliﬁer of length q1−ǫ as used in this section, and then the result we can obtain is
+Nξ′,c(T, Q) ≥ 0.8429N(T, Q).
+6. completion of the proof
+We have obtained that
+NG(D, Q) ≤ 0.167835N(T, Q)
+in section 4 and
+Nξ′,c(T, Q) ≥ 0.93828N(T, Q).
+in section 5. Then by (13), (14) we have
+Nd(T, Q) ≥ 1
+2N(T, Q) + 1
+2Nξ′,c(T, Q) − NG(D, Q)
+≥ (1
+2 + 0.46914 − 0.167835)N(T, Q)> 0.8013N(T, Q),
+and for simple zero
+Ns(T, Q) ≥ Nξ′,c(T, Q) − 2NG(D, Q)
+≥ (0.93828 − 0.33567)N(T, Q) = 0.60261N(T, Q).
+Hence we have proved Theorem 1.
+If assume the Generalized Riemann Hypothesis holds, from (15), (16) we have
+Nd(T, Q) ≥ N(T, Q) − NG(D, Q) ≥ 0.83216N(T, Q),
+and
+Ns(T, Q) ≥ N(T, Q) − 2NG(D, Q) ≥ 0.66433N(T, Q).
+Hence we have proved Theorem 2.
+Remark. Using Levinson’s method, we may estimate the proportions for simple zeros
+of the family ofξ(n)(s,χ ), n ≥ 0, and then use Farmer’s combination method as in [10] to
+14
+=== PAGE 15 ===
+get a lower bound for the proportion of distinct zeros only. H owever, the result obtained
+by this way is much worse than Theorem 1. As mentioned in [8], o ur method can be
+generalized to GL2 and GL3 L-function.
+References
+[1] R. J. Anderson, ‘Simple zeros of the Riemann zeta-function,’J. Number Theory, 17 (1983), 176-182.
+[2] H. Bui, J. B. Conrey, and M. Young, ‘More than 41% of the zer os of the zeta function are on the
+critical line,’Acta Arith., 150 (2011), no.1, 35-64.
+[3] J. B. Conrey, ‘Zeros of derivatives of the Riemann’sξ-function on the critical line,’J. Number Theory,
+16 (1983), 49-74.
+[4] J. B. Conrey, ‘More than two ﬁfths of the zeros of the Riema nn zeta function are on the critical line,’
+J. Reine Angew. Math., 339 (1989), 1-26.
+[5] A. Y . Cheer, and D. A. Goldston, ‘Simple zeros of the Riema nn zeta-function,’ Proc. Amer. Math.
+Soc., 118 (1993), 365-373.
+[6] J. B. Conrey, A. Ghosh and S. M. Gonek, ‘Simple zeros of theRiemann zeta-function,’Proc. London.
+Math. Soc., (3) 76 (1998), 497-522.
+[7] J. B. Conrey, H. Iwaniec, and K. Soundararajan, ‘Asympto tic large sieve,’ available at:
+http://arxiv.org/abs/1105.1176.
+[8] J. B. Conrey, H. Iwaniec, and K. Soundararajan, ‘Critica l zeros of Dirichlet L-function,’ to appear in
+J. Reine Angew. Math.
+[9] S. Feng, ‘Zeros of the Riemann zeta function on the critic al line,’J. Number Theory, 132 (4) (2012),
+511-542.
+[10] D. Farmer, ‘Counting distinct zeros of the Riemann zeta -function,’Electron. J. Combin., 2 (1995),
+Research Paper 1, approx. 5 pp.
+[11] D. R. Heath-Brown, ‘Simple zeros of the Riemann zeta-function on the critical line,’Bull. Lond. Math.
+Soc., 11 (1979), 17-18.
+[12] N. Levinson, ‘More than one third of zeros of Riemann’s z eta-function are on σ = 1/2,’Adv. Math.,
+13 (1974), 383-436.
+[13] N. Levinson, ‘Deduction of semi-optimal molliﬁer for o btaining lower bounds for N0(T) for Rie-
+mann’s zeta function,’Proc. Natl. Acad. Sci. USA, 72 (1975), 294-297.
+[14] J. E. Littlewood, ‘On the zeros of the Riemann Zeta-function,’Cambridge Phil .Soc. Proc., 22 (1924),
+295-318.
+[15] H. L. Montgomery, ‘The pair correlation of zeros of the zeta function,’Proc. Sympos Pure Math.,vol.
+24, Amer. Math. Soc., Providence, RI, 1973, pp.181-193.
+[16] H. L. Montgomery, ‘Distribution of the zeros of the zeta function,’Proc. Internat. Congr. Math. Van-
+couver, 1974, pp.379-381.
+[17] E. C. Titchmarsh, The theory of the Riemann zeta-function. revised by D. R. Heath-Brown, Clarendon
+Press, Oxford, second edition, 1986.
+School of Mathematical Sciences, University of Science and Technology of China, Hefei 230026, P.
+R. China.
+E-mail address: xswu@amss.ac.cn
+15
