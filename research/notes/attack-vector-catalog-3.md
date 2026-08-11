@@ -302,7 +302,7 @@ Selberg T, and the new-target diagnostics).
 - **Definition of done:** the written family-averaged theorem (or the documented taper obstruction), with
   q-aspect numerics to 10³–10⁴ on record; Lean-ization if the assembly survives.
 
-### #3. V20 — Effective finite-T version of the 67.25% theorem [task (a)]
+### #4. V20 — Effective finite-T version of the 67.25% theorem [task (a)]
 - **Goal:** produce the explicit effective statement "≥ 0.6725·N(T,2T) − E(T)" with a written, numerically
   validated E(T), and the honest verdict on where it is non-vacuous.
 - **Why it matters:** the only remaining written-theorem deliverable for the REAL zeros (the Lean statements
@@ -326,7 +326,7 @@ Selberg T, and the new-target diagnostics).
   finitet data, and the verdict (non-vacuous range identified, or the documentation-only conclusion with the
   precise T threshold).
 
-### #4. B1-R — Beyond-1-range conditional-input program (the only positive-priced input) [task (e)]
+### #7. B1-R — Beyond-1-range conditional-input program (the only positive-priced input) [task (e)]
 - **Goal:** convert the pricing sheet's one positive price (dv*/dA = 0.6363/A³ for F ≡ 1 on [1, 1+ε]) into a
   written CONDITIONAL certificate program: "under RH + HL*(k₀,λ): ≥ 13/18; under RH + uniform HL: the
   roadmap 0.70/0.80/0.90 at supports 1.04/1.26/1.70", with the FG twisted pair-correlation F_n as the
@@ -353,7 +353,7 @@ Selberg T, and the new-target diagnostics).
   attribution; plus a status paragraph on the FG twisted route (the strongest documented conditional
   statement in the library).
 
-### #5. E-OK — EnclOK / S₃ regeneration closure [task (b)]
+### #3. E-OK — EnclOK / S₃ regeneration closure [task (b)]
 - **Goal:** close the ceiling's last non-Lean link (EnclOK) — or document all three routes exhausted — and,
   if the family is recovered, run the S₃ probe (V4's moment-capacity question).
 - **Why it matters:** EnclOK is the SINGLE displayed hypothesis of the 0.68185 ceiling; a regeneration match
@@ -376,7 +376,7 @@ Selberg T, and the new-target diagnostics).
   all three routes documented exhausted with the blocker standing; S₃ price recorded if the family is in
   hand (a V4 capacity point).
 
-### #6. M4 — m₄(λ<1/2) lane + m₄(1) adjudication [task (c)]
+### #8. M4 — m₄(λ<1/2) lane + m₄(1) adjudication [task (c)]
 - **Goal:** (1) pin m₄(1) among the competing values; (2) evaluate the quartic-weight (m⁴) DISTINCT-count
   certificate at λ < 1/2.
 - **Why it matters:** m₄ is the structural lever the moment machinery points to — the third moment carries
@@ -401,7 +401,7 @@ Selberg T, and the new-target diagnostics).
   re-derivation, with the others' status recorded); the λ<1/2 quartic distinct certificate value recorded
   with its admissibility argument (likely ≤ 5/6, documented).
 
-### #7. SCT-L — Selberg-class T Lean-ization
+### #5. SCT-L — Selberg-class T Lean-ization
 - **Goal:** formalize the axiomatic degree-one theorem T (whose corollaries are Thms A–E) in Lean.
 - **Why it matters:** a guaranteed Lean deliverable that consolidates the whole method into one statement and
   surfaces any axiom the method silently exploits [cat1 #10]; the GL(2) death becomes a class-level statement
@@ -416,7 +416,7 @@ Selberg T, and the new-target diagnostics).
 - **Definition of done:** the Lean structure + A–E instances compile; the axiom-ingredient map and the
   GL(2) corollary recorded.
 
-### #8. A1.1 — α≈1.0–1.3 arithmetic feature follow-up (G3.1 R-4)
+### #10. A1.1 — α≈1.0–1.3 arithmetic feature follow-up (G3.1 R-4)
 - **Goal:** decompose the real, unexplained empirical feature near α = 1 (spike at 1.00, dip at 1.05, spike
   at 1.10; ≥11σ under both the naive and LS estimators; cause unidentified).
 - **Why it matters:** the one genuine empirical deviation at the boundary of the beyond-1 region — the only
@@ -432,7 +432,7 @@ Selberg T, and the new-target diagnostics).
 - **Definition of done:** a written decomposition: either a prime-arithmetic origin identified (finding), or
   a lattice/unfolding artifact pinned (documented negative), with the height dependence on record.
 
-### #9. IPR — spectral-slack diagnostics (C4.1/C4.3, C6.1)
+### #6. IPR — spectral-slack diagnostics (C4.1/C4.3, C6.1)
 - **Goal:** measure the real spectrum's distance from the crystal via eigenvector participation ratios.
 - **Why it matters:** the cleanest realized-world slack measurement — the crystal's eigenvectors are
   delta-localized (IPR ~ O(1)), GUE bulk eigenvectors have IPR ~ 3/N; where W_T's spectrum sits tells us
@@ -446,7 +446,7 @@ Selberg T, and the new-target diagnostics).
 - **Definition of done:** a table + interpretation (delocalized ⇒ the ceiling is not tight in the realized
   world — redirects toward new targets; crystal-like ⇒ the realized world sits near the extremal law).
 
-### #10. 6M — 6th-moment literature verification (LM1-ADD) + MW — multi-window DPSS probe (V18/S2) [two cheap slots]
+### #9. 6M — 6th-moment literature verification (LM1-ADD) [+ MW — multi-window DPSS probe (V18/S2), cheap slot]
 - **Goal (6M):** verify the Heap–Lindqvist 2024 sixth-moment asymptotic (the source is NOT in our library);
   if verified, record it as the strongest input of the conditional roadmap (a proven 6th-moment = a proven
   3-fold additive-correlation main term, feeding HL*(k₀,λ) → 13/18 → 1) [add LM1-ADD].

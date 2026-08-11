@@ -18,8 +18,10 @@ independent halves, and each half is explained by a different mechanism:**
 1. **Zero side (CHECKED NUMERICALLY).** The windowed pair sum that the 67.25% method needs at
    bandwidth λ=1 — the Hilbert–Schmidt ratio κ̂ = ‖bG‖²_F/tr bG of the paper's windowed compression
    (§4–5, (2.20)) — is ≈ 4/3 for every primitive even character mod q (q=5..40, window [2000,4000]),
-   and for the family average. Measured 1.324–1.332 at λ=1 vs the asymptotic 1/λ+λ/3 = 4/3, and vs
-   the *taper-corrected prime-side prediction* (b+λ²J_T)/(a²λ) to ≤ 0.04%. The certificate
+   and for the family average. Across 22 primitive even characters / 61210 zeros (q = 5,7,11,13,16,
+   20,24,40), the per-modulus κ̂ at λ=1 ranges 1.321–1.333 (asymptotic 1/λ+λ/3 = 4/3); the pooled
+   family average is 1.3294; the independent *taper-corrected prime-side prediction*
+   (b+λ²J_T)/(a²λ) is matched to ≤ 0.3% (≤ 0.04% at λ=1 for q=7,11,13). The certificate
    H = 2 − κ̂ ≈ 0.67 (2/3) is visible at finite height, matching Theorem E's mechanism (which is
    **PROVEN** in C for each fixed character).
 
@@ -142,6 +144,15 @@ Command: `./dirichlet-family hsnorm 40 2000` (and q = 5,7,11,13,16,20,24,40); fu
 | 40 | 3 | 0.7 | 6.89 | 1.6762 | 1.7033 | 1.6619 | 0.324 | 0.548 |
 | 40 | 3 | 0.85 | 8.36 | 1.4641 | 1.4853 | 1.4598 | 0.536 | 0.627 |
 | 40 | 3 | 1.0 | 9.84 | 1.3297 | 1.3474 | 1.3333 | 0.670 | 0.691 |
+
+Pooled family (supplementary object: union of the 22 primitive even characters over the 8 moduli,
+`./dirichlet-family pool 2000 5,7,11,13,16,20,24,40`): N_total = 61210, κ̂_pooled(λ=1) = 1.3294
+(asym 4/3 = 1.3333), H = 2 − κ̂ = 0.6706 ≈ 2/3, C/N = 0.6905. Per-modulus κ̂ values: 1.3238 (q=5),
+1.3268 (q=7), 1.3318 (q=11), 1.3333 (q=13), 1.3317 (q=16), 1.3211 (q=20), 1.3232 (q=24), 1.3297
+(q=40) — all within 0.9% of 4/3. Per-character spreads at λ=1 (e.g. q=11: min 1.3309, med 1.3317,
+max 1.3335 across 4 chars; q=13: 1.3322–1.3354 across 5) confirm the characters are genuinely
+distinct computations whose average reproduces the individual-form value (linearity of tr, ‖·‖²_F —
+the "counts commute with averaging" of Rem 7.2(iii)).
 
 Reading: per-character κ̂ and the family average both sit within 0.1–0.7% of the asymptotic 1/λ+λ/3
 and within 0.04–0.3% of the *independently computed prime-side* prediction (b+λ²J_T)/(a²λ) — the
