@@ -4,7 +4,7 @@
 //   Stage 2: tr W_T cross-check from the prime side.
 //   Stage 3: HS^2 two-level.  Stage 4: archimedean tail.
 use std::f64::consts::{PI, SQRT_2};
-use gwdict::{C, Dict, ExplicitFormula, arch_tail_power, h_plus, prime_powers, uniform_integrate};
+use gwdict::{C, Dict, ExplicitFormula, arch_tail_power, prime_powers, uniform_integrate};
 
 fn load_zeros() -> Vec<f64> {
     let mut gams = Vec::new();
@@ -59,7 +59,7 @@ fn main() {
     let delta = dict.delta;
     let qq = prime_powers(c);
     let arch_f = |r: f64| dict.gv(C::real(r)).re;
-    let arch_val = arch_even(&arch_f, 20000.0, 0.05, 1.0 / delta, 0.0);
+    let arch_val = arch_even_env(&arch_f, 20000.0, 1.0 / delta, 0.0);
     let zero_1000 = {
         let mut s = 0.0;
         for i in 0..1000 {
@@ -170,7 +170,7 @@ fn main() {
         let pole = htr_s(s_half) + htr_s(s_minus_half);
         // arch: (1/2pi) int h_+ H_tr^e = (1/pi) int_0^inf h_+(r) H_tr^e(r) dr
         // H_tr period in gamma = T/N; decay center T; use h = T/(2N) (2 periods/panel)
-        let arch = arch_even(&htr_e, 100.0 * t, t / (2.0 * nwin as f64), t / nwin as f64, t);
+        let arch = arch_even_env(&htr_e, 100.0 * t, t / nwin as f64, t);
         let pside_all = prime.re + pole + arch;
         let recompute = pside_all - far;
         let agree = (recompute - tr_win).abs();
