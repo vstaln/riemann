@@ -180,6 +180,9 @@ fn main() {
         let pside_all = prime.re + pole + arch;
         if (t - 100.0).abs() < 1e-9 {
             println!("  [debug T=100] prime={:.6e} pole={:.6e} arch={:.6e} band={:.6} c_ef={:.4}", prime.re, pole, arch, band, c_ef);
+            for &rr in &[0.0, 50.0, t, 2.0 * t, 10.0 * t, 100.0 * t] {
+                println!("    htr_e({:.1}) = {:.6e}   E = {:.6e}", rr, htr_e(rr), htr_e(rr) + htr_e(rr + (t / nwin as f64) / 2.0));
+            }
         }
         let recompute = pside_all - far;
         let agree = (recompute - tr_win).abs();
