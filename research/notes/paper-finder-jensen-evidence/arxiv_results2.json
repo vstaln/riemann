@@ -1,0 +1,763 @@
+{
+  "farmer_author_zeta": {
+    "query": "au:Farmer_D AND all:zeta",
+    "entries": []
+  },
+  "farmer_author_derivative": {
+    "query": "au:Farmer_D AND all:derivative",
+    "entries": [
+      {
+        "arxiv_id": "1203.3345v1",
+        "title": "Power-laws in recurrence networks from dynamical systems",
+        "authors": [
+          "Y. Zou",
+          "J. Heitzig",
+          "R. V. Donner",
+          "J. F. Donges",
+          "J. D. Farmer",
+          "R. Meucci",
+          "S. Euzzor",
+          "N. Marwan",
+          "J. Kurths"
+        ],
+        "year": "2012",
+        "published": "2012-03-15",
+        "summary": "Recurrence networks are a novel tool of nonlinear time series analysis allowing the characterisation of higher-order geometric properties of complex dynamical systems based on recurrences in phase space, which are a fundamental concept in classical mechanics. In this Letter, we demonstrate that recurrence networks obtained from various deterministic model systems as well as experimental data naturally display power-law degree distributions with scaling exponents $\u03b3$ that can be derived exclusively from the systems' invariant densities. For one-dimensional maps, we show analytically that $\u03b3$ is not related to the fractal dimension. For continuous systems, we find two distinct types of behaviour: power-laws with an exponent $\u03b3$ depending on a suitable notion of local dimension, and such with fixed $\u03b3=1$."
+      }
+    ]
+  },
+  "gonek_derivative": {
+    "query": "au:Gonek AND all:derivative",
+    "entries": [
+      {
+        "arxiv_id": "0803.0425v1",
+        "title": "Pair correlation of the zeros of the derivative of the Riemann $\u03be$-function",
+        "authors": [
+          "David W. Farmer",
+          "Steven M. Gonek"
+        ],
+        "year": "2008",
+        "published": "2008-03-04",
+        "summary": "The complex zeros of the Riemannn zeta-function are identical to the zeros of the Riemann xi-function, $\u03be(s)$. Thus, if the Riemann Hypothesis is true for the zeta-function, it is true for $\u03be(s)$. Since $\u03be(s)$ is entire, the zeros of $\u03be'(s)$, its derivative, would then also satisfy a Riemann Hypothesis. We investigate the pair correlation function of the zeros of $\u03be'(s)$ under the assumption that the Riemann Hypothesis is true. We then deduce consequences about the size of gaps between these zeros and the proportion of these zeros that are simple."
+      },
+      {
+        "arxiv_id": "1302.5032v1",
+        "title": "A hybrid Euler-Hadamard product and moments of \u03b6'(\u03c1)",
+        "authors": [
+          "H. M. Bui",
+          "Steven M. Gonek",
+          "Micah B. Milinovich"
+        ],
+        "year": "2013",
+        "published": "2013-02-20",
+        "summary": "Keating and Snaith modeled the Riemann zeta-function \u03b6(s) by characteristic polynomials of random NxN unitary matrices, and used this to conjecture the asymptotic main term for the 2k-th moment of \u03b6(1/2+it) when k>-1/2. However, an arithmetical factor, widely believed to be part of the leading term coefficient, had to be inserted in an ad hoc manner. Gonek, Hughes and Keating later developed a hybrid formula for \u03b6(s) that combines a truncation of its Euler product with a product over its zeros. Using it, they recovered the moment conjecture of Keating and Snaith in a way that naturally includes the arithmetical factor. Here we use the hybrid formula to recover a conjecture of Hughes, Keating and O'Connell concerning discrete moments of the derivative of the Riemann zeta-function averaged over the zeros of \u03b6(s), incorporating the arithmetical factor in a natural way."
+      }
+    ]
+  },
+  "ki_xi_derivatives": {
+    "query": "au:Ki_H AND all:xi",
+    "entries": []
+  },
+  "debranges_author": {
+    "query": "au:Branges",
+    "entries": []
+  },
+  "laguerre_inequalities_retry": {
+    "query": "all:\"Laguerre inequalities\"",
+    "entries": [
+      {
+        "arxiv_id": "2312.10909v1",
+        "title": "Laguerre inequalities and determinantal inequalities for the finite difference of the partition functions",
+        "authors": [
+          "Eve Y. Y. Yang"
+        ],
+        "year": "2023",
+        "published": "2023-12-18",
+        "summary": "The paper aims to establish the Tur\u00e1n inequalities, the Laguerre inequalities (order $2$), and the determinantal inequalities (order $3$) for $\u0394p(n)$ and $\u0394\\bar{p}(n)$, where $\u0394f(n)$ is the first-order forward difference of a sequence $f(n)$. The functions $p(n)$ and $\\bar{p}(n)$ denote the partition function and overpartition function, respectively. Conjectures for thresholds of Laguerre inequalities (order $m$) and positivity of $m$-order determinants are proposed, extending to $\u0394^k p(n)$ and $\u0394^k \\bar{p}(n)$, with $1 \\leq m \\leq 11$ and $1 \\leq k \\leq 5$."
+      },
+      {
+        "arxiv_id": "2305.17864v1",
+        "title": "Laguerre inequality and determinantal inequality for the broken $k$-diamond partition function",
+        "authors": [
+          "Eve Y. Y. Yang"
+        ],
+        "year": "2023",
+        "published": "2023-05-29",
+        "summary": "In 2007, Andrews and Paule introduced the broken $k$-diamond partition function $\u0394_{k}(n)$, which has received a lot of researches on the arithmetic propertises. In this paper, we will prove the broken $k$-diamond partition function satisfies the Laguerre inequalities of order $2$ and the determinantal inequalities of order $3$ for $k=1$ or $2$. Moreover, we conjectured the thresholds for the Laguerre inequalities of order $m$ and the positivity of $m$-order determinants for $4\\leq m\\leq 14$ for the broken $k$-diamond partition function when $k=1$ or $2$."
+      },
+      {
+        "arxiv_id": "0911.1122v1",
+        "title": "Extended Laguerre inequalities and a criterion for real zeros",
+        "authors": [
+          "David A. Cardon"
+        ],
+        "year": "2009",
+        "published": "2009-11-05",
+        "summary": "Let $f(z)=e^{-bz^2}f_1(z)$ where $b \\geq 0$ and $f_1(z)$ is a real entire function of genus 0 or 1. We give a necessary and sufficient condition in terms of a sequence of inequalities for all of the zeros of $f(z)$ to be real. These inequalities are an extension of the classical Laguerre inequalities."
+      },
+      {
+        "arxiv_id": "2310.13814v1",
+        "title": "The Tur\u00e1n and Laguerre inequalities for quasi-polynomial-like functions",
+        "authors": [
+          "Krystian Gajdzica"
+        ],
+        "year": "2023",
+        "published": "2023-10-20",
+        "summary": "This paper deals with both the higher order Tur\u00e1n inequalities and the Laguerre inequalities for quasi-polynomial-like functions -- that are expressions of the form $f(n)=c_l(n)n^l+\\cdots+c_d(n)n^d+o(n^d)$, where $d,l\\in\\mathbb{N}$ and $d\\leqslant l$. A natural example of such a function is the $A$-partition function $p_{A}(n)$, which enumerates the number of partitions of $n$ with parts in the fixed finite multiset $A=\\{a_1,a_2,\\ldots,a_k\\}$ of positive integers. For an arbitrary positive integer $d$, we present efficient criteria for both the order $d$ Tur\u00e1n inequality and the $d$th Laguarre inequality for quasi-polynomial-like functions. In particular, we apply these results to deduce non-trivial analogues for $p_A(n)$."
+      },
+      {
+        "arxiv_id": "1605.01981v1",
+        "title": "Probability distribution built by Prabhakar function. Related Tur\u00e1n and Laguerre inequalities",
+        "authors": [
+          "Tibor K. Pog\u00e1ny",
+          "\u017divorad Tomovski"
+        ],
+        "year": "2016",
+        "published": "2016-05-06",
+        "summary": "Introducing the discrete probability distribution by means of the Prabhakar (or the three--parameter Mittag--Leffler) function, we establish explicit expressions for raw and factorial moments and also general fractional order moments. Applying an elementary moment inequality we obtain functional upper bounds for the Tur\u00e1nian difference for Prabhakar function. Finally, a Laguerre inequality is proved and functional upper bound has been given for Laguerreian difference for Prabhakar function."
+      },
+      {
+        "arxiv_id": "1204.2963v2",
+        "title": "Elements of Polya-Schur theory in finite difference setting",
+        "authors": [
+          "P. Br\u00e4nd\u00e9n",
+          "I. Krasikov",
+          "B. Shapiro"
+        ],
+        "year": "2012",
+        "published": "2012-04-13",
+        "summary": "In this note we attempt to develop an analog of P\u00f3lya-Schur theory describing the class of univariate hyperbolicity preservers in the setting of linear finite difference operators. We study the class of linear finite difference operators preserving the set of real-rooted polynomials whose mesh (i.e. the minimal distance between the roots) is at least one. In particular, finite difference versions of the classical Hermite-Poulain theorem and generalized Laguerre inequalities are obtained."
+      },
+      {
+        "arxiv_id": "2206.13922v1",
+        "title": "$\\ell$-Log-momotonic and Laguerre Inequality of P-recursive Sequences",
+        "authors": [
+          "Guo-Jie Li"
+        ],
+        "year": "2022",
+        "published": "2022-06-28",
+        "summary": "We consider $\\ell$-log-momotonic sequences and Laguerre inequality of order two for sequences $\\{a_n\\}_{n \\ge 0}$ such that \\[ \\frac{a_{n-1}a_{n+1}}{a_n^2} = 1 + \\sum_{i=1}^m \\frac{r_i(\\log n)}{n^{\u03b1_i}} + o\\left( \\frac{1}{n^\u03b2} \\right), \\] where $m$ is a nonnegative integer, $\u03b1_i$ are real numbers, $r_i(x)$ are rational functions of $x$ and \\[ 0 < \u03b1_1 < \u03b1_2 < \\cdots < \u03b1_m < \u03b2. \\] We will give a sufficient condition on $\\ell$-log-momotonic sequences and Laguerre inequality of order two for $n$ sufficiently large. Many P-recursive sequences fall in this frame. At last, we will give a method to find the $N$ such that for any $n\\geq N$, log-momotonic inequality of order three and Laguerre inequality of order two holds."
+      },
+      {
+        "arxiv_id": "2412.18304v1",
+        "title": "Inequalities associated with the root sequences of P-recursive sequences",
+        "authors": [
+          "Zhongjie Li"
+        ],
+        "year": "2024",
+        "published": "2024-12-24",
+        "summary": "The Tur{\u00e1}n inequalities and the Laguerre inequalities are closely related to the Laguerre-P\u00f3lya class and the Riemann hypothesis. These inequalities have been extensively studied in the literature. In this paper, we propose a method to determine a positive integer $N$ such that the sequences $\\{\\sqrt[n]{a_n}/n!\\}_{n \\ge N}$ and $\\{\\sqrt[n+1]{a_{n+1}}/(\\sqrt[n]{a_n} n!)\\}_{n \\ge N}$ satisfy the higher order Tur{\u00e1}n inequalities and the Laguerre inequalities of order two for a P-recursive sequence $\\{a_n\\}_{n \\ge 1}$."
+      },
+      {
+        "arxiv_id": "1005.5186v2",
+        "title": "Discrete analogues of the Laguerre inequalities and a conjecture of I. Krasikov",
+        "authors": [
+          "George Csordas",
+          "Matthew Chasse"
+        ],
+        "year": "2010",
+        "published": "2010-05-27",
+        "summary": "A conjecture of I. Krasikov is proved. Several discrete analogues of classical polynomial inequalities are derived, along with results which allow extensions to a class of transcendental entire functions in the Laguerre-P\u00f3lya class."
+      },
+      {
+        "arxiv_id": "2506.19292v1",
+        "title": "Inequalities related to the coefficients of the $j$-function",
+        "authors": [
+          "Zhongjie Li"
+        ],
+        "year": "2025",
+        "published": "2025-06-24",
+        "summary": "In recent years, the log-concavity or log-convexity of combinatorial sequences and their root sequences, higher order Tur{\u00e1}n inequalities, and Laguerre inequalities of order two have been widely studied. However, the research of the Fourier coefficient $c(n)$ of the $j$-function is limited to its asymptotic form. In this paper, we give the appropriate upper and lower bounds of $c(n)$ to establish the inequalities associated with it."
+      },
+      {
+        "arxiv_id": "2512.21205v1",
+        "title": "Asymptotics and inequalities for the distinct partition function",
+        "authors": [
+          "Gargi Mukherjee",
+          "Helen W. J. Zhang",
+          "Ying Zhong"
+        ],
+        "year": "2025",
+        "published": "2025-12-24",
+        "summary": "In this paper, we give explicit error bounds for the asymptotic expansion of the shifted distinct partition function $q(n +s)$ for any nonnegative integer $s$. Then based on this refined asymptotic formula, we give the exact thresholds of $n$ for the inequalities derived from the invariants of the quartic binary form, the double Tur\u00e1n inequalities, the Laguerre inequalities and their corresponding companion versions."
+      },
+      {
+        "arxiv_id": "1309.0055v2",
+        "title": "Fourier transforms of positive definite kernels and the Riemann $\u03be$-Function",
+        "authors": [
+          "George Csordas"
+        ],
+        "year": "2013",
+        "published": "2013-08-31",
+        "summary": "The purpose of this paper is to investigate the distribution of zeros of entire functions which can be represented as the Fourier transforms of certain admissible kernels. The principal results bring to light the intimate connection between the Bochner-Khinchin-Mathias theory of positive definite kernels and the generalized real Laguerre inequalities. The concavity and convexity properties of the Jacobi theta function play a prominent role throughout this work. The paper concludes with several questions and open problems."
+      },
+      {
+        "arxiv_id": "1611.06724v1",
+        "title": "Log-concavity and Tur\u00e1n-type inequalities for the generalized hypergeometric function",
+        "authors": [
+          "S. I. Kalmykov",
+          "D. B. Karp"
+        ],
+        "year": "2016",
+        "published": "2016-11-21",
+        "summary": "The paper studies logarithmic convexity and concavity of the generalized hypergeometric function with respect to simultaneous shift of several parameters. We use integral representations and properties of Meijer's $G$ function to prove log-convexity. When all parameters are shifted we use series manipulations to examine the power series coefficients of the generalized Tur\u00e1nian formed by the generalized hypergeometric function. In cases when all zeros of the generalized hypergeometric function are real, we further explore the consequences of the extended Laguerre inequalities and formulate a conjecture about reality of zeros."
+      },
+      {
+        "arxiv_id": "1912.04951v5",
+        "title": "On the number of non-real zeroes of a homogeneous differential polynomial and a generalization of the Laguerre inequalities",
+        "authors": [
+          "Mikhail Tyaglov",
+          "Mohamed J. Atia"
+        ],
+        "year": "2019",
+        "published": "2019-12-10",
+        "summary": "Given a real polynomial $p$ with only real zeroes, we find upper and lower bounds for the number of non-real zeroes of the differential polynomial $$ F_{\\varkappa}[p](z):= p(z)p''(z)-\\varkappa[p'(z)]^2,$$ where $\\varkappa$ is a real number. We also construct a counterexample to a conjecture by B. Shapiro on the number of real zeroes of the polynomial $F_{\\tfrac{n-1}{n}}[p](z)$ in the case when the real polynomial $p$ of degree $n$ has non-real zeroes. We formulate some new conjectures generalising the Hawaii conjecture."
+      },
+      {
+        "arxiv_id": "2605.07502v2",
+        "title": "Asymptotics and inequalities for the broken $k$-diamond partition function",
+        "authors": [
+          "Ying Zhong"
+        ],
+        "year": "2026",
+        "published": "2026-05-08",
+        "summary": "Many papers have studied inequalities for Andrews and Paule's broken $k$-diamond partition function $\u0394_{k}(n)$ when $k=1$ or $2$. In this paper, we derive an exact formula for $\u0394_{k}(n)$ when $k\\geq 1$. Building on this result, we also derive an asymptotic formula for $\u0394_{k}(n)$ with an explicit error bound. Using this formula, we prove that for $k\\geq 1$ and sufficiently large $n$, $\u0394_{k}(n)$ satisfies the Tur\u00e1n and Laguerre inequalities of any order and exhibits asymptotic complete monotonicity. Define $n_k:=\\max\\left\\{\\left\\lceil8k^{3}+\\frac{k+1}{12}\\right\\rceil,526\\right\\}$. Furthermore, we show that $\u0394_{k}(n)$ is log-concave for $k\\ge3$ and $n\\ge n_k$. Consequently, it follows that $\u0394_{k}(a)\u0394_{k}(b)\\ge\u0394_{k}(a+b)$ for $k\\ge3$ and $a,b \\ge n_k$."
+      },
+      {
+        "arxiv_id": "math/0204098v1",
+        "title": "Dicrete Analogues of the Laguerre Inequality",
+        "authors": [
+          "Ilia Krasikov"
+        ],
+        "year": "2002",
+        "published": "2002-04-09",
+        "summary": "It is shown that $\\sum_{j=-m}^m (-1)^j \\frac{f(x-j)(f(x+j)}{(m-j)! (m+j)!} \\ge 0,$ $m=0,1,...,$ where $f(x)$ is either a real polynomial with only real zeros or an allied entire function of a special type, provided the distance between two consecutive zeros of $f(x)$ is at least $\\sqrt{4-\\frac{6}{m+2}}.$ These inequalities are a surprisingly similar discrete analogue of higher degree generalizations of the Laguerre and Turan inequalities. Being applied to the classical discrete orthogonal polynomials, they yield sharp, explicit bounds uniform in all parameters involved, on the polynomials and their extreme zeros. We will illustrate it for the case of Krawtchouk polynomials"
+      },
+      {
+        "arxiv_id": "1602.04295v2",
+        "title": "Zeros of Bessel function derivatives",
+        "authors": [
+          "\u00c1rp\u00e1d Baricz",
+          "Chrysi G. Kokologiannaki",
+          "Tibor K. Pog\u00e1ny"
+        ],
+        "year": "2016",
+        "published": "2016-02-13",
+        "summary": "We prove that for $\u03bd>n-1$ all zeros of the $n$th derivative of Bessel function of the first kind $J_\u03bd$ are real and simple. Moreover, we show that the positive zeros of the $n$th and $(n+1)$th derivative of Bessel function of the first kind $J_\u03bd$ are interlacing when $\u03bd\\geq n,$ and $n$ is a natural number or zero. Our methods include the Weierstrassian representation of the $n$th derivative, properties of the Laguerre-P\u00f3lya class of entire functions, and the Laguerre inequalities. Some similar results for the zeros of the first and second derivative of the Struve function of the first kind $\\mathbf{H}_\u03bd$ are also proved. The main results obtained in this paper generalize and complement some classical results on the zeros of Bessel functions of the first kind. Some open problems related to Hurwitz theorem on the zeros of Bessel functions are also proposed, which may be of interest for further research."
+      },
+      {
+        "arxiv_id": "2409.08085v2",
+        "title": "Infinite log-concavity and higher order Tur\u00e1n inequality for the sequences of Speyer's $g$-polynomial of uniform matroids",
+        "authors": [
+          "James J. Y. Zhao"
+        ],
+        "year": "2024",
+        "published": "2024-09-12",
+        "summary": "Let $U_{n,d}$ be the uniform matroid of rank $d$ on $n$ elements. Denote by $g_{U_{n,d}}(t)$ the Speyer's $g$-polynomial of $U_{n,d}$. The Tur\u00e1n inequality and higher order Tur\u00e1n inequality are related to the Laguerre-P\u00f3lya ($\\mathcal{L}$-$\\mathcal{P}$) class of real entire functions, and the $\\mathcal{L}$-$\\mathcal{P}$ class has close relation with the Riemann hypothesis. The Tur\u00e1n type inequalities have received much attention. Infinite log-concavity is also a deep generalization of Tur\u00e1n inequality with different direction. In this paper, we mainly obtain the infinite log-concavity and the higher order Tur\u00e1n inequality of the sequence $\\{g_{U_{n,d}}(t)\\}_{d=1}^{n-1}$ for any $t>0$. In order to prove these results, we show that the generating function of $g_{U_{n,d}}(t)$, denoted $h_n(x;t)$, has only real zeros for $t>0$. Consequently, for $t>0$, we also obtain the $\u03b3$-positivity of the polynomial $h_n(x;t)$, the asymptotical normality of $g_{U_{n,d}}(t)$, and the Laguerre inequalities for $g_{U_{n,d}}(t)$ and $h_n(x;t)$."
+      },
+      {
+        "arxiv_id": "2405.19441v1",
+        "title": "Asymptotic expansion for the Fourier coefficients associated with the inverse of the modular discriminant function $\u0394$",
+        "authors": [
+          "Gargi Mukherjee"
+        ],
+        "year": "2024",
+        "published": "2024-05-29",
+        "summary": "There have been a plethora of investigations carried out in studying inequalities for the Fourier coefficients of weakly holomorphic modular forms, for example, on the partition function. Recently, Bringmann, Kane, Rolen, and Tripp studied asymptotics for the $k$-colored partition function and more generally, for the fractional partitions arising from the Nekrasov-Okounkov formula which in turn allowed them to prove generalized multiplicative inequalities. Motivated by their idea to find interesting inequalities for the $k$-colored partition functions, denoted by $p_k(n)$, in this paper, we prove a family of inequalities for the $p_{24}(n)$. The main aim of this paper is to study the asymptotic expansion with an effective estimate for the error bound regarding the Fourier coefficients of the modular form $1/\u0394$ (up to a constant $c$ and a power of $q$), where $\u0394$ is the modular discriminant function and a well-known combinatorial interpretation for the associated coefficient sequence is called $24$-colored partitions, denoted by $p_{24}(n)$. Consequently, we show that $p_{24}(n)$ satisfies $2$-$\\log$-concavity, Tur\u00e1n inequality of order $3$, and Laguerre inequalities of order $m$ with $2\\le m\\le 8$ eventually. Our method of estimations for the error term of the asymptotic expansion for $p_{24}(n)$ can be adapted in a more general paradigm where the Fourier coefficients of a certain class of Dedekind-eta quotients which are essentially a modular form of negative weight, admit a Rademacher type exact formula involving the $I$-Bessel function of positive order."
+      },
+      {
+        "arxiv_id": "2108.01827v2",
+        "title": "On a new class of Laguerre-P\u00f3lya type functions with applications in number theory",
+        "authors": [
+          "Ian Wagner"
+        ],
+        "year": "2021",
+        "published": "2021-08-04",
+        "summary": "We define a new class of functions, connected to the classical Laguerre-P\u00f3lya class, which we call the shifted Laguerre-P\u00f3lya class. Recent work of Griffin, Ono, Rolen, and Zagier shows that the Riemann Xi function is in this class. We prove that a function being in this class is equivalent to the Taylor coefficients, once shifted, being a degree $d$ multiplier sequence for every $d$, which is equivalent to shifted coefficients satisfying all of the higher T\u00faran inequalities. This mirrors a classical result of P\u00f3lya and Schur. We further show some order derivative of a function in this class satisfies each extended Laguerre inequality. Finally, we discuss some old and new conjectures about iterated inequalities for functions in this class."
+      }
+    ]
+  },
+  "screw_function_retry": {
+    "query": "all:\"screw function\"",
+    "entries": [
+      {
+        "arxiv_id": "2206.03682v4",
+        "title": "Aspects of the screw function corresponding to the Riemann zeta function",
+        "authors": [
+          "Masatoshi Suzuki"
+        ],
+        "year": "2022",
+        "published": "2022-06-08",
+        "summary": "We introduce a screw function corresponding to the Riemann zeta-function and study its properties from various aspects. Typical results are several equivalent conditions for the Riemann hypothesis in terms of the screw function. One of them can be considered an analog of so-called Weil's positivity or Li's criterion. In addition, we prove a few partial but unconditional results for such equivalents."
+      },
+      {
+        "arxiv_id": "2606.09096v1",
+        "title": "Weil's quadratic form via the screw function",
+        "authors": [
+          "Masatoshi Suzuki"
+        ],
+        "year": "2026",
+        "published": "2026-06-08",
+        "summary": "We establish a unified framework for understanding the results on the Weil quadratic form obtained by Yoshida (1992), Bombieri (2001, 2003), Connes--Consani (2023), and Connes--Consani--Moscovici (2025+) from the perspective of the screw function introduced in Suzuki (2023). An advantage of the approach via the screw function is that it provides a method to study the Weil quadratic form, which is originally defined in terms of distributions, by means of continuous functions. Based on this framework, we formulate a conjecture stating that a self-adjoint operator whose eigenvalues are the imaginary parts of the nontrivial zeros of the Riemann zeta function can be obtained as the limit, as $a \\to \\infty$, of self-adjoint operators arising from nonlocal realizations of the first-order differential operator on the finite interval $[-a,a]$. All these results are obtained without assuming the Riemann Hypothesis. This conjecture may be compared with the limit formula for the Riemann zeta function expressed in terms of zeta-regularized products proposed by Connes, Consani, and Moscovici, and it sheds new light on the spectral-theoretic interpretation of the nontrivial zeros of the Riemann zeta function."
+      },
+      {
+        "arxiv_id": "2209.12832v2",
+        "title": "Screw functions of Dirichlet series in the extended Selberg class",
+        "authors": [
+          "Masatoshi Suzuki"
+        ],
+        "year": "2022",
+        "published": "2022-09-14",
+        "summary": "We introduce screw functions for Dirichlet series in the extended Selberg class. Then we prove that the Grand Riemann Hypothesis for a member of the extended Selberg class is equivalent to the nonpositivity of the corresponding screw function."
+      },
+      {
+        "arxiv_id": "2409.00888v2",
+        "title": "$M$-functions and screw functions originating from Goldbach's problem and zeros of the Riemann zeta function",
+        "authors": [
+          "Kohji Matsumoto",
+          "Masatoshi Suzuki"
+        ],
+        "year": "2024",
+        "published": "2024-09-02",
+        "summary": "We study the $M$-functions, which describe the limit theorem for the value-distributions of the secondary main terms in the asymptotic formulas for the summatory functions of the Goldbach counting function. One of the new aspects is a sufficient condition for the Riemann hypothesis provided by some formulas of the $M$-functions, which was a necessary condition in previous work. The other new aspect is the relation between the secondary main terms and the screw functions, which provides another necessary and sufficient condition for the Riemann hypothesis. We study such $M$-functions and screw functions in generalized settings by axiomatizing them."
+      },
+      {
+        "arxiv_id": "2308.11860v2",
+        "title": "Analytic theories around the simplest screw",
+        "authors": [
+          "Masatoshi Suzuki"
+        ],
+        "year": "2023",
+        "published": "2023-08-23",
+        "summary": "We present several analytic theories related to screw functions and describe the connections among them, taking the screw function of the simplest screw line as a guiding example.Note that this article does not contain any new results. Nevertheless, subsequent developments have suggested that the analytic structures associated with the simplest screw provide a useful prototype for a broader theory connected with zeta-functions, Weil's quadratic forms, and related Hilbert-space structures arising in analytic number theory."
+      },
+      {
+        "arxiv_id": "2209.04658v3",
+        "title": "The screw line of the Riemann zeta-function and its applications",
+        "authors": [
+          "Masatoshi Suzuki"
+        ],
+        "year": "2022",
+        "published": "2022-09-10",
+        "summary": "We investigate the screw line corresponding to the screw function associated with the Riemann zeta-function under the Riemann hypothesis and derive three necessary and sufficient conditions for the Riemann hypothesis as applications. One of them explains the non-negativity of the Weil distribution by means of the norm."
+      },
+      {
+        "arxiv_id": "1709.07797v4",
+        "title": "Exact Computation of a Manifold Metric, via Lipschitz Embeddings and Shortest Paths on a Graph",
+        "authors": [
+          "Timothy Chu",
+          "Gary Miller",
+          "Donald Sheehy"
+        ],
+        "year": "2017",
+        "published": "2017-09-22",
+        "summary": "Data-sensitive metrics adapt distances locally based the density of data points with the goal of aligning distances and some notion of similarity. In this paper, we give the first exact algorithm for computing a data-sensitive metric called the nearest neighbor metric. In fact, we prove the surprising result that a previously published $3$-approximation is an exact algorithm. The nearest neighbor metric can be viewed as a special case of a density-based distance used in machine learning, or it can be seen as an example of a manifold metric. Previous computational research on such metrics despaired of computing exact distances on account of the apparent difficulty of minimizing over all continuous paths between a pair of points. We leverage the exact computation of the nearest neighbor metric to compute sparse spanners and persistent homology. We also explore the behavior of the metric built from point sets drawn from an underlying distribution and consider the more general case of inputs that are finite collections of path-connected compact sets. The main results connect several classical theories such as the conformal change of Riemannian metrics, the theory of positive definite functions of Schoenberg, and screw function theory of Schoenberg and Von Neumann. We develop novel proof techniques based on the combination of screw functions and Lipschitz extensions that may be of independent interest."
+      },
+      {
+        "arxiv_id": "1302.4343v1",
+        "title": "On Translation Invariant Kernels and Screw Functions",
+        "authors": [
+          "Purushottam Kar",
+          "Harish Karnick"
+        ],
+        "year": "2013",
+        "published": "2013-02-18",
+        "summary": "We explore the connection between Hilbertian metrics and positive definite kernels on the real line. In particular, we look at a well-known characterization of translation invariant Hilbertian metrics on the real line by von Neumann and Schoenberg (1941). Using this result we are able to give an alternate proof of Bochner's theorem for translation invariant positive definite kernels on the real line (Rudin, 1962)."
+      }
+    ]
+  },
+  "newton_inequalities_retry": {
+    "query": "all:\"Newton inequalities\"",
+    "entries": [
+      {
+        "arxiv_id": "1002.2395v4",
+        "title": "Newton's Inequalities on a Lattice",
+        "authors": [
+          "Gernot Michael Engel"
+        ],
+        "year": "2010",
+        "published": "2010-02-11",
+        "summary": "Functions that satisfy the Hadamard Fisher Inequalities also satisfy Newton's Inequalities"
+      },
+      {
+        "arxiv_id": "1309.2896v2",
+        "title": "Skewness, kurtosis and Newton's inequality",
+        "authors": [
+          "R. Sharma",
+          "R. Bhandari"
+        ],
+        "year": "2013",
+        "published": "2013-09-11",
+        "summary": "We show that an inequality related to Newton's inequality provides one more relation between skewness and kurtosis. This also gives simple and alternative proofs of the bounds for skewness and kurtosis."
+      },
+      {
+        "arxiv_id": "1702.04665v1",
+        "title": "Means Moments and Newton's Inequalities",
+        "authors": [
+          "R. Sharma",
+          "A. Sharma",
+          "R. Saini",
+          "G. Kapoor"
+        ],
+        "year": "2017",
+        "published": "2017-02-15",
+        "summary": "It is shown that Newton's inequalities and the related Maclaurin's inequalities provide several refinements of the fundamental Arithmetic mean - Geometric mean - Harmonic mean inequality in terms of the means and variance of positive real numbers. We also obtain some inequalities involving third and fourth central moments of real numbers."
+      },
+      {
+        "arxiv_id": "math/0512610v1",
+        "title": "M-matrices satisfy Newton's inequalities",
+        "authors": [
+          "Olga Holtz"
+        ],
+        "year": "2005",
+        "published": "2005-12-27",
+        "summary": "Newton's inequalities $c_n^2 \\ge c_{n-1}c_{n+1}$ are shown to hold for the normalized coefficients $c_n$ of the characteristic polynomial of any $M$- or inverse $M$-matrix. They are derived by establishing first an auxiliary set of inequalities also valid for both of these classes. They are also used to derive some new necessary conditions on the eigenvalues of nonnegative matrices."
+      },
+      {
+        "arxiv_id": "2401.02559v1",
+        "title": "A note on the Independent domination polynomial of zero divisor graph of rings",
+        "authors": [
+          "Bilal Ahmad Rather"
+        ],
+        "year": "2024",
+        "published": "2024-01-04",
+        "summary": "In this note we consider the independent domination polynomial problem along with their unimodal and log-concave properties which were earlier studied by G\u00fcrsoy, \u00dclker and G\u00fcrsoy (Soft Comp. 2022). We show that the independent domination polynomial of zero divisor graphs of $\\mathbb{Z}_{n}$ for $n\\in \\{ pq, p^{2}q, pqr, p^\u03b1\\}$ where $p,q,r$ are primes with $2<p<q<r$ are not unimodal thereby contradicting the main result of G\u00fcrsoy, \u00dclker and G\u00fcrsoy \\cite{gursoy}. Besides the authors show that the zero of the independent domination polynomial of these graphs have only real zero and used concept of Newton's inequalities to establish the log-concave property for the afore said polynomials. We show that these polynomials have complex zeros and the technique of Newton's inequalities are not applicable. Finally, by definition of log-concave, we prove that these polynomials are log-concave and fix the flaws in Theorem 10 of G\u00fcrsoy, \u00dclker and G\u00fcrsoy \\cite{gursoy}."
+      },
+      {
+        "arxiv_id": "2008.13452v2",
+        "title": "Spectral linear matrix inequalities",
+        "authors": [
+          "Mario Kummer"
+        ],
+        "year": "2020",
+        "published": "2020-08-31",
+        "summary": "We prove, under a certain representation theoretic assumption, that the set of real symmetric matrices, whose eigenvalues satisfy a linear matrix inequality, is itself a spectrahedron. The main application is that derivative relaxations of the positive semidefinite cone are spectrahedra. From this we further deduce statements on their Wronskians. These imply that Newton's inequalities, as well as a strengthening of the correlation inequalities for hyperbolic polynomials, can be expressed as sums of squares."
+      },
+      {
+        "arxiv_id": "2504.17567v1",
+        "title": "Log-concavity of inverse Kazhdan-Lusztig polynomials of paving matroids",
+        "authors": [
+          "Matthew H. Y. Xie",
+          "Philip B. Zhang"
+        ],
+        "year": "2025",
+        "published": "2025-04-24",
+        "summary": "Gao and Xie (2021) conjectured that the inverse Kazhdan-Lusztig polynomial of any matroid is log-concave. Although the inverse Kazhdan-Lusztig polynomial may not always have only real roots, we conjecture that the Hadamard product of an inverse Kazhdan-Lusztig polynomial of degree $n$ and $(1+t)^n$ has only real roots. Using interlacing polynomials and multiplier sequences, we confirm this conjecture for paving matroids. This result allows us to confirm the log-concavity conjecture for these matroids by applying Newton's inequalities."
+      },
+      {
+        "arxiv_id": "2102.09500v2",
+        "title": "Khinchin-type inequalities via Hadamard's factorisation",
+        "authors": [
+          "Alex Havrilla",
+          "Piotr Nayar",
+          "Tomasz Tkocz"
+        ],
+        "year": "2021",
+        "published": "2021-02-18",
+        "summary": "We prove Khinchin-type inequalities with sharp constants for type L random variables and all even moments. Our main tool is Hadamard's factorisation theorem from complex analysis, combined with Newton's inequalities for elementary symmetric functions. Besides the case of independent summands, we also treat ferromagnetic dependencies in a nonnegative external magnetic field (thanks to Newman's generalisation of the Lee-Yang theorem). Lastly, we compare the notions of type L, ultra sub-Gaussianity (introduced by Nayar and Oleszkiewicz) and strong log-concavity (introduced by Gurvits), with the latter two being equivalent."
+      },
+      {
+        "arxiv_id": "1601.05863v1",
+        "title": "Kirillov's unimodality conjecture for the rectangular Narayana polynomials",
+        "authors": [
+          "Herman Z. Q. Chen",
+          "Arthur L. B. Yang",
+          "Philip B. Zhang"
+        ],
+        "year": "2016",
+        "published": "2016-01-22",
+        "summary": "In the study of Kostka numbers and Catalan numbers, Kirillov posed a unimodality conjecture for the rectangular Narayana polynomials. We prove that the rectangular Narayana polynomials have only real zeros, and thereby confirm Kirillov's unimodality conjecture with the help of Newton's inequality. By using an equidistribution property between descent numbers and ascent numbers on ballot paths due to Sulanke and a bijection between lattice words and standard Young tableaux, we show that the rectangular Narayana polynomial is equal to the descent generating function on standard Young tableaux of certain rectangular shape, up to a power of the indeterminate. Then we obtain the real-rootedness of the rectangular Narayana polynomial based on Brenti's result that the descent generating function of standard Young tableaux has only real zeros."
+      },
+      {
+        "arxiv_id": "2605.11831v1",
+        "title": "Maximum Entropy of Sums of Independent Ternary Random Variables",
+        "authors": [
+          "Mladen Kova\u010devi\u0107"
+        ],
+        "year": "2026",
+        "published": "2026-05-12",
+        "summary": "The classical problem of maximizing the Shannon entropy of a sum of independent random variables supported on a finite alphabet is considered and settled in the ternary case. Namely, the following theorem is established: if \\(X_1,\\ldots,X_n\\) are independent random variables taking values in \\(\\{0,1,2\\}\\), then the entropy of \\(S_n=X_1+\\cdots+X_n\\) is maximized when \\(X_1,\\ldots,X_{n-1}\\) are uniform on \\(\\{0,2\\}\\) and the probability mass function of \\(X_n\\) is given by \\(\\Prob(X_n=0) = \\Prob(X_n=2) = w/2\\), \\(\\Prob(X_n=1) = 1-w\\), where \\(w = \\big(1 + 2^{-H(B_n)+H(B_{n-1})}\\big)^{-1}\\) and \\(B_m\\sim \\Bin(m,1/2)\\). The statement can be seen as an extension to ternary alphabets of the Shepp--Olkin--Mateev theorem. The proof uses the Hermite--Biehler theorem, Newton's inequalities, and Yu's maximum-entropy theorem for ultra-log-concave distributions."
+      }
+    ]
+  },
+  "hermite_biehler_alone": {
+    "query": "all:\"Hermite-Biehler\"",
+    "entries": [
+      {
+        "arxiv_id": "math/0512591v1",
+        "title": "Hermite-Biehler, Routh-Hurwitz, and total positivity",
+        "authors": [
+          "Olga Holtz"
+        ],
+        "year": "2005",
+        "published": "2005-12-27",
+        "summary": "Simple proofs of the Hermite-Biehler and Routh-Hurwitz theorems are presented. The total nonnegativity of the Hurwitz matrix of a stable real polynomial follows as an immediate corollary."
+      },
+      {
+        "arxiv_id": "2302.07018v1",
+        "title": "A generalized Hermite-Biehler theorem",
+        "authors": [
+          "Rostyslav Kozhan",
+          "Mikhail Tyaglov"
+        ],
+        "year": "2023",
+        "published": "2023-02-14",
+        "summary": "The classical Hermite-Biehler theorem describes possible zero sets of complex linear combinations of two real polynomials whose zeros strictly interlace. We provide the full characterization of zero sets for the case when this interlacing is broken at exactly one location. Using this we solve the direct and inverse spectral problem for rank-one multiplicative perturbations of finite Hermitian matrices. We also treat certain rank two additive perturbations of finite Jacobi matrices."
+      },
+      {
+        "arxiv_id": "1005.1596v1",
+        "title": "Maximal univalent disks of real rational functions and Hermite-Biehler polynomials",
+        "authors": [
+          "V. Kostov",
+          "B. Shapiro",
+          "M. Tyaglov"
+        ],
+        "year": "2010",
+        "published": "2010-05-10",
+        "summary": "The well-known Hermite-Biehler theorem claims that a univariate monic polynomial s of degree k has all roots in the open upper half-plane if and only if s=p+iq where p and q are real polynomials of degree k and k-1 resp. with all real, simple and interlacing roots, and q has a negative leading coefficient. Considering roots of p as cyclically ordered on RP^1 we show that the open disk in CP^1 having a pair of consecutive roots of p as its diameter is the maximal univalent disk for the function R=\\frac{q}{p}. This solves a special case of the so-called Hermite-Biehler problem."
+      },
+      {
+        "arxiv_id": "1701.07912v1",
+        "title": "An extension of the Hermite-Biehler theorem with application to polynomials with one positive root",
+        "authors": [
+          "Richard Ellard",
+          "Helena \u0160migoc"
+        ],
+        "year": "2017",
+        "published": "2017-01-27",
+        "summary": "If a real polynomial $f(x)=p(x^2)+xq(x^2)$ is Hurwitz stable (every root if $f$ lies in the open left half-plane), then the Hermite-Biehler Theorem says that the polynomials $p(-x^2)$ and $q(-x^2)$ have interlacing real roots. We extend this result to general polynomials by giving a lower bound on the number of real roots of $p(-x^2)$ and $q(-x^2)$ and showing that these real roots interlace. This bound depends on the number of roots of $f$ which lie in the left half plane. Another classical result in the theory of polynomials is Descartes' Rule of Signs, which bounds the number of positive roots of a polynomial in terms of the number of sign changes in its coefficients. We use our extension of the Hermite-Biehler Theorem to give an inverse rule of signs for polynomials with one positive root."
+      },
+      {
+        "arxiv_id": "1501.05824v2",
+        "title": "The Real-rootedness of Eulerian Polynomials via the Hermite--Biehler Theorem",
+        "authors": [
+          "Arthur L. B. Yang",
+          "Philip B. Zhang"
+        ],
+        "year": "2015",
+        "published": "2015-01-23",
+        "summary": "Based on the Hermite--Biehler theorem, we simultaneously prove the real-rootedness of Eulerian polynomials of type $D$ and the real-rootedness of affine Eulerian polynomials of type $B$, which were first obtained by Savage and Visontai by using the theory of $\\mathbf{s}$-Eulerian polynomials. We also confirm Hyatt's conjectures on the interlacing property of half Eulerian polynomials. Borcea and Br\u00e4nd\u00e9n's work on the characterization of linear operators preserving Hurwitz stability is critical to this approach."
+      },
+      {
+        "arxiv_id": "1308.0228v4",
+        "title": "An inverse problem for a class of canonical systems and its applications to self-reciprocal polynomials",
+        "authors": [
+          "Masatoshi Suzuki"
+        ],
+        "year": "2013",
+        "published": "2013-08-01",
+        "summary": "A canonical system is a kind of first-order system of ordinary differential equations on an interval of the real line parametrized by complex numbers. It is known that any solution of a canonical system generates an entire function of the Hermite-Biehler class. In this paper, we deal with the inverse problem to recover a canonical system from a given entire function of the Hermite-Biehler class satisfying appropriate conditions. This type inverse problem was solved by de Branges in 1960s. However his results are often not enough to investigate a Hamiltonian of recovered canonical system. In this paper, we present an explicit way to recover a Hamiltonian from a given exponential polynomial belonging to the Hermite-Biehler class. After that, we apply it to study distributions of roots of self-reciprocal polynomials."
+      },
+      {
+        "arxiv_id": "1510.07792v1",
+        "title": "De Branges functions of Schroedinger equations",
+        "authors": [
+          "Anton Baranov",
+          "Yurii Belov",
+          "Alexei Poltoratski"
+        ],
+        "year": "2015",
+        "published": "2015-10-27",
+        "summary": "We characterize the Hermite-Biehler (de Branges) functions $E$ which correspond to Shroedinger operators with $L^2$ potential on the finite interval. From this characterization one can easily deduce a recent theorem by Horvath. We also obtain a result about location of resonances."
+      },
+      {
+        "arxiv_id": "2108.10746v3",
+        "title": "Higher-order interlacing for matrix-valued meromorphic Herglotz functions",
+        "authors": [
+          "Jakob Reiffenstein"
+        ],
+        "year": "2021",
+        "published": "2021-08-24",
+        "summary": "Scalar-valued meromorphic Herglotz-Nevanlinna functions are characterized by the interlacing property of their poles and zeros together with some growth properties. We give a characterization of matrix-valued Herglotz-Nevanlinna functions by means of a higher-order interlacing property. As an application we deduce a matrix version of the classical Hermite-Biehler Theorem for entire functions."
+      },
+      {
+        "arxiv_id": "2012.13996v1",
+        "title": "Stability of Dirac resonances",
+        "authors": [
+          "Dmitrii Mokeev"
+        ],
+        "year": "2020",
+        "published": "2020-12-27",
+        "summary": "We prove that the class of resonances of Dirac operators on the half-line with compactly supported potentials is closed with respect to $\\ell^1$ perturbations. We also prove that the potential depends continuously on such perturbations. We show that similar results hold true for the Jost functions and Hermite-Biehler functions associated with Dirac operators."
+      },
+      {
+        "arxiv_id": "2004.14465v1",
+        "title": "A note on the zeros of approximations of the Ramanujan $\u039e-$function",
+        "authors": [
+          "Andr\u00e9s Chirre",
+          "Oswaldo Vel\u00e1squez Casta\u00f1\u00f3n"
+        ],
+        "year": "2020",
+        "published": "2020-04-29",
+        "summary": "In this paper, we review the study of the distribution of the zeros of certain approximations for the Ramanujan $\u039e-$function given by Haseo Ki, and we provide a new proof of his results. Our approach is motivated by the ideas of Vel\u00e1squez in the study of the zeros of certain sums of entire functions with some condition of stability related to the Hermite-Biehler theorem."
+      },
+      {
+        "arxiv_id": "1501.00704v3",
+        "title": "On self-adjointness of Poisson summation",
+        "authors": [
+          "Johannes L\u00f6ffler"
+        ],
+        "year": "2015",
+        "published": "2015-01-04",
+        "summary": "We show that a combination of well-known operators, namely $\\I\u03c4\\circ{H}\\circ\\Ps$ is self-adjoint and {\\em ad-hoc} related to the $\u03b6$ function. Here $\u03c4$ is an involution appearing in Weil's positivity criteria needed for hermitrization, $H$ a regularization operator introduced by Connes \\cite{Co2} and $\\Ps$ essentially Poisson summation. We elaborate on the Hilbert-P\u00f3lya conjecture, discuss why the Hermite-Biehler theorem, uncertainty relations and cohomologies are interesting in our scenario."
+      },
+      {
+        "arxiv_id": "2010.09513v1",
+        "title": "Eulerian pairs and Eulerian recurrence systems",
+        "authors": [
+          "Shi-Mei Ma",
+          "Jun Ma",
+          "Jean Yeh",
+          "Yeong-Nan Yeh"
+        ],
+        "year": "2020",
+        "published": "2020-10-19",
+        "summary": "In this paper, we characterize a duality relation between Eulerian recurrences and Eulerian recurrence systems, which generalizes and unifies Hermite-Biehler decompositions of several enumerative polynomials, including flag descent polynomials for hyperoctahedral group, flag ascent-plateau polynomials for Stirling permutations, up-down run polynomials for symmetric group and alternating run polynomials for hyperoctahedral group. As applications, we derive some properties of associated enumerative polynomials. In particular, we find that both the ascent-plateau polynomials and left ascent-plateau polynomials for Stirling permutations are alternatingly increasing, and so they are unimodal with modes in the middle."
+      },
+      {
+        "arxiv_id": "math/0608297v2",
+        "title": "Sums of entire functions having only real zeros",
+        "authors": [
+          "Steven R. Adams",
+          "David A. Cardon"
+        ],
+        "year": "2006",
+        "published": "2006-08-12",
+        "summary": "We show that certain sums of products of Hermite-Biehler entire functions have only real zeros, extending results of Cardon. As applications of this theorem we construct sums of exponential functions having only real zeros, we construct polynomials having zeros only on the unit circle, and we obtain the three-term recurrence relation for an arbitrary family of real orthogonal polynomials. We discuss a similarity of this result with the Lee-Yang circle theorem from statistical mechanics. Also, we state several open problems."
+      },
+      {
+        "arxiv_id": "1609.03987v1",
+        "title": "Extremal Signatures",
+        "authors": [
+          "Friedrich Littmann",
+          "Mark Spanier"
+        ],
+        "year": "2016",
+        "published": "2016-09-13",
+        "summary": "Let $E= A - iB$ be a Hermite-Biehler entire function of exponential type $\u03c4/2$ where $A$ and $B$ are real entire, and consider $d\u03bc(x) = dx/|E(x)|^2$. We show that the sign of the product $A B$ is an extremal signature for the space of functions of exponential type $\u03c4$ with respect to the norm of $L^1(\u03bc)$. This allows us to find best approximations by entire functions of exponential type $\u03c4$ in $L^1(\u03bc)$-norm to certain special functions (e.g., the Gaussian and the Poisson kernel)."
+      },
+      {
+        "arxiv_id": "1504.01769v1",
+        "title": "Zeros of random functions generated with de Branges kernels",
+        "authors": [
+          "Jorge Antezana",
+          "Jordi Marzo",
+          "Jan-Fredrik Olsen"
+        ],
+        "year": "2015",
+        "published": "2015-04-07",
+        "summary": "We study the point process given by the set of real zeros of random sums of orthonormal bases of reproducing kernels of de Branges spaces. Examples of these kernels are the cardinal sine, Airy and Bessel kernels. We find an explicit formula for the first intensity function in terms of the phase of the Hermite-Biehler function. We prove that the first intensity of the point process completely characterizes the underlying de Branges space. This result is a real version of the so called Calabi rigidity for GAFs proved by M. Sodin."
+      },
+      {
+        "arxiv_id": "2312.11185v3",
+        "title": "A classification of Fourier summation formulas and crystalline measures",
+        "authors": [
+          "Felipe Gon\u00e7alves"
+        ],
+        "year": "2023",
+        "published": "2023-12-18",
+        "summary": "We completely classify Fourier summation formulas, and in particular, all crystalline measures with quadratic decay. Our classification employs techniques from almost periodic functions, Hermite-Biehler functions, de Branges spaces and Poisson representation. We show how our classification generalizes recent results of Kurasov \\& Sarnak and Olevskii \\& Ulanovskii. As an application, we give a new classification result for nonnegative measures with uniformly discrete support that are bounded away from zero on their support. Moreover, we give a new construction using eta-quotients, generalizing an old example of Guinand."
+      },
+      {
+        "arxiv_id": "2411.02226v2",
+        "title": "H\u00f6rmander's Inequality and Point Evaluations in de Branges Space",
+        "authors": [
+          "Alex Bergman"
+        ],
+        "year": "2024",
+        "published": "2024-11-04",
+        "summary": "Let $f$ be an entire function of finite exponential type less than or equal to $\u03c3$ which is bounded by $1$ on the real axis and satisfies $f(0) = 1$. Under these assumptions H\u00f6rmander showed that $f$ cannot decay faster than $\\cos(\u03c3x)$ on the interval $(-\u03c0/\u03c3,\u03c0/\u03c3)$. We extend this result to the setting of de Branges spaces with cosine replaced by the real part of the associated Hermite-Biehler function. We apply this result to study the point evaluation functional and associated extremal functions in de Branges spaces (equivalently in model spaces generated by meromorphic inner functions) generalizing some recent results of Brevig, Chirre, Ortega-Cerd\u00e0, and Seip."
+      },
+      {
+        "arxiv_id": "0802.2165v1",
+        "title": "Stability of PID-Controlled Linear Time-Delay Feedback Systems",
+        "authors": [
+          "Gianpasquale Martelli"
+        ],
+        "year": "2008",
+        "published": "2008-02-15",
+        "summary": "The stability of feedback systems consisting of linear time-delay plants and PID controllers has been investigated for many years by means of several methods, of which the Nyquist criterion, a generalization of the Hermite-Biehler Theorem, and the root location method are well known. The main purpose of these researches is to determine the range of controller parameters that allow stability. Explicit and complete expressions of the boundaries of these regions and computation procedures with a finite number of steps are now available only for first-order plants, provided with one time delay. In this note, the same results, based on Pontryagin's studies, are presented for arbitrary-order plants."
+      },
+      {
+        "arxiv_id": "math/0404215v1",
+        "title": "Classifying real polynomial pencils",
+        "authors": [
+          "Julius Borcea",
+          "Boris Shapiro"
+        ],
+        "year": "2004",
+        "published": "2004-04-11",
+        "summary": "Let $\\bP^n$ be the space of all homogeneous polynomials of degree $n$ in two variables with real coefficients. The standard discriminant $\\D_{n+1}\\subset \\bP^n$ is Whitney stratified according to the number and the multiplicities of multiple real zeros. A real polynomial pencil, that is, a line $L\\subset \\bP^n$ is called generic if it intersects $\\D_{n+1}$ transversally. Nongeneric pencils form the Grassmann discriminant $\\D_{2,n+1}\\subset \\gtn$, where $\\gtn$ is the Grassmannian of lines in $\\bP^n$. We enumerate the connected components of the set $\\widetilde \\gtn=\\gtn\\setminus \\D_{2,n+1}$ of all generic lines in $\\bP^n$ and relate this topic to the Hawaii conjecture and the classical theorems of Obreschkoff and Hermite-Biehler."
+      },
+      {
+        "arxiv_id": "math/9802047v1",
+        "title": "Zeros of reliability polynomials and f-vectors of matroids",
+        "authors": [
+          "David G. Wagner"
+        ],
+        "year": "1998",
+        "published": "1998-02-09",
+        "summary": "For a finite multigraph G, the reliability function of G is the probability R_G(q) that if each edge of G is deleted independantly with probability q then the remaining edges of G induce a connected spanning subgraph of G; this is a polynomial function of q. In 1992, Brown and Colbourn conjectured that for any connected multigraph G, if the complex number q is such that R_G(q)=0 then |q|<=1. We verify that this conjectured property of R_G(q) holds if G is a series-parallel network. The proof is by an application of the Hermite-Biehler Theorem and development of a theory of higher-order interlacing for polynomials with only real nonpositive zeros. We conclude by establishing some new inequalities which are satisfied by the f-vector of any matroid without coloops, and by discussing some stronger inequalities which would follow (in the cographic case) from the Brown-Colbourn Conjecture, and are hence true for cographic matroids of series-parallel networks."
+      }
+    ]
+  },
+  "turan_zeta": {
+    "query": "all:\"Tur\u00e1n inequalities\" AND all:zeta",
+    "entries": [
+      {
+        "arxiv_id": "2510.07710v2",
+        "title": "On the uniform distribution modulo $1$ of zeros and $a$-points of zeta functions",
+        "authors": [
+          "Hideki Murahara",
+          "Tomokazu Onozuka"
+        ],
+        "year": "2025",
+        "published": "2025-10-09",
+        "summary": "Fujii gave five sufficient conditions for the uniform distribution modulo $1$ of the sequence $(u f(\u03b3_n))$, where $\u03b3_n$ runs over the imaginary parts of the non-trivial zeros of the Riemann zeta function. In this paper, we provide four sufficient conditions for the uniform distribution modulo $1$ that apply to a much broader class of sequences. Our method relies solely on the asymptotic behavior of the counting function and does not require the intricate calculations concerning the Riemann zeta function employed by Fujii in his paper. As applications, we prove the uniform distribution modulo $1$ of $(u f(x_n))$ for various sequences $(x_n)$, including the non-trivial $a$-points of the derivatives of the Riemann zeta function, the non-trivial zeros of the derivatives of Dirichlet $L$-functions, and the non-trivial zeros of functions in the Selberg class. Furthermore, by applying the Erd\u0151s--Tur\u00e1n inequality, we obtain an upper bound for the discrepancy of these sequences."
+      },
+      {
+        "arxiv_id": "2306.00161v1",
+        "title": "On the equidistribution properties of patterns in prime numbers Jumping Champions, metaanalysis of properties as Low-Discrepancy Sequences, and some conjectures based on Ramanujan's master theorem and the zeros of Riemann's zeta function",
+        "authors": [
+          "Arturo Ortiz-Tapia"
+        ],
+        "year": "2023",
+        "published": "2023-05-31",
+        "summary": "The Paul Erd\u0151s-Tur\u00e1n inequality is used as a quantitative form of Weyl' s criterion, together with other criteria to asses equidistribution properties on some patterns of sequences that arise from indexation of prime numbers, Jumping Champions (called here and in previous work, \"meta-distances\" or even md, for short). A statistical meta-analysis is also made of previous research concerning meta-distances to review the conclusion that meta-distances can be called Low-discrepancy sequences (LDS), and thus exhibiting another numerical evidence that md's are an equidistributed sequence. Ramanujan's master theorem is used to conjecture that the types of integrands where md's can be used more succesfully for quadratures are product-related, as opposite to addition-related. Finally, it is conjectured that the equidistribution of md's may be connected to the know equidistribution of zeros of Riemann's zeta function, and yet still have enough \"information\" for quasi-random integration (\"right\" amount of entropy)."
+      }
+    ]
+  },
+  "turan_zeta_ascii": {
+    "query": "all:\"Turan inequalities\" AND all:zeta",
+    "entries": []
+  },
+  "campbell_finite_free_zeta": {
+    "query": "all:\"finite free probability\" AND all:zeta",
+    "entries": []
+  },
+  "laguerre_polya_zeta": {
+    "query": "all:\"Laguerre-P\u00f3lya\" AND all:zeta",
+    "entries": [
+      {
+        "arxiv_id": "math/0505174v1",
+        "title": "Multiple positivity and the Riemann zeta-function",
+        "authors": [
+          "Olga M. Katkova"
+        ],
+        "year": "2005",
+        "published": "2005-05-10",
+        "summary": "In the paper it is discussed the relations of the Riemann $\u03b6-$function to classes of generating functions of multiply positive sequences according to Schoenberg (also called P\u00f3lya frequency sequences). Key words: multiply positive sequences, totally positive sequences, P\u00f3lya frequency sequences, Laguerre-P\u00f3lya class, Riemann $\u03b6-$function."
+      },
+      {
+        "arxiv_id": "2405.18940v1",
+        "title": "Brenke polynomials with real zeros and the Riemann Hypothesis",
+        "authors": [
+          "Antonio J. Dur\u00e1n"
+        ],
+        "year": "2024",
+        "published": "2024-05-29",
+        "summary": "If $A(z)=\\sum_{n=0}^\\infty a_nz^n$ and $B(z)=\\sum_{n=0}^\\infty b_nz^n$ are two formal power series, with $a_n,b_n\\in \\mathbb{R}$, the polynomials $(p_n)_n$ defined by the generating function $$ A(z)B(xz)=\\sum_{n=0}^\\infty p_n(x)z^n $$ are called the Brenke polynomials generated by $A$ and associated to $B$. We say that $A\\in \\mathcal{R}_B$ if the Brenke polynomials $(p_n)_n$ have only real zeros. Among other results, in this paper we find necessary and sufficient conditions on $B$ such that $\\mathcal{R}_B=\\mathcal{L}\\text{-}\\mathcal{P}$, where $\\mathcal{L}\\text{-}\\mathcal{P}$ denotes the Laguerre-P\u00f3lya class (of entire functions). These results can be considered an extension to Brenke polynomials of the Jensen, and P\u00f3lya and Schur characterization $\\mathcal{R}_{e^z}=\\mathcal{L}\\text{-}\\mathcal{P}$, for Appell polynomials. When applying our results to a relative of the Riemann zeta function, we find new equivalencies for the Riemann Hypothesis in terms of real-rootedness of some sequences of Brenke polynomials."
+      }
+    ]
+  }
+}

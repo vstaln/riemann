@@ -73,33 +73,42 @@ def m3_closed(lam):
     j2 = J2(lam)
     return 1 + 3 * (1 / lam - 2 * j2) + 1 / lam**2 - 6 * j2 / lam + 2 * (1 - lam / 2)
 
-def m3_diagram(lam, R=60):
-    """DPP diagram, direct quadrature:
+def m3_diagram(lam, R=24, ng=220):
+    """DPP diagram, direct quadrature (numpy Gauss–Legendre, tail-subtracted):
        m3 = 1 + 3 A2 + A3,
-       A2 = int K(u)^2 (1 - S(u)^2) du,
-       A3 = int_int K(u)K(v)K(u+v) rho3(u,v) du dv,
+       A2 = int K(u)^2 (1 - S(u)^2) du            (= 1/lam - 2*J2, closed form)
+       A3 = int_int K(u)K(v)K(u+v) rho3(u,v) du dv
+          = 1/lam^2  +  int_int K(u)K(v)K(u+v) (rho3(u,v) - 1) du dv
        rho3 = det[ S(x_i - x_j) ]_3x3 = 1 - S(u)^2 - S(v)^2 - S(u+v)^2 + 2 S(u)S(v)S(u+v).
-    The integral over the u,v plane is carried over a large square (tails are O(r^-4))."""
-    K = lambda u: sinc(lam * u)
-    S = sinc
-    A2 = mp.quad(lambda u: K(u) ** 2 * (1 - S(u) ** 2), [-R, R])
-    def rho3(u, v):
-        return (1 - S(u) ** 2 - S(v) ** 2 - S(u + v) ** 2
+    The leading '1' of rho3 gives the closed-form tail D = 1/lam^2 (PROVEN in
+    attack-twobandwidth.md §2.2); the remainder decays like O(r^-2) and is integrated
+    on the box [-R,R]^2 with Gauss–Legendre."""
+    K = lambda u: np.sinc(float(lam) * u)   # np.sinc(x) = sin(pi x)/(pi x)
+    S = np.sinc
+    A2 = 1 / float(lam) - 2 * float(J2(lam))   # closed form, cross-checked by quadrature below
+    def rho3_minus_1(u, v):
+        return (- S(u) ** 2 - S(v) ** 2 - S(u + v) ** 2
                 + 2 * S(u) * S(v) * S(u + v))
-    def integ(u, v):
-        return K(u) * K(v) * K(u + v) * rho3(u, v)
-    A3 = mp.quad(integ, [-R, R], [-R, R])
-    return 1 + 3 * A2 + A3, A2, A3
+    xw, xg = np.polynomial.legendre.leggauss(ng)
+    uu = R * xg; vv = R * xg
+    W = np.outer(xw, xw)
+    U, V = np.meshgrid(uu, vv, indexing='ij')
+    integ = K(U) * K(V) * K(U + V) * rho3_minus_1(U, V)
+    A3_corr = (R * R) * np.sum(W * integ)          # box integral of the (rho3-1) part
+    A3 = (1.0 / lam ** 2) + A3_corr                 # + closed-form tail D = 1/lam^2
+    # cross-check A2 by direct 1-D quadrature on the same grid
+    A2_direct = R * np.sum(xw * (K(uu) ** 2 * (1 - S(uu) ** 2)))
+    return 1 + 3 * A2 + A3, A2, A3, A2_direct
 
 print("\n--- (A) PROVEN sine-kernel third moments -------------------------------")
 refs = {mp.mpf(1) / 2: mp.mpf(5), mp.mpf(2) / 3: mp.mpf(13) / 4, mp.mpf(1): mp.mpf(2)}
 for lam in [mp.mpf(1) / 2, mp.mpf(2) / 3, mp.mpf(1)]:
     mc = m3_closed(lam)
-    md, A2, A3 = m3_diagram(lam)
+    md, A2, A3, A2_direct = m3_diagram(lam)
     j2 = J2(lam)
     print(f"lam={mp.nstr(lam,4):>6}: closed m3 = {mp.nstr(mc,10):>10}   "
-          f"diagram m3 = {mp.nstr(md,10):>10}   A2 = {mp.nstr(A2,8):>8}   A3 = {mp.nstr(A3,8):>8}   "
-          f"J2 = {mp.nstr(j2,8):>8}   ref = {mp.nstr(refs[lam],10):>10}")
+          f"diagram m3 = {md:>10.6f}   A2 = {float(A2):>8.5f} (direct {A2_direct:8.5f})   "
+          f"A3 = {float(A3):>8.5f}   J2 = {mp.nstr(j2,8):>8}   ref = {mp.nstr(refs[lam],10):>10}")
 
 # ----------------------------------------------------------------------
 # B. The law's marked S3 as a function of the configuration data

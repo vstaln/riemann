@@ -1,0 +1,137 @@
+{
+  "spectral_truncations": {
+    "query": "all:\"Spectral truncations\" AND all:noncommutative",
+    "entries": [
+      {
+        "arxiv_id": "2004.14115v2",
+        "title": "Spectral truncations in noncommutative geometry and operator systems",
+        "authors": [
+          "Alain Connes",
+          "Walter D. van Suijlekom"
+        ],
+        "year": "2020",
+        "published": "2020-04-29",
+        "summary": "In this paper we extend the traditional framework of noncommutative geometry in order to deal with spectral truncations of geometric spaces (i.e. imposing an ultraviolet cutoff in momentum space) and with tolerance relations which provide a coarse grain approximation of geometric spaces at a finite resolution. In our new approach the traditional role played by $C^*$-algebras is taken over by operator systems. As part of the techniques we treat $C^*$-envelopes, dual operator systems and stable equivalence. We define a propagation number for operator systems, which we show to be an invariant under stable equivalence and use to compare approximations of the same space. We illustrate our methods for concrete examples obtained by spectral truncations of the circle. These are operator systems of finite-dimensional Toeplitz matrices and their dual operator systems which are given by functions in the group algebra on the integers with support in a fixed interval. It turns out that the cones of positive elements and the pure state spaces for these operator systems possess a very rich structure which we analyze including for the algebraic geometry of the boundary of the positive cone and the metric aspect i.e. the distance on the state space associated to the Dirac operator. The main property of the spectral truncation is that it keeps the isometry group intact. In contrast, if one considers the other finite approximation provided by circulant matrices the isometry group becomes discrete, even though in this case the operator system is a $C^*$-algebra. We analyze this in the context of the finite Fourier transform. The extension of noncommutative geometry to operator systems allows one to deal with metric spaces up to finite resolution by considering the relation $d(x,y)<\u03b5$ between two points, or more generally a tolerance relation which naturally gives rise to an operator system."
+      },
+      {
+        "arxiv_id": "2412.00628v2",
+        "title": "A noncommutative integral on spectrally truncated spectral triples, and a link with quantum ergodicity",
+        "authors": [
+          "Eva-Maria Hekkelman",
+          "Edward A. McDonald"
+        ],
+        "year": "2024",
+        "published": "2024-12-01",
+        "summary": "We propose a simple approximation of the noncommutative integral in noncommutative geometry for the Connes--Van Suijlekom paradigm of spectrally truncated spectral triples. A close connection between this approximation and the field of quantum ergodicity and work by Widom in particular immediately provides a Szeg\u0151 limit formula for noncommutative geometry. We then make a connection to the density of states. Finally, we propose a definition for the ergodicity of geodesic flow for compact spectral triples. This definition is known in quantum ergodicity as uniqueness of the vacuum state for $C^*$-dynamical systems, and for spectral triples where local Weyl laws hold this implies that the Dirac operator of the spectral triple is quantum ergodic. This brings to light a close connection between quantum ergodicity and Connes' integral formula."
+      },
+      {
+        "arxiv_id": "2405.17823v5",
+        "title": "Spectral Truncation Kernels: Noncommutativity in $C^*$-algebraic Kernel Machines",
+        "authors": [
+          "Yuka Hashimoto",
+          "Ayoub Hafid",
+          "Masahiro Ikeda",
+          "Hachem Kadri"
+        ],
+        "year": "2024",
+        "published": "2024-05-28",
+        "summary": "A central question in vector- and function-valued learning is how to design kernels that capture both local and non-local interactions while remaining computationally tractable. Existing operator-valued kernels offer only partial answers: separable kernels are efficient but fail to model interactions across the function domain, while commutative kernels capture only pointwise structure. To address this, we propose spectral truncation kernels, a new class of positive definite kernels for vector- and function-valued learning based on spectral truncation and $C^*$-algebra. By allowing noncommutative products in the kernel construction, the proposed kernels induce interactions across the data function domain and fill the gap between existing separable and commutative kernels. In addition, by using the $C^*$-algebraic framework, we reduce the computational cost compared to the existing vector-valued RKHS framework with operator-valued kernels."
+      },
+      {
+        "arxiv_id": "2506.21950v1",
+        "title": "Trace Formulas in Noncommutative Geometry",
+        "authors": [
+          "Eva-Maria Hekkelman"
+        ],
+        "year": "2025",
+        "published": "2025-06-27",
+        "summary": "Trace formulas appear in many forms in noncommutative geometry (NCG). In the first part of this thesis, we obtain results for asymptotic expansions of trace formulas like heat trace expansions by adapting the theory of Multiple Operator Integration to NCG. More broadly, this construction provides a natural language for operator integrals in NCG, which systematises and simplifies operator integral arguments throughout the literature. Towards this end, we construct a functional calculus for abstract pseudodifferential operators and generalise Peller's construction of multiple operator integrals to this abstract pseudodifferential calculus. In the process, we obtain a noncommutative Taylor formula. In the second part of this thesis, we shift our attention to Dixmier trace formulas. First, we provide an approximation of the noncommutative integral for spectrally truncated spectral triples in the Connes--Van Suijlekom paradigm of operator system spectral triples. Our approximation has a close link to Quantum Ergodicity, which we will use to state an NCG analogue of the fundamental result that ergodic geodesic flow implies quantum ergodicity. Furthermore, we provide a Szeg\u0151 limit theorem in NCG. Next, we provide a Dixmier trace formula for the density of states, a measure originating in solid state physics that can be associated with an operator on a geometric space. We first provide this formula in the setting of discrete metric spaces, and then in the setting of manifolds of bounded geometry. The latter leads to a Dixmier trace formula for Roe's index on open manifolds."
+      },
+      {
+        "arxiv_id": "2409.02773v1",
+        "title": "A generalization of K-theory to operator systems",
+        "authors": [
+          "Walter D. van Suijlekom"
+        ],
+        "year": "2024",
+        "published": "2024-09-04",
+        "summary": "We propose a generalization of K-theory to operator systems. Motivated by spectral truncations of noncommutative spaces described by $C^*$-algebras and inspired by the realization of the K-theory of a $C^*$-algebra as the Witt group of hermitian forms, we introduce new operator system invariants indexed by the corresponding matrix size. A direct system is constructed whose direct limit possesses a semigroup structure, and we define the $K_0$-group as the corresponding Grothendieck group. This is an invariant of unital operator systems, and, more generally, an invariant up to Morita equivalence of operator systems. For $C^*$-algebras it reduces to the usual definition. We illustrate our invariant by means of the spectral localizer."
+      }
+    ]
+  },
+  "osullivan_xi": {
+    "query": "au:O%27Sullivan AND all:xi",
+    "entries": []
+  },
+  "burnol_weil": {
+    "query": "au:Burnol AND all:Weil",
+    "entries": [
+      {
+        "arxiv_id": "math/0101068v1",
+        "title": "Sur les Formules Explicites I: analyse invariante",
+        "authors": [
+          "Jean-Francois Burnol"
+        ],
+        "year": "2001",
+        "published": "2001-01-09",
+        "summary": "Weil has generalized the Riemann-von Mangoldt explicit formula linking the prime numbers with the zeros of the zeta function to the set-up of a general algebraic number field K and Dirichlet-Hecke L-function, revealing in the process the role played by the completions (finite and infinite) of K. We show how the local terms of these explicit formulae are explained by the dilaton invariant ``conductor operator'' log(|x|) + log(|y|). We also check Weil's positivity criterion under a support condition."
+      },
+      {
+        "arxiv_id": "math/9901051v2",
+        "title": "Scattering on the p-adic field and a trace formula",
+        "authors": [
+          "Jean-Francois Burnol"
+        ],
+        "year": "1999",
+        "published": "1999-01-12",
+        "summary": "I apply the set-up of Lax-Phillips Scattering Theory to a non-archimedean local field. It is possible to choose the outgoing space and the incoming space to be Fourier transforms of each other. Key elements of the Lax-Phillips theory are seen to make sense and to have the expected interrelations: the scattering matrix S, the projection K to the interacting space, the contraction semi-group Z and the time delay operator T. The scattering matrix is causal, its analytic continuation has the expected poles and zeros, and its phase derivative is the (non-negative) spectral function of T, which is also the restriction to the diagonal of the kernel of K. The contraction semi-group Z is related to S (and T) through a trace formula. Introducing an odd-even grading on the interacting space allows to express the Weil local explicit formula in terms of a ``supertrace''. I also apply my methods to the evaluation of a trace considered by Connes."
+      },
+      {
+        "arxiv_id": "math/9810169v2",
+        "title": "The Explicit Formula in simple terms",
+        "authors": [
+          "Jean-Francois Burnol"
+        ],
+        "year": "1998",
+        "published": "1998-10-29",
+        "summary": "This is a semi-expository paper on the easier aspects of the Explicit Formula for the Riemann Zeta Function. The topics reviewed here include: Weil's criterion for the Riemann Hypothesis and its probabilistic interpretation, various formulations of the contribution corresponding to the real place, Haran's version of the Explicit Formula, and the author's own derivation which puts all places on the same footing. This derivation, an addendum to Tate's Thesis, is in the spirit of Weil's insights towards an adelic understanding of the Explicit Formula. Whereas the analyst would likely formulate the Explicit Formula as a multiplicative convolution, Haran's theorem shows it is also an additive convolution. An intriguing conductor operator is considered whose spectral analysis is equivalent to the Explicit Formula. At a finite place it has a positive cuspidal spectrum. I also comment on the flexibility still left in the Explicit Formula, which shows that it has a symmetry group containing the non-zero rational numbers."
+      },
+      {
+        "arxiv_id": "math/9809119v2",
+        "title": "The Explicit Formula and a Propagator",
+        "authors": [
+          "Jean-Francois Burnol"
+        ],
+        "year": "1998",
+        "published": "1998-09-21",
+        "summary": "I give a new derivation of the Explicit Formula for the general number field K, which treats all primes in exactly the same way, whether they are discrete or archimedean, and also ramified or not. In another token, I advance a probabilistic interpretation of Weil's positivity criterion, as opposed to the usual geometrical analogies or goals. But in the end, I argue that the new formulation of the Explicit Formula signals a specific link with Quantum Fields, as opposed to the Hilbert-Polya operator idea (which leads rather to Quantum Mechanics)."
+      }
+    ]
+  },
+  "lagarias_weil": {
+    "query": "au:Lagarias AND all:Weil",
+    "entries": [
+      {
+        "arxiv_id": "1005.4712v2",
+        "title": "The Lerch Zeta Function I. Zeta Integrals",
+        "authors": [
+          "Jeffrey C. Lagarias",
+          "W. -C. Winnie Li"
+        ],
+        "year": "2010",
+        "published": "2010-05-25",
+        "summary": "This is the first of four papers that study algebraic and analytic structures associated to the Lerch zeta function. This paper studies \"zeta integrals\" associated to the Lerch zeta function using test functions, and obtains functional equations for them. Special cases include a pair of symmetrized four-term functional equations for combinations of Lerch zeta functions, found by A. Weil, for real parameters (a,c) with 0< a, c< 1. It extends these functions to real a, and c, and studies limiting cases of these functions where at least one of a and c takes the values 0 or 1. A main feature is that as a function of three variables (s, a, c), with a, c being real variables, the Lerch zeta function has discontinuities at integer values of a and c. For fixed s, the function is discontinuous on part of the boundary of the closed unit square in the (a,c)-variables, and the location and nature of these discontinuities depend on the real part of s. Analysis of this behavior is used to determine membership of these functions in L^p([0,1]^2, da dc) for 1 \\le p < \\infty, as a function of the real part of s. The paper also defines generalized Lerch zeta functions associated to the oscillator representation, and gives analogous four-term functional equations for them."
+      },
+      {
+        "arxiv_id": "math/0404394v4",
+        "title": "Li Coefficients for Automorphic L-Functions",
+        "authors": [
+          "Jeffrey C. Lagarias"
+        ],
+        "year": "2004",
+        "published": "2004-04-21",
+        "summary": "Xian-Jin Li gave a criterion for the Riemann hypothesis in terms of the positivity of a set of coefficients lambda_n, indexed by the integers. We define similar coefficients attached to principal automorphic L-functions over GL(N). We relate these coefficients to values of Weil's quadratic functional for the associated automorphic representation, and deduce a Riemann hypothesis criterion in terms of positivity of the real parts of these coefficients. We determine asymptotics of the coefficients, both unconditionally and on the Riemann hypothesis, as n increases. We show the existence of an entire function of exponential type that interpolates the generalized Li coefficients at integer values."
+      }
+    ]
+  }
+}

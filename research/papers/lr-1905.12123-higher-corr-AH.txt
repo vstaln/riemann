@@ -1,0 +1,1407 @@
+
+===== PAGE 1 =====
+HIGHER CORRELA TIONS AND THE AL TERNA TIVE HYPOTHESIS
+JEFFREY C. LAGARIAS AND BRAD RODGERS
+Abstract. The Alternative Hypothesis concerns a hypothetical and unlikely picture of how zeros of
+the Riemann zeta function are spaced which one would like to rule out. In the Alternative Hypothesis,
+the renormalized distance between nontrivial zeros is supposed to always lie at a half integer. It is
+known that the Alternative Hypothesis is compatible with what is known about the pair correlation
+function of zeta zeros. We ask whether what is currently known about higher correlation functions of
+the zeros is suﬃcient to rule out the Alternative Hypothesis and show by construction of an explicit
+counterexample point process that it is not. A similar result was recently independently obtained by
+T. Tao, using slightly diﬀerent methods.
+We also apply the ergodic theorem to this point process to show there exists a deterministic collection
+of points lying in 1
+2 Z which satisfy the Alternative Hypothesis spacing but mimic the local statistics
+which are currently known about zeros of the zeta function.
+1. Introduction
+The purpose of this note is to address the following question: can theAlternative Hypothesis regarding
+the distribution of zeros of the Riemann zeta function be ruled out by what is currently known about the
+local distribution of such zeros? We explain more exactly what is meant by both these expressions below.
+The answer to this question is “ no”, and we will demonstrate this by construction of a counterexample
+sequence{cj} supported on 1
+2 Z, with spacing statistics mimicking what is known about the zeta zeros.
+A precise formulation is given in Theorem 3.1.
+Though the statement of Theorem 3.1 requires no background from probability to understand, in
+our proof we ﬁnd it natural to make use of the language of point processes. These are introduced
+in the next section, and our main result concerns a question in the realizability of point processes (a
+topic recently studied by Kuna, Lebowitz, and Speer [18, 19]). In particular we construct an Alternate
+Hypothesis Point Process , with spacing statistics mimicking what is known about the zeta zeros and
+with the spacing between the points of any conﬁguration always lying in the lattice 1
+2 Z. It is by sampling
+a conﬁguration from this process that we obtain a deterministic sequence {cj} as above.
+2. Local Distribution of Zeta Zeros
+Before formulating results we review what we mean by the Alternative Hypothesis and the phrase
+‘what is known about the local distribution of zeta zeros.’
+2.1. Spacings of zeros. We label the non-trivial zeros of the Riemann zeta-function by {σj +iγj}j∈Z,
+ordered such that γj ≤ γj+1. It dates back to Riemann that the ordinates γj have density roughly
+1
+2π log|T| near the value T , and for this reason is is natural to study the re-spaced ordinates
+~γj = γj
+log|γj|
+2π .
+which we call normalized zeros. Thus respaced, the points ~γj have average density 1; that is
+#{~γj∈ [0,T ]}∼ T (1)
+as T→∞ .
+Key words and phrases. Alternative hypothesis, GUE distribution, point process, sine kernel.
+1
+arXiv:1905.12123v3  [math.NT]  19 Aug 2019
+===== PAGE 2 =====
+2 JEFFREY C. LAGARIAS AND BRAD RODGERS
+2.2. GUE Hypothesis. Finer scale information regarding the spacing of zeros is predicted by the GUE
+Hypothesis. Let
+S(x) :=
+{
+sinπx
+πx forx⁄= 0
+1 for x = 0.
+This function is a rescaled sinc-function, S(x) = sinc(πx) and
+∫∞
+−∞S(x)dx = 1.
+Conjecture 2.1 (GUE Hypothesis). Forn≥ 1 and any ϕ∈S (Rn),
+lim
+T→∞
+1
+T
+∫ 2T
+T
+∑
+j1,...,jn∈Zn
+distinct
+ϕ(~γj1−t,...,~γjn−t)dt =
+∫
+Rn
+ϕ(x) det
+1≤i≤j≤n
+[
+S(xi−xj)
+]
+dnx.
+HereS(Rn) denotes the space of Schwartz class functions deﬁned on Rn. By convention for n = 1
+the right side of the formula is
+∫
+Rϕ(x1)dx1.
+The GUE Hypothesis emerged from work of Montgomery [23] and is by now widely believed to be
+true – see e.g. Odlyzko [25] for numerical evidence in its favor, and Katz and Sarnak [15], [16] for a
+theoretical discussion of analogous problems. For some test functions ϕ Conjecture 2.1 is known to be
+true, and we discuss this below.
+The casen = 2 of the GUE Hypothesis already implies (see [23]) that the normalized distance between
+consecutive zeros becomes arbitrarily small and moreover that for any ϵ> 0,
+~γj+1−~γj <ϵ for a positive proportion of j.
+A demonstration even that there exists some value 0 <δ < 1/2 such that
+~γj+1−~γj≤δ for a positive proportion of j (2)
+would be of extraordinary interest since it would have as an implication that there are no Landau-Siegel
+zeros (see [8]). For this reason it is of interest to explore models of zeros in which (2) is not true. 1
+2.3. The Alternative Hypothesis. An extreme example of such a model is described by Alternative
+Hypothesis, which says that almost all spacings of rescaled zeros ~γj−~γk lie close to half-integers.
+Conjecture 2.2 (The Alternative Hypothesis) . For all suﬃciently large j,
+~γj+1−~γj =hj +o(1),
+with hj an element of the set { 1
+2, 1, 3
+2, 2,...} for all j.
+It is perhaps misleading to label this a conjecture, since almost certainly it is false! Clearly it is
+contradicted by the GUE Hypothesis. Nonetheless, our knowledge about the Riemann zeta-function is
+suﬃciently limited that no one has been able to disprove Conjecture 2.2. See Farmer, Gonek and Lee
+[9, Section 2] and Baluyot [5] for recent papers drawing out potential implications of the Alternative
+Hypothesis and a discussion of background material.
+One memorable implication of the Alternative Hypothesis concerns a statistic that is commonly called
+the (two-point) form factor K of the zeros (see [9, Sect. 2], [22, p. 82]); the Alternative Hypothesis can
+be shown to imply
+1
+T
+∑
+0≤~γj,~γk≤T
+f(~γj−~γk)∼
+∫
+R
+ˆf(ξ)KAlt(ξ)dξ. (3)
+for2 KAlt(ξ) :=δ0(ξ) +|ξ| for ξ∈ [−1, 1], and deﬁned by periodicity elsewhere.
+By contrast the case n = 2 of the GUE Hypothesis implies (3) with KAlt replaced by KGUE (ξ) :=
+δ(ξ) + min(|ξ|, 1). (See Cor. 1.4 of [5], though this result is stated in a slightly diﬀerent form there.)
+1Recent work of Carniero et. al. [6] shows that ~γj+1−~γj≤.606894 for a positive proportion ofj, which seems to be the
+best result known in this direction. See also [32]. Goldston and Turnage-Butterbaugh [11] shows that lim inf ( ~γj+1− ~γj)≤
+0.50412, using a result of Conrey, Ghosh, and Gonek [7]. (The proof does not show that gaps become this small a positive
+proportion of the time however.) An unpublished result of Goldston and Milinovich shows that the method of [7] cannot
+be used to show that lim inf ( ~γj+1− ~γj)≤µ if µ≤ 0.500026.
+2Allowing test functions f(x)∈S (R), the form factor KAlt is a tempered distribution, where δ0(ξ) denotes a Dirac
+Delta function centered at ξ = 0.
+===== PAGE 3 =====
+THE ALTERNATIVE HYPOTHESIS 3
+Form FactorKAlt(ξ)
+ Form FactorKGUE (ξ)
+Figure 1. Form factors for the Alternative Hypothesis and GUE process (the vertical
+lines represent Dirac Delta-functions)
+2.4. The local distribution of zeros: what is known. In this paper our goal will be to show that,
+unlikely though it is, the Alternative Hypothesis is consistent with what is currently known about the
+statistical distribution of zeros. By what is known , we mean the following partial version of the GUE
+Hypothesis that has been proved. We begin with what is known about the density of zeros.
+Theorem 2.3 (GUE Density). For any ϕ∈S (R), as T→∞ ,
+lim
+T→∞
+1
+T
+∫ 2T
+T
+∑
+j
+ϕ(~γj−t)dt =
+∫
+R
+ϕ(x)dx. (4)
+The relation (4) is unconditional, and is easily derived from (1). This density in eﬀect dates back to
+Riemann’s 1859 memoir [28] and (1) was proved by von Mangoldt (see [24, Ch. 14]).
+For higher-order correlations the GUE hypothesis has been veriﬁed for a band-limited 3 collection of
+test functions.
+Theorem 2.4 (Band-limited correlations) . Assume the Riemann Hypothesis. Let Kn denote the col-
+lection of band-limited test functions η∈S (Rn) whose Fourier transform has support
+supp ˆη⊂
+{
+ξ∈ Rn : ξ1 +··· +ξn⁄= 0 or |ξ1| +··· +|ξn|< 2
+}
+.
+Then for all n≥ 1 for any η∈K n,
+lim
+T→∞
+1
+T
+∫ 2T
+T
+∑
+j1,...,jn∈Zn
+distinct
+η(~γj1−t,...,~γjn−t)dt =
+∫
+Rn
+η(x) det
+1≤i,j≤n
+[
+S(xi−xj)
+]
+dnx. (5)
+That (5) is true for all η with
+supp ˆη⊂
+{
+ξ∈ Rn : ξ1 +··· +ξn⁄= 0
+}
+does not say anything special about the points {~γj}. It is true owing to the averaging in T ; for test
+functions with Fourier transform supported in this domain both the left and right hand sides evaluate
+to 0. However the claim for band-limited functions η having Fourier transform supported in the second
+region,
+supp ˆη⊂{ξ∈ Rn :|ξ1| +··· +|ξn|< 2},
+is much less trivial, at least for any part of this region intersecting ξ1 +··· +ξn = 0. The case n = 2
+is due to Montgomery [23], n = 3 is due to Hejhal [13], and n >3 is due to Rudnick and Sarnak [29].
+Likely using sieve theoretic methods the region of ξ such that|ξ1| +··· +|ξn| < 2 can be extended to
+the closed region|ξ1| +··· +|ξn|≤ 2, but this does not seem to be in the literature.
+Note thatK1 =S(R), which corresponds to Theorem 2.3. So no band-limitation is put on the test
+functions for n = 1. We have singled out this case in Theorem 2.3 to emphasize that in this case we
+have information for all test functions, as opposed to only partial information for n≥ 2.
+3By a bandlimited function on Rn we mean a function that has a compactly supported Fourier transform.
+===== PAGE 4 =====
+4 JEFFREY C. LAGARIAS AND BRAD RODGERS
+3. Main Result
+Our purpose in this note is to show that all information in Theorem 2.4 of Montgomery - Hejhal -
+Rudnick-Sarnak remains consistent with the Alternative Hypothesis.
+This matter did not seem to have been taken up previously in the literature, and its resolution
+depends upon somewhat special properties of the sine-determinant. Independently and very recently T.
+Tao [33] has also investigated the same question, and come to much the same conclusions, though by
+slightly diﬀerent methods; Tao’s starting point is the ﬁnite circular unitary ensemble and makes special
+use of symmetric function theory in order to do certain computations, whereas the method we give
+below begins with an inﬁnite point process and makes special use of determinantal combinatorics and
+Poisson summation.
+Our main result is as follows:
+Theorem 3.1. There exists a (deterministic) sequence of points {cj}j∈Z on the real line such that
+cj+1−cj∈{ 1
+2, 1, 3
+2, 2,...}
+for all j, and moreover for any ϕ∈S (R),
+lim
+T→∞
+1
+T
+∫ 2T
+T
+∑
+j∈Z
+ϕ(cj−t)dt =
+∫
+R
+ϕ(x)dx,
+and for each n≥ 2 and any η(x)∈K n,
+lim
+T→∞
+1
+T
+∫ 2T
+T
+∑
+j1,...,jn∈Zn
+distinct
+η(cj1−t,...,c jn−t)dt =
+∫
+Rn
+η(x) det
+1≤i,j≤n
+[
+S(xi−xj)
+]
+dnx.
+This theorem will be seen to follow from Theorem 4.7, which constructs a counterexample point
+process, which we term the Alternative Hypothesis (AH) point process. The demonstration that such a
+sequence{cj}j∈Z exists is probabilistic, using an ergodic property of the AH point process. It would be
+interesting if there is a ‘nice’ explicit formula for the jth entry of some speciﬁc sequence satisfying this
+relation, but we do not pursue this here.
+The construction we produce completely speciﬁes the correlation functions for the sequence {cj}
+against all test functions in the Schwarz spaces S(Rn), not just those from Kn (see Remark 4.8 for
+a formula for the n-point densities). In Appendix B we calculate the probability distribution of gaps
+between points for the Alternative Hypothesis point process in a closed form. These probabilities
+coincide with those of the distribution of gaps for the 1
+2-discrete sine process of Proposition 4.3.
+4. Point processes
+4.1. Outline of approach. Our approach to proving Theorem 3.1 makes use of machinery from the
+theory of point processes. We use the theory of determinantal point processes to construct a point
+process supported on 1
+2 Z but with correlation functions consistent with the sine-determinant in (5) for
+band-limited test functions η – that we can do so depends upon some special properties speciﬁc to the
+determinant of the functions S(xi−xj). We randomly translate our point process to obtain one that is
+translation invariant in R, and ﬁnally (again making use of machinery from the theory of determinantal
+point processes) we will obtain a sequence {cj} as in the theorem by taking an instance of the point
+process at random and using the ergodic theorem to guarantee almost surely this sequence inherits
+correlation functions.
+4.2. Review of point processes. We recall the deﬁnition of a point process and their basic properties.
+A well-written modern introduction with the same conventions we follow can be found in [2, Ch. 4].
+Other well-written and concrete introductions can be found in [14, Ch. 1], [12], or [27, Chap.3].
+Intuitively, a point process is a random element whose values are conﬁgurations of points in some set.
+More formally, letX be either 4 R or aZ ={...,−a, 0,a,...}, either equipped with the usual topology. A
+conﬁgurationu inX is just another name for a sequence of elements of X : u = (uj)j∈Z withui∈X for
+4More generallyX can be any locally compact Polish space.
+===== PAGE 5 =====
+THE ALTERNATIVE HYPOTHESIS 5
+all i∈ Z, and we use the notation # V (u) :={i :ui∈V} to count the number of members of u that lie
+in a set V . We let Conf(X ) be the set of locally ﬁnite conﬁgurations
+Conf(X ) :={u a conﬁguration inX such that
+for any compact interval K, #K(u)<∞}.
+We let M be the smallest topology on Conf(X ) to contain all cylindrical sets CV
+n , where
+CV
+n :={u∈ Conf(X ) : # V (u) =n},
+where n ranges over 0, 1, 2... and, in the case X = R, V ranges over all open intervals. (If X =aZ, we
+can let V range over all singleton sets {x}⊂ aZ.) It is known that (Conf(X ), M) is a Polish space.
+LetB(M) be the Borel σ-algebra generated by M. A point process is a random element u taking
+values in (Conf(X ),B(M)). Our deﬁnition of B(M) provides that the sets
+{u∈ Conf(X ) : #B1(u) =n1,..., #Bk(u) =nk}
+are all measurable events, for any collection of Borel subsets B1,...,B k ofX and non-negative integers
+n1,...,n k.
+Also measurable is the event
+{u∈ Conf(X ) :∃x∈X such that #{x}(u)≥ 1}.
+This is the event – said another way – that not all points of the conﬁguration are distinct. If this event
+has probability 0, so that almost surely all points of the point process are distinct, the point process is
+said to be simple.
+A point process on R or aZ with conﬁgurations (uj) is said to be translation invariant if for any
+constantx in R or aZ respectively, the random conﬁguration (x +uj) has the same distribution as the
+original random conﬁguration (uj).
+For eachn and ϕ∈Cc(Rn), the function
+∑
+j1,...,jn∈Zn
+distinct
+ϕ(uj1,...,u jn) (6)
+is a measurable mapping from Conf(X ) to C.
+For a point process with conﬁgurations (uj), (6) is a complex-valued random variable. If there exists
+a measurable function ρn(x1,...,x n) such that
+E
+∑
+j1,...,jn∈Zn
+distinct
+ϕ(uj1,...,u jn) =
+∫
+Rn
+ϕ(x)ρn(x)dx,
+for all ϕ∈Cc(Rn), then ρn is said to be the n-point correlation function (or n-point joint intensity) of
+the process (uj). For a point process on aZ instead of R, the same is said to be true, where the measure
+dnx is replaced by an times the counting measure:
+E
+∑
+j1,...,jn∈Zn
+distinct
+ϕ(uj1,...,u jn) =an ∑
+k∈(aZ)n
+ϕ(k)ρn(k).
+In some rare cases, given a collection of correlation functionsρ1,ρ 2,... there may be more than one point
+process with these correlation functions. See the discussion in Section 1.2 of [14], especially Remark
+1.2.4. for a suﬃcient condition for uniqueness.
+4.3. Construction of determinantal point processes. There is a special class of correlation func-
+tions which will be particularly important to us. Correlation functions, and the process generating them,
+are said to be determinantal if there exists a function K(·,·) : X×X→ C such that K∈L2(D×D)
+for any compact D⊂X and
+ρn(x1,...,x n) = det
+1≤i,j≤n
+[
+K(xi,xj)
+]
+. (7)
+There is an extensive literature on such processes, which play a role in random matrix theory, cf.
+Soshnikov [31].
+===== PAGE 6 =====
+6 JEFFREY C. LAGARIAS AND BRAD RODGERS
+It is known that for a determinantal point process the correlation functions uniquely deﬁne the point
+process.
+Lemma 4.1. Given K as above, there is at most one point process with correlation functions given by
+(7) for all n≥ 1.
+Proof. This is shown in Lemma 4.2.6 of [14]. □
+Given a collection of functions ρ1,ρ 2,... it can be diﬃcult to decide whether there exists a point
+process for which these are the correlation functions. In the case of determinantal correlation functions
+however an exact characterization was given by Macchi [21]. We will discuss this result in Appendix
+A.1. Macchi’s result can be used to demonstrate the existence of point processes with the following
+correlation functions:
+Proposition 4.2 (Sine process). There exists a point process on R with conﬁgurations (vj) such that
+E
+∑
+j1,...,jn∈Zn
+distinct
+ϕ(vj1,...,v jk) =
+∫
+Rn
+ϕ(x) det
+1≤i,j≤n
+[
+S(xi−xj)
+]
+dnx, (8)
+for all n≥ 1 and all ϕ∈Cc(Rn). We refer to this point process as the sine process.
+The sine process is very well-known and a proof of its existence appears in [2, Sec. 4.2].
+Proposition 4.3 (Discrete sine process) . For each 0<a ≤ 1 there exists a point process supported on
+aZ with conﬁgurations (wj) such that
+E
+∑
+j1,...,jn∈Zn
+distinct
+ϕ(wj1,...,w jk) =an ∑
+k∈(aZ)n
+ϕ(k) det
+1≤i,j≤n
+[
+S(ki−kj)
+]
+(9)
+for all n≥ 1 and all ϕ∈Cc(Rn). We refer to this point process as the a- discrete sine process .
+The discrete sine process is less well-known, but it has also been made use of in e.g. [4, 34, 35]. A
+proof of the existence for the discrete sine process is similar to that for the sine process, but does not
+seem to be readily accessible in the literature; we provide one in Appendix A. The bound 0 ≤a≤ 1 is
+sharp: a process supported on aZ with correlation functions (9) does not exist for a >1, see Remark
+A.3.
+It is well known that the sine process is simple. A similar result holds for the discrete sine-process;
+it is important for our results and we include a proof here for convenience.
+Proposition 4.4. For any 0<a ≤ 1, the a-discrete sine process is simple.
+Proof. For an elementx∈aZ, consider (9) forn = 2. There exists 5 a functionϕ(x1,x 2)∈Cc(R2) which
+when restricted to (aZ)2 has ϕ(k1,k 2) = 1(x,x)(k1,k 2). We have
+E
+∑
+j1,j2∈Z
+distinct
+1(x,x)(wj1,wj2) = E [#{x}(w)][#{x}(w)− 1].
+On the other hand, by (9) we have
+E
+∑
+j1,j2∈Z
+distinct
+1(x,x)(wj1,wj2) = a2 ∑
+(ki,kj )∈(aZ)2
+ϕ(ki,kj) det
+(S(ki−ki) S(ki−kj)
+S(ki−kj) S(kj−kj)
+)
+= a2 ∑
+ki∈aZ
+ϕ(ki,ki) det
+(
+S(ki−ki) S(ki−ki)
+S(ki−ki) S(ki−ki)
+)
+= 0.
+Hence for any x almost surely #{x}(w) = 0 or 1, and so almost surely all points of the conﬁguration
+(w) are distinct. □
+It is well-known that the sine process is invariant under translations in R. We show that the discrete
+sine-process is invariant under translations in aZ.
+5Takeϕ(x1,x 2) =ϕ1(x1−x2) with a bump function ϕ1(x)∈C∞
+c (R) supported inside (−a,a ) with ϕ1(0) = 1.
+===== PAGE 7 =====
+THE ALTERNATIVE HYPOTHESIS 7
+Proposition 4.5. For any 0<a ≤ 1, thea-discrete sine process is translation invariant, for translations
+in aZ.
+Proof. The functions det1≤i,j≤n[S(ki−kj)] are invariant under real shifts (k1,...,k n)↦→ (k1+x,...,k n+x).
+It follows immediately that for any constant x∈aZ thea-discrete sine process with conﬁgurations (wj)
+and a new process with conﬁgurations ( wj +x) has the same correlation functions for all n≥ 1. Now
+Lemma 4.1 implies that the new point process must also be the a-discrete sine process. □
+We will need to know the correlation function formula (9) holds for a slightly wider class of functions
+than Cc((aZ)n). In fact this formula is valid for all functions in 𝓁1(
+(aZ)n)
+. Because the the discrete
+sine process is simple, for ϕ∈𝓁1(
+(aZ)n)
+, almost surely we have
+∑
+j1,...,jn∈Zn
+distinct
+|ϕ(wj1,...,w jk)|≤
+∑
+k1,...,kn∈aZ
+distinct
+|ϕ(k1,...,k n)| =||ϕ||1.
+The function det 1≤i,j≤n[S(xi−xj)] is bounded, so it is easy to see using monotone convergence that
+(9) holds for ϕ which are positive and summable. By decomposing general ϕ into positive and negative
+parts, it follows that (9) holds for all ϕ∈ 𝓁1(
+(aZ)n)
+. In particular, for our purposes, (9) holds for all
+ϕ∈S (Rn). (The same is true for the sine process for S(Rn).)
+Note that the sine process has the same correlation functions as the GUE Hypothesis predicts for
+rescaled zeta zeros. In fact, the GUE Hypothesis can be restated in the following way: for each T deﬁne
+a point processXT with conﬁgurations6
+(~γj−t)j∈Z
+with t is chosen randomly and uniformly from [ T, 2T ]. The GUE Hypothesis is the claim that these
+point processesXT tend in distribution to the sine-kernel process as T→∞ .
+4.4. Band-limited agreement. We now demonstrate that the correlation functions of the discrete
+sine process agree with those of the sine process itself, when tested against a suﬃciently band-limited
+class of test functions.
+Lemma 4.6. Let (wj) be the conﬁgurations of the discrete sine process onaZ with parameter 0<a ≤ 1
+2.
+Then for any n≥ 1 and any η∈S (Rn) such that
+supp ˆη⊂ [− 1
+2a, 1
+2a]n, (10)
+we have
+E
+∑
+j1,...,jn∈Zn
+distinct
+η(wj1,...,w jn) =
+∫
+Rn
+η(x) det
+1≤i,j≤n
+[
+S(xi−xj)
+]
+dnx. (11)
+Remark: For Theorem 3.1, we need this result only for a = 1/2.
+Proof. By Proposition 4.3, verifying (11) is equivalent to verifying for all 0 < a≤ 1/2 and η∈S (Rn)
+with supp ˆη⊂ [− 1
+2a, 1
+2a]n that
+an ∑
+k∈(aZ)n
+η(k) det
+1≤i,j≤n
+[
+S(ki−kj)
+]
+=
+∫
+Rn
+η(x) det
+1≤i,j≤n
+[
+S(xi−xj)
+]
+dnx. (12)
+The identity (12) says that the a-discrete sine process and the sine process have perfectly matching
+n-point correlation statistics for all the bandlimited test functions η in the range speciﬁed above.
+We prove (12) in two steps. First we show that the sine-determinant has no frequencies outside
+[−1, 1]n. Secondly this implies that for band-limited η the functionη(x) det
+[
+S(xi−xj)
+]
+has no frequen-
+cies outside of (−1− 1
+2a, 1 + 1
+2a)n. This allows us to prove the result using Poisson summation.
+Step 1: We show the sine-determinant has no frequencies outside [−1, 1]n. To do this we show that
+for any g∈S (Rn) such that ˆg(ξ) = 0 for all ξ∈ [−1, 1]n, we have
+∫
+Rn
+g(x) det
+1≤i,j≤n
+[
+S(xi−xj)
+]
+dnx = 0. (13)
+6XT is not translation-invariant. We obtain translation-invariance only in the limit T→∞ .
+===== PAGE 8 =====
+8 JEFFREY C. LAGARIAS AND BRAD RODGERS
+Recall that
+S(x) =
+∫
+R
+1[− 1
+2, 1
+2 ](ξ)e(xξ)dξ.
+In particular that S(x) is bandlimited to [− 1
+2, 1
+2]. We have for n≥ 2,
+det
+1≤i,j≤n
+[
+S(xi−xj)
+]
+=
+∑
+σ∈Sn
+sgn(σ)
+n∏
+i=1
+S(xi−xσ(i))
+=
+∑
+σ∈Sn
+sgn(σ)
+∫
+[− 1
+2, 1
+2 ]n
+e
+( n∑
+i=1
+(xi−xσ(i))ξi
+)
+dnξ
+=
+∑
+σ∈Sn
+sgn(σ)
+∫
+[− 1
+2, 1
+2 ]n
+e
+( n∑
+i=1
+xi(ξi−ξσ−1(i))
+)
+dnξ.
+Hence
+∫
+Rn
+g(x) det
+1≤i,j≤n
+[
+S(xi−xj)
+]
+dnx
+=
+∑
+σ∈Sn
+sgn(σ)
+∫
+[− 1
+2, 1
+2 ]n
+ˆg(ξ1−ξσ−1(1),..., ξn−ξσ−1(n))dnξ = 0,
+the last equality holding because|ξi−ξσ−1(i)|≤ 1 holds for 1≤i≤n over the full domain of integration.
+This veriﬁes (13).
+Step 2: We letf(x) =η(x) det1≤i,j≤n
+[
+S(xi−xj)
+]
+and we show ﬁrst that
+ˆf(y) = 0 for y /∈ (−1− 1
+2a, 1 + 1
+2a)n. (14)
+To see this, let y be as in (14). We have
+ˆf(y) =
+∫
+Rn
+η(x) det
+1≤i,j≤n
+[
+S(xi−xj)
+]
+e(−x·y)dnx, (15)
+and e(−x·y)η(x) has Fourier transform
+ˆη(ξ +y) =
+∫
+Rn
+e(−x·y)η(x)e(−x·ξ)dx,
+which satisﬁes
+ˆη(ξ +y) = 0, for ξ∈ [−1, 1]n,
+owing to the restricted support 7 of ˆη in (10). Now step 1 veriﬁes (14).
+Now note that Poisson summation implies
+an ∑
+k∈(aZ)n
+f(k) =
+∑
+k∈(a−1Z)n
+ˆf(k).
+Given 0<a ≤ 1/2, one has that any nonzero k∈ (a−1Z)n lies outside (−1− 1
+2a, 1 + 1
+2a)n, so that
+an ∑
+k∈(a1Z)n
+f(k) = ˆf(0).
+Upon recalling the deﬁnition of f, and using (15) this equality reduces to the identity (12) that we set
+out to prove. □
+The band-limited agreement between the sine-process and the a-discrete sine process ceases for a>
+1/2. We return to this matter in section 6.
+7Fora = 1/2 one must note that for η∈S (Rn), the condition supp ˆη⊂ [−1, 1]n implies that ˆη(ξ) = 0 for ξ on the
+boundary of [−1, 1]n.
+===== PAGE 9 =====
+THE ALTERNATIVE HYPOTHESIS 9
+4.5. Random translation: AH point process. Lemma 4.6 is important for us in the critical case
+a = 1/2. We can randomly translate the 1
+2-discrete sine process in order to induce a R-translation
+invariant point process having: (i) the points in all conﬁgurations separated by integer multiples of 1 /2
+and (ii) the n-point correlation functions agree with those of the sine process against all band-limited
+test functions inKn in Theorem 2.4.
+Theorem 4.7 (AH Point Process). Let (wj) be the conﬁgurations of the 1
+2-discrete sine process on 1
+2 Z
+and let ω be a random variable chosen uniformly from the interval [0, 1/2) independently of this process.
+Then the new point process on R having conﬁgurations
+( ˜wj) := (wj−ω) (16)
+is simple, R-translation invariant, and satisﬁes, for all n≥ 1,
+E
+∑
+j1,...,jn∈Zn
+distinct
+η( ˜wj1,..., ˜wjn) =
+∫
+Rn
+η(x1,...,x n) det
+1≤i,j≤n
+[
+S(xi−xj)
+]
+dnx, (17)
+for all η∈K n. Moreover any pair of points in any (realized) conﬁguration ( ˜wj) will be separated by
+distances of 1/2, 1, 3/2,...
+Remark 4.8. We call the process (16) the Alternative Hypothesis (AH) point process. Note that, in
+full generality, the correlation functions of this process are as follows. For all n≥ 1 and all η∈S (Rn),
+E
+∑
+j1,...,jn∈Zn
+distinct
+η( ˜wj1,..., ˜wjn)
+= 1
+1/2
+∫ 1/2
+0
+(1
+2)n ∑
+k∈( 1
+2 Z)n
+η(k1−t,...,k n−t) det
+1≤i,j≤n
+[
+S(ki−kj)]
+]
+dt. (18)
+This formula follows directly from (9).
+Proof. We ﬁrst address the ﬁnal assertion on half-integer spacings. The distance of separation between
+the points of a conﬁguration (wj−ω) will be the same as that between the points of the 1
+2-discrete sine
+process, and so will be one of 0 , 1/2, 1,... . Because the discrete sine process is simple, we can remove 0
+from this list.
+The simplicity of the new process is directly inherited from that of the 1/2-discrete sine process. The
+uniform averaging overω∈ [0, 1
+2) converts the 1
+2 Z-translation invariance of the 1/2-discrete sine process
+to R-translation invariance of the new process.
+On the other hand, verifying that (17) is satisﬁed is mainly a matter of book-keeping. We deﬁne
+subspacesIn andJn ofS(Rn) as follows:
+(i) In is the collection of η∈S (Rn) such that
+supp ˆη⊂{ξ∈ Rn : ξ1 +··· +ξn⁄= 0},
+(ii) Jn is the collection of η∈S (Rn) such that supp ˆη⊂ [−1, 1]n.
+Then we have
+Kn⊂I n +Jn.
+To verify (17) it suﬃces to show it holds for all η∈I n and for all η∈J n.
+(i): We considerIn ﬁrst. One may ﬁrst verify that for η∈I n and any (x1,...,x n)∈ Rn,
+∫ ∞
+−∞
+η(x1−t,...,x n−t)dt = 0. (19)
+Now note that
+E
+∑
+j1,...,jn∈Zn
+distinct
+η(wj1−ω,...,w jn−ω)
+= 1
+1/2
+∫ 1/2
+0
+(1/2)n ∑
+k∈( 1
+2 Z)n
+ϕ(k1−t,...,k n−t) det
+1≤i,j≤n
+[
+S(ki−kj)
+]
+dt. (20)
+===== PAGE 10 =====
+10 JEFFREY C. LAGARIAS AND BRAD RODGERS
+Because the functions det 1≤i,j≤n
+[
+S(ki− kj)
+]
+are invariant under translations ( k1,...,k n) ↦→ (k1−
+x,...,k n−x), the right hand side of (20) reduces to
+1
+1/2
+∫ ∞
+−∞
+(1/2)n ∑
+k∈( 1
+2 Z)n
+k1=0
+ϕ(k1−t,...,k n−t) det
+1≤i,j≤n
+[
+S(ki−kj)
+]
+dt.
+By dominated convergence (the functions η have rapid decay) we can swap the order of integration and
+summation, and it follows from (19) that for η∈I n the expression above is 0.
+On the other hand, again because of the translation invariance of the sine-determinant, the right
+hand side of (17) is
+∫
+Rn−1
+∫ ∞
+−∞
+η(x1−t,...,x n−t) det
+1≤i,j≤n
+[
+S(xi−xj)
+]
+dtdx 2··· dxn,
+where x1 is no longer integrated over but instead we set x1 = 0. And again for η∈I n this expression
+is 0. This establishes the claim for In.
+(ii): Forη∈J n, the left hand side of (17) is
+1
+1/2
+∫ 1/2
+0
+E
+∑
+j1,...,jn∈Zn
+distinct
+η(wj1−t,...,w jn−t)dt
+= 1
+1/2
+∫ 1/2
+0
+∫
+Rn
+η(x1−t,...,x n−t) det
+1≤i,j,≤n
+[
+S(xi−xj)
+]
+dnxdt
+=
+∫
+Rn
+η(x) det
+1≤i,j≤n
+[
+S(xi−xj)
+]
+dnx
+using Lemma 4.6 in the ﬁrst line and the translation invariance of the sine-determinant in the second. □
+Theorem 3.1 is a variant of Theorem 4.7 in which the point process is replaced by a single sequence
+{cj}. We will prove Theorem 3.1 in the next section using the ergodic theorem.
+5. An ergodic construction
+5.1. The ergodic theorem. We review some basic deﬁnitions and results from ergodic theory; see
+e.g. [10, Ch. 28] for a more extensive discussion. Let Ω be a measurable space. Recall that a sequence
+of random variables X0,X 1,... with each X𝓁 taking values in Ω is said to be stationary if the random
+processes
+(X𝓁)𝓁∈N and ( X𝓁+1)𝓁∈N,
+have the same distribution (for N :={𝓁≥ 0}). A stationary sequence of random variables is said to be
+ergodic if for any set A⊂ ΩN, with A measurable with respect to the product σ-algebra, the event
+(X𝓁+1)𝓁∈N∈A
+is the same event as
+(X𝓁)𝓁∈N∈A,
+only when the latter event has probability 0 or 1. (Said another way, the shift-invariant σ-algebra for
+(X𝓁)𝓁∈N is trivial.)
+Theorem 5.1 (Birkhoﬀ’s ergodic theorem) . If (X𝓁)𝓁∈N is an ergodic sequence of random variables, for
+f a measurable complex-valued function with E|f(X0)|< +∞,
+lim
+N→∞
+1
+N
+N−1∑
+𝓁=0
+f(X𝓁) = Ef(X0),
+almost surely.
+See for instance [10, Thm. 1, Sec. 28.4] for a proof of the ergodic theorem.
+We will make use of this result when the random variable X0 is a point processes, X1 is a point
+process, etc.
+===== PAGE 11 =====
+THE ALTERNATIVE HYPOTHESIS 11
+5.2. Proof of Theorem 3.1. We need the following fact.
+Lemma 5.2. Consider the 1
+2-discrete sine process with conﬁgurations (wj). Let X0 be the random
+conﬁguration (wj), X1 the random conﬁguration (wj− 1/2), X2 the random conﬁguration (wj− 1), etc.
+Then X0,X 1,... is an ergodic sequence.
+We prove this lemma in the Appendix, in Section A.2, by reference to a general result (Theorem
+A.4). By combining it with the Birkhoﬀ ergodic theorem, we obtain:
+Theorem 5.3. For almost all conﬁgurations (wj) of the 1
+2-discrete sine process, for all n≥ 1 and all
+ϕ∈S (Rn),
+lim
+N→∞
+1
+N
+N−1∑
+𝓁=0
+( ∑
+j1,...,jn∈Zn
+distinct
+ϕ(wj1− 𝓁
+2,...,w jn− 𝓁
+2)
+)
+= (1/2)n ∑
+k∈( 1
+2 Z)n
+ϕ(k) det
+1≤i,j≤n
+[
+S(ki−kj)
+]
+. (21)
+Proof. For a single ﬁxed ϕ∈S (Rn), this follows directly from the ergodic theorem. To prove the result
+for all n and ϕ we make use of a density argument. Because the discrete sine process is simple, almost
+surely the points of (wj) are distinct, and in this case
+∑
+j1,...,jn∈Zn
+distinct
+|ϕ(wj1− 𝓁
+2,...,w jn− 𝓁
+2)|≤
+∑
+v1,...,vn∈ 1
+2 Z
+distinct
+|ϕ(v1− 𝓁
+2,...,v n− 𝓁
+2)|≤‖ ϕ‖𝓁1
+(
+( 1
+2 Z)n
+). (22)
+But𝓁1(
+( 1
+2 Z)n)
+is separable for each n. Take a countable dense subset {ϕ(n)
+1 ,ϕ (n)
+2 ,...} of𝓁1(
+( 1
+2 Z)n)
+. For
+eachn almost surely (21) will be satisﬁed for all ϕ(n)
+i , since the union of exceptional conﬁgurations still
+has measure 0, density and (22) then imply that (21) will be satisﬁed for all ϕ∈S (Rn) (in fact all
+ϕ∈ 𝓁1[( 1
+2 Z)n]). Moreover the union of all n of the exceptional conﬁgurations must also have measure
+0, so we have proved the lemma. □
+Proof of Theorem 3.1. With probability 1, conﬁgurations ( wj) of the 1
+2-discrete sine process consist
+of distinct points and are such that (21) holds for all n≥ 1 and ϕ∈S (Rn). Let ( cj) be one such
+conﬁguration. Clearly cj+1−cj∈{ 1/2, 1, 3/2,...}.
+For anyt for such a conﬁguration,
+lim
+N→∞
+1
+N
+N−1∑
+𝓁=0
+( ∑
+j1,...,jn∈Zn
+distinct
+ϕ(cj1−t− 𝓁
+2,...,c jn−t− 𝓁
+2)
+)
+= (1/2)n ∑
+k∈( 1
+2 Z)n
+ϕ(k1−t,...,k n−t) det
+1≤i,j≤n
+[
+S(ki−kj)
+]
+.
+By (22), for all 𝓁 and all t∈ [0, 1/2),
+∑
+j1,...,jn∈Zn
+distinct
+ϕ(cj1−t− 𝓁
+2,...,c jn−t− 𝓁
+2) =Oϕ(1), (23)
+so averagingt from 0 to 1/2 and using dominated convergence to interchange the order of averaging and
+limit,
+lim
+N→∞
+1
+N
+1
+1/2
+∫ 1/2
+0
+N−1∑
+𝓁=0
+( ∑
+j1,...,jn∈Zn
+distinct
+ϕ(cj1−t− 𝓁
+2,...,c jn−t− 𝓁
+2)
+)
+dt
+= 1
+1/2
+∫ 1/2
+0
+(1/2)n ∑
+k∈( 1
+2 Z)n
+ϕ(k1−t,...,k n−t) det
+1≤i,j≤n
+[
+S(ki−kj)
+]
+dt.
+===== PAGE 12 =====
+12 JEFFREY C. LAGARIAS AND BRAD RODGERS
+The left hand side above is
+lim
+N→∞
+1
+N/2
+∫ N/2
+0
+∑
+j1,...,jn∈Zn
+distinct
+ϕ(wj1−t,...,w jn−t)dt, (24)
+while the right hand side is the n-point correlation function of the process ( wj−ω) in Theorem 4.7
+(recall (20)), and therefore agrees for test functions in Kn with the correlation functions of the sine
+process itself.
+It remains to verify
+lim
+T→∞
+1
+T
+∫ 2T
+T
+∑
+j1,...,jn∈Zn
+distinct
+ϕ(cj1−t,...,c jn−t)dt
+= lim
+N→∞
+1
+N/2
+∫ N/2
+0
+∑
+j1,...,jn∈Zn
+distinct
+ϕ(cj1−t,...,c jn−t)dt. (25)
+This is done in the following way: the right hand side of (25), with a limit over integers N, may be seen
+to be equal to a continuous limit
+lim
+T→∞
+1
+T
+∫ T
+0
+∑
+j1,...,jn∈Zn
+distinct
+ϕ(cj1−t,...,c jn−t)dt,
+using the pointwise bound (23). This may in turn be seen to be equal to the left hand side of (25) by
+subtracting an integral from 0 to T from an integral from 0 to 2T . We omit the details. □
+6. Concluding Remarks
+The underlying construction of this paper showed that there exists a point process supported on the
+lattice 1
+2 Z that hadn-point correlation statistics perfectly matching that of the sine process for a class of
+bandlimited test functions on [−1, 1]n, for all n≥ 1. More generally one may consider point supported
+on a lattice aZ and ask for what B can a perfect match be achieved for all test functions bandlimited
+to an interval [−B,B ]n, for all n≥ 1. For the sine process in Lemma 4.6 we gave an existence region
+where it can be done, achieving B = 1
+2a for 0<a ≤ 1
+2. This sort of problem can be considered for more
+generala andB and for more general point processes. We address such questions in a companion paper
+[20].
+Another question concerns uniqueness: is the AH point process in Theorem 4.7 the unique point
+process having (i) the points in all conﬁgurations separated by integer multiples of 1 /2 and (ii) the n-
+point correlation functions agreeing with those of the sine-process against all band-limited test functions
+inKn as in Theorem 2.4? We expect other point processes with these properties exist. An analogous
+question was previously posed less formally in [1, Question A.5].
+Recently Farmer, Gonek and Lee [9] made a study of the (normalized) spacings of the zeros of the
+derivative Riemann ξ′(s) of the Riemann ξ-function ξ(s) = 1
+2s(s− 1)π− s
+2 Γ(s
+2), as a possible approach
+to disprove the Alternative Hypothesis, see [9, Section 2]. Assuming the Riemann hypothesis, all
+zeros of ξ′(s) lie on the critical line. Assuming RH, they proved bounds on the zero spacings, that
+lim infn→∞(γ
+′
+n−γ
+′
+n) logγ
+′
+n
+2π ≤ 0.897, where γ
+′
+n denote the ordinates of the zeros of ξ′(s) in the upper
+half plane, ordered in increasing order. Sodin [30] presented a family of point process Sia depending
+on a real parameter a modeling critical points of characteristic polynomials of GUE-random matrices.
+He showed under very strong assumptions (the Riemann Hypothesis and the GUE Hypothesis 8) that
+the process Si0 with u = 0 would model the T→∞ limit of (shifted) normalized spacings of zeros of
+ξ′(s) ([30, Corollary 2.3]). The point process Si0 has point spacings more tightly clustered about the
+mean spacing 1 than those of the sine process. One may ask a parallel question: what is the range of
+8In Corollary 2.3 Sodin uses the term ‘multiple correlation conjecture’, meaning convergence of (shifted) normalized
+zeta zeros to the sine process in distribution. This statement is equivalent to the GUE Hypothesis.
+===== PAGE 13 =====
+THE ALTERNATIVE HYPOTHESIS 13
+bandlimited agreement permissible for correlation functions of a point process supported on a lattice
+aZ to that of the point process Si0.
+Acknowledgments. Work of the ﬁrst author was partially supported by NSF grant DMS-1701576, a
+Chern Professorship at MSRI in Fall 2018 and by a Simons Foundation Fellowship in 2019. MSRI is
+partially supported by an NSF grant. Work of the second author was partially supported by NSF grant
+DMS-1701577 and by an NSERC grant. We thank F. Aryan for questions that led to Appendix B. We
+thank S. Baluyot, D. Goldston, D. Fiorilli, S. Sodin, and T. Tao for other discussions related to this
+paper, and an anonymous referee for helpful comments and corrections.
+Appendix A. The discrete sine process: existence and ergodicity
+In this appendix we show that the discrete sine process exists, as claimed by Proposition 4.3 and
+demonstrate that it is ergodic, as claimed by Lemma 5.2.
+A.1. Existence. In what follows9X =aZ, and we give𝓁2(X ) the inner product⟨f,g⟩ :=a∑
+k∈aZf(k)g(k).
+A general criterion for the realizability 10 of point processes is as follows (Macchi [21, Theorem 12]):
+Theorem A.1 (Macchi). On the spaceX =aZ deﬁne the operator K : 𝓁2(X )→𝓁2(X ) by
+Kf(j) =a
+∑
+k∈aZ
+K(j,k )f(k).
+If K is a Hermitian locally trace class 11 operator, then the functions
+ρn(k) := det
+1≤i,j≤n
+[
+K(ki,kj)
+]
+are the correlation functions of a point process on X if any only if 12
+0≤ K≤I.
+Proof. The theorem with this statement is proved as Theorem 3 of Soshnikov [31]. □
+We make use of this result for only one kernel K, and it is not very esoteric, but we nonetheless
+have to verify that it is locally trace class. We will not need anything beyond the following result, a
+specialization of the result stated in Reed and Simon [26, XI.4, p. 65].
+Lemma A.2. For a function K :X×X→ C, suppose the operator K deﬁned as before is non-negative
+deﬁnite. If ∑
+j∈X
+K(j,j )< +∞
+then K : 𝓁2(X )→𝓁2(X ) is trace class.
+With these tools we can prove Proposition 4.3.
+Proof of Proposition 4.3. For 0 < a≤ 1, we seek to show there is a point process on X = aZ with
+correlation functions
+det
+1≤i,j≤n
+[
+S(ki−kj)
+]
+.
+9Macchi’s theorem holds more generally for X a locally compact Polish space.
+10 Macchi [21], Sec. IV. B. Deﬁnition 7, treats determinantal point processes (called fermion processes).
+11An operator K : L2(E,dµ )→ L2(E,dµ ) is said to be locally trace class if for any compact D⊂ E the operator
+KD : L2(D,dµ )→L2(D,dµ ) deﬁned by
+KDf(x) =
+∫
+D
+K(x,y )f(y)dµ(y)
+is trace class.
+12We make use of the usual notation for operators, so that 0 ≤ K≤I means that for any ψ∈𝓁2(X) we have
+0≤⟨ψ, Kψ⟩≤⟨ ψ,ψ⟩.
+===== PAGE 14 =====
+14 JEFFREY C. LAGARIAS AND BRAD RODGERS
+By Macchi’s Theorem we need only show that the operator K : 𝓁2(X )→𝓁2(X ) deﬁned by
+Kf(j) =a
+∑
+k∈aZ
+S(j−k)f(k),
+is Hermitian, locally trace class, and satisﬁes 0 ≤ K≤ I. Deﬁne the Fourier transform F : 𝓁2(X )→
+L2[− 1
+2a, 1
+2a] by
+(Ff)(θ) =a
+∑
+k∈aZ
+f(k)e−2πikθ, (F−1F )(j) =
+∫ 1/2a
+−1/2a
+F (θ)e2πijθdθ,
+Recall that, as long as 0 <a ≤ 1,
+S(x) =
+∫ 1/(2a)
+−1/(2a)
+1[− 1
+2, 1
+2 ](θ)e2πixθdθ; (26)
+the equality does not hold for a> 1. Using (26) we see that
+Kf =F−1G, for G(θ) := 1[− 1
+2, 1
+2]
+(θ)· (Ff)(θ).
+That is, K is a projection of 𝓁2(X ) onto the space of functions g ∈ 𝓁2(X ) with Fourier transform
+supported on [− 1
+2, 1
+2]. That K is a projection shows that it is Hermitian, that 0 ≤ K≤I, and also that
+K is non-negative deﬁnite. That K is locally trace class follows obviously and immediately from Lemma
+A.2. □
+Remark A.3. Fora> 1, the operator K ceases to satisfy 0≤ K≤ 1, and so by Macchi’s theorem there
+does not exists an a-discrete sine process for a >1. Indeed, for ψ(0) := 1 and ψ(k) := 0 for all k⁄= 0,
+we have
+⟨ψ, Kψ⟩ =a2,
+while
+⟨ψ,ψ⟩ =a.
+and a2 >a for a> 1.
+A.2. Ergodicity. To establish Lemma 5.2 we make use of another general result.
+Theorem A.4. LetX = aZ and suppose (uj) are the conﬁgurations of a translation invariant de-
+terminantal point process on X , with a kernel satisfying the conditions of Macchi’s theorem and with
+K(j,k ) representable as K(j−k) with lim|x|→∞K(x) = 0 . Then the sequence of point processes with
+conﬁgurations
+(uj), (uj−a), (uj− 2a), ...
+is ergodic.
+Proof. This is the content of Theorem 4.2.34 of [2]. The result there is proved forX = Rd, but the proof
+carries over straightforwardly toX =aZ. □
+Because S(x)→ 0 as|x|→∞ , Theorem A.4 immediately implies Lemma 5.2.
+Appendix B. Gap Probabilities for the Alternative Hypothesis Point Process
+This Appendix derives a formula for the probabilities that a random gap in the Alternative Hypothesis
+point process (deﬁned in Sect. 4.5) is of the size 1/2, 1, 3/2, etc. Let GL/2 be the conditional probability
+that a conﬁguration in the 1 /2-discrete sine-kernel process has position L/2 occupied by a point while
+none of positions (L− 1)/2, (L− 2)/2,..., 1/2 are occupied, given that the position 0 is occupied. That
+is, for the 1/2-discrete sine-kernel process,
+GL/2 = P[#{L/2} = 1, #{1/2,...,(L−1)/2} = 0
+⏐⏐⏐ #{0} = 1].
+Because the 1 /2-discrete sine-kernel process is translation-invariant, and because the alternative hy-
+pothesis point process is just the 1/2-discrete sine-kernel process with an independent translation, GL/2
+is the probability that a randomly chosen gap from either of these processes is of size L/2.
+===== PAGE 15 =====
+THE ALTERNATIVE HYPOTHESIS 15
+In order to state the result, for L≥ 1, we let ΣL be the L×L symmetric Toeplitz matrix
+ΣL = (ak−j)0≤j,k≤L−1,
+where
+aj :=S(j/2) =
+
+
+
+1 for j = 0
+0 for j⁄= 0 even
+2(−1)(|j|−1)/2
+π|j| forj odd,
+.
+For example, noting that aj =a−j, we have
+Σ4 =
+
+
+1 a1 0 a3
+a−1 1 a1 0
+0 a−1 1 a1
+a−3 0 a−1 1
+
+ =
+
+
+1 2
+π 0 − 2
+3π2
+π 1 2
+π 0
+0 2
+π 1 2
+π
+− 2
+3π 0 2
+π 1
+
+
+We let
+ω(L) = det(I− 1
+2ΣL),
+for I the L×L identity matrix, with the convention that
+ω(0) = 1.
+For example,
+ω(4) = det
+(1
+2
+
+
+1 −a1 0 −a3
+−a1 1 −a1 0
+0 −a1 1 −a1
+−a3 0 −a1 1
+
+
+)
+= 1
+16 det
+
+
+1 − 2
+π 0 2
+3π
+− 2
+π 1 − 2
+π 0
+0 − 2
+π 1 − 2
+π2
+3π 0 − 2
+π 1
+
+.
+Theorem B.1. For the Alternative Hypothesis point process the gap probabilitiesGL/2 forL≥ 1 satisfy
+GL/2 = 2(ω(L + 1) +ω(L− 1)− 2ω(L)),
+whereω(L) = det(I− 1
+2ΣL).
+We record the following values:
+G1/2 = 1
+2− 2
+π2≈.297
+G1 = 1
+4 + 2
+π2≈.453
+G3/2 = 1
+8 + 4
+9π2 + 32
+9π4≈.207
+G2 = 1
+16 + 1
+18π2− 224
+81π4≈ 0.0397
+G5/2 = 1
+32− 209
+1800π2− 1664
+2025π4− 131072
+18225π6≈ 0.00357
+G3 = 1
+64− 3
+25π2− 13312
+16875π4 + 2097152
+455625π6≈ 0.000156
+We emphasize that these are gap probabilities for the Alternative Hypothesis point process; there
+may exist other models of zeros which are consistent with the alternative hypothesis but which have
+diﬀerent gap probabilities. Farmer et al [9] and Aryan [3] have considered upper and lower bounds for
+gap probabilities in this more general setting.
+Theorem B.1 is a consequence of a well-known tool from the theory of determinantal point processes.
+In calculations below we adopt the convention that for x∈ R,
+0x =
+{
+1 if x = 0
+0 otherwise . (27)
+Theorem B.2. For all z∈ C, for a determinantal point process on aZ with kernel K : (aZ)×(aZ)→ R
+as in (7), for any ﬁnite B⊂aZ,
+Ez#B = det(I + (z− 1)K|B),
+whereK|B :L2(B)→L2(B) is the operator deﬁned by
+(K|Bφ)(j) =a
+∑
+k∈B
+K(j,k )φ(k), forj∈B.
+===== PAGE 16 =====
+16 JEFFREY C. LAGARIAS AND BRAD RODGERS
+Proof. This is a special case of Theorem 2 in [31]. This result interprets z#B for z = 0 with the
+convention (27). □
+We can now prove Theorem B.1.
+Proof of Theorem B.1. We will specialize Theorem B.1 to the 1/2-discrete sine-kernel process, and take
+z = 0. Note that for L≥ 2,
+P(#{L/2} = 1, #{1/2,...,(L−1)/2} = 0
+⏐⏐⏐ #{0} = 1)
+= P(#{L/2} = 1, #{1/2,...,(L−1)/2} = 0, #{0} = 1)
+P(#{0}) = 1)
+= E((1− 0#{L/2}) 0#{1/2,...,(L−1)/2} (1− 0#{0}))
+E#{0}
+,
+using the fact that this process is simple. But E#{0} = 1/2, and
+E((1− 0#{L/2}) 0#{1/2,...,(L−1)/2} (1− 0#{0}))
+= E 0#{1/2,...,(L−1)/2} + E 0#{0,...,L/2}− E 0#{1/2,...,L/2}− E 0#{0,...,(L−1)/2}.
+Using Theorem B.2 and the fact that the 1 /2-discrete sine-kernel has the kernel ( x,y )↦→S(x−y), we
+see that
+E 0#{1/2,...,(L−1)/2} = det(I− 1
+2ΣL−1),
+E 0#{0,...,L/2} = det(I− 1
+2ΣL+1),
+E 0#{1/2,...,L/2} = E 0#{0,...,(L−1)/2} = det(I− 1
+2ΣL).
+Substituting these values above proves the theorem for L≥ 2. For L = 1, we have
+P(#{1/2} = 1
+⏐⏐⏐ #{0} = 1) = E (1− 0#{1/2})(1− 0#{0})
+E#{0}
+,
+and the proof of the claim proceeds the same way. □
+References
+[1] The American Institute of Mathematics, L-functions and random matrix theory. Posted 2004,
+https://aimath.org/WWN/lrmt/lrmt.pdf.
+[2] G.W Anderson, A. Guionnet, O. Zeitouni, An introduction to random matrices . Cambridge Studies in Advanced
+Mathematics, vol. 118, Cambridge University Press, Cambridge, (2010).
+[3] F. Aryan, Private Communication (2019).
+[4] A. Borodin, A. Okounkov, and G. Olshanski, Asymptotics of Plancherel measures for symmetric groups, J. Amer.
+Math. Soc. 13.3 (2000) 481–515.
+[5] C. Baluyot, On the pair correlation conjecture and the alternative hypothesis, J. Number Theory169 (2016), 183–226.
+[6] E. Carneiro, V. Chandee, F. Littmann, and M. B. Milinovich, Hilbert spaces and the pair correlation of zeros of the
+Riemann zeta-function. J. Reine Angew. Math. 725 (2017), 143–182.
+[7] J. B. Conrey, A. Ghosh, and S. M. Gonek, A note on gaps between zeros of the zeta function, Bull. London Math.Soc.
+16 (1984), no. 4, 421 – 424.
+[8] J. B. Conrey and H. Iwaniec, Spacing of zeros of Hecke L-functions and the class number problem, Acta Arith. 103
+(2002), no. 3, 259–312.
+[9] D. W. Farmer, S. M. Gonek, and Yoonbok Lee, Pair correlation of the zeros of the derivative of the Riemannξ-function,
+J. London Math. Soc. (2) 90 (2014), no. 1, 241–269.
+[10] B.E. Fristedt, and L.F. Gray. A modern approach to probability theory. Birkhauser, Boston 2013.
+[11] D. A. Goldston, C. L. Turnage-Butterbaugh, A note on small gaps between zeros of the Riemann zeta-function,
+preprint.
+[12] J. Grandell, Point Process and Random Measures, Adv. Appl. Probab., 9.3 (1977) 502–526.
+[13] D. A. Hejhal, On the triple correlation of zeros of the zeta function, Int. Math. Res. Notices IMRN 1994, No. 7,
+293–302.
+[14] J. B. Hough, M. Krishnapur, Y. Peres, and B. Virag, Zeros of Gaussian Analytic Functions and Determinantal Point
+Processes.American Mathematical Society University Lecture Series, 51. American Mathematical Society, Providence,
+RI 2009.
+[15] N. Katz and P. Sarnak, Zeros of zeta functions and symmetry, Bull. Amer. Math. Soc. 36 (1999), 1–26.
+===== PAGE 17 =====
+THE ALTERNATIVE HYPOTHESIS 17
+[16] N. Katz and P. Sarnak, Random Matrices, Frobenius Eigenvalues and Monodromy , American Mathematical Society
+Colloquium Publications, 45, American Mathematical Society, Providence, RI 1999.
+[17] O. Kallenberg, Random Measures, Theory and Applications. Proability Theory and Stochastic Modelling Vol. 77,
+Springer, Cham 2017 xx+694pp.
+[18] T. Kuna, J. Lebowitz, and E. Speer, Realizability of Point Processes. J. Stat. Phys. 129.3 (2007) 417–439.
+[19] T. Kuna, J. Lebowitz, and E. Speer, Necessary and suﬃcient conditions for realizability of point processes. Ann.
+Appl. Probab. 21 No. 4 (2011), 1253–1281.
+[20] J. C. Lagarias and B. Rodgers, Bandlimited mimicry of point processes by point processes supported on a lattice,
+preprint.
+[21] O. Macchi, The coincidence approach to stochastic processes. Adv. Appl. Probab. 7 (1975) 83–122.
+[22] M. L. Mehta, Random Matrices. Third Edition. Pure and Applied Math. (Amsterdam) 142. Elsevier/ Academic
+Press, Amsterdam 2004. xviii+688pp.
+[23] H. L. Montgomery, The pair correlation of zeros of the zeta function, Proc. Symp. Pure Math. No.24, American
+Mathematical Society, 181–193, 1973.
+[24] H. Montgomery and R. Vaughan. Multiplicative Number Theory I. Classical Theory. Cambridge University Press,
+2007.
+[25] A. M. Odlyzko, On the distribution of spacings between zeros of the Riemann zeta function, Math. Comp. 48 (1987),
+273–308.
+[26] M. Reed and B. Simon, Methods of modern mathematical physics, III. Scattering theory, Academic Press: [Harcourt
+Brace Jovanovich, Publishers], New York-London 1979.
+[27] S. I. Resnick, Extreme Values, Regular Variation, and Point Processes, Springer-Verlag: New York 1987. [Reprint:
+2008]
+[28] B. Riemann, ¨Uber die Anzahl der Primzahlen unter einer gegebenen Gr¨ osse, (On the number of primes less than a
+given quantity), Monatsberichte der Berliner Akademie 1859. Berlin 1860, 671–680.
+[29] Z. Rudnick and P. Sarnak, Zeros of principal L-functions and random matrix theory. Duke Math. J. 81 (1996),
+269–322.
+[30] S. Sodin. On the critical points of random matrix characteristic polynomials and of the Riemannξ-function. Quarterly
+J. Math. , 69.1 (2017): 183-210.
+[31] A. Soshnikov, Determinantal random point ﬁelds (Russian), Uspekhi Math. Nauk. 55 (2000), no. 5, 107–160. Trans-
+lated in: Russian Math. Surveys 55 (2000), no. 5, 923–975.
+[32] K. Soundararajan, On the distribution of gaps between zeros of the Riemann zeta-function. Quarterly J. Math. , 47.3
+(1996): 383-387.
+[33] T. Tao, The alternative hypothesis for unitary matrices, weblog post:
+terrytao.wordpress.com/2019/05/08/the-alternative-hypothesis-for-unitary-matrices.
+[34] H. Widom, The strong Szeg˝ o limit theorem for circular arcs, Ind. U. Math J. 21 (1971) 277–283.
+[35] H. Widom, Random Hermitian Matrices and (Nonrandom) Toeplitz Matrices, in Toeplitz Operators and Related
+Topics, the Harold Widom anniversary volume. Eds. E. Basor and I Gohberg. Birkhauser (1994) 9–15.
+Department of Mathematics, University of Michigan, Ann Arbor, MI 48109-1043
+E-mail address : lagarias@umich.edu
+Department of Mathematics and Statistics, Queen’s University, Kingston, ON, Canada K7L 3N6
+E-mail address : brad.rodgers@queensu.ca

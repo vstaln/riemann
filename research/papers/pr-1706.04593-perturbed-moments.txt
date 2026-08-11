@@ -1,0 +1,3373 @@
+
+===== PAGE 1 =====
+arXiv:1706.04593v3  [math.NT]  1 Jun 2018
+PER TURBED MOMENTS
+AND A LONGER MOLLIFIER FOR CRITICAL ZEROS OF ζ
+KYLE PRATT AND NICOLAS ROBLES
+Abstract. Let A(s) be a general Dirichlet polynomial and Φ be a smooth function supported in
+[1, 2] with mild bounds on its derivatives. New main terms for the integral I(α, β ) =
+∫
+R ζ( 1
+2 + α +
+it)ζ( 1
+2 + β + it)|A( 1
+2 + it)|2Φ( t
+T )dt are given. For the error term, we show that the length of the
+Feng molliﬁer can be increased from θ < 17
+33 to θ < 6
+11 by decomposing the error into Type I and
+Type II sums and then studying the resulting sums of Klooster man sums. As an application, we
+slightly increase the proportion of zeros of ζ(s) on the critical line.
+1. Introduction
+1.1. Background and motivation. Let A(s) be the Dirichlet polynomial
+A(s) :=
+∑
+n≤N
+an
+ns, with an ≪εnε, N :=T θ, and θ< 1.(1.1)
+Research on the twisted second moment
+I :=
+∫ ∞
+−∞
+|ζ( 1
+2 +it)|2|A( 1
+2 +it)|2Φ
+( t
+T
+)
+dt,(1.2)
+with Φ(x) a smooth function supported in [1 , 2] and with derivatives satisfying Φ (j)(x) ≪j logjT ,
+has been well studied in the literature of the Riemann zeta-f unction, see e.g. [1, 3, 7, 8, 21]. The
+applications of I are very deep, as one may use asymptotic estimates for I to make sense of the
+distribution of values of L-functions, the location of their critical zeros, as well as upper and lower
+bounds for the size of L-functions (see, among many examples, [11, 9, 10, 16, 19, 23, 24]).
+As often stressed, one key aspect to obtaining good results i s to make sure that θ be as large as
+possible. One notorious example of such a beneﬁt is that the l arger θ is, the larger the proportion
+of zeros ofζ(s) on the critical line becomes, up to certain limitations. For example, it is known that
+if one could take θ = 1 −ε, then the Lindel¨ of hypothesis follows (see e.g. [3]). Moreover, as shown
+in [4], if one could take θ = ∞ in the Conrey-Levinson molliﬁer (see below), then the Riema nn
+hypothesis would follow.
+For values of θ such that θ < 1
+2, the literature goes back, at least, to Levinson [21]. Indee d,
+taking θ < 1
+2 is not at all taxing, and it is powerful enough to show that at l east a third of non-
+trivial zeros of ζ(s) are on the critical line. Reﬁnements on the value of θ due to Conrey [8] have
+increased that percentage to 40 .88%. Adding, or reﬁning, the structure of the coeﬃcients an of
+the Dirichlet polynomial in (1.1) also leads to improved val ues of the above mentioned proportion,
+[6, 7, 16, 19, 20, 24].
+2010 Mathematics Subject Classiﬁcation. Primary: 11L05, 11L26, 11M26; Secondary: 11L07, 11M06.
+Keywords and phrases : Riemann zeta-function, critical line, zeros, molliﬁer, W eil bound, incomplete Kloosterman
+sums, bilinear Kloosterman sum, Type I and Type II sums, conv olution structure.
+1
+===== PAGE 2 =====
+2 KYLE PRATT AND NICOLAS ROBLES
+One of the ﬁrst systematic results on I was produced by Balasubramanian, Conrey and Heath-
+Brown in [1]. For θ <1
+2, they showed that
+I =T
+∑
+d,e≤N
+adae
+[d,e ]
+(
+logT (d,e )2
+2πde + 2C0 + log 4− 1
+)
++o(T ),(1.3)
+where (d,e ) and [d,e ] are the gcd and the lcm of d ande, respectively. Here C0 is Euler’s constant.
+WhenA(s) is a molliﬁer, a loose term to indicate thatA(s) approximately replicates the behavior
+ofζ(s)−1, they showed that one could increase θ fromθ <1
+2 toθ< 9
+17 = 1
+2 + 1
+34. This improvement
+allowed them to show that at least 38% of the zeros are on the cr itical line.
+An important and subtle change of behavior takes place whenθ >1
+2. This is because when θ <1
+2
+only the “diagonal” terms contribute to the main term, and th e rest is absorbed in the error; for
+θ> 1
+2 there is a nontrivial contribution from the “oﬀ-diagonal” te rms.
+Bettin, Chandee, and Radziwi/suppress l/suppress l [3] succeeded in breakingthe 1
+2 barrier for an arbitrary Dirichlet
+polynomial. They showed that if θ< 1
+2 +δ with δ = 1
+66, then
+I =
+∑
+d,e≤N
+adae
+[d,e ]
+∫ ∞
+−∞
+(
+logt(d,e )2
+2πde + 2C0
+)
+Φ
+( t
+T
+)
+dt +O(T
+3
+20N
+33
+20 +T
+1
+3 +ε).(1.4)
+Observe that 1
+2 +δ = 17
+33.
+The key to the error term in (1.3) was a result of Bettin and Cha ndee [2] on bounds of generic
+trilinear Kloosterman sums, see §2.
+Let us now move on to the details of this paper. Suppose that µ(n) and Λ(n) denote the usual
+M¨ obius and von Mangoldt functions, respectively. Using the insights and methods of [3], we study
+the more general twisted second moment
+I(α,β ) :=
+∫ ∞
+−∞
+ζ( 1
+2 +α +it)ζ( 1
+2 +β −it)|A( 1
+2 +it)|2Φ
+( t
+T
+)
+dt,(1.5)
+where α,β ≪ (logT )−1. We consider three cases for the coeﬃcients an, namely
+(1.6) an =
+
+
+
+
+
+O(nε), for θ< 17
+33,
+µ2(n)(µ ∗ Λ∗k)(n)f(n), with f(n) ∈ F and for θ < 6
+11,
+µ(n)f(n), with f(n) ∈ F and for θ <4
+7.
+Here F denotes the class of smooth functions given by
+f(n) =P
+( log(N/n)
+logN
+)
+,
+where P (x) is a polynomial.
+The third case µ(n)f(n) of (1.6) was studied by Conrey in 1989, and we call this third case
+the “Levinson-Conrey,” or simply “Conrey,” molliﬁer. The m ain innovations of this paper lie
+in studying the second case of (1.6), and extending the range of θ for which one may prove an
+asymptotic formula. The second case is colloquially known a s the “Feng” molliﬁer, since it was
+ﬁrst exploited in [16, 19].
+The reason behind the choice of (1.5) needs to be explained. A s it will be elaborated in §5, the
+presence of the termsα andβ is due to the fact that in order to compute the percentage of zeros on
+the critical line, one ﬁrst computes I(α,β ) and then sets α =β = −R/ logT , whereR is a bounded
+positive real number of our choice (to be optimized). Theref ore, the integral I in (1.2) needs to be
+generalized to accommodate the variables α and β.
+The strength of the result appearing in [3] is the generality ofan. However, often times applica-
+tions of I or I(α,β ) allow for specialization of the shape of an. In fact, the molliﬁer encountered
+===== PAGE 3 =====
+PERTURBED MOMENTS AND A LONGER MOLLIFIER FOR CRITICAL ZEROS OF ζ 3
+earlier to produce percentages of zeros requires that an should be close to the M¨ obius function
+µ(n). The precise bonus coming from the shape µ2(n)(µ ∗ Λ∗k)(n)f(n) will be explained in §5.
+1.2. Main result. Set L = logT . We are now in a position to state the results of the paper.
+Theorem 1.1. Letα,β ≪L−1. Then one has
+I(α,β ) =
+∑
+d,e≤N
+adae
+[d,e ]
+(d,e )α+β
+dαeβ
+∫ ∞
+−∞
+(
+ζ(1 +α +β) +ζ(1 −α −β)
+( 2πde
+t(d,e )2
+) α+β)
+Φ
+( t
+T
+)
+dt +O(E),
+with E given by the following cases
+E =
+
+
+
+
+
+T
+3
+20N
+33
+20 +N 1/2T
+1
+2 +ε, if an ≪nε,
+T ε(N
+11
+6 +N
+11
+12T
+1
+2 ), if an =µ2(n)(µ ∗ Λ∗k)(n)f(n),
+T ε(N
+7
+4 +N
+7
+8T
+1
+2 ), if an =µ(n)f(n),
+with f ∈ F .
+Remark 1.1. LetIM(α,β ) denote the main term of Theorem 1.1. By the use of the Laurent series
+of ζ(1 +s) around s = 0 we have
+ζ(1 +s) = 1
+s +C0 +O(s).
+This implies that
+ζ(1 +s) +ζ(1 −s)ys = 2C0 − logy +O(s).
+Therefore when α,β → 0 we obtain
+lim
+α→0
+β→0
+IM(α,β ) =
+∑
+d,e≤N
+adae
+[d,e ]
+∫ ∞
+−∞
+(
+logt(d,e )2
+2πde + 2C0
+)
+Φ
+( t
+T
+)
+dt =:IM,
+which is the main term from (1.4).
+Remark 1.2. Colloquially, this means that the length of the Feng molliﬁe r can be “pushed” from
+θ < 17
+33 to θ < 6
+11. We succeed by exploiting more of the structure of the molliﬁ er, rather than
+relying on estimates for generic forms in Kloosterman sums.
+1.3. Additional results. Sometimes it is useful to consider moment integrals where there is a cross
+product of two diﬀerent Dirichlet polynomials. More speciﬁc ally, suppose we have two Dirichlet
+polynomials of the form
+A(s) :=
+∑
+n≤N
+an
+ns, B (s) :=
+∑
+k≤K
+bk
+ks, where an ≪nε, and bk ≪kε.(1.7)
+In this case N :=T θ1 and K :=T θ2. Now we focus on integrals of the form
+Υ(α,β ) :=
+∫ ∞
+−∞
+ζ( 1
+2 +α +it)ζ( 1
+2 +β −it)AB( 1
+2 +it)Φ
+( t
+T
+)
+dt.
+In this scenario, we have the following result.
+Theorem 1.2. Letα,β ≪L−1. Then one has
+Υ(α,β ) =
+∑
+n≤N
+k≤K
+an
+bk
+[n,k ]
+(n,k )α+β
+nαkβ
+∫ ∞
+−∞
+(
+ζ(1 +α +β) +ζ(1 −α −β)
+( 2πnk
+t(n,k )2
+) α+β)
+Φ
+( t
+T
+)
+dt +O(E),
+===== PAGE 4 =====
+4 KYLE PRATT AND NICOLAS ROBLES
+with E given by
+E =
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+T
+1
+2 +ε(NK )
+1
+4 +T
+3
+20 +ε(NK )
+7
+10 (N +K)
+1
+4
++T ε(NK )
+7
+8 (N +K)
+1
+8, if an,b n ≪nε,
+T ε(NK )
+3
+4 (N +K)
+1
+4 +T εN
+7
+12K
+5
+4 +T
+1
+4 +εN
+7
+8K
+1
+4
++T
+1
+2 +εN
+5
+12K
+1
+4 (N
+5
+24 +K
+1
+4 ), if an =µ2(n)(µ ∗ Λ∗k)f(n) and bn ≪nε,
+T εN
+1
+4K
+1
+2 (N
+3
+4 +N
+1
+2K
+1
+2 +K) +T
+1
+4 +εN
+7
+8K
+1
+4
++T
+1
+2 +εN
+3
+8K
+1
+4 (N +K)
+1
+4, if an =µ(n)f(n) and bn ≪nε,
+with f ∈ F .
+Remark 1.3. Theorem 1.2 states that if one couples the Conrey molliﬁer al ong with a generic
+molliﬁer under the same twisted second moment, then the limi ting exponent in the error E above
+becomes 4
+7.
+Lastly, we consider
+J(α,β ) :=
+∫ ∞
+−∞
+ζ( 1
+2 +α +it)ζ( 1
+2 +β −it)|A( 1
+2 +it)|2|B( 1
+2 +it)|2Φ
+( t
+T
+)
+dt.
+where A and B are deﬁned in (1.7) and the additional condition that N ≥ K. The result is as
+follows.
+Theorem 1.3. Letα,β ≪L−1 and an,b n ≪nε. Then one has
+I(α,β ) =
+∑
+d,e≤N K
+ad
+ae
+[d,e ]
+(d,e )α+β
+dαeβ
+∫ ∞
+−∞
+(
+ζ(1 +α +β) +ζ(1 −α −β)
+( 2πde
+t(d,e )2
+) α+β)
+Φ
+( t
+T
+)
+dt +O(E),
+where E given by
+E =T ε(T
+1
+2N
+3
+4K +T
+1
+2NK
+1
+2 +N
+7
+4K
+3
+2 ),
+and with ad := ∑
+nk=danbk.
+1.4. Final remarks. The original approach presented in [8] to get the main terms o f I required
+the functional equation of the more complicated Estermann zeta-function (at u = 0) [15],
+Eu(s,a/q ) :=
+∞∑
+n=1
+σu(n) e(an/q)
+ns , for Re( s)> Re(u) + 1, a,q ∈ N such that (a,q ) = 1.
+The more modern method of [3, 6, 27] utilizes the approximate functional equation of the simpler
+Riemann zeta-function. Both techniques are equivalent, in the sense that they lead to the same
+main and error terms. We have shown preference for the latter in order to parallel [3].
+Finally, throughout the paper, we use shall use the conventi on that ε denotes and arbitrarily
+small positive quantity that may not be the same at each occur rence.
+2. Preliminary results
+2.1. The approximate functional equation. As mentioned in the introduction, the starting
+point is an adaptation of the approximate functional equati on of the Riemann zeta function (see
+[6, Lemma 4.1] and [27, Lemma 4], or more generally [18, Theor em 5.3]). More precisely, let
+G(s) :=es2
+p(s) where p(s) := (α +β)2 − (2s)2
+(α +β)2 .
+===== PAGE 5 =====
+PERTURBED MOMENTS AND A LONGER MOLLIFIER FOR CRITICAL ZEROS OF ζ 5
+In other words, G is an entire function such that G(x +iy) ≪xy−A for any ﬁxed x andA> 0. We
+note that G(−s) =G(s), G(0) = 1 and G(± α+β
+2 ) = 0. Next, we deﬁne
+W (x) := 1
+2πi
+∫
+(2)
+x−wG(w)dw
+w and Vα,β(x,t ) := 1
+2πi
+∫
+(2)
+G(s)
+s gα,β(s,t )x−sds(2.1)
+where
+gα,β(s,t ) :=π−s Γ( 1/2+α+s+it
+2 )Γ( 1/2+β+s−it
+2 )
+Γ( 1/2+α+it
+2 )Γ( 1/2+β−it
+2 )
+=
+( t
+2π
+) s
+(1 +O(t−1(1 + |s|2))),(2.2)
+for larget ands in any ﬁxed vertical strip. With this notation, the approximate functional equation
+becomes
+ζ
+( 1
+2 +α +it
+)
+ζ
+( 1
+2 +β −it
+)
+=
+∑
+m1,m2
+1
+m1/2+α
+1 m1/2+β
+2
+( m1
+m2
+) it
+Vα,β(m1m2,t )
++Xα,β,t
+∑
+m1,m2
+1
+m1/2−β
+1 m1/2−α
+2
+( m1
+m2
+) it
+V−β,−α(m1m2,t )
++OA((1 + |t|)−A),(2.3)
+for α,β with real part less than 1/2, and for any A ≥ 0. Here
+Xα,β,t :=πα+β Γ( 1/2−α−it
+2 )Γ( 1/2−β+it
+2 )
+Γ( 1/2+α+it
+2 )Γ( 1/2+β−it
+2 )
+=
+( t
+2π
+) −α−β
+(1 +O(t−1)),(2.4)
+for large t and s in any ﬁxed vertical strip. As remarked in [6, p. 43], G(s), also known as a pole
+annihilator, can be chosen from a wide class of functions. Th is particular choice has the advantage
+of making G vanish at s = ± α+β
+2 . If α,β → 0, then (2.3) becomes
+⏐
+⏐
+⏐
+⏐ζ
+( 1
+2 +it
+) ⏐
+⏐
+⏐
+⏐
+2
+= 2
+∑
+m1,m2
+1
+(m1m2)1/2
+( m1
+m2
+) it
+V0,0(m1m2,t ) +OA((1 + |t|−A)
+and we also get
+V0,0(m1m2,t ) = 1
+2πi
+∫
+(2)
+G(s)
+s g0,0(s,t )(m1m2)−sds = 1
+2πi
+∫
+(2)
+G(s)
+s
+( 2πm1m2
+t
+) −s
+ds
++O
+( 1
+t1/2−ε(m1m2)1/2+ε
+)
+=W
+( 2πm1m2
+t
+)
++O
+( 1
+t1/2−ε(m1m2)1/2+ε
+)
+.
+Therefore ⏐
+⏐
+⏐
+⏐ζ
+( 1
+2 +it
+) ⏐
+⏐
+⏐
+⏐
+2
+= 2
+∑
+m1,m2
+1
+(m1m2)1/2
+( m1
+m2
+) it
+W
+( 2πm1m2
+t
+)
++O(T −1/2+ε).
+This is, in fact, the starting point of [3].
+2.2. Bounds on Kloosterman sums. We require some results on Kloosterman sums that will
+be used to bound various error terms. We start with a result of Deshouillers and Iwaniec [12, 13].
+Lemma 2.1. Assume A,B,N,V ≥ 1 and |c(a,n )| ≤ 1. Then
+∑ ∑
+v≤V,b≤B
+(b̺,v)=1
+⏐
+⏐
+⏐
+⏐
+∑
+n≤N
+∑
+a≤A
+(a,v)=1
+c(a,n ) e
+(
+n
+̺ab
+v
+) ⏐
+⏐
+⏐
+⏐
+===== PAGE 6 =====
+6 KYLE PRATT AND NICOLAS ROBLES
+≪ (ABNV )1/2+ǫ{(BV )1/2 + (A +N)1/4[BV (N +̺A)(V +̺A2) +̺A2B2N]1/4}.
+The next result is due to Bettin and Chandee [2], and it improv es a result of Duke, Friedlander
+and Iwaniec [14] on bounds of bilinear Kloosterman sums.
+Lemma 2.2. Let αm,β n,ν a be complex numbers, where M ≤ m < 2M , N ≤ n < 2N , and
+A ≤a< 2A. Then for any ε> 0, we have
+∑
+a∼A
+∑ ∑
+m∼M,n∼N
+(m,n)=1
+νaαmβn e
+( a
+m
+n
+)
+≪ε ‖α‖‖β‖‖ν‖
+(
+1 + A
+MN
+) 1
+2
+× ((AMN )
+7
+20 +ε(M +N)
+1
+4 + (AMN )
+3
+8 +ε(AN +AM)
+1
+8 ),
+where ‖ · ‖ denotes the L2 norm.
+We may now proceed with the proof of the results.
+3. Proof of Theorem 1.1
+From (2.3) we get
+I(α,β ) =I1(α,β ) +I2(α,β ) +O(T −A),
+where
+I1(α,β ) =
+∫ ∞
+−∞
+∑
+m1,m2
+1
+m1/2+α
+1 m1/2+β
+2
+( m1
+m2
+) it
+Vα,β(m1m2,t )
+∑
+n1≤N
+an1
+n1/2+it
+1
+∑
+n2≤N
+an2
+n1/2−it
+2
+Φ
+( t
+T
+)
+dt
+=
+∑
+m1,m2,n1,n2
+an1¯an2
+m1/2+α
+1 m1/2+β
+2 n1/2
+1 n1/2
+2
+∫ ∞
+−∞
+( m1n2
+m2n1
+) it
+Vα,β(m1m2,t )Φ
+( t
+T
+)
+dt,
+and
+I2(α,β ) =
+∑
+m1,m2,n1,n2
+an1¯an2
+m1/2−β
+1 m1/2−α
+2 n1/2
+1 n1/2
+2
+∫ ∞
+−∞
+( m1n2
+m2n1
+) it
+V−β,−α(m1m2,t )Xα,β,tΦ
+( t
+T
+)
+dt.
+We ﬁrst concentrate on I1, then describe the modiﬁcations necessary to handle I2. Pulling the
+sums out of the integrals, we get
+I1(α,β ) =
+∑
+m1,m2,n1,n2
+an1an2
+m1/2+α
+1 m1/2+β
+2 n1/2
+1 n1/2
+2
+∫ ∞
+−∞
+( m1n2
+m2n1
+) it
+Vα,β(m1m2,t )Φ
+( t
+T
+)
+dt
+= D1 + S1,
+where the sum is over n1,n 2 ≤ N, D1 is the sum when m1n2 = m2n1 and S1 is the sum when
+m1n2 ⁄=m2n1.
+3.1. Diagonal terms. We start with D1. For j = 1, 2, we writemj =ℓn∗
+j wheren∗
+j = nj
+(n1,n2). The
+contribution from the diagonal term is therefore
+D1 =
+∑
+m1,m2,n1,n2
+an1an2
+m1/2+α
+1 m1/2+β
+2 n1/2
+1 n1/2
+2
+∫ ∞
+−∞
+Vα,β(m1m2,t )Φ
+( t
+T
+)
+dt
+=
+∑
+ℓ,n1,n2
+an1an2(n1,n 2)1+α+β
+ℓ1+α+βn1+α
+1 n1+β
+2
+∫ ∞
+−∞
+Vα,β(ℓn∗
+1ℓn∗
+2,t )Φ
+( t
+T
+)
+dt
+=
+∑
+ℓ,n1,n2
+an1an2(n1,n 2)1+α+β
+ℓ1+α+βn1+α
+1 n1+β
+2
+∫ ∞
+−∞
+1
+2πi
+∫
+(2)
+gα,β(s,t )(ℓ2n∗
+1n∗
+2)−sG(s)ds
+s Φ
+( t
+T
+)
+dt
+===== PAGE 7 =====
+PERTURBED MOMENTS AND A LONGER MOLLIFIER FOR CRITICAL ZEROS OF ζ 7
+=
+∑
+n1,n2
+an1an2(n1,n 2)1+α+β
+n1+α
+1 n1+β
+2
+∫ ∞
+−∞
+1
+2πi
+∫
+(2)
+gα,β(s,t )(n∗
+1n∗
+2)−sζ(1 +α +β + 2s)G(s)ds
+s Φ
+( t
+T
+)
+dt
+=
+∑
+n1,n2
+an1an2(n1,n 2)1+α+β
+n1+α
+1 n1+β
+2
+∫ ∞
+−∞
+1
+2πi
+∫
+(2)
+( 2πn∗
+1n∗
+2
+t
+) −s
+ζ(1 +α +β + 2s)G(s)ds
+s Φ
+( t
+T
+)
+dt
++O(T 1/2+ε),
+by the use of (2.2) in the last line. This term will be later com bined with a contribution from the
+oﬀ-diagonal terms. Together, they give the main term in 1.1.
+3.2. Oﬀ-Diagonal terms. Let us now move on to the oﬀ-diagonal terms S1. First, recall that
+S1 =
+∑
+m1,m2,n1,n2
+m1n2⁄=m2n1
+an1
+an2
+m1/2+α
+1 m1/2+β
+2 n1/2
+1 n1/2
+2
+∫ ∞
+−∞
+( m1n2
+m2n1
+) it
+Vα,β(m1m2,t )Φ
+( t
+T
+)
+dt.
+We now write m1n2 −m2n1 = ∆. From (4.4) of [27] (note the typo) or [18, Proposition 5.4 ] we
+have that for any A ≥ 0 and j = 0, 1, 2, · · ·, we have uniformly in x,
+tj ∂j
+∂tjVα,β(x,t ) ≪A,j (1 + |x/t|)−A.(3.1)
+This means that we can truncate the sum over m1,m 2 tom1m2 ≤T 1+ε. We introduce the smooth
+partition of unity
+1 =
+∑ ′
+M
+FM(x), T −100 ≤x ≤T 1+ε,
+where FM(x) is smooth, supported in [M/2, 3M], and satisﬁes F (j)
+M (x) ≪j M −j for all j ≥ 0. This
+partition of unity will also satisfy
+∑ ′
+M
+1 ≪ log(2 +T ). Therefore the non-diagonal term becomes
+S1 =
+∑ ′
+N1
+∑ ′
+N2
+∑ ′
+M
+∑
+∆ ⁄=0
+∑
+m1,m2,n1,n2
+m1n2−m2n1=∆
+an1
+an2
+m1/2+α
+1 m1/2+β
+2 n1/2
+1 n1/2
+2
+×
+( ∫ ∞
+−∞
+(
+1 + ∆
+m2n1
+) it
+Vα,β(m1m2,t )Φ
+( t
+T
+)
+dt
+)
+FN1(n1)FN2(n2)FM(m2) +O(1),(3.2)
+where N1,N 2 ≤N and M ≤T 1+ε. Using (3.1) and ℓ integration by parts, it is not hard to show
+that with |∆|>D , where D := M N1
+T 1−ε , give a negligible ≪A,εT −A contribution. In other words
+∑ ′
+N1,N2,M
+∑
+|∆ |>D
+∑
+n1,m2
+∑
+n2,m1
+m1n2−m2n1=∆
+an1¯an2
+m1/2+α
+1 m1/2+β
+2 n1/2
+1 n1/2
+2
+×
+∫ ∞
+−∞
+(
+1 + ∆
+m2n1
+) it
+Vα,β(m1m2,t )Φ
+( t
+T
+)
+dt
+≪ℓ
+∑ ′
+N1,M
+∑
+D<|∆ |≤T O(1)
+∑
+n1∼N1
+m2∼M
+∑
+m1≤T 1+ε
+n2≤N
+m1n2−m2n1=∆
+T −ℓ+1+ε
+m1/2
+1 m1/2
+2 n1/2
+1 n1/2
+2
+⏐
+⏐
+⏐
+⏐log
+(
+1 + ∆
+m2n1
+) ⏐
+⏐
+⏐
+⏐
+−ℓ
+≪ℓ
+∑ ′
+N1,M
+∑
+D<|∆ |≤T O(1)
+∑
+n1∼N1
+m2∼M
+1
+√m2n1
+∑
+m1≤T 1+ε
+n2≤N
+m1n2−m2n1=∆
+1√m1n2
+T −ℓ+1+ε
+( MN 1
+D
+) ℓ
+≪A,εT −A,
+===== PAGE 8 =====
+8 KYLE PRATT AND NICOLAS ROBLES
+where ℓ is large enough. Next, we move on to |∆|<D . By (2.2) we have
+Vα,β(x,t ) =W
+( 2πx
+t
+)
++ 1
+2πi
+∫
+(2)
+G(s)
+s E(s,t )x−sds,
+whereE(s,t ) is an analytic function of s and t fort suﬃciently large and Re(s)> 0. Moreover, we
+have the estimate
+E(s,t ) ≪σ
+1 + |s|2
+t1−σ .
+The error term associated to this approximation is then give n by
+EE :=
+∑ ′
+N1
+∑ ′
+N2
+∑ ′
+M
+∑
+0<|∆ |≤D
+∑
+m1,m2,n1,n2
+m1n2−m2n1=∆
+an1an2
+m1/2+α
+1 m1/2+β
+2 n1/2
+1 n1/2
+2
+FN1(n1)FN2(n2)FM(m2)
+×
+( ∫ ∞
+−∞
+(
+1 + ∆
+m2n1
+) it( 1
+2πi
+∫
+(2)
+G(s)
+s E(s,t )(m1m2)−sds
+)
+Φ
+( t
+T
+)
+dt
+)
+.
+As E(s,t ) is analytic in s for σ >0, we can move the line of integration in s from σ = 2 to σ =ε.
+We now apply the triangle inequality and proceed to use trivi al estimations. We upper bound the
+quantity (m1m2)−ε by 1, and use our bound for E(s,t ). From the rapid decay of G(s) in vertical
+strips and the fact that Φ is supported in [1 , 2], it is then easy to see that
+⏐
+⏐
+⏐
+⏐
+∫ ∞
+−∞
+(
+1 + ∆
+m2n1
+) it( 1
+2πi
+∫
+(ε)
+G(s)
+s E(s,t )(m1m2)−sds
+)
+Φ
+( t
+T
+)
+dt
+⏐
+⏐
+⏐
+⏐
+≪ε
+T ε
+T
+∫ ∞
+−∞
+Φ
+( t
+T
+) ∫
+(ε)
+|G(s)|
+|s| (1 + |s|2)|ds| ≪ εT ε.
+We deduce that
+EE ≪εT ε ∑ ′
+N1
+∑ ′
+N2
+∑ ′
+M
+∑
+0<|∆ |≤D
+∑
+m1,m2,n1,n2
+m1n2−m2n1=∆
+FN1(n1)FN2(n2)FM(m2)
+m1/2
+1 m1/2
+2 n1/2
+1 n1/2
+2
+.
+Since |∆| ≪ D we have ∆
+m2n1
+≪ 1
+T 1−ε , and
+1
+m1
+= n2
+m2n1
+(
+1 + ∆
+m2n1
+) −1
+≪ n2
+m2n1
+.
+Taking square roots and using the same bounds and approximations as in [3] (see also the treatment
+below), we then obtain
+EE ≪T ε ∑ ′
+N1
+∑ ′
+N2
+∑ ′
+M ≪T 1/ 2+ε
+√ N2
+N1
+∑
+0<|∆ |≤D
+∑
+m2,n1,n2
+m2n1≡−∆ (mod n2)
+FN1(n1)FN2(n2)FM(m2)
+m2n1
+.
+Next, we extract the greatest common divisor d of n1,n 2, and obtain
+EE ≪T ε ∑
+d≤N
+1
+d
+∑ ′
+N1
+∑ ′
+N2
+∑ ′
+M ≪T 1/ 2+ε
+√ N2
+N1
+∑
+0<|∆ |≤ D
+d
+∑
+(n1,n2)=1
+FN1(dn1)FN2(dn2)
+n1
+∑
+m2≡−n1∆( n2)
+FM(m2)
+m2
+.
+We study the innermost sum. By the support of FM, the inner sum is bounded by
+∑
+c1M <m2≤c2M
+m2≡v(n2)
+1
+m2
+,
+===== PAGE 9 =====
+PERTURBED MOMENTS AND A LONGER MOLLIFIER FOR CRITICAL ZEROS OF ζ 9
+for some positive constants c1 <c 2 and some residue class v modulo n2. We change variables and
+approximate the sum by an integral, which yields
+∑
+c1M <m2≤c2M
+m2≡v mod(n2)
+1
+m2
+≪ 1
+M + 1
+N2
+.
+Summing over the rest of the variables trivially, we obtain
+EE ≪ T ε
+T MN 1N2
+( 1
+M + 1
+N2
+)
+,
+for some M ≪T 1/2+ε
+√
+N2
+N1
+and N1,N 2 ≤N. Applying these bounds yields
+EE ≪T ε
+( N
+T 1/2 + N 2
+T
+)
+≪N 1/2T 1/2+ε.
+In the case |∆|<D we have ∆
+m2n1
+≪ 1
+T 1−ε , and
+m1 = m2n1 + ∆
+n2
+=m2
+n1
+n2
+(
+1 + ∆
+m2n1
+)
+.
+Hence for T <t< 2T , we get the approximation
+(
+1 + ∆
+mn
+) it
+=eit log(1+ ∆
+m2n1
+) =eit ∆
+m2n1
+(
+1 − it∆2
+2m2
+2n2
+1
++O
+( 1
+T 2−ε
+))
+,
+as well as
+W
+( 2πm1m2
+t
+)
+=W
+( 2πm2
+2n1
+tn2
+)
++ 2πm2∆
+tn2
+W ′
+( 2πm1m2
+t
+)
++O
+( 1
+T 2−ε
+)
+.
+Since m1m2 ≤ T 1+ε, we have that m2(m2n1 + ∆) ≤ n2T 1+ε. So, we have the bound M ≪
+T 1/2+ε
+√
+N2
+N1
+, and the error term from using the above approximations in (3 .2) is
+≪ T
+T 2−ε
+∑ ′
+N1
+∑ ′
+N2
+∑ ′
+M ≪T 1/ 2+ε √N2N1
+∑
+0≤|∆ |≤D
+∑
+n1∼N1
+n2∼N2
+∑
+m2∼M
+1
+m2n1
+≪
+∑ ′
+N1
+∑ ′
+N2
+∑ ′
+M ≪T 1/ 2+ε √N2N1
+MN 1N2
+T 2−ε ≪
+√
+TN 3/2
+2 N 1/2
+1
+T 2−ε ≪ N 2
+T 3/2−ε,
+by the deﬁnition of D and the above bound on M. This gives us the split
+S1 = A1 + EW +O
+(
+1 + N 2
+T 3/2−ε
+)
+,(3.3)
+where
+A1 =
+∑ ′
+N1
+∑ ′
+N2
+∑ ′
+M ≤T 1/ 2+ε
+√
+N2
+N1
+∑
+0<|∆ |≤D
+∑
+n1,n2
+∑
+n1m2≡−∆ (mod n2)
+m2>0
+an1¯an2
+m1+α+β
+2 n1
+( n2
+n1
+) α
+×
+( ∫ ∞
+−∞
+e
+( ∆t
+2πm2n1
+)
+W
+( 2πm2
+2n1
+tn2
+)
+Φ
+( t
+T
+)
+dt
+)
+FM(m2)FN1(n1)FN2(n2),(3.4)
+as well as
+EW =
+∑ ′
+N1,N2
+∑ ′
+M ≤T 1/ 2+ε
+√
+N2
+N1
+∑
+0<|∆ |≤D
+∑
+n1,n2
+∑
+n1m2≡−∆ (mod n2)
+m2>0
+an1¯an2
+m1+α+β
+2 n1
+( n2
+n1
+) α
+FM(m2)FN1(n1)FN2(n2)
+===== PAGE 10 =====
+10 KYLE PRATT AND NICOLAS ROBLES
+×
+∫ ∞
+−∞
+e
+( ∆t
+2πm2n1
+)[
+W
+( 2πm2
+2n1
+tn2
+)(
+− ( 1
+2 +α)∆
+m2n1
+− it∆2
+2m2
+2n2
+1
+)
++ 2πm2∆
+tn2
+W ′
+( 2πm2
+2n1
+tn2
+)]
+dΦ,
+(3.5)
+since the rest of the terms arising from the above approximat ions also give a contribution which is
+≪ N 2T −3/2+ε. We set the temporary notation dΦ := Φ( t
+T )dt. Let us ﬁrst examine A1. To this
+end, extract the common divisor d of n1 and n2 and write A as
+A1 =
+∑
+d≤N
+1
+d
+∑ ′
+N1,N2≤N
+∑ ′
+M ≤T 1/ 2+ε
+√ N2
+N1
+∑
+0<|∆ |≤ D
+d
+∑
+n1,n2
+(n1,n2)=1
+adn1¯adn2FN1(dn1)FN2(dn2)AM,Ni(n1,n 2, ∆),
+where
+A1,M,Ni(n1,n 2, ∆) =
+∑
+m2≡−
+n1∆ (mod n2)
+FM(m2)
+m1+α+β
+2 n1
+( n2
+n1
+) α ∫ ∞
+−∞
+e
+( ∆t
+2πm2n1
+)
+W
+( 2πm2
+2n1
+tn2
+)
+Φ
+( t
+T
+)
+dt.
+Using Poisson’s summation formula yields
+A1,M,Ni(n1,n 2, ∆) = 1
+n1n2
+( n2
+n1
+) α ∑
+h∈Z
+e
+(
+−h
+n1∆
+n2
+) ∫ ∞
+0
+e
+(
+−hx
+n2
+) FM(x)
+x1+α+β
+×
+∫ ∞
+−∞
+e
+( ∆t
+2πxn1
+)
+W
+( 2πx2n1
+tn2
+)
+Φ
+( t
+T
+)
+dtdx.
+Next, we make the change of variable x → x
+n1
+so that
+A1,M,Ni(n1,n 2, ∆) = nβ
+1nα
+2
+n1n2
+∑
+h∈Z
+˜AM,Ni(h,n 1,n 2, ∆) e
+(
+−hn1∆
+n2
+)
+,
+where
+˜A1,M,Ni(h,n 1,n 2, ∆) =
+∫ ∞
+0
+e
+(
+− hx
+n1n2
+) FM( x
+n1
+)
+x1+α+β
+∫ ∞
+−∞
+e
+( ∆t
+2πx
+)
+W
+( 2πx2
+n1n2t
+)
+Φ
+( t
+T
+)
+dtdx.
+Now we must study three cases: h = 0, |h| ≥ Hd := N2
+dMT ε and 0 < |h| < Hd. The ﬁrst case will
+provide the contribution to the main term, the second case is negligible and the third case will
+require estimates on Kloosterman sums.
+3.2.1. The case h = 0. The contribution to A1 from h = 0 is
+A1,0 =
+∑
+d≤N
+∑ ∑ ′
+N1≤N,N2≤N
+∑ ′
+M ≤T 1/ 2+ε
+√
+N2
+N1
+∑
+0<|∆ |≤ D
+d
+∑
+n1,n2
+(n1,n2)=1
+adn1¯adn2FN1(dn1)FN2(dn2)
+dn1−β
+1 n1−α
+2
+×
+∫ ∞
+−∞
+∫ ∞
+0
+FM
+( x
+n1
+)
+e
+( ∆t
+2πx
+)
+W
+( 2πx2
+n1n2t
+) dx
+x1+α+β Φ
+( t
+T
+)
+dt.(3.6)
+As argued in [3], we can extend the sum over ∆ to ∆ ∈ Z\{0}, since, as done previously, we
+can show that the term |∆| ≥ D/d yields a negligible contribution. Next, we make the change o f
+variablesy =t/x and integrate by parts twice the second line of (3.6) to get
+− 1
+∆2
+∫ ∞
+−∞
+∫ ∞
+0
+e
+( ∆y
+2π
+) d2
+dy2
+(
+FM
+( t
+n1y
+)
+W
+( 2πt
+n1n2y2
+) 1
+y1−α−β
+)
+dy 1
+tα+β Φ
+( t
+T
+)
+dt
+= − 1
+∆2
+∫ ∞
+−∞
+∫
+R(t,n1)
+e
+( ∆y
+2π
+) d2
+dy2
+(
+FM
+( t
+n1y
+)
+W
+( 2πt
+n1n2y2
+) 1
+y1−α−β
+)
+dy 1
+tα+β Φ
+( t
+T
+)
+dt,
+===== PAGE 11 =====
+PERTURBED MOMENTS AND A LONGER MOLLIFIER FOR CRITICAL ZEROS OF ζ 11
+whereR(t,n 1) = {y|T −100 < t
+n1y <T 1/2+ε
+√
+N2
+N1
+} by a trivial estimate of the part of integral over y
+withy ∈ R>0\R(t,n 1) and the properties of W and FM and n1 ≪T . Now we sum over M,N 1,N 2
+and d. We start with M so that
+∑ ′
+M
+∫ ∞
+−∞
+∫ ∞
+0
+FM
+( x
+n1
+)
+e
+( ∆t
+2πx
+)
+W
+( 2πx2
+n1n2t
+) dx
+x1+α+β Φ
+( t
+T
+)
+dt
+= − 1
+∆2
+∫ ∞
+−∞
+∫
+R(t,n1)
+e
+( ∆y
+2π
+) d2
+dy2
+(
+W
+( 2πt
+n1n2y2
+) 1
+y1−α−β
+)
+dy 1
+tα+β Φ
+( t
+T
+)
+dt +O
+( log(2 +T )
+∆2
+)
+= − 1
+∆2
+∫ ∞
+−∞
+∫ ∞
+0
+e
+( ∆y
+2π
+) d2
+dy2
+(
+W
+( 2πt
+n1n2y2
+) 1
+y1−α−β
+)
+dy 1
+tα+β Φ
+( t
+T
+)
+dt +O
+( log(2 +T )
+∆2
+)
+.
+Summing over N1 and N2 yields
+A1,0 = −
+∑
+d≤N
+∑
+|∆ |⁄=0
+∑
+n1,n2≤ N
+d
+(n1,n2)=1
+adn1¯adn2
+dn1−β
+1 n1−α
+2 ∆2
+×
+∫ ∞
+−∞
+∫ ∞
+0
+e
+( ∆y
+2π
+) d2
+dy2
+(
+W
+( 2πt
+n1n2y2
+) 1
+y1−α−β
+)
+dy 1
+tα+β Φ
+( t
+T
+)
+dt +O(T ε)
+= −
+∑
+d≤N
+∑
+n1,n2≤ N
+d
+(n1,n2)=1
+adn1¯adn2
+dn1−β
+1 n1−α
+2
+×
+∫ ∞
+−∞
+∫ ∞
+0
+∑
+|∆ |⁄=0
+1
+∆2 e
+( ∆y
+2π
+) d2
+dy2
+(
+W
+( 2πt
+n1n2y2
+) 1
+y1−α−β
+)
+dy 1
+tα+β Φ
+( t
+T
+)
+dt +O(T ε)
+= A1,0,+ + A1,0,− +O(T ε).
+The interchange of sum over ∆ and the integrals can be justiﬁe d by absolute convergence. Here
+A0,+ is the sum over ∆ > 0 and A0,− is the sum over ∆ < 0. Changing variables ∆ y → y and
+re-arranging yields
+A1,0,± = −
+∑
+d≤N
+∑
+n1,n2≤ N
+d
+(n1,n2)=1
+adn1¯adn2
+dn1−β
+1 n1−α
+2
+×
+∫ ∞
+−∞
+∫ ∞
+0
+∞∑
+∆=1
+(eiy +e−iy)
+∆α+β
+d2
+dy2
+(
+W
+( 2π∆2t
+n1n2y2
+) 1
+y1−α−β
+)
+dy 1
+tα+β Φ
+( t
+T
+)
+dt
+= −
+∑
+n1,n2≤N
+an1¯an2(n1,n 2)1−α−β
+n1−β
+1 n1−α
+2
+×
+∫ ∞
+−∞
+∫ ∞
+0
+∞∑
+∆=1
+2 cosy
+∆α+β
+d2
+dy2
+(
+W
+( 2πt
+n∗
+1n∗
+2y2
+) 1
+y1−α−β
+)
+dy 1
+tα+β Φ
+( t
+T
+)
+dt,
+since we had previously set n∗
+i = ni
+(n1,n2) for i = 1, 2. The next step is to see that
+∞∑
+∆=1
+1
+∆α+β
+d2
+dy2
+(
+W
+( 2πt
+n∗
+1n∗
+2y2
+) 1
+y1−α−β
+)
+=
+∞∑
+∆=1
+1
+∆α+β
+( 1
+2πi
+∫
+(2)
+G(s)
+( 2π∆2t
+n∗
+1n∗
+2
+) −s
+(2s − 2 +α +β)(2s +α +β − 1)y2s−3+α+βds
+s
+)
+===== PAGE 12 =====
+12 KYLE PRATT AND NICOLAS ROBLES
+= 1
+2πi
+∫
+( 5
+4 )
+ζ(2s +α +β)
+( 2πt
+n∗
+1n∗
+2
+) −s
+(2s +α +β − 1)(2s − 2 +α +β)y2s−3+α+βG(s)ds
+s .
+Using the Mellin transform of cos y, namely [22]
+M(cosy,z ) :=
+∫ ∞
+0
+yz−1 cosydy = Γ(z) cos
+( πz
+2
+)
+,
+valid for 0 < Re(z)< 1, turns the y-integral into
+∫ ∞
+0
+2 cosy 1
+2πi
+∫
+( 5
+4 )
+ζ(2s +α +β)
+( 2πt
+n∗
+1n∗
+2
+) −s
+× (2s +α +β − 1)(2s − 2 +α +β)y2s−3+α+βG(s)ds
+s dy
+= 2 1
+2πi
+∫
+( 5
+4 )
+ζ(2s +α +β)
+( 2πt
+n∗
+1n∗
+2
+) −s
+(2s +α +β − 1)(2s − 2 +α +β)
+× Γ(2s − 2 +α +β) cos
+( π(2s − 2 +α +β)
+2
+)
+G(s)ds
+s
+= 2 1
+2πi
+∫
+( 1
+4 )
+ζ(2s +α +β)
+( 2πt
+n∗
+1n∗
+2
+) −s
+Γ(2s +α +β) cos
+( π(2s − 2 +α +β)
+2
+)
+G(s)ds
+s .
+We have used the duplication formula for the gamma function. We were able to move the path
+of integration from Re(s) = 5
+4 to Re(s) = 1
+4 without encountering singularities because the simple
+pole of ζ(2s +α +β) is canceled by the simple zero of the cosine in the integrand at s = 1−α−β
+2 .
+Note that if α,β → 0, then cos(πs) would still guarantee the lack of a pole 1. Inserting this into
+the t-integral yields
+A1,0 +O(T ε) = −
+∑
+n1,n2
+an1an2(n1,n 2)1−α−β
+n1−β
+1 n1−α
+2
+∫ ∞
+−∞
+1
+2πi
+∫
+( 1
+4 )
+2ζ(2s +α +β)
+( 2πt
+n∗
+1n∗
+2
+) −s
+× Γ(2s +α +β) cos
+( π(2s − 2 +α +β)
+2
+)
+G(s)ds
+s Φ
+( t
+T
+) dt
+tα+β
+= 2π
+2
+∑
+n1,n2
+an1an2(n1,n 2)1−α−β
+n1−β
+1 n1−α
+2
+∫ ∞
+−∞
+1
+2πi
+∫
+( 1
+4 )
+22s+α+βπ2s+α+β−1
+( 2πt
+n∗
+1n∗
+2
+) −s
+×ζ(1 − (2s +α +β))G(s)ds
+s Φ
+( t
+T
+) dt
+tα+β
+= −(2π)α+β ∑
+n1,n2
+an1an2(n1,n 2)1−α−β
+n1−β
+1 n1−α
+2
+×
+∫ ∞
+−∞
+1
+2πi
+∫
+(− 1
+4 )
+ζ(1 + 2w −α −β)
+( t
+2πn∗
+1n∗
+2
+) w
+G(w)dw
+w Φ
+( t
+T
+) dt
+tα+β,
+after an application of the functional equation of the Riema nn zeta-function and the change of
+variabless → −w noting that G(w) =G(−w). From the diagonal terms we have
+D1 + A1,0 =
+∑
+n1,n2
+an1an2(n1,n 2)1+α+β
+n1+α
+1 n1+β
+2
+∫ ∞
+−∞
+1
+2πi
+∫
+(2)
+( 2πn∗
+1n∗
+2
+t
+) −s
+ζ(1 +α +β + 2s)G(s)ds
+s Φ
+( t
+T
+)
+dt
+1In [3, p. 13] it is argued, in addition, that G( 1
+2) = 0 cancels the pole of ζ(2s) at s = 1
+2.
+===== PAGE 13 =====
+PERTURBED MOMENTS AND A LONGER MOLLIFIER FOR CRITICAL ZEROS OF ζ 13
+− (2π)α+β ∑
+n1,n2
+an1an2(n1,n 2)1−α−β
+n1−β
+1 n1−α
+2
+×
+∫ ∞
+−∞
+1
+2πi
+∫
+(− 1
+4 )
+ζ(1 + 2w −α −β)
+( t
+2πn∗
+1n∗
+2
+) w
+G(w)dw
+w Φ
+( t
+T
+) dt
+tα+β +O(T ε).(3.7)
+Now, we move the path of integration of the D1 integral to Re(s) = − 1
+4 and we only pick up a
+simple pole at s = 0 for which
+res
+s=0
+x−sζ(1 +α +β + 2s)G(s)
+s =G(0)ζ(1 +α +β) =ζ(1 +α +β)
+since G(0) = 1. This is the only singularity since the pole of ζ(1 +α +β + 2s) at s = − α+β
+2 is
+canceled by the simple zero of G(s) at s = − α+β
+2 .
+We take the chance to explain what happens with I2. Recall that
+I2(α,β ) =
+∑
+m1,m2,n1,n2
+an1¯an2
+m1/2−β
+1 m1/2−α
+2 n1/2
+1 n1/2
+2
+∫ ∞
+−∞
+( m1n2
+m2n1
+) it
+V−β,−α(m1m2,t )Xα,β,tΦ
+( t
+T
+)
+dt.
+We split into diagonal and oﬀ-diagonal cases. In the diagonal case we can immediately use the
+approximation (2.4). In the oﬀ-diagonal case we truncate the sum by means of the rapid decay of
+Vα,β(x,t ), then integrate by parts. Here we use the fact that
+∂j
+∂tjXα,β,t ≪j t−j,
+which follows from Cauchy’s integral formula and Stirling’ s approximation for Γ(z). Having done
+so, we may then use (2.4) and bound the error as we did with the e rror in the approximation (2.2).
+A similar analysis then shows that the diagonal terms D2 of I2 are given by
+D2 =
+∑
+n1,n2
+an1¯an2(n1,n 2)1−α−β
+n1−β
+1 n1−α
+2
+×
+∫ ∞
+−∞
+1
+2πi
+∫
+(2)
+( 2πn∗
+1n∗
+2
+t
+) −s
+ζ(1 −α −β + 2s)G(s)ds
+s
+( t
+2π
+) −α−β
+Φ
+( t
+T
+)
+dt.(3.8)
+The oﬀ-diagonal terms coming from I2 are given by
+A2,0 =
+∑
+d≤N
+∑ ∑ ′
+N1≤N,N2≤N
+∑ ′
+M ≤T 1/ 2+ε
+√
+N2
+N1
+∑
+0<|∆ |≤ D
+d
+∑
+n1,n2
+(n1,n2)=1
+adn1¯adn2FN1(dn1)FN2(dn2)
+dn1+α
+1 n1+β
+2
+×
+∫ ∞
+−∞
+∫ ∞
+0
+FM
+( x
+n1
+)
+e
+( ∆t
+2πx
+)
+W
+( 2πx2
+n1n2t
+) dx
+x1−α−β
+( t
+2π
+) −α−β
+Φ
+( t
+T
+)
+dt.
+Therefore, we see that
+D1 + A2,0 = M1 +O(T ε)
++
+∑
+n1,n2
+an1¯an2(n1,n 2)1+α+β
+n1+α
+1 n1+β
+2
+∫ ∞
+−∞
+1
+2πi
+∫
+(− 1
+4 )
+( 2πn∗
+1n∗
+2
+t
+) −s
+ζ(1 +α +β + 2s)G(s)ds
+s dΦ
+−
+∑
+n1,n2
+an1¯an2(n1,n 2)1+α+β
+n1+α
+1 n1+β
+2
+∫ ∞
+−∞
+1
+2πi
+∫
+(− 1
+4 )
+( 2πn∗
+1n∗
+2
+t
+) −s
+ζ(1 +α +β + 2s)G(s)ds
+s dΦ
+= M1 +O(T ε)
+===== PAGE 14 =====
+14 KYLE PRATT AND NICOLAS ROBLES
+where
+M1 =
+∑
+n1,n2
+an1¯an2(n1,n 2)1+α+β
+n1+α
+1 n1+β
+2
+∫ ∞
+−∞
+ζ(1 +α +β)Φ
+( t
+T
+)
+dt.
+Likewise, D2 + A1,0 = M2 +O(T ε), where
+M2 =
+∑
+n1,n2
+an1¯an2(n1,n 2)1−α−β
+n1−β
+1 n1−α
+2
+∫ ∞
+−∞
+ζ(1 −α −β)Φ
+( t
+T
+) ( t
+2π
+) −α−β
+dt.
+To account for the arithmetical terms in front of the integra l we have used the fact that
+an1an2(n1,n 2)1−α−β
+n1−β
+1 n1−α
+2
+=
+( [n1,n 2]
+(n1,n 2)
+) α+βan1an2(n1,n 2)1+α+β
+n1+α
+1 n1+β
+2
+,
+since [n1,n 2](n1,n 2) =n1n2. Consequently, the total contribution to the main terms com ing from
+the diagonal terms and the two contributing pieces of the oﬀ-d iagonal terms is
+D1 + D2 + A1,0 + A2,0 =
+∑
+n1,n2≤N
+an1an2(n1,n 2)1+α+β
+n1+α
+1 n1+β
+2
+×
+∫ ∞
+−∞
+(
+ζ(1 +α +β) +ζ(1 −α −β)
+( 2π
+t
+n1n2
+(n1,n 2)2
+) α+β)
+Φ
+( t
+T
+)
+dt
++O(T ε).
+This explains the main term of Theorem 1.1. In the next sectio ns we estimate the error terms.
+3.2.2. The case |h| ≥ Hd. Recall that Hd := N 2
+dMT ε. We make the change variables t =xy so that
+1
+n1n2
+˜AM,Ni(h,n 1,n 2, ∆) = 1
+n1n2
+∫ ∞
+−∞
+e
+( ∆y
+2π
+)
+×
+∫ ∞
+0
+e
+(
+− hx
+n1n2
+)
+FM
+( x
+n1
+)
+W
+( 2πx
+n1n2y
+)
+Φ
+( xy
+T
+) dx
+xα+βdy.
+Since FM is supported in [M/2, 3M] we have that x ≍ N1M
+d . Moreover, y
+T ≍ 1
+x ≍ d
+N1M since Φ is
+supported in the interval [1 , 2]. Furthermore, 1
+n1n2y ≪ T ε1
+x ≍ dT ε1
+N1M due to the rapid decay of W .
+Integrating by parts ℓ times, we obtain
+1
+n1n2
+∫ ∞
+0
+e
+(
+− hx
+n1n2
+)
+FM
+( x
+n1
+)
+W
+( 2πx
+n1n2y
+)
+Φ
+( xy
+T
+) dx
+xα+β
+≪ℓ,ε
+d2
+N1N2
+( n1n2
+h
+dT ε1
+MN 1
+) ℓ+1MN 1
+d ≪
+( T ε1
+h
+) ℓ+1 ( N2
+dM
+) ℓ
+.
+Therefore, the contribution to S1 from |h|>H d is
+≪
+∑
+d≤N
+∑ ′
+N1,N2≤N
+M ≤T 1/ 2+ε
+√ N2
+N1
+∑
+0≤|∆ |≤ D
+d
+∑
+n1,n2
+(n1,n2)=1
+adn1¯adn2FN1(dn1)FN2(dn2)
+dn1−β
+1 n1−α
+2
+∑
+|h|≥Hd
+dT
+hN1M
+( N2T ε1
+dMh
+) ℓ
+≪T −A,
+when ℓ is suﬃciently large. Thus, the terms for which |h|>H d yield a negligible contribution.
+===== PAGE 15 =====
+PERTURBED MOMENTS AND A LONGER MOLLIFIER FOR CRITICAL ZEROS OF ζ 15
+3.2.3. The case 0 < |h| < Hd. It is suﬃcient to consider the terms 0 < h < Hd. We change of
+variablest =xy, followed by x →xn1n2, and consider
+A∗
+M,N1,N2 :=
+∑
+n1,n2
+(n1,n2)=1
+∑
+0<|∆ |< D
+d
+∑
+0<h<Hd
+adn1adn2FN1(dn1)FN2(dn2)
+dnα
+1nβ
+2
+e
+(
+−h∆¯n1
+n2
+)
+×
+∫ ∞
+0
+e(−hx)FM(xn2)
+∫ ∞
+−∞
+e
+( ∆y
+2π
+)
+W
+( 2πx
+y
+)
+Φ
+( xyn1n2
+T
+)
+dy dx
+xα+β.
+To decouple the variables n1 and n2 we write Φ in terms of its Mellin transform M(Φ,w ), i.e.
+Φ
+( xyn1n2
+T
+)
+= 1
+2πi
+∫
+(ε)
+M(Φ,w )
+( xyn1n2
+T
+) −w
+dw.
+Leth∆ =a, A = DHd
+d = N1N2
+d2T 1−ε , and νx,y(a) = ∑
+h∆= a e(−hx + ∆ y
+2π ). With this notation, we arrive
+at the following
+A∗
+M,N1,N2 = 1
+2πid
+∫ ∞
+0
+∫ ∞
+−∞
+∫
+(ε)
+W
+( 2πx
+y
+) ∑
+0<|a|<A
+νx,y(a)
+×
+∑
+n1,n2
+(n1,n2)=1
+adn1adn2FN1(dn1)FN2(dn2)FM(xn2)
+nα+w
+1 nβ+w
+2
+e
+(
+−a¯n1
+n2
+)
+M(Φ,w ) T w
+xwywdwdy dx
+xα+β.
+Observe that since FM is supported in [M/2, 3M] we have x ≍ dM
+N2
+. Moreover, y ≍ T
+xn1n2
+≍ T d
+M N1
+because Φ is supported in [1 , 2]. We now distinguish three cases.
+The ﬁrst, and easiest, case is when we have no information abo ut the coeﬃcients an other than
+an ≪εnε. Here we use Lemma 2.2, as in [3]. In our slightly modiﬁed sett ing we have only to note
+thatT −O(1)<x,y <T O(1) and |α|, |β| ≪ 1
+log T . The second and third cases, in which we specialize
+the coeﬃcients, are more diﬃcult and we give the proofs after we bound the error EW .
+3.2.4. The bound for EW . Here we bound the error EW , which appeared in (3.5). As with A1 we
+extract the common divisor d from n1 and n2, apply the Poisson summation formula, and change
+variables to obtain
+EW =
+∑
+d≤N
+1
+d
+∑ ′
+N1,N2≤N
+∑ ′
+M ≤T 1/ 2+ε
+√ N2
+N1
+∑
+0<|∆ |≤ D
+d
+∑
+n1,n2
+(n1,n2)=1
+adn1¯adn2FN1(dn1)FN2(dn2)EM,Ni(n1,n 2, ∆),
+where
+EW,M,Ni(n1,n 2, ∆) = 1
+n1−β
+1 n1−α
+2
+∑
+h∈Z
+e
+(
+− h¯n1∆
+n2
+) ∫ ∞
+0
+e
+(
+− hx
+n1n2
+)
+FM
+( x
+n1
+) ∫ ∞
+−∞
+e
+( ∆t
+2πx
+)
+Φ
+( t
+T
+)
+×
+[
+W
+( 2πx2
+n1n2t
+)(
+− ( 1
+2 +α)∆
+x2 − it∆2
+2x3
+)
++ 2π∆
+n1n2tW ′
+( 2πx2
+n1n2t
+)]
+dt dx
+xα+β.
+If we integrate by parts, as in Case 2 of A1, we see that the contribution coming from the terms
+with |h|>H d isO(1). The rest of the proof is ﬁnished by estimating trivially the remaining terms,
+namely
+EW,M,Ni(n1,n 2, ∆) ≪ T ε
+n1n2
+(
+1 + N2
+dM
+)
+,
+from which we obtain
+EW ≪T −1/2+εN +T −1+εN 2 ≪NT ε.
+===== PAGE 16 =====
+16 KYLE PRATT AND NICOLAS ROBLES
+3.2.5. Bounding the Error Terms: Feng and Conrey. For specialized coeﬃcients an, we study here
+the sum
+B = B(A,N 1,N 2,d ) =
+∑
+0<|a|<A
+ν(a)
+∑
+n1≤N
+n2≍N2/d
+(n1,n2)=1
+adn1FN1(dn1)
+nα+w
+1
+r(n2)e
+(
+−an1
+n2
+)
+,
+where ν,r are functions satisfying ν(n),r (n) ≪εnε. We give full details only when the coeﬃcients
+an are coeﬃcients of the Feng molliﬁer. The argument is virtual ly identical in the case of the
+Conrey molliﬁer, and we indicate some of these diﬀerences as w e go along. Our argument is based
+on that of Conrey [8].
+Let us now suppose that the an are given by the coeﬃcients of the Feng molliﬁer (see, e.g. [1 6]),
+that is,
+an =
+∑
+2≤k≤K
+1
+(logN)kµ2(n)(µ ∗ Λ∗k)(n)Pk
+( log(N/n)
+logN
+)
+,
+where the Pk are polynomials satisfying certain properties and K is a ﬁxed integer. By linearity
+we see it suﬃces to study
+an =µ2(n)(µ ∗ Λ∗k)(n)Pk
+( log(N/n)
+logN
+)
+.
+What shows up in B is not an1, but adn1, and we need to separate d and n1 from one another
+as much as possible. It is easy to separate d and n1 inside of Pk: by linearity and the binomial
+theorem we reduce to studying
+adn1 =µ2(dn1)(µ ∗ Λ∗k)(dn1)(logn1)j,
+for some integers j,k ≥ 0. The presence of the µ2 factor means we may assume ( d,n 1) = 1, and
+thusµ2(dn1) =µ2(d)µ2(n1). It therefore remains to separate d and n1 in (µ ∗ Λ∗k)(dn1).
+For coprime integers u,g , we have
+(µ ∗ Λ∗j)(ug) =
+∑
+· · ·
+∑
+nℓ1···ℓj =ug
+µ(n)Λ(ℓ1) · · ·Λ(ℓj).
+Since (u,g ) = 1 we haveℓi|u orℓj|g, but we cannot have ℓj|u andℓj|g. It follows that (µ ∗ Λ∗j)(ug)
+is the sum of 2 j sums of the form ∑
+· · ·
+∑
+nℓ1···ℓj=ug
+ℓi1 ,··· ,ℓis |u
+ℓis+1 ,...,ℓij |g
+µ(n)Λ(ℓ1) · · ·Λ(ℓj).
+Since n|ug with (u,g ) = 1 we may uniquely write n = nung, where nu|u and ng|g. Obviously
+(nu,n g) = 1. Moreover, it is easy to see that nuℓi1 · · ·ℓir =u. We therefore have
+∑
+· · ·
+∑
+nℓ1···ℓj=ug
+ℓi1 ,··· ,ℓis |u
+ℓis+1 ,...,ℓij |g
+µ(n)Λ(ℓ1) · · ·Λ(ℓj) = (µ ∗ Λ∗s)(u)(µ ∗ Λ∗(j−s))(g),
+and this gives the desired separation of u and g.
+It follows that B is a linear combination of O(1) sums of the form
+˜B =λ(d)
+∑
+0<|a|<A
+ν(a)
+∑
+n1≤N
+n2≍N2/d
+(n1,dn2)=1
+µ2(n1)(µ ∗ Λ∗s)(n1)FN1(dn1)(logn1)j
+nα+w
+1
+r(n2)e
+(
+−an1
+n2
+)
+,
+===== PAGE 17 =====
+PERTURBED MOMENTS AND A LONGER MOLLIFIER FOR CRITICAL ZEROS OF ζ 17
+where λ(d) ≪ (dT )ε and j,s ≥ 0 are ﬁxed integers. Observe that µ ∗ Λ∗0 =µ.
+Before proceeding, it is helpful to slightly clean up the notation. We setU =N1/d andV =N2/d,
+so that we need to estimate
+B1 =
+∑
+0<|a|<A
+ν(a)
+∑
+u≤N
+u≍U
+v≍V
+(u,dv)=1
+µ2(u)(µ ∗ Λ∗s)(u)FdU (du)(logu)j
+uα+w r(v)e
+(
+−au
+v
+)
+.
+The next step is to decompose µ ∗ Λ∗s into diﬀerent pieces. This will give rise to Type I and Type
+II sums, as they are often called in the literature. We recall the following identities, due essentially
+to Heath-Brown [17], for µ and Λ, valid for n ≤ 2U:
+Λ(n) =
+∑
+1≤k≤K
+(−1)k−1
+( K
+k
+) ∑
+· · ·
+∑
+m1···mkn1···nk=n
+m1,...,mk≤(2U )1/K
+µ(m1) · · ·µ(mk) log(nk),
+µ(n) =
+∑
+1≤k≤K
+(−1)k−1
+( K
+k
+) ∑
+· · ·
+∑
+m1···mkn1···nk−1=n
+m1,...,mk≤(2U )1/K
+µ(m1) · · ·µ(mk).
+We apply these identities with K = 2. We split the range of summation of each variable mi,n j
+into dyadic intervals of the form X < x≤ 2X, which implies that for U < u≤ 2U the function
+(µ ∗ Λ∗s)(u) is a linear combination of O((logU)4s+3) functions of the form
+∑
+· · ·
+∑
+n1···n4s+3=u
+ni∈Ii
+µ(n1) · · ·µ(n2s+2) log(n2s+3) · · ·log(n3s+2).
+Here Ii = (Xi, 2Xi], 2−(4s+3)U ≤ ∏
+iXi < 2U, and 2Xi ≤ (2U)1/2 for 1 ≤i ≤ 2s + 2. It is possible
+that some Ii contain only the integer 1.
+Let 1 ≤ W ≪ U 1/3 be a parameter to be chosen. We claim that either there is some i ∈
+{1,..., 4s+3} withXi ≫U/W , or there is a subsetS ⊂ {1,..., 4s+3} such thatW ≪ ∏
+i∈SXi ≪
+U/W . If there exists an i withXi ≫U/W we are done, and if there is somei such thatW ≪Xi ≪
+U/W we are also done (take S = {i}). Thus we may suppose Xi ≪ W for all i. Since Xi ≪ W
+and ∏
+iXi ≫U ≫W , there is some minimal i0 ≥ 2 such that
+i0∏
+i=1
+Xi ≫W.
+By minimality we have
+i0∏
+i=1
+Xi =Xi0
+i0−1∏
+i=1
+Xi ≪Xi0W ≪W 2 ≪ U
+W,
+the last inequality following since W ≪U 1/3. We ﬁnish by taking S = {1,...,i 0}. To balance the
+various error terms arising we eventually take W =U 1/6.
+It follows that ( µ ∗ Λ∗s)(u) is a linear combination of O(U ε) functions of the form ( β ∗g)(u),
+whereβ is supported on integers ≪W andg is equal to the constant one function or log (the Type
+I case), or functions of the form γ ∗δ, where γ,δ are supported on integers W ≪ n ≪ U/W (the
+Type II case). The functions β,g,γ,δ are supported on dyadic intervals, and satisfy the bounds
+β(n),g (n),γ (n),δ (n) ≪εnε.
+In dealing with the Conrey molliﬁer we perform a similar comb inatorial decomposition on the
+M¨ obius function, and introduce a similar parameterW ′, which is eventually taken to beW ′ =U 1/4.
+===== PAGE 18 =====
+18 KYLE PRATT AND NICOLAS ROBLES
+Let us ﬁrst consider a Type I sum. Using the binomial theorem t o separate variables inside the
+logarithm, we must therefore estimate
+∑
+a≤A
+ν(a)
+∑
+v≍V
+r(v)
+∑
+e≍E
+(e,dv)=1
+β(e)
+∑
+f ≍F
+ef ≍U
+ef ≤N
+(f,dev)=1
+µ2(f)(logf)ℓFdU(def)
+f α+w e
+(
+−aef
+v
+)
+,
+where EF ≍U, E ≪W , and ℓ ≥ 0 is an integer. By summation by parts, we have
+∑
+f ≍F
+ef ≍U
+ef ≤N
+(f,dev)=1
+µ2(f)(logf)ℓFdU(def)
+f α+w e
+(
+−nef
+v
+)
+≪ (1 + |w|)T ε ∑
+f ∈I
+f ≍F
+(f,dev)=1
+µ2(f)e
+(
+−nef
+v
+)
+for some interval I. By inclusion-exclusion this latter sum is equal to
+∑
+h≪F 1/ 2
+(h,dev)=1
+µ(h)
+∑
+f1∈I/h 2
+f1≍F /h2
+(f1,dev)=1
+e
+(
+−nef1h2
+v
+)
+.
+The inner sum is trivially ≪F/h 2. By Weil’s bound for Kloosterman sums [26], the inner sum is
+also ≪T εv1/2(n,v )(1 +Fv −1). Taking the minimum of these two bounds and using the inequa lity
+min(x,y ) ≤ (xy)1/2, we have
+∑
+f ∈I
+f ≍F
+(f,dev)=1
+µ2(f)e
+(
+−nef
+v
+)
+≪F 1/2v1/4(1 +F 1/2v−1/2)(n,v )1/2T ε.
+On summing over a,v , and e we obtain that the contribution to B1 from a Type I sum is
+≪ (1 + |w|)T εA(W 1/2U 1/2V 5/4 +UV 3/4).
+In the case of Conrey’s molliﬁer we also arrive at incomplete Kloosterman sums, but now the
+summation variable is not weighted by a factorµ2(f). We are therefore able to apply Weil’s bound
+for Kloosterman sums directly.
+We turn now to studying Type II sums. Separating variables vi a the Mellin transform of F and
+the binomial theorem, it suﬃces to bound the sum
+∑
+v≍V
+r(v)
+∑
+a≤A
+ν(a)
+∑
+b≍B
+(b,v)=1
+γ(b)
+∑
+c≍C
+(c,bv)=1
+δ(c)e
+(
+abc
+v
+)
+,
+say, where BC ≍ U, and W ≪ B,C ≪ U/W . We may assume without loss of generality that
+B ≪U 1/2, so that in fact W ≪B ≪U 1/2. This is almost in a form where we may apply Lemma
+2.1, but we have the condition ( b,c ) = 1. However, this condition may be removed with M¨ obius
+inversion at no cost. We deduce that the contribution to B1 from a Type II sum is
+≪T ε
+( ∑
+(b,a,u,v)∈J
+BbAaU uV v
+) 1/4
+,
+where
+J = {(−2, 2, 4, 4), (−1, 4, 3, 4), (1, 4, 3, 3), (1, 2, 3, 4), (3, 2, 3, 3), (0, 4, 4, 2), (1, 3, 4, 2)}.
+===== PAGE 19 =====
+PERTURBED MOMENTS AND A LONGER MOLLIFIER FOR CRITICAL ZEROS OF ζ 19
+(The non-alphabetic ordering of the components of the tuple s of J is to facilitate comparison with
+[8, p. 23]). With Conrey’s molliﬁer we bound the Type II sums i n the same fashion, but here there
+is no need for M¨ obius inversion to remove a coprimality condition.
+Combining our bounds and integrating over x,y,w , we ﬁnd that
+A∗
+M,N1,N2 ≪ T ε
+dA
+(
+AW 1/2U 1/2V 5/4 +AUV 3/4 +
+( ∑
+(b,a,u,v)∈J
+BbAaU uV v
+) 1/4)
+.
+We set W = U 1/6 and recall that W ≪ B ≪ U 1/2,U = N1/d,V = N2/d. Summing over dyadic
+intervalsM ≪T O(1), Ni ≤N, and d ≤N, we ﬁnd that the contribution to A from 0 < |h| ≤ Hd
+is bounded by
+≪T ε(N 11/6 +N 11/12T 1/2).
+If N =T θ this error is ≪T 1−ε for θ < 6
+11. For Conrey’s molliﬁer one ﬁnds that the error term is
+≪T ε(N 7/4 +T 1/2N 7/8),
+which is suﬃciently small provided N =T θ with θ< 4
+7.
+4. Proof Theorem 1.2 and Theorem 1.3
+4.1. Proof of Theorem 1.2. The strategy of the main terms is identical to the proof of the
+previous case with an2 replaced by bn2. The diﬀerence is in the error term involving the case
+0< |h|<H d when the structure of A and B are diﬀerent. Recalling that
+A∗
+M,N1,N2 =
+∑
+n1,n2
+(n1,n2)=1
+∑
+0<|∆ |< D
+d
+∑
+0<h<Hd
+adn1bdn2FN1(dn1)FN2(dn2)
+dnα
+1nβ
+2
+× e
+(
+−h∆¯n1
+n2
+) ∫ ∞
+0
+e(−hx)FM(xn2)
+∫ ∞
+−∞
+e
+( ∆y
+2π
+)
+W
+( 2πx
+y
+)
+Φ
+( xyn1n2
+T
+)
+dy dx
+xα+β.
+We ﬁnish by a very similar analysis to that of §3.2.5.
+4.2. Proof of Theorem 1.3. Once again the technique is the same, we ﬁrst apply the approximate
+functional equation and separate J intoJ1 and J2. This time we bear in mind the convolution
+ad :=
+∑
+n1k1=d
+an1bk1
+when computing the J1 integral
+J1(α,β ) :=
+∑
+m1,m2,n1,n2,k1,k1
+an1an2bk1bk2
+m1/2+α
+1 m1/2+β
+2 (n1n2k1k2)1/2
+∫ ∞
+−∞
+( m1n2k2
+m2n1k1
+) it
+Vα,β(m1m2,t )Φ
+( t
+T
+)
+dt.
+A similar analysis to that of [3, §4] ends the proof. We summarize the steps. By following a path
+like that of the proof of Theorem 1.1, we arrive at
+A∗
+M,N1,N1 =
+∑
+n1,n2
+(n1,n2)=1
+∑
+0<|∆ |< D
+d
+∑
+0<h<Hd
+adn1 adn2FN1(dn1)FN2(dn2)
+dnαnβ
+× e
+(
+− h∆n1
+n2
+) ∫ ∞
+0
+e(−hx)FM(xn2)
+∫ ∞
+−∞
+e
+( ∆y
+2π
+)
+W
+( 2πx
+y
+)
+Φ
+( xyn1n2
+T
+)
+dy dx
+xα+β.
+===== PAGE 20 =====
+20 KYLE PRATT AND NICOLAS ROBLES
+Let us now write adn1 asaµhbνr, where µ|d∞, (d,j ) = 1,n 1 =ρrj,ν = d
+(µ,d) andρ = µ
+(µ,d). We leave
+adn2 unchanged. This implies that the quantity we need to bound is
+∑
+d≤N
+1
+d
+∑ ′
+N1,N2,M
+∑
+µ|d∞
+(ν=d/(µ,d))
+∑
+0<|∆ |< D
+d
+∑
+0<|h|<Hd
+∑
+(n2,ρ)=1
+adn2
+∑
+(j,dn2)=1
+aµj
+∑
+(r,n2)=1
+bνr e
+(
+−h∆ρrj
+n2
+)
+× FN1(dρrj)FN2(dn2)
+nα
+1nβ
+2
+∫ ∞
+0
+e(−hx)FM(xn2)
+∫ ∞
+−∞
+e
+( ∆y
+2π
+)
+W
+( 2πx
+y
+)
+Φ
+( xyρrjn 2
+T
+)
+dy dx
+xα+β.
+Here the sums overN1,N 2 andM are dyadic sums up toNK,NK andT 1/2+ε√
+N2/N1, respectively.
+The key instruments are now a separation of the variablesn2,r,j like the one performed in §3.2.5
+via the Mellin transforms of the functions FN1 and Φ, followed by an application of Lemma 2.1.
+For convenience to the reader we remark the following identi ﬁcation of indices: the sum over ℓ in
+the lemma is the sum over n2 with L = N2
+d but the sum over j remains the same with J ≤ N
+µ ;
+moreover, the sum over u is the sum over h∆ with U = N1N2
+d2T 1−ε , and the sum over v becomes the
+sum over r with V ≤ K
+ν . Lastly, JV ≤ N1
+dρ . Once the dyadic sum over M is performed, the result
+of Lemma 2.1 implies that the above expression is bounded by
+T ε(T 1/2N 3/4K +T 1/2NK 1/2 +N 7/4K 3/2),
+see [3, p. 17] for further details.
+5. Application to critical zeros
+We mentioned in §1 that one needed I(α,β ) rather than I in order to compute the percentage
+of zeros on the critical line. More precisely, let N(T ) and N0(T ) be the number of zeros inside the
+rectangle 0< Re(s)< 1 and on the critical line, respectively, both up to height 0 <t<T , (see e.g.
+[25, §9 and §10]). The proportion of zeros 2 on the line is deﬁned as
+κ := lim inf
+T →∞
+N0(T )
+N(T ).
+Littlewood’s lemma yields the useful inequality [25, p. 290 ] and [8, p. 7]
+κ ≥ 1 − 1
+R log
+( 1
+T
+∫ T
+1
+|VA (σ0 +it)|2dt
+)
++o(1),(5.1)
+thereby linking the percentage to twisted second moments. H ere V is deﬁned by
+V (s) :=Q
+(
+− 1
+L
+d
+ds
+)
+ζ(s),
+whereQ(x) is a real polynomial satisfyingQ(0) = 1 andQ(x)+Q(1−x) = constant, andσ0 = 1
+2 − R
+L
+(recall that R is a bounded constant of our choice). In this case the Dirichl et polynomial A(s) is
+chosen to mimic ζ(s)−1 or (ζ(s) + ζ ′(s)
+L )−1. Rather than computing the integral in (5.1), it is more
+useful to compute I deﬁned by
+I :=Q
+( −1
+logT
+d
+dα
+)
+Q
+( −1
+logT
+d
+dβ
+)
+I(α,β )
+⏐
+⏐
+⏐
+⏐
+α=β=−R/L
+.
+2A history of the values of κ is documented in [19]. Bui, Conrey and Young [6] were able to g et 41 . 05%. Feng
+[16] claimed a value of 41 . 27%, though this was contested in [5, 19, 24], and reduced to 4 1. 07% due to an incomplete
+claim on the error terms. The calculation in this note shows t hat the length θ of Feng’s molliﬁer may indeed be taken
+to be larger than 1
+2, but pushing θ past 6
+11 to (perhaps) 4
+7 will require more eﬀort.
+===== PAGE 21 =====
+PERTURBED MOMENTS AND A LONGER MOLLIFIER FOR CRITICAL ZEROS OF ζ 21
+We use a two-piece molliﬁer ψ(s) = ψ1(s) +ψ2(s). We take ψ1(s) to be the Conrey molliﬁer,
+with coeﬃcients given by
+an = µ(n)
+n1/2−σ0
+P1
+( log(N1/n)
+logN1
+)
+,
+where P1 is a polynomial satisfying some minor conditions, and N1 = T θ1 with θ1 < 4
+7. We take
+ψ2(s) to be the Feng molliﬁer, with coeﬃcients
+an = 1
+n1/2−σ0
+∑
+2≤k≤K
+1
+(logT )kµ2(n)(µ ∗ Λ∗k)(n)Pk
+( log(N2/n)
+logN
+)
+.
+The polynomials Pk also satisfy some minor conditions, and we are free to choose the integer
+parameter K. We have N2 =T θ2 with θ2< 6
+11.
+We next open the square in (5.1) and employ Theorem 1.1 for int egrals involving ψiψi for
+i ∈ {1, 2}, and Theorem 1.2 for the integrals involving ψ1ψ2 andψ2ψ1. The error terms associated
+with this process will hold uniformly by Cauchy’s integral f ormula [6, p. 41]. For the sums over d
+and e one ﬁrst uses the fact that
+(d,e )1+α+β =
+∑
+h|d
+h|e
+∑
+k|h
+µ(h)
+( h
+k
+) 1+α+β
+=
+∑
+h|d
+h|e
+h1+α+βF(h, 1 +α +β) with F(h,s ) :=
+∏
+p|h
+(1 −p−s),
+and then follows the technique of the main term computations given in [7, §6] and [8, p. 13] for
+Conrey’s molliﬁer and in [16, §3] for Feng’s molliﬁer.
+We utilize these main term computations in conjunction with the following choice of parameters:
+take θ1 = 4
+7 −ε, θ2 = 6
+11 −ε, R = 1.3025 and K = 3 in the main terms of Feng molliﬁer (see e.g.
+[16, Theorem 2] [19, Theorems 1.1, 1.2 and 1.3]) as well as
+P1(x) =x + 0.327608x(1 −x) − 1.62086x(1 −x)2 − 0.160377x(1 −x)3 + 1.29018x(1 −x)4,
+P2(x) = 0.197567x + 2.40831x2,
+P3(x) = 0.649142x + 1.042x2,
+Q(x) = 0.491203 + 0.630413(1 − 2x) − 0.149615(1 − 2x)3 + 0.0279997(1 − 2x)5.
+This yields κ ≥.41491637.
+6. Acknowledgments
+The authors would like to acknowledge Roger Baker, Maksym Ra dziwi/suppress l/suppress l, Arindam Roy, and
+Alexandru Zaharescu for fruitful and helpful comments. The second author would like to thank
+Maksym Radziwi/suppress l/suppress l for his hospitality at McGill University.
+The authors thank Roger Heath-Brown for discovering a mispr int in the statement of Theorem
+1.2 in earlier versions of this manuscript.
+References
+[1] R. Balasubramanian, B. Conrey and D. R. Heath-Brown. Asymptotic mean square of the product of the Riemann
+zeta-function and a Dirichlet polynomial . J. reine angew. Math., (357):161–181, 1985.
+[2] S. Bettin, and V. Chandee. Trilinear forms with Kloosterman fractions . Preprint, arxiv.org/abs/1502.00769
+[3] S. Bettin, V. Chandee, and M. Radziwill. The mean square of the product of ζ(s) with Dirichlet polynomials . To
+appear in J. Reine Angew. Math.
+[4] S. Bettin, and S. Gonek. The θ = ∞ conjecture implies the Riemann hypothesis . Mathematika, Volume 63, Issue
+1:29–33, 2017.
+[5] H. M. Bui. Critical zeros of the Riemann zeta-function . Preprint, arxiv.org/abs/1410.2433
+[6] H. M. Bui, B. Conrey, and M. P. Young. More than 41% of the zeros of the zeta function are on the critical line .
+Acta Arith., (150.1):35–64, 2011.
+===== PAGE 22 =====
+22 KYLE PRATT AND NICOLAS ROBLES
+[7] J. B. Conrey. Zeros of derivatives of the Riemann ’s ξ-function on the critical line . J. Number Theory, (16):49–74,
+1983.
+[8] J. B. Conrey. More than two ﬁfths of the zeros of the Riemann zeta function a re on the critical line . J. reine
+angew. Math., (399):1–26, 1989.
+[9] J. B. Conrey, H. Iwaniec, and K. Soundararajan Critical zeros of Dirichlet L-functions . J. reine angew. Math.,
+(681):175–198, 2013.
+[10] J. B. Conrey, H. Iwaniec, and K. Soundararajan Critical zeros of Dirichlet L-functions . Preprint,
+arxiv.org/abs/1105.1176
+[11] J. B. Conrey, A. Ghosh, and S. M. Gonek. Large gaps between zeros of the zeta-function . Mathematika (33), no.
+2:211–238, 1986.
+[12] J. M. Deshouillers and H. Iwaniec. Kloosterman sums and Fourier coeﬃcients of cusp forms . Invent. Math.,
+(70):219–288, 1982.
+[13] J. M. Deshouillers and H. Iwaniec. Power mean values of the Riemann zeta function II. Acta Arith., (48):305–312,
+1984.
+[14] W. Duke, J. Friendlander, and H. Iwaniec. Bilinear forms with Kloosterman fractions . Invent. math., (128):23–43,
+1997.
+[15] T. Estermann. On the representation of a number as the sum of two products . P. L. M. S., (2) 31:123–133, 1930.
+[16] S. Feng. Zeros of the Riemann zeta function on the critical line . J. Number Theory, (132):511–542, 2012.
+[17] D. R. Heath-Brown. Prime numbers in short intervals and a generalized Vaughan i dentity. Canad. J. Math. 34
+(1982), no. 6, 1365-1377.
+[18] H. Iwaniec and E. Kowalski. Analytic Number Theory. American Mathematical Society Colloquium Publications,
+53. American Mathematical Society, Providence, RI, 2004.
+[19] P. K¨ uhn, N. Robles and D. Zeindler.On a molliﬁer of the perturbed Riemann zeta-function . J. Number Theory,
+(174):274–321, 2017.
+[20] P. K¨ uhn, N. Robles and D. Zeindler. On mean values for Dirichlet’s polynomials and L-functions. Preprint,
+arxiv.org/abs/1609.03738
+[21] N. Levinson. More than One Third of Zeros of Riemann ’s Zeta-Function are on σ = 1
+2. Adv. Math., (13):383–436,
+1974.
+[22] F. Oberhettinger. Tables of Mellin Transforms . Springer-Verlag, Berlin (1974).
+[23] M. Radziwi/suppress l/suppress l.Limitations to mollifying ζ(s). Preprint, arxiv.org/abs/1207.6583
+[24] N. Robles, A. Roy, and A. Zaharescu. Twisted second moments of the Riemann zeta-function and app lications.
+J. Math. Anal. Appl., (434):271–314, 2016.
+[25] E. C. Titchmarsh. The Theory of the Riemann Zeta-Function . Oxford University Press, 2nd edition, 1986.
+[26] A. Weil. On some exponential sums . Proc. Nat. Acad. Sci. USA, (34):204–207, 1948.
+[27] M. P. Young. A short proof of Levinson ’s theorem. Arch. Math., (95):539–548, 2010.
+Department of Mathematics, University of Illinois, 1409 We st Green Street, Urbana, IL 61801,
+United States
+E-mail address : kpratt4@illinois.edu
+Department of Mathematics, University of Illinois, 1409 We st Green Street, Urbana, IL 61801,
+United States
+E-mail address : nirobles@illinois.edu
+Wolfram Research Inc, 100 Trade Center Dr, Champaign, IL 618 20, USA
+E-mail address : nicolasr@wolfram.com

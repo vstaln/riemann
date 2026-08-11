@@ -1,0 +1,6533 @@
+
+===== PAGE 1 =====
+DISCRETE ANALYSIS , 2021:6, 60 pp.
+www.discreteanalysisjournal.com
+The sixth moment of the Riemann zeta
+function and ternary additive divisor sums
+Nathan Ng*
+Received 4 June 2020; Published 6 July 2021
+Abstract: Hardy and Littlewood initiated the study of the 2k-th moments of the Riemann zeta
+function on the critical line. In 1918 Hardy and Littlewood established an asymptotic formula for
+the second moment and in 1926 Ingham established an asymptotic formula for the fourth moment.
+Since then no other moments have been asymptotically evaluated. In this article we study the
+sixth moment of the zeta function on the critical line. We show that a conjectural formula for a
+certain family of ternary additive divisor sums implies an asymptotic formula with power savings
+error term for the sixth moment of the Riemann zeta function on the critical line. This provides
+a rigorous proof for a heuristic argument of Conrey and Gonek [ 11]. Furthermore, this gives
+some evidence towards a conjecture of Conrey, Keating, Farmer, Rubinstein, and Snaith [8] on
+shifted moments of the Riemann zeta function. In addition, this improves on a theorem of Ivic
+[31], who obtained an upper bound for the the sixth moment of the zeta function, based on the
+assumption of a conjectural formula for correlation sums of the triple divisor function.
+Key words and phrases: Moments of the Riemann zeta function, additive divisor sums
+1 Introduction
+The 2k-th moment of the Riemann zeta function is
+Ik(T ) =
+∫ T
+0
+|ζ ( 1
+2 + it)|2kdt, (1.1)
+where ζ denotes the Riemann zeta function and k > 0. This article concerns the behaviour of (1.1) in the
+case k = 3. Hardy and Littlewood initiated the study of the moments (1.1). Their interest in these moments
+arose from the relationship of the Ik(T ) to the Lindelöf hypothesis, which asserts that for any ε > 0 one has
+|ζ ( 1
+2 +it)|≪ ε tε. In fact, the Lindelöf hypothesis is equivalent to the statement, for anyε > 0, Ik(T )≪ε T 1+ε
+*The research for this article was supported by an NSERC Discovery Grant.
+© 2021 Nathan Ng
+c b Licensed under a Creative Commons Attribution License (CC-BY) DOI: 10.19086/da.22057
+arXiv:1610.04977v3  [math.NT]  6 Jul 2021
+===== PAGE 2 =====
+for all k∈ N. The motivation for studying the moments Ik(T ) is that it seems that it might be easier to obtain
+an average bound of ζ ( 1
+2 +it) rather than a pointwise bound. In 1918, Hardy and Littlewood [22] proved that
+∫ T
+0
+|ζ ( 1
+2 + it)|2dt∼ T (logT ) (1.2)
+and in 1926 Ingham [28] proved that
+∫ T
+0
+|ζ ( 1
+2 + it)|4dt∼ T
+2π2 (logT )4. (1.3)
+To date these are the only asymptotic results established for Ik(T ). In 1996, Conrey and Ghosh [ 10]
+conjectured that ∫ T
+0
+|ζ ( 1
+2 + it)|6dt∼ 42a3
+9! T (logT )9 (1.4)
+and in 1998, Conrey and Gonek [11] conjectured that
+∫ T
+0
+|ζ ( 1
+2 + it)|8dt∼ 24024a4
+16! T (logT )16 (1.5)
+for certain speciﬁc constants a3 and a4 (see (1.7) below). In 1998, Keating and Snaith [33] conjectured for all
+positive integers k that
+Ik(T )∼ gkak
+(k2)!T (logT )k2
+(1.6)
+where
+gk = k2!
+k−1
+∏
+j=0
+j!
+(k + j)!
+and
+ak = ∏
+p
+(
+1− 1
+p
+)k2 ∞
+∑
+m=0
+( Γ(m + k)
+m!Γ(k)
+)2
+p−m. (1.7)
+Note that (1.6) agrees with (1.2), (1.3), (1.4), and (1.5).
+The formulae (1.2) and (1.3) have been reﬁned to asymptotic formulae with error terms admitting power
+savings. In 1926, Ingham [28] showed that
+I1(T ) = T P1(logT ) +O(T
+1
+2 +ε ), for any ε > 0, (1.8)
+and in 1979, Heath-Brown [24] showed that
+I2(T ) = T P4(logT ) +O(T
+7
+8 +ε ), for any ε > 0, (1.9)
+where P1, P4 are polynomials of degrees 1 and 4 respectively. The error term in (1.8) has been improved
+numerous times and the current record is due to Bourgain and Watt [5] who showed O(T
+1515
+4816 +ε ). Zavorotny˘ı
+[49] improved the error term in (1.9) to O(T
+2
+3 +ε ) and this was improved to O(T
+2
+3 (logT )8) (see [38], [32]).
+Although the asymptotic (1.6) remains open for k≥ 3, there are a number of results providing upper
+and lower bounds. Ramachandra [ 42],[43] established that Ik(T )≫k T (logT )k2
+for positive integers 2k
+and this was extended to rational k by Heath-Brown [ 25]. Further, assuming the Riemann hypothesis,
+this was established for all real k > 0 by Ramachandra [ 43],[44] and independently Heath-Brown [ 25].
+Recently, Radziwiłł and Soundararjan [41] obtained the correct lower bound unconditionally for all k > 0.
+2
+===== PAGE 3 =====
+In 2008, Soundararajan [46] showed that on the Riemann hypothesis that Ik(T )≪k T (logT )k2+ε, for any
+ε > 0. Building on this work and introducing a number of new ideas, Harper [23] showed that the Riemann
+hypothesis implies Ik(T )≪k T (logT )k2
+. Prior to Harper’s work, Radziwiłł [40] obtained this bound for
+k < 2.18, assuming the Riemann hypothesis.
+In order to study the mean value Ik(T ) it is convenient to consider the shifted moments
+II,J(ω) =
+∫ ∞
+−∞
+( k
+∏
+j=1
+ζ ( 1
+2 + a j + it)ζ ( 1
+2 + b j− it)
+)
+ω(t)dt (1.10)
+where I ={a1, . . . ,ak} and J ={b1, . . . ,bk} are k-tuples of complex numbers, while ω is a suitable smooth
+function with support [α, β ] satisfying T≪ α≪ β− α≪ T . The elements of I and J are called shifts.
+Observe that Ik(T ) = I{0,...,0},{0,...,0}(ω) where ω = 1[0,T ](t) 1. It turns out that it can be technically simpler
+to study II,J(ω) rather than Ik(T ). It appears that this approach was ﬁrst used by Ingham [ 28] in the case
+|I| =|J| = 1. What the shifts I and J do is that they make the main term easier to compute. The main term of
+II,J(ω) may be written as a certain contour integral of a meromorphic function. If the shifts in I and J are
+distinct, then the poles of this meromorphic function are simple and thus are simpler to compute. On the
+other hand, the shifts introduce a certain combinatorial problem.
+Conrey et al. [8] developed a conjecture for shifted moments of the Riemann zeta function. This shall be
+described shortly. We now explain the conjecture of [8] for this mean value, but we shall follow the notation
+of [27]. In order to do this, we ﬁrst deﬁne several functions.
+Deﬁnition 1. Let X be a ﬁnite multiset of complex numbers. We deﬁne the arithmetic function σX (n) to be
+the coefﬁcient of n−s in the Dirichlet series ζX (s), deﬁned by ζX (s) := ∏x∈X ζ (s + x). In other words, if
+X ={x1, . . . ,xk} then σX (n) = ∑n1···nk=n n−x1
+1 ··· n−xk
+k .
+Observe that
+ζ{0,...,0}(s) = ζ (s)k and
+σ{0,...,0}(n) = dk(n) = ∑
+d1···dk=n
+1
+is the k-th divisor function where k = #{0, . . . ,0}. Thus if, the elements of X are close to zero and k = #X,
+then ζX (s) is approximately ζ k(s) and σX (n) is approximately dk(n).
+Deﬁnition 2. Given ﬁnite multisets X,Y of complex numbers we deﬁne the Dirichlet series
+ZX,Y (s) :=
+∞
+∑
+n=1
+σX (n)σY (n)
+n1+s .
+The series ZX,Y (s) plays an important role in the study of II,J(ω) and will occur frequently in this article.
+It should be noted that ZX,Y (s) has an analytic continuation to the left of ℜ(s) = 0. In fact,
+ZX,Y (s) =
+(
+∏
+x∈X,y∈Y
+ζ (1 + s + x + y)
+)
+AX,Y (s)
+where AX,Y (s) is holomorphic in a half-plane containing s = 0. Precise formulae for AX,Y (s), in the case
+|X| =|Y| = 3, are given in Lemma 2.3 which follows. For|X| =|Y|≤ 2, there are simple formulae forZX,Y (s).
+11B(t) denotes the indicator function corresponding to B⊂ R.
+3
+===== PAGE 4 =====
+Examples. (i) Let X ={x1} and Y ={y1}. Then ZX,Y (s) = ζ (1 + s + x1 + y1).
+(ii) Let X ={x1,x2} and Y ={y1,y2}. Then a calculation, using a formula of Ramanujan, establishes that
+ZX,Y (s) = ζ (1 + s + x1 + y1)ζ (1 + s + x1 + y2)ζ (1 + s + x2 + y1)ζ (1 + s + x2 + y2)
+ζ (2 + 2s + x1 + x2 + y1 + y2) .
+In order to formulate the conjecture on the size of II,J(ω), we require a deﬁnition concerning set operations
+on I and J.
+Deﬁnition 3 ( j-swaps). Let I ={a1, . . . ,ak}, let J ={b1, . . . ,bk}, and let 0≤ j≤ k. Let S⊂ I and T⊂ J be
+such that|S| =|T| = j. We write
+S ={ai1, . . . ,ai j} and T ={bl1, . . . ,bl j}
+where
+i1 <··· < i j and l1 <··· < l j.
+We shall write IS to denote the k-tuple obtained from{a1, . . . ,ak} by replacing air with−blr for 1≤ r≤ j.
+Similarly, we write JT to denote the k-tuple obtained from{b1, . . . ,bk} by replacing blr with−air for 1≤ r≤ j.
+These are called j-swaps since j members of I and J are swapped with the negative signs inserted. This
+terminology is introduced in the series of articles [12], [13], [14], and [15]. In order to explain this we give
+some simple examples.
+Examples. Let I ={a1,a2,a3}, J ={b1,b2,b3}. If S = / 0and T = / 0, then IS = I and J = JT. If S ={a1}
+and T ={b3}, then IS = (−b3,a2,a3) and JT = (b1,b2,−a1). If S ={a1,a3} and T ={b2,b3}, then IS =
+(−b2,a2,−b3) and JT = (b1,−a1,−a3). If S = I and T = J, then IS =−J and JT =−I. The cases of
+|S| =|T| = 0 are called 0-swaps, the cases of|S| =|T| = 1 are called 1-swaps, and in general the cases of
+|S| =|T| = j are called j-swaps.
+We are now prepared to state the conjecture of Conrey, Farmer, Keating, Rubinstein, and Snaith [8] for
+II,J(ω) when ω is a convenient weight function, which we now deﬁne. Let ε0∈ (0, 1
+4 ] be a positive absolute
+constant, and let ω be a function from R to C that satisﬁes the following:
+ω is smooth, (1.11)
+the support of ω lies in [c1T,c2T ] where 0 < c1 < c2 are positive absolute constants, (1.12)
+there exists T0≥ T
+3
+4 +ε0 such that T0≪ T and ω ( j)(t)≪ T− j
+0 for j∈ N∪{ 0} and all t∈ R. (1.13)
+Conjecture 1. Let T > 3 and suppose thatω satisﬁes (1.11), (1.12), and (1.13). Assume that I ={a1, . . . ,ak}⊂
+C and J ={b1, . . . ,bk}⊂ C satisfy|ai|,|bi|≪ (logT )−1 for i = 1, . . . ,k (where the implicit constants are
+absolute). Then, in those cases where T is sufﬁciently large (in absolute terms), one has
+II,J(ω) =
+∫ ∞
+−∞
+(
+∑
+S⊂I,T⊂J
+|S|=|T|
+ZIS,JT (0)
+( t
+2π
+)−S−T
++ o(1)
+)
+ω(t)dt (1.14)
+where we have deﬁned ( t
+2π
+)−S−T
+:=
+( t
+2π
+)− ∑x∈S x−∑y∈T y
+for S⊂ I and T⊂ J.
+4
+===== PAGE 5 =====
+Remarks
+1. The works of Ingham [28] and Motohashi [38] establish this conjecture in the cases|I| =|J| = 1 and
+|I| =|J| = 2, respectively.
+2. Conrey, Farmer, Keating, Rubinstein, and Snaith [ 8] made this conjecture with the o(1) replaced
+by O(T− 1
+2 +ε ). That is, the total error with the weight included is O(T
+1
+2 +ε ). They gave a heuristic
+argument based on a “recipe" (see [8, section 2.2, pp. 53-56]).
+3. It should be observed that if a1 = a2, or if a1 =−b1 then some of the terms ZIS,JT (0) are undeﬁned
+due to the pole of ζ (s) at s = 1. However, these polar terms cancel out as can be seen by Lemma 2.5.1
+of [8], which shows that the right hand side of (1.14) is holomorphic in the ai’s andbi’s, as long as
+|ai|,|bi|≤ η for a sufﬁciently small positive η.
+4. The authors of [8] make the conjecture conditional on the weight function ω being “suitable", without
+actually deﬁning what they mean by that. We have stated the conjecture for functions ω satisfying
+(1.11), (1.12), and (1.13). However, Conjecture 1 should hold for a much wider class of functions. For
+instance, it should also be true when ω(t) = φ (t/T ) where φ is a Schwarz class function.
+5. There is some debate on the size of the error term in this conjecture. In the case k = 3 and all shifts
+ai = b j = 0, namely I3(T ), Motohashi [38, p.218, eq. (5.4.10)] has conjectured that the error term is
+Ω(T
+3
+4−δ ) for any ﬁxed δ > 0. Similarly, Ivic [30, p. 171] has conjectured that the error term in this
+case is O(T
+3
+4 +ε ) and Ω(T
+3
+4 ). Zhang [50] studied a related mean value (the cubic moment of quadratic
+Dirichlet L-functions at the central point) and found a main term plus secondary term of size T
+3
+4 ,
+assuming certain meromorphicity and polynomial growth assumptions for the corresponding multiple
+Dirichlet series. Recently, Diaconu [16] and Diaconu and Whitehead [17] have given a proof of this in
+both the function ﬁeld and number ﬁeld cases.
+6. Recent numerical calculations of these moments (see [45]) currently do not seem give to conclusive
+evidence of what is the correct size for the error term.
+In this article we shall prove that a certain asymptotic formula for ternary additive divisor sums implies
+an asymptotic formula for II,J(ω) in the case|I| =|J| = 3. In the remainder of this article we consider I, J
+where
+I ={a1,a2,a3} and J ={b1,b2,b3}.
+We shall assume that the numbers ai,bi (i = 1,2,3) satisfy a certain condition of the form
+|ai|,|bi|≤ δ for i = 1,2,3, (1.15)
+where δ denotes a positive constant satisfying δ < 1
+2. At times we shall require the more restrictive size
+restriction
+|ai|,|bi|≪ 1
+logT for i = 1,2,3. (1.16)
+In our proof of Theorem 1.1 and in our proofs of various intermediate results we shall assume that T is
+sufﬁciently large. With this assumption, observe that if ai and bi satisfy (1.16), then they will automatically
+satisfy (1.15). The family of additive divisor sums we are concerned with are sums
+D f ;I,J(r) = ∑
+m−n=r
+σI(m)σJ(n) f (m,n) (1.17)
+5
+===== PAGE 6 =====
+where r∈ Z\{ 0} and f is a smooth function. We require that, the partial derivatives of f satisfy growth
+conditions. That is, there must exist X,Y, and P positive such that
+support( f )⊂ [X,2X]× [Y,2Y ] (1.18)
+and the partial derivatives of f satisfy
+xmyn f (m,n)(x,y)≪m,n Pm+n. (1.19)
+In order to state a conjecture for the size of D f ;I,J(r), we must introduce several multiplicative functions.
+Deﬁnition 4. Let X ={x1, . . . ,xk} be a ﬁnite multiset of complex numbers and let s∈ C satisfy ℜ(s) >
+−min j=1,...,k ℜ(x j). The multiplicative function n→ gX (s,n) is given by
+gX (s,n) = ∏
+pα||n
+∑∞
+j=0
+σX (p j+α )
+p js
+∑∞
+j=0
+σX (p j)
+p js
+. (1.20)
+In other words, for n∈ N we have ∑∞
+m=1
+σX (nm)
+ms = gX (s,n)ζ (s + x1)··· ζ (s + xk).
+The multiplicative function n→ GX (s,n) is given by
+GX (s,n) = ∑
+d|n
+µ(d)ds
+φ (d) ∑
+e|d
+µ(e)
+es gX
+(
+s, ne
+d
+)
+. (1.21)
+Finally, we shall use the standard notation e(θ ) := e2πiθ and we recall that the Ramanujan sum is deﬁned
+by c𝓁(r) = ∑𝓁
+a=1
+(a,𝓁)=1
+e( ar
+𝓁 ). With these deﬁnitions in hand, we may state the additive divisor conjecture.
+Conjecture 2. There exists a pair (ϑ ,C)∈ [ 1
+2 , 2
+3 )× [0, ∞) for which the following (henceforth to be referred
+to as AD(ϑ ,C), or the ‘additive divisor hypothesis’) holds. Letε and ε2 be positive absolute constants. Let
+P > 1, and let X,Y > 1
+2 satisfy Y≍ X. Let f be a smooth function satisfying (1.18) and (1.19) and suppose
+I ={a1,a2,a3} and J ={b1,b2,b3} are sets of distinct complex numbers satisfying|ai|,|bi|≪ (logX)−1 for
+i = 1,2,3 (where the implicit constants are absolute). Then, in those cases where X is sufﬁciently large (in
+absolute terms), one has
+D f ;I,J(r) =
+3
+∑
+i1=1
+3
+∑
+i2=1
+∏
+j1⁄=i1
+ζ (1− ai1 + a j1) ∏
+j2⁄=i2
+ζ (1− bi2 + b j2)·
+∞
+∑
+𝓁=1
+c𝓁(r)GI(1− ai1, 𝓁)GJ(1− bi2, 𝓁)
+𝓁2−ai1−bi2
+∫ ∞
+max(0,r)
+f (x,x− r)x−ai1 (x− r)−bi2 dx + O(PCX ϑ +ε ),
+uniformly for 1≤| r|≪ X
+1
+2−ε2.
+Remarks.
+1. The main term in the above conjecture can be derived by following Duke, Friedlander, and Iwaniec’s
+δ-method [18].
+6
+===== PAGE 7 =====
+2. The function D f ;I,J(r) is a smoothed and shifted variant of the classical additive divisor sum
+Dk(x,r) = ∑
+n≤x
+dk(n)dk(n + r).
+The leading term in the conjecture for Dk(x,r) can be worked out with a heuristic probabilistic
+calculation. This was recently done independently by Tao [47] and Ng and Thom [39].
+3. In the case that σI(n) = σJ(n) = d(n), the divisor function, Duke, Friedlander, and Iwaniec [18] have
+shown that an analogous result is available with an error term having ϑ = 3
+4 and C = 5
+4. Furthermore,
+they mention that improvements to their argument would reduce C to 3
+4 and more elaborate arguments
+may lead to C = 1
+2.
+4. Conrey and Gonek [ 11] have conjectured that in the case of D3(x,r) (an unsmoothed version of
+D f ;I,J(r)) that ϑ = 1
+2 is valid for 1≤ r≤√x. Moreover, Conrey and Keating [ 14] have suggested
+that ϑ = 1
+2 is valid for 1≤ r≤ x1−ε. This is discussed extensively in Ng and Thom [ 39] where a
+probabilistic argument has been given which suggests the error term forDk(x,r) is uniform in the range
+1≤ r≤ x1−ε. Hence it is likely that the above conjecture holds in the wider range r≤ X 1−ε2.
+5. Blomer [4] has shown that there exists C > 0 such that
+∑
+𝓁1m−𝓁2n=h
+a(m)a(n) f (m,n)≪ PCX
+1
+2 +Θ+ε
+where g(z) = ∑∞
+m=1 a(m)m
+k−1
+2 e(mz)∈ Sk(N, χ) is a primitive cusp form (holomorphic newform) and Θ
+is a non-negative constant such that|λ (n)|≪ nΘ for eigenvalues λ (n) of the Hecke operator Tn acting
+on the space of weight 0 Maass cusp forms of level N.
+6. Recently, Aryan [2] has shown in the case that σI(n) = σJ(n) = d(n), X = Y , and P = 1, that the
+corresponding error term is O(X
+1
+2 +Θ+ε ).
+7. Unfortunately, for k≥ 3 an asymptotic evaluation of Dk(x,r) currently remains an open problem. In
+the case of the unsmoothed sum Dk(x,r) uniform upper and lower bounds for r≤ xA, for A > 0, of the
+correct order of magnitude are known. Ng and Thom [39] established lower bounds and Henriot [26]
+established upper bounds. Recently, K. Matomäki, M. Radziwiłł, and T. Tao [35], [36] have established
+the expected asymptotic for Dk(x,r) for almost all r in certain ranges.
+The main goal of this article is to show that Conjecture 2 implies the case k = 3 of Conjecture 1 for those
+choices of ω which satisfy (1.11), (1.12), (1.13), T0≫ T b where b > C+3ϑ /2
+C+1 , and
+∫ ∞
+0|ω(t)|dt≫ T .
+Theorem 1.1. Let I ={a1,a2,a3}, J ={b1,b2,b3}, and assume the elements of I and J satisfy (1.16). Let ω
+satisfy (1.11), (1.12), and (1.13). Suppose ε is a positive constant, and that ϑ∈ [ 1
+2 , 2
+3 ) and C > 0 are such
+that the hypothesis AD(ϑ ,C) holds. Then, provided that T is sufﬁciently large, one has
+II,J(ω) =
+∫ ∞
+−∞
+(
+∑
+S⊂I,T⊂J
+|S|=|T|
+ZIS,JT (0)
+( t
+2π
+)−S−T)
+ω(t)dt + O
+(
+T
+3ϑ
+2 +ε
+( T
+T0
+)1+C)
+. (1.22)
+From this theorem, we deduce an asymptotic formula with power savings error term for the sixth moment
+of the Riemann zeta function.
+7
+===== PAGE 8 =====
+Corollary 1.2. If Conjecture 2, AD(ϑ ,C), is true for some constants ϑ∈ [ 1
+2 , 2
+3 ) and C≥ 0, then there exists
+a polynomial P9(x) of degree 9 such that, for any ε > 0,
+I3(T ) =
+∫ T
+0
+|ζ ( 1
+2 + it)|6dt = T P9(logT ) +O(T
+3ϑ
+2 +1+C
+2+C +ε ),
+as long as T is sufﬁciently large.
+Remarks.
+1. Conditionally, this conﬁrms Conjecture 1 and provides an asymptotic formula as long as ϑ < 2
+3.
+2. Assuming a stronger version of Conjecture 2 in which the conditions|ai|,|bi|≤ (logX)−1 (i = 1,2,3)
+are replaced by |ai|,|bi|≤ δ0 (i = 1,2,3), with δ0 chosen to be some (sufﬁciently small) positive
+constant, we can deduce a correspondingly strengthened version of Theorem 1.1, in which the condition
+(1.16) is replaced by a weaker condition of the form (1.15).
+3. This result makes rigorous the argument of Conrey and Gonek in [11]. In their work they argued that
+the I3(T ) is asymptotic to the sum of mean values of the shape
+∫ 2T
+T |DT θi ( 1
+2 + it)|2dt (i = 1,2) where
+DT θi (s) = ∑n≤T θi d3(n)n−s and θ1 + θ2 = 3. They then invoked a Theorem of Goldston and Gonek [19]
+to asymptotically evaluate these expressions. This required a certain conjectural formula for D3(x,r)
+with sharp error terms, uniform for r≤√x.
+4. In a sense, this improves work of Ivi´c [31], who showed that certain asymptotic formula for D3(x,r)
+implies I3(T )≪ T 1+ε for any ε > 0. A slight difference in our treatment is that we have chosen to
+deal with smooth additive divisor sums corresponding to σI(n) and σJ(n) where the elements of I and
+J are≪ (logT )−1. This is a mild assumption and in fact, a number of proofs for unsmoothed additive
+divisor sums are deduced from their smooth and shifted versions.
+5. In our proof we follow an argument of Hughes and Young [ 27] who evaluated the twisted fourth
+moment ∫ ∞
+−∞
+(h
+k
+)−it
+|ζ ( 1
+2 + it)|4ω(t)dt.
+for coprime natural numbers h,k satisfying hk≤ T
+2
+11−ε. Recently, this was improved by Bettin, Bui,
+Li, and Radziwiłł [3] who extended the range to max(h,k)≤ T
+1
+4−ε.
+6. If the hypothesis AD(ϑ ,C) is true for the best possible exponent ϑ = 1
+2 (and some C > 0), then the
+error term in (1.22) will be of size O(T
+3
+4 +ε ) when T0 = T 1−ε. Note this matches with the (already
+mentioned) speculations of Ivic and Motohashi on the error term for I3(T ). Furthermore, under the
+hypothesis AD( 1
+2 ,C) the exponent in the error term in Corollary 1.2 is 1− 1
+8+4C + ε. Note that this is
+greater than 7
+8 + ε, the exponent in (1.9).
+7. Formulae and numerical values for the coefﬁcients of P9 may be found in [8], [9].
+8. From Theorem 1.1 we can also deduce formulae for the integrals
+∫ ∞
+−∞
+ζ ( j1)( 1
+2 + it)ζ ( j2)( 1
+2 + it)ζ ( j3)( 1
+2 + it)ζ ( j4)( 1
+2− it)ζ ( j5)( 1
+2− it)ζ ( j6)( 1
+2− it)ω(t)dt,
+where ( j1, . . . ,j6)∈ Z6
+≥0, assuming Conjecture 2. Such integrals can be used in detecting large gaps
+between the zeros of the Riemann zeta function. For instance see Hall [20].
+8
+===== PAGE 9 =====
+Proof of Corollary 1.2. In this proof I ={a1,a2,a3} and J ={b1,b2,b3} are each triples of complex numbers.
+We also write⃗a = (a1,a2,a3), and⃗b = (b1,b2,b3). Set f (⃗a;⃗b) = II,J(ω) and
+g(⃗a;⃗b) =
+∫ ∞
+−∞
+ω(t)
+(
+∑
+S⊂I,T⊂J
+|S|=|T|
+ZIS,JT (0)
+( t
+2π
+)−S−T)
+dt.
+Note that f (⃗a;⃗b) is holomorphic in ai and bi as long as|ai| < 1
+2 and|bi| < 1
+2. Also by Lemma 2.5.1 of [ 8]
+and [6, Sections 4.4,4.5] g(⃗a;⃗b) is holomorphic in ai and bi as long as|ai| < η and|bi| < η for a sufﬁciently
+small ﬁxed η > 0. It shall be convenient to set a4 =−b1,a5 =−b2, and a6 =−b3. We have (see [7, p. 371])
+g(⃗a;⃗b) =
+∫ ∞
+−∞
+ω(t)
+( t
+2π
+)− 1
+2 ∑3
+j=1(a j+b j)
+P(log t
+2π ,⃗a,⃗b)dt,
+where
+P(x,⃗a,⃗b) =−e(−a1−a2−a3−b1−b2−b3) x
+2
+(3!)2(2πi)6
+∮
+···
+∮ G(z1, . . . ,z6)∆2(z1, . . . ,z6)
+∏6
+j=1 ∏6
+i=1(z j− ai) e(x/2) ∑3
+j=1(z j−z3+ j)dz1 . . .dz6,
+such that the integrals
+∮
+are over small, positively oriented circles, inside of each of which lie all of the points
+a1, . . . ,a6,
+∆(z1, . . . ,z6) = ∏
+1≤i< j≤6
+(z j− zi),
+G(z1, . . . ,z6) = A(z1, . . . ,z6)
+3
+∏
+i=1
+3
+∏
+j=1
+ζ (1 + zi− z3+ j),
+A(z1, . . . ,z6) = ∏
+p
+3
+∏
+i=1
+3
+∏
+j=1
+(
+1− 1
+p1+zi−z3+ j
+)∫ 1
+0
+3
+∏
+j=1
+(
+1− e(θ )
+p
+1
+2 +z j
+)−1(
+1− e(−θ )
+p
+1
+2−z3+ j
+)−1
+.
+It follows that for|ai|,|bi| < η that F(⃗a;⃗b) = f (⃗a;⃗b)− g(⃗a;⃗b) is holomorphic in each of the variables. It
+follows from Theorem 1.1 that
+|F(⃗0;⃗0)|≪ T
+3ϑ
+2 +ε
+( T
+T0
+)1+C
+and so, when ω satisﬁes (1.11), (1.12), and (1.13), one has
+∫ ∞
+−∞
+|ζ ( 1
+2 + it)|6ω(t)dt =
+∫ ∞
+−∞
+P9
+(
+log t
+2π
+)
+ω(t)dt + O
+(
+T
+3ϑ
+2 +ε
+( T
+T0
+)1+C)
+where
+P9(x) =− 1
+(3!)2(2πi)6
+∮
+···
+∮ G(z1, . . . ,z6)∆2(z1, . . . ,z6)
+∏6
+j=1 z6
+j
+e(x/2) ∑3
+j=1(z j−z3+ j)dz1 . . .dz6.
+It is known that P9(x) is a polynomial of degree 9 (see [9, Theorem 1.2]). Now choose ω +(t) to be a smooth
+majorant of the function 1[T,2T ](t) with ω + = 1 in [T,2T ], support(ω +)⊆ [T− T0,2T + T0], and satisfying
+(ω +)( j)≪ T− j
+0 . It follows that
+I3(2T )− I3(T )≤
+∫ 2T
+T
+P9
+(
+log t
+2π
+)
+dt + O
+(
+T0(logT )9 + T
+3ϑ
+2 +ε
+( T
+T0
+)1+C)
+.
+9
+===== PAGE 10 =====
+The term O(T0(logT )9) arises from estimating the portions of the integral corresponding to the intervals
+[T− T0,T ] and [2T,2T + T0]. Now choose T0 so that the ﬁrst and second error terms are equal. Solving for T0
+we ﬁnd that T0 = T
+3ϑ
+2 +1+C
+2+C and note that this satisﬁes (1.13) since 7
+8≤
+3ϑ
+2 +1+C
+2+C < 1 for ϑ∈ [ 1
+2 , 2
+3 ) and C≥ 0.
+Thus
+I3(2T )− I3(T )≤
+∫ 2T
+T
+P9
+(
+log t
+2π
+)
+dt + O
+(
+T
+3ϑ
+2 +1+C
+2+C +ε
+)
+. (1.23)
+By a similar argument with a smooth minorant ω−(t) of 1[T,2T ](t) one may substitute “≥" for “≤" in (1.23),
+and so may conclude that
+I3(2T )− I3(T ) =
+∫ 2T
+T
+P9
+(
+log t
+2π
+)
+dt + O
+(
+T
+3ϑ
+2 +1+C
+2+C +ε
+)
+(1.24)
+for T≥ T1, where T1 is a sufﬁciently large ﬁxed constant. We now assume that T≥ T 5
+1 so that T
+1
+5≥ T1. Let
+J≥ 1, such that T
+2J≥ T
+1
+5 > T
+2J+1 . Substituting T
+2 j in (1.24) for j = 1, . . . ,J and summing, we have
+I3(T )− I3( T
+2J ) =
+∫ T
+T
+2J
+P9
+(
+log t
+2π
+)
+dt + O
+( J
+∑
+j=1
+( T
+2 j
+)
+3ϑ
+2 +1+C
+2+C +ε)
+=
+∫ T
+T
+2J
+P9
+(
+log t
+2π
+)
+dt + O
+(
+T
+3ϑ
+2 +1+C
+2+C +ε
+)
+.
+Now observe that 2
+I3( T
+2J )≤ I3(2T
+1
+5 )≤
+∫ 2T
+1
+5
+0
+|ζ ( 1
+2 + it)|6 dt≪
+∫ 2T
+1
+5
+0
+(t
+1
+4 + 1)6 dt≪ T
+1
+2 . (1.25)
+Letting P9(u) = ∑9
+j=0 α ju j, we ﬁnd
+⏐⏐⏐⏐⏐
+∫ T
+2J
+0
+P9
+(
+log t
+2π
+)
+dt
+⏐⏐⏐⏐⏐≤
+(
+max
+0≤ j≤9
+|α j|
+)∫ 2T
+1
+5
+2πe
+9
+∑
+j=0
+log j( t
+2π )dt + O(1)≪ T
+1
+5 log9(T ).
+From the last three displayed equations we obtain
+I3(T ) =
+∫ T
+0
+P9
+(
+log t
+2π
+)
+dt + O
+(
+T
+3ϑ
+2 +1+C
+2+C +ε + T
+1
+2
+)
+= T P9(logT ) +O
+(
+T
+3ϑ
+2 +1+C
+2+C +ε
+)
+since
+3ϑ
+2 +1+C
+2+C > 1
+2. Here P9 is a polynomial of degree 9, since P9 is a polynomial of degree 9.
+1.1 Conventions and Notation
+Given two functions f (x) and g(x), we shall interchangeably use the notation f (x) = O(g(x)), f (x)≪ g(x),
+and g(x)≫ f (x) to mean there exists M > 0 such that| f (x)|≤ M|g(x)| for all sufﬁciently large x. We
+write f (x)≍ g(x) to mean that the estimates f (x)≪ g(x) and g(x)≪ f (x) simultaneously hold. If we write
+f (x) = Oa1,...,ak (g(x)), f (x)≪a1,...,ak g(x), or f (x)≍a1,...,ak g(x) for real numbers a1, . . . ,ak, then we mean
+that the corresponding constants depend ona1, . . . ,ak. In this article we shall use the convention thatε denotes
+an arbitrarily small positive constant which may vary from instance to instance. In addition, B shall denote a
+positive constant, which may be taken arbitrarily large and which may change from line to line. The letter p
+2The constants in (1.25) are effective. For instance, we can use Lehman’s bound [34, Lemma 2]|ζ ( 1
+2 + it)|≤ (4/(2π)
+1
+4 )t
+1
+4 for
+t≥ 128π.
+10
+===== PAGE 11 =====
+will always be used to denote a prime number. For a functionϕ : R+× R+→ C, ϕ (m,n)(x,y) = ∂ m
+∂xm
+∂ n
+∂yn ϕ(x,y).
+The integral notation
+∫
+(c) f (s)ds for a complex function f (s) and c∈ R will be used frequently and is deﬁned
+by the following contour integral ∫
+(c)
+f (s)ds =
+∫ c+i∞
+c−i∞
+f (s)ds.
+In this article we shall consider s∈ C and usually we shall write its real part as σ = ℜ(s). Throughout this
+article we often use the fact that ω(t) has support in [c1T,c2T ] so that t≍ T .
+2 The approximate functional equation and the Dirichlet series ZI,J(s)
+One of the difﬁculties in evaluating mean values of the type (1.1) and (1.10) is that the integration is on the
+line ℜ(s) = 1
+2 where ζ does not possess an absolutely convergent Dirichlet series. Instead, in the critical strip
+a standard tool is the approximate functional equation. The approximate functional equation for ζ (s)k for
+k = 1,2 was derived by Hardy and Littlewood. Their result is of the form
+ζ (s)k = ∑
+n≤x
+dk(n)
+ns + χ(s)k
+∑
+n≤y
+dk(n)
+n1−s + error(s,x,y)
+where x and y are an arbitrary pair of real numbers satisfying x,y≫ 1 and xy = (|t|
+2π )k (it being assumed that
+s = σ + it with− 1
+2≤ σ≤ 3
+2 and t2≫ 1). There are several problems with this version of the approximate
+functional equation. First, each of these sums have sharp cutoffs, that is, the sum over n does not decay
+smoothly. In practice, it is convenient to sum over all integers with a weight which is smooth. The sharp
+cutoff functions lead to poor error terms error(s,x,y). Another problem is the presence of the factor χ(s)k.
+Modern versions of the approximate functional equation (see [48, p.92, eq. (4.20.1)]) have the shape
+ζ (s)k =
+∞
+∑
+n=1
+dk(n)νx(n)
+ns + χ(s)k
+∞
+∑
+n=1
+dk(n) ˜νy(n)
+n1−s + O(exp(−ct2)) (2.1)
+where c > 0 and νx(m) and ˜νy(n) are certain smooth weights essentially supported in [0,x] and [0,y], while
+xy = (|t|
+2π )k and s = σ + it with 0≤ σ≤ 1 and t2≫ 1. A classical approach to evaluating (1.1) is to use
+the identity|ζ ( 1
+2 + it)|2k = ζ ( 1
+2 + it)kζ ( 1
+2− it)k and then to apply (2.1) with s = 1
+2± it and then multiply
+out to give nine terms. Some of the terms contain factors of the form χ( 1
+2± it)k. These have to be treated
+with stationary phase and lead to unappealing oscillatory integrals. One way to circumvent this problem
+is to develop an approximate functional equation for|ζ ( 1
+2 + it)|2k instead of ζ ( 1
+2 + it)k. This idea is due to
+Heath-Brown [24, Lemma 1] who showed that
+|ζ ( 1
+2 + it)|2k = 2
+∞
+∑
+mn≤cT k
+dk(m)dk(n)√mn
+(m
+n
+)−it
+K(mn,t) +O(T−2) for t∈ [T,2T ] (2.2)
+where both c (a positive constant) and K(u,t) (a certain smooth weight function) depend on k.
+In this section, we prove an approximate functional equation for ζI( 1
+2 + it)ζJ( 1
+2− it) analogous to (2.2)
+in the case I ={a1,a2,a3} and J ={b1,b2,b3}. Recall that ζI and ζJ are deﬁned in Deﬁnition 1. The
+following proposition is a straightforward generalization of [27, Proposition 2.1, p. 209] which handles the
+case I ={a1,a2} and J ={b1,b2}.
+11
+===== PAGE 12 =====
+Proposition 2.1. Let δ∈ (0, 1
+2 ) and|t|≥ 1. Let I ={a1,a2,a3} and J ={b1,b2,b3} be complex numbers
+which satisfy|ai|,|bi|≤ δ for i = 1,2,3. Let G(s) be an even, entire function of rapid decay 3 as|s|→ ∞ in
+any ﬁxed strip|ℜ(s)|≤ A with G(0) = 1. Let
+VI,J;t(x) = 1
+2πi
+∫
+(1)
+G(s)
+s gI,J(s,t)x−sds, (2.3)
+where
+gI,J(s,t) =
+3
+∏
+j=1
+Γ
+( 1
+2 +a j+s+it
+2
+)
+Γ
+( 1
+2 +b j+s−it
+2
+)
+Γ
+( 1
+2 +a j+it
+2
+)
+Γ
+( 1
+2 +b j−it
+2
+) . (2.4)
+Furthermore, set
+XI,J;t = π ∑3
+j=1 a j+b j
+3
+∏
+j=1
+Γ
+( 1
+2−a j−it
+2
+)
+Γ
+( 1
+2−b j+it
+2
+)
+Γ
+( 1
+2 +a j+it
+2
+)
+Γ
+( 1
+2 +b j−it
+2
+) . (2.5)
+Then for any constant A′ > 0, we have
+ζI( 1
+2 + it)ζJ( 1
+2− it) =
+∞
+∑
+m,n=1
+σI(m)σJ(n)
+(mn)
+1
+2
+(m
+n
+)−it
+VI,J;t(π3mn)
++ XI,J;t
+∞
+∑
+m,n=1
+σ−J(m)σ−I(n)
+(mn)
+1
+2
+(m
+n
+)−it
+V−J,−I;t(π3mn) +O((1 +|t|)−A′
+). (2.6)
+Remark. This proposition can be generalized to the case I ={a1, . . . ,ak} and J ={b1, . . . ,bk}.
+Proof. We begin by assuming that I and J satisfy
+|a j| =|b j| = 2 j−1δ j for j = 1,2,3, (2.7)
+where δ < 1
+2. At the end of the proof we remove this condition. This ensures that the elements of I are
+distinct from one another and also the elements of J are distinct from one another. Indeed, this implies
+|ai− a j|≥ 4δ 2( 1
+2− δ ) and|bi− b j|≥ 4δ 2( 1
+2− δ ) for 1≤ i < j≤ 3. (2.8)
+Throughout this proof we let Λ(s) = π− s
+2 Γ( s
+2 )ζ (s) and we make use of the functional equation Λ(s) =
+Λ(1− s). Set
+ΛI,J(s) =
+3
+∏
+j=1
+Λ( 1
+2 + s + a j + it)Λ( 1
+2 + s + b j− it), (2.9)
+and
+I1 = 1
+2πi
+∫
+(1)
+ΛI,J(s)G(s)
+s ds. (2.10)
+We shall move the contour left to the line ℜ(s) =−1 and apply the residue theorem. The integrand has poles
+at s = 0 and at s =± 1
+2− a j− it and s =± 1
+2− b j + it with j = 1,2,3. Observe that by the condition (1.15)
+3G is of rapid decay if for every B > 0, we have|G(s)|≤| s|−B for|ℜ(s)|≤ A and|ℑ(s)| sufﬁciently large. An admissible G is
+G(s) = exp(s2). Observe that A may be chosen to be any positive constant.
+12
+===== PAGE 13 =====
+the poles all lie within the region−1 < ℜ(s) < 1. Furthermore, since|a j|,|b j| < 1
+2 for j = 1,2,3 and|t|≥ 1,
+it follows that the poles are distinct. The residue at s = 0 is
+ΛI,J(0) =
+3
+∏
+j=1
+Λ( 1
+2 + a j + it)Λ( 1
+2 + b j− it).
+It may be checked that the residue at the pole s = 1
+2− a1− it is
+( 3
+∏
+j=2
+Λ(1 + a j− a1)
+) 3
+∏
+j=1
+(
+|Γ( 1+b j−a1−2it
+2 )ζ (1 + b j− a1− 2it)|
+)|G( 1
+2− a1− it)|
+| 1
+2− a1− it|
+≪
+( 3
+∏
+j=2
+1
+|a j− a1|
+)(
+tδ e− π
+2 t·t
+1
+2
+)3
+(1 +|t|)−A−6≪δ t3e− 3πt
+2 (1 +|t|)−A−6,
+where we have used δ < 1
+2, G is of rapid decrease of G(s) when|ℑ(s)| is large, and (2.8). We get the same
+bound at the other poles. Let
+I2 = 1
+2πi
+∫
+(−1)
+ΛI,J(s)G(s)
+s ds.
+By the residue theorem it follows that
+I1− I2 = ΛI,J(0) +O(e− 3πt
+2 (1 +|t|)−A−3).
+Now observe that ΛI,J(−s) = Λ−J,−I(s) and thus
+I2 =− 1
+2πi
+∫
+(1)
+Λ−J,−I(s)G(s)
+s ds.
+Set ZI,J,t(s) = ∏3
+j=1 ζ ( 1
+2 + s + a j + it)ζ ( 1
+2 + s + b j− it) and
+GI,J,t(s) = π− 3
+2−3s− 1
+2 ∑3
+j=1(a j+b j)
+3
+∏
+j=1
+Γ
+( 1
+2 + s + a j + it
+2
+)
+Γ
+( 1
+2 + s + b j− it
+2
+)
+. (2.11)
+A calculation using the deﬁnition (2.9) establishes that ΛI,J(s) = ZI,J,t(s)GI,J,t(s). It follows that
+ZI,J,t(0) = 1
+2πi
+∫
+(1)
+ZI,J,t(s) GI,J,t(s)
+GI,J,t(0)
+G(s)
+s ds + 1
+2πi
+∫
+(1)
+Z−J,−I,t(s)G−J,−I,t(s)
+GI,J,t(0)
+G(s)
+s ds
++ O((1 +|t|)−A).
+Here we make use of the bound|GI,J,t(0)|≫| t|−3e− 3πt
+2 , which follows from Stirling’s formula. We observe
+that
+GI,J,t(s)
+GI,J,t(0) = π−3sgI,J(s,t) and G−J,−I,t(s)
+GI,J,t(0) = π−3sXI,J;tg−J,−I(s,t)
+which follows from (2.11) and deﬁnitions (2.4) and (2.5). The second equality makes use of the identity
+XI,J;t = G−J,−I,t (0)
+GI,J,t (0) . Combining the above facts with ZI,J,t(0) = ζI( 1
+2 + it)ζJ( 1
+2− it) we arrive at
+ζI( 1
+2 + it)ζJ( 1
+2− it) = 1
+2πi
+∫
+(1)
+ZI,J,t(s)π−3sgI,J(s,t)G(s)
+s ds
++ 1
+2πi
+∫
+(1)
+Z−J,−I,t(s)π−3sXI,J;tg−J,−I(s,t)G(s)
+s ds + O((1 +|t|)−A).
+(2.12)
+13
+===== PAGE 14 =====
+However, we have the Dirichlet series expansions
+ZI,J,t(s) =
+∞
+∑
+m,n=1
+σI(m)σJ(n)
+m
+1
+2 +s+itn
+1
+2 +s−it and Z−J,−I,t(s) =
+∞
+∑
+m,n=1
+σ−J(m)σ−I(n)
+m
+1
+2 +s+itn
+1
+2 +s−it .
+These expressions are inserted in (2.12). Since they are absolutely convergent on ℜ(s) = 1, we may exchange
+integration and summation order. Thus using deﬁnition (2.3) we arrive at (2.6) in the case that I and J satisfy
+(2.7). We now deduce (2.6) in the case that
+|a j|,|b j|≤ 2 j−1δ j for j = 1,2,3. (2.13)
+Note that ζI( 1
+2 + it)ζJ( 1
+2− it) is holomorphic for|a j| < 1
+2 and|b j| < 1
+2 for j = 1,2,3. Likewise the sum of
+the two terms on the right hand side of the equality (2.6) is holomorphic in the same region in C6. Since
+δ < 1
+2, the closed region (2.13) is a subset of|a j|,|b j| < 1
+2 for j = 1,2,3. It follows from six applications
+of the maximum modulus principle that (2.6) also holds assuming (2.13). Now as δ approaches 1
+2 from
+below, 2 j−1δ j→ 1
+2 for j = 1,2,3. It follows that for any δ′∈ (0, 1
+2 ), (2.6) holds assuming|a j|,|b j|≤ δ′ for
+j = 1,2,3 and this completes the proof.
+The next lemma gives estimates for the functions XI,J;t, gI,J(s,t), and VI,J;t.
+Lemma 2.2. Let A be a positive constant andδ∈ (0, 1
+6 ). Suppose that t≥ 2A+3. Assume that I ={a1,a2,a3}
+and J ={b1,b2,b3} satisfy|ai|,|bi|≤ δ. Then one has:
+(i) X I,J;t =
+( t
+2π
+)− ∑3
+i=1(ai+bi)
+(1 + O(t−1));
+(ii) For 0≤ ℜ(s)≤ A, we have gI,J(s,t) =
+( t
+2
+)3s(
+1 + O
+((|s|2 + 1
+t
+)
+t3δ
+))
+;
+(iii) Let ε > 0 and i≥ 0. For ℜ(s) = ε,|ℑ(s)|≤
+√
+T , and c1T≤ t≤ c2T where 0 < c1 < c2,
+di
+dt i gI,J(s,t)≪i,ε|s|iT 3ε+3δ−i; (2.14)
+(iv) For x > t3, VI,J;t(x) = O
+((t3
+x
+)A)
+.
+Proof. The ﬁrst two parts follow from Stirling’s formula and are technical calculations. Since the proof of
+(i) is similar and easier than (ii), we leave it as an exercise. The proof of (ii) and (iii) will be deferred to
+Appendix B. Proof of part (iv). Note that we can move the contour right to ℜ(s) = A so that
+VI,J;t(x) = 1
+2πi
+∫
+(A)
+G(s)
+s gI,J(s,t)x−sds≪
+∫ A+i∞
+A−i∞
+|G(s)|
+|s|
+( t3
+8x
+)ℜ(s)(
+1 + c|s|2
+t1−3δ
+)
+|ds|
+for some positive constant c, by part (ii). It follows that VI,J;t(x)≪ ( t3
+x )A as desired.
+In our evaluation of II,J(ω) we shall encounter the Dirichlet series ZI,J(s) = ∑∞
+n=1
+σI(n)σJ(n)
+n1+s . We now
+provide a factorization of this series into zeta factors times an absolutely convergent product near s = 0.
+14
+===== PAGE 15 =====
+Lemma 2.3. Let I ={a1,a2,a3} and J ={b1,b2,b3}. Let δ∈ (0, 1
+6 ) and assume|ai|,|bi|≤ δ for i = 1,2,3.
+We have for ℜ(s)≥ 3δ
+ZI,J(s) =
+( 3
+∏
+i, j=1
+ζ (1 + s + ai + b j)
+)
+AI,J(s) (2.15)
+where
+AI,J(s) = ∏
+p
+Ap;I,J(s) (2.16)
+and
+Ap;I,J(s) = P(p−a1, p−a2, p−a3, p−b1, p−b2, p−b3; p−s−1) (2.17)
+where
+P(X1,X2,X3,Y1,Y2,Y3,U)
+= 1− X1X2X3Y1Y2Y3(X−1
+1 + X−1
+2 + X−1
+3 )(Y−1
+1 +Y−1
+2 +Y−1
+3 )U 2
++ X1X2X3Y1Y2Y3×(
+(X−1
+1 + X−1
+2 + X−1
+3 )(X1 + X2 + X3) + (Y−1
+1 +Y−1
+2 +Y−1
+3 )(Y1 +Y2 +Y3)− 2
+)
+U 3
+− X1X2X3Y1Y2Y3(X1 + X2 + X3)(Y1 +Y2 +Y3)U 4
++ (X1X2X3Y1Y2Y3)2U 6.
+(2.18)
+This implies that AI,J(s) is absolutely convergent in ℜ(s)≥ 3δ− 1
+2 since Ap;I,J(s) = 1 + O(p−1−2δ ) in this
+region.
+Remark. This Lemma provides a memorphic continuation of ZI,J(s) to ℜ(s)≥ 3δ− 1
+2 and shows that it has
+poles at s =−ai− b j for (i, j)∈{ 1,2,3}2. Indeed it is possible to show that the elements−ai− b j are not
+zeros of AI,J(s).
+Proof. Let s = 2z− 1. It is shown in [8] that
+∞
+∑
+n=1
+σI(n)σJ(n)
+n2z =
+( 3
+∏
+i, j=1
+ζ (2z + ai + b j)
+)
+BI,J(z)
+where
+BI,J(z) = ∏
+p
+3
+∑
+m=1
+∏
+i⁄=m
+∏3
+j=1
+(
+1− 1
+p2z+a j +bi
+)
+1− pbm−bi
+.
+It follows that AI,J(s) = ∏p Ap;I,J(s) where
+Ap;I,J(s) =
+3
+∑
+m=1
+∏
+i⁄=m
+∏3
+j=1
+(
+1− 1
+p1+s+a j +bi
+)
+1− pbm−bi
+. (2.19)
+It is proven in [8, p.66] that (2.19) equals P(p−a1, p−a2, p−a3, p−b1, p−b2, p−b3; p−s−1) where P is explicitly
+given in [8, eq.(2.6.7), p.64]. Observe that, since ai,bi satisfy (1.15) it follows that Xi = p−ai and Yi = p−bi
+satisfy|Xi|,|Yi|≤ pδ for i = 1,2,3. Thus it follows from (2.18) that
+Ap;I,J(s) = 1 + O
+(
+p4δ−2−2σ + p6δ−3−3σ + p8δ−4−4σ + p12δ−6−6σ
+)
+= 1 + O(p−2(σ +1−2δ ) = 1 + O(p−1−2δ )
+(2.20)
+15
+===== PAGE 16 =====
+assuming σ≥− 1
+2 + 3δ and δ < 1
+6.
+In the next lemma, we provide standard bounds for ζ (s) and bounds for ZI,J(s).
+Lemma 2.4. (i) For t > t0 > 0, uniformly in σ
+|ζ (σ + it)|≪
+
+
+
+1 σ≥ 2,
+logt 1≤ σ≤ 2,
+t
+1−σ
+2 logt 0≤ σ≤ 1,
+t
+1
+2−σ logt σ≤ 0.
+(2.21)
+(ii) Let|ai|,|bi|≤ δ for i = 1,2,3 with δ∈ (0, 1
+6 ). For ℜ(s)≥ 2δ,
+ZI,J(2s)≪δ 1.
+(iii) Let|ai|,|bi|≤ δ for i = 1,2,3 with δ∈ (0, 1
+12 ). For ℜ(s) =− 1
+4 + 2δ and ℑ(s) = u,
+ZI,J(2s)≪δ (1 +|u|)
+3
+2 . (2.22)
+Proof. (i) is [29, Theorem 1.9]. (ii) For ℜ(s)≥ 2δ, it follows that ℜ(1 + 2s + ai + b j)≥ 1 + 2δ and thus by
+(2.15) and the absolute convergence of AI,J(s) we have
+ZI,J(2s)≪ ζ (1 + 2δ )9≪δ 1.
+(iii) Since ℜ(s) =− 1
+4 + 2δ, we have that 1
+2 + 2δ≤ ℜ(1 + 2s + ai + b j)≤ 1
+2 + 6δ < 1 and thus it follows
+from (2.21) that each factor in the product (2.15) is≪δ (1 +|u|)
+1
+4 where u = ℑ(s). Therefore (2.22) follows
+since there are 9 zeta factors in (2.15) and Lemma 2.3 implies AI,J(2s)≪δ 1.
+3 A formula for the sixth moment
+We now commence with our evaluation ofII,J(ω). At the outset we assume a number of conditions on the
+elements of I and J:
+|a j1± b j2|≥ C0
+logT , for j1, j2∈{ 1,2,3}, (3.1)
+|a j1± a j2|≥ C0
+logT ,|b j1± b j2|≥ C0
+logT , for j1⁄= j2∈{ 1,2,3}, (3.2)
+|ai1± ai2± b j1± b j2|≥ C0
+logT for i1⁄= i2∈{ 1,2,3} and j1⁄= j2∈{ 1,2,3} (3.3)
+where C0 is an arbitrary positive constant which satisﬁes 1≪ C0≪ 1. These size conditions shall be assumed
+throughout sections 3, 4, 5, and 6. They are made so that we will be able to bound terms such asζ (1 +a1−a2)
+and ζ (1− a1 + a2− b1 + b2) which can be very large without these assumptions. They will also ensure that
+all the poles we encounter are distinct. However, in the proof of Theorem 1.1 at the beginning of section 5
+16
+===== PAGE 17 =====
+we show how to remove these conditions by making use of the fact that the II,J(ω) and its main term are
+holomorphic functions of the ai and bi. By Proposition 2.1 it follows that
+II,J(ω) =
+∞
+∑
+m,n=1
+σI(m)σJ(n)
+(mn)
+1
+2
+∫ ∞
+−∞
+(m
+n
+)−it
+VI,J;t(π3mn)ω(t)dt
++
+∞
+∑
+m,n=1
+σ−J(m)σ−I(n)
+(mn)
+1
+2
+∫ ∞
+−∞
+(m
+n
+)−it
+XI,J;tV−J,−I;t(π3mn)ω(t)dt + O
+(∫ ∞
+−∞
+|ω(t)|t−1dt
+)
+:= I(1) + I(2) + O(1).
+Opening the integral formulae for VI,J;t and V−J,−I;t yields
+I(1) =
+∞
+∑
+m,n=1
+σI(m)σJ(n)
+(mn)
+1
+2
+1
+2πi
+∫
+(1)
+G(s)
+s (π3mn)−s
+∫ ∞
+−∞
+(m
+n
+)−it
+gI,J(s,t)ω(t)dtds ,
+and
+I(2) =
+∞
+∑
+m,n=1
+σ−J(m)σ−I(n)
+(mn)
+1
+2
+1
+2πi
+∫
+(1)
+G(s)
+s (π3mn)−s
+∫ ∞
+−∞
+(m
+n
+)−it
+XI,J;t g−J,−I(s,t)ω(t)dtds .
+We now deﬁne the diagonal termsI(1)
+D and I(2)
+D to be those terms above wherem = n. Likewise the off-diagonal
+terms I(1)
+O and I(2)
+O are those terms above where m⁄= n. More precisely,
+I(1)
+D =
+∞
+∑
+n=1
+σI(n)σJ(n)
+n
+1
+2πi
+∫
+(1)
+G(s)
+s (π3n2)−s
+∫ ∞
+−∞
+gI,J(s,t)ω(t)dtds , (3.4)
+I(2)
+D =
+∞
+∑
+n=1
+σ−J(n)σ−I(n)
+n
+1
+2πi
+∫
+(1)
+G(s)
+s (π3n2)−s
+∫ ∞
+−∞
+XI,J;t g−J,−I(s,t)ω(t)dtds ,
+I(1)
+O = ∑
+m⁄=n
+σI(m)σJ(n)
+(mn)
+1
+2
+1
+2πi
+∫
+(1)
+G(s)
+s (π3mn)−s
+∫ ∞
+−∞
+(m
+n
+)−it
+gI,J(s,t)ω(t)dtds , (3.5)
+I(2)
+O = ∑
+m⁄=n
+σ−J(m)σ−I(n)
+(mn)
+1
+2
+1
+2πi
+∫
+(1)
+G(s)
+s (π3mn)−s
+∫ ∞
+−∞
+(m
+n
+)−it
+XI,J;t g−J,−I(s,t)ω(t)dtds . (3.6)
+Summarizing, we have I( j) = I( j)
+D + I( j)
+O for j = 1,2 and thus
+II,J(ω) = (I(1)
+D + I(1)
+O ) + (I(2)
+D + I(2)
+O ) +O(1). (3.7)
+The asymptotic evaluation of II,J(ω) is reduced to evaluating I( j)
+D and I( j)
+O . The calculations of the I( j)
+D are
+straightforward. The majority of this article concerns the evaluation of the off-diagonal sums I( j)
+O .
+4 Diagonal terms
+In this section we evaluate the diagonal terms I( j)
+D .
+17
+===== PAGE 18 =====
+Proposition 4.1. Let δ∈ (0, 1
+12 ) and assume ai,bi satisfy|ai|,|bi|≤ δ for i = 1,2,3 and (3.1) and (3.3).
+Then
+I(1)
+D =
+∫ ∞
+−∞
+ZI,J(0)ω(t)dt
++
+3
+∑
+i, j=1
+Ress=
+−ai−b j
+2
+ZI,J(2s)
+G
+(−ai−b j
+2
+)
+(−ai−b j
+2 )
+∫ ∞
+−∞
+ω(t)
+( t
+2π
+)− 3
+2 (ai+b j)
+dt + O(T
+1
+4 +6δ )
+(4.1)
+and
+I(2)
+D =
+∫ ∞
+−∞
+( t
+2π
+)− ∑3
+k=1(ak+bk)
+Z−J,−I(0)ω(t)dt
++
+3
+∑
+i, j=1
+Ress=
+ai+b j
+2
+Z−J,−I(2s)
+G
+( ai+b j
+2
+)
+( ai+b j
+2 )
+∫ ∞
+−∞
+ω(t)
+( t
+2π
+)− ∑3
+k=1(ak+bk)+ 3
+2 (ai+b j)
+dt + O(T
+1
+4 +6δ ).
+(4.2)
+Proof. By (3.4), moving the sum inside the integral,
+I(1)
+D =
+∫ ∞
+−∞
+ω(t)
+{
+1
+2πi
+∫
+(1)
+G(s)
+s π−3sgI,J(s,t)ZI,J(2s)ds
+}
+dt,
+where ZI,J is deﬁned by Deﬁnition 2. By Cauchy’s theorem, we move the s integral to the ℜ(s) = ε1 line
+where ε1 = 2δ, and then apply Lemma 2.2 (ii) to obtain
+I(1)
+D =
+∫ ∞
+−∞
+ω(t)
+{
+1
+2πi
+∫
+(ε1)
+G(s)
+s
+( t
+2π
+)3s
+(1 + O(|s|2|t|3δ−1))ZI,J(2s)ds
+}
+dt. (4.3)
+The contribution to the contour integral from the O(|s|2|t|3δ−1) term is
+≪ε1|t|3δ +3ε1−1
+∫ ∞
+−∞
+|G(ε1 + iu)|
+|ε1 + iu| |ε1 + iu|2du≪ε1|t|3δ +3ε1−1,
+since ZI,J(2s)≪δ 1 for ℜ(s) = ε1 and G is of rapid decay. Since
+∫ ∞
+−∞ ω(t)|t|3ε1−1dt≪ T 9δ , it follows that
+I(1)
+D =
+∫ ∞
+−∞
+ω(t)
+{
+1
+2πi
+∫
+(ε1)
+G(s)
+s
+( t
+2π
+)3s
+ZI,J(2s)ds
+}
+dt + O(T 9δ ).
+The inner integrand has a pole at s = 0 and by Lemma 2.3 it also has poles at s =−ai−b j
+2 for (i, j)∈{ 1,2,3}2.
+By the conditions (3.1), (3.2), and (3.3) it follows that ai + b j⁄= 0 for (i, j)∈{ 1,2,3}2 and ai + b j⁄= ah + bk
+for (i, j), (h,k)∈{ 1,2,3}2. Therefore all of these poles are distinct. We now move the line of integration to
+ℜ(s) =− 1
+4 + ε1, crossing these poles. The contribution from the residue at s = 0 is
+∫ ∞
+−∞
+ZI,J(0)ω(t)dt (4.4)
+and, for 1≤ i, j≤ 3, that of the residue at s =−ai−b j
+2 is
+Ress=
+−ai−b j
+2
+ZI,J(2s)
+G
+(−ai−b j
+2
+)
+−ai−b j
+2
+∫ ∞
+−∞
+ω(t)
+( t
+2π
+)− 3
+2 (ai+b j)
+dt. (4.5)
+18
+===== PAGE 19 =====
+The s-integral on the line ℜ(s) =− 1
+4 + ε1 is
+1
+2πi
+∫
+(− 1
+4 +ε1)
+G(s)
+s
+( t
+2π
+)3s
+ZI,J(2s)ds≪ t− 3
+4 +3ε1
+∫ ∞
+−∞
+|G(− 1
+4 + ε1 + iu)|
+|− 1
+4 + ε1 + iu| (1 +|u|)
+3
+2 du≪ t− 3
+4 +3ε1
+by virtue of (2.22) and the rapid decay of G. Therefore by (1.11)-(1.13)
+∫ ∞
+−∞
+ω(t)
+{
+1
+2πi
+∫
+(− 1
+4 +ε1)
+G(s)
+s
+( t
+2π
+)3s
+ZI,J(2s)ds
+}
+dt≪
+∫ c2T
+c1T
+t− 3
+4 +3ε1|ω(t)|dt≪ T
+1
+4 +6δ .
+Since δ < 1
+12, it follows that T 9δ≪ T
+1
+4 +6δ . Thus, combining (4.4), (4.5), and the last displayed equation we
+obtain (4.1).
+The evaluation of I(2)
+D can be done in a completely analogous fashion. For instance with the help of
+Lemma 2.2 (i) and (ii), we can show that
+I(2)
+D =
+∫ ∞
+−∞
+ω(t)
+( t
+2π
+)− ∑3
+k=1(ak+bk) 1
+2πi
+∫
+(ε1)
+G(s)
+s
+( t
+2π
+)3s
+Z−J,−I(2s)dsdt + O(T 9δ ).
+This formula is obtained from (4.3) by formally replacing I by−J and by replacing J by−I and by inserting
+the factor ( t
+2π )− ∑3
+k=1(ak+bk). As before we shall move the contour in the s-integral left, passing poles at s = 0
+and s = ai+b j
+2 for i, j = 1, . . . ,3. Calculating the residues as before, we arrive at (4.2).
+5 Proof of main theorem and initial evaluation of the off-diagonal terms
+In this section we begin the evaluation of the off-diagonal terms I( j)
+O . In addition, we shall prove Theorem 1.1.
+This is the most involved part of the argument. Combining all of the results from sections 5 and 6 we shall
+establish the following. The proof of Theorem 5.1 may be found in section 6 just after Proposition 6.6.
+Proposition 5.1. Let ai,bi satisfy|ai|,|bi|≪ (logT )−1 for i = 1,2,3 and (3.1), (3.2), and (3.3) with C0 > 0.
+Suppose that ϑ∈ [ 1
+2 , 2
+3 ) and C > 0 are such that the hypothesis AD(ϑ ,C) holds. For every ε > 0, there exists
+Tε > 0 such that for T≥ Tε
+I(1)
+O + I(2)
+O =
+∫ ∞
+−∞
+( 2
+∑
+j=1
+∑
+S⊂I,T⊂J
+|S|=|T|= j
+ZIS,JT (0)
+( t
+2π
+)−S−T)
+ω(t)dt
+−
+3
+∑
+i, j=1
+Ress=
+−ai−b j
+2
+ZI,J(2s)
+G
+(−ai−b j
+2
+)
+−ai−b j
+2
+∫ ∞
+−∞
+ω(t)
+( t
+2π
+)− 3
+2 (ai+b j)
+dt
+−
+3
+∑
+i, j=1
+Ress=
+ai+b j
+2
+Z−J,−I(2s)
+G
+( ai+b j
+2
+)
+ai+b j
+2
+∫ ∞
+−∞
+ω(t)
+( t
+2π
+)− ∑3
+k=1(ak+bk)+ 3
+2 (ai+b j)
+dt
++ O
+(
+T
+3ϑ
+2 +ε
+( T
+T0
+)1+C)
+.
+(5.1)
+The main theorem, Theorem 1.1, follows from Proposition 4.1 and Proposition 5.1.
+19
+===== PAGE 20 =====
+Proof of Theorem 1.1. We begin by establishing Theorem 1.1 in the case that I and J satisfy|ai|,|bi|≤
+C′(logT )−1 for i = 1,2,3, with a ﬁxed choice ofC′ > 0, along with (3.1), (3.2), and (3.3), where it is assumed
+that 0 < C0 < C′. Later, we shall remove the last three conditions. Combining (3.7), (4.1), (4.2), and (5.1)
+II,J(ω) =
+∫ ∞
+−∞
+( 3
+∑
+j=0
+∑
+S⊂I,T⊂J
+|S|=|T|= j
+ZIS,JT (0)
+( t
+2π
+)−S−T)
+ω(t)dt + O
+(
+T
+3ϑ
+2 +ε
+( T
+T0
+)1+C)
+. (5.2)
+Notice that the sum of residues in (4.1) and (4.2) exactly cancel the two sums of residues in (5.1). Also, the
+ﬁrst terms in (4.1) and (4.2) are added into the ﬁrst sum of (5.1) making the sum over j∈{ 0,1,2,3}. This
+completes the proof of the main theorem under the assumptions (3.1), (3.2), and (3.3).
+We now demonstrate how to remove the conditions(3.1), (3.2), and (3.3) and prove the theorem without
+these restrictions. This will be similar to an argument employed in [6]. The main idea is to apply the Cauchy
+integral formula. Note that II,J(ω) is holomorphic if the ai’s andbi’s satisfy|ai| < 1
+2 and|bi| < 1
+2. In addition,
+by Lemma 2.5.1 of [8] the ﬁrst term after the equality in (5.2) is holomorphic if|ai| < η and|bi| < η for
+a sufﬁciently small η. It follows that the error term in (5.2) is holomorphic in the ai,bi, as long they are
+restricted to small enough disks. Let L(a1,a2,a3,b1,b2,b3) = II,J(ω) and let R(a1,a2,a3,b1,b2,b3) denote
+the main term on the right hand side of (5.2). We observe that both of these functions are analytic functions
+of the ai and bi. We have just shown in (5.2) that
+L(a1,a2,a3,b1,b2,b3)− R(a1,a2,a3,b1,b2,b3) +O
+(
+T
+3ϑ
+2 +ε
+( T
+T0
+)1+C)
+(5.3)
+subject to (3.1), (3.2), and (3.3). Suppose that a1,a2,a3,b1,b2,b3 are complex numbers satisfying
+|a j|,|b j|≤ C0
+logT , for j = 1,2,3. (5.4)
+Now consider the polydisc D⊂ C6 deﬁned by D = ∏3
+j=1 D j ∏3
+j=1 ˜D j where
+D j :={z∈ C|| z− a j|≤ r j} and ˜D j :={z∈ C|| z− b j|≤ s j} for j = 1,2,3
+and
+r j = 2 j+1C0
+logT and s j = 2 j+4C0
+logT for j = 1,2,3.
+We shall denote z j and w j as the complex variables lying on the boundaries of D j and ˜D j respectively for
+j = 1,2,3. By Cauchy’s integral formula
+L(a1,a2,a3,b1,b2,b3)− R(a1,a2,a3,b1,b2,b3)
+= 1
+(2πi)6
+∫
+∂D1
+···
+∫
+∂ ˜D3
+L(z1,z2,z3,w1,w2,w3)− R(z1,z2,z3,w1,w2,w3)
+∏3
+j=1(z j− a j)(w j− b j) d⃗zd⃗w. (5.5)
+where d⃗z = dz1dz2dz3, d⃗w = dw1dw2dw3, and ∂D j, ∂ ˜D j denote the boundaries of the polydiscs. To simplify
+notation we set η = C0
+logT . Observe that, if 1≤ j1, j2≤ 3,
+|z j1± w j2|≥| w j2− b j2|−| z j1− a j1|−| a j1|−| b j2|≥ 32η− 16η− η− η = 14η. (5.6)
+If 1≤ j2 < j1≤ 3
+|z j1± z j2|≥| z j1− a j1|−| z j2− a j2|−| a j1|−| a j2|≥ 2 j1+1η− 2 j2+1η− 2η≥ 2η (5.7)
+20
+===== PAGE 21 =====
+and likewise|w j1± w j2|≥ 2 j1+4η− 2 j2+4η− 2η≥ 30η. Finally, if 1≤ i2 < i1≤ 3 and 1≤ j2 < j1≤ 3
+|zi1± zi2± w j1± w j2|
+≥| w j1− b j1|−| w j2− b j2|−| zi1− ai1|−| zi1− ai1|−| ai1|−| ai2|−| b j1|−| b j2|
+≥ (2 j1+4− 2 j2+4− 2i1+1− 2i2+1− 4)η≥ 4η.
+(5.8)
+Thus we have shown that the numbers z j and w j satisfy (3.1), (3.2), and (3.3) and thus (5.3) holds with
+a j = z j∈ ∂D j and b j = w j∈ ∂ ˜D j for j = 1,2,3. Using this bound in the integrand in (5.5) we obtain
+L(a1,a2,a3,b1,b2,b3)− R(a1,a2,a3,b1,b2,b3)
+≪
+( 3
+∏
+j=1
+length(∂D j)length(∂ ˜D j)
+r js j
+)
+T
+3ϑ
+2 +ε
+( T
+T0
+)1+C
+≪ T
+3ϑ
+2 +ε
+( T
+T0
+)1+C (5.9)
+and this completes the proof of Theorem 1.1 in the general case.
+We devote the remainder of this section, and all of the next section, to presenting our proof of Proposition
+5.1 (for the conclusion of its proof, see below the statement of Proposition 6.6). Note that in this proof we
+have the assumption|ai|,|bi|≪ (logT )−1 for i = 1,2,3. However, since T may be assumed sufﬁciently large,
+we can assume the weaker condition
+|ai|,|bi|≤ δ for i = 1,2,3, where δ∈ (0, 1
+12 ).
+It shall be convenient at times to make use of this weaker condition. This bound shall be assumed throughout
+sections 5 and 6. This will simplify some of the estimates and also it will simplify parts of the argument.
+Moreover, the the only time we actually use (1.16) is in the invocation of Conjecture 2. Indeed as mentioned
+in Remark (ii) following Corollary 1.2, we could prove a version of Theorem 1.1 assuming just (1.15),
+instead of (1.16). However, we would have to assume a version of Conjecture 2 where the condition (1.16) is
+replaced by (1.15) with δ < δ0 for a sufﬁciently small δ0 > 0. We now begin an initial evaluation ofI(1)
+O . The
+evaluation of I(2)
+O is similar and may be derived from our formula for I(1)
+O .
+5.1 Initial steps: smooth partition of unity, restricting M and N
+Let ε > 0 and let
+f∗(x,y) = 1
+2πi
+∫
+(ε)
+G(s)
+s
+( 1
+π3xy
+)s 1
+T
+∫ ∞
+−∞
+(x
+y
+)−it
+gI,J(s,t)ω(t)dt ds. (5.10)
+Observe that by (3.5) and an application of Cauchy’s theorem we have
+I(1)
+O = T ∑
+m⁄=n
+σI(m)σJ(n)√mn f∗(m,n).
+We introduce a smooth partition of unity to simplify the evaluation of this sum. The main reason this is done
+is so that we can apply a version of the additive divisor conjecture where the variables are restricted to boxes
+of the shape [M,2M]× [N,2N] with M≍ N. Let W0 be a smooth function supported in [1,2] such that for
+x > 0, ∑k∈ZW0(x/2
+k
+2 ) = 1. In particular, for x≥ 1, we have
+∑
+M=2
+k
+2
+k≥−1
+W0
+( x
+M
+)
+= 1. (5.11)
+21
+===== PAGE 22 =====
+See [21, p. 360] for an example of such a function W0. Thus
+I(1)
+O = ∑
+M,N
+IM,N (5.12)
+where summation is over M,N∈{ 2
+k
+2| k∈ Z and k≥− 1}, while
+IM,N = T√
+MN ∑
+m⁄=n
+σI(m)σJ(n)W
+( m
+M
+)
+W
+( n
+N
+)
+f∗(m,n)
+and W (x) = x− 1
+2W0(x). We shall use later on that the constraints on M and N in the summation in (5.12)
+imply that one has|{M| M≤ X}| =|{N| N≤ X}|≪ 1 + logX for X≥ 1.
+We now restrict the size ofM and N to MN≪ T 3+ε, by showing the contribution from MN≫ T 3+ε is
+negligible. Observe that
+f∗(x,y) = 1
+T
+∫ ∞
+−∞
+(x
+y
+)−it
+ω(t)VI,J;t(π3xy)dt. (5.13)
+Note that by Lemma 2.2 (iv) VI,J;t(π3mn) is very small when mn≫ T 3+ε and c1T≤ t≤ c2T . From this we
+can deduce that, for any B > 0
+∑
+M,N
+MN≫T 3+ε
+IM,N≪ T−B. (5.14)
+Thus, in our analysis of IM,N, we may assume MN≪ T 3+ε.
+The next step is to observe that m and n must be close to each other. This is since oscillations of the factor
+( x
+y )−it cause f∗(x,y) to be small unless x and y are close to each other. We now provide details of this fact.
+We begin by bounding the inner integral in (5.10) when ℜ(s) = ε and|s|≤
+√
+T . Integrating by parts j times,
+it follows that ∫ ∞
+−∞
+(x
+y
+)−it
+gI,J(s,t)ω(t)dt≪ 1
+|log( x
+y )| j
+∫ ∞
+−∞
+⏐⏐⏐ ∂ j
+∂t j gI,J(s,t)ω(t)
+⏐⏐⏐dt.
+By the generalized product rule, Lemma 2.2 (iii), and (1.13)
+∂ j
+∂t j gI,J(s,t)ω(t) = ∑
+a+b= j
+( j
+a
+) ∂ a
+∂ta gI,J(s,t)ω (b)(t)≪ ∑
+a+b= j
+( j
+a
+)
+|s|aT 3ε+3δ−aT−b
+0 = T 3ε+3δ
+(|s|
+T + 1
+T0
+) j
+≪ T 3ε+3δ max(|s|,1) j
+T j
+0
+and thus ∫ ∞
+−∞
+(x
+y
+)−it
+gI,J(s,t)ω(t)dt≪ T 1+3ε+3δ max(|s|,1) j
+|log( x
+y )| jT j
+0
+,
+if|s|≤
+√
+T . We now bound this integral when ℜ(s) = ε and|s| >
+√
+T . Note that Lemma 2.2 (ii) implies that,
+when ℜ(s) = ε > 0, one will have
+∫ ∞
+−∞
+(x
+y
+)−it
+gI,J(s,t)ω(t)dt≪
+∫ c2T
+c1T
+|gI,J(s,t)|dt≪
+∫ c2T
+c1T
+( t
+2
+)3ε(
+1 + O
+(|s|2
+t1−3δ
+))
+dt≪ (T +|s|2)T 3ε+3δ .
+22
+===== PAGE 23 =====
+However, since|s| >
+√
+T
+(T +|s|2)T 3ε+3δ≪ T 3ε+3δ|s|2 = T 3ε+3δ max(|s|,1)2
+≤ T 3ε+3δ max(|s|,1)2
+(max(|s|,1)√
+T
+)2 j
+= T 1+3ε+3δ
+(max(|s|,1)2 j+2
+T j+1
+)
+.
+Since 1≪ x,y and xy≪ T 3+ε, we have|log(x/y)|≤| logx|+|logy|≪ logT≪ j T 1/ j and thus|log(x/y)| jT j
+0≪ j
+T T j
+0≤ T 1+ j. Hence we obtain for all s satisfying ℜ(s) = ε
+∫ ∞
+−∞
+(x
+y
+)−it
+gI,J(s,t)ω(t)dt≪ T 1+3ε+3δ max(|s|,1)2 j+2
+|log( x
+y )| jT j
+0
+.
+Therefore, by (5.10),
+f∗(x,y)≪ T 3ε+3δ
+(xy)ε|log( x
+y )| jT j
+0
+∫
+(ε)
+|G(s)|
+|s| max(|s|,1)2 j|ds|≪ j
+T 3ε+3δ
+|log( x
+y )| jT j
+0
+, (5.15)
+subject to x,y≫ 1 and xy≪ T 3+ε. If
+|log( x
+y )|≫ T−1+ε
+0 ,
+then for any B > 0 we obtain from (5.15) and (1.13)
+f∗(x,y)≪ T 3ε+3δ
+T jε
+0
+≤ T 3(ε+δ− j
+4 ε)≪ T−B,
+by choosing j≥ 4B
+3ε + 4 + 4δ
+ε . Letting m− n = r, it follows that
+IM,N = T√
+MN ∑
+r⁄=0
+∑
+m−n=r
+|log( m
+n )|≪T−1+ε
+0
+σI(m)σJ(n)W
+( m
+M
+)
+W
+( n
+N
+)
+f∗(m,n) +O(T−B)
+for any constant B > 0.
+We now impose several other conditions on M and N. Note that the condition |log(m/n)|≪ T ε−1
+0
+attached to the above sum implies that it is an empty sum unless one has N/3≤ M≤ 3N: for if M < N/3 or
+M > 3N, then, when m,n are such that W (m/M)W (n/N)⁄= 0, one will have|log(m/n)|≥ log(3/2). Also,
+observe that the conditions of summation imply 0⁄= r/N≪ T ε−1
+0 , so that one must have either an empty sum,
+or else 3N≥ M≥ N/3≫| r|T 1−ε
+0 ≫ T 1−ε
+0 . We shall henceforth, in this section, write M≍ N to mean that
+N/3≤ M≤ 3N (5.16)
+(we only use this restricted meaning for ≍ with the symbols M and N). The contribution to the sum
+∑MN≪T 3+ε IM,N from cases where one does not have M≍ N≫ T 1−ε
+0 is therefore of size O((logT )2T−B).
+Thus we may restrict ourselves to evaluating IM,N in the cases where M≍ N and M,N≫ T 1−ε
+0 . Observe that
+if x− y = r is ﬁxed, then by (5.10), one has:
+f∗(x,y) = 1
+2πi
+∫
+(ε)
+G(s)
+s
+( 1
+π3xy
+)s 1
+T
+∫ ∞
+−∞
+(
+1 + r
+y
+)−it
+gI,J(s,t)ω(t)dtds . (5.17)
+We have thus shown the following.
+23
+===== PAGE 24 =====
+Proposition 5.2. Let B > 0 be arbitrary and ﬁxed. Then for M,N≫ T 1−ε
+0 satisfying M≍ N and MN≪ T 3+ε,
+we have
+IM,N = T√
+MN ∑
+0<|r|≪ M
+T0 T ε
+D fr;I,J(r) +O(T−B)
+where, for 0⁄= r∈ Z, we deﬁne
+fr(x,y) = fr;M,N(x,y) = W
+( x
+M
+)
+W
+( y
+N
+) 1
+2πi
+∫
+(ε)
+G(s)
+s
+( 1
+π3xy
+)s 1
+T
+∫ ∞
+−∞
+(
+1 + r
+y
+)−it
+gI,J(s,t)ω(t)dt ds (5.18)
+when x,y > 0 (and put fr(x,y) = 0 otherwise), and take D fr;I,J(r) to be the ternary additive divisor sum that
+is given by (1.17), for f = fr. For those pairs M,N≫ 1 such that one has MN≪ T 3+ε and either M⁄≍ N or
+min(M,N)≪ T 1−ε
+0 , the bound IM,N≪ T−B applies.
+5.2 Application of the additive divisor conjecture AD(ϑ ,C)
+In summary, by (5.12), (5.14), and Proposition 5.2 we have established
+I(1)
+O = ∑
+M,N
+M≍N,MN≪T 3+ε
+M,N≫T 1−ε
+0
+IM,N + O(1). (5.19)
+We assume the validity of Conjecture 2, concerning the ternary additive divisor problem, which puts us
+now in a position to estimate IM,N for the relevant M and N in (5.19). Indeed, it sufﬁces to note that we have
+the following result on fr(x,y) in (5.18), implying that the requisite conditions (1.18) and (1.19) are satisﬁed
+when one has there: X = M,Y = N,P = T 1+εT−1
+0 , and f (x,y) = T− 3ε
+2 fr(x,y).
+Lemma 5.3. Let ε and ε0 satisfy 0 < ε≤ ε0
+2≤ 1
+8. We have that support( fr;M,N)⊆ [M,2M]× [N,2N] and we
+have for M≪ T
+3
+2 +ε, M≍ N, and 1≤| r|≪ M
+T0
+T ε that
+xmyn f (m,n)
+r;M,N(x,y)≪ T
+3
+2 εPn where P = T 1+εT−1
+0 .
+Note that this trivially gives xmyn f (m,n)
+r;M,N(x,y)≪ T
+3
+2 εPm+n with P = T 1+εT−1
+0 . The proof of this technical
+lemma is deferred to Appendix B. We now apply Conjecture 2 to those IM,N occurring in the sum (5.19).
+Observe that f (x,y) := T− 3ε
+2 fr(x,y) is supported in [M,2M]× [N,2N] with M≍ N, and (by Lemma 5.3)
+satisﬁes the condition (1.19). We must also check that|r|≪ M
+1
+2−ε2 for some ε2 > 0. Since 0 < ε≤ ε0
+2≤ 1
+8,
+we deduce
+|r|≪ M
+T0
+T ε≤ MT− 3
+4− ε0
+2 ≪ M
+1
+2 T
+3
+4 + ε
+2− 3
+4− ε0
+2 ≤ M
+1
+2 T− ε0
+4 ≪ M
+1
+2− ε0
+8
+(using that M≪ T
+1
+2 +ε < T 2). Therefore by Conjecture 2
+IM,N = T√
+MN ∑
+0<|r|≪ M
+T0 T ε
+3
+∑
+i1=1
+3
+∑
+i2=1
+∏
+j1⁄=i1
+ζ (1− ai1 + a j1) ∏
+j2⁄=i2
+ζ (1− bi2 + b j2)
+×
+∞
+∑
+𝓁=1
+c𝓁(r)GI(1− ai1, 𝓁)GJ(1− bi2, 𝓁)
+𝓁2−ai1−bi2
+∫ ∞
+max(0,r)
+fr(x,x− r)x−ai1 (x− r)−bi2 dx + O(EM,N)
+24
+===== PAGE 25 =====
+where
+EM,N = T 1+ 3ε
+2
+√
+MN ∑
+0<|r|≪ M
+T0 T ε
+( T
+T0
+)C
+Mϑ +ε .
+Next we consider the contribution of the errors EM,N to (5.19).
+Lemma 5.4. Let ε > 0, 0 < ϑ < 1, and T is sufﬁciently large with respect to ε. Then
+∑
+M,N
+M≍N,MN≪T 3+ε
+EM,N≪ T
+3ϑ
+2 + 5ε
+2
+( T
+T0
+)1+C
+. (5.20)
+Proof. Since M≍ N, we have
+EM,N≪ T 1+ 3ε
+2
+M ∑
+0<|r|≪ M
+T0 T ε
+( T
+T0
+)C
+Mϑ +ε≪ T
+3ε
+2
+( T
+M
+)( T
+T0
+)C
+Mϑ +ε
+(M
+T0
+T ε
+)
+≪ T
+5ε
+2
+( T
+T0
+)1+C
+Mϑ .
+Summing this over M and N we ﬁnd
+∑
+MN≪T 3+ε
+M≍N
+T
+5ε
+2
+( T
+T0
+)1+C
+Mϑ≪ T
+5ε
+2
+( T
+T0
+)1+C
+∑
+M≪T
+3
+2 + ε
+2
+N≍M
+Mϑ≪ T
+3ϑ
+2 +3ε
+( T
+T0
+)1+C
+and the lemma is established.
+The last lemma will be used to bound the contribution of the error terms EM,N when (5.2) is inserted into
+(5.19). Next we give an initial simpliﬁcation of the main term of I(1)
+O that is obtained, via (5.19), from the
+main term in (5.2).
+5.3 Extending the range to 0 <|r|≤ R0
+First, we may extend the range of r in (5.2). Let
+R0 = T 5. (5.21)
+Notice that, by (5.17), (5.18), the integral in (5.2) is
+iM,N,r;i1,i2 =
+∫ ∞
+max(0,r)
+W
+( x
+M
+)
+W
+(x− r
+N
+)
+f∗(x,x− r)x−ai1 (x− r)−bi2 dx. (5.22)
+In (5.2), we seek (at the cost of adding to the error term there) to weaken the conditions on the variable of
+summation r to just 0 <|r|≤ R0. We argue as follows. We begin by observing that the variable of integration
+x in (5.22) is constrained to lie in the interval (M,2M)∩ (N + r,2N + r) since W is supported in [1,2]. If this
+open interval is the empty set then iM,N,r;i1,i2 = 0. Suppose without loss of generality that r≥ 1. Notice that
+x > N + r implies x− r≥ N≥ 2− 1
+2 and thus x≥ r + 2− 1
+2 . We must also have r≤ 5
+3M. This is since we must
+have N + r≤ 2M (if not, then (M,2M)∩ (N + r,2N + r) is empty). Therefore r≤ 2M− N≤ 2M− M
+3 = 5M
+3
+25
+===== PAGE 26 =====
+since we are assuming (5.16). By these observations and (5.15) it follows that, for r≫ M
+T0
+T ε and j sufﬁciently
+large we have
+f∗(x,x− r)≪ T 3ε+3δ
+|log( x
+x−r )T0| j≤ T 3ε+3δ
+|log( 2M
+2M−r )T0| j since x∈ [r + 2− 1
+2 ,2M]
+= T 3ε+3δ
+|log(1− r
+2M )T0| j≪ T 3ε+3δ
+| r
+2M T0| j since|log(1− x)|≫ x for 0 < x≤ 5
+6
+≪ T 3ε+3δ− jε≪ T−B.
+(5.23)
+By (5.22), (1.15), and (5.23) one has iM,N,r;i1,i2≪ M1+2δ T−B for r≫ M
+T0
+T ε. One ﬁnds, similarly, that
+iM,N,r;i1,i2≪ M1+2δ T−B for r satisfying−r≫ M
+T0
+T ε. Therefore the difference ∆M,N made to the main term in
+(5.2) by extending the range of the outer summation to include all non-zero integers r with|r|≤ R0 satisﬁes
+∆M,N := T√
+MN ∑
+M
+T0 T ε≤|r|≤R0
+3
+∑
+i1=1
+3
+∑
+i2=1
+|ci1,i2|
+∞
+∑
+𝓁=1
+|u𝓁,r;i1,i2|M1+2δ T−B (5.24)
+where
+ci1,i2 = ∏
+j1⁄=i1
+ζ (1− ai1 + a j1) ∏
+j2⁄=i2
+ζ (1− bi2 + b j2),
+u𝓁,r;i1,i2 = c𝓁(r)GI(1− ai1, 𝓁)GJ(1− bi2, 𝓁)𝓁−2+ai1 +bi2 .
+(5.25)
+Observe that by (3.2) we have
+ci1,i2≪ (logT )4 (5.26)
+and
+∑
+𝓁≥1
+|u𝓁,r;i1,i2|≪ ∑
+𝓁≥1
+gcd(𝓁,r)𝓁−2+5δ = ∑
+g|r
+g−1+5δ
+∑
+𝓁′≥1
+gcd(𝓁′,r/g)=1
+(𝓁′)−2+5δ≪ d2(|r|).
+(5.27)
+Here we have used the well-known estimate |c𝓁(r)|≤ gcd(𝓁,r). In addition, we applied |𝓁ai1 +bi2|≤ 𝓁2δ
+by (1.15) and thus by Lemma A.4 of Appendix A|GI(1− ai1, 𝓁)GJ(1− bi2, 𝓁)|≤ 𝓁2δ d2(𝓁2)2≪ 𝓁3δ . Since
+M2δ≤ M
+1
+3≪ (T 2)
+1
+3≤ T as δ < 1
+6, it follows that
+∆M,N≪ (logT )4T 2−B
+(
+∑
+1≤|r|≤R0
+d2(|r|)
+)
+≪ (logT )4T 2−BR0(logR0)≪ (logT )−1, (5.28)
+by choosing B = 8. By this, combined with (5.19), (5.2), and (5.20), we obtain
+I(1)
+O = ∑
+M,N
+M≍N,MN≪T 3+ε
+M,N≫T 1−ε
+0
+˜IM,N + O
+(
+T
+3ϑ
+2 +3ε
+( T
+T0
+)1+C)
+(5.29)
+where
+˜IM,N = T√
+MN ∑
+0<|r|≤R0
+3
+∑
+i1=1
+3
+∑
+i2=1
+ci1,i2
+( ∞
+∑
+𝓁=1
+u𝓁,r;i1,i2· iM,N,r;i1,i2
+)
+. (5.30)
+26
+===== PAGE 27 =====
+5.4 Removing the conditions on M and N
+The explicit conditions on M and N in (5.29) shall be removed so that we may sum over all M and N. For M
+and N not satisfying the conditions in the summand of (5.29) we shall show that iM,N,r;i1,i2 is small. If M⁄≍ N,
+then we haveN > 3M or N < M/3. Suppose without loss of generality thatN > 3M. In the integrand in (5.22)
+one effectively has bothM≤ x≤ 2M and N≤ x−r≤ 2N, and so|log( x
+x−r )| = log( x−r
+x )≥ log( N
+2M )≥ log( 3
+2 ).
+Therefore by (1.15), (5.15), and (5.22), we obtain the bound
+iM,N,r;i1,i2≪
+∫ 2M
+M
+O j
+(T 3ε+3δ
+T j
+0
+)
+(MN)δ dx≪ j MT 3ε+3δ T− j
+0 (MN)δ
+≪ T 3+ε
+T 1−ε
+0
+T 3ε+3δ T− j
+0 (T 3+ε )δ≤ T 4+6ε− 3
+4 ( j+1)≪ T−B
+by choosing j sufﬁciently large, where we have used MN≪ T 3+ε, N≫ T 1−ε
+0 (1.13), and δ < 1
+6. Thus for
+these M and N it follows, by an argument similar to that which gave (5.28), that ˜IM,N≪ (logT )−2.
+We now treat the caseM or N≪ T 1−ε
+0 . Without loss of generality we may assumeM,N≥ 2− 1
+2 , M≪ T 1−ε
+0
+and r≥ 1. Observe that we have x≥ N +r > r≥ 1 and thus|log( x
+x−r )|≥ log( x
+x−1 ) > x−1≥ (2M)−1≫ T ε−1
+0 .
+As in the calculation (5.23), it follows that f∗(x,x− r)≪ T 3ε+3δ T−ε j
+0 ≪ T−B, for any B > 0 and again we
+obtain ˜IM,N≪ (logT )−2. By extending the range of summation in (5.29), so as to include all M,N that satisfy
+MN≪ T 3+ε and have either M⁄≍ N or min(M,N)≪ T 1−ε
+0 , we just add (logT )2(logT )−2≪ 1 to the error
+term there, since there are O(logT ) choices for each of M and N.
+Finally, we include the contribution, ∆′ from pairs M,N satisfying MN≫ T 3+ε. By (5.13) and Lemma
+2.2 (iv) it follows that, for any constant A > 0, we have f∗(x,y)≪ ( T 3
+xy )A when xy≥ T 3+ε. Therefore, by
+(5.22), (5.26), and (5.27) we have
+∆′≪ ∑
+r⁄=0
+∑
+i1,i2
+|ci1,i2|
+∞
+∑
+𝓁=1
+|u𝓁,r;i1,i2| ∑
+M,N
+MN≫T 3+ε
+M−2N<r<2M−N
+T√
+MN
+∫ min(2M,2N+r)
+max(M,N+r,r,0)
+( T 3
+(x(x− r)
+)A
+(MN)δ dx
+≪ (logT )4T ∑
+r⁄=0
+d2(|r|) ∑
+M,N
+MN≫max(T 3+ε ,|r|)
+(MN)− 1
+2 +δ
+( T 3
+MN
+)A
+min(M,N),
+where the constant A is arbitrary. In the last sum we putMN = H and note that min(M,N)≤ H
+1
+2 . Observe that
+H = 2
+h−2
+2 ≫ T 3+ε, for some integer h = h(H)≥ 0. For each H there are at most h(H) +1≪ 3 + log(H)≪
+logH pairs M,N with MN = H. It follows that
+∆′≪ T (logT )4
+∑
+H≫T 3+ε
+H− 1
+2 +δ
+(T 3
+H
+)A
+H
+1
+2 (logH) ∑
+1≤r≪H
+d2(r)≪ T (logT )4
+∑
+H≫T 3+ε
+H2
+(T 3
+H
+)A
+,
+where we have used δ≤ 1
+2. If A > 2, the last series converges and is bounded by a constant times the ﬁrst
+term in the sum so that ∆′≪ T (logT )4(T 3+ε )2T−εA≪ T 7+3ε−εA. By choosing A = 7
+ε +3, we obtain ∆′≪ 1.
+All this allows us to remove the restrictions on M and N to obtain
+I(1)
+O = ∑
+M,N
+˜IM,N + O
+(
+T
+3ϑ
+2 +3ε
+( T
+T0
+)1+C)
+(5.31)
+where ˜IM,N is given by (5.30).
+27
+===== PAGE 28 =====
+5.5 Reintroducing the smooth partition of unity
+We simplify the last sum by rearranging summation variables so that
+∑
+M,N
+˜IM,N = T
+3
+∑
+i1=1
+3
+∑
+i2=1
+ci1,i2 ∑
+0<|r|≤R0
+∞
+∑
+𝓁=1
+u𝓁,r;i1,i2
+(
+∑
+M,N
+1√
+MN iM,N,r;i1,i2
+)
+(5.32)
+where we recall that iM,N,r;i1,i2 is given by (5.22) and ci1,i2,u𝓁,r;i1,i2 are given by (5.25). We simplify the inner
+sum by exchanging summation and integration to obtain
+∑
+M,N
+1√
+MN iM,N,r;i1,i2 =
+∫ ∞
+max(0,r)
+1√
+x(x− r)
+(
+∑
+M,N
+W0
+( x
+M
+)
+W0
+(x− r
+N
+))
+f∗(x,x−r)x−ai1 (x−r)−bi2 dx, (5.33)
+since W (x) = x− 1
+2W0(x). Observe that the function in brackets is zero if x≤ max(0,r) +2− 1
+2 and is equal to
+one for all x > max(0,r) +1. However, this is not true if max(0,r) +2− 1
+2 < x≤ max(0,r) +1. By (5.11) we
+have that, for 0⁄= r∈ Z,
+∑
+M,N
+W0
+( x
+M
+)
+W0
+(x− r
+N
+)
+− 1 =
+
+
+
+0 if x > max(0,r) +1,
+W0
+(
+x−max(0,r)
+2− 1
+2
+)
+− 1 if max (0,r) +2− 1
+2 < x≤ max(0,r) +1,
+−1 if max (0,r)≤ x≤ max(0,r) +2− 1
+2 .
+With these observations, we see that (5.33) becomes
+∑
+M,N
+1√
+MN iM,N,r;i1,i2 =
+∫ ∞
+max(0,r)
+1√
+x(x− r)
+f∗(x,x− r)x−ai1 (x− r)−bi2 dx
++ O
+(∫ max(0,r)+1
+max(0,r)
+| f∗(x,x− r)|(x− min(0,r))− 1
+2 +δ (x− max(0,r))− 1
+2−δ dx
+)
+.
+(5.34)
+The contribution from the error term of (5.34) to (5.32) is
+T
+3
+∑
+i1,i2=1
+|ci1,i2| ∑
+1≤|r|≤R0
+∑
+𝓁≥1
+|u𝓁,r;i1,i2|
+∫ max(0,r)+1
+max(0,r)
+| f∗(x,x− r)|(x− min(0,r))− 1
+2 +δ (x− max(0,r))− 1
+2−δ dx
+≪ T (logT )4
+∑
+1≤|r|≤R0
+d2(|r|)
+∫ max(0,r)+1
+max(0,r)
+| f∗(x,x− r)|(x− min(0,r))− 1
+2 +δ (x− max(0,r))− 1
+2−δ dx
+(5.35)
+where we have used (5.26) and (5.27). In the case that r < 0, we have that |log( x
+x−r )| = log( x+|r|
+x )≥
+log(1 +|r|)≥ log(2) for max(0,r) < x≤ max(0,r) +1. An analogous argument gives the same bound in the
+case r > 0. It follows, using the bounds from which (5.15) was deduced, that the last expression in (5.35) is
+bounded by
+≪ε, j T (logT )4
+∑
+1≤|r|≤R0
+d2(|r|)
+∫ max(0,r)+1
+max(0,r)
+(x− min(0,r))− 1
+2 +δ−ε (x− max(0,r))− 1
+2−δ−εT 3ε+3δ T− j
+0 dx
+= 2T 1+3ε+3δ (logT )4
+T j
+0
+∑
+1≤r≤R0
+d2(r)
+∫ 1
+0
+(y + r)− 1
+2 +δ−εy− 1
+2−δ−εdy
+≤ 2T 1+3ε+3δ (logT )4
+T j
+0
+∑
+1≤r≤R0
+d2(r)r− 3
+8
+∫ 1
+0
+y− 3
+4 dy≪ T 7T− j
+0 ≪ 1,
+(5.36)
+28
+===== PAGE 29 =====
+since δ < 1
+12, ε is sufﬁciently small, and in the last inequality j is chosen sufﬁciently large. In summary, we
+ﬁnd from (5.32), (5.34), (5.35), and (5.36) that
+∑
+M,N
+˜IM,N = T
+3
+∑
+i1=1
+3
+∑
+i2=1
+ci1,i2 ∑
+0<|r|≤R0
+∞
+∑
+𝓁=1
+u𝓁,r;i1,i2
+∫ ∞
+max(0,r)
+f∗(x,x− r)x− 1
+2−ai1 (x− r)− 1
+2−bi2 dx + O(1).
+Combining this last expression with (5.31) we obtain the following.
+Proposition 5.5. Let ai,bi satisfy|ai|,|bi|≪ (logT )−1 for i = 1,2,3 and the condition (3.2). Assume
+Conjecture 2 holds for some positive θ and C, then for any ε > 0 and sufﬁciently large T
+I(1)
+O =
+3
+∑
+i1=1
+3
+∑
+i2=1
+I(1)
+(i1,i2) + O
+(
+T
+3ϑ
+2 +3ε
+( T
+T0
+)1+C)
+(5.37)
+where
+I(1)
+(i1,i2) = T ∏
+j1⁄=i1
+ζ (1− ai1 + a j1) ∏
+j2⁄=i2
+ζ (1− bi2 + b j2)
+× ∑
+1≤|r|≤R0
+∫ ∞
+max(0,r)
+f∗(x,x− r)x− 1
+2−ai1 (x− r)− 1
+2−bi2 dx·
+∞
+∑
+𝓁=1
+c𝓁(r)GI(1− ai1, 𝓁)GJ(1− bi2, 𝓁)
+𝓁2−ai1−bi2
+with f∗(x,y) is deﬁned by (5.10) and (2.4).
+It is important to note that the deﬁnition of f∗(x,y) is independent of r. In the next section, the main term
+in (5.37) is further simpliﬁed.
+6 Further evaluation of I(1)
+O . Evaluation of I(1)
+(i1,i2)
+By Proposition 5.5 the evaluation of I(1)
+O has been reduced to the evaluation of I(1)
+(i1,i2). In this calculation we
+shall encounter the Dirichlet series
+HI,J;{a1},{b1}(s) =
+∞
+∑
+r=1
+∞
+∑
+𝓁=1
+c𝓁(r)GI(1− a1, 𝓁)GJ(1− b1, 𝓁)
+𝓁2−a1−b1ra1+b1+2s . (6.1)
+Moreover, HI,J;{a1},{b1}(s) equals a product of ζ functions times a nice inﬁnite product CI,J;{a1},{b1}(s). In
+this section, we shall evaluate the integrals I(1)
+(i1,i2) under the less restrictive conditions (1.15).
+Proposition 6.1. Let δ∈ (0, 1
+12 ), ε∈ (0, 1
+4 ), and assume|ai|,|bi|≤ δ for i = 1,2,3.
+(i) For ℜ(s) > 3
+2 δ,
+HI,J;{a1},{b1}(s) = ζ (a1 + b1 + 2s) ∏
+k1⁄=1
+k2⁄=1
+ζ (1 + ak1 + bk2 + 2s)CI,J;{a1},{b1}(s) (6.2)
+where
+CI,J;{a1},{b1}(s) = ∏
+p
+CI,J;{a1},{b1}(p;s), (6.3)
+CI,J;{a1},{b1}(p;s) = Q(p−a2, p−a3, p−b2, p−b3; p−a1, p−b1; p−1, p−2s), (6.4)
+29
+===== PAGE 30 =====
+and
+Q(X2,X3,Y2,Y3;X1,Y1;U,V ) =
+(
+1 +
+(
+UV X2Y2
+1−UV X2Y2
+1−UX3X−1
+1
+1− X3X−1
+2
+1−UY3Y−1
+1
+1−Y3Y−1
+2
++ UV X2Y3
+1−UV X2Y3
+1−UX3X−1
+1
+1− X3X−1
+2
+1−UY2Y−1
+1
+1−Y2Y−1
+3
++ UV X3Y2
+1−UV X3Y2
+1−UX2X−1
+1
+1− X2X−1
+3
+1−UY3Y−1
+1
+1−Y3Y−1
+2
++ UV X3Y3
+1−UV X3Y3
+1−UX2X−1
+1
+1− X2X−1
+3
+1−UY2Y−1
+1
+1−Y2Y−1
+3
+)
+(1−UV−1X−1
+1 Y−1
+1 )
+)
+× (1−UV X2Y2)(1−UV X2Y3)(1−UV X3Y2)(1−UV X3Y3).
+(6.5)
+(ii) We have, for ℜ(s) = σ≥− 1
+2 + δ + ε,
+CI,J;{a1},{b1}(p;s) = 1− p−a2−a3−b2−b3−2−4s + Oε (p8δ +ϑ (σ )) (6.6)
+where
+ϑ (σ ) =
+
+
+
+−2 if σ≥ 0;
+−2− 2σ if 0 > σ≥− 1
+4;
+−3− 6σ if− 1
+4 > σ
+(6.7)
+and hence CI,J;{a1},{b1}(s) is holomorphic and absolutely convergent for ℜ(s) >− 1
+4 + δ. Furthermore,
+HI,J;{a1},{b1}(s) is holomorphic in ℜ(s) >− 1
+4 + δ with the exception of simple poles at
+1
+2− (a1 + b1)
+2 and− ak1 + bk2
+2 for k1⁄= 1,k2⁄= 1. (6.8)
+The following proposition shows that the local factorsCI,J;{a1},{b1}(p;s) satisfy certain identities at special
+values of s, relating them to the local factors Ap;I,J(s) which occur in Lemma 2.3.
+Proposition 6.2. Let I ={a1,a2,a3} and J ={b1,b2,b3}. We have the identities
+(i) AI{a1},J{b1}(0) = CI,J;{a1},{b1}(0),
+(ii) AI,J(−a1− b1) = CI,J;{a1},{b1}(− a1+b1
+2 ),
+(iii) CI,J;{a1},{b1}(− a2+b2
+2 ) = C−J,−I;{−b3},{−a3}( b2+a2
+2 ).
+(iv) Let (i1,i2)∈{ 1,2,3}2 and (k1,k2)∈{ 1,2,3}2 with k1⁄= i1 and k2⁄= i2. Then
+CI,J;{ai1},{bi2}(−
+ak1 +bk2
+2 ) = C−J,−I;{−br2},{−ar1}(
+bk2 +ak1
+2 )
+where r1 = r(i1,k1) and r2 = r(i2,k2) are deﬁned as follows:
+Given distinct elements i,k of{1,2,3}, then r = r(i,k) is the unique number r
+such that{1,2,3} ={i,k,r}. (6.9)
+30
+===== PAGE 31 =====
+We shall prove Proposition 6.1 and 6.2 in Appendix A. Regarding, in particular, our proof of Proposition
+6.2: the proof of part (i) shall be reduced to the veriﬁcation of a polynomial identity and (ii) and (iii) are
+deduced from (i). Alternately parts (i) and (ii) also follow from an identity in [ 14, Sections 3,4]. In fact,
+the argument in [14] establishes such identities for general sets I ={a1,a2, . . . ,ak} and J ={b1,b2, . . . ,bk}.
+Next we have a result (also to be proved in Appendix A) which gives useful bounds for HI,J;{a1},{b1}(s).
+Lemma 6.3. Let δ∈ (0, 1
+7 ) and assume assume|ai|,|bi|≤ δ for i = 1,2,3.
+(i) For ℜ(s) = 2δ, we have
+|HI,J;{a1},{b1}(s)|≪| s|
+1
+2 .
+(ii) For s satisfying|ℜ(s)− 1
+2|≤ 2δ and ℑ(s)≍ T , then
+|HI,J;{a1},{b1}(s)|≪ T 4δ .
+We now state our formulae forI(1)
+O and I(2)
+O . The proofs of Propositions 6.4 and 6.5 which follow shall
+make use of the previous propositions and lemma.
+Proposition 6.4. Let ai,bi satisfy|ai|,|bi|≪ (logT )−1, for i = 1,2,3 and the conditions (3.1), (3.2), and
+(3.3). Assume Conjecture 2 holds for some positive θ≥ 1
+2 and C. Then, for any ε > 0 and sufﬁciently large
+T , one has
+I(1)
+O =
+3
+∑
+i1=1
+3
+∑
+i2=1
+J(1)
+(i1,i2) + O
+(
+T
+3ϑ
+2 +ε
+( T
+T0
+)1+C)
+(6.10)
+where
+J(1)
+(i1,i2) = ZI{ai1},J{bi2}(0)·
+∫ ∞
+−∞
+ω(t)
+( t
+2π
+)−ai1−bi2
+dt
+− Res
+s=
+−ai1−bi2
+2
+ZI,J(2s)
+G
+(−ai1−bi2
+2
+)
+(
+−ai1−bi2
+2 )
+∫ ∞
+−∞
+ω(t)
+( t
+2π
+)− 3
+2 (ai1 +bi2 )
+dt
++ ∑
+(k1,k2)
+k1⁄=i1,k2⁄=i2
+T(i1,i2);(k1,k2)
+(6.11)
+and
+T(i1,i2);(k1,k2) = 1
+2 ∏
+j1⁄=i1
+ζ (1− ai1 + a j1) ∏
+j2⁄=i2
+ζ (1− bi2 + b j2)
+∫ ∞
+−∞
+ω(t)
+( t
+2π
+)−ai1−bi2−
+ak1 +bk2
+2
+dt
+×
+(
+∏
+l1⁄=i1,ł2⁄=i2
+(l1,l2)⁄=(k1,k2)
+ζ (1 + al1 + bl2− ak1− bk2)
+)
+ζ (1− ai1− bi2 + ak1 + bk2)
+× CI,J;{ai1},{bi2}(−
+ak1 +bk2
+2 )G(−
+ak1 +bk2
+2 )
+(−
+ak1 +bk2
+2 )
+.
+(6.12)
+Remark. (i) It should be observed that the formulae for J(1)
+(i1,i2) contains the extra unwanted residues
+T(i1,i2);(k1,k2). Notice that these do not appear in the formula for I(1)
+O + I(2)
+O given by (5.1).
+31
+===== PAGE 32 =====
+(ii) The proof of this Proposition actually establishes unconditionally that one has ∑3
+i1=1 ∑3
+i2=1 I(1)
+(i1,i2) =
+∑3
+i1=1 ∑3
+i2=1 J(1)
+(i1,i2) + O(T
+3
+4 +5δ ) when|ai|,|bi|≤ δ < 1
+12 for i = 1,2,3.
+(iii) On the Riemann hypothesis it is possible to improve the last error term to O(T
+2
+3 +5δ ). This is since
+we can show CI,J;{a1},{b1}(s) = ζ (2 + 4s + a2 + b2 + a3 + b3)−1DI,J;{a1},{b1}(s) where DI,J;{a1},{b1}(s) is an
+Euler product which is absolutely convergent in ℜ(s)≥− 1
+3 + 2δ.
+We can also prove an analogous result for I(2)
+O . Note that by (3.6) and (3.5) we see that I(2)
+O is the same as
+I(1)
+O , except that I→− J and J→− I and there is the additional factor of XI,J;t. Thus equations (6.13), (6.14),
+and (6.15) below will be obtained from (6.10), (6.11), and (6.12) by replacing each I by−J, each J by−I,
+and inserting the factor ( t
+2π )− ∑3
+i=1(ai+bi) which arises from the Stirling approximation for XI,J;t as derived in
+Lemma 2.2.
+Proposition 6.5. Let ai,bi satisfy|ai|,|bi|≪ (logT )−1 for i = 1,2,3 and the conditions (3.1), (3.2), and
+(3.3). Assume Conjecture 2 holds for some positive θ≥ 1
+2 and C. Then, for any ε > 0 and sufﬁciently large
+T , one has
+I(2)
+O =
+3
+∑
+i1=1
+3
+∑
+i2=1
+J(2)
+(i1,i2) + O
+(
+T
+3ϑ
+2 +ε
+( T
+T0
+)1+C)
+(6.13)
+where
+J(2)
+(i1,i2) = ZII\{ai2},JJ\{bi1}(0)·
+∫ ∞
+−∞
+ω(t)
+( t
+2π
+)− ∑k⁄=i2 ak−∑k⁄=i1 bk
+dt
+− Res
+s=
+bi1 +ai2
+2
+Z−J,−I(2s)
+G
+( bi1 +ai2
+2
+)
+(
+bi1 +ai2
+2 )
+∫ ∞
+−∞
+ω(t)
+( t
+2π
+)− ∑3
+k=1(ak+bk)+
+3(bi1 +ai2 )
+2
+dt
++ ∑
+(k1,k2)
+k1⁄=i1,k2⁄=i2
+U(i1,i2);(k1,k2)
+(6.14)
+and
+U(i1,i2);(k1,k2) = 1
+2 ∏
+j1⁄=i1
+ζ (1 + bi1− b j1) ∏
+j2⁄=i2
+ζ (1 + ai2− a j2)
+∫ ∞
+−∞
+ω(t)
+( t
+2π
+)−ar(i2,k2)−br(i1,k1)−
+bk1 +ak2
+2
+dt
+×
+(
+∏
+l1⁄=i1,l2⁄=i2
+(l1,l2)⁄=(k1,k2)
+ζ (1− bl1− al2 + bk1 + ak2)
+)
+ζ (1 + bi1 + ai2− bk1− ak2)
+× C−J,−I;{−bi1},{−ai2}(
+bk1 +ak2
+2 )G(
+bk1 +ak2
+2 )
+(
+bk1 +ak2
+2 )
+(6.15)
+where r(i1,k1) and r(i2,k2) are deﬁned in (6.9).
+Remark. Notice that the formulae for I(2)
+(i1,i2) also contain extra unwanted residues U(i1,i2);(k1,k2) that do not
+appear in (5.1). Fortunately, we shall establish that the T(i1,i2);(k1,k2) and U(i1,i2);(k1,k2) cancel each other out.
+32
+===== PAGE 33 =====
+Proposition 6.6. We have that
+3
+∑
+i1=1
+3
+∑
+i2=1
+∑
+(k1,k2)
+k1⁄=i1,k2⁄=i2
+(T(i1,i2);(k1,k2) + U(i1,i2);(k1,k2)) = 0.
+Now that we have stated Propositions 6.4, 6.5, and 6.6 we can complete the proof of Proposition 5.1.
+Proof of Proposition 5.1. By combining Propositions 6.4, and 6.5 we see that we get exactly the ﬁrst three
+terms in (5.1) plus
+3
+∑
+i1=1
+3
+∑
+i2=1
+∑
+(k1,k2)
+k1⁄=i1,k2⁄=i2
+(T(i1,i2);(k1,k2) + U(i1,i2);(k1,k2)) +O
+(
+T
+3ϑ
+2 +ε
+( T
+T0
+)1+C)
+.
+Moreover, Proposition 6.6 shows that the sum in (6) equals 0. Thus we establish (5.1).
+Proof of Proposition 6.4. Let δ∈ (0, 1
+12 ) and let ε > 0 satisfy
+δ < ε < 1
+2− δ . (6.16)
+We shall begin by assuming that|ai|,|bi|≤ δ for i = 1,2,3. At the end of the argument we shall assume
+the more restrictive condition|ai|,|bi|≪ (logT )−1 for i = 1,2,3. We focus on one of the nine terms in the
+sum (5.37): the one with i1 = i2 = 1. We will obtain the result for other indices just by permuting them
+appropriately. Recall that in (5.21) we set R0 = T 5. Recall also the deﬁnition given in Proposition 5.5 for the
+term I(1)
+(i1,i2) inside the sum on the right hand side of (5.37). Considering the term in the case i1 = i2 = 1, we
+write I(1)
+(1,1) = I+ + I− where I+ is the sum over r > 0 and I− is the sum over r < 0. Since c𝓁(−r) = c𝓁(r) (for
+all 𝓁,r∈ N), we ﬁnd that
+I± = ∑
+1≤r≤R0
+∏
+j1⁄=1
+ζ (1− a1 + a j1) ∏
+j2⁄=1
+ζ (1− b1 + b j2)
+∞
+∑
+𝓁=1
+c𝓁(r)GI(1− a1, 𝓁)GJ(1− b1, 𝓁)
+𝓁2−a1−b1
+×
+∫ ∞
+max(0,±r)
+x− 1
+2−a1(x∓ r)− 1
+2−b1
+∫
+(ε)
+G(s)
+2πis
+( 1
+π3x(x∓ r)
+)s∫ ∞
+−∞
+(
+1∓ r
+x
+)it
+gI,J(s,t)ω(t)dtdsdx
+for both of the two possible ﬁxed choices of opposing signs ±,∓. (in I− we made the variable change
+r→− r). We let K+ and K− denote the triple integrals appearing in I+ and I−. In K± we make the change of
+variables x = ry to obtain
+K± = r−a1−b1
+∫ ∞
+max(0,±1)
+y− 1
+2−a1(y∓ 1)− 1
+2−b1
+∫
+(ε)
+G(s)
+2πis
+( 1
+π3r2y(y∓ 1)
+)s∫ ∞
+−∞
+(y∓ 1
+y
+)it
+gI,J(s,t)ω(t)dtdsdy .
+For η =±1, we have
+Bs,t(η) :=
+∫ ∞
+max(0,η)
+y− 1
+2−a1−s−it(y− η)− 1
+2−b1−s+itdy =
+{
+B( 1
+2− b1− s + it,a1 + b1 + 2s) if η = 1,
+B( 1
+2− a1− s− it,a1 + b1 + 2s) if η =−1,
+(6.17)
+where, by Euler’s beta function identity B(u,v) =
+∫ ∞
+0 yu−1(1 + y)−u−vdy = Γ(u)Γ(v)
+Γ(u+v) for ℜ(u), ℜ(v) > 0.
+Observe that the convergence regions for the Bs,t(η) integrals in (6.17) are well-deﬁned only if
+−1
+2 (ℜ(a1) +ℜ(b1)) < ε = ℜ(s) < 1
+2 + max(−ℜ(a1),−ℜ(b1)). (6.18)
+33
+===== PAGE 34 =====
+However, (6.16) implies that this condition holds. Hence, by a change in order of integration, we ﬁnd that
+K± = r−a1−b1
+∫ ∞
+−∞
+ω(t)
+∫
+(ε)
+G(s)
+2πis
+( 1
+π3r2
+)s
+gI,J(s,t)Bs,t(±1)dsdt .
+Recalling that K± is the triple integral appearing in the sum I±, above, and that I(1)
+(1,1) = I+ + I−, we therefore
+ﬁnd (with the help of the above Beta function identity) that
+I(1)
+(1,1) = ∏
+j1⁄=1
+ζ (1− a1 + a j1) ∏
+j2⁄=1
+ζ (1− b1 + b j2) ∑
+1≤r≤R0
+∞
+∑
+𝓁=1
+c𝓁(r)GI(1− a1, 𝓁)GJ(1− b1, 𝓁)
+𝓁2−a1−b1ra1+b1
+∫ ∞
+−∞
+ω(t) 1
+2πi
+∫
+(ε)
+G(s)
+s gI,J(s,t)
+( 1
+π3r2
+)s
+Γ(a1 + b1 + 2s)
+(
+Γ( 1
+2− b1− s + it)
+Γ( 1
+2 + a1 + s + it) + Γ( 1
+2− a1− s− it)
+Γ( 1
+2 + b1 + s− it)
+)
+dsdt .
+(6.19)
+We now move thes integral right to the line ℜ(s) = 1; this is in order that we may later be in a position
+to apply Proposition 6.1 (i). Observe that the term in the brackets has simple poles at p1 = 1
+2− b1 + it and
+p2 = 1
+2− a1− it. Using Γ(z)∼ z−1 as z→ 0, we ﬁnd that the residue at s = p j is− G(p j)
+p j
+gI,J(p j,t)(π3r2)−p j
+for j = 1,2. Using Lemma 2.2 (ii), we ﬁnd that when c1T≤ t≤ c2T the contribution of each residue to the t
+integrand in (6.19) is
+G(p j)
+p j
+gI,J(p j,t)(π3r2)−p j≪|G(p j)|
+t t
+5
+2 r−1+2δ≪| G(p j)|t
+3
+2 r−1+2δ
+(it being assumed here that r satisﬁes the conditions of summation in (6.19) where R0 = T 5). For j = 1,2, we
+have both|ℜ(p j)− 1
+2|≤ δ and|p j|≍ t, and so G(p j)≪ t−B. Hence the total contribution of these residues
+to (6.19) is
+∑
+1≤r≤R0
+c1,1
+ra1+b1
+∫ c2T
+c1T
+O(t
+3
+2−Br−1+2δ )dt·
+∞
+∑
+𝓁=1
+u𝓁,r;1,1 = ∑
+1≤r≤T 5
+O((logT )4r4δ T
+5
+2−Br−1d2(r))
+≪ (logT )4T
+5
+2−B
+∑
+1≤r≤T 5
+d2(r)r4δ
+r ≪ T
+5
+2 +20δ−B(logT )6
+where we have used the bounds (5.26) and (5.27). Since δ < 1
+12 we may choose B = 5 to obtain
+I(1)
+(1,1) = ∏
+j1⁄=1
+ζ (1− a1 + a j1) ∏
+j2⁄=1
+ζ (1− b1 + b j2) ∑
+1≤r≤R0
+∞
+∑
+𝓁=1
+c𝓁(r)GI(1− a1, 𝓁)GJ(1− b1, 𝓁)
+𝓁2−a1−b1ra1+b1
+∫ ∞
+−∞
+ω(t) 1
+2πi
+∫
+(1)
+G(s)
+s gI,J(s,t)
+( 1
+π3r2
+)s
+Γ(a1 + b1 + 2s)
+(
+Γ( 1
+2− b1− s + it)
+Γ( 1
+2 + a1 + s + it) + Γ( 1
+2− a1− s− it)
+Γ( 1
+2 + b1 + s− it)
+)
+dsdt
++ O(1).
+(6.20)
+At this point we will add back in those terms withr > R0. However, we require the following consequence
+of Stirling’s formula. Letℜ(s)∈ [2δ ,0.49]∪ [0.51,1],|ℑ(s)|≤ t + 1, and|a1|,|b1|≤ δ where δ≤ 1
+6. Then
+Γ(p j− s)
+Γ(a1 + b1 + p j + s) = t−a1−b1−2s exp((−1) j πi
+2 (a1 + b1 + 2s))(1 + O( 1+|s|2
+t1−2δ )) for j = 1,2. (6.21)
+34
+===== PAGE 35 =====
+The proof of (6.21) is very similar to the proof of Lemma 2.2 (ii) and is left as an exercise. We deduce
+2
+∑
+j=1
+Γ(p j− s)
+Γ(a1 + b1 + p j + s) = 2t−a1−b1−2s cos( π
+2 (a1 + b1 + 2s)) +O
+(
+t−2ℜ(s)eπ|ℑ(s)|( 1+|s|2
+t1−4δ )
+)
+(6.22)
+for ℜ(s)∈ [2δ ,0.49]∪ [0.51,1] and|ℑ(s)|≤ t + 1. Note that we have a weak form of Stirling’s formula,
+namely
+|Γ(x + iy)|≍| y|x− 1
+2 e− π
+2|y| for|y|≥ 1
+2 ,−4≤ x≤ 4. (6.23)
+This implies that, for j = 1,2, we have
+Γ(p j− s)
+Γ(a1 + b1 + p j + s)≪ exp((−1) j−1sgn(ℑ(s))πt)
+(|ℑ(s)|2−t2)ℜ(s)−δ for|ℑ(s)|≥ t + 1,−1≤ ℜ(s)≤ 2. (6.24)
+Again by (6.23) along with a trivial estimate for|ℑ(s)|≤ 2 we obtain
+|Γ(a1 + b1 + 2s)|≪| s|
+3
+2 +2δ e−π|ℑ(s)| for ℜ(s) = 1. (6.25)
+We also require the bound
+|cos( π
+2 z)|≪ e
+π
+2|ℑ(z)| for z∈ C. (6.26)
+Combining (6.22), (6.24), (6.26), (1.15), and the assumption 1≪ c1T≤ t≤ c2T , it follows that, when
+ℜ(s) = 1 one has
+2
+∑
+j=1
+Γ(p j− s)
+Γ(a1 + b1 + p j + s)≪
+{
+t2δ−2eπ|ℑ(s)|(1 + |s|2
+t1−2δ ) if|ℑ(s)|≤ t + 1,
+(||ℑ(s)|2−t2)δ−1eπt otherwise.
+It follows that for all s satisfying ℜ(s) = 1 and t≥ c1T≫ 1
+2
+∑
+j=1
+Γ(p j− s)
+Γ(a1 + b1 + p j + s)≪ t2δ−2|s|2+2δ eπ|ℑ(s)|. (6.27)
+Using (6.25), (6.27), and Lemma 2.2 (ii), one ﬁnds that the absolute value of the s integral in (6.20) is
+bounded above by:
+∫
+(1)
+|G(s)|
+|s| · t3
+8π3r2
+(
+1 + O
+(|s|2
+t1−3δ
+))
+· O(t2δ−2|s|
+7
+2 +4δ )·| ds|≪ r−2t1+2δ
+∫
+(1)
+|G(s)||s|
+9
+2 +4δ|ds|≪ r−2t1+2δ .
+Applying this along with (5.26) and (5.27), it follows that removal of the condition of summationr≤ R0 = T 5
+would add to the right-hand side of (6.20) a sum equal to
+∑
+r>R0
+c1,1
+ra1+b1
+∫ c2T
+c1T
+O(r−2t1+2δ )dt· ∑
+𝓁≥1
+u𝓁,r;1,1 = ∑
+r>T 5
+O((logT )4r2δ−2T 2+2δ d2(r))
+≪ (logT )4T 2+2δ
+∑
+r>T 5
+d2(r)
+r2−2δ < ζ 2( 3
+2− 2δ )T 2+3δ− 5
+2≪ 1
+(6.28)
+since δ < 1
+12. Since (6.20) already includes an error term O(1), it follows from (6.28) that, on the right-hand
+side of the equation (6.20), we may simply omit the condition r≤ R0 (this changes the equation, but it does
+35
+===== PAGE 36 =====
+not lose its validity). Following this step, the variable of summation in (6.20) is free to range over all positive
+integer values. Then, by absolute convergence, we may swap the order of summation and integration there,
+and so obtain
+I(1)
+(1,1) = ∏
+j1⁄=1
+ζ (1− a1 + a j1) ∏
+j2⁄=1
+ζ (1− b1 + b j2)
+∫ ∞
+−∞
+ω(t)
+∫
+(1)
+G(s)
+2πis gI,J(s,t)HI,J;{a1},{b1}(s)π−3sΓ(a1 + b1 + 2s)
+(
+Γ( 1
+2− b1− s + it)
+Γ( 1
+2 + a1 + s + it) + Γ( 1
+2− a1− s− it)
+Γ( 1
+2 + b1 + s− it)
+)
+dsdt + O(1)
+where we recall HI,J;{a1},{b1}(s) is deﬁned in (6.1).
+We know that HI,J;{a1},{b1}(s) has an analytic continuation to ℜ(s)≥− 1
+4 + 2δ with the exception of the
+poles (6.8). We now move this contour back to ℜ(s) = ε1 where we now set ε1 = 2δ. Note that the poles
+−
+ak1 +bk2
+2 for k1⁄= 1, k2⁄= 1 lie in the region ℜ(s)≤ δ. Throughout the rest of this section we shall use this
+value of ε1. In moving the contour we pass poles at s = p1 and s = p2. Observe that the pole 1
+2− a1+b1
+2 of
+HI,J;{a1},{b1}(s) is cancelled by a corresponding zero of
+Γ( 1
+2−b1−s+it)
+Γ( 1
+2 +a1+s+it)
++
+Γ( 1
+2−a1−s−it)
+Γ( 1
+2 +b1+s−it)
+. By Lemma 2.2 (ii) and
+Lemma 6.3 (ii), we ﬁnd that for j = 1,2 the residue at s = p j is
+−G(p j)
+p j
+gI,J(p j,t)HI,J;{a1},{b1}(p j)π−3p j≪| p j|−1−B·
+( t
+2
+)3ℜ(p j)
+·|p j|2
+t1−3δ· T 4δ≪ T
+3
+2−B+10δ
+since we have (1.15), p j≍ T , c1T≤ t≤ c2T . Thus the poles contribute (logT )4T
+5
+2−B+10δ≪ 1 by choosing
+B sufﬁciently large. It follows that
+I(1)
+(1,1) = ∏
+j1⁄=1
+ζ (1− a1 + a j1) ∏
+j2⁄=1
+ζ (1− b1 + b j2)
+∫ ∞
+−∞
+ω(t)
+1
+2πi
+∫
+(ε1)
+G(s)
+s gI,J(s,t)HI,J;{a1},{b1}(s)π−3sΓ(a1 + b1 + 2s)
+(
+Γ( 1
+2− b1− s + it)
+Γ( 1
+2 + a1 + s + it) + Γ( 1
+2− a1− s− it)
+Γ( 1
+2 + b1 + s− it)
+)
+dsdt + O(1).
+(6.29)
+We give a bound for the portion of the inner integral with|ℑ(s)|≥ t + 1. We see, using Lemma 2.2 (ii),
+(6.23), and (6.24), that it is bounded by
+∫
+ℜ(s)=ε1
+|ℑ(s)|≥t+1
+|G(s)|
+|s| · O
+(
+t3ε1· |s|2
+t1−3δ
+)
+|HI,J;{a1},{b1}(s)|·| s|2ε1+2δ− 1
+2 e−π|ℑ(s)|·| s|2δ eπt|ds|
+≪ t3ε1+3δ−1
+∫
+(ε1)
+|G(s)HI,J;{a1},{b1}(s)|·| s|
+1
+2 +4δ +2ε1|ds|.
+(6.30)
+Further, by Lemma 6.3 (i) we ﬁnd (6.30) is
+≪ t9δ−1
+∫
+(2δ )
+|G(s)||s|1+8δ|ds|≪ t9δ−1,
+since ε1 = 2δ. It follows that the contribution to(6.29) arising from|ℑ(s)|≥ t +1 is≪ c1,1
+∫ c2T
+c1T|ω(t)|t9δ−1dt≪
+36
+===== PAGE 37 =====
+(logT )4T 9δ≪ T 10δ . By Lemma 2.2 (ii) and (6.22) it follows that for|ℑ(s)|≤ t + 1
+gI,J(s,t)
+2
+∑
+j=1
+Γ(p j− s)
+Γ(a1 + b1 + p j + s)
+=
+(
+2t−a1−b1−2s cos( π
+2 (a1 + b1 + 2s)) +O
+(
+t−2ℜ(s)eπ|ℑ(s)|( 1+|s|2
+t1−4δ )
+))(
+1 + O
+(
+1+|s|2
+t1−3δ
+))( t
+2
+)3s
+=
+(
+2t−a1−b1−2s cos( π
+2 (a1 + b1 + 2s)) +O
+(
+t−2ℜ(s)eπ|ℑ(s)|
+(
+1+|s|2
+t1−5δ + (1+|s|2)2
+t2−7δ
+)))( t
+2
+)3s
+.
+By this, and the bound obtained just before, we ﬁnd that
+I(1)
+(1,1) = ∏
+j1⁄=1
+ζ (1− a1 + a j1) ∏
+j2⁄=1
+ζ (1− b1 + b j2)
+∫ c2T
+c1T
+ω(t)
+∫ ε1+i(t+1)
+ε1−i(t+1)
+HI,J;{a1},{b1}(s)G(s)
+2πis
+( t
+2π
+)3s
+Γ(a1 + b1 + 2s)
+×
+(
+2t−a1−b1−2s cos( π
+2 (a1 + b1 + 2s)) +O
+(
+t−2ℜ(s)eπ|ℑ(s)|
+(
+1+|s|2
+t1−5δ + (1+|s|2)2
+t2−7δ
+)))
+dsdt + O(T 10δ ).
+(6.31)
+We now have to estimate the the contribution from theO term in (6.31). By Lemma 6.3 (i) and (6.25) we ﬁnd
+this term contributes
+O((logT )4)
+∫ c2T
+c1T
+|ω(t)|
+∫ ε1+(t+1)
+ε1−(t+1)
+Oε1(|s|
+1
+2 )·|G(s)|
+|s| tε1· Oε1(|s|2ε1+2δ− 1
+2 )· O
+(1 +|s|2
+t1−5δ + |s|4
+t2−7δ
+)
+|ds|dt
+≪ (logT )4
+∫ c2T
+c1T
+|ω(t)|tε1+5δ−1· Oε1(1)dt≪ε1 (logT )4T 7δ≪ T 8δ
+(6.32)
+where the last Oε1(1) arises from
+∫
+(ε1)
+|G(s)|·| s|2ε1+2δ−1(1 +|s|)4|ds|≪ ε−4
+1
+∫
+(ε1)
+|G(s)||s|6δ +3|ds| < ∞.
+In the part of the integral in (6.31) corresponding to the term 2t−a1−b1−2s cos( π
+2 (a1 + b1 + 2s)), we would
+like to extend the integration to all of ℜ(s) = ε1. By (6.23) and (6.26) it follows that
+|Γ(a1 + b1 + 2s)cos( π
+2 (a1 + b1 + 2s))|≪ δ|u|2ε1+2δ− 1
+2 (6.33)
+where s = ε1 + iu. By Lemma 6.3 (i) and (6.33), the part of the integral with|ℑ(s)|≥ t + 1 is bounded by
+(logT )4
+∫ c2T
+c1T
+|ω(t)|
+(∫ ε1+i∞
+ε1+i(t+1)
++
+∫ ε1−i(t+1)
+ε1−i∞
+)
+Oε1(|s|
+1
+2 )·|G(s)|
+|s| tε1+2δ· Oε1(|s|2ε1+2δ− 1
+2 )|ds|dt
+≪ (logT )4
+∫ c2T
+c1T
+|ω(t)|t4δ
+∫ ε1+i∞
+ε1+i(t+1)
+|s|−3|ds|≪ 1,
+(6.34)
+since δ < 1
+12. By the above comments we may extend the integration in (6.31) to all of ℜ(s) = ε1, and may
+also remove the terms corresponding to the big O term in (6.31). By Proposition 6.1 and the functional
+equation ζ (1− z) = 21−zπ−z cos( πz
+2 )Γ(z)ζ (z), one has
+2cos ( π
+2 (a1 + b1 + 2s))Γ(a1 + b1 + 2s)HI,J;{a1},{b1}(s)
+= 2cos ( π
+2 (a1 + b1 + 2s))Γ(a1 + b1 + 2s)ζ (a1 + b1 + 2s)CI,J;a1,b1(s) ∏
+k1⁄=1
+k2⁄=1
+ζ (1 + ak1 + bk2 + 2s)
+= (2π)a1+b1+2sζ (1− a1− b1− 2s)CI,J;a1,b1(s) ∏
+k1⁄=1
+k2⁄=1
+ζ (1 + ak1 + bk2 + 2s).
+37
+===== PAGE 38 =====
+Inserting this in the extended form of the integral in (6.31) (the version of (6.31) where the integration is over
+ℜ(s) = ε1) while taking into account the bounds (6.32) and (6.34) we ﬁnd
+I(1)
+(1,1) = ∏
+j1⁄=1
+ζ (1− a1 + a j1) ∏
+j2⁄=1
+ζ (1− b1 + b j2)
+∫ ∞
+−∞
+ω(t) 1
+2πi
+∫
+(ε1)
+ζ (1− a1− b1− 2s)×
+(
+∏
+(k1,k2)
+k1⁄=1,k2⁄=1
+ζ (1 + ak1 + bk2 + 2s)
+)
+CI,J;a1,b1(s)G(s)
+s
+( t
+2π
+)s−a1−b1
+dsdt + O(T 10δ ).
+This simpliﬁes to
+I(1)
+(1,1) = ∏
+j1⁄=1
+ζ (1− a1 + a j1) ∏
+j2⁄=1
+ζ (1− b1 + b j2)
+∫ ∞
+−∞
+ω(t)
+( t
+2π
+)−a1−b1 1
+2πi
+∫
+(ε1)
+ϕ(s)
+( t
+2π
+)s
+dsdt + O(T 10δ )
+where
+ϕ(s) =
+(
+∏
+(k1,k2)
+k1⁄=1,k2⁄=1
+ζ (1 + ak1 + bk2 + 2s)
+)
+ζ (1− a1− b1− 2s)CI,J;a1,b1(s)G(s)
+s .
+We further evaluate I(1)
+(1,1) by applying the residue theorem. Note that ϕ(s) has poles at s = 0, s =− a1+b1
+2 ,
+and−
+ak1 +bk2
+2 for k1⁄= 1 and k2⁄= 1. Observe that conditions (3.1), (3.2), and (3.3) guarantee that these are
+distinct poles. Also note that the condition δ < 1
+12 ensures that all of these poles are to the right of the line
+ℜ(s) =− 1
+4 + 2δ. We move the s contour left past ℜ(s) = 0, picking up residues at the various poles. Let
+R1(t) = Ress=0
+(
+ϕ(s)
+( t
+2π
+)s)
+,
+R2(t) = Ress=− a1+b1
+2
+(
+ϕ(s)
+( t
+2π
+)s)
+,
+R3(t) = ∑
+k1⁄=1
+k2⁄=1
+Res
+s=−
+ak1 +bk2
+2
+(
+ϕ(s)
+( t
+2π
+)s)
+.
+By the residue theorem,
+1
+2πi
+∫
+(ε1)
+ϕ(s)
+( t
+2π
+)s
+ds = R1(t) +R2(t) +R3(t) + 1
+2πi
+∫
+(− 1
+4 +2δ )
+ϕ(s)
+( t
+2π
+)s
+ds.
+Observe that fors =− 1
+4 +2δ +iu the product of all the zeta factors inϕ(s) is of sizeOδ
+((
+(|u|+1)
+1
+4−δ log(2+
+|u|)
+)4)
+≪δ|u| + 1 which follows from (2.21), and that, by Proposition 6.1 (ii), we have CI,J;a1,b1(s)≪ O(1)
+when ℜ(s) =− 1
+2 + 4δ. Therefore
+1
+2πi
+∫
+(− 1
+4 +2δ )
+ϕ(s)
+( t
+2π
+)s
+ds≪ t− 1
+4 +2δ
+∫ ∞
+−∞
+(|u| + 1)|− 1
+4 + 2δ + iu|−1 min(1,|u|−A)du≪ T− 1
+4 +2δ
+and ∫ ∞
+−∞
+ω(t)
+( t
+2π
+)−a1−b1 1
+2πi
+∫
+(− 1
+4 +2δ )
+ϕ(s)
+( t
+2π
+)s
+dsdt≪ T 1+2δ− 1
+4 +2δ = T
+3
+4 +4δ .
+38
+===== PAGE 39 =====
+In addition, as all the poles are simple we have the following residues:
+R1(t) =
+(
+∏
+(k1,k2)
+k1⁄=1,k2⁄=1
+ζ (1 + ak1 + bk2)
+)
+ζ (1− a1− b1)CI,J;a1,b1(0),
+R2(t) =−1
+2
+(
+∏
+(k1,k2)
+k1⁄=1,k2⁄=1
+ζ (1 + ak1 + bk2− a1− b1)
+)
+CI,J;a1,b1(− a1+b1
+2 )G(− a1+b1
+2 )
+(− a1+b1
+2 )
+( t
+2π
+)− a1+b1
+2
+,
+and
+R3(t) = 1
+2 ∑
+k1⁄=1
+k2⁄=1
+∏
+l1⁄=1,l2⁄=1
+(l1,l2)⁄=(k1,k2)
+ζ (1 + al1 + bl2− ak1− bk2)ζ (1− a1− b1 + ak1 + bk2)CI,J;{a1},{b1}(−
+ak1 +bk2
+2 )
+× G(−
+ak1 +bk2
+2 )
+(−
+ak1 +bk2
+2 )
+( t
+2π
+)−
+ak1 +bk2
+2
+.
+Observe that the coefﬁcients− 1
+2 and 1
+2 in front of R2(t) and R3(t) appear since ζ (1 + η± 2s) = ± 1
+2
+s± η
+2
++ O(1)
+for|s|≤ 1 and|η|≤ 2δ. Since T 10δ≪ T
+3
+4 +δ (given that δ < 1
+12), it follows that
+I(1)
+1,1 = S1 + S2 + S3 + O((logT )4T
+3
+4 +δ ), (6.35)
+where
+S1 =
+∫ ∞
+−∞
+ω(t)
+( t
+2π
+)−a1−b1
+dt· CI,J;{a1},{b1}(0)·
+(
+∏
+(a,b)
+a∈I{a1},b∈J{b1}
+ζ (1 + a + b)
+)
+, (6.36)
+S2 =−1
+2 ∏
+j1⁄=1
+ζ (1− a1 + a j1) ∏
+j2⁄=1
+ζ (1− b1 + b j2) ∏
+(k1,k2)
+k1⁄=1,k2⁄=1
+ζ (1 + ak1 + bk2− a1− b1)×
+CI,J;{a1},{b1}(− a1+b1
+2 )G(− a1+b1
+2 )
+(− a1+b1
+2 )
+∫ ∞
+−∞
+ω(t)
+( t
+2π
+)− 3(a1+b1)
+2
+dt,
+(6.37)
+S3 = 1
+2 ∏
+j1⁄=1
+ζ (1− a1 + a j1) ∏
+j2⁄=1
+ζ (1− b1 + b j2) ∑
+(k1,k2)
+k1⁄=1,k2⁄=1
+∫ ∞
+−∞
+ω(t)
+( t
+2π
+)−a1−b1−
+ak1 +bk2
+2
+×
+(
+∏
+l1⁄=1,l2⁄=1
+(l1,l2)⁄=(k1,k2)
+ζ (1 + al1 + bl2− ak1− bk2)
+)
+ζ (1− a1− b1 + ak1 + bk2)CI,J;{a1},{b1}(−
+ak1 +bk2
+2 )G(−
+ak1 +bk2
+2 )
+(−
+ak1 +bk2
+2 )
+dt.
+(6.38)
+39
+===== PAGE 40 =====
+We now provide further simpliﬁcation of S1 and S2. By Proposition 6.2 (i) and Lemma 2.3, we have
+CI,J;{a1},{b1}(0) = AI{a1},J{b1}(0) = ZI{a1},J{b1}(0)·
+(
+∏
+(a,b)
+a∈I{a1},b∈J{b1}
+1
+ζ (1 + a + b)
+)
+.
+By this and (6.36), we obtain
+S1 =
+∫ ∞
+−∞
+ω(t)
+( t
+2π
+)−a1−b1
+dt· ZI{a1},J{b1}(0). (6.39)
+Next, we show that
+S2 =−Ress=−a1−b1
+2
+ZI,J(2s)
+G
+(
+−a1−b1
+2
+)
+(−a1−b1
+2 )
+∫ ∞
+−∞
+ω(t)
+( t
+2π
+)− 3
+2 (a1+b1)
+dt. (6.40)
+First observe that by Lemma 2.3 and the fact that ζ (s) has a simple pole at s = 1 with residue 1,
+Ress=−a1−b1
+2
+ZI,J(2s) = 1
+2
+(
+∏
+(i, j)
+(i, j)⁄=(1,1)
+ζ (1 + ai + b j− a1− b1)
+)
+AI,J(−a1− b1).
+Thus, in order that (6.40) may be deduced from (6.37), it sufﬁces to prove that AI,J(−a1− b1) =
+CI,J;{a1},{b1}(− a1+b1
+2 ) which is Proposition 6.2 (ii). From (6.35), (6.39), (6.40), and (6.38) we arrive at
+I(1)
+(i1,i2) = J(1)
+(i1,i2) + O(T
+3
+4 +2δ ) in the case that i1 = i2 = 1, assuming (1.15) and δ∈ (0, 1
+12 ). The case of general
+i1,i2, follows from a simple permutation of variables. In summary, we have shown that
+3
+∑
+i1=1
+3
+∑
+i2=1
+I(1)
+(i1,i2) =
+3
+∑
+i1=1
+3
+∑
+i2=1
+J(1)
+(i1,i2) + O(T
+3
+4 +2δ ),
+subject to (1.15) and δ∈ (0, 1
+12 ). Combining this with Proposition 5.5 we obtain for any ε′ > 0
+I(1)
+O =
+3
+∑
+i1=1
+3
+∑
+i2=1
+J(1)
+(i1,i2) + O
+(
+T
+3ϑ
+2 +ε′( T
+T0
+)1+C
++ T
+3
+4 +2δ
+)
+,
+subject to the stronger condition|ai|,|bi|≪ (logT )−1. Now for ε′ > 0, we may assume that δ < ε′
+2 . Further-
+more, as ϑ≥ 1
+2, C > 0, and T0≪ T , it follows that the second error term is dominated by the ﬁrst, and so we
+have established the proposition.
+Next, we shall derive Proposition 6.5 from Proposition 6.4.
+Proof of Proposition 6.5. The expression I(2)
+O as deﬁned by (3.6) may viewed as a special case of (3.5), by
+the simultaneous substitutions
+I→− J, J→− I, (or a j→− b j and b j→− a j for j = 1,2,3) (6.41)
+and
+ω(t)→ ω1(t) = XI,J;tω(t). (6.42)
+40
+===== PAGE 41 =====
+By Lemma 2.2 we have the asymptotic XI,J;t∼ ( t
+2π )− ∑3
+k=1(ak+bk). This means that the formula in Proposition
+6.5 can be obtained from Proposition 6.4 by inserting the factor (t/2π)− ∑3
+k=1(ak+bk) and permuting the
+variables as in (6.41). However, it must be veriﬁed that ω1 satisﬁes the conditions (1.11), (1.12), and (1.13).
+The ﬁrst two conditions are immediate. In order to show (1.13) it sufﬁces to show for all j∈ Z≥0 and
+t∈ [c1T,c2T ] that
+∂ j
+∂t j XI,J;t≪ j T− j. (6.43)
+We obtain this bound as follows. The functionz→ XI,J;z is holomorphic on the closed disc{z∈ C|| z−t|≤ t
+2}
+and thus we have ⏐⏐⏐ ∂ j
+∂t j XI,J;t
+⏐⏐⏐≤ j!
+(t/2) j max
+z∈C
+|z−t|= t
+2
+|XI,J;z|.
+It follows from Stirling’s formula (see [37, (C.18), p. 523]) that, when t∈ [c1T,c2T ] and|ai|,|bi|≪ 1
+logT for
+i = 1,2,3, one has
+max
+z∈C
+|z−t|= t
+2
+|XI,J;z|≪ 1.
+The last two bounds combine to give (6.43). Thus, by the generalized product rule, it follows that ω1 satisﬁes
+(1.13). Since we have shown that I(1)
+O = ∑3
+i1=1 ∑3
+i2=1 J(1)
+(i1,i2) + O(T
+3ϑ
+2 +ε ( T
+T0
+)1+C), it sufﬁces to determine
+how the substitutions (6.41) and (6.42) change J(1)
+(1,1). Thus we have I(2)
+O = ∑3
+i1=1 ∑3
+i2=1 ˜J(i1,i2) + O(T
+3
+4 +4δ )
+where ˜J(1,1) is obtained from J(1)
+(1,1) by the the substitutions (6.41). It follows from (6.11) that the ﬁrst
+term in J(1)
+(1,1) is Z−J{−b1},I{−a1}(0)
+∫ ∞
+−∞ ω1(t)( t
+2π )b1+a1dt. Note that−J{−b1} ={a1,−b2,−b3} = I{a2,a3} and
+−I{−a1} ={b1,−a2,−a3} = J{b2,b3} and thus by Lemma 2.2 (i) the ﬁrst term in ˜J(1,1) equals
+∫ ∞
+−∞
+ω(t)
+( t
+2π
+)−a2−a3−b2−b3
+ZI{a2,a3},J{b2,b3}(0)(1 + O(t−1))dt. (6.44)
+By Lemma 2.3, (1.16), (3.1), and (3.2), the term O(t−1) in (6.44) leads to an error of size
+O
+(
+∏
+x∈I{a2,a3},y∈J{b2,b3}
+|x + y|−1
+∫ c2T
+c1T
+t−1dt
+)
+≪ (logT )9.
+Similarly, the second term of ˜J(1,1) is
+−1
+2Ress= a1+b1
+2
+Z−J,−I(2s)
+G
+(
+a1+b1
+2
+)
+( a1+b1
+2 )
+∫ ∞
+−∞
+ω(t)
+( t
+2π
+)− ∑3
+k=1(ak+bk)+ 3(a1+b1)
+2
+(1 + O(t−1))dt (6.45)
+and by Lemma 2.3, (3.1), (3.2), and (3.3) the big O term leads to an error
+O
+((
+∏
+x∈−J,y∈−I
+(x,y)⁄=(−b1,−a1)
+1
+|a1 + b1 + x + y|
+) 1
+|a1 + b1|
+∫ c2T
+c1T
+t−1dt
+)
+≪ (logT )9.
+41
+===== PAGE 42 =====
+The third term in ˜J(1,1) is
+1
+2 ∏
+j1⁄=1
+ζ (1 + b1− b j1) ∏
+j2⁄=1
+ζ (1 + a1− a j2) ∑
+(k1,k2)
+k1⁄=1,k2⁄=1
+∏
+l1⁄=1,l2⁄=1
+(l1,l2)⁄=(k1,k2)
+ζ (1− bl1− al2 + bk1 + ak2)
+× ζ (1 + b1 + a1− bk1− ak2)C−J,−I;{−b1},{−a1}(
+bk1 +ak2
+2 )G(
+bk1 +ak2
+2 )
+(
+bk1 +ak2
+2 )
+×
+∫ ∞
+−∞
+ω(t)
+( t
+2π
+)− ∑3
+k=1(ak+bk)+a1+b1+
+bk1 +ak2
+2
+(1 + O(t−1))dt.
+(6.46)
+By Proposition 6.1 and a calculation similar to those above, the O(t−1) term in (6.46) leads to an error there
+that is of size O((logT )9). Note that the main term in (6.46) simpliﬁes to
++ 1
+2 ∏
+j1⁄=1
+ζ (1 + b1− b j1) ∏
+j2⁄=1
+ζ (1 + a1− a j2) ∑
+(k1,k2)
+k1⁄=1,k2⁄=1
+∫ ∞
+−∞
+ω(t)
+( t
+2π
+)−ar2−br1−
+bk1 +ak2
+2
+dt
+×
+(
+∏
+l1⁄=1,l2⁄=1
+(l1,l2)⁄=(k1,k2)
+ζ (1− bl1− al2 + bk1 + ak2)
+)
+ζ (1 + b1 + a1− bk1− ak2)
+× C−J,−I;{−b1},{−a1}(
+bk1 +ak2
+2 )G(
+bk1 +ak2
+2 )
+(
+bk1 +ak2
+2 )
+(6.47)
+where we recall that r1 = r1(1,k1) and r2 = r2(1,k2) are deﬁned by (6.9). By (6.44), (6.45), (6.46), and
+(6.47), we ﬁnd that when (i1,i2) = (1,1) one has ˜J(i1,i2) = J(2)
+(i1,i2) + O((logT )9), where J(2)
+(i1,i2) is deﬁned by
+(6.14) and (6.15). The general case, (i1,i2)∈{ 1,2,3}2, it follows by considering all permutations of the
+form ai→ aσ (i), bi→ bτ(i)(i = 1,2,3) in which σ and τ are given elements of the subgroup of permutations
+of the set{1,2,3} that is generated by the 3-cycle (231 ).
+Proof of Proposition 6.6. Recall that we are trying to prove that
+3
+∑
+i1=1
+3
+∑
+i2=1
+∑
+(k1,k2)
+k1⁄=i1,k2⁄=i2
+(T(i1,i2);(k1,k2) + U(i1,i2);(k1,k2)) = 0. (6.48)
+We aim to prove this by matching terms in the two triple sums. First we show that
+T(1,1);(2,2) + U(3,3);(2,2) = 0. (6.49)
+42
+===== PAGE 43 =====
+We begin with a few observations. Note that
+T(1,1);(2,2) = 1
+2 ζ (1− a1 + a2)ζ (1− a1 + a3)ζ (1− b1 + b2)ζ (1− b1 + b3)
+∫ ∞
+−∞
+ω(t)
+( t
+2π
+)−a1−b1− a2+b2
+2
+dt
+× ζ (1 + a3 + b2− a2− b2)ζ (1 + a2 + b3− a2− b2)ζ (1 + a3 + b3− a2− b2)ζ (1− a1− b1 + a2 + b2)
+× CI,J;{a1},{b1}(− a2+b2
+2 )G(− a2+b2
+2 )
+(− a2+b2
+2 )
+=−1
+2 ζ (1− a1 + a2)ζ (1− a1 + a3)ζ (1− b1 + b2)ζ (1− b1 + b3)
+∫ ∞
+−∞
+ω(t)
+( t
+2π
+)−a1−b1− a2+b2
+2
+dt
+× ζ (1 + a3− a2)ζ (1 + b3− b2)ζ (1 + a3 + b3− a2− b2)ζ (1− a1− b1 + a2 + b2)
+× CI,J;{a1},{b1}(− a2+b2
+2 )G( a2+b2
+2 )
+( a2+b2
+2 )
+,
+since G is even. We now try to identify a term which will cancel with this. We shall look in the terms coming
+from the second half of the approximate functional equation. We guess the correct term arises from I(2)
+(3,3) and
+is U(3,3);(2,2). Note that, by the deﬁnition (6.9), we have r(3,2) = 1, and so, by (6.15),
+U(3,3);(2,2) = 1
+2 ζ (1 + b3− b1)ζ (1 + b3− b2)ζ (1 + a3− a1)ζ (1 + a3− a2)
+∫ ∞
+−∞
+ω(t)
+( t
+2π
+)−a1+b1− b2+a2
+2
+dt
+× ζ (1− b1− a1 + b2 + a2)ζ (1− b1− a2 + b2 + a2)ζ (1− b2− a1 + b2 + a2)ζ (1 + b3 + a3− b2− a2)
+× C−J,−I;{−b3},{−a3}( b2+a2
+2 )G( b2+a2
+2 )
+( b2+a2
+2 )
+= 1
+2 ζ (1 + b3− b1)ζ (1 + b3− b2)ζ (1 + a3− a1)ζ (1 + a3− a2)
+∫ ∞
+−∞
+ω(t)
+( t
+2π
+)−a1+b1− b2+a2
+2
+dt
+× ζ (1− b1− a1 + b2 + a2)ζ (1− b1 + b2)ζ (1− a1 + a2)ζ (1 + b3 + a3− b2− a2)
+× C−J,−I;{−b3},{−a3}( b2+a2
+2 )G( b2+a2
+2 )
+( b2+a2
+2 )
+.
+Observe that the two expressions we are considering are negatives of each other and add to zero if
+CI,J;{a1},{b1}(− a2+b2
+2 ) = C−J,−I;{−b3},{−a3}( b2+a2
+2 ).
+However, this identity is Proposition(6.2) (iii). Thus this establishes (6.49). More generally, we can show
+that for (i1,i2)∈{ 1,2,3}2 and (k1,k2)∈{ 1,2,3}2 such that k1⁄= i1 and k2⁄= i2 that
+T(i1,i2);(k1,k2) + U(r2,r1);(k2,k1) = 0 (6.50)
+where r1 = r(i1,k1) and r2 = r(i2,k2) are deﬁned by (6.9). By a calculation similar to that seen in our proof
+of (6.49), we ﬁnd that (6.50) follows if one has
+CI,J;{ai1},{bi1}(−
+ak1 +bk2
+2 ) = C−J,−I;{−br2},{−ar1}(
+bk2 +ak1
+2 ).
+This is Proposition 6.2 (iv). Finally, summing (5.4) over i1,i2,k1,k2 with i1⁄= k1, i2⁄= k2 leads to (6.48).
+43
+===== PAGE 44 =====
+Appendix
+A Proof of Propositions 6.1, 6.2, Lemma 6.3
+We now establish Proposition 6.1.
+Lemma A.1. Let k∈ N, I ={1, . . . ,k}, and let X ={x1,x2, . . . ,xk} be distinct complex numbers. For
+ℜ(s) >−min𝓁=1,...k ℜ(x𝓁), p prime, and α≥ 0
+gX (s, pα ) = (1− p−s−x1)··· (1− p−s−xk )
+k
+∑
+i=1
+p−xiα
+1− p−xi−s ∏
+𝓁∈I\{i}
+(1− pxi−x𝓁)−1. (A.1)
+Proof. We begin by recalling that
+gX (s, pα ) =
+∑∞
+j=0
+σX (pα+ j)
+p js
+∑∞
+j=0
+σX (p j)
+p js
+. (A.2)
+We now ﬁnd an expression for σX (p j) for j≥ 0. By the multiplicativity of σX and the Euler product, we
+have the identitity
+ζ (s + x1)··· ζ (s + xk) = ∏
+p
+∞
+∑
+j=0
+σX (p j)p− js = ∏
+p
+(1− p−s−x1)−1··· (1− p−s−xk )−1.
+This is valid for ℜ(s) > 1− min𝓁=1,...,k ℜ(x𝓁), where the Euler product is absolutely convergent. It follows
+that
+∞
+∑
+j=0
+σX (p j)p− js = (1− p−s−x1)−1··· (1− p−s−xk )−1⁄= 0 (A.3)
+for ℜ(s) > 1− min𝓁=1,...,k ℜ(x𝓁). In (A.3) both the sum and product are holomorphic on the half-plane
+ℜ(s) >−min𝓁=1,...,k ℜ(x𝓁), and the product is non-zero there. We can deduce that (A.3) must hold for all s
+lying in that half-plane: in particular, the denominator of the right hand side of (A.2) is non-zero for such
+values of s. By partial fractions and the geometric series,
+(1− p−s−x1)−1··· (1− p−s−xk )−1 =
+k
+∑
+i=1
+(1− p−s−xi)−1
+∏
+𝓁∈I\{i}
+(1− pxi−x𝓁)−1
+=
+k
+∑
+i=1
+∏
+𝓁∈I\{i}
+(1− pxi−xl )−1
+∞
+∑
+j=0
+p−xi j p− js.
+(A.4)
+Hence for j≥ 0
+σX (p j) =
+k
+∑
+i=1
+p−xi j
+∏
+𝓁∈I\{i}
+(1− pxi−x𝓁)−1
+and for α≥ 1
+α−1
+∑
+j=0
+σX (p j)p− js =
+k
+∑
+i=1
+1− (p−xi−s)α
+1− p−xi−s ∏
+𝓁∈I\{i}
+(1− pxi−x𝓁)−1.
+44
+===== PAGE 45 =====
+Thus
+∞
+∑
+j=0
+σX (p j+α )p− js = pαs
+(
+∑
+j≥0
+σX (p j)p− js−
+α−1
+∑
+j=0
+σX (p j)p− js
+)
+= pαs
+k
+∑
+i=1
+(p−xi−s)α
+1− p−xi−s ∏
+𝓁∈I\{i}
+(1− pxi−x𝓁)−1 =
+k
+∑
+i=1
+p−xiα
+1− p−xi−s ∏
+𝓁∈I\{i}
+(1− pxi−x𝓁)−1.
+(A.5)
+By (A.2), (A.3), and (A.5) we obtain (A.1) for α≥ 1. In the case that α = 0, we observe that the left hand
+side equals 1 since gX (s,n) is multiplicative and the right hand side also equals 1 by (A.4).
+Lemma A.2. Let k∈ N, I ={1, . . . ,k}, and X ={x1,x2, . . . ,xk} be distinct complex numbers. For ℜ(s) >
+−min𝓁=1,...k ℜ(x𝓁), p prime, and j≥ 1
+GX (s, p j) = (1− p−s−x1)··· (1− p−s−xk ) 1
+p− 1
+k
+∑
+i=1
+p1−xi j− ps−xi( j−1)
+1− p−xi−s ∏
+𝓁∈I\{i}
+(1− pxi−x𝓁)−1. (A.6)
+Proof. By deﬁnition (1.21) it follows that
+GX (s, p j) = ∑
+d|p j
+µ(d)ds
+φ (d) ∑
+e|d
+µ(e)
+es gX
+(
+s, p je
+d
+)
+= gX (s, p j)− ps
+p− 1gX (s, p j−1) + 1
+φ (p)gX (s, p j)
+= p
+p− 1gX (s, p j)− ps
+p− 1gX (s, p j−1).
+Inserting (A.1) in the last expression with α = j and α = j− 1 yields (A.6).
+Observe that we may apply the preceding result in the special case X = I and s = 1− a1.
+Lemma A.3. Let δ∈ (0, 1
+2 ) and I ={a1,a2,a3} where a1,a2,a3, are distinct complex numbers with|ai|≤ δ
+for i = 1,2,3. Let p be a prime and j ≥ 1. Then
+GI(1− a1, p j) = p−a2 j 1− p−1+a1−a3
+1− pa2−a3
++ p−a3 j 1− p−1+a1−a2
+1− pa3−a2
+(A.7)
+and, in particular,
+GI(1− a1, p) = p−a2 + p−a3− p−1+a1−a2−a3.
+Proof. Note that for X = I ={a1,a2,a3} and s = 1−a1 the condition ℜ(s) >−min𝓁=1,...3 ℜ(a𝓁) is met since
+δ < 1
+2. By Lemma A.2 it follows that
+GI(1− a1, p j) = (1− p−1)(1− p−1+a1−a2)(1− p−1+a1−a3) 1
+p− 1
+×
+3
+∑
+i=1
+p1−ai j− p(1−a1)−ai( j−1)
+1− p−ai−(1−a1) ∏
+𝓁∈I\{i}
+(1− pai−a𝓁)−1.
+Note that (1− p−1)(p− 1)−1 = p−1, and that for i = 1 the exponents 1− a1− ai( j− 1) and 1− ai j are equal.
+Therefore
+GI(1− a1, p j) = (1− p−1+a1−a2)(1− p−1+a1−a3)
+×
+( p−a2 j(1− pa2−a1)
+(1− p−1+a1−a2)(1− pa2−a1)(1− pa2−a3) + p−a3 j(1− pa3−a1)
+(1− p−1+a1−a3)(1− pa3−a1)(1− pa3−a2)
+)
+.
+Simplifying this yields (A.7).
+45
+===== PAGE 46 =====
+Lemma A.4. Let 0 < δ < 1
+2 and I ={a1,a2,a3}, where a1,a2,a3∈ C are distinct and satisfy|ai|≤ δ for
+i = 1,2,3. Then , for 𝓁∈ N, we have|GI(1− a1, 𝓁)|≤ 𝓁δ d2(𝓁2).
+Proof. By multiplicativity, it sufﬁces to prove the result for 𝓁 = p j with j≥ 1. By (A.7) we have
+GI(1− a1, p j) = p−( j+1)a2− p−( j+1)a3
+p−a2− p−a3
+−
+( p− ja2− p− ja3
+p−a2− p−a3
+)
+p−1+a1−a2−a3
+=
+j
+∑
+𝓁=0
+p−( j−𝓁)a2 p−𝓁a3− p−1+a1−a2−a3
+j−1
+∑
+𝓁=0
+p−( j−1−𝓁)a2 p−𝓁a3.
+Since|ai|≤ δ for i = 1,2,3, it follows that
+|GI(1− a1, p j)|≤
+j
+∑
+𝓁=0
+p( j−𝓁)δ p𝓁δ + p−1+3δ
+j−1
+∑
+𝓁=0
+p( j−1−𝓁)δ p𝓁δ = ( j + 1)p jδ + jp jδ +2δ−1≤ p jδ d2(p2 j)
+as long as δ < 1
+2.
+With Lemma A.3 in hand we can proceed with the proof of Proposition 6.1.
+Proof of Proposition 6.1. (i) Throughout the proof of this proposition we let σ = ℜ(s). Observe that by
+the bound|c𝓁(r)|≤ (𝓁,r) and Lemma A.4, we can check that the series for HI,J;{a1},{b1}(s) is absolutely
+convergent for ℜ(s) > 1
+2 + 2δ and δ < 1
+4. Furthermore, since c𝓁(r) = ∑d|(𝓁,r) dµ( 𝓁
+d ) we have
+HI,J;{a1},{b1}(s) =
+∞
+∑
+r=1
+∞
+∑
+𝓁=1
+GI(1− a1, 𝓁)GJ(1− b1, 𝓁)
+𝓁2−a1−b1ra1+b1+2s ∑
+d|(l,r)
+dµ( 𝓁
+d ) =
+∞
+∑
+𝓁=1
+α𝓁
+∞
+∑
+r=1
+1
+rc ∑
+d|l,d|r
+dµ( 𝓁
+d )
+where α𝓁 = GI(1−a1,𝓁)GJ(1−b1,𝓁)
+𝓁2−a1−b1 and c = a1 + b1 + 2s. Thus
+HI,J;{a1},{b1}(s) =
+∞
+∑
+𝓁=1
+α𝓁 ∑
+d|𝓁
+dµ( 𝓁
+d ) ∑
+r≥1,d|r
+1
+rc =
+∞
+∑
+𝓁=1
+α𝓁 ∑
+d|l
+dµ( 𝓁
+d )
+dc ζ (c)
+= ζ (c)
+∞
+∑
+𝓁=1
+α𝓁 ∑
+d|𝓁
+d1−cµ( 𝓁
+d ) = ζ (c)
+∞
+∑
+𝓁=1
+α𝓁𝓁1−c
+∑
+d|𝓁
+µ(d)
+d1−c .
+For p prime and j≥ 1 we have ∑d|p j
+µ(d)
+d1−c = 1− 1
+p1−c . By multiplicativity
+∞
+∑
+𝓁=1
+α𝓁𝓁1−c
+∑
+d|𝓁
+µ(d)
+d1−c = ∏
+p
+(
+1 +
+∞
+∑
+j=1
+GI(1− a1, p j)GJ(1− b1, p j)
+(p j)2−a1−b1
+(p j)1−a1−b1−2s(1− pa1+b1+2s−1)
+)
+= ∏
+p
+(
+1 +
+∞
+∑
+j=1
+GI(1− a1, p j)GJ(1− b1, p j)· 1− pa1+b1+2s−1
+(p j)1+2s
+)
+.
+(A.8)
+We aim to simplify the expression with the brackets. At this point it will be convenient to introduce some
+notation. Let
+U = p−1, W = p−1−2s, Xi = p−ai, Yi = p−bi, for i = 1,2,3. (A.9)
+46
+===== PAGE 47 =====
+Observe that we have the bounds
+|W|≤ p−1−2σ , (A.10)
+p−δ≤| Xi|,|Yi|≤ pδ for i = 1,2,3. (A.11)
+Also set
+Tj = GI(1− a1, p j)GJ(1− b1, p j) and f j = 1− pa1+b1+2s−1
+(p j)1+2s for j∈ Z≥0. (A.12)
+Observe that by Lemma A.3
+T1 = GI(1− a1, p)GJ(1− b1, p) = (X2 + X3−UX2X3X−1
+1 )(Y2 +Y3−UY2Y3Y−1
+1 ) (A.13)
+and from (A.9) and (A.12) we have
+f j = W j− X−1
+1 Y−1
+1 U 2W j−1 for j∈ N. (A.14)
+With these observations in hand, we see that the ﬁrst two terms within the brackets in (A.8) sum to
+1 + T1 f1 = 1 + (X2 + X3−UX2X3X−1
+1 )(Y2 +Y3−UY2Y3Y−1
+1 )W (1− X−1
+1 Y−1
+1 U 2W−1)
+= 1 + (X2Y2 + X2Y3 +Y2X3 + X3Y3)W + b20U 2 + b30U 3 + b40U 4 + b11UW + b21U 2W
+(A.15)
+where the buv is a polynomial in X−1
+1 ,X2,X3,Y−1
+1 ,Y2,Y3 that is homogeneous of degree 2(u + v), so that, by
+(A.11), one has
+|buv|≪ p2(u+v)δ
+for all u,v. It follows that
+b20U 2 + b30U 3 + b40U 4 + b11UW + b21U 2W≪
+4
+∑
+j=2
+p2 jδ p− j + p−1−2σ (p4δ p−1 + p6δ p−2)
+≪ p4δ−2(1 + p2δ−1 + p4δ−2) + p4δ−2−2σ (1 + p2δ−1)≪ p4δ (p−2−2σ + p−2),
+(A.16)
+since δ < 1
+2. Combining (A.15) and (A.16) it follows that the sum of the ﬁrst two terms within the brackets
+in (A.8) equal
+1 + p−1−a2−b2−2s + p−1−a2−b3−2s + p−1−a3−b2−2s + p−1−a3−b3−2s + O((p−2−2σ + p−2)p4δ ).
+This leads us to write the sum over 𝓁 in (A.8) as
+ζ (1 + a2 + b2 + 2s)ζ (1 + a2 + b3 + 2s)ζ (1 + a3 + b2 + 2s)ζ (1 + a3 + b3 + 2s)CI,J;{a1},{b1}(s),
+valid for ℜ(s)≥ 2δ, where
+CI,J;{a1},{b1}(s) = ∏
+p
+CI,J;{a1},{b1}(p;s)
+and
+CI,J;{a1},{b1}(p;s) =
+(
+1 +
+∞
+∑
+j=1
+GI(1− a1, p j)GJ(1− b1, p j)
+(p j)1+2s (1− pa1+b1+2s−1)
+)
+×
+(
+1− 1
+p1+a2+b2+2s
+)(
+1− 1
+p1+a2+b3+2s
+)(
+1− 1
+p1+a3+b2+2s
+)(
+1− 1
+p1+a3+b3+2s
+)
+.
+(A.17)
+47
+===== PAGE 48 =====
+Hence
+HI,J;{a1},{b1}(s) =
+(
+3
+∏
+k=2
+3
+∏
+𝓁=2
+ζ (1 + ak + b𝓁 + 2s)
+)
+ζ (a1 + b1 + 2s)CI,J;{a1},{b1}(s).
+The next step is to derive an explicit formula for CI,J;{a1},{b1}(s), namely (6.4). By (A.7) It follows that
+GI(1− a1, p j)GJ(1− b1, p j)
+(p j)1+2s = p−(1+a2+b2+2s) j 1− p−1+a1−a3
+1− pa2−a3
+1− p−1+b1−b3
+1− pb2−b3
++ p−(1+a2+b3+2s) j 1− p−1+a1−a3
+1− pa2−a3
+1− p−1+b1−b2
+1− pb3−b2
++ p−(1+a3+b2+2s) j 1− p−1+a1−a2
+1− pa3−a2
+1− p−1+b1−b3
+1− pb2−b3
++ p−(1+a3+b3+2s) j 1− p−1+a1−a2
+1− pa3−a2
+1− p−1+b1−b2
+1− pb3−b2
+.
+Since ∑∞
+j=1 p− jκ = p−κ
+1−p−κ , it follows from this and (A.17) that
+CI,J;{a1},{b1}(p;s) =(
+1 +
+( p−(1+a2+b2+2s)
+1− p−(1+a2+b2+2s)
+1− p−1+a1−a3
+1− pa2−a3
+1− p−1+b1−b3
+1− pb2−b3
++ p−(1+a2+b3+2s)
+1− p−(1+a2+b3+2s)
+1− p−1+a1−a3
+1− pa2−a3
+1− p−1+b1−b2
+1− pb3−b2
++ p−(1+a3+b2+2s)
+1− p−(1+a3+b2+2s)
+1− p−1+a1−a2
+1− pa3−a2
+1− p−1+b1−b3
+1− pb2−b3
++ p−(1+a3+b3+2s)
+1− p−(1+a3+b3+2s)
+1− p−1+a1−a2
+1− pa3−a2
+1− p−1+b1−b2
+1− pb3−b2
+)
+(1− pa1+b1+2s−1)
+)
+×
+(
+1− 1
+p1+a2+b2+2s
+)(
+1− 1
+p1+a2+b3+2s
+)(
+1− 1
+p1+a3+b2+2s
+)(
+1− 1
+p1+a3+b3+2s
+)
+and thus CI,J;{a1},{b1}(s) = ∏p CI,J;{a1},{b1}(p;s) where CI,J;{a1},{b1}(p;s) is deﬁned by (6.4) and (6.5).
+(ii) We now establish (6.6). It is convenient to set
+Π = (1− X2Y2W )(1− X2Y3W )(1− X3Y2W )(1− X3Y3W ). (A.18)
+From (A.17) it follows that
+CI,J;{a1},{b1}(p;s) =
+(
+1 +
+∞
+∑
+j=1
+Tj f j
+)
+Π. (A.19)
+Observe that by Lemma A.3 we have
+T2 =
+(
+(X 2
+2 + X2X3 + X 2
+3 )− (X 2
+2 X3X−1
+1 + X 2
+3 X2X−1
+1 )U
+)
+·
+(
+(Y 2
+2 +Y2Y3 +Y 2
+3 )− (Y 2
+2 Y3Y−1
+1 +Y 2
+3 Y2Y−1
+1 )U
+)
+.
+(A.20)
+48
+===== PAGE 49 =====
+Expanding out T1 (A.13), T2 (A.20), Π (A.18), and f1 and f2 (A.14), we ﬁnd with the help of Maple 4 that
+(1 + T1 f1 + T2 f2)Π = ∑
+(u,w)∈S
+cuwU uW w
+where S⊂ Z≥0× Z≥0 is ﬁnite, and cuv is a polynomial in X−1
+1 ,X2,X3,Y−1
+1 ,Y2,Y3 that is homogeneous of
+degree 2(u + w), so that, by (A.11), one has
+|cuw|≪ p2(u+w)δ , (A.21)
+for all (u,w)∈ S. It may be checked that
+c00 = 1, c10 = c01 = 0, c02 =−X2X3Y2Y3 =−p−a2−a3−b2−b3, and (A.22)
+cuw = 0 if either u≥ 5 or w≥ 7. (A.23)
+Thus we have
+(1 + T1 f1 + T2 f2)Π = 1 + c02W 2 + ∑
+u≥2
+(u,0)∈S
+cu0U u + ∑
+u≥1
+(u,0)∈S
+cu1U uW + ∑
+(u,w)∈S
+w≥2,(u,w)⁄=(0,2)
+cuwU uW w.
+(A.24)
+Observe that by (A.9), (A.10), and (A.21) one has
+cuwU uW w≪ p2(u+w)δ−u−(1+2σ )w = p−(1−2δ )u−(1+2σ−2δ )w for u,w≥ 0. (A.25)
+Given that S is ﬁnite, that σ >− 1
+2 + δ, and that we certainly have δ < 1
+2, it follows from (A.22), (A.23),
+(A.24), (A.25), and (A.9) that
+(1 + T1 f1 + T2 f2)Π = 1 + c02W 2 + O
+(
+p−2(1−2δ ) + p−(1−2δ )−(1+2σ−2δ ) + p−3(1+2σ−2δ )
+)
+= 1 + c02W 2 + O
+(
+p6δ +max(−2,−2−2σ ,−3−6σ )
+)
+= 1− p−a2−a3−b2−b3−2−4s + O
+(
+p6δ +ϑ (σ )
+)
+(A.26)
+where ϑ (σ ) is deﬁned by (6.7). Finally, we bound the contribution from j≥ 3 to (A.19). We make use
+of|Tj|≤ (p jδ d2(p2 j))2 = (2 j + 1)2p2 jδ , (A.14), and|Π|≤ (1 + p−(1+2σ−2δ ))4 < 24 (since σ >− 1
+2 + δ) to
+obtain
+( ∞
+∑
+j=3
+Tj f j
+)
+Π≪
+∞
+∑
+j=3
+( j + 1)2p2 jδ
+(( 1
+p1+2σ
+) j
++ p2δ
+p2
+( 1
+p1+2σ
+) j−1)
+≪ p6δ
+(( 1
+p1+2σ
+)3
++ p2δ
+p2
+( 1
+p1+2σ
+)2)
+≤ p8δ
+( 1
+p3+6σ + 1
+p4+4σ
+)
+≪ p8δ p−ϑ (σ )
+(A.27)
+for σ≥− 1
+2 + δ + ε. Combining (A.19), (A.26), and (A.27) we establish (6.6) along with (6.7). Note that
+from (6.7), it follows that if σ = ℜ(s) =− 1
+4 + δ + ε with ε > 0, then CI,J;{a1},{b1}(p;s) = 1 + O(p−1−4ε ).
+Therefore CI,J;{a1},{b1}(s) is holomorphic and absolutely convergent for ℜ(s) >− 1
+4 + δ. Furthermore, we
+see that the poles listed in (6.8) in arise from the zeta factors in (6.2).
+4Maple ﬁle available upon request.
+49
+===== PAGE 50 =====
+Proof of Proposition 6.2. (i) In this proof we set xi = p−ai, yi = p−bi for 1≤ i≤ 3, and u = p−1. We aim to
+show AI{a1},J{b1}(0) = CI,J;{a1},{b1}(0). Indeed, this will follow from
+Ap;I{a1},J{b1}(0) = Cp;I,J;{a1},{b1}(0) (A.28)
+for p prime. Note that I{a1} = (−b1,a2,a3) and J{b1} = (−a1,b2,b3). We observe that AI{a1},J{b1}(0) is
+obtained from AI,J(0) by the transformation a1→− b1 and b1→− a1. Therefore by (2.16) and (2.17)
+AI{a1},J{b1}(0) = ∏
+p
+P(pb1, p−a2, p−a3, pa1, p−b2, p−b3, p−1) = ∏
+p
+P(y−1
+1 ,x2,x3,x−1
+1 ,y2,y3,u).
+On the other hand, by (6.3) and (6.4)
+CI,J;{a1},{b1}(0) = ∏
+p
+Q(p−a2, p−a3, p−b2, p−b3; p−a1, p−b1; p−1,1) = ∏
+p
+Q(x2,x3,y2,y3;x1,y1;u,1).
+Therefore we see that (A.28) is true if P(y−1
+1 ,x2,x3,x−1
+1 ,y2,y3,u) = Q(x2,x3,y2,y3;x1,y1;u,1) is true. From
+the deﬁnitions (2.18) and (6.5) this identity is equivalent to an identity of the form P1(X1, . . . ,X7) =
+Q1(X1, . . . ,X7) in which P1 and Q1 are certain polynomials (the degrees and coefﬁcients are computable).
+Its veriﬁcation is therefore a matter of routine (but lengthy) algebraic calculations: we ﬁnd, by a Maple
+calculation5, that it is indeed a valid identity.
+(ii) We will derive this from (A.28). An inspection of (2.18) and (6.5) reveals that one has both
+P(X1,X2,X3,Y1,Y2,Y3; Λ2U) = P(ΛX1, ΛX2, ΛX3, ΛY1, ΛY2, ΛY3;U)
+and
+Q(X2,X3,Y2,Y3;X1,Y1;U, Λ2V ) = Q(ΛX2, ΛX3, ΛY2, ΛY3; ΛX1, ΛY1;U,V ),
+whenever Λ⁄= 0. We shall take Λ = pη where p is an arbitrary prime and η some complex number (to be
+speciﬁed where needed), one deduces via (2.17) and (6.4) that
+Ap;I,J(−2η) = Ap;I+{−η},J+{−η}(0), (A.29)
+CI,J;{a1},{b1}(p;− a1+b1
+2 ) = CI′,J′;{a1−η},{b1−η}(p;0 ) (A.30)
+(where for setsU,V , U +V ={u +v : u∈ U,v∈ V}). To deduce part (ii) of the Proposition, we setη = a1+b1
+2
+in (A.29) and (A.30). This gives us
+Ap;I,J(−a1− b1) = Ap;I′,J′(0) and CI,J;{a1},{b1}(p;−η) = CI+{−η},J+{−η};{a1−η},{b1−η}(p;0 )
+where I′ = I +{−η}, J′ = J +{−η}, a′
+1 = a1− η = a1−b1
+2 , b′
+1 = b1− η = b1−a1
+2 . By these identities, along
+with (2.16) and (6.3), part (ii) requires that we establish Ap;I′,J′(0) = CI′,J′;{a′
+1},{b′
+1}(p;0 ). Since a′
+1 =−b′
+1, it
+follows that (I′
+{a′
+1}, J′
+{b′
+1}) = (I′, J′) and thus we must show Ap;I′
+{a′
+1},J′
+{b′
+1}
+(0) = CI′,J′;{a′
+1},{b′
+1}(p;0 ). However,
+this is precisely (A.28).
+(iii) For part (iii) we now set η = a2+b2
+2 . We then have by (A.30) and (A.28)
+CI,J;{a1},{b1}(p;−η) = CI′′,J′′;{a′′
+1},{b′′
+1}(p;0 ) = Ap;I′′
+{a′′
+1},J′′
+{b′′
+1}
+(0),
+5Maple ﬁle available upon request.
+50
+===== PAGE 51 =====
+where I′′ = I +{−η}, J′′ = J +{−η}, a′′
+1 = a1− η, and b′′
+1 = b1− η;
+C−J,−I;{−b3},{−a3}(p; η) = CI∗,J∗;{a∗
+3},{b∗
+3}(p;0 ) = Ap;I∗
+{a∗
+3},J∗
+{b∗
+3}
+(0),
+where I∗ = (−J) +{η}, J∗ = (−J) +{η}, a∗
+3 =−b3 + η and b∗
+3 =−a3 + η. By the last two identities, and
+(6.3), we see that part (iii) follows if (I′′
+{a′′
+1}, J′′
+{b′′
+1}) = (I∗
+{a∗
+3}, J∗
+{b∗
+3}). However, observe that
+(I′′
+{a′′
+1}, J′′
+{b′′
+1}) =
+(
+{−(b1− η),a2− η,a3− η},{−(a1− η),b2− η,b3− η}
+)
+,
+(I∗
+{a∗
+3}, J∗
+{b∗
+3}) =
+(
+{−b1 + η,−b2 + η,−(−a3 + η)},{−a1 + η,−a2 + η,−(−b3 + η)}
+)
+.
+Since η = a2+b2
+2 we have both a2− η =−b2 + η and b2− η =−a2 + η and thus these two expressions are
+equal and the proof is complete.
+(iv) This follows from part (iii) by a permutation of variables.
+Proof of Lemma 6.3. (i) By Proposition 6.1, we have for ℜ(s) = 2δ
+HI,J;{a1},{b1}(s)≪| ζ (a1 + b1 + 4δ + 2iu)| ∏
+k1⁄=1
+k2⁄=1
+|ζ (1 + ak1 + bk2 + 4δ + 2iu)|
+≪| ζ (a1 + b1 + 4δ + 2iu)|ζ 4(1 + 2δ )
+for all real u. However, it follows from [29, Theorem 1.9] that for s = x + iy with 0≤ x≤ 0.99 and y∈ R
+|ζ (x + iy)|≪ (1 +|y|)
+1−x
+2 log(2 +|y|).
+Since 2δ≤ ℜ(a1 +b1) +4δ≤ 6δ≤ 0.99 for δ∈ (0, 1
+7 ) and 2u−2δ≤ 2u + ℑ(a1 +b1)≤ 2u +2δ , it follows
+that
+HI,J;{a1},{b1}(s)≪ δ−4|s|
+1−2δ
+2 log(1 +|s|)≪| s|
+1
+2 .
+(ii) Since ℜ(s)≥ 1
+2− 2δ, it follows that ℜ(1 + ak1 + bk2 + 2s)≥ 2− 6δ≥ 1.1 as δ∈ (0, 1
+7 ) and thus
+∏k1⁄=1
+k2⁄=1
+ζ (1 + ak1 + bk2 + 2s)≪ 1. In addition, we have ℑ(s)≍ T and thus by (2.21)
+|ζ (a1 + b1 + 2s)|≪ T
+1−(1−6δ )
+2 logT≪ T 4δ .
+Finally CI,J;{a1},{b1}(s)≪ 1 in this region, and thus we establish the result.
+B Proofs of technical lemmas
+In this section we present the proofs of Parts (ii) and (iii) of Lemma 2.2, and the proof of Lemma 5.3. The
+ﬁrst of these proofs makes extensive use of Stirling’s formula.
+51
+===== PAGE 52 =====
+B.1 Proof of Lemma 2.2(ii)
+Proof. Throughout this proof we assume that |ai|,|bi|≤ δ for i = 1,2,3 with δ∈ (0, 1
+6 ). This argument
+follows closely [ 24, pp.390-391]. Let logz denote the principal branch of the logarithm, so that −π <
+ℑ(logz) < π for z∈ C\(−∞,0]. For each ﬁxed η > 0 we have
+log Γ(z) = (z− 1
+2 )logz− z + 1
+2 log(2π) +O(|z|−1) (B.1)
+in the sector|argz|≤ π− η. Throughout this argument we shall assume that
+α = 1
+2
+(1
+2 + a + it
+)
+, β = s
+2 , and|a|≤ δ .
+We begin by supposing that|ℑ(s)|≤ t
+1
+2 . Note that (B.1) implies
+log Γ(α + β )− log Γ(α) = β log(α) + (α + β− 1
+2 )log(1 + β /α)− β + O(t−1).
+Also
+(α + β− 1
+2 )log(1 + β /α)− β = (α + β− 1
+2 )
+( β
+α + O
+((|β|
+|α|
+)2))
+− β =− β
+2α + O
+(|β|2
+|α|
+)
+and thus log Γ(α + β )− log Γ(α) = β log(α) +O(|s|2+1
+t ). It follows that
+log Γ
+(1
+2
+(1
+2 + a + it + s
+))
+− log Γ
+(1
+2
+(1
+2 + a + it
+))
+= s
+2 log( it
+2 ) +O
+(|s|2 + 1
+t
+)
+. (B.2)
+Conjugating the above equation and replacing a by a, and s by s, yields
+log Γ
+(1
+2
+(1
+2 + a− it + s
+))
+− log Γ
+(1
+2
+(1
+2 + a− it
+))
+= s
+2 log(− it
+2 ) +O
+(|s|2 + 1
+t
+)
+. (B.3)
+Taking a = a j in (B.2) and a = b j in (B.3) we ﬁnd
+log Γ
+(1
+2
+(1
+2 + a j + it + s
+))
+− log Γ
+(1
+2
+(1
+2 + a j + it
+))
++ log Γ
+(1
+2
+(1
+2 + b j− it + s
+))
+− log Γ
+(1
+2
+(1
+2 + b j− it
+))
+= slog
+( t
+2
+)
++ O
+(|s|2 + 1
+t
+)
+.
+(B.4)
+Exponentiating and taking the product over j = 1,2,3 yields
+gI,J(s,t) =
+3
+∏
+j=1
+( t
+2
+)s(
+1 + O
+(|s|2 + 1
+t
+))
+=
+( t
+2
+)3s(
+1 + O
+(|s|2 + 1
+t
+))
+,
+since 0≤ ℜ(s)≤ A and|ℑ(s)|≤ t
+1
+2 .
+Next we deal with the case|ℑ(s)| > t
+1
+2 . In this range, note that the O term becomes larger than 1. Thus it
+sufﬁces to establish that, for s = σ + iy, 0≤ σ≤ A, and|y| > t
+1
+2 one has
+gI,J(s,t)≪A y2t3σ−1+3δ . (B.5)
+52
+===== PAGE 53 =====
+We shall use repeatedly the Stirling estimate: for 0≤ x≪ 1 and|y|≥ 1,
+|Γ(x + iy)| = (2π)
+1
+2|y|x− 1
+2 e− π|y|
+2 (1 + O(|y|−1)). (B.6)
+Thus if|y +t|≥ 1, then, when a∈{ a1,a2,a3},
+⏐⏐⏐⏐⏐
+Γ( 1
+2 ( 1
+2 + a + it + s))
+Γ( 1
+2 ( 1
+2 + a + it))
+⏐⏐⏐⏐⏐≍|t+a′′+y
+2 |
+a′+σ
+2 − 1
+4 e− π
+4|t+y+a′′|
+|t+a′′
+2 |− 1
+4 e− π(t+a′′)
+4
+≍|t + a′′ + y|
+a′+σ
+2 − 1
+4 e− π
+4|t+y+a′′|
+t− 1
+4 e− πt
+4
+where a = a′ + ia′′. Similarly, if|y−t|≥ 1 and b∈{ b1,b2,b3}, then
+⏐⏐⏐⏐⏐
+Γ( 1
+2 ( 1
+2 + b− it + s))
+Γ( 1
+2 ( 1
+2 + b− it))
+⏐⏐⏐⏐⏐≍|b′′ + y−t|
+b′+σ
+2 − 1
+4 e− π
+4|b′′+y−t|
+|t|− 1
+4 e− πt
+4
+.
+Thus if|y−t|≥ 1 and|y +t|≥ 1, these combine to give
+⏐⏐⏐⏐⏐
+Γ( 1
+2 ( 1
+2 + a + it + s))Γ( 1
+2 ( 1
+2 + b− it + s))
+Γ( 1
+2 ( 1
+2 + a + it))Γ( 1
+2 ( 1
+2 + b− it))
+⏐⏐⏐⏐⏐≪|t + a′′ + y|
+a′+σ
+2 − 1
+4|b′′ + y−t|
+b′+σ
+2 − 1
+4 e− π
+4 (|t+y+a′′|+|b′′+y−t|)
+(|t|− 1
+4 e− πt
+4 )2
+≪|t + y|
+a′+σ
+2 − 1
+4|y−t|
+b′+σ
+2 − 1
+4 e− π
+4 (|t+y|+|y−t|)
+|t|− 1
+2 e− πt
+2
+.
+In the case that|y−t|≥ 1 and|y +t|≥ 1, we apply this with a = a j = a′
+j + ia′′
+j and b = b j = b′
+j + ib′′
+j to ﬁnd
+that
+|gI,J(s,t)|≪
+3
+∏
+j=1
+|y +t|
+a′
+j +σ
+2 − 1
+4|y−t|
+b′
+j +σ
+2 − 1
+4 e− π
+4 (|t+y|+|y−t|)
+t− 1
+2 e− πt
+2
+≪
+3
+∏
+j=1
+|y +t|
+σ
+2− 1
+4 + δ
+2|y−t|
+σ
+2− 1
+4 + δ
+2 e− π
+4 (|t+y|+|y−t|)
+t− 1
+2 e− πt
+2
+,
+(B.7)
+since we are assuming the bound (1.15) for I and J. It follows (given that δ is positive) that if y≥ t + 1 then
+|gI,J(s,t)|≪ (t
+1
+2 (y +t)
+σ
+2− 1
+4 + δ
+2 (y−t)
+σ
+2− 1
+4 + δ
+2 e− π
+2 (y−t))3≪ t
+3
+2 (r +t)
+3σ
+2− 3
+4 + 3δ
+2 r
+3σ
+2− 3
+4 + 3δ
+2 e− 3πr
+2 ,
+where we have used that y + t≍ y, and that 0≤ σ≤ A, and have made the variable change r = y− t.
+By considering separately, the cases 1≤ r≤ t and r > t, we obtain that|gI,J(s,t)|≪ (r + t)2t3σ−1 which
+establishes (B.5) in the case y≥ t + 1. For y∈ [√t,t− 1] and 1
+2≤ σ≤ A, we have by (B.7)
+|gI,J(s,t)|≪
+( (y +t)
+σ
+2− 1
+4 + δ
+2 (t− y)
+σ
+2− 1
+4 + δ
+2 e− πt
+2
+t− 1
+2 e− πt
+2
+)3
+≪
+(tσ− 1
+2 +δ
+t− 1
+2
+)3
+= t3(σ +δ )≪ y2t3σ−1+3δ ,
+since y >√t. For y∈ [√t,t− 1] and σ∈ [0, 1
+2 ), we obtain
+|gI,J(s,t)|≪
+( (y +t)
+σ
+2− 1
+4 + δ
+2 (t− y)
+σ
+2− 1
+4 + δ
+2 e− πt
+2
+t− 1
+2 e− πt
+2
+)3
+≪
+(t
+σ
+2− 1
+4 + δ
+2 (t− y)
+σ
+2− 1
+4 + δ
+2
+t− 1
+2
+)3
+≪ t
+3σ
+2 + 3
+4 + 3δ
+2 (t− y)
+3σ
+2− 3
+4 + 3δ
+2 ≪ y2t3σ−1+3δ . (B.8)
+53
+===== PAGE 54 =====
+In the case that σ∈ [0, 1
+2 ) this can be checked by considering the functionh(y) = y2(t−y)
+3
+4− 3σ
+2 on the interval
+[√t,t− 1]. Elementary calculus shows that the minimum of h on this interval is≫ t
+7
+4− 3σ
+2 and therefore (B.8)
+follows. Now, if y∈ [t− 1,t + 1] then, for|b|≤ δ, one has| Γ( 1
+2 ( 1
+2 +b−it+s))
+Γ( 1
+2 ( 1
+2 +b−it)) |≪ A 1
+|Γ( 1
+2 ( 1
+2 +b−it))|≪ t
+1
+4 + δ
+2 e
+πt
+4 (by
+(B.6)) and thus
+⏐⏐⏐⏐⏐
+Γ( 1
+2 ( 1
+2 + a + it + s))Γ( 1
+2 ( 1
+2 + b− it + s))
+Γ( 1
+2 ( 1
+2 + a + it))Γ( 1
+2 ( 1
+2 + b− it))
+⏐⏐⏐⏐⏐≪|t + a′′ + y|
+σ
+2− 1
+4 + δ
+2 e− π
+2| t+y+a′′
+2 |
+|t|− 1
+4 e− πt
+4
+· (t
+1
+4 + δ
+2 e
+πt
+4 )≪ t
+σ
+2 + 1
+4 +δ
+for|a|,|b|≤ δ. Therefore |gI,J(s,t)|≪ (t
+σ
+2 + 1
+4 +δ )3≪ y2t3σ−1+3δ , since y∈ [t− 1,t + 1] and σ≥ 0. The
+cases for y≤−√t are proven in a similar fashion.
+B.2 Partial derivative bounds. Proof of Lemma 2.2 (iii)
+Proof. For 1≤ j≤ 3, let p j(s,t) = Γ( 1
+2 ( 1
+2 +a j+it+s))Γ( 1
+2 ( 1
+2 +b j−it+s))
+Γ( 1
+2 ( 1
+2 +a j+it))Γ( 1
+2 ( 1
+2 +b j−it)) , θ j(s,t) = d
+dt log p j(s,t), and Θ(s,t) =
+∑3
+j=1 θ j(s,t). Observe that
+d
+dt gI,J(s,t) = gI,J(s,t)Θ(s,t) (B.9)
+and more generally, for i≥ 1,
+di
+dt i gI,J(s,t) = ∑
+u+v=i−1
+(i− 1
+u
+) du
+dt u gI,J(s,t) dv
+dt v Θ(s,t). (B.10)
+We shall now demonstrate that
+dv
+dt v θ j(s,t)≪| s|t−v−1 for j = 1,2,3. (B.11)
+From this it follows directly that one has
+dv
+dt v Θ(s,t)≪| s|t−v−1. (B.12)
+Using these facts, we can prove the Lemma by induction. Observe that Lemma 2.2 (ii),(B.12) with v = 0, and
+(B.9) imply d
+dt gI,J(s,t)≪| s|T 3ε+3δ−1. This, together with Lemma 2.2 (ii), establishes the Lemma in the cases
+i = 0 and i = 1. Now assume the inductive hypothesis that, for somej∈ N one has du
+dt u gI,J(s,t)≪| s|uT 3ε+3δ−u
+for u≤ j− 1. Combining this with (B.12) and (B.10), we obtain the case i = j of the bound in (2.14), and so
+(by induction) we ﬁnd that (2.14) holds for for all i≥ 0, ℜ(s) = ε, and|ℑ(s)|≤
+√
+T . Thus to complete our
+proof of Lemma 2.2 (iii) we must establish (B.11). Note that
+θ j(s,t) = i
+2
+(
+Γ′( 1
+2 ( 1
+2 + a j + it + s))
+Γ( 1
+2 ( 1
+2 + a j + it + s))− Γ′( 1
+2 ( 1
+2 + a j + it))
+Γ( 1
+2 ( 1
+2 + a j + it))− Γ′( 1
+2 ( 1
+2 + b j− it + s))
+Γ( 1
+2 ( 1
+2 + b j− it + s)) + Γ′( 1
+2 ( 1
+2 + b j− it))
+Γ( 1
+2 ( 1
+2 + b j− it))
+)
+.
+54
+===== PAGE 55 =====
+However, we have the asymptotic expansion Γ′
+Γ (z) = logz + O(|z|−1) and thus, when y = ℑ(s),
+θ j(s,t) = i
+2
+(
+− log
+(1
+2
+(1
+2 + a j + it
+))
++ log
+(1
+2
+(1
+2 + a j + it + s
+))
+− log
+(1
+2
+(1
+2 + b j− it + s
+))
++ log
+(1
+2
+(1
+2 + b j− it
+)))
++ O(t−1)
+= i
+2 (log(t + y)− log(t)− log|y−t| + log(t)) +O(t−1)
+= i
+2
+(
+log
+(
+1 + y
+t
+)
+− log
+(
+1− y
+t
+))
++ O(t−1)≪ 1 +|y|
+t ≪|s|
+t
+since|y|≤
+√
+T and ℜ(s) = ε > 0. We now study the derivatives of θ j. We have
+dv
+dt v θ j(s,t) =
+( i
+2
+)v+1(( Γ′
+Γ
+)(v)(1
+2
+(1
+2 + a j + it + s
+))
+−
+( Γ′
+Γ
+)(v)(1
+2
+(1
+2 + a j + it
+)))
++
+(( Γ′
+Γ
+)(v)(1
+2
+(1
+2 + b j− it + s
+))
+−
+( Γ′
+Γ
+)(v)(1
+2
+(1
+2 + b j− it
+)))(−i
+2
+)v+1
+.
+It is known (see [1]) that ( Γ′
+Γ )(v)(z) = (−1)v−1(v−1)!
+zv + O( 1
+|z|v+1 ) for ℜ(z) > 0 and thus
+dv
+dt v θ j(s,t) = (−1)v−1(v− 1)!
+( i
+2
+)v+1
+(
+1
+( 1
+2 ( 1
+2 + a j + it + s))v− 1
+( 1
+2 ( 1
+2 + a j + it))v
++ 1
+( 1
+2 ( 1
+2 + b j− it + s))v− 1
+( 1
+2 ( 1
+2 + b j− it))v
+)
++ O(t−v−1).
+(B.13)
+Note that α j =
+1
+2 +a j+it
+1
+2 +a j+it+s satisﬁes
+|α−1
+j − 1| = |s|
+| 1
+2 + a j + it| < |s|
+t− δ≤
+√
+ε2 + T
+t− δ < c1√
+T < 1
+2 ,
+where c1 > 0 and the last inequality holds when T is sufﬁciently large. This implies that|α−1
+j | > 1
+2 and also
+|1− α j| < 4|s|
+t < 1, for T sufﬁciently large. From these inequalities and the binomial theorem it follows that
+α ν
+j− 1≪ν
+|s|
+t for ν∈ N. Multiplying this last inequality by 2ν ( 1
+2 + a j + it)−ν and using| 1
+2 + a j + it| > t/2,
+we obtain that the ﬁrst two terms in the brackets in (B.13) sum to≪ν
+|s|
+tν+1 . The ﬁnal two terms in the brackets
+may be treated similarly. We may therefore deduce from(B.13) that dv
+dt v θ j(s,t)≪ν
+|s|+1
+tν+1 . Since this shows
+that (B.12) holds (given that we have ℜ(s) = ε > 0), the proof is now complete.
+B.3 Proof of Lemma 5.3
+Next we provide a proof of Lemma 5.3. We aim to establish the following result: Let M≪ T
+3
+2 +ε, N≍ M,
+0⁄= r≪ M
+T0
+T ε, and (x,y)∈ [M,2M]× [N,2N]. Then
+xmyn f (m,n)
+r (x,y)≪ T
+3
+2 εPn where P =
+( T
+T0
+)
+T ε . (B.14)
+55
+===== PAGE 56 =====
+Proof. Recall that fr is deﬁned by (5.18). That is, fr(x,y) = W ( x
+M )W ( y
+N )φ (x,y) where
+φ (x,y) = 1
+2πi
+∫
+(ε)
+G(s)
+s
+( 1
+π3xy
+)s 1
+T
+∫ ∞
+−∞
+(
+1 + r
+y
+)−it
+gI,J(s,t)w(t)dt ds
+when x,y > 0 (and is otherwise equal to 0). In order to prove this lemma it sufﬁces to establish
+xmynφ (m,n)(x,y)≪ T
+3
+2 εPn for x≍ M,y≍ N where, P =
+( T
+T0
+)
+T ε . (B.15)
+Indeed, it follows from (B.15) (via two applications of the generalized product rule) that one has:
+| f (m,n)
+r (x,y)| =
+⏐⏐⏐ ∑
+i1+i2=m
+(m
+i1
+)
+W (i1)
+( x
+M
+)
+M−i1
+∑
+j1+ j2=n
+( n
+j1
+)
+W ( j1)
+( y
+N
+)
+N− j1φ (i2, j2)(x,y)
+⏐⏐⏐
+≤ ∑
+i1+i2=m
+2mOi1(1)
+( x
+2
+)−i1
+∑
+j1+ j2=n
+2nO j1(1)
+( y
+2
+)− j1
+· x−i2y− j2· Oi2, j2(T
+3
+2 εP j2)
+=
+( m
+∑
+i1=0
+n
+∑
+j1=0
+Oi1, j1,m,n(1)· P− j1
+)
+T
+3
+2 εPnx−my−n
+where we have made use ofW (u) being zero when u≥ 2. Since P≥ 1 (as follows by (1.13), for all sufﬁciently
+large T ), this bound for f (m,n)
+r (x,y) implies that in (B.14). We have now reduced the proof of the lemma to
+establishing (B.15). We begin with
+φ (m,n)(x,y) = 1
+2πi
+∫
+(ε)
+G(s)
+s
+( 1
+π3
+)s 1
+T
+∫ ∞
+−∞
+∂ m
+∂xm
+∂ n
+∂yn
+(
+x−sy−s
+(
+1 + r
+y
+)−it)
+gI,J(s,t)ω(t)dt ds. (B.16)
+It sufﬁces to compute the partial derivatives in the last inner integral. Observe that
+dk
+dxk x−s = Pk(s)x−s−k where Pk(s) =
+{
+1 if k = 0,
+∏k−1
+j=0(−s− j) if k∈ N. (B.17)
+It sufﬁces to determine dn
+dyn y−s(1 + r
+y )−it for n≥ 0. It may be shown by a straightforward induction proof that
+dk
+dyk
+(
+1 + r
+y
+)−it
+=
+(
+1 + r
+y
+)−it
+(y + r)−k
+k
+∑
+m=1
+( k
+m
+)
+Pk−m(m)Pm(−it)
+( r
+y
+)m
+.
+For k≥ 1, one gets (when y≍ N≍ M, t≍ T , and 1≤| r|≪ M
+T0
+T ε = o(M) and P = ( T
+T0
+)T ε≥ 1):
+⏐⏐⏐ dk
+dyk
+(
+1 + r
+y
+)−it⏐⏐⏐≤| y(1 + o(1)|−k
+k
+∑
+m=1
+2k((k− 1)!)· Om(T m)· Om
+(( P
+T
+)m)
+≪k y−kPk·
+k
+∑
+m=1
+Om(1)≪k
+(P
+y
+)k
+.
+(B.18)
+In the case k = 0 we have the same estimate, since|u−it| = 1 = (P/y)0 for u > 0. By the generalized product
+rule, (B.17), and (B.18)
+dn
+dyn y−s
+(
+1 + r
+y
+)−it
+= ∑
+j+k=n
+(n
+j
+)
+y−s− jPj(s) dk
+dyk
+(
+1 + r
+y
+)−it
+≪ ∑
+j+k=n
+(n
+j
+)
+N−ε− j|s| j
+(P
+y
+)k
+= N−ε
+(|s|
+N + P
+y
+)n
+≪ N−n−ε (|s| + P)n
+56
+===== PAGE 57 =====
+when ℜ(s) = ε, y≍ N, t≍ T , 1≤| r|≪ M
+T0
+T ε = o(M) and P = ( T
+T0
+)T ε≥ 1, by (1.13). By (B.17) it follows
+that
+∂ m
+∂xm
+∂ n
+∂yn
+(
+x−sy−s
+(
+1 + r
+y
+)−it)
+≪ x−ε−m|s|m· N−n−ε (P +|s|)n≪ M−2εx−my−n|s|m(P +|s|)n
+≪ M−2ε (1 +|s|)m+nPnx−my−n.
+Using this, along with
+⏐⏐⏐ G(s)
+s
+⏐⏐⏐≤|G(s)|
+ε for ℜ(s) = ε, and
+|gI,J(s,t)|≪
+( t
+2
+)3ε
+(1 + O(|s|2 + 1))≪ (1 +|s|)2t3ε for ℜ(s) = ε and t≍ T > 1
+(which follows trivially from Lemma 2.2 (ii)) we may bound (B.16). The three bounds, and (1.12), (1.13),
+combine to give
+xmynφ (m,n)(x,y)≪ε PnM−2ε
+∫
+(ε)
+|G(s)|
+( 1
+T
+∫ ∞
+−∞
+(1 +|s|)m+n+2T 3ε|ω(t)|dt
+)
+|ds|
+≪
+( T 3
+M2
+)ε
+Pn for x≍ M,y≍ N and m,n∈ N∪{ 0}.
+Finally, observe that M≫ T0
+T ε|r|≥ T0
+T ε > T
+3
+4 (by (1.11)). Hence T 3
+M2≪ T 3− 3
+2 = T
+3
+2 and we establish Lemma
+5.3.
+Acknowledgments
+I wish to express my deepest gratitude to the referee for their very careful and meticulous reading of this
+manuscript. Most signiﬁcantly, the referee corrected Proposition 6.1 and provided alternate proofs of Lemma
+5.3 and Proposition 6.2 (ii), (iii). Furthermore, they provided extensive comments, simpliﬁcations, and
+improvements. Thank-you to Alia Hamieh, Quanli Shen, and Peng-Jie Wong for helpful discussions and for
+corrections. Also, thank-you to Olga Balkanova, Brian Conrey, Aleksandar Ivi´c, Jon Keating, and Kannan
+Soundararajan for comments and references.
+References
+[1] M. Abramowitz and I.A. Stegun, Handbook of mathematical functions with formulas, graphs, and
+mathematical tables. National Bureau of Standards Applied Mathematics Series, 55 For sale by the
+Superintendent of Documents, U.S. Government Printing Ofﬁce, Washington, D.C. 1964. 55
+[2] F. Aryan. Binary and quadratic divisor problems. Int. J. Number Theory 13 (2017), no. 6, 1457-1471. 7
+[3] Sandro Bettin, H. M. Bui, Xiannan Li, Maksym M. Radziwiłł. A quadratic divisor problem and moments
+of the Riemann zeta-function. J. Eur. Math. Soc. (JEMS) 22 (2020), no. 12, 3953-3980. 8
+[4] V . Blomer. Shifted convolution sums and subconvexity bounds for automorphicL-functions. Int. Math.
+Res. Not. IMRN 2004, no. 73, 3905-3926. 7
+[5] J. Bourgain and N. Watt. Decoupling for perturbed cones and mean square of|ζ ( 1
+2 + it)|. Int. Math.
+Res. Not. IMRN 2018, no. 17, 5219-5296. 2
+57
+===== PAGE 58 =====
+[6] J. Bredberg. Large gaps between consecutive zeros, on the critical line, of the Riemann zeta function.
+preprint, arxiv.org/abs/1101.3197. 9, 20
+[7] J.B. Conrey, D.W. Farmer, J.P. Keating, M.O. Rubinstein, and N.C. Snaith. Autocorrelation of random
+matrix polynomials. Comm. Math. Phys. 237 (2003), no. 3, 365-395. 9
+[8] J.B. Conrey, D.W. Farmer, J.P. Keating, M.O. Rubinstein, and N.C. Snaith. Integral moments of
+L-functions. Proc. London Math. Soc. (3) 91 (2005), no. 1, 33–104. 1, 3, 4, 5, 8, 9, 15, 20
+[9] J.B. Conrey, D.W. Farmer, J.P. Keating, M.O. Rubinstein, and N.C. Snaith. Lower order terms in the
+full moment conjecture for the Riemann zeta function. J. Number Theory 128 (2008), no. 6, 1516-1554.
+8, 9
+[10] J.B. Conrey and A. Ghosh. A conjecture for the sixth power moment of the Riemann zeta-function.
+Internat. Math. Res. Notices 1998, no. 15, 775-780. 2
+[11] J. B. Conrey and S. M. Gonek. High moments of the Riemann zeta-function. Duke Math. J. 107 (2001),
+577-604. 1, 2, 7, 8
+[12] J.B. Conrey and J. P. Keating. Moments of zeta and correlations of divisor-sums: I. Philos. Trans. Roy.
+Soc. A 373 (2015), no. 2040, 20140313, 11 pp. 4
+[13] J.B. Conrey and J. P. Keating. Moments of zeta and correlations of divisor-sums: II. Advances in the
+theory of numbers, 75–85, Fields Inst. Commun., 77, Fields Inst. Res. Math. Sci., Toronto, ON, 2015. 4
+[14] J.B. Conrey and J. P. Keating. Moments of zeta and correlations of divisor-sums: III. Indag. Math.
+(N.S.) 26 (2015), no. 5, 736-747. 4, 7, 31
+[15] J.B. Conrey and J. P. Keating. Moments of zeta and correlations of divisor-sums: IV . Research in
+Number Theory, Res. Number Theory 2 (2016), Paper No. 24, 24 pp. 4
+[16] A. Diaconu. On the third moment of L( 1
+2 , χd) I: The rational function ﬁeld case. J. Number Theory 198
+(2019), 1-42. 5
+[17] A. Diaconu and I. Whitehead. On the third moment of L( 1
+2 , χd) II: The number ﬁeld case. J. Eur. Math.
+Soc. (JEMS) 23 (2021), no. 6, 2051–2070. 5
+[18] W. Duke, J.B. Friedlander, and H. Iwaniec. A quadratic divisor problem. Invent. Math. 115 (1994), no.
+2, 209–217. 6, 7
+[19] D. A. Goldston and S.M. Gonek. Mean value theorems for long Dirichlet polynomials and tails of
+Dirichlet series. Acta Arith. 84 (1998), no. 2, 155–192. 8
+[20] R.R. Hall. Generalized Wirtinger inequalities, random matrix theory, and the zeros of the Riemann
+zeta-function. J. Number Theory 97 (2002), no. 2, 397-409. 8
+[21] G. Harcos. An additive problem in the Fourier coefﬁcients of cusp forms. Math. Ann. 326 (2003), no. 2,
+347-365. 22
+[22] G.H. Hardy and J.E. Littlewood. Contributions to the theory of the Riemann zeta function and the
+theory of the distribution of primes. Acta. Math. 41 (1918), 119-196. 2
+58
+===== PAGE 59 =====
+[23] A. Harper. Sharp conditional bounds for moments of the Riemann zeta function. preprint,
+arxiv.org/abs/1305.4618. 3
+[24] D. R. Heath-Brown. The fourth power moment of the Riemann zeta function. Proc. London Math. Soc.
+(3) 38 (1979), no. 3, 385–422. 2, 11, 52
+[25] D.R. Heath-Brown. Fractional moments of the Riemann zeta-function. J. London Math. Soc. 24 (1981),
+65-78. 2
+[26] K. Henriot. Nair-Tenenbaum bounds uniform with respect to the discriminant. Math Proceedings of the
+Cambridge Philosophical Society 153 (2012), no. 3, 405-424. 7
+[27] C.P. Hughes and Matthew P. Young. The twisted fourth moment of the Riemann zeta function. J. Reine
+Angew. Math. 641 (2010), 203-236. 3, 8, 11
+[28] A.E. Ingham. Mean-value theorems in the theory of the Riemann zeta function. Proc. Lond. Math. Soc.
+27 (1926), 273-300. 2, 3, 5
+[29] A. Ivi´c. The Riemann zeta-function. Theory and applications. Reprint of the 1985 original [Wiley, New
+York; MR0792089], Dover Publications, Inc., Mineola, NY , 2003. 16, 51
+[30] A. Ivi´c, Lectures on mean values of the Riemann zeta function. Tata Institute of Fundamental Research
+Lectures on Mathematics and Physics, 82. Published for the Tata Institute of Fundamental Research,
+Bombay; by Springer-Verlag, Berlin, 1991. Tata Institute Lectures Notes 82, Springer-Verlag, 1991. 5
+[31] A. Ivi´c. On the ternary additive divisor problem and the sixth moment of the zeta-function. in Sieve
+methods, exponential sums, and their applications in number theory (Cardiff, 1995), 205–243, London
+Math. Soc. Lecture Note Ser., 237, Cambridge Univ. Press, Cambridge, 1997. 1, 8
+[32] A. Ivi´c and Y . Motohashi. On the fourth power moment of the Riemann zeta function. Journal of
+Number Theory 51, 16-45 (1995). 2
+[33] J. P. Keating and N. C. Snaith. Random matrix theory and ζ ( 1
+2 + it). Comm. Math. Phys. 214 (2000)
+57-89. 2
+[34] R. S. Lehman. On the distribution of zeros of the Riemann zeta-function. Proc. Lond. Math. Soc.,
+3(20):303-320, 1970. 10
+[35] K. Matomäki, M. Radziwiłł, and T. Tao. Correlations of the von Mangoldt and higher divisor functions
+I. Long shift ranges. Proc. Lond. Math. Soc. (3) 118 (2019), no. 2, 284-350. 7
+[36] K. Matomäki, M. Radziwiłł, and T. Tao. Correlations of the von Mangoldt and higher divisor functions
+II. Divisor correlations in short ranges. Math. Annalen 374 (1-2), pp. 793-840, 2019. 7
+[37] H.L. Montgomery and R.C. Vaughan. Multiplicative number theory. I. Classical theory. Cambridge
+Studies in Advanced Mathematics, 97. Cambridge University Press, Cambridge, 2007 41
+[38] Y . Motohashi. Spectral theory of the Riemann zeta-function. Cambridge Tracts in Mathematics, 127.
+Cambridge University Press, Cambridge, 1997, 228 pp. 2, 5
+[39] N. Ng and M. Thom. Bounds and conjectures for additive divisor sums. Funct. Approx. Comment.
+Math. 60 (2019), no. 1, 97-142. 7
+59
+===== PAGE 60 =====
+[40] M. Radziwiłł. The 4.36th Moment of the Riemann Zeta-Function. International Mathematics Research
+Notices, 2012, no. 18, pp 4245-4259. 3
+[41] M. Radziwiłł and K. Soundararajan. Continuous lower bounds for moments of zeta and L-functions.
+Mathematika 59 (2013), no. 1, 119-128. 2
+[42] K. Ramachandra. Some remarks on the mean value of the Riemann zeta-function and other Dirichlet
+series, I. Hardy-Ramanujan J. 1 (1978), 1-15. 2
+[43] K. Ramachandra. Some remarks on the mean value of the Riemann zeta-function and other Dirichlet
+series, II. Hardy-Ramanujan J. 3 (1980), 1-25. 2
+[44] K. Ramachandra. Some remarks on the mean value of the Riemann zeta-function and other Dirichlet
+series, III. Ann. Acad. Sci. Fenn. 5 (1980), 145-180. 2
+[45] M. Rubinstein and S. Yamagishi. Computing the moment polynomials of the zeta function. Mathematics
+of Computation 84 (2015), 425-454. 5
+[46] K. Soundararajan. Moments of the Riemann zeta function. Ann. of Math. (2) 170 (2009), no. 2, 981-993.
+3
+[47] T. Tao. Heuristic computation of correlations of higher order divisor functions. blog post,
+https://terrytao.wordpress.com/2016/08/31/heuristic-computation
+-of-correlations-of-higher-order-divisor-functions/. 7
+[48] E.C. Titchmarsh. The theory of the Riemann zeta function, second edition. Oxford University Press,
+New York, 1986. 11
+[49] N.I. Zavorotny˘ı. On the fourth moment of the Riemann zeta function (Russian). Automorphic functions
+and number theory, Part I, II (Russian), 69-124a, 254, Akad. Nauk SSSR, Dal’nevostochn. Otdel.,
+Vladivostok, 1989. 2
+[50] Q. Zhang. On the cubic moment of quadratic Dirichlet L-functions. Math. Res. Lett. 12 (2005), no. 2-3,
+413-424. 5
+AUTHOR
+Nathan Ng
+University of Lethbridge
+Lethbridge, Canada
+nathan.ng
+ uleth
+ ca
+https://www.cs.uleth.ca/~nathanng/
+60

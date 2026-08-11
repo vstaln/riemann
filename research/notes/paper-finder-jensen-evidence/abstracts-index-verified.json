@@ -1,0 +1,502 @@
+{
+ "1902.07321": {
+  "arxiv_id": "1902.07321v2",
+  "title": "Jensen polynomials for the Riemann zeta function and other sequences",
+  "authors": [
+   "Michael Griffin",
+   "Ken Ono",
+   "Larry Rolen",
+   "Don Zagier"
+  ],
+  "year": "2019",
+  "published": "2019-02-19",
+  "categories": [
+   "math.NT"
+  ],
+  "summary": "In 1927 P\u00f3lya proved that the Riemann Hypothesis is equivalent to the hyperbolicity of Jensen polynomials for the Riemann zeta function $\u03b6(s)$ at its point of symmetry. This hyperbolicity has been proved for degrees $d\\leq 3$. We obtain an asymptotic formula for the central derivatives $\u03b6^{(2n)}(1/2)$ that is accurate to all orders, which allows us to prove the hyperbolicity of a density $1$ subset of the Jensen polynomials of each degree. Moreover, we establish hyperbolicity for all $d\\leq 8$. These results follow from a general theorem which models such polynomials by Hermite polynomials. In the case of the Riemann zeta function, this proves the GUE random matrix model prediction in derivative aspect. The general theorem also allows us to prove a conjecture of Chen, Jia, and Wang on the partition function."
+ },
+ "2105.05386": {
+  "arxiv_id": "2105.05386v1",
+  "title": "A note on the zeros of Jensen polynomials",
+  "authors": [
+   "Young-One Kim",
+   "Jungseob Lee"
+  ],
+  "year": "2021",
+  "published": "2021-05-12",
+  "categories": [
+   "math.CV"
+  ],
+  "summary": "A recent result of Griffin, Ono, Rolen and Zagier on Jensen polynomials related with the Riemann zeta function is improved."
+ },
+ "1910.01227": {
+  "arxiv_id": "1910.01227v3",
+  "title": "Jensen Polynomials for the Riemann Xi Function",
+  "authors": [
+   "Michael Griffin",
+   "Ken Ono",
+   "Larry Rolen",
+   "Jesse Thorner",
+   "Zachary Tripp",
+   "Ian Wagner"
+  ],
+  "year": "2019",
+  "published": "2019-10-02",
+  "categories": [
+   "math.NT"
+  ],
+  "summary": "We investigate Riemann's xi function $\u03be(s):=\\frac{1}{2}s(s-1)\u03c0^{-\\frac{s}{2}}\u0393(\\frac{s}{2})\u03b6(s)$ (here $\u03b6(s)$ is the Riemann zeta function). The Riemann Hypothesis (RH) asserts that if $\u03be(s)=0$, then $\\mathrm{Re}(s)=\\frac{1}{2}$. P\u00f3lya proved that RH is equivalent to the hyperbolicity of the Jensen polynomials $J^{d,n}(X)$ constructed from certain Taylor coefficients of $\u03be(s)$. For each $d\\geq 1$, recent work proves that $J^{d,n}(X)$ is hyperbolic for sufficiently large $n$. Here we make this result effective. Moreover, we show how the low-lying zeros of the derivatives $\u03be^{(n)}(s)$ influence the hyperbolicity of $J^{d,n}(X)$."
+ },
+ "2008.07206": {
+  "arxiv_id": "2008.07206v2",
+  "title": "Jensen polynomials are not a plausible route to proving the Riemann Hypothesis",
+  "authors": [
+   "David W. Farmer"
+  ],
+  "year": "2020",
+  "published": "2020-08-17",
+  "categories": [
+   "math.NT"
+  ],
+  "summary": "Recent work on the Jensen polynomials of the Riemann xi-function and its derivatives found a connection to the Hermite polynomials. Those results have been suggested to give evidence for the Riemann Hypothesis, and furthermore it has been suggested that those results shed light on the random matrix statistics for zeros of the zeta-function. We place that work in the context of prior results, and explain why the appearance of Hermite polynomials is interesting and surprising, and may represent a new type of universal law which refines M. Berry's \"cosine is a universal attractor\" principle. However, we find there is no justification for the suggested connection to the Riemann Hypothesis, nor for the suggested connection to the conjectured random matrix statistics for zeros of L-functions. These considerations suggest that Jensen polynomials, as well as a large class of related polynomials, are not useful for attacking the Riemann Hypothesis. We propose general criteria for determining whether an equivalence to the Riemann Hypothesis is likely to be useful."
+ },
+ "2007.13582": {
+  "arxiv_id": "2007.13582v2",
+  "title": "Zeros of Jensen polynomials and asymptotics for the Riemann xi function",
+  "authors": [
+   "Cormac O'Sullivan"
+  ],
+  "year": "2020",
+  "published": "2020-07-27",
+  "categories": [
+   "math.NT"
+  ],
+  "summary": "The classical criterion of Jensen for the Riemann hypothesis is that all of the associated Jensen polynomials have only real zeros. We find a new version of this criterion, using linear combinations of Hermite polynomials, and show that this condition holds in many cases. Detailed asymptotic expansions are given for the required Taylor coefficients of the xi function at $1/2$ as well as related quantities. These results build on those in the recent paper of Griffin, Ono, Rolen and Zagier."
+ },
+ "1905.11269": {
+  "arxiv_id": "1905.11269v1",
+  "title": "The Jensen-P\u00f3lya program for various L-functions",
+  "authors": [
+   "Ian Wagner"
+  ],
+  "year": "2019",
+  "published": "2019-05-27",
+  "categories": [
+   "math.NT"
+  ],
+  "summary": "P\u00f3lya proved in 1927 that the Riemann hypothesis is equivalent to the hyperbolicity of all of the Jensen polynomials of degree $d$ and shift $n$ for the Riemann Xi-function. Recently, Griffin, Ono, Rolen, and Zagier proved that for each degree $d \\geq 1$ all of the Jensen polynomials for the Riemann Xi-function are hyperbolic except for possibly finitely many $n$. Here we extend their work by showing the same statement is true for suitable $L$-functions. This offers evidence for the generalized Riemann hypothesis."
+ },
+ "2608.08682": {
+  "arxiv_id": "2608.08682v1",
+  "title": "A new hyperbolicity wedge and a joint semicircle limit for Jensen polynomials of Riemann's $\u03be$-function",
+  "authors": [
+   "Jonathan Holland"
+  ],
+  "year": "2026",
+  "published": "2026-08-09",
+  "categories": [
+   "math.NT"
+  ],
+  "summary": "Let \\[ \u03be\\!\\left(\\frac12+z\\right) =\\sum_{n\\geq 0}\\frac{\u03b3(n)}{n!}z^{2n}, \\qquad J^{d,n}(X) =\\sum_{j=0}^{d}\\binom dj\u03b3(n+j)X^j . \\] The Riemann hypothesis is equivalent to the hyperbolicity of $J^{d,n}$ for every $d,n\\geq0$. We prove that there is an absolute constant $K>0$ such that \\[ n^3\\log^2(n+2)\\geq Kd^5 \\quad\\Longrightarrow\\quad J^{d,n}\\ \\text{is hyperbolic}. \\] Along every sequence with $n,d\\to\\infty$ in this region, the empirical measure of the naturally centered and scaled zeros also converges to Wigner's semicircle law. This gives a simultaneous degree--derivative version of the global semicircle consequence of the fixed-degree Hermite limit of Griffin, Ono, Rolen, and Zagier."
+ },
+ "2511.02628": {
+  "arxiv_id": "2511.02628v2",
+  "title": "Hermite-Jensen limits and $d$ log-concavity of $q$-multinomials",
+  "authors": [
+   "Ken Ono"
+  ],
+  "year": "2025",
+  "published": "2025-11-04",
+  "categories": [
+   "math.NT",
+   "math.CO"
+  ],
+  "summary": "In 1878, Sylvester proved Cayley's Conjecture that the coefficients of the Gaussian $q$-binomial coefficients are unimodal. In 1990, O'Hara famously discovered a constructive combinatorial proof, and in 2013, Pak and Panova proved the stronger property of strict unimodality for sufficiently large parameters. We move from unimodality to log-concavity and higher degree $ d$ log-concavity, known as Tur\u00e1n inequalities. Although $q$-binomial coefficients are not always log- or degree $d$ log-concave, it's natural to ask to what extent these inequalities hold. In infinite families with limiting aspect ratio bounded away from zero and one, we prove that these stronger inequalities hold uniformly, for each $C>0,$ on the central window $|m-\u03bc|< C\u03c3,$ where $\u03bc$ and $\u03c3$ are the mean and standard deviation of the normalized distribution. More generally, we obtain the same conclusions for $q$-multinomial coefficients. These results stem from the asymptotic behavior of normalized Jensen polynomials, which are approximated by Hermite polynomials."
+ },
+ "2410.06403": {
+  "arxiv_id": "2410.06403v2",
+  "title": "Universality for roots of derivatives of entire functions via finite free probability",
+  "authors": [
+   "Andrew Campbell",
+   "Sean O'Rourke",
+   "David Renfrew"
+  ],
+  "year": "2024",
+  "published": "2024-10-08",
+  "categories": [
+   "math.PR",
+   "math.CO",
+   "math.CV"
+  ],
+  "summary": "A universality conjecture of Farmer and Rhoades [Trans. Amer. Math. Soc., 357(9):3789--3811, 2005] and Farmer [Adv. Math., 411:Paper No. 108781, 14, 2022] asserts that, under some natural conditions, the roots of an entire function should become perfectly spaced in the limit of repeated differentiation. This conjecture is known as Cosine Universality. We establish this conjecture for a class of even entire functions with only real roots which are real on the real line. Along the way, we establish a number of additional universality results for Jensen polynomials of entire functions, including the Hermite Universality conjecture of Farmer [Adv. Math., 411:Paper No. 108781, 14, 2022]. Our proofs are based on finite free probability theory. We establish finite free probability analogs of the law of large numbers, central limit theorem, and Poisson limit theorem for sequences of deterministic polynomials under repeated differentiation, under optimal moment conditions, which are of independent interest."
+ },
+ "1002.1616": {
+  "arxiv_id": "1002.1616v1",
+  "title": "Landau-Siegel zeros and zeros of the derivative of the Riemann zeta function",
+  "authors": [
+   "David W. Farmer",
+   "Haseo Ki"
+  ],
+  "year": "2010",
+  "published": "2010-02-08",
+  "categories": [
+   "math.NT"
+  ],
+  "summary": "We show that if the derivative of the Riemann zeta function has sufficiently many zeros close to the critical line, then the zeta function has many closely spaced zeros. This gives a condition on the zeros of the derivative of the zeta function which implies a lower bound of the class numbers of imaginary quadratic fields."
+ },
+ "1308.5116": {
+  "arxiv_id": "1308.5116v1",
+  "title": "On the distribution of the zeros of the derivative of the Riemann zeta-function",
+  "authors": [
+   "S. J. Lester"
+  ],
+  "year": "2013",
+  "published": "2013-08-23",
+  "categories": [
+   "math.NT"
+  ],
+  "summary": "We establish an unconditional asymptotic formula describing the horizontal distribution of the zeros of the derivative of the Riemann zeta-function. For $\\Re(s)=\u03c3$ satisfying $(\\log T)^{-1/3+\u03b5} \\leq (2\u03c3-1) \\leq (\\log \\log T)^{-2}$, we show that the number of zeros of $\u03b6'(s)$ with imaginary part between zero and $T$ and real part larger than $\u03c3$ is asymptotic to $T/(2\u03c0(\u03c3-1/2))$ as $T \\rightarrow \\infty$. This agrees with a prediction from random matrix theory due to Mezzadri. Hence, for $\u03c3$ in this range the zeros of $\u03b6'(s)$ are horizontally distributed like the zeros of the derivative of characteristic polynomials of random unitary matrices are radially distributed."
+ },
+ "1002.0372": {
+  "arxiv_id": "1002.0372v1",
+  "title": "Roots of the derivative of the Riemann zeta function and of characteristic polynomials",
+  "authors": [
+   "Eduardo Due\u00f1ez",
+   "David W. Farmer",
+   "Sara Froehlich",
+   "Chris Hughes",
+   "Francesco Mezzadri",
+   "Toan Phan"
+  ],
+  "year": "2010",
+  "published": "2010-02-02",
+  "categories": [
+   "math.NT",
+   "math-ph"
+  ],
+  "summary": "We investigate the horizontal distribution of zeros of the derivative of the Riemann zeta function and compare this to the radial distribution of zeros of the derivative of the characteristic polynomial of a random unitary matrix. Both cases show a surprising bimodal distribution which has yet to be explained. We show by example that the bimodality is a general phenomenon. For the unitary matrix case we prove a conjecture of Mezzadri concerning the leading order behavior, and we show that the same follows from the random matrix conjectures for the zeros of the zeta function."
+ },
+ "math/0701726": {
+  "arxiv_id": "math/0701726v1",
+  "title": "The zeros of the derivative of the Riemann zeta function near the critical line",
+  "authors": [
+   "Haseo Ki"
+  ],
+  "year": "2007",
+  "published": "2007-01-25",
+  "categories": [
+   "math.NT"
+  ],
+  "summary": "We study the horizontal distribution of zeros of $\u03b6'(s)$ which are denoted as $\u03c1'=\u03b2'+i\u03b3'$. We assume the Riemann hypothesis which implies $\u03b2'\\geqslant1/2$ for any non-real zero $\u03c1'$, equality being possible only at a multiple zero of $\u03b6(s)$. In this paper we prove that $\\liminf(\u03b2'-1/2)\\log\u03b3'\\not=0$ if and only if for any $c>0$ and $s=\u03c3+it$ with $|\u03c3-1/2|<c/\\log t$ $(t\\geqslant10)$ $$ \\frac{\u03b6'}\u03b6(s)=\\frac{1}{s-\u03c1}+O(\\log t), $$ where $\u03c1=1/2+i\u03b3$ is the closest zero of $\u03b6(s)$ to $s$ and the origin. We also show that if $\\liminf(\u03b2'-1/2)\\log\u03b3'\\not=0$, then for any $c>0$ and $s=\u03c3+it$ ($t\\geqslant10$), we have $$ \\log\u03b6(s)=O(\\frac{(\\log t)^{2-2\u03c3}}{\\log\\log t}) $$ uniformly for $1/2+c/\\log t\\leqslant\u03c3\\leqslant\u03c3_1<1$."
+ },
+ "1902.06330": {
+  "arxiv_id": "1902.06330v3",
+  "title": "Orthogonal polynomial expansions for the Riemann xi function",
+  "authors": [
+   "Dan Romik"
+  ],
+  "year": "2019",
+  "published": "2019-02-17",
+  "categories": [
+   "math.NT"
+  ],
+  "summary": "We study infinite series expansions for the Riemann xi function $\u039e(t)$ in three specific families of orthogonal polynomials: (1) the Hermite polynomials; (2) the symmetric Meixner-Pollaczek polynomials $P_n^{(3/4)}(x;\u03c0/2)$; and (3) the continuous Hahn polynomials $p_n\\left(x; \\frac34,\\frac34,\\frac34,\\frac34\\right)$. The first expansion was discussed in earlier work by Tur\u00e1n, and the other two expansions are new. For each of the three expansions, we derive formulas for the coefficients, show that they appear with alternating signs, derive formulas for their asymptotic behavior, and derive additional interesting properties and relationships. We also apply some of the same techniques to prove a new asymptotic formula for the Taylor coefficients of the Riemann xi function. Our results continue and expand the program of research initiated in the 1950s by Tur\u00e1n, who proposed using the Hermite expansion of the Riemann xi function as a tool to gain insight into the location of the Riemann zeta zeros. We also uncover a connection between Tur\u00e1n's ideas and the separate program of research involving the so-called De Bruijn-Newman constant. Most significantly, the phenomena associated with the new expansions in the Meixner-Pollaczek and continuous Hahn polynomial families suggest that those expansions may be even more natural tools than the Hermite expansion for approaching the Riemann hypothesis and related questions."
+ },
+ "2108.01827": {
+  "arxiv_id": "2108.01827v2",
+  "title": "On a new class of Laguerre-P\u00f3lya type functions with applications in number theory",
+  "authors": [
+   "Ian Wagner"
+  ],
+  "year": "2021",
+  "published": "2021-08-04",
+  "categories": [
+   "math.NT"
+  ],
+  "summary": "We define a new class of functions, connected to the classical Laguerre-P\u00f3lya class, which we call the shifted Laguerre-P\u00f3lya class. Recent work of Griffin, Ono, Rolen, and Zagier shows that the Riemann Xi function is in this class. We prove that a function being in this class is equivalent to the Taylor coefficients, once shifted, being a degree $d$ multiplier sequence for every $d$, which is equivalent to shifted coefficients satisfying all of the higher T\u00faran inequalities. This mirrors a classical result of P\u00f3lya and Schur. We further show some order derivative of a function in this class satisfies each extended Laguerre inequality. Finally, we discuss some old and new conjectures about iterated inequalities for functions in this class."
+ },
+ "2602.04022": {
+  "arxiv_id": "2602.04022v1",
+  "title": "The Riemann Hypothesis: Past, Present and a Letter Through Time",
+  "authors": [
+   "Alain Connes"
+  ],
+  "year": "2026",
+  "published": "2026-02-03",
+  "categories": [
+   "math.NT",
+   "math.AG",
+   "math.QA"
+  ],
+  "summary": "This paper, commissioned as a survey of the Riemann Hypothesis, provides a comprehensive overview of 165 years of mathematical approaches to this fundamental problem, while introducing a new perspective that emerged during its preparation. The paper begins with a detailed description of what we know about the Riemann zeta function and its zeros, followed by an extensive survey of mathematical theories developed in pursuit of RH -- from classical analytic approaches to modern geometric and physical methods. We also discuss several equivalent formulations of the hypothesis. Within this survey framework, we present an original contribution in the form of a \"Letter to Riemann,\" using only mathematics available in his time. This letter reveals a method inspired by Riemann's own approach to the conformal mapping theorem: by extremizing a quadratic form (restriction of Weil's quadratic form in modern language), we obtain remarkable approximations to the zeros of zeta. Using only primes less than 13, this optimization procedure yields approximations to the first 50 zeros with accuracies ranging from $2.6 \\times 10^{-55}$ to $10^{-3}$. Moreover we prove a general result that these approximating values lie exactly on the critical line. Following the letter, we explain the underlying mathematics in modern terms, including the description of a deep connection of the Weil quadratic form with the world of information theory. The final sections develop a geometric perspective using trace formulas, outlining a potential proof strategy based on establishing convergence of zeros from finite to infinite Euler products. While completing the commissioned survey, these new results suggest a promising direction for future research on Riemann's conjecture."
+ },
+ "2607.24830": {
+  "arxiv_id": "2607.24830v2",
+  "title": "A Numerical Realization of Suzuki's Weil-Quadratic-Form Operator: The Archimedean Spectral Law, its Universality, and an Operator Form of Weil's Positivity Criterion",
+  "authors": [
+   "Taebong Kim",
+   "Youngsik Hong",
+   "Minsik Kim",
+   "Sunyoung Choi",
+   "Jaewon Jang",
+   "Minseo Kim"
+  ],
+  "year": "2026",
+  "published": "2026-07-23",
+  "categories": [
+   "math.GM"
+  ],
+  "summary": "This paper presents the first numerical realization of Suzuki's Weil-Quadratic-Form operator, a candidate for the Hilbert--P\u00f3lya program linking spectral positivity to the Riemann Hypothesis (RH). Suzuki's 2026 construction was purely theoretical; here, the operator is instantiated via P1 finite-element discretization and Richardson extrapolation. Key results include: (R1) In the prime-free regime, the spectrum follows a closed Archimedean law $A_k(a) = \\log(1/a) + \\log(k-2) + B_0 + O(a)$, with $B_0 = \\log q - 2\\log 2$, confirmed to 30-digit precision. (R2) A Mellin double-pole argument proves the head coefficient $B(\u03bd)$ and shows $B_0$ depends only on the conductor $q$, independent of the Archimedean parameter. (R2b) The degree $d$ of an L-function appears directly as the logarithmic slope of the spectrum. (R3) Total spectral intensity follows the prime number theorem, $S(a) \\sim (2a)^3/6$. (R4) Nontrivial zeros are not eigenvalues but occur in the explicit-formula error term of the prime symbol. (R5) The best-match line $\u03c3^*(a)$ descends toward the critical line. (R6) Weil's positivity criterion is realized in operator form: bounded residual growth corresponds to all zeros on the line, while an injected off-line zero causes exponential blow-up. (R7) The lowest eigenvalue $\u03bb_1(a)$ is strictly positive, decays superexponentially, and passes smoothly through the first prime threshold. (R8) The characteristic function $W(a,0;z)$ is computed for the first time, with all zeros confirmed real. (R9) Indirect traces of GUE statistics appear in the moment structure, even where direct detection is blocked. The authors emphasize that this work does not prove RH. All results are Archimedean and universal, with significance lying in the faithful numerical realization of classical identities rather than new arithmetic."
+ },
+ "2301.00421": {
+  "arxiv_id": "2301.00421v3",
+  "title": "On the Hilbert space derived from the Weil distribution",
+  "authors": [
+   "Masatoshi Suzuki"
+  ],
+  "year": "2023",
+  "published": "2023-01-01",
+  "categories": [
+   "math.NT",
+   "math.FA"
+  ],
+  "summary": "We study the Hilbert space obtained by completing the space of all smooth and compactly supported functions on the real line with respect to the hermitian form arising from the Weil distribution under the Riemann hypothesis. It turns out that this Hilbert space is isomorphic to a de Branges space by a composition of the Fourier transform and a simple map.This result is applied to state a new equivalence condition for the Riemann hypothesis in a series of equalities."
+ },
+ "2209.04658": {
+  "arxiv_id": "2209.04658v3",
+  "title": "The screw line of the Riemann zeta-function and its applications",
+  "authors": [
+   "Masatoshi Suzuki"
+  ],
+  "year": "2022",
+  "published": "2022-09-10",
+  "categories": [
+   "math.NT",
+   "math.FA",
+   "math.MG"
+  ],
+  "summary": "We investigate the screw line corresponding to the screw function associated with the Riemann zeta-function under the Riemann hypothesis and derive three necessary and sufficient conditions for the Riemann hypothesis as applications. One of them explains the non-negativity of the Weil distribution by means of the norm."
+ },
+ "2301.05779": {
+  "arxiv_id": "2301.05779v2",
+  "title": "Li coefficients as norms of functions in a model space",
+  "authors": [
+   "Masatoshi Suzuki"
+  ],
+  "year": "2023",
+  "published": "2023-01-13",
+  "categories": [
+   "math.NT"
+  ],
+  "summary": "It is known that the nonnegativity of Li coefficients is a necessary and sufficient condition for the Riemann hypothesis. We show that it is a necessary and sufficient condition for the Riemann hypothesis that all Li coefficients are norms of certain concrete functions on the real line. Such conditional formulas for Li coefficients are understood as a kind of Weil's criterion for the Riemann hypothesis."
+ },
+ "2206.03682": {
+  "arxiv_id": "2206.03682v4",
+  "title": "Aspects of the screw function corresponding to the Riemann zeta function",
+  "authors": [
+   "Masatoshi Suzuki"
+  ],
+  "year": "2022",
+  "published": "2022-06-08",
+  "categories": [
+   "math.NT",
+   "math.CV",
+   "math.FA"
+  ],
+  "summary": "We introduce a screw function corresponding to the Riemann zeta-function and study its properties from various aspects. Typical results are several equivalent conditions for the Riemann hypothesis in terms of the screw function. One of them can be considered an analog of so-called Weil's positivity or Li's criterion. In addition, we prove a few partial but unconditional results for such equivalents."
+ },
+ "2308.11860": {
+  "arxiv_id": "2308.11860v2",
+  "title": "Analytic theories around the simplest screw",
+  "authors": [
+   "Masatoshi Suzuki"
+  ],
+  "year": "2023",
+  "published": "2023-08-23",
+  "categories": [
+   "math.CV",
+   "math.CA",
+   "math.FA",
+   "math.NT"
+  ],
+  "summary": "We present several analytic theories related to screw functions and describe the connections among them, taking the screw function of the simplest screw line as a guiding example.Note that this article does not contain any new results. Nevertheless, subsequent developments have suggested that the analytic structures associated with the simplest screw provide a useful prototype for a broader theory connected with zeta-functions, Weil's quadratic forms, and related Hilbert-space structures arising in analytic number theory."
+ },
+ "1309.0055": {
+  "arxiv_id": "1309.0055v2",
+  "title": "Fourier transforms of positive definite kernels and the Riemann $\u03be$-Function",
+  "authors": [
+   "George Csordas"
+  ],
+  "year": "2013",
+  "published": "2013-08-31",
+  "summary": "The purpose of this paper is to investigate the distribution of zeros of entire functions which can be represented as the Fourier transforms of certain admissible kernels. The principal results bring to light the intimate connection between the Bochner-Khinchin-Mathias theory of positive definite kernels and the generalized real Laguerre inequalities. The concavity and convexity properties of the Jacobi theta function play a prominent role throughout this work. The paper concludes with several questions and open problems."
+ },
+ "2209.12832": {
+  "arxiv_id": "2209.12832v2",
+  "title": "Screw functions of Dirichlet series in the extended Selberg class",
+  "authors": [
+   "Masatoshi Suzuki"
+  ],
+  "year": "2022",
+  "published": "2022-09-14",
+  "summary": "We introduce screw functions for Dirichlet series in the extended Selberg class. Then we prove that the Grand Riemann Hypothesis for a member of the extended Selberg class is equivalent to the nonpositivity of the corresponding screw function."
+ },
+ "2409.00888": {
+  "arxiv_id": "2409.00888v2",
+  "title": "$M$-functions and screw functions originating from Goldbach's problem and zeros of the Riemann zeta function",
+  "authors": [
+   "Kohji Matsumoto",
+   "Masatoshi Suzuki"
+  ],
+  "year": "2024",
+  "published": "2024-09-02",
+  "summary": "We study the $M$-functions, which describe the limit theorem for the value-distributions of the secondary main terms in the asymptotic formulas for the summatory functions of the Goldbach counting function. One of the new aspects is a sufficient condition for the Riemann hypothesis provided by some formulas of the $M$-functions, which was a necessary condition in previous work. The other new aspect is the relation between the secondary main terms and the screw functions, which provides another necessary and sufficient condition for the Riemann hypothesis. We study such $M$-functions and screw functions in generalized settings by axiomatizing them."
+ },
+ "2004.14465": {
+  "arxiv_id": "2004.14465v1",
+  "title": "A note on the zeros of approximations of the Ramanujan $\u039e-$function",
+  "authors": [
+   "Andr\u00e9s Chirre",
+   "Oswaldo Vel\u00e1squez Casta\u00f1\u00f3n"
+  ],
+  "year": "2020",
+  "published": "2020-04-29",
+  "summary": "In this paper, we review the study of the distribution of the zeros of certain approximations for the Ramanujan $\u039e-$function given by Haseo Ki, and we provide a new proof of his results. Our approach is motivated by the ideas of Vel\u00e1squez in the study of the zeros of certain sums of entire functions with some condition of stability related to the Hermite-Biehler theorem."
+ },
+ "2211.11671": {
+  "arxiv_id": "2211.11671v4",
+  "title": "Currently there are no reasons to doubt the Riemann Hypothesis: The zeta function beyond the realm of computation",
+  "authors": [
+   "David W. Farmer"
+  ],
+  "year": "2022",
+  "published": "2022-11-21",
+  "summary": "We examine published arguments which suggest that the Riemann Hypothesis may not be true. In each case we provide evidence to explain why the claimed argument does not provide a good reason to doubt the Riemann Hypothesis. The evidence we cite involves a mixture of theorems in analytic number theory, theorems in random matrix theory, and illustrative examples involving the characteristic polynomials of random unitary matrices. Similar evidence is provided for four mistaken notions which appear repeatedly in the literature concerning computations of the zeta-function. A fundamental question which underlies some of the arguments is: what does the graph of the Riemann zeta-function look like in a neighborhood of its largest values? We explore that question in detail and provide a survey of results on the relationship between L-functions and the characteristic polynomials of random matrices. We highlight the key role played by the emergent phenomenon of carrier waves, which arise from fluctuations in the density of zeros. The main point of this paper is that it is possible to understand some aspects of the zeta function at large heights, but the computation evidence is misleading."
+ },
+ "0803.3592": {
+  "arxiv_id": "0803.3592v1",
+  "title": "Differentiating polynomials, and zeta(2)",
+  "authors": [
+   "David W. Farmer",
+   "Robert Rhoades"
+  ],
+  "year": "2008",
+  "published": "2008-03-25",
+  "summary": "We study the derivatives of polynomials with equally spaced zeros and find connections to the values of the Riemann zeta-function at the positive even integers."
+ },
+ "math/0310252": {
+  "arxiv_id": "math/0310252v3",
+  "title": "Differentiation Evens Out Zero Spacings",
+  "authors": [
+   "David W. Farmer",
+   "Robert C. Rhoades"
+  ],
+  "year": "2003",
+  "published": "2003-10-17",
+  "summary": "If $f$ is a polynomial with all of its roots on the real line, then the roots of the derivative $f'$ are more evenly spaced than the roots of $f$. The same holds for a real entire function of order~1 with all its zeros on a line. In particular, we show that if $f$ is entire of order~1 and has sufficient regularity in its zero spacing, then under repeated differentiation the function approaches (a change of variables from) the cosine function. We also study polynomials with all their zeros on a circle, and we find a close analogy between the two situations. This sheds light on the spacing between zeros of the Riemann zeta-function and its connection to random matrix polynomials."
+ },
+ "1204.1827": {
+  "arxiv_id": "1204.1827v2",
+  "title": "A canonical system of differential equations arising from the Riemann zeta-function",
+  "authors": [
+   "Masatoshi Suzuki"
+  ],
+  "year": "2012",
+  "published": "2012-04-09",
+  "summary": "This paper has two main results, which relate to a criteria for the Riemann hypothesis via the family of functions $\u0398_\u03c9(z)=\u03be(1/2-\u03c9-iz)/\u03be(1/2+\u03c9-iz)$, where $\u03c9>0$ is a real parameter and $\u03be(s)$ is the Riemann xi-function. The first main result is necessary and sufficient conditions for $\u0398_\u03c9$ to be a meromorphic inner function in the upper half-plane. It is related to the Riemann hypothesis directly whether $\u0398_\u03c9$ is a meromorphic inner function. In comparison with this, a relation of the Riemann hypothesis and the second main result is indirect. It relates to the theory of de Branges, which associates a meromorphic inner function and a canonical system of linear differential equations (in the sense of de Branges). As the second main result, the canonical system associated with $\u0398_\u03c9$ is constructed explicitly and unconditionally under the restriction of the parameter $\u03c9>1$ by applying a method of J.-F. Burnol in his recent work on the gamma function to the Riemann xi-function. If such construction is extended to all $\u03c9> 0$ unconditionally, we get a criterion for the Riemann hypothesis in terms of a family of canonical systems parametrized by $\u03c9>0$, which explains the validity of the Riemann hypothesis as positive semidefiniteness of the corresponding family of Hamiltonian matrices."
+ },
+ "1609.05965": {
+  "arxiv_id": "1609.05965v1",
+  "title": "Dynamic behavior of the roots of the Taylor polynomials of the Riemann xi function with growing degree",
+  "authors": [
+   "Robert Jenkins",
+   "Ken D. T. -R. McLaughlin"
+  ],
+  "year": "2016",
+  "published": "2016-09-19",
+  "summary": "We establish a uniform approximation result for the Taylor polynomials of the xi function of Riemann which is valid in the entire complex plane as the degree grows. In particular, we identify a domain growing with the degree of the polynomials on which they converge to Riemann's xi function. Using this approximation we obtain an estimate of the number of \"spurious zeros\" of the Taylor polynomial which are outside of the critical strip, which leads to a Riemann - von Mangoldt type of formula for the number of zeros of the Taylor polynomials within the critical strip. Super-exponential convergence of Hurwitz zeros of the Taylor polynomials to bounded zeros of the xi function are established along the way, and finally we explain how our approximation techniques can be extended to a collection of analytic L-functions."
+ },
+ "1502.06844": {
+  "arxiv_id": "1502.06844v1",
+  "title": "Real-rooted P\u00f3lya-like approximations to the Riemann Xi-function",
+  "authors": [
+   "Yaoming Shi"
+  ],
+  "year": "2014",
+  "published": "2014-12-08",
+  "summary": "The Riemann $\u039e(z)$ function admits a Fourier transform of a even kernel $\u03a6(t)$. The latter is related to the derivatives of Jacobi theta function $\u03b8(z)$, a modular form of weight $1/2$. P\u00f3lya noticed that when $t$ goes to infinity, $e^t$ goes to $e^t+ e^{-t}=2\\cosh t$. He then approximated the kernel $\u03a6(t)$ by $\u03a6_{P}(t)$ that contained only the leading term and with $\\exp t,\\exp(9t/4)$ replaced by $2\\cosh t,2\\cos(9t/4)$. This procedure captured almost all of the contribution from the tail part (i.e., $t\\to\\infty$) of the kernel $\u03a6(t)$. We realize that when $t$ goes to infinity and $0\\leqslant b<1,c\\in\\R$, $\\cosh t+c \\cosh(bt)$ goes to $\\cosh t$. Thus we improve P\u00f3lya's approximation by replacing $\\cosh(9t/4)$ with $\\cosh(9t/4)+b\\sum_{k=0}^{m-1}b_k \\cosh(9kt/(4m))$ and adjusting the parameters $b,b_k,m$ such that (A) the approximated kernel $\u03a6_{S}(b,b_k,m;t)$ goes to $\u03a6(t)$when $t$ goes to infinity;(B) $\u03a6_{S}(b,b_k,m;t)$ is identical to $\u03a6(t)$ at $t=0$; (C) the Fourier transform of $\u03a6_{S}(b,b_k,m;t)$,like in P\u00f3lya's case, has only real zeros. Since this procedure also captures almost all of the contribution from the head part (i.e., near $t=0$) of the kernel $\u03a6(t)$, we are able to anchor both ends of the kernel $\u03a6(t)$."
+ },
+ "2005.05142": {
+  "arxiv_id": "2005.05142v2",
+  "title": "A proof of Newman's conjecture for the extended Selberg class",
+  "authors": [
+   "Alexander Dobner"
+  ],
+  "year": "2020",
+  "published": "2020-05-11",
+  "summary": "Newman's conjecture (proved by Rodgers and Tao in 2018) concerns a certain family of deformations $\\{\u03be_t(s)\\}_{t \\in \\mathbb{R}}$ of the Riemann xi function for which there exists an associated constant $\u039b\\in \\mathbb{R}$ (called the de Bruijn-Newman constant) such that all the zeros of $\u03be_t$ lie on the critical line if and only if $t \\geq \u039b$. The Riemann hypothesis is equivalent to the statement that $\u039b\\leq 0$, and Newman's conjecture states that $\u039b\\geq 0$. In this paper we give a new proof of Newman's conjecture which avoids many of the complications in the proof of Rodgers and Tao. Unlike the previous best methods for bounding $\u039b$, our approach does not require any information about the zeros of the zeta function, and it can be readily be applied to a wide variety of $L$-functions. In particular, we establish that any $L$-function in the extended Selberg class has an associated de Bruijn-Newman constant and that all of these constants are nonnegative. Stated in the Riemann xi function case, our argument proceeds by showing that for every $t < 0$ the function $\u03be_t$ can be approximated in terms of a Dirichlet series $\u03b6_t(s)=\\sum_{n=1}^{\\infty}\\exp(\\frac{t}{4} \\log^2 n)n^{-s}$ whose zeros then provide infinitely many zeros of $\u03be_t$ off the critical line."
+ },
+ "1801.05914": {
+  "arxiv_id": "1801.05914v5",
+  "title": "The De Bruijn-Newman constant is non-negative",
+  "authors": [
+   "Brad Rodgers",
+   "Terence Tao"
+  ],
+  "year": "2018",
+  "published": "2018-01-18",
+  "summary": "For each $t \\in {\\bf R}$, define the entire function $$ H_t(x) := \\int_0^\\infty e^{tu^2} \u03a6(u) \\cos(xu)\\ du$$ where $\u03a6$ is the super-exponentially decaying function $$ \u03a6(u) := \\sum_{n=1}^\\infty (2\u03c0^2 n^4 e^{9u} - 3\u03c0n^2 e^{5u} ) \\exp(-\u03c0n^2 e^{4u} ).$$ Newman showed that there exists a finite constant $\u039b$ (the \\emph{de Bruijn-Newman constant}) such that the zeroes of $H_t$ are all real precisely when $t \\geq \u039b$. The Riemann hypothesis is the equivalent to the assertion $\u039b\\leq 0$, and Newman conjectured the complementary bound $\u039b\\geq 0$. In this paper we establish Newman's conjecture. The argument proceeds by assuming for contradiction that $\u039b< 0$, and then analyzing the dynamics of zeroes of $H_t$ (building on the work of Csordas, Smith, and Varga) to obtain increasingly strong control on the zeroes of $H_t$ in the range $\u039b< t \\leq 0$, until one establishes that the zeroes of $H_0$ are in local equilibrium, in the sense that locally behave (on average) as if they were equally spaced in an arithmetic progression, with gaps staying close to the global average gap size. But this latter claim is inconsistent with the known results about the local distribution of zeroes of the Riemann zeta function, such as the pair correlation estimates of Montgomery."
+ },
+ "1904.12438": {
+  "arxiv_id": "1904.12438v2",
+  "title": "Effective approximation of heat flow evolution of the Riemann $\u03be$ function, and a new upper bound for the de Bruijn-Newman constant",
+  "authors": [
+   "D. H. J. Polymath"
+  ],
+  "year": "2019",
+  "published": "2019-04-29",
+  "summary": "For each $t \\in \\mathbf{R}$, define the entire function $$ H_t(z) := \\int_0^\\infty e^{tu^2} \u03a6(u) \\cos(zu)\\ du$$ where $\u03a6$ is the super-exponentially decaying function $$ \u03a6(u) := \\sum_{n=1}^\\infty (2\u03c0^2 n^4 e^{9u} - 3\u03c0n^2 e^{5u} ) \\exp(-\u03c0n^2 e^{4u} ).$$ This is essentially the heat flow evolution of the Riemann $\u03be$ function. From the work of de Bruijn and Newman, there exists a finite constant $\u039b$ (the \\emph{de Bruijn-Newman constant}) such that the zeroes of $H_t$ are all real precisely when $t \\geq \u039b$. The Riemann hypothesis is equivalent to the assertion $\u039b\\leq 0$; recently, Rodgers and Tao established the matching lower bound $\u039b\\geq 0$. Ki, Kim and Lee established the upper bound $\u039b< \\frac{1}{2}$. In this paper we establish several effective estimates on $H_t(x+iy)$ for $t \\geq 0$, including some that are accurate for small or medium values of $x$. By combining these estimates with numerical computations, we are able to obtain a new upper bound $\u039b\\leq 0.22$ unconditionally, as well as improvements conditional on further numerical verification of the Riemann hypothesis. We also obtain some new estimates controlling the asymptotic behavior of zeroes of $H_t(x+iy)$ as $x \\to \\infty$."
+ },
+ "2006.13771": {
+  "arxiv_id": "2006.13771v1",
+  "title": "Weil positivity and Trace formula, the archimedean place",
+  "authors": [
+   "Alain Connes",
+   "Caterina Consani"
+  ],
+  "year": "2020",
+  "published": "2020-06-24",
+  "summary": "We provide a potential conceptual reason for the positivity of the Weil functional using the Hilbert space framework of the semi-local trace formula of the paper \"Trace formula in noncommutative geometry and the zeros of the Riemann zeta function\". (Selecta Math. 5 (1999), no. 1, 29--106). We explore in great details the simplest case of the single archimedean place. The root of the positivity is the trace of the scaling action compressed onto the orthogonal complement of the range of the cutoff projections associated to the cutoff in phase space, for cutoff parameter equal to 1. We express the difference between the Weil distribution and the Sonin trace (coming from the above compression of the scaling action) in terms of prolate spheroidal wave functions, and use as a key device the theory of hermitian Toeplitz matrices to control the difference. All the ingredients and tools used above make sense in the general semi-local case, where Weil positivity implies RH."
+ },
+ "1509.05576": {
+  "arxiv_id": "1509.05576v1",
+  "title": "An essay on the Riemann Hypothesis",
+  "authors": [
+   "Alain Connes"
+  ],
+  "year": "2015",
+  "published": "2015-09-18",
+  "summary": "The Riemann hypothesis is, and will hopefully remain for a long time, a great motivation to uncover and explore new parts of the mathematical world. After reviewing its impact on the development of algebraic geometry we discuss three strategies, working concretely at the level of the explicit formulas. The first strategy is \"analytic\" and is based on Riemannian spaces and Selberg's work on the trace formula and its comparison with the explicit formulas. The second is based on algebraic geometry and the Riemann-Roch theorem. We establish a framework in which one can transpose many of the ingredients of the Weil proof as reformulated by Mattuck, Tate and Grothendieck. This framework is elaborate and involves noncommutative geometry, Grothendieck toposes and tropical geometry. We point out the remaining difficulties and show that RH gives a strong motivation to develop algebraic geometry in the emerging world of characteristic one. Finally we briefly discuss a third strategy based on the development of a suitable \"Weil cohomology\", the role of Segal's Gamma-rings and of topological cyclic homology as a model for \"absolute algebra\" and as a cohomological tool."
+ },
+ "2004.14115": {
+  "arxiv_id": "2004.14115v2",
+  "title": "Spectral truncations in noncommutative geometry and operator systems",
+  "authors": [
+   "Alain Connes",
+   "Walter D. van Suijlekom"
+  ],
+  "year": "2020",
+  "published": "2020-04-29",
+  "summary": "In this paper we extend the traditional framework of noncommutative geometry in order to deal with spectral truncations of geometric spaces (i.e. imposing an ultraviolet cutoff in momentum space) and with tolerance relations which provide a coarse grain approximation of geometric spaces at a finite resolution. In our new approach the traditional role played by $C^*$-algebras is taken over by operator systems. As part of the techniques we treat $C^*$-envelopes, dual operator systems and stable equivalence. We define a propagation number for operator systems, which we show to be an invariant under stable equivalence and use to compare approximations of the same space. We illustrate our methods for concrete examples obtained by spectral truncations of the circle. These are operator systems of finite-dimensional Toeplitz matrices and their dual operator systems which are given by functions in the group algebra on the integers with support in a fixed interval. It turns out that the cones of positive elements and the pure state spaces for these operator systems possess a very rich structure which we analyze including for the algebraic geometry of the boundary of the positive cone and the metric aspect i.e. the distance on the state space associated to the Dirac operator. The main property of the spectral truncation is that it keeps the isometry group intact. In contrast, if one considers the other finite approximation provided by circulant matrices the isometry group becomes discrete, even though in this case the operator system is a $C^*$-algebra. We analyze this in the context of the finite Fourier transform. The extension of noncommutative geometry to operator systems allows one to deal with metric spaces up to finite resolution by considering the relation $d(x,y)<\u03b5$ between two points, or more generally a tolerance relation which naturally gives rise to an operator system."
+ },
+ "math/9810169": {
+  "arxiv_id": "math/9810169v2",
+  "title": "The Explicit Formula in simple terms",
+  "authors": [
+   "Jean-Francois Burnol"
+  ],
+  "year": "1998",
+  "published": "1998-10-29",
+  "summary": "This is a semi-expository paper on the easier aspects of the Explicit Formula for the Riemann Zeta Function. The topics reviewed here include: Weil's criterion for the Riemann Hypothesis and its probabilistic interpretation, various formulations of the contribution corresponding to the real place, Haran's version of the Explicit Formula, and the author's own derivation which puts all places on the same footing. This derivation, an addendum to Tate's Thesis, is in the spirit of Weil's insights towards an adelic understanding of the Explicit Formula. Whereas the analyst would likely formulate the Explicit Formula as a multiplicative convolution, Haran's theorem shows it is also an additive convolution. An intriguing conductor operator is considered whose spectral analysis is equivalent to the Explicit Formula. At a finite place it has a positive cuspidal spectrum. I also comment on the flexibility still left in the Explicit Formula, which shows that it has a symmetry group containing the non-zero rational numbers."
+ }
+}
