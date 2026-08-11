@@ -286,7 +286,7 @@ caught by both.
 ```
 Archive: research/notes/attack-detection-threshold/{e4sweep.rs, pairdiag.rs, e4probe.rs, e4nminus.rs,
          Cargo.toml, e4sweep-run1.txt, e4probe-run1.txt, e4nminus-run1.txt, pairdiag-run1.txt,
-         SHA256SUMS}
+         e4derived.py, verify_tables.py, SHA256SUMS}
 cd /tmp/finitet-e4 && export PATH=$HOME/.cargo/bin:$PATH RUSTFLAGS="-C linker=rust-lld" \
   && cargo build --release --target x86_64-unknown-linux-musl --bin finitet-e4sweep \
   && ./target/x86_64-unknown-linux-musl/release/finitet-e4sweep > /tmp/e4sweep-run1.txt 2>&1
