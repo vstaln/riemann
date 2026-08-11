@@ -1,0 +1,327 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/TYIBp/gwWhSi9R+mZDP2OdDVksk</id>
+  <title>arXiv Query: search_query=all:"Selberg zeta" AND all:zeros&amp;id_list=&amp;start=0&amp;max_results=15</title>
+  <updated>2026-08-11T15:43:54Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22Selberg+zeta%22+AND+all:zeros&amp;start=0&amp;max_results=15&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>15</opensearch:itemsPerPage>
+  <opensearch:totalResults>35</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1302.5928v2</id>
+    <title>On the distribution of zeros of the derivative of Selberg's zeta function associated to finite volume Riemann surfaces</title>
+    <updated>2013-02-26T05:02:18Z</updated>
+    <link href="https://arxiv.org/abs/1302.5928v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1302.5928v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>W. Luo has investigated the distribution of zeros of the derivative of the Selberg zeta function associated to compact hyperbolic Riemann surfaces. In essence, the main results in Luo's article involve the following three points: Finiteness for the number of zeros in the half plane to the left of the critical line; an asymptotic expansion for the counting function measuring the vertical distribution of zeros; and an asymptotic expansion for the counting function measuring the horizontal distance of zeros from the critical line. In the present article, we study the more complicated setting of distribution of zeros of the derivative of the Selberg zeta function associated to a non-compact, finite volume hyperbolic Riemann surface. There are numerous difficulties which exist in the non-compact case that are not present in the compact setting, beginning with the fact that in the non-compact case the Selberg zeta function does not satisfy the analogue of the Riemann hypothesis. To be more specific, we actually study the zeros of the derivative of ZH, where Z is the Selberg zeta function and H is the Dirichlet series component of the scattering matrix, both associated to an arbitrary finite-volume hyperbolic Riemann surface. Our main results address finiteness of zeros in the half plane to the left of the critical line, an asymptotic count for the vertical distribution of zeros, and an asymptotic count for the horizontal distance of zeros.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-02-24T17:04:00Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Jay Jorgenson</name>
+    </author>
+    <author>
+      <name>Lejla Smajlovic</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1606.09109v4</id>
+    <title>A transfer-operator-based relation between Laplace eigenfunctions and zeros of Selberg zeta functions</title>
+    <updated>2019-08-25T09:05:18Z</updated>
+    <link href="https://arxiv.org/abs/1606.09109v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1606.09109v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Over the last few years Pohl (partly jointly with coauthors) developed dual `slow/fast' transfer operator approaches to automorphic functions, resonances, and Selberg zeta functions for a certain class of hyperbolic surfaces $Γ\backslash\mathbb{H}$ with cusps and all finite-dimensional unitary representations $χ$ of $Γ$.
+  The eigenfunctions with eigenvalue $1$ of the fast transfer operators determine the zeros of the Selberg zeta function for $(Γ,χ)$. Further, if $Γ$ is cofinite and $χ$ is the trivial one-dimensional representation then highly regular eigenfunctions with eigenvalue $1$ of the slow transfer operators characterize Maass cusp forms for $Γ$. Conjecturally, this characterization extends to more general automorphic functions as well as to residues at resonances.
+  In this article we study, without relying on Selberg theory, the relation between the eigenspaces of these two types of transfer operators for any Hecke triangle surface $Γ\backslash\mathbb{H}$ of finite or infinite area and any finite-dimensional unitary representation $χ$ of the Hecke triangle group $Γ$. In particular we provide explicit isomorphisms between relevant subspaces. This solves a conjecture by Möller and Pohl, characterizes some of the zeros of the Selberg zeta functions independently of the Selberg trace formula, and supports the previously mentioned conjectures.</summary>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-06-29T14:12:00Z</published>
+    <arxiv:comment>52 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="math.SP"/>
+    <author>
+      <name>Alexander Adam</name>
+    </author>
+    <author>
+      <name>Anke Pohl</name>
+    </author>
+    <arxiv:doi>10.1017/etds.2018.51</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1017/etds.2018.51" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2204.08218v1</id>
+    <title>Zeros of the Selberg zeta function for symmetric infinite area hyperbolic surfaces</title>
+    <updated>2022-04-18T08:41:42Z</updated>
+    <link href="https://arxiv.org/abs/2204.08218v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2204.08218v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In the present paper we give a simple mathematical foundation for describing the zeros of the Selberg zeta functions $Z_X$ for certain very symmetric infinite area surfaces $X$. For definiteness, we consider the case of three funneled surfaces. We show that the zeta function is a complex almost periodic function which can be approximated by complex trigonometric polynomials on large domains (in Theorem 4.2). As our main application, we provide an explanation of the striking empirical results of Borthwick (arXiv:1305.4850) (in Theorem 1.5) in terms of convergence of the affinely scaled zero sets to standard curves $\mathcal C$.</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-04-18T08:41:42Z</published>
+    <arxiv:comment>36 pages, 11 Figures</arxiv:comment>
+    <arxiv:primary_category term="math.DS"/>
+    <arxiv:journal_ref>Geometriae Dedicata (2019) 201:155-186</arxiv:journal_ref>
+    <author>
+      <name>Mark Pollicott</name>
+    </author>
+    <author>
+      <name>Polina Vytnova</name>
+    </author>
+    <arxiv:doi>10.1007/s10711-018-0386-6</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s10711-018-0386-6" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.14981v1</id>
+    <title>The divisor of the twisted Selberg zeta function</title>
+    <updated>2026-07-16T13:34:29Z</updated>
+    <link href="https://arxiv.org/abs/2607.14981v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.14981v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For the Selberg zeta function of geometrically finite infinite-area hyperbolic orbisurfaces with twists by finite-dimensional unitary representations, we establish a factorization formula in terms of a Weierstrass product of the Laplace resonances of the considered hyperbolic orbisurface, Barnes G-functions, gamma functions, and the singularity degrees of the representation. We thereby provide an interpretation of the zeros and poles of the Selberg zeta function by spectral and geometric entities of the orbisurface and the representation. This formula generalizes the factorization result by Borthwick, Judge and Perry to hyperbolic orbisurfaces with orbifold singularities as well as to unitary twists. Also in the untwisted case, the presence of orbifold singularities yields a separate, previously unobserved contribution to the factorization formula.</summary>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-16T13:34:29Z</published>
+    <arxiv:comment>56 pages</arxiv:comment>
+    <arxiv:primary_category term="math.SP"/>
+    <author>
+      <name>Moritz Doll</name>
+    </author>
+    <author>
+      <name>Anke Pohl</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1910.11913v2</id>
+    <title>Normal modes in thermal AdS via the Selberg zeta function</title>
+    <updated>2020-05-20T04:48:38Z</updated>
+    <link href="https://arxiv.org/abs/1910.11913v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1910.11913v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The heat kernel and quasinormal mode methods of computing 1-loop partition functions of spin $s$ fields on hyperbolic quotient spacetimes $\mathbb{H}^{3}/\mathbb{Z}$ are related via the Selberg zeta function. We extend that analysis to thermal $\text{AdS}_{2n+1}$ backgrounds, with quotient structure $\mathbb{H}^{2n+1}/\mathbb{Z}$. Specifically, we demonstrate the zeros of the Selberg function encode the normal mode frequencies of spin fields upon removal of non-square-integrable modes. With this information we construct the 1-loop partition functions for symmetric transverse traceless tensors in terms of the Selberg zeta function and find exact agreement with the heat kernel method.</summary>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-10-25T19:44:01Z</published>
+    <arxiv:comment>22 pages, clarifications added, Scipost formatting</arxiv:comment>
+    <arxiv:primary_category term="hep-th"/>
+    <arxiv:journal_ref>SciPost Phys. 9, 009 (2020)</arxiv:journal_ref>
+    <author>
+      <name>Victoria L. Martin</name>
+    </author>
+    <author>
+      <name>Andrew Svesko</name>
+    </author>
+    <arxiv:doi>10.21468/SciPostPhys.9.1.009</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.21468/SciPostPhys.9.1.009" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2312.06770v2</id>
+    <title>A generalized Selberg zeta function for flat space cosmologies</title>
+    <updated>2024-04-01T10:30:49Z</updated>
+    <link href="https://arxiv.org/abs/2312.06770v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2312.06770v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Flat space cosmologies (FSCs) are time dependent solutions of three-dimensional (3D) gravity with a vanishing cosmological constant. They can be constructed from a discrete quotient of empty 3D flat spacetime and are also called shifted-boost orbifolds. Using this quotient structure, we build a new and generalized Selberg zeta function for FSCs, and show that it is directly related to the scalar 1-loop partition function. We then propose an extension of this formalism applicable to more general quotient manifolds $\mathcal M/\mathbb Z$, based on representation theory of fields propagating on this background. Our prescription constitutes a novel and expedient method for calculating regularized 1-loop determinants, without resorting to the heat kernel. We compute quasinormal modes in the FSC using the zeroes of a Selberg zeta function, and match them to known results.</summary>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-12-11T19:00:04Z</published>
+    <arxiv:comment>25 pages, a few clarifications added</arxiv:comment>
+    <arxiv:primary_category term="hep-th"/>
+    <author>
+      <name>Arjun Bagchi</name>
+    </author>
+    <author>
+      <name>Cynthia Keeler</name>
+    </author>
+    <author>
+      <name>Victoria Martin</name>
+    </author>
+    <author>
+      <name>Rahul Poddar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1910.07607v1</id>
+    <title>BTZ one-loop determinants via the Selberg zeta function for general spin</title>
+    <updated>2019-10-16T20:58:22Z</updated>
+    <link href="https://arxiv.org/abs/1910.07607v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1910.07607v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We relate the heat kernel and quasinormal mode methods of computing the 1-loop partition function of arbitrary spin fields on a rotating (Euclidean) BTZ background using the Selberg zeta function associated with $\mathbb{H}^{3}/\mathbb{Z}$, extending (1811.08433). Previously, Perry and Williams showed for a scalar field that the zeros of the Selberg zeta function coincide with the poles of the associated scattering operator upon a relabeling of integers. We extend the integer relabeling to the case of general spin, and discuss its relationship to the removal of non-square-integrable Euclidean zero modes.</summary>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-10-16T20:58:22Z</published>
+    <arxiv:primary_category term="hep-th"/>
+    <author>
+      <name>Cynthia Keeler</name>
+    </author>
+    <author>
+      <name>Victoria L. Martin</name>
+    </author>
+    <author>
+      <name>Andrew Svesko</name>
+    </author>
+    <arxiv:doi>10.1007/JHEP10(2020)138</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/JHEP10(2020)138" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1201.2324v1</id>
+    <title>Perturbation of zeros of the Selberg zeta-function for $Γ_0(4)$</title>
+    <updated>2012-01-11T15:15:51Z</updated>
+    <link href="https://arxiv.org/abs/1201.2324v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1201.2324v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the asymptotic behavior of zeros of the Selberg zeta-function for the congruence subgroup $Γ_0(4)$ as a function of a one-parameter family of characters tending to the trivial character. The motivation for the study comes from observations based on numerical computations. Some of the observed phenomena lead to precise theorems that we prove and compare with the original numerical results.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-01-11T15:15:51Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Roelof Bruggeman</name>
+    </author>
+    <author>
+      <name>Markus Fraczek</name>
+    </author>
+    <author>
+      <name>Dieter Mayer</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2210.01118v2</id>
+    <title>A Selberg zeta function for warped AdS$_3$ black holes</title>
+    <updated>2022-11-30T14:56:19Z</updated>
+    <link href="https://arxiv.org/abs/2210.01118v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2210.01118v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Selberg zeta function and trace formula are powerful tools used to calculate kinetic operator spectra and quasinormal modes on hyperbolic quotient spacetimes. In this article, we extend this formalism to non-hyperbolic quotients by constructing a Selberg zeta function for warped AdS$_3$ black holes. We also consider the so-called self-dual solutions, which are of interest in connection to near-horizon extremal Kerr. We establish a map between the zeta function zeroes and the quasinormal modes on warped AdS$_3$ black hole backgrounds. In the process, we use a method involving conformal coordinates and the symmetry structure of the scalar Laplacian to construct a warped version of the hyperbolic half-space metric, which to our knowledge is new and may have interesting applications of its own, which we describe. We end by discussing several future directions for this work, such as computing 1-loop determinants (which govern quantum corrections) on the quotient spacetimes we consider, as well as adapting the formalism presented here to more generic orbifolds.</summary>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-10-03T17:59:25Z</published>
+    <arxiv:comment>23 pages, minor revisions and corrections of typos</arxiv:comment>
+    <arxiv:primary_category term="hep-th"/>
+    <author>
+      <name>Victoria L. Martin</name>
+    </author>
+    <author>
+      <name>Rahul Poddar</name>
+    </author>
+    <author>
+      <name>Agla Þórarinsdóttir</name>
+    </author>
+    <arxiv:doi>10.1007/JHEP01(2023)049</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/JHEP01(2023)049" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2209.05927v1</id>
+    <title>Selberg zeta functions, cuspidal accelerations, and existence of strict transfer operator approaches</title>
+    <updated>2022-09-13T12:16:41Z</updated>
+    <link href="https://arxiv.org/abs/2209.05927v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2209.05927v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For geometrically finite non-compact developable hyperbolic orbisurfaces (including those of infinite volume), we provide transfer operator families whose Fredholm determinants are identical to the Selberg zeta function. Our proof yields an algorithmic and uniform construction. This construction is initiated with an externally provided cross section for the geodesic flow on the considered orbisurface that yields a highly faithful, but non-uniformly expanding discrete dynamical system modelling the geodesic flow. Through a number of algorithmic steps of reduction, extension, translation, induction and acceleration, we turn this cross section into one that yields a still highly faithful, but now uniformly expanding discrete dynamical system. The arising transfer operator family is nuclear of order zero on suitable Banach spaces. In addition, finite-dimensional twists with non-expanding cusp monodromy can be included.</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-09-13T12:16:41Z</published>
+    <arxiv:comment>150 pages, 27 figures</arxiv:comment>
+    <arxiv:primary_category term="math.DS"/>
+    <author>
+      <name>Anke Pohl</name>
+    </author>
+    <author>
+      <name>Paul Wabnitz</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1011.4441v3</id>
+    <title>Symmetries of the transfer operator for $Γ_0(N)$ and a character deformation of the Selberg zeta function for $Γ_0(4)$</title>
+    <updated>2011-01-19T11:10:53Z</updated>
+    <link href="https://arxiv.org/abs/1011.4441v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1011.4441v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The transfer operator for $Γ_0(N)$ and trivial character $χ_0$ possesses a finite group of symmetries generated by permutation matrices $P$ with $P^2=id$. Every such symmetry leads to a factorization of the Selberg zeta function in terms of Fredholm determinants of a reduced transfer operator. These symmetries are related to the group of automorphisms in $GL(2,\mathbb{Z})$ of the Maass wave forms of $Γ_0(N)$ . For the group $Γ_0(4)$ and Selberg's character $χ_α$ there exists just one non-trivial symmetry operator $P$. The eigenfunctions of the corresponding reduced transfer operator with eigenvalue $λ=\pm 1$ are related to Maass forms even respectively odd under a corresponding automorphism. It then follows from a result of Sarnak and Phillips that the zeros of the Selberg function determined by the eigenvalues $λ=-1$ of the reduced transfer operator stay on the critical line under the deformation of the character. From numerical results we expect that on the other hand all the zeros corresponding to the eigenvalue $λ=+1$ leave this line for $α$ turning away from zero.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2010-11-19T14:57:14Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <arxiv:journal_ref>Algebra and Number Theory vol 6 No 3 (2012) 587-610</arxiv:journal_ref>
+    <author>
+      <name>Markus Fraczek</name>
+    </author>
+    <author>
+      <name>Dieter Mayer</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1710.00603v3</id>
+    <title>Turing's method for the Selberg zeta-function</title>
+    <updated>2018-07-21T10:54:19Z</updated>
+    <link href="https://arxiv.org/abs/1710.00603v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1710.00603v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In one of his final research papers, Alan Turing introduced a method to certify the completeness of a purported list of zeros of the Riemann zeta-function. In this paper we consider Turing's method in the analogous setting of Selberg zeta-functions, and we demonstrate that it can be carried out rigorously in the prototypical case of the modular surface.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-10-02T12:19:23Z</published>
+    <arxiv:comment>33 pages, to appear in Communications in Mathematical Physics</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Andrew R. Booker</name>
+    </author>
+    <author>
+      <name>David J. Platt</name>
+    </author>
+    <arxiv:doi>10.1007/s00220-018-3243-4</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s00220-018-3243-4" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1808.09239v1</id>
+    <title>Zero is a resonance of every Schottky surface</title>
+    <updated>2018-08-28T12:02:37Z</updated>
+    <link href="https://arxiv.org/abs/1808.09239v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1808.09239v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For certain spectral parameters we find explicit eigenfunctions of transfer operators for Schottky surfaces. Comparing the dimension of the eigenspace for the spectral parameter zero with the multiplicity of topological zeros of the Selberg zeta function, we deduce that zero is a resonance of every Schottky surface.</summary>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-08-28T12:02:37Z</published>
+    <arxiv:comment>13 pages</arxiv:comment>
+    <arxiv:primary_category term="math.SP"/>
+    <author>
+      <name>Alexander Adam</name>
+    </author>
+    <author>
+      <name>Anke Pohl</name>
+    </author>
+    <author>
+      <name>Alexander Weiße</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2007.14617v1</id>
+    <title>Note on the number of zeros of $ζ^{(k)}(s)$</title>
+    <updated>2020-07-29T06:03:24Z</updated>
+    <link href="https://arxiv.org/abs/2007.14617v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2007.14617v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Assuming the Riemann hypothesis, we prove that $$ N_k(T) = \frac{T}{2π}\log \frac{T}{4πe} + O_k\left(\frac{\log{T}}{\log\log{T}}\right), $$ where $N_k(T)$ is the number of zeros of $ζ^{(k)}(s)$ in the region $0&lt;\Im s\le T$. We further apply our method and obtain a zero counting formula for the derivative of Selberg zeta functions, improving earlier work of Luo.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-07-29T06:03:24Z</published>
+    <arxiv:comment>10 pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <arxiv:journal_ref>Ramanujan J. 55 (2021), 661-672</arxiv:journal_ref>
+    <author>
+      <name>Fan Ge</name>
+    </author>
+    <author>
+      <name>Ade Irma Suriajaya</name>
+    </author>
+    <arxiv:doi>10.1007/s11139-019-00219-z</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s11139-019-00219-z" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2204.08203v2</id>
+    <title>The Bowen$\unicode{x2013}$Series coding and zeros of zeta functions</title>
+    <updated>2025-07-14T12:26:57Z</updated>
+    <link href="https://arxiv.org/abs/2204.08203v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2204.08203v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We give a discussion of the classical Bowen$\unicode{x2013}$Series coding and, in particular, its application to the study of zeta functions associated to geodesic flows and their zeros. In the case of compact surfaces of constant negative curvature $-1$ the analytic extension of the Selberg zeta function to the entire complex plane is classical, and can be achieved using the Selberg trace formula. However, an alternative dynamical approach is to use the Bowen$\unicode{x2013}$Series coding on the boundary at infinity to obtain a piecewise analytic expanding map from which the extension of the zeta function can be obtained using properties of the associated transfer operator. This latter method has the advantage that it also applies in the case of infinite area surfaces provided they do not have cusps. For such examples the location of the zeros is somewhat more mysterious. However, in particularly simple examples there is a striking structure to the zeros when we take appropriate limits. We will try to give some insight into this phenomenon.
+  The newer version, in addition to the study of pair of pants, also includes heuristic analysis of the zeta function associated to the geodesic flow on symmetric one-funneled tori; in particular, there is a number of pure numerical results on location of its small zeros.</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-04-18T07:54:07Z</published>
+    <arxiv:comment>52 pages, 22 Figures</arxiv:comment>
+    <arxiv:primary_category term="math.DS"/>
+    <author>
+      <name>Mark Pollicott</name>
+    </author>
+    <author>
+      <name>Polina Vytnova</name>
+    </author>
+  </entry>
+</feed>

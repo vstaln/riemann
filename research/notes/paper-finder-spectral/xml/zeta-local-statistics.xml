@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/WbRjzb5RLS4IUYS0GRkXNJfvt2Q</id>
+  <title>arXiv Query: search_query=all:"Riemann zeta" AND all:"local statistics"&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-08-11T16:07:49Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22Riemann+zeta%22+AND+all:%22local+statistics%22&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2507.04150v1</id>
+    <title>Selberg's Central Limit Theorem weighted by Linear Statistics of Zeta Zeros</title>
+    <updated>2025-07-05T20:08:01Z</updated>
+    <link href="https://arxiv.org/abs/2507.04150v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.04150v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider the value distribution of the logarithm of the Riemann zeta function on the critical line, weighted by the local statistics of zeta zeros. We show that, with appropriate normalization, it satisfies a complex Central Limit Theorem, provided that the Fourier support of the test function in the linear statistics is sufficiently small. For the imaginary part, we extend this support condition up to its natural barrier under the Riemann Hypothesis. Finally, we prove that the correlation between $\log ζ$ and the one-level density, while negligible on the level of Selberg's Central Limit Theorem, only decays at a rather slow rate if the Riemann Hypothesis is assumed. Our results can be viewed as a combination of Selberg's Central Limit Theorem with work of Hughes and Rudnick on mock-Gaussian behavior of the local statistics.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-05T20:08:01Z</published>
+    <arxiv:comment>16 pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Alessandro Fazzari</name>
+    </author>
+    <author>
+      <name>Maxim Gerspach</name>
+    </author>
+    <author>
+      <name>Paolo Minelli</name>
+    </author>
+  </entry>
+</feed>

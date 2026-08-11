@@ -1,0 +1,370 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/lGkNwdRGwyD/oOzGVdmcPMF7bAk</id>
+  <title>arXiv Query: search_query=all:"determinantal point process" AND all:"sine kernel"&amp;id_list=&amp;start=0&amp;max_results=25</title>
+  <updated>2026-08-11T15:44:02Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22determinantal+point+process%22+AND+all:%22sine+kernel%22&amp;start=0&amp;max_results=25&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>25</opensearch:itemsPerPage>
+  <opensearch:totalResults>17</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2203.07590v1</id>
+    <title>Scaling limit for determinantal point processes on spheres</title>
+    <updated>2022-03-15T01:29:58Z</updated>
+    <link href="https://arxiv.org/abs/2203.07590v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2203.07590v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The unitary group with the Haar probability measure is called Circular Unitary Ensemble. All the eigenvalues lie on the unit circle in the complex plane and they can be regarded as a determinantal point process on $\mathbb{S}^1$. It is also known that the scaled point processes converge weakly to the determinantal point process associated with the so-called sine kernel as the size of matrices tends to $\infty$. We extend this result to the case of high-dimensional spheres and show that the scaling limit processes are determinantal point processes associated with the kernels expressed by the Bessel functions of the first kind.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-03-15T01:29:58Z</published>
+    <arxiv:comment>"Stochastic Analysis on Large Scale Interacting Systems". November 5-8, 2018. edited by Ryoki Fukushima, Tadahisa Funaki, Yukio Nagahata, Hirofumi Osada and Kenkichi Tsunoda. The papers presented in this volume of RIMS Kôkyûroku Bessatsu are in final form and refereed. http://hdl.handle.net/2433/260647</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <arxiv:journal_ref>RIMS Kôkyûroku Bessatsu B79 (2020), 123-138</arxiv:journal_ref>
+    <author>
+      <name>Makoto Katori</name>
+    </author>
+    <author>
+      <name>Tomoyuki Shirai</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1403.7814v1</id>
+    <title>A limiting random analytic function related to the CUE</title>
+    <updated>2014-03-30T21:22:49Z</updated>
+    <link href="https://arxiv.org/abs/1403.7814v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1403.7814v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We show in this paper that, when properly rescaled in time and in space, the characteristic polynomial of a random unitary matrix converges almost surely to a random analytic function whose zeros, which are on the real line, form a determinantal point process with sine kernel. We prove this result in the framework of virtual isometries to circumvent the fact that the rescaled characteristic polynomial does not even have a moment of order one, hence making the classical techniques of random matrix theory difficult to apply.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-03-30T21:22:49Z</published>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Reda Chhaibi</name>
+    </author>
+    <author>
+      <name>Joseph Najnudel</name>
+    </author>
+    <author>
+      <name>Ashkan Nikeghbali</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1407.0505v2</id>
+    <title>Noncolliding system of continuous-time random walks</title>
+    <updated>2014-09-29T07:22:47Z</updated>
+    <link href="https://arxiv.org/abs/1407.0505v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1407.0505v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The continuous-time random walk is defined as a Poissonization of discrete-time random walk. We study the noncolliding system of continuous-time simple and symmetric random walks on ${\mathbb{Z}}$. We show that the system is determinantal for any finite initial configuration without multiple point. The spatio-temporal correlation kernel is expressed by using the modified Bessel functions. We extend the system to the noncolliding process with an infinite number of particles, when the initial configuration has equidistant spacing of particles, and show a relaxation phenomenon to the equilibrium determinantal point process with the sine kernel.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-07-02T10:12:42Z</published>
+    <arxiv:comment>AMS-LaTeX, 19 pages, no figure. arXiv admin note: text overlap with arXiv:1307.1856 by other authors. v2: AMS-LaTeX 19 pages, minor corrections made for publication in Pacific Journal of Mathematics for Industry</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Syota Esaki</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math-ph/0010015v1</id>
+    <title>Infinite random matrices and ergodic measures</title>
+    <updated>2000-10-11T18:21:34Z</updated>
+    <link href="https://arxiv.org/abs/math-ph/0010015v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math-ph/0010015v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We introduce and study a 2-parameter family of unitarily invariant probability measures on the space of infinite Hermitian matrices. We show that the decomposition of a measure from this family on ergodic components is described by a determinantal point process on the real line. The correlation kernel for this process is explicitly computed.
+  At certain values of parameters the kernel turns into the well-known sine kernel which describes the local correlation in Circular and Gaussian Unitary Ensembles. Thus, the random point configuration of the sine process is interpreted as the random set of ``eigenvalues'' of infinite Hermitian matrices distributed according to the corresponding measure.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.RT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2000-10-11T18:21:34Z</published>
+    <arxiv:comment>36 pages</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <arxiv:journal_ref>Comm. Math. Phys. 223 (2001), no. 1, 87--123</arxiv:journal_ref>
+    <author>
+      <name>Alexei Borodin</name>
+    </author>
+    <author>
+      <name>Grigori Olshanski</name>
+    </author>
+    <arxiv:doi>10.1007/s002200100529</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s002200100529" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0812.4108v3</id>
+    <title>Non-Equilibrium Dynamics of Dyson's Model with an Infinite Number of Particles</title>
+    <updated>2009-06-19T01:04:31Z</updated>
+    <link href="https://arxiv.org/abs/0812.4108v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0812.4108v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Dyson's model is a one-dimensional system of Brownian motions with long-range repulsive forces acting between any pair of particles with strength proportional to the inverse of distances with proportionality constant $β/2$. We give sufficient conditions for initial configurations so that Dyson's model with $β=2$ and an infinite number of particles is well defined in the sense that any multitime correlation function is given by a determinant with a continuous kernel. The class of infinite-dimensional configurations satisfying our conditions is large enough to study non-equilibrium dynamics. For example, we obtain the relaxation process starting from a configuration, in which every point of $\Z$ is occupied by one particle, to the stationary state, which is the determinantal point process with the sine kernel.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nlin.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2008-12-22T07:19:11Z</published>
+    <arxiv:comment>v3: AMS-LaTeX, 32 pages, 1 figure, revised version for publication in Commun. Math. Phys</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <arxiv:journal_ref>Commun. Math. Phys. 293 (2010) 469-497</arxiv:journal_ref>
+    <author>
+      <name>Makoto Katori</name>
+    </author>
+    <author>
+      <name>Hideki Tanemura</name>
+    </author>
+    <arxiv:doi>10.1007/s00220-009-0912-3</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s00220-009-0912-3" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1507.00670v2</id>
+    <title>Linear rigidity of stationary stochastic processes</title>
+    <updated>2016-11-29T15:27:38Z</updated>
+    <link href="https://arxiv.org/abs/1507.00670v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1507.00670v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider stationary stochastic processes $X_n$, $n\in \mathbb{Z}$ such that $X_0$ lies in the closed linear span of $X_n$, $n\neq 0$; following Ghosh and Peres, we call such processes linearly rigid. Using a criterion of Kolmogorov, we show that it suffices, for a stationary stochastic process to be rigid, that the spectral density vanish at zero and belong to the Zygmund class $Λ_{*}(1)$. We next give sufficient condition for stationary determinantal point processes on $\mathbb{Z}$ and on $\mathbb{R}$ to be rigid. Finally, we show that the determinantal point process on $\mathbb{R}^2$ induced by a tensor square of Dyson sine-kernels is $\textit{not}$ linearly rigid.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-07-02T17:31:52Z</published>
+    <arxiv:comment>18 pp, to appear in Ergodic Theory and Dynamical Systems</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Alexander I. Bufetov</name>
+    </author>
+    <author>
+      <name>Yoann Dabrowski</name>
+    </author>
+    <author>
+      <name>Yanqi Qiu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1211.2435v3</id>
+    <title>Determinantal processes and completeness of random exponentials: the critical case</title>
+    <updated>2014-10-22T01:28:38Z</updated>
+    <link href="https://arxiv.org/abs/1211.2435v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1211.2435v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For a locally finite point set $Λ\subset \mathbb{R}$, consider the collection of exponential functions given by $\mathcal{E}_Λ:= \{e^{i λx} : λ\in L \}$. We examine the question whether $\mathcal{E}_Λ$ spans the Hilbert space $L^2[-π,π]$, when $Λ$ is random. For several point processes of interest, this belongs to a certain critical case of the corresponding question for deterministic $Λ$, about which little is known. For $Λ$ the continuum sine kernel process, obtained as the bulk limit of GUE eigenvalues, we establish that $\mathcal{E}_Λ$ is indeed complete. We also answer an analogous question on $\mathbb{C}$ for the Ginibre ensemble, arising as weak limits of certain non-Hermitian random matrix eigenvalues. In fact we establish completeness for any "rigid" determinantal point process in a general setting. In addition, we partially answer two questions due to Lyons and Steif about stationary determinantal processes on $\mathbb{Z}^d$.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.FA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-11-11T16:55:44Z</published>
+    <arxiv:comment>To appear in Probability Theory and Related Fields</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Subhro Ghosh</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1412.6777v2</id>
+    <title>Bulk and soft-edge universality for singular values of products of Ginibre random matrices</title>
+    <updated>2015-06-06T18:03:37Z</updated>
+    <link href="https://arxiv.org/abs/1412.6777v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1412.6777v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>It has been shown by Akemann, Ipsen and Kieburg that the squared singular values of products of $M$ rectangular random matrices with independent complex Gaussian entries are distributed according to a determinantal point process with a correlation kernel that admits a representation in terms of Meijer G-functions. We prove the universality of the local statistics of the squared singular values, namely, the bulk universality given by the sine kernel and the edge universality given by the Airy kernel. The proof is based on the asymptotic analysis for the double contour integral representation of the correlation kernel. Our strategy can be generalized to deal with other models of products of random matrices introduced recently and to establish similar universal results. Two more examples are investigated, one is the product of $M$ Ginibre matrices and the inverse of $K$ Ginibre matrices studied by Forrester, and the other one is the product of $M-1$ Ginibre matrices with one truncated unitary matrix considered by Kuijlaars and Stivigny.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-12-21T13:09:56Z</published>
+    <arxiv:comment>32 pages, 7 figures, revised upon the suggestions of the anonymous referees</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Dang-Zheng Liu</name>
+    </author>
+    <author>
+      <name>Dong Wang</name>
+    </author>
+    <author>
+      <name>Lun Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/0107056v3</id>
+    <title>Correlation function of Schur process with application to local geometry of a random 3-dimensional Young diagram</title>
+    <updated>2003-01-31T14:44:46Z</updated>
+    <link href="https://arxiv.org/abs/math/0107056v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0107056v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Schur process is a time-dependent analog of the Schur measure on partitions studied in math.RT/9907127. Our first result is that the correlation functions of the Schur process are determinants with a kernel that has a nice contour integral representation in terms of the parameters of the process. This general result is then applied to a particular specialization of the Schur process, namely to random 3-dimensional Young diagrams. The local geometry of a large random 3-dimensional diagram is described in terms of a determinantal point process on a 2-dimensional lattice with the incomplete beta function kernel (which generalizes the discrete sine kernel). A brief discussion of the universality of this answer concludes the paper.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nlin.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2001-07-06T23:18:57Z</published>
+    <arxiv:comment>35 pages, 7 figures, to appear in JAMS</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Andrei Okounkov</name>
+    </author>
+    <author>
+      <name>Nikolai Reshetikhin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1807.02833v2</id>
+    <title>Singular Value Statistics for the Spiked Elliptic Ginibre Ensemble</title>
+    <updated>2019-07-25T17:28:56Z</updated>
+    <link href="https://arxiv.org/abs/1807.02833v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1807.02833v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The complex elliptic Ginibre ensemble with coupling $τ$ is a complex Gaussian matrix interpolating between the Gaussian Unitary Ensemble (GUE) and the Ginibre ensemble. It has been known for some time that its eigenvalues form a determinantal point process in the complex plane. A recent result of Kanazawa and Kieburg (arXiv:1804.03985) shows that the singular values form a Pfaffian point process. In this paper we turn to consider an extended elliptic Ginibre ensemble, which connects the GUE and the spiked Wishart matrix, and prove that the singular values still build a Pfaffian point process with correlation kernels expressed by contour integral representations. As $τ$ tends to 1 at a certain critical rate, we prove that the limiting distribution of the largest singular value is described as a new Fredholm Pfaffian series, which connects two distributions $F_{\mathrm{GUE}}$ and $F^{2}_{\mathrm{GUE}}$ where $F_{\mathrm{GUE}}$ is the GUE Tracy-Widom distribution. For fixed $τ$, we prove the Baik-Ben Arous-Péché transition of the largest singular value and the sine kernel in the bulk. We also observe a crossover phenomenon at the origin when $τ$ tends to 1 at another critical rate.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-07-08T14:42:05Z</published>
+    <arxiv:comment>An extended version with 59 pages, 6 figures; a new family of limiting distributions are obtained in Theorem 1.5; Sections 4 and 6 are new; the hard edge limit is removed to Section 5</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Dang-Zheng Liu</name>
+    </author>
+    <author>
+      <name>Yanhui Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/9905032v2</id>
+    <title>Asymptotics of Plancherel measures for symmetric groups</title>
+    <updated>1999-09-11T23:42:25Z</updated>
+    <link href="https://arxiv.org/abs/math/9905032v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/9905032v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We consider the asymptotics of the Plancherel measures on partitions of $n$ as $n$ goes to infinity. We prove that the local structure of a Plancherel typical partition (which we identify with a Young diagram) in the middle of the limit shape converges to a determinantal point process with the discrete sine kernel. On the edges of the limit shape, we prove that the joint distribution of suitably scaled 1st, 2nd, and so on rows of a Plancherel typical diagram converges to the corresponding distribution for eigenvalues of random Hermitian matrices (given by the Airy kernel). This proves a conjecture due to Baik, Deift, and Johansson by methods different from the Riemann-Hilbert techniques used in their original papers math.CO/9810105 and math.CO/9901118 and from the combinatorial approach proposed by Okounkov in math.CO/9903176.
+  Our approach is based on an exact determinantal formula for the correlation functions of the poissonized Plancherel measures involving a new kernel on the 1-dimensional lattice. This kernel is expressed in terms of Bessel functions and we obtain it as a degeneration of the hypergeometric kernel from the paper math.RT/9904010 by Borodin and Olshanski. Our asymptotic analysis relies on the classical asymptotic formulas for the Bessel functions and depoissonization techniques.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.RT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>1999-05-05T17:52:57Z</published>
+    <arxiv:comment>43 pages, AMS LaTeX, 1 figure, added a section about a commuting difference operator and other material</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>J. Amer. Math. Soc. 13 (2000), no. 3, 481--515.</arxiv:journal_ref>
+    <author>
+      <name>Alexei Borodin</name>
+    </author>
+    <author>
+      <name>Andrei Okounkov</name>
+    </author>
+    <author>
+      <name>Grigori Olshanski</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1510.03641v3</id>
+    <title>Mesoscopic fluctuations for unitary invariant ensembles</title>
+    <updated>2016-09-11T20:41:20Z</updated>
+    <link href="https://arxiv.org/abs/1510.03641v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1510.03641v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Considering a determinantal point process on the real line, we establish a connection between the sine-kernel asymptotics for the correlation kernel and the CLT for mesoscopic linear statistics. This implies universality of mesoscopic fluctuations for a large class of unitary invariant Hermitian ensembles. In particular, this shows that the support of the equilibrium measure need not be connected in order to see Gaussian fluctuations at mesoscopic scales. Our proof is based on the cumulants computations introduced in [48] for the CUE and the sine process and the asymptotics formulae derived by Deift et al. in [12]. For varying weights $e^{-N \tr V (H)}$, in the one-cut regime, we also provide estimates for the variance of linear statistics $\tr f(H)$ which are valid for a rather general function $f$. In particular, this implies that the characteristic polynomials of such Hermitian random matrices converge in a suitable regime to a regularized fractional Brownian motion with logarithmic correlations defined in [19]. For the GUE kernel, we also discuss how to obtain the necessary sine-kernel asymptotics at mesoscopic scale by elementary means.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-10-13T12:12:32Z</published>
+    <arxiv:comment>Typos have been corrected and the presentation improved. This version was published in the author's PhD thesis at KTH</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Gaultier Lambert</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2303.02380v1</id>
+    <title>Asymptotics of noncolliding q-exchangeable random walks</title>
+    <updated>2023-03-04T11:01:01Z</updated>
+    <link href="https://arxiv.org/abs/2303.02380v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2303.02380v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider a process of noncolliding $q$-exchangeable random walks on $\mathbb{Z}$ making steps $0$ (straight) and $-1$ (down). A single random walk is called $q$-exchangeable if under an elementary transposition of the neighboring steps (down, straight) $\to$ (straight, down) the probability of the trajectory is multiplied by a parameter $q\in(0,1)$. Our process of $m$ noncolliding $q$-exchangeable random walks is obtained from the independent $q$-exchangeable walks via the Doob's $h$-transform for a certain nonnegative eigenfunction $h$ with the eigenvalue less than $1$. The system of $m$ walks evolves in the presence of an absorbing wall at $0$.
+  We show that the trajectory of the noncolliding $q$-exchangeable walks started from an arbitrary initial configuration forms a determinantal point process, and express its kernel in a double contour integral form. This kernel is obtained as a limit from the correlation kernel of $q$-distributed random lozenge tilings of sawtooth polygons.
+  In the limit as $m\to \infty$, $q=e^{-γ/m}$ with $γ&gt;0$ fixed, and under a suitable scaling of the initial data, we obtain a limit shape of our noncolliding walks and also show that their local statistics are governed by the incomplete beta kernel. The latter is a distinguished translation invariant ergodic extension of the two-dimensional discrete sine kernel.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.QA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-03-04T11:01:01Z</published>
+    <arxiv:comment>34 pages, 9 figures</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Leonid Petrov</name>
+    </author>
+    <author>
+      <name>Mikhail Tikhonov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1811.11556v2</id>
+    <title>Free fermions and $α$-determinantal processes</title>
+    <updated>2019-02-26T15:12:13Z</updated>
+    <link href="https://arxiv.org/abs/1811.11556v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1811.11556v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The $α$-determinant is a one-parameter generalisation of the standard determinant, with $α=-1$ corresponding to the determinant, and $α=1$ corresponding to the permanent. In this paper a simple limit procedure to construct $α$-determinantal point processes out of fermionic processes is examined. The procedure is illustrated for a model of $N$ free fermions in a harmonic potential. When the system is in the ground state, the rescaled correlation functions converge for large $N$ to determinants (of the sine kernel in the bulk and the Airy kernel at the edges). We analyse the point processes associated to a special family of excited states of fermions and show that appropriate scaling limits generate $α$-determinantal processes. Links with wave optics and other random matrix models are suggested.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.quant-gas" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-11-28T13:47:52Z</published>
+    <arxiv:comment>22 pages, 7 figures</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <arxiv:journal_ref>J. Phys. A: Math. Theor. 52, 165202 (2019)</arxiv:journal_ref>
+    <author>
+      <name>Fabio Deelan Cunden</name>
+    </author>
+    <author>
+      <name>Satya N. Majumdar</name>
+    </author>
+    <author>
+      <name>Neil O'Connell</name>
+    </author>
+    <arxiv:doi>10.1088/1751-8121/ab0ebd</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/1751-8121/ab0ebd" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1410.1440v3</id>
+    <title>The Circular Unitary Ensemble and the Riemann zeta function: the microscopic landscape and a new approach to ratios</title>
+    <updated>2015-08-18T16:45:40Z</updated>
+    <link href="https://arxiv.org/abs/1410.1440v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1410.1440v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We show in this paper that after proper scalings, the characteristic polynomial of a random unitary matrix converges almost surely to a random analytic function whose zeros, which are on the real line, form a determinantal point process with sine kernel. Our scaling is performed at the so-called "microscopic" level, that is we consider the characteristic polynomial at points which are of order $1/n$ distant. We prove this in the framework of virtual isometries to circumvent the fact that the rescaled characteristic polynomial does not even have a moment of order one, hence making the classical techniques of random matrix theory difficult to apply. The strong convergence results in this setup provide us with a new approach to ratios: we are able to solve open problems about the limiting distribution of ratios of characteristic polynomials evaluated at points of the form $\exp(2 i πα/n)$ and related objects (such as the logarithmic derivative). We also explicitly describe the dependence relation for the logarithm of the characteristic polynomial evaluated at several points on the microscopic scale. On the number theory side, inspired by the Keating-Snaith philosophy, we conjecture some new limit theorems for the value distribution of the Riemann zeta function on the critical line at the stochastic process level.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-10-06T16:22:12Z</published>
+    <arxiv:comment>71 pages; v1: New expanded version of arXiv:1403.7814 with new applications and a different point of view; v2: New approach to ratios formulas; v3: Added relevant references</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <arxiv:journal_ref>Invent. math. (2017) 207: 23</arxiv:journal_ref>
+    <author>
+      <name>Reda Chhaibi</name>
+    </author>
+    <author>
+      <name>Joseph Najnudel</name>
+    </author>
+    <author>
+      <name>Ashkan Nikeghbali</name>
+    </author>
+    <arxiv:doi>10.1007/s00222-016-0669-1</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s00222-016-0669-1" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.08928v1</id>
+    <title>The Singular Values of Lévy's Area Matrix</title>
+    <updated>2026-06-08T02:09:51Z</updated>
+    <link href="https://arxiv.org/abs/2606.08928v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.08928v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The matrix of Lévy's areas of $d$-dimensional Brownian motion is a fundamental object in stochastic analysis. In this article, we study the singular values of this $d \times d$ skew-symmetric random matrix. First, we derive an explicit formula for the density of the singular values and, en passant, present a new short proof of the characteristic function of Lévy's area when $d \ge 3$. This also allows us to extend the well-known formula for the density of Lévy's area to $d \ge 3$. Next, we use these results to characterise the singular spectrum as a determinantal point process with its kernel in explicit form. Finally, we study the asymptotics as $d \to \infty$: the empirical measure of singular values converges to an absolute Cauchy distribution, the largest singular values are of order $d$ with Gaussian fluctuations, the smallest singular values are of order $1/d$, and the local bulk spacings are of order $1/d$, with sine-kernel statistics after rescaling.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-08T02:09:51Z</published>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Danilo Jr Dela Cruz</name>
+    </author>
+    <author>
+      <name>Harald Oberhauser</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1504.06455v2</id>
+    <title>Gaussian and non-Gaussian fluctuations for mesoscopic linear statistics in determinantal processes</title>
+    <updated>2019-07-22T09:00:46Z</updated>
+    <link href="https://arxiv.org/abs/1504.06455v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1504.06455v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study mesoscopic linear statistics for a class of determinantal point processes which interpolates between Poisson and Gaussian Unitary Ensemble statistics. These processes are obtained by modifying the spectrum of the correlation kernel of the GUE eigenvalue process. An example of such a system comes from considering the distribution of non-colliding Brownian motions in a cylindrical geometry, or a grand canonical ensemble of free fermions in a quadratic well at positive temperature. When the scale of the modification of the spectrum of the GUE kernel, related to the size of the cylinder or the temperature, is different from the scale in the mesoscopic linear statistic, we get a central limit theorem of either Poisson or GUE type. On the other hand, in the critical regime where the scales are the same, we get a non-Gaussian process in the limit. Its distribution is characterized by explicit but complicated formulae for the cumulants of smooth linear statistics. These results rely on an asymptotic sine-kernel approximation of the GUE kernel which is valid at all mesoscopic scales, and a generalization of cumulant computations of Soshnikov for the sine process. Analogous determinantal processes on the circle are also considered with similar results.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-04-24T10:04:24Z</published>
+    <arxiv:comment>63 pages, version published and available in G.L. PhD thesis</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <arxiv:journal_ref>Ann. Probab. Volume 46, Number 3 (2018), 1201-1278</arxiv:journal_ref>
+    <author>
+      <name>Kurt Johansson</name>
+    </author>
+    <author>
+      <name>Gaultier Lambert</name>
+    </author>
+    <arxiv:doi>10.1214/17-AOP1178</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1214/17-AOP1178" title="doi"/>
+  </entry>
+</feed>

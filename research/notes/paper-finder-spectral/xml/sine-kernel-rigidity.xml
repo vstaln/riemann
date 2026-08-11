@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/dkIlA/xOkoYT/b2kn2W4CJAc9H0</id>
+  <title>arXiv Query: search_query=all:"sine kernel" AND all:rigidity&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-08-11T15:44:06Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22sine+kernel%22+AND+all:rigidity&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>6</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1712.08432v1</id>
+    <title>Boundaries of sine kernel universality for Gaussian perturbations of Hermitian matrices</title>
+    <updated>2017-12-22T13:24:39Z</updated>
+    <link href="https://arxiv.org/abs/1712.08432v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1712.08432v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We explore the boundaries of sine kernel universality for the eigenvalues of Gaussian perturbations of large deterministic Hermitian matrices. Equivalently, we study for deterministic initial data the time after which Dyson's Brownian motion exhibits sine kernel correlations. We explicitly describe this time span in terms of the limiting density and rigidity of the initial points. Our main focus lies on cases where the initial density vanishes at an interior point of the support. We show that the time to reach universality becomes larger if the density vanishes faster or if the initial points show less rigidity.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-12-22T13:24:39Z</published>
+    <arxiv:comment>43 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <arxiv:journal_ref>Random Matrices Theory Appl. 8, no. 3, 50 pp., 2019</arxiv:journal_ref>
+    <author>
+      <name>Tom Claeys</name>
+    </author>
+    <author>
+      <name>Thorsten Neuschel</name>
+    </author>
+    <author>
+      <name>Martin Venker</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1507.00670v2</id>
+    <title>Linear rigidity of stationary stochastic processes</title>
+    <updated>2016-11-29T15:27:38Z</updated>
+    <link href="https://arxiv.org/abs/1507.00670v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1507.00670v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider stationary stochastic processes $X_n$, $n\in \mathbb{Z}$ such that $X_0$ lies in the closed linear span of $X_n$, $n\neq 0$; following Ghosh and Peres, we call such processes linearly rigid. Using a criterion of Kolmogorov, we show that it suffices, for a stationary stochastic process to be rigid, that the spectral density vanish at zero and belong to the Zygmund class $Λ_{*}(1)$. We next give sufficient condition for stationary determinantal point processes on $\mathbb{Z}$ and on $\mathbb{R}$ to be rigid. Finally, we show that the determinantal point process on $\mathbb{R}^2$ induced by a tensor square of Dyson sine-kernels is $\textit{not}$ linearly rigid.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-07-02T17:31:52Z</published>
+    <arxiv:comment>18 pp, to appear in Ergodic Theory and Dynamical Systems</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Alexander I. Bufetov</name>
+    </author>
+    <author>
+      <name>Yoann Dabrowski</name>
+    </author>
+    <author>
+      <name>Yanqi Qiu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1804.01216v1</id>
+    <title>Rigidity of the $\operatorname{Sine}_β$ process</title>
+    <updated>2018-04-04T02:38:13Z</updated>
+    <link href="https://arxiv.org/abs/1804.01216v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1804.01216v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We show that the $\operatorname{Sine}_β$ point process, defined as the scaling limit of the Circular Beta Ensemble when the dimension goes to infinity, and generalizing the determinantal sine-kernel process, is rigid in the sense of Ghosh and Peres: the number of points in a given bounded Borel set $B$ is almost surely equal to a measurable function of the position of the points outside $B$.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-04-04T02:38:13Z</published>
+    <arxiv:primary_category term="math.PR"/>
+    <arxiv:journal_ref>Electron. Commun. Probab., Volume 23 (2018), paper no. 94, 8 pp</arxiv:journal_ref>
+    <author>
+      <name>Reda Chhaibi</name>
+    </author>
+    <author>
+      <name>Joseph Najnudel</name>
+    </author>
+    <arxiv:doi>10.1214/18-ECP195</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1214/18-ECP195" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1407.5402v2</id>
+    <title>From Sine kernel to Poisson statistics</title>
+    <updated>2014-10-06T12:10:24Z</updated>
+    <link href="https://arxiv.org/abs/1407.5402v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1407.5402v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the Sine$_β$ process introduced in [B. Valkó and B. Virág. Invent. math. (2009)] when the inverse temperature $β$ tends to 0. This point process has been shown to be the scaling limit of the eigenvalues point process in the bulk of $β$-ensembles and its law is characterized in terms of the winding numbers of the Brownian carrousel at different angular speeds. After a careful analysis of this family of coupled diffusion processes, we prove that the Sine$_β$ point process converges weakly to a Poisson point process on $\mathbb{R}$. Thus, the Sine$_β$ point processes establish a smooth crossover between the rigid clock (or picket fence) process (corresponding to $β=\infty$) and the Poisson process.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-07-21T07:48:36Z</published>
+    <arxiv:comment>24 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <arxiv:journal_ref>Electron. J. Probab. 19 (2014) no. 114, 1-25</arxiv:journal_ref>
+    <author>
+      <name>Romain Allez</name>
+    </author>
+    <author>
+      <name>Laure Dumaz</name>
+    </author>
+    <arxiv:doi>10.1214/EJP.v19-3742</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1214/EJP.v19-3742" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1703.02349v2</id>
+    <title>Universality for conditional measures of the sine point process</title>
+    <updated>2019-03-21T11:27:17Z</updated>
+    <link href="https://arxiv.org/abs/1703.02349v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1703.02349v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The sine process is a rigid point process on the real line, which means that for almost all configurations $X$, the number of points in an interval $I = [-R,R]$ is determined by the points of $X$ outside of $I$. In addition, the points in $I$ are an orthogonal polynomial ensemble on $I$ with a weight function that is determined by the points in $X \setminus I$. We prove a universality result that in particular implies that the correlation kernel of the orthogonal polynomial ensemble tends to the sine kernel as the length $|I|=2R$ tends to infinity, thereby answering a question posed by A.I. Bufetov.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-03-07T12:16:42Z</published>
+    <arxiv:comment>26 pages, no figures, revised version with Appendix B</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <arxiv:journal_ref>Journal of Approximation Theory 243 (2019), 1-24</arxiv:journal_ref>
+    <author>
+      <name>Arno B. J. Kuijlaars</name>
+    </author>
+    <author>
+      <name>Erwin Miña-Díaz</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1211.2435v3</id>
+    <title>Determinantal processes and completeness of random exponentials: the critical case</title>
+    <updated>2014-10-22T01:28:38Z</updated>
+    <link href="https://arxiv.org/abs/1211.2435v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1211.2435v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For a locally finite point set $Λ\subset \mathbb{R}$, consider the collection of exponential functions given by $\mathcal{E}_Λ:= \{e^{i λx} : λ\in L \}$. We examine the question whether $\mathcal{E}_Λ$ spans the Hilbert space $L^2[-π,π]$, when $Λ$ is random. For several point processes of interest, this belongs to a certain critical case of the corresponding question for deterministic $Λ$, about which little is known. For $Λ$ the continuum sine kernel process, obtained as the bulk limit of GUE eigenvalues, we establish that $\mathcal{E}_Λ$ is indeed complete. We also answer an analogous question on $\mathbb{C}$ for the Ginibre ensemble, arising as weak limits of certain non-Hermitian random matrix eigenvalues. In fact we establish completeness for any "rigid" determinantal point process in a general setting. In addition, we partially answer two questions due to Lyons and Steif about stationary determinantal processes on $\mathbb{Z}^d$.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.FA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-11-11T16:55:44Z</published>
+    <arxiv:comment>To appear in Probability Theory and Related Fields</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Subhro Ghosh</name>
+    </author>
+  </entry>
+</feed>

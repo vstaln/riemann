@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/H9hrvAZ9izdVj5S/APRDixqGnFU</id>
+  <title>arXiv Query: search_query=all:"Gaudin" AND all:Mehta&amp;id_list=&amp;start=0&amp;max_results=15</title>
+  <updated>2026-08-11T15:44:27Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22Gaudin%22+AND+all:Mehta&amp;start=0&amp;max_results=15&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>15</opensearch:itemsPerPage>
+  <opensearch:totalResults>8</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1703.06985v1</id>
+    <title>Evidence of the Poisson/Gaudin-Mehta phase transition for banded matrices on global scales</title>
+    <updated>2017-03-20T22:09:54Z</updated>
+    <link href="https://arxiv.org/abs/1703.06985v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1703.06985v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove that the Poisson/Gaudin--Mehta phase transition conjectured to occur when the bandwidth of an $N \times N$ symmetric banded matrix grows like $\sqrt N$ is observable as a critical point in the fourth moment of the level density for a wide class of symmetric banded matrices. A second critical point when the bandwidth grows like ${2 \over 5} N$ leads to a new conjectured phase transition in the eigenvalue localization, whose existence we demonstrate in numerical experiments.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-03-20T22:09:54Z</published>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Sheehan Olver</name>
+    </author>
+    <author>
+      <name>Andrew Swan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2212.00525v2</id>
+    <title>The complex elliptic Ginibre ensemble at weak non-Hermiticity: bulk spacing distributions</title>
+    <updated>2023-03-12T18:54:52Z</updated>
+    <link href="https://arxiv.org/abs/2212.00525v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2212.00525v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We show that the distribution of bulk spacings between pairs of adjacent eigenvalue real parts of a random matrix drawn from the complex elliptic Ginibre ensemble is asymptotically given by a generalization of the Gaudin-Mehta distribution, in the limit of weak non-Hermiticity. The same generalization is expressed in terms of an integro-differential Painlevé function and it is shown that the generalized Gaudin-Mehta distribution describes the crossover, with increasing degree of non-Hermiticity, from Gaudin-Mehta nearest-neighbor bulk statistics in the Gaussian Unitary Ensemble to Poisson gap statistics for eigenvalue real parts in the bulk of the Complex Ginibre Ensemble.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nlin.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-12-01T14:21:51Z</published>
+    <arxiv:comment>39 pages, 3 figures. Version 2 corrects typos</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>Thomas Bothner</name>
+    </author>
+    <author>
+      <name>Alex Little</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1203.1605v3</id>
+    <title>The asymptotic distribution of a single eigenvalue gap of a Wigner matrix</title>
+    <updated>2012-08-31T01:05:54Z</updated>
+    <link href="https://arxiv.org/abs/1203.1605v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1203.1605v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We show that the distribution of (a suitable rescaling of) a single eigenvalue gap $λ_{i+1}(M_n)-λ_i(M_n)$ of a random Wigner matrix ensemble in the bulk is asymptotically given by the Gaudin-Mehta distribution, if the Wigner ensemble obeys a finite moment condition and matches moments with the GUE ensemble to fourth order. This is new even in the GUE case, as prior results establishing the Gaudin-Mehta law required either an averaging in the eigenvalue index parameter $i$, or fixing the energy level $u$ instead of the eigenvalue index.
+  The extension from the GUE case to the Wigner case is a routine application of the Four Moment Theorem. The main difficulty is to establish the approximate independence of the eigenvalue counting function $N_{(-\infty,x)}(\tilde M_n)$ (where $\tilde M_n$ is a suitably rescaled version of $M_n$) with the event that there is no spectrum in an interval $[x,x+s]$, in the case of a GUE matrix. This will be done through some general considerations regarding determinantal processes given by a projection kernel.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-03-07T20:44:24Z</published>
+    <arxiv:comment>21 pages, no figures, submitted, Prob. Thy. and Related Fields. This is the final version, incorporating the referee comments</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Terence Tao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1407.5752v2</id>
+    <title>Random matrices, log-gases and Holder regularity</title>
+    <updated>2014-07-23T17:05:51Z</updated>
+    <link href="https://arxiv.org/abs/1407.5752v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1407.5752v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Wigner-Dyson-Gaudin-Mehta conjecture asserts that the local eigenvalue statistics of large real and complex Hermitian matrices with independent, identically distributed entries are universal in a sense that they depend only on the symmetry class of the matrix and otherwise are independent of the details of the distribution. We present the recent solution to this half-century old conjecture. We explain how stochastic tools, such as the Dyson Brownian motion, and PDE ideas, such as De Giorgi-Nash-Moser regularity theory, were combined in the solution.
+  We also show related results for log-gases that represent a universal model for strongly correlated systems. Finally, in the spirit of Wigner's original vision, we discuss the extensions of these universality results to more realistic physical systems such as random band matrices.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-07-22T06:36:57Z</published>
+    <arxiv:comment>Proceedings of ICM 2014</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Laszlo Erdos</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1702.07895v4</id>
+    <title>Random sorting networks: local statistics via random matrix laws</title>
+    <updated>2018-11-12T08:45:52Z</updated>
+    <link href="https://arxiv.org/abs/1702.07895v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1702.07895v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper finds the bulk local limit of the swap process of uniformly random sorting networks. The limit object is defined through a deterministic procedure, a local version of the Edelman-Greene algorithm, applied to a two dimensional determinantal point process with explicit kernel. The latter describes the asymptotic joint law near $0$ of the eigenvalues of the corners in the antisymmetric Gaussian Unitary Ensemble. In particular, the limiting law of the first time a given swap appears in a random sorting network is identified with the limiting distribution of the closest to $0$ eigenvalue in the antisymmetric GUE. Moreover, the asymptotic gap, in the bulk, between appearances of a given swap is the Gaudin-Mehta law -- the limiting universal distribution for gaps between eigenvalues of real symmetric random matrices.
+  The proofs rely on the determinantal structure and a double contour integral representation for the kernel of random Poissonized Young tableaux of arbitrary shape.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-02-25T14:03:32Z</published>
+    <arxiv:comment>Final version; to appear in PTRF</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <arxiv:journal_ref>Probability Theory and Related Fields 175 (2019), 45-96</arxiv:journal_ref>
+    <author>
+      <name>Vadim Gorin</name>
+    </author>
+    <author>
+      <name>Mustazee Rahman</name>
+    </author>
+    <arxiv:doi>10.1007/s00440-018-0886-1</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s00440-018-0886-1" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1106.4986v4</id>
+    <title>Universality of local spectral statistics of random matrices</title>
+    <updated>2012-01-30T06:30:41Z</updated>
+    <link href="https://arxiv.org/abs/1106.4986v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1106.4986v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Wigner-Gaudin-Mehta-Dyson conjecture asserts that the local eigenvalue statistics of large random matrices exhibit universal behavior depending only on the symmetry class of the matrix ensemble. For invariant matrix models, the eigenvalue distributions are given by a log-gas with inverse temperature $β= 1, 2, 4$, corresponding to the orthogonal, unitary and symplectic ensembles. For $β\not \in \{1, 2, 4\}$, there is no matrix model behind this model, but the statistical physics interpretation of the log-gas is still valid for all $β&gt; 0$. The universality conjecture for invariant ensembles asserts that the local eigenvalue statistics are independent of $V$. In this article, we review our recent solution to the universality conjecture for both invariant and non-invariant ensembles. We will also demonstrate that the local ergodicity of the Dyson Brownian motion is the intrinsic mechanism behind the universality. Furthermore, we review the solution of Dyson's conjecture on the local relaxation time of the Dyson Brownian motion. Related questions such as delocalization of eigenvectors and local version of Wigner's semicircle law will also be discussed.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2011-06-24T14:57:23Z</published>
+    <arxiv:comment>Some typos corrected and references added</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Laszlo Erdos</name>
+    </author>
+    <author>
+      <name>Horng-Tzer Yau</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1808.09436v3</id>
+    <title>Mesoscopic eigenvalue density correlations of Wigner matrices</title>
+    <updated>2019-09-13T07:23:10Z</updated>
+    <link href="https://arxiv.org/abs/1808.09436v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1808.09436v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We investigate to what extent the microscopic Wigner-Gaudin-Mehta-Dyson (WGMD) (or sine kernel) statistics of random matrix theory remain valid on mesoscopic scales. To that end, we compute the connected two-point spectral correlation function of a Wigner matrix at two mesoscopically separated points. In the mesoscopic regime, density correlations are much weaker than in the microscopic regime. Our result is an explicit formula for the two-point function. This formula implies that the WGMD statistics are valid to leading order on all mesoscopic scales, that in the real symmetric case there are subleading corrections matching precisely the WGMD statistics, while in the complex Hermitian case these subleading corrections are absent. We also uncover non-universal subleading correlations, which dominate over the universal ones beyond a certain intermediate mesoscopic scale. The proof is based on a hierarchy of Schwinger-Dyson equations for a sufficiently large class of polynomials in the entries of the Green function. The hierarchy is indexed by a tree, whose depth is controlled using stopping rules. A key ingredient in the derivation of the stopping rules is a new estimate on the density of states, which we prove to have bounded derivatives of all order on all mesoscopic scales.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-08-28T17:52:06Z</published>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Yukun He</name>
+    </author>
+    <author>
+      <name>Antti Knowles</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1212.0839v1</id>
+    <title>Universality for random matrices and log-gases</title>
+    <updated>2012-12-04T19:56:15Z</updated>
+    <link href="https://arxiv.org/abs/1212.0839v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1212.0839v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Eugene Wigner's revolutionary vision predicted that the energy levels of large complex quantum systems exhibit a universal behavior: the statistics of energy gaps depend only on the basic symmetry type of the model.
+  Simplified models of Wigner's thesis have recently become mathematically accessible. For mean field models represented by large random matrices with independent entries, the celebrated Wigner-Dyson-Gaudin-Mehta (WDGM) conjecture asserts that the local eigenvalue statistics are universal. For invariant matrix models, the eigenvalue distributions are given by a log-gas with potential $V$ and inverse temperature $β= 1, 2, 4$. corresponding to the orthogonal, unitary and symplectic ensembles. For $β\not \in \{1, 2, 4\}$, there is no natural random matrix ensemble behind this model, but the analogue of the WDGM conjecture asserts that the local statistics are independent of $V$.
+  In these lecture notes we review the recent solution to these conjectures for both invariant and non-invariant ensembles. We will discuss two different notions of universality in the sense of (i) local correlation functions and (ii) gap distributions.
+  We will demonstrate that the local ergodicity of the Dyson Brownian motion is the intrinsic mechanism behind the universality. In particular, we review the solution of Dyson's conjecture on the local relaxation time of the Dyson Brownian motion. Additionally, the gap distribution requires a De Giorgi-Nash-Moser type Hölder regularity analysis for a discrete parabolic equation with random coefficients.
+  Related questions such as the local version of Wigner's semicircle law and delocalization of eigenvectors will also be discussed. We will also explain how these results can be extended beyond the mean field models, especially to random band matrices.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-12-04T19:56:15Z</published>
+    <arxiv:comment>Lecture Notes for the conference Current Developments in Mathematics, 2012</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>Laszlo Erdos</name>
+    </author>
+  </entry>
+</feed>

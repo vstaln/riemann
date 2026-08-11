@@ -1,0 +1,407 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/Na4tip1RnFTItSCMFJElMeXKqyI</id>
+  <title>arXiv Query: search_query=ti:"Ramanujan graph"&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-08-11T16:08:00Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=ti:%22Ramanujan+graph%22&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>52</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1711.06558v1</id>
+    <title>Ramanujan Graphs</title>
+    <updated>2017-11-15T18:39:14Z</updated>
+    <link href="https://arxiv.org/abs/1711.06558v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1711.06558v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This is an item on Ramanujan Graphs for a planned encyclopedia on Ramanujan. The notion of Ramanujan graphs is explained, as well as the reason to name these graphs after Ramanujan.</summary>
+    <category term="math.HO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.RT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-11-15T18:39:14Z</published>
+    <arxiv:primary_category term="math.HO"/>
+    <author>
+      <name>Alexander Lubotzky</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1904.03500v2</id>
+    <title>$X$-Ramanujan Graphs</title>
+    <updated>2019-04-10T17:04:45Z</updated>
+    <link href="https://arxiv.org/abs/1904.03500v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1904.03500v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $X$ be an infinite graph of bounded degree; e.g., the Cayley graph of a free product of finite groups. If $G$ is a finite graph covered by $X$, it is said to be $X$-Ramanujan if its second-largest eigenvalue $λ_2(G)$ is at most the spectral radius $ρ(X)$ of $X$, and more generally $k$-quasi-$X$-Ramanujan if $λ_k(G)$ is at most $ρ(X)$. In case $X$ is the infinite $Δ$-regular tree, this reduces to the well known notion of a finite $Δ$-regular graph being Ramanujan. Inspired by the Interlacing Polynomials method of Marcus, Spielman, and Srivastava, we show the existence of infinitely many $k$-quasi-$X$-Ramanujan graphs for a variety of infinite $X$. In particular, $X$ need not be a tree; our analysis is applicable whenever $X$ is what we call an additive product graph. This additive product is a new construction of an infinite graph $\mathsf{AddProd}(A_1, \dots, A_c)$ from finite 'atom' graphs $A_1, \dots, A_c$ over a common vertex set. It generalizes the notion of the free product graph $A_1 * \cdots * A_c$ when the atoms $A_j$ are vertex-transitive, and it generalizes the notion of the universal covering tree when the atoms $A_j$ are single-edge graphs. Key to our analysis is a new graph polynomial $α(A_1, \dots, A_c;x)$ that we call the additive characteristic polynomial. It generalizes the well known matching polynomial $μ(G;x)$ in case the atoms $A_j$ are the single edges of $G$, and it generalizes the $r$-characteristic polynomial introduced in [Ravichandran'16, Leake-Ravichandran'18]. We show that $α(A_1, \dots, A_c;x)$ is real-rooted, and all of its roots have magnitude at most $ρ(\mathsf{AddProd}(A_1, \dots, A_c))$. This last fact is proven by generalizing Godsil's notion of treelike walks on a graph $G$ to a notion of freelike walks on a collection of atoms $A_1, \dots, A_c$.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-04-06T17:36:33Z</published>
+    <arxiv:comment>36 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Sidhanth Mohanty</name>
+    </author>
+    <author>
+      <name>Ryan O'Donnell</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1806.05709v2</id>
+    <title>Ramanujan graphs in cryptography</title>
+    <updated>2018-12-18T04:15:30Z</updated>
+    <link href="https://arxiv.org/abs/1806.05709v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1806.05709v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper we study the security of a proposal for Post-Quantum Cryptography from both a number theoretic and cryptographic perspective. Charles-Goren-Lauter in 2006 [CGL06] proposed two hash functions based on the hardness of finding paths in Ramanujan graphs. One is based on Lubotzky-Phillips-Sarnak (LPS) graphs and the other one is based on Supersingular Isogeny Graphs. A 2008 paper by Petit-Lauter-Quisquater breaks the hash function based on LPS graphs. On the Supersingular Isogeny Graphs proposal, recent work has continued to build cryptographic applications on the hardness of finding isogenies between supersingular elliptic curves. A 2011 paper by De Feo-Jao-Plût proposed a cryptographic system based on Supersingular Isogeny Diffie-Hellman as well as a set of five hard problems. In this paper we show that the security of the SIDH proposal relies on the hardness of the SIG path-finding problem introduced in [CGL06]. In addition, similarities between the number theoretic ingredients in the LPS and Pizer constructions suggest that the hardness of the path-finding problem in the two graphs may be linked. By viewing both graphs from a number theoretic perspective, we identify the similarities and differences between the Pizer and LPS graphs.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-06-14T19:16:04Z</published>
+    <arxiv:comment>33 pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Anamaria Costache</name>
+    </author>
+    <author>
+      <name>Brooke Feigon</name>
+    </author>
+    <author>
+      <name>Kristin Lauter</name>
+    </author>
+    <author>
+      <name>Maike Massierer</name>
+    </author>
+    <author>
+      <name>Anna Puskás</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1804.08028v4</id>
+    <title>Ramanujan Graphs and Digraphs</title>
+    <updated>2020-05-25T10:06:14Z</updated>
+    <link href="https://arxiv.org/abs/1804.08028v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1804.08028v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Ramanujan graphs have fascinating properties and history. In this paper we explore a parallel notion of Ramanujan digraphs, collecting relevant results from old and recent papers, and proving some new ones. Almost-normal Ramanujan digraphs are shown to be of special interest, as they are extreme in the sense of an Alon-Boppana theorem, and they have remarkable combinatorial features, such as small diameter, Chernoff bound for sampling, optimal covering time and sharp cutoff. Other topics explored are the connection to Cayley graphs and digraphs, the spectral radius of universal covers, Alon's conjecture for random digraphs, and explicit constructions of almost-normal Ramanujan digraphs.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-04-21T21:01:17Z</published>
+    <arxiv:comment>To appear in Analysis and Geometry on Graphs and Manifolds, LMS Lecture Note Series (461)</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Ori Parzanchevski</name>
+    </author>
+    <arxiv:doi>10.1017/9781108615259.014</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1017/9781108615259.014" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1908.09575v2</id>
+    <title>Random growth on a Ramanujan graph</title>
+    <updated>2019-10-22T17:04:33Z</updated>
+    <link href="https://arxiv.org/abs/1908.09575v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1908.09575v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The behavior of a certain random growth process is analyzed on arbitrary regular and non-regular graphs. Our argument is based on the Expander Mixing Lemma, which entails that the results are strongest for Ramanujan graphs, which asymptotically maximize the spectral gap. Further, we consider Erdős--Rényi random graphs and compare our theoretical results with computational experiments on flip graphs of point configurations. The latter is relevant for enumerating triangulations.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-08-26T10:03:47Z</published>
+    <arxiv:comment>22 pages, 7 figures, 1 table. This version makes several changes based on feedback of the first version. This includes a change to the title and a new section with results on Erdős--Rényi random graphs</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Janko Boehm</name>
+    </author>
+    <author>
+      <name>Michael Joswig</name>
+    </author>
+    <author>
+      <name>Lars Kastner</name>
+    </author>
+    <author>
+      <name>Andrew Newman</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1604.03544v1</id>
+    <title>Ramanujan Graphs in Polynomial Time</title>
+    <updated>2016-04-12T19:59:18Z</updated>
+    <link href="https://arxiv.org/abs/1604.03544v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1604.03544v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The recent work by Marcus, Spielman and Srivastava proves the existence of bipartite Ramanujan (multi)graphs of all degrees and all sizes. However, that paper did not provide a polynomial time algorithm to actually compute such graphs. Here, we provide a polynomial time algorithm to compute certain expected characteristic polynomials related to this construction. This leads to a deterministic polynomial time algorithm to compute bipartite Ramanujan (multi)graphs of all degrees and all sizes.</summary>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-04-12T19:59:18Z</published>
+    <arxiv:primary_category term="cs.DS"/>
+    <author>
+      <name>Michael B. Cohen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0911.4148v1</id>
+    <title>Spectra of lifted Ramanujan graphs</title>
+    <updated>2009-11-21T00:10:27Z</updated>
+    <link href="https://arxiv.org/abs/0911.4148v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0911.4148v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  A random $n$-lift of a base graph $G$ is its cover graph $H$ on the vertices $[n]\times V(G)$, where for each edge $u v$ in $G$ there is an independent uniform bijection $π$, and $H$ has all edges of the form $(i,u),(π(i),v)$. A main motivation for studying lifts is understanding Ramanujan graphs, and namely whether typical covers of such a graph are also Ramanujan.
+  Let $G$ be a graph with largest eigenvalue $λ_1$ and let $ρ$ be the spectral radius of its universal cover. Friedman (2003) proved that every "new" eigenvalue of a random lift of $G$ is $O(ρ^{1/2}λ_1^{1/2})$ with high probability, and conjectured a bound of $ρ+o(1)$, which would be tight by results of Lubotzky and Greenberg (1995). Linial and Puder (2008) improved Friedman's bound to $O(ρ^{2/3}λ_1^{1/3})$. For $d$-regular graphs, where $λ_1=d$ and $ρ=2\sqrt{d-1}$, this translates to a bound of $O(d^{2/3})$, compared to the conjectured $2\sqrt{d-1}$.
+  Here we analyze the spectrum of a random $n$-lift of a $d$-regular graph whose nontrivial eigenvalues are all at most $λ$ in absolute value. We show that with high probability the absolute value of every nontrivial eigenvalue of the lift is $O((λ\vee ρ) \log ρ)$. This result is tight up to a logarithmic factor, and for $λ\leq d^{2/3-ε}$ it substantially improves the above upper bounds of Friedman and of Linial and Puder. In particular, it implies that a typical $n$-lift of a Ramanujan graph is nearly Ramanujan.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2009-11-21T00:10:27Z</published>
+    <arxiv:comment>34 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Eyal Lubetzky</name>
+    </author>
+    <author>
+      <name>Benny Sudakov</name>
+    </author>
+    <author>
+      <name>Van Vu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2412.20721v1</id>
+    <title>Ramanujan Graphs and Interlacing Families</title>
+    <updated>2024-12-30T05:41:52Z</updated>
+    <link href="https://arxiv.org/abs/2412.20721v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2412.20721v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This survey accompanies a lecture on the paper ``Interlacing Families I: Bipartite Ramanujan Graphs of All Degrees'' by A. Marcus, D. Spielman, and N. Srivastava at the 2024 International Congress of Basic Science (ICBS) in July, 2024. Its purpose is to explain the developments surrounding this work over the past ten or so years, with an emphasis on connections to other areas of mathematics. Earlier surveys about the interlacing families method by the same authors focused on applications in functional analysis, whereas the focus here is on applications in spectral graph theory.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-30T05:41:52Z</published>
+    <arxiv:comment>Proc. ICBS 2024</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Nikhil Srivastava</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1507.04725v5</id>
+    <title>Cutoff on all Ramanujan graphs</title>
+    <updated>2016-08-24T19:51:01Z</updated>
+    <link href="https://arxiv.org/abs/1507.04725v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1507.04725v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We show that on every Ramanujan graph $G$, the simple random walk exhibits cutoff: when $G$ has $n$ vertices and degree $d$, the total-variation distance of the walk from the uniform distribution at time $t=\frac{d}{d-2}\log_{d-1} n + s\sqrt{\log n}$ is asymptotically $\mathbb{P}(Z &gt; c\, s)$ where $Z$ is a standard normal variable and $c=c(d)$ is an explicit constant. Furthermore, for all $1 \leq p \leq \infty$, $d$-regular Ramanujan graphs minimize the asymptotic $L^p$-mixing time for SRW among all $d$-regular graphs. Our proof also shows that, for every vertex $x$ in $G$ as above, its distance from $n-o(n)$ of the vertices is asymptotically $\log_{d-1} n$.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-07-16T19:40:55Z</published>
+    <arxiv:comment>27 pages, 7 figures; to appear in GAFA</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Eyal Lubetzky</name>
+    </author>
+    <author>
+      <name>Yuval Peres</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/0306196v1</id>
+    <title>Ramanujan Graphs with Small Girth</title>
+    <updated>2003-06-11T22:36:34Z</updated>
+    <link href="https://arxiv.org/abs/math/0306196v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0306196v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We construct an infinite family of (q+1)-regular Ramanujan graphs X_n of girth 1. We also give covering maps X_{n+1} --&gt; X_n such that the minimal common covering of all the graphs is the universal covering tree.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2003-06-11T22:36:34Z</published>
+    <arxiv:comment>14 pages, 1 figure. to appear: Combinatorica</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Yair Glasner</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2009.00837v2</id>
+    <title>An entropic proof of cutoff on Ramanujan graphs</title>
+    <updated>2020-11-06T02:04:51Z</updated>
+    <link href="https://arxiv.org/abs/2009.00837v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2009.00837v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>It is recently proved by Lubetzky and Peres that the simple random walk on a Ramanujan graph exhibits a cutoff phenomenon, that is to say, the total variation distance of the random walk distribution from the uniform distribution drops abruptly from near $1$ to near $0$. There are already a few alternative proofs of this fact. In this note, we give yet another proof based on functional analysis and entropic consideration.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.FA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-09-02T06:27:11Z</published>
+    <arxiv:comment>9 pages; Added remarks and references (v2)</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Narutaka Ozawa</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2409.13784v2</id>
+    <title>Ramanujan graphs with diameter at most three</title>
+    <updated>2024-09-27T04:05:20Z</updated>
+    <link href="https://arxiv.org/abs/2409.13784v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2409.13784v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For a simple graph $G$, the complement and the line graph of $G$ are denoted by $G^c$ and $L(G)$, respectively. In this paper, we show that for every simple connected regular graph $G$ with at least $5$ vertices, the graph $\mathcal{R}(G):=L(L(G)^c)^c$ is a Ramanujan graph with diameter at most three.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-09-20T03:38:10Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Mahdi Ebrahimi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1402.0620v1</id>
+    <title>Almost-Ramanujan Graphs and Prime Gaps</title>
+    <updated>2014-02-04T05:37:01Z</updated>
+    <link href="https://arxiv.org/abs/1402.0620v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1402.0620v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The method of Murty and Cioabă shows how one can use results about gaps between primes to construct families of almost-Ramanujan graphs. In this paper we give a simpler construction which avoids the search for perfect matchings and thus eliminates the need for computation. A couple of recent explicit bounds on the gap between consecutive primes are then used to give the construction of $k$-regular families with explicit lower bounds on the spectral gaps. We then show that a result of Ben-Aroya and Ta-Shma can be improved using our simpler construction on the assumption of the Riemann Hypothesis, which sheds some more light on a question raised by Reingold, Vadhan and Widgerson.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-02-04T05:37:01Z</published>
+    <arxiv:comment>Feedback is sincerely welcome</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Adrian Dudek</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1310.0489v3</id>
+    <title>Cycle density in infinite Ramanujan graphs</title>
+    <updated>2015-12-22T13:50:39Z</updated>
+    <link href="https://arxiv.org/abs/1310.0489v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1310.0489v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce a technique using nonbacktracking random walk for estimating the spectral radius of simple random walk. This technique relates the density of nontrivial cycles in simple random walk to that in nonbacktracking random walk. We apply this to infinite Ramanujan graphs, which are regular graphs whose spectral radius equals that of the tree of the same degree. Kesten showed that the only infinite Ramanujan graphs that are Cayley graphs are trees. This result was extended to unimodular random rooted regular graphs by Abért, Glasner and Virág. We show that an analogous result holds for all regular graphs: the frequency of times spent by simple random walk in a nontrivial cycle is a.s. 0 on every infinite Ramanujan graph. We also give quantitative versions of that result, which we apply to answer another question of Abért, Glasner and Virág, showing that on an infinite Ramanujan graph, the probability that simple random walk encounters a short cycle tends to 0 a.s. as the time tends to infinity.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-10-01T21:01:59Z</published>
+    <arxiv:comment>Published at http://dx.doi.org/10.1214/14-AOP961 in the Annals of Probability (http://www.imstat.org/aop/) by the Institute of Mathematical Statistics (http://www.imstat.org)</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <arxiv:journal_ref>Annals of Probability 2015, Vol. 43, No. 6, 3337-3358</arxiv:journal_ref>
+    <author>
+      <name>Russell Lyons</name>
+    </author>
+    <author>
+      <name>Yuval Peres</name>
+    </author>
+    <arxiv:doi>10.1214/14-AOP961</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1214/14-AOP961" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2206.03983v1</id>
+    <title>Graph rigidity properties of Ramanujan graphs</title>
+    <updated>2022-06-08T16:02:28Z</updated>
+    <link href="https://arxiv.org/abs/2206.03983v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2206.03983v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A recent result of Cioabă, Dewar and Gu implies that any $k$-regular Ramanujan graph with $k\geq 8$ is globally rigid in $\mathbb{R}^2$. In this paper, we extend these results and prove that any $k$-regular Ramanujan graph of sufficiently large order is globally rigid in $\mathbb{R}^2$ when $k\in \{6, 7\}$, and when $k\in \{4,5\}$ if it is also vertex-transitive. These results imply that the Ramanujan graphs constructed by Morgenstern in 1994 are globally rigid. We also prove several results on other types of framework rigidity, including body-bar rigidity, body-hinge rigidity, and rigidity on surfaces of revolution. In addition, we use computational methods to determine which Ramanujan graphs of small order are globally rigid in $\mathbb{R}^2$.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-06-08T16:02:28Z</published>
+    <arxiv:comment>23 pages, 9 figures</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>The Electronic Journal of Combinatorics (2023)</arxiv:journal_ref>
+    <author>
+      <name>Sebastian M. Cioabă</name>
+    </author>
+    <author>
+      <name>Sean Dewar</name>
+    </author>
+    <author>
+      <name>Georg Grasegger</name>
+    </author>
+    <author>
+      <name>Xiaofeng Gu</name>
+    </author>
+    <arxiv:doi>10.37236/11324</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.37236/11324" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1904.03533v1</id>
+    <title>From Ramanujan Graphs to Ramanujan Complexes</title>
+    <updated>2019-04-06T21:34:29Z</updated>
+    <link href="https://arxiv.org/abs/1904.03533v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1904.03533v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Ramanujan graphs are graphs whose spectrum is bounded optimally. Such graphs have found numerous applications in combinatorics and computer science. In recent years, a high dimensional theory has emerged. In this paper these developments are surveyed. After explaining their connection to the Ramanujan conjecture we will present some old and new results with an emphasis on random walks on these discrete objects and on the Euclidean spheres. The latter lead to "golden gates" which are of importance in quantum computation.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.RT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-04-06T21:34:29Z</published>
+    <arxiv:comment>To appear in the proceedings of the Ramanujan Centenary Celebration at the Royal Society</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <arxiv:journal_ref>Philosophical Transactions of the Royal Society A, 378 (2020), no. 2163</arxiv:journal_ref>
+    <author>
+      <name>Alexander Lubotzky</name>
+    </author>
+    <author>
+      <name>Ori Parzanchevski</name>
+    </author>
+    <arxiv:doi>10.1098/rsta.2018.0445</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1098/rsta.2018.0445" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.21333v2</id>
+    <title>Ramanujan Graph Rewiring with Non Negative Resistance Curvature</title>
+    <updated>2026-06-24T08:57:15Z</updated>
+    <link href="https://arxiv.org/abs/2606.21333v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.21333v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Graph Neural Networks (GNNs) have emerged as a powerful paradigm for learning on graph-structured data by iteratively propagating and aggregating information across edges. However, conventional message passing schemes often suffer from over-squashing, whereby exponentially large neighborhoods are compressed into fixed-dimensional embeddings, impeding effective long-range dependency learning. In this work, we introduce Ramanujan Propagation, a graph rewiring strategy that leverages Ramanujan graphs to alleviate topological bottlenecks in GNNs. We first establish that suitably chosen Ramanujan graphs guarantee non-negative resistance curvature, which mitigates over-squashing and facilitates efficient information flow. We then propose an algorithmic framework to construct a Ramanujan rewired graph that preserves the local connectivity of the original graph. Our experiments demonstrate that our method outperforms nine state-of-the-art rewiring techniques. These results establish Ramanujan graphs as a rigorous structural prior for scalable, topology-aware message passing in GNNs.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-19T11:26:42Z</published>
+    <arxiv:comment>Accepted at ECML PKDD 2026 (Research Track)</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Hugo Attali</name>
+    </author>
+    <author>
+      <name>Rachid El Jouhri</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1408.4421v1</id>
+    <title>Ramanujan Graphs and the Solution of the Kadison-Singer Problem</title>
+    <updated>2014-08-19T18:41:30Z</updated>
+    <link href="https://arxiv.org/abs/1408.4421v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1408.4421v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We survey the techniques used in our recent resolution of the Kadison-Singer problem and proof of existence of Ramanujan Graphs of every degree: mixed characteristic polynomials and the method of interlacing families of polynomials. To demonstrate the method of interlacing families of polynomials, we give a simple proof of Bourgain and Tzafriri's restricted invertibility principle in the isotropic case.</summary>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-08-19T18:41:30Z</published>
+    <arxiv:comment>A version of this paper will appear in the proceedings of the 2014 International Congress of Mathematicians</arxiv:comment>
+    <arxiv:primary_category term="math.SP"/>
+    <author>
+      <name>Adam W. Marcus</name>
+    </author>
+    <author>
+      <name>Daniel A. Spielman</name>
+    </author>
+    <author>
+      <name>Nikhil Srivastava</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1305.6784v1</id>
+    <title>Ramanujan graphings and correlation decay in local algorithms</title>
+    <updated>2013-05-29T13:09:46Z</updated>
+    <link href="https://arxiv.org/abs/1305.6784v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1305.6784v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $G$ be a large-girth $d$-regular graph and $μ$ be a random process on the vertices of $G$ produced by a randomized local algorithm. We prove the upper bound $(k+1-2k/d)\Bigl(\frac{1}{\sqrt{d-1}}\Bigr)^k$ for the (absolute value of the) correlation of values on pairs of vertices of distance $k$ and show that this bound is optimal. The same results hold automatically for factor of i.i.d processes on the $d$-regular tree. In that case we give an explicit description for the (closure) of all possible correlation sequences. Our proof is based on the fact that the Bernoulli graphing of the infinite $d$-regular tree has spectral radius $2\sqrt{d-1}$. Graphings with this spectral gap are infinite analogues of finite Ramanujan graphs and they are interesting on their own right.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-05-29T13:09:46Z</published>
+    <arxiv:primary_category term="math.PR"/>
+    <arxiv:journal_ref>Random Structures &amp; Algorithms Volume 47, Issue 3, 424-435, 2015</arxiv:journal_ref>
+    <author>
+      <name>Agnes Backhausz</name>
+    </author>
+    <author>
+      <name>Balazs Szegedy</name>
+    </author>
+    <author>
+      <name>Balint Virag</name>
+    </author>
+    <arxiv:doi>10.1002/rsa.20562</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1002/rsa.20562" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1905.04297v1</id>
+    <title>Zeta functions of Ramanujan graphs and modular forms</title>
+    <updated>2019-05-10T05:17:48Z</updated>
+    <link href="https://arxiv.org/abs/1905.04297v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1905.04297v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We will investigate the relationship between Ihara's zeta functions of Ramanujan graphs and Hasse-Weil's congruent zeta functions of modular curves. As an application we will describe the limit value of Hasse-Weil's congruent zeta functions in terms of the corresponding Ramanujan graphs. Moreover we will show a congruence relation of the Fourier coefficients of a normalized Hecke eigenform of weight 2.</summary>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-05-10T05:17:48Z</published>
+    <arxiv:comment>arXiv admin note: text overlap with arXiv:1905.03417</arxiv:comment>
+    <arxiv:primary_category term="math.AG"/>
+    <author>
+      <name>Kennichi Sugiyama</name>
+    </author>
+  </entry>
+</feed>

@@ -4,7 +4,7 @@
 //   Stage 2: tr W_T cross-check from the prime side.
 //   Stage 3: HS^2 two-level.  Stage 4: archimedean tail.
 use std::f64::consts::{PI, SQRT_2};
-use gwdict::{C, Dict, ExplicitFormula, arch_tail_power, prime_powers, uniform_integrate};
+use gwdict::{C, Dict, ExplicitFormula, arch_tail_power, h_plus, prime_powers, uniform_integrate};
 
 fn load_zeros() -> Vec<f64> {
     let mut gams = Vec::new();

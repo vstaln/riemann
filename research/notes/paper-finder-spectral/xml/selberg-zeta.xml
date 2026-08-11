@@ -1,0 +1,581 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/kZ97BrtWUx2DN3RyjfRmGfVXYDA</id>
+  <title>arXiv Query: search_query=all:"Selberg zeta"&amp;id_list=&amp;start=0&amp;max_results=30</title>
+  <updated>2026-08-11T15:43:45Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22Selberg+zeta%22&amp;start=0&amp;max_results=30&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>30</opensearch:itemsPerPage>
+  <opensearch:totalResults>139</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1706.10045v2</id>
+    <title>Selberg zeta function and hyperbolic eisenstein series</title>
+    <updated>2019-12-09T09:56:02Z</updated>
+    <link href="https://arxiv.org/abs/1706.10045v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1706.10045v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the product of  Selberg Zeta function and hyperbolic Eisenstein  series on a family of  degenerating hyperbolic surfaces.</summary>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-06-30T07:36:23Z</published>
+    <arxiv:primary_category term="math.SP"/>
+    <author>
+      <name>Thérèse Falliero</name>
+      <arxiv:affiliation>LANLG</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1011.3093v2</id>
+    <title>Milnor-Selberg zeta functions and zeta regularizations</title>
+    <updated>2011-03-30T10:40:34Z</updated>
+    <link href="https://arxiv.org/abs/1011.3093v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1011.3093v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>By a similar idea for the construction of Milnor's gamma functions, we introduce "higher depth determinants" of the Laplacian on a compact Riemann surface of genus greater than one. We prove that, as a generalization of the determinant expression of the Selberg zeta function, this higher depth determinant can be expressed as a product of multiple gamma functions and what we call a Milnor-Selberg zeta function. It is shown that the Milnor-Selberg zeta function admits an analytic continuation, a functional equation and, remarkably, has an Euler product.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2010-11-13T03:20:34Z</published>
+    <arxiv:comment>32 pages, 7 figures</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <arxiv:journal_ref>J. Geom. Phys., 64 (2013) No. 1, 120-145</arxiv:journal_ref>
+    <author>
+      <name>Nobushige Kurokawa</name>
+    </author>
+    <author>
+      <name>Masato Wakayama</name>
+    </author>
+    <author>
+      <name>Yoshinori Yamasaki</name>
+    </author>
+    <arxiv:doi>10.1016/j.geomphys.2012.10.015</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.geomphys.2012.10.015" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0804.4837v1</id>
+    <title>Computation of Selberg zeta functions on Hecke triangle groups</title>
+    <updated>2008-04-30T14:55:16Z</updated>
+    <link href="https://arxiv.org/abs/0804.4837v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0804.4837v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  In this paper, a heuristic method to compute the Selberg zeta function for Hecke triangle groups, $G_q$ ($q&gt;=3$) is described. The algorithm is based on the transfer operator method and an overview of the relevant background is given. We give numerical support for the claim that the method works and can be used to compute the Selberg Zeta function for $G_q$ to any desired precision. We also present some numerical results obtained by implementing the algorithm.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2008-04-30T14:55:16Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Fredrik Strömberg</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/0209383v2</id>
+    <title>Selberg zeta functions for spaces of higher rank</title>
+    <updated>2004-02-16T12:46:32Z</updated>
+    <link href="https://arxiv.org/abs/math/0209383v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0209383v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  The theory of Selberg zeta functions is generalized to higher rank spaces. Applications towards analytic torsion numbers are given.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2002-09-27T14:14:43Z</published>
+    <arxiv:comment>92 pages, LATEX</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Anton Deitmar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math-ph/0501047v2</id>
+    <title>Hierarchy of the Selberg zeta functions</title>
+    <updated>2005-04-13T04:03:12Z</updated>
+    <link href="https://arxiv.org/abs/math-ph/0501047v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math-ph/0501047v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We introduce a Selberg type zeta function of two variables which interpolates several higher Selberg zeta functions. The analytic continuation, the functional equation and the determinant expression of this function via the Laplacian on a Riemann surface are obtained.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2005-01-18T07:10:26Z</published>
+    <arxiv:comment>14 pages</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <arxiv:journal_ref>Lett. Math. Phys. Vol. 73 (2005), p.59-70.</arxiv:journal_ref>
+    <author>
+      <name>Yasufumi Hashimoto</name>
+    </author>
+    <author>
+      <name>Masato Wakayama</name>
+    </author>
+    <arxiv:doi>10.1007/s11005-005-6784-3</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s11005-005-6784-3" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.14981v1</id>
+    <title>The divisor of the twisted Selberg zeta function</title>
+    <updated>2026-07-16T13:34:29Z</updated>
+    <link href="https://arxiv.org/abs/2607.14981v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.14981v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For the Selberg zeta function of geometrically finite infinite-area hyperbolic orbisurfaces with twists by finite-dimensional unitary representations, we establish a factorization formula in terms of a Weierstrass product of the Laplace resonances of the considered hyperbolic orbisurface, Barnes G-functions, gamma functions, and the singularity degrees of the representation. We thereby provide an interpretation of the zeros and poles of the Selberg zeta function by spectral and geometric entities of the orbisurface and the representation. This formula generalizes the factorization result by Borthwick, Judge and Perry to hyperbolic orbisurfaces with orbifold singularities as well as to unitary twists. Also in the untwisted case, the presence of orbifold singularities yields a separate, previously unobserved contribution to the factorization formula.</summary>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-16T13:34:29Z</published>
+    <arxiv:comment>56 pages</arxiv:comment>
+    <arxiv:primary_category term="math.SP"/>
+    <author>
+      <name>Moritz Doll</name>
+    </author>
+    <author>
+      <name>Anke Pohl</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/0409101v8</id>
+    <title>Arithmetic expressions of Selberg's zeta functions for congruence subgroups</title>
+    <updated>2006-02-24T07:03:54Z</updated>
+    <link href="https://arxiv.org/abs/math/0409101v8" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0409101v8" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  In Sarnak's paper, it was proved that the Selberg zeta function for SL(2,Z) is expressed in terms of the fundamental units and the class numbers of the primitive indefinite binary quadratic forms. The aim of this paper is to obtain similar arithmetic expressions of the logarithmic derivatives of the Selberg zeta functions for congruence subgroups of SL(2,Z). As applications, we study the Brun-Titchmarsh type prime geodesic theorem, the asymptotic behavior of the sum of the class number.</summary>
+    <category term="math.RT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2004-09-07T10:40:07Z</published>
+    <arxiv:comment>12 pages</arxiv:comment>
+    <arxiv:primary_category term="math.RT"/>
+    <arxiv:journal_ref>Journal of Number Theory, Vol. 122 (2007), p.324-335.</arxiv:journal_ref>
+    <author>
+      <name>Yasufumi Hashimoto</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1910.11913v2</id>
+    <title>Normal modes in thermal AdS via the Selberg zeta function</title>
+    <updated>2020-05-20T04:48:38Z</updated>
+    <link href="https://arxiv.org/abs/1910.11913v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1910.11913v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The heat kernel and quasinormal mode methods of computing 1-loop partition functions of spin $s$ fields on hyperbolic quotient spacetimes $\mathbb{H}^{3}/\mathbb{Z}$ are related via the Selberg zeta function. We extend that analysis to thermal $\text{AdS}_{2n+1}$ backgrounds, with quotient structure $\mathbb{H}^{2n+1}/\mathbb{Z}$. Specifically, we demonstrate the zeros of the Selberg function encode the normal mode frequencies of spin fields upon removal of non-square-integrable modes. With this information we construct the 1-loop partition functions for symmetric transverse traceless tensors in terms of the Selberg zeta function and find exact agreement with the heat kernel method.</summary>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-10-25T19:44:01Z</published>
+    <arxiv:comment>22 pages, clarifications added, Scipost formatting</arxiv:comment>
+    <arxiv:primary_category term="hep-th"/>
+    <arxiv:journal_ref>SciPost Phys. 9, 009 (2020)</arxiv:journal_ref>
+    <author>
+      <name>Victoria L. Martin</name>
+    </author>
+    <author>
+      <name>Andrew Svesko</name>
+    </author>
+    <arxiv:doi>10.21468/SciPostPhys.9.1.009</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.21468/SciPostPhys.9.1.009" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2312.06770v2</id>
+    <title>A generalized Selberg zeta function for flat space cosmologies</title>
+    <updated>2024-04-01T10:30:49Z</updated>
+    <link href="https://arxiv.org/abs/2312.06770v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2312.06770v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Flat space cosmologies (FSCs) are time dependent solutions of three-dimensional (3D) gravity with a vanishing cosmological constant. They can be constructed from a discrete quotient of empty 3D flat spacetime and are also called shifted-boost orbifolds. Using this quotient structure, we build a new and generalized Selberg zeta function for FSCs, and show that it is directly related to the scalar 1-loop partition function. We then propose an extension of this formalism applicable to more general quotient manifolds $\mathcal M/\mathbb Z$, based on representation theory of fields propagating on this background. Our prescription constitutes a novel and expedient method for calculating regularized 1-loop determinants, without resorting to the heat kernel. We compute quasinormal modes in the FSC using the zeroes of a Selberg zeta function, and match them to known results.</summary>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-12-11T19:00:04Z</published>
+    <arxiv:comment>25 pages, a few clarifications added</arxiv:comment>
+    <arxiv:primary_category term="hep-th"/>
+    <author>
+      <name>Arjun Bagchi</name>
+    </author>
+    <author>
+      <name>Cynthia Keeler</name>
+    </author>
+    <author>
+      <name>Victoria Martin</name>
+    </author>
+    <author>
+      <name>Rahul Poddar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/dg-ga/9411004v1</id>
+    <title>$Γ$-Cohomology and the Selberg Zeta Function</title>
+    <updated>1994-11-18T13:17:36Z</updated>
+    <link href="https://arxiv.org/abs/dg-ga/9411004v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/dg-ga/9411004v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We propose a new method for studying $n$- and $Γ$-cohomology of globalizations of Harish-Chandra modules, where $G=KAN$ is a rank one semisimple Lie group, $Γ$ is a discrete subgroup of $G$ and $n=Lie(N)$. We prove a conjecture of Patterson relating the singularities of Selberg zeta functions with the $Γ$-cohomology of principal series representations if $Γ$ is cocompact and torsion free.</summary>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>1994-11-18T13:17:36Z</published>
+    <arxiv:comment>21 pages, LATEX</arxiv:comment>
+    <arxiv:primary_category term="math.DG"/>
+    <author>
+      <name>Ulrich Bunke</name>
+    </author>
+    <author>
+      <name>Martin Olbrich</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/dg-ga/9603003v2</id>
+    <title>Group cohomology and the singularities of the Selberg zeta function associated to a Kleinian group</title>
+    <updated>1999-03-01T00:00:00Z</updated>
+    <link href="https://arxiv.org/abs/dg-ga/9603003v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/dg-ga/9603003v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We prove Patterson's conjecture about the singularities of the Selberg zeta function associated to a convex-cocompact, torsion free group acting on a hyperbolic space.</summary>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>1996-03-07T18:12:11Z</published>
+    <arxiv:comment>63 pages, published version</arxiv:comment>
+    <arxiv:primary_category term="math.DG"/>
+    <arxiv:journal_ref>Ann. of Math. (2) 149 (1999), no. 2, 627-689</arxiv:journal_ref>
+    <author>
+      <name>Ulrich Bunke</name>
+    </author>
+    <author>
+      <name>Martin Olbrich</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/0504073v2</id>
+    <title>Higher Selberg zeta functions for congruence subgroups</title>
+    <updated>2006-09-27T11:04:39Z</updated>
+    <link href="https://arxiv.org/abs/math/0504073v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0504073v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  As a generalization of the results [KW3],we study the functional equation of the higher Selberg zeta function for congruence subgroups. To obtain the gamma factor of this function, we introduce a higher Dirichlet $L$-function. Then we determine the gamma factor explicitly in terms of the Barnes triple gamma function and the higher Dirichlet $L$-function.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.RT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2005-04-05T13:37:06Z</published>
+    <arxiv:comment>30pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Tetsuya Momotani</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1709.00760v4</id>
+    <title>Meromorphic continuation of Selberg zeta functions with twists having non-expanding cusp monodromy</title>
+    <updated>2020-02-09T10:39:57Z</updated>
+    <link href="https://arxiv.org/abs/1709.00760v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1709.00760v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We initiate the study of Selberg zeta functions $Z_{Γ,χ}$ for geometrically finite Fuchsian groups $Γ$ and finite-dimensional representations $χ$ with non-expanding cusp monodromy. We show that for all choices of $(Γ,χ)$, the Selberg zeta function $Z_{Γ,χ}$ converges on some half-plane in $\mathbb{C}$. In addition, under the assumption that $Γ$ admits a strict transfer operator approach, we show that $Z_{Γ,χ}$ extends meromorphically to all of $\mathbb{C}$.</summary>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-09-03T19:30:57Z</published>
+    <arxiv:comment>46 pages, v4: added results on nonconvergence beyond NECM; added proofs for meromorphic continuation of derivatives of the Lerch transcendent; final version accepted for publication</arxiv:comment>
+    <arxiv:primary_category term="math.SP"/>
+    <author>
+      <name>Ksenia Fedosova</name>
+    </author>
+    <author>
+      <name>Anke Pohl</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1302.5928v2</id>
+    <title>On the distribution of zeros of the derivative of Selberg's zeta function associated to finite volume Riemann surfaces</title>
+    <updated>2013-02-26T05:02:18Z</updated>
+    <link href="https://arxiv.org/abs/1302.5928v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1302.5928v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>W. Luo has investigated the distribution of zeros of the derivative of the Selberg zeta function associated to compact hyperbolic Riemann surfaces. In essence, the main results in Luo's article involve the following three points: Finiteness for the number of zeros in the half plane to the left of the critical line; an asymptotic expansion for the counting function measuring the vertical distribution of zeros; and an asymptotic expansion for the counting function measuring the horizontal distance of zeros from the critical line. In the present article, we study the more complicated setting of distribution of zeros of the derivative of the Selberg zeta function associated to a non-compact, finite volume hyperbolic Riemann surface. There are numerous difficulties which exist in the non-compact case that are not present in the compact setting, beginning with the fact that in the non-compact case the Selberg zeta function does not satisfy the analogue of the Riemann hypothesis. To be more specific, we actually study the zeros of the derivative of ZH, where Z is the Selberg zeta function and H is the Dirichlet series component of the scattering matrix, both associated to an arbitrary finite-volume hyperbolic Riemann surface. Our main results address finiteness of zeros in the half plane to the left of the critical line, an asymptotic count for the vertical distribution of zeros, and an asymptotic count for the horizontal distance of zeros.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-02-24T17:04:00Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Jay Jorgenson</name>
+    </author>
+    <author>
+      <name>Lejla Smajlovic</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2009.01428v1</id>
+    <title>Selberg's zeta function for the modular group in the critical strip</title>
+    <updated>2020-09-03T03:14:58Z</updated>
+    <link href="https://arxiv.org/abs/2009.01428v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2009.01428v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In the present paper, we study the growth of the Selberg zeta function for the modular group in the critical strip.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-09-03T03:14:58Z</published>
+    <arxiv:comment>6 pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <arxiv:journal_ref>Math. Nachr., 294 (2021), 1899-1904</arxiv:journal_ref>
+    <author>
+      <name>Yasufumi Hashimoto</name>
+    </author>
+    <arxiv:doi>10.1002/mana.202000268</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1002/mana.202000268" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1910.07607v1</id>
+    <title>BTZ one-loop determinants via the Selberg zeta function for general spin</title>
+    <updated>2019-10-16T20:58:22Z</updated>
+    <link href="https://arxiv.org/abs/1910.07607v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1910.07607v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We relate the heat kernel and quasinormal mode methods of computing the 1-loop partition function of arbitrary spin fields on a rotating (Euclidean) BTZ background using the Selberg zeta function associated with $\mathbb{H}^{3}/\mathbb{Z}$, extending (1811.08433). Previously, Perry and Williams showed for a scalar field that the zeros of the Selberg zeta function coincide with the poles of the associated scattering operator upon a relabeling of integers. We extend the integer relabeling to the case of general spin, and discuss its relationship to the removal of non-square-integrable Euclidean zero modes.</summary>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-10-16T20:58:22Z</published>
+    <arxiv:primary_category term="hep-th"/>
+    <author>
+      <name>Cynthia Keeler</name>
+    </author>
+    <author>
+      <name>Victoria L. Martin</name>
+    </author>
+    <author>
+      <name>Andrew Svesko</name>
+    </author>
+    <arxiv:doi>10.1007/JHEP10(2020)138</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/JHEP10(2020)138" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2011.08429v1</id>
+    <title>Functional equations for Selberg zeta functions with Tate motives</title>
+    <updated>2020-11-17T05:38:32Z</updated>
+    <link href="https://arxiv.org/abs/2011.08429v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2011.08429v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For a compact Riemann surface $M$ of genus $g\ge 2$, we study the functional equations of the Selberg zeta functions attached with the Tate motives $f$. We prove that certain functional equations hold if and only if $f$ has the absolute automorphy.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-11-17T05:38:32Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Shin-ya Koyama</name>
+    </author>
+    <author>
+      <name>Nobushige Kurokawa</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.13086v1</id>
+    <title>Brownian Loops and the Selberg Zeta Function</title>
+    <updated>2026-01-19T14:26:27Z</updated>
+    <link href="https://arxiv.org/abs/2601.13086v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.13086v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the Brownian loop measure on hyperbolic surfaces for Brownian motion with a constant killing rate. We compute the mass of Brownian loops with killing in a free homotopy class and then relate the total mass of loops in all essential homotopy classes to the Selberg zeta function when the surface is geometrically finite. As an application, we provide a probabilistic interpretation of different notions of regularized determinants of Laplacian, in both the compact and infinite-area cases.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-19T14:26:27Z</published>
+    <arxiv:comment>19 pages, 1 figure</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Roman Lemonde</name>
+    </author>
+    <author>
+      <name>Jian Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1606.09109v4</id>
+    <title>A transfer-operator-based relation between Laplace eigenfunctions and zeros of Selberg zeta functions</title>
+    <updated>2019-08-25T09:05:18Z</updated>
+    <link href="https://arxiv.org/abs/1606.09109v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1606.09109v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Over the last few years Pohl (partly jointly with coauthors) developed dual `slow/fast' transfer operator approaches to automorphic functions, resonances, and Selberg zeta functions for a certain class of hyperbolic surfaces $Γ\backslash\mathbb{H}$ with cusps and all finite-dimensional unitary representations $χ$ of $Γ$.
+  The eigenfunctions with eigenvalue $1$ of the fast transfer operators determine the zeros of the Selberg zeta function for $(Γ,χ)$. Further, if $Γ$ is cofinite and $χ$ is the trivial one-dimensional representation then highly regular eigenfunctions with eigenvalue $1$ of the slow transfer operators characterize Maass cusp forms for $Γ$. Conjecturally, this characterization extends to more general automorphic functions as well as to residues at resonances.
+  In this article we study, without relying on Selberg theory, the relation between the eigenspaces of these two types of transfer operators for any Hecke triangle surface $Γ\backslash\mathbb{H}$ of finite or infinite area and any finite-dimensional unitary representation $χ$ of the Hecke triangle group $Γ$. In particular we provide explicit isomorphisms between relevant subspaces. This solves a conjecture by Möller and Pohl, characterizes some of the zeros of the Selberg zeta functions independently of the Selberg trace formula, and supports the previously mentioned conjectures.</summary>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-06-29T14:12:00Z</published>
+    <arxiv:comment>52 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="math.SP"/>
+    <author>
+      <name>Alexander Adam</name>
+    </author>
+    <author>
+      <name>Anke Pohl</name>
+    </author>
+    <arxiv:doi>10.1017/etds.2018.51</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1017/etds.2018.51" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1205.1754v1</id>
+    <title>Selberg zeta functions on odd-dimensional hyperbolic manifolds of finite volume</title>
+    <updated>2012-05-08T17:31:39Z</updated>
+    <link href="https://arxiv.org/abs/1205.1754v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1205.1754v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study Selberg zeta functions $Z(s,σ)$ associated to locally homogeneous vector bundles over the unit-sphere bundle of a complete odd-dimensional hyperbolic manifold of finite volume. We assume a certain condition on the fundamental group of the manifold. A priori, the Selberg zeta functions are defined only for s in some right half-space of $\mathbb{C}$. We will prove that for any locally homogeneous bundle the functions $Z(s,σ)$ have a meromorphic continuation to $\mathbb{C}$ and we will give a complete description of their singularities in terms of spectral data of the underlying manifold. Our work generalizes results of Bunke and Olbrich to the non-compact situation. As an application of our results one can compare the normalized Reidemeister torsions on hyperbolic 3 manifolds with cusps which were introduced by Menal-Ferrer and Porti to the corresponding regularized analytic torsions.</summary>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-05-08T17:31:39Z</published>
+    <arxiv:primary_category term="math.DG"/>
+    <author>
+      <name>Jonathan Pfaff</name>
+    </author>
+    <arxiv:doi>10.1515/crelle-2013-0047</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1515/crelle-2013-0047" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1404.3934v1</id>
+    <title>A thermodynamic formalism approach to the Selberg zeta function for Hecke triangle surfaces of infinite area</title>
+    <updated>2014-04-15T14:40:50Z</updated>
+    <link href="https://arxiv.org/abs/1404.3934v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1404.3934v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We provide an explicit construction of a cross section for the geodesic flow on infinite-area Hecke triangle surfaces which allows us to conduct a transfer operator approach to the Selberg zeta function. Further we construct closely related cross sections for the billiard flow on the associated triangle surfaces and endow the arising discrete dynamical systems and transfer operator families with two weight functions which presumably encode Dirichlet respectively Neumann boundary conditions. The Fredholm determinants of these transfer operator families constitute dynamical zeta functions, which provide a factorization of the Selberg zeta function of the Hecke triangle surfaces.</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-04-15T14:40:50Z</published>
+    <arxiv:comment>23 pages, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="math.DS"/>
+    <author>
+      <name>Anke D. Pohl</name>
+    </author>
+    <arxiv:doi>10.1007/s00220-015-2304-1</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s00220-015-2304-1" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0801.1938v2</id>
+    <title>Artin formalism for Selberg zeta functions of co-finite Kleinian groups</title>
+    <updated>2008-01-19T22:00:32Z</updated>
+    <link href="https://arxiv.org/abs/0801.1938v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0801.1938v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Let $Γ\backslash\mathbb H^3$ be a finite-volume quotient of the upper-half space, where $Γ\subset {\rm SL}(2,\mathbb C)$ is a discrete subgroup. To a finite dimensional unitary representation $χ$ of $Γ$ one associates the Selberg zeta function $Z(s;Γ;χ)$. In this paper we prove the Artin formalism for the Selberg zeta function. Namely, if $\tildeΓ$ is a finite index group extension of $Γ$ in ${\rm SL}(2,\mathbb C)$, and $π={\rm Ind}_Γ^{\tildeΓ}χ$ is the induced representation, then $Z(s;Γ;χ)=Z(s;\tildeΓ;π)$. In the second part of the paper we prove by a direct method the analogous identity for the scattering function, namely $φ(s;Γ;χ)=φ(s;\tildeΓ;π)$, for an appropriate normalization of the Eisenstein series.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2008-01-13T07:20:33Z</published>
+    <arxiv:comment>14 pages. In v2 added key reference and clarified relationship to certain results in the literature</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Eliot Brenner</name>
+    </author>
+    <author>
+      <name>Florin Spinu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.16681v2</id>
+    <title>Determinants of twisted Laplacians and the twisted Selberg zeta function</title>
+    <updated>2026-02-09T12:12:03Z</updated>
+    <link href="https://arxiv.org/abs/2512.16681v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.16681v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $X$ be an orbisurface, meaning a compact hyperbolic Riemann surface possibly with a finite number of elliptic points, and let $X_1$ denote its unit tangent bundle. We consider the twisted Selberg zeta function $Z(s;ρ)$ associated to a representation $ρ: π_1(X_1) \to \text{GL}(V_ρ)$. We prove a relation between the twisted Selberg zeta function $Z(s;ρ)$ and the regularized determinant of the twisted Laplacian associated to $ρ$. These results can be viewed as a generalization of a result due to Sarnak who considered the trivial character. Yet our proof is different, as it is based on evaluation of the Laplace-Mellin type integral transformations. Going further, we explicitly compute the multiplicative constant, which we call the torsion factor, and express its dependence on parameters which determine the representation. We study the asymptotic behavior of the constant for a sequence of non-unitary representations introduced by Yamaguchi and prove that the asymptotic behavior of this constant as the dimension of the representation tends to infinity is the same as the behavior of the higher-dimensional Reidemeister torsion on $X_1$ (up to an absolute constant).</summary>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-18T15:48:36Z</published>
+    <arxiv:comment>Sign correction in equation (1.3), in the limits on page 3, in equations (7.2), (7.3), (8.6) and in the limit in Corollary 7.2</arxiv:comment>
+    <arxiv:primary_category term="math.SP"/>
+    <author>
+      <name>Jay Jorgenson</name>
+    </author>
+    <author>
+      <name>Lejla Smajlovic</name>
+    </author>
+    <author>
+      <name>Polyxeni Spilioti</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0902.4225v2</id>
+    <title>Remarks on a special value of the Selberg zeta function</title>
+    <updated>2009-02-25T21:27:14Z</updated>
+    <link href="https://arxiv.org/abs/0902.4225v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0902.4225v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Let $\CmZ_{Y_0(N)}$ be the constant term of the logarithmic derivative at $s=1$ of the Selberg zeta function of the modular curve $Y_0(N)$. Jorgenson and Kramer established the bound $\CmZ_{Y_0(N)}=O_ε(N^ε)$, $ε&gt;0$ by relating it to geometric invariants. In this article we give, for $N$ prime, another proof via $L$-functions and exponential sums improving on a previous approach by Abbes-Ullmo and Michel-Ullmo. We further derive a power of $\log N$ bound along the same line.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2009-02-24T19:56:10Z</published>
+    <arxiv:comment>12 pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Nicolas Templier</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.27152v1</id>
+    <title>Asymptotics of the Selberg Zeta function on the spin moduli space</title>
+    <updated>2026-06-25T15:21:18Z</updated>
+    <link href="https://arxiv.org/abs/2606.27152v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.27152v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove a limited asymptotic expansion up to order $t^4\log t$ of the logarithmic derivative of the Selberg zeta function for the spin Dirac operator on compact surfaces for families of hyperbolic metrics degenerating towards complete hyperbolic metrics with cusps in a pinching process where the lengths $l_j(t)$ of certain disjoint simple closed geodesics converge smoothly to $0$ as $t\to 0$.</summary>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-25T15:21:18Z</published>
+    <arxiv:comment>29 pages</arxiv:comment>
+    <arxiv:primary_category term="math.DG"/>
+    <author>
+      <name>Cipriana Anghel</name>
+    </author>
+    <author>
+      <name>Sergiu Moroianu</name>
+    </author>
+    <author>
+      <name>Rareş Stan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2011.08427v1</id>
+    <title>Simple functional equations for generalized Selberg zeta functions with Tate motives</title>
+    <updated>2020-11-17T05:36:01Z</updated>
+    <link href="https://arxiv.org/abs/2011.08427v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2011.08427v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove that for a compact locally symmetric Riemannian space $M$ of rank 1 there exist infinitely many automorphic Tate motives $f$ such that the generalized Selberg zeta function $Z_{M(f)}(s)$ satisfies a simple functional equation in the sense that it has no gamma factors.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-11-17T05:36:01Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Shin-ya Koyama</name>
+    </author>
+    <author>
+      <name>Nobushige Kurokawa</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1511.04208v2</id>
+    <title>The twisted Selberg trace formula and the Selberg zeta function for compact orbifolds</title>
+    <updated>2015-11-19T08:56:04Z</updated>
+    <link href="https://arxiv.org/abs/1511.04208v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1511.04208v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study elements of the spectral theory of compact hyperbolic orbifolds $Γ\backslash \mathbb{H}^{n}$. We establish a version of the Selberg trace formula for non-unitary representations of $Γ$ and prove that the associated Selberg zeta function admits a meromorphic continuation to $\mathbb{C}$.</summary>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-11-13T09:25:08Z</published>
+    <arxiv:comment>arXiv admin note: text overlap with arXiv:0906.3997 by other authors</arxiv:comment>
+    <arxiv:primary_category term="math.SP"/>
+    <author>
+      <name>Ksenia Fedosova</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2210.01118v2</id>
+    <title>A Selberg zeta function for warped AdS$_3$ black holes</title>
+    <updated>2022-11-30T14:56:19Z</updated>
+    <link href="https://arxiv.org/abs/2210.01118v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2210.01118v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Selberg zeta function and trace formula are powerful tools used to calculate kinetic operator spectra and quasinormal modes on hyperbolic quotient spacetimes. In this article, we extend this formalism to non-hyperbolic quotients by constructing a Selberg zeta function for warped AdS$_3$ black holes. We also consider the so-called self-dual solutions, which are of interest in connection to near-horizon extremal Kerr. We establish a map between the zeta function zeroes and the quasinormal modes on warped AdS$_3$ black hole backgrounds. In the process, we use a method involving conformal coordinates and the symmetry structure of the scalar Laplacian to construct a warped version of the hyperbolic half-space metric, which to our knowledge is new and may have interesting applications of its own, which we describe. We end by discussing several future directions for this work, such as computing 1-loop determinants (which govern quantum corrections) on the quotient spacetimes we consider, as well as adapting the formalism presented here to more generic orbifolds.</summary>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-10-03T17:59:25Z</published>
+    <arxiv:comment>23 pages, minor revisions and corrections of typos</arxiv:comment>
+    <arxiv:primary_category term="hep-th"/>
+    <author>
+      <name>Victoria L. Martin</name>
+    </author>
+    <author>
+      <name>Rahul Poddar</name>
+    </author>
+    <author>
+      <name>Agla Þórarinsdóttir</name>
+    </author>
+    <arxiv:doi>10.1007/JHEP01(2023)049</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/JHEP01(2023)049" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.07100v1</id>
+    <title>Selberg Zeta Functions Have Second Moment At $σ= 1$</title>
+    <updated>2025-11-10T13:39:28Z</updated>
+    <link href="https://arxiv.org/abs/2511.07100v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.07100v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we demonstrate the existence of the second moment of the Selberg zeta function for a Fuchsian group of the first kind at $σ= 1$. The prime geodesic theorem plays a crucial role in this context. The proof extends to Beurling zeta-functions satisfying a weak form of the Riemann hypothesis and to general Dirichlet series with positive coefficients, the partial sums of which are well-behaved. Note that by employing the recent approach of Broucke and Hilberdink in proving the second moment theorem, we can circumvent the separation condition introduced by Landau for general Dirichlet series.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-10T13:39:28Z</published>
+    <arxiv:comment>12 pages, 0 figures</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Ramūnas Garunkštis</name>
+    </author>
+    <author>
+      <name>Jokūbas Putrius</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1809.10140v2</id>
+    <title>Euler products of Selberg zeta functions in the critical strip</title>
+    <updated>2018-10-21T12:37:30Z</updated>
+    <link href="https://arxiv.org/abs/1809.10140v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1809.10140v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For any congruence subgroup of the modular group, we extend the region of convergence of the Euler products of the Selberg zeta functions beyond the boundary Re s = 1, if they are attached with a nontrivial irreducible unitary representation. The region is determined by the size of the lowest eigenvalue of the Laplacian, and it extends to Re s $\geqslant$ 3/4 under Selberg's eigenvalue conjecture. More generally, for any unitary representation we establish the relation between the behavior of partial Euler products in the critical strip and the estimate of the error term in the prime geodesic theorem. For the trivial representation, the proof essentially exploits the idea of the celebrated work of Ramanujan.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-09-24T16:00:00Z</published>
+    <arxiv:comment>24 pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <arxiv:journal_ref>The Ramanujan Journal 59 (2022), no. 2, 437-458</arxiv:journal_ref>
+    <author>
+      <name>Ikuya Kaneko</name>
+    </author>
+    <author>
+      <name>Shin-ya Koyama</name>
+    </author>
+    <arxiv:doi>10.1007/s11139-022-00550-y</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s11139-022-00550-y" title="doi"/>
+  </entry>
+</feed>

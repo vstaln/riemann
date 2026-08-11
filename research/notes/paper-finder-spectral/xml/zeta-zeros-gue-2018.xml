@@ -1,0 +1,324 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/hsHe3BMe0Q0xH55IOs+3689Ob7E</id>
+  <title>arXiv Query: search_query=all:"Riemann zeta" AND all:zeros AND all:"random matrix" AND submittedDate:"201801010000 TO 202612312359"&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-08-11T16:11:03Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22Riemann+zeta%22+AND+(all:zeros+AND+(all:%22random+matrix%22+AND+submittedDate:%22201801010000+TO+202612312359%22))&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>15</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2509.07788v1</id>
+    <title>Complex moments of the derivative of the Riemann zeta function</title>
+    <updated>2025-09-09T14:23:05Z</updated>
+    <link href="https://arxiv.org/abs/2509.07788v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.07788v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We conjecture results about the complex moments of the derivative of the Riemann zeta function, evaluated at the non-trivial zeros of the Riemann zeta function. We do this via two different random matrix computations. In the first, we find an exact formula for the complex moments of the derivative of the characteristic polynomials of unitary matrices averaged over Haar measure using Selberg's integral. In the second, we consider the hybrid approach for zeta, first proposed by Gonek, Hughes and Keating.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-09T14:23:05Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Christopher Hughes</name>
+    </author>
+    <author>
+      <name>Andrew Pearce-Crump</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.07792v1</id>
+    <title>Integer moments of the derivatives of the Riemann zeta function</title>
+    <updated>2025-09-09T14:27:19Z</updated>
+    <link href="https://arxiv.org/abs/2509.07792v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.07792v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We conjecture the full asymptotic expansion of a product of Riemann zeta functions, evaluated at the non-trivial zeros of the zeta function, with shifts added in each argument. By taking derivatives with respect to these shifts, we form a conjecture for the integer moments of mixed derivatives of the zeta function. This generalises a result of the authors where they took complex moments of the first derivative of the zeta function, evaluated at the non-trivial zeros. We approach this problem in two different ways: the first uses a random matrix theory approach, and the second by the Ratios Conjecture of Conrey, Farmer, and Zirnbauer.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-09T14:27:19Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Christopher Hughes</name>
+    </author>
+    <author>
+      <name>Andrew Pearce-Crump</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2409.03687v2</id>
+    <title>On moments of the derivative of CUE characteristic polynomials and the Riemann zeta function</title>
+    <updated>2024-12-23T13:13:44Z</updated>
+    <link href="https://arxiv.org/abs/2409.03687v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2409.03687v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the derivative of the characteristic polynomial of $N \times N$ Haar distributed unitary matrices. We obtain the first explicit formulae for complex-valued moments when the spectral variable is inside the unit disc, in the limit $N \to \infty$. These formulae are expressed in terms of the confluent hypergeometric function of the first kind. As an application, we provide an alternative method to re-obtain Mezzadri's result [J. Phys. A, 36(12):2945-2962, 2003] on the asymptotic density of zeros of the derivative as $N \to \infty$. We explore the connection between these moments and those of the derivative of the Riemann zeta function away from the critical line. Under the Lindelöf hypothesis, we prove that all positive integer moments agree with our random matrix results up to an arithmetic factor. Inspired by this finding, we propose a conjecture on the asymptotics of non-integer moments of the derivative of the Riemann zeta function off the critical line. Within random matrix theory, we also investigate the microscopic regime where the spectral variable $z$ satisfies $|z|^{2}=1-\frac{c}{N}$ for a fixed constant $c$. We obtain an asymptotic formula for the moments in this regime as a determinant involving the finite temperature Bessel kernel, which reduces to the Bessel kernel when $c=0$. For finite matrix size, we provide an exact formula for the moments of the derivative inside the unit disc, expressed as polynomials of the inverse of the distance from the circle, with coefficients given by combinatorial sums.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-09-05T16:42:47Z</published>
+    <arxiv:comment>50 pages. Updated version</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Nick Simm</name>
+    </author>
+    <author>
+      <name>Fei Wei</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2005.08721v2</id>
+    <title>Higher-order level spacings in random matrix theory based on Wigner's conjecture</title>
+    <updated>2020-08-04T16:40:34Z</updated>
+    <link href="https://arxiv.org/abs/2005.08721v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2005.08721v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The distribution of higher order level spacings, i.e. the distribution of $\{s_{i}^{(n)}=E_{i+n}-E_{i}\}$ with $n\geq 1$ is derived analytically using a Wigner-like surmise for Gaussian ensembles of random matrix as well as Poisson ensemble. It is found $s^{(n)}$ in Gaussian ensembles follows a generalized Wigner-Dyson distribution with rescaled parameter $α=νC_{n+1}^2+n-1$, while that in Poisson ensemble follows a generalized semi-Poisson distribution with index $n$. Numerical evidences are provided through simulations of random spin systems as well as non-trivial zeros of Riemann zeta function. The higher order generalizations of gap ratios are also discussed.</summary>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-05-18T13:56:37Z</published>
+    <arxiv:comment>7 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.dis-nn"/>
+    <arxiv:journal_ref>Phys. Rev. B 102, 054202 (2020)</arxiv:journal_ref>
+    <author>
+      <name>Wen-Jia Rao</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevB.102.054202</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevB.102.054202" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2102.06936v1</id>
+    <title>Riemann zeros from a periodically-driven trapped ion</title>
+    <updated>2021-02-13T14:33:10Z</updated>
+    <link href="https://arxiv.org/abs/2102.06936v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2102.06936v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The non-trivial zeros of the Riemann zeta function are central objects in number theory. In particular, they enable one to reproduce the prime numbers. They have also attracted the attention of physicists working in Random Matrix Theory and Quantum Chaos for decades. Here we present an experimental observation of the lowest non-trivial Riemann zeros by using a trapped ion qubit in a Paul trap, periodically driven with microwave fields. The waveform of the driving is engineered such that the dynamics of the ion is frozen when the driving parameters coincide with a zero of the real component of the zeta function. Scanning over the driving amplitude thus enables the locations of the Riemann zeros to be measured experimentally to a high degree of accuracy, providing a physical embodiment of these fascinating mathematical objects in the quantum realm.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-02-13T14:33:10Z</published>
+    <arxiv:comment>10 pages, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>npj Quantum Information volume 7, Article number: 109 (2021)</arxiv:journal_ref>
+    <author>
+      <name>Ran He</name>
+    </author>
+    <author>
+      <name>Ming-Zhong Ai</name>
+    </author>
+    <author>
+      <name>Jin-Ming Cui</name>
+    </author>
+    <author>
+      <name>Yun-Feng Huang</name>
+    </author>
+    <author>
+      <name>Yong-Jian Han</name>
+    </author>
+    <author>
+      <name>Chuan-Feng Li</name>
+    </author>
+    <author>
+      <name>Guang-Can Guo</name>
+    </author>
+    <author>
+      <name>G. Sierra</name>
+    </author>
+    <author>
+      <name>C. E. Creffield</name>
+    </author>
+    <arxiv:doi>10.1038/s41534-021-00446-7</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1038/s41534-021-00446-7" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.10193v1</id>
+    <title>Distributions of consecutive level spacings of circular unitary ensemble and their ratio: finite-size corrections and Riemann $ζ$ zeros</title>
+    <updated>2025-07-14T12:00:12Z</updated>
+    <link href="https://arxiv.org/abs/2507.10193v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.10193v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We compute the joint distribution of two consecutive eigenphase spacings and their ratio for Haar-distributed $\mathrm{U}(N)$ matrices (the circular unitary ensemble) using our framework for Jánossy densities in random matrix theory, formulated via the Tracy-Widom system of nonlinear PDEs. Our result shows that the leading finite-$N$ correction in the gap-ratio distribution relative to the universal sine-kernel limit is of $\mathcal{O}(N^{-4})$, reflecting a nontrivial cancellation of the $\mathcal{O}(N^{-2})$ part present in the joint distributions of consecutive spacings. This finding suggests the potential to extract subtle finite-size corrections from the energy spectra of quantum-chaotic systems and explains why the deviation of the gap-ratio distribution of the Riemann zeta zeros $\{1/2+iγ_n\}, γ_n\approx T\gg1$ from the sine-kernel prediction scales as $\left(\log(T/2π)\right)^{-3}$.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-14T12:00:12Z</published>
+    <arxiv:comment>15 pages in ptephy_v1.cls, 11 figures</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>Shinsuke M. Nishigaki</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2404.00583v2</id>
+    <title>If our chaotic operator is derived correctly, then the Riemann hypothesis holds true</title>
+    <updated>2025-12-24T00:50:40Z</updated>
+    <link href="https://arxiv.org/abs/2404.00583v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2404.00583v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This work develops an operator-theoretic and dynamical framework inspired by the Riemann--von Mangoldt formula, chaotic dynamics, and random-matrix models for the Riemann zeta function, without attempting to prove the Riemann Hypothesis. Starting from the explicit zero-counting function $N(T)$, we construct a discrete map on the critical line and analyse its Lyapunov exponents and bifurcation diagrams, showing that the smooth von Mangoldt term generates a strongly unstable flow that captures the global growth of the zero density. Motivated by this dynamics, we define a self-adjoint ``chaotic'' operator $\mathcal{O}_α$ on a weighted Hilbert space with weight $\mathrm{d}N/\mathrm{d}T$, prove its unboundedness and essential self-adjointness, and describe its spectral resolution via the spectral theorem. Finite-dimensional truncations of $\mathcal{O}_α$ yield Hermitian random matrices whose eigenvalue statistics agree numerically with Gaussian unitary ensemble predictions and show qualitative similarities to both Odlyzko's zeta zeros and the hydrogen-atom spectrum, suggesting that $\mathcal{O}_α$ lies in the same universality class as the nontrivial zeros and providing a concrete Hilbert--Pólya--type framework rather than a proof of the conjecture.</summary>
+    <category term="math.GM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nlin.CD" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-03-31T07:05:05Z</published>
+    <arxiv:comment>Revised version: rigorous operator-theoretic framework from the Riemann--von Mangoldt formula, with spectral and numerical analysis (Lyapunov exponents, bifurcations, random-matrix truncations, hydrogen comparison), without claiming a proof of RH (with Pedro Ceras)</arxiv:comment>
+    <arxiv:primary_category term="math.GM"/>
+    <author>
+      <name>Zeraoulia Rafik</name>
+    </author>
+    <author>
+      <name>Pedro Caceres</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2202.04284v2</id>
+    <title>Convergence of random holomorphic functions with real zeros and extensions of the stochastic zeta function</title>
+    <updated>2024-10-26T18:37:30Z</updated>
+    <link href="https://arxiv.org/abs/2202.04284v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2202.04284v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this article, we provide a unified framework for studying the convergence of rescaled characteristic polynomials of random matrices from various classical ensembles as well as functional convergence results for the Riemann zeta function. To this end, we consider the more general viewpoint of converging point processes (a special case of which is the sequence of converging eigenvalue point processes from random matrix ensembles), and we identify sufficient conditions under which the convergence of random point processes on the real line implies the convergence in law, for the topology of uniform convergence on compact sets, of suitable random holomorphic functions whose zeros are given by the point processes which are considered. Our results extend convergence results for rescaled characteristic polynomials obtained by various authors (in the case of the circular unitary ensemble, the limiting random analytic function is called the stochasic zeta function). We also show that for a wide class of point processes associated with these limiting random holomorphic functions (we can often interpret these points as the spectrum of some random operator), their Stieltjes transform follows for almost all points of the real line the standard Cauchy distribution, reminiscent of the results by Aizenman and Warzel (\cite{AW15}) in the case of the sine kernel point process.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-02-09T05:33:53Z</published>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Joseph Najnudel</name>
+    </author>
+    <author>
+      <name>Ashkan Nikeghbali</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.21672v1</id>
+    <title>An $L$-function Approach to Two-Dimensional Conformal Field Theory</title>
+    <updated>2025-09-25T22:40:24Z</updated>
+    <link href="https://arxiv.org/abs/2509.21672v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.21672v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce a framework for two-dimensional conformal field theory (CFT) in the language of analytic number theory. Attached to the torus partition function of every two-dimensional CFT is a self-dual, degree-4 $L$-function of root number $\varepsilon=1$, with a universal gamma factor determined by $SL(2,\mathbb{Z})$ and local conformal invariance. Due to the richness of CFT operator spectra, these are not, in general, standard $L$-functions. We explicate their analytic structure, exploring the interplay of the Hadamard product over non-trivial zeros with the generalized Dirichlet series over CFT scalar primary conformal dimensions. We derive a zero sum rule in terms of the spectrum, and a global zero density bound in terms of the spectral gap. Convergence of the series representation implies square root cancellation of the degeneracies; we relate this to random matrix behavior of high-energy level spacings. Random matrix universality of the CFT implies "Riemann zeta universality" of the $L$-function: an average relation between the $L$-function on the critical line and Riemann zeta on the 1-line. This in turn yields a subconvexity bound. For a compact free boson, the $L$-function is a product of Riemann zeta functions times an analytic factor. Extensions to correlator $L$-functions and spinning spectra are briefly discussed.
+  In the course of this work, we are led to sharpen the notion of random matrix universality in two-dimensional CFTs. We formulate a precise version of the following standalone conjecture, logically independent of $L$-functions: in unitary, compact Virasoro CFTs with central charge $c&gt;1$, fixed-spin primary spectra at high energy are asymptotically simple, with random extreme gap statistics.</summary>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-25T22:40:24Z</published>
+    <arxiv:comment>101 pages</arxiv:comment>
+    <arxiv:primary_category term="hep-th"/>
+    <author>
+      <name>Eric Perlmutter</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.14596v1</id>
+    <title>Prime--Zero Duality: Fractal Geometry, Renormalization-Group Flow, and an Information-Ontological Framework for Number Theory</title>
+    <updated>2026-04-16T03:59:18Z</updated>
+    <link href="https://arxiv.org/abs/2604.14596v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.14596v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The prime numbers and the non-trivial zeros of the Riemann zeta function are globally linked by the explicit formula of analytic number theory. Whether they share a hidden, scale-by-scale geometric symmetry has remained unexplored. We address this by measuring the joint fractal structure of a prime residue class (p=1,5,9,13 mod 16) and the zero distribution of zeta(s). Our central finding is that the duality measure K = 1/d_P + 1/zeta_R is remarkably stable, varying by only 17% across scales L=100--2000, captured by a finite-size scaling law K(L) = K_IR + a*L^{-b}. After geometric normalization, the data converge to a universal infrared fixed point K_IR = 4 with critical exponent b ~ 0.51, robust across two random-matrix symmetry classes (beta=2,4), echoing Montgomery--Odlyzko universality. We interpret K as a conserved information current between the arithmetic and spectral domains, with the scaling law reflecting a renormalization-group flow from an ultraviolet fixed point K_UV = 11 (Hurwitz's theorem on normed division algebras) to K_IR = 4. The exponent b ~ 1/2 is derived from a variational information action S[I_P, I_Z]. A structural argument for the Riemann Hypothesis emerges: the generator kappa with kappa^2 = ijk = -1 enforces, via exchange symmetry I_P &lt;-&gt; I_Z, the fixed point I_P* = I_Z* = 2, encoding the critical line Re(s) = 1/2. Upgrading this to a rigorous proof is the central open problem. We also explore, in a speculative spirit, whether (K_IR, b, kappa) resonate with quantities in quantum gravity and learning theory, including the Bekenstein--Hawking entropy formula. These analogies define open problems at the interface of number theory, physics, and information science.</summary>
+    <category term="math.GM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-16T03:59:18Z</published>
+    <arxiv:comment>103 pages, 3 figures, 11 tables</arxiv:comment>
+    <arxiv:primary_category term="math.GM"/>
+    <author>
+      <name>Zhengqiang Li</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2403.00713v2</id>
+    <title>From spectral to scattering form factor</title>
+    <updated>2024-04-23T16:47:02Z</updated>
+    <link href="https://arxiv.org/abs/2403.00713v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2403.00713v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose a novel indicator for chaotic quantum scattering processes, the scattering form factor (ScFF). It is based on mapping the locations of peaks in the scattering amplitude to random matrix eigenvalues, and computing the analog of the spectral form factor (SFF). We compute the spectral and scattering form factors of several non-chaotic systems. We determine the ScFF associated with the phase shifts of the leaky torus, closely related to the distribution of the zeros of Riemann zeta function. We compute the ScFF for the decay amplitude of a highly excited string states into two tachyons. We show that it displays the universal features expected from random matrix theory - a decline, a ramp and a plateau - and is in general agreement with the Gaussian unitary ensemble. It also shows some new features, owning to the special structure of the string amplitude, including a "bump" before the ramp associated with gaps in the average eigenvalue density. The "bump" is removed for highly excited string states with an appropriate state dependent unfolding. We also discuss the SFF for the Gaussian $β$- ensemble, writing an interpolation between the known results of the Gaussian orthogonal, unitary, and symplectic ensembles.</summary>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nlin.CD" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-03-01T17:54:59Z</published>
+    <arxiv:comment>47 pages, 17 figures</arxiv:comment>
+    <arxiv:primary_category term="hep-th"/>
+    <author>
+      <name>Massimo Bianchi</name>
+    </author>
+    <author>
+      <name>Maurizio Firrotta</name>
+    </author>
+    <author>
+      <name>Jacob Sonnenschein</name>
+    </author>
+    <author>
+      <name>Dorin Weissman</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.18275v2</id>
+    <title>Variations of the Hardy Z-Function and the Montgomery Pair Correlation Conjecture</title>
+    <updated>2025-12-19T12:09:19Z</updated>
+    <link href="https://arxiv.org/abs/2511.18275v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.18275v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In 1973 Montgomery formulated the pair correlation conjecture, predicting that the local spacing statistics of the nontrivial zeros of the Riemann zeta function coincide with those of eigenvalues of large Hermitian matrices from the Gaussian Unitary Ensemble (GUE). The zeta function, however, is a fixed deterministic object, and the mechanism by which its zeros reproduce random matrix statistics has remained unclear. In this paper, assuming the Riemann Hypothesis, we prove Montgomery's pair correlation conjecture for the zeros of Hardy's $Z$-function. Building on earlier works, we use a finite-dimensional variational space of sections $Z_N(t;a)$ that approximate $Z(t)$ on each window $[2N,2N+2]$. Inside this space we define the real hall $\mathcal{RH}_N(\mathbb{R})$, consisting of those sections whose zeros in the corresponding critical rectangle are real, simple, and remain so along any homotopy from the core section. This real hall plays the role of a random matrix ensemble. Equipping it with an admissible probability measure with smooth, positive density on the coefficient space, we construct a Skorokhod-type stochastic differential equation with reflection at the discriminant boundary. We show that the induced dynamics of the unfolded zeros are, in the bulk, equivalent in law to Dyson Brownian motion with $β=2$, and by invoking modern universality results for Dyson Brownian motion and log-gases we obtain that, for any such measure, the ensemble-averaged local pair-correlation converges to the GUE sine-kernel law. Finally, using Selberg's probabilistic theory of the argument $S(t)$, we prove that the pair-correlation observables of the canonical approximants $Z_N(t;1)$ over disjoint windows behave asymptotically like decorrelated samples drawn from this GUE-distributed ensemble, and we upgrade the averaged GUE law to a deterministic pair-correlation law for the zeros of $Z(t)$.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-23T03:52:12Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Yochay Jerby</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2308.06766v2</id>
+    <title>Statistics of local level spacings in single- and many-body quantum chaos</title>
+    <updated>2024-05-29T19:43:48Z</updated>
+    <link href="https://arxiv.org/abs/2308.06766v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2308.06766v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce a notion of local level spacings and study their statistics within a random-matrix-theory approach. In the limit of infinite-dimensional random matrices, we determine universal sequences of mean local spacings and of their ratios which uniquely identify the global symmetries of a quantum system and its internal -- chaotic or regular -- dynamics. These findings, which offer a new framework to monitor single- and many-body quantum systems, are corroborated by numerical experiments performed for zeros of the Riemann zeta function, spectra of irrational rectangular billiards and many-body spectra of the Sachdev-Ye-Kitaev Hamiltonians.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nlin.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-08-13T13:30:54Z</published>
+    <arxiv:comment>Published version. Main text: 7 pages, 1 figure and 3 tables. Supplemental material: 5 pages and 4 figures</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <arxiv:journal_ref>Phys. Rev. Lett. 132, 220401 (2024)</arxiv:journal_ref>
+    <author>
+      <name>Peng Tian</name>
+    </author>
+    <author>
+      <name>Roman Riser</name>
+    </author>
+    <author>
+      <name>Eugene Kanzieper</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevLett.132.220401</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevLett.132.220401" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1810.01569v1</id>
+    <title>Ordered level spacing probability densities</title>
+    <updated>2018-10-03T02:46:08Z</updated>
+    <link href="https://arxiv.org/abs/1810.01569v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1810.01569v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Spectral statistics of quantum systems have been studied in detail using the nearest neighbour level spacings, which for generic chaotic systems follows random matrix theory predictions. In this work, the probability density of the closest neighbour and farther neighbour spacings from a given level are introduced. Analytical predictions are derived using a $3 \times 3$ matrix model. The closest neighbour density is generalized to the $k-$th closest neighbour spacing density, which allows for investigating long-range correlations. For larger $k$ the probability density of $k-$th closest neighbour spacings is well described by a Gaussian. Using these $k-$th closest neighbour spacings we propose the ratio of the closest neighbour to the second closest neighbour as an alternative to the ratio of successive spacings. For a Poissonian spectrum the density of the ratio is flat, whereas for the three Gaussian ensembles repulsion at small values is found. The ordered spacing statistics and their ratio are numerically studied for the integrable circle billiard, the chaotic cardioid billiard, the standard map and the zeroes of the Riemann zeta function. Very good agreement with the predictions is found.</summary>
+    <category term="nlin.CD" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-10-03T02:46:08Z</published>
+    <arxiv:primary_category term="nlin.CD"/>
+    <arxiv:journal_ref>J. Phys. A: Math. Theor. 52 025101(2019)</arxiv:journal_ref>
+    <author>
+      <name>Shashi C. L. Srivastava</name>
+    </author>
+    <author>
+      <name>Arul Lakshminarayan</name>
+    </author>
+    <author>
+      <name>Steven Tomsovic</name>
+    </author>
+    <author>
+      <name>Arnd Bäcker</name>
+    </author>
+    <arxiv:doi>10.1088/1751-8121/aaefa4</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/1751-8121/aaefa4" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2211.11671v4</id>
+    <title>Currently there are no reasons to doubt the Riemann Hypothesis: The zeta function beyond the realm of computation</title>
+    <updated>2025-11-17T12:54:02Z</updated>
+    <link href="https://arxiv.org/abs/2211.11671v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2211.11671v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We examine published arguments which suggest that the Riemann Hypothesis may not be true. In each case we provide evidence to explain why the claimed argument does not provide a good reason to doubt the Riemann Hypothesis. The evidence we cite involves a mixture of theorems in analytic number theory, theorems in random matrix theory, and illustrative examples involving the characteristic polynomials of random unitary matrices. Similar evidence is provided for four mistaken notions which appear repeatedly in the literature concerning computations of the zeta-function. A fundamental question which underlies some of the arguments is: what does the graph of the Riemann zeta-function look like in a neighborhood of its largest values? We explore that question in detail and provide a survey of results on the relationship between L-functions and the characteristic polynomials of random matrices. We highlight the key role played by the emergent phenomenon of carrier waves, which arise from fluctuations in the density of zeros. The main point of this paper is that it is possible to understand some aspects of the zeta function at large heights, but the computation evidence is misleading.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-11-21T17:40:01Z</published>
+    <arxiv:comment>Numerous small improvements based on referee comments. To appear in Bull AMS</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>David W. Farmer</name>
+    </author>
+  </entry>
+</feed>

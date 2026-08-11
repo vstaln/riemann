@@ -1,0 +1,483 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/1xyunhuJJW+PpgbZxT7jHc6yD08</id>
+  <title>arXiv Query: search_query=all:"Selberg trace formula"&amp;id_list=&amp;start=0&amp;max_results=25</title>
+  <updated>2026-08-11T15:43:50Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22Selberg+trace+formula%22&amp;start=0&amp;max_results=25&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>25</opensearch:itemsPerPage>
+  <opensearch:totalResults>144</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2306.13636v3</id>
+    <title>Supersymmetry and trace formulas II. Selberg trace formula</title>
+    <updated>2026-06-25T03:15:14Z</updated>
+    <link href="https://arxiv.org/abs/2306.13636v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2306.13636v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>By extending the new supersymmetric localization principle introduced in \cite{Choi:2021yuz}, we present a path integral derivation of the Selberg trace formula on arbitrary compact Riemann surfaces, including the case of vector-valued automorphic forms of arbitrary half-integer weight corresponding to Maass Laplacian. We also generalize the method to formulate the Selberg trace formula on generic compact locally symmetric space.</summary>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.RT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-06-23T17:46:58Z</published>
+    <arxiv:comment>33 pages, ATMP Journal published version</arxiv:comment>
+    <arxiv:primary_category term="hep-th"/>
+    <arxiv:journal_ref>Advances in Theoretical and Mathematical Physics, Vol. 30, Issue 3 (2026), pp. 871-916</arxiv:journal_ref>
+    <author>
+      <name>Changha Choi</name>
+    </author>
+    <author>
+      <name>Leon A. Takhtajan</name>
+    </author>
+    <arxiv:doi>10.4310/ATMP.260522000819</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.4310/ATMP.260522000819" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1904.04728v2</id>
+    <title>A K-theoretic Selberg trace formula</title>
+    <updated>2019-10-25T20:19:12Z</updated>
+    <link href="https://arxiv.org/abs/1904.04728v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1904.04728v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let G be a semisimple Lie group and H a uniform lattice in G. The Selberg trace formula is an equality arising from computing in two different ways the traces of convolution operators on the Hilbert space L^2(G/H) associated to test functions.
+  In this paper we present a cohomological interpretation of the trace formula involving the K-theory of the maximal group C*-algebras of G and H. As an application, we exploit the role of group C*-algebras as recipients of higher indices of elliptic differential operators and we obtain the index theoretic version of the Selberg trace formula developed by Barbasch and Moscovici from ours.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.KT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-04-09T15:20:58Z</published>
+    <arxiv:comment>Extended the introduction and added a couple of extra remarks in Section 4</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Bram Mesland</name>
+    </author>
+    <author>
+      <name>Mehmet Haluk Sengun</name>
+    </author>
+    <author>
+      <name>Hang Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1710.01866v1</id>
+    <title>The Selberg trace formula revisited</title>
+    <updated>2017-10-05T02:52:03Z</updated>
+    <link href="https://arxiv.org/abs/1710.01866v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1710.01866v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A new approach to the Selberg trace formula, and more precisely to its spectral side, is developed. The approach relies on a notion of "Plancherel decomposition" of "asymptotically finite functions", and may generalize to obtain a general relative trace formula. This is an incomplete first version that will be complemented by an account of the invariant trace formula.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.RT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-10-05T02:52:03Z</published>
+    <arxiv:comment>80pp</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Yiannis Sakellaridis</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math-ph/0607010v1</id>
+    <title>The Selberg trace formula for Dirac operators</title>
+    <updated>2006-07-07T13:44:38Z</updated>
+    <link href="https://arxiv.org/abs/math-ph/0607010v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math-ph/0607010v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We examine spectra of Dirac operators on compact hyperbolic surfaces. Particular attention is devoted to symmetry considerations, leading to non-trivial multiplicities of eigenvalues. The relation to spectra of Maass-Laplace operators is also exploited. Our main result is a Selberg trace formula for Dirac operators on hyperbolic surfaces.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2006-07-07T13:44:38Z</published>
+    <arxiv:primary_category term="math-ph"/>
+    <arxiv:journal_ref>J.Math.Phys. 47 (2006) 112104</arxiv:journal_ref>
+    <author>
+      <name>Jens Bolte</name>
+    </author>
+    <author>
+      <name>Hans-Michael Stiepan</name>
+    </author>
+    <arxiv:doi>10.1063/1.2359578</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1063/1.2359578" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1509.04323v2</id>
+    <title>The Selberg trace formula as a Dirichlet series</title>
+    <updated>2016-06-19T18:41:08Z</updated>
+    <link href="https://arxiv.org/abs/1509.04323v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1509.04323v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We explore an idea of Conrey and Li of expressing the Selberg trace formula as a Dirichlet series. We describe two applications, including an interpretation of the Selberg eigenvalue conjecture in terms of quadratic twists of certain Dirichlet series, and a formula for an arithmetically weighted sum of the complete symmetric square L-functions associated to cuspidal Maass newforms of squarefree level N&gt;1.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-09-14T21:01:57Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Andrew R. Booker</name>
+    </author>
+    <author>
+      <name>Min Lee</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2309.02163v1</id>
+    <title>On the geometric trace of a generalized Selberg trace formula</title>
+    <updated>2023-09-05T12:01:51Z</updated>
+    <link href="https://arxiv.org/abs/2309.02163v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2309.02163v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A certain generalization of the Selberg trace formula was proved by the first named author in 1999. In this generalization instead of considering the integral of $K(z,z)$ (where $K(z,w)$ is an automorphic kernel function) over the fundamental domain, one considers the integral of $K(z,z)u(z)$, where $u(z)$ is a fixed automorphic eigenfunction of the Laplace operator. This formula was proved for discrete subgroups of $PSL(2,\mathbb{R})$, and just as in the case of the classical Selberg trace formula it was obtained by evaluating in two different ways ("geometrically" and "spectrally") the integral of $K(z,z)u(z)$.
+  In the present paper we work out the geometric side of a further generalization of this generalized trace formula: we consider the case of discrete subgroups of $PSL(2,\mathbb{R})^n$ where $n&gt;1$. Many new difficulties arise in the case of these groups due to the fact that the classification of conjugacy classes is much more complicated for $n&gt;1$ than in the case $n=1$.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-09-05T12:01:51Z</published>
+    <arxiv:comment>38 pages, 0 figures</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>András Biró</name>
+      <arxiv:affiliation>Alfréd Rényi Institute of Mathematics</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Dávid Tóth</name>
+      <arxiv:affiliation>Alfréd Rényi Institute of Mathematics</arxiv:affiliation>
+      <arxiv:affiliation>Budapest University of Technology and Economics</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0710.5787v1</id>
+    <title>The Selberg Trace Formula for Hecke operators on cocompact Kleinian groups</title>
+    <updated>2007-10-31T01:06:59Z</updated>
+    <link href="https://arxiv.org/abs/0710.5787v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0710.5787v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We compute the Selberg trace formula for Hecke operators (also called the trace formula for modular correspondences) in the context of cocompact Kleinian groups with finite-dimentional unitary representations. We give some applications to the distribution of Hecke eigenvalues, and give an analogue of Huber's theorem.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2007-10-31T01:06:59Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Joshua S. Friedman</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1511.04208v2</id>
+    <title>The twisted Selberg trace formula and the Selberg zeta function for compact orbifolds</title>
+    <updated>2015-11-19T08:56:04Z</updated>
+    <link href="https://arxiv.org/abs/1511.04208v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1511.04208v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study elements of the spectral theory of compact hyperbolic orbifolds $Γ\backslash \mathbb{H}^{n}$. We establish a version of the Selberg trace formula for non-unitary representations of $Γ$ and prove that the associated Selberg zeta function admits a meromorphic continuation to $\mathbb{C}$.</summary>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-11-13T09:25:08Z</published>
+    <arxiv:comment>arXiv admin note: text overlap with arXiv:0906.3997 by other authors</arxiv:comment>
+    <arxiv:primary_category term="math.SP"/>
+    <author>
+      <name>Ksenia Fedosova</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1810.09437v3</id>
+    <title>Deducing Selberg trace formula via Rankin-Selberg method for $\mathrm{GL}_2$</title>
+    <updated>2019-03-19T21:02:39Z</updated>
+    <link href="https://arxiv.org/abs/1810.09437v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1810.09437v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In the 80s, Zagier and Jacquet-Zagier tried to derive the Selberg trace formula by applying the Rankin-Selberg method to the automorphic kernel function. Their derivation was incomplete due to a puzzle of the computation of a residue. We solve this puzzle and complete the derivation. The main input is an extension of the theory of regularized integrals invented by Zagier, which is of independent interest.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-10-20T19:56:51Z</published>
+    <arxiv:comment>final version, accepted by Transactions of the AMS. arXiv admin note: substantial text overlap with arXiv:1610.00230</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <arxiv:journal_ref>Trans. Amer. Math. Soc. 372 (2019), 8507-8551</arxiv:journal_ref>
+    <author>
+      <name>Han Wu</name>
+    </author>
+    <arxiv:doi>10.1090/tran/7853</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1090/tran/7853" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1208.6086v1</id>
+    <title>Differences of the Selberg trace formula and Selberg type zeta functions for Hilbert modular surfaces</title>
+    <updated>2012-08-30T06:34:29Z</updated>
+    <link href="https://arxiv.org/abs/1208.6086v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1208.6086v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present the first example of the Selberg type zeta function for noncompact higher rank locally symmetric spaces. We study certain Selberg type zeta functions and Ruelle type zeta functions attached to the Hilbert modular group of a real quadratic field. We show that they have meromorphic extensions to the whole complex plane and satisfy functional equations. The method is based on considering the differences among several Selberg trace formulas with different weights for the Hilbert modular group. Besides as an application of the differences of the Selberg trace formula, we also obtain an asymptotic average of the class numbers of indefinite binary quadratic forms over the real quadratic integer ring.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-08-30T06:34:29Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Yasuro Gon</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.11813v1</id>
+    <title>Sub-Riemannian Selberg Trace Formulae for Compact Quotients of SL(2,R) and Determinants of Sub-Laplacians</title>
+    <updated>2026-06-10T08:47:02Z</updated>
+    <link href="https://arxiv.org/abs/2606.11813v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.11813v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove sub-Riemannian Selberg trace formulae for compact quotients of SL(2, R). Using the Fourier decomposition along the SO(2)-fibers, we reduce the heat trace computation to the Selberg trace formula for Maass Laplacians on the hyperbolic plane. The resulting formula has an identity contribution and a hyperbolic contribution, the latter involving a character-dependent theta factor over closed geodesics. We then use this trace formula to compute the zeta-regularized determinant of the sub-Laplacian. The determinant formula is remarkably compact and is expressed in terms of a determinant depending only on the base hyperbolic surface and an explicit relative Selberg product.</summary>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-10T08:47:02Z</published>
+    <arxiv:primary_category term="math.DG"/>
+    <author>
+      <name>Fabrice Baudoin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2201.06587v3</id>
+    <title>Selberg trace formula in hyperbolic band theory</title>
+    <updated>2022-09-08T18:48:21Z</updated>
+    <link href="https://arxiv.org/abs/2201.06587v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2201.06587v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We apply Selberg's trace formula to solve problems in hyperbolic band theory, a recently developed extension of Bloch theory to model band structures on experimentally realized hyperbolic lattices. For this purpose we incorporate the higher-dimensional crystal momentum into the trace formula and evaluate the summation for periodic orbits on the Bolza surface of genus two. We apply the technique to compute partition functions on the Bolza surface and propose an approximate relation between the lowest bands on the Bolza surface and on the $\{8,3\}$ hyperbolic lattice. We discuss the role of automorphism symmetry and its manifestation in the trace formula.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-01-17T19:03:44Z</published>
+    <arxiv:comment>17+9 pages</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <arxiv:journal_ref>Phys. Rev. E 106, 034114 (2022)</arxiv:journal_ref>
+    <author>
+      <name>Adil Attar</name>
+    </author>
+    <author>
+      <name>Igor Boettcher</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevE.106.034114</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevE.106.034114" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1108.5659v2</id>
+    <title>Zeta functions and regularized determinants related to the Selberg trace formula</title>
+    <updated>2012-06-15T02:21:01Z</updated>
+    <link href="https://arxiv.org/abs/1108.5659v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1108.5659v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For a general Fuchsian group of the first kind with an arbitrary unitary representation we define zeta functions related to the contributions of the identity, hyperbolic, elliptic and parabolic conjugacy classes in Selberg's trace formula. We present Selberg's zeta function in terms of a regularized determinant of the automorphic Laplacian. We also present the zeta function for the identity contribution in terms of a regularized determinant of the Laplacian on the two dimensional sphere. We express the zeta functions for the elliptic and parabolic contributions in terms of certain regularized determinants of one dimensional Schroedinger operator for harmonic oscillator. We decompose the determinant of the automorphic Laplacian into a product of the determinants where each factor is a determinant representation of a zeta function related to Selberg's trace formula. Then we derive an identity connecting the determinants of the automorphic Laplacians on different Riemannian surfaces related to the arithmetical groups. Finally, by using the Jacquet-Langlands correspondence we connect the determinant of the automorphic Laplacian for the unit group of quaternions to the product of the determinants of the automorphic Laplacians for certain cogruence subgroups.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2011-08-29T17:12:58Z</published>
+    <arxiv:comment>58 pages</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>Arash Momeni</name>
+    </author>
+    <author>
+      <name>Alexei Venkov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/0410067v2</id>
+    <title>The Selberg trace formula and Selberg zeta-function for cofinite Kleinian groups with finite-dimensional unitary representations</title>
+    <updated>2004-10-19T21:52:24Z</updated>
+    <link href="https://arxiv.org/abs/math/0410067v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0410067v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  For cofinite Kleinian groups, with finite-dimensional unitary representations, we derive the Selberg trace formula. As an application we define the corresponding Selberg zeta-function and compute its divisor, thus generalizing results of Elstrodt, Grunewald and Mennicke to non-trivial unitary representations. We show that the presence of cuspidal elliptic elements sometimes adds ramification point to the zeta function. In fact, if D is the ring of Eisenstein integers, then the Selberg zeta-function of PSL(2,D) contains ramification points and is the sixth-root of a meromorphic function.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2004-10-04T22:10:52Z</published>
+    <arxiv:comment>25 pages, submitted to Mathematische Zeitschrift</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Joshua S. Friedman</name>
+    </author>
+    <arxiv:doi>10.1007/s00209-005-0806-9</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s00209-005-0806-9" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1911.10493v1</id>
+    <title>Quantum Jackiw-Teitelboim gravity, Selberg trace formula, and random matrix theory</title>
+    <updated>2019-11-24T10:26:46Z</updated>
+    <link href="https://arxiv.org/abs/1911.10493v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1911.10493v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We show that the partition function of quantum Jackiw-Teitelboim (JT) gravity, including topological fluctuations, is equivalent to the partition function of a Maass-Laplace operator of large -- imaginary -- weight acting on non-compact, infinite area, hyperbolic Riemann surfaces of arbitrary genus. The resulting spectrum of this open quantum system is semiclasically exact and given by a regularized Selberg trace formula, namely, it is expressed as a sum over the lengths of primitive periodic orbits of these hyperbolic surfaces. By using semiclassical techniques, we compute analytically the spectral form factor and the variance of the Wigner time delay in the diagonal approximation. We find agreement with the random matrix theory (RMT) prediction for open quantum chaotic systems. Our results show that full quantum ergodicity is a distinct feature of quantum JT gravity.</summary>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nlin.CD" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-11-24T10:26:46Z</published>
+    <arxiv:comment>24 pages, 1 figure</arxiv:comment>
+    <arxiv:primary_category term="hep-th"/>
+    <author>
+      <name>Antonio M. García-García</name>
+    </author>
+    <author>
+      <name>Salomón Zacarías</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1311.0488v1</id>
+    <title>Periodic orbits in cosmological billiards: the Selberg trace formula for asymptotic Bianchi IX universes, evidence for scars in the wavefunction of the quantum universe and large-scale structure anisotropies of the present universe</title>
+    <updated>2013-11-03T16:20:01Z</updated>
+    <link href="https://arxiv.org/abs/1311.0488v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1311.0488v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Selberg trace formula is specified for cosmological billiards in $4=3+1$ spacetime dimensions. The spectral formula is rewritten as an exact sum over the initial conditions for the Einstein field equations for which periodic orbits are implied. For this, a suitable density of measure invariant under the billiard maps has been defined, within the statistics implied by the BKL paradigm. The trace formula has also been specified for the stochastic limit of the dynamics, where the sum over initial conditions has been demonstrated to be equivalent to a sum over suitable symmetry operations on the generators of the groups that define the billiard dynamics, and acquires different features for the different statistical maps.
+  Evidence for scars at the quantum regime is provided. The validity of the Selberg trace formula at the classical level and in the quantum regime enforces the validity of the semiclassical descriptions of these systems, thus offering further elements for the comparison of quantum-gravity effects and the present observed structure of the universe. This procedure also constitutes a new approach in hyperbolic geometry for the application of the Selberg trace formula for a chaotic system whose orbits are associated to precise statistical distributions, for both billiard tables corresponding to the desymmetrized fundamental domain and to that a a congruence subgroup of it.</summary>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-11-03T16:20:01Z</published>
+    <arxiv:comment>33 pages, 13 tables, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="gr-qc"/>
+    <author>
+      <name>Orchidea Maria Lecian</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/0612807v1</id>
+    <title>The Selberg Trace Formula and Selberg Zeta-Function for Cofinite Kleinian Groups with Finite Dimensional Unitary Representations: Stony Brook University PhD Thesis</title>
+    <updated>2006-12-28T03:15:31Z</updated>
+    <link href="https://arxiv.org/abs/math/0612807v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0612807v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  For cofinite Kleinian groups, with finite-dimensional unitary representations, we derive the Selberg trace formula. As an application we define the corresponding Selberg zeta-function and compute its divisor, thus generalizing results of Elstrodt, Grunewald and Mennicke to non-trivial unitary representations. We show that the presence of cuspidal elliptic elements sometimes adds ramification point to the zeta function. In fact, if D is the ring of Eisenstein integers, then the Selberg zeta-function of PSL(2,D) contains ramification points.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2006-12-28T03:15:31Z</published>
+    <arxiv:comment>Stony Brook University PhD Thesis from May of 2005</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Joshua S. Friedman</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2301.01654v2</id>
+    <title>A Selberg Trace Formula for $\text{GL}_{3}(\mathbb{F}_p)\backslash \text{GL}_{3}(\mathbb{F}_q)/K$</title>
+    <updated>2023-01-05T15:22:48Z</updated>
+    <link href="https://arxiv.org/abs/2301.01654v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2301.01654v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we prove a discrete analog of the Selberg Trace Formula for the group $\text{GL}_{3}(\mathbb{F}_q).$ By considering a cubic extension of the finite field $\mathbb{F}_q$, we define an analog of the upper half space and an action of $\text{GL}_{3}(\mathbb{F}_q)$ on it. To compute the orbital sums we explicitly identify the double coset spaces and fundamental domains in our upper half space. To understand the spectral side of the trace formula we decompose the induced representation $ρ= \text{Ind}_Γ^{G} 1$ for $G= \text{GL}_{3}(\mathbb{F}_q) $ and $ Γ= \text{GL}_{3}(\mathbb{F}_p).$</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-01-04T14:58:25Z</published>
+    <arxiv:comment>29 pages. Comments are welcome. Same as the first version. In the new version the title and abstract displays better in the arXiv</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Daksh Aggarwal</name>
+    </author>
+    <author>
+      <name>Asghar Ghorbanpour</name>
+    </author>
+    <author>
+      <name>Masoud Khalkhali</name>
+    </author>
+    <author>
+      <name>Jiyuan Lu</name>
+    </author>
+    <author>
+      <name>Balázs Németh</name>
+    </author>
+    <author>
+      <name>C Shijia Yu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/0407288v2</id>
+    <title>Selberg's trace formula: an introduction</title>
+    <updated>2008-02-13T19:45:03Z</updated>
+    <link href="https://arxiv.org/abs/math/0407288v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0407288v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  These lecture notes provide a basic introduction to Selberg's trace formula. We discuss the simplest possible case: the spectrum of the Laplacian on a compact Riemannian surface of constant negative curvature. (To appear in Springer LNP.)</summary>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2004-07-16T10:48:23Z</published>
+    <arxiv:comment>Lectures given at the International School "Quantum Chaos on Hyperbolic Manifolds" (Schloss Reisensburg, Gunzburg, Germany, 4-11 October 2003). To appear in Springer LNP</arxiv:comment>
+    <arxiv:primary_category term="math.SP"/>
+    <arxiv:journal_ref>Hyperbolic Geometry and Applications in Quantum Chaos and Cosmology, eds. J. Bolte and F. Steiner, Cambridge University Press 2011, pp. 83-119</arxiv:journal_ref>
+    <author>
+      <name>Jens Marklof</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1710.08885v3</id>
+    <title>Absolute convergence of the twisted Arthur-Selberg trace formula</title>
+    <updated>2019-02-11T01:14:22Z</updated>
+    <link href="https://arxiv.org/abs/1710.08885v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1710.08885v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We show that the distributions occurring in the geometric and spectral side of the twisted Arthur-Selberg trace formula extend to non-compactly supported test functions. The geometric assertion is modulo a hypothesis on root systems proven when the group is split. The result extends the work of Finis-Lapid (and Müller, spectral side) to the twisted setting. We use the absolute convergence to give a geometric interpretation of sums of residues of certain Rankin-Selberg L-functions.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.RT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-10-24T16:48:11Z</published>
+    <arxiv:comment>Accepted to be published in Mathematische Zeitschrift. Removed proof of RCL for base change; Section 8 now requires Assumption 8.1. Also, minor corrections</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <arxiv:journal_ref>Mathematische Zeitschrift, 2019</arxiv:journal_ref>
+    <author>
+      <name>Abhishek Parab</name>
+    </author>
+    <arxiv:doi>10.1007/s00209-019-02290-0</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s00209-019-02290-0" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.01957v1</id>
+    <title>The Eichler--Selberg trace formula for Hilbert cusp forms, the class numbers of quartic CM fields, and their distributions</title>
+    <updated>2026-07-02T09:50:20Z</updated>
+    <link href="https://arxiv.org/abs/2607.01957v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.01957v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Motivated by Su's construction of Cohen-type Eisenstein series of half-integral weight over totally real number fields \cite{Su16}, we introduce a generalization of Hurwitz class numbers to totally real number fields. Using these generalized Hurwitz class numbers, we establish an Eichler--Selberg trace formula for the space of holomorphic Hilbert cusp forms over real quadratic fields of narrow class number one. While the classical Hurwitz class numbers are defined in terms of class numbers of imaginary quadratic fields, the generalized Hurwitz class numbers appearing in our Eichler--Selberg trace formula are defined in terms of class numbers of quartic CM fields. For applications of this Eichler--Selberg trace formula, we study the distribution of the generalized Hurwitz class numbers, prove class number relations, and carry out numerical computations of traces of Hecke operators for $\mathbb{Q}(\sqrt{5})$ and $\mathbb{Q}(\sqrt{29})$.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-02T09:50:20Z</published>
+    <arxiv:comment>24 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Seiji Kuga</name>
+    </author>
+    <author>
+      <name>Andrei Seymour-Howell</name>
+    </author>
+    <author>
+      <name>Satoshi Wakatsuki</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2306.12433v1</id>
+    <title>$G$, $Γ$, $G/Γ$</title>
+    <updated>2023-06-13T16:14:04Z</updated>
+    <link href="https://arxiv.org/abs/2306.12433v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2306.12433v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The purpose of this book is to provide an introduction to one of the fundamental tools of abstract harmonic analysis, namely the Selberg trace formula.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-06-13T16:14:04Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Garth Warner</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0906.3997v1</id>
+    <title>The Selberg trace formula for non-unitary representations of the lattice</title>
+    <updated>2009-06-22T13:13:37Z</updated>
+    <link href="https://arxiv.org/abs/0906.3997v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0906.3997v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  For a compact locally symmetric space X, we establish a version of the Selberg trace fromula for a non-unitary representation of the fundamental group of X. On the spectral side appears the spectrum of the "flat Laplacian", acting in the space of sections of the associated flat bundle. In general, this is a non-self-adjoint operator with the same principal symbol as the Laplace operator associated to any choice of a Hermitian fiber metric in the flat bundle.</summary>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2009-06-22T13:13:37Z</published>
+    <arxiv:comment>27 pages</arxiv:comment>
+    <arxiv:primary_category term="math.SP"/>
+    <author>
+      <name>Werner Mueller</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1407.6218v1</id>
+    <title>A trace formula for non-unitary representations of a uniform lattice</title>
+    <updated>2014-07-23T13:57:22Z</updated>
+    <link href="https://arxiv.org/abs/1407.6218v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1407.6218v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this work we shall generalize the Selberg trace formula to a non-unitary finite-dimensional complex representation $χ:Γ\rightarrow\operatorname{GL}(V)$ of a uniform lattice $Γ$ of a real Lie group $G$.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.RT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-07-23T13:57:22Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Anton Deitmar</name>
+    </author>
+    <author>
+      <name>Frank Monheim</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/hep-th/9608089v2</id>
+    <title>Determinant of Laplacian on a non-compact 3-dimensional hyperbolic manifold with finite volume</title>
+    <updated>1996-10-23T15:21:39Z</updated>
+    <link href="https://arxiv.org/abs/hep-th/9608089v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/hep-th/9608089v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  The functional determinant of Laplace-type operators on the 3-dimensional non-compact hyperbolic manifold with invariant fundamental domain of finite volume is computed by quadratures and making use of the related terms of the Selberg trace formula.</summary>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>1996-08-14T08:09:46Z</published>
+    <arxiv:comment>10 pages, LaTex. The contribution of hyperbolic elements has been added</arxiv:comment>
+    <arxiv:primary_category term="hep-th"/>
+    <arxiv:journal_ref>J.Phys.A30:3543-3552,1997</arxiv:journal_ref>
+    <author>
+      <name>A. A. Bytsenko</name>
+    </author>
+    <author>
+      <name>Guido Cognola</name>
+    </author>
+    <author>
+      <name>Sergio Zerbini</name>
+    </author>
+    <arxiv:doi>10.1088/0305-4470/30/10/028</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/0305-4470/30/10/028" title="doi"/>
+  </entry>
+</feed>

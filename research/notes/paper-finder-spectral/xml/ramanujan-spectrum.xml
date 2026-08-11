@@ -1,0 +1,422 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/uYmuR99u5+DAxE2ikli3OY56kzk</id>
+  <title>arXiv Query: search_query=all:"Ramanujan" AND all:spectrum&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-08-11T15:43:41Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22Ramanujan%22+AND+all:spectrum&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>65</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1904.03533v1</id>
+    <title>From Ramanujan Graphs to Ramanujan Complexes</title>
+    <updated>2019-04-06T21:34:29Z</updated>
+    <link href="https://arxiv.org/abs/1904.03533v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1904.03533v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Ramanujan graphs are graphs whose spectrum is bounded optimally. Such graphs have found numerous applications in combinatorics and computer science. In recent years, a high dimensional theory has emerged. In this paper these developments are surveyed. After explaining their connection to the Ramanujan conjecture we will present some old and new results with an emphasis on random walks on these discrete objects and on the Euclidean spheres. The latter lead to "golden gates" which are of importance in quantum computation.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.RT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-04-06T21:34:29Z</published>
+    <arxiv:comment>To appear in the proceedings of the Ramanujan Centenary Celebration at the Royal Society</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <arxiv:journal_ref>Philosophical Transactions of the Royal Society A, 378 (2020), no. 2163</arxiv:journal_ref>
+    <author>
+      <name>Alexander Lubotzky</name>
+    </author>
+    <author>
+      <name>Ori Parzanchevski</name>
+    </author>
+    <arxiv:doi>10.1098/rsta.2018.0445</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1098/rsta.2018.0445" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1406.6666v3</id>
+    <title>Spectrum and combinatorics of two-dimensional Ramanujan complexes</title>
+    <updated>2017-07-04T11:53:14Z</updated>
+    <link href="https://arxiv.org/abs/1406.6666v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1406.6666v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Ramanujan graphs have extremal spectral properties, which imply a remarkable combinatorial behavior. In this paper we compute the high dimensional Hodge-Laplace spectrum of Ramanujan triangle complexes, and show that it implies a combinatorial expansion property, and a pseudo-randomness result. For this purpose we prove a Cheeger-type inequality and a mixing lemma of independent interest.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.RT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-06-25T18:59:29Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Isr. J. Math. (2019) 230: 583</arxiv:journal_ref>
+    <author>
+      <name>Konstantin Golubev</name>
+    </author>
+    <author>
+      <name>Ori Parzanchevski</name>
+    </author>
+    <arxiv:doi>10.1007/s11856-019-1828-z</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s11856-019-1828-z" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/cs/0610108v2</id>
+    <title>Doppler Spectrum Estimation by Ramanujan Fourier Transforms</title>
+    <updated>2009-02-01T19:24:25Z</updated>
+    <link href="https://arxiv.org/abs/cs/0610108v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/cs/0610108v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  The Doppler spectrum estimation of a weather radar signal in a classic way can be made by two methods, temporal one based in the autocorrelation of the successful signals, whereas the other one uses the estimation of the power spectral density PSD by using Fourier transforms. We introduces a new tool of signal processing based on Ramanujan sums cq(n), adapted to the analysis of arithmetical sequences with several resonances p/q. These sums are almost periodic according to time n of resonances and aperiodic according to the order q of resonances. New results will be supplied by the use of Ramanujan Fourier Transform (RFT) for the estimation of the Doppler spectrum for the weather radar signal.</summary>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2006-10-18T14:43:45Z</published>
+    <arxiv:primary_category term="math.NA"/>
+    <author>
+      <name>Mohand Lagha</name>
+      <arxiv:affiliation>AERONAUTIC Department of Blida University, Femto-ST</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Messaoud Bensebti</name>
+      <arxiv:affiliation>AERONAUTIC Department of Blida University</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/9204229v1</id>
+    <title>Ramanujan duals and automorphic spectrum</title>
+    <updated>1992-04-01T00:00:00Z</updated>
+    <link href="https://arxiv.org/abs/math/9204229v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/9204229v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We introduce the notion of the automorphic dual of a matrix algebraic group defined over $Q$. This is the part of the unitary dual that corresponds to arithmetic spectrum. Basic functorial properties of this set are derived and used both to deduce arithmetic vanishing theorems of ``Ramanujan'' type as well as to give a new construction of automorphic forms.</summary>
+    <category term="math.RT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>1992-04-01T00:00:00Z</published>
+    <arxiv:comment>5 pages</arxiv:comment>
+    <arxiv:primary_category term="math.RT"/>
+    <arxiv:journal_ref>Bull. Amer. Math. Soc. (N.S.) 26 (1992) 253-257</arxiv:journal_ref>
+    <author>
+      <name>Marc Burger</name>
+    </author>
+    <author>
+      <name>Jian-Shu Li</name>
+    </author>
+    <author>
+      <name>Peter Sarnak</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.12057v1</id>
+    <title>Ramanujan polar graphs</title>
+    <updated>2026-01-17T13:52:11Z</updated>
+    <link href="https://arxiv.org/abs/2601.12057v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.12057v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recently, a construction of minimal codes arising from a family of almost Ramanujan graphs was shown. Ramanujan graphs are examples of expander graphs that minimize the second-largest eigenvalue of their adjacency matrix. We call such graphs Ramanujan, since all known non-trivial constructions imply the Ramanujan conjecture on arithmetical functions. In this paper, we prove that some families of tangent graphs of finite classical polar spaces satisfy Ramanujan's condition. If the polarity is unitary, or it is orthogonal and the quadric is over the binary field, the tangent graphs are strongly regular, and we know their spectrum. By direct computation, it is possible to show which families of tangent graphs are Ramanujan.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-17T13:52:11Z</published>
+    <arxiv:comment>Accepted for publication by Journal of Algebraic Systems</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Valentino Smaldore</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2310.01771v2</id>
+    <title>Hypergraph coverings and Ramanujan Hypergraphs</title>
+    <updated>2024-03-04T13:51:57Z</updated>
+    <link href="https://arxiv.org/abs/2310.01771v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.01771v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper we investigate Ramanujan hypergraphs by using hypergraph coverings. We first show that the spectrum of a $k$-fold covering $\bar{H}$ of a connected hypergraph $H$ contains the spectrum of $H$, and that it is the union of the spectrum of $H$ and the spectrum of an incidence-signed hypergraph with $H$ as underlying hypergraph if $k=2$, which generalizes Bilu-Linial result on graph coverings. We give a lower bound for the second largest eigenvalue of a $d$-regular hypergraph by universal cover, which generalizes Alon-Boppana bound on $d$-regular graphs and Feng-Li bound on $(d,r)$-regular hypergraphs. By using interlacing family of polynomials, we prove that every $(d,r)$-regular hypergraph has a right-sided Ramanujan $2$-covering, and has a left-sided Ramanujan $2$-covering if the roots of the matching polynomial of its incident graph satisfy some condition. By Ramanujan $2$-coverings, we prove the existence of some families of infinite many left-sided or right-sided $(d,r)$-regular Ramanujan hypergraphs under certain conditions on $d$ and $r$.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-03T03:39:04Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Yi-Min Song</name>
+    </author>
+    <author>
+      <name>Yi-Zheng Fan</name>
+    </author>
+    <author>
+      <name>Zhengke Miao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1605.02664v3</id>
+    <title>The Ramanujan Property for Simplicial Complexes</title>
+    <updated>2016-07-07T19:21:41Z</updated>
+    <link href="https://arxiv.org/abs/1605.02664v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1605.02664v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $G$ be a topological group acting on a simplicial complex $\mathcal{X}$ satisfying some mild assumptions. For example, consider a $k$-regular tree and its automorphism group, or more generally, a regular affine Bruhat-Tits building and its automorphism group. We define and study various types of high-dimensional spectra of quotients of $\mathcal{X}$ by subgroups of $G$. These spectra include the spectrum of many natural operators associated with the quotients, e.g. the high-dimensional Laplacians.
+  We prove a theorem in the spirit of the Alon-Boppana Theorem, leading to a notion of Ramanujan quotients of $\mathcal{X}$. Ramanujan $k$-regular graphs and Ramanuajn complexes in the sense of Lubotzky, Samuels and Vishne are Ramanujan in dimension $0$ according to our definition (for $\mathcal{X}$, $G$ suitably chosen). We give a criterion for a quotient of $\mathcal{X}$ to be Ramanujan which is phrased in terms of representations of $G$, and use it, together with deep results about automorphic representations, to show that affine buildings of inner forms of $\mathbf{GL}_n$ over local fields of positive characteristic admit infinitely many quotients which are Ramanujan in all dimensions. The Ramanujan (in dimension $0$) complexes constructed by Lubotzky, Samuels and Vishne arise as a special case of our construction. Our construction also gives rise to Ramanujan graphs which are apparently new.
+  Other applications are also discussed. For example, we show that there are non-isomorphic simiplicial complexes which are isospectral in all dimensions.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.RT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-05-09T17:32:02Z</published>
+    <arxiv:comment>90 pages. Comments are welcome</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Uriya A. First</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1005.3504v1</id>
+    <title>Ramanujan bigraphs associated with SU(3) over a p-adic field</title>
+    <updated>2010-05-19T17:54:47Z</updated>
+    <link href="https://arxiv.org/abs/1005.3504v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1005.3504v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We use the representation theory of the quasisplit form G of SU(3) over a p-adic field to investigate whether certain quotients of the Bruhat--Tits tree associated to this form are Ramanujan bigraphs. We show that a quotient of the tree associated with G (which is a biregular bigraph) is Ramanujan if and only if G satisfies a Ramanujan type conjecture. This result is analogous to the seminal case of PGL(2) considered by Lubotzky-Phillips-Sarnak. As a consequence, the classification by Rogawski of the automorphic spectrum of U(3) implies the existence of certain infinite families of Ramanujan bigraphs.</summary>
+    <category term="math.RT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2010-05-19T17:54:47Z</published>
+    <arxiv:comment>16 pages</arxiv:comment>
+    <arxiv:primary_category term="math.RT"/>
+    <author>
+      <name>Cristina Ballantine</name>
+    </author>
+    <author>
+      <name>Dan Ciubotaru</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1311.3085v1</id>
+    <title>Community detection thresholds and the weak Ramanujan property</title>
+    <updated>2013-11-13T11:25:18Z</updated>
+    <link href="https://arxiv.org/abs/1311.3085v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1311.3085v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Decelle et al.\cite{Decelle11} conjectured the existence of a sharp threshold for community detection in sparse random graphs drawn from the stochastic block model. Mossel et al.\cite{Mossel12} established the negative part of the conjecture, proving impossibility of meaningful detection below the threshold. However the positive part of the conjecture remained elusive so far. Here we solve the positive part of the conjecture. We introduce a modified adjacency matrix $B$ that counts self-avoiding paths of a given length $\ell$ between pairs of nodes and prove that for logarithmic $\ell$, the leading eigenvectors of this modified matrix provide non-trivial detection, thereby settling the conjecture. A key step in the proof consists in establishing a {\em weak Ramanujan property} of matrix $B$. Namely, the spectrum of $B$ consists in two leading eigenvalues $ρ(B)$, $λ_2$ and $n-2$ eigenvalues of a lower order $O(n^ε\sqrt{ρ(B)})$ for all $ε&gt;0$, $ρ(B)$ denoting $B$'s spectral radius. $d$-regular graphs are Ramanujan when their second eigenvalue verifies $|λ|\le 2 \sqrt{d-1}$. Random $d$-regular graphs have a second largest eigenvalue $λ$ of $2\sqrt{d-1}+o(1)$ (see Friedman\cite{friedman08}), thus being {\em almost} Ramanujan. Erdős-Rényi graphs with average degree $d$ at least logarithmic ($d=Ω(\log n)$) have a second eigenvalue of $O(\sqrt{d})$ (see Feige and Ofek\cite{Feige05}), a slightly weaker version of the Ramanujan property. However this spectrum separation property fails for sparse ($d=O(1)$) Erdős-Rényi graphs. Our result thus shows that by constructing matrix $B$ through neighborhood expansion, we regularize the original adjacency matrix to eventually recover a weak form of the Ramanujan property.</summary>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-11-13T11:25:18Z</published>
+    <arxiv:primary_category term="cs.SI"/>
+    <author>
+      <name>Laurent Massoulie</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0911.4148v1</id>
+    <title>Spectra of lifted Ramanujan graphs</title>
+    <updated>2009-11-21T00:10:27Z</updated>
+    <link href="https://arxiv.org/abs/0911.4148v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0911.4148v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  A random $n$-lift of a base graph $G$ is its cover graph $H$ on the vertices $[n]\times V(G)$, where for each edge $u v$ in $G$ there is an independent uniform bijection $π$, and $H$ has all edges of the form $(i,u),(π(i),v)$. A main motivation for studying lifts is understanding Ramanujan graphs, and namely whether typical covers of such a graph are also Ramanujan.
+  Let $G$ be a graph with largest eigenvalue $λ_1$ and let $ρ$ be the spectral radius of its universal cover. Friedman (2003) proved that every "new" eigenvalue of a random lift of $G$ is $O(ρ^{1/2}λ_1^{1/2})$ with high probability, and conjectured a bound of $ρ+o(1)$, which would be tight by results of Lubotzky and Greenberg (1995). Linial and Puder (2008) improved Friedman's bound to $O(ρ^{2/3}λ_1^{1/3})$. For $d$-regular graphs, where $λ_1=d$ and $ρ=2\sqrt{d-1}$, this translates to a bound of $O(d^{2/3})$, compared to the conjectured $2\sqrt{d-1}$.
+  Here we analyze the spectrum of a random $n$-lift of a $d$-regular graph whose nontrivial eigenvalues are all at most $λ$ in absolute value. We show that with high probability the absolute value of every nontrivial eigenvalue of the lift is $O((λ\vee ρ) \log ρ)$. This result is tight up to a logarithmic factor, and for $λ\leq d^{2/3-ε}$ it substantially improves the above upper bounds of Friedman and of Linial and Puder. In particular, it implies that a typical $n$-lift of a Ramanujan graph is nearly Ramanujan.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2009-11-21T00:10:27Z</published>
+    <arxiv:comment>34 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Eyal Lubetzky</name>
+    </author>
+    <author>
+      <name>Benny Sudakov</name>
+    </author>
+    <author>
+      <name>Van Vu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0812.2170v1</id>
+    <title>Ramanujan sums analysis of long-period sequences and 1/f noise</title>
+    <updated>2008-12-11T15:06:24Z</updated>
+    <link href="https://arxiv.org/abs/0812.2170v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0812.2170v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Ramanujan sums are exponential sums with exponent defined over the irreducible fractions. Until now, they have been used to provide converging expansions to some arithmetical functions appearing in the context of number theory. In this paper, we provide an application of Ramanujan sum expansions to periodic, quasiperiodic and complex time series, as a vital alternative to the Fourier transform. The Ramanujan-Fourier spectrum of the Dow Jones index over 13 years and of the coronal index of solar activity over 69 years are taken as illustrative examples. Distinct long periods may be discriminated in place of the 1/f^α spectra of the Fourier transform.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2008-12-11T15:06:24Z</published>
+    <arxiv:comment>10 pages</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <arxiv:journal_ref>EPL 85 (2009) 40005</arxiv:journal_ref>
+    <author>
+      <name>Michel Planat</name>
+      <arxiv:affiliation>FEMTO-ST</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Milan Minarovjech</name>
+      <arxiv:affiliation>ASTRINSTSAV</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Metod Saniga</name>
+      <arxiv:affiliation>ASTRINSTSAV</arxiv:affiliation>
+    </author>
+    <arxiv:doi>10.1209/0295-5075/85/40005</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1209/0295-5075/85/40005" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.13323v2</id>
+    <title>Skeletons and Spectra: Bernoulli graphings are relatively Ramanujan</title>
+    <updated>2025-10-16T07:43:45Z</updated>
+    <link href="https://arxiv.org/abs/2510.13323v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.13323v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The aim of this paper is to investigate the spectral theory of unimodular random graphs and graphings representing them. We prove that Bernoulli graphings are relatively Ramanujan with respect to their skeleton Markov chain. That is, the part of their spectrum that comes from the random labels falls within the appropriate Alon-Boppana bound. This result complements an example due to Frączyk of an ergodic unimodular random graph with almost sure spectral gap but non-expanding Bernoulli graphing.
+  We also highlight connections of our work with the theory of finite random graphs. Exploiting the result of Bordenave and Collins on random lifts being relatively almost Ramanujan, we prove a strengthening of our main theorem for unimodular quasi-transitive quasi-trees.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-15T09:10:12Z</published>
+    <arxiv:comment>22 pages. Comments welcome!</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Héctor Jardón-Sánchez</name>
+    </author>
+    <author>
+      <name>László Márton Tóth</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2206.00567v2</id>
+    <title>Weak Ramanujan property of the standard non-uniform arithmetic quotient of $PGL_4$</title>
+    <updated>2023-10-04T13:28:23Z</updated>
+    <link href="https://arxiv.org/abs/2206.00567v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2206.00567v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $F$ be a field of formal series over a finite field and $\mathcal{B}_d$ be the affine building associated to $PGL_d(F)$. Given a lattice $Γ$ in $PGL_d(F)$, the complex arising as a quotient $Γ\backslash \mathcal{B}_d$ is called weakly Ramanujan if every non-tivial discrete simultaneous spectrum of the colored adjacency operators $A_1,A_2,\ldots,A_{d-1}$ acting on $L^2(Γ\backslash \mathcal{B}_d)$ is contained in the simultaneous spectrum of those operators acting on $L^2(\mathcal{B})$. In this paper, we prove that the standard non-uniform arithmetic quotient $PGL_4(\mathbb{F}_q[t])\backslash \mathcal{B}_4$ of $PGL_4(F)$ is weakly Ramanujan.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-06-01T15:27:59Z</published>
+    <arxiv:comment>37pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Soonki Hong</name>
+    </author>
+    <author>
+      <name>Sanghoon Kwon</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math-ph/0209002v1</id>
+    <title>Ramanujan sums for signal processing of low frequency noise</title>
+    <updated>2002-09-01T19:03:42Z</updated>
+    <link href="https://arxiv.org/abs/math-ph/0209002v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math-ph/0209002v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  An aperiodic (low frequency) spectrum may originate from the error term in the mean value of an arithmetical function such as Möbius function or Mangoldt function, which are coding sequences for prime numbers. In the discrete Fourier transform the analyzing wave is periodic and not well suited to represent the low frequency regime. In place we introduce a new signal processing tool based on the Ramanujan sums c_q(n), well adapted to the analysis of arithmetical sequences with many resonances p/q. The sums are quasi-periodic versus the time n of the resonance and aperiodic versus the order q of the resonance. New results arise from the use of this Ramanujan-Fourier transform (RFT) in the context of arithmetical and experimental signals</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2002-09-01T19:03:42Z</published>
+    <arxiv:comment>11 pages in IOP style, 14 figures, 2 tables, 16 references</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <arxiv:journal_ref>Phys. Rev. E 66, 056128 (2002) (7 pages)</arxiv:journal_ref>
+    <author>
+      <name>M. Planat</name>
+    </author>
+    <author>
+      <name>H. C. Rosu</name>
+    </author>
+    <author>
+      <name>S. Perrine</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevE.66.056128</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevE.66.056128" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.21656v3</id>
+    <title>Ramanujan's $1/π$ series and conformal field theories</title>
+    <updated>2025-10-21T07:02:16Z</updated>
+    <link href="https://arxiv.org/abs/2503.21656v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2503.21656v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In 1914, Ramanujan unveiled 17 extraordinary infinite series for $1/π$. In this work, we uncover their physics origin by relating them to 2D logarithmic conformal field theories (LCFTs), which emerge in diverse settings such as the fractional quantum Hall effect, percolation, polymers, and even holography. Through this LCFT connection, we reinterpret such infinite series in terms of fundamental CFT data -- the operator spectrum and OPE coefficients. This perspective leads to novel physics-inspired approximations for $1/π$. Drawing lessons from Ramanujan's formulae, we construct a new family of bases for expanding LCFT correlators that converge far more rapidly than the standard conformal block decomposition. This is achieved using recently developed stringy/parametric crossing-symmetric dispersion relations. Remarkably, when working with these new expansions, the action of a certain differential operator (which arises naturally from the Ramanujan connection) dramatically enhances convergence, with the entire contribution collapsing to that of the logarithmic identity operator. This striking simplification hints at a universal property of LCFTs. Finally, we discuss a new holographic interpretation of this unexpected mathematics-physics connection.</summary>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-03-27T16:21:08Z</published>
+    <arxiv:comment>12 pages, 4 figures, v3: version to appear in Phys. Rev. Lett. (title changed for journal)</arxiv:comment>
+    <arxiv:primary_category term="hep-th"/>
+    <author>
+      <name>Faizan Bhat</name>
+    </author>
+    <author>
+      <name>Aninda Sinha</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1501.06087v2</id>
+    <title>Non-backtracking spectrum of random graphs: community detection and non-regular Ramanujan graphs</title>
+    <updated>2015-04-22T15:32:22Z</updated>
+    <link href="https://arxiv.org/abs/1501.06087v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1501.06087v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A non-backtracking walk on a graph is a directed path such that no edge is the inverse of its preceding edge. The non-backtracking matrix of a graph is indexed by its directed edges and can be used to count non-backtracking walks of a given length. It has been used recently in the context of community detection and has appeared previously in connection with the Ihara zeta function and in some generalizations of Ramanujan graphs. In this work, we study the largest eigenvalues of the non-backtracking matrix of the Erdos-Renyi random graph and of the Stochastic Block Model in the regime where the number of edges is proportional to the number of vertices. Our results confirm the "spectral redemption" conjecture that community detection can be made on the basis of the leading eigenvectors above the feasibility threshold.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-01-24T22:02:50Z</published>
+    <arxiv:comment>59 pages</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Charles Bordenave</name>
+    </author>
+    <author>
+      <name>Marc Lelarge</name>
+    </author>
+    <author>
+      <name>Laurent Massoulié</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/hep-th/9304056v2</id>
+    <title>The sums of Rogers, Schur and Ramanujan and the Bose-Fermi correspondence in $1+1$-dimensional quantum field theory</title>
+    <updated>1993-05-03T20:41:50Z</updated>
+    <link href="https://arxiv.org/abs/hep-th/9304056v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/hep-th/9304056v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We discuss the relation of the two types of sums in the Rogers-Schur-Ramanujan identities with the Bose-Fermi correspondence of massless quantum field theory in $1+1$ dimensions. One type, which generalizes to sums which appear in the Weyl-Kac character formula for representations of affine Lie algebras and in expressions for their branching functions, is related to bosonic descriptions of the spectrum of the field theory (associated with the Feigin-Fuchs construction in conformal field theory). Fermionic descriptions of the same spectrum are obtained via generalizations of the other type of sums. We here summarize recent results for such fermionic sum representations of characters and branching functions. (To appear in C.N. Yang's 70th birthday Festschrift.)</summary>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>1993-04-14T02:28:30Z</published>
+    <arxiv:comment>28/17 pages in harvmac, ITP-SB-93-19. [a few refs added]</arxiv:comment>
+    <arxiv:primary_category term="hep-th"/>
+    <arxiv:journal_ref>in Recent Progress in Statistical Mechanics and Quantum Field Theory, ed. P. Bouwknegt et al, World Scientific , (Singapore 1995) 195</arxiv:journal_ref>
+    <author>
+      <name>Rinat Kedem</name>
+    </author>
+    <author>
+      <name>Barry M. McCoy</name>
+    </author>
+    <author>
+      <name>Ezer Melzer</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math-ph/0307033v1</id>
+    <title>Quantum $1/f$ Noise in Equilibrium: from Planck to Ramanujan</title>
+    <updated>2003-07-16T14:34:16Z</updated>
+    <link href="https://arxiv.org/abs/math-ph/0307033v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math-ph/0307033v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We describe a new model of massless thermal bosons which predicts an hyperbolic fluctuation spectrum at low frequencies. It is found that the partition function per mode is the Euler generating function for unrestricted partitions $p(n)$. Thermodynamical quantities carry a strong arithmetical structure: they are given by series with Fourier coefficients equal to summatory functions $σ_k(n)$ of the power of divisors, with $k=-1$ for the free energy, $k=0$ for the number of particles and $k=1$ for the internal energy. Low frequency contributions are calculated using Mellin transform methods. In particular the internal energy per mode diverges as $\frac{\tilde{E}}{kT}=\frac{π^2}{6 x}$ with $x=\frac{h ν}{kT}$ in contrast to the Planck energy $\tilde{E}=kT$. The theory is applied to calculate corrections in black body radiation and in the Debye solid. Fractional energy fluctuations are found to show a $1/ν$ power spectrum in the low frequency range. A satisfactory model of frequency fluctuations in a quartz crystal resonator follows. A sketch of the whole Ramanujan--Rademacher theory of partitions is reminded as well.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2003-07-16T14:34:16Z</published>
+    <arxiv:comment>slightly expanded version of a text published in Physica A</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <arxiv:journal_ref>Physica A 318, 371 (2003)</arxiv:journal_ref>
+    <author>
+      <name>Michel Planat</name>
+    </author>
+    <arxiv:doi>10.1016/S0378-4371(02)01659-X</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/S0378-4371(02)01659-X" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2009.02595v1</id>
+    <title>Explicit near-fully X-Ramanujan graphs</title>
+    <updated>2020-09-05T20:36:16Z</updated>
+    <link href="https://arxiv.org/abs/2009.02595v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2009.02595v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $p(Y_1, \dots, Y_d, Z_1, \dots, Z_e)$ be a self-adjoint noncommutative polynomial, with coefficients from $\mathbb{C}^{r \times r}$, in the indeterminates $Y_1, \dots, Y_d$ (considered to be self-adjoint), the indeterminates $Z_1, \dots, Z_e$, and their adjoints $Z_1^*, \dots, Z_e^*$. Suppose $Y_1, \dots, Y_d$ are replaced by independent random $n \times n$ matching matrices, and $Z_1, \dots, Z_e$ are replaced by independent random $n \times n$ permutation matrices. Assuming for simplicity that $p$'s coefficients are $0$-$1$ matrices, the result can be thought of as a kind of random $rn$-vertex graph $G$. As $n \to \infty$, there will be a natural limiting infinite graph $X$ that covers any finite outcome for $G$. A recent landmark result of Bordenave and Collins shows that for any $\varepsilon &gt; 0$, with high probability the spectrum of a random $G$ will be $\varepsilon$-close in Hausdorff distance to the spectrum of $X$ (once the suitably defined "trivial" eigenvalues are excluded). We say that $G$ is "$\varepsilon$-near fully $X$-Ramanujan". Our work has two contributions: First we study and clarify the class of infinite graphs $X$ that can arise in this way. Second, we derandomize the Bordenave-Collins result: for any $X$, we provide explicit, arbitrarily large graphs $G$ that are covered by $X$ and that have (nontrivial) spectrum at Hausdorff distance at most $\varepsilon$ from that of $X$. This significantly generalizes the recent work of Mohanty et al., which provided explicit near-Ramanujan graphs for every degree $d$ (meaning $d$-regular graphs with all nontrivial eigenvalues bounded in magnitude by $2\sqrt{d-1} + \varepsilon$). As an application of our main technical theorem, we are also able to determine the "eigenvalue relaxation value" for a wide class of average-case degree-$2$ constraint satisfaction problems.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-09-05T20:36:16Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Ryan O'Donnell</name>
+    </author>
+    <author>
+      <name>Xinyu Wu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1801.09161v2</id>
+    <title>Detection of Brain Stimuli Using Ramanujan Periodicity Transforms</title>
+    <updated>2018-12-09T00:39:37Z</updated>
+    <link href="https://arxiv.org/abs/1801.09161v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1801.09161v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The ability to efficiently match the frequency of the brain's response to repetitive visual stimuli in real time is the basis for reliable SSVEP-based Brain-Computer-Interfacing (BCI). The detection of different stimuli is posed as a composite hypothesis test, where SSVEPs are assumed to admit a sparse representation in a Ramanujan Periodicity Transform (RPT) dictionary. For the binary case, we develop and analyze the performance of an RPT detector based on a derived generalized likelihood ratio test. Our approach is extended to multi-hypothesis multi-electrode settings, where we capture the spatial correlation between the electrodes using pre-stimulus data. We also introduce a new metric for evaluating SSVEP detection schemes based on their achievable efficiency and discrimination rate tradeoff for given system resources. We obtain exact distributions of the test statistic in terms of confluent hypergeometric functions. Results based on extensive simulations with both synthesized and real data indicate that the RPT detector substantially outperforms spectral-based methods. Its performance also surpasses the state-of-the-art Canonical Correlation Analysis (CCA) methods with respect to accuracy and sample complexity in short data lengths regimes crucial for real-time applications. The proposed approach is asymptotically optimal as it closes the gap to a perfect measurement bound as the data length increases. In contrast to existing supervised methods which are highly data-dependent, the RPT detector only uses pre-stimulus data to estimate the per-subject spatial correlation, thereby dispensing with considerable overhead associated with data collection for a large number of subjects and stimuli. Our work advances the theory and practice of emerging real-time BCI and affords a new framework for comparing SSVEP detection schemes across a wider spectrum of operating regimes.</summary>
+    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-01-28T01:11:00Z</published>
+    <arxiv:primary_category term="eess.SP"/>
+    <author>
+      <name>Pouria Saidi</name>
+    </author>
+    <author>
+      <name>Azadeh Vosoughi</name>
+    </author>
+    <author>
+      <name>George Atia</name>
+    </author>
+  </entry>
+</feed>

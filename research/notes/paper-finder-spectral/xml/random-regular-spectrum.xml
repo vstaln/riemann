@@ -1,0 +1,491 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/unLO51HUsYLEJ06cP9XnVaGVc2U</id>
+  <title>arXiv Query: search_query=all:"random regular graph" AND all:spectrum&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-08-11T16:10:26Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22random+regular+graph%22+AND+all:spectrum&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>24</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2209.00734v2</id>
+    <title>Subgraph distributions in dense random regular graphs</title>
+    <updated>2023-05-08T17:44:58Z</updated>
+    <link href="https://arxiv.org/abs/2209.00734v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2209.00734v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Given connected graph $H$ which is not a star, we show that the number of copies of $H$ in a dense uniformly random regular graph is asymptotically Gaussian, which was not known even for $H$ being a triangle. This addresses a question of McKay from the 2010 International Congress of Mathematicians. In fact, we prove that the behavior of the variance of the number of copies of $H$ depends in a delicate manner on the occurrence and number of cycles of length $3,4,5$ as well as paths of length $3$ in $H$. More generally, we provide control of the asymptotic distribution of certain statistics of bounded degree which are invariant under vertex permutations, including moments of the spectrum of a random regular graph.
+  Our techniques are based on combining complex-analytic methods due to McKay and Wormald used to enumerate regular graphs with the notion of graph factors developed by Janson in the context of studying subgraph counts in $\mathbb{G}(n,p)$.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-09-01T21:36:58Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Ashwin Sah</name>
+    </author>
+    <author>
+      <name>Mehtaab Sawhney</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.14230v2</id>
+    <title>Mobility Edge for the Anderson Model on Random Regular Graphs</title>
+    <updated>2026-03-19T03:14:08Z</updated>
+    <link href="https://arxiv.org/abs/2603.14230v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.14230v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We determine the phase diagram of the Anderson tight-binding model on random regular graphs with Gaussian disorder and sufficiently large degree. In particular, we prove that if the degree is fixed and the number of vertices goes to infinity, the spectrum asymptotically consists of a finite delocalized interval surrounded by two unbounded localized components. Our argument uses a recent description of the spectrum of the tight-binding model on the Bethe lattice (Aggarwal--Lopatto, 2025). By viewing the Bethe lattice as the local limit of a random regular graph, and establishing suitable concentration, eigenvalue-counting, and resolvent estimates, we transfer this characterization of the spectrum of the limiting model to the finite-volume setting.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-15T05:41:10Z</published>
+    <arxiv:comment>36 pages</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Suhan Liu</name>
+    </author>
+    <author>
+      <name>Patrick Lopatto</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2306.14965v3</id>
+    <title>Renormalization Group Analysis of the Anderson Model on Random Regular Graphs</title>
+    <updated>2024-05-09T12:32:15Z</updated>
+    <link href="https://arxiv.org/abs/2306.14965v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2306.14965v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a renormalization group analysis of the problem of Anderson localization on a Random Regular Graph (RRG) which generalizes the renormalization group of Abrahams, Anderson, Licciardello, and Ramakrishnan to infinite-dimensional graphs. The renormalization group equations necessarily involve two parameters (one being the changing connectivity of sub-trees), but we show that the one-parameter scaling hypothesis is recovered for sufficiently large system sizes for both eigenstates and spectrum observables. We also explain the non-monotonic behavior of dynamical and spectral quantities as a function of the system size for values of disorder close to the transition, by identifying two terms in the beta function of the running fractal dimension of different signs and functional dependence. Our theory provides a simple and coherent explanation for the unusual scaling behavior observed in numerical data of the Anderson model on RRG and of Many-Body Localization.</summary>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-06-26T18:00:13Z</published>
+    <arxiv:comment>8+6 pages, 3+7 figures, comments are welcome</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.dis-nn"/>
+    <author>
+      <name>Carlo Vanoni</name>
+    </author>
+    <author>
+      <name>Boris L. Altshuler</name>
+    </author>
+    <author>
+      <name>Vladimir E. Kravtsov</name>
+    </author>
+    <author>
+      <name>Antonello Scardicchio</name>
+    </author>
+    <arxiv:doi>10.1073/pnas.2401955121</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1073/pnas.2401955121" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2305.14416v1</id>
+    <title>Anatomy of the fragmented Hilbert space: eigenvalue tunneling, quantum scars and localization in the perturbed random regular graph</title>
+    <updated>2023-05-23T18:00:00Z</updated>
+    <link href="https://arxiv.org/abs/2305.14416v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2305.14416v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider the properties of the random regular graph with node degree $d$ perturbed by chemical potentials $μ_k$ for a number of short $k$-cycles. We analyze both numerically and analytically the phase diagram of the model in the $(μ_k,d)$ plane. The critical curve separating the homogeneous and clusterized phases is found and it is demonstrated that the clusterized phase itself generically is separated as the function of $d$ into the phase with ideal clusters and phase with coupled ones when the continuous spectrum gets formed. The eigenstate spatial structure of the model is investigated and it is found that there are localized scar-like states in the delocalized part of the spectrum, that are related to the topologically equivalent nodes in the graph. We also reconsider the localization of the states in the non-perturbative band formed by eigenvalue instantons and find the semi-Poisson level spacing distribution. The Anderson transition for the case of combined ($k$-cycle) structural and diagonal (Anderson) disorders is investigated. It is found that the critical diagonal disorder gets reduced sharply at the clusterization phase transition, but does it unevenly in non-perturbative and mid-spectrum bands, due to the scars, present in the latter. The applications of our findings to $2$d quantum gravity are discussed.</summary>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-05-23T18:00:00Z</published>
+    <arxiv:comment>27 pages, 9 figures, 87 references + 4 pages, 4 figures in Appendices</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.dis-nn"/>
+    <arxiv:journal_ref>Phys. Rev. B 108, 094203 (2023)</arxiv:journal_ref>
+    <author>
+      <name>Daniil Kochergin</name>
+    </author>
+    <author>
+      <name>Ivan M. Khaymovich</name>
+    </author>
+    <author>
+      <name>Olga Valba</name>
+    </author>
+    <author>
+      <name>Alexander Gorsky</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevB.108.094203</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevB.108.094203" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2112.14585v1</id>
+    <title>Mobility Edge in the Anderson model on partially disordered random regular graphs</title>
+    <updated>2021-12-29T14:55:29Z</updated>
+    <link href="https://arxiv.org/abs/2112.14585v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2112.14585v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this Letter we study numerically the Anderson model on partially disordered random regular graphs (RRG) considered as the toy model for a Hilbert space of interacting disordered many-body system. The protected subsector of zero-energy states in a many-body system corresponds to clean nodes in RRG ensemble. Using adjacent gap ratio statistics and IPR we find the sharp mobility edge in the spectrum of one-particle Anderson model above some critical density of clean nodes. Its position in the spectrum is almost independent on the disorder strength. The possible application of our result for the controversial issue of mobility edge in the many-body localized (MBL) phase is discussed.</summary>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-12-29T14:55:29Z</published>
+    <arxiv:primary_category term="cond-mat.dis-nn"/>
+    <author>
+      <name>O. Valba</name>
+    </author>
+    <author>
+      <name>A. Gorsky</name>
+    </author>
+    <arxiv:doi>10.1134/S0021364022601750</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1134/S0021364022601750" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2309.05691v3</id>
+    <title>Robust extended states in Anderson model on partially disordered random regular graphs</title>
+    <updated>2024-03-13T07:57:13Z</updated>
+    <link href="https://arxiv.org/abs/2309.05691v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2309.05691v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this work we analytically explain the origin of the mobility edge in the partially disordered random regular graphs of degree d, i.e., with a fraction $β$ of the sites being disordered, while the rest remain clean. It is shown that the mobility edge in the spectrum survives in {a certain range of parameters} $(d,β)$ at infinitely large uniformly distributed disorder. The critical curve separating extended and localized states is derived analytically and confirmed numerically. The duality in the localization properties between the sparse and extremely dense RRG has been found and understood.</summary>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-09-11T18:00:00Z</published>
+    <arxiv:comment>12 pages, 5 figures, 86 references + 8 pages, 9 figures in Appendices</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.dis-nn"/>
+    <arxiv:journal_ref>SciPost Phys. 16, 106 (2024)</arxiv:journal_ref>
+    <author>
+      <name>Daniil Kochergin</name>
+    </author>
+    <author>
+      <name>Ivan M. Khaymovich</name>
+    </author>
+    <author>
+      <name>Olga Valba</name>
+    </author>
+    <author>
+      <name>Alexander Gorsky</name>
+    </author>
+    <arxiv:doi>10.21468/SciPostPhys.16.4.106</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.21468/SciPostPhys.16.4.106" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2201.04673v2</id>
+    <title>Sub-diffusive Thouless time scaling in the Anderson model on random regular graphs</title>
+    <updated>2023-09-14T05:43:31Z</updated>
+    <link href="https://arxiv.org/abs/2201.04673v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2201.04673v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The scaling of the Thouless time with system size is of fundamental importance to characterize dynamical properties in quantum systems. In this work, we study the scaling of the Thouless time in the Anderson model on random regular graphs with on-site disorder. We determine the Thouless time from two main quantities: the spectral form factor and the power spectrum. Both quantities probe the long-range spectral correlations in the system and allow us to determine the Thouless time as the time scale after which the system is well described by random matrix theory. We find that the scaling of the Thouless time is consistent with the existence of a sub-diffusive regime anticipating the localized phase. Furthermore, to reduce finite-size effects, we break energy conservation by introducing a Floquet version of the model and show that it hosts a similar sub-diffusive regime.</summary>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-01-12T19:56:56Z</published>
+    <arxiv:comment>9 pages, 7 figures, 118 references + 1 page, 3 figures in Appendices</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.dis-nn"/>
+    <arxiv:journal_ref>Phys. Rev. B105, 174207 (2022)</arxiv:journal_ref>
+    <author>
+      <name>Luis Colmenarez</name>
+    </author>
+    <author>
+      <name>David J. Luitz</name>
+    </author>
+    <author>
+      <name>Ivan M. Khaymovich</name>
+    </author>
+    <author>
+      <name>Giuseppe De Tomasi</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevB.105.174207</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevB.105.174207" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1910.10121v2</id>
+    <title>Edge rigidity and universality of random regular graphs of intermediate degree</title>
+    <updated>2020-06-11T15:45:37Z</updated>
+    <link href="https://arxiv.org/abs/1910.10121v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1910.10121v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For random $d$-regular graphs on $N$ vertices with $1 \ll d \ll N^{2/3}$, we develop a $d^{-1/2}$ expansion of the local eigenvalue distribution about the Kesten-McKay law up to order $d^{-3}$. This result is valid up to the edge of the spectrum. It implies that the eigenvalues of such random regular graphs are more rigid than those of Erdős-Rényi graphs of the same average degree. As a first application, for $1 \ll d \ll N^{2/3}$, we show that all nontrivial eigenvalues of the adjacency matrix are with very high probability bounded in absolute value by $(2 + o(1)) \sqrt{d - 1}$. As a second application, for $N^{2/9} \ll d \ll N^{1/3}$, we prove that the extremal eigenvalues are concentrated at scale $N^{-2/3}$ and their fluctuations are governed by Tracy-Widom statistics. Thus, in the same regime of $d$, $52\%$ of all $d$-regular graphs have second-largest eigenvalue strictly less than $2 \sqrt{d - 1}$.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-10-22T17:12:25Z</published>
+    <arxiv:primary_category term="math.PR"/>
+    <arxiv:journal_ref>Geom. Funct. Anal., 30, 693-769, (2020)</arxiv:journal_ref>
+    <author>
+      <name>Roland Bauerschmidt</name>
+    </author>
+    <author>
+      <name>Jiaoyang Huang</name>
+    </author>
+    <author>
+      <name>Antti Knowles</name>
+    </author>
+    <author>
+      <name>Horng-Tzer Yau</name>
+    </author>
+    <arxiv:doi>10.1007/s00039-020-00538-0</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s00039-020-00538-0" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.13789v1</id>
+    <title>Random cubic graph embedded in a hypercube: Entanglement spectrum and many-body localization</title>
+    <updated>2025-08-19T12:49:21Z</updated>
+    <link href="https://arxiv.org/abs/2508.13789v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2508.13789v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The schematic model of interacting spins is introduced, which combines the symmetry of hypercube with the simplicity of random regular graph with degree three, i.e. the random cubic graph. We study the localization transition in this model, which shares essential characteristics with the systems exhibiting many-body localization. Namely, we investigate the transition in terms of the entanglement entropy and entanglement spectrum. We also show that the most significant indicator of the localization transition is the failure of eigenstate thermalization hypothesis, when the distribution of matrix elements of local operators changes from Gasussian to bimodal. It also provides good estimate for the critical disorder strength.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-08-19T12:49:21Z</published>
+    <arxiv:comment>21 pages, 21 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <arxiv:journal_ref>Phys. Rev. B 112, 024205 (2025)</arxiv:journal_ref>
+    <author>
+      <name>Frantisek Slanina</name>
+    </author>
+    <arxiv:doi>10.1103/bz43-x4cg</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/bz43-x4cg" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2310.03412v3</id>
+    <title>Localization transition in non-Hermitian systems depending on reciprocity and hopping asymmetry</title>
+    <updated>2024-02-24T18:07:32Z</updated>
+    <link href="https://arxiv.org/abs/2310.03412v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.03412v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We studied the single-particle Anderson localization problem for non-Hermitian systems on directed graphs. Random regular graph and various undirected standard random graph models were modified by controlling reciprocity and hopping asymmetry parameters. We found the emergence of left, biorthogonal and right localized states depending on both parameters and graph structure properties such as node degree $d$. For directed random graphs, the occurrence of biorthogonal localization near exceptional points is described analytically and numerically. The clustering of localized states near the center of the spectrum and the corresponding mobility edge for left and right states are shown numerically. Structural features responsible for localization, such as topologically invariant nodes or drains and sources, were also described. Considering the diagonal disorder, we observed the disappearance of localization dependence on reciprocity around $W \sim 20$ for a random regular graph $d=4$. With a small diagonal disorder, the average biorthogonal fractal dimension drastically reduces. Around $W \sim 5$ localization scars occur within the spectrum, alternating as vertical bands of clustering of left and right localized states.</summary>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-05T09:31:02Z</published>
+    <arxiv:comment>15 pages, 8 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.dis-nn"/>
+    <author>
+      <name>Daniil Kochergin</name>
+    </author>
+    <author>
+      <name>Vasilii Tiselko</name>
+    </author>
+    <author>
+      <name>Arsenii Onuchin</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevE.109.044315</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevE.109.044315" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2006.13605v2</id>
+    <title>A Note on the Trace Method for Random Regular Graphs</title>
+    <updated>2021-03-25T14:10:08Z</updated>
+    <link href="https://arxiv.org/abs/2006.13605v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2006.13605v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The main goal of this note is to illustrate the advantage of analyzing the non-backtracking spectrum of a regular graph rather than the ordinary spectrum. We show that by switching to non-backtracking spectrum, the method of proof used in [Puder 2015, arXiv::1212.5216] yields a bound of $2\sqrt{d-1}+\frac{2}{\sqrt{d-1}}$ instead of the original $2\sqrt{d-1}+1$ on the second largest eigenvalue of a random $d$-regular graph.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-06-24T10:27:59Z</published>
+    <arxiv:comment>9 pages, no figures. Minor changes upon previous version</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Israel Journal of Mathematics, 256, 269--282, 2023</arxiv:journal_ref>
+    <author>
+      <name>Joel Friedman</name>
+    </author>
+    <author>
+      <name>Doron Puder</name>
+    </author>
+    <arxiv:doi>10.1007/s11856-023-2497-5</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s11856-023-2497-5" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2002.02979v2</id>
+    <title>Localization transition on the Random Regular Graph as an unstable tricritical point in a log-normal Rosenzweig-Porter random matrix ensemble</title>
+    <updated>2020-03-07T20:32:21Z</updated>
+    <link href="https://arxiv.org/abs/2002.02979v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2002.02979v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Gaussian Rosenzweig-Porter (GRP) random matrix ensemble is the only one in which the robust multifractal phase and ergodic transition have a status of a mathematical theorem. Yet, this phase in GRP model is oversimplified: the spectrum of fractal dimensions is degenerate and the mini-band in the local spectrum is not multifractal. In this paper we suggest an extension of the GRP model by adopting a logarithmically-normal (LN) distribution of off-diagonal matrix elements. A family of such LN-RP models is parametrized by a symmetry parameter $p$ and it interpolates between the GRP at $p\rightarrow 0$ and Levy ensembles at $p\rightarrow\infty$. A special point $p=1$ is shown to be the simplest approximation to the Anderson localization model on a random regular graph.We study in detail the phase diagram of LN-RP model and show that $p=1$ is a tricritical point where the multifractal phase first collapses. This collapse is shown to be unstable with respect to the truncation of the log-normal distribution. We suggest a new criteria of stability of the non-ergodic phases and prove that the Anderson transition in LN-RP model is discontinuous at all $p&gt;0$.</summary>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.quant-gas" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-02-07T19:00:54Z</published>
+    <arxiv:comment>11 pages, 9 figures, 2 tables, 48 references + 8 pages, 6 figures in Appendices</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.dis-nn"/>
+    <author>
+      <name>V. E. Kravtsov</name>
+    </author>
+    <author>
+      <name>I. M. Khaymovich</name>
+    </author>
+    <author>
+      <name>B. L. Altshuler</name>
+    </author>
+    <author>
+      <name>L. B. Ioffe</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1505.06700v3</id>
+    <title>Bulk eigenvalue statistics for random regular graphs</title>
+    <updated>2016-08-24T08:02:38Z</updated>
+    <link href="https://arxiv.org/abs/1505.06700v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1505.06700v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider the uniform random $d$-regular graph on $N$ vertices, with $d \in [N^α, N^{2/3-α}]$ for arbitrary $α&gt; 0$. We prove that in the bulk of the spectrum the local eigenvalue correlation functions and the distribution of the gaps between consecutive eigenvalues coincide with those of the Gaussian Orthogonal Ensemble.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-05-25T17:41:50Z</published>
+    <arxiv:primary_category term="math.PR"/>
+    <arxiv:journal_ref>Ann. Probab., 45(6A):3626-3663, 2017</arxiv:journal_ref>
+    <author>
+      <name>Roland Bauerschmidt</name>
+    </author>
+    <author>
+      <name>Jiaoyang Huang</name>
+    </author>
+    <author>
+      <name>Antti Knowles</name>
+    </author>
+    <author>
+      <name>Horng-Tzer Yau</name>
+    </author>
+    <arxiv:doi>10.1214/16-AOP1145</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1214/16-AOP1145" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2312.03300v2</id>
+    <title>Non-backtracking eigenvalues and eigenvectors of random regular graphs and hypergraphs</title>
+    <updated>2024-05-28T15:01:01Z</updated>
+    <link href="https://arxiv.org/abs/2312.03300v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2312.03300v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The non-backtracking operator of a graph is a powerful tool in spectral graph theory and random matrix theory. Most existing results for the non-backtracking operator of a random graph concern only eigenvalues or top eigenvectors. In this paper, we take the first step in analyzing its bulk eigenvector behaviors. We demonstrate that for the non-backtracking operator $B$ of a random $d$-regular graph, its eigenvectors corresponding to nontrivial eigenvalues are completely delocalized with high probability. Additionally, we show complete delocalization for a reduced $2n \times 2n$ non-backtracking matrix $\tilde{B}$. By projecting all eigenvalues of $\tilde{B}$ onto the real line, we obtain an empirical measure that converges weakly in probability to the Kesten-McKay law for fixed $d\geq 3$ and to a semicircle law as $d \to\infty$ with $n \to\infty$. We extend our analysis to random regular hypergraphs, including the limiting measure of the real part of the spectrum for $\tilde{B}$, $\ell_{\infty}$-norm bounds for the eigenvectors of $\tilde{B}$ and $B$, and a deterministic relation between eigenvectors of $B$ and the eigenvectors of the adjacency matrix.
+  As an application, we analyze the non-backtracking spectrum of the regular stochastic block model (RSBM) and provide a spectral method based on eigenvectors of $\tilde{B}$ to recover the community structure exactly. We also show that there exists an isolated real eigenvalue with an informative eigenvector inside the circle of radius $\sqrt{d_1+d_2-1}$ in the spectrum of $B$, analogous to the "eigenvalue insider" phenomenon for the Erdős-Rényi stochastic block model conjectured in Dall'Amico et al. (2019).</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-12-06T05:54:34Z</published>
+    <arxiv:comment>Major revision. 21 pages, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Xiangyi Zhu</name>
+    </author>
+    <author>
+      <name>Yizhe Zhu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1609.09052v3</id>
+    <title>Local Kesten--McKay law for random regular graphs</title>
+    <updated>2016-12-20T07:13:34Z</updated>
+    <link href="https://arxiv.org/abs/1609.09052v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1609.09052v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the adjacency matrices of random $d$-regular graphs with large but fixed degree $d$. In the bulk of the spectrum $[-2\sqrt{d-1}+\varepsilon, 2\sqrt{d-1}-\varepsilon]$ down to the optimal spectral scale, we prove that the Green's functions can be approximated by those of certain infinite tree-like (few cycles) graphs that depend only on the local structure of the original graphs. This result implies that the Kesten--McKay law holds for the spectral density down to the smallest scale and the complete delocalization of bulk eigenvectors. Our method is based on estimating the Green's function of the adjacency matrices and a resampling of the boundary edges of large balls in the graphs.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-09-28T19:49:16Z</published>
+    <arxiv:comment>A new title</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <arxiv:journal_ref>Commun. Math. Phys. 369 (2):523-636, 2019</arxiv:journal_ref>
+    <author>
+      <name>Roland Bauerschmidt</name>
+    </author>
+    <author>
+      <name>Jiaoyang Huang</name>
+    </author>
+    <author>
+      <name>Horng-Tzer Yau</name>
+    </author>
+    <arxiv:doi>10.1007/s00220-019-03345-3</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s00220-019-03345-3" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1009.3430v1</id>
+    <title>Robustness of Random Graphs Based on Natural Connectivity</title>
+    <updated>2010-09-17T14:15:58Z</updated>
+    <link href="https://arxiv.org/abs/1009.3430v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1009.3430v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recently, it has been proposed that the natural connectivity can be used to efficiently characterise the robustness of complex networks. Natural connectivity quantifies the redundancy of alternative routes in a network by evaluating the weighted number of closed walks of all lengths and can be regarded as the average eigenvalue obtained from the graph spectrum. In this article, we explore the natural connectivity of random graphs both analytically and numerically and show that it increases linearly with the average degree. By comparing with regular ring lattices and random regular graphs, we show that random graphs are more robust than random regular graphs; however, the relationship between random graphs and regular ring lattices depends on the average degree and graph size. We derive the critical graph size as a function of the average degree, which can be predicted by our analytical results. When the graph size is less than the critical value, random graphs are more robust than regular ring lattices, whereas regular ring lattices are more robust than random graphs when the graph size is greater than the critical value.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.soc-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2010-09-17T14:15:58Z</published>
+    <arxiv:comment>12 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <author>
+      <name>Jun Wu</name>
+    </author>
+    <author>
+      <name>Mauricio Barahona</name>
+    </author>
+    <author>
+      <name>Yuejin Tan</name>
+    </author>
+    <author>
+      <name>Hongzhong Deng</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2002.07211v1</id>
+    <title>Spectrum preserving short cycle removal on regular graphs</title>
+    <updated>2020-02-17T19:16:15Z</updated>
+    <link href="https://arxiv.org/abs/2002.07211v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2002.07211v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We describe a new method to remove short cycles on regular graphs while maintaining spectral bounds (the nontrivial eigenvalues of the adjacency matrix), as long as the graphs have certain combinatorial properties. These combinatorial properties are related to the number and distance between short cycles and are known to happen with high probability in uniformly random regular graphs.
+  Using this method we can show two results involving high girth spectral expander graphs. First, we show that given $d \geq 3$ and $n$, there exists an explicit distribution of $d$-regular $Θ(n)$-vertex graphs where with high probability its samples have girth $Ω(\log_{d - 1} n)$ and are $ε$-near-Ramanujan; i.e., its eigenvalues are bounded in magnitude by $2\sqrt{d - 1} + ε$ (excluding the single trivial eigenvalue of $d$). Then, for every constant $d \geq 3$ and $ε&gt; 0$, we give a deterministic poly$(n)$-time algorithm that outputs a $d$-regular graph on $Θ(n)$-vertices that is $ε$-near-Ramanujan and has girth $Ω(\sqrt{\log n})$, based on the work of arXiv:1909.06988 .</summary>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-02-17T19:16:15Z</published>
+    <arxiv:comment>21 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.DS"/>
+    <author>
+      <name>Pedro Paredes</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1508.01714v3</id>
+    <title>A random matrix model with localization and ergodic transitions</title>
+    <updated>2015-12-28T12:17:57Z</updated>
+    <link href="https://arxiv.org/abs/1508.01714v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1508.01714v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Motivated by the problem of Many-Body Localization and the recent numerical results for the level and eigenfunction statistics on the random regular graphs, a generalization of the Rosenzweig-Porter random matrix model is suggested that possesses two localization transitions as the parameter $γ$ of the model varies from 0 to $\infty$. One of them is the Anderson transition from the localized to the extended states that happens at $γ=2$. The other one at $γ=1$ is the transition from the extended non-ergodic (multifractal) states to the extended ergodic states similar to the eigenstates of the Gaussian Orthogonal Ensemble. We computed the two-level spectral correlation function, the spectrum of multifractality $f(α)$ and the wave function overlap which all show the transitions at $γ=1$ and $γ=2$.</summary>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-08-07T14:54:54Z</published>
+    <arxiv:comment>8 pages, 9 figures (main text) + 7 pages, 4 figures (supplementary materials)</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.dis-nn"/>
+    <arxiv:journal_ref>New Journal of Physics 17, 122002 (2015)</arxiv:journal_ref>
+    <author>
+      <name>V. E. Kravtsov</name>
+    </author>
+    <author>
+      <name>I. M. Khaymovich</name>
+    </author>
+    <author>
+      <name>E. Cuevas</name>
+    </author>
+    <author>
+      <name>M. Amini</name>
+    </author>
+    <arxiv:doi>10.1088/1367-2630/17/12/122002</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/1367-2630/17/12/122002" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2408.10530v2</id>
+    <title>First return times on sparse random graphs</title>
+    <updated>2025-02-13T16:36:24Z</updated>
+    <link href="https://arxiv.org/abs/2408.10530v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2408.10530v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider random walks in the form of nearest-neighbor hopping on Erdos-Renyi random graphs of finite fixed mean degree c as the number of vertices N tends to infinity. In this regime, using statistical field theory methods, we develop an analytic theory of the first return time probability distribution. The problem turns out closely related to finding the spectrum of the normalized graph Laplacian that controls the continuum time version of the nearest-neighbor-hopping random walk. In the infinite graph limit, where loops are highly improbable, the returns operate in a manner qualitatively similar to c-regular trees, and the expressions for probabilities resemble those on random c-regular graphs. Because the vertex degrees are not exactly constant, however, the way c enters the formulas differs from the dependence on the graph degree of first return probabilities on random regular graphs.</summary>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-08-20T04:07:27Z</published>
+    <arxiv:comment>v2: comments and references added, published version</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.dis-nn"/>
+    <arxiv:journal_ref>J. Phys. A 58 (2025) 075002</arxiv:journal_ref>
+    <author>
+      <name>Oleg Evnin</name>
+    </author>
+    <author>
+      <name>Weerawit Horinouchi</name>
+    </author>
+    <arxiv:doi>10.1088/1751-8121/adb084</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/1751-8121/adb084" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0912.2144v1</id>
+    <title>Robustness of Regular Graphs Based on Natural Connectivity</title>
+    <updated>2009-12-11T03:13:07Z</updated>
+    <link href="https://arxiv.org/abs/0912.2144v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0912.2144v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  It has been recently proposed that the natural connectivity can be used to characterize efficiently the robustness of complex networks. The natural connectivity quantifies the redundancy of alternative routes in the network by evaluating the weighted number of closed walks of all lengths and can be seen as an average eigenvalue obtained from the graph spectrum. In this paper, we explore both analytically and numerically the natural connectivity of regular ring lattices and regular random graphs obtained through degree-preserving random rewirings from regular ring lattices. We reformulate the natural connectivity of regular ring lattices in terms of generalized Bessel functions and show that the natural connectivity of regular ring lattices is independent of network size and increases with monotonically. We also show that random regular graphs have lower natural connectivity, and are thus less robust, than regular ring lattices.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.soc-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2009-12-11T03:13:07Z</published>
+    <arxiv:comment>18 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <author>
+      <name>Jun Wu</name>
+    </author>
+    <author>
+      <name>Mauricio Barahona</name>
+    </author>
+    <author>
+      <name>Yuejin Tan</name>
+    </author>
+    <author>
+      <name>Hongzhong Deng</name>
+    </author>
+  </entry>
+</feed>

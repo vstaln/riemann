@@ -290,9 +290,8 @@ fn main() {
                         if let Ok(txt) = fs::read_to_string(&p) {
                             for line in txt.lines() {
                                 let mut it = line.split_whitespace();
-                                let _idx = it.next();
-                                if let Some(v) = it.next() {
-                                    if let Ok(x) = v.parse::<f64>() {
+                                if let (Some(ix), Some(v)) = (it.next(), it.next()) {
+                                    if let (Ok(_i), Ok(x)) = (ix.parse::<usize>(), v.parse::<f64>()) {
                                         lmfdb.push(x);
                                     }
                                 }
@@ -304,6 +303,7 @@ fn main() {
         }
     }
     lmfdb.sort_by(|a, b| a.partial_cmp(b).unwrap());
+    lmfdb.dedup();
     let in_strip: Vec<f64> = lmfdb.iter().copied().filter(|&g| g > t0 && g < t0 + h).collect();
     let n_leq_t0 = lmfdb.iter().filter(|&&g| g <= t0).count();
     let n_leq_th = lmfdb.iter().filter(|&&g| g <= t0 + h).count();

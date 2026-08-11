@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/UWPwUumrv4zF49BAtVqyokoeUDE</id>
+  <title>arXiv Query: search_query=au:Bufetov AND all:rigidity&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-08-11T16:07:19Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=au:Bufetov+AND+all:rigidity&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>6</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1810.09223v1</id>
+    <title>On Number Rigidity for Pfaffian Point Processes</title>
+    <updated>2018-10-22T12:53:45Z</updated>
+    <link href="https://arxiv.org/abs/1810.09223v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1810.09223v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Our first result states that the orthogonal and symplectic Bessel processes are rigid in the sense of Ghosh and Peres. Our argument in the Bessel case proceeds by an estimate of the variance of additive statistics in the spirit of Ghosh and Peres. Second, a sufficient condition for number rigidity of stationary Pfaffian processes, relying on the Kolmogorov criterion for interpolation of stationary processes and applicable, in particular, to pfaffian sine-processes, is given in terms of the asymptotics of the spectral measure for additive statistics.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-10-22T12:53:45Z</published>
+    <arxiv:comment>57 pages</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Alexander I. Bufetov</name>
+    </author>
+    <author>
+      <name>Pavel P. Nikitin</name>
+    </author>
+    <author>
+      <name>Yanqi Qiu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1507.00670v2</id>
+    <title>Linear rigidity of stationary stochastic processes</title>
+    <updated>2016-11-29T15:27:38Z</updated>
+    <link href="https://arxiv.org/abs/1507.00670v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1507.00670v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider stationary stochastic processes $X_n$, $n\in \mathbb{Z}$ such that $X_0$ lies in the closed linear span of $X_n$, $n\neq 0$; following Ghosh and Peres, we call such processes linearly rigid. Using a criterion of Kolmogorov, we show that it suffices, for a stationary stochastic process to be rigid, that the spectral density vanish at zero and belong to the Zygmund class $Λ_{*}(1)$. We next give sufficient condition for stationary determinantal point processes on $\mathbb{Z}$ and on $\mathbb{R}$ to be rigid. Finally, we show that the determinantal point process on $\mathbb{R}^2$ induced by a tensor square of Dyson sine-kernels is $\textit{not}$ linearly rigid.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-07-02T17:31:52Z</published>
+    <arxiv:comment>18 pp, to appear in Ergodic Theory and Dynamical Systems</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Alexander I. Bufetov</name>
+    </author>
+    <author>
+      <name>Yoann Dabrowski</name>
+    </author>
+    <author>
+      <name>Yanqi Qiu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1506.07581v1</id>
+    <title>Rigidity of Determinantal Point Processes with the Airy, the Bessel and the Gamma Kernel</title>
+    <updated>2015-06-24T23:41:21Z</updated>
+    <link href="https://arxiv.org/abs/1506.07581v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1506.07581v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A point process is said to be rigid if for any bounded domain in the phase space, the number of particles in the domain is almost surely determined by the restriction of the configuration to the complement of our bounded domain. The main result of this paper is that determinantal point processes with the Airy, the Bessel and the Gamma kernels are rigid. The proof follows the scheme of Ghosh [6], Ghosh and Peres [7]: the main step is the construction of a sequence of additive statistics with variance going to zero.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-06-24T23:41:21Z</published>
+    <arxiv:comment>10 pages</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Alexander I. Bufetov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1606.01564v1</id>
+    <title>Quasi-symmetries and rigidity for determinantal point processes associated with de Branges spaces</title>
+    <updated>2016-06-05T21:32:42Z</updated>
+    <link href="https://arxiv.org/abs/1606.01564v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1606.01564v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this note, we show that determinantal point processes on the real line corresponding to de Branges spaces of entire functions are rigid in the sense of Ghosh-Peres and, under certain additional assumptions, quasi-invariant under the group of diffeomorphisms of the line with compact support.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-06-05T21:32:42Z</published>
+    <arxiv:comment>7 pages</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Alexander I. Bufetov</name>
+    </author>
+    <author>
+      <name>Tomoyuki Shirai</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1512.07553v1</id>
+    <title>$J$-Hermitian determinantal point processes: balanced rigidity and balanced Palm equivalence</title>
+    <updated>2015-12-23T17:32:02Z</updated>
+    <link href="https://arxiv.org/abs/1512.07553v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1512.07553v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study Palm measures of determinantal point processes with $J$-Hermitian correlation kernels. A point process $\mathbb{P}$ on the punctured real line $\mathbb{R}^* = \mathbb{R}_{+} \sqcup \mathbb{R}_{-}$ is said to be $\textit{balanced rigid}$ if for any precompact subset $B\subset \mathbb{R}^*$, the $\textit{difference}$ between the numbers of particles of a configuration inside $B\cap \mathbb{R}_{+}$ and $B\cap \mathbb{R}_{-}$ is almost surely determined by the configuration outside $B$. The point process $\mathbb{P}$ is said to have the $\textit{balanced Palm equivalence property}$ if any reduced Palm measure conditioned at $2n$ distinct points, $n$ in $\mathbb{R}_{+}$ and $n$ in $\mathbb{R}_{-}$, is equivalent to the $\mathbb{P}$.
+  We formulate general criteria for determinantal point processes with $J$-Hermitian correlation kernels to be balanced rigid and to have the balanced Palm equivalence property and prove, in particular, that the determinantal point processes with Whittaker kernels of Borodin and Olshanski are balanced rigid and have the balanced Palm equivalence property.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.FA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-12-23T17:32:02Z</published>
+    <arxiv:comment>58 pages</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Alexander I. Bufetov</name>
+    </author>
+    <author>
+      <name>Yanqi Qiu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1411.4951v3</id>
+    <title>Determinantal point processes associated with Hilbert spaces of holomorphic functions</title>
+    <updated>2016-11-30T12:54:55Z</updated>
+    <link href="https://arxiv.org/abs/1411.4951v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1411.4951v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study determinantal point processes on $\mathbb{C}$ induced by the reproducing kernels of generalized Fock spaces as well as those on the unit disc $\mathbb{D}$ induced by the reproducing kernels of generalized Bergman spaces. In the first case, we show that all reduced Palm measures $\textit{of the same order}$ are equivalent. The Radon-Nikodym derivatives are computed explicitly using regularized multiplicative functionals. We also show that these determinantal point processes are rigid in the sense of Ghosh and Peres, hence reduced Palm measures $\textit{of different orders}$ are singular. In the second case, we show that all reduced Palm measures, $\textit{of all orders}$, are equivalent. The Radon-Nikodym derivatives are computed using regularized multiplicative functionals associated with certain Blaschke products. The quasi-invariance of these determinantal point processes under the group of diffeomorphisms with compact supports follows as a corollary.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-11-18T18:22:59Z</published>
+    <arxiv:comment>Accepted version, accepted in Communications in Mathematical Physics</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Alexander I. Bufetov</name>
+    </author>
+    <author>
+      <name>Yanqi Qiu</name>
+    </author>
+  </entry>
+</feed>

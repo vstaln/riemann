@@ -1,0 +1,226 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/Nv5nquB5+M1MKyKgGzTLGCHRYHA</id>
+  <title>arXiv Query: search_query=au:Bordenave AND all:regular&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-08-11T16:10:29Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=au:Bordenave+AND+all:regular&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>11</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1409.2000v1</id>
+    <title>On quantum percolation in finite regular graphs</title>
+    <updated>2014-09-06T09:19:23Z</updated>
+    <link href="https://arxiv.org/abs/1409.2000v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1409.2000v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The aim of this paper is twofold. First, we study eigenvalues and eigenvectors of the adjacency matrix of a bond percolation graph when the base graph is finite and well approximated locally by an infinite regular graph. We relate quantitatively the empirical measure of the eigenvalues and the delocalization of the eigenvectors to the spectrum of the adjacency operator of the percolation on the infinite graph. Secondly, we prove that percolation on an infinite regular tree with degree at least $3$ preserves the existence of an absolutely continuous spectrum if the removal probability is small enough. These two results are notably relevant for bond percolation on a uniformly sampled regular graph or a Cayley graph with large girth.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-09-06T09:19:23Z</published>
+    <arxiv:comment>33 pages</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>Charles Bordenave</name>
+    </author>
+    <arxiv:doi>10.1007/s00023-014-0382-9</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s00023-014-0382-9" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.03006v2</id>
+    <title>Logarithmic regularity of spectral measures on infinite graphs</title>
+    <updated>2026-07-25T00:46:41Z</updated>
+    <link href="https://arxiv.org/abs/2606.03006v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.03006v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the regularity of spectral measures of self-adjoint operators on infinite weighted graphs in the unimodular setting. This framework encompasses operators in the group algebra of a finitely generated group, random operators whose distribution is quasi-invariant under a group action, and Benjamini--Schramm limits of operators on finite graphs. Under a natural geometric condition on the underlying graph, we prove that the expected spectral measure satisfies a logarithmic Hölder regularity estimate. The proof relies on a strengthened version of the monotone labelling method previously introduced with Sen and Virág to control the pure point part of the spectal measure. Applications include operators in group algebras of indicable groups, Anderson-type models with arbitrary compactly supported potentials on Cayley graphs, anisotropic percolation operators, and operators on quasi-transitive graphs. In particular, our results extend the classical Craig--Simon theorem beyond the Euclidean lattice.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-02T01:26:01Z</published>
+    <arxiv:comment>24 pages, comments are welcome</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>Charles Bordenave</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2102.02653v2</id>
+    <title>Typicality and entropy of processes on infinite trees</title>
+    <updated>2021-12-04T11:43:23Z</updated>
+    <link href="https://arxiv.org/abs/2102.02653v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2102.02653v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Consider a uniformly sampled random $d$-regular graph on $n$ vertices. If $d$ is fixed and $n$ goes to $\infty$ then we can relate typical (large probability) properties of such random graph to a family of invariant random processes (called "typical" processes) on the infinite $d$-regular tree $T_d$. This correspondence between ergodic theory on $T_d$ and random regular graphs is already proven to be fruitful in both directions. This paper continues the investigation of typical processes with a special emphasis on entropy. We study a natural notion of micro-state entropy for invariant processes on $T_d$. It serves as a quantitative refinement of the notion of typicality and is tightly connected to the asymptotic free energy in statistical physics. Using entropy inequalities, we provide new sufficient conditions for typicality for edge Markov processes. We also extend these notions and results to processes on unimodular Galton-Watson random trees.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-02-04T14:47:59Z</published>
+    <arxiv:comment>21 pages</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Ágnes Backhausz</name>
+    </author>
+    <author>
+      <name>Charles Bordenave</name>
+    </author>
+    <author>
+      <name>Balázs Szegedy</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1812.06769v3</id>
+    <title>Cutoff at the entropic time for random walks on covered expander graphs</title>
+    <updated>2020-10-12T07:27:12Z</updated>
+    <link href="https://arxiv.org/abs/1812.06769v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1812.06769v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>It is a fact simple to establish that the mixing time of the simple random walk on a d-regular graph $G_n$ with n vertices is asymptotically bounded from below by $d/ ((d-2)\log (d-1))\log n$. Such a bound is obtained by comparing the walk on $G_n$ to the walk on the infinite $d$-regular tree. If one can map another infinite transitive graph onto $G_n$, then we can improve the strategy by using a comparison with the random walk on this transitive graph (instead of that of the regular tree), and we obtain a lower bound of the form $1/h \log n$, where $h$ is the entropy rate associated with the walk on the transitive graph. We call this the entropic lower bound. It was recently proved that in the case of the tree, this entropic lower bound is sharp when graphs have minimal spectral radius and thus that in that case the random walk exhibit cutoff at the entropic time. In this paper, we provide a generalization of the result by providing a sufficient condition on the spectra the random walks on $G_n$ under which the random walk exhibit cutoff at the entropic time. It applies notably to anisotropic random walks on random $d$-regular graphs and to random walks on random $n$-lifts of a base graph (including non-reversible walks).</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-12-17T13:56:08Z</published>
+    <arxiv:comment>45 pages, non-reversible random walks added, accepted for publication in Journal of the Institute of Mathematics of Jussieu</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Charles Bordenave</name>
+    </author>
+    <author>
+      <name>Hubert Lacoin</name>
+    </author>
+    <arxiv:doi>10.1017/S1474748020000663</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1017/S1474748020000663" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1805.06205v2</id>
+    <title>Spectral gap of sparse bistochastic matrices with exchangeable rows with application to shuffle-and-fold maps</title>
+    <updated>2019-03-25T00:40:44Z</updated>
+    <link href="https://arxiv.org/abs/1805.06205v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1805.06205v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider a random bistochastic matrix of size $n$ of the form $M Q$ where $M$ is a uniformly distributed permutation matrix and $Q$ is a given bistochastic matrix. Under mild sparsity and regularity assumptions on $Q$, we prove that the second largest eigenvalue of $MQ$ is essentially bounded by the normalized Hilbert-Schmidt norm of $Q$ when $n$ grows large. We apply this result to random walks on random regular digraphs and to shuffle-and-fold maps of the unit interval popularized in fluid mixing protocols.</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-05-16T09:20:12Z</published>
+    <arxiv:comment>5 Figures 36 pages</arxiv:comment>
+    <arxiv:primary_category term="math.DS"/>
+    <author>
+      <name>Charles Bordenave</name>
+    </author>
+    <author>
+      <name>Yanqi Qiu</name>
+    </author>
+    <author>
+      <name>Yiwei Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0801.0155v3</id>
+    <title>Resolvent of Large Random Graphs</title>
+    <updated>2009-05-05T12:55:00Z</updated>
+    <link href="https://arxiv.org/abs/0801.0155v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0801.0155v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We analyze the convergence of the spectrum of large random graphs to the spectrum of a limit infinite graph. We apply these results to graphs converging locally to trees and derive a new formula for the Stieljes transform of the spectral measure of such graphs. We illustrate our results on the uniform regular graphs, Erdos-Renyi graphs and preferential attachment graphs. We sketch examples of application for weighted graphs, bipartite graphs and the uniform spanning tree of n vertices.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2007-12-31T11:47:47Z</published>
+    <arxiv:comment>21 pages, 1 figure</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Charles Bordenave</name>
+    </author>
+    <author>
+      <name>Marc Lelarge</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1501.06087v2</id>
+    <title>Non-backtracking spectrum of random graphs: community detection and non-regular Ramanujan graphs</title>
+    <updated>2015-04-22T15:32:22Z</updated>
+    <link href="https://arxiv.org/abs/1501.06087v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1501.06087v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A non-backtracking walk on a graph is a directed path such that no edge is the inverse of its preceding edge. The non-backtracking matrix of a graph is indexed by its directed edges and can be used to count non-backtracking walks of a given length. It has been used recently in the context of community detection and has appeared previously in connection with the Ihara zeta function and in some generalizations of Ramanujan graphs. In this work, we study the largest eigenvalues of the non-backtracking matrix of the Erdos-Renyi random graph and of the Stochastic Block Model in the regime where the number of edges is proportional to the number of vertices. Our results confirm the "spectral redemption" conjecture that community detection can be made on the basis of the leading eigenvectors above the feasibility threshold.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-01-24T22:02:50Z</published>
+    <arxiv:comment>59 pages</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Charles Bordenave</name>
+    </author>
+    <author>
+      <name>Marc Lelarge</name>
+    </author>
+    <author>
+      <name>Laurent Massoulié</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1103.2734v2</id>
+    <title>Combinatorial optimization over two random point sets</title>
+    <updated>2011-10-05T08:49:28Z</updated>
+    <link href="https://arxiv.org/abs/1103.2734v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1103.2734v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We analyze combinatorial optimization problems over a pair of random point sets of equal cardinal. Typical examples include the matching of minimal length, the traveling salesperson tour constrained to alternate between points of each set, or the connected bipartite r-regular graph of minimal length. As the cardinal of the sets goes to infinity, we investigate the convergence of such bipartite functionals.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2011-03-14T18:26:27Z</published>
+    <arxiv:comment>34 pages</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Franck Barthe</name>
+    </author>
+    <author>
+      <name>Charles Bordenave</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1502.04482v4</id>
+    <title>A new proof of Friedman's second eigenvalue Theorem and its extension to random lifts</title>
+    <updated>2019-03-05T21:20:57Z</updated>
+    <link href="https://arxiv.org/abs/1502.04482v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1502.04482v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>It was conjectured by Alon and proved by Friedman that a random $d$-regular graph has nearly the largest possible spectral gap, more precisely, the largest absolute value of the non-trivial eigenvalues of its adjacency matrix is at most $2\sqrt{d-1} +o(1)$ with probability tending to one as the size of the graph tends to infinity. We give a new proof of this statement. We also study related questions on random $n$-lifts of graphs and improve a recent result by Friedman and Kohler.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-02-16T10:12:45Z</published>
+    <arxiv:comment>49 pages, final version, to appear in "Annales scientifiques de l'École normale supérieure"</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Charles Bordenave</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2105.10177v1</id>
+    <title>Existence of absolutely continuous spectrum for Galton-Watson random trees</title>
+    <updated>2021-05-21T07:37:52Z</updated>
+    <link href="https://arxiv.org/abs/2105.10177v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2105.10177v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We establish a quantitative criterion for an operator defined on a Galton-Watson random tree for having an absolutely continuous spectrum. For the adjacency operator, this criterion requires that the offspring distribution has a relative variance below a threshold. As a byproduct, we prove that the adjacency operator of a supercritical Poisson Galton-Watson tree has a non-trivial absolutely continuous part if the average degree is large enough. We also prove that its Karp and Sipser core has purely absolutely spectrum on an interval if the average degree is large enough. We finally illustrate our criterion on the Anderson model on a d-regular infinite tree with d $\ge$ 3 and give a quantitative version of Klein's Theorem on the existence of absolutely continuous spectrum at disorder smaller that C $\sqrt$ d for some absolute constant C.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-05-21T07:37:52Z</published>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Adam Arras</name>
+      <arxiv:affiliation>I2M</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Charles Bordenave</name>
+      <arxiv:affiliation>I2M</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.14182v2</id>
+    <title>Quantum mixing on large Schreier graphs</title>
+    <updated>2026-02-10T10:56:28Z</updated>
+    <link href="https://arxiv.org/abs/2601.14182v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.14182v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove quantum ergodicity and quantum mixing for sequences of finite Schreier graphs converging to an infinite Cayley graph whose adjacency operator has absolutely continuous spectrum. Under Benjamini-Schramm convergence (or strong convergence in distribution), we show that correlations between eigenvectors at distinct energies vanish asymptotically when tested against a broad class of local observables. Our results apply to all orthonormal eigenbases and do not require tree-like structure or periodicity of the limiting graph, unlike previous approaches based on non-backtracking operators or Floquet theory. The proof introduces a new framework for quantum ergodicity, based on trace identities, resolvent approximations and representation-theoretic techniques and extends to certain families of non-regular graphs. We illustrate the assumptions and consequences of our theorems on Schreier graphs arising from free products of groups, right-angled Coxeter groups and lifts of a fixed base graph.</summary>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-20T17:38:44Z</published>
+    <arxiv:comment>Submitted version</arxiv:comment>
+    <arxiv:primary_category term="math.SP"/>
+    <author>
+      <name>Charles Bordenave</name>
+    </author>
+    <author>
+      <name>Cyril Letrouit</name>
+    </author>
+    <author>
+      <name>Mostafa Sabri</name>
+    </author>
+  </entry>
+</feed>

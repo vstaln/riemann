@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/9MLAW6hUgfaPIFZvTZ1JSewsOL0</id>
+  <title>arXiv Query: search_query=all:"Riemann zeta" AND all:"GUE" AND all:numerical&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-08-11T16:07:57Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22Riemann+zeta%22+AND+(all:%22GUE%22+AND+all:numerical)&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>2</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1112.0346v1</id>
+    <title>Statistics on Riemann zeros</title>
+    <updated>2011-12-01T22:26:20Z</updated>
+    <link href="https://arxiv.org/abs/1112.0346v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1112.0346v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We numerically study the statistical properties of differences of zeros of Riemann zeta function and L-functions predicted by the theory of the eñe product. In particular, this provides a simple algorithm that computes any non-real Riemann zeros from very large ones ("self-replicating property of Riemann zeros"). Also the algorithm computes the full sequence of non-real zeros of Riemann zeta function from the sequence of non-real zeros of any Dirichlet L-function ("zeros of L-functions know about Riemann zeros"). We also check that the first error to the convergence to the classical GUE statistic near 0 is a Fresnel distribution.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2011-12-01T22:26:20Z</published>
+    <arxiv:comment>47 pages, 75 figures</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Ricardo Perez Marco</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1711.08318v1</id>
+    <title>Local box-counting dimensions of discrete quantum eigenvalue spectra: Analytical connection to quantum spectral statistics</title>
+    <updated>2017-11-14T07:03:00Z</updated>
+    <link href="https://arxiv.org/abs/1711.08318v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1711.08318v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Two decades ago, Wang and Ong [Phys. Rev. A 55, 1522 (1997)] hypothesized that the local box-counting dimension of a discrete quantum spectrum should depend exclusively on the nearest-neighbor spacing distribution (NNSD) of the spectrum. In this paper, we validate their hypothesis by deriving an explicit formula for the local box-counting dimension of a countably-infinite discrete quantum spectrum. This formula expresses the local box-counting dimension of a spectrum in terms of single and double integrals of the NNSD of the spectrum. As applications, we derive an analytical formula for Poisson spectra and closed-form approximations to the local box-counting dimension for spectra having Gaussian orthogonal ensemble (GOE), Gaussian unitary ensemble (GUE), and Gaussian symplectic ensemble (GSE) spacing statistics. In the Poisson and GOE cases, we compare our theoretical formulas with the published numerical data of Wang and Ong and observe excellent agreement between their data and our theory. We also study numerically the local box-counting dimensions of the Riemann zeta function zeros and the alternate levels of GOE spectra, which are often used as numerical models of spectra possessing GUE and GSE spacing statistics, respectively. In each case, the corresponding theoretical formula is found to accurately describe the numerically-computed local box-counting dimension.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nlin.CD" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-11-14T07:03:00Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Phys. Rev. E 97, 030202 (2018)</arxiv:journal_ref>
+    <author>
+      <name>Jamal Sakhr</name>
+    </author>
+    <author>
+      <name>John M. Nieminen</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevE.97.030202</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevE.97.030202" title="doi"/>
+  </entry>
+</feed>

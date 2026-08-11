@@ -13,7 +13,7 @@ constants: int_psi2=0.849227999318304 c_HS=1.327499296320588 3/2-(1/sqrt2)cot=0.
     L(lemma3.2)=13277.0000  L'(CS)=13277.0000 Lper=6729.0000  Lglo(top-6725)=11639.0000  Lemma-exact? True
     gains over L: CS +0.0000  Perron -6548.0000  Glover-top -1638.0000
     -> at the sharp crystal: L == ||A||^2 (exact); CS gain = 0;
-       Perron gain = 4-4b < 0 for b >= 2; Glover-top gain = -4b < 0.
+       Perron gain = 4-4b < 0 for b >= 2; Glover-top gain = -b < 0 for r >= b
 
 === T2: real on-line W_T (P-side, Q = 0): rank family cap ===
   T=200 N=123: 2tr-||.||^2=88.1331 (tr)^2/||.||^2=95.3659 rank=123  per-N: 0.716530 vs 0.672501  CS-win=7.2328 = (tr-||.||^2)^2/||.||^2=7.2328

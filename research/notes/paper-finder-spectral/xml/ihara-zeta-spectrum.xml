@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/wEhTi9QLt/Ak2wM/Un9J8vi46/k</id>
+  <title>arXiv Query: search_query=all:"Ihara zeta" AND all:spectrum&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-08-11T16:10:55Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22Ihara+zeta%22+AND+all:spectrum&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>7</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2106.09873v1</id>
+    <title>The Ihara-zeta function and the spectrum of the join of two semi-regular bipartite graphs</title>
+    <updated>2021-06-18T02:20:16Z</updated>
+    <link href="https://arxiv.org/abs/2106.09873v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2106.09873v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, using matrix techniques, we compute the Ihara-zeta function and the number of spanning trees of the join of two semi-regular bipartite graphs. Furthermore, we show that the spectrum and the zeta function of the join of two semi-regular bipartite graphs can determine each other.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-06-18T02:20:16Z</published>
+    <arxiv:comment>21 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Xiaotong Li</name>
+    </author>
+    <author>
+      <name>Xian'an Jin</name>
+    </author>
+    <author>
+      <name>Qi Yan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0712.0192v1</id>
+    <title>The Non-Backtracking Spectrum of the Universal Cover of a Graph</title>
+    <updated>2007-12-02T22:29:38Z</updated>
+    <link href="https://arxiv.org/abs/0712.0192v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0712.0192v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  A non-backtracking walk on a graph, $H$, is a directed path of directed edges of $H$ such that no edge is the inverse of its preceding edge. Non-backtracking walks of a given length can be counted using the non-backtracking adjacency matrix, $B$, indexed by $H$'s directed edges and related to Ihara's Zeta function. We show how to determine $B$'s spectrum in the case where $H$ is a tree covering a finite graph. We show that when $H$ is not regular, this spectrum can have positive measure in the complex plane, unlike the regular case. We show that outside of $B$'s spectrum, the corresponding Green function has ``periodic decay ratios.'' The existence of such a ``ratio system'' can be effectively checked, and is equivalent to being outside the spectrum. We also prove that the spectral radius of the non-backtracking walk operator on the tree covering a finite graph is exactly $\sqrt\gr$, where $\gr$ is the growth rate of the tree. This further motivates the definition of the graph theoretical Riemann hypothesis proposed by Stark and Terras \cite{ST}. Finally, we give experimental evidence that for a fixed, finite graph, $H$, a random lift of large degree has non-backtracking new spectrum near that of $H$'s universal cover. This suggests a new generalization of Alon's second eigenvalue conjecture.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2007-12-02T22:29:38Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Omer Angel</name>
+    </author>
+    <author>
+      <name>Joel Friedman</name>
+    </author>
+    <author>
+      <name>Shlomo Hoory</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1501.06087v2</id>
+    <title>Non-backtracking spectrum of random graphs: community detection and non-regular Ramanujan graphs</title>
+    <updated>2015-04-22T15:32:22Z</updated>
+    <link href="https://arxiv.org/abs/1501.06087v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1501.06087v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A non-backtracking walk on a graph is a directed path such that no edge is the inverse of its preceding edge. The non-backtracking matrix of a graph is indexed by its directed edges and can be used to count non-backtracking walks of a given length. It has been used recently in the context of community detection and has appeared previously in connection with the Ihara zeta function and in some generalizations of Ramanujan graphs. In this work, we study the largest eigenvalues of the non-backtracking matrix of the Erdos-Renyi random graph and of the Stochastic Block Model in the regime where the number of edges is proportional to the number of vertices. Our results confirm the "spectral redemption" conjecture that community detection can be made on the basis of the leading eigenvectors above the feasibility threshold.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-01-24T22:02:50Z</published>
+    <arxiv:comment>59 pages</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Charles Bordenave</name>
+    </author>
+    <author>
+      <name>Marc Lelarge</name>
+    </author>
+    <author>
+      <name>Laurent Massoulié</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1410.1610v2</id>
+    <title>Distinguishing graphs with zeta functions and generalized spectra</title>
+    <updated>2015-05-01T22:02:40Z</updated>
+    <link href="https://arxiv.org/abs/1410.1610v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1410.1610v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Conjecturally, almost all graphs are determined by their spectra. This problem has also been studied for variants such as the spectra of the Laplacian and signless Laplacian. Here we consider the problem of determining graphs with Ihara and Bartholdi zeta functions, which are also computable in polynomial time. These zeta functions are geometrically motivated, but can be viewed as certain generalizations of characteristic polynomials. After discussing some graph properties determined by zeta functions, we show that large classes of cospectral graphs can be distinguished with zeta functions and enumerate graphs distinguished by zeta functions on $\le 11$ vertices. This leads us to conjecture that almost all graphs which are not determined by their spectrum are determined by zeta functions.
+  Along the way, we make some observations about the usual types of spectra and disprove a conjecture of Setyadi and Storm about Ihara zeta functions determining degree sequences.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-10-07T04:00:31Z</published>
+    <arxiv:comment>23 pages, to appear in Linear Algebra and its Applications, minor revisions and strengthened results in Section 3.2</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Linear Algebra Appl. 481 (2015) 54-82</arxiv:journal_ref>
+    <author>
+      <name>Christina Durfee</name>
+    </author>
+    <author>
+      <name>Kimball Martin</name>
+    </author>
+    <arxiv:doi>10.1016/j.laa.2015.04.028</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.laa.2015.04.028" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1812.03332v7</id>
+    <title>The spectra of generalized Paley graphs of $(q^\ell+1)$-th powers and applications</title>
+    <updated>2024-07-24T13:47:30Z</updated>
+    <link href="https://arxiv.org/abs/1812.03332v7" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1812.03332v7" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider a special class of generalized Paley graphs over finite fields, namely the Cayley graphs with vertex set $\mathbb{F}_{q^m}$ and connection set the nonzero $(q^\ell+1)$-th powers in $\mathbb{F}_{q^m}$, as well as their complements. We explicitly compute the spectrum and the energy of these graphs. As a consequence, the graphs turn out to be (with trivial exceptions) simple, connected, non-bipartite, integral and strongly regular, of pseudo or negative Latin square type. By using the spectral information we compute several invariants of these graphs. We exhibit infinitely many pairs of equienergetic non-isospectral graphs. As applications, on the one hand we solve Waring's problem over $\mathbb{F}_q^m$ for the exponents $q^\ell+1$, for each $q$ and for infinitely many values of $\ell$ and $m$. We obtain that the Waring's number $g(q^\ell+1,q^m)=1$ or $2$, depending on $m$ and $\ell$, thus solving some open cases. On the other hand, we construct infinite towers of Ramanujan graphs in all characteristics. Finally, we give the Ihara zeta functions of these graphs.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-12-08T15:05:34Z</published>
+    <arxiv:comment>28 pages, 3 tables. Minor corrections</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Ricardo A. Podestá</name>
+    </author>
+    <author>
+      <name>Denis E. Videla</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2408.04952v1</id>
+    <title>Functional Equations and Pole Structure of the Bartholdi Zeta Function</title>
+    <updated>2024-08-09T09:15:04Z</updated>
+    <link href="https://arxiv.org/abs/2408.04952v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2408.04952v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we investigate the Bartholdi zeta function on a connected simple digraph with $n_V$ vertices and $n_E$ edges. We derive a functional equation for the Bartholdi zeta function $ζ_G(q,u)$ on a regular graph $G$ with respect to the bump parameter $u$. We also find an equivalence between the Bartholdi zeta function with a specific value of $u$ and the Ihara zeta function at $u=0$. We determine bounds of the critical strip of $ζ_G(q,u)$ for a general graph. If $G$ is a $(t+1)$-regular graph, the bounds are saturated and $q=(1-u)^{-1}$ and $q=(t+u)^{-1}$ are the poles at the boundaries of the critical strip for $u\ne 1, -t$. When $G$ is the regular graph and the spectrum of the adjacency matrix satisfies a certain condition, $ζ_G(q,u)$ satisfies the so-called Riemann hypothesis. For $u \ne 1$, $q=\pm(1-u)^{-1}$ are poles of $ζ_G(q,u)$ unless $G$ is tree. Although the order of the pole at $q=(1-u)^{-1}$ is $n_E-n_V+1$ if $u\ne u_* \equiv 1-\frac{n_E}{n_V}$, it is enhanced at $u=u_*$. In particular, if the Moore-Penrose inverse of the incidence matrix $L^+$ and the degree vector $\vec{d}$ satisfy the condition $|L^+ \vec{d}|^2\ne n_E$, the order of the pole at $q=(1-u)^{-1}$ increases only by one at $u=u_*$. The order of the pole at $q=-(1-u)^{-1}$ coincides with that at $q=(1-u)^{-1}$ if $G$ is bipartite and is $n_E-n_V$ otherwise.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-08-09T09:15:04Z</published>
+    <arxiv:comment>30 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>So Matsuura</name>
+    </author>
+    <author>
+      <name>Kazutoshi Ohta</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1505.02081v1</id>
+    <title>Deitmar schemes, graphs and zeta functions</title>
+    <updated>2015-05-08T16:08:46Z</updated>
+    <link href="https://arxiv.org/abs/1505.02081v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1505.02081v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In [19] it was explained how one can naturally associate a Deitmar scheme (which is a scheme defined over the field with one element, $\mathbb{F}_1$) to a so-called "loose graph" (which is a generalization of a graph). Several properties of the Deitmar scheme can be proven easily from the combinatorics of the (loose) graph, and known realizations of objects over $\mathbb{F}_1$ such as combinatorial $\mathbb{F}_1$-projective and $\mathbb{F}_1$-affine spaces exactly depict the loose graph which corresponds to the associated Deitmar scheme. In this paper, we first modify the construction of loc. cit., and show that Deitmar schemes which are defined by finite trees (with possible end points) are "defined over $\mathbb{F}_1$" in Kurokawa's sense; we then derive a precise formula for the Kurokawa zeta function for such schemes (and so also for the counting polynomial of all associated $\mathbb{F}_q$-schemes). As a corollary, we find a zeta function for all such trees which contains information such as the number of inner points and the spectrum of degrees, and which is thus very different than Ihara's zeta function (which is trivial in this case). Using a process called "surgery," we show that one can determine the zeta function of a general loose graph and its associated { Deitmar, Grothendieck }-schemes in a number of steps, eventually reducing the calculation essentially to trees. We study a number of classes of examples of loose graphs, and introduce the Grothendieck ring of $\mathbb{F}_1$-schemes along the way in order to perform the calculations. Finally, we compare the new zeta function to Ihara's zeta function for graphs in a number of examples, and include a computer program for performing more tedious calculations.</summary>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-05-08T16:08:46Z</published>
+    <arxiv:comment>49 pages; preprint (May 2015)</arxiv:comment>
+    <arxiv:primary_category term="math.AG"/>
+    <author>
+      <name>Manuel Mérida-Angulo</name>
+    </author>
+    <author>
+      <name>Koen Thas</name>
+    </author>
+  </entry>
+</feed>

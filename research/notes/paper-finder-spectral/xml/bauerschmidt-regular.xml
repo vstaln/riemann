@@ -1,0 +1,214 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/3O0OqNNkUcZ95OI+3smv2FQonk8</id>
+  <title>arXiv Query: search_query=au:Bauerschmidt AND all:regular&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-08-11T16:10:33Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=au:Bauerschmidt+AND+all:regular&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>8</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1910.10121v2</id>
+    <title>Edge rigidity and universality of random regular graphs of intermediate degree</title>
+    <updated>2020-06-11T15:45:37Z</updated>
+    <link href="https://arxiv.org/abs/1910.10121v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1910.10121v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For random $d$-regular graphs on $N$ vertices with $1 \ll d \ll N^{2/3}$, we develop a $d^{-1/2}$ expansion of the local eigenvalue distribution about the Kesten-McKay law up to order $d^{-3}$. This result is valid up to the edge of the spectrum. It implies that the eigenvalues of such random regular graphs are more rigid than those of Erdős-Rényi graphs of the same average degree. As a first application, for $1 \ll d \ll N^{2/3}$, we show that all nontrivial eigenvalues of the adjacency matrix are with very high probability bounded in absolute value by $(2 + o(1)) \sqrt{d - 1}$. As a second application, for $N^{2/9} \ll d \ll N^{1/3}$, we prove that the extremal eigenvalues are concentrated at scale $N^{-2/3}$ and their fluctuations are governed by Tracy-Widom statistics. Thus, in the same regime of $d$, $52\%$ of all $d$-regular graphs have second-largest eigenvalue strictly less than $2 \sqrt{d - 1}$.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-10-22T17:12:25Z</published>
+    <arxiv:primary_category term="math.PR"/>
+    <arxiv:journal_ref>Geom. Funct. Anal., 30, 693-769, (2020)</arxiv:journal_ref>
+    <author>
+      <name>Roland Bauerschmidt</name>
+    </author>
+    <author>
+      <name>Jiaoyang Huang</name>
+    </author>
+    <author>
+      <name>Antti Knowles</name>
+    </author>
+    <author>
+      <name>Horng-Tzer Yau</name>
+    </author>
+    <arxiv:doi>10.1007/s00039-020-00538-0</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s00039-020-00538-0" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1505.06700v3</id>
+    <title>Bulk eigenvalue statistics for random regular graphs</title>
+    <updated>2016-08-24T08:02:38Z</updated>
+    <link href="https://arxiv.org/abs/1505.06700v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1505.06700v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider the uniform random $d$-regular graph on $N$ vertices, with $d \in [N^α, N^{2/3-α}]$ for arbitrary $α&gt; 0$. We prove that in the bulk of the spectrum the local eigenvalue correlation functions and the distribution of the gaps between consecutive eigenvalues coincide with those of the Gaussian Orthogonal Ensemble.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-05-25T17:41:50Z</published>
+    <arxiv:primary_category term="math.PR"/>
+    <arxiv:journal_ref>Ann. Probab., 45(6A):3626-3663, 2017</arxiv:journal_ref>
+    <author>
+      <name>Roland Bauerschmidt</name>
+    </author>
+    <author>
+      <name>Jiaoyang Huang</name>
+    </author>
+    <author>
+      <name>Antti Knowles</name>
+    </author>
+    <author>
+      <name>Horng-Tzer Yau</name>
+    </author>
+    <arxiv:doi>10.1214/16-AOP1145</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1214/16-AOP1145" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1503.08702v5</id>
+    <title>Local semicircle law for random regular graphs</title>
+    <updated>2017-02-12T18:25:28Z</updated>
+    <link href="https://arxiv.org/abs/1503.08702v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1503.08702v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider random $d$-regular graphs on $N$ vertices, with degree $d$ at least $(\log N)^4$. We prove that the Green's function of the adjacency matrix and the Stieltjes transform of its empirical spectral measure are well approximated by Wigner's semicircle law, down to the optimal scale given by the typical eigenvalue spacing (up to a logarithmic correction). Aside from well-known consequences for the local eigenvalue distribution, this result implies the complete (isotropic) delocalization of all eigenvectors and a probabilistic version of quantum unique ergodicity.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-03-30T15:08:48Z</published>
+    <arxiv:primary_category term="math.PR"/>
+    <arxiv:journal_ref>Comm. Pure Appl. Math., 70(10):1898-1960, 2017</arxiv:journal_ref>
+    <author>
+      <name>Roland Bauerschmidt</name>
+    </author>
+    <author>
+      <name>Antti Knowles</name>
+    </author>
+    <author>
+      <name>Horng-Tzer Yau</name>
+    </author>
+    <arxiv:doi>10.1002/cpa.21709</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1002/cpa.21709" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1609.09052v3</id>
+    <title>Local Kesten--McKay law for random regular graphs</title>
+    <updated>2016-12-20T07:13:34Z</updated>
+    <link href="https://arxiv.org/abs/1609.09052v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1609.09052v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the adjacency matrices of random $d$-regular graphs with large but fixed degree $d$. In the bulk of the spectrum $[-2\sqrt{d-1}+\varepsilon, 2\sqrt{d-1}-\varepsilon]$ down to the optimal spectral scale, we prove that the Green's functions can be approximated by those of certain infinite tree-like (few cycles) graphs that depend only on the local structure of the original graphs. This result implies that the Kesten--McKay law holds for the spectral density down to the smallest scale and the complete delocalization of bulk eigenvectors. Our method is based on estimating the Green's function of the adjacency matrices and a resampling of the boundary edges of large balls in the graphs.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-09-28T19:49:16Z</published>
+    <arxiv:comment>A new title</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <arxiv:journal_ref>Commun. Math. Phys. 369 (2):523-636, 2019</arxiv:journal_ref>
+    <author>
+      <name>Roland Bauerschmidt</name>
+    </author>
+    <author>
+      <name>Jiaoyang Huang</name>
+    </author>
+    <author>
+      <name>Horng-Tzer Yau</name>
+    </author>
+    <arxiv:doi>10.1007/s00220-019-03345-3</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s00220-019-03345-3" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2310.04609v2</id>
+    <title>Kawasaki dynamics beyond the uniqueness threshold</title>
+    <updated>2024-05-08T20:06:32Z</updated>
+    <link href="https://arxiv.org/abs/2310.04609v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.04609v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Glauber dynamics of the Ising model on a random regular graph is known to mix fast below the tree uniqueness threshold and exponentially slowly above it. We show that Kawasaki dynamics of the canonical ferromagnetic Ising model on a random $d$-regular graph mixes fast beyond the tree uniqueness threshold when $d$ is large enough (and conjecture that it mixes fast up to the tree reconstruction threshold for all $d\geq 3$). This result follows from a more general spectral condition for (modified) log-Sobolev inequalities for conservative dynamics of Ising models. The proof of this condition in fact extends to perturbations of distributions with log-concave generating polynomial.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-06T22:04:09Z</published>
+    <arxiv:comment>Improved presentation</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <arxiv:journal_ref>Probab. Theory Related Fields, 192, 267-302, (2025)</arxiv:journal_ref>
+    <author>
+      <name>Roland Bauerschmidt</name>
+    </author>
+    <author>
+      <name>Thierry Bodineau</name>
+    </author>
+    <author>
+      <name>Benoit Dagallier</name>
+    </author>
+    <arxiv:doi>10.1007/s00440-024-01326-9</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s00440-024-01326-9" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.14806v1</id>
+    <title>Twisted Dirac operators and fractional correlations of the massless sine-Gordon model at the free fermion point</title>
+    <updated>2025-08-20T15:54:01Z</updated>
+    <link href="https://arxiv.org/abs/2508.14806v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2508.14806v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For the massless sine-Gordon model at the free fermion point, in infinite volume, we define the fractional (charge or vertex operator) correlation functions from the probabilistic path integral and prove that they are given by renormalized determinants of massive twisted Dirac operators. The fractional correlation functions are the moments of the imaginary multiplicative chaos, a random generalized function that we construct with respect to the infinite-volume massless sine-Gordon measure. The renormalized determinants are the tau functions of Sato--Miwa--Jimbo as identified by Palmer.
+  The construction and a priori control of the imaginary multiplicative chaos combines methods from stochastic analysis (of singular SPDE flavor) for short-scale regularity with qualitative input from integrability for large-scale control. The exact identification of the correlation functions with the renormalized determinants relies on finite-volume approximation, regularity estimates for the mass perturbation, and analytic continuation in the coupling constant.
+  The combination of existing results for tau functions with our identification implies various predictions for the sine-Gordon model such as that the fractional two-point functions are expressed as Fredholm determinants and satisfy certain PDEs as predicted by Bernard--LeClair. Using asymptotics of Fredholm determinants of Basor--Tracy and mixing of the massless sine-Gordon model at the free fermion point, which we prove, we further derive the exact formula for the one-point function predicted by Lukyanov--Zamolodchikov (at the free fermion point).</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-08-20T15:54:01Z</published>
+    <arxiv:comment>163 pages, comments welcome</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Roland Bauerschmidt</name>
+    </author>
+    <author>
+      <name>Scott Mason</name>
+    </author>
+    <author>
+      <name>Christian Webb</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1907.12308v2</id>
+    <title>Log-Sobolev inequality for the continuum sine-Gordon model</title>
+    <updated>2020-03-31T16:47:37Z</updated>
+    <link href="https://arxiv.org/abs/1907.12308v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1907.12308v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We derive a multiscale generalisation of the Bakry--Émery criterion for a measure to satisfy a Log-Sobolev inequality. Our criterion relies on the control of an associated PDE well known in renormalisation theory: the Polchinski equation. It implies the usual Bakry--Émery criterion, but we show that it remains effective for measures which are far from log-concave. Indeed, using our criterion, we prove that the massive continuum Sine-Gordon model with $β&lt; 6π$ satisfies asymptotically optimal Log-Sobolev inequalities for Glauber and Kawasaki dynamics. These dynamics can be seen as singular SPDEs recently constructed via regularity structures, but our results are independent of this theory.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-07-29T09:54:21Z</published>
+    <arxiv:comment>Accepted version, to appear in CPAM</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <arxiv:journal_ref>Comm. Pure Appl. Math. 74 (2021), no. 10, 2064-2113</arxiv:journal_ref>
+    <author>
+      <name>Roland Bauerschmidt</name>
+    </author>
+    <author>
+      <name>Thierry Bodineau</name>
+    </author>
+    <arxiv:doi>10.1002/cpa.21926</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1002/cpa.21926" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1211.2477v3</id>
+    <title>Structural stability of a dynamical system near a non-hyperbolic fixed point</title>
+    <updated>2014-04-29T12:06:56Z</updated>
+    <link href="https://arxiv.org/abs/1211.2477v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1211.2477v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove structural stability under perturbations for a class of discrete-time dynamical systems near a non-hyperbolic fixed point. We reformulate the stability problem in terms of the well-posedness of an infinite-dimensional nonlinear ordinary differential equation in a Banach space of carefully weighted sequences. Using this, we prove existence and regularity of flows of the dynamical system which obey mixed initial and final boundary conditions. The class of dynamical systems we study, and the boundary conditions we impose, arise in a renormalisation group analysis of the 4-dimensional weakly self-avoiding walk and the 4-dimensional n-component $|\varphi|^4$ spin model.</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-11-11T23:13:06Z</published>
+    <arxiv:comment>31 pages, to appear in Ann. Henri Poincare</arxiv:comment>
+    <arxiv:primary_category term="math.DS"/>
+    <arxiv:journal_ref>Ann. Henri Poincaré, 16:1033--1065, (2015)</arxiv:journal_ref>
+    <author>
+      <name>Roland Bauerschmidt</name>
+    </author>
+    <author>
+      <name>David C. Brydges</name>
+    </author>
+    <author>
+      <name>Gordon Slade</name>
+    </author>
+    <arxiv:doi>10.1007/s00023-014-0338-0</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s00023-014-0338-0" title="doi"/>
+  </entry>
+</feed>

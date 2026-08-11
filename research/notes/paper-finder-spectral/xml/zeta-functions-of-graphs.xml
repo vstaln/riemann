@@ -1,0 +1,393 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/T3emvh2XRz7PDYLNMl/nc6SENf4</id>
+  <title>arXiv Query: search_query=all:"zeta functions of graphs"&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-08-11T16:08:04Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22zeta+functions+of+graphs%22&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>19</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/math/0007094v1</id>
+    <title>Convergence of zeta functions of graphs</title>
+    <updated>2000-07-14T23:07:02Z</updated>
+    <link href="https://arxiv.org/abs/math/0007094v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0007094v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  The $L^2$-zeta function of an infinite graph Y (defined previously in a ball around zero) has an analytic extension. For a tower of finite graphs covered by Y, the normalized zeta functions of the finite graphs converge to the $L^2$-zeta function of Y.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2000-07-14T23:07:02Z</published>
+    <arxiv:comment>8 pages, 1 figure</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Bryan Clair</name>
+    </author>
+    <author>
+      <name>Shahriar Mokhtari-Sharghi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/0607689v1</id>
+    <title>Zeta functions of graphs with $\mathbb{Z}$ actions</title>
+    <updated>2006-07-26T21:04:49Z</updated>
+    <link href="https://arxiv.org/abs/math/0607689v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0607689v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Suppose $Y$ is a regular covering of a graph $X$ with covering transformation group $π= \mathbb{Z}$. This paper gives an explicit formula for the $L^2$ zeta function of $Y$ and computes examples. When $π= \mathbb{Z}$, the $L^2$ zeta function is an algebraic function. As a consequence it extends to a meromorphic function on a Riemann surface. The meromorphic extension provides a setting to generalize known properties of zeta functions of regular graphs, such as the location of singularities and the functional equation.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2006-07-26T21:04:49Z</published>
+    <arxiv:comment>16 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Bryan Clair</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/0405394v1</id>
+    <title>Topological entropy, homological growth and zeta functions on graphs</title>
+    <updated>2004-05-20T16:17:55Z</updated>
+    <link href="https://arxiv.org/abs/math/0405394v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0405394v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  In connection with the Entropy Conjecture it is known that the topological entropy of a continuous graph map is bounded from below by the spectral radius of the induced map on the first homology group. We show that in the case of a piecewise monotone graph map, its topological entropy is equal precisely to the maximum of the mentioned spectral radius and the exponential growth rate of the number of periodic points of negative type. This nontrivially extends a result of Milnor and Thurston on piecewise monotone interval maps. For this purpose we generalize the concept of Milnor-Thurston zeta function incorporating in the Lefschetz zeta function. The methods developed in the paper can be used also in a more general setting.</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2004-05-20T16:17:55Z</published>
+    <arxiv:comment>14 pages</arxiv:comment>
+    <arxiv:primary_category term="math.DS"/>
+    <author>
+      <name>João F. Alves</name>
+    </author>
+    <author>
+      <name>Roman Hric</name>
+    </author>
+    <author>
+      <name>José Sousa Ramos</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1909.01659v1</id>
+    <title>Zeta functions of graphs, their symmetries and extended Catalan numbers</title>
+    <updated>2019-09-04T09:46:56Z</updated>
+    <link href="https://arxiv.org/abs/1909.01659v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1909.01659v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper we study spectral zeta functions associated to finite and infinite graphs. First we establish a meromorphic continuation of these functions under some general conditions. Then we study special values in the case of standard lattice graphs associated to free abelian groups. In particular we connect it to Catalan numbers in several ways, and obtain some non-trivial special values and functional symmetries. Furthermore we relate the values at the negative integers with the more studied Ihara zeta functions, and prove a few minor results that seem not to have been recorded before. Finally we consider the characteristic polynomial of the graph Laplacians, and in particular completely determine its coefficients for cyclic graphs using new analytical methods.</summary>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-09-04T09:46:56Z</published>
+    <arxiv:comment>23 pages, 0 figures</arxiv:comment>
+    <arxiv:primary_category term="math.SP"/>
+    <author>
+      <name>Jérémy Dubout</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2212.13687v2</id>
+    <title>Special values of spectral zeta functions of graphs and Dirichlet L-functions</title>
+    <updated>2023-07-11T08:21:33Z</updated>
+    <link href="https://arxiv.org/abs/2212.13687v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2212.13687v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we establish relations between special values of Dirichlet $L$-functions and that of spectral zeta functions or $L$-functions of cycle graphs. In fact, they determine each other in a natural way. These two kinds of special values were bridged together by a combinatorial derivative formula obtained from studying spectral zeta functions of the first order self-adjoint differential operators on the unit circle.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-12-28T03:52:35Z</published>
+    <arxiv:comment>2nd version. Minor changes and references updated</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Bing Xie</name>
+    </author>
+    <author>
+      <name>Yigeng Zhao</name>
+    </author>
+    <author>
+      <name>Yongqiang Zhao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1703.04969v3</id>
+    <title>Quaternionic quantum walks of Szegedy type and zeta functions of graphs</title>
+    <updated>2017-05-03T15:54:18Z</updated>
+    <link href="https://arxiv.org/abs/1703.04969v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1703.04969v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We define a quaternionic extension of the Szegedy walk on a graph and study its right spectral properties. The condition for the transition matrix of the quaternionic Szegedy walk on a graph to be quaternionic unitary is given. In order to derive the spectral mapping theorem for the quaternionic Szegedy walk, we derive a quaternionic extension of the determinant expression of the second weighted zeta function of a graph. Our main results determine explicitly all the right eigenvalues of the quaternionic Szegedy walk by using complex right eigenvalues of the corresponding doubly weighted matrix. We also show the way to obtain eigenvectors corresponding to right eigenvalues derived from those of doubly weighted matrix.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-03-15T06:51:40Z</published>
+    <arxiv:comment>24 pages. arXiv admin note: text overlap with arXiv:1505.00683</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>Norio Konno</name>
+    </author>
+    <author>
+      <name>Kaname Matsue</name>
+    </author>
+    <author>
+      <name>Hideo Mitsuhashi</name>
+    </author>
+    <author>
+      <name>Iwao Sato</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1309.3340v2</id>
+    <title>A note on Jacobians, Tutte polynomials, and two-variable zeta functions of graphs</title>
+    <updated>2014-04-21T20:25:13Z</updated>
+    <link href="https://arxiv.org/abs/1309.3340v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1309.3340v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We address questions posed by Lorenzini about relations between Jacobians, Tutte polynomials, and the Brill-Noether theory of finite graphs, as encoded in his two-variable zeta functions. In particular, we give examples showing that none of these invariants is determined by the other two.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-09-13T01:02:16Z</published>
+    <arxiv:comment>9 pages, 6 figures. v2: Improved exposition, updated references. Final version, to appear in Exp. Math</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Exp. Math. 24 (2015), no. 1, 1-7</arxiv:journal_ref>
+    <author>
+      <name>Julien Clancy</name>
+    </author>
+    <author>
+      <name>Timothy Leake</name>
+    </author>
+    <author>
+      <name>Sam Payne</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1601.04573v1</id>
+    <title>A functional relation for L-functions of graphs equivalent to the Riemann Hypothesis for Dirichlet L-functions</title>
+    <updated>2016-01-18T15:36:09Z</updated>
+    <link href="https://arxiv.org/abs/1601.04573v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1601.04573v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this note we define L-functions of finite graphs and study the particular case of finite cycles in the spirit of a previous paper that studied spectral zeta functions of graphs. The main result is a suggestive equivalence between an asymptotic functional equation for these L-functions and the corresponding case of the Generalized Riemann Hypothesis. We also establish a relation between the positivity of such functions and the existence of real zeros in the critical strip of the classical Dirichlet L-functions with the same character.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-01-18T15:36:09Z</published>
+    <arxiv:comment>10 pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Fabien Friedli</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1507.06761v2</id>
+    <title>The quaternionic weighted zeta function of a graph</title>
+    <updated>2015-09-25T03:09:02Z</updated>
+    <link href="https://arxiv.org/abs/1507.06761v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1507.06761v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We establish the quaternionic weighted zeta function of a graph and its Study determinant expressions. For a graph with quaternionic weights on arcs, we define a zeta function by using an infinite product which is regarded as the Euler product. This is a quaternionic extension of the square of the Ihara zeta function. We show that the new zeta function can be expressed as the exponential of a generating function and that it has two Study determinant expressions, which are crucial for the theory of zeta functions of graphs.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-07-24T07:17:39Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Norio Konno</name>
+    </author>
+    <author>
+      <name>Hideo Mitsuhashi</name>
+    </author>
+    <author>
+      <name>Iwao Sato</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1410.8010v2</id>
+    <title>Spectral zeta functions of graphs and the Riemann zeta function in the critical strip</title>
+    <updated>2015-10-05T07:36:24Z</updated>
+    <link href="https://arxiv.org/abs/1410.8010v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1410.8010v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We initiate the study of spectral zeta functions $ζ_{X}$ for finite and infinite graphs $X$, instead of the Ihara zeta function, with a perspective towards zeta functions from number theory and connections to hypergeometric functions. The Riemann hypothesis is shown to be equivalent to an approximate functional equation of graph zeta functions. The latter holds at all points where Riemann's zeta function $ζ(s)$ is non-zero. This connection arises via a detailed study of the asymptotics of the spectral zeta functions of finite torus graphs in the critcal strip and estimates on the real part of the logarithmic derivative of $ζ(s)$. We relate $ζ_{\mathbb{Z}}$ to Euler's beta integral and show how to complete it giving the functional equation $ξ_{\mathbb{Z}}(1-s)=ξ_{\mathbb{Z}}(s)$. This function appears in the theory of Eisenstein series although presumably with this spectral intepretation unrecognized. In higher dimensions $d$ we provide a meromorphic continuation of $ζ_{\mathbb{Z}^{d}}(s)$ to the whole plane and identify the poles. From our aymptotics several known special values of $ζ(s)$ are derived as well as its non-vanishing on the line $Re(s)=1$. We determine the spectral zeta functions of regular trees and show it to be equal to a specialization of Appell's hypergeometric function $F_{1}$ via an Euler-type integral formula due to Picard.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-10-29T15:14:36Z</published>
+    <arxiv:comment>25 pages, no figures</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Fabien Friedli</name>
+    </author>
+    <author>
+      <name>Anders Karlsson</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1509.09181v2</id>
+    <title>Feynman identity for planar graphs</title>
+    <updated>2016-05-18T16:30:54Z</updated>
+    <link href="https://arxiv.org/abs/1509.09181v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1509.09181v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Feynman identity (FI) of a planar graph relates the Euler polynomial of the graph to an infinite product over the equivalence classes of closed nonperiodic signed cycles in the graph. The main objectives of this paper are to compute the number of equivalence classes of nonperiodic cycles of given length and sign in a planar graph and to interpret the data encoded by the FI in the context of free Lie superalgebras. This solves in the case of planar graphs a problem first raised by S. Sherman and sets the FI as the denominator identity of a free Lie superalgebra generated from a graph. Other results are obtained. For instance, in connection with zeta functions of graphs.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-09-30T14:09:50Z</published>
+    <arxiv:comment>19 pages</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>G. A. T. F. da Costa</name>
+    </author>
+    <arxiv:doi>10.1007/s11005-016-0858-2</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s11005-016-0858-2" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2203.02949v1</id>
+    <title>Random walks on crystal lattices and multiple zeta functions</title>
+    <updated>2022-03-06T12:07:54Z</updated>
+    <link href="https://arxiv.org/abs/2203.02949v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2203.02949v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Crystal lattices are known to be one of the generalizations of classical periodic lattices which can be embedded into some Euclidean spaces properly. As to make a wide range of multidimensional discrete distributions on Euclidean spaces more treatable, multidimensional Euler products and multidimensional Shintani zeta functions on crystal lattices are introduced. They are completely different from existing Ihara zeta functions on graphs in that our zeta functions are defined on crystal lattices directly. Via a concept of periodic realizations of crystal lattices, we make it possible to provide many kinds of multidimensional discrete distributions explicitly. In particular, random walks on crystal lattices whose range is infinite and such random walks whose range is finite are constructed by multidimensional Euler products and multidimensional Shintani zeta functions, respectively. We give some comprehensible examples as well.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-03-06T12:07:54Z</published>
+    <arxiv:comment>30 pages, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Takahiro Aoyama</name>
+    </author>
+    <author>
+      <name>Ryuya Namba</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/0605753v3</id>
+    <title>Ihara zeta functions for periodic simple graphs</title>
+    <updated>2007-03-05T18:27:12Z</updated>
+    <link href="https://arxiv.org/abs/math/0605753v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0605753v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  The definition and main properties of the Ihara zeta function for graphs are reviewed, focusing mainly on the case of periodic simple graphs. Moreover, we give a new proof of the associated determinant formula, based on the treatment developed by Stark and Terras for finite graphs.</summary>
+    <category term="math.OA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2006-05-30T12:41:19Z</published>
+    <arxiv:comment>17 pages, 7 figures. V3: minor corrections</arxiv:comment>
+    <arxiv:primary_category term="math.OA"/>
+    <arxiv:journal_ref>in C*-algebras and elliptic theory II, p. 103 - 121. Edited by D.Burghelea, R.Melrose, A.Mishchenko, E.Troitsky. Trends in Mathematics, Birkhauser Verlag, Basel, 2008</arxiv:journal_ref>
+    <author>
+      <name>Daniele Guido</name>
+      <arxiv:affiliation>U. Roma TorVergata</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Tommaso Isola</name>
+      <arxiv:affiliation>U. Roma TorVergata</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Michel L. Lapidus</name>
+      <arxiv:affiliation>UC Riverside</arxiv:affiliation>
+    </author>
+    <arxiv:doi>10.1007/978-3-7643-8604-7</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/978-3-7643-8604-7" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/9806037v1</id>
+    <title>A Combinatorial Proof of Bass's Evaluations of the Ihara-Selberg Zeta Function for Graphs</title>
+    <updated>1998-06-08T15:32:38Z</updated>
+    <link href="https://arxiv.org/abs/math/9806037v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/9806037v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We derive combinatorial proofs of the main two evaluations of the Ihara-Selberg Zeta function associated with a graph. We give three proofs of the first evaluation all based on the algebra of Lyndon words. In the third proof it is shown that the first evaluation is an immediate consequence of Amitsur's identity on the characteristic polynomial of a sum of matrices. The second evaluation of the Ihara-Selberg Zeta function is first derived by means of a sign-changing involution technique. Our second approach makes use of a short matrix-algebra argument.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>1998-06-08T15:32:38Z</published>
+    <arxiv:comment>AMSTeX, to appear in Trans. Amer. Math. Soc</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Dominique Foata</name>
+      <arxiv:affiliation>Univ. of Strasbourg</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+      <arxiv:affiliation>Temple University</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1502.05771v2</id>
+    <title>Seiberg Duality, Quiver Gauge Theories, and Ihara Zeta Function</title>
+    <updated>2015-03-21T10:53:50Z</updated>
+    <link href="https://arxiv.org/abs/1502.05771v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1502.05771v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study Ihara zeta function for graphs in the context of quivers arising from gauge theories, especially under Seiberg duality transformations. The distribution of poles is studied as we proceed along the duality tree, in light of the weak and strong graph versions of the Riemann Hypothesis. As a by-product, we find a refined version of Ihara zeta function to be the generating function for the generic superpotential of the gauge theory.</summary>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-02-20T04:51:34Z</published>
+    <arxiv:comment>41 pages, 10 figures</arxiv:comment>
+    <arxiv:primary_category term="hep-th"/>
+    <author>
+      <name>Da Zhou</name>
+    </author>
+    <author>
+      <name>Yan Xiao</name>
+    </author>
+    <author>
+      <name>Yang-Hui He</name>
+    </author>
+    <arxiv:doi>10.1142/S0217751X15501183</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1142/S0217751X15501183" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1607.03814v1</id>
+    <title>The structure of Deitmar Schemes, II. Zeta functions and automorphism groups</title>
+    <updated>2016-07-13T16:19:01Z</updated>
+    <link href="https://arxiv.org/abs/1607.03814v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1607.03814v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We provide a coherent overview of a number of recent results obtained by the authors in the theory of schemes defined over the field with one element. Essentially, this theory encompasses the study of a functor which maps certain geometries including graphs to Deitmar schemes with additional structure, as such introducing a new zeta function for graphs. The functor is then used to determine automorphism groups of the Deitmar schemes and base extensions to fields.</summary>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-07-13T16:19:01Z</published>
+    <arxiv:comment>8 pages</arxiv:comment>
+    <arxiv:primary_category term="math.AG"/>
+    <author>
+      <name>Manuel Merida-Angulo</name>
+    </author>
+    <author>
+      <name>Koen Thas</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1705.05089v2</id>
+    <title>A novel conductivity mechanism of highly disordered carbon systems based on an investigation of graph zeta function</title>
+    <updated>2017-05-16T05:44:12Z</updated>
+    <link href="https://arxiv.org/abs/1705.05089v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1705.05089v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In the previous report [Phys. Rev. B {\bf{62}} 13812 (2000)], by proposing the mechanism under which electric conductivity is caused by the activational hopping conduction with the Wigner surmise of the level statistics, the temperature-dependent of electronic conductivity of a highly disordered carbon system was evaluated including apparent metal-insulator transition. Since the system consists of small pieces of graphite, it was assumed that the reason why the level statistics appears is due to the behavior of the quantum chaos in each granular graphite. In this article, we revise the assumption and show another origin of the Wigner surmise, which is more natural for the carbon system based on a recent investigation of graph zeta function in graph theory.</summary>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-05-15T07:12:03Z</published>
+    <arxiv:comment>4 pages</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.dis-nn"/>
+    <author>
+      <name>Shigeki Matsutani</name>
+    </author>
+    <author>
+      <name>Iwao Sato</name>
+    </author>
+    <arxiv:doi>10.1016/j.physleta.2017.07.039</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.physleta.2017.07.039" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2307.14200v2</id>
+    <title>Generating functions of non-backtracking walks on weighted digraphs: radius of convergence and Ihara's theorem</title>
+    <updated>2023-10-25T15:27:59Z</updated>
+    <link href="https://arxiv.org/abs/2307.14200v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2307.14200v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>It is known that the generating function associated with the enumeration of non-backtracking walks on finite graphs is a rational matrix-valued function of the parameter; such function is also closely related to graph-theoretical results such as Ihara's theorem and the zeta function on graphs. In [P. Grindrod, D. J. Higham, V. Noferini, The deformed graph Laplacian and its application to network centrality analysis, SIAM J. Matrix Anal. Appl. 39(1), 310--341, 2018], the radius of convergence of the generating function was studied for simple (i.e., undirected, unweighted and with no loops) graphs, and shown to depend on the number of cycles in the graph. In this paper, we use technologies from the theory of polynomial and rational matrices to greatly extend these results by studying the radius of convergence of the corresponding generating function for general, possibly directed and/or weighted, graphs. We give an analogous characterization of the radius of convergence for directed unweighted graphs, showing that it depends on the number of cycles in the undirectization of the graph. For weighted graphs, we provide for the first time an exact formula for the radius of convergence, improving a previous result that exhibited a lower bound. Finally, we consider also backtracking-downweighted walks on unweighted digraphs, and we prove a version of Ihara's theorem in that case.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-07-26T13:53:31Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Vanni Noferini</name>
+    </author>
+    <author>
+      <name>María C. Quintana</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1505.02081v1</id>
+    <title>Deitmar schemes, graphs and zeta functions</title>
+    <updated>2015-05-08T16:08:46Z</updated>
+    <link href="https://arxiv.org/abs/1505.02081v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1505.02081v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In [19] it was explained how one can naturally associate a Deitmar scheme (which is a scheme defined over the field with one element, $\mathbb{F}_1$) to a so-called "loose graph" (which is a generalization of a graph). Several properties of the Deitmar scheme can be proven easily from the combinatorics of the (loose) graph, and known realizations of objects over $\mathbb{F}_1$ such as combinatorial $\mathbb{F}_1$-projective and $\mathbb{F}_1$-affine spaces exactly depict the loose graph which corresponds to the associated Deitmar scheme. In this paper, we first modify the construction of loc. cit., and show that Deitmar schemes which are defined by finite trees (with possible end points) are "defined over $\mathbb{F}_1$" in Kurokawa's sense; we then derive a precise formula for the Kurokawa zeta function for such schemes (and so also for the counting polynomial of all associated $\mathbb{F}_q$-schemes). As a corollary, we find a zeta function for all such trees which contains information such as the number of inner points and the spectrum of degrees, and which is thus very different than Ihara's zeta function (which is trivial in this case). Using a process called "surgery," we show that one can determine the zeta function of a general loose graph and its associated { Deitmar, Grothendieck }-schemes in a number of steps, eventually reducing the calculation essentially to trees. We study a number of classes of examples of loose graphs, and introduce the Grothendieck ring of $\mathbb{F}_1$-schemes along the way in order to perform the calculations. Finally, we compare the new zeta function to Ihara's zeta function for graphs in a number of examples, and include a computer program for performing more tedious calculations.</summary>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-05-08T16:08:46Z</published>
+    <arxiv:comment>49 pages; preprint (May 2015)</arxiv:comment>
+    <arxiv:primary_category term="math.AG"/>
+    <author>
+      <name>Manuel Mérida-Angulo</name>
+    </author>
+    <author>
+      <name>Koen Thas</name>
+    </author>
+  </entry>
+</feed>

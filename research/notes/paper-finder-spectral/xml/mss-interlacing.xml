@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/2FMJT8UUcOWbgA+YfPSzA0q2dd8</id>
+  <title>arXiv Query: search_query=au:Marcus AND au:Spielman AND au:Srivastava&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-08-11T16:06:39Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=au:Marcus+AND+(au:Spielman+AND+au:Srivastava)&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>6</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1304.4132v2</id>
+    <title>Interlacing Families I: Bipartite Ramanujan Graphs of All Degrees</title>
+    <updated>2014-03-03T18:55:42Z</updated>
+    <link href="https://arxiv.org/abs/1304.4132v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1304.4132v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove that there exist infinite families of regular bipartite Ramanujan graphs of every degree bigger than 2. We do this by proving a variant of a conjecture of Bilu and Linial about the existence of good 2-lifts of every graph.
+  We also establish the existence of infinite families of `irregular Ramanujan' graphs, whose eigenvalues are bounded by the spectral radius of their universal cover. Such families were conjectured to exist by Linial and others. In particular, we prove the existence of infinite families of (c,d)-biregular bipartite graphs with all non-trivial eigenvalues bounded by sqrt{c-1}+sqrt{d-1}, for all c, d \geq 3.
+  Our proof exploits a new technique for demonstrating the existence of useful combinatorial objects that we call the "method of interlacing polynomials'".</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-04-15T15:29:54Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Adam Marcus</name>
+    </author>
+    <author>
+      <name>Daniel A. Spielman</name>
+    </author>
+    <author>
+      <name>Nikhil Srivastava</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1306.3969v4</id>
+    <title>Interlacing Families II: Mixed Characteristic Polynomials and the Kadison-Singer Problem</title>
+    <updated>2014-04-14T18:27:32Z</updated>
+    <link href="https://arxiv.org/abs/1306.3969v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1306.3969v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We use the method of interlacing families of polynomials introduced to prove two theorems known to imply a positive solution to the Kadison--Singer problem.
+  The first is Weaver's conjecture $KS_{2}$ \cite{weaver}, which is known to imply Kadison--Singer via a projection paving conjecture of Akemann and Anderson. The second is a formulation due to Casazza, et al., of Anderson's original paving conjecture(s), for which we are able to compute explicit paving bounds.
+  The proof involves an analysis of the largest roots of a family of polynomials that we call the "mixed characteristic polynomials" of a collection of matrices.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.FA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-06-17T19:53:32Z</published>
+    <arxiv:comment>This is the version that has been submitted</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Adam Marcus</name>
+    </author>
+    <author>
+      <name>Daniel A Spielman</name>
+    </author>
+    <author>
+      <name>Nikhil Srivastava</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1504.00350v2</id>
+    <title>Finite free convolutions of polynomials</title>
+    <updated>2019-07-03T01:13:34Z</updated>
+    <link href="https://arxiv.org/abs/1504.00350v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1504.00350v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study three convolutions of polynomials in the context of free probability theory. We prove that these convolutions can be written as the expected characteristic polynomials of sums and products of unitarily invariant random matrices. The symmetric additive and multiplicative convolutions were introduced by Walsh and Szegö in different contexts, and have been studied for a century. The asymmetric additive convolution, and the connection of all of them with random matrices, is new. By developing the analogy with free probability, we prove that these convolutions produce real rooted polynomials and provide strong bounds on the locations of the roots of these polynomials.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-04-01T19:49:33Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Adam Marcus</name>
+    </author>
+    <author>
+      <name>Daniel A. Spielman</name>
+    </author>
+    <author>
+      <name>Nikhil Srivastava</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1408.4421v1</id>
+    <title>Ramanujan Graphs and the Solution of the Kadison-Singer Problem</title>
+    <updated>2014-08-19T18:41:30Z</updated>
+    <link href="https://arxiv.org/abs/1408.4421v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1408.4421v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We survey the techniques used in our recent resolution of the Kadison-Singer problem and proof of existence of Ramanujan Graphs of every degree: mixed characteristic polynomials and the method of interlacing families of polynomials. To demonstrate the method of interlacing families of polynomials, we give a simple proof of Bourgain and Tzafriri's restricted invertibility principle in the isotropic case.</summary>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-08-19T18:41:30Z</published>
+    <arxiv:comment>A version of this paper will appear in the proceedings of the 2014 International Congress of Mathematicians</arxiv:comment>
+    <arxiv:primary_category term="math.SP"/>
+    <author>
+      <name>Adam W. Marcus</name>
+    </author>
+    <author>
+      <name>Daniel A. Spielman</name>
+    </author>
+    <author>
+      <name>Nikhil Srivastava</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1505.08010v1</id>
+    <title>Interlacing Families IV: Bipartite Ramanujan Graphs of All Sizes</title>
+    <updated>2015-05-29T12:13:38Z</updated>
+    <link href="https://arxiv.org/abs/1505.08010v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1505.08010v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove that there exist bipartite Ramanujan graphs of every degree and every number of vertices. The proof is based on analyzing the expected characteristic polynomial of a union of random perfect matchings, and involves three ingredients: (1) a formula for the expected characteristic polynomial of the sum of a regular graph with a random permutation of another regular graph, (2) a proof that this expected polynomial is real rooted and that the family of polynomials considered in this sum is an interlacing family, and (3) strong bounds on the roots of the expected characteristic polynomial of a union of random perfect matchings, established using the framework of finite free convolutions we recently introduced.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-05-29T12:13:38Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Adam W. Marcus</name>
+    </author>
+    <author>
+      <name>Nikhil Srivastava</name>
+    </author>
+    <author>
+      <name>Daniel A. Spielman</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1712.07766v1</id>
+    <title>Interlacing Families III: Sharper Restricted Invertibility Estimates</title>
+    <updated>2017-12-21T01:53:11Z</updated>
+    <link href="https://arxiv.org/abs/1712.07766v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1712.07766v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We use the method of interlacing families of polynomials to derive a simple proof of Bourgain and Tzafriri's Restricted Invertibility Principle, and then to sharpen the result in two ways. We show that the stable rank can be replaced by the Schatten 4-norm stable rank and that tighter bounds hold when the number of columns in the matrix under consideration does not greatly exceed its number of rows. Our bounds are derived from an analysis of smallest zeros of Jacobi and associated Laguerre polynomials.</summary>
+    <category term="math.FA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-12-21T01:53:11Z</published>
+    <arxiv:primary_category term="math.FA"/>
+    <author>
+      <name>Adam W. Marcus</name>
+    </author>
+    <author>
+      <name>Daniel A. Spielman</name>
+    </author>
+    <author>
+      <name>Nikhil Srivastava</name>
+    </author>
+  </entry>
+</feed>

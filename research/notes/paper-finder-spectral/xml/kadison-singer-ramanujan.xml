@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/Xs0d7y0WCVkjK9uaPha1LhleH24</id>
+  <title>arXiv Query: search_query=all:"Kadison-Singer" AND all:Ramanujan&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-08-11T16:06:52Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22Kadison-Singer%22+AND+all:Ramanujan&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>2</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1408.4421v1</id>
+    <title>Ramanujan Graphs and the Solution of the Kadison-Singer Problem</title>
+    <updated>2014-08-19T18:41:30Z</updated>
+    <link href="https://arxiv.org/abs/1408.4421v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1408.4421v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We survey the techniques used in our recent resolution of the Kadison-Singer problem and proof of existence of Ramanujan Graphs of every degree: mixed characteristic polynomials and the method of interlacing families of polynomials. To demonstrate the method of interlacing families of polynomials, we give a simple proof of Bourgain and Tzafriri's restricted invertibility principle in the isotropic case.</summary>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-08-19T18:41:30Z</published>
+    <arxiv:comment>A version of this paper will appear in the proceedings of the 2014 International Congress of Mathematicians</arxiv:comment>
+    <arxiv:primary_category term="math.SP"/>
+    <author>
+      <name>Adam W. Marcus</name>
+    </author>
+    <author>
+      <name>Daniel A. Spielman</name>
+    </author>
+    <author>
+      <name>Nikhil Srivastava</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1704.03892v1</id>
+    <title>Approximating the Largest Root and Applications to Interlacing Families</title>
+    <updated>2017-04-12T18:31:52Z</updated>
+    <link href="https://arxiv.org/abs/1704.03892v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1704.03892v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the problem of approximating the largest root of a real-rooted polynomial of degree $n$ using its top $k$ coefficients and give nearly matching upper and lower bounds. We present algorithms with running time polynomial in $k$ that use the top $k$ coefficients to approximate the maximum root within a factor of $n^{1/k}$ and $1+O(\tfrac{\log n}{k})^2$ when $k\leq \log n$ and $k&gt;\log n$ respectively. We also prove corresponding information-theoretic lower bounds of $n^{Ω(1/k)}$ and $1+Ω\left(\frac{\log \frac{2n}{k}}{k}\right)^2$, and show strong lower bounds for noisy version of the problem in which one is given access to approximate coefficients.
+  This problem has applications in the context of the method of interlacing families of polynomials, which was used for proving the existence of Ramanujan graphs of all degrees, the solution of the Kadison-Singer problem, and bounding the integrality gap of the asymmetric traveling salesman problem. All of these involve computing the maximum root of certain real-rooted polynomials for which the top few coefficients are accessible in subexponential time. Our results yield an algorithm with the running time of $2^{\tilde O(\sqrt[3]n)}$ for all of them.</summary>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-04-12T18:31:52Z</published>
+    <arxiv:primary_category term="cs.DS"/>
+    <author>
+      <name>Nima Anari</name>
+    </author>
+    <author>
+      <name>Shayan Oveis Gharan</name>
+    </author>
+    <author>
+      <name>Amin Saberi</name>
+    </author>
+    <author>
+      <name>Nikhil Srivastava</name>
+    </author>
+  </entry>
+</feed>

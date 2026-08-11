@@ -50,12 +50,12 @@ def unfold(g):
 
 
 def flat_moments(xs, la=1.0, k=3):
-    """flat (sinc) kernel Gram moments m_2..m_k at window lambda."""
+    """flat (sinc) kernel Gram moments m_2..m_k at window lambda; returns (tuple, ev)."""
     d = xs[:, None] - xs[None, :]
     G = np.sinc(la * d)
     ev = np.linalg.eigvalsh(G)
     n = xs.size
-    return {j: float((ev ** j).sum()) / n for j in range(2, k + 1)}, ev
+    return tuple(float((ev ** j).sum()) / n for j in range(2, k + 1)), ev
 
 
 def _safe_sinc(x):

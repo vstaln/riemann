@@ -1,0 +1,399 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/vC69TC+ZdFZ9GUFM18iMNIiA1BI</id>
+  <title>arXiv Query: search_query=all:"spacing" AND all:"zeros of the Riemann zeta"&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-08-11T16:10:44Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22spacing%22+AND+all:%22zeros+of+the+Riemann+zeta%22&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>79</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/math/0510530v1</id>
+    <title>Large gaps between the zeros of the Riemann zeta function</title>
+    <updated>2005-10-25T13:05:50Z</updated>
+    <link href="https://arxiv.org/abs/math/0510530v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0510530v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We show that the generalized Riemann hypothesis implies that there are infinitely many consecutive zeros of the Riemann zeta function whose spacing is 2.9125 times larger than the average spacing. This is deduced from the calculation of the second moment of the Riemann zeta function multiplied by a Dirichlet polynomial averaged over the zeros of the zeta function.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2005-10-25T13:05:50Z</published>
+    <arxiv:comment>39 pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Nathan Ng</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1003.0752v1</id>
+    <title>On gaps between zeros of the Riemann zeta function</title>
+    <updated>2010-03-03T09:06:05Z</updated>
+    <link href="https://arxiv.org/abs/1003.0752v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1003.0752v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Assuming the Riemann Hypothesis, we show that infinitely often consecutive non-trivial zeros of the Riemann zeta-function differ by at least 2.7327 times the average spacing and infinitely often they differ by at most 0.5154 times the average spacing.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2010-03-03T09:06:05Z</published>
+    <arxiv:comment>submitted for publication in January 2010</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Shaoji Feng</name>
+    </author>
+    <author>
+      <name>Xiaosheng Wu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/0412277v3</id>
+    <title>A spectral interpretation for the zeros of the Riemann zeta function</title>
+    <updated>2013-08-27T18:33:07Z</updated>
+    <link href="https://arxiv.org/abs/math/0412277v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0412277v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Based on work of Alain Connes, I have constructed a spectral interpretation for zeros of L-functions. Here we specialise this construction to the Riemann zeta function. We construct an operator on a nuclear Frechet space whose spectrum is the set of non-trivial zeros of zeta. We exhibit the explicit formula for the zeros of the Riemann zeta function as a character formula.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2004-12-14T11:27:15Z</published>
+    <arxiv:comment>15 pages. Corrected a few typos and added clarifying footnotes to the published version</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <arxiv:journal_ref>Mathematisches Institut, Georg-August-Universität Göttingen: Seminars Winter Term 2004/2005, Universitätsdrucke Göttingen, 2005, pp. 117-137</arxiv:journal_ref>
+    <author>
+      <name>Ralf Meyer</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/9811068v1</id>
+    <title>Trace formula in noncommutative geometry and the zeros of the Riemann zeta function</title>
+    <updated>1998-11-10T22:19:14Z</updated>
+    <link href="https://arxiv.org/abs/math/9811068v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/9811068v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We give a spectral interpretation of the critical zeros of the Riemann zeta function as an absorption spectrum, while eventual noncritical zeros appear as resonances. We give a geometric interpretation of the explicit formulas of number theory as a trace formula on the noncommutative space of Adele classes. This reduces the Riemann hypothesis to the validity of the trace formula and eliminates the parameter $δ$ of our previous approach.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>1998-11-10T22:19:14Z</published>
+    <arxiv:comment>88 pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Alain Connes</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0906.5458v3</id>
+    <title>Large Spaces Between the Zeros of the Riemann Zeta-Function</title>
+    <updated>2010-06-22T11:48:20Z</updated>
+    <link href="https://arxiv.org/abs/0906.5458v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0906.5458v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we will employ the Opial and Wirtinger type inequalities to derive some conditional and unconditional lower bounds for the gaps between the zeros of the Riemann zeta-function. First, we prove (unconditionally) that the consecutive nontrivial zeros often differ by at least 1.9902 times the average spacing. This value improves the value 1.9 due to Mueller and the value 1.9799 due to Montogomery and Odlyzko. Second, on the hypothesis that the 2k-th mixed moments of the Hardy Z-function and its derivative are correctly predicted by random matrix theory, we derive some explicit formulae for the gaps and use them to establish new (conditional) large gaps.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2009-06-30T10:05:11Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>S. H. Saker</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1001.0494v7</id>
+    <title>Unconditional and Conditional Large Gaps between the zeros of the Riemann Zeta-Function</title>
+    <updated>2010-06-22T11:54:58Z</updated>
+    <link href="https://arxiv.org/abs/1001.0494v7" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1001.0494v7" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, first by employing inequalities derived from the Opial inequality due to David Boyd with best constant, we will establish new unconditional lower bounds for the gaps between the zeros of the Riemann zeta function. Second, on the hypothesis that the moments of the Hardy Z-function and its derivatives are correctly predicted, we establish some explicit formulae for the lower bounds of the gaps between the zeros and use them to establish some new conditional bounds. In particular it is proved that the consecutive nontrivial zeros often differ by at least 6.1392 (conditionally) times the average spacing. This value improves the value 4.71474396 that has been derived in the literature.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2010-01-04T12:08:01Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>S. H. Saker</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1608.03679v4</id>
+    <title>Hamiltonian for the zeros of the Riemann zeta function</title>
+    <updated>2017-03-06T09:36:51Z</updated>
+    <link href="https://arxiv.org/abs/1608.03679v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1608.03679v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A Hamiltonian operator $\hat H$ is constructed with the property that if the eigenfunctions obey a suitable boundary condition, then the associated eigenvalues correspond to the nontrivial zeros of the Riemann zeta function. The classical limit of $\hat H$ is $2xp$, which is consistent with the Berry-Keating conjecture. While $\hat H$ is not Hermitian in the conventional sense, ${\rm i}{\hat H}$ is ${\cal PT}$ symmetric with a broken ${\cal PT}$ symmetry, thus allowing for the possibility that all eigenvalues of $\hat H$ are real. A heuristic analysis is presented for the construction of the metric operator to define an inner-product space, on which the Hamiltonian is Hermitian. If the analysis presented here can be made rigorous to show that ${\hat H}$ is manifestly self-adjoint, then this implies that the Riemann hypothesis holds true.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.FA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-08-12T05:08:32Z</published>
+    <arxiv:comment>5 pages, version to appear in Phys. Rev. Lett</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Phys. Rev. Lett. 118, 130201 (2017)</arxiv:journal_ref>
+    <author>
+      <name>Carl M. Bender</name>
+    </author>
+    <author>
+      <name>Dorje C. Brody</name>
+    </author>
+    <author>
+      <name>Markus P. Müller</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevLett.118.130201</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevLett.118.130201" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1112.6038v1</id>
+    <title>On large gaps between zeros of the Riemann zeta-function</title>
+    <updated>2011-12-28T01:14:48Z</updated>
+    <link href="https://arxiv.org/abs/1112.6038v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1112.6038v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Assuming the Generalized Riemann Hypothesis(GRH), we show that infinitely often consecutive non-trivial zeros of the Riemann zeta-function differ by at least 3.072 times the average spacing.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2011-12-28T01:14:48Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Feng Shaoji</name>
+    </author>
+    <author>
+      <name>Wu Xiaosheng</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1904.06001v2</id>
+    <title>A note on small gaps between zeros of the Riemann zeta-function</title>
+    <updated>2019-11-11T18:03:52Z</updated>
+    <link href="https://arxiv.org/abs/1904.06001v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1904.06001v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Assuming the Riemann Hypothesis, we improve on previous results by proving there are infinitely many zeros of the Riemann zeta-function whose differences are smaller than 0.50412 times the average spacing. To obtain this result, we generalize a set of weights that were developed by Xiaosheng Wu, who used them to find a positive proportion of large and small gaps between zeros of the Riemann zeta-function.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-04-12T01:49:49Z</published>
+    <arxiv:comment>The authors have found a mistake in the preprint, which invalidates the calculations giving the result of Theorem 1. While the Wu weights are correct, the generalization only holds with functions (or polynomials) which are symmetric in all their variables. The authors do not yet know whether this restriction allows this method to improve on the earlier results or not; this is now work in progress.</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>D. A. Goldston</name>
+    </author>
+    <author>
+      <name>C. L. Turnage-Butterbaugh</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1305.4068v1</id>
+    <title>Large gaps between consecutive zeros of the Riemann zeta-function. II</title>
+    <updated>2013-05-17T13:18:53Z</updated>
+    <link href="https://arxiv.org/abs/1305.4068v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1305.4068v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Assuming the Riemann Hypothesis we show that there exist infinitely many consecutive zeros of the Riemann zeta-function whose gaps are greater than 2.9 times the average spacing.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-05-17T13:18:53Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>H. M. Bui</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1410.3635v3</id>
+    <title>Gaps between zeros of the Riemann zeta-function</title>
+    <updated>2017-04-19T12:34:46Z</updated>
+    <link href="https://arxiv.org/abs/1410.3635v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1410.3635v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove that there exist infinitely many consecutive zeros of the Riemann zeta-function on the critical line whose gaps are greater than $3.18$ times the average spacing. Using a modification of our method, we also show that there are even larger gaps between the multiple zeros of the zeta function on the critical line (if such zeros exist).</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-10-14T10:12:31Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>H. M. Bui</name>
+    </author>
+    <author>
+      <name>M. B. Milinovich</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0903.4007v3</id>
+    <title>Large gaps between consecutive zeros of the Riemann zeta-function</title>
+    <updated>2010-06-14T23:46:46Z</updated>
+    <link href="https://arxiv.org/abs/0903.4007v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0903.4007v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Combining the mollifiers, we exhibit other choices of coefficients that improve the results on large gaps between the zeros of the Riemann zeta-function. Precisely, assuming the Generalized Riemann Hypothesis (GRH), we show that there exist infinitely many consecutive gaps greater than 3.033 times the average spacing.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2009-03-24T03:35:32Z</published>
+    <arxiv:comment>21 pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <arxiv:journal_ref>J. Number Theory 131 (2011), 67-95</arxiv:journal_ref>
+    <author>
+      <name>H. M. Bui</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0910.2052v1</id>
+    <title>A note on the gaps between consecutive zeros of the Riemann zeta-function</title>
+    <updated>2009-10-11T21:43:28Z</updated>
+    <link href="https://arxiv.org/abs/0910.2052v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0910.2052v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Assuming the Riemann Hypothesis, we show that infinitely often consecutive non-trivial zeros of the Riemann zeta-function differ by at most 0.5155 times the average spacing and infinitely often they differ by at least 2.69 times the average spacing.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2009-10-11T21:43:28Z</published>
+    <arxiv:comment>7 pages. Submitted for publication</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <arxiv:journal_ref>Proc. Amer. Math. Soc., 138 (2010), 4167--4175</arxiv:journal_ref>
+    <author>
+      <name>H. M. Bui</name>
+    </author>
+    <author>
+      <name>M. B. Milinovich</name>
+    </author>
+    <author>
+      <name>N. Ng</name>
+    </author>
+    <arxiv:doi>10.1090/S0002-9939-2010-10443-4</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1090/S0002-9939-2010-10443-4" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.10857v1</id>
+    <title>The Alternative Hypothesis for Zeros of the Riemann Zeta-Function</title>
+    <updated>2025-08-14T17:29:05Z</updated>
+    <link href="https://arxiv.org/abs/2508.10857v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2508.10857v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In 2016, the first-named author introduced a formulation of the Alternative Hypothesis that assumes that consecutive zeros of the Riemann zeta-function are spaced at multiples of half of the average spacing, but does not assume that the zeros are simple. In this paper, we assume the Riemann Hypothesis and a similar formulation of the Alternative Hypothesis, and for each integer $k$ we obtain constraints on the density of pairs of zeros whose normalized differences are at $k/2$ times the average spacing. These constraints, in turn, restrict the density of (possible) multiple zeros. We also formulate a stronger version of the Alternative Hypothesis and show that it implies the Essential Simplicity Hypothesis.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-08-14T17:29:05Z</published>
+    <arxiv:comment>27 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Siegfred Alan C. Baluyot</name>
+    </author>
+    <author>
+      <name>Daniel Alan Goldston</name>
+    </author>
+    <author>
+      <name>Ade Irma Suriajaya</name>
+    </author>
+    <author>
+      <name>Caroline L. Turnage-Butterbaugh</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1505.05350v1</id>
+    <title>A small improvement in the small gaps between consecutive zeros of the Riemann zeta-function</title>
+    <updated>2015-05-20T12:52:00Z</updated>
+    <link href="https://arxiv.org/abs/1505.05350v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1505.05350v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Feng and Wu introduced a new general coefficient sequence into Montgomery and Odlyzko's method for exhibiting irregularity in the gaps between consecutive zeros of $ζ(s)$ assuming the Riemann Hypothesis. They used a special case of their sequence to improve upon earlier results on the gaps. In this paper we consider an equivalent form of the general sequence of Feng and Wu, and introduce a somewhat less general sequence $\{a_n\}$ for which we write the Montgomery-Odlyzko expressions explicitly. As an application, we give the following slight improvement of Feng and Wu's result: infinitely often consecutive non-trivial zeros of the Riemann zeta-function differ by at most $0{.}515396$ times the average spacing.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-05-20T12:52:00Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Sergei Preobrazhenskii</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1406.5462v1</id>
+    <title>Hilbert spaces and the pair correlation of zeros of the Riemann zeta-function</title>
+    <updated>2014-06-20T17:09:50Z</updated>
+    <link href="https://arxiv.org/abs/1406.5462v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1406.5462v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Montgomery's pair correlation conjecture predicts the asymptotic behavior of the function $N(T,β)$ defined to be the number of pairs $γ$ and $γ'$ of ordinates of nontrivial zeros of the Riemann zeta-function satisfying $0&lt;γ,γ'\leq T$ and $0 &lt; γ'-γ\leq 2πβ/\log T$ as $T\to \infty$. In this paper, assuming the Riemann hypothesis, we prove upper and lower bounds for $N(T,β)$, for all $β&gt;0$, using Montgomery's formula and some extremal functions of exponential type. These functions are optimal in the sense that they majorize and minorize the characteristic function of the interval $[-β, β]$ in a way to minimize the $L^1\big(\mathbb{R}, \big\{1 - \big(\frac{\sin πx}{πx}\big)^2 \big\}\,dx\big)$-error. We give a complete solution for this extremal problem using the framework of reproducing kernel Hilbert spaces of entire functions. This extends previous work by P. X. Gallagher in 1985, where the case $β\in \frac12 \mathbb{N}$ was considered using non-extremal majorants and minorants.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-06-20T17:09:50Z</published>
+    <arxiv:comment>to appear in J. Reine Angew. Math</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <arxiv:journal_ref>Journal für die reine und angewandte Mathematik (Crelle's journal), vol. 725 (2017), 143-182</arxiv:journal_ref>
+    <author>
+      <name>Emanuel Carneiro</name>
+    </author>
+    <author>
+      <name>Vorrapan Chandee</name>
+    </author>
+    <author>
+      <name>Friedrich Littmann</name>
+    </author>
+    <author>
+      <name>Micah B. Milinovich</name>
+    </author>
+    <arxiv:doi>10.1515/crelle-2014-0078</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1515/crelle-2014-0078" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/nlin/0012049v1</id>
+    <title>Spectral spacing correlations for chaotic and disordered systems</title>
+    <updated>2000-12-22T18:20:33Z</updated>
+    <link href="https://arxiv.org/abs/nlin/0012049v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/nlin/0012049v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  New aspects of spectral fluctuations of (quantum) chaotic and diffusive systems are considered, namely autocorrelations of the spacing between consecutive levels or spacing autocovariances. They can be viewed as a discretized two point correlation function. Their behavior results from two different contributions. One corresponds to (universal) random matrix eigenvalue fluctuations, the other to diffusive or chaotic characteristics of the corresponding classical motion. A closed formula expressing spacing autocovariances in terms of classical dynamical zeta functions, including the Perron-Frobenius operator, is derived. It leads to a simple interpretation in terms of classical resonances. The theory is applied to zeros of the Riemann zeta function. A striking correspondence between the associated classical dynamical zeta functions and the Riemann zeta itself is found. This induces a resurgence phenomenon where the lowest Riemann zeros appear replicated an infinite number of times as resonances and sub-resonances in the spacing autocovariances. The theoretical results are confirmed by existing ``data''. The present work further extends the already well known semiclassical interpretation of properties of Riemann zeros.</summary>
+    <category term="nlin.CD" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2000-12-22T18:20:33Z</published>
+    <arxiv:comment>28 pages, 6 figures, 1 table, To appear in the Gutzwiller Festschrift, a special Issue of Foundations of Physics</arxiv:comment>
+    <arxiv:primary_category term="nlin.CD"/>
+    <arxiv:journal_ref>Found. Phys. 31 (2001) 489-517</arxiv:journal_ref>
+    <author>
+      <name>O. Bohigas</name>
+    </author>
+    <author>
+      <name>P. Leboeuf</name>
+    </author>
+    <author>
+      <name>M. -J. Sanchez</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1810.01569v1</id>
+    <title>Ordered level spacing probability densities</title>
+    <updated>2018-10-03T02:46:08Z</updated>
+    <link href="https://arxiv.org/abs/1810.01569v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1810.01569v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Spectral statistics of quantum systems have been studied in detail using the nearest neighbour level spacings, which for generic chaotic systems follows random matrix theory predictions. In this work, the probability density of the closest neighbour and farther neighbour spacings from a given level are introduced. Analytical predictions are derived using a $3 \times 3$ matrix model. The closest neighbour density is generalized to the $k-$th closest neighbour spacing density, which allows for investigating long-range correlations. For larger $k$ the probability density of $k-$th closest neighbour spacings is well described by a Gaussian. Using these $k-$th closest neighbour spacings we propose the ratio of the closest neighbour to the second closest neighbour as an alternative to the ratio of successive spacings. For a Poissonian spectrum the density of the ratio is flat, whereas for the three Gaussian ensembles repulsion at small values is found. The ordered spacing statistics and their ratio are numerically studied for the integrable circle billiard, the chaotic cardioid billiard, the standard map and the zeroes of the Riemann zeta function. Very good agreement with the predictions is found.</summary>
+    <category term="nlin.CD" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-10-03T02:46:08Z</published>
+    <arxiv:primary_category term="nlin.CD"/>
+    <arxiv:journal_ref>J. Phys. A: Math. Theor. 52 025101(2019)</arxiv:journal_ref>
+    <author>
+      <name>Shashi C. L. Srivastava</name>
+    </author>
+    <author>
+      <name>Arul Lakshminarayan</name>
+    </author>
+    <author>
+      <name>Steven Tomsovic</name>
+    </author>
+    <author>
+      <name>Arnd Bäcker</name>
+    </author>
+    <arxiv:doi>10.1088/1751-8121/aaefa4</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/1751-8121/aaefa4" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/0602270v1</id>
+    <title>On the spacing distribution of the Riemann zeros: corrections to the asymptotic result</title>
+    <updated>2006-02-13T11:40:30Z</updated>
+    <link href="https://arxiv.org/abs/math/0602270v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0602270v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  It has been conjectured that the statistical properties of zeros of the Riemann zeta function near $z = 1/2 + \ui E$ tend, as $E \to \infty$, to the distribution of eigenvalues of large random matrices from the Unitary Ensemble. At finite $E$ numerical results show that the nearest-neighbour spacing distribution presents deviations with respect to the conjectured asymptotic form. We give here arguments indicating that to leading order these deviations are the same as those of unitary random matrices of finite dimension $N_{\rm eff}=\log(E/2π)/\sqrt{12 Λ}$, where $Λ=1.57314 ...$ is a well defined constant.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2006-02-13T11:40:30Z</published>
+    <arxiv:comment>9 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <arxiv:journal_ref>J. Phys. A: Math. Gen. 39 (2006) 10743-10754</arxiv:journal_ref>
+    <author>
+      <name>E. Bogomolny</name>
+    </author>
+    <author>
+      <name>O. Bohigas</name>
+    </author>
+    <author>
+      <name>P. Leboeuf</name>
+    </author>
+    <author>
+      <name>A. G. Monastra</name>
+    </author>
+    <arxiv:doi>10.1088/0305-4470/39/34/010</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/0305-4470/39/34/010" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/0111012v1</id>
+    <title>Spacing of zeros of Hecke L-functions and the class number problem</title>
+    <updated>2001-11-01T21:54:48Z</updated>
+    <link href="https://arxiv.org/abs/math/0111012v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0111012v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We derive strong and effective lower bounds for the class number h(q) of the imaginary quadratic field Q(\sqrt{-q}), conditionally subject to the existence of many small (subnormal) gaps between zeros of the L-function associated with a character of the class group associated with this field. In particular, we prove that if the gap between consecutive zeros of the L-function is somewhat smaller than the average for sufficiently many pairs of zeros on the critical line, then h &gt;&gt; \sqrt q (log q)^{-A} for some constant A &gt; 0. For the trivial character, the L-function is the Dedekind zeta-function of the number field and so contains the Riemann zeta-function as a factor. Thus, as a corollary to our main result, we prove that this lower bound for h follows from the hypothesis that there are sufficiently many pairs of adjacent zeros of the Riemann zeta-function on the critical line whose spacing is slightly smaller than 1/2 of the average spacing.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2001-11-01T21:54:48Z</published>
+    <arxiv:comment>61 pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>J. Brian Conrey</name>
+    </author>
+    <author>
+      <name>Henryk Iwaniec</name>
+    </author>
+  </entry>
+</feed>

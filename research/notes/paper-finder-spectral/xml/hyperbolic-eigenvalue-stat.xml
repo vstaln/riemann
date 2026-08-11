@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/rPe8rfKRllJz3FJNT9p2pxU6qdk</id>
+  <title>arXiv Query: search_query=all:"compact hyperbolic surface" AND all:eigenvalue AND all:statistics&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-08-11T16:08:08Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22compact+hyperbolic+surface%22+AND+(all:eigenvalue+AND+all:statistics)&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>3</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2310.18663v3</id>
+    <title>Smooth linear eigenvalue statistics on random covers of compact hyperbolic surfaces -- A central limit theorem and almost sure RMT statistics</title>
+    <updated>2025-04-11T16:10:01Z</updated>
+    <link href="https://arxiv.org/abs/2310.18663v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.18663v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study smooth linear spectral statistics of twisted Laplacians on random $n$-covers of a fixed compact hyperbolic surface $X$. We consider two aspects of such statistics. The first is the fluctuations of such statistics in a small energy window around a fixed energy level when averaged over the space of all degree $n$ covers of $X$. The second is the energy variance of a typical surface.
+  In the first case, we show a central limit theorem. Specifically, we show that the distribution of such fluctuations tends to a Gaussian with variance given by the corresponding quantity for the Gaussian Orthogonal/Unitary Ensemble (GOE/GUE). In the second case, we show that the energy variance of a typical random $n$-cover is that of the GOE/GUE. In both cases, we consider a double limit where first we let $n$, the covering degree, go to $\infty$ then let $L\to \infty$ where $1/L$ is the window length.</summary>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-28T10:25:47Z</published>
+    <arxiv:comment>47 pages. Accepted for publication in the Israel Journal of Mathematics</arxiv:comment>
+    <arxiv:primary_category term="math.SP"/>
+    <author>
+      <name>Yotam Maoz</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2301.00685v1</id>
+    <title>On the Central Limit Theorem for linear eigenvalue statistics on random surfaces of large genus</title>
+    <updated>2023-01-02T13:57:50Z</updated>
+    <link href="https://arxiv.org/abs/2301.00685v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2301.00685v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the fluctuations of smooth linear statistics of Laplace eigenvalues of compact hyperbolic surfaces lying in short energy windows, when averaged over the moduli space of surfaces of a given genus. The average is taken with respect to the Weil-Petersson measure. We show that first taking the large genus limit, then a short window limit, the distribution tends to a Gaussian. The variance was recently shown to be given by the corresponding quantity for the Gaussian Orthogonal Ensemble (GOE), and the Gaussian fluctuations are also consistent with those in Random Matrix Theory, as conjectured in the physics literature for a fixed surface.</summary>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-01-02T13:57:50Z</published>
+    <arxiv:primary_category term="math.SP"/>
+    <author>
+      <name>Zeév Rudnick</name>
+    </author>
+    <author>
+      <name>Igor Wigman</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2202.06379v5</id>
+    <title>GOE statistics on the moduli space of surfaces of large genus</title>
+    <updated>2023-09-06T08:21:40Z</updated>
+    <link href="https://arxiv.org/abs/2202.06379v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2202.06379v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For a compact hyperbolic surface, we define a smooth linear statistic, mimicking the number of Laplace eigenvalues in a short energy window. We study the variance of this statistic, when averaged over the moduli space $\mathcal M_g$ of all genus $g$ surfaces with respect to the Weil-Petersson measure. We show that in the double limit, first taking the large genus limit and then the high energy limit, we recover GOE statistics. The proof makes essential use of Mirzakhani's integration formula.</summary>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nlin.CD" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-02-13T18:19:46Z</published>
+    <arxiv:comment>Added details and corrections</arxiv:comment>
+    <arxiv:primary_category term="math.SP"/>
+    <author>
+      <name>Zeév Rudnick</name>
+    </author>
+  </entry>
+</feed>

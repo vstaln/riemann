@@ -1,0 +1,296 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/HLi5dRjuaMfa/drVcYey0zs+WBw</id>
+  <title>arXiv Query: search_query=all:"hyperbolic surface" AND all:zeta&amp;id_list=&amp;start=0&amp;max_results=15</title>
+  <updated>2026-08-11T15:43:58Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22hyperbolic+surface%22+AND+all:zeta&amp;start=0&amp;max_results=15&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>15</opensearch:itemsPerPage>
+  <opensearch:totalResults>29</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2105.13321v2</id>
+    <title>Twisted Ruelle zeta function at zero for compact hyperbolic surfaces</title>
+    <updated>2022-10-05T09:11:01Z</updated>
+    <link href="https://arxiv.org/abs/2105.13321v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2105.13321v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $X$ be a compact, hyperbolic surface of genus $g\geq 2$. In this paper, we prove that the twisted Selberg and Ruelle zeta functions, associated with an arbitrary, finite-dimensional, complex representation $χ$ of $π_1(X)$ admit a meromorphic continuation to $\mathbb{C}$. Moreover, we study the behaviour of the twisted Ruelle zeta function at $s=0$ and prove that at this point, it has a zero of order $\dim(χ)(2g-2)$.</summary>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-05-27T17:23:17Z</published>
+    <arxiv:comment>v2: The functional equation for the twisted Ruelle zeta function is made more explicit</arxiv:comment>
+    <arxiv:primary_category term="math.SP"/>
+    <arxiv:journal_ref>J. Number Theory 243 (2023), 38-61</arxiv:journal_ref>
+    <author>
+      <name>Jan Frahm</name>
+    </author>
+    <author>
+      <name>Polyxeni Spilioti</name>
+    </author>
+    <arxiv:doi>10.1016/j.jnt.2022.08.003</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.jnt.2022.08.003" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1110.2150v4</id>
+    <title>An Algorithm for the Computation of Eigenvalues, Spectral Zeta Functions and Zeta-Determinants on Hyperbolic Surfaces</title>
+    <updated>2017-11-17T15:33:58Z</updated>
+    <link href="https://arxiv.org/abs/1110.2150v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1110.2150v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a rigorous scheme that makes it possible to compute eigenvalues of the Laplace operator on hyperbolic surfaces within a given precision. The method is based on an adaptation of the method of particular solutions to the case of locally symmetric spaces and on explicit estimates for the approximation of eigenfunctions on hyperbolic surfaces by certain basis functions. It can be applied to check whether or not there is an eigenvalue in an ε-neighborhood of a given number λ&gt;0. This makes it possible to find all the eigenvalues in a specified interval, up to a given precision with rigorous error estimates. The method converges exponentially fast with the number of basis functions used. Combining the knowledge of the eigenvalues with the Selberg trace formula we are able to compute values and derivatives of the spectral zeta function again with error bounds. As an example we calculate the spectral determinant and the Casimir energy of the Bolza surface and other surfaces.</summary>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2011-10-10T19:10:40Z</published>
+    <arxiv:comment>48 pages, 8 figures, LaTeX, some more typos corrected, more Figures added, some explanations are more detailed now, Fenchel-Nielsen coordinates and numbers for the surface with symmetry group of order 10 corrected, datafiles are now available as ancillary files</arxiv:comment>
+    <arxiv:primary_category term="math.SP"/>
+    <arxiv:journal_ref>Communications in Mathematical Physics February 2013, Volume 317, Issue 3, pp 827-869</arxiv:journal_ref>
+    <author>
+      <name>Alexander Strohmaier</name>
+    </author>
+    <author>
+      <name>Ville Uski</name>
+    </author>
+    <arxiv:doi>10.1007/s00220-012-1557-1</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s00220-012-1557-1" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2308.13463v1</id>
+    <title>Invariant Ruelle Distributions on Convex-Cocompact Hyperbolic Surfaces -- A Numerical Algorithm via Weighted Zeta Functions</title>
+    <updated>2023-08-25T16:10:09Z</updated>
+    <link href="https://arxiv.org/abs/2308.13463v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2308.13463v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a numerical algorithm for the computation of invariant Ruelle distributions on convex co-compact hyperbolic surfaces. This is achieved by exploiting the connection between invariant Ruelle distributions and residues of meromorphically continued weighted zeta functions established by the authors together with Barkhofen (2021). To make this applicable for numerics we express the weighted zeta as the logarithmic derivative of a suitable parameter dependent Fredholm determinant similar to Borthwick (2014). As an additional difficulty our transfer operator has to include a contracting direction which we account for with techniques developed by Rugh (1992). We achieve a further improvement in convergence speed for our algorithm in the case of surfaces with additional symmetries by proving and applying a symmetry reduction of weighted zeta functions.</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-08-25T16:10:09Z</published>
+    <arxiv:comment>52 pages, 25 figures</arxiv:comment>
+    <arxiv:primary_category term="math.DS"/>
+    <author>
+      <name>Philipp Schütte</name>
+    </author>
+    <author>
+      <name>Tobias Weich</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1709.00295v1</id>
+    <title>Hyperbolic Surfaces with Arbitrarily Small Spectral Gap</title>
+    <updated>2017-09-01T13:20:12Z</updated>
+    <link href="https://arxiv.org/abs/1709.00295v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1709.00295v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $ X = Γ\setminus \mathbb{H} $ be a non-elementary geometrically finite hyperbolic surface and let $ δ$ denote the Hausdorff dimension of the limit set $ Λ(Γ) $. We prove that for every $ \varepsilon &gt; 0 $ the surface $ X $ admits a finite cover $ X' $ such that the Selberg zeta function associated to $ X' $ has a zero $ s\neq δ$ with $ | δ- s| &lt; \varepsilon $. For $ δ&gt; \frac{1}{2} $ we exploit the combinatorial interpretation of spectral gap in terms of expander graphs. For $ δ\leq \frac{1}{2} $ the proof is based on the thermodynamic formalism approach for L-functions associated to hyperbolic surfaces and an analogue of the Artin-Takagi formula for these L-functions.</summary>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-09-01T13:20:12Z</published>
+    <arxiv:primary_category term="math.SP"/>
+    <author>
+      <name>Louis Soares</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2101.05757v6</id>
+    <title>Uniform resonance free regions for convex cocompact hyperbolic surfaces and expanders</title>
+    <updated>2024-03-31T19:08:03Z</updated>
+    <link href="https://arxiv.org/abs/2101.05757v6" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2101.05757v6" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove that every family of coverings of any infinite-area, convex cocompact hyperbolic surface has uniform spectral gap, provided that the associated Schreier graphs form a family of two-sided expanders. This extends the results of Brooks, Burger, and Bourgain-Gamburd-Sarnak to a setting where the Laplacian has no $L^2$-eigenvalues. In particular, the notion of spectral gap needs to be redefined in terms of the resonances of the Laplacian. As an immediate corollary, we obtain uniform spectral gap for congruence covers of convex cocompact surfaces, a result previously established by Oh-Winter and Bourgain-Kontorovich-Magee. Moreover, given any convex cocompact hyperbolic surface $X$, we provide a new "universal" resonance-free region for $X$, by which we mean a region in the complex plane that contains no resonances for any finite cover of $X$. This enlarges the universal resonance-free region given by Magee-Naud. Our methods rely on the thermodynamic formalism for twisted Selberg zeta functions.</summary>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-01-14T17:56:57Z</published>
+    <arxiv:comment>44 pages, 2 figures; removed first part of Theorem 1.1 due to gap in the proof; several text edits</arxiv:comment>
+    <arxiv:primary_category term="math.SP"/>
+    <author>
+      <name>Louis Soares</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1305.4850v2</id>
+    <title>Distribution of resonances for hyperbolic surfaces</title>
+    <updated>2013-10-16T18:18:00Z</updated>
+    <link href="https://arxiv.org/abs/1305.4850v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1305.4850v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the distribution of resonances for geometrically finite hyperbolic surfaces of infinite area by countting resonances numerically. The resonances are computed as zeros of the Selberg zeta function, using an algorithm for computation of the zeta function for Schottky groups. Our particular focus is on three aspects of the resonance distribution that have attracted attention recently: the fractal Weyl law, the spectral gap, and the concentration of decay rates.</summary>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-05-21T15:12:58Z</published>
+    <arxiv:comment>28 pages, 29 figures; revised with minor corrections and one additional figure</arxiv:comment>
+    <arxiv:primary_category term="math.SP"/>
+    <author>
+      <name>David Borthwick</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1002.2930v1</id>
+    <title>The trace formula for singular perturbations of the Laplacian on hyperbolic surfaces</title>
+    <updated>2010-02-15T18:23:55Z</updated>
+    <link href="https://arxiv.org/abs/1002.2930v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1002.2930v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We prove an analogue of Selberg's trace formula for a delta potential on a hyperbolic surface of finite volume. For simplicity we restrict ourselves to surfaces with at most one cusp, but our methods can easily be extended to any number of cusps. In the case of a noncompact surface we derive perturbative analogues of Maass cusp forms, residual Maass forms and nonholomorphic Eisenstein series. The latter satisfy a functional equation as in the classical case. We also introduce a perturbative analogue of Selberg's zeta function and apply the trace formula to prove its meromorphic continuation to the complex plane as well as a functional equation.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2010-02-15T18:23:55Z</published>
+    <arxiv:comment>42 pages, 0 figures</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>Henrik Ueberschaer</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2003.00758v1</id>
+    <title>Benjamini-Schramm convergence and zeta functions</title>
+    <updated>2020-03-02T10:58:01Z</updated>
+    <link href="https://arxiv.org/abs/2003.00758v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2003.00758v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this note we show the equivalence of Benjamini-Schramm convergence and convergence of the zeta functions for compact hyperbolic surfaces.</summary>
+    <category term="math.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-03-02T10:58:01Z</published>
+    <arxiv:primary_category term="math.GT"/>
+    <author>
+      <name>Anton Deitmar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1704.02909v2</id>
+    <title>Fourier dimension and spectral gaps for hyperbolic surfaces</title>
+    <updated>2017-05-17T14:33:48Z</updated>
+    <link href="https://arxiv.org/abs/1704.02909v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1704.02909v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We obtain an essential spectral gap for a convex co-compact hyperbolic surface $M=Γ\backslash\mathbb H^2$ which depends only on the dimension $δ$ of the limit set. More precisely, we show that when $δ&gt;0$ there exists $\varepsilon_0=\varepsilon_0(δ)&gt;0$ such that the Selberg zeta function has only finitely many zeroes $s$ with $\Re s&gt;δ-\varepsilon_0$.
+  The proof uses the fractal uncertainty principle approach developed by Dyatlov-Zahl [arXiv:1504.06589]. The key new component is a Fourier decay bound for the Patterson-Sullivan measure, which may be of independent interest. This bound uses the fact that transformations in the group $Γ$ are nonlinear, together with estimates on exponential sums due to Bourgain which follow from the discretized sum-product theorem in $\mathbb R$.</summary>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-04-10T15:35:10Z</published>
+    <arxiv:comment>28 pages, 4 figures. Added Figure 1 on page 2 and made other minor changes. To appear in GAFA</arxiv:comment>
+    <arxiv:primary_category term="math.CA"/>
+    <author>
+      <name>Jean Bourgain</name>
+    </author>
+    <author>
+      <name>Semyon Dyatlov</name>
+    </author>
+    <arxiv:doi>10.1007/s00039-017-0412-0</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s00039-017-0412-0" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2212.11793v5</id>
+    <title>The Selberg trace formula for spin Dirac operators on degenerating hyperbolic surfaces</title>
+    <updated>2025-01-27T18:01:38Z</updated>
+    <link href="https://arxiv.org/abs/2212.11793v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2212.11793v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We investigate the spectrum of the spin Dirac operator on families of hyperbolic surfaces where a set of disjoint simple geodesics shrink to $0$, under the hypothesis that the spin structure is non-trivial along each pinched geodesic. The main tool is a trace formula for the Dirac operator on finite area hyperbolic surfaces. We derive a version of Huber's theorem and a non-standard small-time heat trace asymptotic expansion for hyperbolic surfaces with cusps. As a corollary we find a simultaneous Weyl law for the eigenvalues of the Dirac operator which is uniform in the degenerating parameter. The main result is the convergence of the Selberg zeta function associated to the Dirac operator on such families of hyperbolic surfaces. A central role is played by a $\{ \pm 1 \}$-valued class function $\varepsilon$ determined by the spin structure.</summary>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-12-22T15:25:18Z</published>
+    <arxiv:comment>37 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="math.DG"/>
+    <arxiv:journal_ref>Documenta Mathematica 30 (2025), no. 1, pp. 1-39</arxiv:journal_ref>
+    <author>
+      <name>Rares Stan</name>
+    </author>
+    <arxiv:doi>10.4171/DM/986</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.4171/DM/986" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1706.10045v2</id>
+    <title>Selberg zeta function and hyperbolic eisenstein series</title>
+    <updated>2019-12-09T09:56:02Z</updated>
+    <link href="https://arxiv.org/abs/1706.10045v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1706.10045v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the product of  Selberg Zeta function and hyperbolic Eisenstein  series on a family of  degenerating hyperbolic surfaces.</summary>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-06-30T07:36:23Z</published>
+    <arxiv:primary_category term="math.SP"/>
+    <author>
+      <name>Thérèse Falliero</name>
+      <arxiv:affiliation>LANLG</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2110.06683v2</id>
+    <title>The twisted Ruelle zeta function on compact hyperbolic orbisurfaces and Reidemeister-Turaev torsion</title>
+    <updated>2023-11-17T09:48:16Z</updated>
+    <link href="https://arxiv.org/abs/2110.06683v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2110.06683v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $X$ be a compact hyperbolic surface with finite order singularities, $X_1$ its unit tangent bundle. We consider the Ruelle zeta function $R(s;ρ)$ associated to a representation $ρ\colonπ_1(X_1)\to\operatorname{GL}(V_ρ)$. If $ρ$ does not factor through $π_1(X)$, we show that the value at $0$ of the Ruelle zeta function equals the sign-refined Reidemeister-Turaev torsion of $(X_1, ρ)$ with respect to the Euler structure induced by the geodesic flow and to the natural homology orientation of $X_1$. It generalizes Fried's conjecture to non-unitary representations, and solves the phase and sign ambiguity in the unitary case. We also compute the vanishing order and the leading coefficient of the Ruelle zeta function at $s=0$ when $ρ$ factors through $π_1(X)$.</summary>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.RT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-10-13T12:42:47Z</published>
+    <arxiv:comment>48 pages, final published version</arxiv:comment>
+    <arxiv:primary_category term="math.SP"/>
+    <arxiv:journal_ref>J. Ec. polytech. Math. 10 (2023), 1391-1439</arxiv:journal_ref>
+    <author>
+      <name>Léo Bénard</name>
+    </author>
+    <author>
+      <name>Jan Frahm</name>
+    </author>
+    <author>
+      <name>Polyxeni Spilioti</name>
+    </author>
+    <arxiv:doi>10.5802/jep.247</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.5802/jep.247" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1511.02291v7</id>
+    <title>An Invariant Between Hyperbolic Surfaces and Lattice Spin Models</title>
+    <updated>2023-08-25T23:30:28Z</updated>
+    <link href="https://arxiv.org/abs/1511.02291v7" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1511.02291v7" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this succinct note, it is showed that a partition function of equivalent classes of hyperbolic surfaces can be connected to an Ising model located on the boundary of the Poincare disc, as hinted by Poincare's Uniformization theorem and Patterson-Sullivan's Theorem.
+  Keywords: Hyperbolic spaces, Schottky groups, Ising models, locations of Lee-Yang Zeros, non-trivial zeros of Riemann zeta function, phase transition, and quantum chaos.</summary>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-11-07T03:18:35Z</published>
+    <arxiv:primary_category term="gr-qc"/>
+    <author>
+      <name>William Chuang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2204.08218v1</id>
+    <title>Zeros of the Selberg zeta function for symmetric infinite area hyperbolic surfaces</title>
+    <updated>2022-04-18T08:41:42Z</updated>
+    <link href="https://arxiv.org/abs/2204.08218v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2204.08218v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In the present paper we give a simple mathematical foundation for describing the zeros of the Selberg zeta functions $Z_X$ for certain very symmetric infinite area surfaces $X$. For definiteness, we consider the case of three funneled surfaces. We show that the zeta function is a complex almost periodic function which can be approximated by complex trigonometric polynomials on large domains (in Theorem 4.2). As our main application, we provide an explanation of the striking empirical results of Borthwick (arXiv:1305.4850) (in Theorem 1.5) in terms of convergence of the affinely scaled zero sets to standard curves $\mathcal C$.</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-04-18T08:41:42Z</published>
+    <arxiv:comment>36 pages, 11 Figures</arxiv:comment>
+    <arxiv:primary_category term="math.DS"/>
+    <arxiv:journal_ref>Geometriae Dedicata (2019) 201:155-186</arxiv:journal_ref>
+    <author>
+      <name>Mark Pollicott</name>
+    </author>
+    <author>
+      <name>Polina Vytnova</name>
+    </author>
+    <arxiv:doi>10.1007/s10711-018-0386-6</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s10711-018-0386-6" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.13086v1</id>
+    <title>Brownian Loops and the Selberg Zeta Function</title>
+    <updated>2026-01-19T14:26:27Z</updated>
+    <link href="https://arxiv.org/abs/2601.13086v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.13086v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the Brownian loop measure on hyperbolic surfaces for Brownian motion with a constant killing rate. We compute the mass of Brownian loops with killing in a free homotopy class and then relate the total mass of loops in all essential homotopy classes to the Selberg zeta function when the surface is geometrically finite. As an application, we provide a probabilistic interpretation of different notions of regularized determinants of Laplacian, in both the compact and infinite-area cases.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-19T14:26:27Z</published>
+    <arxiv:comment>19 pages, 1 figure</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Roman Lemonde</name>
+    </author>
+    <author>
+      <name>Jian Wang</name>
+    </author>
+  </entry>
+</feed>

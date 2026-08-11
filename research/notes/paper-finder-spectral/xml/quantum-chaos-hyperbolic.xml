@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/UJg9pS5FbbYWKTUJSPzgHuLzAdY</id>
+  <title>arXiv Query: search_query=all:"quantum chaos" AND all:"hyperbolic surface"&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-08-11T16:10:48Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22quantum+chaos%22+AND+all:%22hyperbolic+surface%22&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>8</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1511.02291v7</id>
+    <title>An Invariant Between Hyperbolic Surfaces and Lattice Spin Models</title>
+    <updated>2023-08-25T23:30:28Z</updated>
+    <link href="https://arxiv.org/abs/1511.02291v7" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1511.02291v7" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this succinct note, it is showed that a partition function of equivalent classes of hyperbolic surfaces can be connected to an Ising model located on the boundary of the Poincare disc, as hinted by Poincare's Uniformization theorem and Patterson-Sullivan's Theorem.
+  Keywords: Hyperbolic spaces, Schottky groups, Ising models, locations of Lee-Yang Zeros, non-trivial zeros of Riemann zeta function, phase transition, and quantum chaos.</summary>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-11-07T03:18:35Z</published>
+    <arxiv:primary_category term="gr-qc"/>
+    <author>
+      <name>William Chuang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/0601776v2</id>
+    <title>Patterson-Sullivan distributions and quantum ergodicity</title>
+    <updated>2006-02-10T17:03:44Z</updated>
+    <link href="https://arxiv.org/abs/math/0601776v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0601776v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We relate two types of phase space distributions associated to eigenfunctions $φ_{ir_j}$ of the Laplacian on a compact hyperbolic surface $X_Γ$:
+  (1) Wigner distributions $\int_{S^*\X} a dW_{ir_j}=&lt; Op(a)φ_{ir_j}, φ_{ir_j}&gt;_{L^2(\X)}$, which arise in quantum chaos. They are invariant under the wave group.
+  (2) Patterson-Sullivan distributions $PS_{ir_j}$, which are the residues of the dynamical zeta-functions $\lcal(s; a): = \sum_γ\frac{e^{-sL_γ}}{1-e^{-L_γ}} \int_{γ_0} a$ (where the sum runs over closed geodesics) at the poles $s = {1/2} + ir_j$. They are invariant under the geodesic flow.
+  We prove that these distributions (when suitably normalized) are asymptotically equal as $r_j \to \infty$. We also give exact relations between them. This correspondence gives a new relation between classical and quantum dynamics on a hyperbolic surface, and consequently a formulation of quantum ergodicity in terms of classical ergodic theory.</summary>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2006-01-31T20:02:11Z</published>
+    <arxiv:comment>54 pages, no figures. Added some references</arxiv:comment>
+    <arxiv:primary_category term="math.SP"/>
+    <arxiv:journal_ref>Ann. Henri Poincare 8 (2007), no. 2, 361--426.</arxiv:journal_ref>
+    <author>
+      <name>Nalini Anantharaman</name>
+    </author>
+    <author>
+      <name>Steve Zelditch</name>
+    </author>
+    <arxiv:doi>10.1007/s00023-006-0311-7</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s00023-006-0311-7" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2003.01388v3</id>
+    <title>Infinite ascension limit: horocyclic chaos</title>
+    <updated>2020-12-17T00:06:52Z</updated>
+    <link href="https://arxiv.org/abs/2003.01388v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2003.01388v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>What will be if, given a pure stationary state on a compact hyperbolic surface, we start applying raising operator every $\hbar$ "adiabatic" second? It turns that during adiabatic time comparable to 1 wavefunction will change as a wave traveling with a finite speed (with respect to the adiabatic time), whereas the semiclassical measure of the system will undergo a controllable transformation. If adiabatic time goes to infinity then, by quantized Furstenberg Theorem, the system will become quantum uniquely ergodic. Thus, infinite ascension of a closed system leads to quantum chaos.</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-03-03T08:29:59Z</published>
+    <arxiv:comment>39 pages, 1 figure</arxiv:comment>
+    <arxiv:primary_category term="math.DS"/>
+    <author>
+      <name>Mikhail Dubashinskiy</name>
+    </author>
+    <arxiv:doi>10.1016/j.geomphys.2020.104053</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.geomphys.2020.104053" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1303.2484v1</id>
+    <title>Logarithmic-scale Quasimodes that do not Equidistribute</title>
+    <updated>2013-03-11T11:08:41Z</updated>
+    <link href="https://arxiv.org/abs/1303.2484v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1303.2484v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Given any compact hyperbolic surface $M$, and a closed geodesic on $M$, we construct of a sequence of quasimodes on $M$ whose microlocal lifts concentrate positive mass on the geodesic. Thus, the Quantum Unique Ergodicity (QUE) property does not hold for these quasimodes. This is analogous to a construction of Faure-Nonnenmacher-De Bièvre in the context of quantized cat maps, and lends credence to the suggestion that large multiplicities play a role in the known failure of QUE for certain "toy models" of quantum chaos. We moreover conjecture a precise threshold for the order of quasimodes needed for QUE to hold--- the result of the present paper shows that this conjecture, if true, is sharp.</summary>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-03-11T11:08:41Z</published>
+    <arxiv:comment>25 pages</arxiv:comment>
+    <arxiv:primary_category term="math.SP"/>
+    <author>
+      <name>Shimon Brooks</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1903.02599v2</id>
+    <title>An introduction to fractal uncertainty principle</title>
+    <updated>2019-08-04T17:16:40Z</updated>
+    <link href="https://arxiv.org/abs/1903.02599v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1903.02599v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Fractal uncertainty principle states that no function can be localized in both position and frequency near a fractal set. This article provides a review of recent developments on the fractal uncertainty principle and of their applications to quantum chaos, including lower bounds on mass of eigenfunctions on negatively curved surfaces and spectral gaps on convex co-compact hyperbolic surfaces.</summary>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-03-06T20:09:57Z</published>
+    <arxiv:comment>45+eps pages, 16 figures. To appear in Journal of Mathematical Physics</arxiv:comment>
+    <arxiv:primary_category term="math.CA"/>
+    <author>
+      <name>Semyon Dyatlov</name>
+    </author>
+    <arxiv:doi>10.1063/1.5094903</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1063/1.5094903" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1006.3303v2</id>
+    <title>Triple Product L Functions and Quantum Chaos on SL(2,C)</title>
+    <updated>2010-08-13T17:20:12Z</updated>
+    <link href="https://arxiv.org/abs/1006.3303v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1006.3303v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We extend the results of Watson, which link quantum unique ergodicity on arithmetic hyperbolic surfaces with subconvexity for the triple product L function, to the case of arithmetic hyperbolic three manifolds. We work with the full unitary dual of SL(2,C), and consider QUE for automorphic forms of arbitrary fixed weight and growing spectral parameter. We obtain our results by constructing microlocal lifts of nonspherical automorphic forms using representation theory, and quantifying the generalised triple product formula of Ichino in the case of complex places.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2010-06-16T19:53:09Z</published>
+    <arxiv:comment>28 pages, submitted</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Simon Marshall</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.09779v2</id>
+    <title>Patterson-Sullivan distributions of finite regular graphs</title>
+    <updated>2026-03-26T17:28:34Z</updated>
+    <link href="https://arxiv.org/abs/2603.09779v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.09779v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>On finite regular graphs, we construct Patterson-Sullivan distributions associated with eigenfunctions of the discrete Laplace operator via their boundary values on the phase space. These distributions are closely related to Wigner distributions defined via a pseudo-differential calculus on graphs, which appear naturally in the study of quantum chaos. Using a pairing formula, we prove that Patterson-Sullivan distributions are also related to invariant Ruelle distributions arising from the transfer operator of the geodesic flow on the shift space. Both relationships provide discrete analogues of results for compact hyperbolic surfaces obtained by Anantharaman-Zelditch and by Guillarmou-Hilgert-Weich.</summary>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-10T15:15:21Z</published>
+    <arxiv:comment>38 pages, 3 figures; v2: added references</arxiv:comment>
+    <arxiv:primary_category term="math.SP"/>
+    <author>
+      <name>Christian Arends</name>
+    </author>
+    <author>
+      <name>Guendalina Palmirotta</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/0212100v2</id>
+    <title>Arithmetic and equidistribution of measures on the sphere</title>
+    <updated>2003-04-09T09:32:08Z</updated>
+    <link href="https://arxiv.org/abs/math/0212100v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0212100v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Motivated by problems of mathematical physics (quantum chaos) questions of equidistribution of eigenfunctions of the Laplace operator on a Riemannian manifold have been studied by several authors. We consider here, in analogy with arithmetic hyperbolic surfaces, orthonormal bases of eigenfunctions of the Laplace operator on the two dimensional unit sphere which are also eigenfunctions of an algebra of Hecke operators which act on these spherical harmonics. We formulate an analogue of the equidistribution of mass conjecture for these eigenfunctions as well as of the conjecture that their moments tend to moments of the Gaussian as the eigenvalue increases. For such orthonormal bases we show that these conjectures are related to the analytic properties of degree eight arithmetic L-functions associated to triples of eigenfunctions. Moreover we establish the conjecture for the third moments and give a conditional (on standard analytic conjectures about these arithmetic L-functions) proof of the equdistribution of mass conjecture.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2002-12-06T09:50:24Z</published>
+    <arxiv:comment>18 pages, an appendix gives corrections to the article "On the central critical value of the triple product L-function" (In: Number Theory 1993-94, 1-46. Cambridge University Press 1996) by Siegfried Boecherer and Rainer Schulze-Pillot. Revised version (minor revisions, new abstract), paper to appear in Communications in Mathematical Physics</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Siegfried Boecherer</name>
+      <arxiv:affiliation>Mannheim</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Peter Sarnak</name>
+      <arxiv:affiliation>Princeton</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Rainer Schulze-Pillot</name>
+      <arxiv:affiliation>Saarbruecken</arxiv:affiliation>
+    </author>
+    <arxiv:doi>10.1007/s00220-003-0922-5</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s00220-003-0922-5" title="doi"/>
+  </entry>
+</feed>

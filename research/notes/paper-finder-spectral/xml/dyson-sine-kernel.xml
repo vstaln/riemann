@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/1ynlH9EpfnnSZMBWXvahQ5IcISA</id>
+  <title>arXiv Query: search_query=all:"Dyson sine kernel"&amp;id_list=&amp;start=0&amp;max_results=15</title>
+  <updated>2026-08-11T15:44:23Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22Dyson+sine+kernel%22&amp;start=0&amp;max_results=15&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>15</opensearch:itemsPerPage>
+  <opensearch:totalResults>3</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/0905.2089v2</id>
+    <title>Universality of sine-kernel for Wigner matrices with a small Gaussian perturbation</title>
+    <updated>2010-04-01T20:13:26Z</updated>
+    <link href="https://arxiv.org/abs/0905.2089v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0905.2089v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We consider $N\times N$ Hermitian random matrices with independent identically distributed entries (Wigner matrices). We assume that the distribution of the entries have a Gaussian component with variance $N^{-3/4+β}$ for some positive $β&gt;0$. We prove that the local eigenvalue statistics follows the universal Dyson sine kernel.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2009-05-13T15:17:03Z</published>
+    <arxiv:comment>76 pages</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>Laszlo Erdos</name>
+    </author>
+    <author>
+      <name>Jose A. Ramirez</name>
+    </author>
+    <author>
+      <name>Benjamin Schlein</name>
+    </author>
+    <author>
+      <name>Horng-Tzer Yau</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0905.4176v2</id>
+    <title>Bulk Universality for Wigner Matrices</title>
+    <updated>2009-10-20T21:22:56Z</updated>
+    <link href="https://arxiv.org/abs/0905.4176v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0905.4176v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We consider $N\times N$ Hermitian Wigner random matrices $H$ where the probability density for each matrix element is given by the density $ν(x)= e^{- U(x)}$. We prove that the eigenvalue statistics in the bulk is given by Dyson sine kernel provided that $U \in C^6(\RR)$ with at most polynomially growing derivatives and $ν(x) \le C e^{- C |x|}$ for $x$ large. The proof is based upon an approximate time reversal of the Dyson Brownian motion combined with the convergence of the eigenvalue density to the Wigner semicircle law on short scales.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2009-05-26T11:45:41Z</published>
+    <arxiv:comment>23 pages, 1 figure. An error in the previous version has been corrected</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>Laszlo Erdos</name>
+    </author>
+    <author>
+      <name>Sandrine Peche</name>
+    </author>
+    <author>
+      <name>Jose A. Ramirez</name>
+    </author>
+    <author>
+      <name>Benjamin Schlein</name>
+    </author>
+    <author>
+      <name>Horng-Tzer Yau</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1507.00670v2</id>
+    <title>Linear rigidity of stationary stochastic processes</title>
+    <updated>2016-11-29T15:27:38Z</updated>
+    <link href="https://arxiv.org/abs/1507.00670v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1507.00670v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider stationary stochastic processes $X_n$, $n\in \mathbb{Z}$ such that $X_0$ lies in the closed linear span of $X_n$, $n\neq 0$; following Ghosh and Peres, we call such processes linearly rigid. Using a criterion of Kolmogorov, we show that it suffices, for a stationary stochastic process to be rigid, that the spectral density vanish at zero and belong to the Zygmund class $Λ_{*}(1)$. We next give sufficient condition for stationary determinantal point processes on $\mathbb{Z}$ and on $\mathbb{R}$ to be rigid. Finally, we show that the determinantal point process on $\mathbb{R}^2$ induced by a tensor square of Dyson sine-kernels is $\textit{not}$ linearly rigid.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-07-02T17:31:52Z</published>
+    <arxiv:comment>18 pp, to appear in Ergodic Theory and Dynamical Systems</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Alexander I. Bufetov</name>
+    </author>
+    <author>
+      <name>Yoann Dabrowski</name>
+    </author>
+    <author>
+      <name>Yanqi Qiu</name>
+    </author>
+  </entry>
+</feed>

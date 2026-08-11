@@ -1,0 +1,443 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/vE80qe4a29yxegiTzt/njDqAcpU</id>
+  <title>arXiv Query: search_query=au:Aurich AND au:Steiner&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-08-11T16:07:15Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=au:Aurich+AND+au:Steiner&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>18</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/astro-ph/0109288v2</id>
+    <title>Dark Energy in a Hyperbolic Universe</title>
+    <updated>2002-05-24T13:08:51Z</updated>
+    <link href="https://arxiv.org/abs/astro-ph/0109288v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/astro-ph/0109288v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Dark energy models due to a slowly evolving scalar (quintessence) field $φ$ are studied for various potentials $V(φ)$ in a universe with negative curvature. The potentials differ in whether they possess a minimum at $φ=0$ or are monotonically declining, i.e. have a minimum at infinity. The angular power spectrum $C_l$ of the cosmic microwave background (CMB) as well as the magnitude-redshift relation $m_B(z)$ of the type Ia supernovae are compared with the quintessence models. It is demonstrated that some of the models with $Ω_tot \simeq 0.85...0.9$ are in agreement with the observations, i.e. possess acoustic peaks in the angular power spectrum of the CMB anisotropy as observed experimentally, and yield a magnitude-redshift relation in agreement with the data. Furthermore, it is found that the power spectrum $P(k)$ of the large-scale structure (LSS) agrees with the observations too.</summary>
+    <category term="astro-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2001-09-18T14:41:42Z</published>
+    <arxiv:comment>10 pages</arxiv:comment>
+    <arxiv:primary_category term="astro-ph"/>
+    <arxiv:journal_ref>Mon.Not.Roy.Astron.Soc.334:735-742,2002</arxiv:journal_ref>
+    <author>
+      <name>R. Aurich</name>
+    </author>
+    <author>
+      <name>F. Steiner</name>
+    </author>
+    <arxiv:doi>10.1046/j.1365-8711.2002.05494.x</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1046/j.1365-8711.2002.05494.x" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0903.3133v2</id>
+    <title>Hot pixel contamination in the CMB correlation function?</title>
+    <updated>2009-12-17T10:42:51Z</updated>
+    <link href="https://arxiv.org/abs/0903.3133v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0903.3133v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Recently, it was suggested that the map-making procedure, which is applied to the time-ordered CMB data by the WMAP team, might be flawed by hot pixels. This could lead to a bias in the pixels having an angular distance of about 141 degrees from hot pixels due to the differential measuring process of the satellite WMAP. Here, the bias is confirmed, and the temperature two-point correlation function C(theta) is reevaluated by excluding the affected pixels. It is shown that the most significant effect occurs in C(theta) at the largest angles near theta = 180 degrees. Furthermore, the corrected correlation function C(theta) is applied to the cubic topology of the Universe, and it is found that such a multi-connected universe matches the temperature correlation better than the LCDM concordance model, provided the cubic length scale is close to L=4 measured in units of the Hubble length.</summary>
+    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2009-03-18T11:05:34Z</published>
+    <arxiv:primary_category term="astro-ph.CO"/>
+    <arxiv:journal_ref>Class.Quant.Grav.27:095009,2010</arxiv:journal_ref>
+    <author>
+      <name>R. Aurich</name>
+    </author>
+    <author>
+      <name>S. Lustig</name>
+    </author>
+    <author>
+      <name>F. Steiner</name>
+    </author>
+    <arxiv:doi>10.1088/0264-9381/27/9/095009</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/0264-9381/27/9/095009" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/astro-ph/0504656v1</id>
+    <title>CMB Anisotropy of Spherical Spaces</title>
+    <updated>2005-04-29T10:35:36Z</updated>
+    <link href="https://arxiv.org/abs/astro-ph/0504656v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/astro-ph/0504656v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  The first-year WMAP data taken at their face value hint that the Universe might be slightly positively curved and therefore necessarily finite, since all spherical (Clifford-Klein) space forms M^3 = S^3/Gamma, given by the quotient of S^3 by a group Gamma of covering transformations, possess this property. We examine the anisotropy of the cosmic microwave background (CMB) for all typical groups Gamma corresponding to homogeneous universes. The CMB angular power spectrum and the temperature correlation function are computed for the homogeneous spaces as a function of the total energy density parameter Omega_tot in the large range [1.01, 1.20] and are compared with the WMAP data. We find that out of the infinitely many homogeneous spaces only the three corresponding to the binary dihedral group T*, the binary octahedral group O*, and the binary icosahedral group I* are in agreement with the WMAP observations. Furthermore, if Omega_tot is restricted to the interval [1.00, 1.04], the space described by T* is excluded since it requires a value of Omega_tot which is probably too large being in the range [1.06, 1.07]. We thus conclude that there remain only the two homogeneous spherical spaces S^3/O* and S^3/I* with Omega_tot of about 1.038 and 1.018, respectively, as possible topologies for our Universe.</summary>
+    <category term="astro-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2005-04-29T10:35:36Z</published>
+    <arxiv:comment>A version with high resolution sky maps can be obtained at http://www.physik.uni-ulm.de/theo/qc/</arxiv:comment>
+    <arxiv:primary_category term="astro-ph"/>
+    <arxiv:journal_ref>Class.Quant.Grav. 22 (2005) 3443-3460</arxiv:journal_ref>
+    <author>
+      <name>R. Aurich</name>
+    </author>
+    <author>
+      <name>S. Lustig</name>
+    </author>
+    <author>
+      <name>F. Steiner</name>
+    </author>
+    <arxiv:doi>10.1088/0264-9381/22/17/006</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/0264-9381/22/17/006" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/astro-ph/0007264v2</id>
+    <title>The Cosmic Microwave Background for a Nearly Flat Compact Hyperbolic Universe</title>
+    <updated>2000-10-06T08:39:40Z</updated>
+    <link href="https://arxiv.org/abs/astro-ph/0007264v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/astro-ph/0007264v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  The fluctuations of the cosmic microwave background (CMB) are investigated for a hyperbolic universe with finite volume. Four-component models with radiation, matter, vacuum energy, and an extra spatially constant dark energy X-component are considered. The general solution of the Friedmann equation for the cosmic scale factor a(eta) is given for the four-component models in terms of the Weierstrass P-function. The lower part of the angular power spectra C_l of the CMB anisotropy is computed for nearly flat models with Omega_tot &lt;= 0.95. It is shown that the particular compact fundamental cell, which is considered in this paper, leads to a suppression in C_l for l&lt;10 and Omega_tot &lt;= 0.9.</summary>
+    <category term="astro-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2000-07-18T15:38:38Z</published>
+    <arxiv:comment>9 pages</arxiv:comment>
+    <arxiv:primary_category term="astro-ph"/>
+    <arxiv:journal_ref>Mon.Not.Roy.Astron.Soc. 323 (2001) 1016-1024</arxiv:journal_ref>
+    <author>
+      <name>R. Aurich</name>
+    </author>
+    <author>
+      <name>F. Steiner</name>
+    </author>
+    <arxiv:doi>10.1046/j.1365-8711.2001.04304.x</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1046/j.1365-8711.2001.04304.x" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/astro-ph/0212471v1</id>
+    <title>Quintessence with a constant equation of state in hyperbolic universes</title>
+    <updated>2002-12-20T10:42:01Z</updated>
+    <link href="https://arxiv.org/abs/astro-ph/0212471v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/astro-ph/0212471v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Quintessence models leading to a constant equation of state are studied in hyperbolic universes. General properties of the quintessence potentials V(phi) are discussed, and for some special cases also the exact analytic expressions for these potentials are derived. It is shown that the observed angular power spectrum of the cosmic microwave background (CMB) is in excellent agreement with some of the quintessence models even in cases with negative curvature. It is emphasized that due to a (w_phi, Omega_phi, Omega_c)-degeneracy a universe with negative spatial curvature cannot be excluded.</summary>
+    <category term="astro-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2002-12-20T10:42:01Z</published>
+    <arxiv:comment>15 pages, a version with figures in color can be obtained at http://www.physik.uni-ulm.de/theo/qc/ulm-tp/tp02-13.ps.gz</arxiv:comment>
+    <arxiv:primary_category term="astro-ph"/>
+    <arxiv:journal_ref>Phys.Rev. D67 (2003) 123511</arxiv:journal_ref>
+    <author>
+      <name>R. Aurich</name>
+    </author>
+    <author>
+      <name>F. Steiner</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevD.67.123511</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevD.67.123511" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/astro-ph/0510847v1</id>
+    <title>The circles-in-the-sky signature for three spherical universes</title>
+    <updated>2005-10-31T14:38:46Z</updated>
+    <link href="https://arxiv.org/abs/astro-ph/0510847v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/astro-ph/0510847v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  The mysteriously low CMB power on the largest scales might point to a Universe which consists of a multi-connected space. In addition to a suppression of large-scale power, a multi-connected space can be revealed by its circles-in-the-sky signature. In this paper, a detailed search for this signature is carried out for those three homogeneous multi-connected spherical space forms that lead to the smallest large-scale power. A simultaneous search for all occurring paired circles is made using filtered CMB sky maps which enhance the ordinary Sachs-Wolfe contribution. A marginal hint is found for the right-handed Poincare dodecahedron at Omega_tot = 1.015 and for the right-handed binary tetrahedral space at Omega_tot = 1.068. However, due to the complicated noise and foreground structure of the available microwave sky maps, we cannot draw firm conclusions from our findings.</summary>
+    <category term="astro-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2005-10-31T14:38:46Z</published>
+    <arxiv:primary_category term="astro-ph"/>
+    <arxiv:journal_ref>Mon.Not.Roy.Astron.Soc.369:240-248,2006</arxiv:journal_ref>
+    <author>
+      <name>R. Aurich</name>
+    </author>
+    <author>
+      <name>S. Lustig</name>
+    </author>
+    <author>
+      <name>F. Steiner</name>
+    </author>
+    <arxiv:doi>10.1111/j.1365-2966.2006.10296.x</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1111/j.1365-2966.2006.10296.x" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2403.09221v2</id>
+    <title>Betti Functionals as a Probe for Cosmic Topology</title>
+    <updated>2024-03-27T15:40:55Z</updated>
+    <link href="https://arxiv.org/abs/2403.09221v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2403.09221v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The question of the global topology of the Universe (cosmic topology) is still open. In the $Λ$CDM concordance model it is assumed that the space of the Universe possesses the trivial topology of $\mathbb{R}^3$ and thus that the Universe has an infinite volume. As an alternative, we study in this paper one of the simplest non-trivial topologies given by a cubic 3-torus describing a universe with a finite volume. To probe cosmic topology, we analyse certain structure properties in the cosmic microwave background (CMB) using Betti Functionals and the Euler Characteristic evaluated on excursions sets, which possess a simple geometrical interpretation. Since the CMB temperature fluctuations $δT$ are observed on the sphere $\mathbb{S}^2$ surrounding the observer, there are only three Betti functionals $β_k(ν)$, $k=1,2,3$. Here $ν=δT/σ_0$ denotes the temperature threshold normalized by the standard deviation $σ_0$ of $δT$. Analytic approximations of the Gaussian expectations for the Betti functionals and an exact formula for the Euler characteristic are given. It is shown that the amplitudes of $β_0(ν)$ and $β_1(ν)$ decrease with increasing volume $V=L^3$ of the cubic 3-torus universe. Since the computation of the $β_k$'s from observational sky maps is hindered due to the presence of masks, we suggest a method yielding lower and upper bounds for them and apply it to four Planck 2018 sky maps. It is found that the $β_k$'s of the Planck maps lie between those of the torus universes with side-lengths $L=2.0$ and $L=3.0$ in units of the Hubble length and above the infinite $Λ$CDM case. These results give a further hint that the Universe has a non-trivial topology.</summary>
+    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-03-14T09:38:57Z</published>
+    <arxiv:comment>9 pages</arxiv:comment>
+    <arxiv:primary_category term="astro-ph.CO"/>
+    <arxiv:journal_ref>Universe 2024, vol. 10, issue 5, p. 190</arxiv:journal_ref>
+    <author>
+      <name>Ralf Aurich</name>
+    </author>
+    <author>
+      <name>Frank Steiner</name>
+    </author>
+    <arxiv:doi>10.3390/universe10050190</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.3390/universe10050190" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/astro-ph/0302264v2</id>
+    <title>Quintessence and the Curvature of the Universe after WMAP</title>
+    <updated>2003-06-06T12:39:21Z</updated>
+    <link href="https://arxiv.org/abs/astro-ph/0302264v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/astro-ph/0302264v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We study quintessence models with a constant (effective) equation of state. It is investigated whether such quintessence models are consistent with a negative spatial curvature of the Universe with respect to the anisotropy of the cosmic microwave background radiation measured by the WMAP mission. If the reionization is negligibly small, it is found that such models with negative curvature are admissible due to a geometrical degeneracy. However, a very high optical depth tau to the surface of last scattering, as indicated by the polarization measurements of WMAP, would rule out such models.</summary>
+    <category term="astro-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2003-02-13T12:40:57Z</published>
+    <arxiv:comment>enlarged version which includes a discussion of reionization</arxiv:comment>
+    <arxiv:primary_category term="astro-ph"/>
+    <arxiv:journal_ref>Int.J.Mod.Phys. D13 (2004) 123-136</arxiv:journal_ref>
+    <author>
+      <name>R. Aurich</name>
+    </author>
+    <author>
+      <name>F. Steiner</name>
+    </author>
+    <arxiv:doi>10.1142/S0218271804003615</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1142/S0218271804003615" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/astro-ph/0412569v2</id>
+    <title>CMB Anisotropy of the Poincare Dodecahedron</title>
+    <updated>2005-02-25T12:33:54Z</updated>
+    <link href="https://arxiv.org/abs/astro-ph/0412569v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/astro-ph/0412569v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We analyse the anisotropy of the cosmic microwave background (CMB) for the Poincare dodecahedron which is an example for a multi-connected spherical universe. We compare the temperature correlation function and the angular power spectrum for the Poincare dodecahedral universe with the first-year WMAP data and find that this multi-connected universe can explain the surprisingly low CMB anisotropy on large scales found by WMAP provided that the total energy density parameter Omega_tot is in the range 1.016...1.020. The ensemble average over the primordial perturbations is assumed to be the scale-invariant Harrison-Zel'dovich spectrum. The circles-in-the-sky signature is studied and it is found that the signal of the six pairs of matched circles could be missed by current analyses of CMB sky maps.</summary>
+    <category term="astro-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2004-12-21T17:20:05Z</published>
+    <arxiv:primary_category term="astro-ph"/>
+    <arxiv:journal_ref>Class.Quant.Grav. 22 (2005) 2061-2083</arxiv:journal_ref>
+    <author>
+      <name>R. Aurich</name>
+    </author>
+    <author>
+      <name>S. Lustig</name>
+    </author>
+    <author>
+      <name>F. Steiner</name>
+    </author>
+    <arxiv:doi>10.1088/0264-9381/22/11/010</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/0264-9381/22/11/010" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/astro-ph/0403597v2</id>
+    <title>Hyperbolic Universes with a Horned Topology and the CMB Anisotropy</title>
+    <updated>2004-10-19T08:31:53Z</updated>
+    <link href="https://arxiv.org/abs/astro-ph/0403597v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/astro-ph/0403597v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We analyse the anisotropy of the cosmic microwave background (CMB) in hyperbolic universes possessing a non-trivial topology with a fundamental cell having an infinitely long horn. The aim of this paper is twofold. On the one hand, we show that the horned topology does not lead to a flat spot in the CMB sky maps in the direction of the horn as stated in the literature. On the other hand, we demonstrate that a horned topology having a finite volume could explain the suppression of the lower multipoles in the CMB anisotropy as observed by COBE and WMAP.</summary>
+    <category term="astro-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2004-03-25T15:25:27Z</published>
+    <arxiv:primary_category term="astro-ph"/>
+    <arxiv:journal_ref>Class.Quant.Grav. 21 (2004) 4901-4926</arxiv:journal_ref>
+    <author>
+      <name>Ralf Aurich</name>
+    </author>
+    <author>
+      <name>Sven Lustig</name>
+    </author>
+    <author>
+      <name>Frank Steiner</name>
+    </author>
+    <author>
+      <name>Holger Then</name>
+    </author>
+    <arxiv:doi>10.1088/0264-9381/21/21/010</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/0264-9381/21/21/010" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0708.1420v2</id>
+    <title>Do we Live in a "Small Universe"?</title>
+    <updated>2008-04-08T12:53:57Z</updated>
+    <link href="https://arxiv.org/abs/0708.1420v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0708.1420v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We compute the effects of a compact flat universe on the angular correlation function, the angular power spectrum, the circles-in-the-sky signature, and the covariance matrix of the spherical harmonics coefficients of the cosmic microwave background radiation using the full Boltzmann physics. Our analysis shows that the Wilkinson Microwave Anisotropy Probe (WMAP) three-year data are well compatible with the possibility that we live in a flat 3-torus with volume ~5x10^3 Gpc^3.</summary>
+    <category term="astro-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2007-08-10T13:03:31Z</published>
+    <arxiv:primary_category term="astro-ph"/>
+    <arxiv:journal_ref>Class.Quant.Grav.25:125006,2008</arxiv:journal_ref>
+    <author>
+      <name>Ralf Aurich</name>
+    </author>
+    <author>
+      <name>Holger S. Janzer</name>
+    </author>
+    <author>
+      <name>Sven Lustig</name>
+    </author>
+    <author>
+      <name>Frank Steiner</name>
+    </author>
+    <arxiv:doi>10.1088/0264-9381/25/12/125006</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/0264-9381/25/12/125006" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1007.2722v1</id>
+    <title>Ellipticity of Structures in CMB Sky Maps</title>
+    <updated>2010-07-16T09:07:59Z</updated>
+    <link href="https://arxiv.org/abs/1007.2722v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1007.2722v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the ellipticity of contour lines in the sky maps of the cosmic microwave background (CMB) as well as other measures of elongation. The sensitivity of the elongation on the resolution of the CMB maps which depends on the pixelization and the beam profile of the detector, is investigated. It is shown that the current experimental accuracy does not allow to discriminate between cosmological models which differ in curvature by Delta Omega_tot=0.05. Analytical expressions are given for the case that the statistical properties of the CMB are those of two-dimensional Gaussian random fields.</summary>
+    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2010-07-16T09:07:59Z</published>
+    <arxiv:primary_category term="astro-ph.CO"/>
+    <arxiv:journal_ref>Int. J. Mod. Phys. D20 (2011) 2253-2280</arxiv:journal_ref>
+    <author>
+      <name>Ralf Aurich</name>
+    </author>
+    <author>
+      <name>Holger S. Janzer</name>
+    </author>
+    <author>
+      <name>Sven Lustig</name>
+    </author>
+    <author>
+      <name>Frank Steiner</name>
+    </author>
+    <arxiv:doi>10.1142/S021827181101975X</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1142/S021827181101975X" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/astro-ph/0412407v1</id>
+    <title>Can one hear the shape of the Universe?</title>
+    <updated>2004-12-16T10:39:11Z</updated>
+    <link href="https://arxiv.org/abs/astro-ph/0412407v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/astro-ph/0412407v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  It is shown that the recent observations of NASA's explorer mission "Wilkinson Microwave Anisotropy Probe" (WMAP) hint that our Universe may possess a non-trivial topology. As an example we discuss the Picard space which is stretched out into an infinitely long horn but with finite volume.</summary>
+    <category term="astro-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2004-12-16T10:39:11Z</published>
+    <arxiv:comment>4 pages</arxiv:comment>
+    <arxiv:primary_category term="astro-ph"/>
+    <arxiv:journal_ref>Phys.Rev.Lett. 94 (2005) 021301</arxiv:journal_ref>
+    <author>
+      <name>R. Aurich</name>
+    </author>
+    <author>
+      <name>S. Lustig</name>
+    </author>
+    <author>
+      <name>F. Steiner</name>
+    </author>
+    <author>
+      <name>H. Then</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevLett.94.021301</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevLett.94.021301" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/astro-ph/0612308v1</id>
+    <title>CMB Alignment in Multi-Connected Universes</title>
+    <updated>2006-12-12T10:25:22Z</updated>
+    <link href="https://arxiv.org/abs/astro-ph/0612308v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/astro-ph/0612308v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  The low multipoles of the cosmic microwave background (CMB) anisotropy possess some strange properties like the alignment of the quadrupole and the octopole, and the extreme planarity or the extreme sphericity of some multipoles, respectively. In this paper the CMB anisotropy of several multi-connected space forms is investigated with respect to the maximal angular momentum dispersion and the Maxwellian multipole vectors in order to settle the question whether such spaces can explain the low multipole anomalies in the CMB.</summary>
+    <category term="astro-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2006-12-12T10:25:22Z</published>
+    <arxiv:primary_category term="astro-ph"/>
+    <arxiv:journal_ref>Class.Quant.Grav.24:1879-1894,2007</arxiv:journal_ref>
+    <author>
+      <name>R. Aurich</name>
+    </author>
+    <author>
+      <name>S. Lustig</name>
+    </author>
+    <author>
+      <name>F. Steiner</name>
+    </author>
+    <author>
+      <name>H. Then</name>
+    </author>
+    <arxiv:doi>10.1088/0264-9381/24/7/013</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/0264-9381/24/7/013" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2106.13205v2</id>
+    <title>The variance of the CMB temperature gradient: a new signature of a multiply connected Universe</title>
+    <updated>2021-11-01T11:29:31Z</updated>
+    <link href="https://arxiv.org/abs/2106.13205v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2106.13205v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this work we investigate the standard deviation of the Cosmic Microwave Background (CMB) temperature gradient field as a signature for a multiply connected nature of the Universe. CMB simulations of a spatially infinite universe model within the paradigm of the standard cosmological model present non-zero two-point correlations at any angular scale. This is in contradiction with the extreme suppression of correlations at scales above $60^{\circ}$ in the observed CMB maps. Universe models with spatially multiply connected topology contain typically a discrete spectrum of the Laplacian with a specific wave-length cut-off and thus lead to a suppression of the correlations at large angular scales, as observed in the CMB (in general there can be also an additional continuous spectrum). Among the simplest examples are 3-dimensional tori which possess only a discrete spectrum. To date, the universe models with non-trivial topology such as the toroidal space are the only models that possess a two-point correlation function showing a similar behaviour as the one derived from the observed Planck CMB maps. In this work it is shown that the normalized standard deviation of the CMB temperature gradient field does hierarchically detect the change in size of the cubic 3-torus, if the volume of the Universe is smaller than $\simeq 2.5 \cdot 10^3$ Gpc$^3$. It is also shown that the variance of the temperature gradient of the Planck maps is consistent with the median value of simulations within the standard cosmological model. All flat tori are globally homogeneous, but are globally anisotropic. However, this study also presents a test showing a level of homogeneity and isotropy of all the CMB map ensembles for the different torus sizes considered that are nearly at the same weak level of anisotropy revealed by the CMB in the standard cosmological model.</summary>
+    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-06-24T17:38:13Z</published>
+    <arxiv:comment>33 pages, 10 figures and 3 tables, matches published version in CQG</arxiv:comment>
+    <arxiv:primary_category term="astro-ph.CO"/>
+    <arxiv:journal_ref>Class. Quantum Grav. 38 (2021) 225005</arxiv:journal_ref>
+    <author>
+      <name>Ralf Aurich</name>
+    </author>
+    <author>
+      <name>Thomas Buchert</name>
+    </author>
+    <author>
+      <name>Martin J. France</name>
+    </author>
+    <author>
+      <name>Frank Steiner</name>
+    </author>
+    <arxiv:doi>10.1088/1361-6382/ac27f0</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/1361-6382/ac27f0" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/chao-dyn/9411023v1</id>
+    <title>On the Role of Non-Periodic Orbits in The Semiclassical Quantization of the Truncated Hyperbola Billiard</title>
+    <updated>1994-11-29T15:09:51Z</updated>
+    <link href="https://arxiv.org/abs/chao-dyn/9411023v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/chao-dyn/9411023v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Based on an accurate computation of the first 1851 quantal energy levels of the truncated hyperbola billiard, we have found an anomalous long-range modulation in the integrated level density. It is shown that the observed anomaly can be explained by an additional term in Gutzwiller's trace formula. This term is given as a sum over families of closed, non-periodic orbits which are reflected in a point of the billiard boundary where the boundary is continuously differentiable, but its curvature radius changes discontinuously.</summary>
+    <category term="nlin.CD" scheme="http://arxiv.org/schemas/atom"/>
+    <published>1994-11-29T15:09:51Z</published>
+    <arxiv:comment>8 pages, uu-encoded ps-file</arxiv:comment>
+    <arxiv:primary_category term="nlin.CD"/>
+    <author>
+      <name>R. Aurich</name>
+      <arxiv:affiliation>II. Institut fuer Theoretische Physik, Universitaet Hamburg</arxiv:affiliation>
+    </author>
+    <author>
+      <name>T. Hesse</name>
+      <arxiv:affiliation>II. Institut fuer Theoretische Physik, Universitaet Hamburg</arxiv:affiliation>
+    </author>
+    <author>
+      <name>F. Steiner</name>
+      <arxiv:affiliation>II. Institut fuer Theoretische Physik, Universitaet Hamburg</arxiv:affiliation>
+    </author>
+    <arxiv:doi>10.1103/PhysRevLett.74.4408</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevLett.74.4408" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/chao-dyn/9608016v1</id>
+    <title>Mode fluctuations as fingerprint of chaotic and non-chaotic systems</title>
+    <updated>1996-08-26T16:43:29Z</updated>
+    <link href="https://arxiv.org/abs/chao-dyn/9608016v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/chao-dyn/9608016v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  The mode-fluctuation distribution $P(W)$ is studied for chaotic as well as for non-chaotic quantum billiards. This statistic is discussed in the broader framework of the $E(k,L)$ functions being the probability of finding $k$ energy levels in a randomly chosen interval of length $L$, and the distribution of $n(L)$, where $n(L)$ is the number of levels in such an interval, and their cumulants $c_k(L)$. It is demonstrated that the cumulants provide a possible measure for the distinction between chaotic and non-chaotic systems. The vanishing of the normalized cumulants $C_k$, $k\geq 3$, implies a Gaussian behaviour of $P(W)$, which is realized in the case of chaotic systems, whereas non-chaotic systems display non-vanishing values for these cumulants leading to a non-Gaussian behaviour of $P(W)$. For some integrable systems there exist rigorous proofs of the non-Gaussian behaviour which are also discussed. Our numerical results and the rigorous results for integrable systems suggest that a clear fingerprint of chaotic systems is provided by a Gaussian distribution of the mode-fluctuation distribution $P(W)$.</summary>
+    <category term="nlin.CD" scheme="http://arxiv.org/schemas/atom"/>
+    <published>1996-08-26T16:43:29Z</published>
+    <arxiv:comment>44 pages, Postscript. The figures are included in low resolution only. A full version is available at http://www.physik.uni-ulm.de/theo/qc/baecker.html</arxiv:comment>
+    <arxiv:primary_category term="nlin.CD"/>
+    <arxiv:journal_ref>Int. J. Mod. Phys. B 11 (1997) 805-849</arxiv:journal_ref>
+    <author>
+      <name>R. Aurich</name>
+    </author>
+    <author>
+      <name>A. Bäcker</name>
+    </author>
+    <author>
+      <name>F. Steiner</name>
+    </author>
+    <arxiv:doi>10.1142/S0217979297000459</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1142/S0217979297000459" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/gr-qc/0404020v1</id>
+    <title>Numerical computation of Maass waveforms and an application to cosmology</title>
+    <updated>2004-04-06T11:53:00Z</updated>
+    <link href="https://arxiv.org/abs/gr-qc/0404020v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/gr-qc/0404020v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We compute numerically eigenvalues and eigenfunctions of the Laplacian in a three-dimensional hyperbolic space. Applying the results to cosmology, we demonstrate that the methods learned in quantum chaos can be used in other fields of research.</summary>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nlin.CD" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2004-04-06T11:53:00Z</published>
+    <arxiv:comment>A version of the paper with high resolution figures is available at http://www.physik.uni-ulm.de/theo/qc/publications.html</arxiv:comment>
+    <arxiv:primary_category term="gr-qc"/>
+    <arxiv:journal_ref>Hyperbolic Geometry and Applications in Quantum Chaos and Cosmology; LMS 397, Cambridge University Press, 2011, pp. 229--269</arxiv:journal_ref>
+    <author>
+      <name>R. Aurich</name>
+    </author>
+    <author>
+      <name>F. Steiner</name>
+    </author>
+    <author>
+      <name>H. Then</name>
+    </author>
+    <arxiv:doi>10.1017/CBO9781139108782.008</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1017/CBO9781139108782.008" title="doi"/>
+  </entry>
+</feed>

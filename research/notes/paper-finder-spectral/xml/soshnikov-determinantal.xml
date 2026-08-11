@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/IPVjpYmF5AAZG4pvISKjDRCMx98</id>
+  <title>arXiv Query: search_query=au:Soshnikov AND all:determinantal&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-08-11T16:07:46Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=au:Soshnikov+AND+all:determinantal&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>7</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/math-ph/0212063v4</id>
+    <title>Janossy Densities I. Determinantal Ensembles</title>
+    <updated>2003-09-05T23:12:08Z</updated>
+    <link href="https://arxiv.org/abs/math-ph/0212063v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math-ph/0212063v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We derive an elementary formula for Janossy densities for determinantal point processes with a finite rank projection-type kernel. In particular, for beta=2 polynomial ensembles of random matrices we show that the Janossy densities on an interval I can be expressed in terms of the Christoffel-Darboux kernel for the orthogonal polynomials on the complement of I.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2002-12-20T22:08:39Z</published>
+    <arxiv:comment>This is the first of two papers on Janossy densities in determinantal and pfaffian ensembles. A few misprints are corrected. The paper will appear in J.Stat.Phys, vol. 113, No. 3/4, pp. 595-610 (2003)</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>Alexei Borodin</name>
+    </author>
+    <author>
+      <name>Alexander Soshnikov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/0002099v4</id>
+    <title>Determinantal random point fields</title>
+    <updated>2000-11-28T21:37:48Z</updated>
+    <link href="https://arxiv.org/abs/math/0002099v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0002099v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  The paper contains an exposition of recent as well as old enough results on determinantal random point fields. We start with some general theorems including the proofs of the necessary and sufficient condition for the existence of the determinantal random point field with Hermitian kernel and a criterion for the weak convergence of its distribution. In the second section we proceed with the examples of the determinantal random point fields from Quantum Mechanics, Statistical Mechanics, Random Matrix Theory, Probability Theory, Representation Theory and Ergodic Theory. In connection with the Theory of Renewal Processes we characterize all determinantal random point fields in R^1 and Z^1 with independent identically distributed spacings. In the third section we study the translation invariant determinantal random point fields and prove the mixing property of any multiplicity and the absolute continuity of the spectra. In the fourth (and the last) section we discuss the proofs of the Central Limit Theorem for the number of particles in the growing box and the Functional Central Limit Theorem for the empirical distribution function of spacings.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2000-02-14T22:30:56Z</published>
+    <arxiv:comment>To appear in the Russian Mathematical Surveys; small misprints are corrected</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Alexander Soshnikov</name>
+    </author>
+    <arxiv:doi>10.1070/RM2000v055n05ABEH000321</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1070/RM2000v055n05ABEH000321" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/0006037v3</id>
+    <title>Gaussian limit for determinantal random point fields</title>
+    <updated>2001-05-21T17:39:18Z</updated>
+    <link href="https://arxiv.org/abs/math/0006037v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0006037v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We prove that under fairly general conditions properly rescaled determinantal random point field converges to a generalized Gaussian random process.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2000-06-05T15:44:08Z</published>
+    <arxiv:comment>This is the revised version accepted for publication in the Annals of Probability. The results of Theorems 1 and 2 are extended, minor misprints are corrected</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Alexander Soshnikov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/0506286v2</id>
+    <title>Statistics of Extreme Spacings in Determinantal Random Point Processes</title>
+    <updated>2006-03-31T19:43:39Z</updated>
+    <link href="https://arxiv.org/abs/math/0506286v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0506286v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We study translation-invariant determinantal random point fields on the real line. We prove, under quite general conditions, that the smallest nearest spacings between the particles in a large interval have Poisson statistics as the length of the interval goes to infinity.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2005-06-14T22:31:05Z</published>
+    <arxiv:comment>16 pages</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Alexander Soshnikov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math-ph/9907012v2</id>
+    <title>Gaussian fluctuation for the number of particles in Airy, Bessel, sine and other determinantal random point fields</title>
+    <updated>1999-12-14T22:17:52Z</updated>
+    <link href="https://arxiv.org/abs/math-ph/9907012v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math-ph/9907012v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We prove the Central Limit Theorem for the number of eigenvalues near the spectrum edge for hermitian ensembles of random matrices. To derive our results, we use a general theorem, essentially due to Costin and Lebowitz, concerning the Gaussian fluctuation of the number of particles in random point fields with determinantal correlation functions. As another corollary of Costin-Lebowitz Theorem we prove CLT for the empirical distribution function of the eigenvalues of random matrices from classical compact groups.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>1999-07-15T22:26:38Z</published>
+    <arxiv:comment>The essential alterations are a slightly different formulation of the Costin-Lebowitz Theorem and the addition of Remark 4 in the section 2</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>Alexander B. Soshnikov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math-ph/0301003v5</id>
+    <title>Janossy Densities II. Pfaffian Ensembles</title>
+    <updated>2003-09-05T23:15:14Z</updated>
+    <link href="https://arxiv.org/abs/math-ph/0301003v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math-ph/0301003v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We extend the main result of the companion paper math-ph/0212063 "Janossy Densities I. Determinantal Ensembles" (joint with Alexei Borodin) to the case of the pfaffian ensembles.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2003-01-03T22:58:45Z</published>
+    <arxiv:comment>Misprints are corrected. The paper is to appear in J.Stat.Phys, vo. 113, No. 3/4, pp.611-622, (2003)</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>Alexander Soshnikov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math-ph/0309019v4</id>
+    <title>Janossy Densities of Coupled Random Matrices</title>
+    <updated>2004-03-26T21:38:42Z</updated>
+    <link href="https://arxiv.org/abs/math-ph/0309019v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math-ph/0309019v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We explicitly calculate Janossy densities for a special class of finite determinantal point processes with several types of particles introduced by Prähofer and Spohn and, in the full generality, by Johansson in connection with the analysis of polynuclear growth models. The results of our paper generalize the theorem we proved earlier with Borodin about the Janossy densities in biorthogonal ensembles. In particular, our results can be applied to coupled random matrices.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2003-09-05T23:03:36Z</published>
+    <arxiv:comment>We revised the introduction and added a couple of new references</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>Alexander Soshnikov</name>
+    </author>
+    <arxiv:doi>10.1007/s00220-004-1177-5</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s00220-004-1177-5" title="doi"/>
+  </entry>
+</feed>

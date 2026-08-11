@@ -106,8 +106,8 @@ untouched). Command: `uv run --with numpy python tools/control_mu_sweep.py`. Ful
 
 **T1 — sharp crystal (Lemma 3.2 equality case).** A = diag(1^r, 2^b): `L = ‖A‖²_F` exact at
 (r,b) = (2,1),(67,16),(6725,1638) (‖A‖² = 6, 131, 13277; L = 6, 131, 13277). Gains over L:
-CS (trQ₊−2b)²/b = 0 always; Perron `4−4b` = 0, −60, −6548; Glover-top `−4b` = −1, −16, −1638. No
-candidate exceeds L at the sharp crystal.
+CS (trQ₊−2b)²/b = 0 always; Perron `4−4b` = 0, −60, −6548; Glover-top `−b` (r ≥ b) = −1, −16, −1638.
+No candidate exceeds L at the sharp crystal.
 
 **T2 — real on-line W_T (P-side, Q = 0).** T=200/400/600, N=123/289/472:
 `(2tr−‖·‖²)/N = 0.716530 / 0.711225 / 0.709068` (reproduces the QI sweep TEST A; no asymptotic-decay
@@ -163,8 +163,8 @@ D = (tr, ‖·‖²_F, rank, n₊)? NO.**
 2. **Per-candidate verdicts (all negative, each for a different reason):**
    - **Glover 2Σσ**: no transfer function / no Hankel singular values exist for the certificate (data
      outside D); even granted the full spectrum, its natural top-r-energy bound misses the Q-charge and
-     is strictly below L at the sharp crystal by exactly 4b (T1); on mixed configs it degenerates to the
-     true ‖A‖²_F the certificate already has (T4).
+     is strictly below L at the sharp crystal (gains −1, −16, −1638 = −b for r ≥ b, T1); on mixed
+     configs it degenerates to the true ‖A‖²_F the certificate already has (T4).
    - **Perron**: entrywise/max-row-sum form reads zero-side data (outside D); the D-only
      λ_max ≥ trQ₊/b form is strictly weaker than both CS and Lemma 3.2's flat charge at the sharp
      crystal for b ≥ 2 (T1: −60, −6548; T4: −8.07).

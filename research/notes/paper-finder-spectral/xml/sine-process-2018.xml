@@ -1,0 +1,287 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/EABUWgTHqwDCSJ8EGrzBy1JwgC0</id>
+  <title>arXiv Query: search_query=all:"sine process" AND submittedDate:"201801010000 TO 202612312359"&amp;id_list=&amp;start=0&amp;max_results=25</title>
+  <updated>2026-08-11T15:44:10Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22sine+process%22+AND+submittedDate:%22201801010000+TO+202612312359%22&amp;start=0&amp;max_results=25&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>25</opensearch:itemsPerPage>
+  <opensearch:totalResults>13</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2412.20910v1</id>
+    <title>The Speed of Convergence with respect to the Kolmogorov-Smirnov Metric in the Soshnikov Central Limit Theorem for the Sine-Process</title>
+    <updated>2024-12-30T12:43:49Z</updated>
+    <link href="https://arxiv.org/abs/2412.20910v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2412.20910v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For rescaled additive functionals of the sine-process, upper bounds are obtained for their speed of convergence to the Gaussian distribution with respect to the Kolmogorov-Smirnov metric. Under scaling with coefficient $R$ the Kolmogorov-Smirnov distance is bounded from above by $c/\log R$ for a smooth function and by $c/R$ for a function holomorphic in a horizontal strip.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.FA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-30T12:43:49Z</published>
+    <arxiv:comment>4 pages</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Alexander I. Bufetov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2412.20902v1</id>
+    <title>The Expectation of a Multiplicative Functional under the Sine-Process</title>
+    <updated>2024-12-30T12:27:57Z</updated>
+    <link href="https://arxiv.org/abs/2412.20902v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2412.20902v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>An explicit expression for the expected value of a regularized multiplicative functional under the sine-process is obtained by passing to the scaling limit in the Borodin-Okounkov-Geronimo-Case formula.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.FA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-30T12:27:57Z</published>
+    <arxiv:comment>10 pages</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <arxiv:journal_ref>Funkcionalnyj Analiz i ego Prilozhenija/Functional Analysis and its Applications, 2024, 2(58), 23 -33</arxiv:journal_ref>
+    <author>
+      <name>Alexander I. Bufetov</name>
+    </author>
+    <arxiv:doi>10.4213/faa4203</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.4213/faa4203" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2308.04318v1</id>
+    <title>Local Statistics and Concentration for Non-intersecting Brownian Bridges With Smooth Boundary Data</title>
+    <updated>2023-08-08T15:10:03Z</updated>
+    <link href="https://arxiv.org/abs/2308.04318v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2308.04318v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper we consider non-intersecting Brownian bridges, under fairly general upper and lower boundaries, and starting and ending data. Under the assumption that these boundary data induce a smooth limit shape (without empty facets), we establish two results. The first is a nearly optimal concentration bound for the Brownian bridges in this model. The second is that the bulk local statistics of these bridges along any fixed time converge to the sine process.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-08-08T15:10:03Z</published>
+    <arxiv:comment>110 pages, 14 figures</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Amol Aggarwal</name>
+    </author>
+    <author>
+      <name>Jiaoyang Huang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2301.13107v1</id>
+    <title>One-dimensional Discrete Dirac Operators in a Decaying Random Potential II: Clock, Schrödinger and Sine statistics</title>
+    <updated>2023-01-30T17:44:58Z</updated>
+    <link href="https://arxiv.org/abs/2301.13107v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2301.13107v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider one-dimensional discrete Dirac models in vanishing random environments. In a previous work [6], we showed that these models exhibit a rich phase diagram in terms of their spectrum as a function of the rate of decay of the random potential.
+  This article is devoted to their spectral statistics. We show that the rescaled spectrum converges to the clock process for fast decay and to the Schrödinger/Sine processes from random matrix theory for critical decay. This way, we recover all the regimes previously identified for the Anderson model in a similar context [25]. Poisson statistics, which should appear in the model with slow decay, are left as an open problem.
+  The core of the proof consists in a suitable scaling limit for the Prüfer phase and monotonicity arguments, yielding an alternative to the approach of [25]. For one of the models, we also obtain the scaling limit of the Prüfer radii and discuss the consequences for the limiting shape of the eigenfunctions.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-01-30T17:44:58Z</published>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>Gregorio R. Moreno Flores</name>
+    </author>
+    <author>
+      <name>Amal Taarabt</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2209.07253v2</id>
+    <title>Weak and strong confinement in the Freud random matrix ensemble and gap probabilities</title>
+    <updated>2022-09-22T13:59:49Z</updated>
+    <link href="https://arxiv.org/abs/2209.07253v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2209.07253v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Freud ensemble of random matrices is the unitary invariant ensemble corresponding to the weight $\exp(-n |x|^β)$, $β&gt;0$, on the real line. We consider the local behaviour of eigenvalues near zero, which exhibits a transition in $β$. If $β\ge 1$, it is described by the standard sine process. Below the critical value $β=1$, it is described by a process depending on the value of $β$, and we determine the first two terms of the large gap probability in it. This so called weak confinement range $0&lt;β&lt;1$ corresponds to the Freud weight with the indeterminate moment problem. We also find the multiplicative constant in the asymptotic expansion of the Freud multiple integral for $β\ge 1$.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-09-15T12:40:12Z</published>
+    <arxiv:comment>56 pages</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>Tom Claeys</name>
+    </author>
+    <author>
+      <name>Igor Krasovsky</name>
+    </author>
+    <author>
+      <name>Oleksandr Minakov</name>
+    </author>
+    <arxiv:doi>10.1007/s00220-023-04749-y</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s00220-023-04749-y" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2109.06718v2</id>
+    <title>Free Fermion Six Vertex Model: Symmetric Functions and Random Domino Tilings</title>
+    <updated>2023-01-27T11:58:03Z</updated>
+    <link href="https://arxiv.org/abs/2109.06718v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2109.06718v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Our work deals with symmetric rational functions and probabilistic models based on the fully inhomogeneous six vertex (ice type) model satisfying the free fermion condition. Two families of symmetric rational functions $F_λ,G_λ$ are defined as certain partition functions of the six vertex model, with variables corresponding to row rapidities, and the labeling signatures $λ=(λ_1\ge \ldots\ge λ_N)\in \mathbb{Z}^N$ encoding boundary conditions. These symmetric functions generalize Schur symmetric polynomials, as well as some of their variations, such as factorial and supersymmetric Schur polynomials. Cauchy type summation identities for $F_λ,G_λ$ and their skew counterparts follow from the Yang-Baxter equation. Using algebraic Bethe Ansatz, we obtain a double alternant type formula for $F_λ$ and a Sergeev-Pragacz type formula for $G_λ$.
+  In the spirit of the theory of Schur processes, we define probability measures on sequences of signatures with probability weights proportional to products of our symmetric functions. We show that these measures can be viewed as determinantal point processes, and we express their correlation kernels in a double contour integral form. We present two proofs: The first is a direct computation of Eynard-Mehta type, and the second uses non-standard, inhomogeneous versions of fermionic operators in a Fock space coming from the algebraic Bethe Ansatz for the six vertex model.
+  We also interpret our determinantal processes as random domino tilings of a half-strip with inhomogeneous domino weights. In the bulk, we show that the lattice asymptotic behavior of such domino tilings is described by a new determinantal point process on $\mathbb{Z}^{2}$, which can be viewed as an doubly-inhomogeneous generalization of the extended discrete sine process.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-09-14T14:33:13Z</published>
+    <arxiv:comment>121 pages, 21 figures. v2: Added references, corrected typos. To appear in Selecta Math</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Amol Aggarwal</name>
+    </author>
+    <author>
+      <name>Alexei Borodin</name>
+    </author>
+    <author>
+      <name>Leonid Petrov</name>
+    </author>
+    <author>
+      <name>Michael Wheeler</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2009.10480v1</id>
+    <title>Limit shapes of large skew Young tableaux and a modification of the TASEP process</title>
+    <updated>2020-09-22T12:00:38Z</updated>
+    <link href="https://arxiv.org/abs/2009.10480v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2009.10480v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a survey of points of view on the problem of the asymptotic shape of a path between two large Young diagrams, and introduce a modification of the TASEP process related to it. This representation allows to write explicitly the functional, counting the asymptotics of the number of Young tableau close to a given one, as well as to see the sine-process on the boundary shape of a large random Young diagram.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-09-22T12:00:38Z</published>
+    <arxiv:comment>43 pages, 13 figures</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Anna Gordenko</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2002.10723v2</id>
+    <title>Determinantal point processes and fermion quasifree states</title>
+    <updated>2020-03-17T13:31:20Z</updated>
+    <link href="https://arxiv.org/abs/2002.10723v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2002.10723v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Determinantal point processes are characterized by a special structural property of the correlation functions: they are given by minors of a correlation kernel. However, unlike the correlation functions themselves, this kernel is not defined intrinsically, and the same determinantal process can be generated by many different kernels. The non-uniqueness of a correlation kernel causes difficulties in studying determinantal processes.
+  We propose a formalism which allows to find a distinguished correlation kernel under certain additional assumptions. The idea is to exploit a connection between determinantal processes and quasifree states on CAR, the algebra of canonical anticommutation relations.
+  We prove that the formalism applies to discrete N-point orthogonal polynomial ensembles and to some of their large-N limits including the discrete sine process and the determinantal processes with the discrete Hermite, Laguerre, and Jacobi kernels investigated by Alexei Borodin and the author in [Commun. Math. Phys. 353 (2017), 853-903; arXiv:1608.01564]. As an application we resolve the equivalence/disjointness dichotomy for some of those processes.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-02-25T08:11:13Z</published>
+    <arxiv:comment>to appear in Commun. Math. Phys.; v2: some typos fixed, uncited references removed</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <arxiv:journal_ref>Communications in Mathematical Physics 378 (2020), 507-555</arxiv:journal_ref>
+    <author>
+      <name>Grigori Olshanski</name>
+    </author>
+    <arxiv:doi>10.1007/s00220-020-03716-1</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s00220-020-03716-1" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1912.13454v1</id>
+    <title>The sine-process has excess one</title>
+    <updated>2019-12-31T17:50:23Z</updated>
+    <link href="https://arxiv.org/abs/1912.13454v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1912.13454v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The main result of this paper is that almost every realization of the sine-process with one particle removed is a uniqueness set for the Paley-Wiener space; with two particles removed, a zero set for the Paley-Wiener space.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.FA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-12-31T17:50:23Z</published>
+    <arxiv:comment>57pages</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Alexander I. Bufetov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1907.03391v3</id>
+    <title>Band-limited mimicry of point processes by point processes supported on a lattice</title>
+    <updated>2020-02-04T02:49:45Z</updated>
+    <link href="https://arxiv.org/abs/1907.03391v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1907.03391v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We say that one point process on the line $\mathbb{R}$ mimics another at a bandwidth $B$ if for each $n \ge 1$ the two point processes have $n$-level correlation functions that agree when integrated against all bandlimited test functions on bandwidth $[-B, B]$. This paper asks the question of for what values $a$ and $B$ can a given point process on the real line be mimicked at bandwidth $B$ by a point process supported on the lattice $a\mathbb{Z}$. For Poisson point processes we give a complete answer for allowed parameter ranges $(a,B)$, and for the sine process we give existence and nonexistence regions for parameter ranges. The results for the sine process have an application to the Alternative Hypothesis regarding the scaled spacing of zeros of the Riemann zeta function, given in a companion paper.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-07-08T03:07:31Z</published>
+    <arxiv:comment>25 pages, 1 figure. Companion paper to arXiv:1905.12123. Incorporates referee suggestions</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <arxiv:journal_ref>Annals of Applied Probability 31 (2021), no.1, 351--376</arxiv:journal_ref>
+    <author>
+      <name>Jeffrey C. Lagarias</name>
+    </author>
+    <author>
+      <name>Brad Rodgers</name>
+    </author>
+    <arxiv:doi>10.1214/20-AAP1592</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1214/20-AAP1592" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1906.11079v2</id>
+    <title>Large gap asymptotics for the generating function of the sine point process</title>
+    <updated>2020-10-10T13:00:56Z</updated>
+    <link href="https://arxiv.org/abs/1906.11079v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1906.11079v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider the generating function of the sine point process on $m$ consecutive intervals. It can be written as a Fredholm determinant with discontinuities, or equivalently as the convergent series \begin{equation*} \sum_{k_{1},...,k_{m} \geq 0} \mathbb{P}\Bigg(\bigcap_{j=1}^{m} \#\{\mbox{points in j-th interval}\}=k_{j}\Bigg)\prod_{j=1}^{m} s_{j}^{k_{j}}, \end{equation*} where $s_{1},\ldots,s_{m} \in [0,1]$. In particular, we can deduce from it joint probabilities of the counting function of the process. In this work, we obtain large gap asymptotics for the generating function, which are asymptotics as the size of the intervals grows. Our results are valid for an arbitrary integer $m$, in the cases where all the parameters $s_{1},\ldots,s_{m}$, except possibly one, are positive. This generalizes two known results: 1) a result of Basor and Widom, which corresponds to $m=1$ and $s_{1}&gt;0$, and 2) the case $m=1$ and $s_{1} = 0$ for which many authors have contributed. We also present some applications in the context of thinning and conditioning of the sine process.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-06-25T07:18:02Z</published>
+    <arxiv:comment>51 pages, 9 figures. arXiv admin note: text overlap with arXiv:1812.02188</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>Christophe Charlier</name>
+    </author>
+    <arxiv:doi>10.1112/plms.12393</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1112/plms.12393" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1810.09223v1</id>
+    <title>On Number Rigidity for Pfaffian Point Processes</title>
+    <updated>2018-10-22T12:53:45Z</updated>
+    <link href="https://arxiv.org/abs/1810.09223v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1810.09223v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Our first result states that the orthogonal and symplectic Bessel processes are rigid in the sense of Ghosh and Peres. Our argument in the Bessel case proceeds by an estimate of the variance of additive statistics in the spirit of Ghosh and Peres. Second, a sufficient condition for number rigidity of stationary Pfaffian processes, relying on the Kolmogorov criterion for interpolation of stationary processes and applicable, in particular, to pfaffian sine-processes, is given in terms of the asymptotics of the spectral measure for additive statistics.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-10-22T12:53:45Z</published>
+    <arxiv:comment>57 pages</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Alexander I. Bufetov</name>
+    </author>
+    <author>
+      <name>Pavel P. Nikitin</name>
+    </author>
+    <author>
+      <name>Yanqi Qiu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1807.11387v1</id>
+    <title>The sine process under the influence of a varying potential</title>
+    <updated>2018-07-30T15:08:49Z</updated>
+    <link href="https://arxiv.org/abs/1807.11387v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1807.11387v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We review the authors' recent work \cite{BDIK1,BDIK2,BDIK3} where we obtain the uniform large $s$ asymptotics for the Fredholm determinant $D(s,γ):=\det(I-γK_s\upharpoonright_{L^2(-1,1)})$, $0\leqγ\leq 1$. The operator $K_s$ acts with kernel $K_s(x,y)=\sin(s(x-y))/(π(x-y))$ and $D(s,γ)$ appears for instance in Dyson's model \cite{Dyson2} of a Coulomb log-gas with varying external potential or in the bulk scaling analysis of the thinned GUE \cite{BP}.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nlin.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-07-30T15:08:49Z</published>
+    <arxiv:comment>7 pages, 1 figure, a contribution to JMP's volume devoted to the memory of LD Faddeev</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>Thomas Bothner</name>
+    </author>
+    <author>
+      <name>Percy Deift</name>
+    </author>
+    <author>
+      <name>Alexander Its</name>
+    </author>
+    <author>
+      <name>Igor Krasovsky</name>
+    </author>
+    <arxiv:doi>10.1063/1.5050394</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1063/1.5050394" title="doi"/>
+  </entry>
+</feed>

@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/rVfPxFaelYG1kPRlfQMgJbvAsaE</id>
+  <title>arXiv Query: search_query=au:Holroyd AND au:Soo&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-08-11T16:07:42Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=au:Holroyd+AND+au:Soo&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>4</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/math/0610705v2</id>
+    <title>A Nonmeasurable Set from Coin Flips</title>
+    <updated>2009-07-16T10:28:51Z</updated>
+    <link href="https://arxiv.org/abs/math/0610705v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0610705v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  In this note we give an example of a nonmeasurable set in the probability space for an infinite sequence of coin flips. The example arises naturally from the notion of an equivariant function, and serves as a pedagogical illustration of the need for measure theory.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.GM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2006-10-24T00:17:51Z</published>
+    <arxiv:comment>4 pages</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Alexander E. Holroyd</name>
+    </author>
+    <author>
+      <name>Terry Soo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1007.3538v3</id>
+    <title>Insertion and Deletion Tolerance of Point Processes</title>
+    <updated>2013-02-16T22:02:18Z</updated>
+    <link href="https://arxiv.org/abs/1007.3538v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1007.3538v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We develop a theory of insertion and deletion tolerance for point processes. A process is insertion-tolerant if adding a suitably chosen random point results in a point process that is absolutely continuous in law with respect to the original process. This condition and the related notion of deletion-tolerance are extensions of the so-called finite energy condition for discrete random processes. We prove several equivalent formulations of each condition, including versions involving Palm processes. Certain other seemingly natural variants of the conditions turn out not to be equivalent. We illustrate the concepts in the context of a number of examples, including Gaussian zero processes and randomly perturbed lattices, and we provide applications to continuum percolation and stable matching.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2010-07-20T23:52:19Z</published>
+    <arxiv:comment>32 pages. "Condition Sigma" is included as an equivalent formulation of deletion-tolerance</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Alexander E. Holroyd</name>
+    </author>
+    <author>
+      <name>Terry Soo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0908.3409v3</id>
+    <title>Poisson splitting by factors</title>
+    <updated>2011-12-08T06:47:52Z</updated>
+    <link href="https://arxiv.org/abs/0908.3409v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0908.3409v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Given a homogeneous Poisson process on ${\mathbb{R}}^d$ with intensity $λ$, we prove that it is possible to partition the points into two sets, as a deterministic function of the process, and in an isometry-equivariant way, so that each set of points forms a homogeneous Poisson process, with any given pair of intensities summing to $λ$. In particular, this answers a question of Ball [Electron. Commun. Probab. 10 (2005) 60--69], who proved that in $d=1$, the Poisson points may be similarly partitioned (via a translation-equivariant function) so that one set forms a Poisson process of lower intensity, and asked whether the same is possible for all $d$. We do not know whether it is possible similarly to add points (again chosen as a deterministic function of a Poisson process) to obtain a Poisson process of higher intensity, but we prove that this is not possible under an additional finitariness condition.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2009-08-24T11:17:32Z</published>
+    <arxiv:comment>Published in at http://dx.doi.org/10.1214/11-AOP651 the Annals of Probability (http://www.imstat.org/aop/) by the Institute of Mathematical Statistics (http://www.imstat.org)</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <arxiv:journal_ref>Annals of Probability 2011, Vol. 39, No. 5, 1938-1982</arxiv:journal_ref>
+    <author>
+      <name>Alexander E. Holroyd</name>
+    </author>
+    <author>
+      <name>Russell Lyons</name>
+    </author>
+    <author>
+      <name>Terry Soo</name>
+    </author>
+    <arxiv:doi>10.1214/11-AOP651</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1214/11-AOP651" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0912.0047v1</id>
+    <title>Deterministic Thinning of Finite Poisson Processes</title>
+    <updated>2009-12-01T00:48:50Z</updated>
+    <link href="https://arxiv.org/abs/0912.0047v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0912.0047v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Let Pi and Gamma be homogeneous Poisson point processes on a fixed set of finite volume. We prove a necessary and sufficient condition on the two intensities for the existence of a coupling of Pi and Gamma such that Gamma is a deterministic function of Pi, and all points of Gamma are points of Pi. The condition exhibits a surprising lack of monotonicity. However, in the limit of large intensities, the coupling exists if and only if the expected number of points is at least one greater in Pi than in Gamma.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2009-12-01T00:48:50Z</published>
+    <arxiv:comment>16 pages; 1 figure</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Omer Angel</name>
+    </author>
+    <author>
+      <name>Alexander E. Holroyd</name>
+    </author>
+    <author>
+      <name>Terry Soo</name>
+    </author>
+  </entry>
+</feed>

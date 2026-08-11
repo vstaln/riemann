@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/TXfLsze/Lb1OTSadgGc7V1cRlKk</id>
+  <title>arXiv Query: search_query=all:"determinantal" AND all:"Riemann zeta"&amp;id_list=&amp;start=0&amp;max_results=15</title>
+  <updated>2026-08-11T15:44:31Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22determinantal%22+AND+all:%22Riemann+zeta%22&amp;start=0&amp;max_results=15&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>15</opensearch:itemsPerPage>
+  <opensearch:totalResults>6</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/math/0404133v1</id>
+    <title>Determinantal processes with number variance saturation</title>
+    <updated>2004-04-06T14:00:39Z</updated>
+    <link href="https://arxiv.org/abs/math/0404133v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0404133v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Consider Dyson's Hermitian Brownian motion model after a finite time S, where the process is started at N equidistant points on the real line. These N points after time S form a determinantal process and has a limit as N tends to infinity. This limting determinantal proceess has the interesting feature that it shows number variance saturation. The variance of the number of particles in an interval converges to a limiting value as the length of the interval goes to infinity. Number variance saturation is also seen for example in the zeros of the Riemann zeta function (Odlyzko, Berry). The process can also be constructed using non-intersecting paths and we consider several variants of this construction. One construction leads to a model which shows a transition from a non-universal behaviour with number variance saturation to a universal sine-kernel behaviour as we go up the line.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2004-04-06T14:00:39Z</published>
+    <arxiv:comment>35 pages</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Kurt Johansson</name>
+    </author>
+    <arxiv:doi>10.1007/s00220-004-1186-4</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s00220-004-1186-4" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1410.1440v3</id>
+    <title>The Circular Unitary Ensemble and the Riemann zeta function: the microscopic landscape and a new approach to ratios</title>
+    <updated>2015-08-18T16:45:40Z</updated>
+    <link href="https://arxiv.org/abs/1410.1440v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1410.1440v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We show in this paper that after proper scalings, the characteristic polynomial of a random unitary matrix converges almost surely to a random analytic function whose zeros, which are on the real line, form a determinantal point process with sine kernel. Our scaling is performed at the so-called "microscopic" level, that is we consider the characteristic polynomial at points which are of order $1/n$ distant. We prove this in the framework of virtual isometries to circumvent the fact that the rescaled characteristic polynomial does not even have a moment of order one, hence making the classical techniques of random matrix theory difficult to apply. The strong convergence results in this setup provide us with a new approach to ratios: we are able to solve open problems about the limiting distribution of ratios of characteristic polynomials evaluated at points of the form $\exp(2 i πα/n)$ and related objects (such as the logarithmic derivative). We also explicitly describe the dependence relation for the logarithm of the characteristic polynomial evaluated at several points on the microscopic scale. On the number theory side, inspired by the Keating-Snaith philosophy, we conjecture some new limit theorems for the value distribution of the Riemann zeta function on the critical line at the stochastic process level.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-10-06T16:22:12Z</published>
+    <arxiv:comment>71 pages; v1: New expanded version of arXiv:1403.7814 with new applications and a different point of view; v2: New approach to ratios formulas; v3: Added relevant references</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <arxiv:journal_ref>Invent. math. (2017) 207: 23</arxiv:journal_ref>
+    <author>
+      <name>Reda Chhaibi</name>
+    </author>
+    <author>
+      <name>Joseph Najnudel</name>
+    </author>
+    <author>
+      <name>Ashkan Nikeghbali</name>
+    </author>
+    <arxiv:doi>10.1007/s00222-016-0669-1</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s00222-016-0669-1" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.16965v1</id>
+    <title>Uniform treatments of Bernoulli numbers, Stirling numbers, and their generating functions</title>
+    <updated>2025-04-23T09:54:51Z</updated>
+    <link href="https://arxiv.org/abs/2504.16965v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2504.16965v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, by virtue of a determinantal formula for derivatives of the ratio between two differentiable functions, in view of the Faà di Bruno formula, and with the help of several identities and closed-form formulas for the partial Bell polynomials $\operatorname{B}_{n,k}$, the author establishes thirteen Maclaurin series expansions of the functions \begin{align*} &amp;\ln\frac{\operatorname{e}^x+1}{2}, &amp;&amp; \ln\frac{\operatorname{e}^x-1}{x}, &amp;&amp; \ln\cosh x, \\ &amp;\ln\frac{\sinh x}{x}, &amp;&amp; \biggl[\frac{\ln(1+x)}{x}\biggr]^r, &amp;&amp; \biggl(\frac{\operatorname{e}^x-1}{x}\biggr)^r \end{align*} for $r=\pm\frac{1}{2}$ and $r\in\mathbb{R}$ in terms of the Dirichlet eta function $η(1-2k)$, the Riemann zeta function $ζ(1-2k)$, and the Stirling numbers of the first and second kinds $s(n,k)$ and $S(n,k)$. presents four determinantal expressions and three recursive relations for the Bernoulli numbers $B_{2n}$.  finds out three closed-form formulas for the Bernoulli numbers $B_{2n}$ and the generalized Bernoulli numbers $B_n^{(r)}$ in terms of the Stirling numbers of the second kind $S(n,k)$, and deduce two combinatorial identities for the Stirling numbers of the second kind $S(n,k)$. acquires two combinatorial identities, which can be regarded as diagonal recursive relations, involving the Stirling numbers of the first and second kinds $s(n,k)$ and $S(n,k)$. recovers an integral representation and a closed-form formula, and establish an alternative explicit and closed-form formula, for the Bernoulli numbers of the second kind $b_n$ in terms of the Stirling numbers of the first kind $s(n,k)$. obtains three identities connecting the Stirling numbers of the first and second kinds $s(n,k)$ and $S(n,k)$.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-04-23T09:54:51Z</published>
+    <arxiv:comment>22 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Feng Qi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0809.0449v5</id>
+    <title>Point processes in arbitrary dimension from fermionic gases, random matrix theory, and number theory</title>
+    <updated>2008-11-25T16:49:23Z</updated>
+    <link href="https://arxiv.org/abs/0809.0449v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0809.0449v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  It is well known that one can map certain properties of random matrices, fermionic gases, and zeros of the Riemann zeta function to a unique point process on the real line. Here we analytically provide exact generalizations of such a point process in d-dimensional Euclidean space for any d, which are special cases of determinantal processes. In particular, we obtain the n-particle correlation functions for any n, which completely specify the point processes. We also demonstrate that spin-polarized fermionic systems have these same n-particle correlation functions in each dimension. The point processes for any d are shown to be hyperuniform. The latter result implies that the pair correlation function tends to unity for large pair distances with a decay rate that is controlled by the power law r^[-(d+1)]. We graphically display one- and two-dimensional realizations of the point processes in order to vividly reveal their "repulsive" nature. Indeed, we show that the point processes can be characterized by an effective "hard-core" diameter that grows like the square root of d. The nearest-neighbor distribution functions for these point processes are also evaluated and rigorously bounded. Among other results, this analysis reveals that the probability of finding a large spherical cavity of radius r in dimension d behaves like a Poisson point process but in dimension d+1 for large r and finite d. We also show that as d increases, the point process behaves effectively like a sphere packing with a coverage fraction of space that is no denser than 1/2^d.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2008-09-02T14:59:58Z</published>
+    <arxiv:comment>40 pages, 11 figures, 1 table, iopart; corrected mislabeled section numbers and minor typographical issues; minor text changes</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <author>
+      <name>Salvatore Torquato</name>
+    </author>
+    <author>
+      <name>A. Scardicchio</name>
+    </author>
+    <author>
+      <name>Chase E Zachary</name>
+    </author>
+    <arxiv:doi>10.1088/1742-5468/2008/11/P11019</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/1742-5468/2008/11/P11019" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1311.2981v2</id>
+    <title>Large deviations for the Sine_beta and Sch_tau processes</title>
+    <updated>2013-11-18T17:45:46Z</updated>
+    <link href="https://arxiv.org/abs/1311.2981v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1311.2981v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study two one-parameter families of point processes connected to random matrices: the Sine_beta and Sch_tau processes. The first one is the bulk point process limit for the Gaussian beta-ensemble. For beta=1, 2 and 4 it gives the limit of the GOE, GUE and GSE models of random matrix theory. In particular, for beta=2 it is a determinantal point process conjectured to have similar behavior to the critical zeros of the Riemann zeta-function. The second process can be obtained as the bulk scaling limit of the spectrum of certain discrete one-dimensional random Schrödinger operators.
+  Both processes have asymptotically constant average density, in our normalization one expects close to lambda/(2pi) points in a large interval of length lambda. Our main results are large deviation principles for the average densities of the processes, essentially we compute the asymptotic probability of seeing an unusual average density in a large interval. Our approach is based on the representation of the counting functions of these processes using stochastic differential equations. We also prove path level large deviation principles for the arising diffusions.
+  Our techniques work for the full range of parameter values. The results are novel even in the classical beta=1, 2 and 4 cases for the Sine_beta process. They are consistent with the existing rigorous results on large gap probabilities and confirm the physical predictions made using log-gas arguments.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-11-12T23:22:19Z</published>
+    <arxiv:comment>39 pages, 1 figure, v2: added additional references</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Diane Holcomb</name>
+    </author>
+    <author>
+      <name>Benedek Valkó</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2407.19233v3</id>
+    <title>Exchangeable arrays and integrable systems for characteristic polynomials of random matrices</title>
+    <updated>2024-10-14T20:06:08Z</updated>
+    <link href="https://arxiv.org/abs/2407.19233v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2407.19233v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The joint moments of the derivatives of the characteristic polynomial of a random unitary matrix, and also a variant of the characteristic polynomial that is real on the unit circle, in the large matrix size limit, have been studied intensively in the past twenty five years, partly in relation to conjectural connections to the Riemann zeta-function and Hardy's function. We completely settle the most general version of the problem of convergence of these joint moments, after they are suitably rescaled, for an arbitrary number of derivatives and with arbitrary positive real exponents. Our approach relies on a hidden, higher-order exchangeable structure, that of an exchangeable array. Using these probabilistic techniques, we then give a combinatorial formula for the leading order coefficient in the asymptotics of the joint moments, when the power on the characteristic polynomial itself is a positive real number and the exponents of the derivatives are integers, in terms of a finite number of finite-dimensional integrals which are explicitly computable. Finally, we develop a method, based on a class of Hankel determinants shifted by partitions, that allows us to give an exact representation of all these joint moments, for finite matrix size, in terms of derivatives of Painlevé V transcendents, and then for the leading order coefficient in the large-matrix limit in terms of derivatives of solutions of the $σ$-Painlevé III' equation. Equivalently, we can represent all the joint moments of power sum linear statistics of a certain determinantal point process behind this problem in terms of derivatives of $σ$-Painlevé III' transcendents. This gives an efficient way to compute all these quantities explicitly. Our methods can be used to obtain analogous results for a number of other models sharing the same features.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-07-27T11:32:24Z</published>
+    <arxiv:comment>Typos corrected. Submitted version</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Theodoros Assiotis</name>
+    </author>
+    <author>
+      <name>Mustafa Alper Gunes</name>
+    </author>
+    <author>
+      <name>Jonathan P. Keating</name>
+    </author>
+    <author>
+      <name>Fei Wei</name>
+    </author>
+  </entry>
+</feed>

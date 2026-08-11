@@ -1,0 +1,539 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/0KOaQGTeHlRoMRxeESaOTW/M3jY</id>
+  <title>arXiv Query: search_query=all:"Ihara zeta function"&amp;id_list=&amp;start=0&amp;max_results=25</title>
+  <updated>2026-08-11T15:43:22Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22Ihara+zeta+function%22&amp;start=0&amp;max_results=25&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>25</opensearch:itemsPerPage>
+  <opensearch:totalResults>68</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1502.05771v2</id>
+    <title>Seiberg Duality, Quiver Gauge Theories, and Ihara Zeta Function</title>
+    <updated>2015-03-21T10:53:50Z</updated>
+    <link href="https://arxiv.org/abs/1502.05771v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1502.05771v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study Ihara zeta function for graphs in the context of quivers arising from gauge theories, especially under Seiberg duality transformations. The distribution of poles is studied as we proceed along the duality tree, in light of the weak and strong graph versions of the Riemann Hypothesis. As a by-product, we find a refined version of Ihara zeta function to be the generating function for the generic superpotential of the gauge theory.</summary>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-02-20T04:51:34Z</published>
+    <arxiv:comment>41 pages, 10 figures</arxiv:comment>
+    <arxiv:primary_category term="hep-th"/>
+    <author>
+      <name>Da Zhou</name>
+    </author>
+    <author>
+      <name>Yan Xiao</name>
+    </author>
+    <author>
+      <name>Yang-Hui He</name>
+    </author>
+    <arxiv:doi>10.1142/S0217751X15501183</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1142/S0217751X15501183" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2011.14162v3</id>
+    <title>A note on the Grover walk and the generalized Ihara zeta function of the one-dimensional integer lattice</title>
+    <updated>2021-12-16T04:03:29Z</updated>
+    <link href="https://arxiv.org/abs/2011.14162v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2011.14162v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Chinta, Jorgenson and Karlsson introduced a generalized version of the determinant formula for the Ihara zeta function associated to finite or infinite regular graphs. On the other hand, Konno and Sato obtained a formula of the characteristic polynomial of the Grover matrix by using the determinant expression for the second weighted zeta function of a finite graph. In this paper, we focus on a relationship between the Grover walk and the generalized Ihara zeta function. That is to say, we treat the generalized Ihara zeta function of the one-dimensional integer lattice as a limit of the Ihara zeta function of the cycle graph.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-11-28T16:23:20Z</published>
+    <arxiv:comment>8 pages, Yokohama Mathematical Journal (in press)</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Takashi Komatsu</name>
+    </author>
+    <author>
+      <name>Norio Konno</name>
+    </author>
+    <author>
+      <name>Iwao Sato</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1306.5454v1</id>
+    <title>The Ihara zeta function of the infinite grid</title>
+    <updated>2013-06-23T18:44:50Z</updated>
+    <link href="https://arxiv.org/abs/1306.5454v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1306.5454v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The infinite grid is the Cayley graph of $\mathbb{Z} \times \mathbb{Z}$ with the usual generators. In this paper, the Ihara zeta function for the infinite grid is computed using elliptic integrals and theta functions. The zeta function of the grid extends to an analytic, multivalued function which satisfies a functional equation. The set of singularities in its domain is finite.
+  The grid zeta function is the first computed example which is non-elementary, and which takes infinitely many values at each point of its domain. It is also the limiting value of the normalized sequence of Ihara zeta functions for square grid graphs and torus graphs.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-06-23T18:44:50Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Bryan Clair</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1302.4644v1</id>
+    <title>Heat kernels on regular graphs and generalized Ihara zeta function formulas</title>
+    <updated>2013-02-19T15:29:57Z</updated>
+    <link href="https://arxiv.org/abs/1302.4644v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1302.4644v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We establish a new formula for the heat kernel on regular trees in terms of classical I-Bessel functions. Although the formula is explicit, and a proof is given through direct computation, we also provide a conceptual viewpoint using the horocyclic transform on regular trees. From periodization, we then obtain a heat kernel expression on any regular graph. From spectral theory, one has another expression for the heat kernel as an integral transform of the spectral measure. By equating these two formulas and taking a certain integral transform, we obtain several generalized versions of the determinant formula for the Ihara zeta function associated to finite or infinite regular graphs. Our approach to the Ihara zeta function and determinant formula through heat kernel analysis follows a similar methodology which exists for quotients of rank one symmetric spaces.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-02-19T15:29:57Z</published>
+    <arxiv:comment>15 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Gautam Chinta</name>
+    </author>
+    <author>
+      <name>Jay Jorgenson</name>
+    </author>
+    <author>
+      <name>Anders Karlsson</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1712.06363v2</id>
+    <title>A generalized Ihara zeta function formula for simple graphs with bounded degree</title>
+    <updated>2017-12-30T04:22:29Z</updated>
+    <link href="https://arxiv.org/abs/1712.06363v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1712.06363v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We establish a generalized Ihara zeta function formula for simple graphs with bounded degree. This is a generalization of the formula obtained by G. Chinta, J. Jorgenson and A. Karlsson from a vertex-transitive graph.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-12-18T12:26:13Z</published>
+    <arxiv:comment>13 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Taichi Kousaka</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2104.00215v1</id>
+    <title>Ihara zeta function and twisted Alexander invariants</title>
+    <updated>2021-04-01T02:57:59Z</updated>
+    <link href="https://arxiv.org/abs/2104.00215v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2104.00215v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Lin and Wang defined a model of random walks on knot diagrams and interprete the Alexnader polynomials and the colored Jones polynomials as Ihara zeta functions, i.e. zeta functions defined by counting cycles on the knot diagram. Using this explanation, they gave a more conceptual proof for the Melvin-Morton conjecture. In this paper, we give an analogous zeta function expression for the twisted Alexander invariants.</summary>
+    <category term="math.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-04-01T02:57:59Z</published>
+    <arxiv:comment>18 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="math.GT"/>
+    <author>
+      <name>Zipei Zhuang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2204.06424v3</id>
+    <title>Kazakov-Migdal model on the Graph and Ihara Zeta Function</title>
+    <updated>2022-08-03T08:20:18Z</updated>
+    <link href="https://arxiv.org/abs/2204.06424v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2204.06424v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose the Kazakov-Migdal model on graphs and show that, when the parameters of this model are appropriately tuned, the partition function is represented by the unitary matrix integral of an extended Ihara zeta function, which has a series expansion by all non-collapsing Wilson loops with their lengths as weights. The partition function of the model is expressed in two different ways according to the order of integration. A specific unitary matrix integral can be performed at any finite $N$ thanks to this duality. We exactly evaluate the partition function of the parameter-tuned Kazakov-Migdal model on an arbitrary graph in the large $N$ limit and show that it is expressed by the infinite product of the Ihara zeta functions of the graph.</summary>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-04-13T14:37:53Z</published>
+    <arxiv:comment>33 pages, 6 figures, references added, a figure added, a comment on physical model added, typos corrected</arxiv:comment>
+    <arxiv:primary_category term="hep-th"/>
+    <author>
+      <name>So Matsuura</name>
+    </author>
+    <author>
+      <name>Kazutoshi Ohta</name>
+    </author>
+    <arxiv:doi>10.1007/JHEP09(2022)178</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/JHEP09(2022)178" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2501.00639v1</id>
+    <title>Ihara zeta functions for some simple graph families</title>
+    <updated>2024-12-31T20:35:53Z</updated>
+    <link href="https://arxiv.org/abs/2501.00639v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.00639v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The reciprocal of the Ihara zeta function of a graph is a polynomial invariant introduced by Ihara in 1966. Scott and Storm gave a method to determine the coefficients of the polynomial. Here we simplify their calculation and determine the zeta function for all graphs of rank two. We verify that it is a complete invariant for such graphs: If $G_1$ and $G_2$ are of rank two, then $G_1$ and $G_2$ are isomorphic if and only if they have the same Ihara zeta function. We observe that the reciprocal of the zeta function is an even polynomial if the graph is bipartite. We also determine the zeta function for several graph families: complete graphs, complete bipartite graphs, Möbius ladders, cocktail party graphs, and all graphs of order five or less. We use the special value $u=1$ to count the spanning trees for these families.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-31T20:35:53Z</published>
+    <arxiv:comment>25 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Maize Chico</name>
+    </author>
+    <author>
+      <name>Thomas W. Mattman</name>
+    </author>
+    <author>
+      <name>Alex Richards</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1512.09065v3</id>
+    <title>Limiting eigenvalue distribution of random matrices of Ihara zeta function of long-range percolation graphs</title>
+    <updated>2017-12-05T12:54:45Z</updated>
+    <link href="https://arxiv.org/abs/1512.09065v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1512.09065v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider the ensemble of $N\times N$ real random symmetric matrices $H_N^{(R)}$ obtained from the determinant form of the Ihara zeta function associated to random graphs $Γ_N^{(R)}$ of the long-range percolation radius model with the edge probability determined by a function $φ(t)$.
+  We show that the normalized eigenvalue counting function of $H_N^{( R)}$ weakly converges in average as $N,R\to\infty$, $R=o(N)$ to a unique measure that depends on the limiting average vertex degree of $Γ_N^{(R)}$ given by $φ_1 = \int φ(t) dt$. This measure converges in the limit of infinite $φ_1$ to a shift of the Wigner semi-circle distribution. We discuss relations of these results with the properties of the Ihara zeta function and weak versions of the graph theory Riemann Hypothesis.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-12-30T19:09:19Z</published>
+    <arxiv:comment>revised version: 38 pages, 2 figures</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>Oleksiy Khorunzhiy</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1408.3522v3</id>
+    <title>The Ihara Zeta function for infinite graphs</title>
+    <updated>2018-01-09T13:34:36Z</updated>
+    <link href="https://arxiv.org/abs/1408.3522v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1408.3522v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We put forward the concept of measure graphs. These are (possibly uncountable) graphs equipped with an action of a groupoid and a measure invariant under this action. Examples include finite graphs, periodic graphs, graphings and percolation graphs. Making use of Connes' non-commutative integration theory we construct a Zeta function and present a determinant formula for it. We further introduce a notion of weak convergence of measure graphs and show that our construction is compatible with it. The approximation of the Ihara Zeta function via the normalized version on finite graphs in the sense of Benjamini-Schramm follows as a special case. Our framework not only unifies corresponding earlier results occurring in the literature. It likewise provides extensions to rich new classes of objects such as percolation graphs.</summary>
+    <category term="math.MG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.FA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-08-15T12:47:01Z</published>
+    <arxiv:primary_category term="math.MG"/>
+    <author>
+      <name>Daniel Lenz</name>
+    </author>
+    <author>
+      <name>Felix Pogorzelski</name>
+    </author>
+    <author>
+      <name>Marcel Schmidt</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/0605753v3</id>
+    <title>Ihara zeta functions for periodic simple graphs</title>
+    <updated>2007-03-05T18:27:12Z</updated>
+    <link href="https://arxiv.org/abs/math/0605753v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0605753v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  The definition and main properties of the Ihara zeta function for graphs are reviewed, focusing mainly on the case of periodic simple graphs. Moreover, we give a new proof of the associated determinant formula, based on the treatment developed by Stark and Terras for finite graphs.</summary>
+    <category term="math.OA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2006-05-30T12:41:19Z</published>
+    <arxiv:comment>17 pages, 7 figures. V3: minor corrections</arxiv:comment>
+    <arxiv:primary_category term="math.OA"/>
+    <arxiv:journal_ref>in C*-algebras and elliptic theory II, p. 103 - 121. Edited by D.Burghelea, R.Melrose, A.Mishchenko, E.Troitsky. Trends in Mathematics, Birkhauser Verlag, Basel, 2008</arxiv:journal_ref>
+    <author>
+      <name>Daniele Guido</name>
+      <arxiv:affiliation>U. Roma TorVergata</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Tommaso Isola</name>
+      <arxiv:affiliation>U. Roma TorVergata</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Michel L. Lapidus</name>
+      <arxiv:affiliation>UC Riverside</arxiv:affiliation>
+    </author>
+    <arxiv:doi>10.1007/978-3-7643-8604-7</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/978-3-7643-8604-7" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1507.03411v2</id>
+    <title>Edge reconstruction of the Ihara zeta function</title>
+    <updated>2018-04-24T12:29:01Z</updated>
+    <link href="https://arxiv.org/abs/1507.03411v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1507.03411v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We show that if a graph $G$ has average degree $\bar d \geq 4$, then the Ihara zeta function of $G$ is edge-reconstructible. We prove some general spectral properties of the edge adjacency operator $T$: it is symmetric for an indefinite form and has a "large" semi-simple part (but it can fail to be semi-simple in general). We prove that this implies that if $\bar d&gt;4$, one can reconstruct the number of non-backtracking (closed or not) walks through a given edge, the Perron-Frobenius eigenvector of $T$ (modulo a natural symmetry), as well as the closed walks that pass through a given edge in both directions at least once.
+  The appendix by Daniel MacDonald established the analogue for multigraphs of some basic results in reconstruction theory of simple graphs that are used in the main text.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-07-13T12:04:24Z</published>
+    <arxiv:comment>19 pages, 2 pictures, in version 2 some minor changes and now including an appendix by Daniel McDonald</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Gunther Cornelissen</name>
+      <arxiv:affiliation>with an appendix by Daniel McDonald</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Janne Kool</name>
+      <arxiv:affiliation>with an appendix by Daniel McDonald</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.08058v1</id>
+    <title>Determinant formulas for Ihara zeta functions via simple cycles</title>
+    <updated>2026-06-06T08:44:02Z</updated>
+    <link href="https://arxiv.org/abs/2606.08058v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.08058v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Building upon the algebraic framework of trace monoids introduced by Giscard and Rochet, we establish a new determinant formula for the Ihara zeta functions of certain digraphs. We present our results through two main theorems. First, at the algebraic level, we show a general determinant formula expressed by a Cayley determinant over the hike monoid ring, which provides a unifying perspective on several known determinant expressions. Second, by evaluating the lengths of hikes through a natural ring homomorphism, we prove that the reciprocal of the Ihara zeta function can be explicitly expressed as a determinant whose dimension is equal to the number of simple cycles of the line digraph without backtrack.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-06T08:44:02Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Kosei Watanabe</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1508.07839v5</id>
+    <title>On eigenvalue distribution of random matrices of Ihara zeta function of large random graphs</title>
+    <updated>2016-11-17T10:50:04Z</updated>
+    <link href="https://arxiv.org/abs/1508.07839v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1508.07839v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider the ensemble of real symmetric random matrices $H^{(n,ρ)}$ obtained from the determinant form of the Ihara zeta function of random graphs that have $n$ vertices with the edge probability $ρ/n$. We prove that the normalized eigenvalue counting function of $H^{(n,ρ)}$ weakly converges in average as $n,ρ\to\infty$ and $ρ=o(n^α)$ for any $α&gt;0$ to a shift of the Wigner semi-circle distribution. Our results support a conjecture that the large Erdos-Rényi random graphs satisfy in average the weak graph theory Riemann Hypothesis.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-08-31T14:13:38Z</published>
+    <arxiv:comment>version 5: slightly corrected with respect to version 4</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <arxiv:journal_ref>Journal of Mathematical Physics, Analysis, Geometry, Vol. 13 (2017) 268-282</arxiv:journal_ref>
+    <author>
+      <name>O. Khorunzhiy</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1905.13485v4</id>
+    <title>Ihara zeta function, coefficients of Maclaurin series, and Ramanujan graphs</title>
+    <updated>2020-07-03T03:41:06Z</updated>
+    <link href="https://arxiv.org/abs/1905.13485v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1905.13485v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $X$ denote a connected $(q+1)$-regular undirected graph of finite order $n$. The graph $X$ is called Ramanujan whenever $$ |λ|\leq 2q^{\frac{1}{2}} $$ for all nontrivial eigenvalues $λ$ of $X$. We consider the variant $Ξ(u)$ of the Ihara zeta function $Z(u)$ of $X$ defined by \begin{gather*} Ξ(u)^{-1} =
+  \left\{
+  \begin{array}{ll}
+  (1-u)(1-qu)(1-q^{\frac{1}{2}} u)^{2n-2}(1-u^2)^{\frac{n(q-1)}{2}}
+  Z(u)
+  \qquad
+  &amp;\hbox{if $X$ is nonbipartite},
+  (1-q^2u^2)
+  (1-q^{\frac{1}{2}} u)^{2n-4}
+  (1-u^2)^{\frac{n(q-1)}{2}+1}
+  Z(u)
+  \qquad
+  &amp;\hbox{if $X$ is bipartite}.
+  \end{array}
+  \right. \end{gather*} The function $Ξ(u)$ satisfies the functional equation $Ξ(q^{-1} u^{-1})=Ξ(u)$. Let $\{h_k\}_{k=1}^\infty$ denote the number sequence given by $$ \frac{d}{du}\ln Ξ(q^{-\frac{1}{2}}u) =\sum_{k=0}^\infty h_{k+1} u^k. $$ In this paper we establish the equivalence of the following statements: (i) $X$ is Ramanujan; (ii) $h_k\geq 0$ for all $k\geq 1$; (iii) $h_{k}\geq 0$ for infinitely many even $k\geq 2$. Furthermore we derive the Hasse--Weil bound for the Ramanujan graphs.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-05-31T09:49:41Z</published>
+    <arxiv:comment>8 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Hau-Wen Huang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/0608229v1</id>
+    <title>Ihara's zeta function for periodic graphs and its approximation in the amenable case</title>
+    <updated>2006-08-09T18:08:36Z</updated>
+    <link href="https://arxiv.org/abs/math/0608229v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0608229v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  In this paper, we give a more direct proof of the results by Clair and Mokhtari-Sharghi on the zeta functions of periodic graphs. In particular, using appropriate operator-algebraic techniques, we establish a determinant formula in this context and examine its consequences for the Ihara zeta function. Moreover, we answer in the affirmative one of the questions raised by Grigorchuk and Zuk. Accordingly, we show that the zeta function of a periodic graph with an amenable group action is the limit of the zeta functions of a suitable sequence of finite subgraphs.</summary>
+    <category term="math.OA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2006-08-09T18:08:36Z</published>
+    <arxiv:comment>21 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="math.OA"/>
+    <arxiv:journal_ref>Journal of Functional Analysis 255 (2008) no. 6, 1339-1361</arxiv:journal_ref>
+    <author>
+      <name>Daniele Guido</name>
+    </author>
+    <author>
+      <name>Tommaso Isola</name>
+    </author>
+    <author>
+      <name>Michel L. Lapidus</name>
+    </author>
+    <arxiv:doi>10.1016/j.jfa.2008.07.011</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.jfa.2008.07.011" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1402.4945v2</id>
+    <title>Ihara Zeta functions of infinite weighted graphs</title>
+    <updated>2017-09-01T08:27:53Z</updated>
+    <link href="https://arxiv.org/abs/1402.4945v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1402.4945v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The theory of Ihara zeta functions is extended to infinite graphs which are weighted and of finite total weight. In this case one gets meromorphic instead of rational functions and the classical determinant formulas of Bass and Ihara hold true with Fredholm determinants.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-02-20T10:05:58Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Antonius Deitmar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2106.09873v1</id>
+    <title>The Ihara-zeta function and the spectrum of the join of two semi-regular bipartite graphs</title>
+    <updated>2021-06-18T02:20:16Z</updated>
+    <link href="https://arxiv.org/abs/2106.09873v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2106.09873v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, using matrix techniques, we compute the Ihara-zeta function and the number of spanning trees of the join of two semi-regular bipartite graphs. Furthermore, we show that the spectrum and the zeta function of the join of two semi-regular bipartite graphs can determine each other.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-06-18T02:20:16Z</published>
+    <arxiv:comment>21 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Xiaotong Li</name>
+    </author>
+    <author>
+      <name>Xian'an Jin</name>
+    </author>
+    <author>
+      <name>Qi Yan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1906.02514v1</id>
+    <title>Ihara Zeta Entropy</title>
+    <updated>2019-06-06T10:50:38Z</updated>
+    <link href="https://arxiv.org/abs/1906.02514v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1906.02514v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this article, we introduce an entropy based on the formal power series expansion of the Ihara Zeta function. We find a number of inequalities based on the values of the Ihara zeta function. These new entropies are applicable in symbolic dynamics and the dynamics of billiards.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-06-06T10:50:38Z</published>
+    <arxiv:comment>Comments welcome</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>Supriyo Dutta</name>
+    </author>
+    <author>
+      <name>Partha Guha</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2403.07385v2</id>
+    <title>Phases and Duality in Fundamental Kazakov-Migdal Model on the Graph</title>
+    <updated>2024-06-11T07:39:08Z</updated>
+    <link href="https://arxiv.org/abs/2403.07385v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2403.07385v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We examine the fundamental Kazakov-Migdal (FKM) model on a generic graph, whose partition function is represented by the Ihara zeta function weighted by unitary matrices. The FKM model becomes unstable in the critical strip of the Ihara zeta function. We discover a duality between small and large couplings, associated with the functional equation of the Ihara zeta function for regular graphs. Although the duality is not precise for irregular graphs, we show that the effective action in the large coupling region can be represented by a summation of all possible Wilson loops on the graph similar to that in the small coupling region. We estimate the phase structure of the FKM model both in the small and large coupling regions by comparing it with the Gross-Witten-Wadia (GWW) model. We further validate the theoretical analysis through detailed numerical simulations.</summary>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-03-12T07:45:36Z</published>
+    <arxiv:comment>46pages, 31figures, typos corrected</arxiv:comment>
+    <arxiv:primary_category term="hep-th"/>
+    <author>
+      <name>So Matsuura</name>
+    </author>
+    <author>
+      <name>Kazutoshi Ohta</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1404.1553v1</id>
+    <title>A remark on zeta functions of finite graphs via quantum walks</title>
+    <updated>2014-04-06T07:27:33Z</updated>
+    <link href="https://arxiv.org/abs/1404.1553v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1404.1553v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>From the viewpoint of quantum walks, the Ihara zeta function of a finite graph can be said to be closely related to its evolution matrix. In this note we introduce another kind of zeta function of a graph, which is closely related to, as to say, the square of the evolution matrix of a quantum walk. Then we give to such a function two types of determinant expressions and derive from it some geometric properties of a finite graph. As an application, we illustrate the distribution of poles of this function comparing with those of the usual Ihara zeta function.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-04-06T07:27:33Z</published>
+    <arxiv:comment>14 pages, 1 figure</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>Yu. Higuchi</name>
+    </author>
+    <author>
+      <name>N. Konno</name>
+    </author>
+    <author>
+      <name>I. Sato</name>
+    </author>
+    <author>
+      <name>E. Segawa</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2501.09848v1</id>
+    <title>Holonomy, Zeta Functions, and Cohomological Structures in Foliated Manifolds with Stratified Boundaries</title>
+    <updated>2025-01-16T21:31:17Z</updated>
+    <link href="https://arxiv.org/abs/2501.09848v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.09848v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper explores the interplay between holonomy, Ihara zeta functions, and cohomological structures within the framework of ratified F-completions of foliated manifolds. We develop a novel formalism for the Gamma-set, a topological multigraph that captures intersection points of foliations with stratified boundaries, and use it to define an Ihara zeta function that encodes the manifold's symmetries. By investigating the holonomy group of spinor fields in relation to the Delta-actions on the Gamma-set, we conjecture a duality between holonomy fixed points and the poles of the Ihara zeta function, extending to twisted cohomology classes. We further analyze how the twist map T impacts cohomology within stratified spaces, highlighting the role of vector bundles and the twisted cochain complex. Applications of our framework to spectral graph theory and tiling in R^n demonstrate the power of holonomy-zeta duality in geometrically rich foliated structures.</summary>
+    <category term="math.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-01-16T21:31:17Z</published>
+    <arxiv:primary_category term="math.GT"/>
+    <author>
+      <name>John Zimmerman</name>
+    </author>
+    <author>
+      <name>Nehal Doiphode</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2004.03444v1</id>
+    <title>A System of Billiard and Its Application to Information-Theoretic Entropy</title>
+    <updated>2020-04-07T14:48:03Z</updated>
+    <link href="https://arxiv.org/abs/2004.03444v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2004.03444v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this article, we define an information-theoretic entropy based on the Ihara zeta function of a graph which is called the Ihara entropy. A dynamical system consists of a billiard ball and a set of reflectors correspond to a combinatorial graph. The reflectors are represented by the vertices of the graph. Movement of the billiard ball between two reflectors is represented by the edges. The prime cycles of this graph generate the bi-infinite sequences of the corresponding symbolic dynamical system. The number of different prime cycles of a given length can be expressed in terms of the adjacency matrix of the oriented line graph. It also constructs the formal power series expansion of Ihara zeta function. Therefore, the Ihara entropy has a deep connection with the dynamical system of billiards. As an information-theoretic entropy, it fulfils the generalized Shannon-Khinchin axioms. It is a weakly decomposable entropy whose composition law is given by the Lazard formal group law.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-04-07T14:48:03Z</published>
+    <arxiv:comment>Comments are welcome</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>Supriyo Dutta</name>
+    </author>
+    <author>
+      <name>Partha Guha</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/0608060v3</id>
+    <title>A trace on fractal graphs and the Ihara zeta function</title>
+    <updated>2008-10-22T10:24:28Z</updated>
+    <link href="https://arxiv.org/abs/math/0608060v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0608060v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Starting with Ihara's work in 1968, there has been a growing interest in the study of zeta functions of finite graphs, by Sunada, Hashimoto, Bass, Stark and Terras, Mizuno and Sato, to name just a few authors. Then, Clair and Mokhtari-Sharghi have studied zeta functions for infinite graphs acted upon by a discrete group of automorphisms. The main formula in all these treatments establishes a connection between the zeta function, originally defined as an infinite product, and the Laplacian of the graph. In this article, we consider a different class of infinite graphs. They are fractal graphs, i.e. they enjoy a self-similarity property. We define a zeta function for these graphs and, using the machinery of operator algebras, we prove a determinant formula, which relates the zeta function with the Laplacian of the graph. We also prove functional equations, and a formula which allows approximation of the zeta function by the zeta functions of finite subgraphs.</summary>
+    <category term="math.OA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2006-08-02T15:50:39Z</published>
+    <arxiv:comment>30 pages, 5 figures. v3: minor corrections, to appear on Transactions AMS</arxiv:comment>
+    <arxiv:primary_category term="math.OA"/>
+    <arxiv:journal_ref>Trans. Amer. Math. Soc. 361 (2009), no. 6, 3041-3070</arxiv:journal_ref>
+    <author>
+      <name>Daniele Guido</name>
+      <arxiv:affiliation>U. Roma TorVergata</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Tommaso Isola</name>
+      <arxiv:affiliation>U. Roma TorVergata</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Michel L. Lapidus</name>
+      <arxiv:affiliation>UC Riverside</arxiv:affiliation>
+    </author>
+    <arxiv:doi>10.1090/S0002-9947-08-04702-8</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1090/S0002-9947-08-04702-8" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2101.03338v5</id>
+    <title>Asymptotic absence of poles of Ihara zeta function of large Erdos-Renyi random graphs</title>
+    <updated>2022-03-07T11:01:44Z</updated>
+    <link href="https://arxiv.org/abs/2101.03338v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2101.03338v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Using recent results on the concentration of the largest eigenvalue and maximal vertex degree of large random graphs, we show that the infinite sequence of Erd\H os-Rényi random graphs $G(n,ρ_n/n)$ such that $ρ_n/\log n$ infinitely increases as $n\to\infty$ verifies a version of the graph theory Riemann Hypothesis.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-01-09T11:38:37Z</published>
+    <arxiv:comment>final version, accepted for publication in the Journal of Mathematical Physics, Analysis, Geometry (Kharkiv, Ukraine)</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>O. Khorunzhiy</name>
+    </author>
+  </entry>
+</feed>

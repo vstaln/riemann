@@ -1,0 +1,406 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/cN9cRti7hbLftH5Rrxun6IlqISY</id>
+  <title>arXiv Query: search_query=ti:"sine kernel"&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-08-11T16:11:06Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=ti:%22sine+kernel%22&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>20</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1407.5402v2</id>
+    <title>From Sine kernel to Poisson statistics</title>
+    <updated>2014-10-06T12:10:24Z</updated>
+    <link href="https://arxiv.org/abs/1407.5402v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1407.5402v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the Sine$_β$ process introduced in [B. Valkó and B. Virág. Invent. math. (2009)] when the inverse temperature $β$ tends to 0. This point process has been shown to be the scaling limit of the eigenvalues point process in the bulk of $β$-ensembles and its law is characterized in terms of the winding numbers of the Brownian carrousel at different angular speeds. After a careful analysis of this family of coupled diffusion processes, we prove that the Sine$_β$ point process converges weakly to a Poisson point process on $\mathbb{R}$. Thus, the Sine$_β$ point processes establish a smooth crossover between the rigid clock (or picket fence) process (corresponding to $β=\infty$) and the Poisson process.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-07-21T07:48:36Z</published>
+    <arxiv:comment>24 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <arxiv:journal_ref>Electron. J. Probab. 19 (2014) no. 114, 1-25</arxiv:journal_ref>
+    <author>
+      <name>Romain Allez</name>
+    </author>
+    <author>
+      <name>Laure Dumaz</name>
+    </author>
+    <arxiv:doi>10.1214/EJP.v19-3742</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1214/EJP.v19-3742" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2003.08136v1</id>
+    <title>Sine-kernel determinant on two large intervals</title>
+    <updated>2020-03-18T10:29:13Z</updated>
+    <link href="https://arxiv.org/abs/2003.08136v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2003.08136v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider the probability of two large gaps (intervals without eigenvalues) in the bulk scaling limit of the Gaussian Unitary Ensemble of random matrices. We determine the multiplicative constant in the asymptotics. We also provide the full explicit asymptotics (up to decreasing terms) for the transition between one and two large gaps.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.FA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-03-18T10:29:13Z</published>
+    <arxiv:comment>63 pages</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>Benjamin Fahs</name>
+    </author>
+    <author>
+      <name>Igor Krasovsky</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1303.1871v1</id>
+    <title>Asymptotics of a cubic sine kernel determinant</title>
+    <updated>2013-03-08T01:50:46Z</updated>
+    <link href="https://arxiv.org/abs/1303.1871v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1303.1871v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the one parameter family of Fredholm determinants $\det(I-γK_{\textnormal{csin}}),γ\in\mathbb{R}$ of an integrable Fredholm operator $K_{\textnormal{csin}}$ acting on the interval $(-s,s)$ whose kernel is a cubic generalization of the sine kernel which appears in random matrix theory. This Fredholm determinant appears in the description of the Fermi distribution of semiclassical non-equilibrium Fermi states in condensed matter physics as well as in random matrix theory. Using the Riemann-Hilbert method, we calculate the large $s$-asymptotics of $\det(I-γK_{\textnormal{csin}})$ for all values of the real parameter $γ$.</summary>
+    <category term="nlin.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.quant-gas" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-03-08T01:50:46Z</published>
+    <arxiv:comment>59 pages, 10 figures. arXiv admin note: text overlap with arXiv:1209.5415</arxiv:comment>
+    <arxiv:primary_category term="nlin.SI"/>
+    <author>
+      <name>Thomas Bothner</name>
+    </author>
+    <author>
+      <name>Alexander Its</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0803.1141v2</id>
+    <title>The Riemann Zeta-Function and the Sine Kernel</title>
+    <updated>2008-09-05T14:12:04Z</updated>
+    <link href="https://arxiv.org/abs/0803.1141v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0803.1141v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We point out an interesting occurrence of the sine kernel in connection with the shifted moments of the Riemann zeta function along the critical line. We discuss rigorous results in this direction for the shifted second moment and for the shifted fourth moment. Furthermore, we conjecture that the sine kernel also occurs in connection with the higher (even) shifted moments and show that this conjecture is closely related to a recent conjecture by Conrey, Farmer, Keating, Rubinstein, and Snaith.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2008-03-07T18:02:10Z</published>
+    <arxiv:comment>18 pages; revised version; references added</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>H. Kösters</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2403.06722v3</id>
+    <title>Asymptotics of the finite-temperature sine kernel determinant</title>
+    <updated>2024-10-29T13:52:06Z</updated>
+    <link href="https://arxiv.org/abs/2403.06722v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2403.06722v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In the present paper, we study the asymptotics of the Fredholm determinant $D(x,s)$ of the finite-temperature deformation of the sine kernel, which represents the probability that there is no particles on the interval $(-x/π,x/π)$ in the bulk scaling limit of the finite-temperature fermion system. The variable $s$ in $D(x,s)$ is related to the temperature. The determinant also corresponds to the finite-temperature correlation function of one dimensional Bose gas. We derive the asymptotics of $D(x,s)$ in several different regimes in the $(x,s)$-plane. A third-order phase transition is observed in the asymptotic expansions as both $x$ and $s$ tend to positive infinity at certain related speed. The phase transition is then shown to be described by an integral involving the Hastings-McLeod solution of the second Painlevé equation.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-03-11T13:43:40Z</published>
+    <arxiv:comment>52 pages, 8 figures, typos corrected and figures added</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>Shuai-Xia Xu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1905.04907v1</id>
+    <title>Riemann-Hilbert approach to a generalised sine kernel</title>
+    <updated>2019-05-13T08:31:49Z</updated>
+    <link href="https://arxiv.org/abs/1905.04907v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1905.04907v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We derive the large distance asymptotics of the Fredholm determinant of the so-called generalised sine kernel at the critical point. This kernel corresponds to a generalisation of the pure sine kernel arising in the theory of random matrices and has potential applications to the analysis of the large-distance asymptotic behaviour of the so-called emptiness formation probability for various quantum integrable models away from their free fermion point.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nlin.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-05-13T08:31:49Z</published>
+    <arxiv:comment>23 pages</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>R. Gharakhloo</name>
+    </author>
+    <author>
+      <name>A. R. Its</name>
+    </author>
+    <author>
+      <name>K. K. Kozlowski</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1011.3159v1</id>
+    <title>Sine kernel asymptotics for a class of singular measures</title>
+    <updated>2010-11-13T20:43:03Z</updated>
+    <link href="https://arxiv.org/abs/1011.3159v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1011.3159v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We construct a family of measures on $\bbR$ that are purely singular with respect to Lebesgue measure, and yet exhibit universal sine-kernel asymptotics in the bulk. The measures are best described via their Jacobi recursion coefficients: these are sparse perturbations of the recursion coefficients corresponding to Chebyshev polynomials of the second kind. We prove convergence of the renormalized Christoffel-Darboux kernel to the sine kernel for any sufficiently sparse decaying perturbation.</summary>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2010-11-13T20:43:03Z</published>
+    <arxiv:primary_category term="math.SP"/>
+    <author>
+      <name>Jonathan Breuer</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2309.03803v1</id>
+    <title>On the integrable structure of deformed sine kernel determinants</title>
+    <updated>2023-09-07T15:57:42Z</updated>
+    <link href="https://arxiv.org/abs/2309.03803v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2309.03803v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study a family of Fredholm determinants associated to deformations of the sine kernel, parametrized by a weight function w. For a specific choice of w, this kernel describes bulk statistics of finite temperature free fermions. We establish a connection between these determinants and a system of integro-differential equations generalizing the fifth Painlevé equation, and we show that they allow us to solve an integrable PDE explicitly for a large class of initial data.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-09-07T15:57:42Z</published>
+    <arxiv:comment>26 pages</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>Tom Claeys</name>
+    </author>
+    <author>
+      <name>Sofia Tarricone</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/0401205v2</id>
+    <title>Dyson's constant in the asymptotics of the Fredholm determinant of the sine kernel</title>
+    <updated>2004-08-04T14:26:36Z</updated>
+    <link href="https://arxiv.org/abs/math/0401205v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0401205v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We prove that the asymptotics of the Fredholm determinant of $I-K_α$, where $K_α$ is the integral operator with the sine kernel $\sin(x-y)/(x-y)/π$ on the interval $[0,α]$ is given by a formula which was conjectured by F.J. Dyson. The first and second order asymptotics as well as the higher order asymptotics except for the constant term have already been proved. In this paper we thus determine the constant term.</summary>
+    <category term="math.FA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2004-01-16T15:33:52Z</published>
+    <arxiv:comment>30 pages; v2: change of title, Thm.5.7 corrected, minor changes</arxiv:comment>
+    <arxiv:primary_category term="math.FA"/>
+    <author>
+      <name>Torsten Ehrhardt</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1005.5047v1</id>
+    <title>Integral operators with the generalized sine-kernel on the real axis</title>
+    <updated>2010-05-27T12:32:52Z</updated>
+    <link href="https://arxiv.org/abs/1005.5047v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1005.5047v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The asymptotic properties of integral operators with the generalized sine kernel acting on the real axis are studied. The formulas for the resolvent and the Fredholm determinant are obtained in the large x limit. Some applications of the results obtained to the theory of integrable models are considered.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2010-05-27T12:32:52Z</published>
+    <arxiv:comment>17 pages, 2 Postscript figures, submitted to Theor. Math. Phys</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>N. A. Slavnov</name>
+    </author>
+    <arxiv:doi>10.1007/s11232-010-0108-1</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s11232-010-0108-1" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0805.4586v3</id>
+    <title>Riemann-Hilbert approach to a generalized sine kernel and applications</title>
+    <updated>2011-10-06T19:21:05Z</updated>
+    <link href="https://arxiv.org/abs/0805.4586v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0805.4586v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We investigate the asymptotic behavior of a generalized sine kernel acting on a finite size interval [-q,q]. We determine its asymptotic resolvent as well as the first terms in the asymptotic expansion of its Fredholm determinant. Further, we apply our results to build the resolvent of truncated Wiener--Hopf operators generated by holomorphic symbols. Finally, the leading asymptotics of the Fredholm determinant allows us to establish the asymptotic estimates of certain oscillatory multidimensional coupled integrals that appear in the study of correlation functions of quantum integrable models.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2008-05-29T18:56:45Z</published>
+    <arxiv:comment>74 pages</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <arxiv:journal_ref>Communications in Mathematical Physics 3, 291 (2009) 691-761</arxiv:journal_ref>
+    <author>
+      <name>N. Kitanine</name>
+      <arxiv:affiliation>LPTM</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Karol K. Kozlowski</name>
+      <arxiv:affiliation>Phys-ENS</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jean Michel Maillet</name>
+      <arxiv:affiliation>Phys-ENS</arxiv:affiliation>
+    </author>
+    <author>
+      <name>N. A. Slavnov</name>
+      <arxiv:affiliation>SMI</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Véronique Terras</name>
+      <arxiv:affiliation>Phys-ENS, LPTA</arxiv:affiliation>
+    </author>
+    <arxiv:doi>10.1007/s00220-009-0878-1</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s00220-009-0878-1" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1109.5494v2</id>
+    <title>The top eigenvalue of the random Toeplitz matrix and the sine kernel</title>
+    <updated>2013-12-16T07:44:37Z</updated>
+    <link href="https://arxiv.org/abs/1109.5494v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1109.5494v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We show that the top eigenvalue of an $n\times n$ random symmetric Toeplitz matrix, scaled by $\sqrt{2n\log n}$, converges to the square of the $2\to4$ operator norm of the sine kernel.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2011-09-26T09:01:55Z</published>
+    <arxiv:comment>Published in at http://dx.doi.org/10.1214/13-AOP863 the Annals of Probability (http://www.imstat.org/aop/) by the Institute of Mathematical Statistics (http://www.imstat.org)</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <arxiv:journal_ref>Annals of Probability 2013, Vol. 41, No. 6, 4050-4079</arxiv:journal_ref>
+    <author>
+      <name>Arnab Sen</name>
+    </author>
+    <author>
+      <name>Bálint Virág</name>
+    </author>
+    <arxiv:doi>10.1214/13-AOP863</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1214/13-AOP863" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/hep-th/9405010v1</id>
+    <title>Asymptotics for the Fredholm Determinant of the Sine Kernel on a Union of Intervals</title>
+    <updated>1994-05-02T18:02:39Z</updated>
+    <link href="https://arxiv.org/abs/hep-th/9405010v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/hep-th/9405010v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  In the bulk scaling limit of the Gaussian Unitary Ensemble of Hermitian matrices the probability that an interval of length $s$ contains no eigenvalues is the Fredholm determinant of the sine kernel $\sin(x-y)\overπ(x-y)$ over this interval. A formal asymptotic expansion for the determinant as $s$ tends to infinity was obtained by Dyson. In this paper we replace a single interval of length $s$ by $sJ$ where $J$ is a union of $m$ intervals and present a proof of the asymptotics up to second order. The logarithmic derivative with respect to $s$ of the determinant equals a constant (expressible in terms of hyperelliptic integrals) times $s$, plus a bounded oscillatory function of $s$ (zero of $m=1$, periodic if $m=2$, and in general expressible in terms of the solution of a Jacobi inversion problem), plus $o(1)$. Also determined are the asymptotics of the trace of the resolvent operator, which is the ratio in the same model of the probability that the set contains exactly one eigenvalue to the probability that it contains none. The proofs use ideas from orthogonal polynomial theory.</summary>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nlin.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>1994-05-02T18:02:39Z</published>
+    <arxiv:comment>24 pages</arxiv:comment>
+    <arxiv:primary_category term="hep-th"/>
+    <arxiv:journal_ref>Commun.Math.Phys. 171 (1995) 159-180</arxiv:journal_ref>
+    <author>
+      <name>Harold Widom</name>
+    </author>
+    <arxiv:doi>10.1007/BF02103774</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/BF02103774" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1011.5897v3</id>
+    <title>Riemann--Hilbert approach to the time-dependent generalized sine kernel</title>
+    <updated>2015-04-29T14:59:57Z</updated>
+    <link href="https://arxiv.org/abs/1011.5897v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1011.5897v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We derive the leading asymptotic behavior and build a new series representation for the Fredholm determinant of integrable integral operators appearing in the representation of the time and distance dependent correlation functions of integrable models described by a six-vertex R-matrix. This series representation opens a systematic way for the computation of the long-time, long-distance asymptotic expansion for the correlation functions of the aforementioned integrable models away from their free fermion point. Our method builds on a Riemann--Hilbert based analysis.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.FA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2010-11-25T22:45:11Z</published>
+    <arxiv:comment>60 pages, 15 figures, V2: minor modifications in the introduction, V3: a few missprints corrected</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>K. K. Kozlowski</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2106.02389v1</id>
+    <title>The sine kernel, two corresponding operator identities, and random matrices</title>
+    <updated>2021-06-04T10:03:30Z</updated>
+    <link href="https://arxiv.org/abs/2106.02389v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2106.02389v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In the present paper, we consider the integral operator, which acts in Hilbert space and has sine kernel. This operator generates two operator identities and two corresponding canonical differential systems. We find the asymptotics of the corresponding resolvent and Hamiltonians. We use both the method of operator identities and the theory of random matrices.</summary>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.FA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-06-04T10:03:30Z</published>
+    <arxiv:comment>This paper is a prolongation (and an important development of some results) of our paper arXiv:2104.12694</arxiv:comment>
+    <arxiv:primary_category term="math.CA"/>
+    <author>
+      <name>Lev Sakhnovich</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1712.08432v1</id>
+    <title>Boundaries of sine kernel universality for Gaussian perturbations of Hermitian matrices</title>
+    <updated>2017-12-22T13:24:39Z</updated>
+    <link href="https://arxiv.org/abs/1712.08432v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1712.08432v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We explore the boundaries of sine kernel universality for the eigenvalues of Gaussian perturbations of large deterministic Hermitian matrices. Equivalently, we study for deterministic initial data the time after which Dyson's Brownian motion exhibits sine kernel correlations. We explicitly describe this time span in terms of the limiting density and rigidity of the initial points. Our main focus lies on cases where the initial density vanishes at an interior point of the support. We show that the time to reach universality becomes larger if the density vanishes faster or if the initial points show less rigidity.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-12-22T13:24:39Z</published>
+    <arxiv:comment>43 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <arxiv:journal_ref>Random Matrices Theory Appl. 8, no. 3, 50 pp., 2019</arxiv:journal_ref>
+    <author>
+      <name>Tom Claeys</name>
+    </author>
+    <author>
+      <name>Thorsten Neuschel</name>
+    </author>
+    <author>
+      <name>Martin Venker</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0905.2089v2</id>
+    <title>Universality of sine-kernel for Wigner matrices with a small Gaussian perturbation</title>
+    <updated>2010-04-01T20:13:26Z</updated>
+    <link href="https://arxiv.org/abs/0905.2089v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0905.2089v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We consider $N\times N$ Hermitian random matrices with independent identically distributed entries (Wigner matrices). We assume that the distribution of the entries have a Gaussian component with variance $N^{-3/4+β}$ for some positive $β&gt;0$. We prove that the local eigenvalue statistics follows the universal Dyson sine kernel.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2009-05-13T15:17:03Z</published>
+    <arxiv:comment>76 pages</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>Laszlo Erdos</name>
+    </author>
+    <author>
+      <name>Jose A. Ramirez</name>
+    </author>
+    <author>
+      <name>Benjamin Schlein</name>
+    </author>
+    <author>
+      <name>Horng-Tzer Yau</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2412.10596v1</id>
+    <title>Transition Analysis: From the Airy and Pearcey Kernels to the Sine Kernel</title>
+    <updated>2024-12-13T22:45:38Z</updated>
+    <link href="https://arxiv.org/abs/2412.10596v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2412.10596v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study transitions between the three universal limiting kernels Airy, Pearcey and sine kernel, arising in Random Matrix Theory at edge, cusp and bulk points of the spectrum. Under appropriate rescalings, we provide complete asymptotic expansions of the extended Airy kernel and the extended Pearcey kernel approaching the extended sine kernel, expliciting the fluctuations.</summary>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-13T22:45:38Z</published>
+    <arxiv:comment>29 pages, 7 figures</arxiv:comment>
+    <arxiv:primary_category term="math.CA"/>
+    <author>
+      <name>Thorsten Neuschel</name>
+    </author>
+    <author>
+      <name>Martin Venker</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.03103v3</id>
+    <title>Tripartite information of free fermions: a universal entanglement coefficient from the sine kernel</title>
+    <updated>2026-03-08T12:25:33Z</updated>
+    <link href="https://arxiv.org/abs/2603.03103v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.03103v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the tripartite information I_3 of free fermions on two-dimensional lattices partitioned into three adjacent strips of width w. Translation invariance yields the exact decomposition I_3 = \sum_{k_y} g(k_F(k_y) w), where g(z) is a universal function of the scaling variable z = k_F w, determined by the spectrum of the sine-kernel (Slepian) integral operator. We find that g(z) has a unique zero at z* = 1.329 +/- 0.001: modes with k_F w &lt; z* violate monogamy of mutual information (g &gt; 0), while modes with k_F w &gt; z* satisfy it (g &lt; 0).
+  The central analytical result is g(z) = cz + O(z^3 ln z) with c = 3 ln(4/3)/pi ~ 0.2747, derived from the rank-1 limit of the sine kernel. Two exact cancellations -- of the z ln z area-law terms and of the z^2 terms -- are intrinsic to the I_3 combination. The coefficient c generalizes to n-partite information: c_n = (n/pi) ln R_n with R_n a rational number from binomial combinatorics. For Renyi entropy of index alpha, we show that g_alpha(z) ~ z^alpha for alpha &lt; 2 and g_2(z) = -(8/pi^3)z^3: von Neumann entropy (alpha = 1) uniquely gives linear sensitivity to Lifshitz transitions, while Renyi-2 gives only cubic sensitivity. We verify all predictions on square, triangular, and cubic lattices. DMRG calculations on the interacting t-V model provide evidence that the linear coefficient is independent of the Luttinger parameter K.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-03T15:39:35Z</published>
+    <arxiv:comment>12 pages, 7 tables, 4 figures. v3: added DMRG evidence for interaction-independence of c, expanded numerical protocol, softened claims per referee feedback. Ancillary files: Python code reproducing all results</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <author>
+      <name>Aleksandrs Sokolovs</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/0605003v2</id>
+    <title>Dyson's constants in the asymptotics of the determinants of Wiener-Hopf-Hankel operators with the sine kernel</title>
+    <updated>2006-11-09T21:09:00Z</updated>
+    <link href="https://arxiv.org/abs/math/0605003v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0605003v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  In this paper we are going to prove two asymptotic formulas for determinants det(I-K_s), as s goes to infinity, where K_s are the Wiener-Hopf-Hankel operators acting on L^2[0,s] with the kernels K(x-y)+K(x+y) and K(x-y)-K(x+y), respectively, and K(t):=sin(t)/(π*t). These formulas were conjectured by Dyson. The identification of the constant term in the asymptotics was an open problem for a long time.</summary>
+    <category term="math.FA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2006-04-28T23:56:28Z</published>
+    <arxiv:comment>proof of Thm. 3.2 corrected; introduction extended</arxiv:comment>
+    <arxiv:primary_category term="math.FA"/>
+    <author>
+      <name>Torsten Ehrhardt</name>
+    </author>
+    <arxiv:doi>10.1007/s00220-007-0239-x</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s00220-007-0239-x" title="doi"/>
+  </entry>
+</feed>

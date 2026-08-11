@@ -1,0 +1,232 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/YnNSHN+JNdcA3n9I1mTr1FGfoGw</id>
+  <title>arXiv Query: search_query=au:Ghosal AND all:rigidity&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-08-11T16:10:51Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=au:Ghosal+AND+all:rigidity&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>9</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2112.10607v3</id>
+    <title>Rigidity of the Stochastic Airy Operator</title>
+    <updated>2022-09-23T21:35:54Z</updated>
+    <link href="https://arxiv.org/abs/2112.10607v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2112.10607v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove that the spectrum of the stochastic Airy operator is rigid in the sense of Ghosh and Peres (Duke Math. J., 166(10):1789--1858, 2017) for Dirichlet and Robin boundary conditions. This proves the rigidity of the Airy-$β$ point process and the soft-edge limit of rank-$1$ perturbations of Gaussian $β$-Ensembles for any $β&gt;0$, and solves an open problem mentioned in a previous work of Bufetov, Nikitin, and Qiu (Mosc. Math. J., 19(2):217--274, 2019). Our proof uses a combination of the semigroup theory of the stochastic Airy operator and the techniques for studying insertion and deletion tolerance of point processes developed by Holroyd and Soo (Electron. J. Probab., 18:no. 74, 24, 2013).</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-12-20T15:26:13Z</published>
+    <arxiv:comment>Final version; accepted for publication in Int. Math. Res. Not</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Pierre Yves Gaudreau Lamarre</name>
+    </author>
+    <author>
+      <name>Promit Ghosal</name>
+    </author>
+    <author>
+      <name>Wenxuan Li</name>
+    </author>
+    <author>
+      <name>Yuchen Liao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1908.08422v2</id>
+    <title>Spectral rigidity of random Schrödinger operators via Feynman-Kac formulas</title>
+    <updated>2020-06-12T10:45:16Z</updated>
+    <link href="https://arxiv.org/abs/1908.08422v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1908.08422v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We develop a technique for proving number rigidity (in the sense of Ghosh-Peres) of the spectrum of general random Schrödinger operators (RSOs). Our method makes use of Feynman-Kac formulas to estimate the variance of exponential linear statistics of the spectrum in terms of self-intersection local times.
+  Inspired by recent results concerning Feynman-Kac formulas for RSOs with multiplicative white noise by Gorin, Shkolnikov and the first-named author, we use this method to prove number rigidity for a class of one-dimensional continuous RSOs of the form $-\frac12Δ+V+ξ$, where $V$ is a deterministic potential and $ξ$ is a stationary Gaussian noise. Our results require only very mild assumptions on the domain on which the operator is defined, the boundary conditions on that domain, the regularity of the potential $V$, and the singularity of the noise $ξ$.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-08-22T14:58:48Z</published>
+    <arxiv:comment>30 pages; to appear in Annales Henri Poincaré (Theoretical and Mathematical Physics)</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>Pierre Yves Gaudreau Lamarre</name>
+    </author>
+    <author>
+      <name>Promit Ghosal</name>
+    </author>
+    <author>
+      <name>Yuchen Liao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2109.06976v2</id>
+    <title>GRiD: GPU-Accelerated Rigid Body Dynamics with Analytical Gradients</title>
+    <updated>2022-02-25T15:57:15Z</updated>
+    <link href="https://arxiv.org/abs/2109.06976v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2109.06976v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce GRiD: a GPU-accelerated library for computing rigid body dynamics with analytical gradients. GRiD was designed to accelerate the nonlinear trajectory optimization subproblem used in state-of-the-art robotic planning, control, and machine learning, which requires tens to hundreds of naturally parallel computations of rigid body dynamics and their gradients at each iteration. GRiD leverages URDF parsing and code generation to deliver optimized dynamics kernels that not only expose GPU-friendly computational patterns, but also take advantage of both fine-grained parallelism within each computation and coarse-grained parallelism between computations. Through this approach, when performing multiple computations of rigid body dynamics algorithms, GRiD provides as much as a 7.2x speedup over a state-of-the-art, multi-threaded CPU implementation, and maintains as much as a 2.5x speedup when accounting for I/O overhead. We release GRiD as an open-source library for use by the wider robotics community.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-09-14T21:31:17Z</published>
+    <arxiv:comment>Camera Ready Update: 8 pages, 5 figures, 1 data table, 2 algorithm blocks</arxiv:comment>
+    <arxiv:primary_category term="cs.RO"/>
+    <author>
+      <name>Brian Plancher</name>
+    </author>
+    <author>
+      <name>Sabrina M. Neuman</name>
+    </author>
+    <author>
+      <name>Radhika Ghosal</name>
+    </author>
+    <author>
+      <name>Scott Kuindersma</name>
+    </author>
+    <author>
+      <name>Vijay Janapa Reddi</name>
+    </author>
+    <arxiv:doi>10.1109/ICRA46639.2022.9812384</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/ICRA46639.2022.9812384" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2209.03818v1</id>
+    <title>Model studies on motion of respiratory droplets driven through a face mask</title>
+    <updated>2022-09-08T13:41:24Z</updated>
+    <link href="https://arxiv.org/abs/2209.03818v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2209.03818v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Face masks are used to intercept respiratory droplets to prevent spreading of air-borne diseases. Designing face masks with better efficiency needs microscopic understanding on how respiratory droplets move through a mask. Here we study a simple model on the interception of droplets by a face mask. The mask is treated as a polymeric network in an asymmetric confinement, while the droplet is taken as a micrometer sized tracer colloidal particle, subject to driving force that mimics the breathing. We study numerically, using the Langevin dynamics, the tracer particle permeation through the polymeric network. We show that the permeation is an activated process following an Arrhenius dependence on temperature. The potential energy profile responsible for the activation process increases with tracer size, tracer bead interaction, network rigidity and decreases with the driving force and confinement length. A deeper energy barrier led to better efficiency to intercept the tracer particles of a given size in the presence of driving force at room temperature. Our studies may help to design mask with better efficiency.</summary>
+    <category term="cond-mat.soft" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-09-08T13:41:24Z</published>
+    <arxiv:comment>13 pages, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.soft"/>
+    <arxiv:journal_ref>EPL 2023</arxiv:journal_ref>
+    <author>
+      <name>Rahul Karmakar</name>
+    </author>
+    <author>
+      <name>Aishani Ghosal</name>
+    </author>
+    <author>
+      <name>Jaydeb Chakrabarti</name>
+    </author>
+    <arxiv:doi>10.1209/0295-5075/acaf9f</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1209/0295-5075/acaf9f" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.28570v1</id>
+    <title>Digitizing Coaching Intelligence: An Agentic Framework for Holistic Athlete Profiling using VLM and RAG</title>
+    <updated>2026-06-26T19:53:26Z</updated>
+    <link href="https://arxiv.org/abs/2606.28570v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.28570v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Athlete assessment is a critical process for tracking physical progress and identifying elite talent. However, during mass recruitment drives, traditional methods rely on manual observation, which is inherently subjective and unscalable, or basic computer vision (CV) systems limited to quantitative repetition counting. These standard approaches lack the "coaching intelligence" required to evaluate qualitative physiological markers such as form degradation, spinal articulation, and fatigue. This paper presents a novel, LLM-based hybrid agentic framework for automated, holistic athlete profiling that strictly aligns with the Sports Authority of India (SAI) assessment protocols. Orchestrated via LangGraph, our dual-pipeline architecture synthesizes the geometric precision of CV (MediaPipe) for kinematic tracking with the semantic reasoning of Vision-Language Models (Llama-4-scout). To overcome the latency and token constraints associated with multimodal video processing, we introduce a 3 X 3 "Smart Grid" temporal chunking strategy, reducing computational overhead by over 88% while preserving critical temporal continuity. To ensure data integrity and mitigate hallucination, the framework pioneers an autonomous "LLM-as-a-Judge" self-correction loop that cross-references quantitative and qualitative metrics before persistence. Finally, we implement a dual-persistence Retrieval-Augmented Generation (RAG) pipeline utilizing a vector search engine (ChromaDB). This enables coaches to bypass rigid SQL databases and perform complex semantic queries (e.g., "Identify athletes with high endurance but poor core rigidity") using natural language. Experimental results demonstrate that this multi-agent approach significantly bridges the gap between raw biometric tracking and actionable coaching insights, offering a scalable, objective solution for national talent identification.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-26T19:53:26Z</published>
+    <arxiv:comment>16 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Deep Ghosal</name>
+    </author>
+    <author>
+      <name>Ishani Sen</name>
+    </author>
+    <author>
+      <name>Wazib Ansar</name>
+    </author>
+    <author>
+      <name>Amlan Chakrabarti</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1302.4575v2</id>
+    <title>Melting Scenario for Coulomb-interacting Classical Particles in Two-dimensional Irregular Confinements</title>
+    <updated>2013-06-12T11:59:43Z</updated>
+    <link href="https://arxiv.org/abs/1302.4575v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1302.4575v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The "melting" of self-formed rigid structures made of a small number of interacting classical particles confined in an irregular two-dimensional space is investigated using Monte Carlo simulations. It is shown that the interplay of long-range Coulomb repulsions between these particles and the irregular confinement yields a solid-like phase at low temperatures that possesses a bond-orientational order, however, the positional order is depleted even at the lowest temperatures. Upon including thermal fluctuations, this solid-like phase smoothly crosses over to a liquid-like phase by destroying the bond-orientational order. The collapse of solidity is shown to be defect mediated, and aided by the proliferation of free disclinations. The behavior of different physical observables across the crossover region are obtained. Our results will help quantifying melting found in experiments on systems with confined geometries.</summary>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-02-19T10:56:10Z</published>
+    <arxiv:comment>9 pages, 9 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.dis-nn"/>
+    <author>
+      <name>Dyuti Bhattacharya</name>
+    </author>
+    <author>
+      <name>Amit Ghosal</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2101.00319v2</id>
+    <title>On Spatial Conditioning of the Spectrum of Discrete Random Schrödinger Operators</title>
+    <updated>2023-03-09T22:22:34Z</updated>
+    <link href="https://arxiv.org/abs/2101.00319v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2101.00319v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Consider a random Schrödinger-type operator of the form $H:=-H_X+V+ξ$ acting on a general graph $\mathscr G=(\mathscr V,\mathscr E)$, where $H_X$ is the generator of a Markov process $X$ on $\mathscr G$, $V$ is a deterministic potential with sufficient growth (so that $H$ has a purely discrete spectrum), and $ξ$ is a random noise with at-most-exponential tails. We prove that $H$'s eigenvalue point process is number rigid in the sense of Ghosh and Peres (Duke Math. J. 166 (2017), no. 10, 1789--1858); that is, the number of eigenvalues in any bounded domain $B\subset\mathbb C$ is determined by the configuration of eigenvalues outside of $B$. Our general setting allows to treat cases where $X$ could be non-symmetric (hence $H$ is non-self-adjoint) and $ξ$ has long-range dependence. Our strategy of proof consists of controlling the variance of the trace of the semigroup $\mathrm e^{-t H}$ using the Feynman-Kac formula.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-01-01T21:07:22Z</published>
+    <arxiv:comment>32 pages; revised version incorporating referee comments and fixing a few misprints and errors. Accepted in the Journal of Spectral Theory</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>Pierre Yves Gaudreau Lamarre</name>
+    </author>
+    <author>
+      <name>Promit Ghosal</name>
+    </author>
+    <author>
+      <name>Yuchen Liao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.14411v1</id>
+    <title>Energy-Efficient Quadruped Locomotion with Compliant Feet</title>
+    <updated>2026-05-14T05:54:13Z</updated>
+    <link href="https://arxiv.org/abs/2605.14411v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.14411v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Quadruped robots are often designed with rigid feet to simplify control and maintain stable contact during locomotion. While this approach is straightforward, it limits the ability of the legs to absorb impact forces and reuse stored elastic energy, leading to higher energy expenditure during locomotion. To explore whether compliant feet can provide an advantage, we integrate foot compliance into a reinforcement learning (RL) locomotion controller and study its effect on walking efficiency. In simulation, we train eight policies corresponding to eight different spring stiffness values and then cross-evaluate their performance by measuring mechanical energy consumed per meter traveled. In experiments done on a developed quadruped, the energy consumption for the intermediate stiffness spring is lower by ~ 17% when compared to a very stiff or a very flexible spring incorporated in the feet, with similar trends appearing in the simulation results. These results indicate that selecting an appropriate foot compliance can improve locomotion efficiency without destabilizing the robot during motion.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-14T05:54:13Z</published>
+    <arxiv:comment>29 pages, 7 figures, supplemental videos link is mentioned in the paper</arxiv:comment>
+    <arxiv:primary_category term="cs.RO"/>
+    <author>
+      <name>Pramod Pal</name>
+      <arxiv:affiliation>Indian Institute of Science Bangalore India</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Shishir Kolathaya</name>
+      <arxiv:affiliation>Robert Bosch Centre for Cyber Physical Systems Bangalore India</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ashitava Ghosal</name>
+      <arxiv:affiliation>Indian Institute of Science Bangalore India</arxiv:affiliation>
+      <arxiv:affiliation>Ahmedabad University Ahmedabad India</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2309.09163v2</id>
+    <title>Hamiltonian Dynamics Learning from Point Cloud Observations for Nonholonomic Mobile Robot Control</title>
+    <updated>2024-03-12T18:49:19Z</updated>
+    <link href="https://arxiv.org/abs/2309.09163v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2309.09163v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Reliable autonomous navigation requires adapting the control policy of a mobile robot in response to dynamics changes in different operational conditions. Hand-designed dynamics models may struggle to capture model variations due to a limited set of parameters. Data-driven dynamics learning approaches offer higher model capacity and better generalization but require large amounts of state-labeled data. This paper develops an approach for learning robot dynamics directly from point-cloud observations, removing the need and associated errors of state estimation, while embedding Hamiltonian structure in the dynamics model to improve data efficiency. We design an observation-space loss that relates motion prediction from the dynamics model with motion prediction from point-cloud registration to train a Hamiltonian neural ordinary differential equation. The learned Hamiltonian model enables the design of an energy-shaping model-based tracking controller for rigid-body robots. We demonstrate dynamics learning and tracking control on a real nonholonomic wheeled robot.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-09-17T05:31:31Z</published>
+    <arxiv:comment>8 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.RO"/>
+    <author>
+      <name>Abdullah Altawaitan</name>
+    </author>
+    <author>
+      <name>Jason Stanley</name>
+    </author>
+    <author>
+      <name>Sambaran Ghosal</name>
+    </author>
+    <author>
+      <name>Thai Duong</name>
+    </author>
+    <author>
+      <name>Nikolay Atanasov</name>
+    </author>
+  </entry>
+</feed>

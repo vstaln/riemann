@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/f5gfgW3B2uLDV0O+Tru7ulWKVsQ</id>
+  <title>arXiv Query: search_query=all:Ihara AND all:"random matrix"&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-08-11T16:07:01Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:Ihara+AND+all:%22random+matrix%22&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2209.12271v4</id>
+    <title>Extreme singular values of inhomogeneous sparse random rectangular matrices</title>
+    <updated>2024-12-12T18:06:41Z</updated>
+    <link href="https://arxiv.org/abs/2209.12271v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2209.12271v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We develop a unified approach to bounding the largest and smallest singular values of an inhomogeneous random rectangular matrix, based on the non-backtracking operator and the Ihara-Bass formula for general random Hermitian matrices with a bipartite block structure. We obtain probabilistic upper (respectively, lower) bounds for the largest (respectively, smallest) singular values of a large rectangular random matrix $X$. These bounds are given in terms of the maximal and minimal $\ell_2$-norms of the rows and columns of the variance profile of $X$. The proofs involve finding probabilistic upper bounds on the spectral radius of an associated non-backtracking matrix $B$. The two-sided bounds can be applied to the centered adjacency matrix of sparse inhomogeneous Erdős-Rényi bipartite graphs for a wide range of sparsity, down to criticality. In particular, for Erdős-Rényi bipartite graphs $G(n,m,p)$ with $p=ω(\log n)/n$, and $m/n\to y \in (0,1)$, our sharp bounds imply that there are no outliers outside the support of the Marčenko-Pastur law almost surely. This result extends the Bai-Yin theorem to sparse rectangular random matrices.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-09-25T17:25:45Z</published>
+    <arxiv:comment>23 pages</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <arxiv:journal_ref>Bernoulli, 30(4): 2904-2931, 2024</arxiv:journal_ref>
+    <author>
+      <name>Ioana Dumitriu</name>
+    </author>
+    <author>
+      <name>Yizhe Zhu</name>
+    </author>
+    <arxiv:doi>10.3150/23-BEJ1699</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.3150/23-BEJ1699" title="doi"/>
+  </entry>
+</feed>

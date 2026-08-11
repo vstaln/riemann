@@ -1,0 +1,377 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/ZlT52i1RmV3uh0G+tvqYPPKhVik</id>
+  <title>arXiv Query: search_query=all:"Selberg eigenvalue conjecture"&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-08-11T16:07:11Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22Selberg+eigenvalue+conjecture%22&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>19</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1803.06016v2</id>
+    <title>Twist-minimal trace formulas and the Selberg eigenvalue conjecture</title>
+    <updated>2020-04-17T17:11:50Z</updated>
+    <link href="https://arxiv.org/abs/1803.06016v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1803.06016v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We derive a fully explicit version of the Selberg trace formula for twist-minimal Maass forms of weight 0 and arbitrary conductor and nebentypus character, and apply it to prove two theorems. First, conditional on Artin's conjecture, we classify the even 2-dimensional Artin representations of small conductor; in particular, we show that the even icosahedral representation of smallest conductor is the one found by Doud and Moore, of conductor 1951. Second, we verify the Selberg eigenvalue conjecture for groups of small level, improving on a result of Huxley from 1985.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-03-15T22:02:11Z</published>
+    <arxiv:comment>64 pages, to appear in JLMS</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Andrew R. Booker</name>
+    </author>
+    <author>
+      <name>Min Lee</name>
+    </author>
+    <author>
+      <name>Andreas Strömbergsson</name>
+    </author>
+    <arxiv:doi>10.1112/jlms.12349</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1112/jlms.12349" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1609.05500v4</id>
+    <title>On Selberg's Eigenvalue Conjecture for moduli spaces of abelian differentials</title>
+    <updated>2018-09-07T14:24:12Z</updated>
+    <link href="https://arxiv.org/abs/1609.05500v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1609.05500v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>J.-C. Yoccoz proposed a natural extension of Selberg's Eigenvalue Conjecture to moduli spaces of abelian differentials. We prove an approximation to this conjecture. This gives a qualitative generalization of Selberg's $\frac{3}{16}$ Theorem to moduli spaces of abelian differentials on surfaces of genus $\geq 2$.</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-09-18T15:22:56Z</published>
+    <arxiv:comment>49 pages. Added section giving the Dolgopyat-type argument</arxiv:comment>
+    <arxiv:primary_category term="math.DS"/>
+    <arxiv:journal_ref>Compositio Math. 155 (2019) 2354-2398</arxiv:journal_ref>
+    <author>
+      <name>Michael Magee</name>
+    </author>
+    <arxiv:doi>10.1112/S0010437X1900767X</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1112/S0010437X1900767X" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/9811158v1</id>
+    <title>On an Analog of Selberg's Eigenvalue Conjecture for SL_3(Z)</title>
+    <updated>1998-11-27T01:06:30Z</updated>
+    <link href="https://arxiv.org/abs/math/9811158v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/9811158v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Let H be the homogeneous space associated to the group PGL_3(R). Let X=Γ/H where Γ=SL_3(Z) and consider the first non-trivial eigenvalue λ_1 of the Laplacian on L^2(X). Using geometric considerations, we prove the inequality λ_1&lt;pi^2/10. Since the continuous spectrum is represented by the band [1,\infty), our bound on λ_1 can be viewed as an analogue of Selberg's eigenvalue conjecture for quotients of the hyperbolic half space.</summary>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>1998-11-27T01:06:30Z</published>
+    <arxiv:primary_category term="math.SP"/>
+    <author>
+      <name>Sultan Catto</name>
+    </author>
+    <author>
+      <name>Jonathan Huntley</name>
+    </author>
+    <author>
+      <name>Jay Jorgenson</name>
+    </author>
+    <author>
+      <name>David Tepper</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1509.04323v2</id>
+    <title>The Selberg trace formula as a Dirichlet series</title>
+    <updated>2016-06-19T18:41:08Z</updated>
+    <link href="https://arxiv.org/abs/1509.04323v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1509.04323v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We explore an idea of Conrey and Li of expressing the Selberg trace formula as a Dirichlet series. We describe two applications, including an interpretation of the Selberg eigenvalue conjecture in terms of quadratic twists of certain Dirichlet series, and a formula for an arithmetically weighted sum of the complete symmetric square L-functions associated to cuspidal Maass newforms of squarefree level N&gt;1.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-09-14T21:01:57Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Andrew R. Booker</name>
+    </author>
+    <author>
+      <name>Min Lee</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.00493v2</id>
+    <title>On the greatest prime factor and uniform equidistribution of quadratic polynomials</title>
+    <updated>2025-05-30T13:10:55Z</updated>
+    <link href="https://arxiv.org/abs/2505.00493v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.00493v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We show that the greatest prime factor of $n^2+h$ is at least $n^{1.312}$ infinitely often. This gives an unconditional proof for the range previously known under the Selberg eigenvalue conjecture. Furthermore, we get uniformity in $h \leq n^{1+o(1)}$ under a natural hypothesis on real characters. The same uniformity is obtained for the equidistribution of the roots of quadratic congruences modulo primes. We also prove a variant of the divisor problem for $ax^2+by^3$, which was used by the second author to give a conditional result about primes of that shape.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-01T12:47:12Z</published>
+    <arxiv:comment>v2: minor corrections</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Lasse Grimmelt</name>
+    </author>
+    <author>
+      <name>Jori Merikoski</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1106.1139v2</id>
+    <title>Non-split Sums of Coefficients of GL(2)-Automorphic Forms</title>
+    <updated>2011-06-07T17:34:16Z</updated>
+    <link href="https://arxiv.org/abs/1106.1139v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1106.1139v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Given a cuspidal automorphic form $π$ on $\GL_2$, we study smoothed sums of the form $\sum_{n\in\mathbb{N}} a_π(n^2+d)W(\frac{n}{Y})$. The error term we get is sharp in that it is uniform in both $d$ and $Y$ and depends directly on bounds towards Ramanujan for forms of half-integral weight and Selberg eigenvalue conjecture. Moreover, we identify (at least in the case where the level is square-free) the main term as a simple factor times the residue as $s=1$ of the symmetric square L-function $L(s,\Msym^2π)$. In particular there is no main term unless $d&gt;0$ and $π$ is a dihedral form.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.RT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2011-06-06T18:13:03Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Nicolas Templier</name>
+    </author>
+    <author>
+      <name>Jacob Tsimerman</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1703.03197v3</id>
+    <title>Niveau de répartition des polynômes quadratiques et crible majorant pour les entiers friables</title>
+    <updated>2019-05-07T14:26:52Z</updated>
+    <link href="https://arxiv.org/abs/1703.03197v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1703.03197v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We obtain new estimates on the level of distribution of the set $\{Q(n)\}$ where $Q\in{\mathbb Z}[X]$ is irreducible quadratic, for well-factorable moduli, improving a result due to Iwaniec. As a by-product of our arguments, we study the Chebyshev problem of estimating $\max\{P^+(n^2-D), n\leq x\}$ and make explicit, in Deshouillers-Iwaniec's state-of-the-art result, the dependence on the Selberg eigenvalue conjecture. Combined with the construction of an upper-bound sieve for numbers free of large factors, we obtain new upper bounds for the quantity $Ψ_Q(x, y) = |\{n\leq x: p\mid Q(n)\Rightarrow p\leq y\}|$ for $Q\in{\mathbb Z}[X]$ linear or quadratic.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-03-09T09:41:38Z</published>
+    <arxiv:comment>50 pages, in French</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Régis de la Bretèche</name>
+    </author>
+    <author>
+      <name>Sary Drappeau</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1302.3127v3</id>
+    <title>Weighted spectral large sieve inequalities for Hecke congruence subgroups of SL(2,Z[i])</title>
+    <updated>2013-02-18T18:19:29Z</updated>
+    <link href="https://arxiv.org/abs/1302.3127v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1302.3127v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove new bounds for weighted mean values of sums involving Fourier coefficients of cusp forms that are automorphic with respect to a Hecke congruence subgroup Γ=Γ_0(q) of the group SL(2,Z[i]), and correspond to exceptional eigenvalues of the Laplace operator on the space L^2(Γ\SL(2,C)/SU(2)). These results are, for certain applications, an effective substitute for the generalised Selberg eigenvalue conjecture. We give a proof of one such application, which is an upper bound for a sum of generalised Kloosterman sums (of significance in the study of certain mean values of Hecke zeta-functions with groessencharakters).
+  Our proofs make extensive use of Lokvenec-Guleska's generalisation of the Bruggeman-Motohashi summation formulae for PSL(2,Z[i])\PSL(2,C). We also employ a bound of Kim and Shahidi for the first eigenvalues of the relevant Laplace operators, and an `unweighted' spectral large sieve inequality (our proof of which is to appear separately).</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-02-13T14:53:18Z</published>
+    <arxiv:comment>to appear in Functiones et Approximatio Commentarii Mathematici; 116 pages, 0 figures; revised statement of Theorem 1 and change in the definition, on page 13, of the B-transform (both revisions involve correction by a factor 2); other related corrections (e.g. in Equation (0.1)); corrections of a few typos (e.g. on page 8); additional information on references [22], [23] to unpublished work</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <arxiv:journal_ref>Functiones et Approximatio Commentarii Mathematici, 48.2 (2013), 213-376</arxiv:journal_ref>
+    <author>
+      <name>Nigel Watt</name>
+    </author>
+    <arxiv:doi>10.7169/facm/2013.48.2.4</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.7169/facm/2013.48.2.4" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1801.02212v1</id>
+    <title>The fifth moment of Hecke L-functions in the weight aspect</title>
+    <updated>2018-01-07T16:51:03Z</updated>
+    <link href="https://arxiv.org/abs/1801.02212v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1801.02212v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove an upper bound for the fifth moment of Hecke L-functions associated to holomorphic Hecke cusp forms of full level and weight k in a dyadic interval K &lt; k &lt; 2K, as K tends to infinity. The bound is sharp on Selberg's eigenvalue conjecture.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-01-07T16:51:03Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <arxiv:journal_ref>Math. Proc. Camb. Phil. Soc. 168 (2020) 543-566</arxiv:journal_ref>
+    <author>
+      <name>Rizwanur Khan</name>
+    </author>
+    <arxiv:doi>10.1017/S0305004118000944</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1017/S0305004118000944" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2402.11761v1</id>
+    <title>The number of automorphic representations of $\mathrm{GL}_2$ with exceptional eigenvalues</title>
+    <updated>2024-02-19T01:24:14Z</updated>
+    <link href="https://arxiv.org/abs/2402.11761v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2402.11761v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We obtain an upper bound for the dimension of the cuspidal automorphic forms for $\mathrm{GL}_2$ over a number field, whose archimedean local representations are not tempered. More precisely, we prove the following result.
+  Let $F$ be a number field and $\mathbb{A}_{F}$ be the ring of adeles of $F$. Let $\mathcal{O}_{F}$ be the ring of integers of $F$. Let $\mathfrak{X}_{F,\mathrm{ex}}$ be the set of irreducible cuspidal automorphic representations $π$ of $\mathrm{GL}_2(\mathbb{A}_{F})$ with the trivial central character such that for each archimedean place $v$ of $F$, the local representation of $π$ at $v$ is an unramified principal series and is not tempered. For an ideal $J$ of $\mathcal{O}_{F}$, let $\mathrm{K}_{0}(J)$ be the subgroup of $\mathrm{GL}_2(\mathbb{A}_{F})$ corresponding to $Γ_0(J) \subset \mathrm{SL}_2(\mathcal{O}_F)$. Let $r_1$ be the number of real embeddings of $F$ and $r_2$ be the number of conjugate pairs of complex embeddings of $F$. Using the Arthur-Selberg trace formula, we have \begin{equation*}
+  \sum_{π\in \mathfrak{X}_{F,\mathrm{ex}}} \dim π^{\mathrm{K}_0(J)}
+  \ll_{F} \frac{[\mathrm{SL}_2(\mathcal{O}_{F}) : Γ_0(J)]}{(\log (N_{F/\mathbb{Q}}(J)))^{2r_1+3r_2}} \quad \text{ as } \quad |N_{F/\mathbb{Q}}(J)|\to \infty.
+  \end{equation*} From this result, we obtain the result on an upper bound for the number of Hecke-Maass cusp forms of weight $0$ on $Γ_0(N)$ which do not satisfy the Selberg eigenvalue conjecture.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-02-19T01:24:14Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Dohoon Choi</name>
+    </author>
+    <author>
+      <name>Min Lee</name>
+    </author>
+    <author>
+      <name>Youngmin Lee</name>
+    </author>
+    <author>
+      <name>Subong Lim</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0707.2332v3</id>
+    <title>On Selberg's small eigenvalue conjecture and residual eigenvalues</title>
+    <updated>2008-11-07T13:58:48Z</updated>
+    <link href="https://arxiv.org/abs/0707.2332v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0707.2332v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We show that Selberg's eigenvalue conjecture concerning small eigenvalues of the automorphic Laplacian for congruence groups is equivalent to a conjecture about the non-existence of residual eigenvalues for a perturbed system. We prove this using a combination of methods from asymptotic perturbation theory and number theory.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2007-07-16T14:53:14Z</published>
+    <arxiv:comment>33pages, Various expository corrections</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Morten S. Risager</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/hep-th/0304130v1</id>
+    <title>Spectral theory of automorphic forms and analysis of invariant operators on $SL_3({\cal{Z}}$ with applications</title>
+    <updated>2003-04-15T00:59:50Z</updated>
+    <link href="https://arxiv.org/abs/hep-th/0304130v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/hep-th/0304130v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We study a variety of problems in the spectral theory of automorphic forms using entirely analytic techniques such as Selberg trace formula, asymptotics of Whittaker functions and behavior of heat kernels. Error terms for Weyl's law and an analog of Selberg's eigenvalue conjecture for $SL_3({\bf Z})$ is given. We prove the following: Let $\cal H$ be the homogeneous space associated to the group $PGL_3(\bf R)$. Let $X = Γ{\backslash SL_3({\bf Z}})$ and consider the first non-trivial eigenvalue $λ_1$ of the Laplacian on $L^2(X)$. Using geometric considerations, we prove the inequality $λ_1 &gt; 3pi^2/10&gt; 2.96088.$ Since the continuous spectrum is represented by the band $[1,\infty)$, our bound on $λ_{1}$ can be viewed as an analogue of Selberg's eigenvalue conjecture for quotients of the hyperbolic half space. Brief comment on relevance of automorphic forms to applications in high energy physics is given.</summary>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2003-04-15T00:59:50Z</published>
+    <arxiv:comment>6 pages, revtex</arxiv:comment>
+    <arxiv:primary_category term="hep-th"/>
+    <author>
+      <name>Sultan Catto</name>
+    </author>
+    <author>
+      <name>Jonathan Huntley</name>
+    </author>
+    <author>
+      <name>Nam-Jong Moh</name>
+    </author>
+    <author>
+      <name>David Tepper</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1908.08816v3</id>
+    <title>On the largest prime factor of $n^2+1$</title>
+    <updated>2020-11-02T09:38:00Z</updated>
+    <link href="https://arxiv.org/abs/1908.08816v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1908.08816v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We show that the largest prime factor of $n^2+1$ is infinitely often greater than $n^{1.279}$. This improves the result of de la Bretèche and Drappeau (2019) who obtained this with $1.2182$ in place of $1.279.$ The main new ingredients in the proof are a new Type II estimate and using this estimate by applying Harman's sieve method. To prove the Type II estimate we use the bounds of Deshouillers and Iwaniec on linear forms of Kloosterman sums. We also show that conditionally on Selberg's eigenvalue conjecture the exponent $1.279$ may be increased to $1.312.$</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-08-23T13:21:57Z</published>
+    <arxiv:comment>v3: Small corrections according to comments by referee</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Jori Merikoski</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1809.10140v2</id>
+    <title>Euler products of Selberg zeta functions in the critical strip</title>
+    <updated>2018-10-21T12:37:30Z</updated>
+    <link href="https://arxiv.org/abs/1809.10140v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1809.10140v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For any congruence subgroup of the modular group, we extend the region of convergence of the Euler products of the Selberg zeta functions beyond the boundary Re s = 1, if they are attached with a nontrivial irreducible unitary representation. The region is determined by the size of the lowest eigenvalue of the Laplacian, and it extends to Re s $\geqslant$ 3/4 under Selberg's eigenvalue conjecture. More generally, for any unitary representation we establish the relation between the behavior of partial Euler products in the critical strip and the estimate of the error term in the prime geodesic theorem. For the trivial representation, the proof essentially exploits the idea of the celebrated work of Ramanujan.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-09-24T16:00:00Z</published>
+    <arxiv:comment>24 pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <arxiv:journal_ref>The Ramanujan Journal 59 (2022), no. 2, 437-458</arxiv:journal_ref>
+    <author>
+      <name>Ikuya Kaneko</name>
+    </author>
+    <author>
+      <name>Shin-ya Koyama</name>
+    </author>
+    <arxiv:doi>10.1007/s11139-022-00550-y</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s11139-022-00550-y" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.00653v2</id>
+    <title>On the exponents of distribution of primes and smooth numbers</title>
+    <updated>2025-06-29T22:06:28Z</updated>
+    <link href="https://arxiv.org/abs/2505.00653v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.00653v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We show that both primes and smooth numbers are equidistributed in arithmetic progressions to moduli up to $x^{5/8 - o(1)}$, using triply-well-factorable weights for the primes (we also get improvements for the well-factorable linear sieve weights). This completely eliminates the dependency on Selberg's eigenvalue conjecture in previous works of Lichtman and the author, which built in turn on results of Maynard and Drappeau. We rely on recent large sieve inequalities for exceptional Maass forms of the author for additively-structured sequences, and on a related result of Watt for multiplicatively-structured sequences. As applications, we prove refined upper bounds for the counts of twin primes and consecutive smooth numbers up to $x$.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-01T16:55:08Z</published>
+    <arxiv:comment>42 pages. Submission arXiv:2404.04239v1 was split into two parts, the first of which is arXiv:2404.04239v2, and the second of which is this submission; added new applications. v2: Corrected a few typos</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Alexandru Pascadi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2309.08522v1</id>
+    <title>Primes in arithmetic progressions to large moduli, and Goldbach beyond the square-root barrier</title>
+    <updated>2023-08-30T20:08:42Z</updated>
+    <link href="https://arxiv.org/abs/2309.08522v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2309.08522v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We show the primes have level of distribution $66/107\approx 0.617$ using triply well-factorable weights. This gives the highest level of distribution for primes in any setting, improving on the prior record level $3/5=0.60$ of Maynard. We also extend this level to $5/8=0.625$, assuming Selberg's eigenvalue conjecture. As applications of the method, we obtain new upper bounds for twin primes and for Goldbach representations of even numbers $a$. For the Goldbach problem, this is the first use of a level of distribution beyond the square-root barrier, and leads to the greatest improvement on the problem since Bombieri-Davenport from 1966. Our proof optimizes the Deshouillers-Iwaniec spectral large sieve estimates, both in the exceptional spectrum and uniformity in the residue $a$, refining Drappeau-Pratt-Radziwill and Assing-Blomer-Li.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-08-30T20:08:42Z</published>
+    <arxiv:comment>Appendix with Sary Drappeau, 55 pages. note: text overlap with arXiv:2109.02851; substantial text overlap with arXiv:2006.07088, arXiv:2006.06572 by other authors</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Jared Duker Lichtman</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2501.15033v2</id>
+    <title>Anisotropic quadratic equations in three variables</title>
+    <updated>2025-04-18T05:20:53Z</updated>
+    <link href="https://arxiv.org/abs/2501.15033v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.15033v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $f(x_1, x_2, x_3)$ be an indefinite anisotropic integral quadratic form with determinant $d(f)$, and $t$ a non-zero integer such that $d(f)t$ is square-free. It is proved in this paper that, as long as there is one integral solution to $f(x_1, x_2, x_3) = t$, there are infinitely many such solutions for which (i) $x_1$ has at most $6$ prime factors, and (ii) the product $x_1 x_2$ has at most $16$ prime factors. Various methods, such as algebraic theory of quadratic forms, harmonic analysis, Jacquet-Langlands theory, as well as combinatorics, interact here, and the above results come from applying the sharpest known bounds towards Selberg's eigenvalue conjecture. Assuming the latter the number $6$ or $16$ may be reduced to $5$ or $14$, respectively.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-01-25T02:31:42Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Jiamin Li</name>
+    </author>
+    <author>
+      <name>Jianya Liu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1609.02539v1</id>
+    <title>A quadratic divisor problem and moments of the Riemann zeta-function</title>
+    <updated>2016-09-08T19:20:29Z</updated>
+    <link href="https://arxiv.org/abs/1609.02539v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1609.02539v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We estimate asymptotically the fourth moment of the Riemann zeta-function twisted by a Dirichlet polynomial of length $T^{\frac14 - \varepsilon}$. Our work relies crucially on Watt's theorem on averages of Kloosterman fractions. In the context of the twisted fourth moment, Watt's result is an optimal replacement for Selberg's eigenvalue conjecture.
+  Our work extends the previous result of Hughes and Young, where Dirichlet polynomials of length $T^{\frac{1}{11}-\varepsilon}$ were considered. Our result has several applications, among others to the proportion of critical zeros of the Riemann zeta-function, zero spacing and lower bounds for moments.
+  Along the way we obtain an asymptotic formula for a quadratic divisor problem, where the condition $a m_1 m_2 - b n_1 n_2 = h$ is summed with smooth averaging on the variables $m_1, m_2, n_1, n_2, h$ and arbitrary weights in the average on $a,b$. Using Watt's work allows us to exploit all averages simultaneously. It turns out that averaging over $m_1, m_2, n_1, n_2, h$ right away in the quadratic divisor problem simplifies considerably the combinatorics of the main terms in the twisted fourth moment.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-09-08T19:20:29Z</published>
+    <arxiv:comment>27 pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Sandro Bettin</name>
+    </author>
+    <author>
+      <name>H. M. Bui</name>
+    </author>
+    <author>
+      <name>Xiannan Li</name>
+    </author>
+    <author>
+      <name>Maksym Radziwiłł</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1509.08993v2</id>
+    <title>The Cheeger Constant, Isoperimetric Problems, and Hyperbolic Surfaces</title>
+    <updated>2016-01-06T18:57:09Z</updated>
+    <link href="https://arxiv.org/abs/1509.08993v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1509.08993v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We give a brief literature review of the isoperimetric problem and discuss its relationship with the Cheeger constant of Riemannian $n$-manifolds. For some non-compact, finite area 2-manifolds, we prove the existence and regularity of subsets whose isoperimetric ratio is equal to the Cheeger constant. To do this, we use results of Hass-Morgan for the isoperimetric problem of these manifolds. We also give an example of a finite area 2-manifold where no such subset exists. Using work of Adams-Morgan, we classify all such subsets of geometrically finite hyperbolic surfaces where such subsets always exist. From this, we provide an algorithm for finding these sets given information about the topology, length spectrum, and distances between the simple closed geodesics of the surface. Finding such a subset allows one to directly compute the Cheeger constant of the surface. As an application of this work suggested by Agol, we give a test for Selberg's eigenvalue conjecture. We do this by comparing a quantitative improvement of Buser's inequality resulting from works of both Agol and the author to an upper bound on the Cheeger constant of these surfaces, the latter given by Brooks-Zuk. As expected, our test does not contradict Selberg's conjecture.</summary>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-09-30T02:06:45Z</published>
+    <arxiv:comment>38 pages, 4 figures. Changes from v1 to v2: Added statement of a theorem we attribute to Hass-Morgan resulting in change of Theorem indices in Section 4. Several corrections and clarifications were made to the algorithm in Section 6.2. References added</arxiv:comment>
+    <arxiv:primary_category term="math.DG"/>
+    <author>
+      <name>Brian Benson</name>
+    </author>
+  </entry>
+</feed>

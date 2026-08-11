@@ -1,0 +1,215 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/To4321hYmYgljUxFAUCt7TMFpEk</id>
+  <title>arXiv Query: search_query=all:"zeros of the Selberg zeta"&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-08-11T16:07:04Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22zeros+of+the+Selberg+zeta%22&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>10</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2204.08218v1</id>
+    <title>Zeros of the Selberg zeta function for symmetric infinite area hyperbolic surfaces</title>
+    <updated>2022-04-18T08:41:42Z</updated>
+    <link href="https://arxiv.org/abs/2204.08218v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2204.08218v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In the present paper we give a simple mathematical foundation for describing the zeros of the Selberg zeta functions $Z_X$ for certain very symmetric infinite area surfaces $X$. For definiteness, we consider the case of three funneled surfaces. We show that the zeta function is a complex almost periodic function which can be approximated by complex trigonometric polynomials on large domains (in Theorem 4.2). As our main application, we provide an explanation of the striking empirical results of Borthwick (arXiv:1305.4850) (in Theorem 1.5) in terms of convergence of the affinely scaled zero sets to standard curves $\mathcal C$.</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-04-18T08:41:42Z</published>
+    <arxiv:comment>36 pages, 11 Figures</arxiv:comment>
+    <arxiv:primary_category term="math.DS"/>
+    <arxiv:journal_ref>Geometriae Dedicata (2019) 201:155-186</arxiv:journal_ref>
+    <author>
+      <name>Mark Pollicott</name>
+    </author>
+    <author>
+      <name>Polina Vytnova</name>
+    </author>
+    <arxiv:doi>10.1007/s10711-018-0386-6</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s10711-018-0386-6" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1201.2324v1</id>
+    <title>Perturbation of zeros of the Selberg zeta-function for $Γ_0(4)$</title>
+    <updated>2012-01-11T15:15:51Z</updated>
+    <link href="https://arxiv.org/abs/1201.2324v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1201.2324v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the asymptotic behavior of zeros of the Selberg zeta-function for the congruence subgroup $Γ_0(4)$ as a function of a one-parameter family of characters tending to the trivial character. The motivation for the study comes from observations based on numerical computations. Some of the observed phenomena lead to precise theorems that we prove and compare with the original numerical results.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-01-11T15:15:51Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Roelof Bruggeman</name>
+    </author>
+    <author>
+      <name>Markus Fraczek</name>
+    </author>
+    <author>
+      <name>Dieter Mayer</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1808.09239v1</id>
+    <title>Zero is a resonance of every Schottky surface</title>
+    <updated>2018-08-28T12:02:37Z</updated>
+    <link href="https://arxiv.org/abs/1808.09239v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1808.09239v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For certain spectral parameters we find explicit eigenfunctions of transfer operators for Schottky surfaces. Comparing the dimension of the eigenspace for the spectral parameter zero with the multiplicity of topological zeros of the Selberg zeta function, we deduce that zero is a resonance of every Schottky surface.</summary>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-08-28T12:02:37Z</published>
+    <arxiv:comment>13 pages</arxiv:comment>
+    <arxiv:primary_category term="math.SP"/>
+    <author>
+      <name>Alexander Adam</name>
+    </author>
+    <author>
+      <name>Anke Pohl</name>
+    </author>
+    <author>
+      <name>Alexander Weiße</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1606.09109v4</id>
+    <title>A transfer-operator-based relation between Laplace eigenfunctions and zeros of Selberg zeta functions</title>
+    <updated>2019-08-25T09:05:18Z</updated>
+    <link href="https://arxiv.org/abs/1606.09109v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1606.09109v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Over the last few years Pohl (partly jointly with coauthors) developed dual `slow/fast' transfer operator approaches to automorphic functions, resonances, and Selberg zeta functions for a certain class of hyperbolic surfaces $Γ\backslash\mathbb{H}$ with cusps and all finite-dimensional unitary representations $χ$ of $Γ$.
+  The eigenfunctions with eigenvalue $1$ of the fast transfer operators determine the zeros of the Selberg zeta function for $(Γ,χ)$. Further, if $Γ$ is cofinite and $χ$ is the trivial one-dimensional representation then highly regular eigenfunctions with eigenvalue $1$ of the slow transfer operators characterize Maass cusp forms for $Γ$. Conjecturally, this characterization extends to more general automorphic functions as well as to residues at resonances.
+  In this article we study, without relying on Selberg theory, the relation between the eigenspaces of these two types of transfer operators for any Hecke triangle surface $Γ\backslash\mathbb{H}$ of finite or infinite area and any finite-dimensional unitary representation $χ$ of the Hecke triangle group $Γ$. In particular we provide explicit isomorphisms between relevant subspaces. This solves a conjecture by Möller and Pohl, characterizes some of the zeros of the Selberg zeta functions independently of the Selberg trace formula, and supports the previously mentioned conjectures.</summary>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-06-29T14:12:00Z</published>
+    <arxiv:comment>52 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="math.SP"/>
+    <author>
+      <name>Alexander Adam</name>
+    </author>
+    <author>
+      <name>Anke Pohl</name>
+    </author>
+    <arxiv:doi>10.1017/etds.2018.51</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1017/etds.2018.51" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1305.4850v2</id>
+    <title>Distribution of resonances for hyperbolic surfaces</title>
+    <updated>2013-10-16T18:18:00Z</updated>
+    <link href="https://arxiv.org/abs/1305.4850v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1305.4850v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the distribution of resonances for geometrically finite hyperbolic surfaces of infinite area by countting resonances numerically. The resonances are computed as zeros of the Selberg zeta function, using an algorithm for computation of the zeta function for Schottky groups. Our particular focus is on three aspects of the resonance distribution that have attracted attention recently: the fractal Weyl law, the spectral gap, and the concentration of decay rates.</summary>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-05-21T15:12:58Z</published>
+    <arxiv:comment>28 pages, 29 figures; revised with minor corrections and one additional figure</arxiv:comment>
+    <arxiv:primary_category term="math.SP"/>
+    <author>
+      <name>David Borthwick</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1206.2255v5</id>
+    <title>Fractal Weyl laws for asymptotically hyperbolic manifolds</title>
+    <updated>2013-01-07T17:39:47Z</updated>
+    <link href="https://arxiv.org/abs/1206.2255v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1206.2255v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For asymptotically hyperbolic manifolds with hyperbolic trapped sets we prove a fractal upper bound on the number of resonances near the essential spectrum, with power determined by the dimension of the trapped set. This covers the case of general convex cocompact quotients (including the case of connected trapped sets) where our result implies a bound on the number of zeros of the Selberg zeta function in disks of arbitrary size along the imaginary axis. Although no sharp fractal lower bounds are known, the case of quasifuchsian groups, included here, is most likely to provide them.</summary>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-06-11T15:27:09Z</published>
+    <arxiv:comment>59 pages, 7 figures. To appear in Geometric and Functional Analysis</arxiv:comment>
+    <arxiv:primary_category term="math.AP"/>
+    <arxiv:journal_ref>Geometric and Functional Analysis. Vol. 23, No. 4, pp. 1145-1206, 2013</arxiv:journal_ref>
+    <author>
+      <name>Kiril Datchev</name>
+    </author>
+    <author>
+      <name>Semyon Dyatlov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1910.07607v1</id>
+    <title>BTZ one-loop determinants via the Selberg zeta function for general spin</title>
+    <updated>2019-10-16T20:58:22Z</updated>
+    <link href="https://arxiv.org/abs/1910.07607v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1910.07607v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We relate the heat kernel and quasinormal mode methods of computing the 1-loop partition function of arbitrary spin fields on a rotating (Euclidean) BTZ background using the Selberg zeta function associated with $\mathbb{H}^{3}/\mathbb{Z}$, extending (1811.08433). Previously, Perry and Williams showed for a scalar field that the zeros of the Selberg zeta function coincide with the poles of the associated scattering operator upon a relabeling of integers. We extend the integer relabeling to the case of general spin, and discuss its relationship to the removal of non-square-integrable Euclidean zero modes.</summary>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-10-16T20:58:22Z</published>
+    <arxiv:primary_category term="hep-th"/>
+    <author>
+      <name>Cynthia Keeler</name>
+    </author>
+    <author>
+      <name>Victoria L. Martin</name>
+    </author>
+    <author>
+      <name>Andrew Svesko</name>
+    </author>
+    <arxiv:doi>10.1007/JHEP10(2020)138</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/JHEP10(2020)138" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.17936v1</id>
+    <title>Spectral and dynamical invariants of Hecke triangle groups via transfer operators</title>
+    <updated>2025-09-22T15:55:08Z</updated>
+    <link href="https://arxiv.org/abs/2509.17936v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.17936v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we consider Hecke triangle groups $Γ_w$ for $w&gt;2$ and associated infinite-volume orbifolds $Γ_w \backslash \mathbb{H}$. We show that the Selberg zeta function $Z_{Γ_w}(s)$ can be approximated for $s \in \mathbb{C} \setminus \frac{1}{2}(1-2 \mathbb{N}_0)$ by determinants of finite-dimensional matrices with an explicitly computed error term that decays exponentially as the matrix size increases. As an application, we evaluate the Hausdorff dimensions of Hecke triangle groups with high precision, explicitly compute the values of the corresponding Ruelle zeta functions at zero, and obtain estimates on orders of trivial zeroes of the Selberg zeta function.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-22T15:55:08Z</published>
+    <arxiv:comment>15 pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Ksenia Fedosova</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2411.02929v2</id>
+    <title>The spectral concentration for damped waves on compact Anosov manifolds</title>
+    <updated>2025-02-04T05:17:12Z</updated>
+    <link href="https://arxiv.org/abs/2411.02929v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2411.02929v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the spectral distribution of damped waves on compact Anosov manifolds. Sjöstrand \cite{SJ1} proved that the imaginary parts of the majority of the eigenvalues concentrate near the average of the damping function, see also Anantharaman \cite{AN2}. In this paper, we prove that the most of eigenvalues actually lie in certain regions with imaginary parts that approach the average logarithmically as the real parts tend to infinity. The proof relies on the moderate deviation principles for Anosov geodesic flows. As an application, we show the concentration of non-trivial zeros of twisted Selberg zeta functions in a logarithmic region asymptotically close to $\Re s=\frac{1}{2}$.</summary>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-11-05T09:16:37Z</published>
+    <arxiv:comment>In the updated version, we apply the moderate deviation principles for Anosov contact flows to improve the width of the concentration for damped waves to |\log h|^{-1/2+α}, for any α&gt;0</arxiv:comment>
+    <arxiv:primary_category term="math.SP"/>
+    <author>
+      <name>Yulin Gong</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2312.06770v2</id>
+    <title>A generalized Selberg zeta function for flat space cosmologies</title>
+    <updated>2024-04-01T10:30:49Z</updated>
+    <link href="https://arxiv.org/abs/2312.06770v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2312.06770v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Flat space cosmologies (FSCs) are time dependent solutions of three-dimensional (3D) gravity with a vanishing cosmological constant. They can be constructed from a discrete quotient of empty 3D flat spacetime and are also called shifted-boost orbifolds. Using this quotient structure, we build a new and generalized Selberg zeta function for FSCs, and show that it is directly related to the scalar 1-loop partition function. We then propose an extension of this formalism applicable to more general quotient manifolds $\mathcal M/\mathbb Z$, based on representation theory of fields propagating on this background. Our prescription constitutes a novel and expedient method for calculating regularized 1-loop determinants, without resorting to the heat kernel. We compute quasinormal modes in the FSC using the zeroes of a Selberg zeta function, and match them to known results.</summary>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-12-11T19:00:04Z</published>
+    <arxiv:comment>25 pages, a few clarifications added</arxiv:comment>
+    <arxiv:primary_category term="hep-th"/>
+    <author>
+      <name>Arjun Bagchi</name>
+    </author>
+    <author>
+      <name>Cynthia Keeler</name>
+    </author>
+    <author>
+      <name>Victoria Martin</name>
+    </author>
+    <author>
+      <name>Rahul Poddar</name>
+    </author>
+  </entry>
+</feed>

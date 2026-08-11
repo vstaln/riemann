@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/LTz8WpqW+pAvUDbYT+FNx/myU4M</id>
+  <title>arXiv Query: search_query=au:Sarnak AND (all:spectrum OR all:eigenvalue) AND all:hyperbolic&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-08-11T16:10:59Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=au:Sarnak+AND+((all:spectrum+OR+all:eigenvalue)+AND+all:hyperbolic)&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/math/0212100v2</id>
+    <title>Arithmetic and equidistribution of measures on the sphere</title>
+    <updated>2003-04-09T09:32:08Z</updated>
+    <link href="https://arxiv.org/abs/math/0212100v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0212100v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Motivated by problems of mathematical physics (quantum chaos) questions of equidistribution of eigenfunctions of the Laplace operator on a Riemannian manifold have been studied by several authors. We consider here, in analogy with arithmetic hyperbolic surfaces, orthonormal bases of eigenfunctions of the Laplace operator on the two dimensional unit sphere which are also eigenfunctions of an algebra of Hecke operators which act on these spherical harmonics. We formulate an analogue of the equidistribution of mass conjecture for these eigenfunctions as well as of the conjecture that their moments tend to moments of the Gaussian as the eigenvalue increases. For such orthonormal bases we show that these conjectures are related to the analytic properties of degree eight arithmetic L-functions associated to triples of eigenfunctions. Moreover we establish the conjecture for the third moments and give a conditional (on standard analytic conjectures about these arithmetic L-functions) proof of the equdistribution of mass conjecture.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2002-12-06T09:50:24Z</published>
+    <arxiv:comment>18 pages, an appendix gives corrections to the article "On the central critical value of the triple product L-function" (In: Number Theory 1993-94, 1-46. Cambridge University Press 1996) by Siegfried Boecherer and Rainer Schulze-Pillot. Revised version (minor revisions, new abstract), paper to appear in Communications in Mathematical Physics</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Siegfried Boecherer</name>
+      <arxiv:affiliation>Mannheim</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Peter Sarnak</name>
+      <arxiv:affiliation>Princeton</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Rainer Schulze-Pillot</name>
+      <arxiv:affiliation>Saarbruecken</arxiv:affiliation>
+    </author>
+    <arxiv:doi>10.1007/s00220-003-0922-5</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s00220-003-0922-5" title="doi"/>
+  </entry>
+</feed>

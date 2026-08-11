@@ -212,7 +212,8 @@ def main():
     print("LOCAL POINTWISE PROBE (C-RH2 probe design: xi,xi',xi'' along the line)")
     print("  D(t) = 2 xi xi'' - xi'^2  = discriminant of the local quadratic at s = 1/2+it.")
     print("  NOT a Jensen discriminant: J_{d,n} lives in the (d, shift n) table of global")
-    print("  coefficients, not at a height t.  Sign of D(t) tracks local convexity only.")
+    print("  coefficients, not at a height t.  D(t) > 0 is generic for ANY oscillating g")
+    print("  with real zeros (g = sin t: D = cos^2 t + 2 sin^2 t > 0), so it is not RH-sensitive.")
     print("=" * 78)
     mp.mp.dps = 25
     hs = [1000, 1200, 1500, 1800, 2200, 2700, 3300, 4000, 5000, 6000, 7500, 9000, 10000]
@@ -226,9 +227,12 @@ def main():
         zp = mp.zeta(s, derivative=1)
         return (-1 / s ** 2 - 1 / (s - 1) ** 2 + mp.mpf('0.25') * mp.psi(1, s / 2)
                 + mp.zeta(s, derivative=2) / mp.zeta(s) - (zp / mp.zeta(s)) ** 2)
-    print("  {:>8} {:>26} {:>6}".format("t", "D(t) = 2 xi*xipp - xip^2", "sign"))
+    print("  {:>10} {:>20} {:>14} {:>6}".format("t", "D(t) = 2 xixi'' - xi'^2", "D/|xi'|^2", "sign"))
     stats = []
-    for t in hs:
+    hs2 = list(hs) + [mp.mpf('14.1347251417346937904572519835625'),
+                      mp.mpf('15.58570858982934'), mp.mpf('25.01085758014568876')]
+    # hs2 = 13 heights + gamma_1, first xi'-zero u_1, gamma_2
+    for t in hs2:
         s = mp.mpf('0.5') + 1j * mp.mpf(t)
         v = xi_loc(s)
         xip_v = v * A(s)
@@ -239,9 +243,16 @@ def main():
         pos += Dt > 0
         neg += Dt < 0
         stats.append(Dt)
-        print(f"  {t:>8} {mp.nstr(Dt, 18):>26} {sign:>6}")
-    print(f"  D(t) > 0: {pos}/{len(hs)}   D(t) < 0: {neg}/{len(hs)}   "
-          "(negative on concave 'hills' of g(t)=xi(1/2+it) -- carries no RH information)")
+        rel = Dt / (-xip_v ** 2).real if abs(xip_v) > mp.mpf('1e-30') else mp.mpf('inf')
+        print("  {:>10} {:>20} {:>14} {:>6}".format(mp.nstr(t, 6), mp.nstr(Dt, 8), mp.nstr(rel, 6), sign))
+    print(f"  D(t) > 0: {pos}/{len(hs2)}   D(t) < 0: {neg}/{len(hs2)}")
+    print("  |xi(1/2+it)| ~ exp(-pi t/4)*t^{O(1)} on the line, so D(t) is exponentially tiny:")
+    print("  only the SIGN and relative margin D/|xi'|^2 carry meaning, and neither is RH-sensitive:")
+    print("  for any oscillating g with real zeros, D = g'^2 - 2 g g'' > 0 generically")
+    print("  (g = sin t: D = cos^2 t + 2 sin^2 t > 0), while g = 1 + t^2 (no zeros) gives D = -4 < 0.")
+    print("  The local discriminant merely echoes 'oscillation' -- tautological for xi (real zeros")
+    print("  of g ARE RH).  It is NOT a Jensen discriminant: J_{d,n} lives in the (d, shift n)")
+    print("  table of GLOBAL coefficients, not at a height t (C-RH2 probe design misidentified).")
     mp.mp.dps = 60
 
     # ---- prime-side demonstrations ----
@@ -249,7 +260,7 @@ def main():
     print("PRIME-SIDE COMPUTABILITY OF THE COEFFICIENTS (honest statement)")
     print("=" * 78)
     # (a) convergent prime sum at Re s = 2
-    N = 10 ** 6
+    N = 10 ** 7
     sieve = bytearray(b'\x01') * (N + 1)
     sieve[0:2] = b'\x00\x00'
     for i in range(2, int(N ** 0.5) + 1):
@@ -261,8 +272,9 @@ def main():
         pp = mp.mpf(p)
         zz2 -= mp.log(pp) / (pp ** 2 - 1)
     ref2 = mp.zeta(2, derivative=1) / mp.zeta(2)
-    print(f"  zeta'/zeta(2) via prime sum sum_p log p/(p^2-1), p<=10^6 = {mp.nstr(zz2, 15)}")
+    print(f"  zeta'/zeta(2) via prime sum sum_p log p/(p^2-1), p<=10^7 = {mp.nstr(zz2, 15)}")
     print(f"  mpmath zeta'/zeta(2)                                        = {mp.nstr(ref2, 15)}")
+    print(f"  diff = {mp.nstr(zz2 - ref2, 4)}  (truncation tail ~ 1/10^7 = 1e-7)")
 
     # (b) NON-convergence of the C-RH2 'convergent' series  sum_p log p p^{-1/2} cos(t log p)
     t_ = 14.1347251417346937904572519835625
@@ -283,19 +295,19 @@ def main():
     print("  mpmath's Euler-Maclaurin zeta at s = 1/2 -- no zeros used anywhere.")
 
     # (c) convergent Dirichlet-side route to zeta(1/2): eta-series with Euler transform
+    #     eta(s) = sum_{n>=0} (-1)^n (n+1)^{-s};  Euler: S = sum_k Delta^k a_0 / 2^{k+1}
+    #     (Delta = backward difference, Delta a_n = a_n - a_{n+1})
     print("\n  zeta(1/2) from the convergent alternating eta-series (Euler transform):")
     s12 = mp.mpf('0.5')
     a = [mp.power(mp.mpf(i + 1), -s12) for i in range(80)]
     b = a[:]
     total = mp.mpf(0)
     for k in range(60):
-        # forward-difference averaging (van Wijngaarden)
-        for i in range(0, len(b) - 1 - k):
-            b[i] = (b[i] + b[i + 1]) / 2
         total += b[0] / 2 ** (k + 1)
+        b = [b[i] - b[i + 1] for i in range(len(b) - 1)]
     eta = total
     zeta12 = eta / (1 - mp.power(2, 1 - s12))
-    print(f"    eta(1/2) Euler-transformed = {mp.nstr(eta, 15)}")
+    print(f"    eta(1/2) Euler-transformed = {mp.nstr(eta, 15)}   (known 0.60489864342163037...)")
     print(f"    zeta(1/2) = eta/(1-2^(1/2)) = {mp.nstr(zeta12, 15)}")
     print(f"    mpmath zeta(1/2)            = {mp.nstr(mp.zeta(s12), 15)}")
 
