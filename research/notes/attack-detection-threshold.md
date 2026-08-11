@@ -168,7 +168,7 @@ theory floor = 0.6725007.
 | 200 | top-clustered | 1.00 | **0.5%** (0.5900) | 0.5% |
 | 500 | top-clustered | 0.05, 0.10 | **∈ (0.5%, 1%)** (0.706–0.699) | 4% |
 | 500 | top-clustered | 0.20–1.0 | **0.5%** | 2% (β=0.3), 1% (β=0.5), 0.5% (β=1) |
-| 500 | scattered | 0.30 | **1 pair (0.7027)**; β=0.05 borderline in (0.7051) | 1% (β=0.05) / 0.5–1% (β=0.3) |
+| 500 | scattered | 0.30 | **1 pair (0.7027)**; β=0.05 borderline in (0.7051) | ∈ (0.5%, 1%) (β=0.05) / 0.5% (β=0.3, 0.6717) |
 
 **Headline threshold (task 2's answer):** the certificate leaves the real-data noise band at
 **f ≈ 1 pair ≈ 0.3–0.5% (scattered/bulk, any β ≥ 0.05)** up to **f ≈ 1–1.5% (top-clustered, β ≤ 0.2)**,
@@ -197,7 +197,7 @@ at the Θ(N) level for tr; **the certificate reads off-line content entirely thr
 
 **Count threshold: ONE pair.** n₋ counts the pairs' negative directions (Claim 2.3's (1,1) signature):
 measured n₋ ≈ N₂ in every swept row (e4nminus: e.g. T=300 top-clustered f=2%, N₂=4 → n₋=3; f=8%, N₂=16 →
-n₋=13–15; scattered f=2%, N₂=4 → n₋=2–4), so **n₋ > 0 as soon as ≥ 1 pair exists**, i.e. f ≥ 1/N
+n₋=13–15; scattered f=2%, N₂=4 → n₋=2–4; measured deficit 0–4, largest for top-clustered edge pairs), so **n₋ > 0 as soon as ≥ 1 pair exists**, i.e. f ≥ 1/N
 (0.81% at T=200, 0.49% at T=300, 0.26% at T=500). In f-count this beats the certificate (which needs
 ~1–1.5% top-clustered) by ~2–4×, and matches it for scattered placement.
 
@@ -229,8 +229,8 @@ caught by both.
   window's top edge at shallow depth β ≲ 0.3 (ordinate units; s-space displacement imb = β·N/T ≲ 0.2),
   where the certificate stays in-band (0.7098–0.7116 at T = 200–300, f = 0.5%, β ≤ 0.3) AND n₋ stays 0
   (top-edge negatives suppressed below the floor, §6). Everything else is detected: any bulk pair at any
-  β ≥ 0.05 (certificate, §4.2), any pair at β ≳ 0.5 (n₋ everywhere, §6), ≥ 1% edge-clustered pairs
-  (certificate, §4.1), ≥ 2–4% of pairs (0.6725 floor, §4.3).
+  β ≥ 0.05 (certificate, §4.2), any pair at β ≳ 0.5 (n₋ everywhere, §6), ≳ 1–1.5% of edge-clustered pairs
+  at β ≤ 0.2 or ≳ 0.5–1% at β = 0.3 (certificate, §4.1), ≳ 2–4% of pairs (0.6725 floor, §4.3).
 - **How "loud" a hypothetical off-line signal must be:** it must consist of ≲ 2 pairs per window, hidden
   at the window edges, with depth below ~0.3 spacings. A genuine small-RH-failure signal (scattered pairs,
   per the sandbox's honest-model convention) is detected at a **single pair** — the certificate's

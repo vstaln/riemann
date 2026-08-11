@@ -326,6 +326,43 @@ fn main() {
             let t: f64 = args[3].parse().unwrap();
             ortho_cmd(q, t);
         }
+        "pool" => {
+            // pooled family: union of primitive even chars over several moduli, lambda=1, T fixed
+            let t: f64 = args.get(2).and_then(|s| s.parse().ok()).unwrap_or(2000.0);
+            let qs: Vec<u32> = args
+                .get(3)
+                .map(|s| s.split(',').filter_map(|x| x.parse().ok()).collect())
+                .unwrap_or_else(|| vec![5, 7, 11, 13, 16, 20, 24, 40]);
+            let d0 = 2.0 * t.sqrt();
+            let win = hsnorm::window(40, t, 1.0, 0.1); // L depends on q; rebuilt per q below
+            let mut sum_tr = 0.0f64;
+            let mut sum_tr2 = 0.0f64;
+            let mut sum_n = 0.0f64;
+            let mut per_q = Vec::new();
+            for &q in &qs {
+                let win = hsnorm::window(q, t, 1.0, 0.1);
+                let rows = per_char_results(q, t, d0, &win, 6.0, 2.0);
+                let (mut s_tr, mut s_tr2, mut s_n) = (0.0, 0.0, 0.0);
+                for (n, tr_bg, tr2_bg) in &rows {
+                    s_tr += tr_bg;
+                    s_tr2 += tr2_bg;
+                    s_n += *n as f64;
+                }
+                sum_tr += s_tr;
+                sum_tr2 += s_tr2;
+                sum_n += s_n;
+                per_q.push((q, s_n, s_tr2 / s_tr));
+            }
+            println!("pooled family (union over q={:?}, T={}, lambda=1):", qs, t);
+            for (q, n, k) in &per_q {
+                println!("  q={}: N={:.0} kappa_q={:.4}", q, n, k);
+            }
+            let kappa_pooled = sum_tr2 / sum_tr;
+            println!(
+                "  POOLED: N_total={:.0} kappa_pooled={:.4}  (asym 4/3 = {:.4})  H=2-kappa={:.4}  C/N={:.4}",
+                sum_n, kappa_pooled, 4.0 / 3.0, 2.0 - kappa_pooled, sum_tr * sum_tr / (sum_tr2 * sum_n)
+            );
+        }
         "all" => {
             let mode = args.get(2).map(|s| s.as_str()).unwrap_or("t");
             if mode == "t" {
@@ -400,7 +437,7 @@ fn main() {
         }
         _ => {
             println!(
-                "subcommands: chars q | phasecheck q | zeros q T | hsnorm q T | qaspect q | ortho q T | all t|q|ortho"
+                "subcommands: chars q | phasecheck q | zeros q T | hsnorm q T | qaspect q | ortho q T | pool [T] [qs] | all t|q|ortho"
             );
         }
     }

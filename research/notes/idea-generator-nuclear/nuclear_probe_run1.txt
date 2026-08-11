@@ -6,3 +6,31 @@ loaded 10000 zeros, max gamma = 9879.0
    200    123   2.0000   2.0000   3.0000   3.0000   2.0000   2.0000  -0.6667  -0.6667
    500    380   2.0000   2.0000   3.0000   3.0000   2.0000   2.0000  -0.6667  -0.6667
   1000    868   2.0000   2.0000   3.0000   3.0000   2.0000   2.0000  -0.6667  -0.6667
+  2000   1957   2.0000   2.0000   3.0000   3.0000   2.0000   2.0000  -0.6667  -0.6667
+  3000   3129   2.0000   2.0000   3.0000   3.0000   2.0000   2.0000  -0.6667  -0.6667
+
+(reading: 'def raw' vs 'def unf' — if unfolding removes most of the deficit,
+ the [AF]-convention finite-T error is density-drift; if it persists, it is
+ pair-correlation arithmetic. Targets: m2 -> 4/3 = 1.3333, m3 -> 2.)
+
+==============================================================================
+PART 2 (N2.1/N5.3/N6.1): xi'-tower rigidity  (targets m2=4/3, m3=2; cos m2 -> 1.3275)
+==============================================================================
+xi'-gram eigenvalue-2 mass  (|lam-2|<= 0.05): fraction of eigenvalues = 0.00000
+xi'-gram eigenvalue-2 mass  (|lam-2|<= 0.1): fraction of eigenvalues = 0.00000
+xi'-zeros: N'=989, flat m2=2.0000 m3=3.0000, cos-pair m2(/(INT_PSI2^2))=1.1165 (target 1.3275)
+xi'-spacing: mean gap=1.0004 (density-1 -> ~1), mean r-stat=0.8049 (GUE ~0.599..0.61, lattice -> 1)
+zeta reference (1000 zeros, unfolded interior): m2 ~ 1.286, m3 ~ 1.84 (chem F1)
+
+==============================================================================
+PART 3 (N5.2/N6.4 + N3.3): real-configuration eigenvalue-2 detector and m4
+==============================================================================
+zeta flat-gram eigenvalue-2 mass (|lam-2|<= 0.05): eigenvalue fraction = 0.01667, trace-mass fraction = 0.03319  (ideal all-simple world: 0; ideal 1/6-double world: ~1/3)
+zeta flat-gram eigenvalue-2 mass (|lam-2|<= 0.1): eigenvalue fraction = 0.03111, trace-mass fraction = 0.06205  (ideal all-simple world: 0; ideal 1/6-double world: ~1/3)
+zeta interior (idx 51..950, N=900): flat m2=2.0000 m3=3.0000 m4=4.0000
+  targets: m2=4/3, m3=2, m4=13/4=3.25 (paper claim; [AN §6] flag), extremal-world mark-only m4=10/3=3.3333
+lambda_max = 2.2779; fraction of trace above 1.5 = 0.3194
+
+==============================================================================
+PART 4 (N1.2/N4.2): CUE finite-N null model for (m2, m3)  ('are the zeros GUE at finite N?')
+==============================================================================

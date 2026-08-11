@@ -122,7 +122,7 @@ fn arg_zeta(s_re: f64, s_im: f64, n: usize, lns: &[f64]) -> f64 {
     im.atan2(re)
 }
 
-fn winding(t0: f64, h: f64, ds: f64) -> (f64, f64, f64, f64, f64, f64, f64, f64) {
+fn winding(t0: f64, h: f64, ds: f64) -> (f64, f64, f64, f64, f64, f64, f64, f64, f64, f64, f64, f64) {
     // rectangle [0,1] x [t0, t0+h], CCW: bottom (σ 0→1), right (t ↑), top (σ 1→0), left (t ↓)
     let n = ((1.6 * (t0 + h) / (2.0 * PI)).ceil().max(10.0)) as usize;
     let lns: Vec<f64> = (0..n).map(|j| if j == 0 { 0.0 } else { (j as f64).ln() }).collect();
@@ -140,6 +140,8 @@ fn winding(t0: f64, h: f64, ds: f64) -> (f64, f64, f64, f64, f64, f64, f64, f64)
     let mut total_z = 0.0f64;
     let mut total_s = 0.0f64;
     let mut total_p = 0.0f64;
+    let mut edge_z = [0.0f64; 4];
+    let mut edge_i = 0usize;
     let mut unwrap = |cur: f64, prev: &mut Option<f64>| -> f64 {
         let d = match *prev {
             Some(p) => {
@@ -158,6 +160,7 @@ fn winding(t0: f64, h: f64, ds: f64) -> (f64, f64, f64, f64, f64, f64, f64, f64)
         d
     };
 
+    let mut unwrap_cur = 0.0f64;
     let mut eval = |s_re: f64, s_im: f64,
                     total_s: &mut f64,
                     total_g: &mut f64,
@@ -182,6 +185,7 @@ fn winding(t0: f64, h: f64, ds: f64) -> (f64, f64, f64, f64, f64, f64, f64, f64)
         let d_g = unwrap(a_g, prev_g);
         let d_z = unwrap(a_z, prev_z);
         let d_p = unwrap(a_p, prev_p);
+        unwrap_cur = d_z;
         *total_s += d_s;
         *total_g += d_g;
         *total_z += d_z;
@@ -196,31 +200,39 @@ fn winding(t0: f64, h: f64, ds: f64) -> (f64, f64, f64, f64, f64, f64, f64, f64)
 
     // bottom: σ 0→1 at t=t0
     let mut sigma = 0.0;
+    edge_i = 0;
     while sigma <= 1.0 + 1e-9 {
         eval(sigma, t0, &mut total_s, &mut total_g, &mut total_z, &mut total_p, &mut prev_s, &mut prev_g, &mut prev_z, &mut prev_p, &mut max_d);
+        edge_z[edge_i] += unwrap_cur;
         sigma += ds;
     }
     // right: t t0→t0+h at σ=1
     let mut tt = t0 + ds;
+    edge_i = 1;
     while tt <= t0 + h + 1e-9 {
         eval(1.0, tt, &mut total_s, &mut total_g, &mut total_z, &mut total_p, &mut prev_s, &mut prev_g, &mut prev_z, &mut prev_p, &mut max_d);
+        edge_z[edge_i] += unwrap_cur;
         tt += ds;
     }
     // top: σ 1→0 at t=t0+h
     let mut sigma = 1.0 - ds;
+    edge_i = 2;
     while sigma >= -1e-9 {
         eval(sigma, t0 + h, &mut total_s, &mut total_g, &mut total_z, &mut total_p, &mut prev_s, &mut prev_g, &mut prev_z, &mut prev_p, &mut max_d);
+        edge_z[edge_i] += unwrap_cur;
         sigma -= ds;
     }
     // left: t t0+h→t0 at σ=0
     let mut tt = t0 + h - ds;
+    edge_i = 3;
     while tt >= t0 - 1e-9 {
         eval(0.0, tt, &mut total_s, &mut total_g, &mut total_z, &mut total_p, &mut prev_s, &mut prev_g, &mut prev_z, &mut prev_p, &mut max_d);
+        edge_z[edge_i] += unwrap_cur;
         tt -= ds;
     }
     total = total_s + total_g + total_z + total_p;
     (total / (2.0 * PI), max_d, max_dz.get().max(max_dg.get()), n_big.get() as f64,
-     total_z, total_g, total_s, total_p)
+     total_z, total_g, total_s, total_p, edge_z[0], edge_z[1], edge_z[2], edge_z[3])
 }
 
 // ---------------------------------------------------------------------------
@@ -360,12 +372,13 @@ fn main() {
     }
 
     // ---- numerical winding (uncertified) ----------------------------------
-    let (w, maxd, maxdg, nbig, tz, tg, ts, tp) = winding(t0, h, 0.02);
+    let (w, maxd, maxdg, nbig, tz, tg, ts, tp, ez0, ez1, ez2, ez3) = winding(t0, h, 0.02);
     println!("== numerical argument-principle winding on [0,1]×[T,T+H] ==");
     println!("  winding number: {:.6}   max |Δarg| per step: {:.3} rad (zeta/other)", w, maxd);
     println!("  max |Δarg| for the zeta and Gamma factors: {:.3} rad; steps with |Δarg zeta|>0.8π: {}", maxdg, nbig as usize);
     println!("  Δarg zeta = {:.4} rad (2π·{:.6}), Δarg Gamma = {:.4}, Δarg s(s-1)/2 = {:.4}, Δarg π = {:.4}",
              tz, tz / (2.0 * PI), tg, ts, tp);
+    println!("  Δarg zeta per edge: bottom={:.4} right={:.4} top={:.4} left={:.4}", ez0, ez1, ez2, ez3);
     println!("  (UNCERTIFIED — demonstration of the contour count)");
 
     // ---- p1-type summary --------------------------------------------------

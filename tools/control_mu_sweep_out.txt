@@ -1,0 +1,87 @@
+=== control-family sweep vs Lemma 3.2 (C-MU2) — uv run --with numpy python tools/control_mu_sweep.py ===
+constants: int_psi2=0.849227999318304 c_HS=1.327499296320588 3/2-(1/sqrt2)cot=0.672500703679412
+=== T1: sharp crystal A = diag(1^r, 2^b) (Lemma 3.2 equality case) ===
+    (PROVEN: lemmaR_tight / Prop 4.4(b); the equality case of Lemma 3.2 is
+     P = Pi_1, Q = 2*Pi_2, Pi_1 _|_ Pi_2, ranks r, b -- checked here)
+  (r,b)=(2,1): trP=2.0 trQ=2.0 trQ+=2.0 ||A||^2=6.0
+    L(lemma3.2)=6.0000  L'(CS)=6.0000 Lper=6.0000  Lglo(top-2)=5.0000  Lemma-exact? True
+    gains over L: CS +0.0000  Perron +0.0000  Glover-top -1.0000
+  (r,b)=(67,16): trP=67.0 trQ=32.0 trQ+=32.0 ||A||^2=131.0
+    L(lemma3.2)=131.0000  L'(CS)=131.0000 Lper=71.0000  Lglo(top-67)=115.0000  Lemma-exact? True
+    gains over L: CS +0.0000  Perron -60.0000  Glover-top -16.0000
+  (r,b)=(6725,1638): trP=6725.0 trQ=3276.0 trQ+=3276.0 ||A||^2=13277.0
+    L(lemma3.2)=13277.0000  L'(CS)=13277.0000 Lper=6729.0000  Lglo(top-6725)=11639.0000  Lemma-exact? True
+    gains over L: CS +0.0000  Perron -6548.0000  Glover-top -1638.0000
+    -> at the sharp crystal: L == ||A||^2 (exact); CS gain = 0;
+       Perron gain = 4-4b < 0 for b >= 2; Glover-top gain = -4b < 0.
+
+=== T2: real on-line W_T (P-side, Q = 0): rank family cap ===
+  T=200 N=123: 2tr-||.||^2=88.1331 (tr)^2/||.||^2=95.3659 rank=123  per-N: 0.716530 vs 0.672501  CS-win=7.2328 = (tr-||.||^2)^2/||.||^2=7.2328
+  T=400 N=289: 2tr-||.||^2=205.5440 (tr)^2/||.||^2=223.8232 rank=289  per-N: 0.711225 vs 0.672501  CS-win=18.2792 = (tr-||.||^2)^2/||.||^2=18.2792
+  T=600 N=472: 2tr-||.||^2=334.6801 (tr)^2/||.||^2=365.3250 rank=472  per-N: 0.709068 vs 0.672501  CS-win=30.6449 = (tr-||.||^2)^2/||.||^2=30.6449
+    -> CS >= 2tr-||.||^2 always (equality iff eigenvalues in {0,1});
+       the gap (r - trP)^2/r is a finite-T artifact (trP/N -> 1), not a
+       uniform gain -- matches the QI sweep TEST A.
+
+=== T3: synthetic off-line hyperbolic pair blocks (Gabor v-vectors) ===
+  pair @gamma=201.26: eig={+1.81758, -0.15169} tr=1.66588 trQ+=1.81758 ||Q||^2=3.32660
+    L=4tr-4=2.66354  L'(CS)=(trQ+)^2=3.30359  (trQ+-2)^2=0.03328  inf_D||DQD^-1||^2=3.32660 (vs 3.32660)
+  pair @gamma=219.07: eig={+1.86505, -0.17330} tr=1.69175 trQ+=1.86505 ||Q||^2=3.50845
+    L=4tr-4=2.76699  L'(CS)=(trQ+)^2=3.47842  (trQ+-2)^2=0.01821  inf_D||DQD^-1||^2=3.50845 (vs 3.50845)
+  pair @gamma=250.00: eig={+1.87003, -0.17409} tr=1.69594 trQ+=1.87003 ||Q||^2=3.52732
+    L=4tr-4=2.78376  L'(CS)=(trQ+)^2=3.49701  (trQ+-2)^2=0.01689  inf_D||DQD^-1||^2=3.52732 (vs 3.52732)
+  pair @gamma=300.00: eig={+1.86826, -0.17504} tr=1.69322 trQ+=1.86826 ||Q||^2=3.52102
+    L=4tr-4=2.77287  L'(CS)=(trQ+)^2=3.49038  (trQ+-2)^2=0.01736  inf_D||DQD^-1||^2=3.52102 (vs 3.52102)
+    -> single block (b=1): CS == Perron; identity ||Q||^2 = (trQ)^2 + 2ab;
+       deep pairs: both bounds very loose; D-scaling cannot shrink the
+       F-norm at all (T6) -- it is a margin bound, not a certificate bound.
+    -> Perron vs CS differ only for b >= 2 (T4/T5).
+
+=== T4: mixed A = P_on(s1) + Q_off(p pairs), full side-by-side ===
+  N=123 s1=50 p=4 (b=4): trP=49.8339 trQ=6.6799 trQ+=6.7235 ||A||^2=92.9937 n+(A)=51
+    L(lemma3.2) = 60.3875   (slack ||A||^2 - L = +32.6062)
+    L'(CS)      = 60.7948   (gain 0.4074 = (trQ+-2b)^2/b)
+    Lper        = 52.3188   (Perron gain -8.0687)
+    Lglo(top-50) = 92.9934   (Glover-family, full-spectrum grant; gain +32.6059)
+    all candidates valid lower bounds? True
+    certificate: 4trA-||A||^2 = 133.0616 <= 3s1+4b = 166.0 (slack +32.9384); bound/N = 1.081801 vs 2.67250 (crystal)
+
+=== T5: gap distribution over random (1,1)-block configs ===
+  CS (L'): gain over L  min=+7.447754 median=+4936.159202 max=+29391.995633   #beats L: 500/500
+  Perron: gain over L  min=-47.999959 median=+800.494419 max=+6307.353273   #beats L: 470/500
+  Glover-top: gain over L  min=+257.320754 median=+21408.574736 max=+79939.032548   #beats L: 500/500
+  CS >= Lemma always (asserted): True
+    -> pointwise gains are common (non-sharp configs) but the uniform gain is 0:
+       the sharp crystal diag(1^r,2^b) is in the class and has gain 0 (T1);
+       Perron/Glover-top are < L there.  The certificate must cover all configs,
+       so no D-only candidate moves the LP minimum (lemmaR_tight, PROVEN).
+
+=== T6: D-scaling: vacuous for the certificate's Hermitian data ===
+    (PROVEN: (a) for Hermitian A and diagonal D > 0,
+     ||DAD^-1||_F^2 - ||A||_F^2 = sum_{i<j} |a_ij|^2[(d_i/d_j)^2+(d_j/d_i)^2-2] >= 0,
+     so inf_D ||DAD^-1||_F = ||A||_F, attained at D ~ I.
+     (b) DAD^-1 is similar to A, so its spectrum equals A's; sigma_bar(X) >= rho(X)
+     for any X, hence sigma_bar(DAD^-1) >= sigma_bar(A), equality at D = I:
+     inf_D sigma_bar(DAD^-1) = sigma_bar(A) exactly.  Both certificate norms are
+     D-scaling-invariant on Hermitian data -- the mu-analysis D-scaling bound
+     inf_D sigma_bar is only nontrivial for NON-normal matrices (asymmetric
+     singular values); the Weil form bA is Hermitian, so it never applies.)
+  d=20 r=6 b=2: ||A||_F^2=722.3402  inf_D||DAD^-1||_F^2=722.3402 (ratio 1.00000000 -- F-norm cannot shrink; D ~ I)
+  d=40 r=12 b=4: ||A||_F^2=34427.4942  inf_D||DAD^-1||_F^2=34427.4942 (ratio 1.00000000 -- F-norm cannot shrink; D ~ I)
+    spectral: [[3,1],[1,2]] sigma_bar(A)=3.618034  sigma_bar(DAD^-1) over t=d1/d2: min=3.618034 (>= sigma_bar(A), equality at t=1), max=1000.006500
+    random mixed d=40: sigma_bar(A)=120.531810; sigma_bar(DAD^-1) over 400 random D: max=3772.441439 (never below sigma_bar(A))
+    -> the LP-level D-scaling reading (C-MU1: row reweighting r(j/N), the
+       256-law as the worst-case real perturbation, |E(1)| = 2.54e-6) is a
+       MARGIN statement confirming attack-lpdual; the matrix-inequality
+       D-scaling family contributes nothing to ||A||_F^2 on Hermitian data.
+
+=== T7: Ostrowski-Schneider inertia transfer -- finite content check ===
+    (INAPPLICABLE as a certificate input: the equality form n+(X)=n+(A) needs
+     the Lyapunov equation A*X + XA = -Q with the zeros as the spectrum of A,
+     i.e. the Hilbert-Polya operator -- RH itself (C-LY1).  The usable finite
+     statement n+(A+Q) >= n+(A) for Q >= 0 is the monotonicity already used
+     as Lemma 3.1 (pull-back, PROVEN in Lean).  Checked here for sanity.)
+  2000 random (A Hermitian, Q >= 0): violations of n+(A+Q) >= n+(A): 0
+
+=== bottom line: no control-family bound beats Lemma 3.2 on D ===
+    (independent confirmation of the QI sweep negative; see research/notes/attack-mu-sweep.md)
