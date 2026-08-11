@@ -412,8 +412,9 @@ pub fn character_prime(q: u32, g: u32, idx: &[u32], k: u32) -> Character {
 }
 
 /// Deterministic sample of `s` distinct even characters mod the odd prime q:
-/// k = 2 and s-1 evenly spread even exponents. All have conductor q.
-pub fn sample_even_prime(q: u32, s: usize) -> Vec<Character> {
+/// k = 2 and s-1 evenly spread even exponents. Returns (k, character) pairs;
+/// all have conductor q.
+pub fn sample_even_prime(q: u32, s: usize) -> Vec<(u32, Character)> {
     let g = primitive_root_prime(q);
     let idx = index_table_prime(q, g);
     let avail = (q - 3) / 2; // even k in [2, q-3]
@@ -428,5 +429,5 @@ pub fn sample_even_prime(q: u32, s: usize) -> Vec<Character> {
             }
         }
     }
-    ks.iter().map(|&k| character_prime(q, g, &idx, k)).collect()
+    ks.into_iter().map(|k| (k, character_prime(q, g, &idx, k))).collect()
 }

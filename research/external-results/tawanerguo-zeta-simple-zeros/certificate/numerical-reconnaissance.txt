@@ -1,0 +1,7 @@
+status=NONRIGOROUS_RECONNAISSANCE
+density=0.673
+period_two_gap_a=1.03215141637113
+period_two_gap_b=1.93961678570911
+truncated_pair_energy_per_point=0.00683820923700625
+range_6_capacity_reward_per_point=0.00321242863522665
+warning=These values are not certified lower bounds.

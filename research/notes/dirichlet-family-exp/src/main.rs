@@ -127,8 +127,9 @@ fn zeros_cmd(q: u32, t: f64) {
     println!("  total zeros: {}", total);
 }
 
-/// Per-character and family-averaged HS-norm ratios.
-fn per_char_results(
+/// Per-character and family-averaged HS-norm ratios over an explicit character list.
+fn per_char_results_for(
+    chars: &[characters::Character],
     q: u32,
     t: f64,
     d0: f64,
@@ -136,10 +137,9 @@ fn per_char_results(
     rv: f64,
     rp: f64,
 ) -> Vec<(usize, f64, f64)> {
-    // (n_zeros, tr bG, tr bG^2) per primitive even character, in parallel.
-    let pe = primitive_even_chars(q);
+    // (n_zeros, tr bG, tr bG^2) per character, in parallel.
     std::thread::scope(|s| {
-        let handles: Vec<_> = pe
+        let handles: Vec<_> = chars
             .iter()
             .enumerate()
             .map(|(ci, chi)| {
@@ -153,6 +153,19 @@ fn per_char_results(
             .collect();
         handles.into_iter().map(|h| h.join().unwrap()).collect()
     })
+}
+
+/// Per-character and family-averaged HS-norm ratios over all primitive even chars mod q.
+fn per_char_results(
+    q: u32,
+    t: f64,
+    d0: f64,
+    win: &hsnorm::Window,
+    rv: f64,
+    rp: f64,
+) -> Vec<(usize, f64, f64)> {
+    let pe = primitive_even_chars(q);
+    per_char_results_for(&pe, q, t, d0, win, rv, rp)
 }
 
 fn hsnorm_cmd(q: u32, t: f64, lams: &[f64], d0_scale: f64, rv: f64, rp: f64) {
@@ -316,11 +329,16 @@ fn qscale_cmd(q: u32, c: u32, nsample: usize) {
         ell, lam_f, lam_single, d0, t - d0, 2.0 * t + d0
     );
     let chars = characters::sample_even_prime(q, nsample);
-    println!("  sampled {} even (primitive) chars, k = {:?}", chars.len(), chars.iter().map(|c| c.order).collect::<Vec<_>>());
+    let klist: Vec<u32> = chars.iter().map(|(k, _)| *k).collect();
+    let chis: Vec<characters::Character> = chars.into_iter().map(|(_, c)| c).collect();
+    println!(
+        "  sampled {} even (primitive) chars, k = {:?}",
+        chis.len(),
+        klist
+    );
     // zero counts
     let counts: Vec<usize> = std::thread::scope(|s| {
-        chars
-            .iter()
+        chis.iter()
             .enumerate()
             .map(|(ci, chi)| {
                 s.spawn(move || load_or_compute_zeros(q, chi, t - d0, 2.0 * t + d0, ci).len())
@@ -332,11 +350,15 @@ fn qscale_cmd(q: u32, c: u32, nsample: usize) {
     });
     let main = hsnorm::rvm_main(q, t - d0, 2.0 * t + d0);
     let ntot: usize = counts.iter().sum();
+    println!(
+        "    total zeros over sample: {} (RvM main {:.0})",
+        ntot, main
+    );
     for (i, n) in counts.iter().enumerate() {
         println!(
-            "    char[{}] order={}: {} zeros, RvM main {:.0}, |diff|={:.1} ({:.2}%)",
+            "    char[{}] (k={}): {} zeros, RvM main {:.0}, |diff|={:.1} ({:.2}%)",
             i,
-            chars[i].order,
+            klist[i],
             n,
             main,
             (*n as f64 - main).abs(),
@@ -349,7 +371,7 @@ fn qscale_cmd(q: u32, c: u32, nsample: usize) {
             println!("  lambda={:.4}: d=0 — skip", lam);
             continue;
         }
-        let rows = per_char_results(q, t, d0, &win, 6.0, 2.0);
+        let rows = per_char_results_for(&chis, q, t, d0, &win, 6.0, 2.0);
         let mut sum_tr = 0.0;
         let mut sum_tr2 = 0.0;
         let mut sum_n = 0.0;
@@ -415,11 +437,11 @@ fn qcross_cmd(q: u32) {
         q, n_direct, n_all, mismatch
     );
     // spot check: gauss sums and orders for the sample
-    for c in characters::sample_even_prime(q, 4) {
+    for (k, c) in characters::sample_even_prime(q, 4) {
         let (gr, gi) = c.gauss_sum;
         println!(
-            "  sample: order={:>3} even={} |gauss|={:.6} (expect sqrt(q)={:.6})",
-            c.order, c.even, (gr * gr + gi * gi).sqrt(), (q as f64).sqrt()
+            "  sample k={:>3} order={:>3} even={} |gauss|={:.6} (expect sqrt(q)={:.6})",
+            k, c.order, c.even, (gr * gr + gi * gi).sqrt(), (q as f64).sqrt()
         );
     }
 }

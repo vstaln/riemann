@@ -1,0 +1,99 @@
+==========================================================================
+PART A — constant algebra (mpmath, 60 dps)
+H0 = 3/2 - (1/sqrt2)*cot(1/sqrt2) = 0.6725007036794116457343797908032951885934030286262640789
+three_point(221e-6) = (H0 - e/4)/(1 - e/2) = 0.6725197671136777071210166631445726638727609687133068993
+seven_point = (1345000*H0 - 2680)/1340003 = 0.6730085279277797613234752598542182582114570441277558231
+
+-- structural checks --
+3-pt formula == fixpoint of p = H0 + (e/2)(p-1/2): True
+3-pt improvement: 0.00001906343426606138663687234  (p-1/2)/2 = 0.086259883556838853561
+7-pt as (H0-d)/(1-e): d = 0.001992565055762081784387  e = 0.003715241635687732342007  d/e = 0.536321793076  (3-pt has d/e = 1/4; 7-pt differs in shape)
+  check (H0-d)/(1-e) == seven_point: True
+7-pt improvement: 0.0005078242483681155890954691
+  impr/e : 3-pt = 0.08625988356  7-pt = 0.1336379601  ratio = 1.549248093
+VERDICT: A: constants reproduce published digits to 50 dps; formula algebra exact (CHECKED NUMERICALLY)
+==========================================================================
+PART B — kernel k(x) on [0,4]
+closed vs quad at x=0.3: 0.868118475471583613 vs 0.868118475471583613
+closed vs quad at x=1.0: 0.0533640459720868702 vs 0.0533640459720868702
+closed vs quad at x=2.5: 0.106221481631359918 vs 0.106221481631359918
+closed vs quad at x=3.14: -0.0312280828840351806 vs -0.0312280828840351806
+k(0) = 1.0  (K(0) = 0.91872536986556843778 )
+zeros of k in (0,4): 3
+   z1 = 1.0572782910088552670356286991172   k(z) = -1.05836430457e-62
+   z2 = 2.0300675301281605255371253848248   k(z) = -3.1750929137e-62
+   z3 = 3.0202429921714815050340249156218   k(z) = 3.1750929137e-62
+k'(z_i): ['-0.877453251762', '0.420646134575', '-0.277917937388']
+
+-- near-miss: which zero pairs sum near a zero? --
+  z1+z1 = 2.114557  nearest zero 2.030068  |Delta| = 0.084489
+  z1+z2 = 3.087346  nearest zero 3.020243  |Delta| = 0.067103
+  z2+z1 = 3.087346  nearest zero 3.020243  |Delta| = 0.067103
+
+-- global grid floor (N=900 triangle) --
+  grid min S2   = 2.23908182e-04 at (2.01112,1.05451)
+  grid min S1   = 2.00015746e-02 at (2.02892,1.05451)
+  grid min Sinf = 9.99446080e-03 at (2.00667,1.05006)
+  zoom min S2 = 2.22157467e-04 at (1.053004,2.012175)
+  SLSQP min S2   = 2.2214911016e-04 at u=2.0120573473, v=1.0530893971, w=3.0651467444
+  SLSQP min S1   = 1.8098633765e-02 at u=1.0572782893, v=2.0300675250, w=3.0873458143
+  SLSQP min Sinf = 9.4170696279e-03 at u=2.0079180380, v=1.0466704926, w=3.0545885306
+
+-- high-precision refinement of S2 minimum (mpmath Newton) --
+  stationary point: u = 2.012057343466106931139826  v = 1.053089401989153888647472  w = 3.065146745455260819787298
+  k(u) = -0.00764283351747396372  k(v) = 0.00369264010217104461  k(w) = -0.012251555617953811
+  min S2 = 0.000222149110159800811705821207371
+
+-- consistency with claimed eps4 >= 221/10^6 = 2.21e-4 --
+  min S2 = 2.221491e-04  (eps4 = S2 : holds, loose by 1.005x)
+  min S2 = 2.221491e-04  (eps4 = 2*S2 = tr Psi(M3): loose by 2.010x)
+  min S1 = 1.809863e-02 (loose by 81.9x); min Sinf = 9.417070e-03 (no triple-zero config)
+VERDICT: B: kernel has exactly 3 zeros in (0,4); no (u,v) triple-zero with u+v<=4 (min max|k| = 0.009417); min S2 = 2.221491e-04 >= 221/10^6 (tight to 0.52%), mechanism HOLDS (CHECKED NUMERICALLY)
+==========================================================================
+PART C — 7-point six-gap weighted pressure (19/5000 = 0.0038)
+zero-gap construction (z1,z2-z1,z3-z2,0,0,0): P1 = 1.553e-32 -> infimum of P1 is 0 (19/5000 unreachable for the literal reading)
+
+-- functional P1 --
+  sum<=4  : min P1 = 2.017870e-05   gaps=['1.0573', '0.0000', '0.0000', '1.9629', '0.0000', '0.9798']
+  sum<=6  : min P1 = 5.959105e-06   gaps=['2.0301', '1.9854', '0.9967', '0.0000', '0.9879', '0.0000']
+  each<=4 : min P1 = 2.275006e-03   gaps=['3.0815', '1.9928', '2.2451', '0.0027', '1.9975', '3.9974']
+
+-- functional P2 --
+  sum<=4  : min P2 = 4.828375e-01   gaps=['0.6746', '0.6473', '0.6781', '0.6781', '0.6473', '0.6746']
+  sum<=6  : min P2 = 6.075037e-03   gaps=['0.9949', '1.0023', '1.0028', '1.0028', '1.0023', '0.9949']
+  each<=4 : min P2 = 1.865407e-04   gaps=['3.0016', '2.0139', '2.0134', '3.9909', '2.0513', '3.9885']
+
+-- functional P0 --
+  sum<=4  : min P0 = 1.381039e+00   gaps=['0.6757', '0.6546', '0.6697', '0.6697', '0.6546', '0.6757']
+  sum<=6  : min P0 = 1.800086e-02   gaps=['0.9959', '1.0019', '1.0022', '1.0022', '1.0019', '0.9959']
+  each<=4 : min P0 = 6.552679e-05   gaps=['3.0147', '3.9995', '3.0107', '3.9996', '3.0097', '3.0127']
+
+  sanity: P2(uniform gaps=1) = 6.1210e-03  P0(uniform) = 1.8078e-02
+VERDICT: C: literal 6-term pressure P1 has infimum 0 (zero-gap construction) — 19/5000 impossible for that reading; all-pairs variants P2/P0 minima are positive and domain-dependent (see table; CHECKED NUMERICALLY / INCONCLUSIVE vs repo without access)
+==========================================================================
+PART D — flaw-hunt checks
+
+D1. 3x3 Gram identity tr Psi(M) = 2*S2 (exact for ev in [0,2])
+  ev=['1.06933', '1.01283', '0.917846']  tr Psi(M)=0.0117199808464 2*S2=0.0117199808464  (equal: True)
+  ev=['1.67441', '1.10592', '0.219664']  tr Psi(M)=1.07497913621 2*S2=1.07497913621  (equal: True)
+  ev=['1.01627', '0.99673', '0.987002']  tr Psi(M)=0.00044429822032 2*S2=0.00044429822032  (equal: True)
+
+D2. Markov-type density of good triples u+v<=4 (mean simple-gap = 1/p)
+  p=0.672500703679: P(u+v<=4) >= 1-1/(2p) = 0.25650635 -> #good >= (p-1/2)N = 0.1725007N
+  p=0.672519767114: P(u+v<=4) >= 1-1/(2p) = 0.25652743 -> #good >= (p-1/2)N = 0.17251977N
+  p=0.673008527928: P(u+v<=4) >= 1-1/(2p) = 0.25706736 -> #good >= (p-1/2)N = 0.17300853N
+  7-point span: E[sum 6 gaps] = 6/p >= 6 > 4 -> Markov on span VACUOUS; positive density of span<=4 7-blocks NOT certified by first moments
+
+D3. unconstrained 3-point infimum = 0 (span bound essential)
+  (u,v)=(z1,40): S2 = 1.25e-06
+
+D4. Gram block at refined S2 argmin:
+  eigenvalues ['1.016268286', '0.9967296279', '0.9870020862']  all<=2: True
+
+==========================================================================
+VERDICTS
+  A: constants reproduce published digits to 50 dps; formula algebra exact (CHECKED NUMERICALLY)
+  B: kernel has exactly 3 zeros in (0,4); no (u,v) triple-zero with u+v<=4 (min max|k| = 0.009417); min S2 = 2.221491e-04 >= 221/10^6 (tight to 0.52%), mechanism HOLDS (CHECKED NUMERICALLY)
+  C: literal 6-term pressure P1 has infimum 0 (zero-gap construction) — 19/5000 impossible for that reading; all-pairs variants P2/P0 minima are positive and domain-dependent (see table; CHECKED NUMERICALLY / INCONCLUSIVE vs repo without access)
+
+wall time: 28.3s

@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+title: "Certified unconditional 67.3192911473% lower bound for simple zeros of the Riemann zeta function"
+message: "If you use this archive, please cite the repository and the pinned upstream framework."
+type: software
+authors:
+  - name: "tawanerguo-cn"
+    affiliation: "Independent research archive"
+version: "67.3192911"
+date-released: 2026-08-12
+repository-code: "https://github.com/tawanerguo-cn/zeta-simple-zeros"
+url: "https://doi.org/10.5281/zenodo.21890630"
+doi: "10.5281/zenodo.21890630"
+license: MIT
+keywords:
+  - Riemann zeta function
+  - simple zeros
+  - critical line
+  - unconditional lower bound
+  - 67.3192911473 percent
+  - Bellman coboundary
+  - interval arithmetic
+  - reproducible computation

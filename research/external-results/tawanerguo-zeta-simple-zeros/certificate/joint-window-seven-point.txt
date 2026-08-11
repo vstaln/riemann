@@ -1,0 +1,29 @@
+certificate=joint-window-seven-point
+verified=true
+window_profile=v(s)=cos((147/100)s), |s|<=1/2
+inequality=F6_window_147_over_100_pressure_1_over_1920 >= 563_over_100000
+grid=4000
+precision_bits=256
+mpfr_version=4.2.2
+interpolation_error_upper=3.1250000000000005e-08
+kernel_table_sha256=13213b84960fa629db0eac3ed7891148066313cba84f4fa151cfcce749d8fc2c
+generator_sha256=ff0a05c618b9cdfbe444b5ef849c28c23bb2223509d53d81dc4852c202ff7320
+verifier_source_sha256=47300561ad024198b8cdf35c8f387b3e92f6fe7083c30056164db5afcb485436
+verifier_binary_sha256=b9fdfa8011b0350b73de604e19064bae1a0f57870634209384b669567c3d6d35
+box_log_sha256=4278465698e7a1775666751efe0b71373361ce9af860241b162b8e108b3c1e14
+pressure_denominator=1920
+target_numerator=563
+target_denominator=100000
+pressure_cutoff_cells=43239
+table_cells=43247
+surviving_gap_components_cells=[3743,4968];[7004,41739]
+surviving_gap_components_real=[0.93575,1.24225];[1.751,10.435]
+initial_boxes=64
+nodes=81269558
+splits=40634747
+pressure_pruned=2951
+interval_pruned=40631860
+maximum_depth=71
+leaf_identity_left=40634811
+leaf_identity_right=40634811
+terminal_unresolved=0

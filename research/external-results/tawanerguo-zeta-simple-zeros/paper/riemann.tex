@@ -1,0 +1,433 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{url}
+
+\hypersetup{colorlinks=true,linkcolor=blue!55!black,citecolor=blue!55!black,
+  urlcolor=blue!55!black,
+  pdftitle={Certified unconditional lower bound for simple zeros of the Riemann zeta function},
+  pdfauthor={tawanerguo-cn}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\sinc}{\operatorname{sinc}}
+\newcommand{\dd}{\,\mathrm{d}}
+\newcommand{\repo}{\url{https://github.com/tawanerguo-cn/zeta-simple-zeros}}
+
+\title{\textbf{Certified unconditional 67.3192911473\% lower bound\\
+for simple zeros of the Riemann zeta function on the critical line}}
+\author{tawanerguo-cn}
+\date{12 August 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We give a reproducible proof record for
+\[
+ \liminf_{T\to\infty}\frac{N_0^s(T,2T)}{N(T,2T)}
+ \ge 0.6731929114731422535099843283\ldots .
+\]
+The argument uses the nonnegative cosine window $v(s)=\cos(1.47s)$ on
+$[-1/2,1/2]$, jointly optimizes the window and the Gram-overlap correction,
+and proves a seven-point inequality by interval arithmetic.  The certificate
+uses directed MPFR endpoint bounds, a 43,247-cell kernel table, a CWD2
+derivative table, and exhaustive
+subdivision of 64 initial boxes.  Every box reruns with
+\texttt{verified=true}.  The stored table has SHA-256
+\par\smallskip\noindent
+\small\texttt{13213b84960fa629db0eac3ed78911480}\\[-2pt]
+\texttt{66313cba84f4fa151cfcce749d8fc2c}.
+\par\smallskip
+Here ``unconditional'' means that no Riemann-hypothesis assumption or other
+unproved hypothesis about zeta zeros is made.  The repository rerun passed
+locally; it has not received an external independent audit or peer review.
+\end{abstract}
+
+\begin{center}
+\fbox{\parbox{0.91\linewidth}{\small
+\textbf{Verification status.} The bound evaluation, byte-for-byte table
+regeneration, C++20 compilation, and all 64 boxes passed on the recorded local
+toolchain.  This is an in-repository rerun of the supplied artifacts, not an
+external audit or peer review.}}
+\end{center}
+\tableofcontents
+
+\section{Statement and scope}
+Let $N(T,2T)$ count nontrivial zeros of the Riemann zeta function in $(T,2T]$,
+with multiplicity, and let $N_0^s(T,2T)$ count simple zeros on the critical
+line $\Re s=1/2$.  The main result is:
+
+\begin{theorem}[Certified simple-zero proportion]\label{thm:main}
+Without assuming the Riemann hypothesis (or any other conjecture about the
+location or simplicity of zeta zeros),
+\begin{equation}
+ \liminf_{T\to\infty}\frac{N_0^s(T,2T)}{N(T,2T)}
+ \ge 0.6731929114731422535099843283\ldots .
+ \label{eq:bound}
+\end{equation}
+Equivalently, the certified percentage is
+$67.3192911473142253509\ldots\%$.
+\end{theorem}
+
+Here ``unconditional'' has its standard analytic-number-theory meaning: the
+inequality uses stated analytic theorems and explicit finite inequalities, but
+does not assume RH, a zero-density conjecture, pair correlation, or a model for
+the zeros.  The general-window analytic input is imported, with provenance and
+a pinned commit in Section~\ref{sec:provenance}; this archive does not claim
+to have reproved that imported theory.  The arithmetic constant, kernel table,
+and finite interval certificate are independently rerun here.
+
+This paper is a compact guide to the repository.  The current source note is
+\path{BELLMAN_COBBOUNDARY_PROOF.md}; \path{NEXT_FRONTIER.md} records the
+separate exploratory route.  The executable protocol is in \texttt{tools/},
+and the verification record is in \texttt{docs/verification.md}.
+
+\section{Window functional and joint choice}
+\label{sec:window}
+The imported general-window formulation associates to a nonnegative profile
+$v$ on $[-1/2,1/2]$ the scale-free constant
+\begin{equation}
+ c_1(v)=
+ \frac{\left(\int_{-1/2}^{1/2}v(s)\dd s\right)^2}
+ {\int_{-1/2}^{1/2}v(s)^2\dd s+
+  \iint_{[-1/2,1/2]^2}|s-t|v(s)v(t)\dd s\dd t},
+ \qquad H(v)=2-\frac1{c_1(v)}.
+ \label{eq:c1}
+\end{equation}
+The source for this nonnegative-window extension is Anthropic's official PDF,
+Section~7.1, equations (7.1)--(7.3), cited in Section~\ref{sec:provenance}.
+
+We choose
+\begin{equation}
+ v_\alpha(s)=\cos(\alpha s),\qquad
+ \alpha=\frac{147}{100}=1.47,\qquad |s|\le\frac12.
+ \label{eq:window}
+\end{equation}
+Put
+\begin{align}
+ I_0&=\int_{-1/2}^{1/2}\cos(\alpha s)\dd s
+      =\frac{2\sin(\alpha/2)}{\alpha},\\
+ I_2&=\int_{-1/2}^{1/2}\cos^2(\alpha s)\dd s
+      =\frac12+\frac{\sin\alpha}{2\alpha}.
+ \label{eq:i0i2}
+\end{align}
+For $(Tv)(s)=\int_{-1/2}^{1/2}|s-t|v(t)\dd t$, one has $(Tv)''=2v$.
+Evenness and the endpoint derivative give
+\begin{equation}
+ (Tv_\alpha)(s)=-\frac{2}{\alpha^2}\cos(\alpha s)
+ +\frac{\sin(\alpha/2)}{\alpha}
+ +\frac{2\cos(\alpha/2)}{\alpha^2}.
+ \label{eq:tv}
+\end{equation}
+Thus, with $J_\alpha=\iint|s-t|v_\alpha(s)v_\alpha(t)\dd s\dd t$,
+\begin{equation}
+ J_\alpha=-\frac{2I_2}{\alpha^2}
+ +\left(\frac{\sin(\alpha/2)}{\alpha}
+ +\frac{2\cos(\alpha/2)}{\alpha^2}\right)I_0.
+ \label{eq:jalpha}
+\end{equation}
+At $\alpha=1.47$,
+\begin{align*}
+ I_0&=0.9123634770583724514009940575\ldots,&
+ I_2&=0.8384096427814901013129008377\ldots,\\
+ J_\alpha&=0.2666451720005777693177967855\ldots,&
+ c_1(v_\alpha)&=0.7532722387479082089072381632\ldots,\\
+ H_\alpha&=0.6724587094007293401705106878\ldots.
+\end{align*}
+The window alone is slightly below the best two-trace cosine choice; the gain
+comes from optimizing it jointly with the overlap correction.
+
+\section{Overlap kernel and finite certificate}
+\label{sec:certificate}
+The normalized limiting overlap kernel is
+\begin{equation}
+ k_\alpha(x)=
+ \frac{\displaystyle\int_{-1/2}^{1/2}\cos(\alpha s)\cos(2\pi xs)\dd s}
+ {\displaystyle\int_{-1/2}^{1/2}\cos(\alpha s)\dd s}
+ =\frac{\sinc(\pi x-\alpha/2)+\sinc(\pi x+\alpha/2)}
+ {2\sinc(\alpha/2)},
+ \qquad w_\alpha(x)=k_\alpha(x)^2.
+ \label{eq:kernel}
+\end{equation}
+For six consecutive gaps $g_1,\ldots,g_6\ge0$, start from the seven-point
+functional $F_0$ and add the explicit five-gap coboundary
+\begin{align}
+ U(g_1,\ldots,g_5)&=\frac{54g_1-123g_2+123g_4-54g_5}{1920000}\\
+ &\quad+\frac{5971}{300000}\bigl(w(g_1)+w(g_2)-w(g_4)-w(g_5)\bigr),\\
+ F_B(g_1,\ldots,g_6)&=F_0(g_1,\ldots,g_6)+U(g_2,\ldots,g_6)-U(g_1,\ldots,g_5).
+ \label{eq:coboundary}
+\end{align}
+The resulting pressure and nearest-neighbour coefficients are
+\begin{align}
+ (p_1,\ldots,p_6)
+ &=\frac{(946,1177,877,877,1177,946)}{1920000},\notag\\
+ (q_1,\ldots,q_6)
+ &=\left(\frac{31343}{100000},\frac13,\frac{105971}{300000},
+ \frac{105971}{300000},\frac13,\frac{31343}{100000}\right).
+ \label{eq:pq}
+\end{align}
+Here $\sum p_i=1/320$, $\sum q_i=2$, so the coboundary telescopes while
+preserving global pair-energy accounting.  Its directed-MPFR CWD2 certificate
+proves
+\begin{equation}
+ \mathcal F_B(g_1,\ldots,g_6)\ge\frac{577}{100000},
+ \qquad \alpha=\frac{147}{100}.
+ \label{eq:fb}
+\end{equation}
+This is the sole new computer-assisted assertion.
+
+The generator evaluates directed 256-bit MPFR enclosures at a grid of 4000
+points.  The kernel table is the unchanged 43,247-cell ``CWK2`` file; the
+independently reimplemented derivative table is a big-endian ``CWD2`` file.
+
+The one-body pressure test leaves two cell components and their six-fold
+Cartesian product gives 64 initial boxes.  The C++20 GMP verifier recursively
+splits the widest coordinate; pressure, interval, or tangent lower bounds
+prune each branch.  The recorded aggregate is:
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+initial boxes & 64\\
+visited nodes & 1,126,636\\
+splits & 563,286\\
+pressure-pruned leaves & 3,477\\
+interval-pruned leaves & 318,922\\
+tangent-pruned leaves & 240,951\\
+maximum depth & 55\\
+unresolved terminal cells & 0\\
+\bottomrule
+\end{tabular}
+\end{center}
+Every invocation for box codes $0,1,\ldots,63$ returned
+\texttt{verified=true}.  The certificate records target $577/100000$ and
+the local derivative-table SHA-256
+\begin{center}
+\small\texttt{035946b4368fbeab578720109039bb4098}\\[-2pt]
+\texttt{77f2c3728b672a1c1daff6c3e6f375}.
+\end{center}
+
+At each tangent-pruned box the verifier encloses the Hessian with directed
+binary64 intervals, then converts every endpoint to an exact dyadic GMP
+rational and performs an exact-positive-definite LDL test.  The tangent at
+the box midpoint is consequently a certified lower bound.  The independent
+64-box run satisfies the exact tree identity
+\[
+1{,}126{,}636-563{,}286=3{,}477+318{,}922+240{,}951=563{,}350,
+\]
+with no unresolved terminal cells.
+
+\section{From local gaps to a Gram defect}
+\label{sec:gram}
+Let $y_1<\cdots<y_m$ be normalized ordinates and $g_i=y_{i+1}-y_i$.  Define
+\begin{align}
+ E_m&=2\sum_{1\le i<j\le m}w_\alpha(y_j-y_i),\notag\\
+ P_m&=\text{the nonnegative weighted gap sum induced by the $p_i$ in
+ \eqref{eq:pq}}.
+ \label{eq:block}
+\end{align}
+Summing \eqref{eq:fb} over consecutive windows gives
+\begin{equation}
+ E_m+P_m\ge\frac{577}{100000}(m-6).
+ \label{eq:localblock}
+\end{equation}
+Across a canonical block, the total pressure is
+$(m-6)\sum_i p_i=(m-6)/320$; after averaging at $m=183$ this is the tax
+$59/19520$ used below.
+
+The stability-enhanced rank--trace input is
+\begin{equation}
+ S\ge H_\alpha N+\mathcal D(M^\circ)-o(N),
+ \qquad \mathcal D(G)=\tr\Psi(G),
+ \label{eq:ranktrace}
+\end{equation}
+where
+\begin{equation}
+ \Psi(t)=\begin{cases}(t-1)^2,&0\le t\le2,\\2t-3,&t\ge2.
+ \end{cases}
+ \label{eq:psi}
+\end{equation}
+The imported upstream commit contains the coarser Gram-defect lemma.  The
+finite trace--energy implication used here is proved directly in
+\texttt{docs/trace\_energy\_envelope.md}; its short derivation follows.
+
+For an $m\times m$ positive-semidefinite unit-diagonal Gram matrix, let
+$\lambda_i$ be its eigenvalues, $x_i=\lambda_i-1$, and
+$E=\sum_i x_i^2=\tr(G-I)^2$.  Let $L=\{i:x_i>1\}$, $k=|L|$,
+$R=\sum_Lx_i$, and $Q=\sum_Lx_i^2$.  Since the linear branch saves
+$(x_i-1)^2$ on $L$,
+\begin{equation}
+ \mathcal D(G)=E+2R-k-Q.
+ \label{eq:didentity}
+\end{equation}
+If $k\ge2$, Cauchy--Schwarz on the other $m-k$ coordinates gives
+$E-Q\ge R^2/(m-k)$ and hence
+\begin{equation}
+ \mathcal D(G)\ge2R-k+\frac{R^2}{m-k}\ge\frac{km}{m-k}>2.
+ \label{eq:ksmall}
+\end{equation}
+If $k=0$, then $\mathcal D(G)=E$.  If $k=1$, writing the large coordinate
+as $r>1$, Cauchy gives $r\le\sqrt{(m-1)E/m}$ and
+\begin{equation}
+ \mathcal D(G)\ge E+2r-1-r^2.
+ \label{eq:kone}
+\end{equation}
+The correction $2r-r^2$ decreases for $r\ge1$.  For the value
+$A=577(183-6)/100000=1.02129$, these cases imply
+\begin{equation}
+ E+P\ge A,\quad P\ge0
+ \Longrightarrow\quad \mathcal D(G)+P\ge\Phi_m(A),
+ \label{eq:phiimp}
+\end{equation}
+where
+\begin{equation}
+ \Phi_m(E)=\begin{cases}
+ E,&0\le E\le m/(m-1),\\
+ 2\sqrt{(m-1)E/m}-1+E/m,&E\ge m/(m-1).
+ \end{cases}
+ \label{eq:phi}
+\end{equation}
+This is the only trace--energy range used below; no global minimizer claim is
+needed.
+
+\section{The certified constant}
+\label{sec:constant}
+Choose $m=183$ and
+\begin{equation}
+ A=\frac{577}{100000}(183-6)=\frac{102129}{100000}=1.02129.
+ \label{eq:A}
+\end{equation}
+The second branch of \eqref{eq:phi} gives
+\begin{align}
+ B:=\Phi_{183}(A)
+ &=2\sqrt{\frac{18587478}{18300000}}-1
+   +\frac{102129}{18300000}\\
+ &=1.0212287852929821661489401766\ldots .
+ \label{eq:B}
+\end{align}
+The averaged pressure loss is
+\begin{equation}
+ \frac{59}{19520}=0.0030225409836065573770491803\ldots .
+ \label{eq:pressure}
+\end{equation}
+Pinching to full blocks for each shift and averaging gives
+\begin{equation}
+ \mathcal D(M^\circ)\ge\frac{B}{183}S-\frac{59}{19520}N-o(N).
+ \label{eq:average}
+\end{equation}
+Substitution into \eqref{eq:ranktrace} yields
+\begin{equation}
+ \frac{H_\alpha-59/19520}{1-B/183}
+ =0.6731929114731422535099843283\ldots .
+ \label{eq:final}
+\end{equation}
+This proves Theorem~\ref{thm:main}; \texttt{compute\_joint\_bound.py} prints
+the same value to 90 digits.
+
+\section{Global spectral dual and future route}
+\label{sec:dual}
+The archive also records a global route that is not needed for the theorem.
+For $t\ge0$, the scalar identity
+\begin{equation}
+ \Psi(t)=\sup_{h\le2}\left\{h(t-1)-\frac{h^2}{4}\right\}
+ \label{eq:fenchel}
+\end{equation}
+implies by spectral calculus
+\begin{equation}
+ \tr\Psi(M)=\sup_{H=H^*,\,H\preceq2I}
+ \left[\tr H(M-I)-\frac14\tr H^2\right].
+ \label{eq:matrixfenchel}
+\end{equation}
+Choosing a connection Laplacian $L(q)\succeq0$ from nonnegative edge weights
+and setting $H=S-L(q)$ gives a global capacitated-edge certificate.  The
+hard-capacity condition $\sum_jq_{ij}\le2$ removes the diagonal penalty and
+allows edges across old block boundaries.
+
+The finite Bellman-coboundary certificate above is part of the strict bound.
+The separate global spectral-dual construction remains a future route for
+removing block-boundary pressure loss; the supplied double-precision
+reconnaissance for that route is not interval certified and is not used here.
+
+\section{Reproducibility and trust boundary}
+\label{sec:repro}
+From the repository root, the Windows entry point is:
+\begin{verbatim}
+powershell -ExecutionPolicy Bypass -File scripts/verify.ps1
+\end{verbatim}
+On a Unix-like system with Python~3, MPFR, and a C++20 compiler, the
+corresponding core steps are:
+\begin{samepage}
+\begin{quote}\small\ttfamily
+\detokenize{python3 tools/compute_joint_bound.py}\par
+\detokenize{python3 tools/run_generate_joint_kernel_table.py} \textbackslash\par
+\quad\detokenize{--output /tmp/cos147-kernel.bin}\par
+\detokenize{cmp /tmp/cos147-kernel.bin data/cos147-kernel.bin}\par
+\detokenize{python3 tools/generate_coboundary_derivative_table.py} \textbackslash\par
+\quad\detokenize{--output /tmp/cos147-derivatives.bin}\par
+\detokenize{cmp /tmp/cos147-derivatives.bin data/cos147-derivatives.bin}\par
+\detokenize{g++ -O2 -std=c++20 -frounding-math -ffp-contract=off} \textbackslash\par
+\quad\detokenize{tools/verify_coboundary.cpp -lgmp -o /tmp/verify_coboundary}
+\end{quote}
+\end{samepage}
+Run the resulting verifier with the stored table for box codes $0$ through
+$63$.  The table must be byte-identical.  The local run used Python~3.12.12,
+Strawberry MinGW g++~13.2.0, and MPFR~4.2.1 through its Windows DLL; the
+local derivative table was generated with that 4.2.1 toolchain (the
+unavailable source package reported MPFR~4.2.2).  No WSL distribution or
+Clang fallback was available or required.
+
+The trust boundary is explicit: the local run checks the arithmetic constant,
+table generation, source compilation, and all finite boxes.  It does not
+replace an independent implementation, formal proof checking, or peer review
+of the imported analytic framework and asymptotic passage.  The numerical
+reconnaissance file is explicitly non-rigorous.
+
+\section{Provenance and repository}
+\label{sec:provenance}
+The code, certificates, proof notes, and source table are archived at
+\begin{center}\repo\end{center}
+with Zenodo concept DOI \url{https://doi.org/10.5281/zenodo.21890630}.
+
+The earlier Gram-defect framework is imported from the
+\href{https://github.com/ainta/zeta-simple-zeros/tree/040c5e899e658aed7b56a2a87f501798fe10761d}{pinned
+\texttt{ainta/zeta-simple-zeros} snapshot}, at commit
+\begin{center}
+\small\texttt{040c5e899e658aed7b56a2a87f501798fe10761d}.
+\end{center}
+That commit supplies the coarser $\min(1,E)$ lemma; it is not cited as a proof
+of the sharper finite implication in Section~\ref{sec:gram}.  The
+nonnegative-window analytic extension is recorded in Anthropic's official
+PDF, Section~7.1, equations (7.1)--(7.3),
+\href{https://www-cdn.anthropic.com/564f962e60643842f5fcb4a17c9dbc8f608f1c37.pdf}{
+official PDF}; the checked copy has SHA-256
+\begin{center}
+\small\texttt{6792988e6cd0e17690621ce898abd5d5}\\[-2pt]
+\texttt{34f98407741bc7cb14bbe7d07c77d72e}.
+\end{center}
+
+{\small
+\begin{thebibliography}{9}
+\bibitem{ainta}
+ainta, \emph{zeta-simple-zeros}, repository snapshot at commit
+\texttt{040c5e899e658aed7b56a2a87f501798fe10761d},
+\url{https://github.com/ainta/zeta-simple-zeros/tree/040c5e899e658aed7b56a2a87f501798fe10761d}.
+\bibitem{anthropic}
+Anthropic, official Claude mathematical paper, Section~7.1, equations
+(7.1)--(7.3),
+\url{https://www-cdn.anthropic.com/564f962e60643842f5fcb4a17c9dbc8f608f1c37.pdf}.
+\bibitem{archive}
+tawanerguo-cn, \emph{zeta-simple-zeros: certified unconditional
+67.3192911473\% lower bound for simple zeros of the Riemann zeta function},
+\repo, Zenodo concept DOI \url{https://doi.org/10.5281/zenodo.21890630}.
+\end{thebibliography}
+}
+\end{document}

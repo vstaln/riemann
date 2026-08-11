@@ -1,0 +1,27 @@
+certificate=bellman-coboundary-seven-point
+verified=true
+target=F_B >= 577/100000
+alpha=147/100
+grid=4000
+mpfr_precision_bits=256
+derivative_start_cell=3500
+initial_boxes=64
+nodes=1126636
+splits=563286
+pressure_pruned=3477
+interval_pruned=318922
+tangent_pruned=240951
+maximum_depth=55
+unresolved_terminal_cells=0
+leaves=563350
+tree_identity_lhs=563350
+kernel_table_sha256=13213b84960fa629db0eac3ed7891148066313cba84f4fa151cfcce749d8fc2c
+derivative_table_sha256=035946b4368fbeab578720109039bb409877f2c3728b672a1c1daff6c3e6f375
+pressure_coefficients=(946,1177,877,877,1177,946)/1920000
+nearest_coefficients=(31343/100000,1/3,105971/300000,105971/300000,1/3,31343/100000)
+components_0=[3722,5018];[6935,46843]
+components_1=[3741,4970];[7006,36928]
+components_2=[3748,4961];[7007,50528]
+components_3=[3748,4961];[7007,50528]
+components_4=[3741,4970];[7006,36928]
+components_5=[3722,5018];[6935,46843]

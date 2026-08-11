@@ -1,0 +1,23 @@
+kernel_regeneration_cmp_status=0
+derivative_regeneration_cmp_status=not_applicable_source_zip_unavailable
+kernel_sha256=13213b84960fa629db0eac3ed7891148066313cba84f4fa151cfcce749d8fc2c
+derivative_sha256=035946b4368fbeab578720109039bb409877f2c3728b672a1c1daff6c3e6f375
+source_expected_derivative_sha256=53e7f31fdc12f60a393dd5cf3963b544e18916859cb7ac8ce9ad935f644e8a24
+raw_box_logs=64
+aggregate_box_report_matches_raw_logs=true
+compiler=g++ 13.2.0
+compile_flags=-O2 -std=c++20 -frounding-math -ffp-contract=off -Wall -Wextra -Wpedantic -IC:\Strawberry\c\include -LC:\Strawberry\c\lib -lgmp
+exact_ldl_backend=GMP mpq_t (portable replacement for unavailable Boost.Multiprecision headers)
+all_boxes_verified=true
+local_nodes=1126636
+local_splits=563286
+local_pressure=3477
+local_interval=318922
+local_tangent=240951
+local_depth=55
+local_unresolved=0
+final_bound_directed_mpfr=true
+final_bound_lower=0.6731929114731422
+final_bound_upper=0.67319291147314231
+certified_decimal=0.67319291147314
+note=The local derivative table is an independent directed-MPFR reimplementation; it is not claimed byte-identical to the unavailable source ZIP.

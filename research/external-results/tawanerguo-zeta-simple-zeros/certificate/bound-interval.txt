@@ -1,0 +1,16 @@
+mpfr_version=4.2.1
+precision_bits=256
+m=183
+H_lower=0.67245870940072927
+H_upper=0.67245870940072938
+H_lower_hex=0x1.584c820992b02p-1
+H_upper_hex=0x1.584c820992b03p-1
+B_lower=1.021228785292982
+B_upper=1.0212287852929822
+B_lower_hex=0x1.056f3fea9131ap+0
+B_upper_hex=0x1.056f3fea9131bp+0
+bound_lower=0.6731929114731422
+bound_upper=0.67319291147314231
+bound_lower_hex=0x1.58acbdc55a32dp-1
+bound_upper_hex=0x1.58acbdc55a32ep-1
+certified_decimal_14=0.67319291147314
