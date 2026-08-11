@@ -160,7 +160,7 @@ fn winding(t0: f64, h: f64, ds: f64) -> (f64, f64, f64, f64, f64, f64, f64, f64,
         d
     };
 
-    let mut unwrap_cur = 0.0f64;
+    let unwrap_cur = std::cell::Cell::new(0.0f64);
     let mut eval = |s_re: f64, s_im: f64,
                     total_s: &mut f64,
                     total_g: &mut f64,
@@ -185,7 +185,7 @@ fn winding(t0: f64, h: f64, ds: f64) -> (f64, f64, f64, f64, f64, f64, f64, f64,
         let d_g = unwrap(a_g, prev_g);
         let d_z = unwrap(a_z, prev_z);
         let d_p = unwrap(a_p, prev_p);
-        unwrap_cur = d_z;
+        unwrap_cur.set(d_z);
         *total_s += d_s;
         *total_g += d_g;
         *total_z += d_z;
@@ -203,7 +203,7 @@ fn winding(t0: f64, h: f64, ds: f64) -> (f64, f64, f64, f64, f64, f64, f64, f64,
     edge_i = 0;
     while sigma <= 1.0 + 1e-9 {
         eval(sigma, t0, &mut total_s, &mut total_g, &mut total_z, &mut total_p, &mut prev_s, &mut prev_g, &mut prev_z, &mut prev_p, &mut max_d);
-        edge_z[edge_i] += unwrap_cur;
+        edge_z[edge_i] += unwrap_cur.get();
         sigma += ds;
     }
     // right: t t0→t0+h at σ=1
@@ -211,7 +211,7 @@ fn winding(t0: f64, h: f64, ds: f64) -> (f64, f64, f64, f64, f64, f64, f64, f64,
     edge_i = 1;
     while tt <= t0 + h + 1e-9 {
         eval(1.0, tt, &mut total_s, &mut total_g, &mut total_z, &mut total_p, &mut prev_s, &mut prev_g, &mut prev_z, &mut prev_p, &mut max_d);
-        edge_z[edge_i] += unwrap_cur;
+        edge_z[edge_i] += unwrap_cur.get();
         tt += ds;
     }
     // top: σ 1→0 at t=t0+h
@@ -219,7 +219,7 @@ fn winding(t0: f64, h: f64, ds: f64) -> (f64, f64, f64, f64, f64, f64, f64, f64,
     edge_i = 2;
     while sigma >= -1e-9 {
         eval(sigma, t0 + h, &mut total_s, &mut total_g, &mut total_z, &mut total_p, &mut prev_s, &mut prev_g, &mut prev_z, &mut prev_p, &mut max_d);
-        edge_z[edge_i] += unwrap_cur;
+        edge_z[edge_i] += unwrap_cur.get();
         sigma -= ds;
     }
     // left: t t0+h→t0 at σ=0
@@ -227,7 +227,7 @@ fn winding(t0: f64, h: f64, ds: f64) -> (f64, f64, f64, f64, f64, f64, f64, f64,
     edge_i = 3;
     while tt >= t0 - 1e-9 {
         eval(0.0, tt, &mut total_s, &mut total_g, &mut total_z, &mut total_p, &mut prev_s, &mut prev_g, &mut prev_z, &mut prev_p, &mut max_d);
-        edge_z[edge_i] += unwrap_cur;
+        edge_z[edge_i] += unwrap_cur.get();
         tt -= ds;
     }
     total = total_s + total_g + total_z + total_p;
