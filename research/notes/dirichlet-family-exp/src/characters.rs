@@ -333,3 +333,100 @@ impl Character {
         self.table[r]
     }
 }
+
+// ---------------------------------------------------------------------------
+// Direct construction for prime moduli (large q).
+// For q prime, every non-principal character is primitive, and the even ones
+// are exactly those with even exponent k in chi_k(g^a) = exp(2 pi i k a/(q-1)),
+// since chi(-1) = chi(g^{(q-1)/2}) = (-1)^k. This lets us build a single
+// character's table in O(q) (after an O(q^2) one-time index table), avoiding
+// the full phi(q)-character enumeration whose memory cost is prohibitive at
+// q ~ 1e3-1e4. All characters below have conductor q (they are primitive).
+// ---------------------------------------------------------------------------
+
+/// Smallest primitive root mod the odd prime q.
+pub fn primitive_root_prime(q: u32) -> u32 {
+    // distinct prime factors of q-1
+    let mut n = q - 1;
+    let mut fac = Vec::new();
+    let mut p = 2u32;
+    while p * p <= n {
+        if n % p == 0 {
+            fac.push(p);
+            while n % p == 0 {
+                n /= p;
+            }
+        }
+        p += 1;
+    }
+    if n > 1 {
+        fac.push(n);
+    }
+    let mut g = 2u32;
+    loop {
+        if fac.iter().all(|&p| pow_mod(g, (q - 1) / p, q) != 1) {
+            return g;
+        }
+        g += 1;
+    }
+}
+
+/// index table: idx[n] = j with g^j = n (mod q), for n = 1..q-1.
+pub fn index_table_prime(q: u32, g: u32) -> Vec<u32> {
+    let mut idx = vec![0u32; q as usize];
+    let mut cur = 1u32;
+    for j in 0..(q - 1) {
+        idx[cur as usize] = j;
+        cur = (cur as u64 * g as u64 % q as u64) as u32;
+    }
+    idx
+}
+
+/// The character chi_k(g^a) = exp(2 pi i k a/(q-1)) for the odd prime q.
+/// k must satisfy 0 < k < q-1 (primitive); even k gives chi(-1) = 1.
+pub fn character_prime(q: u32, g: u32, idx: &[u32], k: u32) -> Character {
+    let two_pi = std::f64::consts::TAU;
+    let mut table = vec![(0.0f64, 0.0f64); q as usize];
+    for a in 1..q {
+        let j = idx[a as usize];
+        let arg = two_pi * k as f64 * j as f64 / (q - 1) as f64;
+        table[a as usize] = (arg.cos(), arg.sin());
+    }
+    // gauss sum
+    let mut gs = (0.0f64, 0.0f64);
+    for a in 1..q {
+        let (cr, ci) = table[a as usize];
+        let ang = two_pi * a as f64 / q as f64;
+        gs.0 += cr * ang.cos() - ci * ang.sin();
+        gs.1 += cr * ang.sin() + ci * ang.cos();
+    }
+    let order = (q - 1) / gcd(k, q - 1);
+    Character {
+        q,
+        table,
+        conductor: q,
+        even: k % 2 == 0,
+        gauss_sum: gs,
+        order,
+    }
+}
+
+/// Deterministic sample of `s` distinct even characters mod the odd prime q:
+/// k = 2 and s-1 evenly spread even exponents. All have conductor q.
+pub fn sample_even_prime(q: u32, s: usize) -> Vec<Character> {
+    let g = primitive_root_prime(q);
+    let idx = index_table_prime(q, g);
+    let avail = (q - 3) / 2; // even k in [2, q-3]
+    let mut ks = vec![2u32];
+    if s > 1 {
+        let step = (avail / (s as u32 - 1)).max(1);
+        let mut k = 2u32;
+        for _ in 1..s {
+            k = (k + 2 * step).min(q - 3);
+            if !ks.contains(&k) {
+                ks.push(k);
+            }
+        }
+    }
+    ks.iter().map(|&k| character_prime(q, g, &idx, k)).collect()
+}

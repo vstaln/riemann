@@ -213,8 +213,7 @@ fn hsnorm_cmd(q: u32, t: f64, lams: &[f64], d0_scale: f64, rv: f64, rp: f64) {
     }
 }
 
-fn qaspect_cmd(q: u32) {
-    let t = ((q as f64).ln()).powi(2).ceil();
+fn qaspect_cmd(q: u32) {    let t = ((q as f64).ln()).powi(2).ceil();
     println!(
         "\n=== q-aspect: q={} T=(ln q)^2={} ===",
         q, t
@@ -295,6 +294,136 @@ fn ortho_cmd(q: u32, t: f64) {
     }
 }
 
+/// q-aspect scaling run for prime q: T = (log q)^c, sample of even characters,
+/// family HS-norm at the legal family bandwidth lambda_F and at the limit point
+/// lambda = 1. D0 is chosen large enough for the pair sums (>= 1.2*rp*L at rp=2)
+/// and the zero-finding window is [T-D0, 2T+D0].
+fn qscale_cmd(q: u32, c: u32, nsample: usize) {
+    assert!(q >= 5 && q % 2 == 1, "qscale needs an odd prime modulus");
+    let lq = (q as f64).ln();
+    let t = lq.powi(c as i32).ceil();
+    let ell = (q as f64 * t / std::f64::consts::TAU).ln() + 2.0 * (2.0f64).ln() - 1.0;
+    let lam_f = (q as f64).powf(0.99).ln() / ell;
+    let lam_single = t.powf(0.99).ln() / ell;
+    let l1 = hsnorm::window(q, t, 1.0, 0.1).L;
+    let d0 = (2.0 * t.sqrt()).max(2.4 * l1);
+    println!(
+        "\n=== qscale q={} c={} T=(ln q)^{}={:.1} ===",
+        q, c, c, t
+    );
+    println!(
+        "  ell={:.3}  lambda_F (X<=q^0.99)={:.4}  lambda_single (X<=T^0.99)={:.4}  D0={:.1}  window=[{:.1},{:.1}]",
+        ell, lam_f, lam_single, d0, t - d0, 2.0 * t + d0
+    );
+    let chars = characters::sample_even_prime(q, nsample);
+    println!("  sampled {} even (primitive) chars, k = {:?}", chars.len(), chars.iter().map(|c| c.order).collect::<Vec<_>>());
+    // zero counts
+    let counts: Vec<usize> = std::thread::scope(|s| {
+        chars
+            .iter()
+            .enumerate()
+            .map(|(ci, chi)| {
+                s.spawn(move || load_or_compute_zeros(q, chi, t - d0, 2.0 * t + d0, ci).len())
+            })
+            .collect::<Vec<_>>()
+            .into_iter()
+            .map(|h| h.join().unwrap())
+            .collect()
+    });
+    let main = hsnorm::rvm_main(q, t - d0, 2.0 * t + d0);
+    let ntot: usize = counts.iter().sum();
+    for (i, n) in counts.iter().enumerate() {
+        println!(
+            "    char[{}] order={}: {} zeros, RvM main {:.0}, |diff|={:.1} ({:.2}%)",
+            i,
+            chars[i].order,
+            n,
+            main,
+            (*n as f64 - main).abs(),
+            100.0 * (*n as f64 - main).abs() / main.max(1.0)
+        );
+    }
+    for &lam in &[lam_f, 1.0] {
+        let win = hsnorm::window(q, t, lam, 0.1);
+        if win.d == 0 {
+            println!("  lambda={:.4}: d=0 — skip", lam);
+            continue;
+        }
+        let rows = per_char_results(q, t, d0, &win, 6.0, 2.0);
+        let mut sum_tr = 0.0;
+        let mut sum_tr2 = 0.0;
+        let mut sum_n = 0.0;
+        let mut kappas = Vec::new();
+        for (n, tr_bg, tr2_bg) in &rows {
+            if *tr_bg <= 0.0 {
+                continue;
+            }
+            sum_tr += tr_bg;
+            sum_tr2 += tr2_bg;
+            sum_n += *n as f64;
+            kappas.push(tr2_bg / tr_bg);
+        }
+        let kappa_f = sum_tr2 / sum_tr;
+        let c_f = sum_tr * sum_tr / sum_tr2;
+        let (kp, cn) = hsnorm::prediction(&win, q);
+        let asym_kappa = 1.0 / lam + lam / 3.0;
+        let asym_c = lam / (1.0 + lam * lam / 3.0);
+        kappas.sort_by(|a, b| a.partial_cmp(b).unwrap());
+        let med = kappas[kappas.len() / 2];
+        println!(
+            "  lambda={:.4} (L={:.2}, d={}): N_total={} per-char-med kappa={:.4}  FAMILY kappa_F={:.4}  (taper-pred {:.4}, asym {:.4})",
+            lam, win.L, win.d, sum_n as usize, med, kappa_f, kp, asym_kappa
+        );
+        println!(
+            "      C_F/N={:.4} (pred {:.4}, asym {:.4});  H = 2-kappa_F = {:.4}  (asym 2-1/l-l/3 = {:.4})",
+            c_f / sum_n, cn, asym_c, 2.0 - kappa_f, 2.0 - asym_kappa
+        );
+    }
+    println!("  (family legal lambda lambda_F = {:.4}, single-char legal lambda = {:.4})", lam_f, lam_single);
+}
+
+/// Cross-check the direct prime construction against the full CRT enumeration.
+fn qcross_cmd(q: u32) {
+    assert!(q >= 5 && q % 2 == 1);
+    let all = characters::all_characters(q);
+    let g = characters::primitive_root_prime(q);
+    let idx = characters::index_table_prime(q, g);
+    let mut n_direct = 0;
+    let mut mismatch = 0;
+    for k in 0..(q - 1) {
+        let dc = characters::character_prime(q, g, &idx, k);
+        // find the matching character in `all` (same table)
+        let same = all
+            .iter()
+            .find(|c| {
+                (0..q).all(|a| {
+                    (c.table[a as usize].0 - dc.table[a as usize].0).abs() < 1e-9
+                        && (c.table[a as usize].1 - dc.table[a as usize].1).abs() < 1e-9
+                })
+            })
+            .is_some();
+        if !same {
+            mismatch += 1;
+        }
+        if dc.even && k != 0 {
+            n_direct += 1;
+        }
+    }
+    let n_all = all.iter().filter(|c| c.even && c.conductor == q).count();
+    println!(
+        "qcross q={}: direct even non-principal chars = {}, CRT primitive-even = {}, table mismatches = {}",
+        q, n_direct, n_all, mismatch
+    );
+    // spot check: gauss sums and orders for the sample
+    for c in characters::sample_even_prime(q, 4) {
+        let (gr, gi) = c.gauss_sum;
+        println!(
+            "  sample: order={:>3} even={} |gauss|={:.6} (expect sqrt(q)={:.6})",
+            c.order, c.even, (gr * gr + gi * gi).sqrt(), (q as f64).sqrt()
+        );
+    }
+}
+
 fn main() {
     let args: Vec<String> = std::env::args().collect();
     let cmd = args.get(1).map(|s| s.as_str()).unwrap_or("help");
@@ -320,6 +449,16 @@ fn main() {
         "qaspect" => {
             let q: u32 = args[2].parse().unwrap();
             qaspect_cmd(q);
+        }
+        "qscale" => {
+            let q: u32 = args[2].parse().unwrap();
+            let c: u32 = args.get(3).and_then(|s| s.parse().ok()).unwrap_or(2);
+            let ns: usize = args.get(4).and_then(|s| s.parse().ok()).unwrap_or(4);
+            qscale_cmd(q, c, ns);
+        }
+        "qcross" => {
+            let q: u32 = args[2].parse().unwrap();
+            qcross_cmd(q);
         }
         "ortho" => {
             let q: u32 = args[2].parse().unwrap();
