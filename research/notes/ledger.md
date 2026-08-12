@@ -56,3 +56,21 @@ Phone mobile data dropped mid-wave (killed 2 agents). All specs now mandate cras
 2. Distinct lane: N_d ≥ 0.8071N theorem landed (real, distinct ≠ simple, no simple gain).
 3. **Beyond-1 door CLOSED** (bump = α=1 spike; e≥2 terms ≤ 0.03 no corr).
 4. **M2-curve roadmap WEAKENED** (LP proxy: 0.70 needs A≈1.063, 0.80 unreachable, R floor ≈ 0.75; proxy fidelity itself is the open question — cumulative family_law LP gave p₁(64) ∈ [0.828,0.844] vs pointwise 0.9338).
+
+## m3-MIN-FRONTIER (COMPLETE) — the m₃-class door is CLOSED; a sign-correction discovery
+
+**The certificate value over the m₃=5±ε class is v(ε) = 0.50 (pool floor) at EVERY ε ∈ {0.1, 0.44, 1.0, 2.98} — the 0.70 certificate is NOT reachable on this hinge.**
+
+- **THE SIGN CORRECTION (the real discovery here):** the zeros' actual connected part T = m₃ − D − pair is **POSITIVE**: [+0.272, +0.427] (N=64, 156 blocks), [+0.333, +0.401] (N=256), trending to **A3(1/2) = +1/2 (PROVEN)**. The "[−3.93, −0.44] realized T-range" in m3-price was NOT zeros-realized — it is the identity-derived marked-T window at p₁ ≈ p₀ (T = m₃ − D − pair ∈ [1+3p₁−6u, 1+3p₁−3u] = [−1.88372−3p₁, −0.44186]; PROVEN arithmetic, same source). m3-price mislabeled it "realized"; it is the T the MARKED configs need to reach m₃=5.
+- **Why the class is empty under zeros-T:** marked m₃ = D + pair + T with pair ≥ 3u(p₁) = 3p₁+1.44186 ⟹ m₃ ≥ 5.44186 + T. With T = zeros' +1/2: m₃ ≥ 5.94 — outside 5±ε for ε ≤ 2.98. The zeros realize m₃ = 5 with the UNMARKED pair (marks all 1: D=1, pair = 3·A2 = 3.5, T = +1/2). The marked class's T is a different object — **unconstrained by any proven input (attack-law-s3 §4 stands)**.
+- **Why the pin fails on the min side (PROVEN arithmetic):** marked-T window [−1.88372−3p₁−ε, −0.44186+ε] is NONEMPTY for every p₁ ≥ 0 ⟹ the m₃-pin imposes NO lower bound on p₁. Low-p₁ (high-D) configs stay in-class by taking negative marked-T. LP confirms: pool marked-T ∈ [−7.51, −2.59] (seeds 42/1234, D4 identity verified to 0.0 err) — the class's min-p₁ = 0.50 (Parseval floor), NOT excludable.
+- **So the m₃ discovery's certificate consequence is VOID:** the super-law exclusion (m₃=7.98 ∉ 5±ε) is real, but the binding adversary was always the Parseval-floor config (min-p₁=0.50), which the pin never touched. The pin is free on BOTH sides (max side: pair-refund; min side: free marked-T). The m₃-paper's "class-robustness wall falls" claim stands for the ADVERSARY SET; its implicit certificate-gain framing needs a correction note (next paper render: flag "CLIMBS to 0.70 conditional on T-achievability" — now ADJUDICATED: marked-T free ⟹ condition trivially satisfiable ⟹ pin gives nothing; v = 0.50).
+- **The gap (THE missing third-order input, unchanged):** a PROVEN bound on the MARKED connected part T — same hole as attack-law-s3 §4. Any future 0.70 route needs either this or a different read entirely.
+
+## Door landscape (UPDATED)
+1. **m₃-class: CLOSED** (v(ε) = 0.50; sign contradiction under zeros-T; pin free both sides).
+2. Distinct lane: N_d ≥ 0.8071N theorem LANDED (real; distinct ≠ simple; no simple gain).
+3. Beyond-1: CLOSED (α=1 spike; e≥2 terms ≤ 0.03).
+4. M2-curve roadmap: WEAKENED (LP proxy: 0.70 needs A≈1.063, 0.80 unreachable).
+5. **Record: 0.6732654365 — RE-CERTIFIED at grid 6000 (verified=True, 1,140,800 nodes) — doubly secure.**
+6. LIVE: rust-zeros v2 (Gabcke tail, 100k zeros + high-N stats — the periodogram/spacing reads could surface a NEW read); kanaka2 independent m₃ re-verification (zetazero phase — the m₃ paper's second-implementation upgrade); 8065@g4000 record-move test still grinding.
