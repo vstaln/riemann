@@ -43,3 +43,6 @@ research/waves/wave-local/results/exec-eps-max.json + exec-eps-max-runs.log
 Fresh verifier process re-ran from scratch: verified=True, nodes=1137428, elapsed=554.65s.
 Command: `uv run --quiet --with python-flint python verify_cos7.py 149 100 1 1290 8224 1000000`
 This independently confirms the eps-max agent's certification. The new bound is CERTIFIED.
+
+## ⚠️ RETRACTED (2026-08-12)
+This claim is INVALID — see research/notes/retraction-673-invalid.md (kernel double-normalization bug in verify_cos7.py: w(0)=1.2075≠1; true floor ≈0.00779; corrected bound ≈0.673088 below external mechanisms).

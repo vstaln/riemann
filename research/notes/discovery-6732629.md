@@ -71,3 +71,6 @@ bound = (H − τ(m))/(1 − B/m), with τ(m) = psum·(m−6)/m and B = Φ_m(ε(
 - /tmp/combine/debug_H_final.py (the H resolution)
 - Full suite in /tmp/combine/ (cert_search.py, batch_cert.py, bound_map.py, ...)
 - To be copied into tools/ for permanence.
+
+## ⚠️ RETRACTED (2026-08-12)
+This claim is INVALID — see research/notes/retraction-673-invalid.md (kernel double-normalization bug in verify_cos7.py: w(0)=1.2075≠1; true floor ≈0.00779; corrected bound ≈0.673088 below external mechanisms).
