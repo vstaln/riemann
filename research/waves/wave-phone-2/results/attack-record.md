@@ -54,3 +54,17 @@ Runs started 16:50:55 (parallel, 6 workers): 8065@g4000, 8066/8068/8070@g6000, 8
 ((6316,6316),(11945,11945),(11895,11895),(6280,6280),(11857,11857),(6301,6301)) lower=0.008060649099672502,
 max_depth=81, pruned=146518, interval=124317, tangent=21644, elapsed ~3.6 min.
 **Finer grid (6000) does NOT raise the certified floor: 0.008070 fails at g6000 with the same ~0.0080606 floor.** The box coordinates are exactly grid-scaled versions of the g4000 failing boxes (coords × 1.5) — same terminal region, grid-refined.
+
+## Result 5 — ARTIFACT PROBE #2: eps=0.008068 at grid=6000 FAILS (CHECKED NUMERICALLY)
+`verify_cos7.py 149 100 1 1320 8068 1000000 - 6000` → verified=False, terminal box
+((6309,6309),(11945,11945),(11901,11901),(6281,6281),(11842,11842),(6303,6303)) lower=0.008058687850487158,
+nodes=530530, max_depth=81, ~19 min (contention). Again grid-scaled version of the g4000 failing region.
+**Floor at g6000 ≈ 0.0080587–0.0080606 — same as g4000 (~0.008060). Finer grid does NOT raise the certifiable floor.**
+
+## Verifier-re-run state (17:25 start, per-run logs)
+r_8065_g4000, r_8065_g6000, r_8066_g6000, r_8066_g8000 → /tmp/combine/r_*.log (dedicated files; the shared-file stdout of the parallel batch was lost after DONE markers — likely buffering/contention, re-running individually).
+
+## Certified-sweep summary (bound arithmetic, CHECKED NUMERICALLY)
+- (α=1.49, psum=1/220, m=133, eps=0.008064 certified): bound 0.6732654364955235 — NEW RECORD +2.571e-6.
+- (α=1.47, eps=0.007985): no beat. (α=1.49, psum=1/225, eps=0.007909): m=135/136 beat record slightly but < leader.
+- (α=1.45, eps=0.008064): bound 0.6733277419 would be best BUT α=1.45 eps certification NOT established — needs verifier run. FLAGGED INCONCLUSIVE.

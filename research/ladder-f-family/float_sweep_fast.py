@@ -24,10 +24,10 @@ from zeta_ext import design
 from zeta_ext.kernel import kernel_derivatives, kernel_k0
 from flint import arb
 
-H_CERT = 0.6724570414145443
+H_CERT = 672457 / 1_000_000  # exact rational certified lower bound
 PRESSURE = 1.0 / 2300.0
-NMAX = 6.0
-NTAB = 200_001  # 3e-5 grid
+NMAX = 40.0
+NTAB = 400_001  # 1e-4 grid; w ~ 1/x^2 tail handled to x=40
 
 
 def w_exact(x: float, spec, k0sq: float) -> float:
