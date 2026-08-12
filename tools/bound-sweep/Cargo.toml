@@ -1,0 +1,11 @@
+[package]
+name = "bound-sweep"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# f128 for high-precision bound arithmetic (no external deps needed)
+
+[profile.release]
+opt-level = 3
+lto = true
