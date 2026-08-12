@@ -1,0 +1,22 @@
+[package]
+name = "idea-analogy"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "analogy"
+path = "src/bin/analogy.rs"
+
+[[bin]]
+name = "flip"
+path = "src/bin/flip.rs"
+
+[dependencies]
+
+[[bin]]
+name = "gramev"
+path = "src/bin/gramev.rs"
+
+[[bin]]
+name = "lattice"
+path = "src/bin/lattice.rs"

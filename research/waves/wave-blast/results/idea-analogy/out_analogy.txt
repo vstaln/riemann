@@ -1,0 +1,44 @@
+== A. 256-law constants (midpoint model) ==
+A1 S(256) = 211.432009142486
+A2 D(1) = T/256 - 1/2 = 0.823953160712835
+A3 E(1) = -0.000002543131510  (|E(1)| = 0.000002543131510)
+A4 p0 (law's simple fraction, certified) = 0.681828687463832
+A5 LP value (affine dual cert) = p0 + |E(1)| = 0.68183123059534190
+   recorded ceiling 0.68183123059534187426
+
+== B. real zeros pair-count vs GUE datum (F≡1) ==
+B0 zeros read: 11000
+B1 alpha=0.10 real_C=0.010000 GUE(alpha)=0.100 diff=-0.090000
+B1 alpha=0.25 real_C=0.044727 GUE(alpha)=0.250 diff=-0.205273
+B1 alpha=0.50 real_C=0.275545 GUE(alpha)=0.500 diff=-0.224455
+B1 alpha=0.75 real_C=0.643909 GUE(alpha)=0.750 diff=-0.106091
+B1 alpha=1.00 real_C=0.992273 GUE(alpha)=1.000 diff=-0.007727
+B1 alpha=1.25 real_C=1.355909 GUE(alpha)=1.250 diff=+0.105909
+B1 alpha=1.50 real_C=1.714727 GUE(alpha)=1.500 diff=+0.214727
+B1 alpha=2.00 real_C=2.440091 GUE(alpha)=2.000 diff=+0.440091
+
+== C. Delsarte dual LP slack at the law ==
+C1 ceiling (LP value at 256-law) = 0.681831230595342
+C2 Theorem-D value = 0.6725007036794116; in-class gap = 0.009331
+C3 external best 0.6731929114731423; gap to ceiling = 0.008638
+
+== D. Gram anchors from real zeros ==
+D1 start=0 m=16 tr=16 Gershgorin_radius=11.683757 E=tr(G-I)^2=128.7658
+D1 start=0 m=64 tr=64 Gershgorin_radius=14.635351 E=tr(G-I)^2=279.5280
+D1 start=0 m=256 tr=256 Gershgorin_radius=15.334348 E=tr(G-I)^2=506.7569
+
+== E. bound sensitivity to eps (cosine window, alpha=1.49) ==
+E1 H(1.49) = 0.6724218861
+E2 bound at (eps=0.00806, m=133) = 0.674629758923
+E3 d(bound)/d(eps) ~ 0.6260 per unit eps
+E4 eps needed for 0.6732628655343560 at m=133: 0.005877
+
+== E2. bound vs block size m at fixed eps=0.00806 ==
+E2b m=64 bound=0.6745167783
+E2b m=100 bound=0.6745953906
+E2b m=133 bound=0.6746297589
+E2b m=183 bound=0.6745230812
+E2b m=257 bound=0.6742153220
+E2b m=400 bound=0.6736679452
+
+VERDICT: all numbers produced by analogy.rs (CHECKED NUMERICALLY)

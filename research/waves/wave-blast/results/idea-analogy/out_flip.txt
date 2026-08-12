@@ -1,0 +1,13 @@
+== F. Boolean-function sensitivity anchors ==
+F1a F(g0) at p=1/2300 = 0.00988800
+F1b dF/dg[0] ~ 0.0052
+F1b dF/dg[1] ~ -0.0675
+F1b dF/dg[2] ~ -0.0543
+F1b dF/dg[3] ~ -0.0543
+F1b dF/dg[4] ~ -0.0675
+F1b dF/dg[5] ~ 0.0052
+F2a mean F over jitter = 0.01323203, std = 0.00402958
+F3a nearest-neighbor (span-1) share of pair energy = 0.8629
+F3b same at uniform gaps = 0.9305
+
+VERDICT: F-probes produced by flip.rs (CHECKED NUMERICALLY)

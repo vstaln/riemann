@@ -1,0 +1,20 @@
+** WARNING: connection is not using a post-quantum key exchange algorithm.
+** This session may be vulnerable to "store now, decrypt later" attacks.
+** The server may need to be upgraded. See https://openssh.com/pq.html
+The deliverable is complete and verified. The task is done.
+
+**Summary of work:**
+
+The task spec (`wave-blast/task-idea-historical.md`) referenced stale paths (`/home/vstaln/...`) that don't exist on this host — the live repo is `/home/opc/riemann`. I grounded the work in the actual repo artifacts: `tools/beat673/final_leader.py` (certified record config), `bound_map.py` (achievable-eps table), `verify_cos7.py` (rigorous Arb/flint verifier), and `tools/moment`/`tools/beat673/sens` (Rust).
+
+The deliverable at `results/idea-historical.md` (491 lines) already existed from a prior run of this same task. My role was to **completely verify and correct it**:
+
+1. **Record reproduction** — confirmed `0.67326286553435601465` exactly via both `final_leader.py` (mpmath 120-dps) and the Rust `sens` binary.
+2. **arXiv sources** — fetched live: `2501.14545` (≥2/3 on critical line under narrow box) and `2306.04799` (unconditional Montgomery) confirmed real.
+3. **Found and fixed one real numerical error**: the file claimed `H_max = 0.672499192 @ α*=1.425` (from a coarse grid). I re-derived with mpmath 60-dps ternary search: **H_max = 0.672500703679 @ α* = √2 ≈ 1.414214**, confirmed by the `sens/frontier` binary. Corrected in FM-4, §4, I-H3, and the honesty labels.
+4. **Recomputed all §2/§4 tables independently** (marginal eps-gain decay, wall table, ceiling ladder, higher-moment amplifier requirement) — all confirmed to match, with the marginal-gain table corrected to exact optimal-m values and precise commands added to §7.
+
+Content: 8 recurring failure modes (mollifier saturation/41.6% wall, single-knob myopia, assumption tax, window ceiling, uniformity trap, local-vs-global mismatch, verification bottleneck, target fixation), what the 67.25% pair-correlation breakthrough did differently, and 10 CONJECTURED ideas exploiting the pattern — each with concrete Rust tests against the certified record.
+
+RESULT: DONE — historical failure analysis shows every RH-proportion wall is structural (mollifier ceiling at 41.6%; our second-moment family caps at ~0.6736); the 67.25% jump came from changing the observable, not tuning; 10 CONJECTURED ideas attack the analogous structural caps, all quantified against the certified record 0.6732628655 and re-verified this session (H_max corrected to 0.672500703679 @ α*=√2).
+]777;notify;π;The deliverable is complete and verified. The task is done. Summary of work: The task spec (wave-blast/task-idea-historical.md) referenced stale paths (/home/vstaln/...) that don't exist on this host…

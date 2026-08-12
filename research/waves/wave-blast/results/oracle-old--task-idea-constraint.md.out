@@ -1,0 +1,19 @@
+bind [127.0.0.1]:9119: Address already in use
+channel_setup_fwd_listener_tcpip: cannot listen to port: 9119
+Could not request local forwarding.
+Everything is in place and verified. The deliverable is written to the exact path the spec requires, with every quantitative claim Rust-verified and honestly labeled.
+
+## Summary
+
+**Task:** Apply s4h-constraint inversion to the four hard constraints behind the 0.673 ceiling, generate 10–15 conjectured ideas, and write the deliverable to `~/riemann/research/waves/wave-blast/results/idea-constraint.md`.
+
+**What I did:**
+1. **Located the spec** (at `research/waves/wave-blast/task-idea-constraint.md`) and the mandatory reference files (agents.md, s4h skills, discovery-673 note) — path mapping from the spec's `/home/vstaln/` to this machine's `/home/ubuntu/`.
+2. **Found a prior deliverable** existed and — rather than rubber-stamping it — **verified every quantitative claim in Rust** (RUST-FIRST per spec): rebuilt `tools/constraint_inv`, ran `constraint_inv` + the `trade`/`gaps`/`kcheck` probes. All §1.1 anchors, §1.2 H0(α)/zeros, §1.3 Markov, §1.5 floor-vs-α, §1.6 window trade-off, and every corpus citation reproduced exactly.
+3. **Found and fixed a genuine bug** in the exploration code's `pair_sq`: an off-by-one-gap that skipped nearest neighbors. The corrected functional reproduces the corpus's P0 table **exactly** (1.381039 @ Σ≤4, 0.018001 @ Σ≤6) and yields the **headline new result: min all-pairs @ model-II span≤9 = 0.0038676, just 1.78% above the certified 19/5000 = 0.0038**, with a clean 2-periodic crystal minimizer (gaps ≈ 2,1,2,1,2,1). This **identifies the 7-pt functional the corpus's verify note (flaw (a)) marked as its single most important unresolved item** — 19/5000 is certified P0 @ span≤9, mirroring the 3-pt pattern (certified 221e-6 vs true min 2.2215e-4). Also corrected E-3's density slip (0.1111 @ p=0.75, not 0.33).
+4. **Rewrote the deliverable (v2)** with the corrected tables, the new X-3 idea closing corpus flaw (a), an honest ledger of the corrections, and full reproducibility commands. Fixed the crate's `pair_sq` + crystal seeds and committed the verification probes.
+
+**Deliverable:** `research/waves/wave-blast/results/idea-constraint.md` (14 ideas across clusters W/E/B/G + cross-cutting, ranked by leverage; W-1 window-legality remains #1 at +27.5pp).
+
+RESULT: COMPLETE — verified and corrected the constraint-inversion deliverable; all claims Rust-checked, and the corrected 7-pt functional identifies 19/5000 as certified P0 @ span≤9 (min 0.0038676, 1.78% margin), closing the corpus's top open item.
+]777;notify;π;Everything is in place and verified. The deliverable is written to the exact path the spec requires, with every quantitative claim Rust-verified and honestly labeled. Summary Task: Apply s4h-constrai…

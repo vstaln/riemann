@@ -1,0 +1,5 @@
+** WARNING: connection is not using a post-quantum key exchange algorithm.
+** This session may be vulnerable to "store now, decrypt later" attacks.
+** The server may need to be upgraded. See https://openssh.com/pq.html
+Read from remote host 168.110.210.65: Software caused connection abort
+client_loop: send disconnect: Broken pipe

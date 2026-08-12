@@ -1,0 +1,40 @@
+R4 theta_pi_14_1347 -0.55025033
+R4 theta_pi_9877_78 9998.67927084
+R4 x_first -0.550250 x_last 10998.229045 n 11000
+R1 pairs_vs_delta
+R1 0.004 0.0
+R1 0.006 0.0
+R1 slope 0.006 NaN
+R1 0.010 0.0
+R1 slope 0.010 NaN
+R1 0.015 0.0
+R1 slope 0.015 NaN
+R1 0.020 0.0
+R1 slope 0.020 NaN
+R1 0.030 0.0
+R1 slope 0.030 NaN
+R1 0.050 2.0
+R1 slope 0.050 inf
+R1 0.070 2.0
+R1 slope 0.070 0.000
+R1 0.100 5.0
+R1 slope 0.100 2.569
+R1 0.150 17.0
+R1 slope 0.150 3.018
+R1 0.200 45.0
+R1 slope 0.200 3.384
+R1 0.300 184.0
+R1 slope 0.300 3.473
+R1 0.400 495.0
+R1 slope 0.400 3.440
+R1 0.500 976.0
+R1 slope 0.500 3.042
+R5 pairs_lt_0.05 2 pairs_lt_0.1 5
+R2 min_gap_first_100 0.386799
+R2 min_gap_first_500 0.236325
+R2 min_gap_first_1000 0.137628
+R2 min_gap_first_3000 0.089253
+R2 min_gap_first_6000 0.046290
+R2 min_gap_first_10999 0.042098
+R3 gap_palindrome_mean 0.440164
+DONE

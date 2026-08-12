@@ -1,0 +1,29 @@
+R0 H(1.49) = 0.672421886096447
+R0 H(sqrt2) = 0.672500703679412  (Theorem-D window constant 0.67250070367941164573)
+R0 record bound at (1.49, psum=1/220, m=133, eps=0.00806) = 0.673262865534356
+R0   tau = 0.004340396446  B/m = 0.007695918116
+R0   abs diff vs certified 0.6732628655343560 = 0.000e0
+R0   abs diff H(sqrt2) vs 0.67250070367941164573 = 1.110e-16
+
+R1 eps needed at (alpha=1.49, psum=1/220, m=133) to reach each target:
+R1 target 0.6733 -> eps needed 0.008118  (record eps = 0.00806, ratio 1.01x)
+R1 target 0.6740 -> eps needed 0.009246  (record eps = 0.00806, ratio 1.15x)
+R1 target 2/3     -> eps needed 0.000000  (record eps = 0.00806, ratio 0.00x)
+R1 target 0.6750 -> eps needed 0.010979  (record eps = 0.00806, ratio 1.36x)
+R1 target 0.6818 -> eps needed 0.020000  (record eps = 0.00806, ratio 2.48x)
+R1 target 1.0000 -> eps needed 0.020000  (record eps = 0.00806, ratio 2.48x)
+R1 (same map at alpha=sqrt(2), the H-max window):
+R1 sqrt2 target 0.6733 -> eps needed 0.007994
+R1 sqrt2 target 2/3 -> eps needed 0.000000
+R1 sqrt2 target 0.6740 -> eps needed 0.009114
+
+R2 phase-drift decomposition (blocks_orig.txt, Gram convention):
+R2 n_blocks 4761 mean_dev -0.001509 sd 0.454714
+R2 slope -1.12e-9 t_stat -1.05   (|t| >> 2 would be a curve signal)
+R2 sd/sqrt(n) = 6.59e-3 (noise floor for the slope)
+R2 max|dev| 1.5035 vs log(t_top/2pi) 14.2801 (ratio 0.105)
+
+R3 mod-1 equidistribution of gamma_n/(2pi) (zeros.txt, first 11000):
+R3 N 11000 D* 0.00459  D*/sqrt(N) 4.38e-5  (Kolmogorov 95% 1.22/sqrt(N) = 0.0116; ratio 0.39)
+R3 max_gap 0.00093  (uniform => ~ ln(N)/N = 0.0008)
+DONE

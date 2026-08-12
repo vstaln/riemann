@@ -1,0 +1,361 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{url}
+
+\hypersetup{colorlinks=true,linkcolor=blue!55!black,citecolor=blue!55!black,
+  urlcolor=blue!55!black,
+  pdftitle={A certified 67.3263\% lower bound for simple zeros of the Riemann zeta function},
+  pdfauthor={DeepSeek V4 Flash (pi coding agent, multi-agent swarm)}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\sinc}{\operatorname{sinc}}
+\newcommand{\dd}{\,\mathrm{d}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\Nc}{N_0^s}
+\newcommand{\N}{N}
+\newcommand{\repo}{\url{https://github.com/vstaln/riemann}}
+
+\title{\textbf{A certified 67.3263\% lower bound for simple zeros of the\\
+Riemann zeta function on the critical line}}
+\author{DeepSeek V4 Flash (multi-agent swarm, pi coding agent)\\
+\texttt{github.com/vstaln/riemann}}
+\date{12 August 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We certify an unconditional lower bound
+\[
+ \liminf_{T\to\infty}\frac{\Nc(T,2T)}{\N(T,2T)}
+ \ge 0.673262865534356014645\ldots,
+\]
+i.e.\ $67.3262865534356014645\ldots\%$ of the nontrivial zeros of the Riemann
+zeta function are \emph{simple and on the critical line}.  This improves the
+previously certified record $0.6731929114731422\ldots$ by
+$6.9954\times 10^{-5}$.  The argument is the Gram-overlap / Bellman-coboundary
+machinery of the recent AI-generated extensions of the 2026 result of
+Claude/Anthropic, re-optimized in two parameters that the previous record
+held fixed: the window frequency $\alpha$ and the total pressure $\Sigma p_i$.
+We prove the required seven-point inequality
+$F \ge 8060/10^6$ by rigorous interval arithmetic (Arb), and we resolve a
+subtle issue with the window functional $H(\alpha)$: naive numerical
+quadrature of the double integral $J=\iint |s-t|v(s)v(t)\,\dd s\,\dd t$
+fails at the kink $s=t$; the analytic formula is correct to $40$ digits.
+The certificate is reproducible from the repository.
+\end{abstract}
+
+\begin{center}
+\fbox{\parbox{0.91\linewidth}{\small
+\textbf{Honesty statement.} This paper was produced by an autonomous swarm of
+AI agents (dispatched by DeepSeek V4 Flash on the pi coding agent) testing a
+known hard benchmark against a new model.  The bound is certified by rigorous
+interval arithmetic, but the certificate is an implementation artifact, not a
+formally verified (Lean) proof, and it has not received independent peer
+review.  All code is public in the repository.}}
+\end{center}
+
+\tableofcontents
+
+\section{Statement and context}
+\label{sec:statement}
+
+Let $\N(T,2T)$ count the nontrivial zeros of $\zeta$ in the strip
+$T<\operatorname{Im}\rho\le 2T$, with multiplicity, and let
+$\Nc(T,2T)$ count those that are \emph{simple} and lie on the critical line
+$\Re s=\tfrac12$.
+
+\begin{theorem}[Certified simple-on-line proportion]\label{thm:main}
+Without assuming the Riemann hypothesis or any other unproved hypothesis about
+the zeros of $\zeta$,
+\begin{equation}
+ \liminf_{T\to\infty}\frac{\Nc(T,2T)}{\N(T,2T)}
+ \ge 0.673262865534356014645368000853343519319712248\ldots
+ \label{eq:bound}
+\end{equation}
+Equivalently, at least $67.3262865534356014645368000853\ldots\%$ of the
+nontrivial zeros are simple and on the critical line.
+\end{theorem}
+
+The bound (\ref{eq:bound}) is a genuine improvement over the current external
+record.  Table~\ref{tab:ladder} collects the known certified constants for the
+same quantity.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{lcc}
+\toprule
+Source & certified bound & gain vs.\ previous \\
+\midrule
+Anthropic (2026), Theorem D \cite{claude2026} & $0.6725007036794116$ & --- \\
+ainta \cite{ainta} (7-point stability) & $0.6730085279277797$ & $+5.1\times10^{-4}$ \\
+trmdy \cite{trmdy} (9/11-point) & $0.6731376306993445$ & $+1.3\times10^{-4}$ \\
+tawanerguo \cite{tawanerguo} (Bellman coboundary) & $0.6731929114731422$ & $+5.5\times10^{-5}$ \\
+\textbf{this work} & \textbf{$0.6732628655343560$} & \textbf{$+7.0\times10^{-5}$} \\
+\bottomrule
+\end{tabular}
+\caption{The ladder of certified lower bounds for the simple-on-line fraction.
+All entries are computer-assisted certificates; see the individual repositories
+for their verification records.}
+\label{tab:ladder}
+\end{table}
+
+\section{The mechanism}
+\label{sec:mechanism}
+
+The underlying method was introduced in \cite{claude2026} and extended by the
+three AI-generated proofs \cite{ainta,trmdy,tawanerguo}.  We recall the
+structure; details are in \cite{ainta}.
+
+\subsection{The rank--trace inequality with Gram correction}
+\label{sec:rank-trace}
+
+Let $V$ be a matrix with $r$ columns of norm at most one, put
+$P=VV^*$, $M=V^*V$, and let $Q$ be Hermitian with at most $b$ positive
+eigenvalues.  Ainta \cite{ainta} prove the stability-enhanced rank--trace
+inequality
+\begin{equation}
+ \|P+Q\|_F^2 \ge 4\tr(P+Q) - 3r - 4b + \tr\Psi(M),
+ \label{eq:stability}
+\end{equation}
+where
+\[
+ \Psi(t)=\begin{cases}(t-1)^2,&0\le t\le 2,\\ 2t-3,&t\ge 2,\end{cases}
+\]
+and the Gram matrix $M$ has entries determined by the zero ordinates through
+the overlap kernel
+\[
+ k(x)=\frac{K(x)}{K(0)},\qquad
+ K(x)=\int_{-1/2}^{1/2}\cos(\sqrt2\,t)\cos(2\pi x t)\,\dd t.
+\]
+
+The refined inequality (\ref{eq:stability}) is what all the improvements over
+\cite{claude2026} exploit: the equality case of the plain rank--trace bound
+requires mutually orthogonal atoms, which is impossible for the kernel above,
+and the correction $\tr\Psi(M)$ converts that structural impossibility into a
+positive, certifiable term.
+
+\subsection{The window functional}
+\label{sec:window}
+
+The certificate is parameterized by a nonnegative even window
+$v(s)=\cos(\alpha s)$ on $[-1/2,1/2]$.  The associated constants are
+\begin{align}
+ I_0 &= \int_{-1/2}^{1/2} v^2 = \frac{2\sin(\alpha/2)}{\alpha}, &
+ I_2 &= \frac12+\frac{\sin\alpha}{2\alpha},\\
+ J &= \iint_{[-1/2,1/2]^2} |s-t|\,v(s)v(t)\,\dd s\,\dd t, &
+ c &= \frac{I_0^2}{I_2+J},\qquad
+ H(\alpha) = 2 - \frac1c .
+\end{align}
+The analytic evaluation of $J$ is
+\begin{equation}
+ J = -\frac{2I_2}{\alpha^2} + \left(\frac{I_0}{2}+\frac{2\cos(\alpha/2)}{\alpha^2}\right)I_0 .
+ \label{eq:J}
+\end{equation}
+
+\begin{remark}[A numerical pitfall]
+\label{rem:kink}
+The double integral $J$ has an integrable singularity in the derivative along
+$s=t$ (the kink of $|s-t|$).  Naive quadrature of (\ref{eq:J})'s integral
+form is unreliable at the $10^{-6}$ level.  Splitting the domain at the kink
+and integrating each half exactly reproduces the analytic formula to
+$1.7\times10^{-41}$ (80-digit arithmetic; see \texttt{debug\_H\_final.py}).
+This pitfall is material: an incorrect $H$ at the $10^{-6}$ level would
+corrupt the final bound at the $10^{-6}$ level, which is precisely the scale
+of the improvement claimed here.
+\end{remark}
+
+\subsection{The block defect and the Bellman coboundary}
+\label{sec:block}
+
+Following \cite{tawanerguo}, fix a block size $m$.  Let
+$E=2\sum_{i<j}G_{ij}^2$ be the pair energy of a unit-diagonal PSD Gram block
+$G$ and $D=\tr\Psi(G)$.  The trace--energy envelope \cite{tawanerguo} gives
+the sharp branch bound
+\begin{equation}
+ D+P \ge \Phi_m(E),\qquad
+ \Phi_m(E)=\begin{cases}
+ E, & 0\le E\le \frac{m}{m-1},\\[2pt]
+ 2\sqrt{\frac{m-1}{m}E}-1+\frac Em, & E\ge \frac{m}{m-1}.
+ \end{cases}
+ \label{eq:envelope}
+\end{equation}
+A ``pressure'' $P\ge0$ is distributed over the gaps; the total pressure
+$\Sigma p_i$ enters the final bound only through the block tax
+\[
+ \tau(m) = \frac{m-6}{m}\,\sum_i p_i .
+\]
+Assembling the block inequality over the zero set yields the unified bound
+\begin{equation}
+ \frac{\Nc}{\N} \ge \frac{H(\alpha) - \tau(m)}{1 - B/m},
+ \qquad B=\Phi_m\bigl(\eps(m-6)\bigr),
+ \label{eq:unified}
+\end{equation}
+where $\eps$ is the certified floor of the local seven-point functional $F$,
+\begin{equation}
+ F(g_1,\ldots,g_6) \ge \eps \qquad\text{over all nonnegative gaps}.
+ \label{eq:floor}
+\end{equation}
+
+\section{The optimization}
+\label{sec:opt}
+
+The previous record \cite{tawanerguo} fixed $\alpha=1.47$ and total pressure
+$\Sigma p_i = 1/320$, and certified $\eps = 577/100000 = 0.00577$.  The
+unified formula (\ref{eq:unified}) makes the trade-off explicit: the tax
+$\tau(m)$ grows with $\Sigma p_i$, while the achievable floor $\eps$ grows
+with $\Sigma p_i$ too.  The previous choice $1/320$ sits on the wrong side of
+the optimum.
+
+\subsection{The parameter search}
+\label{sec:search}
+
+We swept $(\alpha,\Sigma p_i)$ numerically, then certified the boundary by
+interval arithmetic.  The decisive configuration is
+\begin{center}
+\begin{tabular}{ccc}
+\toprule
+$\alpha$ & $\Sigma p_i$ & certified floor $\eps$ \\
+\midrule
+$1.49$ & $1/220$ & $8060/10^6 = 0.00806$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+with the per-gap pressure $p=1/1320$.  The boundary is sharp:
+$0.00806$ verifies; $0.008065$ and $0.00807$ fail to verify.
+
+Table~\ref{tab:search} shows the boundary behavior around the optimum.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{lllc}
+\toprule
+$\alpha$ & $\Sigma p_i$ & max certified $\eps$ & bound \\
+\midrule
+$1.47$ & $1/320$ & $0.00584$ & $0.6732384$ \\
+$1.47$ & $1/220$ & $0.007985$ & $0.6732517$ \\
+$1.49$ & $1/220$ & $\mathbf{0.00806}$ & $\mathbf{0.6732629}$ \\
+$1.49$ & $1/225$ & $0.00790$ & $0.6732572$ \\
+$1.49$ & $1/230$ & $0.00770$ & $0.6732502$ \\
+$1.50$ & $1/220$ & $0.00802$ & $0.6732139$ \\
+\bottomrule
+\end{tabular}
+\caption{The certified-bound landscape around the optimum.  The pressure
+$1/220$ and frequency $\alpha=1.49$ jointly maximize the certified bound.}
+\label{tab:search}
+\end{table}
+
+\subsection{The optimal block size}
+\label{sec:m}
+
+At the winning configuration, the optimal block size is $m=133$, where
+\[
+ A = \eps(m-6) = 1.02362,\qquad
+ B = \Phi_{133}(1.02362) = 1.0235571094\ldots,\qquad
+ \tau = \frac{127}{133}\cdot\frac{1}{220} = 0.0043403964\ldots .
+\]
+For fixed $(\alpha,\eps)$, the bound (\ref{eq:unified}) is maximized at
+$m=133$; increasing $m$ raises the tax $\tau$ while $B/m\to0$, and decreasing
+$m$ raises $B/m$.
+
+\section{The certificate}
+\label{sec:cert}
+
+\subsection{The seven-point inequality}
+\label{sec:seven}
+
+The floor (\ref{eq:floor}) at $\alpha=1.49$, per-gap pressure $p=1/1320$, and
+target $\eps = 8060/10^6$ is proved by the rigorous interval-arithmetic
+verifier \texttt{verify\_cos7.py} (410 lines, Arb via python-flint).  The
+verifier:
+\begin{itemize}
+\item builds a $1/4000$-grid table of enclosures of $k^2$ and its second
+  derivative, with rigorous series evaluation of $\sinc$ near its removable
+  singularities (radius $0.75$);
+\item subdivides the six-dimensional gap cell $[0,3.5]^6$ into $64$ initial
+  boxes (after pressure pre-pruning);
+\item prunes each box by monotonicity (pressure), interval bounds on the
+  pairwise terms, and tangent-plane lower bounds from the second-derivative
+  table;
+\item confirms every surviving terminal cell by an exact
+  (dyadic-rational) LDL positivity check.
+\end{itemize}
+The run: \texttt{verified=True}, $942{,}944$ nodes, all $64$ initial boxes
+processed, no unresolved terminal cells, $\sim300$\,s on 8 cores.
+
+\subsection{The bound arithmetic}
+\label{sec:arith}
+
+The final evaluation (\texttt{final\_leader.py}, 120-digit mpmath):
+\[
+ H(1.49) = 0.6724218860964\ldots,\qquad
+ \frac{\Nc}{\N}\ge \frac{0.6724218860964 - 0.0043403964}{1 - 0.0076959181}
+ = 0.6732628655343560\ldots .
+\]
+The same certificate was re-run twice (the agent's two-shard run and an
+independent full re-run in this session), both
+\texttt{verified=True}.
+
+\section{Honesty, provenance, and reproducibility}
+\label{sec:honesty}
+
+\begin{enumerate}
+\item \textbf{Certification level.} The floor (\ref{eq:floor}) is certified by
+  rigorous interval arithmetic (Arb), not by a formal proof assistant.  The
+  original result \cite{claude2026} has a Lean formalization
+  \cite{lean2026}; Lean-izing the present certificate is a natural next step.
+\item \textbf{The H-value.} We verified $H(1.49)$ against kink-split
+  quadrature to $40$ digits (Remark~\ref{rem:kink}).  The value used by
+  \cite{tawanerguo}, $H(1.47)=0.6724587094$, is correct; an earlier concern
+  about a $10^{-6}$ discrepancy was traced to naive quadrature, not to their
+  arithmetic.
+\item \textbf{Provenance.} This work was produced by an autonomous multi-agent
+  swarm.  The swarm reverse-engineered the three external certificates into a
+  single exact rational-arithmetic model, which exposed the two suboptimal
+  parameter choices of the previous record.
+\item \textbf{Reproducibility.} All code is in the public repository
+  \repo{} under \texttt{tools/beat673/}: the verifier
+  \texttt{verify\_cos7.py}, the bound computation \texttt{final\_leader.py},
+  and the H-resolution script \texttt{debug\_H\_final.py}.
+\end{enumerate}
+
+\begin{thebibliography}{9}
+\bibitem{claude2026}
+Claude (Anthropic).
+\emph{More than two thirds of the zeros of the Riemann zeta function lie on
+the critical line.}
+2026. arXiv / Anthropic technical report; Lean formalization \cite{lean2026}.
+\bibitem{lean2026}
+Anthropic.
+\emph{Zeta23: a Lean 4 formalization.}
+\url{https://github.com/anthropics/zeta-23-lean}.
+\bibitem{ainta}
+ainta.
+\emph{A 67.30085\% lower bound for simple zeros of the Riemann zeta
+function.}
+\url{https://github.com/ainta/zeta-simple-zeros}.
+\bibitem{trmdy}
+trmdy.
+\emph{A 67.3137630699\% lower bound for simple zeros of the Riemann zeta
+function.}
+\url{https://github.com/trmdy/zeta-simple-zeros-673137}.
+\bibitem{tawanerguo}
+tawanerguo-cn.
+\emph{Certified unconditional 67.3192911473\% lower bound for simple zeros of
+the Riemann zeta function.}
+\url{https://github.com/tawanerguo-cn/zeta-simple-zeros}.
+\end{thebibliography}
+
+\end{document}
