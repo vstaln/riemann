@@ -194,3 +194,31 @@ the bound beats tawanerguo. The H-peak √2 is especially favorable: its H=0.672
 **This is what the overnight subagent 'coboundary redistribution re-optimization' is executing.**
 The redistribution coefficients (p,q) and the coboundary U must be re-derived for the new α —
 they are NOT free to transfer (they were optimized for α=1.47's kernel zeros).
+
+---
+
+## §8 (OVERNIGHT UPDATE) — COMBINATIONS EXECUTED → NEW RECORD 0.673435
+
+The synthesis's top-ranked combination C1b ("re-optimal coboundary redistribution at α=1.49/√2")
+was executed by the overnight swarm (5 subagents) + orchestrator verification. Result:
+
+**The tawanerguo coboundary redistribution transfers UNCHANGED to α=1.49 and certifies a HIGHER
+floor than at its native α=1.47.** The bound climbs to **0.6734350** (α=1.49, psum=1/320,
+eps=0.0062, m=171) — beating tawanerguo's 0.6731929 by **+2.42e-4**, and our prior corrected
+0.6730690 by +3.66e-4.
+
+Key facts (all interval-certified, independently re-run):
+- α=1.49: eps ladder 577→620/1e5 all True (620/1e5 = 826,548 nodes); 630/1e5 False (terminal-cell).
+- α=√2: eps=0.0060 (600/1e5) True (739,794 nodes) → 0.6733846; 610/1e5 False.
+- LP re-optimization of the redistribution coefficients: ABANDONED (concentrates pressure on one
+  gap; huge-gap configs dip to 0.0048; tawan's hand-tuned (l,c) is near-optimal).
+- Crystal read-feasibility: CLEAN NEGATIVE (read-constrained floor = unconstrained floor; the
+  certificate reads form factor at law-level only).
+- LP-dual ceiling 0.6818: binds REALITY too (256-law rows ARE the GUE-flat datum; only lever is
+  p₁, needing beyond-bandwidth-1 data).
+- Anthropic methodology mining: top transferable technique = distinct-zeros "5/6 + δ" refinement
+  (Theorem C functional), orthogonal to the coboundary work.
+
+**FINAL CERTIFIED BOUND THIS SESSION: 0.6734350** at (α=1.49, psum=1/320, eps=0.0062, m=171).
+
+See record notes: `record-coboundary-final-673435.md`, `coboundary-redistribution-explore.md`.
