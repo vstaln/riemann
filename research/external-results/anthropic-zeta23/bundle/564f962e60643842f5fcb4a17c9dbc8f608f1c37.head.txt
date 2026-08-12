@@ -1,0 +1,231 @@
+MORE THAN TWO THIRDS OF THE ZEROS OF THE RIEMANN ZETA
+FUNCTION LIE ON THE CRITICAL LINE
+CLAUDE
+Abstract. Let N (T, 2T ) denote the number of zeros ρ = β + iγ of the Riemann zeta function
+with T < γ ≤ 2T , counted with multiplicity, and N0∗ (T, 2T ) the number of distinct such zeros
+with β = 12 . We prove unconditionally that
+N0∗ (T, 2T )
+2
+≥ ,
+T →∞ N (T, 2T )
+3
+
+lim inf
+
+that at least ( 23 − o(1))N (T, 2T ) of the zeros are simple and on the critical line, and that
+at least ( 56 − o(1))N (T, 2T ) are distinct; with an optimised test family the three constants
+become 0.6725, 0.6725, 0.83625 . . . . The constant 32 (resp. 0.6725) is Montgomery’s (resp.
+Montgomery–Taylor’s) constant for simple zeros under the Riemann hypothesis, and the
+arithmetic input is exactly Montgomery’s prime-side evaluation of the pair-correlation second
+moment with band-width ≤ 1, which is unconditional. The Riemann hypothesis, classically
+needed to read the zero side as a positive sum over real ordinates, is replaced by linear algebra applied to a finite compression of Weil’s Hermitian form: Sylvester’s law of inertia (an
+off-line pair {ρ, 1 − ρ̄} contributes a block of signature (1, 1)) and a rank–trace inequality for
+Hermitian matrices, proved via von Neumann’s trace inequality, which is the matrix analogue
+of the integrality steps m2 ≥ 2m − 1 and m2 ≥ 3m − 2. The analytic inputs are those of
+Baluyot, Goldston, Suriajaya and Turnage-Butterbaugh [BGSTB24] and Goldston and Suriajaya [GS25, GS26]; the new ingredient is a linear-algebraic reading of their pair-correlation
+sum.
+
+Contents
+1. Introduction
+2. The explicit formula and the test family
+3. Lemmas from linear algebra
+4. The zero side: signature and rank
+5. The prime side: magnitude
+6. Proofs of Theorems A, B and C
+7. Variants, extensions, and remarks
+8. Numerical illustrations
+Appendix A. The explicit formula: normalisations
+Appendix B. Formal and symbolic verification
+Appendix C. On the discovery of this result
+Acknowledgments
+
+2
+6
+9
+10
+14
+19
+20
+25
+27
+28
+30
+33
+
+Date: August 10, 2026.
+2020 Mathematics Subject Classification. 11M06, 11M26, 15A42.
+Key words and phrases. Riemann zeta function, critical line, explicit formula, pair correlation, Sylvester’s
+law of inertia.
+The argument and its verification are the author’s. Jarred Sumner posed the problem and guided the
+investigation. Ralph Furman and Levent Alpöge studied the result, set it in context, and take responsibility for
+its communication. See the Acknowledgments and Appendix C..
+1
+
+2
+
+CLAUDE
+
+References
+
+34
+
+1. Introduction
+1.1. The question. In the autumn of 1859 Riemann [Rie59] communicated to the Berlin
+Academy an eight-page memoirPon the number of primes below a given bound. Its central
+−s
+object is the function ζ(s) =
+n≥1 n , continued to C, whose zeros in the critical strip
+0 < Re s < 1 he observed to govern the fluctuations of the prime-counting function. Concerning
+their horizontal position Riemann wrote that it is “sehr wahrscheinlich” that all of them lie
+on the line Re s = 12 ; he had not pursued a proof, he added, because it was not needed for
+the immediate purpose of his note. That parenthetical remark has since become the Riemann
+hypothesis, and the line Re s = 21 the critical line.
+The hypothesis remains unproven. What has been proven, in a line of work spanning more
+than a century, is that an increasing proportion of the zeros do lie where Riemann said they
+should, that many of them are simple, and that many of them are distinct; and it is to this
+line of work that the present paper offers a contribution.
+1.2. History of the problem. That ζ(s) has infinitely many zeros on the critical line was
+shown by Hardy [Har14] in 1914; Hardy and Littlewood [HL21] subsequently showed that
+their number up to height T is ≫ T . That a positive proportion of all zeros lie there—that is,
+that N0 (T ) ≥ κ N (T ) for some absolute κ > 0 and all large T , where N (T ) counts zeros with
+0 < γ ≤ T and N0 (T ) those additionally on the line—is due to Selberg [Sel42] in 1942. Selberg’s
+constant was small and not made explicit. Thirty-two years passed before Levinson [Lev74],
+by an entirely new and strikingly direct method based on mollifying ζ near the line, showed
+that one may take κ = 13 . Heath-Brown [HB79] (and independently Selberg) observed that
+Levinson’s zeros are in fact simple. Conrey [Con89] refined the mollifier to reach κ > 52 ; further
+refinements by Bui, Conrey and Young [BCY11], Feng [Fen12], and Pratt, Robles, Zaharescu
+and Zeindler [PRZZ20] have brought the record to
+κ >
+
+5
+12
+
+= 0.4166 . . . ,
+
+where it has stood since 2020. Every result in this line uses Levinson’s method. For distinct
+zeros (each point counted once regardless of multiplicity), Farmer [Far95] proved Nd (T ) >
+0.6395 N (T ) unconditionally by combining simple-zero proportions for the derivatives ξ (j) ,
+and Wu [Wu15] improved this to 0.6603.
+A separate line originates with Montgomery’s 1973 paper [Mon73] on the pair correlation
+of zeros. Working under the Riemann hypothesis, Montgomery evaluated a certain second
+moment
+pairs of zero ordinates in terms of a sum over prime powers, deduced that
+P 2 over
+4
+m
+≤
+(
++
+o(1))N (T ) (sum over distinct zeros), and hence that at least 23 of the zeros
+ρ ρ
+3
+are simple. By Cauchy–Schwarz the same bound gives Nd (T ) ≥ ( 43 − o(1))N (T ), and using
+the integrality m2 ≥ 3m − 2 even Nd (T ) ≥ ( 56 − o(1))N (T ) [CGG98, (1.2)]. The constant 23
+arises as 2 − λ1 − λ3 at λ = 1, where λ is the normalised band-limit of the test function; the
+argument is a single application of the inequality m2 ≥ 2m − 1 to integer multiplicities. On
+RH, 23 was improved to 0.6725 by Montgomery and Taylor [Mon75] and to 0.6727 by Cheer
+and Goldston [CG93]; Bui and Heath-Brown [BHB13] obtained 19
+27 (on RH and GLH earlier
+in [CGG98]), and Chirre, Gonçalves and de Laat [CGdL20] obtained 0.6792 via semidefinite
+programming by exploiting the positivity of F outside [−1, 1]; the optimality statement in
+
+MORE THAN TWO THIRDS OF THE ZETA ZEROS ON THE CRITICAL LINE
+
+3
+
+Theorem D is scoped to the values of F on [−1, 1] only, so such majorants operate in a
+different regime.
+Montgomery’s prime-side evaluation is a mean value of a Dirichlet polynomial of length T ,
+and hence is unconditional; what required the Riemann hypothesis was only the reading of the
+zero side, where without RH the zeros are complex and the diagonal terms cannot be isolated
+by sign. That the prime side is unconditional was made fully explicit by Baluyot, Goldston,
+Suriajaya and Turnage-Butterbaugh [BGSTB24] (see also Aryan [Ary22]), who showed that
+Montgomery’s form factor F (α) holds for the sum over all complex zeros. In subsequent
+work Goldston and Suriajaya [GS25, GS26] (see also [BGSTB25, GLSS25]) showed that Montgomery’s 23 follows unconditionally if one assumes that all zeros lie within a vertical box of
+width o(1/ log T ) around the line, and asked what would follow “if RH could be removed from
+Montgomery’s proof”. Their work isolated the remaining obstacle precisely—the termwise
+positivity that fails off the line—which the present paper replaces; see §7.4 for a detailed
+comparison. Theorems A–C below answer that question.
+1.3. The results. Write ρ = β +iγ for a nontrivial zero of ζ(s) and mρ ≥ 1 for its multiplicity.
+For 0 ≤ T1 < T2 we write
+N (T1 , T2 ) := #{ρ : T1 < γ ≤ T2 }
+
+(counted with multiplicity),
+
+Nd (T1 , T2 ) := #{ρ : T1 < γ ≤ T2 }
+
+(each distinct point counted once),
+
+N0s (T1 , T2 ) := #{ρ :
+
+T1 < γ ≤ T2 , β = 21 , mρ = 1},
+
+and N (T ) := N (0, T ), etc. We also let N0 (T1 , T2 ) and N0∗ (T1 , T2 ) be the number of zeros on the
+critical line with T1 < γ ≤ T2 counted with, respectively without, multiplicity, and N s (T1 , T2 )
+the number of simple zeros; trivially
+(1.1)
+
+N0s ≤ N0∗ ≤ N0 ≤ N,
+
+N0s ≤ N s ≤ Nd ≤ N.
+
+By the Riemann–von Mangoldt formula, with l := log(T /2π),
+
+T
+(1.2)
+N (T, 2T ) =
+l + 2 log 2 − 1 + O(log T ).
+2π
+For 0 < λ ≤ 1 put
+1 λ
+1 + H(λ)
+λ
+H(λ) := 2 − − ,
+Hd (λ) :=
+,
+F (λ) :=
+;
+λ 3
+2
+1 + λ2 /3
+(1.3)
+H(1) = 23 ,
+Hd (1) = 56 ,
+F (1) = 43 ;
+√
+Hd (λ) ≥ F (λ) ⇐⇒ H(λ) ≥ 0 ⇐⇒ λ ≥ 3 − 6 = 0.5505 . . . .
+Theorem A. Let 0 < λ ≤ 1 be fixed. There are constants c(λ) > 0 and T0 (λ) such that for
+all T ≥ T0 (λ)
+
+log log T 
+N0∗ (T, 2T ) ≥ H(λ) − c(λ)
+N (T, 2T ),
+log T
+and for λ < 1 the factor log log T may be omitted. In particular
+2
+N ∗ (T )
+2
+N ∗ (T, 2T )
+≥ ,
+lim inf 0
+≥ ,
+lim inf 0
+T →∞ N (T )
+T →∞ N (T, 2T )
+3
+3
+and a fortiori N0 (T ) ≥ ( 32 − o(1))N (T ).
+The proof uses, on the arithmetic side, only the prime powers n ≤ X := (T /2π)λ , through
+P
+P
+P
+2
+2
+−1/2 and the
+Chebyshev–Mertens estimates for
+n≤X Λ(n)n
+n≤X Λ(n) ,
+n≤X Λ(n) /n,
+Montgomery–Vaughan generalised Hilbert inequality for the frequencies log n, n ≤ X; besides
+
+

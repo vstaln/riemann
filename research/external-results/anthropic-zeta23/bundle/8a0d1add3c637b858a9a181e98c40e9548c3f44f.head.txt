@@ -1,0 +1,204 @@
+How the one-half result was found - transcript of Claude sub-agent E2
+
+How the one-half result was found - transcript of Claude sub-agent
+E2, typeset and annotated
+Sub-agent rh-E2-pontryagin · 3 Aug 2026 21:29 – 4 Aug 01:03 UTC (3 h 34 min) · 54 model messages · 53
+tool calls · no network calls · thinking text not in the export
+Introduction - editorial, not part of the record
+
+What this document is. The complete transcript of one autonomous Claude sub-agent, "E2", working for
+three and a half hours on the night of 3–4 August 2026 inside a larger Claude Code session run by Jarred. It
+was briefed by the orchestrating Claude (not by a human) to develop a "negative index" idea for bounding
+zeros of the Riemann zeta function off the critical line. It found that route empty, and then turned the same
+object around to claim — by a route the brief had not suggested, though it had named the goal — that
+unconditionally at least half of the nontrivial zeros are on the critical line. The follow-up run the next morning
+pushed ½ to ⅔ (the companion transcript), and the published paper builds on both; inside this log it is,
+throughout, the agent's own claim.
+What is verbatim and what is editorial. Everything in the white message panels is the record, in order and
+unedited apart from the marked redactions: the brief (U1), the documents the agent wrote (typeset from their
+plain-text mathematics, words unchanged) and its three short chat messages. Each of the remaining tool
+calls - scripts, file reads, log checks, process housekeeping - is represented by a grey box holding the agent's
+own one-line description of it and a short editorial summary of the command and its output; the one exception
+is the exp1.py script at M14, which is printed in full. A few messages from the orchestrating session are
+shown in teal where they fall in time (C1–C11); they are context, not part of this agent's record. The yellow
+boxes and the section banners are the notes. The notes were written afterwards by Claude, working from the
+exported record shown on these pages and, where a note says so, the published paper; they are editorial
+commentary, not part of the record. A note that states a fact gives the message id where it can be checked;
+where it goes beyond the record it says so; the few statements about later events point at the companion
+transcript or the published paper. "Referees" and other runs mentioned are further Claude sub-agents of the
+same session, not people.
+What is missing. The model's private reasoning is not in the export; only the length of each silent interval is
+known. The agent did its visible thinking in files — notes.md , proof_thm4.md , REPORT.md and its scripts
+— because the brief told it to, so most of the argument can be followed anyway. No web or search tool was
+called at any point; every citation the agent makes is from memory, from the brief or from the files it read, and
+in several places it says so.
+Where to look first.
+
+M11 (22:18Z) — fifty minutes in, before any computation, the agent argues that the brief's
+quantity, correctly defined, "is IDENTICALLY ZERO in every computable range … There is
+nothing to fit."
+M14 (22:31Z) — an unexplained extra column defined in the exp1 script, "fraction of
+eigenvalues PROVABLY positive … from tr and tr^2 alone (prime-computable numbers)": the
+prime-side half of the eventual theorem.
+M31 (23:48Z) — after about 37 minutes of near-silence, the whole ½ argument written out in
+one go: "THE DUAL USE OF INERTIA".
+
+page 1 of 68
+
+How the one-half result was found - transcript of Claude sub-agent E2
+
+M43 and M49 — the referee version ("maximal suspicion is warranted") and the agent's own
+ranked list of ways it could be wrong, led by "Too strong to be new".
+M54 and C9 — the return ("PARTIAL … claimed … Referees requested") and the orchestrator's
+reaction: "my prior is that it's wrong."
+id
+
+UTC
+
+what happens
+
+U1
+
+21:29
+
+The brief: negative index as an upper bound on off-line zeros
+
+M7
+
+22:09
+
+First action after a 32-minute silence
+
+M10–M11
+
+22:13–22:18
+
+Theorem 1 (with the "distinct" correction); the brief's route declared empty
+
+M12–M14
+
+22:25–22:31
+
+The instrument built and validated; the Cauchy–Schwarz column appears
+
+M30
+
+23:33
+
+After 22 silent minutes: no negative square at any X
+
+M31
+
+23:48
+
+The pivot: count positive squares instead; Theorem 4, ≥ ½
+
+M41
+
+00:23
+
+Primes alone give 0.766, 0.762 against the predicted 0.750
+
+M43
+
+00:33
+
+proof_thm4.md , "for hostile refereeing"
+
+M49
+
+00:48
+
+Red team: "Too strong to be new" ranked first
+
+M50
+
+00:50
+
+REPORT.md; the T≈10⁶ point arrives: 0.757
+
+M54
+
+01:03
+
+Return: "PARTIAL … ≥ 1/2 … Referees requested"
+
+How to read this document. Everything outside the yellow boxes, the dark section banners, the grey 'tool call summary' boxes and the teal context blocks is the sub-agent's record, complete and in order. ✎ document card =
+text the agent wrote into one of its files (REPORT.md, notes.md, proof_thm4.md, and one short memory note at
+M52), typeset from its plain-text mathematics - notation only; every word is the agent's, line for line.
+tool call - summary = any other tool call (a shell command, a script run, a file read) together with its output,
+replaced by a short summary: the line in quotation marks is the agent's own description of the call, copied from the
+record, followed by generated facts (size of the command and of the output, how long it ran by the record's
+timestamps, any error flag) and, at the right, the time of the call; the sentences below were written afterwards by
+Claude, the annotator, from that call's exact input and output and nothing else (and, where a command was cut off
+or its effect only shows in the next call, the next call's output) - 47 such summaries of the agent's calls in this
+document. teal blocks = records from the orchestrating session, shown for context; the sub-agent never saw
+them. yellow boxes
+
+and dark banners = the numbered notes and section headings (their authorship is stated in
+
+the introduction above); where a note steps outside this sub-agent's record it says so and points at the
+orchestrating-session messages shown here, at the companion transcript, or at the published paper. Message
+headers give the message id, the time its first block was logged and, as '+1m43s', the time since the previous
+record; there is no thinking text anywhere in the export, and a purple 'silent' gap in a header is where it happened.
+Messages marked ★ are the ones the introduction's 'where to look first' points to. All times are UTC. References
+such as M11 or Note 12 are links within this document.
+
+page 2 of 68
+
+How the one-half result was found - transcript of Claude sub-agent E2
+
+Contents
+Context from the main session, before the launch (C1 to C7)
+1. The brief; reading the inheritance (21:29–21:36Z) (U1 to M6)
+2. After 32 silent minutes: Theorem 1, and "nothing to fit" (22:09–22:19Z) (M7 to M11)
+3. Building and validating the instrument (22:25–22:58Z) (M12 to M23)
+4. Planted zeros; a 22-minute silence; the exp1 table (23:00–23:33Z) (M24 to M30)
+5. The pivot: "the dual use of inertia" (23:48Z) (M31)
+6. Testing the dual; the referee version (23:52–00:45Z) (M32 to M48)
+7. Red team, report, return (00:48–01:03Z) (M49 to M54)
+Context from the main session, after the sub-agent returned (C8 to C11)
+Appendix: per-message table
+
+About this record
+This is the complete record of one Claude Code sub-agent run, in order, presented for reading on paper: the documents
+the agent wrote are typeset, and each of the other tool calls is replaced by a short editorial summary of the command and
+its output. The sub-agent was named rh-E2-pontryagin (description: "E2: Pontryagin index of condition space") and
+ran inside a larger autonomous Claude Code session; it was launched by the orchestrating conversation's Agent tool, the
+launch brief it received is U1 below, and its final returned text is the last message.
+Time span: 2026-08-03T21:29:33.846Z to 2026-08-04T01:03:20.435Z (3h33m47s). The record has 54 assistant
+messages, numbered M1 to M54 in order. Plain-text user-role records are numbered U1 to U2: U1 is the launch brief; U2 is
+a routine harness reminder. Each tool call appears, with its output, inside the message it belongs to - typeset if it wrote a
+document, otherwise as a summary.
+The model's extended thinking is not in this record. In the exported session file every thinking block is empty apart
+from an opaque signature field, so no thinking text is available; this is how the session was recorded, not a redaction made
+for this publication. The length of that signature grows with the amount of thinking, which is why each block's size is listed
+in the per-message table at the end of this document and why the long silent gaps before some messages are attributed to
+thinking. In this edition the 35 thinking blocks are not shown as separate markers; where a message followed a long silent
+interval its header says so. What the model wrote visibly is 3 text blocks (2,051 characters) and 53 tool calls (Bash 48,
+Read 4, Write 1), and the shell commands it typed - most of them here-documents writing its notes, proof and scripts - are
+where the visible reasoning is (in this edition the here-documents that wrote its documents are typeset in full; the other
+commands, including the scripts, are summarized, and the notes quote the scripts' decisive comment lines); plus 53 tool
+outputs (8 flagged as errors by the harness, e.g. a command that timed out or was refused).
+Context from the main session. For orientation, selected records from the main session (the orchestrating Claude Code
+conversation, which talks with Jarred (the human running the session) and launches the sub-agents) are shown in clearly
+separate teal 'MAIN SESSION' sections with their own ids: C1 to C7 before U1 (what led to the launch); C8 to C11 after the
+sub-agent's last message (how the returned text was received). They are copied verbatim from the orchestrating session's
+own transcript and are not part of this sub-agent's record; the small '#756'-style numbers on them are their positions in that
+transcript, kept so that they can be cited.
+Redactions and other departures from the exported file. Apart from the summaries (each tool call that did not write a
+document is represented by an editorial summary instead of its command and output, as explained at the top), this edition
+differs from the original exported session file as follows. Bracketed redactions of infrastructure details unrelated to the
+mathematics were applied to the record before anything was typeset or summarized - the harness's shell-wrapper echo of
+the failed command (internal shell plumbing unrelated to the agent's work) (1); other processes on the host, unrelated to
+this agent (3); host project directory name in the Claude Code memory path (2); sub-agent launch confirmation (internal
+bookkeeping text) (6); harness task-output file paths (1); internal task ids (1); internal tool-use ids (1); harness usage
+counters in task notifications (1) - the counts are occurrences in the underlying record; where one falls inside a typeset
+document or a verbatim block it is marked inline, and where it fell inside an output that is summarized here the summary
+was written from the redacted text. The per-record envelope metadata (model identifier, message and request identifiers,
+token-usage counters, client version and working-directory fields) is not shown, and two harness bookkeeping records with
+no conversational content (a tool-availability listing and a skills listing) are omitted. The brief, the messages from the
+
+page 3 of 68
+
+

@@ -1,0 +1,1253 @@
+67% of the zeroes are on the line.
+
+Theorem.
+
+
+
+3
+
+X
+1
+1
+
+
+ord ζ.
+1 ≥  − √ cot √ −oT →∞ (1) ·
+ρ
+2
+
+2
+2
+1
+ζ(ρ)=0,
+|
+{z
+}
+ζ(ρ)=0, Re ρ= 2 ,
+X
+
+T ≤Im ρ<2T
+
+T ≤Im ρ<2T
+
+= 67.25...%
+
+We are going to choose a good finite-dimensional space of functions and restrict the pairing induced by
+the explicit formula to that space. That restriction will have the property that zeroes on the line contribute
+a positive line aka (1, 0) part, and pairs of zeroes off the line contribute a hyperbolic plane aka (1, 1) part.
+Then we will write down an inequality lower bounding the rank of the part attributed to the zeroes on
+the line in terms of information controlled by the 2-norm of the full form as well as traces of these on- and
+off-the-line constituents. And then we will manage to calculate everything.
+Proof of Theorem assuming all claims and lemmas below.
+
+
+#|on[T,2T ) | + O T δ log T = #|onNT δ ([T,2T )) | ≥ rank WTon
+
+(vρ · vρt ≥ 0 if Re ρ = 12 )
+
+
+
+≥ 2 tr WTon + 4 tr WToff − 4n+ WToff − ||WT ||2HS (Lemma 3.4)
+
+
+
+= 4 tr WT − 2 tr WTon + 2n+ WToff
+− ||WT ||2HS
+(WT = WTon + WToff )
+
+(Claim 2.3)
+≥ 4 tr WT − 2Nall (T ) − ||WT ||2HS − O T δ log T
+
+
+1
+1
+1
+= 4 − 2 − − √ cot √ + oχ;T →∞ (1) · Nall (T )
+2
+2
+2
+(Lemmas 3.2 & 3.3)
+
+
+3
+1
+1
+=
+− √ cot √ + oχ;T →∞ (1) · Nall (T ),
+2
+2
+2
+
+
+as desired.
+
+1
+
+Notation.
+
+Let T ≫ 1. Write, for an interval I ⊆ R, Nall (I) :=
+
+X
+
+ord ζ and Nall (T ) := Nall ([T, 2T )) — thus
+ρ
+
+ζ(ρ)=0,
+Im ρ∈I
+
+√
+T
+− 2π
++ O(log T ).1 Let δ := 10−10 .2 Let ψ(x) := cos( 2x) · 1|x|≤ 1 .3 Let χ ∈ C ∞ (R)
+2
+
+
+
+be such that χ|(−∞,0] = 0, χ|[1,∞) = 1, and χ is nondecreasing. Let φT (x) := χ Nall2T(T ) + x · χ Nall2T(T ) − x ·
+r
+ √
+
+h
+i
+∞ (R), is even, 0 ≤ φ ≤ 1, and supp φ ⊆ − Nall (T ) , Nall (T ) . Applying Paleycos Nall2T
+·
+x
+.
+Then
+φ
+∈
+C
+T
+T
+T
+c
+2T
+2T
+(T )
+
+Nall (T )
+Wiener to continue φ
+bT , |φ
+bT (z)| ≪χ eπ·| Im z|· T · min log T, |z|−1 , |z|−2 by integrating by parts 0,
+ 1,1 or2
+ ′
+
+
+P
+Λ(n)
+2 +iτ
+log
+π
+1
+times. Let µ(τ ) := 2π
+Re ΓΓ 14 + iτ2
+− 2π , λT (τ ) := − π1 n≤T √n cos (τ log n), πT (τ ) := π1 Re T1 +iτ
+,
+T
+Nall (T ) = 2π
+log
+
+2T
+π
+
+
+
+2
+
+ρ− 1
+and νT := µ + λT + πT . Let, for ρ ∈ C, γρ := i 2 .
+
+Theorem (Guinand-Weil). Let F ∈ Cc∞ (R). Then:
+ 
+  Z
+
+
+X Λ(n)   log n 
+X
+i
+i
+log n
+b
+b
+b
+b
+√
+ord ζ · F (γρ ) = F
++F −
++
+dτ F (τ ) · µ(τ ) −
+F
++F −
+.
+ρ
+2
+2
+2π
+2π
+n
+R
+ρ
+n≥1
+
+h
+i
+h
+i
+R
+P
+T log T
+Thus if supp F ⊆ − NallT(T ) , NallT(T ) ⊊ − log
+,
+then ρ ordρ ζ · Fb(γρ ) = R dτ Fb(τ ) · νT (τ ). Let now
+2π
+2π
+ 
+Nall (T )−1
+X
+vρ := φ
+bT γρ − T − NallT(T ) · k
+∈ CNall (T ) . Let WT := N (TT)·R φ2
+ord ζ · vρ · vρt . It
+all
+
+k=0
+
+R
+
+T
+
+ρ
+
+Im ρ∈NT δ ([T,2T ))
+
+′
+
+(Riemann-von Mangoldt aka integrate ζζ in a rectangle with top and bottom to infinity, right at Re s = 1 + δ, and left and right
+matched up by the functional equation.)
+2
+Its use indicates unoptimized Rbut easy
+parts.
+R
+R
+1
+
+3
+
+This is the minimizer of ψ 7→
+
+2
+R ψ + R du R dv ψ(u)ψ(v)·|u−v|
+R
+2
+Rψ
+
+(
+
+)
+
+and the provenance of the 23 − √12 cot √12 .
+
+should be clear that roots on the line contribute positive squares in the sum, whereas pairs (ρ, 1 − ρ) of roots
+off the line contribute hyperbolic planes, and extracting counts based on the signature of this form via
+first- and second-order information is the entire point. Because the functional equation matches roots and
+multiplicities off the line WT is real symmetric. Let, for an interval I ⊆ R, onI := {ρ : ζ(ρ) = 0, Re ρ =
+1
+1
+: ζ(ρ) = 0, Im ρ ̸∈ I}. Thus by
+2 , Im ρ ∈ I}, off I := {ρ : ζ(ρ) = 0, Re ρ ̸= 2 , Im ρ ∈ I}, and farI := {ρ P
+Riemann-von Mangoldt #|onNT δ ([T,2T )) | = #|on[T,2T ) | + O T δ log T . Also ρ∈onI ordρ ζ + #|off I | ≤ Nall (I).
+P
+P
+Let WTon := N (TT)·R φ2 ρ∈onN ([T,2T )) ordρ ζ · vρ · vρt , WToff := N (TT)·R φ2 ρ∈off N ([T,2T )) ordρ ζ · vρ · vρt , so
+all
+
+R
+
+all
+
+Tδ
+
+T
+
+R
+
+T
+
+Tδ
+
+that WT = WTon + WToff . Hence WTon is positive semidefinite and rank WTon ≤ #|onNT δ ([T,2T )) |. We write the
+signature of a quadratic form
+P Q as (n+ (Q), n− (Q)). t
+TR
+Let Efar := N (T )· φ2 ρ∈farN ([T,2T )) ordρ ζ · vρ · vρ .
+all
+
+Tδ
+
+T
+
+R
+
+Theorem 1.1 (Montgomery-Vaughan). Let xn ∈ C and yn ∈ R be such that for each m there is a σm > 0 such that
+for all n either ym = yn or else |ym − yn | ≥ σm . Then:
+X xm · xn
+m̸=n
+
+2
+
+ym − yn
+
+≪
+
+X
+
+−1
+|xm |2 · σm
+.
+
+m
+
+Claims.
+
+Claim 2.1. Let z, z ′ ∈ C. Then:
+X 
+φ
+cT z − T −
+k∈Z
+
+kT
+Nall (T )
+
+
+
+
+·φ
+cT z ′ − T −
+
+kT
+Nall (T )
+
+
+=
+
+Nall (T ) c2
+· φT (z − z ′ ).
+T
+
+Proof of Claim 2.1. Apply hPoisson summation
+and simply compute the Fourier transform — the point being
+i
+
+that supp φT +supp φT ⊆ − NallT(T ) , NallT(T ) and so all but the zero mode of the relevant convolution vanishes.
+Claim 2.2. For 0 ≤ k, ℓ < Nall (T ),
+Z
+
+
+
+
+
+dτ φ
+bT τ − T − NallT(T ) k · φ
+bT τ − T − NallT(T ) ℓ · νT (τ )
+ R
+
+T
+
+
+
+
+X
+R 2 
+Wk,ℓ =
+
+.
+Nall (T ) · R φT 
+−
+bT γρ − T − NallT(T ) ℓ 
+ord ζ · φ
+bT γρ − T − NallT(T ) k · φ
+ρ∈farN δ ([T,2T ))
+
+ρ
+
+T
+
+Proof of Claim 2.2. The claim is equivalently a calculation of
+
+
+
+
+X
+T
+T
+ord ζ · φ
+bT γρ − T −
+·k ·φ
+bT γρ − T −
+·ℓ ,
+ρ
+Nall (T )
+Nall (T )
+ρ
+and per the remark afterhour statement of
+i Guinand-Weil it suffices to check that the relevant convolution of
+two φT ’s has support in − NallT(T ) , NallT(T ) , which it does.
+Claim 2.3. tr WTon ≤
+
+P
+
+ρ∈onN δ ([T,2T )) ordρ ζ and n+
+T
+
+
+WToff ≤ 12 · #|off NT δ ([T,2T )) |.
+
+Proof of Claim 2.3. For ρ ∈ onNT δ ([T,2T )) one has γρ ∈ R, so
+Nall (T )−1
+
+tr
+
+vρ · vρt
+
+
+
+= ||vρ ||22 =
+
+X
+k=0
+
+
+φ
+bT γρ − T −
+
+T
+·k
+Nall (T )
+
+2
+
+Nall (T )
+≤
+·
+T
+
+Z
+
+φ2T
+
+R
+
+by Claim 2.1 at z = z ′ = γρ . Summing gives the trace bound.
+For the rest, pair off ρ ∈ off NT δ ([T,2T )) as (ρ, 1 − ρ) via the functional equation. Because γ1−ρ = γρ it follows
+that v1−ρ = vρ (Schwarz reflection), whence the desired hyperbolic plane i.e. vρ · vρt + vρ · vρt . It follows
+that the relevant quadratic form is a pullback from (1, 1)⊕#|pairs| and the bound follows from comparing
+signatures.
+
+3
+
+Lemmas.
+1
+
+Lemma 3.1. | tr Efar |, ||Efar ||HS ≪χ T 2 −2δ .
+Proof of Lemma 3.1. Run the same calculation as in Claim 2.3 and apply the Paley-Wiener integration by parts
+bound and sum (the square-root coming from | Im γρ | < 21 a priori).
+Lemma 3.2. tr WT = (1 + oχ;T →∞ (1)) · Nall (T ).
+Proof of Lemma 3.2. Again apply Paley-Wiener to control the contribution of k ̸∈ [0, Nall (T ) − 1) by ≪χ
+√
+T · NallT(T ) · dist (Im ρ, {T, 2T })−3 (and similarly for the ≪ T δ many ρ with Im ρ within T δ of the interval endpoints).
+
+
+Lemma 3.3. ||WT ||2HS = 21 + √12 cot √12 + oχ;T →∞ (1) · Nall (T ).
+Proof of Lemma 3.3. The Hilbert-Schmidt norm is, after completing the relevant k-sum and localizing the
+relevant τ and τ ′ integrals to [T, 2T ), an integral of a kernel formed from a convolution of φT with itself
+against a product of νT with itself. νT has three terms: πT , corresponding to the pole of ζ, is irrelevant here.
+The diagonal terms of the λT · λT product will contribute to the main term, and for the off-diagonal terms
+we will use Montgomery-Vaughan-Hilbert. µ · µ also contributes, and this is where we see the shape of the
+variational problem that ψ solves. 
+All other cross-terms
+ cancel
+ (e.g. because ofthe cosine oscillation in λT ).
+P
+T
+′
+Let K(τ, τ ) := 0≤k<Nall (T ) φ
+bT τ − T − Nall (T ) · k · φ
+bT τ ′ − T − NallT(T ) · k and αk := T + NallT(T ) · k.
+
+2
+R
+R
+R
+By definition of Efar , NallT(T ) · R φ2T · ||WT + Efar ||2HS = R dτ R dτ ′ K(τ, τ ′ )2 · νT (τ ) · νT (τ ′ ). We will
+calculate the right-hand side and then use Lemma 3.1 to remove the Efar from the left-hand side. (Note that
+we expect the main term to be of order T · (log T )5 .)
+First let us execute the Poisson summation à la Claim 2.1 and also localize the integrals to [T, 2T ].
+Throughout the error terms below we freely write log T for NallT(T ) (and hence log log T for log NallT(T ) );
+R
+only main terms need the exact ratio. Record once: for real τ, τ ′ one has |K(τ, τ ′ )| ≤ NallT(T ) · R φ2T ≪ log2 T
+c2 (s) ≤ R φ2 ≪ log T ; and R
+(Cauchy-Schwarz + Claim 2.1 at z = z ′ = τ resp. τ ′ ); φ
+bT (s)| ≪χ
+T
+|s|≥D ds |φ
+R T
+
+1
+min log log T , D (integrate the Paley-Wiener min).
+ Z 2T
+
+Z
+Z 2T
+Z
+Nall (T ) 2
+′
+′ 2
+′
+c2 (τ − τ ′ )2 · ν (τ ) · ν (τ ′ )
+·
+Claim.
+dτ
+dτ
+dτ ′ φ
+dτ K(τ, τ ) · νT (τ ) · νT (τ ) =
+T
+T
+T
+T
+T
+R
+T
+R
+
+4
++ Oχ T · log T · log log T .
+c2 (τ − τ ′ ) = − P
+bT (τ − αk ) · φ
+bT (τ ′ − αk ). Hence
+Proof. On [T, 2T ]2 : by Claim 2.1, K(τ, τ ′ ) − NallT(T ) · φ
+k/
+∈[0,Nall (T )) φ
+T
+′ 2
+
+
+
+K(τ, τ ) −
+
+Nall (T ) c2
+· φT (τ − τ ′ )
+T
+
+2
+
+X
+
+≪ log2 T ·
+
+φ
+bT (τ − αk ) · φ
+bT (τ ′ − αk ) .
+
+k/
+∈[0,Nall (T ))
+
+√
+1
+Integrate against |νT (τ ) · νT (τ ′ )| ≤ T (Chebyshev + Stirling: |µ| ≪ log T , |λT | ≪ T , |πT | ≪ T − 2 on
+R
+2
+2T
+/ [0, Nall (T )) one has
+[T, 2T ]) over [T, 2T ]2 ; the k-th summand factors as T dτ |φ
+bT (τ − αk )| . For k ∈
+R 2T
+T
+αk ∈
+/ [T, 2T ), so |τ − αk | ≥ Nall (T ) · dist (k, [0, Nall (T ))) for all τ ∈ [T, 2T ]; hence T dτ |φ
+bT (τ − αk )| ≪χ
+
+
+log T
+min log log T , dist (k,[0,N
+. Summing the squares:
+all (T )))
+
+min log log T ,
+
+X
+k/
+∈[0,Nall (T ))
+
+log T
+dist (k, · · · )
+
+2
+≪ log T · log log T .
+
+So this piece is ≪χ T · log3 T · log log TR.
+R
+Off [T, 2T ]2 : by symmetry ≤ 2 τ ∈R τ ′ /∈[T,2T ] . Pull one |K| ≪ log2 T out: K(τ, τ ′ )2 ≪ log2 T ·
+P
+bT (τ − αk ) · φ
+bT (τ ′ − αk )|. Factor the double integral:
+0≤k<Nall (T ) |φ
+≪ log2 T ·
+
+X
+0≤k<Nall (T )
+
+Z
+R
+
+ Z
+dτ |φ
+bT (τ − αk )| · |νT | ·
+
+R\[T,2T ]
+
+
+dτ ′ φ
+bT (τ ′ − αk ) · |νT | .
+
+√
+√ R
+√
+The first factor: |νT | ≪ T on |τ | ≤ T 2 , so ≤ T · R |φ
+bT | ≪ T ·log log T (the |τ | > T 2 tail is negligible via the
+|τ |−2 decay). The second factor: αk ∈ [T, 2T ), so for τ ′ ∈
+/ [T, 2T ] one has |τ ′ −αk | ≥ NallT(T ) ·min(k, Nall (T )−k);
+
+
+√
+log T
+. Summing:
+hence ≪ T · min log log T , min(k,N
+all (T )−k)
+X
+
+
+min log log T ,
+
+log T
+min(k, Nall (T ) − k)
+
+√
+
+√
+
+0≤k<Nall (T )
+
+So this piece is ≪χ log2 T ·
+
+T · log log T ·
+
+
+
+≪ log T · log Nall (T ) ≪ log2 T.
+
+T · log2 T = T · log4 T · log log T .
+
+Now let us split νT · νT = (µ + λT + πT )2 . In each piece the error is at least one log T below the main
+term ≍ T · log3 T .
+
+
+R 2T
+R 2T
+c2 (τ − τ ′ )2 · µ(τ ) · µ(τ ′ ) = T · Nall (T ) 2 · R φ4 + O T · log2 T .
+Claim. T dτ T dτ ′ φ
+χ
+T
+R T
+T
+1
+τ
+Proof. Write µ(τ ) = NallT(T ) + O(1) on [T, 2T ] (Stirling: µ(τ ) = 2π
+log 2π
++ O(τ −1 ); and NallT(T ) is the average
+′|
+of µ over [T, 2T ] up to O( logT T ) by Riemann-von Mangoldt) and µ(τ ) − µ(τ ′ ) ≪ |τ −τ
+(since µ′ ≪ |τ |−1 ).
+T
+R
+R
+R
+2T
+c2 (s)2 · |s| ≪ log T · log log T (via ds φ
+c2 (s)2 · |s| ≪
+Freeze µ(τ ′ ) → µ(τ ): cost ≪ T dτ |µ(τ )| · T1 · R ds φ
+χ
+T
+T
+R
+R
+R
+2T
+2
+c
+′
+′
+2
+2
+2/3
+2
+log log T ). Extend τ ∈ [T, 2T ] → τ ∈ R: cost ≪ T dτ µ(τ ) · |s|≥dist (τ,{T,2T }) ds φT (s) ≪χ log T · (log T ) .
+
+
+R
+c2 (s)2 = R φ4 (Plancherel), and R 2T µ2 = T · Nall (T ) 2 + O(N (T )) (from µ = Nall (T ) + O(1)
+Then R ds φ
+all
+T
+R T
+T
+T
+T
+squared).
+
+Claim.
+
+R 2T
+T
+
+dτ
+
+R 2T
+T
+
+c2 (τ − τ ′ )2 · λ (τ ) · λ (τ ′ ) = 2T · R Nall (T )/T dy y · φ2 ∗ φ2  (y) + O T · log2 T .
+dτ ′ φ
+χ
+T
+T
+T
+T
+T
+0
+
+R
+c2 (τ − τ ′ )2 ≪ T · (log T )2/3 (via |λ | ≪ √T and
+Proof. Extend τ ′ → R: cost ≪ |λT |2∞ · τ ∈[T,2T ],τ ′ /∈[T,2T ] φ
+χ
+T
+T
+R
+R
+R
+T
+c2 2
+c2
+2/3 ).
+′ 2
+τ ∈[T,2T ],τ ′ /
+∈[T,2T ] φT (τ − τ ) = 0 dD |s|≥D ds φT (s) ≪χ (log T )
+
+R
+c2 is even,
+c2 (s)2 · e(sy) = φ2 ∗ φ2 (y) and φ
+Inner integral. Since ds φ
+Z
+
+T
+
+T
+
+R
+
+c2 (τ − τ ′ )2 · λ (τ ′ ) = −
+dτ ′ φ
+T
+T
+
+R
+
+T
+
+T
+
+
+1 X Λ(m)
+√
+· φ2T ∗ φ2T
+π m
+m
+
+
+
+log m
+2π
+
+
+· cos (τ log m) .
+
+Multiply by λT (τ ) and integrate over τ ∈ [T, 2T ]; write cos A · cos B = 12 (cos (A + B) + cos (A − B)) with
+A := τ log n, B := τ log m.
+
+
+  log n 
+R 2T
+2
+P
+2 ∗ φ2
+Diagonal n = m. T dτ cos2 (τ log n) = T2 + O log1 n , so this piece is 2πT 2 n Λ(n)
+·
+φ
++
+T
+T
+n
+2π
+
+2
+P
+Oχ (log2 T ). Partial summation: with A(t) := n≤t Λ(n)
+= 12 log2 t + O(log t) and g(y) := φ2T ∗ φ2T (y) (so
+n
+h
+i
+supp g ⊆ − NallT(T ) , NallT(T ) and ||g ′ ||∞ ≤ ||(φ2T )′ ||1 ≪χ 1),
+X Λ(n)2
+n
+
+n
+
+
+·g
+
+log n
+2π
+
+Z Nall (T )/T
+
+
+=−
+
+
+dy
+
+0
+
+
+Z Nall (T )/T
+1
+2
+′
+2
+dy y · g(y) + Oχ (log2 T )
+(2πy) + O(2πy) · g (y) = 4π
+2
+0
+
+
+
+Nall (T )
+T
+T
+(the boundary term A(T ) · g log
+= 0 since log
+; then integrate by parts once more). Times 2πT 2 :
+2π
+2π >
+T
+R Nall (T )/T
+2T 0
+dy y · g(y) + Oχ (T · log2 T ).
+
+
+
+R 2T
+2iT −(n/m)iT
+n
+√ · niT and x′ := xn ·
+Off-diagonal n ̸= m. T dτ cos τ log m
+= Im (n/m)log (n/m)
+. Set xn := Λ(n)
+n
+n
+
+
+P
+xn ·x′m
+log n
+2iT
+g 2π (respectively n ): the sum is Im n̸=m log n−log m , and Montgomery-Vaughan with yn := log n,
+1
+
+1
+
+1
+σn > n+1
+gives (in bilinear form: the theorem reads −CD ≤ iH ≤ CD, so ||D− 2 · iH · D− 2 ||op ≤ C)
+1
+1
+P
+P
+2 2 · ||g|| ·
+2 2 ≪ T · log2 T .
+|· · · | ≪
+∞
+n≤T Λ(n)
+m≤T Λ(m)
+P
+ P
+
+R 2T
+Λ(m)
+Λ(n)
+√
+√
+The cos (A + B)-half. T dτ cos(τ log nm) ≤ log2 4 ; so this is ≪ log T ·
+·
+≪ T ·
+m
+n
+n
+m
+log T .
+R 2T
+R 2T
+c2 (τ − τ ′ )2 · 2µλ + 2µπ + 2λ π + π 2  ≪ T · log T .
+Claim. T dτ T dτ ′ φ
+χ
+T
+T
+T T
+T
+T
+
+R 2T R 2T c2
+R
+1
+Proof. The three terms with πT : bound |πT | ≪ T − 2 on [T, 2T ] and T T φ
+(τ − τ ′ )2 ≤ T · R φ4T ≪ T · log T ;
+T
+√
+1
+then |µπT | ≪ T − 2 log T , |λT πT | ≪ 1, |πT2 | ≪ T −1 give respectively ≪ T log2 T , ≪ T log T , ≪ log T .
+
+The 2µλT term: extend τ ′ → R (cost ≪ log T ·
+the previous Claim:
+Z 2T
+dτ µ(τ ) ·
+
+2
+T
+
+√
+
+T · (log T )2/3 ), then use the inner-integral formula from
+
+1 X Λ(m)
+√
+−
+·g
+π m
+m
+
+
+
+log m
+2π
+
+!
+
+
+
+· cos (τ log m) .
+
+h
+i2T
+R 2T
+′ ) sin (··· )
+µ(τ ) sin (τ log m)
+log T
+dτ
+µ(τ
+)
+·
+cos(τ
+log
+m)
+=
+− T dτ µ (τlog
+≪ log
+T
+log m
+m
+m
+T
+√
+P
+P
+Λ(m)
+log T
+1
+T
+1
+′
+−1
+(boundary ≪ log m ; integral ≪ log m via µ ≪ T ). Then m √m·log m = p≤T √p + O(1) ≪ log T ; times
+√
+√
+log T
+2
+T
+T · log T .
+||g||∞ ≪ log T and the log
+:
+total
+≪
+log
+T
+·
+m
+log T ≪
+Integrate by parts once in τ :
+
+Claim.
+
+
+
+Nall (T )
+T
+
+R 2T
+
+
+2 R
+
+2
+
+
+R N (T )/T
+R
+· R φ4T + 2 0 all
+dy y · φ2T ∗ φ2T (y) = 21 + √12 cot √12 · NallT(T ) · R φ2T + Oχ log2 T .
+
+
+R1
+Proof. Since ψ ′′ +2ψ = 0 on − 21 , 21 , the map u 7→ ψ(u)+ −2 1 dv |u−v|·ψ(v) has vanishing second derivative
+2
+R
+d2
+there (differentiate under the integral: du
+dv
+|u
+−
+v|
+·
+ψ(v)
+= 2ψ(u)), hence is affine, hence (being even)
+2
+1
+√
+
+R
+R1
+constant on − 12 , 12 . Its value at u = 0 is ψ(0) + 2 02 dv v · ψ(v) = cos √12 + √12 sin √12 ; and −2 1 ψ = 2 sin √12 ;
+2
+
+
+the ratio is 21 + √12 cot √12 . Integrate the constant against ψ over − 12 , 12 :
+Z 1
+2
+
+2
+
+Z 1
+
+ψ +
+− 12
+
+Z 1
+
+2
+
+2
+
+du
+− 12
+
+
+dv |u − v| · ψ(u) · ψ(v) =
+
+− 12
+
+1
+1
+1
++ √ cot √
+2
+2
+2
+
+!2
+
+Z 1
+
+
+
+2
+
+·
+
+ψ
+
+;
+
+− 21
+
+R1
+the double integral equals
+2
+ 0 dw
+ w · (ψ ∗ ψ)(w) (substitute w = u − v, use ψ even).
+Rescale: φ2T (x) and ψ
+
+xT
+Nall (T )
+
+· 1|x|≤ Nall (T ) differ only on the two transition intervals of total length Oχ (1),
+2T
+R1
+R
+R1
+on which both are ≤ 1. Hence R φ2T = NallT(T ) · −2 1 ψ + Oχ (1) and R φ4T = NallT(T ) · −2 1 ψ 2 + Oχ (1); and
+2
+2
+
+
+
+3
+
+R Nall (T )/T
+Nall (T )
+yT
+2
+2
+2
+2
+dy y · (φT ∗ φT )(y) = NallT(T ) ·
+φT ∗ φT (y) = T · (ψ ∗ ψ) Nall (T ) + Oχ (1) uniformly, so 0
+
+R1
+2
+0 dw w · (ψ ∗ ψ)(w) + Oχ log T . Substitute.
+R
+
+Assemble: the µµ and λT λT main terms sum to T times the left side of the last Claim, so
+Z 2T
+
+Z 2T
+dτ
+
+T
+
+T
+
+c2 (τ − τ ′ )2 · ν · ν =
+dτ ′ φ
+T
+T
+T
+
+
+
+1
+1
+1
++ √ cot √
+2
+2
+2
+
+
+
+Z
+· Nall (T ) ·
+
+φ2T
+
+2
+
+
++ Oχ T · log2 T .
+
+R
+
+
+2
+
+Multiply by NallT(T ) , add the first Claim’s error Oχ T · log4 T · log log T , and divide through by
+
+2
+
+
+Nall (T ) R
+4
+1
+1
+1
+2
+2
+√
+√
+·
+φ
+≍
+log
+T
+:
+this
+gives
+||W
++
+E
+||
+=
++
+cot
+· Nall (T ) + Oχ (T · log log T ).
+T
+far HS
+R T
+T
+2
+2
+2
+p
+1
+Finally ||WT ||2HS − ||WT + Efar ||2HS ≤ 2 · ||WT + Efar ||HS · ||Efar ||HS + ||Efar ||2HS ≪ Nall (T ) · T 2 −2δ by Lemma
+3.1.
+Lemma 3.4. Let A and B be Hermitian forms on Cn with A positive semidefinite. Then:
+rank A ≥ 2 · tr A + 4 · tr B − 4n+ (B) − ||A + B||2HS .
+Proof of Lemma 3.4. Write r := rank A and F (A, B) := rank A − 2 · tr A − 4 · tr B + 4n+ (B) + ||A + B||2HS .
+The minima of U → R via U 7→ F (A, U · B · U † ) =: F (A, BU ) satisfy tr (A · [BU , H]) = 0 = tr ([A, BU ] · H)
+for all Hermitian H, whence at a minimum [A, BU ] = 0. But then for the purpose of the inequality we may
+assume without loss of generality that A and B are diagonal, with eigenvalues a1 ≥ · · · ≥ an ≥ 0 (so ai = 0
+for i > r) and b1 , . . . , bn . Then with xi := ai + bi ,
+||A + B||2HS =
+
+n
+X
+i=1
+
+x2i ≥
+
+n
+X
+i=1
+
+2ai + 4bi − ci = 2 tr A + 4 tr B −
+
+X
+
+ci ,
+
+i
+
+where ci = 1, 0, 4 according as i ≤ r,P
+bi ≤ 0; i > r, bi ≤ 0; bi > 0 (via (xi − 1)2 , x2i , (xi − 2)2 ≥ 0 and
+−2bi , −4bi , 2ai ≥ 0 respectively); and ni=1 ci ≤ r + 4 · #|{i : bi > 0}| = r + 4 n+ (B). Rearranging we
+conclude.
+
+
