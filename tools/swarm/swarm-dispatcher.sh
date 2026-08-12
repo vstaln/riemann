@@ -5,7 +5,8 @@
 # Example:
 #   swarm-dispatcher.sh kanaka2 /home/vstaln/riemann/research/waves/wave-1/task-idea-A.md
 #
-# Runs:  ssh <host> "cd <workdir> && cat <spec> | pi -p --provider commandcode --model deepseek/deepseek-v4-flash"
+# Runs the spec text through pi on the remote host:
+#   ssh <host> "cd <workdir> && pi -p --provider commandcode --model deepseek/deepseek-v4-flash" < spec
 # and saves the output to a results file next to the spec.
 set -euo pipefail
 
@@ -22,9 +23,10 @@ OUT="$RESULT_DIR/${HOST}--${SPEC_NAME%.md}.out"
 PI_OPTS="${PI_OPTS:---provider commandcode --model deepseek/deepseek-v4-flash}"
 
 echo "[swarm] $HOST <- $SPEC_NAME  (workdir: ~/$WORKDIR)"
-timeout "${SWARM_TIMEOUT:-600}" ssh -o ConnectTimeout=15 -o BatchMode=yes "$HOST" \
+# Pipe the spec text as stdin to pi on the remote
+timeout "${SWARM_TIMEOUT:-900}" ssh -o ConnectTimeout=15 -o BatchMode=yes "$HOST" \
   "export PATH=\"\$HOME/.npm-global/bin:\$HOME/.local/bin:\$PATH\"; cd \"\$HOME/$WORKDIR\" 2>/dev/null || cd /tmp; \
-   cat '$SPEC_NAME' 2>/dev/null | pi -p $PI_OPTS" \
+   pi -p $PI_OPTS" < "$SPEC" \
   > "$OUT" 2>&1 || { echo "[swarm] $HOST FAILED (see $OUT)"; tail -5 "$OUT"; exit 1; }
 
 echo "[swarm] $HOST done -> $OUT ($(wc -c < "$OUT") bytes)"
