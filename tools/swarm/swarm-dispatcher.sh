@@ -25,7 +25,8 @@ PI_OPTS="${PI_OPTS:---provider commandcode --model deepseek/deepseek-v4-flash}"
 echo "[swarm] $HOST <- $SPEC_NAME  (workdir: ~/$WORKDIR)"
 # Pipe the spec text as stdin to pi on the remote
 timeout "${SWARM_TIMEOUT:-900}" ssh -o ConnectTimeout=15 -o BatchMode=yes "$HOST" \
-  "export PATH=\"\$HOME/.npm-global/bin:\$HOME/.local/bin:\$PATH\"; cd \"\$HOME/$WORKDIR\" 2>/dev/null || cd /tmp; \
+  "export PATH=\"\$HOME/.npm-global/bin:\$HOME/.cargo/bin:/usr/bin:\$PATH\"; cd \"\$HOME/$WORKDIR\" 2>/dev/null || cd /tmp; \
+   command -v pi >/dev/null || { echo 'PI NOT FOUND on $HOST'; exit 1; }; \
    pi -p $PI_OPTS" < "$SPEC" \
   > "$OUT" 2>&1 || { echo "[swarm] $HOST FAILED (see $OUT)"; tail -5 "$OUT"; exit 1; }
 
