@@ -81,3 +81,8 @@ Phone mobile data dropped mid-wave (killed 2 agents). All specs now mandate cras
 - eps=8064 re-certified True at grid=6000 (1,140,800 nodes) — both old and new levels freshly certified.
 - Frontier: 8068@g6000 FAILS (lower=0.008058687850487158); 8065 certified ⇒ boundary ∈ (8065, 8068]; push probes 8066@g4000/8067@g4000 launched.
 - beat673's psum-shifted probes (1/1302 @ eps 8130/8140, 1/1314 @ 8080/8100) may exceed this IF they certify AND the bound recomputes with psum=1/1302 (τ smaller ⇒ bound higher) — verdicts live in beat673's session.
+
+## eps-frontier RESOLVED at g4000 (2026-08-12) — record is certified-OPTIMAL
+- Boundary: eps=8065 ✓ certified (1,563,008 nodes) · eps=8066 ✗ (lower=0.00805205779678169, 387,646 nodes) · eps=8067 ✗ (lower=0.008053019035790712, 389,746) · eps=8068 ✗ (lower=0.008054068309021395, 301,001) — all at grid 4000, psum 1/1320. The failing-box floors sit just below 8065's certified floor ⇒ **8065 is the max certifiable eps at g4000/psum-1/1320/α=1.49**; the record 0.6732660791400006829 is optimal at this triple.
+- beat673's psum-shifted probes (1/1290 @ eps 8225, 1/1302 @ 8140/8130, 1/1314 @ 8100/8080): τ·eps invariance ⇒ their certified bounds land ≈0.673265x — BELOW our 0.6732660791. (Check: τ(1/215)=0.0044419, A(8225)=1.044575, B=1.043774 ⇒ bound ≈ 0.673265.)
+- 8065@g6000 (finer-grid confirmation): earlier run TIMED OUT under oversubscription; relaunched with timeout 3600 on the now-lighter machine (log /tmp/combine/final_r8065_g6000.log).
