@@ -133,6 +133,77 @@ fn n_count(t: f64) -> f64 {
 
 fn main() {
     let args: Vec<String> = env::args().collect();
+    // mode 1: zeros <count> [T_max] [step]   (count-based, original)
+    // mode 2: zeros win <t_lo> <t_hi> <step> <shard> <shard_count>   (window scan)
+
+    // sanity checks on Bernoulli
+    assert!((bernoulli(2) - 1.0 / 6.0).abs() < 1e-15, "B2");
+    assert!((bernoulli(4) + 1.0 / 30.0).abs() < 1e-14, "B4");
+    assert!((bernoulli(6) - 1.0 / 42.0).abs() < 1e-14, "B6");
+
+    let mut out = io::stdout().lock();
+
+    if args.get(1).map(|s| s.as_str()) == Some("win") {
+        let t_lo: f64 = args.get(2).expect("win t_lo").parse().unwrap();
+        let t_hi: f64 = args.get(3).expect("win t_hi").parse().unwrap();
+        let step: f64 = args.get(4).map(|s| s.parse().unwrap()).unwrap_or(0.1);
+        let shard: usize = args.get(5).map(|s| s.parse().unwrap()).unwrap_or(0);
+        let n_shard: usize = args.get(6).map(|s| s.parse().unwrap()).unwrap_or(1);
+        let w = (t_hi - t_lo) / n_shard as f64;
+        let clo = t_lo + shard as f64 * w;
+        let chi = clo + w;
+        let scan_lo = (clo - 2.0 * step).max(14.0);
+        let scan_hi = chi + 2.0 * step;
+        let _ = writeln!(
+            out,
+            "# win t_lo={:.3} t_hi={:.3} step={step} shard={shard}/{n_shard} scan[{scan_lo:.3},{scan_hi:.3}]",
+            clo, chi
+        );
+        let mut t = scan_lo;
+        let mut zprev = z(t);
+        let mut found = 0usize;
+        while t < scan_hi {
+            let t_next = t + step;
+            if t_next > scan_hi {
+                break;
+            }
+            let znext = z(t_next);
+            if zprev.is_finite() && znext.is_finite() && zprev * znext < 0.0 {
+                let (mut lo, mut hi) = (t, t_next);
+                let mut zlo = zprev;
+                for _ in 0..80 {
+                    let mid = 0.5 * (lo + hi);
+                    let zm = z(mid);
+                    if zlo * zm < 0.0 {
+                        hi = mid;
+                    } else {
+                        lo = mid;
+                        zlo = zm;
+                    }
+                }
+                let g = 0.5 * (lo + hi);
+                if g >= clo && g <= chi {
+                    let _ = writeln!(out, "{:.12}", g);
+                    let _ = out.flush();
+                    found += 1;
+                }
+            }
+            t = t_next;
+            zprev = znext;
+        }
+        let expect = n_count(chi) - n_count(clo);
+        let _ = writeln!(
+            out,
+            "# win done: found={found} expected={expect:.2} diff={:+.2}",
+            found as f64 - expect
+        );
+        eprintln!(
+            "win shard {shard}: found={found} expected={expect:.2} diff={:+.2}",
+            found as f64 - expect
+        );
+        return;
+    }
+
     let count: usize = args
         .get(1)
         .expect("usage: zeros <count> [T_max]")
@@ -143,15 +214,11 @@ fn main() {
         .map(|s| s.parse().unwrap())
         .unwrap_or(if count > 0 { -1.0 } else { 0.0 });
 
-    // sanity checks on Bernoulli
-    assert!((bernoulli(2) - 1.0 / 6.0).abs() < 1e-15, "B2");
-    assert!((bernoulli(4) + 1.0 / 30.0).abs() < 1e-14, "B4");
-    assert!((bernoulli(6) - 1.0 / 42.0).abs() < 1e-14, "B6");
-
-    let mut out = io::stdout().lock();
+    let mut out2 = io::stdout().lock();
     let t0 = 14.0;
     let step = args.get(3).and_then(|s| s.parse().ok()).unwrap_or(0.2);
-    let _ = writeln!(out, "# rust-zeros v3 hybrid: EM(t<200) + RS-g0(t>=200), step {step}, bisect x80");
+    let _ = writeln!(out2, "# rust-zeros v3 hybrid: EM(t<200) + RS-g0(t>=200), step {step}, bisect x80");
+    let mut out = out2;
 
     let mut zeros: Vec<f64> = Vec::with_capacity(count);
     let mut t = t0;
