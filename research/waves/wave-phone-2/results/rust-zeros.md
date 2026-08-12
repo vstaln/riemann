@@ -25,3 +25,8 @@
 CHECKED NUMERICALLY (validation + all statistics); the −89 deficit documented with mechanism. The tool itself is a reusable asset: `tools/zeros_rust/` (main.rs, stats_100k.py, README). Zero file: tools/data/zeros_rust_100k.txt (100k ordinates).
 
 RESULT: COMPLETE — fast zero-finder validated (5.6e-4), 100k zeros generated; band-z −0.15 at 10× sample kills the beyond-1 bump definitively; m₃ → 5 confirmed at 4.783±0.001; spacing shows strong repulsion + a 0.042 min-gap twin.
+
+## Addendum (924k zeros, 8-core parallel shards, t to 5.6e5 — 9.25x sample)
+- m3(1/2) = 4.8060 +- 0.0005 (N=256 blocks, 3609 blocks) — deficit shrinking with height toward PROVEN 5.
+- **Marked connected part T = m3 - D - pair (m3_min_frontier convention): mean +0.416 +- 0.0002, range [+0.333, +0.463]** (3609 blocks). The empirical floor of the 0.70-gap input is +0.333 with ZERO exceptions across 3609 blocks; marching to PROVEN A3(1/2)=+1/2. A proven T >= c > 0 would reopen the m3-class door (certificate value > Parseval floor 0.50).
+- Spacing: min gap 0.0279 (real ultra-twin at t ~ 5e5); frac(gap<0.1)=4.1e-4, frac(gap<0.5)=0.0999 — clean small-gap regime (the step-0.1 twin deficit is 0.21%, documented).
