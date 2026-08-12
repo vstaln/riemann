@@ -38,14 +38,12 @@ case "$cmd" in
       timeout 30 scp -q -o ConnectTimeout=15 "$mf" "$HOST":~/riemann/$mf 2>/dev/null || true
     done
     timeout 30 scp -q -r -o ConnectTimeout=15 tools/swarm "$HOST":~/riemann/tools/ 2>/dev/null || true
-    # methodology banner prepended to the fed spec
+    # methodology banner prepended to the fed spec; RUN via the laptop hop (stable route)
     { cat tools/swarm/dispatch-banner.md; echo; cat "research/waves/$WAVE/$SPEC"; } | \
-      timeout "$TIMEOUT" ssh -o ConnectTimeout=15 -o BatchMode=yes "$HOST" \
-        "export PATH=\"\$HOME/.npm-global/bin:\$HOME/.cargo/bin:/usr/bin:\$PATH\"; cd \"\$HOME/riemann\" 2>/dev/null || cd /tmp; \
-         command -v pi >/dev/null || { echo 'PI NOT FOUND on $HOST'; exit 1; }; \
-         pi -p --provider commandcode --model deepseek/deepseek-v4-flash" \
+      timeout "$TIMEOUT" ssh -o ConnectTimeout=15 -o BatchMode=yes pc-jump \
+        "su vstaln -c 'bash /home/vstaln/riemann/tools/swarm/phone-worker.sh $HOST $TIMEOUT'" \
       > "research/waves/$WAVE/results/$HOST--$SPEC.out" 2>&1
-    echo "launched $SPEC -> $HOST (timeout $TIMEOUT). Log: research/waves/$WAVE/results/$HOST--$SPEC.out"
+    echo "launched $SPEC -> $HOST via laptop hop (timeout $TIMEOUT). Log: research/waves/$WAVE/results/$HOST--$SPEC.out"
     ;;
   pull)
     [ -n "$WAVE" ] && [ -n "$HOST" ] || { echo "usage: pull <wave> <host>"; exit 1; }
