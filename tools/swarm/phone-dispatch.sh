@@ -22,6 +22,7 @@ case "$cmd" in
     HOST="${2:-}"
     [ -n "$HOST" ] || { echo "usage: sync-method <host>"; exit 1; }
     for mf in hooks/agents.md research/notes/ledger.md; do
+      timeout 30 ssh -o ConnectTimeout=15 -o BatchMode=yes "$HOST" "mkdir -p ~/riemann/\$(dirname $mf)" 2>/dev/null || true
       timeout 30 scp -q -o ConnectTimeout=15 "$mf" "$HOST":~/riemann/$mf 2>/dev/null || echo "scp $mf failed"
     done
     timeout 30 scp -q -r -o ConnectTimeout=15 tools/swarm "$HOST":~/riemann/tools/ 2>/dev/null || echo "scp tools/swarm failed"
