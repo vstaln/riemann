@@ -1,0 +1,58 @@
+[package]
+name = "provocation"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "wtest"
+path = "src/bin/wtest.rs"
+
+[[bin]]
+name = "pat4"
+path = "src/bin/pat4.rs"
+
+[[bin]]
+name = "twowin"
+path = "src/bin/twowin.rs"
+
+[dependencies]
+
+[[bin]]
+name = "rep"
+path = "src/bin/rep.rs"
+
+[[bin]]
+name = "prime"
+path = "src/bin/prime.rs"
+
+[[bin]]
+name = "calib"
+path = "src/bin/calib.rs"
+
+[[bin]]
+name = "quad"
+path = "src/bin/quad.rs"
+
+[[bin]]
+name = "curve"
+path = "src/bin/curve.rs"
+
+[[bin]]
+name = "eigen"
+path = "src/bin/eigen.rs"
+
+[[bin]]
+name = "lattice"
+path = "src/bin/lattice.rs"
+
+[[bin]]
+name = "primeq"
+path = "src/bin/primeq.rs"
+
+[[bin]]
+name = "window"
+path = "src/bin/window.rs"
+
+[[bin]]
+name = "provoke"
+path = "src/bin/provoke.rs"

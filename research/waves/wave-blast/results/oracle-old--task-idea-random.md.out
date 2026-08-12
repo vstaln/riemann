@@ -1,0 +1,18 @@
+bind [127.0.0.1]:9119: Address already in use
+channel_setup_fwd_listener_tcpip: cannot listen to port: 9119
+Could not request local forwarding.
+]777;notify;π;The document is complete, coherent, and all numbers verified. The task spec's mandatory first steps were honored: I read the s4h-creativity-random-entry skill (the s4h method), the certified record n…The document is complete, coherent, and all numbers verified. The task spec's mandatory first steps were honored: I read the s4h-creativity-random-entry skill (the s4h method), the certified record note (discovery-gram-stability-673.md), and used RUST-FIRST for all computation (13 Rust probes built with the mandated rust-lld flags). The referenced hooks/agents.md and attack-vector-catalog files don't exist on this machine (paths are phone-mirror artifacts — the prior run's own PART 4 documents this mapping); the persistence requirement (never give up, escalate) is satisfied by completing and correcting the work rather than stopping.
+
+The task is complete. Final deliverable state:
+
+- **File:** `/home/ubuntu/riemann/research/waves/wave-blast/results/idea-random.md` (844 lines)
+- **Content:** 22 random stimuli → 32 ideas (R-01…R-32), 13 Rust probes (a–m), all quantitative claims CHECKED NUMERICALLY with cited commands
+- **Corrections applied during verification:**
+  1. probe_c empirical S2 quantiles (stale pre-fix raw-gap-squares: 0.909/3.321 → corrected kernel-S2: min 2.2898e-4 = 1.031× floor — the zeros *attain* the worst case)
+  2. probe_m diagonal floor (3.73× → 1.532× rigidity bonus)
+  3. probe_b H1 scan artifact flagged (printed 0.001757; verified lobe peaks 0.1804/0.1064/0.0756)
+  4. R-24 node-clustering claim disproven by correct null (1.008× independence, not ~14×)
+  5. R-22 swirl-map fit corrected (E[v|u] ≈ 1.29−0.27u, not 1.6−0.44u)
+- **Newly documented:** probes h–m (vortex, membrane, crystal, thermostat/rain, harvest, girder) with ideas R-22…R-32, including the independently null-tested lag-20 quasi-period (ACF 0.0832 vs null 0.006–0.009)
+
+RESULT: COMPLETED — verified and completed the wave-blast random-entry deliverable: fixed 5 stale/incorrect claims (incl. probe_c's empirical floor attainment 2.2898e-4 = 1.031× certified, probe_m rigidity 1.53×, R-24 null disproving nodal clustering, R-22 reversion fit), documented 6 previously-unrecorded probes (h–m) adding 11 ideas to reach 22 stimuli → 32 ideas across 13 Rust probes, and independently null-tested the candidate lag-20 quasi-periodicity (ACF 0.0832, ~10× null).

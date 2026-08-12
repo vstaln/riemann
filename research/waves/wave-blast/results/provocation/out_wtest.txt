@@ -1,0 +1,11 @@
+E0 count 11000
+E1 blocks 4761 mean_dev -1.00151 sd 0.45467 max 2.50351
+E2 rep_b100 0.038708086431812
+E2 rep_b500 0.038708086431812
+E2 gaps n 10999 mean 0.9739 med 0.9199 min 0.0377 p10 0.4856 p90 1.5121 close_lt_half 1109 close_min_ratio 0.0387 tiny_lt_0.25 140 ap3 0 ap4 0
+E2 rep_last 0.038708086431812
+E3 ratio_mean 1.30449 mad_from_1 0.68968
+E4 reflect_mean_delta 262.1117 delta_lt_1 87 spec_gap_mean 0.00009
+E5 gram_multi2 3 total_blocks 4760
+E6 tiny_pair_rate 0.012728 min_gap_units 0.0387
+DONE

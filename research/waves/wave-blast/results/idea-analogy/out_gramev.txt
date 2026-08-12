@@ -1,0 +1,14 @@
+== G. Gram-spectrum anchors from real zeros ==
+G1 m=32 tr=32.0000 tr2=39.6016 mean=1.0000 conc=1-mean((l-1)^2)=0.762451
+G2 m=32 min_ev=0.104293 max_ev=1.800847 neg_count=0
+G3 m=32 row-energy-concentration (IPR proxy) = 4.7363
+G1 m=128 tr=128.0000 tr2=162.0342 mean=1.0000 conc=1-mean((l-1)^2)=0.734108
+G2 m=128 min_ev=0.055597 max_ev=2.021262 neg_count=0
+G3 m=128 row-energy-concentration (IPR proxy) = 10.7104
+
+== G4. extremal-law spectrum vs real (the 3-atom law) ==
+G4a extremal law: ones 2/3, twos 1/6, zeros 1/6
+G4b conc for extremal law = 1 - (1/6*(2-1)^2 + 1/6*(0-1)^2) = 1 - 1/3 = 0.6667
+G4c (see G1 m=128 conc value above for the real-zeros comparison)
+
+VERDICT: G-probes produced by gramev.rs (CHECKED NUMERICALLY)

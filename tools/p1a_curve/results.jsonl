@@ -1,0 +1,66 @@
+{"A": 1.0, "M": 64, "tau": 0.0, "success": true, "p1": 0.9286300861891557, "certified": 0.9286707762933223, "nz": 65, "time_s": 1.5, "seed": 42, "p0_256": 0.6818286874638315}
+{"A": 1.02, "M": 65, "tau": 0.0, "success": true, "p1": 0.9293237081960823, "certified": 0.929364398300249, "nz": 66, "time_s": 1.5, "seed": 42, "p0_256": 0.6818286874638315}
+{"A": 1.03, "M": 65, "tau": 0.0, "success": true, "p1": 0.9293237081960823, "certified": 0.929364398300249, "nz": 66, "time_s": 1.6, "seed": 42, "p0_256": 0.6818286874638315}
+{"A": 1.04, "M": 66, "tau": 0.0, "success": true, "p1": 0.9298418477924042, "certified": 0.9298825378965708, "nz": 67, "time_s": 1.7, "seed": 42, "p0_256": 0.6818286874638315}
+{"A": 1.05, "M": 67, "tau": 0.0, "success": true, "p1": 0.9307072162884843, "certified": 0.9307479063926509, "nz": 68, "time_s": 1.7, "seed": 42, "p0_256": 0.6818286874638315}
+{"A": 1.1, "M": 70, "tau": 0.0, "success": true, "p1": 0.937467096846527, "certified": 0.9375077869506936, "nz": 71, "time_s": 1.8, "seed": 42, "p0_256": 0.6818286874638315}
+{"A": 1.126, "M": 72, "tau": 0.0, "success": true, "p1": 0.9375170028556599, "certified": 0.9375576929598265, "nz": 73, "time_s": 1.8, "seed": 42, "p0_256": 0.6818286874638315}
+{"A": 1.13, "M": 72, "tau": 0.0, "success": true, "p1": 0.9375170028556599, "certified": 0.9375576929598265, "nz": 73, "time_s": 1.8, "seed": 42, "p0_256": 0.6818286874638315}
+{"A": 1.2, "M": 76, "tau": 0.0, "success": true, "p1": 0.9403150017712656, "certified": 0.9403556918754322, "nz": 77, "time_s": 2.0, "seed": 42, "p0_256": 0.6818286874638315}
+{"A": 1.26, "M": 80, "tau": 0.0, "success": true, "p1": 0.9427942973196598, "certified": 0.9428349874238264, "nz": 81, "time_s": 6.2, "seed": 42, "p0_256": 0.6818286874638315}
+{"A": 1.3, "M": 83, "tau": 0.0, "success": true, "p1": 0.9437062785465599, "certified": 0.9437469686507265, "nz": 84, "time_s": 2.3, "seed": 42, "p0_256": 0.6818286874638315}
+{"A": 1.4, "M": 89, "tau": 0.0, "success": true, "p1": 0.9468081088634889, "certified": 0.9468487989676555, "nz": 90, "time_s": 2.3, "seed": 42, "p0_256": 0.6818286874638315}
+{"A": 1.5, "M": 96, "tau": null, "success": false, "p1": null, "certified": null, "note": "infeasible in family at all tau", "seed": 42, "p0_256": 0.6818286874638315}
+{"A": 1.6, "M": 102, "tau": null, "success": false, "p1": null, "certified": null, "note": "infeasible in family at all tau", "seed": 42, "p0_256": 0.6818286874638315}
+{"A": 1.7, "M": 108, "tau": null, "success": false, "p1": null, "certified": null, "note": "infeasible in family at all tau", "seed": 42, "p0_256": 0.6818286874638315}
+{"A": 1.8, "M": 115, "tau": null, "success": false, "p1": null, "certified": null, "note": "infeasible in family at all tau", "seed": 42, "p0_256": 0.6818286874638315}
+{"A": 1.9, "M": 121, "tau": null, "success": false, "p1": null, "certified": null, "note": "infeasible in family at all tau", "seed": 42, "p0_256": 0.6818286874638315}
+{"A": 1.95, "M": 124, "tau": null, "success": false, "p1": null, "certified": null, "note": "infeasible in family at all tau", "seed": 42, "p0_256": 0.6818286874638315}
+{"A": 1.97, "M": 126, "tau": null, "success": false, "p1": null, "certified": null, "note": "infeasible in family at all tau", "seed": 42, "p0_256": 0.6818286874638315}
+{"A": 1.98, "M": 126, "tau": null, "success": false, "p1": null, "certified": null, "note": "infeasible in family at all tau", "seed": 42, "p0_256": 0.6818286874638315}
+{"A": 1.99, "M": 127, "tau": null, "success": false, "p1": null, "certified": null, "note": "infeasible in family at all tau", "seed": 42, "p0_256": 0.6818286874638315}
+{"A": 2.0, "M": 128, "tau": null, "success": false, "p1": null, "certified": null, "note": "infeasible in family at all tau", "seed": 42, "p0_256": 0.6818286874638315}
+{"A": 1.0, "M": 64, "tau": 0.0, "success": true, "p1": 0.9402991715869291, "certified": 0.9403398616910957, "nz": 65, "time_s": 1.9, "seed": 1234, "p0_256": 0.6818286874638315}
+{"A": 1.02, "M": 65, "tau": 0.0, "success": true, "p1": 0.9427438999626139, "certified": 0.9427845900667805, "nz": 66, "time_s": 1.7, "seed": 1234, "p0_256": 0.6818286874638315}
+{"A": 1.03, "M": 65, "tau": 0.0, "success": true, "p1": 0.9427438999626139, "certified": 0.9427845900667805, "nz": 66, "time_s": 1.7, "seed": 1234, "p0_256": 0.6818286874638315}
+{"A": 1.04, "M": 66, "tau": 0.0, "success": true, "p1": 0.9428316274187172, "certified": 0.9428723175228838, "nz": 67, "time_s": 1.7, "seed": 1234, "p0_256": 0.6818286874638315}
+{"A": 1.05, "M": 67, "tau": 0.0, "success": true, "p1": 0.9428640135231924, "certified": 0.942904703627359, "nz": 68, "time_s": 1.8, "seed": 1234, "p0_256": 0.6818286874638315}
+{"A": 1.1, "M": 70, "tau": 0.0, "success": true, "p1": 0.9459836543978739, "certified": 0.9460243445020405, "nz": 71, "time_s": 1.9, "seed": 1234, "p0_256": 0.6818286874638315}
+{"A": 1.126, "M": 72, "tau": 0.0, "success": true, "p1": 0.948629039210467, "certified": 0.9486697293146337, "nz": 73, "time_s": 1.9, "seed": 1234, "p0_256": 0.6818286874638315}
+{"A": 1.13, "M": 72, "tau": 0.0, "success": true, "p1": 0.948629039210467, "certified": 0.9486697293146337, "nz": 73, "time_s": 1.9, "seed": 1234, "p0_256": 0.6818286874638315}
+{"A": 1.2, "M": 76, "tau": 0.0, "success": true, "p1": 0.9536390038838948, "certified": 0.9536796939880614, "nz": 77, "time_s": 2.0, "seed": 1234, "p0_256": 0.6818286874638315}
+{"A": 1.26, "M": 80, "tau": 0.001, "success": true, "p1": 0.9553513231556745, "certified": 0.9553920132598411, "nz": 81, "time_s": 2.0, "seed": 1234, "p0_256": 0.6818286874638315}
+{"A": 1.3, "M": 83, "tau": null, "success": false, "p1": null, "certified": null, "note": "infeasible in family at all tau", "seed": 1234, "p0_256": 0.6818286874638315}
+{"A": 1.4, "M": 89, "tau": null, "success": false, "p1": null, "certified": null, "note": "infeasible in family at all tau", "seed": 1234, "p0_256": 0.6818286874638315}
+{"A": 1.5, "M": 96, "tau": null, "success": false, "p1": null, "certified": null, "note": "infeasible in family at all tau", "seed": 1234, "p0_256": 0.6818286874638315}
+{"A": 1.6, "M": 102, "tau": null, "success": false, "p1": null, "certified": null, "note": "infeasible in family at all tau", "seed": 1234, "p0_256": 0.6818286874638315}
+{"A": 1.7, "M": 108, "tau": null, "success": false, "p1": null, "certified": null, "note": "infeasible in family at all tau", "seed": 1234, "p0_256": 0.6818286874638315}
+{"A": 1.8, "M": 115, "tau": null, "success": false, "p1": null, "certified": null, "note": "infeasible in family at all tau", "seed": 1234, "p0_256": 0.6818286874638315}
+{"A": 1.9, "M": 121, "tau": null, "success": false, "p1": null, "certified": null, "note": "infeasible in family at all tau", "seed": 1234, "p0_256": 0.6818286874638315}
+{"A": 1.95, "M": 124, "tau": null, "success": false, "p1": null, "certified": null, "note": "infeasible in family at all tau", "seed": 1234, "p0_256": 0.6818286874638315}
+{"A": 1.97, "M": 126, "tau": null, "success": false, "p1": null, "certified": null, "note": "infeasible in family at all tau", "seed": 1234, "p0_256": 0.6818286874638315}
+{"A": 1.98, "M": 126, "tau": null, "success": false, "p1": null, "certified": null, "note": "infeasible in family at all tau", "seed": 1234, "p0_256": 0.6818286874638315}
+{"A": 1.99, "M": 127, "tau": null, "success": false, "p1": null, "certified": null, "note": "infeasible in family at all tau", "seed": 1234, "p0_256": 0.6818286874638315}
+{"A": 2.0, "M": 128, "tau": null, "success": false, "p1": null, "certified": null, "note": "infeasible in family at all tau", "seed": 1234, "p0_256": 0.6818286874638315}
+{"A": 1.0, "M": 64, "tau": 0.0, "success": true, "p1": 0.932588942783875, "certified": 0.9326296328880417, "nz": 65, "time_s": 1.7, "seed": 2024, "p0_256": 0.6818286874638315}
+{"A": 1.02, "M": 65, "tau": 0.0, "success": true, "p1": 0.9340175808034437, "certified": 0.9340582709076103, "nz": 66, "time_s": 1.7, "seed": 2024, "p0_256": 0.6818286874638315}
+{"A": 1.03, "M": 65, "tau": 0.0, "success": true, "p1": 0.9340175808034437, "certified": 0.9340582709076103, "nz": 66, "time_s": 1.7, "seed": 2024, "p0_256": 0.6818286874638315}
+{"A": 1.04, "M": 66, "tau": 0.0, "success": true, "p1": 0.9350373305494548, "certified": 0.9350780206536214, "nz": 67, "time_s": 1.8, "seed": 2024, "p0_256": 0.6818286874638315}
+{"A": 1.05, "M": 67, "tau": 0.0, "success": true, "p1": 0.935295793787997, "certified": 0.9353364838921636, "nz": 68, "time_s": 1.8, "seed": 2024, "p0_256": 0.6818286874638315}
+{"A": 1.1, "M": 70, "tau": 0.0, "success": true, "p1": 0.9404161803171542, "certified": 0.9404568704213209, "nz": 71, "time_s": 2.0, "seed": 2024, "p0_256": 0.6818286874638315}
+{"A": 1.126, "M": 72, "tau": 0.0, "success": true, "p1": 0.9434823879465695, "certified": 0.9435230780507361, "nz": 73, "time_s": 2.0, "seed": 2024, "p0_256": 0.6818286874638315}
+{"A": 1.13, "M": 72, "tau": 0.0, "success": true, "p1": 0.9434823879465695, "certified": 0.9435230780507361, "nz": 73, "time_s": 2.0, "seed": 2024, "p0_256": 0.6818286874638315}
+{"A": 1.2, "M": 76, "tau": 0.0, "success": true, "p1": 0.948068806256046, "certified": 0.9481094963602126, "nz": 77, "time_s": 2.2, "seed": 2024, "p0_256": 0.6818286874638315}
+{"A": 1.26, "M": 80, "tau": null, "success": false, "p1": null, "certified": null, "note": "infeasible in family at all tau", "seed": 2024, "p0_256": 0.6818286874638315}
+{"A": 1.3, "M": 83, "tau": null, "success": false, "p1": null, "certified": null, "note": "infeasible in family at all tau", "seed": 2024, "p0_256": 0.6818286874638315}
+{"A": 1.4, "M": 89, "tau": null, "success": false, "p1": null, "certified": null, "note": "infeasible in family at all tau", "seed": 2024, "p0_256": 0.6818286874638315}
+{"A": 1.5, "M": 96, "tau": null, "success": false, "p1": null, "certified": null, "note": "infeasible in family at all tau", "seed": 2024, "p0_256": 0.6818286874638315}
+{"A": 1.6, "M": 102, "tau": null, "success": false, "p1": null, "certified": null, "note": "infeasible in family at all tau", "seed": 2024, "p0_256": 0.6818286874638315}
+{"A": 1.7, "M": 108, "tau": null, "success": false, "p1": null, "certified": null, "note": "infeasible in family at all tau", "seed": 2024, "p0_256": 0.6818286874638315}
+{"A": 1.8, "M": 115, "tau": null, "success": false, "p1": null, "certified": null, "note": "infeasible in family at all tau", "seed": 2024, "p0_256": 0.6818286874638315}
+{"A": 1.9, "M": 121, "tau": null, "success": false, "p1": null, "certified": null, "note": "infeasible in family at all tau", "seed": 2024, "p0_256": 0.6818286874638315}
+{"A": 1.95, "M": 124, "tau": null, "success": false, "p1": null, "certified": null, "note": "infeasible in family at all tau", "seed": 2024, "p0_256": 0.6818286874638315}
+{"A": 1.97, "M": 126, "tau": null, "success": false, "p1": null, "certified": null, "note": "infeasible in family at all tau", "seed": 2024, "p0_256": 0.6818286874638315}
+{"A": 1.98, "M": 126, "tau": null, "success": false, "p1": null, "certified": null, "note": "infeasible in family at all tau", "seed": 2024, "p0_256": 0.6818286874638315}
+{"A": 1.99, "M": 127, "tau": null, "success": false, "p1": null, "certified": null, "note": "infeasible in family at all tau", "seed": 2024, "p0_256": 0.6818286874638315}
+{"A": 2.0, "M": 128, "tau": null, "success": false, "p1": null, "certified": null, "note": "infeasible in family at all tau", "seed": 2024, "p0_256": 0.6818286874638315}

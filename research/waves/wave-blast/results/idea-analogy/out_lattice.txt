@@ -1,0 +1,17 @@
+== H. 256-lattice Gram spectrum (Delsarte/two-distance anchor) ==
+H1 n=64 tr=64.000 tr2=64.385 conc=0.993978 min=0.8332 max=1.0884
+H2 n=64 eigenvalues near 0/1/2: 0/54/0 (3-atom check)
+H1 n=256 tr=256.000 tr2=257.562 conc=0.993899 min=0.8289 max=1.0885
+H2 n=256 eigenvalues near 0/1/2: 0/216/0 (3-atom check)
+H3 real-zeros comparison (gramev.rs): m=128 conc=0.7341, m=32 conc=0.7625
+
+== I. two-window overlap / aging anchor ==
+I1 halves: 5500 and 5500 zeros; max |C1-C2| = 0.008545
+I2 alpha=0.1 |C1-C2|/null_std = 0.073
+I2 alpha=0.5 |C1-C2|/null_std = 0.116
+I2 alpha=0.9 |C1-C2|/null_std = 0.064
+I2 alpha=1.3 |C1-C2|/null_std = 0.015
+I2 alpha=1.7 |C1-C2|/null_std = 0.023
+I3 (ratio ~ 1 = equilibrium/stationary; >> 1 = systematic/glassy drift)
+
+VERDICT: H/I probes produced by lattice.rs (CHECKED NUMERICALLY)

@@ -1,0 +1,6 @@
+E7a ap4_strict_1e3 0 ap4_loose_1e2 3
+E7b dev_mean 1.1947 dev_max 9.0356 dev_at_100 2.5387 dev_at_9999 0.5983
+E7c p4_periodicity 0.013657 p8_periodicity 0.025997 mean_gap 0.98659
+E8 curvature_runs 7099 max_run 5 mean_run 1.408
+E8b third_diff_small_1e2 68
+DONE

@@ -1,0 +1,5 @@
+** WARNING: connection is not using a post-quantum key exchange algorithm.
+** This session may be vulnerable to "store now, decrypt later" attacks.
+** The server may need to be upgraded. See https://openssh.com/pq.html
+]777;notify;π;Done. The deliverable is at /home/opc/riemann/research/waves/wave-orch-phone/results/theorist-systems.md (145 lines — slightly over the ~120 guidance because of the honesty section; content is focuse…]777;notify;π;Deliverable written. Summary of what was produced: ~/riemann/research/waves/wave-orch-phone/results/idea-gen-analogy.md (369 lines, 7 transfers, ranked) Key finding (grounded in fresh sandbox runs + …]777;notify;π;All timestamps confirm the documented mid-session rewrite (binary 08:57 vs my first probe at ~08:33). Work is complete. Summary RESULT: REFUTED — the 4th-moment two-world separation does not survive …Read from remote host 168.110.210.65: Software caused connection abort
+client_loop: send disconnect: Broken pipe

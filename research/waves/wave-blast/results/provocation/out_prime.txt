@@ -1,0 +1,26 @@
+P1 ap4_prime 0 ap4_composite 0 ap4_random_avg 0 (trials 200) prime_gaps 1335
+P2 mean_gap_prime 0.97392 mean_gap_composite 1.00357 mean_gap_all 0.99998
+P3 gap_mean 0.99998 gap_var 0.15459
+P3 ac_lag_1 -0.36890
+P3 ac_lag_2 -0.08836
+P3 ac_lag_3 -0.05012
+P3 ac_lag_4 -0.02733
+P3 ac_lag_5 -0.00903
+P3 ac_lag_6 -0.00897
+P3 ac_lag_7 0.01070
+P3 ac_lag_8 0.02881
+P3 ac_lag_9 0.01108
+P3 ac_lag_10 -0.00227
+P3 ac_lag_11 0.02078
+P3 ac_lag_12 0.03613
+P3 ac_lag_13 0.01294
+P3 ac_lag_14 -0.00311
+P3 ac_lag_15 -0.05444
+P3 ac_lag_16 -0.10581
+P3 ac_lag_17 -0.00773
+P3 ac_lag_18 0.06768
+P3 ac_lag_19 0.04941
+P3 ac_lag_20 0.02445
+P3 runs 7819 mean_run 1.407
+P4 nn_share 0.252441 total_pairsum 69018.453868
+DONE

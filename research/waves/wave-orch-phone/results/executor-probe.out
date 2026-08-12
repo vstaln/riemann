@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/var/lib/proot-distro/containers/ubuntu/rootfs/root/riemann/research/waves/wave-orch-phone/probe/tower_probe.py", line 243, in <module>
+    main()
+    ~~~~^^
+  File "/data/data/com.termux/files/usr/var/lib/proot-distro/containers/ubuntu/rootfs/root/riemann/research/waves/wave-orch-phone/probe/tower_probe.py", line 87, in main
+    roots = find_roots(H1, lo, hi)
+  File "/data/data/com.termux/files/usr/var/lib/proot-distro/containers/ubuntu/rootfs/root/riemann/research/waves/wave-orch-phone/probe/tower_probe.py", line 49, in find_roots
+    if f_prev * f_next < 0:
+       ^^^^^^^^^^^^^^^^^^^
+TypeError: '<' not supported between instances of 'mpc' and 'int'
