@@ -28,7 +28,8 @@ for spec in "${SPECS[@]}"; do
   tname="$(basename "$spec")"
   (
     timeout 1800 ssh -o ConnectTimeout=15 -o BatchMode=yes "$h" \
-      "export PATH=\"\$HOME/.npm-global/bin:\$HOME/.cargo/bin:\$PATH\"; cd \"\$HOME/riemann\"; \
+      "export PATH=\"\$HOME/.npm-global/bin:\$HOME/.cargo/bin:/usr/bin:\$PATH\"; cd \"\$HOME/riemann\" 2>/dev/null || cd /tmp; \
+       command -v pi >/dev/null || { echo 'PI NOT FOUND on $h'; exit 1; }; \
        pi -p --provider commandcode --model deepseek/deepseek-v4-flash" < "$spec" \
       > "research/waves/$WAVE/results/$h--$tname.out" 2>&1
     echo "[blaster] DONE $h: $tname ($(wc -c < "research/waves/$WAVE/results/$h--$tname.out") bytes)"
