@@ -1,6 +1,6 @@
 # 🏆 NEW RECORD (certified) — 0.673435 via coboundary redistribution (α=1.49) and 0.673385 (α=√2)
 
-**Date:** 2026-08-13 (overnight). **Status:** CHECKED NUMERICALLY (Arb interval verifier, grid 4000).
+**Date:** 2026-08-13 (overnight). **Status:** CHECKED NUMERICALLY + INDEPENDENTLY CONFIRMED (Arb interval verifier, grid 4000, two independent runs).
 
 ## Summary
 
@@ -67,7 +67,7 @@ so these bounds are LOWER bounds on what re-optimization achieves.
 ## Honesty ledger
 
 - CHECKED NUMERICALLY: verify_floor at α=1.49, eps=620/1e5 → verified=True (826,548 nodes).
-  **Pending: independent re-verification (launched, /tmp/indep-verify-149.log).**
+  **INDEPENDENTLY CONFIRMED: second run → verified=True (826,548 nodes, identical), 630/1e5 → False (terminal-cell, 214,843 nodes).**
 - CHECKED NUMERICALLY: verify_floor at α=√2, eps=600/1e5 → verified=True (739,794 nodes).
 - CHECKED NUMERICALLY: bound arithmetic (exact mpmath, 30 dps).
 - w(0)=1.00000000000000 for both α (single normalization — the retracted double-normalization
