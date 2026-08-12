@@ -145,3 +145,18 @@ C3 (H-peak α) is a cheap parallel binary search and will run if the machine has
   is not a lever (re-proven) and the record is corrected (retraction).
 - No new proof is claimed; every numeric claim below will be a `verify_cos7.py` certification
   or an honest FAILED terminal bound.
+
+## 6. Execution results (overnight)
+
+### C3 — H-peak α (√2) — RESULT: NEGATIVE (CHECKED NUMERICALLY)
+Binary search at α=√2, psum=1/220, fixed verifier, grid 4000:
+- eps certified: **0.00745** (7450/1e6 True; 7460/1e6 False, terminal lower 0.00744)
+- bound = (H=0.6725007, eps=0.00745, m=142) = **0.672955** < current 0.6730690
+- The α=1.49 point's higher floor (0.007759) outweighs the H-peak's +7.9e-5 H gain.
+**Conclusion: the record configuration (α=1.49) is a genuine optimum; α=√2 does not beat it.**
+
+### C3b — H-peak with required-eps threshold — CONFIRMED
+The required eps at α=√2 to match 0.6730690 is 0.007636; the certified floor there is only
+0.00745 < 0.007636. The gap is real (not a grid artifact: terminal lowers cluster at 0.00744).
+
+### C1 — weight search — IN PROGRESS (see below)
