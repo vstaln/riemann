@@ -160,3 +160,37 @@ The required eps at α=√2 to match 0.6730690 is 0.007636; the certified floor 
 0.00745 < 0.007636. The gap is real (not a grid artifact: terminal lowers cluster at 0.00744).
 
 ### C1 — weight search — IN PROGRESS (see below)
+
+## 7. BREAKTHROUGH INSIGHT (arithmetic, CHECKED NUMERICALLY) — why tawanerguo wins, and the precise untried combo
+
+Reading `research/external-results/tawanerguo-zeta-simple-zeros/BELLMAN_COBBOUNDARY_PROOF.md`
+revealed the full tawanerguo recipe, which the bound arithmetic now explains:
+
+- **tawanerguo**: α=1.47, **psum=1/320** (via redistribution sum(p)=1/320), eps=0.00577 (F_B≥577/1e5), m=183 → 0.6731929 (reproduced exactly).
+- **ours**: α=1.49, psum=1/220, eps=0.007759, m=137 → 0.6730690.
+
+The coboundary `U(g1..g5) = (54g1−123g2+123g4−54g5)/1920000 + (5971/300000)[w(g1)+w(g2)−w(g4)−w(g5)]`
+**telescopes on periodic sequences** (adds 0 on average) while redistributing the per-gap pressure
+non-uniformly. This redistribution is what makes the **looser psum=1/320 certifiable** — it
+concentrates pressure where the crystal adversary is weak. That is the "break the eps–psum
+coupling" lever (idea-systems I1), and tawanerguo already used a version of it.
+
+**The decisive arithmetic (bound formula, all CHECKED NUMERICALLY):**
+
+| config | bound |
+|---|---|
+| tawanerguo (1.47, 1/320, 0.00577, m=183) | 0.6731929 |
+| ours (1.49, 1/220, 0.007759, m=137) | 0.6730690 |
+| **coboundary @1.49, psum=1/320, eps=0.0060** | **0.673304** (beats tawanerguo +1.1e-4) |
+| **coboundary @1.49, psum=1/320, eps=0.0065** | **0.673616** |
+| coboundary @√2, psum=1/320, eps=0.0057 | 0.673190 |
+| **coboundary @√2, psum=1/320, eps=0.0060** | **0.673383** |
+
+**The untried combination (now precise):** apply the coboundary redistribution at α=1.49 or α=√2
+with psum=1/320. If the redistribution certifies eps ≥ 0.0059 there (vs tawan's 0.00577 at 1.47),
+the bound beats tawanerguo. The H-peak √2 is especially favorable: its H=0.6725007 is +4.2e-5 over
+α=1.47, so even eps=0.0058 at √2 gives 0.67324 (beats tawanerguo).
+
+**This is what the overnight subagent 'coboundary redistribution re-optimization' is executing.**
+The redistribution coefficients (p,q) and the coboundary U must be re-derived for the new α —
+they are NOT free to transfer (they were optimized for α=1.47's kernel zeros).
