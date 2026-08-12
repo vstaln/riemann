@@ -134,3 +134,9 @@ T1: Lean-style statement READY (theorem + exact closed forms + gap list; hCert A
 - VALIDATED vs LMFDB 11k: max |Δγ| = 6.44e-4 < 1e-3 BAR MET; 11000/11000 complete; 0 duplicates. 100k zeros in 12.7 s @ step 0.01 (3.3x vs 42 s baseline); 6.8 s @ 0.02 (6.2x).
 - Completeness: resolves twins down to gap ~0.01 (baseline's 0.2-step missed ALL pairs < 0.2, -785/100k). Verified real pair at gap 0.0148 (t=71733).
 - PRODUCTION FINDER for the 10M shard run (LMFDB blockstarts as ground-truth boundaries).
+## 2026-08-12 — WEIGHT-PROFILE SWEEP (C1) CLOSED — last unscanned in-class DOF scanned
+- Proxy (babd4afe sweep_proxy) ranked 40+ profiles; top span3_ramp_up proxy floor 0.008126 (claimed >8066).
+- REAL ORACLE at grid 4000 (record grid): span3_ramp_up/span3_ends2/ramp_up0.5 ALL FAIL 8066 — certified lowers 0.0080519-0.0080525, BELOW the default's 0.008065. Proxy ranking inverted for skewed profiles (multi-start missed true minima).
+- VERDICT: default 2/(7-r) profile was already optimal; C1 CLOSED. Full in-class inventory now priced: P-ascent CLOSED, alpha CLOSED (1.49), n-family CLOSED, weights CLOSED, ceiling 0.6818 FORMALIZED (law-specific).
+- Record 0.6732660791 (eps=8065@g4000) stands certified-optimal IN-CLASS. Route to 0.70 needs a certificate-class change (c=3 distinct port 0.83621; rank-trace/integrality ladder).
+- Verdict file: results/weight-sweep-verdict.md. Oracle outs on laptop /tmp/oracle_*.g4000.out.
