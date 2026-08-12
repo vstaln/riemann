@@ -1,0 +1,1195 @@
+3202
+peS
+41
+]TN.htam[
+4v18570.4032:viXra
+SHARP UPPER BOUND FOR THE SIXTH MOMENT OF THE
+RIEMANN ZETA FUNCTION
+THI ALTENSCHMIDT
+Abstract. The main task of this work is to give an improvement for the upper bounds of
+the Laplace transform β >2
+∀
++∞ 2β
+1 1 1 1
+ζ +it e
+−δtdt
+max , ,
+ˆ 0 (cid:12) (cid:18) 2 (cid:19)(cid:12) ≪ β,ε (cid:26) δ β− 2 1+ε δ1+ε δβ−2+ε (cid:27)
+(cid:12) (cid:12)
+for (cid:12) (cid:12) π
+(cid:12) (cid:12) 0<δ < ,δ 0+, ε>0.
+2 → ∀
+In particular, this implies
+T 1 6
+ζ +it dt T1+ε T + , ε>0.
+ˆ 2 ≪ β,ε → ∞ ∀
+0 (cid:12) (cid:18) (cid:19)(cid:12)
+(cid:12) (cid:12)
+(cid:12) (cid:12)
+(cid:12) (cid:12)
+Introduction
+Let β N be a natural number. The 2β-th integer absolute moment of the Riemann zeta
+∈
+function on the critical line is defined as
+T 1 2β
+M (T) = ζ +it dt.
+β ˆ 2
+0 (cid:12) (cid:18) (cid:19)(cid:12)
+(cid:12) (cid:12)
+The main conjecture in estimation of the (cid:12)absolute mo(cid:12)ments is the following asymptotic
+(cid:12) (cid:12)
+formula
+M (T) C T
+logβ2
+(T), T + ,
+β β
+∼ · · → ∞
+for some positive constants C ([HB81, p. 65]). In [KS00] the conjecture is stated with
+β
+explicite coefficients C . For β = 0 the formula is trivial. For β = 1,2 it is well-known
+β
+that C = 1, resp. C = 1 from the classical works of G.H. Hardy und J.E. Littlewood
+1 2 2π2
+[HaLi18] resp. A.E. Ingham [Ing26]. In fact, if one could prove only the sharp upper bounds
+M (T) T1+ε for all β > 2, then this already implies the Lindelöf hypothesis, which says
+β β,ε
+≪
+ζ 1 +it t ε, because (cf. [Iv85, p. 45])
+2 ≪ ε | |
+(cid:0) (cid:1) T+log2T 1 2β
+ζ(1/2+it) 2β logT 1+ ζ +it dt .
+| | ≪ ˆ 2
+T−log2T (cid:12) (cid:18) (cid:19)(cid:12) !
+(cid:12) (cid:12)
+On Riemann hypothesis K. Soundararajan proved in [
+(cid:12)
+(cid:12)S09] that M
+(cid:12)
+(cid:12) (T) T
+(logT)β2+ε
+β β,ε
+≪
+for every positive real number β and ε > 0 and this has been improved in [Ha13]. In [Tit86,
+∀
+2020 Mathematics Subject Classification. 11M06.
+Key words and phrases. Riemann zeta function, absolute moments.
+Ich möchte mich an dieser Stelle bei meiner Ehefrau Sabine Liesbeth Altenschmidt für ihre unendliche
+Liebe, Geduld und Unterstützung bedanken.
+1
+
+| Chap. | VII] | one considers |     | the   | Laplace | transform |     |         |     |     |     |     |     |
+| ----- | ---- | ------------- | --- | ----- | ------- | --------- | --- | ------- | --- | --- | --- | --- | --- |
+|       |      |               |     |       | +∞      | 1         |     | 2β      |     |     | π   |     |     |
+|       |      |               | J   | (δ) = |         | ζ         | +it | e−δtdt, |     | 0 < | δ < |     |     |
+β
+|         |           |        |     |         | ˆ               | 2                 |                  |          |       |     | 2   |     |     |
+| ------- | --------- | ------ | --- | ------- | --------------- | ----------------- | ---------------- | -------- | ----- | --- | --- | --- | --- |
+|         |           |        |     |         | 0               | (cid:12) (cid:18) | (cid:19)(cid:12) |          |       |     |     |     |     |
+|         |           |        |     |         |                 | (cid:12)          |                  | (cid:12) |       |     |     |     |     |
+| and the | classical | result |     | is (cf. | [Tit86(cid:12), | Chap.             | VII(cid:12),     | p.       | 173]) |     |     |     |     |
+|         |           |        |     |         |                 | (cid:12)          |                  | (cid:12) |       |     |     |     |     |
+1
+|     |     |     | J   | (2δ) = | O   |            | ,        | δ   | 0+, | ε > 0,β | > 2. |     |     |
+| --- | --- | --- | --- | ------ | --- | ---------- | -------- | --- | --- | ------- | ---- | --- | --- |
+|     |     |     |     | β      | β,ε | β+ε        |          |     |     |         |      |     |     |
+|     |     |     |     |        |     | δ          |          | →   | ∀   |         |      |     |     |
+|     |     |     |     |        |     | (cid:18) 2 | (cid:19) |     |     |         |      |     |     |
+In this work we improve this classical result by proving the following
+| Theorem | 1.  | As δ | 0+  |     |     |     |     |     |     |     |     |     |     |
+| ------- | --- | ---- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+→
+|              |     |           |     |     |          | 1     | 1    | 1      |          |        |          |     |     |
+| ------------ | --- | --------- | --- | --- | -------- | ----- | ---- | ------ | -------- | ------ | -------- | --- | --- |
+|              |     | J         | (δ) | max |          |       | ,    | ,      | ,        | ε      | > 0, β > | 2.  |     |
+|              |     |           | β   | β,ε |          | β−1+ε | δ1+ε | δβ−2+ε |          |        |          |     |     |
+|              |     |           | ≪   |     |          | δ     |      |        |          | ∀      | ∀        |     |     |
+|              |     |           |     |     | (cid:26) | 2     |      |        | (cid:27) |        |          |     |     |
+| Consequently |     | we obtain |     |     |          |       |      |        |          |        |          |     |     |
+| Corollary    |     | 2. As     | T   | +   |          |       |      |        |          |        |          |     |     |
+|              |     |           | →   | ∞   |          |       |      |        |          |        |          |     |     |
+|              |     |           |     | M   | (T)      | T1+ε, |      | T      | + ,      | ε > 0. |          |     |     |
+|              |     |           |     |     | 3        | ε     |      |        |          |        |          |     |     |
+|              |     |           |     |     |          | ≪     |      | →      | ∞ ∀      |        |          |     |     |
+| Proof:       |     | >         |     |     |          |       |      |        |          |        |          |     |     |
+Let f(t) 0 be a non-negative function. For δ > 0, if we have ε > 0
+∀
++∞
+|     |     |     |     |     | f(t)e−δtdt |     |     |           |     | 0+  |     |     |     |
+| --- | --- | --- | --- | --- | ---------- | --- | --- | --------- | --- | --- | --- | --- | --- |
+|     |     |     |     |     |            |     |     | g(1/δ,ε), |     | δ   |     |     |     |
+|     |     |     |     | ˆ   |            |     | ≪ ε |           |     | →   |     |     |     |
+0
+| for some | function |     | g then |     |     |     |     |     |     |     |     |     |     |
+| -------- | -------- | --- | ------ | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+T
+|     |     |     |     |     | f(t)dt | g(T,ε), |     | T   | +   | , ε > | 0.  |     |     |
+| --- | --- | --- | --- | --- | ------ | ------- | --- | --- | --- | ----- | --- | --- | --- |
+ε
+|     |     |     |     | ˆ   |     | ≪   |     | →   | ∞   | ∀   |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+0
+| Indeed, | we have |        |     |     |             |     |     |     |             |     |         |     |     |
+| ------- | ------- | ------ | --- | --- | ----------- | --- | --- | --- | ----------- | --- | ------- | --- | --- |
+|         |         | T      |     |     | T           |     |     |     | +∞          |     |         |     |     |
+|         |         | f(t)dt |     | < e | f(t)e−t/Tdt |     | <   | e   | f(t)e−t/Tdt |     | g(T,ε). |     |     |
+ε
+|        |           | ˆ       |     | ·ˆ          |     |      |         | ·ˆ  |     |     | ≪   |     |         |
+| ------ | --------- | ------- | --- | ----------- | --- | ---- | ------- | --- | --- | --- | --- | --- | ------- |
+|        |           | 0       |     |             | 0   |      |         | 0   |     |     |     |     |         |
+| So the | corollary | follows |     | immediately |     | from | theorem | 1.  |     |     |     |     | (cid:3) |
+Wewill follow themainframework [Tit86, Chap. VII§7.13 -§7.18]andinclude allthedetails
+of our own arguments. We explain briefly now our idea. In [Tit86, Chap. VII §7.18] one
+breaks down
+|       |     | +∞       |         |                 |      | λ        |         |                 |           | +∞  |                  |                 |     |
+| ----- | --- | -------- | ------- | --------------- | ---- | -------- | ------- | --------------- | --------- | --- | ---------------- | --------------- | --- |
+|       |     |          |         | 2               |      |          |         |                 | 2         |     |                  | 2               |     |
+|       |     | Φ        | xie−iδ  |                 | dx = | Φ        | xie−iδ  |                 | dx+       |     | Φ xie−iδ         | dx,             |     |
+|       |     |          | β       |                 |      |          | β       |                 |           |     | β                |                 |     |
+|       | ˆ   |          |         |                 |      | ˆ        |         |                 |           | ˆ   |                  |                 |     |
+|       | 0   |          |         |                 |      | 0        |         |                 |           | λ   |                  |                 |     |
+|       |     | (cid:12) | (cid:0) | (cid:1)(cid:12) |      | (cid:12) | (cid:0) | (cid:1)(cid:12) |           |     | (cid:12) (cid:0) | (cid:1)(cid:12) |     |
+| where |     | (cid:12) |         | (cid:12)        |      | (cid:12) |         | (cid:12)        |           |     | (cid:12)         | (cid:12)        |     |
+|       |     |          |         |                 |      | +∞       |         |                 | Γ(s)ζβ(s) |     |                  |                 |     |
++Res
+|     |     |     |     | Φ (z) | =   | d (n)e−nz |     |     |     |     |     |     |     |
+| --- | --- | --- | --- | ----- | --- | --------- | --- | --- | --- | --- | --- | --- | --- |
+|     |     |     |     | β     |     | β         |     |     | s=1 |     |     |     |     |
+zs
+n=1
+X
+then integrates part by part, which leads to the problem with the estimation of the double
+sums over all natural numbers n,m with n = m involving d (n)d (m), since one can choose
+|     |     |     |     |     |     |     |     |     |     | β   | β   |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+6 2
+
+β
+only λ = δ as the optimal choice to balance the upper bounds of both integrals above.
+2
+| Instead | of  | that, | we break | down |     |     |     |     |     |     |     |     |     |
+| ------- | --- | ----- | -------- | ---- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
++∞
+|     | Φ   | xie−iδ | 2   | dx  |     |     |     |     |     |     |     |     |     |
+| --- | --- | ------ | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+β
+ˆ
+0
+|     | (cid:12) | (cid:0) | (cid:1)(cid:12) |         |                 |     | β−1 |                  |        |                 |     |                  |                 |
+| --- | -------- | ------- | --------------- | ------- | --------------- | --- | --- | ---------------- | ------ | --------------- | --- | ---------------- | --------------- |
+|     | (cid:12) |         | +∞(cid:12)      |         |                 |     | δ   | 2                |        |                 |     | 1                |                 |
+|     |          |         |                 |         |                 | 2   |     |                  |        | 2               |     |                  | 2               |
+|     |          | =       | Φ               | xie−iδ  |                 | dx+ |     | Φ                | xie−iδ | dx+             |     | Φ xie−iδ         | dx.             |
+|     |          |         |                 | β       |                 |     |     | β                |        |                 |     | β                |                 |
+|     |          |         | ˆ               |         |                 |     | ˆ   |                  |        |                 | ˆ   | β−1              |                 |
+|     |          |         | 1               |         |                 |     | 0   |                  |        |                 | δ   | 2                |                 |
+|     |          |         | (cid:12)        | (cid:0) | (cid:1)(cid:12) |     |     | (cid:12) (cid:0) |        | (cid:1)(cid:12) |     | (cid:12) (cid:0) | (cid:1)(cid:12) |
+The upper bounds fo(cid:12)r the first (cid:12)two integrals a(cid:12)re well-kno(cid:12)wn. The tric(cid:12)ky part is (cid:12)now to
+estimate the third integral. Prof. B. Conrey kindly pointed out to me by a simple argument
++∞ (n)e−nz.
+that one can’t get rid off the oscillations in the sum d β Let now α (0,1)
+|     |     |     |     |     |     |     |     |     | n=1 |     |     |     | ∈   |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+be a real number. By method of moving contour integrals and residue calculation we shift
+P
+| firstly | to the | negative |     | vertical | line |       |     |     |     |     |     |     |     |
+| ------- | ------ | -------- | --- | -------- | ---- | ----- | --- | --- | --- | --- | --- | --- | --- |
+|         |        |          |     |          |      | −α+i∞ |     |     | ds  |     |     |     |     |
+Γ(s)ζβ(s)
+(xie−iδ)s
+ˆ
+−α−i∞
+then use the functional equation ζ(s) = χ(s)ζ(1 s) to turn back to the line σ = 1+α. This
+−
+is the reflection principle (see e.g [Iv85, §4.4]). The crucial point is that the two integrals
+|     |     |     | −α+i∞ |           |     |           | ds  | −α+i∞ |     | Γ(s)ζβ(s) |     |     |     |
+| --- | --- | --- | ----- | --------- | --- | --------- | --- | ----- | --- | --------- | --- | --- | --- |
+|     |     |     |       | Γ(s)ζβ(s) |     |           |     | ,     |     |           |     | ds  |     |
+|     |     |     | ˆ     |           |     | (xie−iδ)s |     | ˆ     |     | (xie−iδ)s |     |     |     |
+| |
+|     |     |     | −α−i∞ |     |     |     |     | −α−i∞ |     | (cid:12) | (cid:12) |     |     |
+| --- | --- | --- | ----- | --- | --- | --- | --- | ----- | --- | -------- | -------- | --- | --- |
+|     |     |     |       |     |     |     |     |       |     | (cid:12) | (cid:12) |     |     |
+are quite different. The oscillations in the first one will(cid:12)cancel out(cid:12) each other, while the
+|     |     |     |     |     |     |     |     |     |     | (cid:12) | (cid:12) |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | -------- | -------- | --- | --- |
+second one is very huge. With the techniques of exponential integrals (see [Iv85, §2.1]) we
+can reduce the higher power of 1 in the oscillatory integral by 1/2. This old idea has been
+δ
+exploited already very successfully in [Tit86, Chap. XII, p. 315] for estimating the rest
+∆ (x) of the general divisor sum D (x) = d (n) subtracted by xP (x). Now, by
+| β   |     |     |     |     |     | β   |     | n6x β |     |     |     | β−1 |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | --- | --- | --- |
+ε
+choosing α = , we get the desired estimation. Since we must rely on the classical result
+2(β−1)
+P
+| in [Tit86, |     | Chap. | VII, p.173] |     |     |     |     |     |     |     |     |     |     |
+| ---------- | --- | ----- | ----------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+β−1
+|     |     |     | δ 2      |         |          |     |          |            |     |      |     |         |     |
+| --- | --- | --- | -------- | ------- | -------- | --- | -------- | ---------- | --- | ---- | --- | ------- | --- |
+|     |     |     |          |         | 2        |     |          | 1          |     |      |     |         |     |
+|     |     |     | Φ        | (xie−iδ | dx       | = O |          |            | , β | > 2, | ε > | 0,δ 0+, |     |
+|     |     |     | β        |         |          |     | β,ε      | β−         |     |      |     |         |     |
+|     |     | ˆ   |          |         |          |     | δ        | 1+ε        | ∀   |      | ∀   | →       |     |
+|     |     | 0   |          |         |          |     | (cid:18) | 2 (cid:19) |     |      |     |         |     |
+|     |     |     | (cid:12) |         | (cid:12) |     |          |            |     |      |     |         |     |
+it is clear that our(cid:12)method w(cid:12)on’t work in higher cases β > 4. Now we fix some notations
+throughout this work. We will denote by C some positive constants, which depend only
+β
+on β and they must not be the same everywhere. By P (z) we will mean some complex
+β−1
+polynomials in z of degree β 1 and again they can be different from each other. All the
+−
+asymptotic notations will be written freely either in Landau’s or in Vinogradov’s style.
+|     |     |     |     |     |     | Proof | of  | theorem |     | 1   |     |     |     |
+| --- | --- | --- | --- | --- | --- | ----- | --- | ------- | --- | --- | --- | --- | --- |
+1.
+By analytic continuation of the Cahen-Mellin’s formula one has for a complex number z with
+|      |      | R(z) |           |          |     |        |       | π      |      |       |     |          |     |
+| ---- | ---- | ---- | --------- | -------- | --- | ------ | ----- | ------ | ---- | ----- | --- | -------- | --- |
+| real | part |      | > 0 and   | argument |     | Arg(z) | <     |        |      |       |     |          |     |
+|      |      |      |           |          |     | |      | |     | 2      |      |       |     |          |     |
+|      |      |      |           |          |     | +∞     |       |        |      |       |     | +∞       |     |
+|      |      | 1    | 2+i∞      |          | ds  |        |       | 1 2+i∞ |      | ds    |     |          |     |
+|      |      |      | Γ(s)ζβ(s) |          |     |        |       |        |      |       |     | (n)e−nz, |     |
+|      |      |      |           |          | =   |        | d (n) |        | Γ(s) |       | =   | d        |     |
+|      | 2πi  | ˆ    |           |          | zs  |        | β     | 2πi ˆ  |      | (nz)s |     | β        |     |
+|      |      | 2−i∞ |           |          |     |        |       | 2−i∞   |      |       |     |          |     |
+|      |      |      |           |          |     | n=1    |       |        |      |       |     | n=0      |     |
+|      |      |      |           |          |     | X      |       | 3      |      |       |     | X        |     |
+
+where
+d (n) = 1.
+β
+n=n X1n2...nβ
+The function Γ(s)ζβ(s) 1 has a pole at s = 1. We define
+zs
+1
+Ψ (z) = Res Γ(s)ζβ(s)
+β s=1 zs
+(cid:18) (cid:19)
+and
++∞
+Φ (z) = d (n)e−nz Ψ (z).
+β β β
+−
+n=0
+X
+Residue calculation gives us
+1 logβ−1(z)
+Ψ (z) = λ λ log(z)+ +( 1)β−1λ ,
+β 0 1 β−1
+z − ··· − (β 1)!
+(cid:26) − (cid:27)
+where λ ,...,λ are the coefficients in the series representation near the pole s = 1 of
+0 β−1
+β−1 +∞
+λ
+Γ(s)ζβ(s) = n + a (s 1)n.
+(s 1)n+1 n −
+n=0 − n=0
+X X
+Indeed, one can write
+1 1 1 +∞ ( 1)n
+= exp( (s 1)logz) = − (s 1)nlognz,
+zs z − − z n! −
+n=0
+X
+from which the residue calculation follows easily. Cauchy’s integral theorem along the seg-
+ments [2 iT,2+iT, 1 +iT, 1 iT] gives us
+− 2 2 −
+2πiΨ (z) =
+β
+2+iT ds 1 2 +iT ds 1 2 −iT ds 2−iT ds
+Γ(s)ζβ(s) + Γ(s)ζβ(s) + Γ(s)ζβ(s) + Γ(s)ζβ(s) .
+ˆ zs ˆ zs ˆ zs ˆ zs
+2−iT 2+iT 1+iT 1−iT
+2 2
+One has
+1 2 +iT ds 2 1 dσ
+Γ(s)ζβ(s) = Γ(σ +iT)ζβ(σ +iT) ,
+ˆ zs ˆ zσ+iT
+2+iT 2
+where zσ+iT = exp((σ + iT)log(z)) and logz takes the principal branch. By using the
+Stirling’s formula
+Γ(s) = √2π t σ−1/2e−π|t|/2 1+O t −1 , t > T
+0
+| | | | | |
+and the trivial estimation ([Iv85, Thm. 1.9]) (cid:0) (cid:0) (cid:1)(cid:1)
+logt, 1 6 σ 6 2
+ζ(σ+it)
+≪ t
+1−σ
+logt, 0 6 σ 6 1
+( 2
+uniformly in σ for t > T′, we see that
+0
+2
+1+iT
+ds
+lim Γ(s)ζβ(s) = 0.
+T→+∞ ˆ zs
+2+iT
+4
+
+By using ζ(s) = ζ(s¯) we also see that
+2−iT ds
+lim Γ(s)ζβ(s) = 0.
+T→+∞ ˆ 1−iT zs
+2
+Hence
+2
+1+i∞
+ds
+Φ (z) = Γ(s)ζβ(s) .
+β ˆ zs
+1−i∞
+2
+Now we set z = xei(π 2 −δ) for x > 0 and 0 < δ < π. Parseval’s theorem tells us
+2
+1 +∞ 1 1 2 +∞ 2
+2π ˆ Γ 2 +it ζβ 2 +it e(π−2δ)tdt = ˆ Φ β xei(π 2 −δ) dx.
+−∞ (cid:12) (cid:18) (cid:19) (cid:18) (cid:19)(cid:12) 0
+(cid:12) (cid:16) (cid:17)(cid:12)
+(cid:12) (cid:12)
+By using the Stirling’s formula and the trivial estimation of t(cid:12)he Riemann ze(cid:12)ta function as
+(cid:12) (cid:12)
+(cid:12) (cid:12)
+above, there must (cid:12) exist t = max(T ,T′) > (cid:12) 0, such that
+0 0 0
+0 1 1 2 −t0 1 1 2
+Γ +it ζβ +it e(π−2δ)tdt = Γ +it ζβ +it e(π−2δ)tdt
+ˆ 2 2 ˆ 2 2
+−∞(cid:12) (cid:18) (cid:19) (cid:18) (cid:19)(cid:12) −∞ (cid:12) (cid:18) (cid:19) (cid:18) (cid:19)(cid:12)
+(cid:12) (cid:12) 0 (cid:12) (cid:12) 1 1 (cid:12) (cid:12) 2 (cid:12) (cid:12)
+(cid:12) + (cid:12)Γ +it ζβ (cid:12)+it e(π−2δ)tdt (cid:12)
+ˆ 2 2
+−t0(cid:12) (cid:18) (cid:19) (cid:18) (cid:19)(cid:12)
+= O β,ε (1)+
+(cid:12)
+(cid:12) (cid:12)O ˆ
+−t0
+e2(π−δ)t | t | β 2 log2
+(cid:12)
+(cid:12) (cid:12) β | t | 1+O | t | −1 dt = O β,ε (1).
+(cid:18) −∞ (cid:19)
+(cid:0) (cid:0) (cid:1)(cid:1)
+So we must have
++∞ 1 2β +∞ 2
+J β (2δ) = ˆ ζ 2 +it e−2δtdt = ˆ Φ β xei(π 2 −δ) dx+O β,ε (1).
+0 (cid:12) (cid:18) (cid:19)(cid:12) 0
+(cid:12) (cid:16) (cid:17)(cid:12)
+(cid:12) (cid:12)
+We decompose (cid:12) (cid:12)
+(cid:12) (cid:12)
+(cid:12) (cid:12)
+(cid:12) (cid:12)
++∞ 2 +∞ 2 1 2
+ˆ Φ β
+xei(π
+2
+−δ)
+dx = ˆ Φ β
+xei(π
+2
+−δ)
+dx+ ˆ Φ β
+xei(π
+2
+−δ)
+dx = J 1 +J 2 .
+0 1 0
+(cid:12) (cid:16) (cid:17)(cid:12) (cid:12) (cid:16) (cid:17)(cid:12) (cid:12) (cid:16) (cid:17)(cid:12)
+The est(cid:12)imation of J is(cid:12)well-known(cid:12)to the experts,(cid:12)but we inc(cid:12)lude the argum(cid:12)ents here for the
+1
+(cid:12) (cid:12) (cid:12) (cid:12) (cid:12) (cid:12)
+sake of completeness. By applying the Cauchy’s inequality we obtain
+J 1 6 ˆ +∞ +∞ d β (n)e−nxei(π 2 −δ) 2 dx+ ˆ +∞ Ψ β xei(π 2 −δ) 2 dx
+1 (cid:12) (cid:12)X n=0 (cid:12) (cid:12) 1 (cid:12) (cid:16) (cid:17)(cid:12)
+(cid:12) (cid:12) (cid:12) (cid:12)
+1/2
++ (cid:12) (cid:12) O  ˆ +∞ +∞ d β (cid:12) (cid:12) (n)e−nxei(π 2 −δ (cid:12) ) 2 dx  ˆ + (cid:12) ∞ Ψ β xei(π 2 −δ) 2 dx 1/2  .
+1 (cid:12) (cid:12)X n=0 (cid:12) (cid:12) (cid:18) 1 (cid:12) (cid:16) (cid:17)(cid:12) (cid:19)
+ (cid:12) (cid:12) (cid:12) (cid:12) 
+One has   (cid:12) (cid:12)  (cid:12) (cid:12) 
+(cid:12) (cid:12)
+β
+1 λ π m−1
+Ψ β xei(π 2 −δ) 6 | m | logx+ .
+x (m 1)! 2
+(cid:12) (cid:16) (cid:17)(cid:12) m X =1 − (cid:16) (cid:17)
+From [Tit28, Lem. 3(cid:12)] there exists a(cid:12)positive constant A > 0 such that
+(cid:12) (cid:12) 1
+logx+ π β−1
+Ψ β xei(π 2 −δ) 6 βexp(A 1 βlogβ) 2 .
+x
+(cid:12) (cid:16) (cid:17)(cid:12) 5 (cid:0) (cid:1)
+(cid:12) (cid:12)
+(cid:12) (cid:12)
+
+Thus
++∞ 2 +∞ log x+ π 2(β−1)
+ˆ Ψ β xei(π 2 −δ) dx = O β ˆ x2 2 dx = O β,ε (1).
+1 1 (cid:0) (cid:1) !
+(cid:12) (cid:16) (cid:17)(cid:12)
+(cid:12) (cid:12)
+Now we comput(cid:12)e (cid:12)
++∞ +∞ 2 +∞ +∞ +∞
+d
+(n)e−nxei(π
+2
+−δ)
+dx = d (n)d (m)exp inxeiδ imxe−iδ dx
+ˆ 1 (cid:12) (cid:12)X n=0 β (cid:12) (cid:12) ˆ 1 X n=1m X =1 β β (cid:0) − (cid:1)
+(cid:12) (cid:12) +∞ +∞ (cid:12) (cid:12) +∞ +∞ +∞
+=(cid:12) d (n)d (m)(cid:12) exp inxeiδ imxe−iδ = d2(n) e−2nxsinδdx
+β β ˆ − β ˆ
+n=1m=1 1 n=1 1
+XX (cid:0) (cid:1) X
++∞
++ d (n)d (m) exp( (n+m)xsinδ +i(n m)xcosδ)dx
+β β ˆ − −
+1
+n6=m
+X
+= Σ +Σ .
+1 2
+One has
+1 +∞ d2(n) C 1
+Σ = β e−2nsinδ β logβ2 , δ 0+.
+1
+2sinδ n ∼ δ δ →
+n=1 (cid:18) (cid:19)
+X
+Indeed, one introduces the function F (s) = +∞ d2 β (n) for σ > 1. Then one can write
+β n=1 ns
+F (s) = ζβ2(s)g(s), where g(s) is an analytic function in σ > 1 (cf. [Tit86, p. 174]). It
+β P 2
+means
++∞ d2(n) 1 2+i∞ ds
+β e−2nsinδ = Γ(s)F (s+1) ,
+n 2πi ˆ β (2sinδ)s
+n=1 2−i∞
+X
+where the function Γ(s)F (s + 1) has a pole of order β2 + 1 at s = 0. Residue calculation
+β
+and moving countour integral give us then the asymptotic formula of Σ . To estimate Σ we
+1 2
+will follow the idea in [Tit28, proof of Lem. 5]. One has for n > m
++∞
+exp( (n+m)xsinδ +i(n m)xcosδ)dx
+ˆ − −
+(cid:12) 1 (cid:12)
+(cid:12) +∞ (cid:12)
+(cid:12) (cid:12)
+(cid:12) = exp( (n+m)(1+iy)sinδ +(cid:12) i(n m)(1+iy)cosδ)dy
+ˆ − −
+(cid:12) 0 (cid:12)
+(cid:12) +∞ (cid:12) e−nsinδ
+(cid:12) (cid:12) < e−(n+m)sinδ e−(n−m)ycosδdy < (cid:12) (cid:12) .
+ˆ (n m)cosδ
+0 −
+By using the symmetry between the indices n and m in Σ we have consequently
+2
+1 +∞ n−1 1 1 +∞ +∞ e−nsinδ
+Σ d (n)d (m) e−nsinδ = d (n)d (n k)
+2 β β β β
+≪ cosδ (n m) cosδ − k
+n=2m=1 − k=1n=k+1
+XX X X
+1
++∞ e−1ksinδ +∞
+= 2 d β (n)e−1 2 nsinδd β (n k)e− 2 1(n−k)sinδ.
+cosδ k −
+k=1 n=k+1
+X X
+6
+
+The Cauchy’s inequality yields
++∞
+d β (n)e−1 2 nsinδd β (n k)e− 2 1(n−k)sinδ 6
+−
+n=k+1
+X
+1
++∞ +∞ 2 +∞
+d2(n)e−nsinδ d2(n k)e−(n−k)sinδ < d2(n)e−nsinδ.
+β β − β
+!
+n=k+1 n=k+1 n=1
+X X X
+One has
++∞ e−1ksin2δ
+1 2 1
+2
+= log log , ε > 0,δ 0.
+k 1 e−1sinδ ∼ δ ≪ ε δε ∀ →
+2
+X k=1 −
+Now one has (cf. [Tit86, Chap. VII, p. 174])
++∞
+C 1
+d2(n)e−nsinδ β logβ2−1 , δ 0+, ε > 0.
+β ∼ δ δ → ∀
+n=1
+X
+Indeed,byanalyticcontinuationoftheCahen-Mellin’sformulaforR(z) > 0and Arg(z) < π
+2
+one has
+(cid:12) (cid:12)
+1 2+i∞ ds (cid:12) (cid:12)
+d2(n)e−nz = Γ(s)F (s) .
+β 2πi ˆ β zs
+n=1 2−i∞
+X
+The function F (s) has a pole at s = 1. By writing
+β
+1 1 1 +∞ ( 1)n
+= exp( (s 1)logz) = − (s 1)nlognz,
+zs z − − z n! −
+n=0
+X
+one gets the asymptotic formula above by residue calculation and Stirling’s formula. This
+means
+1 1
+Σ logβ2−1 , δ 0+.
+2 β
+≪ δ δ →
+(cid:18) (cid:19)
+So we obtain the following result, which is well-known to the experts:
+C 1
+J β logβ2 , δ 0+, ε > 0, β > 2.
+1
+∼ δ δ → ∀ ∀
+(cid:18) (cid:19)
+Now it remains to estimate the integral
+β−1
+1 2 δ 2 2 1 2
+J 2 = ˆ Φ β
+xei(π
+2
+−δ)
+dx = ˆ Φ β
+xei(π
+2
+−δ)
+dx+ ˆ β−1 Φ β
+xei(π
+2
+−δ)
+dx
+0 0 δ 2
+(cid:12) (cid:16) (cid:17)(cid:12) (cid:12) (cid:16) (cid:17)(cid:12) (cid:12) (cid:16) (cid:17)(cid:12)
+(cid:12) (cid:12) (cid:12) (cid:12) (cid:12) =(cid:12)J 3 +J 4
+(cid:12) (cid:12) (cid:12) (cid:12) (cid:12) (cid:12)
+By changing variable x = 1 we have
+y
++∞ ei(π 2 −δ) 2 dy
+J = Φ .
+3 ˆ β y y2
+1 (cid:12) !(cid:12)
+β−1 (cid:12) (cid:12)
+δ 2 (cid:12) 7 (cid:12)
+(cid:12) (cid:12)
+(cid:12) (cid:12)
+
+The estimation of J is well-known. However we need to spell out a few words in details. We
+3
+consider the function
+1 1 α+i∞
+Φ = Γ(s)ζβ(s)z¯sds, 0 < α < 1.
+β z¯ 2πi ˆ
+(cid:18) (cid:19) α−i∞
+By the Cauchy’s integration theorem we have
+1
+Res Γ(s)ζβ(s)z¯s = Γ(s)ζβ(s)z¯sds,
+s=0 2πi ˛
+D
+(cid:0) (cid:1)
+where D is the rectangle [α iT,α + iT, α + iT, α iT], since Γ(s) has a simple pole
+− − − −
+at s = 0. As before, by using the Stirling’s formula, we see that the integrals along the
+horizontal lines of D vanish, when T + . Residue calculation gives us
+→ ∞
+Res Γ(s)ζβ(s)z¯s = O (1).
+s=0 β
+One has then (cid:0) (cid:1)
+1 1 −α+i∞
+Φ = Γ(s)ζβ(s)z¯sds+O (1).
+β z¯ 2πi ˆ β
+(cid:18) (cid:19) −α−i∞
+After changing the variable s 1 s one has
+→ −
+1 z¯ 1+α+i∞ ds
+Φ = Γ(1 s)ζβ(1 s) +O (1).
+β z¯ 2πi ˆ − − z¯s β
+(cid:18) (cid:19) 1+α−i∞
+By using the functional equation of the Riemann zeta function (cf. [Iv85, p. 9])
+ζ(s) = χ(s)ζ(1 s), χ(s) = (2π)s/(2Γ(s)cos(πs/2))
+−
+one obtains
+1 z¯ 1+α+i∞ Γ(1 s) ds
+Φ = − ζβ(s) +O (1).
+β z¯ 2πi ˆ χβ(s) z¯s β
+(cid:18) (cid:19) 1+α−i∞
+The Euler’s functional equation
+π
+Γ(s)Γ(1 s) =
+− sinπs
+gives us
+1 z¯ 1+α+i∞ cosβ πs ds
+Φ = 2β(1−s)π1−βs 2 Γβ−1(s)ζβ(s) +O (1).
+β z¯ 2πi ˆ sinπs z¯s β
+(cid:18) (cid:19) 1+α−i∞ (cid:0) (cid:1)
+On the vertical line σ = 1+α we have ζβ(s) = +∞ dβ(n) , so we can rewrite
+n=1 ns
+1 z¯ +∞ 1+α+i∞ P cosβ πs ds
+Φ = d (n) 2β(1−s)π1−βs 2 Γβ−1(s) +O (1).
+β z¯ 2πi β ˆ sinπs (nz¯)s β
+(cid:18) (cid:19) n=1 1+α−i∞ (cid:0) (cid:1)
+X
+We consider the integral
+1+α+i∞ cosβ πs ds
+I = 2β(1−s)π1−βs 2 Γβ−1(s) .
+ˆ sinπs (nz¯)s
+1+α−i∞ (cid:0) (cid:1)
+By the Stirling’s formula we have t > 0, such that t > t
+1 1
+∃ ∀| |
+Γ(1+α+it) β−1 (2π) β− 2 1 t (1 2 +α)(β−1)e−π 2 |t|(β−1)(1+O( t −1))β−1.
+| | ∼ | | | |
+8
+
+Again the Stirling’s formula shows that t > 0, such that t > t and for s = 1+α+it
+2 2
+∃ ∀| |
+1
+Γ (β 1)s β +1 √2π((β 1) t ) (1 2 +α)(β−1)e−π 2 |t|(β−1)(1+O( t −1)).
+− − 2 ∼ − | | | |
+(cid:12) (cid:18) (cid:19)(cid:12)
+(cid:12) (cid:12)
+So we m(cid:12) ust have (cid:12)
+(cid:12) (cid:12) 1
+Γβ−1(s) Γ (β 1)s β +1 .
+β
+≪ − − 2
+(cid:18) (cid:19)
+So t = max(t ,t ), such that
+3 1 2
+∃
+1+α−it3 1+α+it3 1+α+i∞ cosβ πs ds
+I = + + 2β(1−s)π1−βs 2 Γβ−1(s)
+ˆ ˆ ˆ sinπs (nz¯)s
+(cid:18) 1+α−i∞ 1+α−it3 1+α+it3 (cid:19) (cid:0) (cid:1)
+1 1+α+i∞ cosβ πs 1 ds
+O + 2β(1−s)π1−βs 2 Γ (β 1)s β +1
+≪ β,ε β,ε (ny)1+α ˆ sinπs − − 2 (nz¯)s
+(cid:18) (cid:19) 1+α−i∞ (cid:0) (cid:1) (cid:18) (cid:19)
+1 1+α+i∞ cosβ−1 πs 1 ds
+= O + 2β(1−s)−1π1−βs 2 Γ (β 1)s β +1 .
+β,ε (ny)1+α ˆ sin πs − − 2 (nz¯)s
+(cid:18) (cid:19) 1+α−i∞ (cid:0)2 (cid:1) (cid:18) (cid:19)
+In the upper-half plane t > 0 we have
+(cid:0) (cid:1)
+cosβ−1 π 2 s = 2β 1 −1 e iπ 2 s +e −i 2 πs β−1 22−βie−i(β−2)π 2 s , t +
+sin π (cid:0)2 s (cid:1) 1 (cid:16) e iπ 2 s e −i 2 πs(cid:17) ∼ − → ∞
+2i −
+(cid:0) (cid:1) (cid:16) (cid:17)
+and for t < 0 we have
+cosβ−1 π 2 s = 2β 1 −1 e iπ 2 s +e −i 2 πs β−1 22−βiei(β−2)π 2 s , t .
+sin π (cid:0)2 s (cid:1) 1 (cid:16) e iπ 2 s e −i 2 πs(cid:17) ∼ → −∞
+2i −
+(cid:0) (cid:1) (cid:16) (cid:17)
+Now for z = yei(π 2 −δ) with 0 < δ < π
+2
+1+α 1 ds
+e−i(β−2)π
+2
+s
+Γ (β 1)s β +1 =
+ˆ − − 2 (nz¯)s
+1+α−i∞ (cid:18) (cid:19)
+0 1 dt
+i e−iπ 2 (1+α)(β−2)e π 2 t(β−2)Γ (β 1)(1+α+it) β +1
+ˆ − − 2 (nz¯)1+α+it
+−∞ (cid:18) (cid:19)
+1 0 1
+≪ β,ε (ny)1+α ˆ | t | ( 2 1+α)(β−1)e π 2 t(β−1)e π 2 t(β−1)et(δ−π 2 ) dt = O β,ε (ny)1+α .
+−∞ (cid:18) (cid:19)
+Similarly
+1+α+i∞ 1 ds 1
+ˆ
+ei(β−2)π
+2
+s
+Γ (β − 1)s − 2 β +1 (nz¯)s ≪ β,ε (ny)1+α .
+1+α (cid:18) (cid:19)
+So we obtain
+1
+I O
+β,ε β,ε
+≪ (ny)1+α
+(cid:18) (cid:19)
+1+α+i∞ 1 ds
++ (2π)1−βs ei(β−2)π 2 s +e−i(β−2)π 2 s Γ (β 1)s β +1 .
+ˆ − − 2 (nz¯)s
+1+α−i∞ (cid:18) (cid:19)
+(cid:0) 9 (cid:1)
+
+We set (β 1)s 1β +1 = w, the integral becomes
+− − 2
+1+α+i∞ 1 ds
+(2π)1−βs ei(β−2)π 2 s +e−i(β−2)π 2 s Γ (β 1)s β +1
+ˆ − − 2 (nz¯)s
+1+α−i∞ (cid:18) (cid:19)
+(cid:0)
+1
+(β−1)(1+α)−β/(cid:1)2+1+i∞
+= (2π)1− β− β 1 (w+1 2 β−1) Γ(w)
+β 1 ˆ ×
+− (β−1)(1+α)−β/2+1−i∞
+e
+iπ(β−2
+2
+)
+(
+(
+β
+w
+−
++
+1
+β
+)
+/2−1) +e−iπ(β−2
+2
+)
+(
+(
+β
+w
+−
++
+1
+β
+)
+/2−1) dw
+.
+× w+β/2−1
+(nz¯) β−1
+(cid:16) (cid:17)
+We can write
+(β−1)(1+α)−β/2+1+i∞ (2π)1− β− β 1 (w+1 2 β−1) Γ(w)e iπ(β−2 2 ) ( ( β w − + 1 β ) /2−1) dw
+ˆ w+β/2−1
+(β−1)(1+α)−β/2+1−i∞ (nz¯) β−1
+2π (β−1)(1+α)−β/2+1+i∞ Γ(w)dw
+= .
+(2π)βnz¯e−i(β−2)π 2 β β / − 2− 1 1 ˆ (β−1)(1+α)−β/2+1−i∞ (2π)βnz¯e−i(β−2)π 2 β− 1 1 w
+(cid:16) (cid:17)
+By Cahen-Mellin(cid:0)’s formula we hav(cid:1)e (cid:0) (cid:1)
+ˆ (β ( − β− 1) 1 ( ) 1 ( + 1+ α α )− )− β/ β 2 / + 2+ 1− 1+ i∞ i∞ (2π)βn Γ z¯e ( − w i ) (β d − w 2)π 2 β− 1 1 w = exp (cid:16) − (2π)βnz¯e−i(β−2)π 2 β− 1 1 (cid:17) .
+(cid:0) (cid:1)
+(cid:16) (cid:17)
+(cid:0) (cid:1)
+Similary
+(β−1)(1+α)−β/2+1+i∞ (2π)1− β− β 1 (w+1 2 β−1) Γ(w)e −iπ(β−2 2 ) ( ( β w − + 1 β ) /2−1) dw
+ˆ w+β/2−1
+(β−1)(1+α)−β/2+1−i∞ (nz¯) β−1
+= 2π exp (2π)βnz¯ei(β−2)π 2 β− 1 1 .
+(2π)βnz¯ei(β−2)π 2 β β / − 2− 1 1 (cid:16) − (cid:17)
+(cid:0) (cid:1)
+Thus we have for z =
+yei(π
+2
+−δ) (cid:0) (cid:1)
+1
+2πexp
+(2π)βnyei(δ+π
+2
+−π
+2
+β) β−1
+1 −
+I = O + (cid:18) (cid:19)
+β,ε (ny)1+α (cid:16) (cid:17) β/2−1
+(cid:18) (cid:19) (β 1) (2π)βnyei(δ+π 2 −π 2 β) β−1
+−
+(cid:16) (cid:17) 1
+2πexp
+(2π)βnyei(δ−3
+2
+π+π
+2
+β) β−1
+−
++ (cid:18) (cid:19).
+(cid:16) (cid:17)
+β/2−1
+(β 1)
+(2π)βnyei(δ−3
+2
+π+π
+2
+β) β−1
+−
+(cid:16) (cid:17)
+On the other hand
+ei δ+ β π 2 − − 1 π 2 β = sin δ icos δ
+β 1 − β 1
+(cid:18) −10 (cid:19) (cid:18) − (cid:19)
+
+and sin δ > 0 for 0 < δ < π. Similarly
+β−1 2
+(cid:16) (cid:17)
+ei δ−3 β 2 π − + 1 π 2 β = sin π − δ +icos π − δ
+β 1 β 1
+(cid:18) − (cid:19) (cid:18) − (cid:19)
+and sin π−δ > 0 for 0 < δ < π and β > 2. Now we can estimate
+β−1 2
+(cid:16) (cid:17)
+1
+Φ β
+ei(δ−π
+2
+)
+y
+(cid:18) (cid:19)
+1 +∞ d β (n) 1 +∞ exp i(2π)β− β 1nβ− 1 1yβ− 1 1 exp i β− δ 1
++ d (n)
+≪ β,ε yα
+n=1
+n1+α
+y
+β
+β
+/
+−
+2−
+1
+1−1
+n=1
+β (cid:16)
+n
+β
+β
+/
+−
+2−
+1
+1 (cid:16) (cid:17)(cid:17)
+X X
+1 +∞ exp − (2π)β− β 1nβ− 1 1yβ− 1 1 sin β π − − 1 δ
++ d (n) = T +T +T .
+y
+β
+β
+/
+−
+2−
+1
+1−1
+n=1
+β (cid:16)
+n
+β
+β
+/
+−
+2−
+1
+1 (cid:16) (cid:17)(cid:17) 1 2 3
+X
+The main contributor of J comes from the middle term T of the estimation above, because
+3 2
+the estimation of the mixed terms +∞ T T dy and +∞ T T dy follows immediately then
+´ β
+1
+−1
+1 2y2
+´ β
+1
+−1
+2 3y2
+δ 2 δ 2
+by using Cauchy’s inequality, as well the terms +∞ T dy and +∞ T2dy are bounded when
+´ β
+1
+−1
+1y2
+´ β
+1
+−1
+3 y2
+δ 2 δ 2
+δ 0+ for β > 3. For β = 2 all terms T and T are asymptotic equivalent. Now we are
+2 3
+→
+allowed to integrate and sum up like in [Tit86, Chap. VII, p. 172-173] to obtain
++∞ 1 2 dy +∞ dy 1
+J = Φ ie−iδ T 2 = O .
+3 ˆ β 1 −1 (cid:12) β (cid:18) y (cid:19)(cid:12) y2 ≪ ˆ β 1 −1 | 2 | y2 β,ε (cid:18) δ β− 2 1+ε (cid:19)
+δ 2 (cid:12) (cid:12) δ 2
+(cid:12) (cid:12)
+(cid:12) (cid:12)
+It remains to estimate the integral
+1
+J = Φ (xie−iδ) 2 dx.
+4 ˆ β−1 β
+δ 2
+(cid:12) (cid:12)
+Recall, by residue calculation one has for R(cid:12) (z) > 0 and (cid:12) Arg(z) < π (cf. [Tit86, Chap. VII
+| | 2
+§7.13, p. 160])
++∞ β−1
+1
+Φ (z) = d (n)e−nz + a(β)lognz.
+β β z n
+n=1 n=0
+X X
+Cauchy’s inequality gives us
+J = O 1 +∞ d (n)e−nxie−iδ 2 dx +O 1 β−1 a(β) logx+i π δ n 2 dx
+4 ˆ δ β− 2 1 (cid:12) (cid:12)X n=1 β (cid:12) (cid:12)  ˆ δ β− 2 1 (cid:12) (cid:12)X n=0 n (cid:16) (cid:16) 2 − (cid:17)(cid:17) (cid:12) (cid:12) x2
+(cid:12) (cid:12) (cid:12) (cid:12)
+ (cid:12) (cid:12)   (cid:12) = J (cid:12)+J .
+5 6
+(cid:12) (cid:12) (cid:12) (cid:12)
+11
+
+The estimation of J is straightforward. Again by Cauchy’s inequality
+6
+J 6 1 a(β) logx+i π δ n 2 dx 6 β 1 a(β) 2 logx+i π δ 2n dx
+6 ˆ β−1 n 2 − x2 ˆ β−1 n 2 − x2
+δ 2 δ 2
+(cid:16) (cid:12) (cid:16) (cid:17)(cid:12) (cid:17) (cid:12) (cid:16) (cid:17)(cid:12)
+β−(cid:12)1 (cid:12)
+(cid:12) 1 (cid:12) n
+(cid:12) (cid:12)
+(cid:12) (cid:12)
+= β (cid:12) a( (cid:12) β(cid:12)) δ β− 2 1 log2y + (cid:12) π δ 2 dy = (cid:12) O (cid:12) (cid:12) 1 , δ 0+(cid:12) , ε > 0.
+X n=0 (cid:12) n (cid:12) ˆ 1 (cid:18) (cid:16) 2 − (cid:17) (cid:19) (cid:18) δ β− 2 1+ε (cid:19) → ∀
+Let α (0,1) be (cid:12) a re (cid:12) al number. We have for z = xie−iδ
+∈
+1 +∞ 2
+J = d (n)e−nz dx
+5 ˆ δ β− 2 1 (cid:12) (cid:12)X n=1 β (cid:12) (cid:12)
+1 (cid:12) (cid:12) Γ(s) (cid:12) (cid:12)ζβ(s) Γ(s)ζβ(s) 1 −α+i∞ ds 2
+= (cid:12) Res (cid:12) +Res Γ(s)ζβ(s) dx
+ˆ β−1 s=1 zs s=0 zs − 2πi ˆ zs
+δ 2 (cid:12) −α−i∞ (cid:12)
+(cid:12) (cid:12) 1 Γ(s)ζβ(s) 2 1 Γ(s)ζβ(s) 2 (cid:12) (cid:12)
+(cid:12) Res dx+ Res dx (cid:12)
+≪ ˆ β−1 s=1 zs ˆ β−1 s=0 zs
+δ 2 (cid:12) (cid:12) δ 2 (cid:12) (cid:12)
+(cid:12) (cid:12) (cid:12) (cid:12) (cid:12) (cid:12) 1 1 −α+i∞ (cid:12) (cid:12) ds 2
+(cid:12) (cid:12) + (cid:12) (cid:12)Γ(s)ζβ(s) dx.
+ˆ β−1 2πi ˆ zs
+δ 2 (cid:12) −α−i∞ (cid:12)
+(cid:12) (cid:12)
+By residue calculation as before we have (cid:12) (cid:12)
+(cid:12) (cid:12)
+Γ(s)ζβ(s) 1 1 C 1
+Res = P log β logβ−1 ,
+s=1 (xie−iδ)s xie−iδ β−1 xie−iδ ∼ x x
+(cid:18) (cid:19) (cid:18) (cid:19)
+where we denote by P (z) a polynomial of degree β 1 in z and
+β−1
+−
+Γ(s)ζβ(s)
+Res = O(1).
+s=0 (xie−iδ)s
+So
+1 Γ(s)ζβ(s) 2 1 1 dx 1
+Res dx C logβ−1 = O
+ˆ δ β− 2 1 (cid:12) s=1 (xie−iδ)s (cid:12) ∼ βˆ δ β− 2 1 (cid:18) x (cid:19) x2 β,ε (cid:18) δ β− 2 1+ε (cid:19)
+and (cid:12) (cid:12)
+(cid:12) (cid:12)
+(cid:12) 1 (cid:12) Γ(s)ζβ(s) 2
+Res dx = O(1).
+ˆ β−1 s=0 (xie−iδ)s
+δ 2 (cid:12) (cid:12)
+(cid:12) (cid:12)
+The functional equation ζ(s) = χ(s)ζ(1 s) gives us
+(cid:12) (cid:12)
+(cid:12) − (cid:12)
+−α+i∞ ds +∞ −α+i∞ ds
+Γ(s)ζβ(s) = d (n) Γ(s)χβ(s) .
+ˆ zs β ˆ n1−szs
+−α−i∞ n=1 −α−i∞
+X
+From Stirling’s formula
+Γ(s) √2πss− 2 1 e−s, s + ,
+∼ | | → ∞
+one has (see e.g [Iv85, §1.2, p. 9])
+σ+it−1
+χ(s) = 2π 2 ei(t+π 4 ) 1+O 1 ,t > t 0 > 0.
+t t
+(cid:18) (cid:19) (cid:18) (cid:18) (cid:19)(cid:19)
+12
+
+We see for z = xie−iδ
+−α ds 1
+Γ(s)χβ(s) = O .
+ˆ n1−szs n1+α
+−α−i∞ (cid:18) (cid:19)
+For t > 1 one has
+δ1+ε
+−α+i∞ ds 1 +∞
+Γ(s)χβ(s) t(β−1)(α+1/2)e−δtdt
+ˆ n1−szs ≪ n1+α ˆ
+−α+i 1 1
+δ1+ε δ1+ε
+6 e− 2δ 1 ε +∞ t(β−1)(α+1/2)e− 2 1δtdt = o 1 .
+n1+α ˆ n1+α
+1
+δ1+ε (cid:18) (cid:19)
+Now we can write for t > 0
+0
+−α+i δ1 1 +ε
+Γ(s)χβ(s)
+ds
+= O
+1
+ˆ n1−szs n1+α
+−α (cid:18) (cid:19)
++
+ixα δ1 1 +ε
+Γ( α+it)χβ( α+it)exp itlogn ( α+it) x+i
+π
+δ dt
+n1+α ˆ − − − − − 2 −
+t0
+n (cid:16) (cid:16) (cid:17)(cid:17)o
+≪ α n1 1 +α + n x 1+ α α ˆ δ1 1 +ε t(β−1)(α+ 2 1) e−δtexp { iF(t) } dt,
+t0
+where
+F(t) = t(logt 1 βlogt+βlog2π+β logn logx)
+− − − −
+and the asymptotic formula of Γ(s) with R(s) < 0 follows easily from the reflection formula
+Γ(s)Γ(1 s) = π . Indeed, one has in any fixed strip α 6 α 6 α
+− sinπs 1 − 2
+1
+Γ( α+it) =
+√2πt−α+it−1 2e−π
+2
+t−it−1
+2
+iπ(α+
+2
+1)
+1+O
+− t
+(cid:26) (cid:18) (cid:19)(cid:27)
+and
+−α−1+it
+χ( α+it) =
+2π 2 ei(t+π
+4
+)
+1+O
+1
+.
+− t t
+(cid:18) (cid:19) (cid:26) (cid:18) (cid:19)(cid:27)
+As
+1 β
+F′′(t) = −
+t
+we can apply [Iv85, Lem. 2.2] for G(t) = t(β−1)(α+1 2 ) e−δt by splitting up
+1
+δ1+ε
+G(t)exp iF(t) dt =
+ˆ { }
+t0
+(β−1) ( α+2 1)
+1
+δ δ1+ε
+G(t)exp iF(t) dt+ G(t)exp iF(t) dt
+ˆ
+t0
+{ } ˆ(β−1) (
+δ
+α+2 1) { }
+1 1 1
++ = O ,
+≪ β,α δ(β−1)(α+1
+2
+)−
+2
+1 δ(β−1)(α+
+2
+1)−1+
+2
+ε β,α
+(cid:18)
+δ(β−1)(α+1
+2
+)−
+2
+1
+(cid:19)
+13
+
+because G(t) is monotonic positive on each interval above. Putting all this together, we
+obtain
+2
+|     |     |     | 1   | 1   | −α+i∞ |     | ds  |     |     | 1   |     |
+| --- | --- | --- | --- | --- | ----- | --- | --- | --- | --- | --- | --- |
+Γ(s)ζβ(s)
+|     |           |     |                |           |               |        |               | dx    |                |        | .    |
+| --- | --------- | --- | -------------- | --------- | ------------- | ------ | ------------- | ----- | -------------- | ------ | ---- |
+|     |           |     | ˆ β−1          | 2πi       | ˆ             |        | zs            | ≪ β,α | δ(β−1)(1+2α)−1 |        |      |
+|     |           |     | δ              |           | −α−i∞         |        |               |       |                |        |      |
+|     |           |     | 2              | (cid:12)  |               |        | (cid:12)      |       |                |        |      |
+| Now | we choose |     | α =            | ε(cid:12) | and establish | the    | boun(cid:12)d |       |                |        |      |
+|     |           |     | 2(β−(cid:12)1) |           |               |        | (cid:12)      |       |                |        |      |
+|     |           |     |                | (cid:12)  |               |        | (cid:12)      |       |                |        |      |
+|     |           |     |                |           | 1             | 1      |               |       |                |        |      |
+|     |           |     | J              | max       |               | ,      | ,             | δ 0+, | ε              | > 0, β | > 2. |
+|     |           |     | 5              | β,ε       | β−1+ε         |        |               |       |                |        |      |
+|     |           |     | ≪              |           | δ             | δβ−2+ε |               | →     | ∀              | ∀      |      |
+|     |           |     |                |           | (cid:26) 2    |        | (cid:27)      |       |                |        |      |
+2
+|     |     |     |     |     |     | +∞  | xei(π | −δ) |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | --- | --- |
+Replacing δ by δ/2 in the integral Φ 2 dx, we obtain also the same estima-
+|      |       |         |      |           |     | 0 β                       |     |                          |     |     |     |
+| ---- | ----- | ------- | ---- | --------- | --- | ------------------------- | --- | ------------------------ | --- | --- | --- |
+| tion | for J | (δ) and | this | completes | the | ´ pr(cid:12)oof(cid:16)of | our | the(cid:17)o(cid:12)rem. |     |     |     |
+β
+|     |     |     |     |     |     | (cid:12) |     | (cid:12) |     |     |     |
+| --- | --- | --- | --- | --- | --- | -------- | --- | -------- | --- | --- | --- |
+|     |     |     |     |     |     | (cid:12) |     | (cid:12) |     |     |     |
+Acknowledgement
+| I thank | Prof. | B.  | Conrey | for | many | helpful | discussions. |     |     |     |     |
+| ------- | ----- | --- | ------ | --- | ---- | ------- | ------------ | --- | --- | --- | --- |
+References
+[HaLi18] G.H. Hardy, J.E. Littlewood, Contributions to the theory of the Riemann zeta-function and the
+|     | theory | of the | distribution |     | of primes, | Acta | Mathematica, | 41, | 119-196,1918. |     |     |
+| --- | ------ | ------ | ------------ | --- | ---------- | ---- | ------------ | --- | ------------- | --- | --- |
+[Ha13] A.J.Harper,SharpconditionalboundsformomentsoftheRiemannzetafunction,arXiv:1305.4618v1
+[math.NT]
+24,
+[HB81] D.R. Heath-Brown, Fractional moments of the Riemann zeta function, J. Lond. Math. Soc.,
+|     | 65-78, | 1981. |     |     |     |     |     |     |     |     |     |
+| --- | ------ | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+[KS00] J.P.Keating,N.C.Snaith,Randommatrixtheoryandζ(1/2+it),Comm.Math.Phys.214,57-89,
+2000.
+[Ing26] A.E. Ingham, Mean-value theorems in the theory of the Riemann zeta-function, Proc. Lond. Math.
+27,
+|     | Soc., | 273-300,1926. |     |     |     |     |     |     |     |     |     |
+| --- | ----- | ------------- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+[Iv85] A. Ivić, The Riemann Zeta-Function: The Theory of the Riemann Zeta-Function with Applications,
+|     | John | Wiley | & Sons, | New | York, 1985. |     |     |     |     |     |     |
+| --- | ---- | ----- | ------- | --- | ----------- | --- | --- | --- | --- | --- | --- |
+170,
+[S09] K. Soundararajan, Moments of the Riemann zeta function, Annals of Mathematics, 981-993,
+2009.
+27,
+[Tit28] E. C. Titchmarsch, On an inequality satisfied by the zeta-function of Riemann, P.L.M.S (2)
+137-50,1928.
+[Tit86] E.C.Titchmarsch,D.R.Heath-Brown,TheTheoryoftheRiemannZeta-Function(2ndedn),Oxford
+|       | University |     | Press,                     | Oxford, | 1986. |     |     |     |     |     |     |
+| ----- | ---------- | --- | -------------------------- | ------- | ----- | --- | --- | --- | --- | --- | --- |
+| Email | address:   |     | ldt.altenschmidt@gmail.com |         |       |     |     |     |     |     |     |
+14

@@ -1,0 +1,797 @@
+5102
+nuJ
+32
+]TN.htam[
+1v24860.6051:viXra
+MOMENTS OF ZETA AND CORRELATIONS OF DIVISOR-SUMS: I
+BRIAN CONREY AND JONATHAN P. KEATING
+Abstract. We examine the calculation of the second and fourth moments and shifted
+moments of the Riemann zeta-function on the critical line using long Dirichlet polynomials
+and divisor correlations. Previously this approach has proved unsuccessful in computing
+moments beyond the eighth, even heuristically. A careful analysis of the second and fourth
+moments illustrates the nature of the problemandenables us to identify the terms that are
+missed in the standard application of these methods.
+1. Introduction
+We revisit the long-standing problem of determining the moments of the Riemann zeta-
+function on the critical line from a somewhat new perspective. On one hand, we have the
+detailedconjecturesof[KS,CFKRS]whichpredictveryprecisely theoutcomeofanymoment
+calculation. On the other hand, we have the conventional approaches of analytic number
+theorists via Dirichlet polynomial approximations to ζ(s) or ζ(s)k which proceed by refine-
+ments of the approximate Parseval formula for Dirichlet polynomials (i.e. the Montgomery-
+Vaughan formula). We would like to bring these approaches closer together. In particular,
+the Dirichlet polynomial approach completely fails when considering the 10th or higher mo-
+ment of ζ(s) on the critical line: it predicts negative values when the moments are clearly
+non-negative. We want to understand and rectify, at least from a heuristic perspective, this
+failing.
+Our aim here is to illustrate the nature and cause of this failing by a careful analysis of
+the second and fourth moments. We take the standard approach of approximating the zeta
+function by long Dirichlet polynomials and computing moments using divisor correlations,
+but depart in using longer polynomials than is normal.
+The approximate functional equation expresses the zeta function at a height T on the
+critical line by Dirichlet polynomials of length of the order of T1/2. This allows all principal
+terms (called, in [CFKRS], the moment polynomials) in the second [I, A] and fourth [HB]
+Date: June 24, 2015.
+We gratefully acknowledge support under EPSRC Programme Grant EP/K034383/1LMF: L-Functions
+and Modular Forms. Research of the first author was also supported by the American Institute of Mathe-
+matics and by a grant from the National Science Foundation. JPK is grateful for the following additional
+support: a grant from the Leverhulme Trust, a Royal Society Wolfson Research Merit Award, a Royal So-
+ciety Leverhulme Senior Research Fellowship, and a grant from the Air Force Office of Scientific Research,
+AirForceMaterialCommand,USAF(numberFA8655-10-1-3088). HeisalsopleasedtothanktheAmerican
+Institute of Mathematics for hospitality during a visit where this work started.
+1
+
+| 2   |     |     |     |     | BRIAN CONREY |     | ANDJONATHANP. |     | KEATING |     |     |
+| --- | --- | --- | --- | --- | ------------ | --- | ------------- | --- | ------- | --- | --- |
+moments to be determined. This approach extends heuristically to the sixth moment, and
+to calculating the leading-order in the asymptotics of the eighth moment; see, for example,
+[CG]. For moments beyond the eighth, it leads to answers that are clearly incorrect, in
+that they are negative. In order to understand this problem better, we here examine the
+calculations for the second and fourth moments when we use longer Dirichlet polynomials;
+specifically, we take the length to be substantially larger than T (and so do not utlize the
+approximate functional equation). We find that in this case the success of the standard
+methods when applied to the second moment rests on a particular identity, and that they
+fail when applied to the fourth moment by missing certain key terms. We believe that this
+| sheds | new | light | on  | the moment | problem. |           |        |     |     |     |     |
+| ----- | --- | ----- | --- | ---------- | -------- | --------- | ------ | --- | --- | --- | --- |
+|       |     |       |     |            |          | 2. Second | moment |     |     |     |     |
+We begin with the simplest case, that of the second moment of ζ(s); even in this case our
+perspective reveals some new information. Our starting point is the theorem of Ingham [I]
+that
+|     | T   |     |     |     |     | T   |     |     | −α−β |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | ---- | --- | --- |
+t
+|     | ζ(s+α)ζ(1 |     |     | s+β) | dt = | ζ(1+α+β)+ |     |          |          | ζ(1 α | β) dt+O(T1/2+ǫ) |
+| --- | --------- | --- | --- | ---- | ---- | --------- | --- | -------- | -------- | ----- | --------------- |
+|     |           |     | −   |      |      |           |     | 2π       |          | −     | −               |
+| Z0  |           |     |     |      | Z0   |           |     | (cid:18) | (cid:19) |       | !               |
+uniformly for small α and β, where s = 1/2 + it. Sandro Bettin [B] has proven that,
+remarkably, the same formula holds for a much larger range of α and β namely α β <
+|ℜ ||ℜ |
+| 1/4 | and | α   | , β    | T.  |     |     |     |     |     |     |     |
+| --- | --- | --- | ------ | --- | --- | --- | --- | --- | --- | --- | --- |
+|     |     | |ℑ  | | |ℑ | | ≪   |     |     |     |     |     |     |     |
+We compare this result with what one gets when using the work of Goldston-Gonek [GG]
+on the mean-square of long Dirichlet polynomials. We refer to Corollary 1 of [GG] together
+with example 1, which is about the case α = β = 0 of Ingham’s theorem. In particular we
+n−s−α
+approximate ζ(s + α) by a Dirichlet polynomial with X substantially larger
+n≤X
+than T , say X = Tθ with 1 < θ < 2; the error in such an approximation is X1/2/T
+P
+≪
+when t T so that ζ(s) is well-approximated point-wise by this long Dirichlet polynomial.
+≈
+We introduce a smooth weight function ψ(u) which is real and compactly supported, say on
+[1,2], and then evaluate the mean square of ζ by evaluating (as [GG] do)
+2
+|     |     | ∞   |     |     |     | ∞   |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+1
+|     |     | ψ(t/T) | ζ(1/2+it) |     | 2 dt | =   | ψ(t/T) |              |     | dt+O(X1/2logT). |     |
+| --- | --- | ------ | --------- | --- | ---- | --- | ------ | ------------ | --- | --------------- | --- |
+|     |     |        | |         |     | |    |     |        | n1/2+it      |     |                 |     |
+|     | Z0  |        |           |     |      | Z0  |        | (cid:12)     |     | (cid:12)        |     |
+|     |     |        |           |     |      |     |        | (cid:12)n ≤X |     | (cid:12)        |     |
+|     |     |        |           |     |      |     |        | (cid:12) X   |     | (cid:12)        |     |
+Using coefficient correlations, Goldston and Gon(cid:12)ek prove th(cid:12)at this is
+|     |     |     |          |     |     |     |                 | (cid:12)   |     | (cid:12) |     |
+| --- | --- | --- | -------- | --- | --- | --- | --------------- | ---------- | --- | -------- | --- |
+|     |     |     |          |     | 1   | ∞   | v               | dv         |     |          |     |
+|     |     |     | ˆ        |     |     |     | ˆ               | +O(Tǫ(X1/2 |     |          |     |
+|     |     |     | = ψ (0)T |     | +2  | T   | ψ (v)           |            |     | +X/T))   |     |
+|     |     |     |          |     | n   | ℜ   | y               | v          |     |          |     |
+|     |     |     |          | n≤X |     | Zy  |                 |            |     |          |     |
+|     |     |     |          | X   |     |     | (cid:2) (cid:3) |            |     |          |     |
+where
+T
+|     |     |     |     |     |     |     | y = | ,   |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+2πX
+
+|     |     |     | MOMENTS | OF  | ZETA | AND | CORRELATIONS |     | OF DIVISOR-SUMS: |     |     | I   |     | 3   |
+| --- | --- | --- | ------- | --- | ---- | --- | ------------ | --- | ---------------- | --- | --- | --- | --- | --- |
+[v] is the floor of v, i.e. the greatest integer less than or equal to v, and the Fourier transform
+| is  | defined | by  |     |     |        |     |           |     |     |     |     |     |     |     |
+| --- | ------- | --- | --- | --- | ------ | --- | --------- | --- | --- | --- | --- | --- | --- | --- |
+|     |         |     |     |     | ψ(v) ˆ | =   | ψ(u)e(uv) |     | du  |     |     |     |     |     |
+R
+Z
+| where | e(x)   | = exp(2πix). |       |          |        |     |          |     |     |     |     |     |     |     |
+| ----- | ------ | ------------ | ----- | -------- | ------ | --- | -------- | --- | --- | --- | --- | --- | --- | --- |
+|       | On the | other        | hand, | the mean | square | of  | ζ is [A] |     |     |     |     |     |     |     |
+∞
+tT
+|     |     |     |     | T   | ψ(t) | log | +2γ | dt+O(X1/2). |     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | ---- | --- | --- | ----------- | --- | --- | --- | --- | --- | --- |
+2π
+|       |     |           |     | Z0  | (cid:18) |     |     | (cid:19) |     |     |     |     |     |     |
+| ----- | --- | --------- | --- | --- | -------- | --- | --- | -------- | --- | --- | --- | --- | --- | --- |
+| Using | the | fact that |     |     |          |     |     |          |     |     |     |     |     |     |
+1
+|     |     |     |     |     |     | = logX | +γ  | +O(1/X) |     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | ------ | --- | ------- | --- | --- | --- | --- | --- | --- |
+n
+n≤X
+X
+| it  | follows | that |     |     |        |     |     |        |         |     |     |     |     |     |
+| --- | ------- | ---- | --- | --- | ------ | --- | --- | ------ | ------- | --- | --- | --- | --- | --- |
+|     |         |      |     | ∞   |        |     | ∞   |        |         |     |     |     |     |     |
+|     |         |      |     |     | v      | dv  |     |        |         |     |     |     |     |     |
+| (1) |         |      | 2   |     | ψ(v) ˆ |     |     | (loguy | +γ)ψ(u) | du  |     |     |     |     |
+|     |         |      |     | ℜ   | y      | v ∼ |     |        |         |     |     |     |     |     |
+|     |         |      |     | Zy  |        |     | Z0  |        |         |     |     |     |     |     |
+(cid:2) (cid:3)
+as y 0+. In the present formulation, this is purely a statement about a relationship
+→
+between a function and its Fourier transform for real, compactly supported functions ψ.
+We note that establishing the compatibility between the result of [GG] and that in [I, A] in
+the approach taken here relies on proving equation (1). This we do below, as a consequence
+| of  | a more  | general | identity. |     |     |     |     |     |     |     |     |     |     |     |
+| --- | ------- | ------- | --------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|     | General |         | and       | β.  |     |     |     |     |     |     |     |     |     |     |
+2.1. α If we do this with small shifts α and β we have, again with s =
+1/2+it,
+−α−β
+|     | t        |           |     |      |     |     |      |           |     |     | tT                |     |       |       |
+| --- | -------- | --------- | --- | ---- | --- | --- | ---- | --------- | --- | --- | ----------------- | --- | ----- | ----- |
+|     | ψ        | ζ(s+α)ζ(1 |     | s+β) | dt  | = T | ψ(t) | ζ(1+α+β)+ |     |     |                   |     | ζ(1 α | β) dt |
+|     | T        |           |     | −    |     |     |      |           |     |     | 2π                |     | −     | −     |
+| R   |          |           |     |      |     |     | R    |           |     |     |                   |     |       | !     |
+| Z   | (cid:18) | (cid:19)  |     |      |     |     | Z    |           |     |     | (cid:18) (cid:19) |     |       |       |
++O(T1/2+ǫ)
+| by  | Ingham.  | By  | [GG]   | this is | also equal | to       |          |     |                 |     |     |         |     |     |
+| --- | -------- | --- | ------ | ------- | ---------- | -------- | -------- | --- | --------------- | --- | --- | ------- | --- | --- |
+|     |          |     |        |         | ∞          |          | −α−β     |     |                 |     |     |         |     |     |
+|     |          |     | 1      |         |            | hT       |          |     | dv              |     |     |         |     |     |
+|     | ψ ˆ (0)T |     |        | +2T     |            |          |          | ψ   | ˆ (v) +O(Tǫ(X/T |     |     | +X1/2)) |     |     |
+|     |          |     | n1+α+β |         |            | 2πv      |          | ℜ   | v               |     |     |         |     |     |
+|     |          |     |        |         | Zy h≤v     |          |          |     |                 |     |     |         |     |     |
+|     |          | n≤X |        |         |            | (cid:18) | (cid:19) |     |                 |     |     |         |     |     |
+|     |          | X   |        |         | Xy         |          |          |     |                 |     |     |         |     |     |
+T
+| where | y = | .   | Since |     |     |     |     |     |     |     |     |     |     |     |
+| ----- | --- | --- | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+2πX
+|     |     |     |     |        | 1   |          |     | U−α−β |         |     |     |     |     |     |
+| --- | --- | --- | --- | ------ | --- | -------- | --- | ----- | ------- | --- | --- | --- | --- | --- |
+|     |     |     |     |        | =   | ζ(1+α+β) |     |       | +O(1/U) |     |     |     |     |     |
+|     |     |     |     | n1+α+β |     |          |     | −     | α+β     |     |     |     |     |     |
+n≤U
+X
+| for | (α+β) | >   | 0 and | U > T/π, | it follows |     | that |     |     |     |     |     |     |     |
+| --- | ----- | --- | ----- | -------- | ---------- | --- | ---- | --- | --- | --- | --- | --- | --- | --- |
+ℜ
+|     |     |          | yα+β |           |     |     |          |     | ∞   |        |     | dv     |     |     |
+| --- | --- | -------- | ---- | --------- | --- | --- | -------- | --- | --- | ------ | --- | ------ | --- | --- |
+|     |     |          |      | +t−α−βζ(1 |     |     |          |     |     | h−α−βψ | ˆ   |        |     |     |
+|     |     | ψ(t)     |      |           |     | α   | β) dt    | 2   |     |        | (v) |        |     |     |
+|     |     |          | α+β  |           | −   | −   |          | ∼   | ℜ   |        |     | v1−α−β |     |     |
+|     | R   |          |      |           |     |     |          |     | Zy  |        |     |        |     |     |
+|     | Z   | (cid:18) |      |           |     |     | (cid:19) |     | h≤v |        |     |        |     |     |
+Xy
+
+4 BRIAN CONREY ANDJONATHANP. KEATING
+as y 0+. In fact, this is an identity. Note that (1) is the limiting case when α,β 0 of
+→ →
+this identity.
+When we pass to higher moments the corresponding identities will be consequences of
+conjectures rather than facts. Thus, it is desirable to give a direct proof of this now, one
+that can be imitated later.
+Proof. Writeδ = α+β. Wecanextend theintegrationinv down tov = 0 since theintegrand
+is 0 for 0 < v < y. We will show that
+yδ ∞ dv
+(2) ψ(t) +t−δζ(1 δ) dt = 2 h−δψ ˆ (v) .
+δ − ℜ v1−δ
+Z R (cid:18) (cid:19) Z0 h≤v
+Xy
+To begin with use
+1
+(v)s
+h−δ = ζ(s+δ) y ds.
+2πi s
+h≤v Z(2)
+Xy
+Then write
+ˆ
+2 ψ(v) = ψ(u)(e( uv)+e(uv)) du.
+ℜ −
+R
+Z
+Because of the support of ψ the u-integral only runs over a finite segment of the positive
+reals. We now want to interchange the u-integration and the v- integration, but we have to
+be careful here. Basically we first split the u-integrand into two pieces, one with e(uv) and
+one with e( uv) and we deform the paths of the two ensuing v-integrals by rotating the
+−
+straight line paths along the positive reals onto the positive imaginary axis (in the case of
+the e(uv) integral) and the negative imaginary axis (in the case of the e( uv) integral). In
+−
+this way we get that the right hand side of (2) is
+∞ 1 y−s ∞ dv ∞ dv
+ψ(u) ζ(s+δ) (iv)s+δe−2πvu + ( iv)s+δe−2πvu ds du.
+2πi s v − v
+Z0 Z(2) (cid:18)Z0 Z0 (cid:19)
+The sum of the two v-integrals is
+π(s+δ)
+2cos (2π)−s−δΓ(s+δ)u−s−δ
+2
+which is u−s−δχ(1 s δ) where χ is the factor from the functional equation ζ(1 s) =
+− − −
+χ(1 s)ζ(s). Thus, our expression simplifies to
+−
+∞ 1 y−su−s−δ
+(3) ψ(u) ζ(1 s δ) ds du.
+2πi − − s
+Z0 Z(2)
+Now we move the s-path of integration to the left to s = . When we account for the
+residues from the poles at s = 0 and s = δ we exactly ℜ obta − in ∞ the left-hand side of (2). (cid:3)
+−
+Note that we have shown that if s > 0 then
+ℜ
+∞ dv ∞
+(4) 2 vs ψ ˆ (v) = χ(1 s) ψ(t)t−s dt
+ℜ v −
+Z0 Z0
+
+|               |     | MOMENTS     |     | OF        | ZETA AND | CORRELATIONS |     |     | OF DIVISOR-SUMS: |     |     | I   | 5   |
+| ------------- | --- | ----------- | --- | --------- | -------- | ------------ | --- | --- | ---------------- | --- | --- | --- | --- |
+| for functions |     | ψ compactly |     | supported |          | on (0,       | ).  |     |                  |     |     |     |     |
+∞
+We conclude that one can calculate the second moment of the zeta function with a power
+savings on the error term using long Dirichlet polynomials (i.e. longer than in the approx-
+imate functional equation), but this relies on establishing certain identities, such as that
+proved above. We shall see that this becomes more challenging for the higher moments.
+|     |     |     |     |     | 3.  | Fourth | moment |     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | ------ | ------ | --- | --- | --- | --- | --- | --- |
+The fourth moment of the Riemann zeta-function has been much studied with the explicit
+| formula | of Motohashi |     | [M] | one | of the | crowning | achievements. |     |     |     |     |     |     |
+| ------- | ------------ | --- | --- | --- | ------ | -------- | ------------- | --- | --- | --- | --- | --- | --- |
+The main goal of this paper is to revisit this topic but through the lens described in the
+last section. We want to understand how one can approach the fourth moment via the mean
+ζ(s)2.
+square of a long Dirichlet polynomial approximation to This point of view has also
+been explored to a certain extent in the work [H-B] of Heath-Brown, which built upon that
+of Ingam and Atkinson [I, A]; see also [CG]. But each of the above used an approximate
+functional equation to reduce the necessary length of the approximating polynomial. Here
+we want to see what happens purely with Dirichlet polynomials. This perspective will turn
+out to be useful in a future discussion of yet higher moments and divisor correlations.
+|     |     |     |     |     | 4. The | 4th | moment | of  | zeta |     |     |     |     |
+| --- | --- | --- | --- | --- | ------ | --- | ------ | --- | ---- | --- | --- | --- | --- |
+To begin with we recall the fourth moment of zeta. Let s = 1/2 + it and suppose that
+| α,β,γ,δ | (logT)−1. |     | Then |     |     |     |     |     |     |     |     |     |     |
+| ------- | --------- | --- | ---- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+≪
+|     |     |     | ∞   | t   |                 |     |     |     |         |      |     |     |     |
+| --- | --- | --- | --- | --- | --------------- | --- | --- | --- | ------- | ---- | --- | --- | --- |
+| (5) |     |     |     | ψ   | ζ(s+α)ζ(s+β)ζ(1 |     |     |     | s+γ)ζ(1 | s+δ) | dt  |     |     |
+|     |     |     |     | T   |                 |     |     | −   |         | −    |     |     |     |
+Z0
+(cid:18) (cid:19)
+∞
+|     |     |     |     |     | = T |     | ψ(t) | (α,β,γ,δ) |     | dt+O(T2/3+ǫ), |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | ---- | --------- | --- | ------------- | --- | --- | --- |
+tT
+Z
+Z0
+where
+|           |     |     |             |     |     | t −α−γ |     |      |       | t   | −α−δ |           |     |
+| --------- | --- | --- | ----------- | --- | --- | ------ | --- | ---- | ----- | --- | ---- | --------- | --- |
+| (α,β,γ,δ) |     | =   | Z(α,β,γ,δ)+ |     |     |        | Z(  | γ,β, | α,δ)+ |     |      | Z( δ,β,γ, | α)  |
+t
+| Z   |     |     |     |          | 2π       |          | −   |       | −        | 2π       |          | −       | −   |
+| --- | --- | --- | --- | -------- | -------- | -------- | --- | ----- | -------- | -------- | -------- | ------- | --- |
+|     |     |     |     |          | (cid:18) | (cid:19) |     |       |          | (cid:18) | (cid:19) |         |     |
+|     |     |     |     | t        | −β−γ     |          |     |       | t        | −β−δ     |          |         |     |
+| (6) |     |     | +   |          |          | Z(α,     | γ,  | β,δ)+ |          | Z(α,     |          | δ,γ, β) |     |
+|     |     |     |     | 2π       |          |          | − − |       | 2π       |          | −        | −       |     |
+|     |     |     |     | (cid:18) | (cid:19) |          |     |       | (cid:18) | (cid:19) |          |         |     |
+−α−β−γ−δ
+t
+|     |     |     |     | +   |     |     | Z(  | γ,  | δ, α, | β)  |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | --- | --- |
+|     |     |     |     |     | 2π  |     |     | − − | −     | −   |     |     |     |
+(cid:18) (cid:19)
+where
+|     |     |            |     | ζ(1+α+γ)ζ(1+α+δ)ζ(1+β |     |         |     |     |     | +γ)ζ(1+δ) |     |     |     |
+| --- | --- | ---------- | --- | --------------------- | --- | ------- | --- | --- | --- | --------- | --- | --- | --- |
+|     |     | Z(α,β,γ,δ) |     | =                     |     |         |     |     |     |           |     |     |     |
+|     |     |            |     |                       |     | ζ(2+α+β |     | +γ  | +δ) |           |     |     |     |
+(Perhaps “recall” is not the correct word here since the above is certainly a theorem but its
+| proof is | not written |     | down | in full | details | anywhere.) |     |     |     |     |     |     |     |
+| -------- | ----------- | --- | ---- | ------- | ------- | ---------- | --- | --- | --- | --- | --- | --- | --- |
+
+| 6   |     |     |     | BRIAN |     | CONREY | ANDJONATHANP. |     |     | KEATING |     |     |     |     |
+| --- | --- | --- | --- | ----- | --- | ------ | ------------- | --- | --- | ------- | --- | --- | --- | --- |
+Now
+∞
+|     |     |     |     |     |     |     |     |     |     | τ (n) |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | --- | --- |
+α,β
+|     |     |     |     |     | ζ(s+α)ζ(s+β) |     |     | =   |     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | ------------ | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+n2s
+n=1
+X
+where
+h−αk−β.
+|     |     |     |     |     |     | τ   | (n) := |     |     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | ------ | --- | --- | --- | --- | --- | --- | --- |
+α,β
+hk=n
+X
+We let
+∞
+τ (n)
+|     |     |     |     |     |     | D   | (s) | =   | α,β |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+α,β
+ns
+X n=1
+and
+|     |     |     |     |     |     |     |       |     | τ   | (n) |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | --- | --- | --- | --- | --- |
+|     |     |     |     |     |     | D   | (s;X) | =   | α,β |     |     |     |     |     |
+α,β
+ns
+n≤X X
+| be  | its approximating |        |     | Dirichlet | polynomial |     | of  | length   | X.       | Let    |     |      |     |     |
+| --- | ----------------- | ------ | --- | --------- | ---------- | --- | --- | -------- | -------- | ------ | --- | ---- | --- | --- |
+|     |                   |        |     |           |            |     | ∞   | t        |          |        |     |      |     |     |
+|     |                   | I(T;X) |     | = I       | (T;X)      | =   |     | ψ        | D        | (s,X)D | (1  | s,X) | dt. |     |
+|     |                   |        |     | α,β,γ,δ   |            |     |     |          | α,β      |        | γ,δ |      |     |     |
+|     |                   |        |     |           |            |     |     | T        |          |        | −   |      |     |     |
+|     |                   |        |     |           |            |     | Z0  | (cid:18) | (cid:19) |        |     |      |     |     |
+Our basic question is: How does I(T;X) approach ∞ ψ t ζ(s+α)ζ(s+β)ζ(1 s+γ)ζ(1
+|      |     |      |     |     |            |     |         |     | 0   | T               |     |     | −   | −   |
+| ---- | --- | ---- | --- | --- | ---------- | --- | ------- | --- | --- | --------------- | --- | --- | --- | --- |
+| s+δ) | dt  | as X |     | ?   |            |     |         |     |     |                 |     |     |     |     |
+|      |     |      | → ∞ |     |            |     |         |     | R   | (cid:0) (cid:1) |     |     |     |     |
+|      |     |      |     | 5.  | Descending |     | through |     | the | recipe          |     |     |     |     |
+If we cheat, we can work backwards in a way and deduce the behavior of I(T;X) from
+∞
+that of ψ t ζ(s+α)ζ(s+β)ζ(1 s+γ)ζ(1 s+δ) dt. The starting point is that by
+|          |     | 0       | T       |     |       |     | −   |     | −       |     |     |     |     |     |
+| -------- | --- | ------- | ------- | --- | ----- | --- | --- | --- | ------- | --- | --- | --- | --- | --- |
+| Perron’s |     | formula |         |     |       |     |     |     |         |     |     |     |     |     |
+|          | R   | (cid:0) | (cid:1) |     |       |     | 1   |     |         |     | dz  |     |     |     |
+|          |     |         |         | D   | (s;X) |     | =   | D   | (s+z)Xz |     | .   |     |     |     |
+|          |     |         |         |     | α,β   |     |     |     | α,β     |     |     |     |     |     |
+|          |     |         |         |     |       |     | 2πi |     |         |     | z   |     |     |     |
+Z(2)
+So, then
+∞
+|     |        |     |        | 1     |      |     |          | t        |        |     |     |      | dzdw |     |
+| --- | ------ | --- | ------ | ----- | ---- | --- | -------- | -------- | ------ | --- | --- | ---- | ---- | --- |
+|     | I(T;X) |     | =      |       | Xw+z |     | ψ        | D        | (s+z)D |     | (1  | s+w) | dt . |     |
+|     |        |     |        |       |      |     |          |          | α,β    |     | γ,δ |      |      |     |
+|     |        |     | (2πi)2 |       |      |     |          | T        |        |     | −   |      | z w  |     |
+|     |        |     |        | ZZz,w |      | Z0  |          |          |        |     |     |      |      |     |
+|     |        |     |        |       |      |     | (cid:18) | (cid:19) |        |     |     |      |      |     |
+Now, if we move the paths of integration in z and w so that their real parts are positive but
+small, then we can use the formula (5) to evaluate the integral over t; however the imaginary
+parts of z and w can be large. We believe (5) holds uniformly when the real parts of the
+shifts are 1/logT but the imaginary parts of the shifts can be large, as large as T1−ǫ and
+≪
+even larger. This has not been proven to hold for (5), but has been proven, as mentioned
+| above, | by  | Sandro | Bettin   | [B]  | in the | case | of the | second |         | moment. |     |     |     |     |
+| ------ | --- | ------ | -------- | ---- | ------ | ---- | ------ | ------ | ------- | ------- | --- | --- | --- | --- |
+| Now    | we  | use    | the fact | that |        |      |        |        |         |         |     |     |     |     |
+|        |     |        |          |      |        | D    | (s+z)  | = D    |         | (s)     |     |     |     |     |
+|        |     |        |          |      |        | α,β  |        |        | α+z,β+z |         |     |     |     |     |
+|        |     |        |          |      |        |      |        |        | ∞       | t       |     |     |     |     |
+and, assuming the uniform version of (5), replace ψ D (s+z)D (1 s+w) dt in
+|     |       |     |     |     |      |     |        |      | 0       | T               | α,β | γ,δ | −   |     |
+| --- | ----- | --- | --- | --- | ---- | --- | ------ | ---- | ------- | --------------- | --- | --- | --- | --- |
+| the | above | by  |     |     |      |     |        |      |         |                 |     |     |     |     |
+|     |       |     |     |     | ∞    |     |        |      | R       | (cid:0) (cid:1) |     |     |     |     |
+|     |       |     |     | T   | ψ(t) |     | (α+z,β | +z,γ | +w,δ+w) |                 | dt. |     |     |     |
+tT
+Z
+Z0
+
+|       |      |      | MOMENTS |     | OF ZETA | AND  | CORRELATIONS |        | OF DIVISOR-SUMS: |            | I   | 7   |
+| ----- | ---- | ---- | ------- | --- | ------- | ---- | ------------ | ------ | ---------------- | ---------- | --- | --- |
+| Next, | note | that |         |     |         |      |              |        |                  |            |     |     |
+|       |      |      | (α+z,β  |     | +z,γ    | +w,δ | +w)          | = (α+z | +w,β             | +z +w,γ,δ) |     |     |
+|       |      |      | t       |     |         |      |              | t      |                  |            |     |     |
+|       |      | Z    |         |     |         |      |              | Z      |                  |            |     |     |
+follows just from the symmetries of . We now change variables with s = z +w and have
+t
+Z
+|        |     | 1   |     |     |     | Xs  |     | ∞    |                   |     |               |     |
+| ------ | --- | --- | --- | --- | --- | --- | --- | ---- | ----------------- | --- | ------------- | --- |
+| I(T;X) | =   |     |     |     |     |     | T   | ψ(t) | (α+s,β+s;γ,δ)dtdw |     | ds+O(T2/3+ǫ). |     |
+tT
+|     |     | (2πi)2 |            |     | w(s | w)  |     |     | Z   |     |     |     |
+| --- | --- | ------ | ---------- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|     |     |        | Zℜs=4Zℜw=2 |     |     | −   | Z0  |     |     |     |     |     |
+We move the path of integration in the w-variable off to the left, to and collect the
+−∞
+| residue | from | the | pole | at w | = 0. | In this | way | we have |     |     |     |     |
+| ------- | ---- | --- | ---- | ---- | ---- | ------- | --- | ------- | --- | --- | --- | --- |
+|         |      |     |      |      | Xs   | ∞       |     |         |     |     |     |     |
+1
+|     | I(T;X) |     | =   |     |     | T   | ψ(t) | (α+s,β | +s;γ,δ) | dt ds+O(T2/3+ǫ). |     |     |
+| --- | ------ | --- | --- | --- | --- | --- | ---- | ------ | ------- | ---------------- | --- | --- |
+tT
+|     |     |     | 2πi |       | s   |     |      | Z     |         |     |     |     |
+| --- | --- | --- | --- | ----- | --- | --- | ---- | ----- | ------- | --- | --- | --- |
+|     |     |     |     | Zℜs=4 |     | Z0  |      |       |         |     |     |     |
+|     |     |     |     |       | 6.  | How | many | swaps | to use? |     |     |     |
+In the formula (6) we sort the terms according to the number U of “swaps”; this is the
+number of pairs of variables that are exchanged in the arguments of . Specifically, there
+t
+Z
+are 6 terms on the right side of (6), the first has 0-swaps, the next four each have one swap,
+and the sixth and last term has two swaps. This notion is relevant because in the expressions
+for
+|     |     |     |     |     |     |     | (α+s,β | +s;γ,δ) |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | ------ | ------- | --- | --- | --- | --- |
+t
+Z
+the terms with U swaps have factors of the form tT −Us . When paired with the factor Xs
+2π
+we see that to evaluate the relevant integral over s we should move the path to the right
+(cid:0) (cid:1)
+(and get 0 for an answer) whenever X < tT U ; otherwise we should move the path to the
+2π
+left and evaluate the integral as the sum of the residues over the poles.
+|     |     |     |     |     |     |          | (cid:0) | (cid:1)  |         |     |     |     |
+| --- | --- | --- | --- | --- | --- | -------- | ------- | -------- | ------- | --- | --- | --- |
+|     |     |     |     |     |     | Explicit |         | formula: | 0-swaps |     |     |     |
+7.
+We refer to the terms with 0-swaps as the “diagonal” terms. These are just
+|     |     |     |     |         |     | 1   | Xs  |        |         |     |     |     |
+| --- | --- | --- | --- | ------- | --- | --- | --- | ------ | ------- | --- | --- | --- |
+|     |     |     |     | ψ(0)T ˆ |     |     |     | (α+s,β | +s;γ,δ) | ds  |     |     |
+|     |     |     |     |         | 2πi |     | s   | Z      |         |     |     |     |
+Zℜs=4
+
+8 BRIAN CONREY ANDJONATHANP. KEATING
+ˆ
+which lead to Tψ(0) times
+1 ζ(s+1+α+γ)ζ(s+1+α+δ)ζ(s+1+β +γ)ζ(s+1+β +δ)Xs
+ds
+2πi ζ(2s+2+α+β +γ +δ) s
+Z(2)
+ζ(1+α+γ)ζ(1+α+δ)ζ(1+β +γ)ζ(1+β +δ)
+=
+ζ(2+α+β +γ +δ)
+X−α−γ ζ(1+δ γ)ζ(1+β α)ζ(1+β α+δ γ)
+− − − −
+− α+γ ζ(2+β α+δ γ)
+− −
+X−α−δ ζ(1+γ δ)ζ(1+β α)ζ(1+β α+γ δ)
+− − − −
+− α+δ ζ(2+β α+γ δ)
+− −
+X−β−γ ζ(1+β α)ζ(1+δ γ)ζ(1+α β +δ γ)
+− − − −
+− β +γ ζ(2+α β +δ γ)
+− −
+X−β−δ ζ(1+α β)ζ(1+γ δ)ζ(1+α β +γ δ)
+− − − −
+− β +δ ζ(2+α β +γ δ)
+− −
+plus an error term which is O(T2/3+ǫ).
+8. Explicit formula: one swap
+There are four terms with one-swap. One of these is
+∞ 1 Xs tT −α−γ−s
+(7) T ψ(t) Z( γ,β +s, α s,δ) ds dt.
+2πi s 2π − − −
+Z0 Zℜs=4 (cid:18) (cid:19)
+If X < T this is 0. If X > T then we evaluate it as a sum over the residues at all of the
+2π π
+poles (near s = 0) of the integrand. Note that
+ζ(1 α γ s)ζ(1 γ +δ)ζ(1 α+β)ζ(1+β +δ +s)
+Z( γ,β +s, α s,δ) = − − − − −
+− − − ζ(2 α+β γ +δ)
+− −
+which has poles at s = α γ and s = β δ. The sum of the residues at these poles and
+− − − −
+at s = 0 give
+∞ tT −α−γ ζ(1 α γ)ζ(1 γ +δ)ζ(1 α+β)ζ(1+β +δ)
+(8) T ψ(t) − − − −
+2π ζ(2 α+β γ +δ)
+Z0 (cid:18)(cid:18) (cid:19) − −
+X−α−γ ζ(1 γ +δ)ζ(1 α+β)ζ(1 α+β γ +δ)
++ − − − −
+α+γ ζ(2 α+β γ +δ)
+− −
+X−β−δ tT −α+β−γ+δ ζ(1 α+β γ +δ)ζ(1 γ +δ)ζ(1 α+β)
+− − − − dt.
+− β +δ 2π ζ(2 α+β γ +δ)
+(cid:18) (cid:19) − − (cid:19)
+Note that the term in the integrand which is independent of t cancels with a term from the
+0-swap diagonal piece above.
+
+MOMENTS OF ZETA AND CORRELATIONS OF DIVISOR-SUMS: I 9
+9. Explicit formula: two swaps
+For the term with two-swaps we have
+∞ 1 tT −α−β−γ−δ−2s Xs
+T ψ(t) Z( γ, δ, α s, β s) ds dt.
+2πi 2π − − − − − − s
+Z0 Z(2)(cid:18) (cid:19)
+If T2 > π2X then the answer will be 0 as can be seen by moving the path of integration to
+the right. If T2 < 4π2X then we use the fact that
+ζ(1 α γ s)ζ(1 β γ s)ζ(1 α δ s)ζ(1 β δ s)
+Z( γ, δ, α s, β s) = − − − − − − − − − − − −
+− − − − − − ζ(2 α β γ δ 2s)
+− − − − −
+has poles at s = α+γ,α+δ,β+γ and β +δ; so together with the residue from the pole at
+s = 0 we will get a total of five terms for this integral:
+−α−β−γ−δ
+tT ζ(1 α γ)ζ(1 β γ)ζ(1 α δ)ζ(1 β δ)
+− − − − − − − −
+2π ζ(2 α β γ δ)
+(cid:18) (cid:19) − − − −
+X−α−γ tT α−β+γ−δ ζ(1+α β)ζ(1+γ δ)ζ(1+α β +γ δ)
++ − − − −
+α+γ 2π ζ(2+α β +γ δ)
+(cid:18) (cid:19) − −
+X−α−δ tT α−β−γ+δ ζ(1 γ +δ)ζ(1+α β γ +δ)ζ(1+α β)
++ − − − −
+α+δ 2π ζ(2+α β γ +δ)
+(cid:18) (cid:19) − −
+X−β−γ tT −α+β+γ−δ ζ(1 α+β)ζ(1 α+β +γ δ)ζ(1+γ δ)
++ − − − −
+α+δ 2π ζ(2 α+β +γ δ)
+(cid:18) (cid:19) − −
+X−β−δ tT −α+β−γ+δ ζ(1 α+β γ +δ)ζ(1 γ +δ)ζ(1 α+β)
++ − − − −
+β +δ 2π ζ(2 α+β γ +δ)
+(cid:18) (cid:19) − −
+Notice that the last term here is the negative of the last term in the explicit formula for
+one-swap. In the case that X > T 2 we add the 0-swap, one swap, and two swap terms
+2π
+all together and all of the dependency on X disappears; we recover exactly the formula (5).
+(cid:0) (cid:1)
+This is to be expected since when X > T 2 it is known that the Dirichlet polynomial
+2π
+D (s;X) is a good point-wise approximation to ζ(s+α)ζ(s+β), so the mean squares are
+α,β
+(cid:0) (cid:1)
+the same.
+10. Ascending through convolution sums: the diagonal
+Next we turn to what can be said about the mean-square I(T;X) but now from the point
+of view of coefficient correlations. We call this the “ascending” perspective. We consider
+∞ τ (m)τ (n)
+Iψ(T,X) = D (s,X)D (1 s,X)ψ(t/T) dt = T α,β γ,δ ψ ˆ (T log(m/n).
+α,β γ,δ
+− √mn
+Z0
+m,n≤X
+X
+
+10 BRIAN CONREY ANDJONATHANP. KEATING
+The simplest terms are the diagonal terms:
+τ (n)τ (n)
+ˆ α,β γ,δ
+ψ(0)T .
+n
+n≤X
+X
+The sum here may be evaluated by Perron’s formula as
+τ (n)τ (n) 1 ∞ τ (n)τ (n)Xs
+α,β γ,δ α,β γ,δ
+= ds.
+n 2πi n1+s s
+n≤X Z(2) n=1
+X X
+But
+∞
+τ (n)τ (n)
+α,β γ,δ
+= (α+s,β +s;γ,δ)
+n1+s Z
+n=1
+X
+and so the diagonal terms are identical to the 0-swap terms already considered above.
+11. Ascending: Type I off-diagonals with shifts
+Now we are left with the terms
+τ (m)τ (n)
+α,β γ,δ ˆ
+= T ψ(T log(m/n)).
+√mn
+m,n≤X
+Xm6=n
+We let m = n+h and obtain (just as in [GG])
+∞ hT dv
+2T M′ ,h ψ ˆ (v)
+ℜ 2πv v
+Zy h≤v (cid:18) (cid:19)
+Xy
+where the coefficient correlation is
+τ (n)τ (n+h) = M(u,h)+E(u,h).
+α,β γ,δ
+n≤u
+X
+We use the δ-method of [DFI] to get an expression for M′(u,h), the average value of
+τ (n)τ (n+h). Namely,
+n≤u α,β γ,δ
+∞
+P
+c (h)P (u,q)P (u+h,q)
+q α,β γ,δ
+q=1
+X
+where c (h) = dµ(q/d) is the Ramanujan sum and where P (u,d) is the average value
+q d|h α,β
+d|q
+of τ (n)e(n/d). The latter is just the sum of the residues near 1 of (s,1/d)us−1
+n≤u α,β P D α,β
+where
+P ∞
+(s,1/d) = τ (n)e(n/d)n−s.
+α,β α,β
+D
+n=1
+X
+In[C] Lemma 4, forexample, it is shown that (s,1/q) q1−2s−α−βD (s)is entire. Thus,
+α,β α,β
+D −
+1 1
+P (u,q) = ζ(1 α+β)u−αqα−β + ζ(1+α β)u−βqβ−α
+α,β
+q − q −
+
+MOMENTS OF ZETA AND CORRELATIONS OF DIVISOR-SUMS: I 11
+and
+∞
+c (h)
+M′(u,h) = q ζ(1 α+β)u−αqα−β +ζ(1+α β)u−βqβ−α
+q2 − −
+q=1
+X (cid:0) (cid:1)
+ζ(1 γ +δ)u−γqγ−δ +ζ(1+γ δ)u−δqδ−γ .
+× − −
+We multiply out this expression and ha(cid:0)ve 4 terms each of which can be expressed i(cid:1)n terms
+of
+ζ(1+α+β)ζ(1+γ +δ) 1
+M := .
+α,β;γ,δ
+ζ(2+α+β +γ) d1+α+β+γ+δ
+d|h
+X
+Specifically, we have
+M′(u,h) = u−α−γM +u−α−δM +u−β−γM +u−β−δM .
+−γ,β;−α,δ −δ,β;γ,−α α,−γ;−β,δ α,−δ;γ,−β
+Now, much as we did in the first section we compute
+∞ hT dv
+2 M′( ,h)ψ ˆ (v) .
+ℜ 2πv v
+Z0
+h≤v/y
+X
+(Note that the integrand is 0 for 0 < v < y.) We have that one term (the term corresponding
+to u−α−γM ) of M′(hT ,h) is
+−γ,β;−α,δ h≤v/y 2πv
+P −α−γ
+ζ(1 α+β)ζ(1 γ +δ) T
+− − h−α−γd−1−β−δ
+ζ(2 α+β γ +δ) 2πv
+− − (cid:18) (cid:19) hd≤v/y
+X
+ζ(1 α+β)ζ(1 γ +δ) T
+−α−γ
+1
+(v)s
+y
+= − − ζ(s+α+γ)ζ(s+1β +δ) ds.
+ζ(2 α+β γ +δ) 2πv 2πi s
+− − (cid:18) (cid:19) Z(2)
+As before, see (3), we compute that
+∞ ∞
+ζ(s+α+γ) ψ ˆ (v)vs−1+α+γ dv = ζ(1 s α γ) ψ(u)u−s−α−γ du.
+− − −
+Z0 Z0
+Then, by moving the s-path of integration to s = 1/2 we have
+ℜ −
+1 y−su−s−α−γ
+ζ(1 s α γ)ζ(s+1+β +δ) ds
+2πi − − − s
+Z(2)
+yα+γ
+= u−α−γζ(1 α γ)ζ(1+β +δ)+ζ(1 α+β γ +δ)
+− − − − α+γ
+yβ+δu−α+β−γ+δ
+ζ(1 α+β γ +δ) +O(y1/2).
+− − − β +δ
+
+12 BRIAN CONREY ANDJONATHANP. KEATING
+Now we have shown that
+∞ hT dv ∞ T −α−γ ζ(1 α+β)ζ(1 γ +δ)
+2 M′( ,h)ψ ˆ (v) = ψ(u) − −
+ℜ 2ψv v 2π ζ(2 α+β γ +δ)
+Z0 h≤v/y Z0 (cid:18) (cid:19) − −
+X
+yα+γ
+u−α−γζ(1 α γ)ζ(1+β +δ)+ζ(1 α+β γ +δ)
+× − − − − α+γ
+(cid:18)
+yβ+δu−α+β−γ+δ
+ζ(1 α+β γ +δ) du+O(y1/2).
+− − − β +δ
+(cid:19)
+Recalling that y = T/(2πX) we see that this term matches up with the first term (8) that
+we got from the recipe with one swap. Similarly the other three terms match up. It follows
+that the one-swap terms match up with the Type I off-diagonal terms.
+12. Conclusion
+The coefficient correlation terms that we have analyzed here contribute to I(T;X) once
+X gets larger than T. We have shown two very different ways to view these terms: from the
+1-swap terms of the recipe conjecture, and from the Type-I divisor correlation sums much
+studied in analytic number theory. Our results illustrate that there are other terms to be
+considered once X > T2, i.e. that there is something missing from the above analysis. These
+are the divisor correlations that must match the 2-swapped terms.
+The next step is to describe, from the ascending perspective, the terms that we see in the
+descent from (5) to the terms with 2-swaps. This will be the subject of a subsequent paper
+where the coefficient sums to be considered are much as in [BK]:
+m−αn−γm−βn−δ h h
+1 1 2 2 ψ ˆ T 1 + 2
+m m m M m M
+M (M 1, 1 M X ,M 2, 2 h ) 1 = ,h 1 2 m1 ( , ∗ m X 1) 2 , , ( n ∗ 1 2 , ) n2 1 2 (cid:18) (cid:18) 1 1 2 2(cid:19)(cid:19)
+m1m2≤X
+where
+( ) : M m = M n +h ( ) : M m = M n +h
+1 1 1 2 1 1 2 2 2 1 2 2
+∗ ∗
+for coprime integers M and M .
+1 2
+References
+[A] Atkinson, F. V., The mean value of the zeta-function on the critical line. Proc. London Math. Soc. 47
+(1941), 174–200.
+[B] Bettin, Sandro, The second moment of the Riemann zeta function with unbounded shifts. Int. J.
+Number Theory 6 (2010), no. 8, 1933–1944.
+[BK] Bogomolny,E.B.;Keating,J.P.,RandommatrixtheoryandtheRiemannzerosI:three-andfour-point
+correlations.Nonlinearity 8 (1995), no. 6, 1115–1131.
+[C] Conrey,J. B.More than two fifths of the zeros of the Riemann zeta function are onthe critical line. J.
+Reine Angew. Math. 399 (1989), 1–26.
+[CFKRS] Conrey,J.B.; Farmer,D.W.; Keating,J.P.; Rubinstein, M.O.; Snaith,N.C.,Integralmoments
+of L-functions. Proc. Lond. Math. Soc. 91 (2005) 33–104.
+
+|     | MOMENTS | OF ZETA AND | CORRELATIONS | OF DIVISOR-SUMS: | I   | 13  |
+| --- | ------- | ----------- | ------------ | ---------------- | --- | --- |
+[CG] Conrey, J. B.; Gonek, S. M. High moments of the Riemann zeta-function. Duke Math. J. 107 (2001),
+no. 3, 577–604.
+[DFI] Duke, W.; Friedlander, J. B.; Iwaniec, H. A quadratic divisor problem. Invent. Math. 115 (1994), no.
+2, 209–217.
+[GG] Goldston,D.A.;Gonek,S.M.MeanvaluetheoremsforlongDirichletpolynomialsandtailsofDirichlet
+| series. Acta | Arith. 84 | (1998), no. 2, 155–192. |     |     |     |     |
+| ------------ | --------- | ----------------------- | --- | --- | --- | --- |
+[HB] Heath-Brown,D.R., Thefourthpowermomentofthe Riemannzeta function.Proc.Lond.Math.Soc.
+| 38 (1979), | 385–422. |     |     |     |     |     |
+| ---------- | -------- | --- | --- | --- | --- | --- |
+[I] Ingham, A. E., Mean-values theorems in the theory of the Riemann zeta-function. Proc. Lond. Math.
+| Soc. 27 | (1926) 273–300. |     |     |     |     |     |
+| ------- | --------------- | --- | --- | --- | --- | --- |
+[KS] Keating,J.P.;Snaith,N.C.Randommatrixtheoryandζ(1/2+it).Commun.Math.Phys.214(2000),
+no. 1, 57–89.
+[M] Motohashi,Yo-ichi,An explicitformulafor the fourthpowermeanofthe Riemannzeta-function.Acta
+| Math. 170 | (1993), no. | 2, 181–220. |     |     |     |     |
+| --------- | ----------- | ----------- | --- | --- | --- | --- |
+American Institute of Mathematics, 360 Portage Ave, Palo Alto, CA 94306, USA and
+School of Mathematics, University of Bristol, Bristol BS8 1TW, UK
+| E-mail address: | conrey@aimath.org |     |     |     |     |     |
+| --------------- | ----------------- | --- | --- | --- | --- | --- |
+School of Mathematics, University of Bristol, Bristol BS8 1TW, UK
+| E-mail address: | j.p.keating@bristol.ac.uk |     |     |     |     |     |
+| --------------- | ------------------------- | --- | --- | --- | --- | --- |

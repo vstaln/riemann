@@ -376,9 +376,10 @@ def tangent_lower(box, kernel, weights, pressure, grid,
                 heuristic[row][column] += scalar
     if cap_scheme == "coboundary":
         for i in range(q):
-            if second_ranges is None or i >= second_ranges.length:
+            low_i, high_i = box[i]
+            if second_ranges is None or high_i >= second_ranges.length:
                 return None
-            s2 = second_ranges.query(i, i)
+            s2 = second_ranges.query(low_i, high_i)
             if s2 == float("-inf"):
                 return None
             scalar = _down(nearest_coeffs[i] * s2)

@@ -1,0 +1,831 @@
+5102
+nuJ
+32
+]TN.htam[
+1v44860.6051:viXra
+MOMENTS OF ZETA AND CORRELATIONS OF DIVISOR-SUMS: III
+BRIAN CONREY AND JONATHAN P. KEATING
+Abstract. In this series we examine the calculation of the 2kth moment and shifted mo-
+mentsoftheRiemannzeta-functiononthecriticallineusinglongDirichletpolynomialsand
+divisor correlations. The present paper is concerned with the precise input of the conjec-
+tural formula for the classical shifted convolution problem for divisor sums so as to obtain
+all of the lower order terms in the asymptotic formula for the mean square along [T,2T] of
+2
+a Dirichlet polynomial of length up to T with divisor functions as coefficients.
+1. Introduction
+This paper is part3 ofa sequence of papersdevoted tounderstanding howto conjecture all
+of the integral moments of the Riemann zeta-function from a number theoretic perspective.
+The method is to approximate ζ(s)k by a long Dirichlet polynomial and then compute the
+mean square of the Dirichlet polynomial (c.f. [GG]). There will be many off-diagonal terms
+and it is the care of these that is the concern of these papers. In particular it is necessary to
+treat the off-diagonal terms by a method invented by Bogomolny and Keating [BK1, BK2].
+Our perspective on this method is that it is most properly viewed as a multi-dimensional
+Hardy-Littlewood circle method.
+In parts 1 and 2 [CK1, CK2] we considered the second and fourth moments of zeta in
+this new light. In this paper we embark on the higher moments. Here we only consider the
+classical shifted convolution problem but we try to solve it precisely in a way that exhibits
+all of the main terms of the expected formula. This requires some care! In the next paper we
+will introduce the new terms for the higher moments (much as we did for the fourth moment
+in paper 2 [CK2]).
+One way to think of this paper is that it is a more precise version of [CG] in that we obtain
+all of the main terms in the asymptotic formula. Our treatment is not rigorous; in particular
+we conjecture the shape of the fundamental shifted convolution at a critical juncture. This
+Date: September 18, 2018.
+We gratefully acknowledge support under EPSRC Programme Grant EP/K034383/1LMF: L-Functions
+and Modular Forms. Research of the first author was also supported by the American Institute of Mathe-
+matics and by a grant from the National Science Foundation. JPK is grateful for the following additional
+support: a grant from the Leverhulme Trust, a Royal Society Wolfson Research Merit Award, a Royal So-
+ciety Leverhulme Senior Research Fellowship, and a grant from the Air Force Office of Scientific Research,
+AirForceMaterialCommand,USAF(numberFA8655-10-1-3088). HeisalsopleasedtothanktheAmerican
+Institute of Mathematics for hospitality during a visit where this work started.
+1
+
+2 BRIAN CONREY ANDJONATHANP. KEATING
+is to be expected since for example no one knows how to evaluate
+τ (n)τ (n+1)
+3 3
+n≤x
+X
+asymptotically in a rigorous way.
+The formula we obtain is in complete agreement with all of the main terms predicted by
+the recipe of [CFKRS] (and in particular, with the leading order term conjectured in [KS]).
+2. Shifted moments
+Some of the underlying mechanism of moments becomes a little clearer if we introduce
+shifts. (The initial work is possibly harder but the payoff makes it worthwhile.) Basically
+we are interested in the moment
+T
+ζ(s+α )...ζ(s+α )ζ(1 s+β )...ζ(1 s+β ) dt
+1 k 1 k
+− −
+Z0
+where s = 1/2 + it and we think of the shifts as being small complex numbers of size
+1/logT. Now
+≪
+∞
+1 τ (m)
+ζ(s+α )...ζ(s+α ) = =
+α1,...,αk
+1 k ms+α1 ...ms+αk ms
+m1X ,...,mk 1 k m
+X
+=1
+where
+τ (m) = m−α1 ...m−αk.
+α1,...,αk 1 k
+m1·m X2...mk=m
+(We have here used τ for the divisor function rather than d.) Let
+τ (n)
+D (s;X) =
+α1,...,αk
+.
+α1,...,αk
+ns
+n≤X
+X
+More succinctly if A = α ,...,α we let
+1 k
+{ }
+τ (m) = τ (m)
+A α1,...,αk
+and
+∞
+τ (m)
+A
+D (s) = = ζ(s+α);
+A ms
+m=1 α∈A
+X Y
+for the Dirichlet polynomial approximation to this we use the notation
+τ (m)
+A
+D (s;X) = .
+A ms
+m≤X
+X
+For a set A it is convenient to designate this set translated by w with the notation A ; i.e.
+w
+A = w+α ,...,w +α .
+w 1 k
+{ }
+
+|     |        |     | MOMENTS |                | OF  | ZETA | AND CORRELATIONS |        |     | OF  | DIVISOR-SUMS: |      | III | 3   |
+| --- | ------ | --- | ------- | -------------- | --- | ---- | ---------------- | ------ | --- | --- | ------------- | ---- | --- | --- |
+| The | moment |     | we      | are interested |     | in   | is               |        |     |     |               |      |     |     |
+|     |        |     |         |                |     | ∞    | t                |        |     |     |               |      |     |     |
+| (1) |        |     | Rψ      | (T)            | =   | ψ    |                  | ζ(s+α) |     |     | ζ(1           | s+β) | dt  |     |
+A,B
+|     |     |     |     |     |     |          | T           |     |     |     | −   |     |     |     |
+| --- | --- | --- | --- | --- | --- | -------- | ----------- | --- | --- | --- | --- | --- | --- | --- |
+|     |     |     |     |     | Z0  | (cid:18) | (cid:19)α∈A |     |     | β∈B |     |     |     |     |
+|     |     |     |     |     |     |          | Y           |     |     | Y   |     |     |     |     |
+where ψ is a smooth function with compact support, say ψ C∞[1,2]. The recipe [CFKRS]
+∈
+| tells | us how | we  | expect | this | moment |     | will          | behave, | namely |     |     |     |     |     |
+| ----- | ------ | --- | ------ | ---- | ------ | --- | ------------- | ------- | ------ | --- | --- | --- | --- | --- |
+|       |        |     | ∞      |      |        |     | −Pαˆ∈U(αˆ+βˆ) |         |        |     |     |     |     |     |
+tT
+| Rψ  | (T) | = T | ψ(t) |     |     |          |          | βˆ∈V |     | Z(A | U +V−,B |     | V +U−) dt+o(T) |     |
+| --- | --- | --- | ---- | --- | --- | -------- | -------- | ---- | --- | --- | ------- | --- | -------------- | --- |
+| A,B |     |     |      |     |     | 2π       |          |      | A   |     | −       |     | −              |     |
+|     |     | Z0  |      |     |     | (cid:18) | (cid:19) |      |     |     |         |     |                |     |
+U⊂A,V⊂B |UX|=|V|
+where
+|     |     |     |     |     |     | Z(A,B) |     | :=  |     | ζ(α+β) |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | ------ | --- | --- | --- | ------ | --- | --- | --- | --- |
+α∈A,β∈B
+Y
+and (A,B) is a product over primes that converges nicely in the domains under consider-
+A
+ation (see below). Also we have used an unconventional notation here; by A U +V− we
+−
+mean the following: start with the set A and remove the elements of U and then include
+the negatives of the elements of V. We think of the process as “swapping” equal numbers
+of elements between A and B; when elements are removed from A and put into B they first
+get multiplied by 1. We keep track of these swaps with our equal-sized subsets U and V
+−
+of A and B; and when we refer to the “number of swaps” in a term we mean the cardinality
+| U   | of U | (or, since | they | are | of  | equal | size, | of V). |     |     |     |     |     |     |
+| --- | ---- | ---------- | ---- | --- | --- | ----- | ----- | ------ | --- | --- | --- | --- | --- | --- |
+| |
+| The | Euler | product |     |     | is given | by  |     |     |     |     |     |     |     |     |
+| --- | ----- | ------- | --- | --- | -------- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+A
+1
+|     |     |     |     |     | (A,B) | =   | Z (A,B) |     |     | (A,B) |     | dθ, |     |     |
+| --- | --- | --- | --- | --- | ----- | --- | ------- | --- | --- | ----- | --- | --- | --- | --- |
+|     |     |     |     |     |       |     | p       |     |     | p,θ   |     |     |     |     |
+|     |     |     |     | A   |       |     |         |     | A   |       |     |     |     |     |
+|     |     |     |     |     |       |     | p       |     | Z0  |       |     |     |     |     |
+Y
+| where | z (x) | :=  | (1  | p−x)−1, | Z     | (A,B) | =     |     | z (1+α+β)−1 |       |     | and |     |     |
+| ----- | ----- | --- | --- | ------- | ----- | ----- | ----- | --- | ----------- | ----- | --- | --- | --- | --- |
+|       | p     |     |     |         |       | p     |       | α∈A | p           |       |     |     |     |     |
+|       |       |     | −   |         |       |       |       | β∈B |             |       |     |     |     |     |
+|       |       |     |     |         |       |       | Q     | 1   |             |       | 1   |     |     |     |
+|       |       |     |     |         | (A,B) | :=    | z     | (   | +α)         | z     | (   | +β) |     |     |
+|       |       |     |     | p,θ     |       |       | p,−θ  |     |             |       | p,θ |     |     |     |
+|       |       |     |     | A       |       |       |       | 2   |             |       | 2   |     |     |     |
+|       |       |     |     |         |       |       | α∈A Y |     |             | β∈B Y |     |     |     |     |
+e(θ)p−x)−1.
+| with | z (x) | :=  | (1  |     |     |     |     |     |     |     |     |     |     |     |
+| ---- | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|      | p,θ   |     | −   |     |     |     |     |     |     |     |     |     |     |     |
+The technique we are developing here is to approach our moment problem (1) through
+| long | Dirichlet |     | polynomials, |     | i.e. | we consider |     |     |     |     |     |     |     |     |
+| ---- | --------- | --- | ------------ | --- | ---- | ----------- | --- | --- | --- | --- | --- | --- | --- | --- |
+∞
+t
+|     |     |     | Iψ  | (T;X) | :   | =   | ψ   |     | D   | (s;X)D | (1  | s;X) | dt  |     |
+| --- | --- | --- | --- | ----- | --- | --- | --- | --- | --- | ------ | --- | ---- | --- | --- |
+|     |     |     |     |       |     |     |     |     | A   |        | B   |      |     |     |
+|     |     |     | A,B |       |     |     |     | T   |     |        |     | −    |     |     |
+Z0
+(cid:18) (cid:19)
+ˆ
+|     |     |     |     |     |     |     |     | τ   | (m)τ | (n)ψ | T log | m   |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | ---- | ---- | ----- | --- | --- | --- |
+|     |     |     |     |     |     |     |     | A   |      | B    | 2π    | n   |     |     |
+| (2) |     |     |     |     |     | =   | T   |     |      |      |       |     |     |     |
+√mn
+|     |     |     |     |     |     |     |     |     |     |     | (cid:0) | (cid:1) |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------- | ------- | --- | --- |
+m,n≤X
+X
+for various ranges of X. We can use the recipe of [CFKRS] to conjecture a formula for Iψ.
+| We  | start | with |     |     |     |       |     |     |     |     |         |     |     |     |
+| --- | ----- | ---- | --- | --- | --- | ----- | --- | --- | --- | --- | ------- | --- | --- | --- |
+|     |       |      |     |     |     |       |     | 1   | Xw  |     |         |     |     |     |
+|     |       |      |     |     | D   | (s;X) | =   |     |     | D   | (s) dw. |     |     |     |
+|     |       |      |     |     |     | A     |     |     |     | Aw  |         |     |     |     |
+|     |       |      |     |     |     |       |     | 2πi | w   |     |         |     |     |     |
+Zw
+
+4 BRIAN CONREY ANDJONATHANP. KEATING
+Thus,
+1 Xz+w
+Iψ (T;X) = Rψ (T) dw dz.
+A,B (2πi)2 zw Aw,Bz
+ZZz,w
+We insert the conjecture above from the recipe and expect that
+∞ 1 Xz+w tT
+−Pαˆ∈U(αˆ+w+βˆ+z)
+Iψ (T;X) = T ψ(t) βˆ∈V
+A,B (2πi)2 zw 2π
+Z0 ZZz,w U⊂A,V⊂B (cid:18) (cid:19)
+|UX|=|V|
+Z(A U +V−,B V +U−) dw dz dt+o(T).
+×A w − w z z − z w
+We have done a little simplification here: instead of writing U A we have written U A
+w
+⊂ ⊂
+and changed the exponent of (tT/2π) accordingly.
+Notice that there is a factor (X/T|U|)w+z here. As mentioned above we refer to U as
+| |
+the number of “swaps” in the recipe, and now we see more clearly the role it plays; in the
+terms above for which X < T|U| we move the path of integration in w or z to + so that
+∞
+the factor (X/T|U|)w+z 0 and the contribution of such a term is 0. Thus, the size of X
+→
+determines how many “swaps” we must keep track of. For example, if X < T, then we only
+need to keep the terms with U = V = 0, i.e. no swaps. We then have
+| | | |
+1 Xw+z
+(3) Iψ (T;X) = Tψ ˆ (0) Z(A ,B ) dw dz +o(T).
+A,B (2πi)2 ℜz=2 wz A w z
+ZZℜw=2
+We let s = z +w and have
+1 Xs
+Iψ (T;X) = Tψ ˆ (0) Z(A ,B) dw ds+o(T);
+A,B (2πi)2 ℜs=4 w(s w)A s
+ZZℜw=2 −
+(here we used an identity Z(A ,B ) = Z(A ,B); this is obvious for the Z factor and
+w z w+z
+A A
+less obvious for the factor). We move the w integral to the left towards w = and
+A ℜ −∞
+evaluate that integral as the residue at w = 0. Thus,
+1 Xs
+Iψ (T;X) = Tψ ˆ (0) Z(A ,B) ds+o(T).
+A,B 2πi s A s
+Zℜs=4
+Since
+∞
+τ (n)τ (n)
+A B
+= Z(A ,B)
+ns A s
+n=1
+X
+it follows that
+τ (n)τ (n)
+Iψ (T;X) = Tψ ˆ (0) A B +o(T).
+A,B n
+n≤X
+X
+This is exactly the same as what we have referred to previously [CK1, CK2] as the diagonal
+term.
+
+MOMENTS OF ZETA AND CORRELATIONS OF DIVISOR-SUMS: III 5
+3. Type I off-diagonals with shifts
+What happens if T X T2? From the recipe we add on the terms with one swap, i.e.
+≪ ≪
+U = V = 1. These terms are
+| | | |
+∞ Tt
+−αˆ−βˆ
+1 Xw+z
+T ψ(t)
+Z0 X β αˆ ˆ∈ ∈ B A (cid:18) 2π (cid:19) (2πi)2 ZZℜ ℜ w z= = 2 2 wz
+ˆ ˆ
+Z (A αˆ +w ) β z ,(B β +z ) αˆ w dw dz dt+o(T).
+w z
+A −{ } ∪{− − } −{ } ∪{− − }
+Let A′ = A αˆ(cid:0) and B′ = B β ˆ . Then (cid:1)
+−{ } −{ }
+ˆ ˆ
+Z (A αˆ +w ) β z ,(B β +z ) αˆ w
+w z
+−{ } ∪{− − } −{ } ∪{− − }
+(cid:0) = Z(A′ ,B′)Z(A′ , αˆ w )Z( β ˆ z ,B′)Z( β ˆ (cid:1) z , αˆ w )
+w z w {− − } {− − } z {− − } {− − }
+= Z(A′ ,B′)Z(A′, αˆ )Z( β ˆ ,B′)ζ(1 αˆ β ˆ w z).
+z+w {− } {− } − − − −
+Letting s = w+z and integrating the w-integral, we obtain
+∞ Tt
+−αˆ−βˆ
+(4) T ψ(t) Z(A′, αˆ )Z( β ˆ ,B′)
+2π {− } {− }
+Z0 αˆ∈A (cid:18) (cid:19)
+X βˆ∈B
+1 2πX s
+Tt (A′ β ˆ s ,B′ αˆ )Z(A′,B′)ζ(1 αˆ β ˆ s) ds.
+×2πi s A ∪{− − } s ∪{− } s − − −
+Zℜs=4 (cid:0) (cid:1)
+How does such a term appear on the coefficient correlation side of things? The correlation
+sum
+D (u,h) := τ (n)τ (n+h)
+A,B A B
+n≤u
+X
+when averaged over h turns out to lead to just such an expression. We conjecture that (see
+[CG] and [DFI])
+D (u,h) = m (u,h)+O(u1/2+ǫ)
+A,B A,B
+uniformly for 1 h u1−ǫ, where m (u,h) is a smooth function of u whose derivative is
+A,B
+≤ ≤
+f (u,d)
+m′ (u,h) = A,B ,
+A,B d
+d|h
+X
+where
+∞
+µ(q)
+f (u,d) = P (u,qd)P (u+h,qd),
+A,B q2 A B
+q=1
+X
+in which P (u,q) is the average of τ (n)e(n/q), i.e.
+A n≤u A
+s
+1 P u
+P (u,q) = ζ(s+1+α)G (s+1,q) ds ,
+A A
+2πi q
+Z|s|=1/8 α∈A (cid:18) (cid:19)
+Y
+
+| 6   |     |     |     | BRIAN | CONREY | ANDJONATHANP. |     |     | KEATING |     |     |     |
+| --- | --- | --- | --- | ----- | ------ | ------------- | --- | --- | ------- | --- | --- | --- |
+with
+|     |     |     |     |     |     | µ(d) |     | µ(e) |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | ---- | --- | ---- | --- | --- | --- | --- |
+ds
+|         |     |      |     | G A (s,q) | =   |      |     |     | g A (s,qe/d) |     | ,   |     |
+| ------- | --- | ---- | --- | --------- | --- | ---- | --- | --- | ------------ | --- | --- | --- |
+|         |     |      |     |           |     | φ(d) |     | es  |              |     |     |     |
+|         |     |      |     |           | d|q |      |     | e|d |              |     |     |     |
+|         |     |      |     |           | X   |      |     | X   |              |     |     |     |
+| and, if | q = | pqp, |     |           |     |      |     |     |              |     |     |     |
+p
+|     | Q   |     |     |     |     |     |     |     | ∞ τ | (pj+qp) |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------- | --- | --- |
+A
+|     |     |     | g   | (s,q) | =   |           | 1 p−s−α |          |     |     | .   |     |
+| --- | --- | --- | --- | ----- | --- | --------- | ------- | -------- | --- | --- | --- | --- |
+|     |     |     | A   |       |     |           |         |          |     | pjs |     |     |
+|     |     |     |     |       |     |           | −       |          |     |     | !   |     |
+|     |     |     |     |       | p|q | α∈A       |         | j=0      |     |     |     |     |
+|     |     |     |     |       | Y   | Y (cid:0) |         | (cid:1)X |     |     |     |     |
+Thus,
+u −αˆ
+|             |        |     | P (u,q) | =       | G           | (1       | αˆ,q) |                   |      | ζ(1    | αˆ +α).  |          |
+| ----------- | ------ | --- | ------- | ------- | ----------- | -------- | ----- | ----------------- | ---- | ------ | -------- | -------- |
+|             |        |     | A       |         | A           |          |       |                   |      |        |          |          |
+|             |        |     |         |         |             | −        |       | q                 |      | −      |          |          |
+|             |        |     |         |         | αˆ∈A        |          |       | (cid:18) (cid:19) | α∈A′ |        |          |          |
+|             |        |     |         |         | X           |          |       |                   | Y    |        |          |          |
+| So, looking | back   | to  | (2),    | we have | to consider |          |       |                   |      |        |          |          |
+|             |        | τ   | (m)τ    | (n)     | Th          |          |       | X                 |      |        |          | Th du    |
+|             |        | A   |         | B       | ˆ           |          |       |                   |      |        | ˆ        |          |
+|             |        |     |         |         | ψ           |          |       | τ                 | (m)τ | (n)    | ∗ ψ      |          |
+|             |        |     |         |         |             |          |       |                   | A    | B im∼u |          |          |
+|             |        |     | m       |         | 2πm         | ∼        |       | h                 |      |        |          | 2πu u    |
+|             | m=n+h  |     |         |         | (cid:18)    | (cid:19) | h     | ZT                |      |        | (cid:18) | (cid:19) |
+|             | T≤Xm≤X |     |         |         |             |          | X     |                   |      |        |          |          |
+where indicates the condition m = n+h. We replace τ (m)τ (n) ∗ with
+|     |     |     |     |     |        |     |     |         | A      | B   | im∼u |     |
+| --- | --- | --- | --- | --- | ------ | --- | --- | ------- | ------ | --- | ---- | --- |
+|     | ∗   |     |     |     |        |     |     |         | h      |     |      |     |
+|     |     |     |     |     | ∞ µ(q) |     | 1   |         |        |     |      |     |
+|     |     |     |     |     |        |     | P   | (u,dq)P | (u,dq) |     |      |     |
+|     |     |     |     |     |        |     | A   |         | B      |     |      |     |
+|     |     |     |     |     | q2     |     | d   |         |        |     |      |     |
+q=1
+|          |        |     |       |      | X         | X d|h    |     |           |     |            |     |            |
+| -------- | ------ | --- | ----- | ---- | --------- | -------- | --- | --------- | --- | ---------- | --- | ---------- |
+| and then | switch | the | sums  | over | h and     | d. Thus, |     | the above | is  |            |     |            |
+|          |        |     |       |      |           |          |     | µ(q)G     |     | (1 αˆ,qd)G |     | (1 β,qd) ˆ |
+|          |        |     |       |      |           |          | ˆ   |           |     | A          | B   |            |
+|          |        |     | ζ(1+α |      | αˆ) ζ(1+β |          | β)  |           |     | −          |     | −          |
+d1−αˆ−βˆq2−αˆ−βˆ
+|     |      |          |     | −   |        |     | −   |        |     |     |     |     |
+| --- | ---- | -------- | --- | --- | ------ | --- | --- | ------ | --- | --- | --- | --- |
+|     | αˆ ∈ | A α 6=αˆ |     |     | βY6=βˆ |     |     | q ,d,h |     |     |     |     |
+|     | X ˆ∈ | Y        |     |     |        |     |     | X      |     |     |     |     |
+β B
+|     |     |     |     |     | X       | Thd      |          | du  |     |     |     |     |
+| --- | --- | --- | --- | --- | ------- | -------- | -------- | --- | --- | --- | --- | --- |
+|     |     |     |     |     | u−αˆ−βˆ | ˆ        |          |     |     |     |     |     |
+|     |     |     |     |     |         | ψ        |          | .   |     |     |     |     |
+|     |     |     |     | ×   |         | 2πu      |          | u   |     |     |     |     |
+|     |     |     |     | ZT  |         | (cid:18) | (cid:19) |     |     |     |     |     |
+We make the change of variable v = Thd and bring the sum over h to the inside; u < X
+2πu
+implies that
+2πXv
+|     |     |     |     |     |     | hd  | <   | .   |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+T
+| Thus, | we have |     |     |     |     |     |     |     |     |     |     |     |
+| ----- | ------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+−αˆ−βˆ
+|     |     |     |                 |       |     |        |       |       | T        |          | (v)vαˆ+βˆ |     |
+| --- | --- | --- | --------------- | ----- | --- | ------ | ----- | ----- | -------- | -------- | --------- | --- |
+|     |     |     |                 | ζ(1+α | αˆ) |        | ζ(1+β | β ˆ ) |          |          | ψ ˆ       |     |
+|     |     |     |                 |       | −   |        |       | −     | 2π       |          |           |     |
+|     |     |     |                 |       |     |        |       |       | (cid:18) | (cid:19) | Zv        |     |
+|     |     | X   | αˆ ∈ A α Y 6=αˆ |       |     | βY6=βˆ |       |       |          |          |           |     |
+|     |     |     | β ˆ∈ B          |       |     |        |       |       |          |          |           |     |
+ˆ
+|     |     |     |     |     |            | µ(q)G | (1              | αˆ,qd)G | (1  | β,qd)dv |     |     |
+| --- | --- | --- | --- | --- | ---------- | ----- | --------------- | ------- | --- | ------- | --- | --- |
+|     |     |     |     |     |            |       | A               |         | B   |         |     |     |
+|     |     |     |     |     |            |       | −               |         |     | −       | .   |     |
+|     |     |     |     | ×   |            |       | q2−αˆ−βˆhαˆ+βˆd |         |     |         | v   |     |
+|     |     |     |     |     | hd<X 2π Xv |       |                 |         |     |         |     |     |
+T
+
+|     |              |     | MOMENTS |     | OF ZETA | AND     | CORRELATIONS |     | OF    | DIVISOR-SUMS: |     | III |     | 7   |
+| --- | ------------ | --- | ------- | --- | ------- | ------- | ------------ | --- | ----- | ------------- | --- | --- | --- | --- |
+| We  | use Perron’s |     | formula | to  | write   | the sum | over         | d,q | and h | as            |     |     |     |     |
+ˆ
+|     |     |     | 1   |     | µ(q)G | (1                   | αˆ,qd)G |     | (1 β | ,qd)(2πXv/T)s |     |     |     |     |
+| --- | --- | --- | --- | --- | ----- | -------------------- | ------- | --- | ---- | ------------- | --- | --- | --- | --- |
+| (5) |     |     |     |     |       | A                    | −       | B   | −    |               |     | ds. |     |     |
+|     |     |     | 2πi |     |       | q2−αˆ−βˆhs+αˆ+βˆd1+s |         |     |      |               | s   |     |     |     |
+Z(2)
+h,d,q
+X
+Recall that
+|     |     |     |     |     |       |       | µ(d) | µ(e)  |            |     |     |     |     |     |
+| --- | --- | --- | --- | --- | ----- | ----- | ---- | ----- | ---------- | --- | --- | --- | --- | --- |
+|     |     |     |     | G   | (s,q) | =     | ds   |       | g (s,qe/d) |     | ,   |     |     |     |
+|     |     |     |     | A   |       |       |      |       | A          |     |     |     |     |     |
+|     |     |     |     |     |       |       | φ(d) |       | es         |     |     |     |     |     |
+|     |     |     |     |     |       | X d|q |      | X e|d |            |     |     |     |     |     |
+and
+|     |     |     |     |     |     |     |     |     | ∞   | (pj+qp) |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------- | --- | --- | --- | --- |
+τ
+|     |     |     |     | g (s,q) | =   |     | 1   | p−s−α |     | A   |     |     |     |     |
+| --- | --- | --- | --- | ------- | --- | --- | --- | ----- | --- | --- | --- | --- | --- | --- |
+A
+|     |     |     |     |     |     |             | −   |     |              | pjs |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | ----------- | --- | --- | ------------ | --- | --- | --- | --- | --- |
+|     |     |     |     |     |     |             |     |     |              |     | !   |     |     |     |
+|     |     |     |     |     |     | Y p|q α∈A Y |     |     | (cid:1)X j=0 |     |     |     |     |     |
+(cid:0)
+pqp,
+| for q | =   |     | so that |     |     |     |     |     |     |     |     |     |     |     |
+| ----- | --- | --- | ------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+p
+|     | Q   |     |     |     |     |     |     | p1−αˆ | g (1 | αˆ,p) |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | ----- | ---- | ----- | --- | --- | --- | --- |
+A
+|     |     | G   | (1  | αˆ,p) | = g | (1  | αˆ,p) |     | +   | −   |     |     |     |     |
+| --- | --- | --- | --- | ----- | --- | --- | ----- | --- | --- | --- | --- | --- | --- | --- |
+|     |     |     | A   |       |     | A   |       |     |     |     |     |     |     |     |
+|     |     |     | −   |       |     | −   | −     | p 1 |     | p 1 |     |     |     |     |
+|     |     |     |     |       |     |     |       | −   |     | −   |     |     |     |     |
+p
+p−αˆ
+|     |     |     |     |     | =   |     | g A (1 | αˆ,p) |     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | ------ | ----- | --- | --- | --- | --- | --- | --- |
+|     |     |     |     |     | p   | 1   | −      |       | −   |     |     |     |     |     |
+−
+|     |     |     |     |     |     | (cid:0) |     | ∞   | (cid:1)j+1) |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | ------- | --- | --- | ----------- | --- | --- | --- | --- | --- |
+τ (p
+|     |     |     |     |     | =   | (1  | p−1−α+αˆ) |     | A        |     | p−αˆ | +O(1/p) |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --------- | --- | -------- | --- | ---- | ------- | --- | --- |
+|     |     |     |     |     |     | −   |           |     | pj(1−αˆ) | −   |      |         |     |     |
+|     |     |     |     |     | α∈A |     |           | j=0 |          |     |      |         |     |     |
+|     |     |     |     |     | Y   |     |           | X   |          |     |      |         |     |     |
+p−αˆ
+|     |     |     |     |     | = τ | (p) | +O(1/p) |     | = τ | (p)+O(1/p). |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | ------- | --- | --- | ----------- | --- | --- | --- | --- |
+|     |     |     |     |     |     | A − |         |     | A′  |             |     |     |     |     |
+Thus,
+∞ µ(q)G (1 αˆ,qd)G (1 β ˆ ,qd) ∞ µ(pq)G (1 αˆ,pd+q)G (1 β ˆ ,pd+q)
+|       |     | A   |              |     | B   |     |     |       |     | A          |             | B   |     |     |
+| ----- | --- | --- | ------------ | --- | --- | --- | --- | ----- | --- | ---------- | ----------- | --- | --- | --- |
+|       |     |     | −            |     | −   |     | =   |       |     |            | −           |     | −   |     |
+|       |     |     | d1+sq2−αˆ−βˆ |     |     |     |     |       |     |            | pd+dz+2q+qw |     |     |     |
+| d,q=1 |     |     |              |     |     |     | p   | d,q=0 |     |            |             |     |     |     |
+| X     |     |     |              |     |     |     | Y   | X     |     |            |             |     |     |     |
+|       |     |     |              |     |     |     | =   |       | (s) | ζ(1+a+b+s) |             |     |     |     |
+AA,B,αˆ,βˆ
+|     |     |     |     |     |     |     |     |     | a ∈ | A ′ |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|     |     |     |     |     |     |     |     |     | Y   | ′   |     |     |     |     |
+b ∈ B
+where
+|     |            |     |     |         |     |            |     | ∞      |     |                  |           |     | ˆ        |     |
+| --- | ---------- | --- | --- | ------- | --- | ---------- | --- | ------ | --- | ---------------- | --------- | --- | -------- | --- |
+|     |            |     |     |         |     |            |     | µ(pq)G |     | (1               | αˆ,pd+q)G | (1  | β ,pd+q) |     |
+|     |            |     |     |         |     | p−1−α−β−s) |     |        |     | A                |           | B   |          |     |
+|     | AA,B,αˆ,βˆ | (s) | =   |         | (1  |            |     |        |     | −                |           |     | −        |     |
+|     |            |     |     |        | −   |            |    |        |     | pd+ds+q(2−αˆ−βˆ) |           |     |          |     |
+|     |            |     | p   | α ∈ A′  |     |            | d   | ,q=0   |     |                  |           |     |          |     |
+|     |            |     | Y   | Y       | ′   |            |     | X      |     |                  |           |     |          |     |
+|     |            |     |     |  β ∈ B |     |            |    |        |     |                  |           |     |          |     |
+|     |            |     |     |        |     |            |    |        |     |                  |           |     |          |     |
+is an Euler product that is absolutely convergent when the real parts of z and w are near 0.
+| Thus, | (5) | becomes |     |     |     |     |     |     |     |     |     |      |     |     |
+| ----- | --- | ------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ---- | --- | --- |
+|       |     |         |     |     |     |     |     |     |     |     |     | 2πXv | s   |     |
+1
+|     |     |     |     |     | ζ(s+αˆ | +β  | ˆ ) ζ(1+s+a+b) |     |     |     |     | (s) T | ds. |     |
+| --- | --- | --- | --- | --- | ------ | --- | -------------- | --- | --- | --- | --- | ----- | --- | --- |
+AA,B,αˆ,βˆ
+|     |     |     |     | 2πi  |     |     |     |     |     |     |     |         | s       |     |
+| --- | --- | --- | --- | ---- | --- | --- | --- | --- | --- | --- | --- | ------- | ------- | --- |
+|     |     |     |     | Z(2) |     |     | ′   |     |     |     |     | (cid:0) | (cid:1) |     |
+a Y ∈ A
+|     |     |     |     |     |     |     | b ∈ B ′ |     |     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | ------- | --- | --- | --- | --- | --- | --- | --- |
+
+8 BRIAN CONREY ANDJONATHANP. KEATING
+Now
+dv ∞
+ψ
+ˆ (v)vαˆ+βˆ+s
+=
+ψ(t)t−αˆ−βˆ−sχ(1
+s αˆ β
+ˆ
+).
+v − − −
+Zv Z0
+Thus, the above is
+T
+−αˆ−βˆ
+∞
+ζ(1+α αˆ) ζ(1+β β
+ˆ
+)
+ψ(t)t−αˆ−βˆ
+− − 2π
+X β
+αˆ
+ˆ∈
+∈
+B
+A α
+Y
+6=αˆ βY6=βˆ (cid:18) (cid:19) Z0
+1 2πX s
+ζ(1 s αˆ β ˆ )Z(A′,B′) (s) tT ds dt.
+×2πi − − − s AA,B,αˆ,βˆ s
+Z(2) (cid:0) (cid:1)
+This should be compared with (4):
+∞ Tt
+−αˆ−βˆ
+T ψ(t) Z(A′, αˆ )Z( β ˆ ,B′)
+2π {− } {− }
+Z0 αˆ∈A (cid:18) (cid:19)
+X βˆ∈B
+1 2πX s
+Tt (A′ β ˆ s ,B′ αˆ )Z(A′,B′)ζ(1 αˆ β ˆ s) ds.
+×2πi s A ∪{− − } s ∪{− } s − − −
+Zℜs=4 (cid:0) (cid:1)
+These are identical provided that
+(s) = (A′ β ˆ s ,B′ αˆ );
+AA,B,αˆ,βˆ A ∪{− − } s ∪{− }
+so it just remains to prove this identity.
+4. The Euler products
+To prove the identity we follow the method of [CG]. We compare the p-factor of each Euler
+product
+∞ µ(pq)G (1 αˆ,pd+q)G (1 β ˆ ,pd+q)
+p (s) := (1 p−1−α−β−s) A − B −
+AA,B,αˆ,βˆ − pd+ds+q(2−αˆ−βˆ)
+β α Y ∈ ∈ B A ′ ′ d X ,q=0
+and
+p(A′ β ˆ s ,B′ αˆ ) := A (A′,B′)A (A′, αˆ )A ( β ˆ ,B′)(1 p−1+αˆ+βˆ+s)
+A ∪{− − } s ∪{− } p s p {− } p {− } −
+1
+(A′ β ˆ s ,B′ αˆ ) dθ
+× A p,θ ∪{− − } s ∪{− }
+Z0
+Now the integral over θ is
+∞ τ (pj)τ (pj)
+A′∪{−βˆ−s} B
+s
+′∪{−αˆ}
+.
+pj
+j=0
+X
+
+MOMENTS OF ZETA AND CORRELATIONS OF DIVISOR-SUMS: III 9
+Thus, cancelling the factor (A′,B′) from both sides and replacing all of the β + s B
+A p s ∈ s
+by β (i.e. taking s = 0), we see that we have to prove
+∞ τ (pj)τ (pj)
+(6) A (A′, αˆ )A ( β ˆ ,B′)(1 p−1+αˆ+βˆ ) A′∪{−βˆ} B′∪{−αˆ}
+p {− } p {− } − pj
+j=0
+X
+∞ µ(pq)G (1 αˆ,pd+q)G (1 β ˆ ,pd+q)
+A B
+= − − .
+pd+q(2−αˆ−βˆ)
+d,q=0
+X
+We note an easily proven identity that will be useful: if a A and A′ = A a then for
+∈ −{ }
+r 1
+≥
+(7) τ (pr) = τ (pr)+p−aτ (pr−1).
+A A′ A
+Thus, for r 1 we have
+≥
+p ps
+G (s,pr) = g (s,pr) g (s,pr−1)
+A A A
+p 1 − p 1
+− −
+p ∞ τ (pj+r) ∞ τ (pj+r−1)
+= (1 p−s−α) A ps−1 A ;
+− p 1 pjs − pjs
+!
+α∈A − j=0 j=0
+Y X X
+and with s = 1 a we have by (7)
+−
+∞ τ (pj+r)
+G (1 a,pr) = (1 p−1+a−α) A′ .
+A
+− − pj(1−a)
+α∈A′ j=0
+Y X
+The right side of (6) is
+∞ G (1 αˆ,pd)G (1 β ˆ ,pd) ∞ G (1 αˆ,pd+1)G (1 β ˆ ,pd+1)
+(8)
+A
+−
+B
+−
+p−2+αˆ+βˆ A
+−
+B
+−
+pd − pd
+d=0 d=0
+X X
+Now
+(9) G (1 αˆ,pd)G (1 β ˆ ,pd) p−2+αˆ+βˆ G (1 αˆ,pd+1)G (1 β ˆ ,pd+1)
+A B A B
+− − − − −
+= G (1 αˆ,pd) p−1+αˆG (1 αˆ,pd+1) G (1 β ˆ ,pd)
+A A B
+− − − −
+(cid:0) +p−1+αˆG (1 αˆ,pd+1) G (1 β ˆ ,pd(cid:1)) p−1+βˆ G (1 β ˆ ,pd+1) .
+A B B
+− − − −
+(cid:16) (cid:17)
+Using
+G (1 αˆ,pd) p−1+αˆG (1 αˆ,pd+1)
+A A
+− − −
+∞ τ (pj+d) ∞ τ (pj+d+1)
+= (1 p−1+αˆ−α) A′ p−1+αˆ A′
+− pj(1−αˆ) − pj(1−αˆ)
+!
+α∈A′ j=0 j=0
+Y X X
+= (1 p−1+a−α)τ (pd)
+A′
+−
+α∈A′
+Y
+
+10 BRIAN CONREY ANDJONATHANP. KEATING
+we find that
+∞
+G (1 αˆ,pd) p−1+αˆG (1 αˆ,pd+1) G (1 β ˆ ,pd)
+A A B
+− − − −
+d=0
+X(cid:0) (cid:1)
+∞ τ (pd) ∞ τ (pj+d)
+= (1 p−1+αˆ−α) (1 p−1+βˆ−β) A′ B′ .
+− − pd pj(1−βˆ)
+α∈A′ β∈B′ d=0 j=0
+Y Y X X
+The sum over d and j here may be rewritten as
+∞ τ (pr) r
+(10) B′ p(r−d)βˆ τ (pd).
+pr
+A′
+r=0 d=0
+X X
+We recognize that this last sum over d is a convolution:
+r
+p(r−d)βτ (pd) = (pr/g)−βˆ τ (g) = τ (pr).
+A′ A′ A′∪{−βˆ}
+d=0 g|pr
+X X
+Thus, (10) is
+∞ τ (pr)τ (pr)
+B′ A′∪{−βˆ}
+.
+pr
+r=0
+X
+The second term on the right side of (9) is slightly different; it is
+∞ τ (pd) ∞ τ (pj+d+1)
+(1 p−1+αˆ−α) (1 p−1+βˆ−β)p−1+αˆ B′ A′ .
+− − pd pj(1−αˆ)
+α∈A′ β∈B′ d=0 j=0
+Y Y X X
+Now
+∞ τ (pd) ∞ τ (pj+d+1) ∞ τ (pd) ∞ τ (pj+d)
+p−1+αˆ B′ A′ = B′ A′
+pd pj(1−αˆ) pd pj(1−αˆ)
+d=0 j=0 d=0 j=1
+X X X X
+∞ τ (pd) ∞ τ (pj+d) ∞ τ (pd)τ (pd)
+B′ A′ B′ A′
+= ;
+pd pj(1−αˆ) − pd
+d=0 j=0 d=0
+X X X
+using the argument above this is
+∞ τ (pr)τ (pr) ∞ τ (pr)τ (pr)
+A′ B′∪{−αˆ} A′ B′
+.
+pr − pr
+r=0 r=0
+X X
+Thus, (8) is
+∞ τ B′ (pr)τ A′∪{−βˆ} (pr) ∞ τ A′ (pr)τ B′∪{−αˆ} (pr) ∞ τ A′ (pr)τ B′ (pr)
++ .
+pr pr − pr
+r=0 r=0 r=0
+X X X
+
+|     | MOMENTS |     | OF  | ZETA | AND | CORRELATIONS |     | OF  | DIVISOR-SUMS: |     | III | 11  |
+| --- | ------- | --- | --- | ---- | --- | ------------ | --- | --- | ------------- | --- | --- | --- |
+Now
+|     | (pr)τ |          | (pr)+τ   |          | (pr)τ       |          | (pr)     | (pr)τ    | (pr) |         |      |     |
+| --- | ----- | -------- | -------- | -------- | ----------- | -------- | -------- | -------- | ---- | ------- | ---- | --- |
+| τ   | B′    |          |          |          | A′          |          |          | τ A′     | B′   |         |      |     |
+|     |       | A′∪{−βˆ} |          |          |             | B′∪{−αˆ} |          | −        |      |         |      |     |
+|     | =     | τ (pr)   | τ        | (pr)+pβˆ | τ           |          | (pr−1)   |          |      |         |      |     |
+|     |       | B′       |          | A′       |             | A′∪{−βˆ} |          |          |      |         |      |     |
+|     |       |          | (cid:16) |          |             |          |          | (cid:17) |      |         |      |     |
+|     |       |          | + τ      | (pr)     | τ (pr)+pαˆτ |          |          | (pr−1)   |      | τ (pr)τ | (pr) |     |
+|     |       |          |          | A′       | B′          |          | B′∪{−αˆ} |          |      | A′      | B′   |     |
+−
+(pr)+(cid:0)pβˆ
+|     | =   | τ (pr)τ |     |     | τ   | (pr)τ |          | (pr−1)+p(cid:1) | αˆτ | (pr)τ | (pr−1)   |     |
+| --- | --- | ------- | --- | --- | --- | ----- | -------- | --------------- | --- | ----- | -------- | --- |
+|     |     | A′      | B′  |     | B′  |       | A′∪{−βˆ} |                 | A′  |       | B′∪{−αˆ} |     |
+(pr)+pβˆ
+|     | =   | τ        |        | τ        |     | (pr−1) | τ         | (pr)+pαˆτ |          | (pr−1) |         |     |
+| --- | --- | -------- | ------ | -------- | --- | ------ | --------- | --------- | -------- | ------ | ------- | --- |
+|     |     | A′       |        | A′∪{−βˆ} |     |        | B′        |           | B′∪{−αˆ} |        |         |     |
+|     |     | (cid:16) | pαˆ+βˆ |          |     |        | (cid:17)  |           |          |        |         |     |
+|     |     |          |        | τ        |     | (pr−1) | τ (cid:0) | (pr−1)    |          |        | (cid:1) |     |
+|     |     |          |        | A′∪{−βˆ} |     |        | B′∪{−αˆ}  |           |          |        |         |     |
+−
+|     | =   | τ        | (pr)τ |          | (pr) |     | pαˆ+βˆ τ |          | (pr−1)τ |          | (pr−1). |     |
+| --- | --- | -------- | ----- | -------- | ---- | --- | -------- | -------- | ------- | -------- | ------- | --- |
+|     |     | A′∪{−βˆ} |       | B′∪{−αˆ} |      |     |          | A′∪{−βˆ} |         | B′∪{−αˆ} |         |     |
+−
+This leads to
+pαˆ+βˆ
+|     |     | ∞ τ |          | (pr)τ |          | (pr) |     | τ        | (pr−1)τ |          | (pr−1) |     |
+| --- | --- | --- | -------- | ----- | -------- | ---- | --- | -------- | ------- | -------- | ------ | --- |
+|     |     |     | A′∪{−βˆ} |       | B′∪{−αˆ} |      |     | A′∪{−βˆ} |         | B′∪{−αˆ} |        |     |
+|     | 1+  |     |          |       |          |      | −   |          |         |          |        |     |
+pr
+r=1
+X
+∞
+|     |     |     |           |     |     | τ        | (pr)τ |          | (pr) |     |     |     |
+| --- | --- | --- | --------- | --- | --- | -------- | ----- | -------- | ---- | --- | --- | --- |
+|     |     |     | p−1+αˆ+βˆ |     |     | A′∪{−βˆ} |       | B′∪{−αˆ} |      |     |     |     |
+|     |     | =   | 1         |     |     |          |       |          |      | ;   |     |     |
+pr
+−
+r=0
+|     |     | (cid:16) |     |     | (cid:17)X |     |     |     |     |     |     |     |
+| --- | --- | -------- | --- | --- | --------- | --- | --- | --- | --- | --- | --- | --- |
+and (6) follows.
+References
+[BK1] Bogomolny, E. B.; Keating, J. P. Random matrix theory and the Riemann zeros I: three- and
+| four-point |     | correlations. |     | Nonlinearity |     | 8 (1995), | 1115–1131. |     |     |     |     |     |
+| ---------- | --- | ------------- | --- | ------------ | --- | --------- | ---------- | --- | --- | --- | --- | --- |
+[BK2] Bogomolny, E. B.; Keating, J. P. Random matrix theory and the Riemann zeros II: n-point
+| correlations. |     | Nonlinearity |     | 9   | (1996), | 911–935. |     |     |     |     |     |     |
+| ------------- | --- | ------------ | --- | --- | ------- | -------- | --- | --- | --- | --- | --- | --- |
+[CFKRS] Conrey,J.B.;Farmer,D.W.;Keating,J.P.;Rubinstein,M.O.;Snaith,N.C.Integralmoments
+| of  | L-functions. |     | Proc. | Lond. | Math. Soc. | 91  | (2005) | 33–104. |     |     |     |     |
+| --- | ------------ | --- | ----- | ----- | ---------- | --- | ------ | ------- | --- | --- | --- | --- |
+[CG] Conrey, J. B.; Gonek, S. M. High moments of the Riemann zeta-function. Duke Math. J. 107
+| (2001), | no. | 3, 577–604. |     |     |     |     |     |     |     |     |     |     |
+| ------- | --- | ----------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+[CK1] Conrey, J. B.; Keating, J. P. Moments of zeta and correlations of divisor-sums: I. Phil. Trans.
+| R.  | Soc. A, | 20140313(2015). |     |     |     |     |     |     |     |     |     |     |
+| --- | ------- | --------------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+[CK2] Conrey,J.B.; Keating,J.P.Moments of zeta andcorrelationsofdivisor-sums: II. submitted for
+publication.
+[DFI] Duke,W.;Friedlander,J.B.;Iwaniec,H.Aquadraticdivisorproblem.Invent.Math.115(1994),
+no. 2, 209–217.
+[GG] Goldston, D. A.; Gonek, S. M. Mean value theorems for long Dirichlet polynomials and tails of
+| Dirichlet |     | series. | Acta | Arith. | 84 (1998), | no. | 2, 155–192. |     |     |     |     |     |
+| --------- | --- | ------- | ---- | ------ | ---------- | --- | ----------- | --- | --- | --- | --- | --- |
+[KS] Keating, J.P.; Snaith, N. C. Random matrix theory and ζ(1/2+it).Commun. Math. Phys.214
+| (2000), | no. | 1, 57–89. |     |     |     |     |     |     |     |     |     |     |
+| ------- | --- | --------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+
+12 BRIAN CONREY ANDJONATHANP. KEATING
+American Institute of Mathematics, 360 Portage Ave, Palo Alto, CA 94306, USA and
+School of Mathematics, University of Bristol, Bristol BS8 1TW, UK
+E-mail address: conrey@aimath.org
+School of Mathematics, University of Bristol, Bristol BS8 1TW, UK
+E-mail address: j.p.keating@bristol.ac.uk

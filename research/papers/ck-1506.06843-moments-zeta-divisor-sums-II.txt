@@ -1,0 +1,660 @@
+| MOMENTS |     | OF  | ZETA | AND | CORRELATIONS |     |     | OF DIVISOR-SUMS: | II  |
+| ------- | --- | --- | ---- | --- | ------------ | --- | --- | ---------------- | --- |
+5102 nuJ 32  ]TN.htam[  1v34860.6051:viXra BRIAN CONREY AND JONATHAN P. KEATING
+Abstract. ThisispartIIofourexaminationofthesecondandfourthmomentsandshifted
+moments of the Riemann zeta-function on the critical line using long Dirichlet polynomials
+| and | divisor | correlations. |     |     |                 |     |     |     |     |
+| --- | ------- | ------------- | --- | --- | --------------- | --- | --- | --- | --- |
+|     |         |               |     |     | 1. Introduction |     |     |     |     |
+In part I, see [CK], we completed the analysis of the second moment of the Riemann
+zeta-function using the long Dirichlet polynomial method of Goldston and Gonek [GG] and
+we initiated the study of the fourth moment by this approach. In particular we calculated
+the contributions from the off-diagonal terms arising from coefficient correlations of the form
+d(n)d(n+h) and identified the terms that are missed in this approach. In this paper
+n≤X
+wPe show how to evaluate these new terms that were missing and in doing so we introduce a
+new technique that is a discrete analog of the circle method. This analysis gives a concrete
+introduction to how we will approach higher moments through this circle method approach.
+In a subsequent paper we will show how to obtain the “full-moment” conjecture for the 2kth
+k2
+moment of ζ(s) on the critical line, i.e. the full polynomial of degree which comprises the
+main term. The idea for this method originates in the work of Bogomolny and Keating; see
+[BK].
+Thus, we will calculate the contribution of what we call the type II sums (after [BK])
+| which arise | in  | the evaluation |     | of  |     |     |     |     |     |
+| ----------- | --- | -------------- | --- | --- | --- | --- | --- | --- | --- |
+∞
+|     |     |     |     | t                 |     | τ (m) |     | τ (n)  |     |
+| --- | --- | --- | --- | ----------------- | --- | ----- | --- | ------ | --- |
+|     |     |     |     | ψ                 |     | α,β   |     | γ,δ dt |     |
+|     |     |     | Z   | (cid:18)T(cid:19) |     | ms    |     | n1−s   |     |
+|     |     |     | 0   |                   | X   |       | X   |        |     |
+|     |     |     |     |                   | m≤X |       | m≤X |        |     |
+where s = 1/2+it and τ (n) = d−αe−β. (See [CK] for further notation and intro-
+|     |     |     | α,β |     | de=n |     |     |     |     |
+| --- | --- | --- | --- | --- | ---- | --- | --- | --- | --- |
+duction.) To describe the type IIPsums we observe that integrating term-by-term we find
+| Date: November |     | 6, 2018. |     |     |     |     |     |     |     |
+| -------------- | --- | -------- | --- | --- | --- | --- | --- | --- | --- |
+We gratefully acknowledge support under EPSRC Programme Grant EP/K034383/1LMF: L-Functions
+and Modular Forms. Research of the first author was also supported by the American Institute of Mathe-
+matics and by a grant from the National Science Foundation. JPK is grateful for the following additional
+support: a grant from the Leverhulme Trust, a Royal Society Wolfson Research Merit Award, a Royal So-
+ciety Leverhulme Senior Research Fellowship, and a grant from the Air Force Office of Scientific Research,
+AirForceMaterialCommand,USAF(numberFA8655-10-1-3088). HeisalsopleasedtothanktheAmerican
+Institute of Mathematics for hospitality during a visit where this work started.
+1
+
+| 2        |       |     | BRIAN | CONREY |     | ANDJONATHANP.  |     |     | KEATING |     |     |
+| -------- | ----- | --- | ----- | ------ | --- | -------------- | --- | --- | ------- | --- | --- |
+| that the | above | is  |       |        |     |                |     |     |         |     |     |
+|          |       |     | τ     | (m)τ   | (n) | T              |     |     |         |     |     |
+|          |       | T   |       | α,β    | γ,δ | ψ( ˆ log(m/n)) |     | =   | T +T    | +   |     |
+|          |       |     |       | √mn    |     | 2π             |     |     | D       | O E |     |
+X
+m,n≤X
+| where | is the | diagonal |     |     |     |     |     |     |     |     |     |
+| ----- | ------ | -------- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+D
+|     |     |     |     |     |        | τ   | (n)τ | (n) |     |     |     |
+| --- | --- | --- | --- | --- | ------ | --- | ---- | --- | --- | --- | --- |
+|     |     |     |     |     | ˆ      |     | α,β  | γ,δ |     |     |     |
+|     |     |     |     |     | = ψ(0) |     |      |     | ;   |     |     |
+|     |     |     |     | D   |        |     |      | n   |     |     |     |
+X
+n≤X
+| is the | off-diagonal |     |     |     |     |     |     |     |     |     |     |
+| ------ | ------------ | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+O
+|     |     |     |     |     |     | τ (m)τ | (n) | T   |            |     |     |
+| --- | --- | --- | --- | --- | --- | ------ | --- | --- | ---------- | --- | --- |
+|     |     |     |     |     |     | α,β    | γ,δ | ˆ   |            |     |     |
+|     |     |     | =   |     |     |        |     | ψ(  | log(m/n)); |     |     |
+|     |     |     | O   |     |     | √mn    |     | 2π  |            |     |     |
+X m6=n
+0<|m−n|<m/τ
+and Tǫ is an error term; here τ = T1−ǫ and the Fourier transform is defined by
+E ≪
+|     |     |     |     |     | ψ(v) ˆ | = ψ(u)e(uv) |     | du  |     |     |     |
+| --- | --- | --- | --- | --- | ------ | ----------- | --- | --- | --- | --- | --- |
+ZR
+| where | e(x) = exp(2πix). |     |     |     |     |     |     |     |     |     |     |
+| ----- | ----------------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+If we evaluate here in the traditional manner, eg. as in [GG], we would now solve the
+O
+| shifted | convolution | problem |     | which | consists | of evaluating |       |     |     |     |     |
+| ------- | ----------- | ------- | --- | ----- | -------- | ------------- | ----- | --- | --- | --- | --- |
+|         |             |         |     |       |          | τ (n)τ        | (n+h) |     |     |     |     |
+|         |             |         |     |       |          | α,β           | γ,δ   |     |     |     |     |
+X n≤x
+and summing by parts. This analysis was carried out in I. Here we use a new approach. We
+first make use of the fact that τ and τ are convolutions to write
+|     |     |     |     | α,β |     | γ,δ |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+m−αm−βn−γn−δ
+T
+|     |     | =   |     |     |     | 1 2 | 1 2 | ψ ˆ ( | log((n | n )/(m | m )). |
+| --- | --- | --- | --- | --- | --- | --- | --- | ----- | ------ | ------ | ----- |
+|     |     |     |     |     |     |     |     |       |        | 1 2    | 1 2   |
+|     | O   |     |     |     |     | m m |     | 2π    |        |        |       |
+|     |     |     | X   |     |     | 1   | 2   |       |        |        |       |
+m1m2,n1n2≤X
+0<|m1m2−n1n2|<m1m2/τ
+Now we embark on a discrete analog of the circle method which basically consists of approx-
+imating a ratio, say m /n by a rational number with a small denominator, say M/N, and
+|          |        |           | 1 1  |     |     |          |      |     |     |     |     |
+| -------- | ------ | --------- | ---- | --- | --- | -------- | ---- | --- | --- | --- | --- |
+| then sum | all of | the terms | with | m   | /n  | close to | M/N. |     |     |     |     |
+1 1
+TothisendweintroduceaparameterQandsubdividetheinterval[0,1]intoFareyintervals
+associated with the fractions M/N with 1 M N Q and (M,N) = 1 from the Farey
+|     |     |     |     |     |     | ≤   | ≤   | ≤   |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+sequence . The Farey interval determined by the fraction M/N is defined to be
+|     | Q    |     |     |     | M,N       |        |     |     |     |          |     |
+| --- | ---- | --- | --- | --- | --------- | ------ | --- | --- | --- | -------- | --- |
+|     | F    |     |     |     | M         |        |     |     |     |          |     |
+|     |      |     |     |     | M         | M +M′′ | M   | M   | +M′ |          |     |
+|     |      |     |     | =   |           |        | ,   | +   |     |          |     |
+|     |      |     |     | M,N |           | +N′′   |     |     | +N′ |          |     |
+|     |      |     | M   |     | (cid:20)N | − N    | N   |     | N   | (cid:19) |     |
+|     | M′′, | M′  |     |     |           |        |     |     |     |          |     |
+where M, are three consecutive terms in the Farey sequence . Now given such an
+|     | N′′ N | N′  |     |     |     |     |     |     |     | Q   |     |
+| --- | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+F
+M and N we sum over the terms m and n for which m /n ; for such a pair we
+|     |     |     |     |     | 1   | 1   |     |     | 1 1 ∈ | M M,N |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | ----- | ----- | --- |
+define
+|     |     |     |     |     | h   | := m N | n   | M.  |     |     |     |
+| --- | --- | --- | --- | --- | --- | ------ | --- | --- | --- | --- | --- |
+|     |     |     |     |     | 1   | 1      | − 1 |     |     |     |     |
+
+MOMENTS OF ZETA AND CORRELATIONS OF DIVISOR-SUMS: II 3
+The possible range of h may be computed by
+1
+m M M M +M′′ n n
+1 1 1
+h = n N n N =
+| 1 | (cid:12)n − N (cid:12) 1 ≤ (cid:18)N − N +N′′ (cid:19) 1 N +N′′ ≈ Q
+(cid:12) 1 (cid:12)
+(cid:12) (cid:12)
+since adjacent deno (cid:12) minators (cid:12) satisfy Q < N + N′′ < 2Q. In general, the rapid decay of ψ ˆ
+governs the range of h and h defined below.
+1 2
+Also, we note that if Q is not too large then m /n implies that n /m
+1 1 M,N 2 2 M,N
+∈ M ∈ M
+as well. This is because the distance from m /n to n /m is
+1 1 2 2
+m n m m n n m m 1
+1 2 1 2 1 2 1 2
+= | − | .
+(cid:12)n − m (cid:12) n m ≤ τn m ≤ τ
+(cid:12) 1 2(cid:12) 1 2 1 2
+(cid:12) (cid:12)
+On the other hand (cid:12) (cid:12)
+M M′ 1
+(cid:12)N − N′(cid:12) ≫ Q2
+(cid:12) (cid:12)
+(cid:12) (cid:12)
+so if Q2 = o(τ) then our assertion fol(cid:12)lows. (cid:12)
+Now we define
+h := m M n N.
+2 2 2
+−
+We have
+m m MN n n MN = h m M +h m N h h
+1 2 1 2 1 2 2 1 1 2
+− −
+so that
+m m n n h h h h
+1 2 1 2 1 2 1 2
+− = +
+m m m N m M − m m MN
+1 2 1 2 1 2
+and
+n n h h h h
+1 2 1 2 1 2
+log = + +O .
+m m m N m M m m MN
+1 2 1 2 (cid:0) 1 2 (cid:1)
+The error term is negligible so we have now arranged the sum as
+m−αm−βn−γn−δ Th Th
+1 2 1 2 ψ ˆ 1 + 2
+m m (cid:18)2πm N 2πm M(cid:19)
+X X X 1 2 1 2
+M≤N≤Q h1,h2 m1m2≤X
+(M,N)=1 (∗1),(∗2)
+where
+( ) : m N n M = h and ( ) : m M n N = h
+1 1 1 1 2 2 2 2
+∗ − ∗ −
+Note that for a given m ,n and h the condition ( ) implies that m /n so we
+1 1 1 1 1 1 M,N
+∗ ∈ M
+don’t need to write that condition.
+
+| 4   |     |     |     |     | BRIAN     | CONREY | ANDJONATHANP. |      |      | KEATING |     |     |     |     |
+| --- | --- | --- | --- | --- | --------- | ------ | ------------- | ---- | ---- | ------- | --- | --- | --- | --- |
+|     |     |     |     | 2.  | Smoothing |        | the           | sums | over | M       | and | N   |     |     |
+We introduce another smooth weight function φ(y), which is an approximation to the
+characteristic function χ (y) to help with the summation over M and N. We will then
+(0,1]
+| have | sums | of  | the form |     |       |     |     |     |     |            |     |     |     |     |
+| ---- | ---- | --- | -------- | --- | ----- | --- | --- | --- | --- | ---------- | --- | --- | --- | --- |
+|      |      |     |          |     |       |     |     | M   | N   |            |     |     |     |     |
+|      |      |     |          | S   | (ξ,η) | :=  | φ   |     | φ   | M−1−ξN−1−η |     |     |     |     |
+Q
+|     |     |     |     |     |     |     |     | (cid:18)Q(cid:19) | (cid:18)Q(cid:19) |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | ----------------- | ----------------- | --- | --- | --- | --- | --- |
+1≤M≤N X
+(M,N)=1
+| for   | a finite | set | of choices |     | of ξ       | and η | which | are of | the  | form |     |     |     |     |
+| ----- | -------- | --- | ---------- | --- | ---------- | ----- | ----- | ------ | ---- | ---- | --- | --- | --- | --- |
+|       |          |     |            |     |            | ǫ     | α+ǫ   | β +ǫ   | γ +ǫ | δ    |     |     |     |     |
+|       |          |     |            |     |            |       | 1     | 2      | 3    | 4    |     |     |     |     |
+| where | the      | ǫ i | 1,0,1      | .   | We require |       | that  |        |      |      |     |     |     |     |
+|       |          |     | ∈ {        | }   |            |       |       |        |      |      |     |     |     |     |
+1
+˜ (s)y−s
+|     |     |     |     |     |     | φ(y) | =   |     | φ   | ds  |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | ---- | --- | --- | --- | --- | --- | --- | --- | --- |
+2πi
+Z
+(1)
+˜
+| where | φ(s) | has | the | properties |         | that |     |     |     |          |     |     |     |     |
+| ----- | ---- | --- | --- | ---------- | ------- | ---- | --- | --- | --- | -------- | --- | --- | --- | --- |
+|       |      |     |     |            | Resφ(s) | ˜    | = 1 | and |     | φ(ξ) ˜ = | 0   |     |     |     |
+s=0
+for all of the eligible values of ξ that arise, and that φ(s) ˜ is analytic in s 1/2 and has
+|     |     |     |     |     |     |     |     |     |     |     |     | ℜ ≥ − |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- |
+rapid decay vertically in this region. In practice S (ξ,η) will be combined with S (η,ξ) to
+|     |     |     |     |     |     |     |     |     | Q   |     |     |     | Q   |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+obtain
+2
+|     |     |           |     |       |     |                   | 1   |     |     | M                 | N                 |            |     |     |
+| --- | --- | --------- | --- | ----- | --- | ----------------- | --- | --- | --- | ----------------- | ----------------- | ---------- | --- | --- |
+|     |     | S (ξ,η)+S |     | (η,ξ) |     | = φ               |     | +   | φ   |                   | φ                 | M−1−ξN−1−η |     |     |
+|     |     | Q         |     | Q     |     |                   |     |     |     |                   |                   |            |     |     |
+|     |     |           |     |       |     | (cid:18)Q(cid:19) |     |     |     | (cid:18)Q(cid:19) | (cid:18)Q(cid:19) |            |     |     |
+X
+(M,N)=1
+| The | second | term   | is  |          |                |       |     |            |          |     |     |                 |     |      |
+| --- | ------ | ------ | --- | -------- | -------------- | ----- | --- | ---------- | -------- | --- | --- | --------------- | --- | ---- |
+|     |        | µ(d)   |     | Md       |                |       |     | Nd         |          |     |     |                 |     |      |
+|     |        |        |     |          |                | M−1−ξ |     |            | M−1−η    |     |     |                 |     |      |
+|     |        |        |     | φ        |                |       |     | φ          |          |     |     |                 |     |      |
+|     |        | d2+ξ+η |     | (cid:18) | Q (cid:19)     |       |     | (cid:18) Q | (cid:19) |     |     |                 |     |      |
+|     | X      | d      | X M |          |                |       | X N |            |          |     |     |                 |     |      |
+|     |        |        |     |          |                |       |     |            | w        |     |     |                 |     | z    |
+|     |        | µ(d)   |     | 1        |                |       |     | Q          |          | 1   |     |                 | Q   |      |
+|     | =      |        |     |          | φ(w)ζ(w+1+ξ) ˜ |       |     |            | dw       |     |     | φ(z)ζ(z ˜ +1+η) |     | dz . |
+d2+ξ+η(cid:18)2πi Z (cid:18)d(cid:19) (cid:19)(cid:18)2πi Z (cid:18)d(cid:19) (cid:19)
+|     | X   |     |     | (1) |     |     |     |     |     |     | (1) |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+d
+Thefirstintegralis= ζ(1+ξ)+O((Q/d)−1/3)ascanbeseenbymovingthepathofintegration
+to the left to w = 1/3 and accounting for the residue at the pole w = 0; note that since
+|     |     |     | ℜ   | −   |     |     |     |     |     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+˜
+| φ(  | ξ) = | 0, there | is  | no pole | at  | w = | ξ. Thus, | altogether |     | we  | have |     |     |     |
+| --- | ---- | -------- | --- | ------- | --- | --- | -------- | ---------- | --- | --- | ---- | --- | --- | --- |
+|     | −    |          |     |         |     | −   |          |            |     |     |      |     |     |     |
+2
+|     |     |     |     |     |     |     |     | 1   | ζ(1+ξ)ζ(1+η) |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | ------------ | --- | --- | --- | --- | --- |
++O(Q−1/3).
+| (1) |     |     | S Q (ξ,η)+S |     | Q (η,ξ) | =   | φ                 | +   |       |     |     |     |     |     |
+| --- | --- | --- | ----------- | --- | ------- | --- | ----------------- | --- | ----- | --- | --- | --- | --- | --- |
+|     |     |     |             |     |         |     | (cid:18)Q(cid:19) |     | ζ(2+ξ | +η) |     |     |     |     |
+
+MOMENTS OF ZETA AND CORRELATIONS OF DIVISOR-SUMS: II 5
+3. The case of h = 0
+2
+We remark first of all that the terms with h = h = 0 are precisely the diagonal terms.
+1 2
+Now we consider what happens if h = 0 and h = 0. We call this a “semi-diagonal” term
+2 1
+6
+after [BK].
+If h = 0 then m M = n N. Since (M,N) = 1 it follows that m = Nℓ and n = Mℓ for
+2 2 2 2 2
+some ℓ. Thus we have
+M N m−α(Nℓ)−βn−γ(Mℓ)−δ Th
+φ φ 1 1 ψ ˆ 1
+(cid:18)Q(cid:19) (cid:18)Q(cid:19) m m (cid:18)2πm N(cid:19)
+X X X 1 2 1
+M≤N h1 m1,n1,ℓ
+(M,N)=1 (∗1)
+n1≥|h1|Q
+where
+( ) : m N n M = h .
+1 1 1 1
+∗ −
+We replace m by a smooth variable u and n by m N/M. We have u ℓN = m m X
+1 1 1 1 1 1 2
+≤
+and so our sum is
+M N Th
+φ φ M−δ+γ−1N−β−γ−1 ℓ−1−β−δ u−1−α−γψ ˆ 1 du
+(cid:18)Q(cid:19) (cid:18)Q(cid:19) Z 1 (cid:18)2πu N(cid:19) 1
+M
+X
+≤N
+X
+h1
+X
+ℓ
+u1ℓ≤
+N
+X 1
+(M,N)=1
+We save the term with h = 0 for later and we group the terms with h and h together
+1 1 1
+−
+and use ψ ˆ ( v) = ψ ˆ (v). We make the substitution v = Th1 in the integral and switch the
+− 1 2πu1N
+integral over v with the sum over h and ℓ. Then (with h > 0) we have that
+1 1 1
+ℓNTh
+1
+= u ℓN X
+1
+2πv N ≤
+1
+implies that
+2πXv
+1
+ℓh .
+1
+≤ T
+Thus we have
+M N ∞
+φ φ M−δ+γ−1Nα−β−1 v−1+α+γ(2 ψ ˆ (v )) h−α−γℓ−1−β−δ dv .
+(cid:18)Q(cid:19) (cid:18)Q(cid:19) Z 1 ℜ 1 1 1
+X 0 X
+(M
+M
+,N
+≤
+)
+N
+=1
+h1ℓ≤2πX
+T
+v1
+The sum over h and ℓ is
+1
+s
+1 2πv X ds
+1
+ζ(s+1+β +δ)ζ(s+α+γ)
+2πi Z (cid:18) T (cid:19) s
+(2)
+Together with the integral over v this is
+1
+∞ 2 2πv X s ds
+v−1+α+γψ ˆ (v ) ζ(s+1+β +δ)ζ(s+α+γ) 1 dv .
+Z 1 1 2πi Z (cid:18) T (cid:19) s 1
+0 (2)
+Now, as we’ve seen before, if s > 0 then
+ℜ
+∞ ∞
+(2 ψ ˆ (v))vs dv = χ(1 s) ψ(t)t−s dt.
+Z ℜ − Z
+0 0
+
+| 6     |     |             |     | BRIAN | CONREY  | ANDJONATHANP. |        |     | KEATING |          |             |     |
+| ----- | --- | ----------- | --- | ----- | ------- | ------------- | ------ | --- | ------- | -------- | ----------- | --- |
+| Thus, | the | above is    |     |       |         |               |        |     |         |          |             |     |
+|       |     | ∞           |     |       |         |               |        |     |         |          | s           |     |
+|       |     |             |     | 2     |         |               |        |     |         | 2πX      |             | ds  |
+|       |     | t−1−α−γψ(t) |     |       | ζ(s+1+β |               | +δ)ζ(1 |     | s α     | γ)       |             | dt  |
+|       | Z   |             | 2πi | Z     |         |               |        | −   | − −     | (cid:18) | tT (cid:19) | s   |
+|       | 0   |             |     | (2)   |         |               |        |     |         |          |             |     |
+We move the s-path left to s = 1/2, thus crossing the poles at s = 0, s = α γ and
+|     |     |             |       | ℜ        | −      |     |     |     |         |     |       | − −             |
+| --- | --- | ----------- | ----- | -------- | ------ | --- | --- | --- | ------- | --- | ----- | --------------- |
+| s = | β   | δ. Thus the | above | is       |        |     |     |     |         |     |       |                 |
+|     | − − |             |       |          |        |     |     |     |         |     |       |                 |
+|     |     | ∞           |       |          |        |     |     |     | ζ(1 α+β |     | γ +δ) | 2πX −β−δ        |
+|     |     | t−1−α−γψ(t) |       | ζ(1+β    | +δ)ζ(1 |     | α   | γ)  | −       | −   |       | tT              |
+|     |     |             |       |          |        |     |     |     |         |     |       | (cid:0) (cid:1) |
+|     | Z   |             |       | (cid:18) |        |     | −   | − − |         |     | β +δ  |                 |
+0
+2πX −α−γ
+|     |            |                   |                   |               |     | ζ(1 | α+β | γ   | +δ)     |         |          |     |
+| --- | ---------- | ----------------- | ----------------- | ------------- | --- | --- | --- | --- | ------- | ------- | -------- | --- |
+|     |            |                   |                   |               |     | +   | −   | −   |         | tT      | dt       |     |
+|     |            |                   |                   |               |     |     |     | α+γ | (cid:0) | (cid:1) | (cid:19) |     |
+| and | altogether | we have           |                   |               |     |     |     |     |         |         |          |     |
+|     |            | M                 |                   | N             |     |     |     |     |         |         |          |     |
+|     |            | φ                 | φ                 | M−δ+γ−1Nα−β−1 |     |     |     |     |         |         |          |     |
+|     |            | (cid:18)Q(cid:19) | (cid:18)Q(cid:19) |               |     |     |     |     |         |         |          |     |
+X
+M≤N
+(M,N)=1
+−β−δ
+|     |     | ∞           |     |          |     |        |     |      | ζ(1 | α+β | γ    | +δ) 2πX         |
+| --- | --- | ----------- | --- | -------- | --- | ------ | --- | ---- | --- | --- | ---- | --------------- |
+|     |     | t−1−α−γψ(t) |     |          |     |        |     |      |     |     |      | tT              |
+|     |     |             |     | ζ(1+β    |     | +δ)ζ(1 |     | α γ) |     | −   | −    |                 |
+|     |     |             |     |          |     |        |     |      |     |     | β +δ | (cid:0) (cid:1) |
+|     |     | ×Z          |     | (cid:18) |     |        | −   | −    | −   |     |      |                 |
+0
+|     |     |     |     |     | ζ(1 | α+β |     | γ +δ) | 2πX             | −α−γ     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | ----- | --------------- | -------- | --- | --- |
+|     |     |     |     |     | +   | −   |     | −     | tT              |          | dt  |     |
+|     |     |     |     |     |     |     |     |       | (cid:0) (cid:1) |          |     |     |
+|     |     |     |     |     |     |     |     | α+γ   |                 | (cid:19) |     |     |
+All of the above is predicated on m /n < 1. The contribution from the terms where
+|     |     |     |     |     |     | 1   | 1   |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+n < m will be exactly as above but with the quadruple (α,β,γ,δ)replaced with (γ,δ,α,β).
+1 1
+In particular, α + γ will be replaced by β +γ prior to summing over M and N. This will
+| give | another | term              |                   |               |     |     |     |     |     |     |     |     |
+| ---- | ------- | ----------------- | ----------------- | ------------- | --- | --- | --- | --- | --- | --- | --- | --- |
+|      |         | M                 |                   | N             |     |     |     |     |     |     |     |     |
+|      |         | φ                 | φ                 | Mα−β−1N−δ+γ−1 |     |     |     |     |     |     |     |     |
+|      |         | (cid:18)Q(cid:19) | (cid:18)Q(cid:19) |               |     |     |     |     |     |     |     |     |
+X
+M≤N
+(M,N)=1
+−β−δ
+|     |     | ∞           |     |       |     |        |     |      | ζ(1 | α+β | γ   | +δ) 2πX |
+| --- | --- | ----------- | --- | ----- | --- | ------ | --- | ---- | --- | --- | --- | ------- |
+|     |     | t−1−β−δψ(t) |     | ζ(1+β |     | +δ)ζ(1 |     | α γ) |     | −   | −   | tT      |
+(cid:0) (cid:1)
+|     |     | ×Z  |     | (cid:18) |     |     | −   | −   | −   |     | β +δ |     |
+| --- | --- | --- | --- | -------- | --- | --- | --- | --- | --- | --- | ---- | --- |
+0
+|     |     |     |     |     |     |     |     |       | 2πX     | −α−γ             |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | ----- | ------- | ---------------- | --- | --- |
+|     |     |     |     |     | ζ(1 | α+β |     | γ +δ) |         |                  |     |     |
+|     |     |     |     |     | +   | −   |     | −     | tT      |                  | dt  |     |
+|     |     |     |     |     |     |     |     | α+γ   | (cid:0) | (cid:1) (cid:19) |     |     |
+Now we consider what happens when h = 0 and h = 0. These terms will contribute the
+|     |     |     |     |     |     |     | 1   | 2   |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+6
+“complements” to the above two expressions so that we will be in the situation described in
+(1) and so we can execute the sums over M and N as described there, replacing the sums
+
+MOMENTS OF ZETA AND CORRELATIONS OF DIVISOR-SUMS: II 7
+over M and N by ratios of zeta functions with small error terms. Thus, we obtain
+∞ ζ(1+β +δ)ζ(1 α γ)ζ(1 γ +δ)ζ(1 α+β)
+t−1−α−γψ(t) − − − −
+Z (cid:18) ζ(2 α+β γ +δ)
+0 − −
+−β−δ
+2πX ζ(1 α+β γ +δ)ζ(1 α+β)ζ(1 γ +δ)
+− − − −
+−(cid:18) tT (cid:19) (β +δ) ζ(2 α+β γ +δ)
+− −
+−α−γ
+2πX ζ(1 α+β γ +δ)ζ(1 α+β)ζ(1 γ +δ)
++ − − − − dt
+(cid:18) tT (cid:19) (α+γ) ζ(2 α+β γ +δ) (cid:19)
+− −
+and the complimentary term with α+γ replaced by β +δ and vice-versa.
+This is identical with one of the one-swap terms identified by descending as previously
+described.
+There are further semi-diagonal terms. If we do the exact same analysis as throughout
+this entire section but now focusing on the ratio m /n instead of m /n then the effect will
+1 2 1 1
+be to switch the roles of γ and δ in the expression above. Then we end up with two more
+terms and a total of four terms. These terms are identical with the four terms obtained by
+the “descent” method described in section 8 of [CK].
+A question of whether we have over-counted some terms may arise. But the “duplicate”
+terms for which m /n and simultaneously m /n with N Q and
+1 1 M,N 1 2 M′,N′
+∈ M ∈ M ≤
+N′ Q contribute an insignificant amount to the total and so may be regarded as part of
+≤
+the error term.
+4. The case of h h = 0
+1 2
+6
+Now we consider
+M N m−αm−βn−γn−δ Th Th
+φ φ 1 2 1 2 ψ ˆ 1 + 2 .
+(cid:18)Q(cid:19) (cid:18)Q(cid:19) m m (cid:18)2πm N 2πm M(cid:19)
+X X X 1 2 1 2
+M≤N h1h26=0 m1m2≤X
+(M,N)=1 (∗1),(∗2)
+In this case we have a bound for h similar to that for h :
+2 1
+m n M
+2 2
+h .
+2
+| | ≪ Q ≪ QN
+In particular, we have
+n n M X
+1 2
+h h .
+| 1 2 | ≪ Q2N ≪ Q2
+Now we replace the sums over m ,m ,n ,n subject to ( ) and ( ) by their averages. As
+1 2 1 2 1 2
+∗ ∗
+before, we replace m by u and now we replace m by u . We replace n and n by u N/M
+1 1 2 2 1 2 1
+and u M/N respectively. We then have
+2
+M N Th Th
+φ φ Mγ−δ−1Nδ−γ−1 u−α−γ−1u−β−δ−1ψ ˆ 1 + 2 du du .
+(cid:18)Q(cid:19) (cid:18)Q(cid:19) Z 1 2 (cid:18)2πu N 2πu M(cid:19) 1 2
+M
+X
+≤N h1
+X
+h26=0
+u1u2≤X 1 2
+(M,N)=1
+
+8 BRIAN CONREY ANDJONATHANP. KEATING
+Now there are four cases to consider according to the four sign choices of h and h . We
+1 2
+make the substitutions
+T h T h
+1 2
+v = | | and v = | |
+1 2
+2πu N 2πu M
+1 2
+and move the sums over h and h to the inside. The condition u u X implies that
+1 2 1 2
+≤
+T2 h h
+1 2
+| | = u u X
+1 2
+4π2v v MN ≤
+1 2
+or
+4π2XMNv v
+1 2
+h h .
+| 1 2 | ≤ T2
+We get
+T M N
+−α−β−γ−δ φ φ Mγ+β−1Nδ+α−1 vα+γ−1vβ+δ−1
+2π (cid:18)Q(cid:19) (cid:18)Q(cid:19) ZZ 1 2
+(cid:0) (cid:1) (M M X ,N ≤ ) N =1 v1,v2 0<|h1h2|≤ X 4π2XM T2 Nv1v2
+h−α−γh−β−δ ψ ˆ (v +v )+ψ ˆ (v v )+ψ ˆ ( v +v )+ψ ˆ ( v v ) dv dv .
+× 1 2 1 2 1 − 2 − 1 2 − 1 − 2 1 2
+(cid:16) (cid:17)
+Using
+∞
+ˆ
+ψ(v +v ) = ψ(t)e(t(v +v )) dt
+1 2 1 2
+Z
+0
+we see that
+∞
+ˆ ˆ ˆ ˆ
+ψ(v +v )+ψ(v v )+ψ( v +v )+ψ( v v ) = ψ(t) e(tv )+e( tv ) e(tv )+e( tv ) dt;
+1 2 1 2 1 2 1 2 1 1 2 2
+− − − − Z − −
+0 (cid:0) (cid:1)(cid:0) (cid:1)
+Also
+s
+4π2XMNv1v2
+h−α−γh−β−δ =
+1
+ζ(s+α+γ)ζ(s+β +δ)(cid:16)
+T2
+(cid:17) ds
+1 2 2πi Z s
+X (2)
+h1h2≤4π2XM
+T2
+Nv1v2
+and
+∞
+vs+α+γ−1(e(tv )+e( tv )) dv = t−s−α−γχ(1 s α γ),
+Z 1 1 − 1 1 − − −
+0
+and similarly for the integral over v . Incorporating these, we have simplified things to
+2
+T M N
+−α−β−γ−δ φ( )φ( )Mγ+β−1Nδ+α−1
+2π Q Q
+(cid:0) (cid:1) M X ≤N≤Q
+(M,N)=1
+∞ 1 (4π2XMN)s
+ψ(t)t−α−β−γ−δ ζ(1 s α γ)ζ(1 s β δ) t2T2 ds dt.
+×Z 2πi Z − − − − − − s
+0 (2)
+
+MOMENTS OF ZETA AND CORRELATIONS OF DIVISOR-SUMS: II 9
+The above expression is unchanged if (α,γ) is interchanged with (β,δ). So the result of
+summing terms for which n /m 1 rather than m /n 1 allows for summing over M
+1 1 1 1
+≤ ≤
+and N as in Section 9; we obtain
+T 1 ζ(1 β γ s+z)ζ(1 α δ s+w)
+−α−β−γ−δ ˜ ˜
+φ(z)φ(w) − − − − − −
+2π (2πi)2 Z ζ(2 α β γ δ 2s+z +w)
+(cid:0) (cid:1) z,w − − − − −
+∞ 1 ( X )sQz+w
+ψ(t)t−α−β−γ−δ ζ(1 s α γ)ζ(1 s β δ) t2T2 ds dw dz dt.
+×Z 2πi Z − − − − − − s
+0 (2)
+Moving the s-path to the right to and the z and w paths to the left to 1/4, say we
+∞ −
+obtain
+∞ tT −α−β−γ−δ ζ(1 α γ)ζ(1 β δ)ζ(1 β γ)ζ(1 α δ)
+ψ(t) − − − − − − − −
+Z (cid:18)(cid:18)2π(cid:19) ζ(2 α β γ δ)
+0 − − − −
+α−β+γ−δ
+tT ζ(1+α β +γ δ)ζ(1+α β)ζ(1+γ δ)
++X−α−γ − − − −
+(cid:18)2π(cid:19) (α+γ) ζ(2+α β +γ δ)
+− −
+−α+β−γ+δ
+tT ζ(1 α+β γ +δ)ζ(1 α+β)ζ(1 γ +δ)
++X−β−δ − − − −
+(cid:18)2π(cid:19) (β +δ) ζ(2 α+β γ +δ)
+− −
+α−β−γ+δ
+tT ζ(1 γ +δ)ζ(1+α β γ +δ)ζ(1+α β)
++X−α−δ − − − −
+(cid:18)2π(cid:19) (α+δ)ζ(2+α β γ +δ)
+− −
+−α+β+γ−δ
+tT ζ(1 α+β)ζ(1 α+β +γ δ)ζ(1+γ δ)
++X−β−γ − − − − dt
+(cid:18)2π(cid:19) (β +γ)ζ(2 α+β +γ δ) (cid:19)
+− −
+with an error term of O(Q−1/4). This expression is exactly what we were hoping for; it is
+identical to the “two-swap” terms found in the descent approach of section 9 of [CK].
+5. Conclusion
+We have shown how to reproduce the complete conjecture for the shifted fourth moment
+of ζ by analyzing the mean square of long Dirichlet polynomials whose coefficients are con-
+volutions of two smooth arithmetic functions. In the next paper we will carry this analysis
+out for coefficients which are convolutions of an arbitrary number of convolutions and use
+this to reproduce the full conjecture for the 2kth moment of ζ for an arbitrary k.
+References
+[BK] Bogomolny, E. B.; Keating, J. P., Random matrix theory and the Riemann zeros I: three- and four-
+point correlations. Nonlinearity 8 (1995), no. 6, 1115–1131.
+[CK] Conrey, J. B.; Keating, J. P. Moments of zeta and correlations of divisor-sums: I, preprint.
+[GG] Goldston, D. A.; Gonek, S. M. Mean value theorems for long Dirichlet polynomials and tails of
+Dirichlet series. Acta Arith. 84 (1998), no. 2, 155–192.
+
+10 BRIAN CONREY ANDJONATHANP. KEATING
+American Institute of Mathematics, 360 Portage Ave, Palo Alto, CA 94306, USA and
+School of Mathematics, University of Bristol, Bristol BS8 1TW, UK
+E-mail address: conrey@aimath.org
+School of Mathematics, University of Bristol, Bristol BS8 1TW, UK
+E-mail address: j.p.keating@bristol.ac.uk
