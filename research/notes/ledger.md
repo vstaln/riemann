@@ -74,3 +74,10 @@ Phone mobile data dropped mid-wave (killed 2 agents). All specs now mandate cras
 4. M2-curve roadmap: WEAKENED (LP proxy: 0.70 needs A≈1.063, 0.80 unreachable).
 5. **Record: 0.6732654365 — RE-CERTIFIED at grid 6000 (verified=True, 1,140,800 nodes) — doubly secure.**
 6. LIVE: rust-zeros v2 (Gabcke tail, 100k zeros + high-N stats — the periodogram/spacing reads could surface a NEW read); kanaka2 independent m₃ re-verification (zetazero phase — the m₃ paper's second-implementation upgrade); 8065@g4000 record-move test still grinding.
+
+## RECORD MOVE (2026-08-12, fresh certification)
+- **NEW RECORD: 0.67326607914000068290279687189167079692373428880136** — eps=**8065** certified at grid=4000 (verifier log: **verified=True, nodes=1,563,008**; log /tmp/combine/par_r8065_g4000.log; bound formula re-verified in the verification sweep, residual 8e-52). Gain +6.426444e-7 over 0.6732654364955235… (eps=8064).
+- Chain: bound = (H−τ)/(1−B/m), H(1.49)=0.67242188609644747281, τ=(1/220)(127/133)=0.0043403964456596035543, A=8065·127/10⁶=1.024255, B=Φ_133(1.024255)=1.024187053870446558, m=133.
+- eps=8064 re-certified True at grid=6000 (1,140,800 nodes) — both old and new levels freshly certified.
+- Frontier: 8068@g6000 FAILS (lower=0.008058687850487158); 8065 certified ⇒ boundary ∈ (8065, 8068]; push probes 8066@g4000/8067@g4000 launched.
+- beat673's psum-shifted probes (1/1302 @ eps 8130/8140, 1/1314 @ 8080/8100) may exceed this IF they certify AND the bound recomputes with psum=1/1302 (τ smaller ⇒ bound higher) — verdicts live in beat673's session.
