@@ -72,3 +72,10 @@ The old claim (beat all three at 0.6732629) was an artifact of the double-normal
 eps-max log entries: [23:00:10] p=1/1320 target=7758 verified=True (497s, 1016826 nodes);
 [23:02:31] 7763 False (lower 0.0077452); [23:11:24] 7760 False (lower 0.0077423).
 Independent direct runs by orchestrator confirm: psum=1/220 7900 → False (lower 0.007888).
+
+## FINAL CONFIRMED NUMBER (2026-08-12 23:40)
+eps=7759/1e6 at psum=1/220 verified=True (23:35:12, 1428s, 1,436,228 nodes); 7760 verified=False.
+**Final corrected bound: 0.6730690301666756 at (alpha=1.49, psum=1/220, eps=0.007759, m=137).**
+Beats ainta 0.6730085; below trmdy 0.6731376 and tawanerguo 0.6731929.
+Also: two-tone executor confirmed max H = 0.672500703679 (the classic constant) — two-tone
+windows cannot raise H (negative, checked to 1e-13).
