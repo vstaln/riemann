@@ -4,6 +4,9 @@
 
 ---
 
+## Status: PHONE-BRAIN ARCHITECTURE (2026-08-12, after freeze)
+The phone is the ONLY brain: it funds, specs, judges, synthesizes. Laptop + boxes are compute workers — dispatched jobs only, no autonomous swarms (laptop swarm confirmed OFF: no crons/services/tmux; box orphans killed 2026-08-12). Contract: `tools/swarm/phone-brain.md`; dispatch: `tools/swarm/phone-dispatch.sh`. Waves ≤3 agents, ledger-gated, <2M tokens/wave.
+
 ## Status: SWARM FROZEN — vertical mode (2026-08-12)
 After ~800M tokens across waves 1/blast/local/orch/phone with **zero certified record improvement**, the swarm is frozen. Surviving lines: **(a) eps-certification push on the record config** (attack-record), **(b) m₃-separation / new certificate class** (super-law S₃). All other lines killed (see verdicts below — they're dead for stated reasons, not abandoned silently).
 
