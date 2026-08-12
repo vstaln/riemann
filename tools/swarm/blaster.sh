@@ -27,10 +27,12 @@ for spec in "${SPECS[@]}"; do
   h="${HOSTS[$((i % ${#HOSTS[@]}))]}"
   tname="$(basename "$spec")"
   (
+    # Copy spec to host, then run pi pointing at it (stdin drops >500 bytes)
+    timeout 60 scp -q "$spec" "$h":~/riemann/"$WAVE/$tname" 2>/dev/null || true
     timeout 1800 ssh -o ConnectTimeout=15 -o BatchMode=yes "$h" \
       "export PATH=\"\$HOME/.npm-global/bin:\$HOME/.cargo/bin:/usr/bin:\$PATH\"; cd \"\$HOME/riemann\" 2>/dev/null || cd /tmp; \
        command -v pi >/dev/null || { echo 'PI NOT FOUND on $h'; exit 1; }; \
-       pi -p --provider commandcode --model deepseek/deepseek-v4-flash" < "$spec" \
+       pi -p --provider commandcode --model deepseek/deepseek-v4-flash \"Read the task spec at $WAVE/$tname and execute it completely. Write your deliverable file as instructed. Print RESULT: <status> — <summary> at the end.\"" \
       > "research/waves/$WAVE/results/$h--$tname.out" 2>&1
     echo "[blaster] DONE $h: $tname ($(wc -c < "research/waves/$WAVE/results/$h--$tname.out") bytes)"
   ) &
