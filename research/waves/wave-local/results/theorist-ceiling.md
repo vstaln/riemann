@@ -197,3 +197,14 @@ inequality, is what blocks 0.7.
   rank–trace inequality: the inequality gives the form, the kernel gives the ceiling.
 
 RESULT: CEILING ≈ 0.67342 (CONJECTURED) — the record 0.6732628655343560 sits ~1.6e-4 below the family's constrained ceiling; 2/3 already beaten, 0.7 unreachable because the F6 kernel floor caps eps at ~0.007-0.008 while H is capped at H(√2)=0.6725007; the binding constraint is eps, whose true infimum is the only remaining headroom (certify the eps_max(p) frontier next).
+
+## ⚠️ CORRECTED STATUS (2026-08-12, after the retraction)
+The certified eps values cited above (0.00806 etc.) were produced by the buggy
+double-normalized verifier and are INVALID. Corrected certified floors (fixed verifier,
+single normalization w(0)=1):
+- psum=1/220 (p=1/1320): eps certified = 0.007759 (7759 True, 7760 False) → bound **0.6730690** (m=137)
+- psum=1/214 (p=1/1284): eps certified = 0.007931 → bound 0.6730572 (m=134)
+Structural conclusions that SURVIVE: H capped at 0.6725007 (window-independent, PROVEN),
+sensitivity d(bound)/dH ≈ +1.0 dominant, d(bound)/deps ≈ +0.64, the family is exhausted
+at its corrected limits, and beating trmdy/tawanerguo needs a structurally new inequality.
+See research/notes/retraction-673-invalid.md.
