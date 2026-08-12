@@ -24,5 +24,13 @@ config: α=1.49, psum=1/220, m=133, eps=0.00806 (certifies; 0.008065 FAILS). H(1
 - **wave-blast** (laptop) — 20 idea catalogs (constraint/provocation/random/historical/systems/analogy-x1). UNFUNDED — catalogs, not results.
 
 ## In flight
+- **attack-record v2** (a13b96b0, wave-phone-2): prior run (killed by mobile-data loss) independently re-verified eps=8060/1e6 certifies at grid=4000 (942,944 nodes, matches discovery note), 8066 FAILS. Now: resolve 8065, probe grid-artifact question (finer grids), certified (psum,m,α) sweep. **THE priority — boundary is artifact-vs-genuine-floor.**
+- **superlaw-s3 v4** (995699c4, wave-phone-2): prior run found superlaw_s3.py has FATAL scaling bug (global vs per-block spacing → counts→0 → all prior S₃-FAIL verdicts VOID); pointwise R₃ is a poor discriminator; decisive probe = WINDOWED MARKED m₃. Partial file: research/waves/wave-phone-2/results/superlaw-s3.md. Pinned bottoms: m₃ ≥ 5.4419 (λ=1/2), ≥ 3.9825 (λ=2/3) vs sine-kernel 5, 13/4 — if super-law realizes the bottom, m₃ input SEPARATES it → new certificate class.
+- **tower-method (P5, THE METHOD line)** (4e423498, wave-phone-2): user directive — find a METHOD for zeros on the line, no brute force. Derivative tower: ξ′ zeros on line (FGL-family, Lean ≥0.85838 for ξ′), Rolle interlacing + N(T) count → force ξ zeros on line; missing lemma being worked out. tower_probe.py bug (line 87 mpc-vs-int) to fix.
+
+## Resilience note (2026-08-12)
+Phone mobile data dropped mid-wave (killed 2 agents). All specs now mandate crash-proofing: write deliverable EARLY, append per result, bash calls < 90 s, nohup+poll long jobs. attack-record v1 died with no file (spec lacked the mandate) — seed findings in the relaunch prompt instead.
+
+## In flight (superseded)
 - **attack-record** (d3fc79e9, wave-phone-2): adversarial re-verify + eps-max push. **THE priority.**
 - **superlaw-s3** (f10a8b2b, wave-phone-2): S₃=sine-kernel check + m₃-separation test (m₃(1/2)=5 proven for real zeros vs super-law marked m₃≥5.44 → new certificate class if separated). Crash-proofed (incremental file writes).
