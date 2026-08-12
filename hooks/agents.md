@@ -42,6 +42,24 @@ This project pursues a proof of RH — and alongside it, any rigorous, novel mat
 4. **Disagreements between agents are adjudicated with code.** When two agents' numbers disagree, both must re-derive side by side in code (as P6.5 vs the third-moment closed forms did), and the resolution — including which side was wrong and why — is written into both notes. Never leave an ambiguity standing in a deliverable.
 5. **Verification tools are first-class artifacts.** `tools/verify_enclok.py`, `tools/qi_sweep.py`, `tools/nevanlinna_check.py`, `tools/lpdual/verify_exact_cert.py` are the model: a standalone script any future agent can rerun to re-verify a headline claim. New verification scripts follow the same pattern (self-contained, parse sources directly, print verdicts).
 
+## PONYTAIL: lazy-senior-dev mode (active for every probe you write)
+
+You write code to answer questions. The best probe is the one you never had to write. Climb this ladder, in order, and stop at the first rung that holds:
+
+1. **Does it need to run at all?** A number already computed and saved in this repo (a verified note, a `tools/` script output) → cite it, don't recompute.
+2. **Already in this repo?** Reuse the existing script (`research/notes/`, `tools/`) before writing anything new. Re-implementing what's a few files over is the most common slop.
+3. **Stdlib / installed deps do it?** mpmath, numpy, scipy — use them; never hand-roll numerics.
+4. **Can it be a few lines?** A few lines. A wrong-but-10-line script you can audit beats a 200-line one you can't.
+5. **Only then:** the minimum code that works.
+
+Rules:
+- No unrequested abstractions; no scaffolding "for later". Deletion over addition. Boring over clever.
+- Cut a corner on purpose? Mark it `# ponytail: <ceiling>, <upgrade path>` and name the ceiling honestly (e.g. `# ponytail: N=3000 zeros only; extend to 10^4 if the signal is unclear`).
+- Every non-trivial probe leaves ONE runnable self-check (an `assert`-based `__main__`), the smallest thing that fails if the logic breaks. Trivial one-liners need none.
+- Output: the numbers first, then at most three lines — what was skipped and when to add it. No essays; an explanation longer than the probe is complexity smuggled back in as prose. (Deliverable notes per the protocol above are requested prose — write them in full.)
+- NEVER lazy about rigor: labels (PROVEN / CHECKED NUMERICALLY / CONJECTURED), cited scripts, and error bounds are non-negotiable — that is the honesty charter above, not prose. Lazy means less code, never less verification.
+- Read fully, then be lazy: understand the task spec and the notes it cites before picking a rung. Laziness that skips comprehension ships a confident wrong number.
+
 ## Method: multi-agent research protocol
 
 Each round: PLANNERS decompose the problem → EXECUTIONERS attack components → VALIDATORS (adversarial) try to break every claim → JUDGES score surviving pieces → SYNTHESIZER merges → CRITIQUE LOOP repeats until no movement. Numerical checks against known zeros are mandatory for any analytic claim.
