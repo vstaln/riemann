@@ -57,3 +57,18 @@ is the reference implementation to build on.
 - Corrected: `tools/verify_coboundary_floor.py`
 - Executor report: `research/waves/wave-local/exec-npoint.md`
 - This retraction: `research/notes/retraction-673-invalid.md`
+
+## DEFINITIVE CORRECTED STANDING (2026-08-12 23:15, after eps-max corrected-kernel search)
+With the FIXED verifier (single normalization, w(0)=1), the certified floors and bounds are:
+
+| psum | certified eps (max) | best bound (m) |
+|---|---|---|
+| 1/220 | 0.007758 (7758 True, 7760 False) | **0.6730684** (m=137) |
+| 1/214 | 0.007931 (7931 True, 7932 False) | 0.6730572 (m=134) |
+
+External valid mechanisms: ainta 0.6730085 | trmdy 0.6731376 | tawanerguo 0.6731929.
+**Corrected best 0.6730684 beats ainta but NOT trmdy or tawanerguo.**
+The old claim (beat all three at 0.6732629) was an artifact of the double-normalization bug.
+eps-max log entries: [23:00:10] p=1/1320 target=7758 verified=True (497s, 1016826 nodes);
+[23:02:31] 7763 False (lower 0.0077452); [23:11:24] 7760 False (lower 0.0077423).
+Independent direct runs by orchestrator confirm: psum=1/220 7900 → False (lower 0.007888).
