@@ -128,3 +128,9 @@ NEW BOUND: distinct-on-line >= 0.83621 N in our class (vs their formalized 5/6 a
 
 ## 2026-08-12 — WAVE 2 RESULTS (committed wave2-results-20260812.md) + C1 WEIGHT-SWEEP DISPATCHED
 T1: Lean-style statement READY (theorem + exact closed forms + gap list; hCert Arb-not-Lean is the gap). 10M pipeline: formula catalog + NEW 924k measurements (T block autocorr rho1=-0.136+-0.017, rho5=+0.163+-0.017 — 8-10 sigma NON-independence; small-gap tail exponent 3.81+-0.18 vs sine-kernel 3; N=64 NO floor — +1/3 floor is N>=256 phenomenon; m3-deficit exponent 0.330; frac(<0.1)=4.07e-4). Novel hunt: C1 WINNER = the 21 pair-weight DOF never swept (only default 2/(7-s)); C2 realized-floor finite-height cert; C3 prime-side second trace. n9 final probe: INCONCLUSIVE (crashed; marginal anyway). Weight-profile sweep agent babd4afe RUNNING (threshold eps >= 8066 at record triple => bound >= 0.673268; upside capped 0.6818; negative closes the last in-class DOF).
+## 2026-08-12 — faster_finder v1 LANDED (commit 3eff6d5)
+- Pure-std Rust finder: batch row-update RS (rotation recurrences, re-seed/1024) + EM t<200 + fine scan (step 0.01/0.02) + pure-bisection refine + banded wiggle-pair collapse + 8 threads.
+- THREE real bugs found/fixed in bring-up: (1) n-growth terms rotated one step AHEAD (phase error persisted to re-seed, zeros 5-7e-3 off e.g. zero 1166 at t=1610); (2) scan bypassed the EM dispatch at t<200 (spurious grid-point roots); (3) IQI bracket collapse (spurious endpoint roots) — replaced by pure bisection.
+- VALIDATED vs LMFDB 11k: max |Δγ| = 6.44e-4 < 1e-3 BAR MET; 11000/11000 complete; 0 duplicates. 100k zeros in 12.7 s @ step 0.01 (3.3x vs 42 s baseline); 6.8 s @ 0.02 (6.2x).
+- Completeness: resolves twins down to gap ~0.01 (baseline's 0.2-step missed ALL pairs < 0.2, -785/100k). Verified real pair at gap 0.0148 (t=71733).
+- PRODUCTION FINDER for the 10M shard run (LMFDB blockstarts as ground-truth boundaries).
