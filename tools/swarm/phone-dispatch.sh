@@ -19,6 +19,7 @@ cmd="${1:-}"; WAVE="${2:-}"; SPEC="${3:-}"; HOST="${4:-}"; TIMEOUT="${5:-1800}"
 case "$cmd" in
   sync-method)
     # push the current methodology (hooks, ledger, contract, dispatcher) to a box
+    HOST="${2:-}"
     [ -n "$HOST" ] || { echo "usage: sync-method <host>"; exit 1; }
     for mf in hooks/agents.md research/notes/ledger.md; do
       timeout 30 scp -q -o ConnectTimeout=15 "$mf" "$HOST":~/riemann/$mf 2>/dev/null || echo "scp $mf failed"
