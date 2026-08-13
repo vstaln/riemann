@@ -86,6 +86,25 @@ Apply the underlying methods even where plugin commands are unavailable:
 - creativity + analogy (transfer methods from other problems)
 - strategy (which attack to fund; kill criteria)
 
+## Skills: Hermes skill library (installed into pi)
+
+The full Nous Research Hermes skill library (173 skills — 72 bundled + 101 optional) is installed
+and discoverable by pi at:
+- `~/.pi/agent/skills/hermes-bundled/`  (symlinks → `~/.hermes/hermes-agent/skills/`)
+- `~/.pi/agent/skills/hermes-optional/` (symlinks → `~/.hermes/hermes-agent/optional-skills/`)
+
+**MANDATORY for paper writing:** whenever you write, restructure, or revise any paper, draft,
+README, or write-up for this project (paper/main.tex, research/papers/, research/notes/ that are
+publication-bound), FIRST read and apply the **research-paper-writing** skill:
+`~/.pi/agent/skills/hermes-bundled/research/research-paper-writing/SKILL.md`
+(read it fully before drafting). Its non-negotiables bind here too: never hallucinate citations
+(fetch programmatically, mark unverifiable ones `[CITATION NEEDED]`), one clear contribution in a
+single sentence, every experiment states the claim it supports, and commit drafts often.
+
+Useful companion skills (read on-demand): `arxiv` (paper search), `grounded-citations` (cited
+sources), `pdf` / `ocr-and-documents` (source extraction), `systematic-debugging` (root-cause
+method), `test-driven-development` (verifier work).
+
 ## Standing research context
 
 - RH: open since 1859 (Millennium Prize).
