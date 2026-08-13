@@ -244,3 +244,45 @@ under-specified class + the simple/distinct mislabel + provenance gaps.
 ## Status
 All review agents complete. Meta-review done. Fix list finalized. Next: apply fixes 1-9 to
 paper-main.tex + attack_bound_check.py, recompile, verify, commit.
+
+---
+
+# STATUS UPDATE (2026-08-13, fixes applied)
+
+## Fixes APPLIED (paper v2, commit f09c37a + CGG fix)
+1. [CRITICAL] Abstract + Theorem 3: "0.83621 simple" -> "0.83621 distinct on the
+   critical line" (N_d = s1+s2+2p). Done. Verified in compiled PDF.
+2. attack_bound_check.py rewritten: computes eps=8065/1e6 exact-rational, psum=1/220,
+   emits bound = 0.67326607914000068290279687189167079692373428880136 — matches paper
+   headline to all displayed digits (residual 2.6e-51 = 160dps vs 120dps truncation).
+3. psum/P disambiguation: Theorem 1 now states (alpha, psum, P, m) = (1.49, 1/220,
+   1/1320, 133); table row fixed to "1/220 optimal (mollifier P=1/1320)".
+4. Certificate class defined precisely in Section 2: Phi_m, c = I0^2/(I2+J), the cosine
+   kernel k_alpha, the 127 = m-6 factor, E(1) = -1/(6N^2) explicit with "not a
+   conjecture about the zeros pair correlation".
+5. New refs added + verified: Montgomery 1973 (Proc. Sympos. Pure Math. 24, 181-193),
+   Rudnick-Sarnak 1996 (Duke 81, 269-322), Bombieri-Lagarias 1999 (JNT 77, 274-287),
+   Heath-Brown 1979 (Bull. LMS 11, 17-18), Keating-Snaith 2000 (CMP 214, 57-89),
+   CGG 1986 (Invent. Math. 86, 563-576 — corrected from 1998 via CrossRef).
+6. Table symbols defined: T, rho_1, K_2, gamma_i before the table.
+7. Companion repository named in text ("the riemann git repository, commit hash at
+   publication").
+8. Unverifiable min-gap 0.0188 + exponent 3.06 DROPPED (no saved source; data on laptop).
+9. New section "What is proven, what is certified" — explicit conditional status.
+
+## Verified clean
+- Recompiled: 7 pages, 0 errors, no undefined refs (3x).
+- Downloads copies refreshed (md5 d61f859e...).
+- arXiv package builds standalone from clean dir (951K, 7 pages, 0 errors).
+
+## Remaining (not blocked, deferred)
+- Deep-n Li lambda_n at 300-500 dps (the live mathematical frontier — next step, not
+  part of this review pass).
+- arXiv actual submission: user must create account / submit; package is ready at
+  results/arxiv-pkg.tar.gz + arxiv-README.md.
+
+## Files
+- Paper v2: paper-main.tex/.pdf (7 pages)
+- Verifier: scripts/attack_bound_check.py (rewritten, emits headline)
+- Review file: paper-review-20260813.md (this)
+- arXiv: arxiv-README.md + arxiv-pkg.tar.gz
