@@ -65,7 +65,7 @@ def taylor_coeffs() -> dict:
         "c2": c2,
         "c3": c3_hur,
         "c4": c4,
-        "c3_frac": -5.0 / 288.0,
+        "c3_frac": -1.0 / 288.0,  # ζ(−1,1/4)=1/96, not 5/96 (B₂(1/4)=−1/48)
         "c4_frac": -3.0 / 128.0,
         "c2_frac": -7.0 / 8.0,
     }
@@ -75,11 +75,11 @@ def main() -> None:
     print("=== Hurwitz at 1/4 ===")
     tc = taylor_coeffs()
     print(f"  ζ(0,1/4)  = {tc['zeta0']:.16f}  want 1/4={0.25}")
-    print(f"  ζ(−1,1/4) = {tc['zeta_m1']:.16f}  want 5/96={5/96:.16f}")
+    print(f"  ζ(−1,1/4) = {tc['zeta_m1']:.16f}  want 1/96={1/96:.16f}")
     print(f"  ζ(−2,1/4) = {tc['zeta_m2']:.16f}  want −1/64={-1/64:.16f}")
     print("=== Taylor coefficients (t>0) ===")
     print(f"  c2 = {tc['c2']:.16f}  −7/8 = {tc['c2_frac']:.16f}")
-    print(f"  c3 = {tc['c3']:.16f}  −5/288 = {tc['c3_frac']:.16f}")
+    print(f"  c3 = {tc['c3']:.16f}  −1/288 = {tc['c3_frac']:.16f}")
     print(f"  c4 = {tc['c4']:.16f}  −3/128 = {tc['c4_frac']:.16f}")
 
     print("\n=== r''(closed) vs stencil ===")

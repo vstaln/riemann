@@ -2,7 +2,7 @@
 
 **Date:** 2026-08-13. **s4h:** constraint-hardness (is the first-prime a wall or a finite calculation?) + epistemology (labels) + strategy (do not re-grind the exhausted coboundary class).
 **Redirect:** the previous session closed the in-class `(psum, l, c)` search (`handoff-psum-lc-frontier.md`). METHOD FIRST + `attack-cvs-import.md` §9.4: if the program funds the RH-horizontal line, the first tasks are Suzuki Thm 1.4 for larger `a`, and the limit formulas. This note does (a).
-**Code:** `tools/weil_first_prime/probe.py`, `lower_bound.py`, `diagnose_neg.py`, `dirichlet_matrix.py`, `multiplier.py`, `dirichlet_ft.py`. Every number below is from those scripts (or the one-off N-convergence command in §6). `uv` was not on PATH; ran with system `python3` + numpy 2.4.4.
+**Code:** `tools/weil_first_prime/probe.py`, `lower_bound.py`, `diagnose_neg.py`, `dirichlet_matrix.py`, `multiplier.py`, `dirichlet_ft.py`, `screw_kernel.py`, `dirichlet_vs_prime.py`, `remainder_bound.py`, `rpp_closed.py`, `poincare_even.py`, `l_fourier.py`. Every number below is from those scripts (or the one-off N-convergence command in §6). `uv` was not on PATH; ran with system `python3` + numpy 2.4.4.
 **Labels:** PROVEN / CHECKED NUMERICALLY / CONJECTURED / ABANDONED / INCONCLUSIVE.
 
 ---
@@ -12,6 +12,8 @@
 Weil positivity on every finite interval is equivalent to RH. Positivity is already proved on the *prime-free* interval `a < (log 2)/2`. Continuity of `λ_a` does **not** by itself cross the first prime (the infimum could hit `0` at the endpoint). Yoshida’s finite calculation at `t = (log 2)/2` supplies the strict inequality at the threshold, hence some `δ`-neighborhood past it; that `δ` is not explicit. The crude bound that treats the prime-2 term as size `√2 log 2 ≈ 0.980` **cannot** produce an explicit `δ` (it is 600× the Ritz gap at `a = (log 2)/2`). The actual prime-2 matrix element is an *overlap* of size `O(10^{-2})`, not `O(1)`. In the 4–8 mode even Dirichlet subspace the Rayleigh quotient stays positive through the whole first-prime window — but Rayleigh–Ritz is an **upper** bound, and past `a₂` the value is a `10^{-5}` remainder after `O(1)` cancellation, so this does **not** prove `λ_a > 0` for `a > (log 2)/2`.
 
 **What is new (this continuation):** the Poincaré overlap lemma is now **PROVEN** (elementary Hardy on endpoint strips). The saturating two-bump family is *not* a negative direction (`T/G(0) ≥ 0.386` through `a₃`). The pointwise Fourier multiplier of `T` is **negative even where positivity is known**, so a 1D infimum of `M_a(ξ)` cannot prove the lemma. Gershgorin / diagonal Schur on the Dirichlet matrix **fail** (off-diagonals `4–6×` the ground gap; positivity is a coherent cancellation). Frequency-side Ritz in the even Dirichlet subspace stays positive through the whole first-prime window, but the gap collapses from `1.5×10^{-3}` at `a₂` to `6×10^{-8}` at `a₃`. Prime-by-prime matrix certification will not reach RH; a uniform-in-`a` argument is required.
+
+**What is new (§21):** `r''(t)` is closed-form; Taylor is `−7/8 t² − t³/288 − 3t⁴/128`; Suzuki (4.5) matches `T` to `3×10^{-5}`; (4.6) matches `L` to `4×10^{-6}`; dropping `ρ` **fails** at `a₂` (`ν_{\mathrm{Ritz}}=1.348<1.355`); `ρ''≤−(3/10)t²` on `(0,20]` saves the J-ground state at `a₂` (`LB=+2.4×10^{-4}`) and dies near `a₃` on the cosine. A usable `μ₂` lower bound from (4.6)+type-1 is the remaining local-`δ` input.
 
 RH is not proved. The certificate-class grind is not resumed.
 
@@ -442,27 +444,111 @@ T − [log(1/a) − (2A+1) + L]  ≈  2.86 a
 
 for `a∈[0.10, 0.45]` (coefficient `2.84, 2.85, 2.86`). Matching the rank-one approximation `−a r''(0)(∫w)²/‖w‖²` with `r''(0)=−7/4` and `∫w=4/π` gives `a·(7/4)·16/π² ≈ 2.837 a`. The O(10^{-3}) gap at `a₂` is this three-way cancellation (`L`, `log(1/a)−(2A+1)`, and the `r''` rank-one) to relative error `~10^{-3}`. Primes then hit that remainder.
 
-**Lemma (t² remainder) — PROVEN, elementary.** For `t>0` smaller than `log 2` (no primes),
-`r(t) := g(t) − (1/2)t log t − A t` satisfies `r(t) = −(7/8) t² + O(t⁴)`.
-Proof: polar `−4(e^{t/2}+e^{-t/2}−2) = −t² + O(t⁴)`; `F(t)−F(0)` has `t²` coefficient `ζ(0,1/4)·4t²/2 = t²/2`; `(1/4)` of that is `t²/8`. Linear and `t log t` pieces sit in `(1/2)t log t + A t`. CHECKED: `r(t)/t² = −0.87500039` at `t=10^{-4}` (`screw_kernel.py`).
+**Lemma (t² remainder) — PROVEN, elementary.** For `t>0` (archimedean `r`, primes stripped),
+`r(t) := g_{\mathrm{arch}}(t) − (1/2)t log t − A t` satisfies
+`r(t) = −(7/8) t² − (1/288) t³ − (3/128) t⁴ + O(t^5)`.
+Proof: `r=r_0+r_1` as in Suzuki p.11; polar `r_0=−t²−t⁴/48+O(t^6)`; Hurwitz `ζ(0,1/4)=1/4` ⇒ `+t²/8`; `ζ(−1,1/4)=1/96` (`B_2(1/4)=−1/48`) ⇒ `−t³/288`; `ζ(−2,1/4)=−1/64` ⇒ `−t⁴/384`; net `t⁴` is `−1/48−1/384=−3/128`. The expansion in `|t|` is even as a function of `t` but has odd powers of `|t|` for `t>0`. CHECKED: `rpp_closed.py`.
 
-Then the last line of (4.5) is `(7/4)a (∫w)² + O(a³)‖w‖²`, and the O(a³) (size `~0.04` at `a₂` if the constant is 1 — possibly larger than the gap) is what an interval remainder must control. That is still a local `δ` past `a₂` if the constant is small enough; it is not yet uniform in `a`.
+Then the last line of (4.5) is `(7/4)a (∫w)² + ρ`-term, and the `ρ`-term is *not* a crude `O(a³)‖w‖²` of size `~0.04` (that wall is the same as `‖ρ''‖_∞`). Sign-definite control is §21.
 
 Cheap model: OpenCode Go `deepseek-v4-flash` with `thinking.disabled` (otherwise the whole `max_tokens` budget is hidden reasoning and `content` is empty). Key is not in the repo. DSV4F drafts were not trusted for numbers: one draft called `L_a=0.967` “below zero”; that error is discarded.
 
 ---
 
-## 20. Commands (continuation)
+## 21. Closed-form `r''`, sign of `ρ''`, even-sector Poincaré (this round)
+
+**RH is not proved.** Certified simple-on-line proportion unchanged. No coboundary grind.
+
+### 21.1 `r''(t)` — PROVEN (Suzuki generating function + chain rule)
+
+For `t>0`,
+```
+r''(t) = −2 cosh(t/2) + e^{t/2}/(2 sinh t) − 1/(2t),     r''(0+) = −7/4.
+```
+`r_0''(t)=−2 cosh(t/2)` (chain rule; the factor `1/2` is load-bearing — missing it gives the false `−15/4`). `r_1''` is Suzuki p.11. CHECKED vs 5-point stencil of `r_of_t`: `|closed−stencil|<4×10^{-5}` on `[10^{-4}, 2a_3]` (`rpp_closed.py`).
+
+### 21.2 Taylor — PROVEN elementary; the fake `t⁴` mismatch was `t³`
+
+Command: `python3 tools/weil_first_prime/rpp_closed.py`.
+
+| coeff | exact | source |
+|---|---|---|
+| `t²` | `−7/8` | polar `−1` + Hurwitz `n=2` `+1/8` |
+| `t³` | `−1/288` | `ζ(−1,1/4)=1/96` |
+| `t⁴` | `−3/128` | polar `−1/48` + Hurwitz `n=4` `−1/384` |
+
+`(r+7/8 t²)/t⁴` at `t=10^{-3}` is `−3.495` (not `−3/128`): that is `c_3/t + c_4 + O(t)`, with `c_3=−1/288`. After subtracting `c_3 t³`, the quotient is `−0.023437` at `t=10^{-2}` (`−3/128=−0.02343750`).
+
+### 21.3 `(4.5)` pieces sum to `T` — CHECKED NUMERICALLY
+
+Command: `python3 tools/weil_first_prime/remainder_bound.py` (n=401, ~4 min). Even cosine: `T−sum ≈ 3.1×10^{-5}` at every listed `a∈[0.10, 0.45]`. First odd sine: `T−sum ≈ 1.0×10^{-4}`. Crude `‖ρ''‖_∞` lower bound is **negative at `a₂`** (`−0.577` vs `T=0.00268`) — ABANDONED, same wall as crude `|G|\le G(0)`.
+
+Odd sine: rank-one vanishes; `L/‖w‖²=1.518799`; prime Hankel is **positive** (opposite-sign bumps). The first-prime obstruction is in the **even nonnegative** sector.
+
+### 21.4 Dropping `ρ` cannot cross `a₂` — CHECKED NUMERICALLY
+
+`threshold(a)=(2A+1)+log a`. Need `L/‖w‖² + (7/4)a(∫w)²/‖w‖² + ρ + prime ≥ threshold`.
+
+Command: `python3 tools/weil_first_prime/poincare_even.py`.
+
+| | value |
+|---|---|
+| `threshold(a₂)` | `1.35543263` |
+| cosine `L+rank1−th` | `−0.006570` |
+| `ν_Ritz` of `J=L+(7/4)a₂(∫)²` on 5 even Dirichlet modes | `1.34822781 < threshold` |
+| J-ground (almost cosine: `c_0=0.99963`), `min w=0` | `J−th=−0.007205` |
+
+**Lemma (checked).** The joint form `J_a` without `ρ` is already below threshold at `a₂` on the approximate ground state. Any proof that drops `ρ` cannot cross `a₂`.
+
+### 21.5 Sign of `ρ''` and a usable lower bound for `w≥0`
+
+`ρ''(t):=r''(t)+7/4`. Command: `python3 tools/weil_first_prime/l_fourier.py`.
+
+- `ρ''(t)<0` on `(0,20]` (max in the scan is `O(10^{-5})` at the left endpoint; no zero). CONJECTURED for all `t>0` (DSV4F proof attempt truncated at `max_tokens`; not used).
+- `min_{t∈(0,20]} (−ρ''(t)/t²) = 0.300259` at `t=1.501`. Hence **CHECKED:** `ρ''(t) ≤ −(3/10) t²` on `(0,20]` (margin `2.6×10^{-4}`). On the first-prime window `(0,2a₃]`, `c_*=0.302417`.
+
+**Lemma (PROVEN given the sign bound).** If `w≥0` and `ρ''(s)≤−c s²` on `[0,2a]`, then
+`ρ`-term `≥ c a³ ∬(x−y)² w(x)w(y) / ‖w‖²`. For even `w`, `∬(x−y)² ww = 2(∫w)(∫ x² w)`.
+
+On the cosine at `a₂`: `ρ_lo=0.00773 > 0.00657`, `LB=+0.00116`. On the J-ground state: `ρ_lo=0.00744`, `LB=+0.00024>0`. The `ρ` lower bound *saves those two functions* at `a₂`. Near `a₃` (`a=0.5483`) the same cosine bound fails (`LB=−0.00253`, prime `−0.140`). So this `c t²` remainder is **not** a ticket through the whole first-prime window, even on test functions.
+
+`LB(w)>0` is a lower bound of `R(w)` on that `w`, **not** of `inf R`. Ritz of `J` is an **upper** bound of `inf J`. Neither proves `λ_a>0`.
+
+### 21.6 `L` split; cosine is not the `L`-minimizer
+
+| family | `L/‖w‖²` | jump | pot | `(∫w)²/‖w‖²` |
+|---|---|---|---|---|
+| cosine | 0.365645 | 0.284499 | 0.081147 | 1.621122 |
+| plateau η=0.05 | 0.293602 | 0.038942 | 0.254661 | 1.966641 |
+| tent | 0.447048 | 0.386304 | 0.060744 | 1.499981 |
+| mean-zero even | 1.967044 | 1.819418 | 0.147627 | 0 |
+| sine (odd) | 1.518799 | 1.330688 | 0.188110 | 0 |
+| two-bump | 2.637891 | 2.079673 | 0.558218 | 0.378713 |
+
+`μ_Ritz(L)=[0.26552, 1.96706, 2.555, …]` at `M=5`, `n=201` (upper bounds). Command `python3 tools/weil_first_prime/mu_ritz.py`: `μ₂` is stable under `M=3→7` (`1.9809, 1.9671, 1.9607`) and under `n=81→201` (`1.96715→1.96706`). `μ₁` still drops (`0.285→0.257`). Plateau has smaller `L` than cosine (almost-constant). Two-bump is Gårding-safe. Mean-zero even / odd: rank-one vanishes; through mid-window they stay positive (`log-c+L` or primes help). At `a₃−10^{-3}` mean-zero even `LB=+0.00482` (prime `−0.148` vs `log-c+L=+0.153`). `threshold(a₃)=1.81599338`; `μ_{2,\mathrm{Ritz}}≈1.961` sits `0.145` above it — the same size as the prime hit, so a *lower* bound on `μ₂` is tight if it is to reach `a₃`.
+
+### 21.7 Suzuki (4.6) — CHECKED NUMERICALLY
+
+`L(w)=(1/2π)∫(log|ξ|+γ)|ŵ(ξ)|² dξ` with `ŵ(ξ)=∫_{-1}^1 w(t)e^{-iξt}dt`. Uniform `ξ`-grid is a trap (log weight). Split log-grid near 0 + linear tail, closed `ŵ` of the cosine: `Plancherel=1.000001`, `L_ft−L_jump=−4×10^{-6}`. Average `log|ξ|=−0.21158`.
+
+Crude Paley–Wiener envelope `|ŵ|≤√(2/3)|ξ|‖w‖` on `{ŵ(0)=0}`, dropping the positive tail `|ξ|>e^{-γ}`: `L/‖w‖² ≥ −0.00417`. **ABANDONED** as a `μ₂` bound (vacuous vs `threshold(a₂)=1.355`). A usable `μ₂` lower bound from (4.6)+type-1 is the next lemma: it would reduce the first-prime window to a 1-mode calculation (complement of the even ground state).
+
+### 21.8 What would prove a local `δ`, and what would prove RH
+
+- **Local `δ` (not RH):** a *lower* bound `μ₂ ≥ (2A+1)+log a + |prime|_{comp}` on the even mean-zero subspace, plus the 1-mode Rayleigh of the ground ray (rank-one + `ρ_lo` + overlap Hardy). `μ_{2,\mathrm{Ritz}}=1.967` is an *upper* bound; at `a₃` one has `threshold=1.815`, so the gap is tight against a `0.15` prime hit. Interval/`rug` certification of `μ₂` is the remaining analytic input for an explicit `δ`, not a matrix grind over `a`.
+- **RH:** still uniform-in-`a`. Primes accumulate; the `c t²` remainder plus rank-one is a local cancellation, not a Gårding inequality that survives `a→∞`. Suzuki Cor 1.6 (`W(a,θ;z)→ξ/ξ'`) is the spectral encoding; it assumes the form stays positive to define the spaces. Do not claim a path we do not have.
+
+---
+
+## 22. Commands (continuation)
 
 ```
-python3 tools/weil_first_prime/lower_bound.py
-python3 tools/weil_first_prime/diagnose_neg.py
-python3 tools/weil_first_prime/dirichlet_matrix.py
-python3 tools/weil_first_prime/multiplier.py
-python3 tools/weil_first_prime/dirichlet_ft.py
-python3 tools/weil_first_prime/screw_kernel.py
-python3 tools/weil_first_prime/dirichlet_vs_prime.py
+python3 tools/weil_first_prime/remainder_bound.py   # (4.5) vs T; ~4 min
+python3 tools/weil_first_prime/rpp_closed.py        # r'' closed form + Taylor
+python3 tools/weil_first_prime/poincare_even.py     # L split, J vs threshold, ρ_lo
+python3 tools/weil_first_prime/l_fourier.py         # (4.6), J-ground, global c*
+python3 tools/weil_first_prime/mu_ritz.py           # μ1, μ2 Ritz stability
 ```
 
-(`uv` not on PATH; system `python3` + numpy 2.4.4. Exploratory `f64`, not `rug`/`arb`. Python used because each script is a few hundred ms of closed-form / 1D quadrature, not a search.)
+(`uv` not on PATH; system `python3` + numpy 2.4.4. Exploratory `f64`, not `rug`/`arb`. Python used because each script is closed-form / 1D quadrature, not a search.)
 
