@@ -75,16 +75,28 @@ Rules:
 
 Each round: PLANNERS decompose the problem → EXECUTIONERS attack components → VALIDATORS (adversarial) try to break every claim → JUDGES score surviving pieces → SYNTHESIZER merges → CRITIQUE LOOP repeats until no movement. Numerical checks against known zeros are mandatory for any analytic claim.
 
-## Skills: skills-for-humanity (s4h)
+## Skills: skills-for-humanity (s4h) — MANDATORY
 
-Reference: https://github.com/human-avatar/skills-for-humanity (install: npx @human-avatar/skills-for-humanity).
-Apply the underlying methods even where plugin commands are unavailable:
-- epistemology (evidence weighting, belief updating — what counts as progress)
-- investigation (hypothesis generation and testing)
-- logic (argument mapping, finding holes)
-- constraint (turn RH's structure into constraints)
-- creativity + analogy (transfer methods from other problems)
-- strategy (which attack to fund; kill criteria)
+Reference: https://github.com/human-avatar/skills-for-humanity. Installed at
+`~/.pi/agent/skills/s4h*/SKILL.md` (also loadable as `/skill:s4h*` commands).
+
+**MANDATORY (binds every agent on every task):** apply s4h thinking to every non-trivial step of
+the program — idea generation, attack selection, verification, adjudication, and synthesis. Every
+subagent task brief MUST name at least one s4h skill for the agent to read and apply; a task that
+used no s4h method is incomplete. Read the skill file fully before applying it.
+
+- **s4h** (`~/.pi/agent/skills/s4h/SKILL.md`) — the master orchestration skill; route any
+  open-ended "how do I think through this" through it.
+- **s4h-epistemology** — label epistemic status (what we KNOW vs ASSUME vs HOPE); never let a
+  CONJECTURED claim drift into a PROVEN one. This is the honest-calibration backbone.
+- **s4h-investigation** — hypothesis generation, claim decomposition, source trace, counter-hypothesis.
+- **s4h-logic** — argument validation, consistency check, constraint mapping, causality.
+- **s4h-constraint** — hardness-test the constraints (is a "wall" real or an assumption?).
+- **s4h-creativity / s4h-analogy** — transfer methods from other problems; fresh attack ideas.
+- **s4h-strategy** — which attack to fund; kill criteria; victory conditions.
+
+The underlying methods apply even where plugin commands are unavailable — but on this machine the
+skills ARE installed, so load them directly rather than re-deriving from memory.
 
 ## Skills: Hermes skill library (installed into pi)
 
