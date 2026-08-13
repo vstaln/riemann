@@ -40,3 +40,5 @@ Phone mobile data dropped mid-wave (killed 2 agents). All specs now mandate cras
 ## In flight (superseded)
 - **attack-record** (d3fc79e9, wave-phone-2): adversarial re-verify + eps-max push. **THE priority.**
 - **superlaw-s3** (f10a8b2b, wave-phone-2): S₃=sine-kernel check + m₃-separation test (m₃(1/2)=5 proven for real zeros vs super-law marked m₃≥5.44 → new certificate class if separated). Crash-proofed (incremental file writes).
+
+- **weil-first-prime** (2026-08-13) — RH-horizontal. PROVEN: λ_a>0 for a<(log 2)/2, continuous, RH ⇔ λ_a>0 ∀a. CHECKED: crude |G(log 2)|≤G(0) bound = 0.980 is 620× the Ritz gap at a₂, so it cannot cross the first prime; actual G(log 2)/G(0)=7.2e-3 (overlap). Ritz stays positive through (a₂,a₃) but is an UPPER bound after O(1) cancellation to 10^{-5} — INCONCLUSIVE for positivity past a₂. File: research/notes/attack-weil-first-prime.md. Next: Yoshida finite calculation with the prime-2 rank-one update (interval K-split). Coboundary grind not resumed.
