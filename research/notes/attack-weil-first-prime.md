@@ -623,6 +623,12 @@ Finite tail `k=M..79` (`ground_ray_cross.py`): at `M=64`, `C_g=0.005297`, `C_g²
 
 Next lemma (do not grind coboundary): prove `|Q(φ_0,φ_k)| ≤ C/k` from the closed `ŵ_k` and the cancellation `L_{0k}+κ mean_0 mean_k = O(1/k)`, then the Schur of §23.4 is a theorem. After that: primes in `(a₂,a₃)` against the `0.213` mean-zero margin and the `~10^{-3}` ground-ray margin.
 
+### 23.6 Split: potential is `O(1/k²)`; jump cancels rank-one — CHECKED
+
+Command: `python3 tools/weil_first_prime/q0k_split.py`. `L=jump+pot` with `pot=−½∫ log(1−t²) φ_0 φ_k`. And `φ_0 φ_k=½(cos((k+1)π t)+cos(k π t))`, so `pot=−¼(I(k+1)+I(k))` with `I(n)=∫_{-1}^1 log(1−t²) cos(nπ t)\,dt`. One IBP: boundary `log(1−t²)sin(nπ t)→0`, hence `I(n)=O(1/n)` (the remaining `t/(1−t²)` is a Dirichlet integral). Adjacent frequencies cancel: `I(k)+I(k+1)=O(1/k²)`. CHECKED: `k² pot → ≈0.24` (`k=32`: `0.2408`). Trapezoid `pot` matches the `I(n)` formula to `10^{-10}` at `k≤4`.
+
+So potential **cannot** cancel rank-one (`O(1/k)`). The cancellation is in `jump+κ mean_0 mean_k`: `k(jump+rank1)` is already `±0.088` at `k=1` and stays in `[-0.095,−0.088]` for even `k=2..32` (odd: `+0.088` to `+0.089`). Empirically `|k(jump+rank1)|≤0.10`. `ρ` is smaller (`k ρ ≈0.013` at `k=32`). This is why `k Q_{0k}` saturates near `0.08` in §23.4. Still not a closed `C/k` bound (the jump bilinear has no elementary closed form in this basis), but it names the exact term that has to be estimated: the Beurling–Deny form of `(φ_0,φ_k)` against the rank-one mean.
+
 ---
 
 ## 24. Commands (continuation)
@@ -636,6 +642,7 @@ python3 tools/weil_first_prime/mu_ritz.py           # μ1, μ2 Ritz stability
 python3 tools/weil_first_prime/mu2_envelope.py      # nested HS μ₂ vs threshold
 python3 tools/weil_first_prime/ground_ray.py        # cosine Hankel, V_M J+ρ, internal Schur
 python3 tools/weil_first_prime/ground_ray_cross.py  # Fourier Q, λ_min(V_K), 1/k Schur
+python3 tools/weil_first_prime/q0k_split.py         # jump vs pot vs rank-one for Q(φ0,φk)
 ```
 
 (`uv` not on PATH; system `python3` + numpy 2.4.4. Exploratory `f64`, not `rug`/`arb`. Python used because each script is closed-form / 1D quadrature, not a search.)
