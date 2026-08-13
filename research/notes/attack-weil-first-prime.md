@@ -233,8 +233,8 @@ with `Σ |c_ρ|² = 1` and at least half the `ℓ²` mass on the off-line zeros.
 - PROVEN (read at source): Weil ⇔ RH; Yoshida localization; Suzuki Thms 1.1–1.5, Cor 1.6; Bombieri Thm 12 and the trichotomy; continuity of `λ_a`.
 - PROVEN (elementary, §10): Poincaré overlap `|G(log 2)| ≤ ε² ‖v'‖_{L²(-a,a)}²` for `a=a₂+ε`.
 - CHECKED NUMERICALLY (`python3 tools/weil_first_prime/probe.py` and the N-convergence snippet): all tables in §2–§4; self-checks passed.
-- CHECKED NUMERICALLY (`python3 tools/weil_first_prime/lower_bound.py`, `diagnose_neg.py`, `dirichlet_matrix.py`, `multiplier.py`, `dirichlet_ft.py`): §§10–14.
-- CONJECTURED: the Lemma in §5; Bombieri (iii) uniqueness in the infinite on-line class; Suzuki limit formula (1.12).
+- CHECKED NUMERICALLY (`python3 tools/weil_first_prime/lower_bound.py`, `diagnose_neg.py`, `dirichlet_matrix.py`, `multiplier.py`, `dirichlet_ft.py`, `screw_kernel.py`, `dirichlet_vs_prime.py`): §§10–14, §§17–19.
+- CONJECTURED: the Lemma in §5; Bombieri (iii) uniqueness in the infinite on-line class; Suzuki limit formula (1.12); `r(t)=−(7/8)t²+O(t⁴)` exactly.
 - INCONCLUSIVE: sign of `λ_a` on `(a₂, a₃)` (Ritz upper bounds only; remainder not a proof; gap at `a₃` is `10^{-8}`).
 - ABANDONED: crude prime bound; in-class certificate grind as an RH route; Gershgorin/Schur decoupling; pointwise multiplier positivity; prime-by-prime matrix grind as an RH route.
 - No zeros were computed. No coboundary verifier was rerun.
@@ -381,11 +381,73 @@ A modest explicit `δ` with gap `~10^{-3}` (`a ≤ a₂+0.01`) remains a possibl
 
 Weil positivity on every finite interval ⇔ RH. The obstruction is not “we have not computed a large enough matrix.” It is that `λ_a` (even restricted to a few even modes) appears to drop exponentially in `a` once primes are live, while the archimedean multiplier `M_a` is negative on a set of positive measure at every `a` we sampled. Any proof must use the Paley–Wiener type `2a` *structurally* — a Gårding inequality, a positivity-improving semigroup (Suzuki §5, currently only for small `a`), or Suzuki Cor 1.6 (limit of `W(a,θ;z)` toward `ξ/ξ'`).
 
-Next lever: Suzuki’s positivity-improving argument in §5 — what dies at `a₂`. Reading at source (Suzuki 2606.09096 §5.2): small-`a` positivity uses a Beurling–Deny Dirichlet form whose jumping kernel `|x−y|^{-1}` is positive on `(-1,1)²`, hence irreducible, hence the semigroup is positivity-improving and the ground state is simple and even. The prime-2 term `−√2 log 2 · G(log 2)` is an *attractive* coupling of the two endpoint strips (for even `v`, a Hankel form `∫_0^{2ε} u(s) u(2ε−s) ds`). Attractive kernels are not Dirichlet-form jumping measures. Label: PROVEN that Suzuki’s §5 machine as written does not apply past `a₂`; CONJECTURED that some replacement (Dirichlet form plus a compact Hankel perturbation, or a different Markov kernel) can. That replacement is the RH-horizontal method, not a larger matrix.
+Next lever: Suzuki’s positivity-improving argument in §5 — what dies at `a₂`. Reading at source (Suzuki 2606.09096 §5.2): small-`a` positivity uses a Beurling–Deny Dirichlet form whose jumping kernel `|x−y|^{-1}` is positive on `(-1,1)²`, hence irreducible, hence the semigroup is positivity-improving and the ground state is simple and even. The prime-2 term `−√2 log 2 · G(log 2)` is an *attractive* coupling of the two endpoint strips (for even `v`, a Hankel form `∫_0^{2ε} u(s) u(2ε−s) ds`). Attractive kernels are not Dirichlet-form jumping measures. Label: PROVEN that Suzuki’s §5 machine as written does not apply past `a₂`. The replacement is **not** “add prime to `L_a`”: §17–§18 show `L_a` is O(1) while `T` is the cancelled remainder of Suzuki (4.5). Next: certify `r(t)=−(7/8)t²+O(t⁴)` in (2.2) and control the `−a⟨r''(a·)w,w⟩` term plus the scaled Hankel.
 
 ---
 
-## 16. Commands (continuation)
+## 17. Screw `g(t)` parse (CHECKED NUMERICALLY)
+
+Command: `python3 tools/weil_first_prime/screw_kernel.py`.
+
+Suzuki (1.3) implemented via the Gradshteyn expansion of the Lerch piece in §2.2 (not a truncated Lerch series — that series is unusable as `z=e^{-2|t|}→1`). Self-checks:
+
+| check | value | want |
+|---|---|---|
+| `g(0)` | `0` | `0` |
+| evenness | odd part `0` | `0` |
+| `ζ(0,1/4)` via Bernoulli | `0.25` | `1/4` (Suzuki) |
+| `A_emp(t=10^{-3})` | `0.70667136` | `A=0.70754637` (rel `1.24×10^{-3}`, the `O(t)` in `r(t)/|t|`) |
+| `r(t)/t²` as `t→0` | `−0.87500039` at `t=10^{-4}` | CONJECTURED exact `−7/8` |
+
+Nyström of the compact kernel `K(t,u)=g(t-u)-g(t)-g(u)` on mean-zero `L²(-a,a)`: `n_neg=0` through `a₃` on grids up to `n=81`. **This does not prove `λ_a>0`.** `G` is compact, spectrum accumulates at `0`, so `min_nz→0` under refinement even when the operator is positive. `Q_W(v)=⟨G Dv, Dv⟩`; the useful operator is `D*GD`, i.e. `T` again. **ABANDONED** as a better lower-bound encoding.
+
+---
+
+## 18. `L_a` does not absorb prime 2 (CHECKED NUMERICALLY)
+
+Command: `python3 tools/weil_first_prime/dirichlet_vs_prime.py`.
+
+Suzuki (2.3) jumping form `L_a` vs prime-2 vs `T`, even families, `G(0)=‖v‖²`:
+
+| family | `ε` | `L_a/G0` | prime/`G0` | `T/G0` |
+|---|---|---|---|---|
+| cosine | 0.01 | 1.397 | −7.1e-5 | 0.00328 |
+| cosine | 0.10 | 1.172 | −0.034 | 0.00794 |
+| cosine | 0.202 | 0.967 | −0.140 | 0.00045 |
+| two-bump | 0.01 | 5.199 | −0.243 | 2.612 |
+| two-bump | 0.202 | 1.950 | −0.245 | 0.385 |
+
+`L_a + prime` stays positive on both families. That does **not** prove `λ_a>0`: `L_a` is O(1) while `T` is the O(10^{-3}) remainder after Suzuki’s other terms cancel `L_a`. Prime 2 is negligible against `L_a` and large against `T` (at `ε=0.202`, `|prime|/T ≈ 310` on the cosine). DSV4F (thinking disabled) suggested absorbing Hankel into `L_a`; the table kills that as an RH route. Two-bump stays Gårding-safe (`T/G0≥0.385`).
+
+---
+
+## 19. The identity that *does* split the cancellation (Suzuki (4.5), PROVEN at source)
+
+Scale `w(t)=v(at)` onto `[-1,1]`. Then `T(v)/‖v‖²_{(-a,a)} = R(a,w)` with
+
+```
+R(a,w) = −log a − (2A+1) + L(w)/‖w‖²
+         + (1/a) Σ_{n≤e^{2a}} (Λ(n)/√n) · (Hankel of w at lag (log n)/a)
+         − (a/‖w‖²) ∬ r''(a(x−y)) w(x) w(y) dx dy.
+```
+
+Here `A=(1/2)(log(2π)+γ−1)`, `L` is (4.4) on the *fixed* interval `[-1,1]` (independent of `a`), and `r` is the C² remainder in (2.2). For `a<a₂` the prime sum is empty. As `a→0` the last term is `O(a)` and `−log a → +∞`: that is Thm 1.4.
+
+CHECKED on the even cosine (`w(t)=cos(π t/2)`), `L(w)/‖w‖² = 0.365642` (independent of `a`), and
+
+```
+T − [log(1/a) − (2A+1) + L]  ≈  2.86 a
+```
+
+for `a∈[0.10, 0.45]` (coefficient `2.84, 2.85, 2.86`). Matching the rank-one approximation `−a r''(0)(∫w)²/‖w‖²` with `r''(0)=−7/4` and `∫w=4/π` gives `a·(7/4)·16/π² ≈ 2.837 a`. The O(10^{-3}) gap at `a₂` is this three-way cancellation (`L`, `log(1/a)−(2A+1)`, and the `r''` rank-one) to relative error `~10^{-3}`. Primes then hit that remainder.
+
+**Next lemma (CONJECTURED, the deliverable):** `r(t)=−(7/8)t² + O(t⁴)` exactly from the polar+Hurwitz expansion, with an explicit O(t⁴) bound. Then the last line of (4.5) is `(7/4)a (∫w)² + O(a³)‖w‖²`, and the O(a³) (size `~0.04` at `a₂` if the constant is 1 — possibly larger than the gap) is what an interval remainder must control. That is still a local `δ` past `a₂` if the constant is small enough; it is not yet uniform in `a`.
+
+Cheap model: OpenCode Go `deepseek-v4-flash` with `thinking.disabled` (otherwise the whole `max_tokens` budget is hidden reasoning and `content` is empty). Key is not in the repo. DSV4F drafts were not trusted for numbers: one draft called `L_a=0.967` “below zero”; that error is discarded.
+
+---
+
+## 20. Commands (continuation)
 
 ```
 python3 tools/weil_first_prime/lower_bound.py
@@ -393,6 +455,8 @@ python3 tools/weil_first_prime/diagnose_neg.py
 python3 tools/weil_first_prime/dirichlet_matrix.py
 python3 tools/weil_first_prime/multiplier.py
 python3 tools/weil_first_prime/dirichlet_ft.py
+python3 tools/weil_first_prime/screw_kernel.py
+python3 tools/weil_first_prime/dirichlet_vs_prime.py
 ```
 
 (`uv` not on PATH; system `python3` + numpy 2.4.4. Exploratory `f64`, not `rug`/`arb`. Python used because each script is a few hundred ms of closed-form / 1D quadrature, not a search.)
