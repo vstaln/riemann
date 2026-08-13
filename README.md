@@ -31,6 +31,38 @@ RH is **not proved**. Nothing below should be read as a proof of the Riemann hyp
 
 Paper draft of the Weil sector: `research/papers/weil-first-prime-even-sector.md`.
 
+## Credits (ideas and code we used)
+
+This repo did not invent the certificate class. The record is a transfer of other people’s machinery (window, rank–trace, coboundary) onto a slightly different $(\alpha,\varepsilon)$. Local mirrors live under `research/external-results/` and `research/lean-zeta-23/`.
+
+**Git repos**
+
+| who / repo | what we took |
+|---|---|
+| [anthropics/zeta-23-lean](https://github.com/anthropics/zeta-23-lean) | Claude / Anthropic 2026: Theorems A–E (2/3 on-line, 2/3 simple-on-line, 5/6 distinct, $0.6725$ Montgomery–Taylor). Sorry-free Lean. Paper: [Anthropic PDF](https://www-cdn.anthropic.com/564f962e60643842f5fcb4a17c9dbc8f608f1c37.pdf). Verified by Conrey & Goldston. |
+| [ainta/zeta-simple-zeros](https://github.com/ainta/zeta-simple-zeros) | 7-point Gram-stability refinement of rank–trace. Bound $0.673008527927$. Analytic framework (general window, $\min(1,E)$ Gram-defect) that later repos pin. |
+| [trmdy/zeta-simple-zeros-673137](https://github.com/trmdy/zeta-simple-zeros-673137) | Trig-polynomial window + weighted 7-point block inequality. Bound $0.673137630699$. |
+| [tawanerguo-cn/zeta-simple-zeros](https://github.com/tawanerguo-cn/zeta-simple-zeros) | Bellman coboundary redistribution $(p,q)$. Bound $0.673192911473$ at $\alpha=1.47$. **Our $0.67348086$ uses their $p,q$ unchanged**, moved to $\alpha=1.464$, $\varepsilon=0.00620$, $p_{\mathrm{sum}}=1/320$. Zenodo: [10.5281/zenodo.21890630](https://doi.org/10.5281/zenodo.21890630). |
+| [openai/ten-proofs](https://github.com/openai/ten-proofs) | Lean-formalized method examples (not a zeta bound). Mined for certificate / Lean hygiene. |
+| [leanprover-community/mathlib4](https://github.com/leanprover-community/mathlib4) | Lean standard library under the Anthropic formalization. |
+| [AlexKontorovich/PrimeNumberTheoremAnd](https://github.com/AlexKontorovich/PrimeNumberTheoremAnd) | PNT-in-Lean material used by zeta-23-lean. |
+
+**Papers (the analytic inputs)**
+
+| who | what we took |
+|---|---|
+| A. Weil (1952) | Explicit formula; $Q_W\ge 0$ for all compactly supported test functions $\Leftrightarrow$ RH. |
+| H. Montgomery (1973) | Pair correlation / form factor on bandwidth $\le 1$ (unconditional second moment). |
+| N. Levinson (1974); J. B. Conrey (1989); Bui–Conrey–Young (2011); Pratt–Robles–Zaharescu–Zeindler (2020) | Mollifier line: 1/3 → ~40% → 41.05% → **>41.7% on the line**, **>40.75% simple-on-line** (published unconditional records). |
+| H. Yoshida (1992); E. Bombieri (2000/2001) | Localization of Weil’s form; $\lambda_a>0$ for small $a$; variational $T$. |
+| M. Suzuki [arXiv:2606.09096](https://arxiv.org/abs/2606.09096) | Screw function; $\lambda_a>0$ for $a<(\log 2)/2$; identity (4.5)–(4.6) used in the first-prime notes. |
+| Baluyot–Goldston–Suriajaya–Turnage-Butterbaugh [2306.04799](https://arxiv.org/abs/2306.04799), [2501.14545](https://arxiv.org/abs/2501.14545) | Unconditional Montgomery-type pair correlation / Goldston–Suriajaya inputs to the certificate. |
+| Rudnick–Sarnak | Unconditional $n$-level sine kernel for $|\lambda|<1$ (unmarked $m_3=5$). |
+| X. Wu [arXiv:1206.3737](https://arxiv.org/abs/1206.3737) | Distinct zeros of $\zeta$: $N_d\ge 0.66036\,N$ (pre-Anthropic distinct record). |
+| Farmer–Gonek–Lee / FGL $\xi'$ | $\xi'$ simple-on-line $0.85838$, distinct $0.92919$ (Lean in zeta-23). |
+
+If a bound in the scoreboard is “ours,” the **mechanism** is still one of the rows above. Cite the source repo, not this README, as the origin of the idea.
+
 ---
 
 A persistent multi-agent research program attacking the **Riemann hypothesis** — and alongside it, any
