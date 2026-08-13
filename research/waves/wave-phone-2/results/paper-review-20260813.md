@@ -172,3 +172,75 @@ Is the "pair-correlation form factor on [0,1]" / "two-point statistic E(1)" inpu
 (b) Montgomery's pair-correlation CONJECTURE (conditional)?
 If (b): the paper's positioning collapses — 0.6733 is conditional, and Montgomery 1973 already gives κ ≥ 2/3 ≈ 0.6667 conditionally, so 0.6733 is a hair above a 1973 benchmark, NOT "above 5/12".
 This MUST be resolved from the actual math source files before any fix is applied.
+
+---
+
+# META-REVIEW (orchestrator synthesis, 2026-08-13)
+
+## The decisive question — RESOLVED from source
+Reviewers asked: is the "pair-correlation form factor on [0,1]" input (a) unconditional or
+(b) Montgomery's pair-correlation conjecture (conditional)?
+
+RESOLUTION from repo source (verify_cos7.py, laptop-family.md, ceiling-breaker-proposal.md):
+- The certificate reads ONLY {mean density, form factor F on [0,1], multiplicity integrality}.
+- E(1) = -1/(6N²) is the CUE/GUE form factor of the certificate's OWN admissible law — a
+  closed-form model object (PROVEN-BY-ARGUMENT, laptop-family.md:42), NOT the actual zeros'
+  pair correlation.
+- The moments m_k(lambda) are PROVEN unconditionally via Rudnick–Sarnak (k*lambda < 2).
+- The conjectural input in Levinson-type methods is the Hardy–Littlewood PRIME-pair conjecture
+  (HL*), which gates mollifier length beyond theta = 4/7 (the proven fourth-moment barrier,
+  Ingham). It is NOT Montgomery's zero-pair conjecture.
+- The 0.6733 bound is a "simple-on-line" quantity inside a weighted Levinson integral, certified
+  numerically (CHECKED NUMERICALLY), NOT a hand-proven theorem. sota-online-bound-audit.md:26
+  already states this honestly.
+
+VERDICT on reviewers' positioning criticism:
+- Reviewer 2's claim "Montgomery 1973 gives kappa >= 2/3 conditionally" is FALSE — Montgomery's
+  pair-correlation work is about zero SPACING, not proportion-on-line. There is no such theorem.
+  Reviewer 2 hallucinated a benchmark.
+- Reviewer 2's claim "a positive proportion of simple zeros is not known unconditionally" is
+  FALSE — Levinson's method proves > 1/3 simple-on-line unconditionally (that IS the method).
+- Reviewer 2's claim that "the form factor = Montgomery's conjecture" is FALSE per the repo
+  source (it's the admissible-law form factor).
+- BUT the reviewers are RIGHT that the paper must define the class precisely and must not
+  overclaim. The paper itself is honest (says "current unconditional record 5/12" and shows it
+  "for scale" in Fig 1) — it does NOT say "above every published constant". My own summary to
+  the reviewers overclaimed this, not the paper.
+
+## THE REAL ERROR FOUND (all reviewers + verifier missed it; orchestrator caught it)
+**0.83621 is a DISTINCT-zeros bound (N_d = s1+s2+2p), NOT a simple-zeros bound.**
+- paper-main.tex abstract line: "at least 0.83621 of the zeros are simple" — WRONG.
+- paper-main.tex Theorem 3: "At least 0.83621 of the nontrivial zeros of ζ(s) are simple" — WRONG.
+- Section 4 correctly says N_d >= (3-C)/2 * N and then warns "a bound on N_d does not by itself
+  lift s1 past 2/3". The abstract + Thm 3 CONTRADICT Section 4.
+- Ledger.md:126: C = 1.3275781 exactly, (3-C)/2 = 0.83621095. Honest statement: "C <= 1.32758"
+  (not 1.3277, which gives 0.83615).
+- This is a major honesty fix. 0.83621 distinct is still a real result (beats 5/6 = 0.8333 by
+  +0.00288) but it is NOT "0.83621 simple".
+
+## Reviewer score consensus
+soundness 2/4, presentation 2/4, contribution 2/4, overall 3/10 — driven mostly by the
+under-specified class + the simple/distinct mislabel + provenance gaps.
+
+## FINAL FIX LIST (updated, ordered)
+1. [CRITICAL] Fix abstract + Theorem 3: "0.83621 simple" -> "0.83621 distinct on-line"
+   (N_d = s1+s2+2p); state C <= 1.32758 (not 1.3277).
+2. Fix attack_bound_check.py to compute eps=8065e-6 exact-rational and print the headline
+   (script must literally emit 0.6732660791...).
+3. Disambiguate P vs psum in paper text: psum = 1/220 (= 6/1320), P = 1/1320 (mollifier length).
+4. Define the certificate class precisely in Section 2: what Phi_m is, what c is (c = I0^2/(I2+J)),
+   the kernel k_alpha, the 127 = m-6 factor, and the admissible-law form factor E(1) = -1/(6N²).
+5. Add missing refs: Montgomery 1973, Rudnick–Sarnak 1996, Bombieri–Lagarias 1999, Heath-Brown 1979,
+   Conrey–Ghosh–Gonek 1998, LMFDB, Keating–Snaith 2000 (moment conjecture). Cite Montgomery for
+   the form factor correctly (as the admissible-law source, not as a kappa bound).
+6. Fix table symbols: define T, rho_1 before the table; reference figures in body text.
+7. Name the companion repository (the riemann git repo + commit hash) so the headline is reproducible.
+8. min-gap 0.0188 + exponent 3.06: keep ONLY if a saved script produced them; else drop or label
+   "computed from the 10M subset" with the script path. Data file lives on laptop.
+9. Add an explicit "conditional status" paragraph: what is proven, what is certified, what is
+   conjectural (HL* prime-pair / sixth moment), and that 0.6733 is numerically certified, not proved.
+10. Recompile, re-verify numbers, copy to Downloads, commit.
+
+## Status
+All review agents complete. Meta-review done. Fix list finalized. Next: apply fixes 1-9 to
+paper-main.tex + attack_bound_check.py, recompile, verify, commit.
