@@ -20,6 +20,35 @@ This project pursues a proof of RH — and alongside it, any rigorous, novel mat
 4. Never weaken a validator to make a result pass.
 5. A wrong, confident result is worse than no result — it poisons the whole search.
 
+## METHOD FIRST — compute is the last resort (binding, user directive)
+
+**We are finding a METHOD, not grinding numbers.** The deliverable of this project is a
+mathematical argument — a theorem, a certificate structure, a proof idea that can be checked by
+hand or by a small verifier. Heavy computation is a sign the agent is lost, not making progress.
+
+1. **Do not calculate zeros.** No downloading/processing zeta-zero batches, no zero-counting,
+   no pair-correlation statistics over real zero data, no "empirical cross-checks" that consume
+   minutes of compute to confirm what the theory already predicts. Zero data exists; it is not
+   the frontier. The frontier is the METHOD that makes the inequality hold.
+2. **Do not grind verification runs.** One re-verification of a certified record is enough;
+   re-running the branch-and-bound at new eps values to "find a record" is compute-slop. The
+   certificate class is PROVEN exhausted at eps=0.00620 (research/notes/eps-boundary-exact.md).
+   Re-exploring it is waste.
+3. **Every task must produce a mathematical artifact**: a lemma, a proof sketch, a reduction,
+   a certificate STRUCTURE (not a number), a refutation of an approach, a literature finding
+   that changes the strategy. If a task's only possible output is a bigger number from the same
+   machinery, the task is wrong — pick a different lever or a different theorem.
+4. **Compute budget discipline**: before running anything CPU-bound, write one line saying what
+   belief the computation would change. If it changes nothing (or only confirms), skip it and
+   say so in the note. A note that says "I did not compute X because it would not change our
+   beliefs, here's why" is a good note.
+5. **LMFDB and zero data are for LITERATURE/STRUCTURE, not for counting**: use them to find what
+   theorems are known (e.g. what is the best KNOWN simple-zero proportion, what tools exist),
+   never to compute statistics. The arxiv skill is the same idea: mine the METHOD, not the data.
+6. **The 0.6818 ceiling is structural** (research/notes/structural-final-verdict.md): the
+   in-class certificate can never pass it. Pushing past 0.673481 requires a genuinely new input
+   structure or theorem. Agents that do not address that requirement are not on the goal.
+
 ## Language policy — Rust-first for EVERYTHING numeric (binding)
 
 Python is too slow for this project's compute-bound work. **Rust is the default for all numeric and CPU-bound code** — every computation that is not trivial one-liners or bulk network I/O. No exceptions without a documented reason.
