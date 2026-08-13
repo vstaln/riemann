@@ -15,6 +15,8 @@ Weil positivity on every finite interval is equivalent to RH. Positivity is alre
 
 **What is new (§21):** `r''(t)` is closed-form; Taylor is `−7/8 t² − t³/288 − 3t⁴/128`; Suzuki (4.5) matches `T` to `3×10^{-5}`; (4.6) matches `L` to `4×10^{-6}`; dropping `ρ` **fails** at `a₂` (`ν_{\mathrm{Ritz}}=1.348<1.355`); `ρ''≤−(3/10)t²` on `(0,20]` saves the J-ground state at `a₂` (`LB=+2.4×10^{-4}`) and dies near `a₃` on the cosine. Even mean-zero **`μ₂ ≥ 1.641`** (nested HS, conservative `n=81×1.05`) **clears `threshold(a₂)=1.355`**. Complement at `a=a₂` has `R≥0.182`. Ground ray and primes past `a₂` remain. 67% record unchanged. RH not proved.
 
+**Paper draft:** `research/papers/weil-first-prime-even-sector.md` — even mean-zero sector at $a_2$, nested $\mu_2$, cosine Hankel. Does not claim $\lambda_{a_2}>0$, RH, or 67%.
+
 RH is not proved. The certificate-class grind is not resumed.
 
 ---

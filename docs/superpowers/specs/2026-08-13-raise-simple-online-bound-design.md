@@ -97,6 +97,8 @@ Every number from a script under `tools/weil_first_prime/` (new file `mu2_envelo
 
 Commands: `python3 tools/weil_first_prime/mu2_envelope.py`, `python3 tools/weil_first_prime/ground_ray.py`, `python3 tools/weil_first_prime/ground_ray_cross.py`.
 
+Paper draft (honest, not RH): `research/papers/weil-first-prime-even-sector.md`.
+
 ## Follow-up (same campaign, after μ₂ cleared)
 
 The spec's "1-mode check of the ground ray" is now the live lemma (`research/notes/attack-weil-first-prime.md` §23). Remaining: prove `|Q(φ_0,φ_k)|≤C/k` so the Schur of §23.4 is a theorem. Do not resume coboundary.
