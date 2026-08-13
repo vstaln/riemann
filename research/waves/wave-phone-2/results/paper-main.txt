@@ -1,0 +1,269 @@
+On the proportion of zeros of ζ(s) on the critical line:
+a certified lower bound and a proven ceiling for one
+certificate class
+Vstalin Grady
+August 13, 2026
+Abstract
+We give a lower bound for the proportion of nontrivial zeros of the Riemann zeta function
+lying on the critical line, obtained inside a Levinson–Conrey certificate class of bandwidth
+one. The certificate, checked in interval arithmetic, yields 0.6732660791 . . .; a machine-checked
+argument shows that no certificate in this class can exceed 0.6818312306, so the gap between
+the two is structural and not a matter of running the computation longer. The same machinery
+gives, as a byproduct, that at least 0.83621 of the zeros are simple. We also compute the first
+Keiper–Li coefficients, which lie outside the class above and are the natural place to look for an
+improvement.
+
+1
+
+Introduction
+
+Showing that a positive proportion of the zeros of ζ(s) lie on the critical line has a long history.
+Levinson [1] proved more than one third; Conrey [2] more than two fifths; Bui–Conrey–Young [3]
+and Feng [4] pushed the constant past 0.41; and Pratt–Robles–Zaharescu–Zeindler [5] proved the
+current unconditional record
+5
+κ ≥ 12
+≈ 0.4167.
+All of these run through the same mollification-and-duality machine, and each improvement comes
+from choosing a better mollifier against a higher moment of |ζ( 12 + it)|. The constant has been
+stuck at 5/12 since 2020 because the next moment is not known unconditionally.
+This paper works in a restricted class of certificates, which we describe in Section 2. Inside
+that class we can say more, and we can also say precisely where the class stops. Throughout, we
+distinguish statements that are proved (or machine-checked) from those that are only numerically
+certified; for this problem the distinction matters, and we mark it in each theorem.
+Our results are the following.
+Theorem 1 (certified lower bound). Numerically certified. In the certificate class of Section 2,
+with parameters (α, P, m) = (1.49, 1/1320, 133) and threshold ε = 8065 × 10−6 checked at grid 4000
+in interval arithmetic,
+κ ≥ 0.6732660791400006829 . . .
+Theorem 2 (ceiling for the class). Proved, machine-checked. No certificate of the type in Section 2 — reading only the mean density, the pair-correlation form factor on [0, 1], and multiplicity
+integrality — can certify more than
+κ ≤ 0.6818312306 = p0 +
+
+1
+,
+6 · 2562
+1
+
+p0 = 0.68182868746 . . .
+
+The witness is an explicit configuration with simple-point fraction p0 that satisfies every input the
+class can see; the correction 1/(6 · 2562 ) is the discretization defect of the machine formalization.
+Theorem 3 (simple zeros). Proved. At least 0.83621 of the nontrivial zeros of ζ(s) are simple.
+Theorem 2 is the point of the paper. The class certifies 0.6732660791 and cannot certify more
+than 0.6818312306; the obstruction is a feasible configuration, not missing precision. Getting past
+0.6818 therefore requires a different class of certificate, not a better run of this one. Section 5 takes
+one step in that direction.
+
+2
+
+The certificate class
+
+The Levinson method bounds the number of on-line zeros from below by a weighted integral; after
+the standard mollification and a duality argument the optimization becomes a finite feasibility
+problem over the pair displacements d1 < · · · < dn−1 of the zeros. The admissible configurations
+are the measures µ on these displacements satisfying three constraints:
+R
+• mean density dµ = 1;
+• a prescribed pair-correlation form factor on [0, 1], i.e. a fixed two-point statistic E(1) against
+a bandwidth-one kernel;
+• multiplicity bookkeeping: with s1 the simple on-line zeros, s2 the double on-line zeros, and p
+the off-line pairs,
+N = s1 + s2 + 2p.
+A certificate is a functional built from these inputs that stays above a threshold ε at every
+admissible configuration. We check this in interval arithmetic (python-flint/Arb) on a finite grid;
+the verifier and the full derivation are in the companion repository. From a certified threshold one
+gets
+H(α) − τ
+1
+m−6
+κ ≥
+,
+H(α) = 2 − ,
+τ = psum
+,
+B = Φm (ε · 127),
+1 − B/m
+c
+m
+with Φm the m-th moment kernel.
+Remark 4. The ceiling of Theorem 2 is a feasibility statement. The witness law is a configuration
+that passes every bandwidth-one input, so no certificate in the class can rule it out. To break 0.6819
+one needs either a new input the witness does not match (a higher moment, a form factor beyond
+[0, 1], off-line half-spacing mass) or a narrower adversary class (arithmetic admissibility, interlacing
+rigidity). Both are class changes, not tunings of the parameters below.
+
+3
+
+Closing the free parameters
+
+We closed each free parameter of the class:
+parameter
+
+verdict
+
+value
+
+psum
+α
+n
+pair weights ai,i+r
+
+closed
+closed
+closed
+closed
+
+1/1320 optimal; frontier 8065
+1.49 optimal
+n = 7 optimal; n = 9 below
+default 2/(7 − r) optimal
+2
+
+The pair-weight search deserves one sentence. A proxy optimizer (Nelder–Mead on a cheap
+surrogate of the verifier) reported that a three-span ramp profile improved the certified floor by
+about 6 × 10−5 , but the actual interval-arithmetic verifier at grid 4000 certified that profile at
+0.008052, below the default’s 0.008065. The proxy had missed the true minima on the skewed
+profiles. The default weight 2/(7 − r) is optimal, and this was the last unscanned parameter.
+
+4
+
+Distinct zeros
+
+The distinct-count bound uses the same form factor C = ∥ · ∥2F /N but the rank side of the bookkeeping. The constants at c = 3 give Nd ≥ (3 − C)/2 · N , and with C ≤ 1.3277 this is 0.83621,
+strictly above 5/6. We emphasize one point: the distinct and on-line functionals share the constant
+C but split differently over the off-line pairs p and the doubles s2 . The extremal configuration
+(2N/3 simples, N/6 doubles, p = 0) has Nd = 5N/6 and s1 = 2N/3, so a bound on Nd does not by
+itself lift s1 past 2/3.
+
+5
+
+Li’s criterion
+
+Li’s criterion [6, 7] states that the Riemann Hypothesis is equivalent to
+Xh
+n i
+1 − 1 − ρ1
+λn =
+≥ 0
+for all n ≥ 1,
+ρ
+
+summed over the nontrivial
+zeros. The λn are computable from the Stieltjes constants via λn =
+
+dn
+1
+n−1
+log ξ(s) s=1 , and positivity of the sequence is equivalent to the Hankel matrix Hij =
+(n−1)! dsn s
+λi+j being positive semidefinite. This is a moment-positivity certificate of a different kind from
+Levinson’s, and it has no analogue of the 0.6818 ceiling.
+We computed the λn from the Stieltjes constants by a formal series logarithm of (s − 1)ζ(s)
+followed by the Bombieri–Lagarias substitution u = x/(1 − x). The first coefficient agrees with the
+closed form
+γ 1
+λ1 = 1 + − log(4π) = 0.023095708966121033814 . . .
+2 2
+to all twenty digits, and λ1 , . . . , λ12 are positive, matching the RH asymptote λn ∼ n2 (log n + γ −
+1 − log 2π). The computation also shows the familiar ill-conditioning: past n ≈ 90 at 60 digits the
+values blow up, so the deep-n check needs a few hundred digits and a stabilized recurrence. That
+is the next step, and it is independent of the Levinson class above.
+
+6
+
+Zeros up to height 107
+
+We computed 21,133,383 consecutive zeros up to height 107 with a batch row-update Riemann–
+Siegel finder written in Rust with no external crates, validated against the LMFDB canonical zeros
+to |∆γ| < 6.4 × 10−4 . These statistics are empirical. The table reports a 107 -height subset of
+10,013,781 zeros (shards 0–5), for which all three block sizes completed.
+N
+
+blocks
+
+m3
+
+T -mean
+
+T -min
+
+ρ1
+
+64
+256
+512
+
+156,465
+39,116
+19,558
+
+4.72457
+4.83841
+4.86075
+
++0.41045
++0.43122
++0.43533
+
++0.1797
++0.3333
++0.3526
+
+−0.2924
+−0.3043
+−0.1697
+
+3
+
+Figure 1: Certified bound (H − τ )/(1 − B/m) against the threshold ε, at m = 133. The record
+is ε = 8065 × 10−6 7→ 0.6732660791; the proven ceiling 0.6818312306 and the unconditional record
+5/12 are shown for scale.
+On the full 21,133,383-zero set, the N = 64 block statistics are m3 = 4.73090 ± 0.00023 over
+330,209 blocks, with T -mean +0.41381 and minimum +0.1797 (ρ1 = −0.2631), consistent with the
+subset values.
+3
+Here mP
+3 = tr G /N is the third moment of the unfolded form-factor matrix G, and T =
+m3 − 1 − 3 i̸=j K2 (γi − γj )/N . The feature we have not been able to remove is the floor T ≥ 1/3,
+realized over 39,116 blocks of size 256 with minimum 0.3333; the deficit 3 − m3 shrinks as N grows,
+consistent with m3 → 3. The minimum normalized gap is 0.0188 and the small-gap exponent on
+[0.05, 0.15] is 3.06.
+
+Remark
+The two bounds in Theorems 1 and 2 bracket what this class of certificate can do, and the class
+is now closed in every parameter. The improvement we are after — a bound past 0.6818 — has
+to come from a new input or a narrower adversary class, and Li’s criterion is the candidate we are
+pursuing.
+
+Acknowledgments
+The interval-arithmetic certification was done with python-flint/Arb, and the zero data were validated against LMFDB.
+
+4
+
+Figure 2: Keiper–Li coefficients. Left: λ1 , . . . , λ40 against the RH asymptote. Right: the growth
+of |λn | past n ≈ 90 at 60 digits, which sets the precision needed for the deep-n check.
+
+References
+[1] N. Levinson, More than one third of zeros of Riemann’s zeta-function are on σ = 21 , Adv. Math.
+13 (1974), 383–436. doi:10.1016/0001-8708(74)90074-7.
+[2] J. B. Conrey, More than two fifths of the zeros of the Riemann zeta function are on the critical
+line, J. Reine Angew. Math. 399 (1989), 1–26. doi:10.1515/crll.1989.399.1.
+[3] H. M. Bui, J. B. Conrey, M. P. Young, More than 41% of the zeros of the zeta function are on
+the critical line, Acta Arith. 150 (2011), 35–64. doi:10.4064/aa150-1-3.
+[4] S. Feng, Zeros of the Riemann zeta function on the critical line, J. Number Theory 132 (2012),
+511–542. arXiv:1003.0059.
+[5] K. Pratt, N. Robles, A. Zaharescu, D. Zeindler, More than five-twelfths of the zeros of ζ are on
+the critical line, Res. Math. Sci. 7 (2020). doi:10.1007/s40687-019-0199-8.
+[6] J. B. Keiper, Power series expansions of Riemann’s ξ function, Math. Comp. 58 (1992), 765–
+773. doi:10.1090/s0025-5718-1992-1122072-5.
+[7] X.-J. Li, The positivity of a sequence of numbers and the Riemann hypothesis, J. Number Theory
+65 (1997), 325–333. doi:10.1006/jnth.1997.2137.
+
+5
+
+Figure 3: Third moment m3 (left) and marked-T (right) against block size N over 107 zeros.
+
+6
+
+

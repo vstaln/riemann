@@ -1,0 +1,8 @@
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Statement of results}{2}{subsection.1.1}%
+\contentsline {section}{\numberline {2}The certificate class}{2}{section.2}%
+\contentsline {section}{\numberline {3}Exhaustion of the in-class degrees of freedom}{3}{section.3}%
+\contentsline {section}{\numberline {4}Distinct zeros}{3}{section.4}%
+\contentsline {section}{\numberline {5}Li's criterion: a certificate class without the ceiling}{4}{section.5}%
+\contentsline {section}{\numberline {6}Numerical statistics of $2.1\times 10^7$ zeros}{4}{section.6}%
+\contentsline {section}{\numberline {7}Discussion}{5}{section.7}%
