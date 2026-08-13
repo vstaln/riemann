@@ -54,24 +54,3 @@ Runs started 16:50:55 (parallel, 6 workers): 8065@g4000, 8066/8068/8070@g6000, 8
 ((6316,6316),(11945,11945),(11895,11895),(6280,6280),(11857,11857),(6301,6301)) lower=0.008060649099672502,
 max_depth=81, pruned=146518, interval=124317, tangent=21644, elapsed ~3.6 min.
 **Finer grid (6000) does NOT raise the certified floor: 0.008070 fails at g6000 with the same ~0.0080606 floor.** The box coordinates are exactly grid-scaled versions of the g4000 failing boxes (coords × 1.5) — same terminal region, grid-refined.
-
-## Result 5 — ARTIFACT PROBE #2: eps=0.008068 at grid=6000 FAILS (CHECKED NUMERICALLY)
-`verify_cos7.py 149 100 1 1320 8068 1000000 - 6000` → verified=False, terminal box
-((6309,6309),(11945,11945),(11901,11901),(6281,6281),(11842,11842),(6303,6303)) lower=0.008058687850487158,
-nodes=530530, max_depth=81, ~19 min (contention). Again grid-scaled version of the g4000 failing region.
-**Floor at g6000 ≈ 0.0080587–0.0080606 — same as g4000 (~0.008060). Finer grid does NOT raise the certifiable floor.**
-
-## Verifier-re-run state (17:25 start, per-run logs)
-r_8065_g4000, r_8065_g6000, r_8066_g6000, r_8066_g8000 → /tmp/combine/r_*.log (dedicated files; the shared-file stdout of the parallel batch was lost after DONE markers — likely buffering/contention, re-running individually).
-
-## Certified-sweep summary (bound arithmetic, CHECKED NUMERICALLY)
-- (α=1.49, psum=1/220, m=133, eps=0.008064 certified): bound 0.6732654364955235 — NEW RECORD +2.571e-6.
-- (α=1.47, eps=0.007985): no beat. (α=1.49, psum=1/225, eps=0.007909): m=135/136 beat record slightly but < leader.
-- (α=1.45, eps=0.008064): bound 0.6733277419 would be best BUT α=1.45 eps certification NOT established — needs verifier run. FLAGGED INCONCLUSIVE.
-
-## 2026-08-12 late — in-class SEARCH COMPLETE (faster finder + weight sweep closure)
-- **faster_finder v1** (commit 3eff6d5): batch row-update RS + EM + fine scan (step 0.01) + bisection refine + banded wiggle collapse; LMFDB-validated (max 6.44e-4 < 1e-3 bar, 11000/11000 complete, 0 dups); 100k in 12.7s (3.3x baseline). Three real bugs found/fixed (n-growth phase bug, t<200 dispatch, IQI collapse). Production finder for the 21M run.
-- **Weight-profile sweep (C1) CLOSED** (commit d5ed432): the 21 pair-weight DOF scanned for the first time — proxy (babd4afe sweep_proxy) ranked span3_ramp_up top (0.008126); REAL ORACLE at grid 4000 disproves: all top profiles certify lower ~0.008052 < the default's 0.008065. Default 2/(7-r) was already optimal. Last unscanned in-class DOF now scanned.
-- **In-class inventory COMPLETE**: P-ascent CLOSED (8065 frontier), alpha CLOSED (1.49), n-family CLOSED (n=7 optimal), weights CLOSED (default optimal), ceiling 0.6818 FORMALIZED (law-specific). **Record 0.6732660791 (eps=8065@g4000) stands certified-optimal in-class.**
-- **21M shard run LAUNCHED** (laptop shards 0-5 + oracle-new shards 6-11, 12 shards from LMFDB blockstarts; ~21.13M zeros to height 10^7; shard 0 done: 1,433,948 zeros in 111s). stats_10m.py ready.
-- Route to 0.70: certificate-class change only — c=3 distinct port (0.83621 > 5/6) is the day's real new theorem; rank-trace/integrality ladder toward 2/3.
