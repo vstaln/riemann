@@ -93,7 +93,11 @@ Every number from a script under `tools/weil_first_prime/` (new file `mu2_envelo
 
 - Approach A/B not run (tooling / no prime-side marked moment), as specified.
 - `tools/weil_first_prime/mu2_envelope.py`: nested conservative `μ₂ ≥ 1.6414` at `Ω=3.2` (n=81 HS × 1.05) **clears `threshold(a₂)=1.3554`** (margin 0.286). Hard cutoff maxed at 1.270 (method wall). Does not clear `a₃`.
-- Even mean-zero sector at `a=a₂`: `R≥0.182` after crude `ρ`. Ground ray still open. 67% record unchanged. RH not proved.
+- Even mean-zero sector at `a=a₂`: `R≥0.213` after L¹ `ρ` (`‖ρ''‖_1=0.0725`). Ground ray: cosine clears by `2.65×10^{-3}`; `λ_min(V_80)−th=+1.34×10^{-3}`; 1/`k` Schur candidate (not a closed lemma). 67% record unchanged. RH not proved.
 
-Command: `python3 tools/weil_first_prime/mu2_envelope.py`
+Commands: `python3 tools/weil_first_prime/mu2_envelope.py`, `python3 tools/weil_first_prime/ground_ray.py`, `python3 tools/weil_first_prime/ground_ray_cross.py`.
+
+## Follow-up (same campaign, after μ₂ cleared)
+
+The spec's "1-mode check of the ground ray" is now the live lemma (`research/notes/attack-weil-first-prime.md` §23). Remaining: prove `|Q(φ_0,φ_k)|≤C/k` so the Schur of §23.4 is a theorem. Do not resume coboundary.
 

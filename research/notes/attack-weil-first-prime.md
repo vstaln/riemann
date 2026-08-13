@@ -561,18 +561,71 @@ Conservative pass (`n=81` HS × 1.05):
 
 **`μ₂ ≥ 1.6414 > threshold(a₂)=1.3554`** (margin `0.286`). Does **not** clear `threshold(a₃)=1.816`. Label: CHECKED NUMERICALLY (quadrature of HS, not `rug` interval). The inequality `λ_max ≤ HS` and the Stieltjes lower bound are PROVEN given `α`; the number `α(ω)` is the quadrature.
 
-**Even mean-zero sector at `a=a₂` (prime 2 not yet overlapping).** `R ≥ μ₂ − threshold + ρ`-term. Crude `|ρ|≤ a₂ · |ρ''(log 2)| · 2` with `|ρ''(log 2)|=0.14986` (`rpp_closed.py`) gives `|ρ|≤0.1039`, hence `R ≥ 0.182 > 0`. CHECKED. This is **not** `λ_a>0`: the even ground ray (nonzero mean) still needs the rank-one + `ρ_lo` argument of §21.5, and past `a₂` the prime Hankel is open.
+**Even mean-zero sector at `a=a₂` (prime 2 not yet overlapping).** `R ≥ μ₂ − threshold + ρ`-term. Young: `|ρ|-term ≤ ∫_{-2a_{2}}^{2a_{2}} |ρ''(s)| ds`. On this interval `ρ''≤0` (CHECKED in `rpp_closed.py`), so the L¹ bound equals `|m(0)|=0.07251498` (`ground_ray.py`). Hence `R ≥ 1.6414 − 1.3554 − 0.0725 = 0.2135 > 0`. (Previous crude `|ρ''(log 2)|·2a₂=0.1039` is looser; same conclusion.) This is **not** `λ_a>0`: the even ground ray (nonzero mean) is §23, and past `a₂` the prime Hankel is open.
 
 Does **not** raise the 67% simple-on-line record. Does **not** prove RH.
 
 ### 21.8 What would prove a local `δ`, and what would prove RH
 
-- **Local `δ` (not RH):** even mean-zero complement at `a=a₂` is now CHECKED (`μ₂≥1.641>1.355`, crude `ρ` leaves `R≥0.182`). The ground ray (nonzero mean) still needs rank-one + `ρ_lo`. Primes past `a₂` still eat overlap. `threshold(a₃)` is not cleared. Interval/`rug` certification of the HS quadrature is the remaining analytic hygiene, not a matrix grind over `a`.
+- **Local `δ` (not RH):** even mean-zero complement at `a=a₂` is now CHECKED (`μ₂≥1.641>1.355`, L¹ `ρ` leaves `R≥0.213`). The ground ray is §23 (finite-section gap `+1.34×10^{-3}`, 1/`k` Schur candidate, **not** a closed lemma). Primes past `a₂` still eat overlap. `threshold(a₃)` is not cleared. Interval/`rug` certification of the HS quadrature is the remaining analytic hygiene, not a matrix grind over `a`.
 - **RH:** still uniform-in-`a`. Primes accumulate; the `c t²` remainder plus rank-one is a local cancellation, not a Gårding inequality that survives `a→∞`. Suzuki Cor 1.6 (`W(a,θ;z)→ξ/ξ'`) is the spectral encoding; it assumes the form stays positive to define the spaces. Do not claim a path we do not have.
 
 ---
 
-## 22. Commands (continuation)
+## 23. Ground ray at `a=a₂` — cosine lemma, finite-section gap, 1/`k` Schur candidate
+
+At `a=a₂` the prime-2 lag is `(log 2)/a₂=2`, Hankel support is a point, prime term `=0`. Even positivity ⇔ `Q(w):=L(w)+(7/4)a₂(∫w)²+ρ(w) ≥ threshold(a₂)·‖w‖²` with `threshold(a₂)=1.3554326301692685`. Commands: `python3 tools/weil_first_prime/ground_ray.py` and `python3 tools/weil_first_prime/ground_ray_cross.py`.
+
+### 23.1 Closed Hankel of the cosine — PROVEN elementary, integral CHECKED
+
+`φ(t)=cos(π t/2)` on `[-1,1]`, `‖φ‖²=1`. For `h∈[0,2]`,
+```
+H(h) = ((2−h)/2) cos(π h/2) + sin(π h/2)/π.
+```
+(`H(0)=1`, `H(2)=0`.) Then `ρ(φ)=−2∫_0^{log 2} ρ''(s) H(2s/log 2) ds`.
+
+CHECKED (`ground_ray.py`, n=4001 trap vs n=801 mixed Hankel): `ρ_closed=0.009220270414`, `ρ_quad=0.009220199424`. Jumping-form `L/n=0.365641812186`, rank-one `=0.983224371719`, `J=1.348866183905`, `J−th=−6.566446×10^{-3}`. Hence `J+ρ−th=+2.653824×10^{-3}>0`. **The cosine itself is positive at the endpoint.** Dropping `ρ` still fails (same as §21.5). Fourier `L00=0.36562723` (`ground_ray_cross.py`, Plancherel `φ0=1.00000011`) matches the jumping form to `1.5×10^{-5}`.
+
+### 23.2 `ρ` is not a positive Fourier multiplier — CHECKED
+
+`m(η)=∫_{-2a₂}^{2a₂} ρ''(s) cos(η s) ds`. Then `ρ(w)=(1/2π)∫ (−m(ξ/a)) |ŵ|² dξ / ‖w‖²`. `m(0)=−0.07251498`; `m` changes sign (`m(5.5)=+0.05231`). High-frequency even `w` can have `ρ<0`. Odd sine: `L=1.51879886`, `ρ=−0.011015`, `L+ρ−th=+0.15235` (one test function, not `λ_a>0` on the odd sector).
+
+### 23.3 Finite-section `λ_min(Q|_{V_K})` — CHECKED, still an upper bound of `inf Q`
+
+Even Dirichlet `φ_k=cos((k+1/2)π t)`, closed `ŵ_k`. `Q` assembled from (4.6) + `m(ξ/a)` + rank-one, `K=80` (`ground_ray_cross.py`).
+
+| `K` | `λ_min(Q|_{V_K})` | `λ_min−th` |
+|---:|---:|---:|
+| 1 | 1.3580744633 | `2.642×10^{-3}` |
+| 6 | 1.3569604897 | `1.528×10^{-3}` |
+| 24 | 1.3568235907 | `1.391×10^{-3}` |
+| 48 | 1.3567882720 | `1.356×10^{-3}` |
+| 80 | 1.3567723762 | `1.340×10^{-3}` |
+
+Monotone decreasing (as it must), **always above threshold**. Jumping-form 6-mode section (`ground_ray.py`, n=151) gave `min Q=1.35693489`, `Q−th=+1.502×10^{-3}`, matching the Fourier 6-mode `1.35696049`. This does **not** prove `inf Q>th`: Ritz / finite-section min is an **upper** bound of the true inf. A `1/K` extrapolation of the gap is `≈1.32×10^{-3}` — CONJECTURED, not a bound.
+
+Internal Schur on `V_6` (no tail) **passes**: `Q(ψ,ψ)−th=2.617×10^{-3}`, `C_M=0.02996`, `min Q` on `V_6∩ψ⊥=2.03183`, `C_M²/((q00−th)(μ⊥−th))=0.507`. Crude Frobenius Schur of `V_M` against the Dirichlet tail **fails** (`‖C‖_2≈0.16–0.28` vs budget `0.05`) because most of `C` hits *high* modes, not the ground ray. That bound is the wrong estimate, not a dip of `Q`.
+
+### 23.4 Ground-ray Schur with a 1/`k` tail — CHECKED on `k<80`, lemma incomplete
+
+Let `v_M` be the ground state of `Q|_{V_M}` (`v_M[0]≈0.99926`, i.e. the cosine ray). `C_g=‖Q(v_M, V_M^⊥)‖`. Schur closes if `C_g² < (λ_min(A)−th)(μ_B−th)` with `μ_B≥ μ_{L,tail}−‖ρ''‖_1 = 1.8541−0.072515=1.781585` (nested `μ` of even `⊥V_3` at `Ω=4` from `ground_ray.py` §6, conservative when `M≥3`).
+
+Finite tail `k=M..79` (`ground_ray_cross.py`): at `M=64`, `C_g=0.005297`, `C_g²/budget=0.0489`. Remaining `k≥80`: CHECKED on `32≤k<80` that `k|(Q v)_k|≤0.0958`, and `k·Q[0,k]` is saturating (`0.073` at `k=24` → `0.082` at `k=79`; residual `(L+rank1)/rank1 → ≈−0.195`). Envelope `|(Qv)_k|≤c_{max}/k` for `k≥80` with this `c_{max}` gives `C_tot≤0.012008`, `C²/budget=0.2514<1` (`pass=True`). Same at `M=32` (`0.3998`) and `M=48` (`0.3072`).
+
+**This is not a proof.** The bound `k|(Qv)_k|≤c` for *all* `k≥80` is an extrapolation of a finite table (the residual fraction is still drifting). It is the remaining elementary lemma: a `O(1/k)` (or better) decay of `Q(φ_j,φ_k)` after the `L`/`rank-one` cancellation. Headroom: even `c_∞=0.12` (vs `0.082` at `k=79`) still yields `C²/budget≈0.37<1`. Do not claim `λ_{a₂}>0`.
+
+### 23.5 What is proved vs what is not
+
+- **PROVEN** (elementary): cosine Hankel; prime term vanishes at `a=a₂`; `ρ-term=−∫ ρ''(s) H(s/a) ds`; Young `|ρ|≤‖ρ''‖_1`; even Dirichlet Fourier transform.
+- **CHECKED NUMERICALLY** (scripts above): cosine `J+ρ>th` by `2.65×10^{-3}`; even mean-zero `R≥0.213`; `λ_min(V_{80})−th=+1.340×10^{-3}`; ground-ray 1/`k` Schur *if* `k|(Qv)_k|` stays ≤ `0.096`.
+- **CONJECTURED:** `inf Q > threshold(a₂)` on all even `w` vanishing at `±1` (i.e. `λ_{a₂}>0` on the even sector). The finite-section trend and the 1/`k` budget say this is the live local theorem; it is not closed.
+- **NOT claimed:** `λ_a>0` for `a>a₂`; any improvement of the 67% simple-on-line record; RH.
+
+Next lemma (do not grind coboundary): prove `|Q(φ_0,φ_k)| ≤ C/k` from the closed `ŵ_k` and the cancellation `L_{0k}+κ mean_0 mean_k = O(1/k)`, then the Schur of §23.4 is a theorem. After that: primes in `(a₂,a₃)` against the `0.213` mean-zero margin and the `~10^{-3}` ground-ray margin.
+
+---
+
+## 24. Commands (continuation)
 
 ```
 python3 tools/weil_first_prime/remainder_bound.py   # (4.5) vs T; ~4 min
@@ -581,6 +634,8 @@ python3 tools/weil_first_prime/poincare_even.py     # L split, J vs threshold, �
 python3 tools/weil_first_prime/l_fourier.py         # (4.6), J-ground, global c*
 python3 tools/weil_first_prime/mu_ritz.py           # μ1, μ2 Ritz stability
 python3 tools/weil_first_prime/mu2_envelope.py      # nested HS μ₂ vs threshold
+python3 tools/weil_first_prime/ground_ray.py        # cosine Hankel, V_M J+ρ, internal Schur
+python3 tools/weil_first_prime/ground_ray_cross.py  # Fourier Q, λ_min(V_K), 1/k Schur
 ```
 
 (`uv` not on PATH; system `python3` + numpy 2.4.4. Exploratory `f64`, not `rug`/`arb`. Python used because each script is closed-form / 1D quadrature, not a search.)
