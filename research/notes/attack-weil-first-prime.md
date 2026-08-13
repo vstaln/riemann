@@ -13,7 +13,7 @@ Weil positivity on every finite interval is equivalent to RH. Positivity is alre
 
 **What is new (this continuation):** the Poincaré overlap lemma is now **PROVEN** (elementary Hardy on endpoint strips). The saturating two-bump family is *not* a negative direction (`T/G(0) ≥ 0.386` through `a₃`). The pointwise Fourier multiplier of `T` is **negative even where positivity is known**, so a 1D infimum of `M_a(ξ)` cannot prove the lemma. Gershgorin / diagonal Schur on the Dirichlet matrix **fail** (off-diagonals `4–6×` the ground gap; positivity is a coherent cancellation). Frequency-side Ritz in the even Dirichlet subspace stays positive through the whole first-prime window, but the gap collapses from `1.5×10^{-3}` at `a₂` to `6×10^{-8}` at `a₃`. Prime-by-prime matrix certification will not reach RH; a uniform-in-`a` argument is required.
 
-**What is new (§21):** `r''(t)` is closed-form; Taylor is `−7/8 t² − t³/288 − 3t⁴/128`; Suzuki (4.5) matches `T` to `3×10^{-5}`; (4.6) matches `L` to `4×10^{-6}`; dropping `ρ` **fails** at `a₂` (`ν_{\mathrm{Ritz}}=1.348<1.355`); `ρ''≤−(3/10)t²` on `(0,20]` saves the J-ground state at `a₂` (`LB=+2.4×10^{-4}`) and dies near `a₃` on the cosine. Even mean-zero `μ₂≥1.02797` (elementary `ξ²` envelope) — short of `threshold(a₂)=1.355` by `0.327`. Tightening that envelope is the local-`δ` input.
+**What is new (§21):** `r''(t)` is closed-form; Taylor is `−7/8 t² − t³/288 − 3t⁴/128`; Suzuki (4.5) matches `T` to `3×10^{-5}`; (4.6) matches `L` to `4×10^{-6}`; dropping `ρ` **fails** at `a₂` (`ν_{\mathrm{Ritz}}=1.348<1.355`); `ρ''≤−(3/10)t²` on `(0,20]` saves the J-ground state at `a₂` (`LB=+2.4×10^{-4}`) and dies near `a₃` on the cosine. Even mean-zero **`μ₂ ≥ 1.641`** (nested HS, conservative `n=81×1.05`) **clears `threshold(a₂)=1.355`**. Complement at `a=a₂` has `R≥0.182`. Ground ray and primes past `a₂` remain. 67% record unchanged. RH not proved.
 
 RH is not proved. The certificate-class grind is not resumed.
 
@@ -536,13 +536,38 @@ Crude Paley–Wiener envelope `|ŵ|≤√(2/3)|ξ|‖w‖` on `{ŵ(0)=0}`, dropp
 **Even mean-zero envelope that keeps the tail — PROVEN elementary, constant CHECKED.**
 For even mean-zero `w` supported in `[-1,1]`: `|cos(ξt)−1|≤ξ²t²/2` ⇒ `|ŵ(ξ)|≤(ξ²/2)∫ t²|w|≤(ξ²/2)√(2/5)‖w‖`, so `|ŵ|²≤ξ⁴/10 ‖w‖²`. Hence the Plancherel mass in `|ξ|<Ω` is `≤ Ω⁵/(50π)`. The log-weight on `|ξ|<e^{-γ}` contributes `≥ −7.09×10^{-5}`. Therefore
 ```
-μ₂ ≥ max_{Ω>1} (1 − Ω⁵/(50π))(log Ω + γ) − 7.09×10^{-5} = 1.02797
+μ₂ ≥ max_{Ω>1} (1 − Ω⁵/(50π))(log Ω + γ) − 7.09e-5 = 1.02797
 ```
-at `Ω=1.865` (`l_fourier.py`). This is a genuine lower bound (not Ritz), but it is `0.327` short of `threshold(a₂)=1.355` and `0.788` short of `threshold(a₃)`. Tightening the envelope (prolates / `min(ξ²t²/2, 2)`) is the remaining local-`δ` input; the crude `|ξ|` bound that dropped the tail is not.
+at `Ω=1.865` (`l_fourier.py`). Hard frequency cutoff with this `ξ²` envelope is **0.327 short** of `threshold(a₂)`.
+
+**Nested concentration (this round) — CHECKED NUMERICALLY.** Command: `python3 tools/weil_first_prime/mu2_envelope.py`.
+
+Low-frequency mass in `|ξ|<ω` is `⟨Q_ω w,w⟩` with kernel `sin(ω(x−y))/(π(x−y))`. On even mean-zero, `‖Q^{emz}_ω‖_{HS}` is a valid operator-norm cap (PROVEN: `‖·‖_{HS}≥‖·‖_{op}`). Nyström trapezoid of that HS, `n=81→321` at `Ω=2.4`: `0.125775 → 0.125675` (decreases; coarser grid is conservative). HS, max-eig, and trace agree to `10^{-4}` (the compression is essentially rank one).
+
+Hard cutoff using `α(Ω)=HS_emz(Ω)` peaks at `μ₂≥1.270` (`Ω=2.4`) — **cannot** reach `1.355` even with exact `λ_max`, because it treats mass in `(0,Ω)` as log-weight 0.
+
+Nested constraint `F(ω)≤α(ω)` for all `ω`, greedy fill, integration by parts:
+```
+μ₂ ≥ log Ω + γ − ∫_0^Ω α(ω)/ω dω + NEG.
+```
+Conservative pass (`n=81` HS × 1.05):
+
+| `Ω` | `α_cons` | nested `μ₂` |
+|---|---|---|
+| 2.2 | 0.0938 | 1.3429 |
+| 2.4 | 0.1321 | 1.4202 |
+| 3.2 | 0.3570 | **1.6414** |
+| 6.0 | 1.0000 | 1.8159 (saturates; HS cap hits 1) |
+
+**`μ₂ ≥ 1.6414 > threshold(a₂)=1.3554`** (margin `0.286`). Does **not** clear `threshold(a₃)=1.816`. Label: CHECKED NUMERICALLY (quadrature of HS, not `rug` interval). The inequality `λ_max ≤ HS` and the Stieltjes lower bound are PROVEN given `α`; the number `α(ω)` is the quadrature.
+
+**Even mean-zero sector at `a=a₂` (prime 2 not yet overlapping).** `R ≥ μ₂ − threshold + ρ`-term. Crude `|ρ|≤ a₂ · |ρ''(log 2)| · 2` with `|ρ''(log 2)|=0.14986` (`rpp_closed.py`) gives `|ρ|≤0.1039`, hence `R ≥ 0.182 > 0`. CHECKED. This is **not** `λ_a>0`: the even ground ray (nonzero mean) still needs the rank-one + `ρ_lo` argument of §21.5, and past `a₂` the prime Hankel is open.
+
+Does **not** raise the 67% simple-on-line record. Does **not** prove RH.
 
 ### 21.8 What would prove a local `δ`, and what would prove RH
 
-- **Local `δ` (not RH):** a *lower* bound `μ₂ ≥ (2A+1)+log a + |prime|_{comp}` on the even mean-zero subspace, plus the 1-mode Rayleigh of the ground ray (rank-one + `ρ_lo` + overlap Hardy). `μ_{2,\mathrm{Ritz}}=1.967` is an *upper* bound; at `a₃` one has `threshold=1.815`, so the gap is tight against a `0.15` prime hit. Interval/`rug` certification of `μ₂` is the remaining analytic input for an explicit `δ`, not a matrix grind over `a`.
+- **Local `δ` (not RH):** even mean-zero complement at `a=a₂` is now CHECKED (`μ₂≥1.641>1.355`, crude `ρ` leaves `R≥0.182`). The ground ray (nonzero mean) still needs rank-one + `ρ_lo`. Primes past `a₂` still eat overlap. `threshold(a₃)` is not cleared. Interval/`rug` certification of the HS quadrature is the remaining analytic hygiene, not a matrix grind over `a`.
 - **RH:** still uniform-in-`a`. Primes accumulate; the `c t²` remainder plus rank-one is a local cancellation, not a Gårding inequality that survives `a→∞`. Suzuki Cor 1.6 (`W(a,θ;z)→ξ/ξ'`) is the spectral encoding; it assumes the form stays positive to define the spaces. Do not claim a path we do not have.
 
 ---
@@ -555,6 +580,7 @@ python3 tools/weil_first_prime/rpp_closed.py        # r'' closed form + Taylor
 python3 tools/weil_first_prime/poincare_even.py     # L split, J vs threshold, ρ_lo
 python3 tools/weil_first_prime/l_fourier.py         # (4.6), J-ground, global c*
 python3 tools/weil_first_prime/mu_ritz.py           # μ1, μ2 Ritz stability
+python3 tools/weil_first_prime/mu2_envelope.py      # nested HS μ₂ vs threshold
 ```
 
 (`uv` not on PATH; system `python3` + numpy 2.4.4. Exploratory `f64`, not `rug`/`arb`. Python used because each script is closed-form / 1D quadrature, not a search.)

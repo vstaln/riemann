@@ -89,9 +89,11 @@ Every number from a script under `tools/weil_first_prime/` (new file `mu2_envelo
 2. Run it. If `μ₂_lo ≥ 1.355`, write the lemma into §21.7 and state the remaining 1-mode task. If not, write the best constant and residual.
 3. Commit, push, update PR #1. Ledger line `weil-first-prime-5`.
 
-## Spec self-review
+## Outcome (executed same session)
 
-- No TBD. Environment blocker on Approach A is explicit.
-- Approach B is not a bound-producer; not scheduled.
-- Scope is one lemma (`μ₂` envelope), not RH and not a 67% record.
-- “Lower bound” in code means a number `≤ μ₂`, never a Ritz eigenvalue.
+- Approach A/B not run (tooling / no prime-side marked moment), as specified.
+- `tools/weil_first_prime/mu2_envelope.py`: nested conservative `μ₂ ≥ 1.6414` at `Ω=3.2` (n=81 HS × 1.05) **clears `threshold(a₂)=1.3554`** (margin 0.286). Hard cutoff maxed at 1.270 (method wall). Does not clear `a₃`.
+- Even mean-zero sector at `a=a₂`: `R≥0.182` after crude `ρ`. Ground ray still open. 67% record unchanged. RH not proved.
+
+Command: `python3 tools/weil_first_prime/mu2_envelope.py`
+
