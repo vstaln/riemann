@@ -112,10 +112,13 @@ def squared_kernel_derivs(x, a, k0):
     k = (v1 + v2) / (2 * k0)
     k1 = pi * (d1_2 - d1_1) / (2 * k0)   # dz/dx = +pi for z2, -pi for z1
     k2 = pi * pi * (d2_1 + d2_2) / (2 * k0)
-    k0sq = k0 * k0
-    w = k * k / k0sq
-    w1 = 2 * k * k1 / k0sq
-    w2 = 2 * (k1 * k1 + k * k2) / k0sq
+    # FIXED (2026-08-12): k is already normalized (divided by 2*k0, k(0)=1),
+    # so w = k^2 with w(0)=1 is the correct single normalization. The previous
+    # w = k*k/k0sq double-normalized (w(0)=1/k0^2=1.2075), inflating the certified
+    # floor F by ~20% — see research/notes/retraction-673-invalid.md.
+    w = k * k
+    w1 = 2 * k * k1
+    w2 = 2 * (k1 * k1 + k * k2)
     return w, w1, w2
 
 def closed_cell(index, grid):
