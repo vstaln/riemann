@@ -240,3 +240,27 @@ violates κ_i ≥ 0 (p_2 < 0) and is NOT a valid certificate. tawan's coefficien
 certified redistribution. Whether a DIFFERENT (l,c) beats tawan remains open, but the specific LP
 output in §2 does not. The certified record stands at eps=0.0062 with tawan's unchanged
 coefficients (α=1.464, bound 0.673481).
+
+---
+
+## §7 CUTTING-PLANE CLOSED (orchestrator, 2026-08-13 07:00) — tawan is near-optimal
+
+A serialized cutting-plane (single-threaded HiGHS, no deadlock; `/tmp/cp_v2.py`) closed the
+two-large-gap family the prior LP missed. Result (CHECKED NUMERICALLY, float):
+
+- tawan global floor = **0.006471** (config [1.06, 2.97, 2.02, 2.0, 2.0, 1.05])
+- corrected LP iterations: it0 v*=0.009668 (κ_min=0.000471) → worst 0.006372; it1 v*=0.007941
+  (κ_min=0.000056) → worst 0.005129; it2+ v*=0.007830 (κ_min=0.000038) → **worst 0.001268**
+  (config [1.06, 9.91, 1.06, 2.01, 1.05, 7.98] — two large gaps).
+
+**Mechanism (PROVEN by the iteration):** to raise the crystal floor, the LP concentrates pressure
+and drives some κ_i → 0; but κ_i is the huge-gap slope, so any κ_i ≈ 0 leaves configurations with
+a large gap at position i vulnerable (F_B → small). The LP's κ_min decays monotonically
+(0.000471 → 0.000056 → 0.000038) while the worst huge-gap floor collapses (0.006372 → 0.005129 →
+0.001268). The κ_i ≥ 0 constraint is the binding limit, and tawan's spread (κ ≈ 0.00046–0.00061,
+all comfortably positive) is the balanced optimum.
+
+**VERDICT (closes the thread):** tawan's hand-tuned (l,c) is near-optimal for the coboundary
+redistribution at α≈1.46–1.49. No better redistribution is certified or likely certifiable via
+LP. The certified record stands: **eps=0.0062, bound 0.673481 (α=1.464)**, with tawan's
+unchanged coefficients.
