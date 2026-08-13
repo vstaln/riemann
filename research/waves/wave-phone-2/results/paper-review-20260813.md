@@ -113,3 +113,62 @@ min gap 0.0188 + exponent 3.06: UNVERIFIABLE (no saved output; data on laptop).
 - Li probe: /root/riemann/tools/li_probe.py
 - Figures script: /root/riemann/tools/make_figures.py
 - This file: /root/riemann/research/waves/wave-phone-2/results/paper-review-20260813.md
+
+---
+
+## Reviewer 1 (soundness) — FULL OUTPUT [agent 6600c438, completed]
+```json
+{
+  "summary": "The paper's central object — a 'bandwidth-one Levinson–Conrey certificate class' — is never defined precisely enough to judge the theorems. The pivotal input, 'a prescribed pair-correlation form factor on [0,1]' (glossed as 'a fixed two-point statistic E(1)'), is either a restriction on the mollifier (unconditional) or the actual two-point statistic of the zeta zeros (conditional on Montgomery's pair correlation). The wording 'two-point statistic' implies the latter, in which case Theorem 1's 'κ ≥ 0.6732660791' is a conditional, certificate-defined statistic dressed in the notation of the unconditional proportion κ, making the comparison to 5/12 misleading. Theorem 3 is labeled 'Proved' but rests on C ≤ 1.3277 with unstated provenance; if C is certified rather than proved, the label is false. Theorem 2's ceiling is a feasibility claim whose witness, machine-checking system, and the derivation of the 1/(6·256²) 'discretization defect' are all missing or asserted.",
+  "weaknesses": [
+    "Certificate class is hand-waved: the 'pair-correlation form factor on [0,1]' is never defined, so it is impossible to tell whether Theorem 1 is unconditional (mollifier restriction) or conditional (assumes pair correlation of zeros).",
+    "Theorem 1 writes 'κ ≥ 0.6732660791' using the same κ as the unconditional proportion; if the class assumes a conjectural input, this is not a bound on κ and 'above 5/12' is an invalid comparison.",
+    "Theorem 3 labeled 'Proved' but rests on 'C ≤ 1.3277' whose provenance is never stated.",
+    "The ceiling correction 1/(6·256²) is asserted with no derivation (no Lipschitz constant, no grid, no error bound).",
+    "Ceiling conflates the witness's 'simple-point fraction p0' with the value of the certified-bound functional; no computation shows the functional ≤ 0.6818312306 at the witness.",
+    "The witness configuration and machine-checking system (Coq/Lean/Isabelle?) are never specified.",
+    "Distinct-count formula Nd ≥ (3−C)/2·N appears with no derivation.",
+    "'The class is closed in every parameter' is a Nelder–Mead proxy search claim, not a proof of closure."
+  ],
+  "questions": [
+    "Is the bandwidth-one form factor a restriction on the mollifier (unconditional) or the actual pair-correlation of zeta zeros (conditional)? This determines the validity of everything.",
+    "What system performed the machine-check, and where is the witness configuration?",
+    "Is C ≤ 1.3277 proved or numerically certified, and of which norm exactly?",
+    "Derive the 1/(6·256²) defect: what grid, what Lipschitz/second-order bound?",
+    "Where is the companion repository and its revision hash?"
+  ],
+  "missing_references": ["Montgomery (1973)", "machine-checking system + proof artifact", "companion repo URL+hash", "source of C ≤ 1.3277 and (3−C)/2 inequality", "published unconditional simple-zeros record"],
+  "soundness": 2, "presentation": 2, "contribution": 2, "overall": 3, "confidence": 4
+}
+```
+
+## Reviewer 2 (novelty/positioning) — FULL OUTPUT [agent a1010323, completed]
+```json
+{
+  "summary": "The paper's central claim — a 0.6733 lower bound that sits 'above every published unconditional constant' — is a category error. The certificate class takes the pair-correlation form factor on [0,1] as an INPUT constraint; that is Montgomery's pair-correlation conjecture, not a proven fact. So 0.6733 is a conditional/empirical statistic and is not comparable to the unconditional 5/12 of PRZZ. Worse, Montgomery (1973) already gives (conditionally on pair correlation) κ ≥ 2/3 ≈ 0.6667, so 0.6733 is a hair above a 1973 conditional benchmark, not a new regime. The 0.83621 simple-zeros theorem is labeled 'Proved' but must inherit the same conjectural C ≤ 1.3277 input; unconditionally it is not credible. The 0.6818 ceiling bounds the author's own relaxed class, which is not shown to faithfully model the real Levinson–Conrey optimization, so 'structural gap' is vacuous for the actual problem. The Li section is a standard, decades-old computation.",
+  "weaknesses": [
+    "0.6733 is not comparable to 5/12. The class's second constraint is 'a prescribed pair-correlation form factor on [0,1]' — Montgomery's pair-correlation conjecture. Claiming 'above every published unconditional constant' is misleading.",
+    "Theorem 3 ('Proved', 0.83621 simple zeros) is mislabeled. A positive proportion of SIMPLE zeros is not known unconditionally. Either conditional (relabel) or an unconditional proof of a major open statement (unbelievable).",
+    "Failure to cite Montgomery (1973), who under pair-correlation proved κ ≥ 2/3 (and ≥ 2/3 simple). Against this, 0.6733 and 0.83621 are modest incremental refinements, not records. Positioning silently wrong by choosing 5/12 as baseline.",
+    "The 0.6818 ceiling bounds an ad-hoc class NOT shown to be a faithful relaxation of the true Levinson–Conrey feasible set. Unless faithfulness is proved, 'structural gap' says nothing about the real problem.",
+    "The 'machine-checked' ceiling carries a hand-asserted 1/(6·256²) correction that is not machine-checked.",
+    "The Li section adds nothing: λ1 = 1 + γ/2 − (log 4π)/2 is textbook; λ1..λ12 positivity and n≈90 ill-conditioning computed by Keiper, Coffey, Maslanka decades ago."
+  ],
+  "questions": [
+    "What exactly is the 'form factor E(1)' and where is it PROVEN for ζ(s)? If Montgomery's conjecture, why is Theorem 1 not labeled conditional?",
+    "Is the certificate class a faithful relaxation of the actual Levinson–Conrey optimization?",
+    "Is Theorem 3 unconditional? If yes, provide the unconditional proof of C ≤ 1.3277; if no, relabel and compare against Montgomery's conditional 2/3.",
+    "Where is the companion repository and verifier? Does the ceiling still hold without the hand-added defect correction?",
+    "Does 0.83621 follow from the on-line machinery, and what is the exact conditional status of each ingredient?"
+  ],
+  "missing_references": ["Montgomery (1973) pair correlation", "Montgomery–Odlyzko / Dyson GUE form factor", "Heath-Brown (1979) simple zeros", "Conrey–Ghosh–Gonek simple zeros", "Goldston–Gonek–Montgomery / Hughes–Rudnick", "Rudnick–Sarnak", "Bombieri–Lagarias (1999) Li criterion complements", "Coffey & Maslanka (λn numerics)", "Farmer–Gonek–Hughes"],
+  "soundness": 2, "presentation": 2, "contribution": 2, "overall": 3, "confidence": 4
+}
+```
+
+## CRITICAL DECISIVE QUESTION (all 3 reviewers + verifier converge here)
+Is the "pair-correlation form factor on [0,1]" / "two-point statistic E(1)" input to the certificate class:
+(a) a PROVEN/unconditional restriction (on the mollifier), or
+(b) Montgomery's pair-correlation CONJECTURE (conditional)?
+If (b): the paper's positioning collapses — 0.6733 is conditional, and Montgomery 1973 already gives κ ≥ 2/3 ≈ 0.6667 conditionally, so 0.6733 is a hair above a 1973 benchmark, NOT "above 5/12".
+This MUST be resolved from the actual math source files before any fix is applied.
