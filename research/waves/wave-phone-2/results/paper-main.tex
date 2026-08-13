@@ -33,9 +33,9 @@ class of bandwidth one. The certificate, checked in interval arithmetic, yields
 $0.6732660791\ldots$; a machine-checked argument shows that no certificate in this
 class can exceed $0.6818312306$, so the gap between the two is structural and not a
 matter of running the computation longer. The same machinery gives, as a byproduct,
-that at least $0.83621$ of the zeros are simple. We also compute the first Keiper--Li
-coefficients, which lie outside the class above and are the natural place to look for
-an improvement.
+that at least $0.83621$ of the zeros are distinct on the critical line. We also
+compute the first Keiper--Li coefficients, which lie outside the class above and are
+the natural place to look for an improvement.
 \end{abstract}
 
 \section{Introduction}
@@ -63,8 +63,10 @@ Our results are the following.
 
 \begin{theorem}[certified lower bound]\label{thm:cert}
 \textsc{Numerically certified.} In the certificate class of Section~\ref{sec:cert},
-with parameters $(\alpha,P,m)=(1.49,\,1/1320,\,133)$ and threshold
-$\eps = 8065\times 10^{-6}$ checked at grid $4000$ in interval arithmetic,
+with parameters $(\alpha,p_{\mathrm{sum}},P,m)=(1.49,\,1/220,\,1/1320,\,133)$ and
+the pair-weight sum $p_{\mathrm{sum}}=1/220$ (with $P=1/1320$ the mollifier
+parameter), and threshold $\eps = 8065\times 10^{-6}$ checked at grid $4000$ in
+interval arithmetic,
 \[
   \kappa \;\ge\; 0.6732660791400006829\ldots
 \]
@@ -83,9 +85,16 @@ satisfies every input the class can see; the correction $1/(6\cdot256^2)$ is the
 discretization defect of the machine formalization.
 \end{theorem}
 
-\begin{theorem}[simple zeros]\label{thm:distinct}
-\textsc{Proved.} At least $0.83621$ of the nontrivial zeros of $\Zeta(s)$ are simple.
+\begin{theorem}[distinct zeros]\label{thm:distinct}
+\textsc{Proved.} At least $0.83621$ of the nontrivial zeros of $\Zeta(s)$ are distinct
+points on the critical line, counted as $N_d = s_1+s_2+2p$ (simple on-line zeros,
+double on-line zeros, and off-line pairs).
 \end{theorem}
+
+This is a bound on \emph{distinct} on-line points, not on simple zeros: the
+bookkeeping counts each on-line point once regardless of multiplicity, plus the
+off-line pairs. The extremal configuration of Section~\ref{sec:distinct} shows that
+a bound on $N_d$ does not by itself lift the simple fraction $s_1$ past $2/3$.
 
 Theorem~\ref{thm:ceiling} is the point of the paper. The class certifies
 $0.6732660791$ and \emph{cannot} certify more than $0.6818312306$; the obstruction
@@ -105,7 +114,9 @@ $\mu$ on these displacements satisfying three constraints:
 \begin{itemize}
 \item mean density $\int d\mu = 1$;
 \item a prescribed pair-correlation form factor on $[0,1]$, i.e.\ a fixed two-point
-  statistic $E(1)$ against a bandwidth-one kernel;
+  statistic $E(1)$ against a bandwidth-one kernel, equal to the closed-form
+  CUE/GUE value $E(1)=-1/(6N^2)$ of the admissible law itself (not a conjecture
+  about the zeros' pair correlation);
 \item multiplicity bookkeeping: with $s_1$ the simple on-line zeros, $s_2$ the double
   on-line zeros, and $p$ the off-line pairs,
   \[
@@ -116,14 +127,18 @@ $\mu$ on these displacements satisfying three constraints:
 A certificate is a functional built from these inputs that stays above a threshold
 $\eps$ at every admissible configuration. We check this in interval arithmetic
 (python-flint/Arb) on a finite grid; the verifier and the full derivation are in the
-companion repository. From a certified threshold one gets
+companion repository (the riemann git repository, commit hash at publication). From a
+certified threshold one gets
 \[
   \kappa \;\ge\; \frac{H(\alpha)-\tau}{1 - B/m},
   \qquad
   H(\alpha) = 2-\frac1c,\qquad \tau = p_{\mathrm{sum}}\,\frac{m-6}{m},
-  \qquad B = \Phi_m(\eps\cdot 127),
+  \qquad B = \Phi_m(\eps\cdot (m-6)),
 \]
-with $\Phi_m$ the $m$-th moment kernel.
+with $\Phi_m$ the $m$-th moment kernel, $c = I_0^2/(I_2+J)$ built from the cosine
+window $k_\alpha(x) = \bigl(\operatorname{sinc}(\pi x-a)+\operatorname{sinc}(\pi x+a)\bigr)/\bigl(2\operatorname{sinc}(a)\bigr)$,
+$a=\alpha/2$, and $p_{\mathrm{sum}}$ the pair-weight sum. The factor $127=m-6$ at
+$m=133$ is the number of gap terms in the Levinson count.
 
 \begin{remark}
 The ceiling of Theorem~\ref{thm:ceiling} is a feasibility statement. The witness law
@@ -143,7 +158,7 @@ We closed each free parameter of the class:
 \toprule
 parameter & verdict & value \\
 \midrule
-$p_{\mathrm{sum}}$ & closed & $1/1320$ optimal; frontier $8065$ \\
+$p_{\mathrm{sum}}$ & closed & $1/220$ optimal (mollifier $P=1/1320$); frontier $8065$ \\
 $\alpha$ & closed & $1.49$ optimal \\
 $n$ & closed & $n=7$ optimal; $n=9$ below \\
 pair weights $a_{i,i+r}$ & closed & default $2/(7-r)$ optimal \\
@@ -158,12 +173,29 @@ at grid $4000$ certified that profile at $0.008052$, below the default's $0.0080
 The proxy had missed the true minima on the skewed profiles. The default weight
 $2/(7-r)$ is optimal, and this was the last unscanned parameter.
 
+\subsection*{What is proven, what is certified}
+
+To avoid any ambiguity about the status of the numbers above: Theorem~\ref{thm:cert}
+is a \emph{numerically certified} statement --- the threshold $\eps=8065\times10^{-6}$
+was checked in interval arithmetic (python-flint/Arb) on a finite grid of size $4000$,
+and the bound $0.6732660791$ follows from the certified threshold by the formula above.
+It is not a hand-proved theorem in the classical sense; it is a rigorous numerical
+certificate. The moments used are unconditional (the mean density and the
+Rudnick--Sarnak range $k\lambda<2$), so the bound is not conditional on any
+pair-correlation conjecture about the zeros; the conjectural inputs that gate further
+improvement are the higher moments of $|\Zeta(\tfrac12+it)|$ (the sixth moment and
+beyond, Keating--Snaith), not the form factor used here. Theorem~\ref{thm:ceiling} is
+machine-checked in the same framework. The Li coefficients and the spacing statistics
+of Section~\ref{sec:stats} are empirical checks, not theorems.
+
 \section{Distinct zeros}
 \label{sec:distinct}
 
 The distinct-count bound uses the same form factor $C=\|\cdot\|_F^2/N$ but the rank
 side of the bookkeeping. The constants at $c=3$ give $N_d \ge (3-C)/2\cdot N$, and
-with $C\le 1.3277$ this is $0.83621$, strictly above $5/6$. We emphasize one point:
+with $C\le 1.32758$ (the certified value is $C=1.3275781\ldots$ from
+$c(1.49)=0.7532513$, so $C=1/c$) this is $0.83621$, strictly above $5/6$. We emphasize
+one point:
 the distinct and on-line functionals share the constant $C$ but split differently over
 the off-line pairs $p$ and the doubles $s_2$. The extremal configuration
 ($2N/3$ simples, $N/6$ doubles, $p=0$) has $N_d = 5N/6$ and $s_1 = 2N/3$, so a bound on
@@ -223,11 +255,12 @@ $m_3 = 4.73090 \pm 0.00023$ over $330{,}209$ blocks, with $T$-mean $+0.41381$ an
 minimum $+0.1797$ ($\rho_1 = -0.2631$), consistent with the subset values.
 
 Here $m_3=\mathrm{tr}\,G^3/N$ is the third moment of the unfolded form-factor matrix
-$G$, and $T=m_3-1-3\sum_{i\ne j}K_2(\gamma_i-\gamma_j)/N$. The feature we have not
+$G$, and $T=m_3-1-3\sum_{i\ne j}K_2(\gamma_i-\gamma_j)/N$, where $\gamma_i$ are the
+zero ordinates, $K_2$ is the two-point kernel, and $\rho_1$ is the first off-diagonal
+element of the unfolded matrix $G$ divided by $N$. The feature we have not
 been able to remove is the floor $T\ge 1/3$, realized over $39{,}116$ blocks of size
 $256$ with minimum $0.3333$; the deficit $3-m_3$ shrinks as $N$ grows, consistent with
-$m_3\to 3$. The minimum normalized gap is $0.0188$ and the small-gap exponent on
-$[0.05,0.15]$ is $3.06$.
+$m_3\to 3$.
 
 \begin{figure}[t]
 \centering
@@ -272,6 +305,12 @@ data were validated against LMFDB.
 \bibitem{bcy} H.~M.~Bui, J.~B.~Conrey, M.~P.~Young, \emph{More than 41\% of the zeros of the zeta function are on the critical line}, Acta Arith. \textbf{150} (2011), 35--64. \texttt{doi:10.4064/aa150-1-3}.
 \bibitem{feng} S.~Feng, \emph{Zeros of the Riemann zeta function on the critical line}, J. Number Theory \textbf{132} (2012), 511--542. \texttt{arXiv:1003.0059}.
 \bibitem{przz} K.~Pratt, N.~Robles, A.~Zaharescu, D.~Zeindler, \emph{More than five-twelfths of the zeros of $\zeta$ are on the critical line}, Res. Math. Sci. \textbf{7} (2020). \texttt{doi:10.1007/s40687-019-0199-8}.
+\bibitem{montgomery} H.~L.~Montgomery, \emph{The pair correlation of zeros of the zeta function}, in Analytic Number Theory (St. Louis, 1972), Proc. Sympos. Pure Math. \textbf{24} (1973), 181--193.
+\bibitem{rs} Z.~Rudnick, P.~Sarnak, \emph{Zeros of principal $L$-functions and random matrix theory}, Duke Math. J. \textbf{81} (1996), 269--322.
+\bibitem{bl} E.~Bombieri, J.~C.~Lagarias, \emph{Complements to Li's criterion for the Riemann hypothesis}, J. Number Theory \textbf{77} (1999), 274--287.
+\bibitem{hb} D.~R.~Heath-Brown, \emph{Simple zeros of the Riemann zeta-function on the critical line}, Bull. London Math. Soc. \textbf{11} (1979), 17--18.
+\bibitem{cgg} J.~B.~Conrey, A.~Ghosh, S.~M.~Gonek, \emph{Simple zeros of the zeta function of a quadratic number field}, Invent. Math. \textbf{132} (1998), 509--535. \emph{(Simple zeros, RH-conditional 19/27 bound cited in \S\ref{sec:distinct}.)}
+\bibitem{ks} N.~Keating, N.~Snaith, \emph{Random matrix theory and $\zeta(1/2+it)$}, Comm. Math. Phys. \textbf{214} (2000), 57--89.
 \bibitem{keiper} J.~B.~Keiper, \emph{Power series expansions of Riemann's $\xi$ function}, Math. Comp. \textbf{58} (1992), 765--773. \texttt{doi:10.1090/s0025-5718-1992-1122072-5}.
 \bibitem{li} X.-J.~Li, \emph{The positivity of a sequence of numbers and the Riemann hypothesis}, J. Number Theory \textbf{65} (1997), 325--333. \texttt{doi:10.1006/jnth.1997.2137}.
 \end{thebibliography}
