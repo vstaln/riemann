@@ -1,5 +1,38 @@
 # Riemann Program
 
+## Scoreboard
+
+RH is **not proved**. Nothing below should be read as a proof of the Riemann hypothesis.
+
+| quantity | value | status |
+|---|---|---|
+| **Certified simple-on-line** (this repo) | **≥ 0.6734808616745137** (67.348%) | CHECKED (Arb coboundary, 3× identical) |
+| **Certified distinct zeros** | **≥ 0.8367404308372568** (83.674%) | affine corollary of the simple-on-line bound |
+| **In-class ceiling** (256-law, bandwidth ≤ 1) | **0.68182868746** simple fraction $p_0$; attained **$p_0+\frac1{6\cdot256^2}=0.68183123059$** | PROVEN (Lean PairCeiling / LP dual) |
+| Gap record → ceiling | $0.00835$ | arithmetic; needs a new input, not a tighter eps |
+| Anthropic 2026 (on the line) | ≥ 2/3; optimized **0.6725** $= \tfrac32-\frac1{\sqrt2}\cot\frac1{\sqrt2}$ | PROVEN (Conrey–Goldston; Lean) |
+| Anthropic distinct | ≥ 5/6 = 0.8333… | PROVEN |
+| Prior record (pre-Anthropic) | 41.6% on the line | Conrey 1989 line |
+
+**Record config** (`research/notes/FINAL-RECORD-2026-08-13.md`): $\alpha=1.464$, coboundary, $p_{\mathrm{sum}}=1/320$, $\varepsilon=0.00620$ (0.00621 fails), $m=171$, $H(1.464)=0.672467425578$, nodes $1{,}096{,}556$. Class exhausted at this saddle — no in-class tick on this pod.
+
+**Other constants**
+
+| quantity | value | status |
+|---|---|---|
+| $\xi'$ simple-on-line / distinct | $0.85838$ / $0.92919$ | Lean (FGL family); standalone, no interlacing transfer |
+| First-prime threshold $a_2=(\log 2)/2$ | $0.346573590280$ | Suzuki: $\lambda_a>0$ for $a<a_2$ |
+| $\mathrm{th}(a_2)=2A+1+\log a_2$ | $1.35543263017$ | (4.5) positivity threshold |
+| Even mean-zero $\mu_2$ (nested HS) | $\ge 1.6414$ | CHECKED; clears $\mathrm{th}(a_2)$ by $0.286$ |
+| Even mean-zero $R$ at $a_2$ | $\ge 0.213$ | CHECKED (Young $\|\rho''\|_1=0.072515$) |
+| Cosine $J+\rho-\mathrm{th}$ at $a_2$ | $+2.653824\times10^{-3}$ | CHECKED; dropping $\rho$ fails |
+| $\lambda_{a_2}>0$ (all even $w$) | open | ground-ray $O(1/k)$ lemma incomplete |
+| 67% record from this Weil line | unchanged | coboundary class is a different object |
+
+Paper draft of the Weil sector: `research/papers/weil-first-prime-even-sector.md`.
+
+---
+
 A persistent multi-agent research program attacking the **Riemann hypothesis** — and alongside it, any
 rigorous, novel mathematics about ζ and its zeros.
 
