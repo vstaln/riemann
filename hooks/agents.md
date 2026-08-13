@@ -122,6 +122,18 @@ Rules:
 
 Each round: PLANNERS decompose the problem → EXECUTIONERS attack components → VALIDATORS (adversarial) try to break every claim → JUDGES score surviving pieces → SYNTHESIZER merges → CRITIQUE LOOP repeats until no movement. Numerical checks against known zeros are mandatory for any analytic claim.
 
+## Subagent operation (binding)
+
+Config: `~/.pi/agent/agents/*.md` (adventurer, architect, builder, diagnose, planner, reviewer, writer).
+
+1. **Run in background always.** `run_in_background: true` is LOCKED in every agent file. The main loop dispatches and monitors; it never blocks on a foreground subagent.
+2. **Write-first context discipline (the fix for context death).** Subagents have died at 85–99% context before writing deliverables. Every agent file now binds: **write the deliverable after ≤3 file reads or the first 5 tool calls, whichever first; refine with ≤3 more reads.** A committed partial note beats a dead agent. If the agent notices context ≥ 80%, it writes immediately.
+3. **Compaction is not failure.** Subagent sessions auto-compact (pi event `subagents:compacted`, reasons manual/threshold/overflow). A compacted agent continues its task; it does not restart.
+4. **Agent roles & write access.** Write-capable: adventurer, architect, builder, writer (`write, edit`). Read-only: diagnose, planner, reviewer (return verdicts/plans, not files). The default `Explore` agent is read-only — route any write task to architect/builder/writer.
+5. **No duplicate levers.** Check `research/notes/` for an existing note on a lever before dispatching; duplicates waste the deepseek rate-limit budget (429s under concurrency) and produce nothing new.
+6. **Steer, don't kill.** A background agent that drifts (reading too much, grinding compute) is steered with a message telling it to write NOW — it is never killed and relaunched if it can still deliver.
+
+
 ## Skills: skills-for-humanity (s4h) — MANDATORY
 
 Reference: https://github.com/human-avatar/skills-for-humanity. Installed at
