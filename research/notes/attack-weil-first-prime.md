@@ -13,7 +13,7 @@ Weil positivity on every finite interval is equivalent to RH. Positivity is alre
 
 **What is new (this continuation):** the Poincaré overlap lemma is now **PROVEN** (elementary Hardy on endpoint strips). The saturating two-bump family is *not* a negative direction (`T/G(0) ≥ 0.386` through `a₃`). The pointwise Fourier multiplier of `T` is **negative even where positivity is known**, so a 1D infimum of `M_a(ξ)` cannot prove the lemma. Gershgorin / diagonal Schur on the Dirichlet matrix **fail** (off-diagonals `4–6×` the ground gap; positivity is a coherent cancellation). Frequency-side Ritz in the even Dirichlet subspace stays positive through the whole first-prime window, but the gap collapses from `1.5×10^{-3}` at `a₂` to `6×10^{-8}` at `a₃`. Prime-by-prime matrix certification will not reach RH; a uniform-in-`a` argument is required.
 
-**What is new (§21):** `r''(t)` is closed-form; Taylor is `−7/8 t² − t³/288 − 3t⁴/128`; Suzuki (4.5) matches `T` to `3×10^{-5}`; (4.6) matches `L` to `4×10^{-6}`; dropping `ρ` **fails** at `a₂` (`ν_{\mathrm{Ritz}}=1.348<1.355`); `ρ''≤−(3/10)t²` on `(0,20]` saves the J-ground state at `a₂` (`LB=+2.4×10^{-4}`) and dies near `a₃` on the cosine. A usable `μ₂` lower bound from (4.6)+type-1 is the remaining local-`δ` input.
+**What is new (§21):** `r''(t)` is closed-form; Taylor is `−7/8 t² − t³/288 − 3t⁴/128`; Suzuki (4.5) matches `T` to `3×10^{-5}`; (4.6) matches `L` to `4×10^{-6}`; dropping `ρ` **fails** at `a₂` (`ν_{\mathrm{Ritz}}=1.348<1.355`); `ρ''≤−(3/10)t²` on `(0,20]` saves the J-ground state at `a₂` (`LB=+2.4×10^{-4}`) and dies near `a₃` on the cosine. Even mean-zero `μ₂≥1.02797` (elementary `ξ²` envelope) — short of `threshold(a₂)=1.355` by `0.327`. Tightening that envelope is the local-`δ` input.
 
 RH is not proved. The certificate-class grind is not resumed.
 
@@ -531,7 +531,14 @@ On the cosine at `a₂`: `ρ_lo=0.00773 > 0.00657`, `LB=+0.00116`. On the J-grou
 
 `L(w)=(1/2π)∫(log|ξ|+γ)|ŵ(ξ)|² dξ` with `ŵ(ξ)=∫_{-1}^1 w(t)e^{-iξt}dt`. Uniform `ξ`-grid is a trap (log weight). Split log-grid near 0 + linear tail, closed `ŵ` of the cosine: `Plancherel=1.000001`, `L_ft−L_jump=−4×10^{-6}`. Average `log|ξ|=−0.21158`.
 
-Crude Paley–Wiener envelope `|ŵ|≤√(2/3)|ξ|‖w‖` on `{ŵ(0)=0}`, dropping the positive tail `|ξ|>e^{-γ}`: `L/‖w‖² ≥ −0.00417`. **ABANDONED** as a `μ₂` bound (vacuous vs `threshold(a₂)=1.355`). A usable `μ₂` lower bound from (4.6)+type-1 is the next lemma: it would reduce the first-prime window to a 1-mode calculation (complement of the even ground state).
+Crude Paley–Wiener envelope `|ŵ|≤√(2/3)|ξ|‖w‖` on `{ŵ(0)=0}`, dropping the positive tail `|ξ|>e^{-γ}`: `L/‖w‖² ≥ −0.00417`. **ABANDONED** as a `μ₂` bound (vacuous vs `threshold(a₂)=1.355`).
+
+**Even mean-zero envelope that keeps the tail — PROVEN elementary, constant CHECKED.**
+For even mean-zero `w` supported in `[-1,1]`: `|cos(ξt)−1|≤ξ²t²/2` ⇒ `|ŵ(ξ)|≤(ξ²/2)∫ t²|w|≤(ξ²/2)√(2/5)‖w‖`, so `|ŵ|²≤ξ⁴/10 ‖w‖²`. Hence the Plancherel mass in `|ξ|<Ω` is `≤ Ω⁵/(50π)`. The log-weight on `|ξ|<e^{-γ}` contributes `≥ −7.09×10^{-5}`. Therefore
+```
+μ₂ ≥ max_{Ω>1} (1 − Ω⁵/(50π))(log Ω + γ) − 7.09×10^{-5} = 1.02797
+```
+at `Ω=1.865` (`l_fourier.py`). This is a genuine lower bound (not Ritz), but it is `0.327` short of `threshold(a₂)=1.355` and `0.788` short of `threshold(a₃)`. Tightening the envelope (prolates / `min(ξ²t²/2, 2)`) is the remaining local-`δ` input; the crude `|ξ|` bound that dropped the tail is not.
 
 ### 21.8 What would prove a local `δ`, and what would prove RH
 

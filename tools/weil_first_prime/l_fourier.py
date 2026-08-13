@@ -190,7 +190,44 @@ def main() -> None:
     print(f"  e^{{-γ}}={x0:.6f}  ∫_0^{{x0}}(log+γ)ξ²={I_neg:.6f}")
     print(f"  L/‖w‖² ≥ {crude:.6f}  (drop |ξ|>e^{{-γ}}; vs th(a2)={C2A1+math.log(A2):.3f})")
 
-    print("\n=== VERDICT ===")
+    print("\n=== even mean-zero: |ŵ|≤(ξ²/2)√(2/5)‖w‖ ⇒ μ₂ lower bound ===")
+    # |cos(ξt)−1|≤ξ² t²/2 for all ξ, so even mean-zero:
+    # |ŵ(ξ)|≤(ξ²/2)∫ t²|w| ≤ (ξ²/2)√(2/5)‖w‖, |ŵ|²≤ξ⁴/10 ‖w‖².
+    # Low mass in |ξ|<Ω is ≤ Ω⁵/(50π). High mass ≥ 1−that.
+    # Negative log only on |ξ|<e^{−γ}; bound by the same envelope.
+    x0 = math.exp(-GAMMA)
+    I_neg4 = -(x0**5) / 25.0  # ∫_0^{x0} (log+γ) ξ^4 dξ
+    neg = (1.0 / (10.0 * math.pi)) * I_neg4  # (1/2π)*2*(1/10)*I_neg4
+    print(f"  negative-part lower bound ( |ξ|<e^{{-γ}} ) = {neg:.8e}")
+
+    def lb(Om: float) -> tuple[float, float, float]:
+        low = (Om**5) / (50.0 * math.pi)
+        if low >= 1.0:
+            return (-1e99, low, 0.0)
+        high = 1.0 - low
+        val = high * (math.log(Om) + GAMMA) + neg
+        return val, low, high
+
+    best = -1e99
+    bestO = 1.0
+    print(f"{'Ω':>8} {'low-mass≤':>12} {'high≥':>10} {'L/‖w‖² ≥':>12}")
+    Om = 1.0
+    while Om <= 2.70:
+        val, low, high = lb(Om)
+        if abs(Om * 20 - round(Om * 20)) < 1e-9 or abs(Om - 1.0) < 1e-12:
+            print(f"{Om:8.3f} {low:12.6f} {high:10.6f} {val:12.6f}")
+        if val > best:
+            best, bestO = val, Om
+        Om += 0.05
+    # refine
+    for Om in np.linspace(bestO - 0.05, bestO + 0.05, 21):
+        if Om <= 1.0:
+            continue
+        val, _, _ = lb(float(Om))
+        if val > best:
+            best, bestO = val, float(Om)
+    print(f"  max = {best:.8f} at Ω={bestO:.4f}  vs threshold(a2)={C2A1+math.log(A2):.4f}  th(a3)={C2A1+math.log(A3):.4f}")
+    print("  (PROVEN elementary envelope; number is the max of an explicit function of Ω.)")
     print("  If L_ft matches L_jump to ~1e-3, (4.6) is implemented with this FT convention.")
     print("  If J-ground LB>0, ρ_lower saves the variational ground state of J at a2.")
     print("  If global min(−ρ''/t²)>0 and max ρ''<0, ρ''<0 for all t in the scan.")
