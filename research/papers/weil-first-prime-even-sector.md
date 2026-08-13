@@ -41,6 +41,8 @@ The even ground ray (nonzero mean) is not closed: the cosine test function itsel
 
 The discovery is a **sector theorem plus a method**: the even mean-zero complement of the first-prime endpoint is under explicit control, by a Paley–Wiener nested envelope rather than a Ritz upper bound. That is the Anthropic-shaped object (a checkable inequality about Weil’s form). It is not RH.
 
+**Credits.** Weil-form identities are Weil, Yoshida, Bombieri, and Suzuki — we did not invent them. The 67% simple-on-line class this note sits next to is Anthropic / [zeta-23-lean](https://github.com/anthropics/zeta-23-lean) (Theorems A–E), then [ainta](https://github.com/ainta/zeta-simple-zeros), [trmdy](https://github.com/trmdy/zeta-simple-zeros-673137), and [tawanerguo](https://github.com/tawanerguo-cn/zeta-simple-zeros) (our certified record uses their coboundary $(p,q)$ unchanged). Full git URLs: README Credits.
+
 ---
 
 ## 2. Setup (Suzuki (4.5)–(4.6))

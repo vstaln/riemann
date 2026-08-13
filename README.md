@@ -46,6 +46,9 @@ This repo did not invent the certificate class. The record is a transfer of othe
 | [openai/ten-proofs](https://github.com/openai/ten-proofs) | Lean-formalized method examples (not a zeta bound). Mined for certificate / Lean hygiene. |
 | [leanprover-community/mathlib4](https://github.com/leanprover-community/mathlib4) | Lean standard library under the Anthropic formalization. |
 | [AlexKontorovich/PrimeNumberTheoremAnd](https://github.com/AlexKontorovich/PrimeNumberTheoremAnd) | PNT-in-Lean material used by zeta-23-lean. |
+| [human-avatar/skills-for-humanity](https://github.com/human-avatar/skills-for-humanity) | s4h thinking skills in the agent charter (`hooks/agents.md`). Process, not a zeta bound. |
+
+**Named people (67% line):** Claude / Anthropic (Theorems A–E); Conrey & Goldston (verification); ainta (Gram-stability); trmdy (trig window); tawanerguo (coboundary $(p,q)$). **Named people (Weil line):** Weil, Yoshida, Bombieri, Suzuki.
 
 **Papers (the analytic inputs)**
 
