@@ -27,24 +27,29 @@
 \maketitle
 
 \begin{abstract}
-We give a lower bound for the proportion of nontrivial zeros of the Riemann zeta
-function lying on the critical line, obtained inside a Levinson--Conrey certificate
-class of bandwidth one. The certificate, checked in interval arithmetic, yields
-$0.6732660791\ldots$; a machine-checked argument shows that no certificate in this
-class can exceed $0.6818312306$, so the gap between the two is structural and not a
-matter of running the computation longer. The same machinery gives, as a byproduct,
-that at least $0.83621$ of the zeros are distinct on the critical line. We also
-compute the first Keiper--Li coefficients, which lie outside the class above and are
-the natural place to look for an improvement.
+We prove that the bandwidth-one Levinson--Conrey certificate class cannot certify
+more than $0.6818312306$ of the zeros of $\Zeta(s)$ on the critical line, and we
+exhibit a certificate in that class that certifies $0.6732660791\ldots$. The ceiling
+is machine-checked: any certificate reading only the mean density, the
+pair-correlation form factor on $[0,1]$, and multiplicity integrality is valid
+against a witness configuration with simple-point fraction
+$p_0=0.68182868746\ldots$, and the $1/(6\cdot256^2)$ correction is the
+discretization defect of the formalization. The lower bound is certified in interval
+arithmetic (python-flint/Arb) at threshold $\eps=8065\times10^{-6}$ on a grid of
+$4000$ points. The two numbers bracket the class. The same bookkeeping gives at
+least $0.83621$ for the proportion of distinct points on the line, and the first
+twelve Keiper--Li coefficients, computed to twenty digits, lie outside the class,
+where the ceiling does not apply.
 \end{abstract}
 
 \section{Introduction}
 
 Showing that a positive proportion of the zeros of $\Zeta(s)$ lie on the critical
 line has a long history. Levinson \cite{levinson} proved more than one third;
-Conrey \cite{conrey} more than two fifths; Bui--Conrey--Young \cite{bcy} and
-Feng \cite{feng} pushed the constant past $0.41$; and Pratt--Robles--Zaharescu--Zeindler
-\cite{przz} proved the current unconditional record
+Conrey \cite{conrey} more than two fifths; Bui--Conrey--Young \cite{bcy} pushed the
+constant past $0.41$; Feng \cite{feng} to $0.4128$; and
+Pratt--Robles--Zaharescu--Zeindler \cite{przz} proved the current unconditional
+record
 \[
   \kappa \;\ge\; \tfrac{5}{12} \;\approx\; 0.4167 .
 \]
@@ -56,8 +61,8 @@ next moment is not known unconditionally.
 This paper works in a restricted class of certificates, which we describe in
 Section~\ref{sec:cert}. Inside that class we can say more, and we can also say
 precisely where the class stops. Throughout, we distinguish statements that are
-proved (or machine-checked) from those that are only numerically certified; for this
-problem the distinction matters, and we mark it in each theorem.
+proved (or machine-checked) from those that are only numerically certified, and we
+mark the distinction in each theorem.
 
 Our results are the following.
 
@@ -96,11 +101,11 @@ bookkeeping counts each on-line point once regardless of multiplicity, plus the
 off-line pairs. The extremal configuration of Section~\ref{sec:distinct} shows that
 a bound on $N_d$ does not by itself lift the simple fraction $s_1$ past $2/3$.
 
-Theorem~\ref{thm:ceiling} is the point of the paper. The class certifies
-$0.6732660791$ and \emph{cannot} certify more than $0.6818312306$; the obstruction
-is a feasible configuration, not missing precision. Getting past $0.6818$ therefore
-requires a different class of certificate, not a better run of this one.
-Section~\ref{sec:li} takes one step in that direction.
+Theorem~\ref{thm:ceiling} is the ceiling. The class certifies
+$0.6732660791$ and cannot certify more than $0.6818312306$; the witness for the
+ceiling is a feasible configuration, not a failure of precision. A better run of
+this certificate will not pass $0.6818$. Section~\ref{sec:li} looks at a
+certificate of a different kind.
 
 \section{The certificate class}
 \label{sec:cert}
@@ -290,10 +295,11 @@ $10^7$ zeros.}
 
 \section*{Remark}
 
-The two bounds in Theorems~\ref{thm:cert} and \ref{thm:ceiling} bracket what this
-class of certificate can do, and the class is now closed in every parameter. The
-improvement we are after --- a bound past $0.6818$ --- has to come from a new input or
-a narrower adversary class, and Li's criterion is the candidate we are pursuing.
+The two bounds in Theorems~\ref{thm:cert} and \ref{thm:ceiling} bracket this
+certificate class: $0.6732660791$ certified below, $0.6818312306$ proven above, and
+every free parameter of the class (pair-weight sum, $\alpha$, family size, pair
+weights) closed by search. Past $0.6818$ there is no better run; there is only a
+different class. Section~\ref{sec:li} is one such class, of a different kind.
 
 \subsection*{Acknowledgments}
 The interval-arithmetic certification was done with python-flint/Arb, and the zero
