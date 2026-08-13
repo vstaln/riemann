@@ -234,7 +234,8 @@ with `Σ |c_ρ|² = 1` and at least half the `ℓ²` mass on the off-line zeros.
 - PROVEN (elementary, §10): Poincaré overlap `|G(log 2)| ≤ ε² ‖v'‖_{L²(-a,a)}²` for `a=a₂+ε`.
 - CHECKED NUMERICALLY (`python3 tools/weil_first_prime/probe.py` and the N-convergence snippet): all tables in §2–§4; self-checks passed.
 - CHECKED NUMERICALLY (`python3 tools/weil_first_prime/lower_bound.py`, `diagnose_neg.py`, `dirichlet_matrix.py`, `multiplier.py`, `dirichlet_ft.py`, `screw_kernel.py`, `dirichlet_vs_prime.py`): §§10–14, §§17–19.
-- CONJECTURED: the Lemma in §5; Bombieri (iii) uniqueness in the infinite on-line class; Suzuki limit formula (1.12); `r(t)=−(7/8)t²+O(t⁴)` exactly.
+- CONJECTURED: the Lemma in §5; Bombieri (iii) uniqueness in the infinite on-line class; Suzuki limit formula (1.12); explicit O(t⁴) constant in `r(t)`.
+- PROVEN (elementary Taylor of Suzuki (2.2)): `r(t)=−(7/8)t²+O(t⁴)` for `0<t<log 2`.
 - INCONCLUSIVE: sign of `λ_a` on `(a₂, a₃)` (Ritz upper bounds only; remainder not a proof; gap at `a₃` is `10^{-8}`).
 - ABANDONED: crude prime bound; in-class certificate grind as an RH route; Gershgorin/Schur decoupling; pointwise multiplier positivity; prime-by-prime matrix grind as an RH route.
 - No zeros were computed. No coboundary verifier was rerun.
@@ -397,7 +398,7 @@ Suzuki (1.3) implemented via the Gradshteyn expansion of the Lerch piece in §2.
 | evenness | odd part `0` | `0` |
 | `ζ(0,1/4)` via Bernoulli | `0.25` | `1/4` (Suzuki) |
 | `A_emp(t=10^{-3})` | `0.70667136` | `A=0.70754637` (rel `1.24×10^{-3}`, the `O(t)` in `r(t)/|t|`) |
-| `r(t)/t²` as `t→0` | `−0.87500039` at `t=10^{-4}` | CONJECTURED exact `−7/8` |
+| `r(t)/t²` as `t→0` | `−0.87500039` at `t=10^{-4}` | **PROVEN** `−7/8` (Taylor of (2.2): polar contributes `−t²`, `n=2` Hurwitz `ζ(0,1/4)=1/4` contributes `+t²/8`; DSV4F independently re-derived the same three lines; script prints `r/t²`) |
 
 Nyström of the compact kernel `K(t,u)=g(t-u)-g(t)-g(u)` on mean-zero `L²(-a,a)`: `n_neg=0` through `a₃` on grids up to `n=81`. **This does not prove `λ_a>0`.** `G` is compact, spectrum accumulates at `0`, so `min_nz→0` under refinement even when the operator is positive. `Q_W(v)=⟨G Dv, Dv⟩`; the useful operator is `D*GD`, i.e. `T` again. **ABANDONED** as a better lower-bound encoding.
 
@@ -441,7 +442,11 @@ T − [log(1/a) − (2A+1) + L]  ≈  2.86 a
 
 for `a∈[0.10, 0.45]` (coefficient `2.84, 2.85, 2.86`). Matching the rank-one approximation `−a r''(0)(∫w)²/‖w‖²` with `r''(0)=−7/4` and `∫w=4/π` gives `a·(7/4)·16/π² ≈ 2.837 a`. The O(10^{-3}) gap at `a₂` is this three-way cancellation (`L`, `log(1/a)−(2A+1)`, and the `r''` rank-one) to relative error `~10^{-3}`. Primes then hit that remainder.
 
-**Next lemma (CONJECTURED, the deliverable):** `r(t)=−(7/8)t² + O(t⁴)` exactly from the polar+Hurwitz expansion, with an explicit O(t⁴) bound. Then the last line of (4.5) is `(7/4)a (∫w)² + O(a³)‖w‖²`, and the O(a³) (size `~0.04` at `a₂` if the constant is 1 — possibly larger than the gap) is what an interval remainder must control. That is still a local `δ` past `a₂` if the constant is small enough; it is not yet uniform in `a`.
+**Lemma (t² remainder) — PROVEN, elementary.** For `t>0` smaller than `log 2` (no primes),
+`r(t) := g(t) − (1/2)t log t − A t` satisfies `r(t) = −(7/8) t² + O(t⁴)`.
+Proof: polar `−4(e^{t/2}+e^{-t/2}−2) = −t² + O(t⁴)`; `F(t)−F(0)` has `t²` coefficient `ζ(0,1/4)·4t²/2 = t²/2`; `(1/4)` of that is `t²/8`. Linear and `t log t` pieces sit in `(1/2)t log t + A t`. CHECKED: `r(t)/t² = −0.87500039` at `t=10^{-4}` (`screw_kernel.py`).
+
+Then the last line of (4.5) is `(7/4)a (∫w)² + O(a³)‖w‖²`, and the O(a³) (size `~0.04` at `a₂` if the constant is 1 — possibly larger than the gap) is what an interval remainder must control. That is still a local `δ` past `a₂` if the constant is small enough; it is not yet uniform in `a`.
 
 Cheap model: OpenCode Go `deepseek-v4-flash` with `thinking.disabled` (otherwise the whole `max_tokens` budget is hidden reasoning and `content` is empty). Key is not in the repo. DSV4F drafts were not trusted for numbers: one draft called `L_a=0.967` “below zero”; that error is discarded.
 
