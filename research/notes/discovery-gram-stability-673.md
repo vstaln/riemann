@@ -61,3 +61,6 @@ The extra **tr Ψ(M) > 0** term is:
 - seven-point bound: (1345000·H0 − 2680)/1340003 → 0.673008527927... (67.3008528%)
 - in-class ceiling p₀ + |E(1)| = 0.68183123059534187426; p₀ = 0.68182868746383147426 (256-law)
 - 2/3 = 0.66666666666666666667 (Theorem A); 5/6 distinct (Theorem C)
+
+## ⚠️ RETRACTED (2026-08-12)
+This claim is INVALID — see research/notes/retraction-673-invalid.md (kernel double-normalization bug in verify_cos7.py: w(0)=1.2075≠1; true floor ≈0.00779; corrected bound ≈0.673088 below external mechanisms).
