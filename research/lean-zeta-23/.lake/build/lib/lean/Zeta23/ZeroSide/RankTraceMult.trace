@@ -1,0 +1,61 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["625d000c5ce508bf.olean"],
+  "m": false,
+  "i": "732065c64589f508.ilean",
+  "c": "9661ec00ff3377db.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/vstaln/riemann/research/lean-zeta-23/.lake/packages/Cli/.lake/build/lib/lean:/home/vstaln/riemann/research/lean-zeta-23/.lake/packages/batteries/.lake/build/lib/lean:/home/vstaln/riemann/research/lean-zeta-23/.lake/packages/Qq/.lake/build/lib/lean:/home/vstaln/riemann/research/lean-zeta-23/.lake/packages/aesop/.lake/build/lib/lean:/home/vstaln/riemann/research/lean-zeta-23/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/vstaln/riemann/research/lean-zeta-23/.lake/packages/importGraph/.lake/build/lib/lean:/home/vstaln/riemann/research/lean-zeta-23/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/vstaln/riemann/research/lean-zeta-23/.lake/packages/plausible/.lake/build/lib/lean:/home/vstaln/riemann/research/lean-zeta-23/.lake/packages/mathlib/.lake/build/lib/lean:/home/vstaln/riemann/research/lean-zeta-23/.lake/build/lib/lean /home/vstaln/.elan/toolchains/leanprover--lean4---v4.33.0-rc2/bin/lean /home/vstaln/riemann/research/lean-zeta-23/Zeta23/ZeroSide/RankTraceMult.lean -o /home/vstaln/riemann/research/lean-zeta-23/.lake/build/lib/lean/Zeta23/ZeroSide/RankTraceMult.olean -i /home/vstaln/riemann/research/lean-zeta-23/.lake/build/lib/lean/Zeta23/ZeroSide/RankTraceMult.ilean -c /home/vstaln/riemann/research/lean-zeta-23/.lake/build/ir/Zeta23/ZeroSide/RankTraceMult.c --setup /home/vstaln/riemann/research/lean-zeta-23/.lake/build/ir/Zeta23/ZeroSide/RankTraceMult.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Zeta23/ZeroSide/RankTraceMult.lean:49:32: Variable name `ht0` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _ht0\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+   "level": "warning"},
+  {"message":
+   "Zeta23/ZeroSide/RankTraceMult.lean:49:60: Variable name `hx` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _hx\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+   "level": "warning"},
+  {"message":
+   "Zeta23/ZeroSide/RankTraceMult.lean:56:30: Variable name `hc` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _hc\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+   "level": "warning"},
+  {"message":
+   "Zeta23/ZeroSide/RankTraceMult.lean:56:43: Variable name `hx` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _hx\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+   "level": "warning"},
+  {"message":
+   "Zeta23/ZeroSide/RankTraceMult.lean:81:32: Variable name `hp` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _hp\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+   "level": "warning"},
+  {"message":
+   "Zeta23/ZeroSide/RankTraceMult.lean:81:58: Variable name `hc` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _hc\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+   "level": "warning"},
+  {"message":
+   "Zeta23/ZeroSide/RankTraceMult.lean:164:20: This simp argument is unused:\n  Matrix.mul_assoc\n\nHint: Omit it from the simp argument list.\n  [apply] simp\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Zeta23/ZeroSide/RankTraceMult.lean:359:28: Variable name `hc` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _hc\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Zeta23/Zeta23:extraDep", [["@Zeta23:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Zeta23.LinAlg transitive imports (legacy)", "683c07bef1fd5fd4"],
+      ["Zeta23.LinAlg:importAllArts", "d04564717a6da4fd"],
+      ["Mathlib.LinearAlgebra.Lagrange transitive imports (legacy)",
+       "8f30b9f175c5faa0"],
+      ["Mathlib.LinearAlgebra.Lagrange:importAllArts", "bbf07b2e4d0f753a"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.33.0, commit d8b18978322de05a8f3dba51ef03cf5461676c17",
+   "3eca9d16ab6c877d"],
+  ["/home/vstaln/riemann/research/lean-zeta-23/Zeta23/ZeroSide/RankTraceMult.lean",
+   "560652da9714f0ba"],
+  ["options",
+   [["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Zeta23.ZeroSide.RankTraceMult", "c55a665d3c2f646b"],
+  ["Package.id?: (some Zeta23)", "31803ca4013655a1"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "407054045e3189f3"}

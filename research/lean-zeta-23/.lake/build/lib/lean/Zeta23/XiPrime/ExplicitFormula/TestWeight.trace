@@ -1,0 +1,51 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["b37d5a4cce6582a2.olean"],
+  "m": false,
+  "i": "e45084fbe003fde5.ilean",
+  "c": "85d1d78aa0171b5f.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/vstaln/riemann/research/lean-zeta-23/.lake/packages/Cli/.lake/build/lib/lean:/home/vstaln/riemann/research/lean-zeta-23/.lake/packages/batteries/.lake/build/lib/lean:/home/vstaln/riemann/research/lean-zeta-23/.lake/packages/Qq/.lake/build/lib/lean:/home/vstaln/riemann/research/lean-zeta-23/.lake/packages/aesop/.lake/build/lib/lean:/home/vstaln/riemann/research/lean-zeta-23/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/vstaln/riemann/research/lean-zeta-23/.lake/packages/importGraph/.lake/build/lib/lean:/home/vstaln/riemann/research/lean-zeta-23/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/vstaln/riemann/research/lean-zeta-23/.lake/packages/plausible/.lake/build/lib/lean:/home/vstaln/riemann/research/lean-zeta-23/.lake/packages/mathlib/.lake/build/lib/lean:/home/vstaln/riemann/research/lean-zeta-23/.lake/build/lib/lean /home/vstaln/.elan/toolchains/leanprover--lean4---v4.33.0-rc2/bin/lean /home/vstaln/riemann/research/lean-zeta-23/Zeta23/XiPrime/ExplicitFormula/TestWeight.lean -o /home/vstaln/riemann/research/lean-zeta-23/.lake/build/lib/lean/Zeta23/XiPrime/ExplicitFormula/TestWeight.olean -i /home/vstaln/riemann/research/lean-zeta-23/.lake/build/lib/lean/Zeta23/XiPrime/ExplicitFormula/TestWeight.ilean -c /home/vstaln/riemann/research/lean-zeta-23/.lake/build/ir/Zeta23/XiPrime/ExplicitFormula/TestWeight.c --setup /home/vstaln/riemann/research/lean-zeta-23/.lake/build/ir/Zeta23/XiPrime/ExplicitFormula/TestWeight.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Zeta23/XiPrime/ExplicitFormula/TestWeight.lean:903:13: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead",
+   "level": "warning"},
+  {"message":
+   "Zeta23/XiPrime/ExplicitFormula/TestWeight.lean:912:13: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead",
+   "level": "warning"},
+  {"message":
+   "Zeta23/XiPrime/ExplicitFormula/TestWeight.lean:945:11: `HasSubset.Subset.eventuallyLE` has been deprecated: Use `LE.le.eventuallyLE` instead\n\nNote: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.eventuallyLE` to `LE.le.eventuallyLE x`).",
+   "level": "warning"},
+  {"message":
+   "Zeta23/XiPrime/ExplicitFormula/TestWeight.lean:983:11: `HasSubset.Subset.eventuallyLE` has been deprecated: Use `LE.le.eventuallyLE` instead\n\nNote: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.eventuallyLE` to `LE.le.eventuallyLE x`).",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Zeta23/Zeta23:extraDep", [["@Zeta23:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Zeta23.XiPrime.ExplicitFormula transitive imports (legacy)",
+       "2d431839492c6205"],
+      ["Zeta23.XiPrime.ExplicitFormula:importAllArts", "8f4a9cc21b517c04"],
+      ["Zeta23.Hypotheses.GzGp transitive imports (legacy)",
+       "768ce4ea437bbd99"],
+      ["Zeta23.Hypotheses.GzGp:importAllArts", "3ee7d5d1557e74d1"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.33.0, commit d8b18978322de05a8f3dba51ef03cf5461676c17",
+   "3eca9d16ab6c877d"],
+  ["/home/vstaln/riemann/research/lean-zeta-23/Zeta23/XiPrime/ExplicitFormula/TestWeight.lean",
+   "9dfbddcc4929f249"],
+  ["options",
+   [["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Zeta23.XiPrime.ExplicitFormula.TestWeight",
+   "ef6d34f1fb4443e1"],
+  ["Package.id?: (some Zeta23)", "31803ca4013655a1"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "83f621ca0ce26420"}

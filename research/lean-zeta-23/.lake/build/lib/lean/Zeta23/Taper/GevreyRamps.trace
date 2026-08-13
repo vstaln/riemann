@@ -1,0 +1,48 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["b19105772c2d64da.olean"],
+  "m": false,
+  "i": "ebc0a39cf74fa93e.ilean",
+  "c": "000cc7775ebc4942.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/vstaln/riemann/research/lean-zeta-23/.lake/packages/Cli/.lake/build/lib/lean:/home/vstaln/riemann/research/lean-zeta-23/.lake/packages/batteries/.lake/build/lib/lean:/home/vstaln/riemann/research/lean-zeta-23/.lake/packages/Qq/.lake/build/lib/lean:/home/vstaln/riemann/research/lean-zeta-23/.lake/packages/aesop/.lake/build/lib/lean:/home/vstaln/riemann/research/lean-zeta-23/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/vstaln/riemann/research/lean-zeta-23/.lake/packages/importGraph/.lake/build/lib/lean:/home/vstaln/riemann/research/lean-zeta-23/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/vstaln/riemann/research/lean-zeta-23/.lake/packages/plausible/.lake/build/lib/lean:/home/vstaln/riemann/research/lean-zeta-23/.lake/packages/mathlib/.lake/build/lib/lean:/home/vstaln/riemann/research/lean-zeta-23/.lake/build/lib/lean /home/vstaln/.elan/toolchains/leanprover--lean4---v4.33.0-rc2/bin/lean /home/vstaln/riemann/research/lean-zeta-23/Zeta23/Taper/GevreyRamps.lean -o /home/vstaln/riemann/research/lean-zeta-23/.lake/build/lib/lean/Zeta23/Taper/GevreyRamps.olean -i /home/vstaln/riemann/research/lean-zeta-23/.lake/build/lib/lean/Zeta23/Taper/GevreyRamps.ilean -c /home/vstaln/riemann/research/lean-zeta-23/.lake/build/ir/Zeta23/Taper/GevreyRamps.c --setup /home/vstaln/riemann/research/lean-zeta-23/.lake/build/ir/Zeta23/Taper/GevreyRamps.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Zeta23/Taper/GevreyRamps.lean:73:88: `ENat.coe_lt_top` has been deprecated: Use `ENat.natCast_lt_top` instead",
+   "level": "warning"},
+  {"message":
+   "Zeta23/Taper/GevreyRamps.lean:211:83: This simp argument is unused:\n  Rp\n\nHint: Omit it from the simp argument list.\n  [apply] simp\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Zeta23/Taper/GevreyRamps.lean:213:83: This simp argument is unused:\n  Rm\n\nHint: Omit it from the simp argument list.\n  [apply] simp\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Zeta23/Zeta23:extraDep", [["@Zeta23:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Zeta23.Taper.Gevrey transitive imports (legacy)", "253da210472db649"],
+      ["Zeta23.Taper.Gevrey:importAllArts", "0b24225a64151316"],
+      ["Zeta23.Taper.GevreyPhi transitive imports (legacy)",
+       "92f21b4b4f7c5605"],
+      ["Zeta23.Taper.GevreyPhi:importAllArts", "c3977b6457db601d"],
+      ["Zeta23.Taper transitive imports (legacy)", "ec30ba9ac4b49447"],
+      ["Zeta23.Taper:importAllArts", "33ffafc2c6bb0a6d"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.33.0, commit d8b18978322de05a8f3dba51ef03cf5461676c17",
+   "3eca9d16ab6c877d"],
+  ["/home/vstaln/riemann/research/lean-zeta-23/Zeta23/Taper/GevreyRamps.lean",
+   "98949e8eeb5c4a27"],
+  ["options",
+   [["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Zeta23.Taper.GevreyRamps", "7eae33c6bf0d8f61"],
+  ["Package.id?: (some Zeta23)", "31803ca4013655a1"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "d8685bf2ae0d2d95"}

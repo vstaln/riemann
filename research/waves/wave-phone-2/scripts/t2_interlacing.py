@@ -32,30 +32,21 @@ US = ['15.5857085898293423445957292355', '22.0979772804009020982460583653',
       '76.2254379706120628126703379202', '77.9978720250931747998206833418']
 ups = [mp.mpf('0.0')] + [mp.mpf(u) for u in US]  # xi' also has zero at t=0 (odd)
 
-counts, roots, bad = [], [], 0
+counts, bad = [], 0
 for i in range(len(ups)-1):
     a, b = ups[i], ups[i+1]
-    # coarse sign-change scan, then bisect (proven pattern; ~60 evals/gap at dps=40)
-    n_coarse = 64
-    ivs, prev, t = [], H2(a)[0], a
-    for j in range(1, n_coarse+1):
-        t = a + (b-a)*j/n_coarse
+    step = (b-a)/4000
+    n_zeros, prev, t = 0, H2(a)[0], a
+    while t < b:
+        t += step
         cur = H2(t)[0]
-        if prev*cur < 0: ivs.append((t - (b-a)/n_coarse, t))
+        if prev*cur < 0: n_zeros += 1
         prev = cur
-    rts = []
-    for (la, lb) in ivs:
-        for _ in range(150):
-            m = (la+lb)/2
-            if H2(la)[0]*H2(m)[0] <= 0: lb = m
-            else: la = m
-        rts.append((la+lb)/2)
-    counts.append(len(rts)); roots.append(rts)
-    if len(rts) != 1: bad += 1
+    counts.append(n_zeros)
+    if n_zeros != 1: bad += 1
 immax = max(abs(H2(t)[1]) for i in range(len(ups)-1) for t in [ups[i], (ups[i]+ups[i+1])/2, ups[i+1]])
 print("gaps checked:", len(counts))
 print("one-xi''-per-gap counts:", counts)
-print("xi''-roots (first 5 gaps):", [mp.nstr(r[0], 12) for r in roots[:5]])
 print("PERFECT_INTERLACING" if bad == 0 else f"MISMATCH: {bad} gaps")
 print("max |Im H2| at endpoints/midpoints:", mp.nstr(immax, 5))
 print("xi''(1/2) = -H2(0) =", mp.nstr(-H2(0)[0], 15))
