@@ -192,3 +192,29 @@ method), `test-driven-development` (verifier work).
 - research/notes/ — proof map, literature map, verification reports, attack log
 - tools/ — numerical toolkit (Rust-first; legacy Python + mpmath where already certified)
 - PLAN.md — the plan; hooks/agents.md — these hooks
+
+## Compute discipline (BINDING — user directive 2026-08-13)
+
+- **Before any CPU-bound run, ask: "is this necessary? does it take long? minimize compute."**
+  The user's standing instruction: never launch long-running commands that could take days
+  unless there is no cheaper path, and always prefer the cheapest run that answers the question.
+- Single verification runs at a RECORDED eps (a few minutes) are fine. What is NOT allowed:
+  open-ended sweeps, loops that re-run the verifier many times, or background jobs left running
+  "to see what happens". Every run must state the belief it changes and its expected runtime.
+- Cheap-first order: (1) closed-form math, (2) float scalar probes (<1 min), (3) one bounded
+  verifier run, (4) only then a small loop — and kill it the moment it stops paying for itself.
+- If a route needs >~20 minutes of compute to reach its next decision point, stop and rethink
+  the route first (or write the state to a note and revisit cheaply).
+
+## Persistence (BINDING — user directive 2026-08-13)
+
+- **NEVER EVER STOP until a proof of the Riemann Hypothesis (or an unconditional
+  structural theorem that settles it) is found and verified.** This is the project's
+  terminal goal, standing user directive. No dead end is final: a failure is a documented
+  result that narrows the search space; every closed lever produces the next open one.
+- Between record-pushing (the 0.673481→0.6818 certified-bound ladder) and proof-seeking
+  (structural RH attack), always keep at least one thread on the structural side.
+  Never let the certified-record thread become the only activity.
+- Continue dispatching the next lever without pausing for permission. Check in with a
+  progress report only when a milestone lands (new record, theorem, or closed lever),
+  or a genuine blocker stops progress.
