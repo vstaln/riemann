@@ -9,7 +9,7 @@
 
 ## 0. Verdict up front
 
-Weil positivity on every finite interval is equivalent to RH. Positivity is already proved on the *prime-free* interval `a < (log 2)/2`, and `λ_a` is continuous, so some first-prime survival is automatic. The crude bound that treats the prime-2 term as size `√2 log 2 ≈ 0.980` **cannot** push past the threshold (it is 600× the Ritz gap at `a = (log 2)/2`). The actual prime-2 matrix element is an *overlap* of size `O(10^{-2})`, not `O(1)`. In the 4–8 mode even Dirichlet subspace the Rayleigh quotient stays positive through the whole first-prime window — but Rayleigh–Ritz is an **upper** bound, and past `a₂` the value is a `10^{-5}` remainder after `O(1)` cancellation, so this does **not** prove `λ_a > 0` for `a > (log 2)/2`.
+Weil positivity on every finite interval is equivalent to RH. Positivity is already proved on the *prime-free* interval `a < (log 2)/2`. Continuity of `λ_a` does **not** by itself cross the first prime (the infimum could hit `0` at the endpoint). Yoshida’s finite calculation at `t = (log 2)/2` supplies the strict inequality at the threshold, hence some `δ`-neighborhood past it; that `δ` is not explicit. The crude bound that treats the prime-2 term as size `√2 log 2 ≈ 0.980` **cannot** produce an explicit `δ` (it is 600× the Ritz gap at `a = (log 2)/2`). The actual prime-2 matrix element is an *overlap* of size `O(10^{-2})`, not `O(1)`. In the 4–8 mode even Dirichlet subspace the Rayleigh quotient stays positive through the whole first-prime window — but Rayleigh–Ritz is an **upper** bound, and past `a₂` the value is a `10^{-5}` remainder after `O(1)` cancellation, so this does **not** prove `λ_a > 0` for `a > (log 2)/2`.
 
 **What is new:** a precise missing lemma (Yoshida’s “finite calculation depending on `t`”, now with one prime) and a diagnosed obstruction (need a *lower* bound at the `10^{-5}` scale, not more coboundary optimization).
 
@@ -43,7 +43,7 @@ Let `Q_W(v) = W(v * ṽ)` be Weil’s quadratic form and
 - `a₃ := (log 3)/2 ≈ 0.549306144334` — second-prime threshold
 - first-prime-only window: `a₂ < a < a₃`, width `(1/2)log(3/2) ≈ 0.202732554054`
 
-**Corollary (PROVEN, immediate).** Since `λ_{a₂} > 0` (Yoshida’s finite calculation) and `λ_a` is continuous, there exists `δ > 0` with `λ_a > 0` on `[0, a₂+δ)`. First-prime survival for *some* `δ` is not open. What is open is an **explicit** `δ ≥ a₃−a₂`, i.e. clearing the whole window before prime 3 appears.
+**Corollary (PROVEN, given Yoshida’s endpoint check).** Suzuki gives `λ_a > 0` only on the open interval `a < a₂`. Continuity alone does **not** push past `a₂` (the infimum could tend to `0` at the endpoint). What does: Yoshida’s finite calculation that positivity still holds *at* `t = a₂` (Bombieri p.184), hence `λ_{a₂} > 0`, hence by continuity a neighborhood `a < a₂+δ`. First-prime survival for *some* `δ` is therefore in the literature, but the `δ` is not explicit and is not known to reach `a₃`.
 
 ---
 
