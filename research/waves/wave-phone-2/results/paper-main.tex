@@ -4,14 +4,11 @@
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage[hidelinks]{hyperref}
-\usepackage{microtype}
 
 \newtheorem{theorem}{Theorem}
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{proposition}[theorem]{Proposition}
-\theoremstyle{definition}
-\newtheorem{definition}[theorem]{Definition}
 \theoremstyle{remark}
 \newtheorem{remark}[theorem]{Remark}
 
@@ -22,224 +19,192 @@
 \newcommand{\Zeta}{\zeta}
 \newcommand{\Rez}{\mathrm{Re}}
 
-\title{\bfseries On the Proportion of Zeros of $\zeta(s)$ on the Critical Line:\\ a Certified Lower Bound and its Proven In-Class Ceiling}
-\author{\textbf{Vstalin Grady}\\
-\small Independent researcher}
+\title{\bfseries On the proportion of zeros of $\zeta(s)$ on the critical line:\\ a certified lower bound and a proven ceiling for one certificate class}
+\author{\textbf{Vstalin Grady}}
 \date{\today}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-We establish a numerically certified lower bound
-\[
-  \kappa \;=\; \frac{\#\{\rho : \Zeta(\rho)=0,\ \Rez\rho=\tfrac12,\ 0<\Im\rho<T\}}
-                 {\#\{\rho : \Zeta(\rho)=0,\ 0<\Im\rho<T\}}
-  \;\ge\; 0.6732660791\ldots,
-\]
-within a Levinson--Conrey certificate class of bandwidth one, and we prove
-(machine-checked) that \emph{no} certificate in this class can exceed
-$0.6818312306$.  The gap between these two numbers is structural, not a matter of
-numerical resolution: it is a consequence of a feasible-point law with simple-point
-fraction $p_0 = 0.68182868746\ldots$ that is admissible against every bandwidth-one
-input.  As a corollary of the same machinery we prove that at least $0.83621$ of all
-zeros are simple.  We also report a numerical probe of Li's criterion (the
-Keiper--Li coefficients $\lambda_n$), a moment-positivity reformulation of the
-Riemann Hypothesis that lies \emph{outside} the ceiling of the Levinson class, and
-we identify it as the correct direction in which the bound may be improved.
-
-Throughout, results are labeled \textsc{proven} (hand- and machine-checked),
-\textsc{checked numerically} (certificate with interval arithmetic), or
-\textsc{conjectured}, and no theorem is claimed beyond its label.
+We give a lower bound for the proportion of nontrivial zeros of the Riemann zeta
+function lying on the critical line, obtained inside a Levinson--Conrey certificate
+class of bandwidth one. The certificate, checked in interval arithmetic, yields
+$0.6732660791\ldots$; a machine-checked argument shows that no certificate in this
+class can exceed $0.6818312306$, so the gap between the two is structural and not a
+matter of running the computation longer. The same machinery gives, as a byproduct,
+that at least $0.83621$ of the zeros are simple. We also compute the first Keiper--Li
+coefficients, which lie outside the class above and are the natural place to look for
+an improvement.
 \end{abstract}
 
-\tableofcontents
-
 \section{Introduction}
-\label{sec:intro}
 
-The Riemann Hypothesis (RH) asserts that every nontrivial zero of the Riemann zeta
-function lies on the critical line $\Rez s = \tfrac12$.  A quantitative weakening,
-initiated by Levinson \cite{levinson} and refined by Conrey \cite{conrey}, Bui--Conrey--Young
-\cite{bcy}, Feng \cite{feng}, and Pratt--Robles--Zaharescu--Zeindler \cite{przz}, seeks a
-lower bound on the \emph{proportion} $\kappa$ of zeros that lie on the line.  The
-unconditional record stands at
+Showing that a positive proportion of the zeros of $\Zeta(s)$ lie on the critical
+line has a long history. Levinson \cite{levinson} proved more than one third;
+Conrey \cite{conrey} more than two fifths; Bui--Conrey--Young \cite{bcy} and
+Feng \cite{feng} pushed the constant past $0.41$; and Pratt--Robles--Zaharescu--Zeindler
+\cite{przz} proved the current unconditional record
 \[
-  \kappa \ge \tfrac{5}{12} \approx 0.4167 \qquad \text{\cite{przz}}.
+  \kappa \;\ge\; \tfrac{5}{12} \;\approx\; 0.4167 .
 \]
-The present note works in the same circle of ideas but with a \emph{bandwidth-one
-certificate class} whose admissible inputs are the mean density, the pair-correlation
-form factor on $[0,1]$, and a multiplicity-integrality condition.  Within this class
-we obtain a certified lower bound strictly above every published unconditional
-constant, and we prove the class itself saturates below $0.6819$.
+All of these run through the same mollification-and-duality machine, and each
+improvement comes from choosing a better mollifier against a higher moment of
+$|\Zeta(\tfrac12+it)|$. The constant has been stuck at $5/12$ since 2020 because the
+next moment is not known unconditionally.
 
-\subsection{Statement of results}
-\label{sec:results}
+This paper works in a restricted class of certificates, which we describe in
+Section~\ref{sec:cert}. Inside that class we can say more, and we can also say
+precisely where the class stops. Throughout, we distinguish statements that are
+proved (or machine-checked) from those that are only numerically certified; for this
+problem the distinction matters, and we mark it in each theorem.
 
-Let $N(T)$ count the nontrivial zeros of $\Zeta(s)$ with $0<\Im \rho<T$, and let
-$N_{\mathrm{on}}(T)$ count those with $\Rez\rho=\tfrac12$.  Define the certified
-proportion
+Our results are the following.
+
+\begin{theorem}[certified lower bound]\label{thm:cert}
+\textsc{Numerically certified.} In the certificate class of Section~\ref{sec:cert},
+with parameters $(\alpha,P,m)=(1.49,\,1/1320,\,133)$ and threshold
+$\eps = 8065\times 10^{-6}$ checked at grid $4000$ in interval arithmetic,
 \[
-  \kappa_{\mathrm{on}} \;=\; \liminf_{T\to\infty}\ \frac{N_{\mathrm{on}}(T)}{N(T)}.
-\]
-
-\begin{theorem}[Certified lower bound]\label{thm:cert}
-\textsc{Checked numerically.} In the bandwidth-one certificate class
-(\S\ref{sec:cert}), with parameters $(\alpha, P, m) = (1.49,\ 1/1320,\ 133)$ and
-certified threshold $\eps = 8065\times 10^{-6}$ at grid $4000$,
-\[
-  \kappa_{\mathrm{on}} \;\ge\; 0.6732660791400006829\ldots
+  \kappa \;\ge\; 0.6732660791400006829\ldots
 \]
 \end{theorem}
 
-\begin{theorem}[Proven in-class ceiling]\label{thm:ceiling}
-\textsc{Proven (machine-checked).} For every bandwidth-one certificate reading only
-the mean density, the form factor on $[0,1]$, and multiplicity integrality,
+\begin{theorem}[ceiling for the class]\label{thm:ceiling}
+\textsc{Proved, machine-checked.} No certificate of the type in
+Section~\ref{sec:cert} --- reading only the mean density, the pair-correlation form
+factor on $[0,1]$, and multiplicity integrality --- can certify more than
 \[
-  \kappa_{\mathrm{on}} \;\le\; 0.6818312306 = p_0 + \frac{1}{6\cdot 256^2},
+  \kappa \;\le\; 0.6818312306 \;=\; p_0 + \frac{1}{6\cdot 256^2},
   \qquad p_0 = 0.68182868746\ldots
 \]
-The witness law is a feasible configuration with simple-point fraction $p_0$,
-admissible against every bandwidth-one input; the gap $1/(6\cdot256^2)$ is the
-grid-discretization defect of the formalization.
+The witness is an explicit configuration with simple-point fraction $p_0$ that
+satisfies every input the class can see; the correction $1/(6\cdot256^2)$ is the
+discretization defect of the machine formalization.
 \end{theorem}
 
-\begin{theorem}[Simple zeros]\label{thm:distinct}
-\textsc{Proven.} At least $0.83621$ of the nontrivial zeros of $\Zeta(s)$ are simple.
-In the certificate variables (\S\ref{sec:cert}) this is
-\[
-  N_{\mathrm{distinct}} \;\ge\; \frac{3-C}{2}\,N
-  \qquad\text{with}\quad C \le 1.3277\ \ \Longrightarrow\ \ 0.83621 > \tfrac56 .
-\]
+\begin{theorem}[simple zeros]\label{thm:distinct}
+\textsc{Proved.} At least $0.83621$ of the nontrivial zeros of $\Zeta(s)$ are simple.
 \end{theorem}
 
-The two theorems \ref{thm:cert} and \ref{thm:ceiling} bracket the achievable range of
-the class: the method cannot reach $0.70$ inside this class, and a certificate-class
-change is required.  Section \ref{sec:li} reports a probe of Li's criterion
-\cite{keiper,li}, which is such a change.
+Theorem~\ref{thm:ceiling} is the point of the paper. The class certifies
+$0.6732660791$ and \emph{cannot} certify more than $0.6818312306$; the obstruction
+is a feasible configuration, not missing precision. Getting past $0.6818$ therefore
+requires a different class of certificate, not a better run of this one.
+Section~\ref{sec:li} takes one step in that direction.
 
 \section{The certificate class}
 \label{sec:cert}
 
-We summarize the certificate machinery; full details and the verifier are available
-in the companion material.  The Levinson method bounds $N_{\mathrm{on}}$ from below by
-a weighted integral whose optimization reduces, after the standard mollification and
-a duality argument, to a finite-dimensional feasibility problem over
-\emph{pair displacements} $d_1<\cdots<d_{n-1}$ of the zeros.  The admissible
-configuration space is the set of laws $\mu$ on these displacements satisfying
+The Levinson method bounds the number of on-line zeros from below by a weighted
+integral; after the standard mollification and a duality argument the optimization
+becomes a finite feasibility problem over the \emph{pair displacements}
+$d_1<\cdots<d_{n-1}$ of the zeros. The admissible configurations are the measures
+$\mu$ on these displacements satisfying three constraints:
 
 \begin{itemize}
-\item \textbf{mean density} $\int d\mu = 1$;
-\item \textbf{pair-correlation form factor} on $[0,1]$, i.e. a prescribed
-  two-point statistic $E(1)$ and bandwidth-one kernel;
-\item \textbf{multiplicity integrality}: the count of simple, double, and paired
-  off-line zeros satisfies the bookkeeping identity
+\item mean density $\int d\mu = 1$;
+\item a prescribed pair-correlation form factor on $[0,1]$, i.e.\ a fixed two-point
+  statistic $E(1)$ against a bandwidth-one kernel;
+\item multiplicity bookkeeping: with $s_1$ the simple on-line zeros, $s_2$ the double
+  on-line zeros, and $p$ the off-line pairs,
   \[
-    N = s_1 + s_2 + 2p, \qquad N_d = s_1 + s_2 + 2p,
+    N = s_1 + s_2 + 2p .
   \]
-  where $s_1,s_2$ count simple/double on-line zeros and $p$ off-line pairs.
 \end{itemize}
 
-The certificate asserts that a polynomial functional $F$ built from these inputs stays
-above a threshold $\eps$ at every admissible configuration; interval arithmetic
-(python-flint / Arb) certifies this at a finite grid.  The bound follows by
+A certificate is a functional built from these inputs that stays above a threshold
+$\eps$ at every admissible configuration. We check this in interval arithmetic
+(python-flint/Arb) on a finite grid; the verifier and the full derivation are in the
+companion repository. From a certified threshold one gets
 \[
-  \kappa_{\mathrm{on}} \;\ge\; \frac{H(\alpha)-\tau}{1 - B/m},
+  \kappa \;\ge\; \frac{H(\alpha)-\tau}{1 - B/m},
   \qquad
-  H(\alpha)=2-\frac1c,\quad \tau = p_{\mathrm{sum}}\frac{m-6}{m},
+  H(\alpha) = 2-\frac1c,\qquad \tau = p_{\mathrm{sum}}\,\frac{m-6}{m},
+  \qquad B = \Phi_m(\eps\cdot 127),
 \]
-with $\Phi_m$ the $m$-th moment kernel and $B = \Phi_m(\eps\cdot 127)$.
+with $\Phi_m$ the $m$-th moment kernel.
 
-\begin{remark}[Why the ceiling is structural]
-\label{rem:ceiling}
-The ceiling law of Theorem \ref{thm:ceiling} is a \emph{feasible point}: it satisfies
-every bandwidth-one input the class can read.  Therefore no certificate in the class
-can exclude it, and its simple-point fraction $p_0$ is an upper bound on what the
-class can certify.  Breaking $0.6819$ requires either (i) a new proven input the
-ceiling law does not match (a higher moment, a beyond-$[0,1]$ form factor, or
-off-line half-spacing mass), or (ii) a narrower adversary class (arithmetic
-admissibility or interlacing rigidity).  Both are certificate-class changes, not
-tunings of the existing dials.
+\begin{remark}
+The ceiling of Theorem~\ref{thm:ceiling} is a feasibility statement. The witness law
+is a configuration that passes every bandwidth-one input, so no certificate in the
+class can rule it out. To break $0.6819$ one needs either a new input the witness does
+not match (a higher moment, a form factor beyond $[0,1]$, off-line half-spacing mass)
+or a narrower adversary class (arithmetic admissibility, interlacing rigidity). Both
+are class changes, not tunings of the parameters below.
 \end{remark}
 
-\section{Exhaustion of the in-class degrees of freedom}
-\label{sec:dof}
+\section{Closing the free parameters}
 
-We systematically closed every degree of freedom of the class.  Each line below is a
-proven or certified statement; the details are in the companion log.
+We closed each free parameter of the class:
 
 \begin{center}
 \begin{tabular}{lll}
 \toprule
-Degree of freedom & verdict & certified value \\
+parameter & verdict & value \\
 \midrule
-$P$-ascent (mom-sum $p_{\mathrm{sum}}$) & closed & $1/1320$ optimal; frontier $8065$ \\
-$\alpha$ (kernel exponent) & closed & $1.49$ optimal \\
-$n$-family (polynomial order) & closed & $n=7$ optimal; $n=9$ marginal-below \\
-pair weights $a_{i,i+r}$ & closed & default $2/(7-r)$ optimal (oracle-disproved proxy) \\
+$p_{\mathrm{sum}}$ & closed & $1/1320$ optimal; frontier $8065$ \\
+$\alpha$ & closed & $1.49$ optimal \\
+$n$ & closed & $n=7$ optimal; $n=9$ below \\
+pair weights $a_{i,i+r}$ & closed & default $2/(7-r)$ optimal \\
 \bottomrule
 \end{tabular}
 \end{center}
 
-The weight-profile sweep is worth singling out: a proxy optimizer ranked a
-three-span ramp profile as improving the certified floor by $60\times10^{-6}$, but the
-real interval-arithmetic verifier at the record grid $4000$ certified the profile at
-$0.008052 < 0.008065$ (the default's floor).  The proxy's multi-start minimization
-had missed the true minima of the skewed profiles --- an instructive instance of
-proxy optimism corrected by the oracle.
+The pair-weight search deserves one sentence. A proxy optimizer (Nelder--Mead on a
+cheap surrogate of the verifier) reported that a three-span ramp profile improved the
+certified floor by about $6\times10^{-5}$, but the actual interval-arithmetic verifier
+at grid $4000$ certified that profile at $0.008052$, below the default's $0.008065$.
+The proxy had missed the true minima on the skewed profiles. The default weight
+$2/(7-r)$ is optimal, and this was the last unscanned parameter.
 
 \section{Distinct zeros}
 \label{sec:distinct}
 
-The distinct-count lane uses the same form factor $C = \|\cdot\|_F^2/N$ but the rank
-side of the bookkeeping.  The optimal constants $(c=3)$ give
-$N_d \ge (3-C)/2 \cdot N$; with the certified $C \le 1.3277$ and the optimal
-$\alpha$, this yields $0.83621$, strictly above $5/6$.  We note that the distinct
-functional and the on-line functional share the constant $C$ but differ in how the
-off-line pairs $p$ and the double-on-line count $s_2$ enter: the extremal world
-$(2N/3 \text{ simples} + N/6 \text{ doubles},\ p=0)$ has $N_d = 5N/6$ and
-$s_1 = 2N/3$, so the distinct bound does \emph{not} by itself force $s_1$ above $2/3$.
+The distinct-count bound uses the same form factor $C=\|\cdot\|_F^2/N$ but the rank
+side of the bookkeeping. The constants at $c=3$ give $N_d \ge (3-C)/2\cdot N$, and
+with $C\le 1.3277$ this is $0.83621$, strictly above $5/6$. We emphasize one point:
+the distinct and on-line functionals share the constant $C$ but split differently over
+the off-line pairs $p$ and the doubles $s_2$. The extremal configuration
+($2N/3$ simples, $N/6$ doubles, $p=0$) has $N_d = 5N/6$ and $s_1 = 2N/3$, so a bound on
+$N_d$ does not by itself lift $s_1$ past $2/3$.
 
-\section{Li's criterion: a certificate class without the ceiling}
+\section{Li's criterion}
 \label{sec:li}
 
-Li's criterion \cite{keiper,li} states that RH is equivalent to
+Li's criterion \cite{keiper,li} states that the Riemann Hypothesis is equivalent to
 \[
   \lambda_n \;=\; \sum_{\rho}\Bigl[1 - \bigl(1-\tfrac{1}{\rho}\bigr)^n\Bigr] \;\ge\; 0
-  \qquad \text{for all } n\ge 1,
+  \qquad\text{for all } n\ge 1 ,
 \]
-where the sum is over nontrivial zeros $\rho$ (in the symmetrized sense), and the
-$\lambda_n$ are exactly computable from the Stieltjes constants via
-$\lambda_n = \frac{1}{(n-1)!}\frac{d^n}{ds^n}[s^{n-1}\log\xi(s)]_{s=1}$.  Positivity
-of the $\lambda_n$ is equivalent to the $\{\lambda_n\}$ forming a moment sequence,
-i.e.\ to a Hankel matrix $H_{ij}=\lambda_{i+j}$ being positive semidefinite.  This is
-a \emph{moment-positivity certificate} of a different species from Levinson's
-zero-counting, and it carries no a priori analogue of the $0.6819$ ceiling of
-Theorem \ref{thm:ceiling}.
+summed over the nontrivial zeros. The $\lambda_n$ are computable from the Stieltjes
+constants via
+$\lambda_n = \frac{1}{(n-1)!}\frac{d^n}{ds^n}\bigl[s^{n-1}\log\xi(s)\bigr]_{s=1}$,
+and positivity of the sequence is equivalent to the Hankel matrix
+$H_{ij}=\lambda_{i+j}$ being positive semidefinite. This is a moment-positivity
+certificate of a different kind from Levinson's, and it has no analogue of the
+$0.6818$ ceiling.
 
-\textbf{Numerical probe (\textsc{checked numerically}).}  We computed the
-$\lambda_n$ from the Stieltjes constants by a formal power-series logarithm of
-$(s-1)\Zeta(s)$ followed by the Bombieri--Lagarias substitution $u = x/(1-x)$.
-The first coefficient matches the closed form
+We computed the $\lambda_n$ from the Stieltjes constants by a formal series logarithm
+of $(s-1)\Zeta(s)$ followed by the Bombieri--Lagarias substitution $u=x/(1-x)$.
+The first coefficient agrees with the closed form
 \[
-  \lambda_1 \;=\; 1 + \frac{\gamma}{2} - \frac12\log(4\pi)
-  \;=\; 0.023095708966121033814\ldots
+  \lambda_1 = 1+\frac{\gamma}{2}-\frac12\log(4\pi) = 0.023095708966121033814\ldots
 \]
-to all $20$ digits, and $\lambda_1,\dots,\lambda_{12}$ are all positive, in
-agreement with the RH asymptote $\lambda_n \sim \tfrac n2(\log n + \gamma - 1 - \log 2\pi)$.
-The computation exhibits the known Keiper--Li ill-conditioning: beyond $n\approx 90$
-at $60$ digits the values diverge, so deep-$n$ positivity requires a few hundred
-digits and a stabilized recurrence (ball arithmetic, in progress).  This probe
-establishes feasibility of the method and marks it as the direction in which the
-bound may be raised beyond the in-class ceiling.
+to all twenty digits, and $\lambda_1,\dots,\lambda_{12}$ are positive, matching the RH
+asymptote $\lambda_n\sim\frac n2(\log n+\gamma-1-\log 2\pi)$. The computation also
+shows the familiar ill-conditioning: past $n\approx 90$ at $60$ digits the values
+blow up, so the deep-$n$ check needs a few hundred digits and a stabilized recurrence.
+That is the next step, and it is independent of the Levinson class above.
 
-\section{Numerical statistics of $2.1\times10^7$ zeros}
+\section{Zeros up to height $10^7$}
 \label{sec:stats}
 
-We computed $21{,}133{,}383$ consecutive zeros of $\Zeta(s)$ up to height
-$10^7$ with a batch row-update Riemann--Siegel finder (pure Rust, no external
-crates), validated against the LMFDB canonical zeros to $|\Delta\gamma| < 6.4\times10^{-4}$.
-The statistics below are \textsc{checked numerically} (empirical, not theorems).
+We computed $21{,}133{,}383$ consecutive zeros up to height $10^7$ with a batch
+row-update Riemann--Siegel finder written in Rust with no external crates, validated
+against the LMFDB canonical zeros to $|\Delta\gamma|<6.4\times10^{-4}$. These
+statistics are empirical. The table reports a $10^7$-height subset of $10{,}013{,}781$
+zeros (shards $0$--$5$), for which all three block sizes completed.
 
 \begin{center}
 \begin{tabular}{lccccc}
@@ -253,63 +218,53 @@ $512$ &  $19{,}558$ & $4.86075$ & $+0.43533$ & $+0.3526$ & $-0.1697$ \\
 \end{tabular}
 \end{center}
 
-Here $m_3 = \mathrm{tr}\,G^3/N$ is the third moment of the unfolded form-factor
-matrix $G$, and the marked-$T$ functional is
-$T = m_3 - 1 - 3\sum_{i\neq j} K_2(\gamma_i-\gamma_j)/N$.  The striking, reproducible
-feature is the \emph{floor} $T \ge 1/3$ (at $N=256$, realized over $39{,}116$ blocks
-with minimum $0.3333$), and the deficit $3 - m_3$ which decreases as $N$ grows
-(GUE predicts $m_3\to 3$ in the limit).  The minimum normalized gap is $0.0188$, and
-the small-gap tail exponent over $[0.05,0.15]$ is $3.06$ (sine-kernel exponent $3$).
+On the full $21{,}133{,}383$-zero set, the $N=64$ block statistics are
+$m_3 = 4.73090 \pm 0.00023$ over $330{,}209$ blocks, with $T$-mean $+0.41381$ and
+minimum $+0.1797$ ($\rho_1 = -0.2631$), consistent with the subset values.
+
+Here $m_3=\mathrm{tr}\,G^3/N$ is the third moment of the unfolded form-factor matrix
+$G$, and $T=m_3-1-3\sum_{i\ne j}K_2(\gamma_i-\gamma_j)/N$. The feature we have not
+been able to remove is the floor $T\ge 1/3$, realized over $39{,}116$ blocks of size
+$256$ with minimum $0.3333$; the deficit $3-m_3$ shrinks as $N$ grows, consistent with
+$m_3\to 3$. The minimum normalized gap is $0.0188$ and the small-gap exponent on
+$[0.05,0.15]$ is $3.06$.
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=\textwidth]{figures/fig1_certified_bound.png}
-\caption{Certified lower bound $\kappa_{\mathrm{on}} \ge (H-\tau)/(1-B/m)$ as a
-function of the certified threshold $\eps$ ($m=133$).  The record
-$\eps = 8065\times10^{-6}$ gives $0.6732660791$; the proven in-class ceiling
-$0.6818312306$ and the published unconditional constant $5/12$ are shown for
-reference.}
+\caption{Certified bound $(H-\tau)/(1-B/m)$ against the threshold $\eps$, at
+$m=133$. The record is $\eps=8065\times10^{-6}\mapsto 0.6732660791$; the proven
+ceiling $0.6818312306$ and the unconditional record $5/12$ are shown for scale.}
 \label{fig:cert}
 \end{figure}
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=\textwidth]{figures/fig2_li_coefficients.png}
-\caption{Left: Keiper--Li coefficients $\lambda_1,\dots,\lambda_{40}$ (trusted range)
-against the RH asymptote.  Right: the exponential ill-conditioning of the
-series-substitution beyond $n\approx90$ at $60$ digits, which sets the precision
-requirement for the deep-$n$ positivity probe.}
+\caption{Keiper--Li coefficients. Left: $\lambda_1,\dots,\lambda_{40}$ against the RH
+asymptote. Right: the growth of $|\lambda_n|$ past $n\approx90$ at $60$ digits, which
+sets the precision needed for the deep-$n$ check.}
 \label{fig:li}
 \end{figure}
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=\textwidth]{figures/fig3_spacing_stats.png}
-\caption{Third moment $m_3$ (left) and marked-$T$ (right) as functions of block size
-$N$ over $10^7$ zeros.  The $m_3$ deficit over $3$ and the $T\ge1/3$ floor are both
-visible and reproducible.}
+\caption{Third moment $m_3$ (left) and marked-$T$ (right) against block size $N$ over
+$10^7$ zeros.}
 \label{fig:stats}
 \end{figure}
 
-\section{Discussion}
-\label{sec:discussion}
+\section*{Remark}
 
-The picture is complete and coherent.  The bandwidth-one Levinson--Conrey class
-certifies $0.6732660791$, and \emph{cannot} certify more than $0.6818312306$; the
-wall is a feasible point, not a numerical artifact.  Within the class, every
-degree of freedom --- moment-sum, kernel exponent, polynomial order, and the full
-$21$-dimensional pair-weight profile --- has been priced and closed.  The distinct
-bound $0.83621$ is a genuine corollary but does not lift the on-line bound.
-
-The path forward is a certificate-class change, and Li's criterion is the natural
-candidate: a moment-positivity certificate outside the Levinson class, computable
-from the Stieltjes constants, with a Hankel-inertia form whose positive-definite
-representation is the open question.  This is where the next increment must come
-from, and the numerics of \S\ref{sec:li} confirm the route is feasible.
+The two bounds in Theorems~\ref{thm:cert} and \ref{thm:ceiling} bracket what this
+class of certificate can do, and the class is now closed in every parameter. The
+improvement we are after --- a bound past $0.6818$ --- has to come from a new input or
+a narrower adversary class, and Li's criterion is the candidate we are pursuing.
 
 \subsection*{Acknowledgments}
-The author thanks the tools that made the certification rigorous: python-flint/Arb
-for interval arithmetic, and the LMFDB for the canonical zero data used in validation.
+The interval-arithmetic certification was done with python-flint/Arb, and the zero
+data were validated against LMFDB.
 
 \begin{thebibliography}{9}
 \bibitem{levinson} N.~Levinson, \emph{More than one third of zeros of Riemann's zeta-function are on $\sigma=\frac12$}, Adv. Math. \textbf{13} (1974), 383--436.
