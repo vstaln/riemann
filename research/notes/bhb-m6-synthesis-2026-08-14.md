@@ -67,3 +67,40 @@ structural thread continues per the persistence directive.
 - Re-check the literature constants: un-mollified Σ|ζ′(ρ)|² ~ (T/2π)L³/3 (Gonek-type; arXiv API
   was down this session — re-fetch and cite).
 - If validator subagents report breaks in the M2/M3/zeta2 notes: fix and re-validate.
+
+---
+
+## 6. Addendum: state of the art for κ* (simple zeros among ALL zeros), verified 2026-08-14
+
+Source: BHB intro (arXiv:1302.5018, fetched text) + BGSTB 2306.04799 (fetched ar5iv intro,
+quotes verbatim) + Goldston–Suriajaya 2511.20059 / 2603.28104 (abstracts, fetched) + PRZZ
+arXiv:1802.10521.
+
+| hypothesis | lower bound κ* (simple/all) | source |
+|---|---|---|
+| none (UNCONDITIONAL) | ≥ 0.4058 | BHB 2013 intro (Levinson, Conrey, Cheer–Goldston, Heath-Brown, BCY chain) |
+| none (UNCONDITIONAL) | **> 0.407** (on the line AND simple) | **PRZZ, arXiv:1802.10521 (2020)** — current record, per BGSTB remark verbatim |
+| box \|β−1/2\| < 1/(2 log T), T^{3/8}<γ≤T (b = 1/2) | ≥ 61.7% | BGSTB 2306.04799 Thm 2 (2023) |
+| box width b/log T with b → 0 | ≥ 2/3, and on the critical line | Goldston–Suriajaya 2603.28104 (2026) |
+| RH | ≥ 2/3 (Montgomery 1973); ≥ 67.2% (Montgomery–Taylor); ≥ 67.9% (Chirre–Gonçalves–de Laat 2020, per BGSTB remark); **≥ 19/27 = 70.37% (BHB 2013, record)** | |
+| RH + GLH | ≥ 19/27, κ_d ≥ 0.84568 (CGG 1998); κ_d ≥ 0.84665 (BHB corollary) | |
+| all Dirichlet L (joint) | > 14/25 = 56% on line and simple (CIS 2013) | |
+
+Connections to this program (all consistent with the M3/M5 verdicts):
+
+1. **The unconditional record is κ* > 0.407 (PRZZ 2020)** — the simple zeros come from
+   Levinson-type on-line counting; nothing touches the off-line correction. Our target
+   0.6818 would be the first unconditional result above Montgomery's conditional 2/3.
+2. **The pair-correlation route is also box-gated**: BGSTB Theorem 1 (unconditional F(α),
+   real/even/nonnegative, α ≤ 1 with explicit errors) gives simple-zeros conclusions only
+   under the box (b = 1/2 → 61.7%) or its strong-ZDH weakening — the "BGSTB strong ZDH (1.6)"
+   of our gap table, a moving-boundary hypothesis, unconditional status open. CONFIRMED
+   against the fetched text ("We can weaken the assumption that there are no zeros outside the
+   box (1.5) by using a strong zero-density hypothesis").
+3. **b → 0 suffices for 2/3 via pair correlation (GS 2026), while our BHB certificate needs
+   b ≤ 0.2237 for 0.6818** — the pair-correlation method converts a narrower box into a weaker
+   conclusion; the BHB certificate converts a wider box into a stronger conclusion. Both agree
+   the moving-boundary box (k < 1 count) is THE input that separates 0.407 → 0.6818.
+4. No 2020–2026 paper claims an unconditional κ* above 0.407; the conditional record
+   19/27 (RH) also stands (BGSTB remark confirms "Bui and Heath-Brown showed that this result
+   holds on RH alone").
