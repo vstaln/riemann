@@ -124,12 +124,12 @@ Each round: PLANNERS decompose the problem → EXECUTIONERS attack components �
 
 ## Subagent operation (binding)
 
-Config: `~/.pi/agent/agents/*.md` (adventurer, architect, builder, diagnose, planner, reviewer, writer).
+Config: `.commandcode/agents/*.md` in this repo (adventurer, architect, builder, diagnose, planner, reviewer, writer) — same 7 agents as the pi setup, ported to Command Code format. All pin `model: deepseek/deepseek-v4-pro`.
 
-1. **Run in background always.** `run_in_background: true` is LOCKED in every agent file. The main loop dispatches and monitors; it never blocks on a foreground subagent.
+1. **Run in background always.** `background: true` is LOCKED in every agent file. The main loop dispatches and monitors via `agent_output`; it never blocks on a foreground subagent.
 2. **Write-first context discipline (the fix for context death).** Subagents have died at 85–99% context before writing deliverables. Every agent file now binds: **write the deliverable after ≤3 file reads or the first 5 tool calls, whichever first; refine with ≤3 more reads.** A committed partial note beats a dead agent. If the agent notices context ≥ 80%, it writes immediately.
-3. **Compaction is not failure.** Subagent sessions auto-compact (pi event `subagents:compacted`, reasons manual/threshold/overflow). A compacted agent continues its task; it does not restart.
-4. **Agent roles & write access.** Write-capable: adventurer, architect, builder, writer (`write, edit`). Read-only: diagnose, planner, reviewer (return verdicts/plans, not files). The default `Explore` agent is read-only — route any write task to architect/builder/writer.
+3. **Compaction is not failure.** Subagent sessions auto-compact (Command Code compaction). A compacted agent continues its task; it does not restart.
+4. **Agent roles & write access.** Write-capable: adventurer, architect, builder, writer (`write_file, edit_file`). Read-only: diagnose, planner, reviewer (return verdicts/plans, not files). The default `Explore` agent is read-only — route any write task to architect/builder/writer.
 5. **No duplicate levers.** Check `research/notes/` for an existing note on a lever before dispatching; duplicates waste the deepseek rate-limit budget (429s under concurrency) and produce nothing new.
 6. **Steer, don't kill.** A background agent that drifts (reading too much, grinding compute) is steered with a message telling it to write NOW — it is never killed and relaunched if it can still deliver.
 
@@ -137,14 +137,14 @@ Config: `~/.pi/agent/agents/*.md` (adventurer, architect, builder, diagnose, pla
 ## Skills: skills-for-humanity (s4h) — MANDATORY
 
 Reference: https://github.com/human-avatar/skills-for-humanity. Installed at
-`~/.pi/agent/skills/s4h*/SKILL.md` (also loadable as `/skill:s4h*` commands).
+`~/.commandcode/skills/s4h*/SKILL.md` (212 skills; loadable as `/s4h-*` commands).
 
 **MANDATORY (binds every agent on every task):** apply s4h thinking to every non-trivial step of
 the program — idea generation, attack selection, verification, adjudication, and synthesis. Every
 subagent task brief MUST name at least one s4h skill for the agent to read and apply; a task that
 used no s4h method is incomplete. Read the skill file fully before applying it.
 
-- **s4h** (`~/.pi/agent/skills/s4h/SKILL.md`) — the master orchestration skill; route any
+- **s4h** (`~/.commandcode/skills/s4h/SKILL.md`) — the master orchestration skill; route any
   open-ended "how do I think through this" through it.
 - **s4h-epistemology** — label epistemic status (what we KNOW vs ASSUME vs HOPE); never let a
   CONJECTURED claim drift into a PROVEN one. This is the honest-calibration backbone.
@@ -157,24 +157,22 @@ used no s4h method is incomplete. Read the skill file fully before applying it.
 The underlying methods apply even where plugin commands are unavailable — but on this machine the
 skills ARE installed, so load them directly rather than re-deriving from memory.
 
-## Skills: Hermes skill library (installed into pi)
+## Skills: Hermes skill library (installed into Command Code)
 
 The full Nous Research Hermes skill library (173 skills — 72 bundled + 101 optional) is installed
-and discoverable by pi at:
-- `~/.pi/agent/skills/hermes-bundled/`  (symlinks → `~/.hermes/hermes-agent/skills/`)
-- `~/.pi/agent/skills/hermes-optional/` (symlinks → `~/.hermes/hermes-agent/optional-skills/`)
+and discoverable at:
+- `~/.commandcode/skills/hermes-bundled/`
+- `~/.commandcode/skills/hermes-optional/`
 
 **MANDATORY for paper writing:** whenever you write, restructure, or revise any paper, draft,
 README, or write-up for this project (paper/main.tex, research/papers/, research/notes/ that are
 publication-bound), FIRST read and apply the **research-paper-writing** skill:
-`~/.pi/agent/skills/hermes-bundled/research/research-paper-writing/SKILL.md`
+`~/.commandcode/skills/hermes-bundled/research/research-paper-writing/SKILL.md`
 (read it fully before drafting). Its non-negotiables bind here too: never hallucinate citations
 (fetch programmatically, mark unverifiable ones `[CITATION NEEDED]`), one clear contribution in a
 single sentence, every experiment states the claim it supports, and commit drafts often.
 
-Useful companion skills (read on-demand): `arxiv` (paper search), `grounded-citations` (cited
-sources), `pdf` / `ocr-and-documents` (source extraction), `systematic-debugging` (root-cause
-method), `test-driven-development` (verifier work).
+Useful companion skills (read on-demand, all under `~/.commandcode/skills/hermes-bundled/`): `arxiv` (research/arxiv — paper search), `nano-pdf` (productivity/nano-pdf — source extraction), `ocr-and-documents` (productivity), `systematic-debugging` (software-development — root-cause method), `test-driven-development` (software-development — verifier work).
 
 ## Standing research context
 

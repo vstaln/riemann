@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Shell(echo \"=== s4h main ===\"; head -40 ~/.pi/agent/skills/s4h/SKILL.md 2>&1; echo \"=== s4h list ===\"; ls ~/.pi/agent/skills/ | grep -E '^s4h' | head -20; echo \"=== count s4h ===\"; ls ~/.pi/agent/skills/ | grep -cE '^s4h'; echo \"=== hermes-bundled tree ===\"; ls ~/.pi/agent/skills/hermes-bundled/ 2>&1 | head -30; echo \"=== one hermes skill ===\"; find ~/.pi/agent/skills/hermes-bundled/ -name SKILL.md | head -3)",
+      "Shell(echo \"=== ~/.commandcode ===\"; ls -la ~/.commandcode/ 2>&1; echo \"=== ~/.commandcode/agents ===\"; ls -la ~/.commandcode/agents/ 2>&1; echo \"=== ~/.commandcode/skills ===\"; ls -la ~/.commandcode/skills/ 2>&1 | head -40; echo \"=== settings.json ===\"; cat ~/.commandcode/settings.json 2>&1)",
+      "Shell(cp:*)",
+      "Shell(mkdir:*)"
+    ],
+    "deny": [],
+    "defaultMode": "default"
+  }
+}
