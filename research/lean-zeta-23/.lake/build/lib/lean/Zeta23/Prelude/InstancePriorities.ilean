@@ -1,1 +1,0 @@
-{"decls":{},"directImports":[["Mathlib.Algebra.Lie.OfAssociative",false,false,false]],"module":"Zeta23.Prelude.InstancePriorities","references":{"{\"c\":{\"m\":\"Mathlib.Algebra.Lie.Basic\",\"n\":\"LieAlgebra.toModule\"}}":{"definition":null,"usages":[[29,24,29,43]]}},"version":5}
