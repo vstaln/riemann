@@ -21,3 +21,8 @@ nohup.out
 .idea/
 .vscode/
 *.swp
+.pi/skills/
+
+# Lean build artifacts (regenerable; keep Lean source only)
+.lake/
+**/.lake/

@@ -177,10 +177,42 @@ Useful companion skills (read on-demand, all under `~/.commandcode/skills/hermes
 ## Standing research context
 
 - RH: open since 1859 (Millennium Prize).
-- Record lower bound on the proportion of zeros on the critical line: 41.6% → 67.25% (Anthropic research model, 2026; verified by Conrey & Goldston; Lean-formalized in anthropics/zeta-23-lean). Anthropic does not expect those techniques to settle RH.
+- Published unconditional record: 41.7% (PRZZ 2020). Anthropic Aug-2026 claims ≥ 2/3 simple-on-line and ≥ 5/6 distinct, unconditionally, via rank–trace inequality on a finite compression of Weil's Hermitian form (Sylvester inertia for off-line pairs); Montgomery–Taylor window gives 0.6725 / 0.8362; Lean-formalized in anthropics/zeta-23-lean. **Sources verified real 2026-08-17 (all HTTP 200; main paper + campaign narrative + E2 transcript downloaded fresh to research/papers/). Community acceptance: UNVERIFIED — the campaign's own ledger entry says "needs a human expert"; refereed only by Claude instances. Treat as live target, not established fact.**
+- Repo-certified (our own work): in-class 0.673481 simple-on-line / 0.836740 distinct (7-point stability refinement of the rank–trace inequality).
 - Clean constant: 3/2 − (1/√2)·cot(1/√2) ≈ 0.6725; simpler argument gives 2/3.
-- Prior chain: Levinson (1974) ≥ 1/3 → Conrey (1989) 40% → Bui–Conrey–Young (2011) 41.05% → Feng (2012) 41.28% → ... → 41.6% → 67.25%.
+- Prior chain: Levinson (1974) ≥ 1/3 → Conrey (1989) 40% → Bui–Conrey–Young (2011) 41.05% → Feng (2012) 41.28% → PRZZ 2020 41.7% → Anthropic 2026 (unverified) ≥ 2/3.
 - Key inputs: Bombieri (2000); Baluyot–Goldston–Suriajaya–Turnage-Butterbaugh (arXiv:2306.04799, 2501.14545); Montgomery pair correlation (1973).
+
+## Campaign method — Anthropic's actual method (BINDING, 2026-08-17)
+
+Extracted from the campaign narrative (`research/papers/anthropic-campaign-narrative.txt`;
+distilled in `research/notes/anthropic-campaign-method-2026-08-17.md`). The coordinator
+ran ~60 sub-agents over ~2 days; the two wins (≥1/2, then ≥2/3) both came from briefs that
+pointed the mechanism the WRONG way and were inverted by the agent. Rules:
+
+1. **Briefs are research memos, not tickets.** Target + objects + reading list + coordinator's
+   conjecture + stated forecast + DEMAND for an RH-false control case (Epstein class-2,
+   Davenport–Heilbronn, Beurling planted zero, fake Weil polynomial). Agent sees nothing but
+   its brief + the files it is told to read.
+2. **Ledger = do-not-repeat list.** Triage past ideas into 4 deflating classes (known theorem
+   restated / equivalent to RH / finite numerical check / near-tautology); never launch a
+   survivor again; never re-derive a ledger verdict — cite it.
+3. **Referee architecture.** Extraordinary claims get hostile referees BEFORE the coordinator
+   reads the proof; blind, forbidden to read each other, one joint each with a worked attack
+   plan; plus a re-derivation-from-scratch agent forbidden to read the proof; plus a cold-read
+   referee on paper drafts. Never weaken a validator.
+4. **Orphaned-proof rescue.** If a sub-agent dies mid-write, read its directory, recognize the
+   deliverable, resume the SAME agent with a checklist + launch checkers.
+5. **Barrier checker (rung 0).** RH-false model zoo + claim classifier (tools/barrier_zoo/,
+   under construction) disciplines every research brief. Any claim that would also "prove" an
+   RH-false model is wrong.
+6. **Proportion ≠ RH (firewall).** A proportion-on-the-line theorem is ZERO evidence about RH
+   in either direction. Never describe it otherwise.
+7. **Ladder.** Barrier checker · zero density · Beurling · off-centre positivity · construct the
+   object · RH. Launch all rungs in parallel with expectations stated ("0–2 can return theorems;
+   3 is a real shot; 4/5 is a moonshot").
+8. **Coordinator reads final messages, rarely files; does its own line-by-line checks at the
+   decisive moments.**
 
 ## Workspace
 
