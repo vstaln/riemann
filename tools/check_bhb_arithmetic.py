@@ -59,6 +59,23 @@ def main():
     print(f"8. MF = {MF} (claimed 107/64); (1/3)(1+MF) = {(1+MF)/3}")
     assert MF == F(107, 64) and (1+MF)/3 == F(57, 64)
 
+    # 9. M3: pair-form box (new identity E = sum_pairs |F(rho)-F(1-rhobar)|^2, see bhb-m3 note)
+    #    E/S2 <= 8 b^2 (r+r')  (quadratic pair form) vs old triangle 2b sqrt(2(r+r'))
+    b_pair = math.sqrt(0.031126315789473682 / (8 * (r + rp)))
+    print(f"9. pair-form box b_pair = {b_pair:.6f} (claimed 0.0758; triangle-form 0.0134)")
+    assert abs(b_pair - 0.0758) < 1e-3
+
+    # 10. M3: GM thresholds (arXiv:2405.20552)
+    #     sharper 15/(3+5sigma) on [7/10,8/10]: need c(1/2-D) < 1/2  <=>  D > 19/70
+    from fractions import Fraction as F
+    D_sharp = F(19, 70)
+    D_uniform = F(17, 60)   # uniform 30/13: D > (c-1)/(2c)
+    s = 0.5 + 0.28
+    exp_gm = 15 * (1 - s) / (3 + 5 * s)
+    print(f"10. GM thresholds: D_sharp={float(D_sharp):.6f} (=19/70), D_uniform={float(D_uniform):.6f} (=17/60); "
+          f"at Delta=0.28 (sigma={s}): GM exponent {exp_gm:.4f} < 1/2 OK")
+    assert float(D_sharp) < 0.28 < 1 / 2 and exp_gm < 0.5
+
     print("ALL CHECKS PASS")
 
 if __name__ == "__main__":
