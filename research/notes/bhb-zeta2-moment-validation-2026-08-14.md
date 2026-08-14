@@ -106,3 +106,41 @@ Background validator subagents failed three times this session (M2 agent twice, 
 with no closing message — an infrastructure failure, not a task failure. Per hooks/agents.md
 ("try again by a different route") validation was completed in-session; a fresh validator
 subagent was attempted once more afterwards for the record.
+
+---
+
+## Addendum (2026-08-14, later same session): BREAK FOUND — the r′ = 3/5 anchor is refuted
+
+A literature check after the pass above produced a genuine break of the note's §3 anchor:
+
+**Gonek's theorem (on RH), quoted verbatim in Bui–Milinovich, "A hybrid Euler–Hadamard product
+and moments of ζ′(ρ)", arXiv:1302.5032 (fetched ar5iv text this session):**
+J_k(T) = (1/N(T))·Σ_{0<γ≤T}|ζ′(ρ)|^{2k},  N(T) = (T/2π)ℒ − T/2π + O(ℒ),  ℒ = log(T/2π);
+**"Gonek [9] proved that if the Riemann Hypothesis (RH) is true, then J₁(T) ∼ (1/12)ℒ³ as
+T → ∞."** Hence **Σ_{0<γ≤T}|ζ′(ρ)|² ~ (T/2π)·ℒ⁴/12** — one full log power above the
+zeta2-moment note's anchor **Σ|ζ′(ρ)|² ~ (T/2π)L³/3** (§3 cross-check, `[inferred]`).
+
+**Resolution (consistency restored):** BHB Lemma 1 with the trivial mollifier B = 1 is
+S₂ = (T/2π)ℒ³/2 − 2Re(ℳ₂) + O(Tℒ^{2+ε}) with ℳ₂ = Σ_{m≤T/2π}a₂(m)e(−m) = Σ_{m≤T/2π}a₂(m)
+(e(−m) = 1; k = 1 only). The coefficients a₂(n) of ζ′/ζ·ζ′² have an **order-5 pole at s = 1**
+(ζ′ ~ −1/(s−1)² so ζ′² ~ 1/(s−1)⁴, times ζ′/ζ ~ −1/(s−1)), hence by the standard
+Perron/Shapiro coefficient-sum asymptotics Σ_{m≤X}a₂(m) ~ −X·(log X)⁴/4! = −(T/2π)ℒ⁴/24, and
+−2Re(ℳ₂) ~ +(T/2π)ℒ⁴/12. Total: Σ|ζ′(ρ)|² ~ (T/2π)ℒ⁴/12·(1 + O(1/ℒ)) — **exactly Gonek's
+value.** CHECKED NUMERICALLY: partial sums of a₂(n) = −Σ_{d|n}Λ(d)g(n/d), g(n) = Σ_{d|n}log d·log(n/d),
+at X = 5·10⁴, 10⁵, 1.5·10⁵, 2·10⁵ give ratios 0.556, 0.576, 0.587, 0.594 vs −X(logX)⁴/24 —
+monotone convergence from below at the expected 1 − c/logX rate (sub-leading constants involve
+γ₀, γ₁) — the ℒ⁴ power and the −1/24 constant are confirmed (`/tmp/riem_m3/check_amain.py`).
+
+**Verdict change:** the zeta2-moment note's un-mollified ζ′-moment constant (T/2π)L³/3 is
+**REFUTED** (true value (T/2π)ℒ⁴/12); its §3 "cross-check" and the pattern-extrapolated
+(T/2π)L⁵/5 for ζ″ have no standing; **r′ = 3/5 is REFUTED as derived** (the factorization
+57/64 = (1/3)(1+107/64) is algebra, but "1/3 = un-mollified constant" and "MF derivative-
+independent" are wrong interpretations). The order-level claim **M = O(ℒ²S₂) survives**
+(both sides are (T/2π)ℒ⁵-scale: S₂ ~ (T/2π)ℒ³·57/64 ⟹ ℒ²S₂ ~ (T/2π)ℒ⁵; the mollified ζ″-moment
+main term is ℒ⁵-scale) — but the exact ratio r′ = c(M)/c(S₂) requires the full mollified
+ζ″-moment computation (M4-proper): **r′ unknown, O(1)-scale.**
+
+**Impact:** b_pair = 0.0758 (M3 note §5) loses its r′ = 3/5 support. The pair-form bound
+E/S₂ ≤ 8b²(r+r′) with r′ ≥ 0 still gives the ζ″-free ceiling **b_pair ≤ 0.2237 (PROVEN)** —
+2.2× narrower than BGSTB's b = 1/2. All milestone verdicts (M2 REFUTED, M3 GAP, pair identity,
+GM right tail Δ > 19/70, left-tail obstruction) are r′-independent and UNAFFECTED.

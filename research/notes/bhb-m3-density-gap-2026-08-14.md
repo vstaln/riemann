@@ -97,7 +97,10 @@ CHECKED NUMERICALLY: 20 random real-coefficient polynomials × random FE-symmetr
 exact to machine precision (`tools/check_pair_identity.py`). STATUS: PROVEN. RH sanity: on-line
 pairs are fixed points, contribution 0 ✓.
 
-Consequences (given the ζ″-moment ratio r′ = 3/5 from `bhb-zeta2-moment-2026-08-14.md`, UNVALIDATED):
+Consequences (given the ζ″-moment ratio r′ from `bhb-zeta2-moment-2026-08-14.md`; NOTE: r′ = 3/5
+is now REFUTED as derived — its anchor (T/2π)L³/3 contradicts Gonek's theorem
+Σ|ζ′(ρ)|² ~ (T/2π)ℒ⁴/12, see `bhb-zeta2-moment-validation-2026-08-14.md` addendum; the PROVEN
+statement is the ζ″-free ceiling below):
 
 1. **E ≥ 0 unconditionally** — the off-line correction only hurts: N* ≤ S₁²/(S₂+E) ≤ S₁²/S₂.
 2. **Quadratic box bound:** with |β−1/2| ≤ Δ for all zeros, Taylor around the pair midpoint
@@ -106,8 +109,10 @@ Consequences (given the ζ″-moment ratio r′ = 3/5 from `bhb-zeta2-moment-202
    **E/S₂ ≤ 8b²(r+r′) ⟹ b < √(0.031126/(8·0.677708)) = 0.07577.**
    vs triangle form b < 0.031126/(2√(2(r+r′))) = 0.01337 (both CHECKED, `tools/check_bhb_arithmetic.py`
    §9). ζ″-only (r′ = 0.6): b < 0.08053. The O((β−1/2)³) error sums to O(b³/L) — negligible.
-3. ζ″-free ceiling of the pair form (r′ = 0): b < 0.2237 — i.e. without the ζ″-moment the box is
-   only 2.2× narrower than BGSTB's b = 1/2; the claimed r′ = 3/5 is what buys the 6.6× gap.
+3. ζ″-free ceiling of the pair form (r′ = 0): **b ≤ 0.2237 (PROVEN)** — without the ζ″-moment
+   the box is 2.2× narrower than BGSTB's b = 1/2. The claimed r′ = 3/5 (which would give
+   b ≈ 0.0758) is REFUTED as derived; r′ is unknown, O(1)-scale; M4-proper (mollified ζ″-moment
+   computation) is required to pin it.
 
 ## 6. Scripts
 
@@ -159,6 +164,6 @@ The draft is preserved at /tmp/riem_m3/bhb-m3-subagent-draft-2026-08-14.md for t
 | right tail killed at Δ > 19/70 by GM; E_out⁺/S₂ → 0 | PROVEN (given GM) |
 | left tail uncontrollable by density inputs (worst case T^{1.258}L² ≫ S₂) | PROVEN (modulo standard pointwise bounds) |
 | pair identity E = Σ_pairs\|F(ρ)−F(1−ρ̄)\|² ≥ 0 | PROVEN + CHECKED NUMERICALLY (20 trials) |
-| box b_pair = 0.07577 vs triangle 0.01337; thresholds 19/70, 17/60 | PROVEN arithmetic; b CONDITIONAL on r′ = 3/5 |
+| box b_pair ≤ 0.2237 (ζ″-free ceiling) vs triangle 0.01337; thresholds 19/70, 17/60 | PROVEN arithmetic; b_pair = 0.0758 REFUTED-as-derived (r′ = 3/5 anchor broken; validation note) |
 | Route D (box-free density) reaches 3.11% | REFUTED |
-| M5 box attainment at b ≈ 0.0758 with known inputs | INCONCLUSIVE (no such input; gated) |
+| M5 box attainment at b ≤ 0.2237 with known inputs | INCONCLUSIVE (no such input; gated) |

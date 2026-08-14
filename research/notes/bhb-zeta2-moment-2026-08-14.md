@@ -221,14 +221,18 @@ three times this session, infra issue). Result: **NOT BROKEN, two labels downgra
   algebra — caught and corrected).
 - VERIFIED: simple-pole-at-zeros structure; un-mollified ζ′-moment constant 1/3 (B = 1 limit of
   Lemma 1: 1/2 − 2·(1/12) = 1/3).
-- **DOWNGRADED:** r′ = 3/5 — the un-mollified ζ″-constant (T/2π)L⁵/5 is pattern-extrapolated
-  (1/(2k+1)), not computed; the cross terms [ζ″² + 2Lζ″ζ′ + L²ζ″ζ] are L⁵-scale at s = 1 and were
-  bounded, not evaluated; MF-derivative-independence unproven. **Label: CONJECTURED**
-  (was "PROVEN (transfer)").
-- **DOWNGRADED:** "no genuinely new arithmetic sum" — the q = 1 pieces are main-term-scale, not
-  T^ε-absorbed; transfer structurally sound but requires the mechanical re-derivation (this
-  note's §8.1). **Label: INCONCLUSIVE** at the "no new work" level; M = O(L²S₂) stands as
-  CONJECTURED (order-level transfer plausible).
-- Box values remain CONDITIONAL: b_pair ∈ [0.0758, 0.2237] as r′ ranges over [3/5, 0]
-  (pair form, M3 note). Milestone verdicts (M2 REFUTED, M3 GAP, pair identity, GM right tail)
-  do not depend on r′.
+- **REFUTED (later same session — BREAK, see validation note addendum):** r′ = 3/5 — the
+  anchor "un-mollified ζ′-moment (T/2π)L³/3" contradicts Gonek's theorem
+  Σ|ζ′(ρ)|² ~ (T/2π)ℒ⁴/12 (J₁(T) ~ ℒ³/12, quoted verbatim in arXiv:1302.5032, fetched and
+  verified this session). The ℒ⁴ lives in the q=1 piece of ℳ₂ (order-5 pole of ζ′/ζ·ζ′²,
+  partial sums ~ −(T/2π)ℒ⁴/24 — CHECKED NUMERICALLY), so BHB Lemma 1 (B=1) is consistent with
+  Gonek. The un-mollified ζ″-constant (T/2π)L⁵/5 was pattern-extrapolated (1/(2k+1)) and has no
+  standing; MF-derivative-independence is wrong as interpreted. **r′ is unknown, O(1)-scale;
+  M = O(ℒ²S₂) survives at the order level only.**
+- **INCONCLUSIVE:** "no genuinely new arithmetic sum" — the q = 1 pieces are main-term-scale, not
+  T^ε-absorbed (confirmed: they carry the ℒ⁴/12 main term in the ζ′ case); transfer requires the
+  mechanical re-derivation (this note's §8.1). M = O(ℒ²S₂) stands at the order level
+  (both sides (T/2π)ℒ⁵-scale).
+- Box values: b_pair loses its r′ = 3/5 support (r′ REFUTED-as-derived). PROVEN ζ″-free
+  ceiling: b_pair ≤ 0.2237 (pair form, r′ ≥ 0). Milestone verdicts (M2 REFUTED, M3 GAP, pair
+  identity, GM right tail Δ > 19/70, left-tail obstruction) do not depend on r′.
