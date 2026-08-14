@@ -24,7 +24,7 @@ Round structure: PLANNERS (decompose) → EXECUTIONERS (attack components) → V
 - research/papers/*.pdf/.txt — primary sources
 - research/lean-zeta-23/ — Lean formalization
 - research/notes/ — proof map, literature map, verification reports, attack log
-- tools/ — numerical toolkit (Python + mpmath)
+- tools/ — numerical toolkit (Rust-first; legacy Python + mpmath where already certified)
 - hooks/agents.md — persistent agent hooks
 
 ## Honest constraints
