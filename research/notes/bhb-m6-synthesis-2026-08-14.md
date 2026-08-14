@@ -10,7 +10,7 @@
 |---|---|---|---|
 | M1 | gap table: bottleneck = moving-boundary count N(1/2+b/L,T) = o(T log T), k<1 | DONE | `87d513d` |
 | M2 | FE ζ″-elimination | **REFUTED** (ζ″ invariant under FE rewrite; exact step: δ(ρ) = 2(β−1/2)ζ″(1/2−iγ)+O((β−1/2)³)) | `b62adc9` |
-| M4-in-essence | ζ″-moment M = (3/5)L²S₂ claim | **BREAK FOUND**: r′ = 3/5 REFUTED as derived (anchor (T/2π)L³/3 contradicts Gonek's theorem Σ\|ζ′(ρ)\|² ~ (T/2π)ℒ⁴/12, arXiv:1302.5032 verbatim; ℒ⁴ traced to the order-5 pole in the q=1 piece of ℳ₂, CHECKED NUMERICALLY); M = O(ℒ²S₂) survives at order level only | `b62adc9` + validation note |
+| M4-in-essence | ζ″-moment M = (3/5)L²S₂ claim | **BREAK FOUND**: r′ = 3/5 REFUTED as derived (anchor (T/2π)L³/3 contradicts Gonek's theorem Σ|ζ′(ρ)|² ~ (T/2π)ℒ⁴/12, arXiv:1302.5032 verbatim; ℒ⁴ traced to the order-5 pole in the q=1 piece of ℳ₂, CHECKED NUMERICALLY); M = O(ℒ²S₂) survives at order level only | `b62adc9` + validation note |
 | M3 | density exponent gap | **GAP**: Route D collapses into Route A; GM kills right tail at Δ > 19/70; left tail uncontrollable; NEW pair identity E = Σ_pairs\|F(ρ)−F(1−ρ̄)\|² ≥ 0 → box b ≈ 0.0758 (pair form) vs 0.0134 (triangle) | `fd94729` |
 | M5 | box attainment b ≈ 0.0758 | GATED: no known input certifies any fixed b at o(T log T) (Shape-1 blind PROVEN; Ingham k=5 → b ~ 3 log log T; GM Shape-1) | — |
 | M6 | this note | — | — |
