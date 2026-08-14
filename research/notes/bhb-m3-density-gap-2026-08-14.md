@@ -74,12 +74,24 @@ For β ≤ 1/2−Δ, |F(ρ̄)| = |F(ρ)| and the FE gives no pointwise gain
 
 The count is #{β ≤ 1/2−Δ} = N(1/2+Δ,T) ≪ T^{0.478} (GM at Δ = 0.28), but the **β-distribution**
 of those zeros is unconstrained by any known input: the zero-free region only excludes
-β > 1 − c/log T; Shape-1 bounds at σ < 1/2 (N(0.22,T) ≪ T^{1.69}) are vacuous vs N(T) ~ (T/2π)L;
-von Mangoldt is the only other constraint. Worst-case configuration (all N(1/2+Δ,T) left zeros at
-β ≈ 0.22; FE partners at 0.78; consistent with every Shape-1 bound, the ZFR, and the
-scale-gap-witness template in `gm-box-certifiability`):
+β > 1 − c/log T; Shape-1 bounds at σ < 1/2 are vacuous (indeed N(0.22,T) = N(T) − N(0.78,T) + O(1)
+~ (T/2π)L by the FE complement, with N(0.78,T) ≪ T^{0.478} by GM — so any fixed T^c-form bound with
+c < 1 is impossible, and even the uniform GM value T^{30·0.78/13+o(1)} = T^{1.80+o(1)} is vacuous
+vs N(T) ~ (T/2π)L; the "T^{1.69}" in an earlier draft was a typo); von Mangoldt is the only other
+constraint. Worst-case configuration (all N(1/2+Δ,T) left zeros at β ≈ 0.22; FE partners at 0.78;
+consistent with every Shape-1 bound, the ZFR, the S₂-lemma, and the scale-gap-witness template in
+`gm-box-certifiability`):
 
 |E_out⁻| ≳ T^{0.78}·T^{0.478}·L² = T^{1.258}·L² ≫ S₂ ~ T·L³   ⟹   E_out⁻/S₂ → ∞.
+
+(Precision on where this mass lives, validation addendum 2026-08-14: S₂ := ΣF(ρ)F(1−ρ) is the
+BHB-evaluated sum ~ (T/2π)ℒ³·57/64; the worst-case mass is a subset of Σ|F(ρ)|² = S₂ + E — NOT of
+S₂. The left pairs' own contribution to S₂ is Σ|F(ρ)F(1−ρ)| ~ T^{0.478}·T^{0.5}·L² = T^{0.978}L²
+≪ S₂ (CHECKED NUMERICALLY, `tools/check_left_tail_adjudication.py`), so Lemma 1 is not violated,
+while E = Σ_pairs|F(ρ)−F(1−ρ̄)|² ≥ Σ_left(|F(ρ)|−|F(1−ρ̄)|)² ~ T^{1.258}L² grows relative to S₂ at
+rate T^{0.258}/L. The claim "|E| ≤ 2S₂ exactly" (validator draft) is FALSE: a single FE-consistent
+pair F(ρ) = 100, F(1−ρ) = 1 gives E_pair = 9801 vs S₂_pair = 200 (ratio 49 > 2), and the model
+shows E/S₂ → ∞ at the predicted rate — both CHECKED NUMERICALLY.)
 
 The pair identity (§5) does not help: |F(ρ) − F(1−ρ̄)|² ≤ 2|F(ρ)|² + 2|F(1−ρ̄)|² retains the
 t^{1−β} term. **Conclusion: any unconditional bound on E requires the two-sided box**
