@@ -55,18 +55,22 @@ object (see §4).
 
 ## 3. Taylor form of E (PROVEN, closed-form)
 
-ρ = β+iγ, ρ̄ = β−iγ, 1−ρ = (1−β)−iγ. Both ρ̄ and 1−ρ sit on opposite sides of s₀ = 1/2+iγ:
+ρ = β+iγ, ρ̄ = β−iγ, 1−ρ = (1−β)−iγ. Both ρ̄ and 1−ρ sit at height **−γ**, on opposite sides of
+s₀ = **1/2−iγ** (their true midpoint; correction 2026-08-14 — an earlier draft used 1/2+iγ, where
+the even Taylor term does NOT cancel):
 
 **ρ̄ − (1−ρ) = 2(β−1/2) ∈ ℝ.**
 
-Taylor at s₀ (odd term survives, even term cancels exactly):
+Taylor at s₀ = 1/2−iγ (odd term survives, even term cancels exactly):
 
-**F(ρ̄) − F(1−ρ) = 2(β−1/2)·F′(1/2+iγ) + O((β−1/2)³·sup|F‴|),  F′ = B′ζ′ + Bζ″.**
+**F(ρ̄) − F(1−ρ) = 2(β−1/2)·F′(1/2−iγ) + O((β−1/2)³·sup|F‴|),  F′ = B′ζ′ + Bζ″.**
+
+(Modulus statements are unaffected: F′ has real coefficients, so |F′(1/2−iγ)| = |F′(1/2+iγ)|.)
 
 So under a box |β−1/2| ≤ Δ:
 
-**E := Σ_{0<γ≤T} F(ρ)[F(ρ̄) − F(1−ρ)] = 2Σ(β−1/2)F(ρ)F′(1/2+iγ) + O(Δ³·…)**
-**|E| ≪ Δ·Σ_{0<γ≤T}|F(ρ)||F′(1/2+iγ)| + O(Δ³).**
+**E := Σ_{0<γ≤T} F(ρ)[F(ρ̄) − F(1−ρ)] = 2Σ(β−1/2)F(ρ)F′(1/2−iγ) + O(Δ³·…)**
+**|E| ≪ Δ·Σ_{0<γ≤T}|F(ρ)||F′(1/2−iγ)| + O(Δ³).**
 
 (Note the exact factor 2 — it must be kept in any explicit Δ.)
 

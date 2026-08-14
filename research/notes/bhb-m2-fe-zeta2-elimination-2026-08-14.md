@@ -18,7 +18,7 @@ Route C resolved at r′ = 3/5 — separate, unvalidated).
 **F(ρ̄) − F(1−ρ) = [B(1−ρ) − B(ρ̄)]·ζ′(ρ)/χ(ρ) + B(ρ̄)·δ(ρ),   δ(ρ) := ζ′(ρ̄) − ζ′(1−ρ)**
 
 holds, and the "defect" δ(ρ) is the **ζ′-analogue of the original difference**: its leading term is
-2(β−1/2)ζ″(1/2+iγ) — the same second derivative the Taylor route produces. ζ″ is not relabeled away;
+2(β−1/2)ζ″(1/2−iγ) — the same second derivative the Taylor route produces. ζ″ is not relabeled away;
 it is moved from "Bζ″ with B′" to "B(ρ̄)ζ″ with weight χ(ρ)⁻¹". **Gate outcome: REFUTATION.** The box
 route therefore needs Route C — the ζ″-moment theorem — which the companion note
 `bhb-zeta2-moment-2026-08-14.md` claims to resolve at r′ = 3/5 (unvalidated; see §5). The one genuine
@@ -60,13 +60,20 @@ F(ρ̄) − F(1−ρ) = B(ρ̄)ζ′(ρ̄) − B(1−ρ)ζ′(1−ρ)
 
 ## 4. Why ζ″ is NOT eliminated [PROVEN]
 
-δ(ρ) = ζ′(ρ̄) − ζ′(1−ρ) is the difference of ζ′ at the conjugate and FE-paired points. Taylor around
-1/2+iγ (the midpoint of both):
+δ(ρ) = ζ′(ρ̄) − ζ′(1−ρ) is the difference of ζ′ at the conjugate and FE-paired points. Both points
+ρ̄ = β−iγ and 1−ρ = (1−β)−iγ sit at height **−γ**; their midpoint is **1/2−iγ**. Taylor around the
+true midpoint:
 
-δ(ρ) = (ρ̄ − (1/2+iγ))ζ″(1/2+iγ) − ((1−ρ) − (1/2+iγ))ζ″(1/2+iγ) + O((β−1/2)³)
-     = (β−1/2−iγ+iγ... ) — compute: ρ̄ = β−iγ, so ρ̄ − (1/2+iγ) = (β−1/2) − 2iγ; and 1−ρ = (1−β)−iγ,
-       so (1−ρ) − (1/2+iγ) = (1/2−β) − 2iγ = −(β−1/2) − 2iγ.
-     ⇒ δ(ρ) = [(β−1/2) − 2iγ]ζ″ − [−(β−1/2) − 2iγ]ζ″ + O((β−1/2)³) = **2(β−1/2)ζ″(1/2+iγ) + O((β−1/2)³)**.
+δ(ρ) = (ρ̄ − (1/2−iγ))ζ″(1/2−iγ) − ((1−ρ) − (1/2−iγ))ζ″(1/2−iγ) + O((β−1/2)³)
+     = (β−1/2)ζ″(1/2−iγ) − (−(β−1/2))ζ″(1/2−iγ) + O((β−1/2)³)
+     = **2(β−1/2)ζ″(1/2−iγ) + O((β−1/2)³)**   [PROVEN]
+
+(Correction, validation addendum 2026-08-14: an earlier draft expanded about 1/2+iγ, claiming
+O((β−1/2)³). At that wrong center the quadratic remainder is −4iγ(β−1/2)ζ‴(1/2+iγ) — it does NOT
+cancel (the points are not symmetric about 1/2+iγ) and is numerically ENORMOUS (|err| ≈ 1.35 > |δ|
+at β−1/2 = 0.02, t = 1000; verified by `research/notes/check_validator_af.py`). The corrected
+statement above is numerically verified (|err| = 0.0017 ≪ |δ| = 0.779 at the same point). All
+modulus conclusions survive the correction because |ζ″(1/2−iγ)| = |ζ″(1/2+iγ)|.)
 
 The (β−1/2)-coefficient of δ is exactly ζ″, with the same 2(β−1/2) weight as the Taylor route's
 F′(1/2+iγ). The FE rewrite moves ζ″ from the B′·ζ′ product derivative (F′ = B′ζ′ + Bζ″) into the
@@ -106,7 +113,7 @@ coefficient ζ″. Any bound of E must control this first-order defect; no FE ma
 without either (a) the ζ″-moment (Route C/M4 — companion note claims r′ = 3/5, transfer-level,
 unvalidated) or (b) a box input of the same b ≈ 0.0134–0.05 scale (M1/M5), now visible both in the
 mollifier-deviation term and in the χ-weight. ζ″ is invariant under the FE rewrite; the exact step is
-§4: δ(ρ) = ζ′(ρ̄) − ζ′(1−ρ) = 2(β−1/2)ζ″(1/2+iγ) + O((β−1/2)³).
+§4: δ(ρ) = ζ′(ρ̄) − ζ′(1−ρ) = 2(β−1/2)ζ″(1/2−iγ) + O((β−1/2)³) (true midpoint of ρ̄, 1−ρ is 1/2−iγ; corrected 2026-08-14).
 
 **Plan gate outcome (per plan §3 M2):** refutation ⇒ the box route needs Route C. Route C is exactly
 what `bhb-zeta2-moment-2026-08-14.md` attempts (M = (3/5)L²S₂ by ζ′→ζ″ substitution into Lemma 1
@@ -122,7 +129,7 @@ check of the ζ′→ζ″ transfer, the un-mollified constant (T/2π)L⁵/5, an
 | ζ′(1−ρ) = −ζ′(ρ)/χ(ρ) at zeros (FE differentiated once) | PROVEN |
 | F(ρ̄)−F(1−ρ) = B(ρ̄)δ(ρ) + [B(1−ρ)−B(ρ̄)]ζ′(ρ)/χ(ρ), δ(ρ) = ζ′(ρ̄)−ζ′(1−ρ) | PROVEN (exact identity) |
 | E = S₂ − Σ F(ρ)F(1−ρ) | PROVEN |
-| δ(ρ) = 2(β−1/2)ζ″(1/2+iγ) + O((β−1/2)³) | PROVEN |
+| δ(ρ) = 2(β−1/2)ζ″(1/2−iγ) + O((β−1/2)³) | PROVEN (corrected center 1/2−iγ; earlier 1/2+iγ version had a false error term) |
 | ζ″ invariant under FE rewrite (second derivative unavoidable) | PROVEN (from the two rows above) |
 | Mollifer-deviation term is a box-weighted ζ′-moment (no ζ″) | PROVEN |
 | |χ(ρ)|⁻¹ = (t/2π)^{β−1/2}(1+o(1)) | PROVEN (classical χ-asymptotic, Stirling) |

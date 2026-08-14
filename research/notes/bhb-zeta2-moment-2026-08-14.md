@@ -236,3 +236,13 @@ three times this session, infra issue). Result: **NOT BROKEN, two labels downgra
 - Box values: b_pair loses its r′ = 3/5 support (r′ REFUTED-as-derived). PROVEN ζ″-free
   ceiling: b_pair ≤ 0.2237 (pair form, r′ ≥ 0). Milestone verdicts (M2 REFUTED, M3 GAP, pair
   identity, GM right tail Δ > 19/70, left-tail obstruction) do not depend on r′.
+
+### §2 mechanism correction (validator finding, accepted 2026-08-14)
+
+The note's §2 claimed the s = 1 pole of the M-integrand "exactly produces the (T/2π)L⁵ main
+term". That mechanism statement is WRONG (verdict: FAIL, mechanism only): the residue at s = 1 of
+ζ″(s)ζ″(1−s)(ζ′/ζ)(s)-type integrands is L-independent (its coefficients are constants γ₀, ζ^(k)(0),
+χ′(0)), and for the μ-mollifier it is suppressed by B(1) = 0 (P(0) = 0). The main terms of the
+mollified moments come from the **diagonal of the character-sum expansion** (the ℳ-analogue,₁
+piece — the same structure as S₂'s (T/2π)ℒ³·57/64). The order-level conclusion (M ~ (T/2π)ℒ⁵·c(M)
+with c(M) to be computed by M4-proper) is unaffected; only the stated mechanism is corrected.
