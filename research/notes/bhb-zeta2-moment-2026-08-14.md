@@ -204,3 +204,31 @@ quoted (paper text via ar5iv); `[verified]` S₂ = Σ|Bζ′(ρ)|² is BHB's onl
 `[inferred]` Σ_{γ≤T}|ζ″(ρ)|² ~ (T/2π)L⁵/5 is Gonek-type standard (literature, not re-extracted this
 session); `[inferred]` MF is derivative-order-independent (Levinson amplification structure,
 anchored by the exact 57/64 reproduction).
+
+---
+
+## 9. Validation addendum (2026-08-14, main-loop adversarial pass)
+
+Adversarial validation of this note was completed in-session (see
+`bhb-zeta2-moment-validation-2026-08-14.md`; background validator subagents failed to complete
+three times this session, infra issue). Result: **NOT BROKEN, two labels downgraded.**
+
+- VERIFIED against the fetched paper (arXiv:1302.5018, ar5iv): Lemma 1 quote (S₂, ℳ₂, a₁/a₂),
+  the ℳ₂,₁ main-term coefficient beginning (1/12 − ϑ/2∫P + 3ϑ/2∫P² − …), "q = 1 gives rise to
+  the main terms", and c(S₂) = 57/64.
+- VERIFIED: ζ″(1−s) = χ(1−s)[ζ″(s) + 2Lζ′(s) + L²ζ(s)] + O(t^{−1}) (independently re-derived
+  twice; the first validator attempt produced a spurious sign error in the VALIDATOR's own
+  algebra — caught and corrected).
+- VERIFIED: simple-pole-at-zeros structure; un-mollified ζ′-moment constant 1/3 (B = 1 limit of
+  Lemma 1: 1/2 − 2·(1/12) = 1/3).
+- **DOWNGRADED:** r′ = 3/5 — the un-mollified ζ″-constant (T/2π)L⁵/5 is pattern-extrapolated
+  (1/(2k+1)), not computed; the cross terms [ζ″² + 2Lζ″ζ′ + L²ζ″ζ] are L⁵-scale at s = 1 and were
+  bounded, not evaluated; MF-derivative-independence unproven. **Label: CONJECTURED**
+  (was "PROVEN (transfer)").
+- **DOWNGRADED:** "no genuinely new arithmetic sum" — the q = 1 pieces are main-term-scale, not
+  T^ε-absorbed; transfer structurally sound but requires the mechanical re-derivation (this
+  note's §8.1). **Label: INCONCLUSIVE** at the "no new work" level; M = O(L²S₂) stands as
+  CONJECTURED (order-level transfer plausible).
+- Box values remain CONDITIONAL: b_pair ∈ [0.0758, 0.2237] as r′ ranges over [3/5, 0]
+  (pair form, M3 note). Milestone verdicts (M2 REFUTED, M3 GAP, pair identity, GM right tail)
+  do not depend on r′.
