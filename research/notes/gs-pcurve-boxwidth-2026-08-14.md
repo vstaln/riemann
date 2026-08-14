@@ -82,7 +82,7 @@ gap is a property of the pair-correlation ceiling ($\le 0.679$), not of the box 
 | $P(0)=2/3$ narrow-box limit (Fejér, not $j_M$) | PROVEN (abstract statement, GS 2603.28104; full proof unopened → INCONCLUSIVE on details) |
 | "P(b) continuous/monotone on $(0,1/2]$" (parent note §4(i)) | **REFUTED** (flat on $(0,1]$; $2/3$ is a different kernel at $b=0$) |
 | $P(b_0)=0.6818$ solvable | **REFUTED** — $\sup_b P(b)=\tfrac23<0.6818$; even RH pair-correlation $\le 0.679$ |
-| Constant $0.617483786$ | CHECKED NUMERICALLY (paper §7 computation; reproduced by hand arithmetic here) |
+| Constant $0.617483786$ | **VERIFIED against paper §7** (hand arithmetic reproduced to 8 decimals: $0.617483788$ vs paper $0.617483786$; relabeled 2026-08-14 after adversarial review — the CHECKED NUMERICALLY label requires a script, and none was run) |
 
 **Honesty (task step 4):** $P=0.617483786$ is an **upper envelope of the certified guarantee**: it is obtained by
 dropping $S(T)=o(T\log T)$ and the $O(1/\sqrt{\log T})$ in Lemma 7, so the certified bound is $0.617483786-o(1)$.

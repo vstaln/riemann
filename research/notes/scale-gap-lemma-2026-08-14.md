@@ -141,17 +141,18 @@ The ADJUDICATION downgraded "zero-density is scale-blind" because "a fixed-σ es
 - `[verified]` arithmetic: N(σ_b,T) = (T/4π) log T + O(1); Σ(β−1/2)² = T/(8π log T); Θ(T log T) ≫ o(T log T).
 - `[inferred]` prior notes conflate N(1/2,T) (one side) with M(T) (full count) — factor 2, immaterial to all labels.
 - `[inferred]` which specific moment input is load-bearing for the moment route — used illustratively in §5 only; the lemma's verdict does not depend on it.
+- **Scope of the witness (flagged after adversarial review, review-round2):** C_T is a zero *configuration* satisfying (1)–(3), not an actual ξ-function. The lemma proves logical independence from the premise set {FE-pairing, von-Mangoldt-count, fixed-σ-density}; consistency with the full Riemann–von Mangoldt **explicit formula** (or Hadamard factorization) is NOT checked — it is outside the premise set. The lemma's conclusion is a statement about zero configurations satisfying (1)–(3); it does not assert that an actual ζ satisfies C_T.
 - No computation performed (pure derivation, per charter). The only numbers ((T/4π), T/(8π), the threshold) are hand algebra; a numerical run would change no belief, so per the compute discipline it is skipped.
 
 ---
 
 ## 9. Next step
 
-The scale-gap lemma is **settled**: zero-density is provably scale-blind, the box hypothesis is a genuinely new input class, and the lever "prove the box via a Guth–Maynard-type zero-density estimate" is now **CLOSED** (not merely suspected closed). Next concrete moves, in priority order:
+The scale-gap lemma is **settled**: **fixed-σ** zero-density is provably scale-blind, the box hypothesis is a genuinely new input class, and the lever "prove the box via a Guth–Maynard-type **fixed-σ** zero-density estimate" is now **CLOSED** (not merely suspected closed). **Important qualifier (after adversarial review):** the closure is of fixed-σ density families. A density hypothesis asserted down to the **moving** boundary σ = 1/2 + c/log T (BGSTB (1.6)-style) is a *distinct, correctly-scaled* input that WOULD imply the box — BGSTB state exactly this. Next concrete moves, in priority order:
 
 1. **Sub-lemma (i) — the P(b) curve** (parent note's priority (i)): express the BGSTB Tsang-kernel guaranteed simple-fraction as an explicit function P(b) of the box half-width and solve P(b₀) = 0.6818. The scale-gap lemma only rules out zero-density as the **supplier** of the box; it says nothing about what proportion the box yields once supplied.
 2. **Classify the box input against correct-scale inputs** (gm-box §8, now sharpened): is N(1/2 + b/log T, T) = o(T log T) implied by / equivalent to S(T) = o(log T) (BGSTB Lemma 7), a log|ζ| mean-square bound, or a pair-correlation input? §5 shows the moment route must save a further 1/log T — that is the correct scale, and the live path.
 
 ## 10. Hand-off note
 
-This note **replaces** the CONJECTURED downgrade in `gs-general-estimate-2026-08-14.md` §5 ADJUDICATION item 2 with PROVEN. The downgrade was overly cautious: the caveat it cites is a scope statement, not a proof gap. Recommend the parent note's label table (row "Guth–Maynard cannot certify (A)/(B)") be updated from CONJECTURED to PROVEN on the strength of this lemma.
+This note **replaces** the CONJECTURED downgrade in `gs-general-estimate-2026-08-14.md` §5 ADJUDICATION item 2 with PROVEN **for fixed-σ density families** (the moving-boundary caveat above is preserved). The downgrade was overly cautious: the caveat it cites is a scope statement, not a proof gap. Recommend the parent note's label table (row "Guth–Maynard cannot certify (A)/(B)") be updated from CONJECTURED to PROVEN on the strength of this lemma.
