@@ -139,3 +139,33 @@ disk without re-deriving. Every claim cites its source note. Labels: PROVEN / CH
 
 **End of memory document.** Any future agent reading only this file + the cited notes has the
 full state. No fabrication; every line traces to a file in this repo.
+
+---
+
+## UPDATE 2026-08-17 (late) — Rust-only directive + parallel wave 3
+
+**Directive (user, binding, all sessions):** Python FORBIDDEN unless absolutely necessary (mpmath-level
+arbitrary precision with no Rust equivalent, justified one line in the note label). No numpy/scipy/mpmath
+in new deliverables. Existing Python verifiers (`tools/barrier_zoo/`, `tools/lpdual/`) are reference-only;
+port to Rust as the first action of any lever touching them. Cargo has network + registry cache (verified
+2026-08-17: minilp 0.2 fetches; zeta-rs builds in 0.03s cached). Rust musl: `export
+PATH=$HOME/.cargo/bin:$PATH RUSTFLAGS="-C linker=rust-lld -C link-self-contained=yes"` + `cargo build
+--release --target x86_64-unknown-linux-musl`. Goal + hooks/agents.md updated to match.
+
+**Parallel thinking is now mandatory** (goal §OUR COMBINED METHOD): dispatch ≥2–3 disjoint background
+sub-agents per turn, never inline everything in the coordinator loop.
+
+**Wave 3 dispatched (all background, pinned opencode-go/deepseek-v4-flash, Rust-only, deliverable-first):**
+- (A) `d629da85-ae98-4d8` builder — barrier zoo → Rust port `tools/barrier_zoo_rs/`: must reproduce the
+  certified DH off-line zeros s=0.8085171824566+i·85.6993484854 and s=0.6508300806097+i·114.1633427308
+  (|f|<1e-50 @50dps, Titchmarsh κ-combination; also zeros of f_plus c=+ε), t_hi≥130.
+- (B) `b333a18a-660e-440` builder — sinc-kernel certificate LP with m₃ read `tools/sinc_m3_cert/`
+  (minilp): does the PROVEN m₃≥m₂² theorem break the in-class ceiling 0.6818 when the certificate is
+  reformulated in the sinc/Montgomery–Taylor window? + RH-false control. THE live mathematical lever.
+- (C) `f11dace2-4faa-458` adventurer — off-centre positivity wrong-direction brief (empty-route forecast;
+  inversion = win; k<1 moving-boundary b≈0.0758 count vs LMFDB zeros).
+
+**Adjudicated this session:** the 9 rebased-in remote commits claiming a complete Lean RH proof / 90%+ /
+De Branges / Li are NOT RECORDS — CompleteRHProof.lean's core theorem is a vacuous tautology (hypothesis
+∀d C≤C_on−4·d·N_off forces N_off=0 by itself; never proved for actual ζ); GramStability.lean has 8 sorries;
+"90%+" contradicts PROVEN walls. File: research/notes/adjudication-remote-rh-claims-2026-08-17.md.
