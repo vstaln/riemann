@@ -15,6 +15,12 @@ incremental surface):
   it speaks the program's native language (law / m₃ / E(1) / marked-T) but has NO a priori
   0.6818 ceiling. Under RH λ_n ~ (n/2) log n (positive, growing); if RH fails, λ_n turns
   negative with exponential amplitude oscillating at the off-line height — an extremely sharp probe.
+- **CORRECTED 2026-08-14 (structure audit):** the claim "λ_n ≥ 0 ⟺ {λ_n} is a moment sequence ⟺
+  Hankel matrix PSD" is FALSE — under RH {λ_n} is a *renormalized* Toeplitz difference
+  λ_n = 2(c₀ − c_n) of the positive-definite Fourier sequence c_n = Σ_γ cos(nθ_γ), NOT a
+  moment sequence in general; termwise nonnegativity is not a Hankel condition. The real
+  structural anchors are (a) the Bombieri–Lagarias Weil form 2λ_n = W(g_n ∗ x⁻¹g_n(x⁻¹)),
+  (b) Suzuki's L²-norm criterion (arXiv 2301.05779), (c) sin²/Chebyshev representations.
 - Concrete next step: compute Stieltjes constants → λ_n to n ~ 10⁴–10⁵ (parallel), check
   positivity + Hankel inertia (interval arithmetic); hunt a positive-definite representation
   of the Hankel form (the program's own "law" is the prototype).
