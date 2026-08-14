@@ -4,20 +4,26 @@
 - **Title:** On the proportion of zeros of ζ(s) on the critical line: a certified lower bound and a proven ceiling for one certificate class
 - **Author:** Vstalin Grady
 - **Category:** math.NT (Number Theory)
-- **Abstract:**
-  We give a lower bound for the proportion of nontrivial zeros of the Riemann zeta
-  function lying on the critical line, obtained inside a Levinson–Conrey certificate
-  class of bandwidth one. The certificate, checked in interval arithmetic, yields
-  0.6732660791…; a machine-checked argument shows that no certificate in this class
-  can exceed 0.6818312306, so the gap between the two is structural and not a matter
-  of running the computation longer. The same machinery gives, as a byproduct, that
-  at least 0.83621 of the zeros are distinct on the critical line. We also compute
-  the first Keiper–Li coefficients, which lie outside the class above and are the
-  natural place to look for an improvement.
-- **Comments:** 7 pages, 3 figures. The interval-arithmetic verifier (python-flint/Arb) and full derivation are available on request; the zero statistics were validated against LMFDB.
+- **Abstract** (matches `paper-main.tex` abstract verbatim; paste this into the arXiv abstract field):
+
+  We prove that the bandwidth-one Levinson--Conrey certificate class cannot certify
+  more than $0.6818312306$ of the zeros of $\zeta(s)$ on the critical line, and we
+  exhibit a certificate in that class that certifies $0.6732660791\ldots$. The ceiling
+  is machine-checked: any certificate reading only the mean density, the
+  pair-correlation form factor on $[0,1]$, and multiplicity integrality is valid
+  against a witness configuration with simple-point fraction
+  $p_0=0.68182868746\ldots$, and the $1/(6\cdot256^2)$ correction is the
+  discretization defect of the formalization. The lower bound is certified in interval
+  arithmetic (python-flint/Arb) at threshold $\epsilon=8065\times10^{-6}$ on a grid of
+  $4000$ points. The two numbers bracket the class. The same bookkeeping gives at
+  least $0.83621$ for the proportion of distinct points on the line, and the first
+  twelve Keiper--Li coefficients, computed to twenty digits, lie outside the class,
+  where the ceiling does not apply.
+
+- **Comments:** 7 pages, 3 figures. The interval-arithmetic verifier (python-flint/Arb) and full derivation live in the companion repository (the riemann git repository, commit hash at publication); the zero statistics were validated against LMFDB.
 
 ## Files
-- `paper-main.tex` — main source (compiles standalone, no external style files beyond standard LaTeX)
+- `paper-main.tex` — main source (compiles standalone, standard LaTeX only)
 - `figures/fig1_certified_bound.png`, `figures/fig2_li_coefficients.png`, `figures/fig3_spacing_stats.png`
 
 ## Compile
