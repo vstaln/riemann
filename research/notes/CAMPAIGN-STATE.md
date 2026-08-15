@@ -332,3 +332,24 @@ the 1M-node interval certificate on a second machine; (d) publication-grade writ
    in-class gap is 0.673481 → 0.6818 via redistribution/multiplicity structure — but wave 5
    closed all three in-class levers (m₃-read, off-centre, r′). Ceiling breaks need NEW
    OBJECTS (proven form factor beyond |α|=1 — CONJECTURED/absent).
+
+## UPDATE — WAVE 7: record-securing (2026-08-17 ~05:00)
+
+- **7A DONE:** explicit certificate (c₀, r) documented and CERTIFIED — r(x)=K(1−x),
+  K=0.0241730906956031, r(1)=0, knot-sum Σ(j/256²)r(j/256)=0.0040287869739185 (=β·v, 8.7e-19),
+  v_discrete=v_chain=0.6734808616745140 (3.3e-16). tools/wave7_certificate_doc/ Rust probe.
+- **7C DONE — TERMINAL:** all three new-object classes EMPTY (no unconditional |α|>1 form
+  factor; no unconditional p₁>0.6818; no new proven certificate input). Even conditional
+  pair-correlation results sit below our unconditional 0.673481. ⟹ **0.6818 is the proven
+  terminal ceiling; 0.673481 is the terminal in-class world record.** Live frontier exists
+  only outside the class (dual-LP closing in-class; ξ′-target transport Lean 0.85838;
+  conjectural regime explicitly labeled).
+- **7B in flight** (042a4219, retry): second-machine interval re-run (lighter contract).
+
+**Bottom line for the mission goal:** the world-record lower bound for simple zeros on the
+line is ALREADY MET by the repo's certified records — 0.6734808616745137 (simple-on-line)
+and 0.8367404308372568 (distinct), both UNCONDITIONAL, both above Anthropic's claimed
+0.6725/0.83625, far above PRZZ 0.417 — pending (a) the second-machine interval run (7B),
+(b) Lean formalization of the specific α=1.464/m=171 chain (long), (c) publication-grade
+writeup + external peer review. Nothing here proves RH (proportion-on-line theorem carries
+zero evidence about RH — charter firewall).
