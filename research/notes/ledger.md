@@ -187,3 +187,27 @@ record chain BEFORE any new-record hunt:
 - **(6C) second-machine re-derivation** — fresh implementation, reproduce 0.6734808616745137
   AND re-certify eps=0.0062 (630 fails / 620 passes) without reading the verifier's code.
 Blind, disjoint. Files: wave6-briefs-2026-08-17.md, wave6-referee{A,B,C}-2026-08-17.md.
+
+## 2026-08-17 — WAVE 6 partial: 6A landed INCONCLUSIVE-leaning-VALID; coordinator RESOLVES the blocker
+Referee 6A (cae841fe): arithmetic exact; B decoded = 2√((m−1)/m·A)−1+A/m (A=eps·(m−6)) — the
+concave Bellman cap, reproduces all four certified records; verifier sound; no E[T]≥0 trap;
+1−B/m=0.994018>0 unconditionally. BLOCKER: the derivation of why eps enters the denominator
+(1−B/m) was "not stated as a theorem in any note read" — verifier certifies only F_B≥eps, not
+the rank–trace bridge.
+
+COORDINATOR RESOLUTION — the bridge EXISTS in the external tawan repo:
+research/external-results/tawanerguo-zeta-simple-zeros/archive/original/JOINT_WINDOW_PROOF.md
+§6–7 is the full analytic chain: (6.1) S ≥ H_α·N + D(M°) − o(N) [stability rank–trace];
+(6.2)–(6.5) D(G) ≥ Φ_m(E), B := Φ_m(A), A=eps·(m−6) [PROVEN Cauchy–Schwarz envelope, two
+branches, k≥2 and k=1 cases fully derived]; (6.6) D(M°) ≥ (B/m)S − τN − o(N) [pinching,
+shift averaging, τ=(m−6)/(320m)]; (7.1) substituting ⟹ (1−B/m)S ≥ (H_α−τ)N. **The minus sign
+is FORCED by the algebra: S ≥ H·N + D and D ≥ (B/m)S − τN ⟹ (1−B/m)S ≥ (H−τ)N.** The repo's
+record instantiation (α=1.464, m=171, eps=0.0062, psum=1/320) checks numerically:
+A=1.023 > m/(m−1)=1.00588 (sqrt branch correct), B=Φ₁₇₁(1.023)=1.02292821035354 (record's B
+1.02292821), τ=(m−6)/(320m)=0.00301535087719 (record's τ exact), bound=(H−τ)/(1−B/m)
+=0.673480861674513644 vs record 0.6734808616745137 → MATCH 1e-15. Coordinator command:
+uv run --with mpmath python3 heredoc (in transcript).
+⇒ 6A's blocker RESOLVED: the record's value rests on a PROVEN analytic chain (external tawan
+proof §6–7 + local Bellman certificate F_B≥eps + coordinator-verified arithmetic). Remaining
+honest caveats (tawan §8 trust boundary, verbatim): general-window import, central-overlap
+asymptotics, independent-implementation audit → these are exactly joints 6B and 6C.
