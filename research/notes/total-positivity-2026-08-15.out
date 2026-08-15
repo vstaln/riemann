@@ -1,0 +1,57 @@
+=== REAL b_k from Phi quadrature (k=0..16) ===
+  b_0 = 4.9712077819e-1
+  b_1 = 1.1485972158e-2
+  b_2 = 1.2345201807e-4
+  b_3 = 8.3235548139e-7
+  b_4 = 3.9922265513e-9
+  b_5 = 1.4616025760e-11
+  b_6 = 4.2745400455e-14
+  b_7 = 1.0309626135e-16
+  b_8 = 2.0997698081e-19
+  b_9 = 3.6781410955e-22
+  b_10 = 5.6228575873e-25
+  b_11 = 7.5917601304e-28
+  b_12 = 9.1433428790e-31
+  b_13 = 9.9061066332e-34
+  b_14 = 9.7246934331e-37
+  b_15 = 8.7045996667e-40
+  b_16 = 7.1434866112e-43
+  sanity: b_0 should be xi(1/2) = 0.49712077818831391;  b_10 ~ 5.62e-25 (wave8d-run5)
+== REAL case (b_k = M_k/(2k)!, Phi > 0) ==
+  T_k > 0 for k=1..15 (no Turan fail)
+  min t_k = 8.317056e-2 at k=15;  min t_k*(k+1) = 1.069632e0 (RH-necessary: >= 1)
+  D_1 = det(b_{i+j})_{0..1} : sign=-  log10|D|=-4.2  expected - OK
+  D_2 = det(b_{i+j})_{0..2} : sign=-  log10|D|=-12.8  expected - OK
+  D_3 = det(b_{i+j})_{0..3} : sign=+  log10|D|=-26.8  expected + OK
+  D_4 = det(b_{i+j})_{0..4} : sign=+  log10|D|=-46.5  expected + OK
+  D_5 = det(b_{i+j})_{0..5} : sign=-  log10|D|=-72.1  expected - OK
+  D_6 = det(b_{i+j})_{0..6} : sign=-  log10|D|=-103.9  expected - OK
+  D_7 = det(b_{i+j})_{0..7} : sign=+  log10|D|=-141.9  expected + OK
+  D_8 = det(b_{i+j})_{0..8} : sign=+  log10|D|=-186.5  expected + OK
+
+== CONTROL all-real (15 zeta-zero heights) ==
+  T_k > 0 for k=1..15 (no Turan fail)
+  min t_k = 2.532377e-1 at k=8;  min t_k*(k+1) = 1.162892e0 (RH-necessary: >= 1)
+  D_1 = det(b_{i+j})_{0..1} : sign=-  log10|D|=-3.9  expected - OK
+  D_2 = det(b_{i+j})_{0..2} : sign=-  log10|D|=-13.0  expected - OK
+  D_3 = det(b_{i+j})_{0..3} : sign=+  log10|D|=-27.9  expected + OK
+  D_4 = det(b_{i+j})_{0..4} : sign=+  log10|D|=-49.0  expected + OK
+  D_5 = det(b_{i+j})_{0..5} : sign=-  log10|D|=-76.6  expected - OK
+  D_6 = det(b_{i+j})_{0..6} : sign=-  log10|D|=-111.1  expected - OK
+  D_7 = det(b_{i+j})_{0..7} : sign=+  log10|D|=-152.6  expected + OK
+  D_8 = det(b_{i+j})_{0..8} : sign=+  log10|D|=-201.4  expected + OK
+
+== CONTROL planted (gamma_2 -> 0.35 +/- 21.1 i) ==
+  T_k > 0 for k=1..15 (no Turan fail)
+  min t_k = 2.934469e-1 at k=11;  min t_k*(k+1) = 1.610956e0 (RH-necessary: >= 1)
+  D_1 = det(b_{i+j})_{0..1} : sign=-  log10|D|=-4.3  expected - OK
+  D_2 = det(b_{i+j})_{0..2} : sign=-  log10|D|=-14.4  expected - OK
+  D_3 = det(b_{i+j})_{0..3} : sign=+  log10|D|=-29.4  expected + OK
+  D_4 = det(b_{i+j})_{0..4} : sign=-  log10|D|=-50.5  expected + <-- WRONG SIGN
+  D_5 = det(b_{i+j})_{0..5} : sign=-  log10|D|=-77.6  expected - OK
+  D_6 = det(b_{i+j})_{0..6} : sign=-  log10|D|=-110.6  expected - OK
+  D_7 = det(b_{i+j})_{0..7} : sign=+  log10|D|=-150.5  expected + OK
+  D_8 = det(b_{i+j})_{0..8} : sign=+  log10|D|=-197.6  expected + OK
+
+Verdict key: real case must satisfy T_k>0 (k=1..15) AND D_n sign = (-1)^{n(n+1)/2} for n=1..8;
+planted control must break at least one of these, else the discriminator is dead.

@@ -1,0 +1,11 @@
+t=1 read hooks/agents.md; ls notes; ls tools
+t=2 grep ledger (no hankel/TP entries for b_k; li-structure-audit: lambda Hankel PSD FALSE, R4 abandoned - different object); found wave8d b_k defs
+t=3 worked out all math in-head: Xi(t)=1/2-(t^2+1/4)g(t) derivation cross-checked at t=0 (0.4971); Phi>0 PROVEN termwise; b_k true Taylor coeffs (repo-verified b_0)
+t=4 wrote partial note total-positivity-2026-08-15.md (math complete: ASW-Edrei Toeplitz; moment-Hankel TP gives POSITIVE-axis zeros; RH => Hankel minors alternate (-1)^{r(r-1)/2}; inversion)
+t=5 read wave8d main.rs (phi/moment/b_k; controls: 15 gammas, plant gamma_2->0.35+-21.1i)
+t=6 read wave8d run files: real b_k cross-check values; controls pass T_k, planted fails L_5(0)
+t=7 read wave8d control() fn: exact plant convention (a=2re/denom, bq=1/denom)
+t=8 wrote tools/tp_hankel_probe (Cargo.toml + main.rs, f64 std-only)
+t=9 built+ran probe: FIRST RUN bug - printed permutation sign not det sign (D1 showed +, must be -T1<0)
+t=10 fixed det_lu true_sign; reran: REAL alternates EXACTLY (-,-,+,+,-,-,+,+) n=1..8, T_k>0 k=1..15, min t_k(k+1)=1.0696; all-real control same; PLANTED control D4 SIGN FLIP (fires!). b_0/b_10 cross-check OK.
+t=11 wrote final note + this progress log. DONE. Deliverable: research/notes/total-positivity-2026-08-15.md (+.out), tools/tp_hankel_probe/.
