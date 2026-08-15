@@ -169,3 +169,51 @@ sub-agents per turn, never inline everything in the coordinator loop.
 De Branges / Li are NOT RECORDS — CompleteRHProof.lean's core theorem is a vacuous tautology (hypothesis
 ∀d C≤C_on−4·d·N_off forces N_off=0 by itself; never proved for actual ζ); GramStability.lean has 8 sorries;
 "90%+" contradicts PROVEN walls. File: research/notes/adjudication-remote-rh-claims-2026-08-17.md.
+
+## UPDATE — wave 3 verdicts + wave 4 dispatch (2026-08-17 ~02:00)
+
+### Wave 3 results (all three agents landed; coordinator post-verified each)
+- **(A) barrier-zoo Rust port — ABANDONED as deliverable, stub kept.** Build fixed by
+  coordinator (8 adjacent-string-literal errors + 1 borrow-move); run shows MATH CORES BROKEN:
+  Γ(2)=1.5054 (expect 1) → Lanczos misimplemented; ε(ψ)=−13.877+66.587i (|ε|=68, expect |ε|=1,
+  GaussSum/(i√5)); certified DH zeros NOT reproduced (|f_plus|=641/232 at the certified spots,
+  need <1e-9); Epstein modularity rel-diff 0.59–0.91, continuation off 3–6 orders, Dedekind
+  false. Weil + Beurling + classifier mostly correct. NOT rung-0 usable; acceptance test =
+  reproduce the certified DH zeros. Wave-4 agent f0f32ad5 fixing Γ→ε→zeros now.
+  File: research/notes/barrier-zoo-rust-2026-08-17.md.
+- **(B) sinc-kernel m₃ certificate LP — CONJECTURED (binary ran; 2 hostile referees dispatched).**
+  Scan (eps=0.44, sinc² B=128 N=256): min-p₁=0.748807, κ=0.748809 — EXCEEDS 0.6818.
+  Honesty flags: (i) minilp shadow block `Infeasible` (linearized LP invalid at the max-kink;
+  scan/bisection is the real optimum); (ii) torus-convention floor 6.1535 → INFEASIBLE read
+  (expected — the read is sinc-convention; route (a) reformulation is exactly this binary);
+  (iii) RH-false control: sinc² Gram σ-blind → reads(B)==reads(A) for the 60%-on-line fake-Weil
+  world → PROVES TOO MUCH for the on-line claim: κ* is a SIMPLE-FRACTION ceiling, the on-line
+  reading needs an RH-type hypothesis (off-line zeros all non-simple). Firewall intact.
+  Calibration-fragile: κ>0.6818 only for m₂(1)≥~2.17; real-zeros sinc m₂²=4.9256→m₂(1)=2.2198≈2.22,
+  so the feasible branch IS the real-zeros branch — the most promising reading.
+  At the optimum the binding constraint is D+P₃=5.44 (read TOP), m₂²=5.02 SLACK — the theorem
+  m₃≥m₂² is NOT the active constraint; the m₃ READ is. The claim's real content:
+  "m₃-read ≤ 5.44 forces p₁ ≥ 0.7488 in the sinc marked-law model." File: sinc-m3-certificate-LP-2026-08-17.md.
+- **(C) off-centre positivity — PROVEN EMPTY (route dead), forecast held.** Window pinned
+  0.6725007, class ceiling 0.6818, beyond-α=1 closed; the one real positivity (3+4cosθ+cos2θ)
+  gives only the zero-free-region right edge — weaker than the box certificate needs. LMFDB
+  data stores (index, ordinate) only → off-line count ≡ 0, sanity check VACUOUS by construction
+  (probe run: 0/51499, ratio 0.7043, Θ(T log T) never o). m₃≥m₂² is λ-independent (CS on PSD A)
+  → off-centre marked positivity = same theorem shifted, empty. File: offcentre-positivity-probe-2026-08-17.md.
+
+### Wave 4 in flight (all background, flash, Rust-only, disjoint)
+1. d273aacb Referee-A — hostile, joint = sinc-m3 marked-law model correctness (normalization
+   E[m]=2/(1+p₁) vs 2−p₁, row-0, pair rows, P₃, floor completeness, calibration, is the
+   theorem row really slack at the optimum). Control: 256-law at p₁=0.6818287 must be excluded.
+2. 81636ce4 Referee-B — hostile, joint = interpretation + LP/scan reconciliation (σ-blindness,
+   what exactly κ* certifies, find an RH-false world where the conclusion is FALSE — DH
+   candidate, scan-vs-minilp, record-mapping). Control: fake-Weil world B.
+3. f0f32ad5 barrier-zoo math cores (Γ, ε, DH zeros, Epstein, Beurling, classifier 10/10).
+4. 7f447497 re-derivation m₃≥m₂² from scratch (FORBIDDEN to read the 3 marked-moment notes;
+   load-bearing output = which m₂ convention the theorem binds in).
+
+### Open items
+- L5 targets C/D: still need a verdict (low priority; behind the live sinc-m3 thread).
+- Pending after wave 4: ledger the referees' verdicts; if model+interpretation survive,
+  dispatch a re-derivation of the certificate's min-p₁ + a blind referee on the record claim;
+  fix barrier-zoo then it becomes the rung-0 discipline tool for all briefs.
