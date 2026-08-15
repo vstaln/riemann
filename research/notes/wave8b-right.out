@@ -1,0 +1,104 @@
+# RIGHT: ζ' zeros in [0.5,1]×[T,T+H], T=10..5000 H=100 step=0.02
+slab [10,110]: winding=5.000000 max|Δarg|=0.519 min-margin=2.640e-2 neg=0
+    refined ζ' zero ≈ 0.848735 + 60.140846i  |ζ'|=8.15e-15
+slab [110,210]: winding=14.000000 max|Δarg|=1.023 min-margin=2.083e-2 neg=0
+    refined ζ' zero ≈ 58.136974 + 160.828287i  |ζ'|=2.19e-18
+slab [210,310]: winding=21.000000 max|Δarg|=1.544 min-margin=1.127e-2 neg=0
+    refined ζ' zero ≈ 58.907133 + 257.372957i  |ζ'|=1.28e-18
+slab [310,410]: winding=23.000000 max|Δarg|=1.476 min-margin=9.592e-3 neg=0
+    refined ζ' zero ≈ 54.262558 + 361.199282i  |ζ'|=3.21e-17
+slab [410,510]: winding=26.000000 max|Δarg|=0.944 min-margin=3.276e-2 neg=0
+    refined ζ' zero ≈ 0.593665 + 459.812738i  |ζ'|=8.50e-14
+slab [510,610]: winding=32.000000 max|Δarg|=1.307 min-margin=9.918e-3 neg=0
+    refined ζ' zero ≈ 0.780996 + 559.861040i  |ζ'|=2.40e-13
+slab [610,710]: winding=31.000000 max|Δarg|=1.370 min-margin=1.365e-2 neg=0
+    refined ζ' zero ≈ 0.933050 + 660.279970i  |ζ'|=1.62e-13
+slab [710,810]: winding=37.000000 max|Δarg|=1.196 min-margin=1.210e-2 neg=0
+    refined ζ' zero ≈ 0.959326 + 760.020273i  |ζ'|=4.45e-14
+slab [810,910]: winding=36.000000 max|Δarg|=0.734 min-margin=3.264e-2 neg=0
+    refined ζ' zero ≈ 2.100849 + 860.235096i  |ζ'|=5.99e-15
+slab [910,1010]: winding=39.000000 max|Δarg|=1.288 min-margin=4.087e-3 neg=0
+    refined ζ' zero ≈ 55.980986 + 957.706263i  |ζ'|=9.75e-18
+slab [1010,1110]: winding=40.000000 max|Δarg|=1.320 min-margin=1.679e-2 neg=0
+    refined ζ' zero ≈ 1.626413 + 1059.856840i  |ζ'|=3.59e-14
+slab [1110,1210]: winding=45.000000 max|Δarg|=1.430 min-margin=1.456e-2 neg=0
+    refined ζ' zero ≈ 56.012136 + 1158.114464i  |ζ'|=9.54e-18
+slab [1210,1310]: winding=46.000000 max|Δarg|=1.327 min-margin=1.422e-2 neg=0
+    refined ζ' zero ≈ 56.352418 + 1259.867757i  |ζ'|=7.53e-18
+slab [1310,1410]: winding=50.000000 max|Δarg|=1.554 min-margin=6.671e-3 neg=0
+    refined ζ' zero ≈ 49.582514 + 1360.985473i  |ζ'|=8.22e-16
+slab [1410,1510]: winding=42.000000 max|Δarg|=1.311 min-margin=1.475e-2 neg=0
+    refined ζ' zero ≈ 55.735014 + 1462.456627i  |ζ'|=1.16e-17
+slab [1510,1610]: winding=45.000000 max|Δarg|=1.497 min-margin=8.664e-3 neg=0
+    refined ζ' zero ≈ 1.151244 + 1559.921075i  |ζ'|=1.58e-13
+slab [1610,1710]: winding=51.000000 max|Δarg|=1.213 min-margin=3.189e-2 neg=0
+    refined ζ' zero ≈ 0.737206 + 1660.289834i  |ζ'|=1.42e-12
+slab [1710,1810]: winding=51.000000 max|Δarg|=1.301 min-margin=7.092e-3 neg=0
+    refined ζ' zero ≈ 1.108524 + 1759.895928i  |ζ'|=6.32e-14
+slab [1810,1910]: winding=54.000000 max|Δarg|=1.460 min-margin=9.859e-3 neg=0
+    refined ζ' zero ≈ 46.059189 + 1861.669696i  |ζ'|=9.45e-15
+slab [1910,2010]: winding=57.000000 max|Δarg|=1.538 min-margin=3.891e-3 neg=0
+    refined ζ' zero ≈ 56.967854 + 1960.445397i  |ζ'|=4.92e-18
+slab [2010,2110]: winding=53.000000 max|Δarg|=1.071 min-margin=3.239e-2 neg=0
+    refined ζ' zero ≈ 1.091729 + 2059.581696i  |ζ'|=1.53e-13
+slab [2110,2210]: winding=53.000000 max|Δarg|=1.419 min-margin=6.052e-3 neg=0
+    refined ζ' zero ≈ 0.947191 + 2160.302580i  |ζ'|=1.30e-12
+slab [2210,2310]: winding=56.000000 max|Δarg|=1.542 min-margin=3.278e-3 neg=0
+    refined ζ' zero ≈ 1.153785 + 2259.578398i  |ζ'|=2.47e-13
+slab [2310,2410]: winding=59.000000 max|Δarg|=1.548 min-margin=1.633e-2 neg=0
+    refined ζ' zero ≈ 0.821298 + 2359.962425i  |ζ'|=4.27e-13
+slab [2410,2510]: winding=56.000000 max|Δarg|=1.500 min-margin=2.167e-2 neg=0
+    refined ζ' zero ≈ 0.924652 + 2460.226691i  |ζ'|=3.81e-13
+slab [2510,2610]: winding=59.000000 max|Δarg|=1.503 min-margin=1.245e-2 neg=0
+slab [2610,2710]: winding=58.000000 max|Δarg|=1.495 min-margin=1.325e-2 neg=0
+slab [2710,2810]: winding=61.000000 max|Δarg|=1.472 min-margin=5.763e-3 neg=0
+slab [2810,2910]: winding=54.000000 max|Δarg|=1.517 min-margin=9.709e-3 neg=0
+slab [2910,3010]: winding=59.000000 max|Δarg|=1.525 min-margin=7.172e-3 neg=0
+slab [3010,3110]: winding=63.000000 max|Δarg|=1.542 min-margin=1.282e-2 neg=0
+slab [3110,3210]: winding=68.000000 max|Δarg|=1.287 min-margin=1.432e-3 neg=0
+slab [3210,3310]: winding=64.000000 max|Δarg|=1.437 min-margin=4.149e-3 neg=0
+slab [3310,3410]: winding=68.000000 max|Δarg|=1.400 min-margin=8.023e-3 neg=0
+slab [3410,3510]: winding=64.000000 max|Δarg|=1.374 min-margin=6.799e-3 neg=0
+slab [3510,3610]: winding=63.000000 max|Δarg|=1.478 min-margin=8.441e-3 neg=0
+slab [3610,3710]: winding=65.000000 max|Δarg|=1.401 min-margin=1.048e-2 neg=0
+slab [3710,3810]: winding=64.000000 max|Δarg|=1.267 min-margin=1.306e-2 neg=0
+slab [3810,3910]: winding=68.000000 max|Δarg|=1.554 min-margin=1.900e-3 neg=0
+slab [3910,4010]: winding=65.000000 max|Δarg|=1.291 min-margin=8.478e-3 neg=0
+slab [4010,4110]: winding=68.000000 max|Δarg|=1.200 min-margin=7.421e-3 neg=0
+slab [4110,4210]: winding=66.000000 max|Δarg|=1.135 min-margin=1.335e-2 neg=0
+slab [4210,4310]: winding=68.000000 max|Δarg|=1.534 min-margin=4.675e-3 neg=0
+slab [4310,4410]: winding=65.000000 max|Δarg|=1.339 min-margin=1.039e-2 neg=0
+slab [4410,4510]: winding=75.000000 max|Δarg|=1.195 min-margin=2.641e-2 neg=0
+slab [4510,4610]: winding=66.000000 max|Δarg|=1.535 min-margin=5.731e-3 neg=0
+slab [4610,4710]: winding=67.000000 max|Δarg|=1.310 min-margin=2.477e-3 neg=0
+slab [4710,4810]: winding=71.000000 max|Δarg|=1.222 min-margin=1.820e-2 neg=0
+slab [4810,4910]: winding=67.000000 max|Δarg|=1.443 min-margin=1.806e-3 neg=0
+slab [4910,5010]: winding=73.000000 max|Δarg|=1.194 min-margin=1.440e-2 neg=0
+TOTAL ζ' zeros in [0.5,1]×[10,5000] = 2651
+min certified |ζ'| margin on right contours = 1.432e-3
+refined zeros (first 25):
+    σ=0.848735  t=60.140846
+    σ=58.136974  t=160.828287
+    σ=58.907133  t=257.372957
+    σ=54.262558  t=361.199282
+    σ=0.593665  t=459.812738
+    σ=0.780996  t=559.861040
+    σ=0.933050  t=660.279970
+    σ=0.959326  t=760.020273
+    σ=2.100849  t=860.235096
+    σ=55.980986  t=957.706263
+    σ=1.626413  t=1059.856840
+    σ=56.012136  t=1158.114464
+    σ=56.352418  t=1259.867757
+    σ=49.582514  t=1360.985473
+    σ=55.735014  t=1462.456627
+    σ=1.151244  t=1559.921075
+    σ=0.737206  t=1660.289834
+    σ=1.108524  t=1759.895928
+    σ=46.059189  t=1861.669696
+    σ=56.967854  t=1960.445397
+    σ=1.091729  t=2059.581696
+    σ=0.947191  t=2160.302580
+    σ=1.153785  t=2259.578398
+    σ=0.821298  t=2359.962425
+    σ=0.924652  t=2460.226691

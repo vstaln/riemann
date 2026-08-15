@@ -1,0 +1,22 @@
+# CONTROL: fake f = ζ·G with planted off-line zeros ρ=0.3+15i, 0.25+28i
+  |f(0.3+15i)| = 0.000e0  (cert err 0.0e0)  → planted zero present: false
+  |f(0.7+15i)| = 0.000e0  (mirror)
+  |f(0.25+28i)| = 0.000e0  (cert err 0.0e0)  → planted zero present: false
+  |f(0.75+28i)| = 0.000e0  (mirror)
+  f' winding on [0.02,0.5]×[4,9] = 0.000  max|Δarg|=0.08  min-margin=4.16e8  neg=0
+  f' winding on [0.02,0.5]×[9,14] = 0.000  max|Δarg|=0.06  min-margin=2.97e8  neg=0
+  f' winding on [0.02,0.5]×[14,19] = 1.000  max|Δarg|=1.42  min-margin=3.76e6  neg=0
+    refined f' zero ≈ 0.490670 + 14.976283i  |f'|=2.27e-8
+  f' winding on [0.02,0.5]×[19,24] = -0.000  max|Δarg|=0.03  min-margin=3.69e9  neg=0
+  f' winding on [0.02,0.5]×[24,29] = 1.000  max|Δarg|=0.75  min-margin=1.31e8  neg=0
+    refined f' zero ≈ 1.021710 + 26.091994i  |f'|=4.77e-6
+  f' winding on [0.02,0.5]×[29,34] = 0.000  max|Δarg|=0.09  min-margin=3.44e9  neg=0
+  TOTAL f' winding in left strip windows = 2.000  → must be NONZERO (Speiser per-L: off-line zero ⟹ f' left-strip zero)
+  REAL ζ' winding on [0.02,0.5]×[4,9] = 0.000  min-margin=1.69e-1  neg=0
+  REAL ζ' winding on [0.02,0.5]×[9,14] = -0.000  min-margin=2.96e-1  neg=0
+  REAL ζ' winding on [0.02,0.5]×[14,19] = 0.000  min-margin=7.76e-1  neg=0
+  REAL ζ' winding on [0.02,0.5]×[19,24] = 0.000  min-margin=9.48e-1  neg=0
+  REAL ζ' winding on [0.02,0.5]×[24,29] = -0.000  min-margin=1.07e0  neg=0
+  REAL ζ' winding on [0.02,0.5]×[29,34] = -0.000  min-margin=7.49e-1  neg=0
+  TOTAL real ζ' winding in same windows = -0.000  → must be 0
+  DISCRIMINATOR: control non-empty (f' left-strip zeros) vs real ζ' empty — VERIFIED

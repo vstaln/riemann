@@ -1,0 +1,55 @@
+# LEFT: ζ' winding on [0.001,0.5]×[T,T+H], T=10..5000 H=100
+slab [10,110]: winding=0.000000 max|Δarg|=0.280 contour-min-margin=3.646e-1 neg-samples=0 interior-min-margin=5.584e-1
+slab [110,210]: winding=0.000000 max|Δarg|=0.548 contour-min-margin=4.414e-1 neg-samples=0 interior-min-margin=1.578e0
+slab [210,310]: winding=-0.000000 max|Δarg|=0.662 contour-min-margin=4.305e-1 neg-samples=0 interior-min-margin=1.302e0
+slab [310,410]: winding=0.000000 max|Δarg|=0.876 contour-min-margin=4.037e-1 neg-samples=0 interior-min-margin=9.377e-1
+slab [410,510]: winding=-0.000000 max|Δarg|=0.953 contour-min-margin=4.125e-1 neg-samples=0 interior-min-margin=1.403e0
+slab [510,610]: winding=-0.000000 max|Δarg|=1.383 contour-min-margin=2.974e-1 neg-samples=0 interior-min-margin=1.799e0
+slab [610,710]: winding=0.000000 max|Δarg|=1.422 contour-min-margin=2.422e-1 neg-samples=0 interior-min-margin=1.609e0
+slab [710,810]: winding=-0.000000 max|Δarg|=1.462 contour-min-margin=2.825e-1 neg-samples=0 interior-min-margin=1.300e0
+slab [810,910]: winding=0.000000 max|Δarg|=0.839 contour-min-margin=5.823e-1 neg-samples=0 interior-min-margin=1.159e0
+slab [910,1010]: winding=-0.000000 max|Δarg|=1.527 contour-min-margin=2.482e-1 neg-samples=0 interior-min-margin=2.390e0
+slab [1010,1110]: winding=0.000000 max|Δarg|=1.413 contour-min-margin=1.508e-1 neg-samples=0 interior-min-margin=2.282e0
+slab [1110,1210]: winding=-0.000000 max|Δarg|=0.879 contour-min-margin=7.038e-1 neg-samples=0 interior-min-margin=1.877e0
+slab [1210,1310]: winding=-0.000000 max|Δarg|=1.443 contour-min-margin=2.681e-1 neg-samples=0 interior-min-margin=2.060e0
+slab [1310,1410]: winding=0.000000 max|Δarg|=1.522 contour-min-margin=1.971e-1 neg-samples=0 interior-min-margin=1.949e0
+slab [1410,1510]: winding=0.000000 max|Δarg|=1.530 contour-min-margin=2.706e-1 neg-samples=0 interior-min-margin=1.152e0
+slab [1510,1610]: winding=0.000000 max|Δarg|=1.251 contour-min-margin=3.682e-1 neg-samples=0 interior-min-margin=1.599e0
+slab [1610,1710]: winding=0.000000 max|Δarg|=1.195 contour-min-margin=2.272e-1 neg-samples=0 interior-min-margin=1.978e0
+slab [1710,1810]: winding=0.000000 max|Δarg|=1.517 contour-min-margin=3.435e-1 neg-samples=0 interior-min-margin=1.496e0
+slab [1810,1910]: winding=-0.000000 max|Δarg|=1.032 contour-min-margin=2.679e-1 neg-samples=0 interior-min-margin=3.126e0
+slab [1910,2010]: winding=0.000000 max|Δarg|=1.492 contour-min-margin=4.238e-1 neg-samples=0 interior-min-margin=1.505e0
+slab [2010,2110]: winding=-0.000000 max|Δarg|=1.252 contour-min-margin=4.718e-1 neg-samples=0 interior-min-margin=2.507e0
+slab [2110,2210]: winding=0.000000 max|Δarg|=1.098 contour-min-margin=6.289e-1 neg-samples=0 interior-min-margin=2.126e0
+slab [2210,2310]: winding=0.000000 max|Δarg|=1.504 contour-min-margin=2.198e-1 neg-samples=0 interior-min-margin=1.366e0
+slab [2310,2410]: winding=0.000000 max|Δarg|=1.233 contour-min-margin=3.889e-1 neg-samples=0 interior-min-margin=2.209e0
+slab [2410,2510]: winding=0.000000 max|Δarg|=1.496 contour-min-margin=1.760e-1 neg-samples=0 interior-min-margin=2.175e0
+slab [2510,2610]: winding=-0.000000 max|Δarg|=0.889 contour-min-margin=6.514e-1 neg-samples=0 interior-min-margin=2.100e0
+slab [2610,2710]: winding=0.000000 max|Δarg|=1.536 contour-min-margin=3.622e-1 neg-samples=0 interior-min-margin=2.272e0
+slab [2710,2810]: winding=-0.000000 max|Δarg|=1.301 contour-min-margin=4.270e-1 neg-samples=0 interior-min-margin=1.214e0
+slab [2810,2910]: winding=0.000000 max|Δarg|=1.469 contour-min-margin=5.133e-1 neg-samples=0 interior-min-margin=1.863e0
+slab [2910,3010]: winding=-0.000000 max|Δarg|=1.513 contour-min-margin=1.417e-1 neg-samples=0 interior-min-margin=2.177e0
+slab [3010,3110]: winding=-0.000000 max|Δarg|=1.442 contour-min-margin=5.773e-1 neg-samples=0 interior-min-margin=3.250e0
+slab [3110,3210]: winding=-0.000000 max|Δarg|=1.284 contour-min-margin=6.050e-1 neg-samples=0 interior-min-margin=2.119e0
+slab [3210,3310]: winding=-0.000000 max|Δarg|=1.188 contour-min-margin=6.305e-1 neg-samples=0 interior-min-margin=2.247e0
+slab [3310,3410]: winding=-0.000000 max|Δarg|=1.015 contour-min-margin=6.565e-1 neg-samples=0 interior-min-margin=2.086e0
+slab [3410,3510]: winding=-0.000000 max|Δarg|=1.565 contour-min-margin=2.294e-1 neg-samples=0 interior-min-margin=2.088e0
+slab [3510,3610]: winding=-0.000000 max|Δarg|=1.391 contour-min-margin=2.426e-1 neg-samples=0 interior-min-margin=2.588e0
+slab [3610,3710]: winding=-0.000000 max|Δarg|=1.447 contour-min-margin=2.277e-1 neg-samples=0 interior-min-margin=1.394e0
+slab [3710,3810]: winding=0.000000 max|Δarg|=1.268 contour-min-margin=4.923e-1 neg-samples=0 interior-min-margin=1.764e0
+slab [3810,3910]: winding=-0.000000 max|Δarg|=1.442 contour-min-margin=1.349e-1 neg-samples=0 interior-min-margin=1.617e0
+slab [3910,4010]: winding=0.000000 max|Δarg|=1.562 contour-min-margin=4.300e-1 neg-samples=0 interior-min-margin=1.347e0
+slab [4010,4110]: winding=0.000000 max|Δarg|=1.152 contour-min-margin=3.083e-1 neg-samples=0 interior-min-margin=1.876e0
+slab [4110,4210]: winding=-0.000000 max|Δarg|=1.385 contour-min-margin=5.539e-1 neg-samples=0 interior-min-margin=2.810e0
+slab [4210,4310]: winding=-0.000000 max|Δarg|=1.524 contour-min-margin=1.977e-1 neg-samples=0 interior-min-margin=2.071e0
+slab [4310,4410]: winding=-0.000000 max|Δarg|=1.396 contour-min-margin=1.931e-1 neg-samples=0 interior-min-margin=2.348e0
+slab [4410,4510]: winding=-0.000000 max|Δarg|=1.442 contour-min-margin=9.930e-2 neg-samples=0 interior-min-margin=1.827e0
+slab [4510,4610]: winding=0.000000 max|Δarg|=1.529 contour-min-margin=4.798e-2 neg-samples=0 interior-min-margin=2.070e0
+slab [4610,4710]: winding=0.000000 max|Δarg|=1.115 contour-min-margin=5.674e-1 neg-samples=0 interior-min-margin=2.121e0
+slab [4710,4810]: winding=-0.000000 max|Δarg|=1.482 contour-min-margin=3.166e-1 neg-samples=0 interior-min-margin=1.875e0
+slab [4810,4910]: winding=0.000000 max|Δarg|=1.542 contour-min-margin=1.717e-1 neg-samples=0 interior-min-margin=1.878e0
+slab [4910,5010]: winding=-0.000000 max|Δarg|=1.388 contour-min-margin=5.133e-2 neg-samples=0 interior-min-margin=2.764e0
+TOTAL winding over left strip = -0.000000  (must be 0)
+global min certified |ζ'| margin on contours = 4.798e-2; negative samples = 0
+max |Δarg| seen = 1.565
+VERDICT left: EMPTY (no ζ' zeros in 0<σ<1/2, winding 0 on every slab)

@@ -1,0 +1,18 @@
+t=1 read brief wave8-briefs-direct-RH (lever 8B fully)
+t=2 ls tools/argprinciple/src, zeta-rs/src, barrier_zoo_rs
+t=3 read argprinciple/src/main.rs (winding machinery)
+t=4 read argprinciple/src/zeta.rs (certified EM, |B|/(2k)! table)
+t=5 read zeta-rs/src/xiprime.rs (xi' interlacing H(t)=Z*P'/P+Z')
+t=6 read zeta-rs/src/main.rs
+t=7 wrote deliverable seed wave8b-speiser-2026-08-17.md; theory corrections; control=zeta*G planted zero
+t=8 wrote tools/wave8b (Cargo.toml, src/em.rs, src/main.rs): certified EM zeta' (Hurwitz shift a), winding, control, censuses
+t=9 built; ran control: planted zeros |f|=0; f' left-strip winding 4 (pre-fix); REAL zeta' winding=1 on [9,14] -> ANOMALY -> debug
+t=10 dbg: analytic zeta' vs central-diff DISAGREES ~1.0 -> bug in pole-term division (num/den^3 not num/den^2)
+t=11 fixed em.rs pole-term division; dbg: analytic zeta' == FD to ~1e-9 at 6 points; winding [9,14]=0
+t=12 re-ran control: f' left-strip winding 2 (windows [14,19],[24,29]), real zeta' 0 -> DISCRIMINATOR VERIFIED
+t=13 left 10 5000: TOTAL winding 0 (50/50 slabs), contour min margin 4.8e-2; online: min|z'|=4.8e-2>0; interl: 4521 H-sign-changes = N(5000)+1
+t=14 right 10 5000 step 0.02: TOTAL 2651 zeta' zeros in [0.5,1]; step 0.04 rerun: 2651 (stable)
+t=15 locate 10 110: 5 zeros (=winding 5); locate 110 210: 14 (=winding 14) -> independent validation
+t=16 realscan: zeta'(sigma)<0 on (0,1), no real zeros; locate 4900 5000: 73 (=winding 73), sigma 0.54-0.94
+t=17 wrote FINAL deliverable note wave8b-speiser-2026-08-17.md (verdict: left-strip EMPTY, control VERIFIED, all labels)
+DONE. Deliverable complete.
