@@ -92,3 +92,22 @@ Phone mobile data dropped mid-wave (killed 2 agents). All specs now mandate cras
 - **sinc-m3 certificate LP — REFUTED as a ceiling-breaker (hostile referees + coordinator check).** Both blind referees break the κ*=0.7488>0.6818 claim: Referee-A (d273aacb): the binding constraint D+P₃=5.44 needs E[T]≥0, UNPROVEN and FALSE per-config (3×3 PSD counterexample a=−0.2: m₃=1.224≥m₂²=1.1664, theorem HOLDS, yet T=−0.016<0; coordinator hand-verified trG²/trG³/P₂). Under the ONLY proven floor (S₃≥m₂²): min-p₁=0.4224 (mass)/0.5939 (count) < 0.6818 — the 0.7488 is an artifact of an unproven inequality. Convention mix: model p₁ is MASS, wall p₀=0.6818287 is COUNT (count recompute: 0.8564). Calibration knife-edge (±5% flips). Control EXHIBITED: 256-law mass-p₁=0.5173 has proven floor 5.2488 ∈ window → admissible under proven inputs. Referee-B (81636ce4): σ-blindness PROVEN; "0.7488" is a loose label (P(m=1)=0.8564 at that p₁); scan AUTHORITATIVE, minilp `Infeasible` is a global linearization artifact (tangent system infeasible ∀p₁, true problem feasible at p₁*); floor monotone through the crossing; raises NO published on-line record; on-line interpretation does NOT survive the firewall; DH simple off-line zeros kill the RH-type hypothesis. Re-derivation (7f447497): m₃≥m₂² PROVEN independently (Parseval+CS: m₃−m₂²=N²M²Var(T1)≥0, equality ⟺ uniform marks); theorem binds the sinc branch legitimately; torus 2.480620 infeasibility is outside the theorem's scope (INCONCLUSIVE). **Ledger: sinc-m3 lever CLOSED as ceiling-breaker; m₃≥m₂² theorem genuine but contributes nothing (slack at optimum). No on-line record affected.** Files: wave4-synthesis-2026-08-17.md, refereeA-sinc-m3-model-2026-08-17.md, refereeB-sinc-m3-interp-2026-08-17.md, rederivation-m3-2026-08-17.md.
 - **barrier-zoo Rust — PROVEN (rung-0 tool now operational).** Builder f0f32ad5 fixed 8 root causes (Gamma off-by-half, C::exp angle in real slot, q^{+s} vs q^{-s} ×3, DH grid dt, theta origin, classifier regex). Acceptance: Γ(2)=1.0/Γ(5)=24.0, |ε|=1, FE both signs true, |f_plus|=3.1e-14 at both certified DH zeros, 2/2 matched, 6 off-line zeros found, Epstein modularity 1e-15–1e-13 + Dedekind true, planted zeros 2.3e-16/1.5e-16, classifier 10/10. Caveat: Epstein's own off-line search grid-limited (fine grid ~1000× too slow; VERDICT text overclaims there). **All briefs now disciplined through this zoo (rung-0).** File: barrier-zoo-rust-2026-08-17-fix.md.
 - **Wave-5 briefs written (not yet dispatched):** M4-proper ζ″-moment r′ pin (closed-form, cheap, never dispatched) + k<1 moving-boundary Type-1 decision (empty-route proof or inversion hunt). File: wave5-briefs-2026-08-17.md.
+
+## 2026-08-17 — WAVE 5 DISPATCH (3 disjoint levers, background, flash, Rust-only, barrier-zoo-disciplined)
+- **(5A) M4-proper ζ″-moment r′ (d2d5db17)** — mechanical re-derivation of BHB Lemma 1 with
+  ζ′→ζ″ (diagonal + ℳ-analogue₁,₂,₃ + convexity). Pins r′ (unknown O(1); r′=3/5 already
+  REFUTED via Gonek's theorem). Forecast: r′≠3/5; outcomes (a) O(1) keeps b≤0.2237 → closed,
+  (b) r′=0/negative → box-form break (surprise), (c) ζ″-moment diverges → box reduction
+  invalid structurally. Control: DH + fake-Weil (working zoo). File target:
+  m4-proper-zdouble-2026-08-17.md.
+- **(5B) k<1 moving-boundary Type-1 decision (0a0236b5)** — is N(1/2+b/L,T)=o(T log T) at
+  b≈0.0758 reachable by ANY known route? Reproduce the 3 PROVEN walls (scale-gap lemma,
+  Ingham k=5, GM Littlewood–Jensen obstacle), then the E2-style inversion hunt (dual of the
+  empty count; pair-identity push; BGSTB strong ZDH). Control: DH violates/weakly satisfies
+  the count? File target: k1-moving-boundary-decision-2026-08-17.md.
+- **(5C) exact-identity m₃ certificate (623d88bf)** — the VALID revival of the refuted sinc-m3
+  lever: build on m₃ = m₂² + N²M²·Var(T1) (exact, PROVEN by wave-4 re-derivation) instead of
+  the broken floor max(D+P₃, m₂²). Compute exact min/max-S₃ envelopes per p₁ (mass + count),
+  recompute min-p₁, 256-law exact-S₃ control (super-law says ≈7.9 — does it survive exact
+  computation?), DH flat-rows control. Verdict: beats 0.6818 or finally closes the m₃-read
+  lever. File target: exact-s3-certificate-2026-08-17.md.
