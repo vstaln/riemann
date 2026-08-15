@@ -1,0 +1,9 @@
+t=1 start wave8a-li-criterion retry
+t=2 wrote partial note; check data formats + build cache
+t=3 checked data+build cache
+t=4 wrote probe main.rs
+t=5 building
+t=6 rebuilt+run
+t=7 fixed 100k format
+t=8 python cross-check of control
+t=9 final note written; copy outputs
