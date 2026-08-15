@@ -346,3 +346,19 @@ Briefs: wave8-briefs-direct-RH-2026-08-17.md. Goal reset to direct-RH mission.
 - Files: tools/wave8b/ (em.rs certified Hurwitz ζ,ζ′ + winding + refine), 
   research/notes/wave8b-speiser-2026-08-17.md, wave8b-speiser.progress (18 lines).
 - Orchestrator: lever 8B → DONE (first live closure through LangGraph).
+
+## 2026-08-17 — WAVE 8 LEVER 8A (Li criterion λ_n) — LANDED (CHECKED NUMERICALLY)
+- λ_n = Σ_pairs[2−(1−1/ρ)ⁿ−(1−1/ρ̄)ⁿ] over 924,715 cached zeros (γ≤5.6e5); n≤10⁴.
+  On-line zeros ⟹ termwise 2(1−cos(nφ)) ≥ 0 (λ_n ≥ 0 automatic under RH); σ<1/2 ⟹
+  |1−1/ρ|>1 → −∞ (control signature).
+- Anchors: λ₁ = 1+γ/2−log(4π)/2 = 0.023095708966 — sum+tail matches to 2.7e-10; model
+  self-check |direct−series| = 1.6e-14 (rug 192-bit); λ₂..λ₅ close to Keiper.
+- Control VERIFIED first: planted 0.6±14.13i / 0.4±14.13i ⟹ λ'ₙ < 0 first at n=21848,
+  envelope e^{0.00050n} exponential (way beyond polynomial RH prediction).
+- Real case: λₙ > 0 ∀n ≤ 1000; residual |rₙ| ~ 0.26·n^0.246 (sub-√n); periodogram of rₙ
+  peaks at the three lowest-zero frequencies φ(γ₁,γ₂,γ₃) — fluctuation IS the signal.
+- Two Rust bugs caught by independent python cross-check and fixed (planted 1/ρ real part;
+  RvM initial-guess NaN masked by f64::max). NOT a proof (finite data, tail corrections,
+  residual-vs-RH-bound comparison is CONJECTURED-usage). Files: tools/wave8a/,
+  wave8a-li-criterion-2026-08-17.md, wave8a-lambda-table.txt, .progress.
+- Orchestrator: 8A → DONE.

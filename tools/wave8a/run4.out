@@ -1,0 +1,55 @@
+zeros: 100k=100000 924k=924715
+gamma_1=14.134725142 gamma_2=21.022039639 gamma_100k=74980.923 gamma_last=559999.733
+== MODEL SELF-CHECK (finite xi_hat, 8 pairs) ==
+  n= 1  direct=+0.010996301144  series=+0.010996301144  diff=+1.731e-16
+  n= 2  direct=+0.043950519939  series=+0.043950519939  diff=+3.919e-16
+  n= 3  direct=+0.098758745084  series=+0.098758745084  diff=+6.881e-17
+  n= 4  direct=+0.175248265803  series=+0.175248265803  diff=+2.287e-16
+  n= 5  direct=+0.273178281629  series=+0.273178281629  diff=+4.301e-16
+  n= 6  direct=+0.392240891500  series=+0.392240891500  diff=+7.153e-16
+  n= 7  direct=+0.532062357606  series=+0.532062357606  diff=+9.620e-16
+  n= 8  direct=+0.692204638139  series=+0.692204638139  diff=+1.312e-15
+  n= 9  direct=+0.872167181881  series=+0.872167181881  diff=+1.525e-15
+  n=10  direct=+1.071388976332  series=+1.071388976332  diff=+1.923e-15
+  n=11  direct=+1.289250839945  series=+1.289250839945  diff=+2.399e-15
+  n=12  direct=+1.525077947889  series=+1.525077947889  diff=+3.140e-15
+  MODEL CHECK max |direct - series| over n=1..40 = 1.599e-14 (prec 192 bits)
+== ANCHORS ==
+lambda_1 closed form = 0.023095708966  (PROVEN: xi'(1)/xi(1) = 1 + gamma/2 - log(4pi)/2)
+lambda_1 from 100k zeros = 0.023073600214  (tail missing ~ 2.211e-5)
+lambda_1 from 924k zeros = 0.023092089235  (tail missing ~ 3.620e-6)
+lambda_2..5 (924k) = 0.09233126 0.20760634 0.36873256 0.57545222   (Keiper: 0.09234586 0.20763936 0.36825319 0.57332746)
+== CONVERGENCE ==
+lambda_1000: 100k zeros=2303.944522  924k zeros=2322.433442  diff=18.4889 (predicted tail ~ (n^2/2pi)(log(G/2pi e)+1)/G, G=7.49e4: ~ 24.00)
+== CONTROL (planted rho = 0.6 +- 14.134725141735i, 0.4 +- 14.134725141735i; real pair removed) ==
+  n=   89 (resonance m=1)  lambda'_n = +1.000751e2
+  n=  178 (resonance m=2)  lambda'_n = +2.597732e2
+  n=  266 (resonance m=3)  lambda'_n = +4.400458e2
+  n=  355 (resonance m=4)  lambda'_n = +6.410562e2
+  n=  444 (resonance m=5)  lambda'_n = +8.508407e2
+  n=  533 (resonance m=6)  lambda'_n = +1.068932e3
+  n=  622 (resonance m=7)  lambda'_n = +1.293977e3
+  n=  710 (resonance m=8)  lambda'_n = +1.530281e3
+  n=  799 (resonance m=9)  lambda'_n = +1.758395e3
+  n=  888 (resonance m=10)  lambda'_n = +2.011291e3
+  n=  977 (resonance m=11)  lambda'_n = +2.253020e3
+  n= 1066 (resonance m=12)  lambda'_n = +2.505383e3
+  CONTROL ANOMALY: lambda'_n < 0 first at n = 21848
+  lambda'_21848 = -2.765965e3  (main term there = 84455.7)
+  control dip depth at n=89: 0.000e0, at n=1066: 5.584e0; log-growth 0.001834/n (planted envelope: e^(0.00050 n))
+== REAL CASE ==
+lambda_1..10: [0.023092089234659552, 0.09233125630231709, 0.20760634297123648, 0.36873256378889363, 0.5754522211746513, 0.827435701949879, 1.1242827507295623, 1.4655240143338435, 1.8506228501345745, 2.2789773900468955]
+main_term/n = (1/2)(log n - log 2pi + gamma - 1);  table -> lambda_table.txt
+empirical C = -2.261736  vs  -log(2pi) + gamma - 1 = -2.260661
+residual envelope fit: |r_n| ~ 2.576e-1 * n^0.2462
+fluct envelope fit: |fluct_n| ~ 2.916e-2 * n^0.7112   (note: RvM smooth is poor at low gamma -> low-zero deviations give ~linear envelope; not an RH signal)
+residual periodogram exact powers: phi(g1)=0.070718 -> 8.357e5   phi(g2)=0.047560 -> 6.263e5   phi(g3)=0.039981 -> 6.876e5
+residual periodogram top-6 freqs: [(0.03700000000000002, 1112618.497794455), (0.03650000000000002, 1111107.3915053755), (0.03750000000000002, 1089691.5081399882), (0.03600000000000002, 1089111.5460624644), (0.03550000000000002, 1052706.7043822433), (0.03800000000000002, 1041353.2988348958)]
+predicted low-zero freqs: phi(gamma_1=14.134725)=0.070718  phi(gamma_2=21.022040)=0.047560  phi(gamma_3=25.010858)=0.039977
+max |fluct| = 10.3886 at n = 864 (main term there ~ 1944.4)
+min residual = -8.4719 at n = 793 (lambda_n > 0 for all n<=1000 termwise: on-line zeros give 2(1-cos)>=0)
+== LARGE n (tail-corrected) ==
+  n= 2000  lambda_n=  5337.281  +tail(224330.7) = 229667.998   main=  5340.241   residual=224327.757 (4200.705% of main)
+  n= 3000  lambda_n=  8584.642  +tail(504744.1) = 513328.757   main=  8618.559   residual=504710.197 (5856.085% of main)
+  n= 5000  lambda_n= 15548.606  +tail(1402067.0) = 1417615.590   main= 15641.329   residual=1401974.261 (8963.268% of main)
+  n=10000  lambda_n= 34374.680  +tail(5608267.9) = 5642642.618   main= 34748.395   residual=5607894.223 (16138.571% of main)
