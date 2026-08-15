@@ -216,7 +216,7 @@ fn gram_mpfr(j: u64, k: u64, z: &[Float]) -> Float {
             let p123 = Float::with_val(256, &p12 + &p3);
             total += Float::with_val(256, &p123 / &ml);
         }
-        // tail m >= 4 via p-expansion
+        // tail m >= 4 via p-expansion (mirror of gram_f64: t1 carries *lf, t3 carries /lf)
         let bl = Float::with_val(256, &b / &lf);
         let al = Float::with_val(256, &a / &lf);
         let mut pb1 = bl.clone();
@@ -233,15 +233,17 @@ fn gram_mpfr(j: u64, k: u64, z: &[Float]) -> Float {
             let c2d3 = Float::with_val(256, &c2 * &d3);
             let c1d2 = Float::with_val(256, &c1 * &d2);
             let c0d1 = Float::with_val(256, &c0 * &d1);
-            let t1 = Float::with_val(256, &c2d3 / (pf + 3.0));
+            // f64: t1 = c2*lf*d3/(p+3); t2 = c1*d2/(p+2); t3 = c0*d1/lf/(p+1)
+            let c2d3lf = Float::with_val(256, &c2d3 * &lf);
+            let t1 = Float::with_val(256, &c2d3lf / (pf + 3.0));
             let t2 = Float::with_val(256, &c1d2 / (pf + 2.0));
-            let t3 = Float::with_val(256, &c0d1 / (pf + 1.0));
+            let c0d1lf = Float::with_val(256, &c0d1 / &lf);
+            let t3 = Float::with_val(256, &c0d1lf / (pf + 1.0));
             let t12 = Float::with_val(256, &t1 + &t2);
             let inner = Float::with_val(256, &t12 + &t3);
             let sgn = if p & 1 == 0 { 1.0f64 } else { -1.0f64 };
             let zl = Float::with_val(256, sgn * (pf + 1.0) * &z[p]);
-            let zlf = Float::with_val(256, &zl * &lf);
-            total += Float::with_val(256, &zlf * inner);
+            total += Float::with_val(256, &zl * inner);
             pb1 = pb2;
             pa1 = pa2;
         }
