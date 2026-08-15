@@ -6,14 +6,14 @@ b_4 = 4.522696740546e-1 (closed) vs 4.522684240567e-1 (quad, leftover 2.5e-6) re
 b_5 = 4.064444495065e-1 (closed) vs 4.064434494910e-1 (quad, leftover 2.0e-6) rel=2.5e-6 OK
 b_6 = 3.690906340544e-1 (closed) vs 3.690898007338e-1 (quad, leftover 1.7e-6) rel=2.3e-6 OK
 G_1,1 = 2.606614048227e-1 (f64) quad 2.606580606971e-1 rel_q=1.3e-5 mpfr rel_m=2.8e-15 OK
-G_1,2 = 2.722092574489e-1 (f64) quad 2.722097053103e-1 rel_q=1.6e-6 mpfr rel_m=3.4e-2 FAIL
-G_2,3 = 2.744368430525e-1 (f64) quad 2.744366440517e-1 rel_q=7.3e-7 mpfr rel_m=8.5e-1 FAIL
-G_3,5 = 2.068897704667e-1 (f64) quad 2.068902529568e-1 rel_q=2.3e-6 mpfr rel_m=9.8e-1 FAIL
-G_4,7 = 1.637126948608e-1 (f64) quad 1.637128115363e-1 rel_q=7.1e-7 mpfr rel_m=1.0e0 FAIL
-G_5,8 = 1.428118748097e-1 (f64) quad 1.428117659402e-1 rel_q=7.6e-7 mpfr rel_m=1.0e0 FAIL
-G_6,7 = 1.503665696681e-1 (f64) quad 1.503661704073e-1 rel_q=2.7e-6 mpfr rel_m=1.0e0 FAIL
+G_1,2 = 2.722092574489e-1 (f64) quad 2.722097053103e-1 rel_q=1.6e-6 mpfr rel_m=1.4e-15 OK
+G_2,3 = 2.744368430525e-1 (f64) quad 2.744366440517e-1 rel_q=7.3e-7 mpfr rel_m=2.0e-15 OK
+G_3,5 = 2.068897704667e-1 (f64) quad 2.068902529568e-1 rel_q=2.3e-6 mpfr rel_m=1.1e-15 OK
+G_4,7 = 1.637126948608e-1 (f64) quad 1.637128115363e-1 rel_q=7.1e-7 mpfr rel_m=3.4e-16 OK
+G_5,8 = 1.428118748097e-1 (f64) quad 1.428117659402e-1 rel_q=7.6e-7 mpfr rel_m=7.4e-15 OK
+G_6,7 = 1.503665696681e-1 (f64) quad 1.503661704073e-1 rel_q=2.7e-6 mpfr rel_m=8.5e-15 OK
 G11=2.6066140482e-1 G12=2.7220925745e-1 G22=3.8033070242e-1 det2=2.504e-2 (must be >0) OK; d1=5.605868e-1
-verification overall: FAIL
+verification overall: PASS
 
 === d_N sweep (f64, Cholesky) ===
 N	d_N	d_N^2	d_N*sqrt(N)	kappa_piv
@@ -28,14 +28,14 @@ N	d_N	d_N^2	d_N*sqrt(N)	kappa_piv
 300	8.8860272763e-2	7.8961e-3	1.539105e0	7.1e3 (solve 0.0s, cholesky ok)
 400	8.7269966994e-2	7.6160e-3	1.745399e0	1.2e4 (solve 0.0s, cholesky ok)
 600	8.3710508670e-2	7.0074e-3	2.050480e0	2.6e4 (solve 0.1s, cholesky ok)
-800	8.1506209827e-2	6.6433e-3	2.305344e0	4.4e4 (solve 0.3s, cholesky ok)
-1000	8.0556534965e-2	6.4894e-3	2.547421e0	6.7e4 (solve 0.6s, cholesky ok)
+800	8.1506209827e-2	6.6433e-3	2.305344e0	4.4e4 (solve 0.1s, cholesky ok)
+1000	8.0556534965e-2	6.4894e-3	2.547421e0	6.7e4 (solve 0.2s, cholesky ok)
 
 log-log slope of d_N (last 4 pts N=400..1000): -0.0892  (d_N ~ N^-0.0892)
 
 === MPFR (256-bit) cross-check ===
-N=50: d_mpfr=0.0000000000e0 d_f64=1.0793711120e-1 rel=1.1e299
-N=100: d_mpfr=0.0000000000e0 d_f64=1.0013884399e-1 rel=1.0e299
+N=50: d_mpfr=1.0793711120e-1 d_f64=1.0793711120e-1 rel=2.2e-13
+N=100: d_mpfr=1.0013884399e-1 d_f64=1.0013884399e-1 rel=6.3e-13
 
 === optimal coefficients N=1000 ===
 c_1=-9.427047e-1 c_10=-7.436691e-1 c_100=7.618218e-2 c_500=-4.651245e-1 c_N=1.089315e0

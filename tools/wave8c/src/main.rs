@@ -541,7 +541,7 @@ fn main() {
 
     // ============ 3. MPFR cross-check ============
     log.push_str("\n=== MPFR (256-bit) cross-check ===\n");
-    for &n in &[50usize, 100] {
+    for &n in &[50usize, 100, 251, 500] {
         let mut g = vec![Float::with_val(256, 0); n * n];
         for i in 0..n {
             for k in 0..n {
