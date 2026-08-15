@@ -283,3 +283,14 @@ record-securing. Remaining caveats are documentation/formalization/machine-rerun
   0.673481 is the terminal in-class record.** Live frontier exists only OUTSIDE the class:
   dual-LP closing (0.6725→0.6818, in-class, ceiling-bounded), ξ′-target transport (Lean
   0.85838 unconditional), or conjectural regime (explicitly labeled).
+
+## 2026-08-17 — WAVE 7 COMPLETE (synthesis committed)
+- 7A CERTIFIED (explicit (c₀,r), knot-sum 8.7e-19, v_discrete=v_chain 3.3e-16).
+- 7B CLOSED: primary grid=4000 re-verified True/1,096,556 nodes on a DIFFERENT machine
+  (python-flint 0.9.0, host void); grid=8000 also True/1,097,508 (stronger discretization);
+  630/1e5 fails terminal-cell low=0.0062867<0.0063 — 6C caveat (iii) closed and strengthened.
+- 7C TERMINAL: all new-object classes empty; 0.6818 proven terminal ceiling; 0.673481
+  terminal in-class record. Even conditional pair-correlation results < 0.673481.
+- Campaign: record-securing COMPLETE. Record = 0.6734808616745137/0.8367404308372568
+  unconditional, documented, machine-re-verified, terminal-in-class. Remaining: Lean
+  formalization (long), writeup, external review. File: wave7-synthesis-2026-08-17.md.
