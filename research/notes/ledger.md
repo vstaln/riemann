@@ -294,3 +294,23 @@ record-securing. Remaining caveats are documentation/formalization/machine-rerun
 - Campaign: record-securing COMPLETE. Record = 0.6734808616745137/0.8367404308372568
   unconditional, documented, machine-re-verified, terminal-in-class. Remaining: Lean
   formalization (long), writeup, external review. File: wave7-synthesis-2026-08-17.md.
+
+## 2026-08-17 — WAVE 8 DISPATCH (DIRECT RH ATTACK — the pivot)
+User directive: "instead of increasing the bounds, let's just prove it directly." The
+proportion-on-line campaign is terminal (0.6818 ceiling Lean-PROVEN; 0.673481 record
+secured). Five disjoint DIRECT attacks on classical RH equivalences launched in parallel
+(background, flash):
+- **8A Li criterion (a6ea1424)**: RH ⟺ λ_n ≥ 0 ∀n (Li 97, Bombieri–Lagarias 99); λ_n from
+  ξ-derivatives/power sums, n ≤ 10⁴; residual-vs-low-zeros fingerprint; planted-zero control.
+- **8B Speiser (3a3734c9)**: RH ⟺ ζ′ ≠ 0 in 0<Re<1/2; certified ζ′ census in left half-
+  strip to T=5000; DH-type control must show off-line ζ′ zeros.
+- **8C Nyman–Beurling/Báez-Duarte (3e92e7ee)**: RH ⟺ d_N → 0, d_N = dist(1, span{{1/(kx)}})
+  in L²(0,1); Gram closed forms, decay fit, optimal-coefficient structure; control saturates.
+- **8D Turán/Laguerre (dccc6955)**: LP necessary conditions on Ξ's Taylor coeffs from the
+  Φ-moment integral; ANY negative T_k or L_k(t) ⟹ non-real zeros (unconditional disproof
+  route); min-margin order; control fails at some order.
+- **8E Beurling operator (3a4ef80f)**: structural twin of 8C; λ_min(G_N) decay + eigenvector-
+  content vs Burnol's explicit-formula kernel; RH ⟺ λ_min(N) → 0 at cited rate.
+Firewall: none of these uses the 0.673481 proportion theorem as input — these are the real
+thing (proportion theorems are zero RH evidence).
+Briefs: wave8-briefs-direct-RH-2026-08-17.md. Goal reset to direct-RH mission.
