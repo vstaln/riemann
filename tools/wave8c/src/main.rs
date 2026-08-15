@@ -65,6 +65,9 @@ fn intervals(j: u64, k: u64, l: u64) -> Vec<(u64, u64, u64, u64)> {
 }
 
 // Z_p = sum_{m=m0}^inf m^{-(p+2)} (m0=4: combined tail), direct sum + Euler-Maclaurin
+// FIX 2026-08-18: EM half-term sign was +0.5*x^{-s}; correct is MINUS (upper-tail EM).
+// Old sign biased every Z_p by +n1^{-(p+2)} (+1e-8 at p=0), G_jk by ~1e-8, d_N by ~1e-7 rel.
+// All 2026-08-17/18 published d_N values carry this bias — flatness conclusions unaffected.
 fn z_table_f64(p_max: usize, m0: u64) -> Vec<f64> {
     let n1 = 10_000u64;
     let mut z = vec![0.0f64; p_max];
@@ -76,7 +79,7 @@ fn z_table_f64(p_max: usize, m0: u64) -> Vec<f64> {
         }
         let x = n1 as f64;
         acc += x.powf(1.0 - s) / (s - 1.0)
-            + 0.5 * x.powf(-s)
+            - 0.5 * x.powf(-s)
             + (s / 12.0) * x.powf(-s - 1.0)
             - (s * (s + 1.0) * (s + 2.0) / 720.0) * x.powf(-s - 3.0);
         z[p] = acc;
@@ -459,6 +462,9 @@ fn main() {
     fs::create_dir_all(out).unwrap();
     let mut log = String::new();
 
+    // optional cap: W8C_NMAX=2000 -> only sweep rows with N <= cap, then exit (bounded runs)
+    let nmax = std::env::var("W8C_NMAX").ok().and_then(|s| s.parse::<usize>().ok());
+
     let z = z_table_f64(32, 4);
     let zm = z_table_mpfr(32, 4);
 
@@ -507,6 +513,13 @@ fn main() {
     log.push_str("=== d_N sweep (f64, Cholesky) ===\nN\td_N\td_N^2\td_N*sqrt(N)\tkappa_piv\n");
     let mut rows: Vec<(usize, f64, f64, f64, f64)> = Vec::new();
     for &n in &ns {
+        if let Some(cap) = nmax {
+            if n > cap {
+                log.push_str(&format!("\n[W8C_NMAX={} cap hit at N={}; remaining rows skipped]\n", cap, n));
+                eprintln!("[W8C_NMAX cap {}: stopping sweep at N>{}]", cap, cap);
+                break;
+            }
+        }
         let g = gram_matrix(n, &|i| (i as u64) + 1, &z);
         let b: Vec<f64> = (1..=n as u64).map(b_f64).collect();
         let t0 = std::time::Instant::now();

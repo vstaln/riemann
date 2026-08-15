@@ -1,0 +1,7 @@
+[validate] START
+[validate] V1 dd ops vs rug256: max rel 8.72e-16 (expect < 1e-28) FAIL
+[validate] V2 dd_ln_int vs rug256: max rel 1.68e-32 (expect < 1e-27) OK
+[validate] V3a z_f64 vs z_mpfr_direct p<40: max rel 6.59e-14 (expect < 1e-13) OK
+[validate] V4 gram j,k<=40: dd-vs-mpfr max rel 1.83e-29 (expect < 1e-27) OK
+[validate] V4 f64(adaptive)-vs-mpfr max rel 5.23e-14 (expect < 5e-15) FAIL
+[validate] V4b TRUNCATION AUDIT: G_11(P32)=2.606614014905735e-1 G_11(adp)=2.606614015078135e-1 G_11(mpfr)=2.606614015078126e-1 |P32-adp|/G=6.61e-11 max over pairs=6.61e-11
