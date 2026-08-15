@@ -173,3 +173,17 @@ Phone mobile data dropped mid-wave (killed 2 agents). All specs now mandate cras
   7-point stability; pushing THAT toward 0.6818 with a better compression/weight is an
   in-class-but-unexplored direction, distinct from the closed certificate class); (iii) the
   torus E[m₂]=2.480620 definition (INCONCLUSIVE, cheap).
+
+## 2026-08-17 — WAVE 6 DISPATCH (mission-critical: adversarial validation of the 0.673481 record)
+Context: records-vs-anthropic note labels 0.673481/0.836740 UNCONDITIONAL and above Anthropic's
+0.6725/0.83625 — if true, we already hold the record. But FINAL-RECORD: no Lean formalization,
+no second-machine audit; the (1−B/m) redistribution lifts above the proven window ceiling
+0.6725007 — a sinc-m3-style algebraic-move risk. Wave 6 = hostile blind referees on the
+record chain BEFORE any new-record hunt:
+- **(6A) redistribution algebra** — re-derive bound=(H(α)−τ)/(1−B/m) from first principles;
+  isolate the exact certified inequality; attack the division move.
+- **(6B) transfer to ζ** — state the exact theorem 0.673481 proves (liminf N_s/N ≥ 0.673481
+  unconditionally?); Montgomery F=1 on [0,1] at grid points incl. j=N edge; rate handling.
+- **(6C) second-machine re-derivation** — fresh implementation, reproduce 0.6734808616745137
+  AND re-certify eps=0.0062 (630 fails / 620 passes) without reading the verifier's code.
+Blind, disjoint. Files: wave6-briefs-2026-08-17.md, wave6-referee{A,B,C}-2026-08-17.md.
