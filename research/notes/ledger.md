@@ -314,3 +314,20 @@ secured). Five disjoint DIRECT attacks on classical RH equivalences launched in 
 Firewall: none of these uses the 0.673481 proportion theorem as input — these are the real
 thing (proportion theorems are zero RH evidence).
 Briefs: wave8-briefs-direct-RH-2026-08-17.md. Goal reset to direct-RH mission.
+
+## 2026-08-17 — KILL-ROBUSTNESS + LANGGRAPH ORCHESTRATOR (infrastructure)
+- User killed the session to install a plugin (langgraph). Two infrastructure upgrades:
+  1. **agents.md kill protocol** (all 7 agent configs + hooks/agents.md): write-ahead
+     deliverable (note after ≤3 reads / first 5 tool calls), progress log
+     (research/notes/<task>.progress appended after EVERY tool call), state-on-disk
+     (numeric results to files immediately), idempotent resume (read .progress first,
+     continue, never restart), coordinator rescue after any kill.
+  2. **Checkpointed LangGraph orchestrator** (tools/campaign_orchestrator/): campaign
+     state machine (DEFINE→DISPATCH→MONITOR→CONSOLIDATE) on SqliteSaver — every
+     super-step durable; `resume`+`step` continues exactly where a killed process died;
+     kill_log keeps the honest audit trail. pi is the hands (subagent tool), LangGraph
+     is the brain (state + decisions). Python sanctioned ONLY here (user authorized).
+- Wave-8 (5 direct-RH levers) was killed mid-flight; re-dispatched as 8A-r2..8E-r2 with
+  kill protocol in-brief: 8A Li (a17b490f), 8B Speiser (477dc8a8), 8C Nyman-Beurling
+  (d52ca673), 8D Turán/Laguerre (67a787f2), 8E Beurling operator (d43bdc5a).
+  Orchestrator tracks all five as DISPATCHED; kill-log empty.
