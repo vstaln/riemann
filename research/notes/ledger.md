@@ -243,3 +243,20 @@ machine-precision reproduction. NOT yet Lean-formalized; 1M-node interval certif
 re-run on a second machine. Pending 6E: the discrete-value identity of the exact 16 digits.
 Files: wave6-synthesis-2026-08-17.md, wave6-referee{A,B,C,D}-2026-08-17.md,
 wave6-briefs-2026-08-17.md.
+
+## 2026-08-17 — WAVE 7 DISPATCH (record-securing phase, 3 disjoint levers, background, flash)
+After wave-6 validated the 0.673481 record through 5 hostile blind referees (unconditional
+liminf, discrete-value identity pinned), the campaign shifts from record-hunting to
+record-securing. Remaining caveats are documentation/formalization/machine-reruns, not math.
+- **(7A) explicit certificate documentation (0ef045ad)** — write down the record's (c₀, r):
+  c₀=H(1.464)−τ=0.6694520747005951, r piecewise-linear on knots j/256, r(1)=0; Rust probe
+  verifies Σ(j/256²)r(j/256)=0.0040287869739185 → 6E's verdict (i) certified. File:
+  wave7-certificate-documented-2026-08-17.md.
+- **(7B) second-machine interval re-run (0345ba1e)** — re-run the 1M-node Arb interval
+  certificate (α=1.464, eps=0.0062, grid=4000) under a DIFFERENT numerical configuration
+  (fresh Arb build / grid=8000 / independent core); confirm verified=True, ~1,096,556 nodes
+  (3 runs), 630/1e5 fails. Closes 6C's caveat. File: wave7-secondmachine-interval-2026-08-17.md.
+- **(7C) new-object frontier scan (81533131)** — is 0.6818 the terminal ceiling? Scan the
+  verified-literature corpus for (a) PROVEN |α|>1 form-factor slivers, (b) PROVEN simple-
+  fraction p₁>0.6818, (c) genuinely new certificate inputs; verdict per class. File:
+  wave7-newobject-scan-2026-08-17.md.
