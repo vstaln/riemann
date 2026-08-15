@@ -47,3 +47,11 @@ t5 COORDINATION: prod-5000 (driver) was SIGTERMed externally at 03:37 (presumabl
    3-way CPU contention; pi's run stands. Serial queue AFTER driver's ddgram (PID 8392)
    exits: [prod 2000 if pi's timed out incomplete] -> prod 5000 -> sample 5000.
    Launched as run_hiN_followup.sh (waits on ddgram pid, then sequential).
+t6 certified results landed: d(2000)=7.782135587726e-2 (kappa 2.5e5), d(3000)=7.459524862924e-2
+   (kappa 5.4e5); refinement plateau 1e-27; entry checks dd-vs-mpfr 1e-27/1e-28, f64-vs-dd 3-5e-12.
+   Flat law N=50..3000: c in [0.2111,0.2149], mean 0.21296, band 1.8% — rate (logN)^-1/2 holds
+   within +-0.9%; c OSCILLATES +-1% (not monotone). Note updated with results table.
+   IN FLIGHT (autonomous chain): ddgram 2000 (ETA ~07:50) -> followup: prod 2000 (mpfr-chol
+   cross-check) -> prod 5000 -> sample 5000 -> harvest.sh digest. pi session active at pts/0
+   (acting as reviewer: caught my rng-range bug). Next session: read HARVEST.txt, finalize note
+   + ledger, commit.
