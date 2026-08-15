@@ -1,0 +1,12 @@
+== 2026-08-18 session: hi-N certified extension (coordinator direct) ==
+t0 plan: extend certified d_N to N in {2000,3000,5000}; test d_N*sqrt(log N) flat at 0.213.
+route: (a) f64 Gram symmetric-threaded + f64 Cholesky [fixes N>=1600 timeout];
+(b) iterative refinement w/ double-double residuals (exact-solve-of-stored-G);
+(c) threaded MPFR-256 Cholesky on stored G (independent solve check, all N);
+(d) FULL dd pipeline (dd Gram+dd Cholesky, dd-integer-ln table 4N^2+2) at N=2000 only
+    (exact MPFR closed-form Gram at N=2000 infeasible: ~O(N^3) intervals x MPFR cost).
+upgrade: z-table MPFR-direct (old zm was f64-converted, capping MPFR Gram at ~1e-15).
+validation ladder before production: dd micro-ops vs rug-256; Gram small pairs dd vs MPFR-direct;
+d_N(50/100) regression vs published 1.0793711120e-1 / 1.0013884399e-1 (rel ~2.2e-13/6.3e-13);
+pow2 control saturation 0.3188.
+new code: tools/wave8c/src/bin/hiN.rs (phases: validate | prod N | mpfrchol N | ddgram N).
