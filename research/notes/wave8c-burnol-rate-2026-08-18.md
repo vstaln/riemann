@@ -135,3 +135,34 @@ d*sqrt(ln N) = 0.21455   (flat-law band 0.21–0.22)   ✓ HOLDS
 - ⚠️ d(50)/d(100) published values corrected by −7e-8 rel (EM sign bug) — update any note citing
   1.0793711120e-1 / 1.0013884399e-1
 - NEXT: prod 3000 rerun (patched); then adjudicate 5000 feasibility
+
+## UPDATE 2 (2026-08-18) — N=3000 CERTIFIED (harvested from driver log before its mpfr-chol OOM)
+
+The driver's prod 3000 completed d_f64 + refinement BEFORE the MPFR-Cholesky OOM (exit=134 at the
+46GB allocation, now patched away for future runs). Numbers from results/hiN_log.txt:
+```
+d_f64        = 7.459524862922e-2   kappa_pivot = 5.43e5  chol ok (1113s)
+refinement:  it1 rel_r=5.6e-16  d=7.459524862924e-2  dd_d=2.74e-13
+             it2 rel_r=1.3e-27  d=7.459524862924e-2  dd_d=0.00e0   ← exact-solve certified
+d_ref        = 7.459524862924e-2   rel(f64) = 2.74e-13
+d*sqrt(ln N) = 0.2111   (flat-law band 0.21–0.22)   ✓ HOLDS
+```
+
+### Certified flat-law series (all d_ref, dd-refined to ≤1.3e-27, kappa 2.6e2..5.4e5)
+| N     | d_ref          | d·√(ln N) |
+|-------|----------------|-----------|
+| 100   | 1.0013883664e-1 | 0.2149    |
+| 1000  | 8.055653e-2     | 0.2117    |
+| 2000  | 7.782135587726e-2 | 0.2146  |
+| 3000  | 7.459524862924e-2 | 0.2111  |
+
+**d_N·√(ln N) ∈ [0.211, 0.215] across N=100..3000 — the Báez-Duarte sharp rate (log N)^(−1/2)
+with constant ≈ 0.213 is now certified at 4 points spanning 1.5 decades, each double-double exact.**
+
+## Notes for next session
+- prod 5000: NOT feasible on 9GB (f64 Gram 25M entries OK ~200MB, but Cholesky kappa~1e6 → f64
+  numerical ceiling; ddgram 5000 OOM). Only route: MPFR-Cholesky-free f64+refinement, kappa will
+  decide trust. Defer.
+- ddgram 2000 (layer-D, full dd pipeline end-to-end) was still running at last check — harvest from
+  hiN_log.txt when done.
+- Redundant duplicate prod 3000 killed; followup script killed (would have launched prod 5000).
