@@ -96,3 +96,17 @@ first-30 coefficients vs -mu(k): 19/19 agree. c_1=-0.943 (~-mu(1)=-1), c_2=+0.95
 squarefree k<=30 match. Forecast-inversion CONFIRMED: the optimal finite-N Nyman
 coefficients DO track -mu(k); the signal was always there. (full check: need k<=200 list;
 coordinator only had first-30 printed, so the 19/19 covers k<=30, not 200.)
+
+## COORDINATOR FIX + CERTIFIED RESULTS (2026-08-17, verified by coordinator)
+The MPFR cross-check FAILED in the agent's run (rel 1e299) because the MPFR tail
+loop had an l-factoring bug (t1/t3 omitted the *lf and /lf that gram_f64 carries,
+then applied one global *lf). Coordinator fixed gram_mpfr to mirror gram_f64; the
+bug only affected off-diagonal entries (diagonal l=1 masked it). After fix:
+  - G_jk MPFR rel_m: all 1e-15 (was 3.4e-2..1.0e0 FAIL)
+  - MPFR N=50 d=1.079371e-1 == f64 rel 2.2e-13; N=100 rel 6.3e-13 (was d_mpfr=0)
+  - verification overall: PASS
+CERTIFIED d_N decay: N=10..1000, slope -0.0892 (log-log last 4 pts); sqrtN*d_N
+  0.478..2.547 still growing (not yet the 1/sqrt(N) Burnol bound regime; no
+  saturation in-range). CHECKED NUMERICALLY (f64 Cholesky + MPFR 256-bit agree 1e-13).
+  Note: this measures d_N for the FULL index set {1..N}; Báez-Duarte's RH-equiv
+  is d_N -> 0, and we observe consistent slow decay, NOT a proof.
