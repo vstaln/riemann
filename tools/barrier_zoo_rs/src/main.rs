@@ -56,7 +56,7 @@ fn gamma(s: C) -> C {
             let d = z.add(C::new(k as f64, 0.0));
             acc = acc.add(C::new(LANCZOS_P[k], 0.0).div(d));
         }
-        let t = z.add(C::new(g, 0.0));
+        let t = z.add(C::new(g + 0.5, 0.0)); // Lanczos: t = z+g+1/2 = s+g-1/2
         let tt = t.ln().mul(z.add(C::new(0.5, 0.0))).sub(t).exp();
         let s2pi = (2.0 * PI).sqrt();
         tt.mul(acc).scale(s2pi)
@@ -201,7 +201,9 @@ fn dedupe(roots: &mut Vec<C>, gap: f64) {
 
 fn find_offline_zeros(f: &dyn Fn(C) -> C, label: &str, t_hi: f64, cert: f64) -> Vec<C> {
     let magf = |s: C| f(s).abs();
-    let cands = grid_find_zeros(&magf, 0.02, 0.98, 0.0, t_hi, 0.05, 0.5, 0.3);
+    // Fine grid: dt=0.5 provably cannot resolve zeros sitting ~0.2-0.37 off a t-gridline
+    // (local-min ratio d_min/d_nb ~ 0.74-0.99 > 0.3 for the certified DH zeros).
+    let cands = grid_find_zeros(&magf, 0.02, 0.98, 0.0, t_hi, 0.01, 0.05, 0.9);
     let mut roots = Vec::new();
     for z0 in cands {
         let (z, err) = newton(f, z0);
@@ -233,13 +235,13 @@ fn l_dirichlet(s: C, chi: &[C; 5]) -> C {
                           .add(hurwitz(s, a as f64 / 5.0).scale(chi[a].im).mul(C::new(0.0, 1.0))));
         }
     }
-    tot.mul(cpow_pos(5.0, s)) // 5^{-s}
+    tot.mul(cpow_pos(5.0, s.scale(-1.0))) // q^{-s} = 5^{-s}
 }
 
 fn gauss_sum(chi: &[C; 5]) -> C {
     let mut g = C::new(0.0, 0.0);
     for a in 1..5usize {
-        let e = C::new(2.0 * PI * a as f64 / 5.0, 0.0).exp();
+        let e = C::new(0.0, 2.0 * PI * a as f64 / 5.0).exp(); // e^{i 2pi a/5}
         g = g.add(chi[a].mul(e));
     }
     g
@@ -341,7 +343,7 @@ fn run_weil() {
     // genuine: x^4 + x^2 + 1 = (x^6-1)/(x^2-1): 6th roots of unity except +-1
     let mut genu: Vec<C> = Vec::new();
     for k in 0..6 {
-        let w = C::new(2.0 * PI * k as f64 / 6.0, 0.0).exp();
+        let w = C::new(0.0, 2.0 * PI * k as f64 / 6.0).exp(); // e^{i 2pi k/6}
         if (w.re - 1.0).abs() > 1e-9 && (w.re + 1.0).abs() > 1e-9 {
             genu.push(w);
         }
@@ -371,7 +373,9 @@ fn theta_q(q: (f64, f64, f64), t: f64) -> f64 {
     for m in -R..=R {
         for n in -R..=R {
             let v = a * (m as f64) * (m as f64) + b * (m as f64) * (n as f64) + c * (n as f64) * (n as f64);
-            if v > 0.0 {
+            // full theta INCLUDES the origin term exp(-pi t*0)=1 (Poisson identity and the
+            // I(s) integrand need it; lam_epstein already subtracts 1.0 internally).
+            if v >= 0.0 {
                 s += (-PI * t * v).exp();
             }
         }
@@ -478,7 +482,7 @@ fn run_epstein() {
                 tot = tot.add(hurwitz(s, a as f64 / 20.0).scale(chi20[a] as f64));
             }
         }
-        tot.mul(cpow_pos(20.0, s))
+        tot.mul(cpow_pos(20.0, s.scale(-1.0))) // q^{-s} = 20^{-s}, same bug class as l_dirichlet
     };
     let zk = |s: C| riemann_zeta(s).mul(l_chi20(s));
     let half = |s: C| zeta_epstein(s, q1, &th1, &th1p, h, n)
@@ -563,7 +567,8 @@ fn run_beurling() {
     let s0 = C::new(0.5 + delta, PI / 2.0f64.ln());
     println!("  c = 2^(1/2+delta) = {:.6}   planted zero s0 = {:.6} + i*{:.6}",
              c, s0.re, s0.im);
-    let z = |s: C| riemann_zeta(s).mul(C::new(1.0, 0.0).add(cpow_pos(2.0, s).scale(c)));
+    // Z(s) = zeta(s)(1 + c*2^{-s}); at s0 = 1/2+delta + i*pi/ln2: 2^{-s0} = -1/c exactly.
+    let z = |s: C| riemann_zeta(s).mul(C::new(1.0, 0.0).add(cpow_pos(2.0, s.scale(-1.0)).scale(c)));
     println!("  coefficients a(n) = 1 + c*[n even] (first 12):");
     let mut line = String::new();
     for n in 1..13 {
@@ -735,10 +740,10 @@ fn re_search(pat: &str, text: &str) -> bool {
     false
 }
 
-const RH_CONCLUSION: [&str; 20] = [
+const RH_CONCLUSION: [&str; 21] = [
     "all nontrivial zeros", "zeros of .*lie on", "zeros .*on the critical line",
-    "no zeros off", "zeros on re(s)=1/2", "zeros on the line",
-    "all zeros .*re(s)\\s*=\\s*1/2", "mertens", "m[öo]bius summatory",
+    "no zeros off", "zeros on re\\(s\\)=1/2", "zeros on the line",
+    "all zeros .*re\\(s\\)\\s*=\\s*1/2", "all roots on the unit circle", "mertens", "m[öo]bius summatory",
     "m(x)\\s*=\\s*o(", "liouville", "lindel[öo]f", "hilbert[ -]p[óo]lya",
     "equivalent to (the )?riemann", "riemann hypothesis", "\\brh\\b",
     "if and only if", "\\biff\\b", "\\u21d4", "all zeros on",
@@ -756,10 +761,11 @@ const KNOWN_THEOREM: [&str; 20] = [
     "pole at s\\s*=\\s*1", "meromorphic continuation", "riemann[ -]siegel",
     "chebyshev", "analytic continuation",
 ];
-const TAUTOLOGY: [&str; 10] = [
+const TAUTOLOGY: [&str; 12] = [
     "by definition", "trivially", "obviously", "immediately", "tautolog",
     "every zero is either", "either on the line or off", "the critical strip is",
     "0\\s*<\\s*re\\(s\\)\\s*<\\s*1\\b", "is either zero or nonzero",
+    "trivial, on the critical line, or off", "trivial, on the line, or off",
 ];
 
 struct World { name: &'static str, hypothesis: &'static [&'static str], violation: &'static str }
