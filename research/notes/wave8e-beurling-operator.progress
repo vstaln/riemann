@@ -1,0 +1,18 @@
+t=1 ls notes/tools: no wave8e artifacts exist; no wave8c either
+t=2 read brief LEVER 8E + verifier-rs Cargo.toml (rug 1.30 float)
+t=3 searched wave8e/wave8c notes+tools: absent; burnol only as .pdf (no .txt)
+t=4 grep burnol txt: file missing; need pdftotext
+t=5 writing deliverable seed
+t=6 seed note written; pinning statements
+t=7 ledger read: 8C line 307-308, 8E 312-313; barrier zoo has Beurling planted-zero world
+t=8 burnol pdf->txt OK (1772 lines); no Baez-Duarte paper in corpus
+t=9 burnol: Weil criterion pinned; no Baez-Duarte in corpus yet
+t=10 searching corpus for Nyman-Beurling/Baez-Duarte statements
+t=11 barrier zoo beurling read (planted zero s0=1/2+delta+i*pi/ln2, c=2^(1/2+delta), Z=zeta*(1+c*2^-s))
+t=12 search all corpus for Nyman-Bez-Duarte-rate statements
+t=13 corpus: NO Baez-Duarte paper present; Burnol pins Weil criterion (lines 174-176, 229-232). Control = barrier-zoo planted zero (s0=1/2+delta+i*pi/ln2, Z=zeta*(1+c*2^-s), c=2^(1/2+delta), delta=0.1). Writing Rust probe now.
+t=14 wrote probe (Cargo.toml + main.rs); building
+t=16 machinery verified vs rug; running real N=300
+t=17 speed fix (Q=2); running sweep
+t=18 launching N=60 real+control background
+real60 done 0

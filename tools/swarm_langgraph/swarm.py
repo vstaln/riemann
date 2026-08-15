@@ -322,10 +322,8 @@ def build_graph(cfg: dict):
     for i in range(cfg["executors"]):
         g.add_edge("gate", f"executor_{i}")
     for i in range(cfg["verifiers"]):
-        g.add_edge("executor_0", f"verifier_{i}")  # all executors feed all verifiers
-        if i > 0:
-            for j in range(cfg["executors"]):
-                g.add_edge(f"executor_{j}", f"verifier_{i}")
+        for j in range(cfg["executors"]):
+            g.add_edge(f"executor_{j}", f"verifier_{i}")  # all executors feed all verifiers
     for i in range(cfg["verifiers"]):
         g.add_edge(f"verifier_{i}", "judge")
     g.add_edge("judge", "synthesizer")

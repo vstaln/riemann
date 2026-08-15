@@ -1,0 +1,3 @@
+t=4 toolchain+ledger checked: no prior NB work in ledger (only wave8b so far); cargo 1.97.1, x86_64-unknown-linux-musl installed; verifier-rs has working rug build
+t=5 seed note written to research/notes/wave8c-nyman-beurling-2026-08-17.md (closed forms b_k, G_jk derived; control plan; honest limitations)
+t=7 probe built OK (tools/wave8c/target/release/wave8c)

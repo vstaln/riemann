@@ -1,0 +1,8 @@
+t=0 start: wave8d retry (first attempt killed mid-run). Joint: Turan T_k=b_k^2-b_{k-1}b_{k+1} and Laguerre L_k(t) on Xi Taylor coeffs b_k=M_k/(2k)!, M_k=2\int Phi(u)u^{2k}du, Phi=classical theta. Control-first, rust+rug, kill-robust: writing note+progress up front.
+t=1 read brief (8D), confirmed plan. Derivation done by hand: TRUE Phi = 2*sum(2pi^2 n^4 e^{9u/2} - 3pi n^2 e^{5u/2}) e^{-pi n^2 e^{2u}} (brief transcription corrupted: 2pi n^2 vs 2pi^2 n^4, and dropped outer 2; brief Phi(0)<0 contradicting "positive"). Xi(t)=2∫Phi cos(tu)du, b_k = M_k/(2k)!, M_k=2∫Phi u^{2k}du. Newton necessary condition under RH: t_k = T_k/b_k^2 >= 1/(k+1).
+t=2 wrote tools/wave8d crate (main.rs, Cargo.toml). Derived correct Phi from scratch; built control (planted pair beta=0.35+/-21.1i replaces gamma_2) + real-case moments (adaptive Simpson MPFR, rigorous tail bound), Turan, Laguerre grid, root validation. Building now.
+t=3 built wave8d release clean. Running now (control + real-case moments/Laguerre), teeing to research/notes/wave8d-run1.txt.
+t=4 fixed control sign bug (pk carries (-1)^k; sign applied twice). Rerunning full probe in background, full output to wave8d-run2.txt.
+t=5 control validated by independent Python (planted fails L5(0)=-9.47e-9 via e3 sign flip; all-real passes). Restarting full real-case run with fixed binary, line-buffered, to wave8d-run3.txt.
+t=6 control validated (both impls); retuned moments (128bit, tol 1e-12, depth 30) after high-k Simpson blowup; relaunching full run line-buffered.
+t=7 fixed tolerance (rel 1e-13, abs floor 1e-28, depth 34) after run4 low-k moment corruption (abs floor 1e-12 ~ M_10 caused premature termination). Rerunning full.

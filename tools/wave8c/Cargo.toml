@@ -1,0 +1,12 @@
+[package]
+name = "wave8c"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rug = { version = "1.30", features = ["float"] }
+gmp-mpfr-sys = { version = "1.7", features = ["force-cross"] }
+
+[profile.release]
+opt-level = 3
+lto = true
