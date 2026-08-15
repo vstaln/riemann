@@ -1,0 +1,9 @@
+t=1 ledger check: foster-reactance-2026-08-15.md is the SAME lever (g1-1); verdict = class 2 restatement, finite check deflating. My brief = g1-2 sibling; unique deliverable = WALL test (foster §5 unrun).
+t=2 read foster note fully; foster_check/main.rs exists (real-Xi C-fraction probe) + dbg scripts; NO results recorded anywhere, no ledger line for foster.
+t=3 wrote note stieltjes-sfraction-2026-08-15.md (theory §1, WALL §2, spec §3, forecast §4). Partial note committed seed.
+t=4 next: run foster_check binary (does the real-Xi pipeline pass? anchor m_0) — then write control probe (toy, planted 1+50i, planted 1+1e6 i, real-12-zero model) via scaled Hankel Stieltjes criterion, run, append §5 + ledger line.
+t=4 foster_check binary RUN: pipeline BROKEN (b_0=0.7457 vs 0.4971; m_0=9.057 vs 0.0231, 400x off; "FAIL a_5" = artifact). Its §5 never recorded = the run was invalid.
+t=5 wrote control probe v1 (scaled-Hankel GE): anchors wrong (finite-30 truncation) + GE pivots flip sign at 1e-17 (unscaled +1, scaled -1) -> v1 unreliable.
+t=6 v2 reciprocal S-fraction: single-pair anchor EXACT + terminates; toy q1=s2/s1<0; but REAL20 spurious q17<0 (pre-termination conditioning).
+t=7 v3 Bareiss Hankel: dets ~1e-49..1e-57 at n=7-8 -> f64 sign unreliable n>=7 for ANY geometric-decay sequence (documented). Controls (n*<=2) are exact small matrices: toy n*=0, 2i n*=1, 1+50i n*=1, shift-first-zero n*=1-2, far 1e6i invisible. SEP20 passes k<=19.
+t=8 note finalized (anchors corrected, results §5, numerics caveat), ledger line appended. DONE.
