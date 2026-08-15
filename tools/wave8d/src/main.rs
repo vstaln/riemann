@@ -335,12 +335,43 @@ fn control_far() {
 }
 
 // ---------------- real Xi ----------------
-fn real_case() {
+
+const BK_PATH: &str = "data/bk.txt";
+
+fn save_bk(path: &str, b: &[Float]) {
+    std::fs::create_dir_all("data").unwrap();
+    let mut s = String::new();
+    for (k, bk) in b.iter().enumerate() {
+        s.push_str(&format!("{} {:.42e}\n", k, bk));
+    }
+    std::fs::write(path, s).unwrap();
+    println!("  saved {} b_k values to {}", b.len(), path);
+}
+
+fn load_bk(path: &str) -> Option<Vec<Float>> {
+    let s = std::fs::read_to_string(path).ok()?;
+    let mut b = Vec::new();
+    for line in s.lines() {
+        let line = line.trim();
+        if line.is_empty() { continue; }
+        let mut it = line.split_whitespace();
+        let _k: usize = it.next()?.parse().ok()?;
+        let val = it.next()?;
+        match Float::parse(val) {
+            Ok(p) => b.push(Float::with_val(PREC, p)),
+            Err(_) => return None,
+        }
+    }
+    if b.is_empty() { None } else { Some(b) }
+}
+
+// b_k = M_k/(2k)! for k = 0..=k_max+1 (one extra row so T_k = b_k^2 - b_{k-1}b_{k+1} is defined at k=k_max)
+fn compute_bk(k_max: u64) -> Vec<Float> {
     let t0 = Instant::now();
-    let k_max = 200u64;
-    let mut b: Vec<Float> = Vec::with_capacity(k_max as usize + 1);
+    let km = k_max + 1;
+    let mut b: Vec<Float> = Vec::with_capacity(km as usize + 1);
     let mut max_rel_err = Float::with_val(PREC, 0);
-    for k in 0..=k_max {
+    for k in 0..=km {
         let (mk, err) = moment(k, PREC);
         let rel = Float::with_val(PREC, &err / &mk.clone().abs());
         if rel > max_rel_err { max_rel_err = rel.clone(); }
@@ -350,74 +381,221 @@ fn real_case() {
         }
         b.push(bk);
     }
-    println!("moments done in {:.1}s, max est rel err = {:.1e}", t0.elapsed().as_secs_f64(), max_rel_err.to_f64());
-    println!("VALIDATION: b_0 = {:.15}  (xi(1/2) = 0.497120778188314)", b[0].to_f64());
+    println!("moments done in {:.1}s (k=0..={}), max est rel err = {:.1e}", t0.elapsed().as_secs_f64(), km, max_rel_err.to_f64());
+    b
+}
 
-    // roots of Xi(t)
-    let mut root_t: Vec<f64> = Vec::new();
+// load-or-compute with sanity gate on b_0 (guards against a corrupt/cached file)
+fn get_bk(k_max: u64, force: bool) -> Vec<Float> {
+    if !force {
+        if let Some(b) = load_bk(BK_PATH) {
+            if b.len() as u64 == k_max + 2 && (b[0].to_f64() - 0.497120778188314).abs() < 1e-10 {
+                println!("  loaded {} b_k values from {} (b_0 = {:.12})", b.len(), BK_PATH, b[0].to_f64());
+                return b;
+            }
+        }
+    }
+    let b = compute_bk(k_max);
+    save_bk(BK_PATH, &b);
+    b
+}
+
+// Taylor truncation P_N(t) = sum_{j<=N} (-1)^j b_j t^{2j} (exact Float sum, no early break)
+fn xi_trunc_eval(b: &[Float], n_trunc: usize, t: &Float, prec: u32) -> Float {
+    let mut s = Float::with_val(prec, 0);
+    let t2 = t.clone().square();
+    for j in 0..=n_trunc {
+        let term = mul(&b[j], &t2.clone().pow(j as u32), prec);
+        if j % 2 == 0 { s += &term; } else { s -= &term; }
+    }
+    s
+}
+
+// 4 positive roots of the Taylor truncation P_N (bisection on sign changes)
+fn trunc_roots(b: &[Float], n_trunc: usize) -> Vec<f64> {
+    let mut roots = Vec::new();
     let mut tprev = 0.0_f64;
-    let mut vprev = xi_eval(&b, &Float::with_val(PREC, 0.0), PREC).to_f64();
-    for i in 1..=1400 {
+    let mut vprev = xi_trunc_eval(b, n_trunc, &Float::with_val(PREC, 0.0), PREC).to_f64();
+    for i in 1..=4000 {
         let t = i as f64 * 0.05;
-        let v = xi_eval(&b, &Float::with_val(PREC, t), PREC).to_f64();
+        let v = xi_trunc_eval(b, n_trunc, &Float::with_val(PREC, t), PREC).to_f64();
         if vprev != 0.0 && v / vprev < 0.0 {
             let mut lo = tprev; let mut hi = t;
             let sgn = vprev > 0.0;
-            for _ in 0..80 {
+            for _ in 0..90 {
                 let mid = 0.5 * (lo + hi);
-                let vm = xi_eval(&b, &Float::with_val(PREC, mid), PREC).to_f64();
+                let vm = xi_trunc_eval(b, n_trunc, &Float::with_val(PREC, mid), PREC).to_f64();
                 if (vm > 0.0) == sgn { lo = mid; } else { hi = mid; }
             }
-            root_t.push(0.5 * (lo + hi));
+            roots.push(0.5 * (lo + hi));
+        }
+        tprev = t; vprev = v;
+        if roots.len() >= 4 { break; }
+    }
+    roots
+}
+
+// roots of Xi(t): method 1 = bisection on the full series, method 2 = Newton refinement; vs published gamma_1..4
+fn root_validation(b: &[Float]) {
+    let known = [14.13472514173469, 21.02203963877155, 25.01085758014569, 30.42487612585951];
+    let mut root_t: Vec<(f64, f64)> = Vec::new();
+    let mut tprev = 0.0_f64;
+    let mut vprev = xi_eval(b, &Float::with_val(PREC, 0.0), PREC).to_f64();
+    for i in 1..=3000 {
+        let t = i as f64 * 0.05;
+        let v = xi_eval(b, &Float::with_val(PREC, t), PREC).to_f64();
+        if vprev != 0.0 && v / vprev < 0.0 {
+            let mut lo = tprev; let mut hi = t;
+            let sgn = vprev > 0.0;
+            for _ in 0..90 {
+                let mid = 0.5 * (lo + hi);
+                let vm = xi_eval(b, &Float::with_val(PREC, mid), PREC).to_f64();
+                if (vm > 0.0) == sgn { lo = mid; } else { hi = mid; }
+            }
+            let bis = 0.5 * (lo + hi);
+            let mut x = Float::with_val(PREC, bis);
+            for _ in 0..10 {
+                let fx = xi_eval(b, &x, PREC);
+                let d1 = xi_deriv(b, 1, &x, PREC);
+                if d1.to_f64().abs() < 1e-300 { break; }
+                let step = Float::with_val(PREC, &fx / &d1);
+                x = Float::with_val(PREC, &x - &step);
+            }
+            root_t.push((bis, x.to_f64()));
         }
         tprev = t; vprev = v;
         if root_t.len() >= 4 { break; }
     }
-    let known = [14.134725, 21.022040, 25.010858, 30.424876];
-    for (i, r) in root_t.iter().enumerate() {
-        println!("  VALIDATION root {} = {:.6}  vs gamma_{} = {:.6}", i + 1, r, i + 1, known[i]);
+    println!("=== ROOTS (full series: bisection vs Newton; vs published gamma_j) ===");
+    for (i, (bis, nw)) in root_t.iter().enumerate() {
+        println!("  root {}: bisect={:.10} Newton={:.10} |bis-Nwt|={:.1e}  gamma_{}={:.10}  |Newton-gamma|={:.1e}",
+            i + 1, bis, nw, (bis - nw).abs(), i + 1, known[i], (nw - known[i]).abs());
     }
+    println!("=== ROOTS of Taylor truncations P_N(t) vs gamma_1..4 (convergence as N grows) ===");
+    for n_trunc in [20usize, 40, 80, 160] {
+        let r = trunc_roots(b, n_trunc);
+        let mut line = format!("  N={}: found {} roots:", n_trunc, r.len());
+        for (j, &rr) in r.iter().enumerate() {
+            let g = known[j];
+            line.push_str(&format!(" root{}={:.8} (|d|={:.1e})", j + 1, rr, (rr - g).abs()));
+        }
+        println!("{}", line);
+    }
+}
 
-    // Turan
-    println!("=== TURAN ===");
+fn turan_table(b: &[Float], k_max: u64) {
+    println!("=== TURAN (k=1..{}) ===", k_max);
     let mut min_tk = Float::with_val(PREC, f64::INFINITY);
     let mut min_k = 0u64;
     let mut min_ratio = Float::with_val(PREC, f64::INFINITY);
     let mut min_ratio_k = 0u64;
+    let mut max_ratio = Float::with_val(PREC, -f64::INFINITY);
+    let mut max_ratio_k = 0u64;
     let mut any_neg = false;
+    let mut table = String::new();
+    table.push_str("k T_k t_k t_k*(k+1)\n");
     for k in 1..=k_max {
         let bk = b[k as usize].clone();
-        let tkn = Float::with_val(PREC, &bk.clone().square() - &(mul(&b[(k - 1) as usize], &b[(k + 1) as usize], PREC)));
-        let tkn = Float::with_val(PREC, &tkn / &bk.clone().square());
+        let tk = Float::with_val(PREC, &bk.clone().square() - &(mul(&b[(k - 1) as usize], &b[(k + 1) as usize], PREC)));
+        let tkn = Float::with_val(PREC, &tk / &bk.clone().square());
         if tkn < min_tk { min_tk = tkn.clone(); min_k = k; }
         let ratio = Float::with_val(PREC, &tkn * (k as f64 + 1.0));
         if ratio < min_ratio { min_ratio = ratio.clone(); min_ratio_k = k; }
+        if ratio > max_ratio { max_ratio = ratio.clone(); max_ratio_k = k; }
         if tkn.to_f64() < 0.0 { any_neg = true; println!("  !!! T_k < 0 at k = {}: T_k = {:.4e}", k, tkn.to_f64()); }
+        table.push_str(&format!("{} {:.6e} {:.10e} {:.10e}\n", k, tk.to_f64(), tkn.to_f64(), ratio.to_f64()));
         if k % 20 == 0 {
             println!("  k={}: t_k={:.8e}  t_k*(k+1)={:.8e}", k, tkn.to_f64(), ratio.to_f64());
         }
     }
+    std::fs::create_dir_all("data").unwrap();
+    std::fs::write("data/tk-table.txt", &table).unwrap();
+    println!("  (full T_k/t_k table k=1..200 -> data/tk-table.txt)");
     println!("  min t_k = {:.8e} at k = {}", min_tk.to_f64(), min_k);
-    println!("  min t_k*(k+1) = {:.8e} at k = {}  (RH-necessary: >= 1)", min_ratio.to_f64(), min_ratio_k);
+    println!("  min t_k*(k+1) = {:.8e} at k = {}   (RH-necessary: >= 1; holds = {})", min_ratio.to_f64(), min_ratio_k, min_ratio.to_f64() >= 1.0);
+    println!("  max t_k*(k+1) = {:.8e} at k = {}   (bounded above -> t_k*(k+1) does not blow up)", max_ratio.to_f64(), max_ratio_k);
     if any_neg { println!("  !!! NEGATIVE T_k FOUND -> RH DISPROOF. ESCALATE."); }
-    let mut ys = Vec::new();
-    for k in (k_max - 60)..=k_max {
-        let bk = b[k as usize].clone();
-        let tk = Float::with_val(PREC, &bk.clone().square() - &(mul(&b[(k - 1) as usize], &b[(k + 1) as usize], PREC)));
-        let tkn = Float::with_val(PREC, &tk / &bk.clone().square());
-        ys.push(((k as f64).ln(), tkn.to_f64().ln()));
-    }
-    let n = ys.len() as f64;
-    let sx: f64 = ys.iter().map(|x| x.0).sum();
-    let sy: f64 = ys.iter().map(|x| x.1).sum();
-    let sxx: f64 = ys.iter().map(|x| x.0 * x.0).sum();
-    let sxy: f64 = ys.iter().map(|x| x.0 * x.1).sum();
-    let pp = (n * sxy - sx * sy) / (n * sxx - sx * sx);
-    let logc = (sy - pp * sx) / n;
-    println!("  tail fit (k={}..{}): t_k ~ {:.4e} * k^({:.3})", k_max - 60, k_max, logc.exp(), pp);
 
-    // Laguerre grid
-    println!("=== LAGUERRE L_k(t), t in [0,40], step 0.25 ===");
+    // asymptotic fit t_k ~ c * k^p on TWO windows (stability cross-check)
+    for (lo, hi, tag) in [(60u64, 120u64, "window1 k=60..120"), (140u64, 200u64, "window2 k=140..200")] {
+        let mut ys = Vec::new();
+        for k in lo..=hi {
+            let bk = b[k as usize].clone();
+            let tk = Float::with_val(PREC, &bk.clone().square() - &(mul(&b[(k - 1) as usize], &b[(k + 1) as usize], PREC)));
+            let tkn = Float::with_val(PREC, &tk / &bk.clone().square());
+            ys.push(((k as f64).ln(), tkn.to_f64().ln()));
+        }
+        let n = ys.len() as f64;
+        let sx: f64 = ys.iter().map(|x| x.0).sum();
+        let sy: f64 = ys.iter().map(|x| x.1).sum();
+        let sxx: f64 = ys.iter().map(|x| x.0 * x.0).sum();
+        let sxy: f64 = ys.iter().map(|x| x.0 * x.1).sum();
+        let pp = (n * sxy - sx * sy) / (n * sxx - sx * sx);
+        let logc = (sy - pp * sx) / n;
+        println!("  tail fit {}: t_k ~ {:.4e} * k^({:.4});  t_k*(k+1) ~ c*k^({:.4})  (p=-1 means t_k ~ c/k, t_k*(k+1) -> const)",
+            tag, logc.exp(), pp, pp + 1.0);
+    }
+}
+
+fn lval(b: &[Float], k: u64, t: f64) -> Float {
+    let tf = Float::with_val(PREC, t);
+    let dk = xi_deriv(b, k, &tf, PREC);
+    let dkm1 = xi_deriv(b, k - 1, &tf, PREC);
+    let dkp1 = xi_deriv(b, k + 1, &tf, PREC);
+    Float::with_val(PREC, dk.clone().square() - dkm1 * dkp1)
+}
+
+// golden-section refinement of the per-k minimum on [a0,b0]
+fn refine_min(b: &[Float], k: u64, a0: f64, b0: f64) -> (f64, Float) {
+    let gr = 0.6180339887498949;
+    let mut a = a0;
+    let mut bb = b0;
+    let mut c = bb - gr * (bb - a);
+    let mut d = a + gr * (bb - a);
+    let mut fc = lval(b, k, c);
+    let mut fd = lval(b, k, d);
+    for _ in 0..60 {
+        if fc <= fd {
+            bb = d; d = c; fd = fc;
+            c = bb - gr * (bb - a);
+            fc = lval(b, k, c);
+        } else {
+            a = c; c = d; fc = fd;
+            d = a + gr * (bb - a);
+            fd = lval(b, k, d);
+        }
+    }
+    let mid = 0.5 * (a + bb);
+    (mid, lval(b, k, mid))
+}
+
+fn laguerre_grid(b: &[Float]) {
+    // exact L_k(0) relations (closed form vs derivative series; k even/odd split)
+    println!("=== L_k(0): closed-form exact relation vs derivative series ===");
+    let mut max_l0_dis = Float::with_val(PREC, 0);
+    for k in 1..=20u64 {
+        let lk_series = lval(b, k, 0.0);
+        let lk_exact = if k % 2 == 0 {
+            let m = (k / 2) as u64;
+            let f = factorial2k(m, PREC);
+            let bm = b[m as usize].clone();
+            let prod = Float::with_val(PREC, &bm * &f);
+            Float::with_val(PREC, prod.clone().square())
+        } else {
+            let m = ((k - 1) / 2) as u64;
+            let f1 = factorial2k(m, PREC);
+            let f2 = factorial2k(m + 1, PREC);
+            let p1 = Float::with_val(PREC, &b[m as usize] * &f1);
+            let p2 = Float::with_val(PREC, &b[(m + 1) as usize] * &f2);
+            Float::with_val(PREC, &p1 * &p2)
+        };
+        let dis = Float::with_val(PREC, (lk_series.clone() - &lk_exact).abs() / lk_exact.clone().abs());
+        if dis > max_l0_dis { max_l0_dis = dis.clone(); }
+        println!("  L_{}(0): series={:.6e}  closed={:.6e}  rel.diff={:.1e}", k, lk_series.to_f64(), lk_exact.to_f64(), dis.to_f64());
+    }
+    println!("  max |rel diff| over k=1..20 = {:.1e}", max_l0_dis.to_f64());
+
+    println!("=== LAGUERRE L_k(t): fine grid t in [0,40] step 0.25 + coarse (40,60] step 0.5, k=1..20 ===");
     let mut global_min = Float::with_val(PREC, f64::INFINITY);
     let mut gmin_k = 0u64;
     let mut gmin_t = 0.0_f64;
@@ -427,38 +605,107 @@ fn real_case() {
         let mut kmin_t = 0.0_f64;
         let mut t = 0.0_f64;
         while t <= 40.0 + 1e-9 {
-            let tf = Float::with_val(PREC, t);
-            let dk = xi_deriv(&b, k, &tf, PREC);
-            let dkm1 = xi_deriv(&b, k - 1, &tf, PREC);
-            let dkp1 = xi_deriv(&b, k + 1, &tf, PREC);
-            let lk = Float::with_val(PREC, dk.clone().square() - dkm1 * dkp1);
-            let lkf = lk.to_f64();
-            if lkf < kmin.to_f64() { kmin = lk.clone(); kmin_t = t; }
-            if lkf < global_min.to_f64() { global_min = lk.clone(); gmin_k = k; gmin_t = t; }
+            let lkf = lval(b, k, t).to_f64();
+            if lkf < kmin.to_f64() { kmin = Float::with_val(PREC, lkf); kmin_t = t; }
+            if lkf < global_min.to_f64() { global_min = Float::with_val(PREC, lkf); gmin_k = k; gmin_t = t; }
             if lkf < 0.0 && !any_lneg {
                 any_lneg = true;
                 println!("  !!! L_k(t) < 0 at k={}, t={:.2}: L_k = {:.4e} -> RH DISPROOF. ESCALATE.", k, t, lkf);
             }
             t += 0.25;
         }
-        println!("  k={}: min L_k = {:.6e} (rel to b_0^2: {:.2e}) at t = {:.2}", k, kmin.to_f64(), (kmin.clone() / b[0].clone().square()).to_f64(), kmin_t);
+        // local refinement around the grid min
+        let lo = (kmin_t - 0.3).max(0.0);
+        let hi = (kmin_t + 0.3).min(40.0);
+        let (tr, vr) = refine_min(b, k, lo, hi);
+        if vr.to_f64() < kmin.to_f64() { kmin = vr.clone(); kmin_t = tr; }
+        if kmin.to_f64() < global_min.to_f64() { global_min = kmin.clone(); gmin_k = k; gmin_t = kmin_t; }
+        println!("  k={}: min L_k = {:.6e} (rel to b_0^2: {:.2e}) at t = {:.3}", k, kmin.to_f64(), (kmin.clone() / b[0].clone().square()).to_f64(), kmin_t);
     }
-    println!("  GLOBAL min L_k = {:.6e} at k={}, t={:.2}", global_min.to_f64(), gmin_k, gmin_t);
+    // coarse scan beyond 40
+    let mut coarse_min = Float::with_val(PREC, f64::INFINITY);
+    let mut ck = 0u64; let mut ct = 0.0_f64;
+    for k in 1..=20u64 {
+        let mut t = 40.5_f64;
+        while t <= 60.0 + 1e-9 {
+            let lkf = lval(b, k, t).to_f64();
+            if lkf < coarse_min.to_f64() { coarse_min = Float::with_val(PREC, lkf); ck = k; ct = t; }
+            if lkf < 0.0 && !any_lneg {
+                any_lneg = true;
+                println!("  !!! L_k(t) < 0 at k={}, t={:.2}: L_k = {:.4e} -> RH DISPROOF. ESCALATE.", k, t, lkf);
+            }
+            t += 0.5;
+        }
+    }
+    println!("  coarse (40,60]: min L_k = {:.6e} at k={}, t={:.2}", coarse_min.to_f64(), ck, ct);
+    println!("  GLOBAL min L_k = {:.6e} at k={}, t={:.3}  (rel to b_0^2: {:.2e})", global_min.to_f64(), gmin_k, gmin_t, (global_min.clone() / b[0].clone().square()).to_f64());
     if !any_lneg {
-        println!("  all L_k(t) >= 0 on the grid");
+        println!("  all L_k(t) >= 0 on the scanned grids");
     }
+}
+
+fn real_case() {
+    let t0 = Instant::now();
+    let k_max = 200u64;
+    let b = get_bk(k_max, false);
+    println!("VALIDATION: b_0 = {:.15}  (xi(1/2) = 0.497120778188314)", b[0].to_f64());
+    root_validation(&b);
+    turan_table(&b, k_max);
+    laguerre_grid(&b);
     println!("total time {:.1}s", t0.elapsed().as_secs_f64());
 }
 
 fn main() {
     let args: Vec<String> = std::env::args().collect();
-    if args.len() > 1 && args[1] == "control" {
-        control(false);
-        control(true);
-        control_far();
-        return;
+    let mode = args.get(1).map(|s| s.as_str()).unwrap_or("real");
+    let force = args.iter().any(|a| a == "--recompute");
+    match mode {
+        "control" => {
+            control(false);
+            control(true);
+            control_far();
+        }
+        "moments" => {
+            let b = get_bk(200u64, force);
+            println!("VALIDATION: b_0 = {:.15}  (xi(1/2) = 0.497120778188314)", b[0].to_f64());
+            root_validation(&b);
+        }
+        "turan" => {
+            let b = get_bk(200u64, force);
+            turan_table(&b, 200u64);
+        }
+        "laguerre" => {
+            let b = get_bk(200u64, force);
+            laguerre_grid(&b);
+        }
+        "lcheck" => {
+            // bounded precision-sweep of L_k(t) at the agent's suspicious points:
+            // does the negative value persist at higher precision? (cancellation test)
+            let b = get_bk(200u64, force);
+            // FIRST: does the series Xi(t) = sum (-1)^k b_k t^{2k} reproduce zeta-direct values?
+            // zeta-direct (mpmath dps=60, independent): Xi(56.5)=8.807e-18, Xi(40)=2.118e-11, Xi(14.1347)=0
+            for &(t, expect) in &[(56.5_f64, "8.81e-18"), (40.0, "2.12e-11"), (14.1347, "~0 (zero)"), (0.0, "4.971e-1")] {
+                let tf = Float::with_val(512, t);
+                let xi = xi_eval(&b, &tf, 512);
+                println!("  series Xi({:6.3}) = {:.6e}   [zeta-direct expects {}]", t, xi.to_f64(), expect);
+            }
+            for &(t, k) in &[(56.5_f64, 3_u64), (40.0, 18), (40.0, 20), (40.0, 19), (35.5, 4), (33.6, 8)] {
+                print!("t={:5.1} k={:2}: ", t, k);
+                for prec in [128u32, 256, 512] {
+                    let tf = Float::with_val(prec, t);
+                    let dk = xi_deriv(&b, k, &tf, prec);
+                    let dkm1 = xi_deriv(&b, k - 1, &tf, prec);
+                    let dkp1 = xi_deriv(&b, k + 1, &tf, prec);
+                    let lk = Float::with_val(prec, dk.clone().square() - dkm1 * dkp1);
+                    print!("L_{}={:+.4e} ({}b)  ", k, lk.to_f64(), prec);
+                }
+                println!();
+            }
+        }
+        _ => {
+            control(false);
+            control(true);
+            real_case();
+        }
     }
-    control(false);
-    control(true);
-    real_case();
 }

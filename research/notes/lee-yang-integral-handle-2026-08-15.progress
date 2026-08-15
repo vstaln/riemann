@@ -1,0 +1,17 @@
+t=1 read s4h-analogy-domain-transfer SKILL.md
+t=2 read s4h-creativity-lateral-thinking SKILL.md
+t=3 listed research/notes + tools
+t=4 read lee-yang-asano-2026-08-15.md (full context)
+t=5 hand-analysis: first counterexample location WRONG (Im arithmetic slip); corrected: cosh(z)+eps*cosh(2z) = 2e*t^2+t-e in t=cosh(z); interior zeros iff 0<eps<1 at Re z=arccosh((1+sqrt(1+8e^2))/(4e)), Im z=pi; eps=0.7 -> Re~0.5422, |w|~0.907
+t=6 wrote research/notes/lee-yang-integral-handle-2026-08-15.md (deliverable seed, ABANDONED verdict)
+t=7 wrote tools/integral_handle_probe.rs (checks A-E); next: compile+run, then patch results into note
+t=8 compiled+ran integral_handle_probe.rs
+t=8 compiled+ran integral_handle_probe.rs
+t=8 compiled+ran integral_handle_probe.rs
+t=9 compiled+ran integral_handle_probe.rs (fixed 2nd attempt)
+t=10 compiled+ran integral_handle_probe.rs (fresh rewrite)
+t=11 note finalized with numeric results; deliverable complete
+t=12 final note compressed to <=70 lines; task complete
+t=13 note at 70 lines (or below); deliverable final
+t=14 note trimmed to 70 lines via sed
+t=15 DONE: note=70 lines, probe verified, deliverable final
