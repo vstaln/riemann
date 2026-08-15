@@ -259,3 +259,43 @@ Briefs on disk: wave5-briefs-2026-08-17.md.
 - Epstein off-line zero search resolution (grid-limited; needs fast I(s) evaluator).
 - Lesson reinforced: ceilings break by NEW OBJECTS/INPUTS, never sharper in-class
   inequalities — sinc-m3 was another sharpening and died, consistent.
+
+## UPDATE — wave 5 verdicts + wave 6 mission-critical pivot (2026-08-17 ~03:00)
+
+### Wave 5 verdicts (all landed; coordinator probe-verified)
+- **5A M4-proper ζ″-moment r′ — lever CLOSED**: r′ ≥ 0 PROVEN by positivity (c(S₂)=57/64);
+  r′=3/5 REFUTED twice (moment is ℒ⁶/90-scale not ℒ⁵/5; 1/(2k+1) pattern false); r′ value NOT
+  pinned by this route (honest); new constant −X·ℒ⁶/180 CHECKED NUMERICALLY (probe 0.445→0.485,
+  ζ′-control reproduces Gonek exactly). b_pair ≤ 0.2237 ceiling STANDS.
+- **5B k<1 Type-1 decision — NO (HIGH confidence)**: count > density hypothesis by two gaps
+  (only log-free ε-free DH certifies, ratio 3.7e-2 @1e10; Montgomery k=13 → 1.9e16, Ingham k=44
+  → 1e59); crossover b*(T) grows 54→283, never fixed; all six inversion duals EMPTY. Route
+  closed, question open.
+- **5C exact-identity m₃ certificate — m₃-read lever FINALLY CLOSED**: identity verified to
+  5.82e-11; only certified consequence min-p₁=0.4224 mass/0.5939 count < 0.6818, independently
+  reproducing Referee-A; old 0.7488 was pure E[T]≥0 artifact. DH control clean.
+- **Synthesis**: three consecutive in-class levers closed; 0.6818 needs a NEW OBJECT.
+
+### ⚠️ Wave 6 PIVOT — the campaign may ALREADY hold the record (mission-critical)
+The repo's certified records **0.673481 simple-on-line / 0.836740 distinct** are labeled
+UNCONDITIONAL (records-vs-anthropic-paper-2026-08-13.md) and exceed Anthropic's claimed
+optimized constants (0.6725 / 0.83625) on BOTH axes, far above PRZZ 0.417. Coordinator
+independently verified the arithmetic: distinct=(1+H)/2=0.83674043083725685 ✓,
+H(1.464)=0.672467425577788142 ✓, bound chain (H−τ)/(1−B/m) with τ=0.00301535, B/m=0.005982
+→ 0.6734809 ✓. BUT: FINAL-RECORD honesty ledger says "NOT YET: Lean formalization, second-
+machine audit"; the record's gain over the PROVEN window ceiling 0.6725007 comes entirely from
+the redistribution denominator (1−B/m) — exactly the class of algebraic move that killed
+sinc-m3 (E[T]≥0). **Therefore: before any new-record hunt, three hostile blind referees on
+the record chain itself.** Wave-6 joints:
+- 6A redistribution algebra (bound=(H−τ)/(1−B/m) first-principles re-derivation; attack the
+  division move) — cae841fe
+- 6B transfer to ζ (exact theorem 0.673481 proves; Montgomery F=1 on [0,1] incl. j=N edge;
+  liminf/rate handling; every input traced) — c5e668e3
+- 6C second-machine re-derivation (fresh implementation, reproduce 0.6734808616745137 + eps
+  0.0062: 630 fails/620 passes, without reading the verifier code) — 358dd28d
+
+### Decision rule (pending referee verdicts)
+- All three PASS → 0.673481/0.836740 are a verified UNCONDITIONAL world record; campaign
+  shifts to formalization + writeup + publication-grade adversarial audit.
+- Any referee BREAKS it → we learn the exact fault; fix or re-scope; record hunt continues
+  with the NEW-OBJECT requirement.
