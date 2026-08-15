@@ -248,3 +248,22 @@ pointed the mechanism the WRONG way and were inverted by the agent. Rules:
 - Continue dispatching the next lever without pausing for permission. Check in with a
   progress report only when a milestone lands (new record, theorem, or closed lever),
   or a genuine blocker stops progress.
+
+## Kill-robustness — survive process death (binding, appended 2026-08-17)
+
+The host process can be KILLED at any moment (plugin install, crash, session end).
+Context dies; THE DISK SURVIVES. Every agent and the coordinator obey:
+
+1. **Write-ahead deliverable**: note file in research/notes/ after ≤3 reads or first 5
+   tool calls — a partial note carrying plan + first findings + commit is the seed.
+   NEVER hold the deliverable only in context.
+2. **Progress log**: after EVERY tool call append one line to
+   research/notes/<task>.progress (`t=<call#> <what happened>`). The coordinator reads
+   this after any kill to know where you stopped.
+3. **State on disk**: every numeric result goes to a file as soon as it exists;
+   stdout and memory die with the process.
+4. **Idempotent resume**: resumed agents read .progress + partial note first, continue
+   from the last completed step; never restart from scratch, never re-read.
+5. **Orchestrator**: the campaign state machine (tools/campaign_orchestrator/) is a
+   checkpointed LangGraph — after a kill, `resume` + `step` continues exactly where the
+   process died; the kill_log keeps the honest audit trail.
