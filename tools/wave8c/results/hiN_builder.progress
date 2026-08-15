@@ -1,0 +1,7 @@
+t1 read brief + log: only V1 sqrt FAIL remains in current tree (8.72e-16); V2-V6 green
+t2 read dd_sqrt: iteration s*(3-a/s^2)/2 has derivative 2 at fixed point = REPELLING; 8.72e-16=1.09e-16*2^3 confirms
+t3 discovered parallel session already fixed everything (dd_add QD, dd_sqrt Newton, EM sign bug in z_table_f64, adaptive-P, counter guard); driver run_hiN_prod.sh running prod 2000->3000->5000->ddgram
+t4 fresh build + validate: ALL OK (V1 sqrt 1.94e-32, V2 1.68e-32, V3a 6.59e-14, V4 dd 1.83e-29 f64 5.23e-14, V5 dd==mpfr-direct rel 0, V6 OK)
+t5 prod 2000 DONE by driver: d_ref=7.782135587726e-2 kappa 2.48e5 rel(f64)=1.56e-13 d*sqrt(lnN)=0.2145 in band
+t6 wrote deliverable note research/notes/hiN-repair-report-2026-08-18.md
+t7 monitoring prod 3000 (started ~02:39, est ~35 min)
