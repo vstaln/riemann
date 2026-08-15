@@ -260,3 +260,26 @@ record-securing. Remaining caveats are documentation/formalization/machine-rerun
   verified-literature corpus for (a) PROVEN |α|>1 form-factor slivers, (b) PROVEN simple-
   fraction p₁>0.6818, (c) genuinely new certificate inputs; verdict per class. File:
   wave7-newobject-scan-2026-08-17.md.
+
+## 2026-08-17 — WAVE 7 VERDICTS (7A done, 7B died → re-dispatch, 7C terminal)
+- **7A (0ef045ad) — CERTIFIED.** Explicit certificate documented: r(x)=K·(1−x),
+  K=(B/m)·v/(1/6−1/393216)=0.0241730906956031, r(1)=0, knots j/256; knot-sum
+  Σ(j/256²)r(j/256)=0.0040287869739185 (=β·v, |diff| 8.7e-19); v_discrete=v_chain=
+  0.6734808616745140 (diff 3.3e-16); exact rationals PASS (τ=11/3648, Σj/256²=257/512,
+  Σ(j/256²)(1−j/256)=1/6−1/393216). 6E's verdict (i) certified. Rust probe:
+  tools/wave7_certificate_doc/ (+ r_knots_table.txt 256 values). Caveat: affine r realizes
+  the forced identity (the original run's hidden r was never stored) — documented.
+- **7B (0345ba1e) — DIED, no deliverable** (6 tool uses, 62% context, no output; the 1M-node
+  Arb run likely timed out). RE-DISPATCHING with a lighter contract: partial note first,
+  run the verification as a background process, allow grid=8000/different Arb build as the
+  second-machine proxy, report node count + verified=True/False.
+- **7C (81533131) — TERMINAL VERDICT.** All three new-object classes EMPTY:
+  (a) no unconditional |α|>1 form-factor sliver (BGSTB24 bandwidth-one; T^{−2α} atom vanishes;
+  bgst-2501.14545 = published erratum fixing GM87 Lemma 8 misapplication, no consequential
+  damage — foundational input survived); (b) no unconditional p₁>0.6818 (19/27 RH-conditional,
+  CGdL20 0.6792 RH + below ceiling anyway); (c) no new proven certificate input bridged
+  (moments proven to add nothing in-range, kλ<2). Even CONDITIONAL pair-correlation results
+  sit below our unconditional 0.6734808616745137. ⟹ **0.6818 is the terminal ceiling;
+  0.673481 is the terminal in-class record.** Live frontier exists only OUTSIDE the class:
+  dual-LP closing (0.6725→0.6818, in-class, ceiling-bounded), ξ′-target transport (Lean
+  0.85838 unconditional), or conjectural regime (explicitly labeled).
