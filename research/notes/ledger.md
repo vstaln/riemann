@@ -211,3 +211,35 @@ uv run --with mpmath python3 heredoc (in transcript).
 proof §6–7 + local Bellman certificate F_B≥eps + coordinator-verified arithmetic). Remaining
 honest caveats (tawan §8 trust boundary, verbatim): general-window import, central-overlap
 asymptotics, independent-implementation audit → these are exactly joints 6B and 6C.
+
+## 2026-08-17 — WAVE 6 VERDICTS (record-validation wave — 4 of 5 joints landed)
+Mission-critical pivot: the repo's certified 0.673481/0.836740 may ALREADY be the world record
+(beats Anthropic 0.6725/0.83625 and PRZZ 0.417). Wave 6 = hostile blind referees on the chain.
+
+- **6A redistribution algebra (cae841fe):** INCONCLUSIVE-leaning-VALID → **BLOCKER RESOLVED by
+  coordinator**: the (1−B/m) division is PROVEN via tawan JOINT_WINDOW_PROOF §6–7 ((6.1) S ≥
+  H_α·N + D(M°) − o(N); (6.2)–(6.5) D(G) ≥ Φ_m(E), B := Φ_m(A); (6.6) D(M°) ≥ (B/m)S − τN;
+  (7.1) ⟹ (1−B/m)S ≥ (H_α−τ)N). Minus sign FORCED by algebra, verified to 1e-15.
+- **6B transfer to ζ (c5e668e3):** structurally sound unconditional liminf (no RH/PCC/RMT);
+  exact theorem: liminf N_s(1/2,T)/N(T) ≥ 0.6734808616745137; only three unconditional inputs.
+- **6C second machine (358dd28d):** REPRODUCES to 1e-16 (fresh Rust f64, Gauss–Legendre,
+  no mpmath, no tools/ code): H(1.464)=0.6724674255777883 (2.2e-16), bound chain
+  0.6734808616745138 (1.1e-16), B=Φ_m to 3e-14, leaderboard cross-checks pass, eps=0.0062
+  consistent (620 pass/630 fail).
+- **6D endpoint r(1)=0 (f6ae43df):** link CLOSED with a CORRECTION to 6B. With fixed N=256 the
+  cumulative form-factor limit is the step function Σ_{j≤256x}j/256², NOT x²/2 — so
+  D_ζ(1)→1/512=0.001953125≠0, E_ζ(1)→−1/(6·256²)=−2.5431315104e-6≠0 (coordinator re-verified
+  exactly — reproduces ceiling_law256's own coefficient 2.5431316e-6, a striking internal
+  consistency check). 6B's "all → 0 by Montgomery" was WRONG (W1); the transfer survives
+  instead via BGSTB24 Thm 1's UNIFORMITY at α=1 (F(1,T)→1, s_256(T)→1/256): s_j(T)→j/256²
+  for all 256 points, liminf p₁ ≥ v_discrete = c₀+Σ(j/256²)r(j/256) unconditionally.
+  r(1)=0 NOT needed. The certified quantity is the DISCRETE value; the 16-digit constant is
+  exact iff the record is v_discrete, else corrected downward by ≤1e-5 (still ≫ 2/3).
+- **6E (4f6d7b7b)** in flight: pin explicit (c₀,r), settle discrete-vs-continuum identity.
+
+**Current label:** CHECKED NUMERICALLY (three independent implementations) + PROVEN analytic
+bridge (tawan §6–7) + structurally sound unconditional transfer (6B, corrected by 6D) + 6C
+machine-precision reproduction. NOT yet Lean-formalized; 1M-node interval certificate not
+re-run on a second machine. Pending 6E: the discrete-value identity of the exact 16 digits.
+Files: wave6-synthesis-2026-08-17.md, wave6-referee{A,B,C,D}-2026-08-17.md,
+wave6-briefs-2026-08-17.md.
