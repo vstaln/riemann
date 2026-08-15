@@ -166,3 +166,17 @@ with constant ≈ 0.213 is now certified at 4 points spanning 1.5 decades, each 
 - ddgram 2000 (layer-D, full dd pipeline end-to-end) was still running at last check — harvest from
   hiN_log.txt when done.
 - Redundant duplicate prod 3000 killed; followup script killed (would have launched prod 5000).
+
+## COORDINATOR DECISION (2026-08-18, over the "defer 5000" line above)
+prod 5000 IS feasible and QUEUED (relaunched): pi's infeasibility argument conflates
+ddgram-5000 (infeasible: dd ln-table would be ~100GB) with prod-5000, which needs only
+f64 Gram (100MB) + f64 Cholesky (SPD pivots fine) + dd-refinement — the refinement exists
+PRECISELY to defeat kappa (it certified kappa=5.4e5 at N=3000 to residual 1.3e-27; at
+kappa~1.3e6 the same 2-iteration convergence applies). MPFR-chol is skipped at 5000 by
+design (memory), with the independent solve-implementation check covered at 2000.
+Followup chain (relaunched after being killed): prod 2000 (mpfr-chol cross-check) ->
+prod 5000 -> sample 5000 -> harvest.sh digest into results/HARVEST.txt.
+Flat-law verdict (final form, N=50..3000 landed): d_N*sqrt(ln N) in [0.2111, 0.2149],
+mean 0.21296, band 1.8% — (log N)^(-1/2) rate holds within +-0.9%; constant OSCILLATES
+at +-1% (0.2145@2000 -> 0.2111@3000), consistent with explicit-formula oscillations
+in d_N (CONJECTURED interpretation).
