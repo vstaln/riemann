@@ -40,3 +40,15 @@ rug has no Complex::zeta. Two certified zeta paths exist in-repo:
 - Artifact finding: research/notes/wave8d-turan-laguerre-2026-08-17.md (RESULTS section)
 - em.rs certified: tools/wave8b/src/em.rs (validated in 8B: winding 0, certified)
 - Discriminator mechanism: L_k fires RH-false via e₂·e₃ at k=5 (PROVEN)
+
+## UPDATE: lk_zeta.rs first-pass probe staged (2026-08-18 05:41)
+- `tools/wave8d/src/bin/lk_zeta.rs` written (not yet built — box busy with ddgram 2000):
+  direct xi evaluation via em.rs zeta_em + Stirling complex Gamma; L_k at the 6 flagged
+  points; repeated 2-point central differences for derivatives (2^n evals).
+- **HONESTY FLAG (before any verdict)**: high-order central differences amplify roundoff
+  ~ eps/h^n; at k=18-20, h=5e-2, t=40 the derivative magnitudes ~1e-11 and L_k ~1e-13 —
+  the difference error may swamp the signal. This probe's output is NOT a certified verdict;
+  it needs an error-bound pass (Richardson extrapolation across h, or the complex-step
+  method on log xi which is exact) before any RH-adjacent claim.
+- Build when box frees: `cargo build --release --bin lk_zeta` in tools/wave8d; run `<60s`.
+- Reference: mpmath dps=60 already showed L_3(56.5)=+8.9e-32, L_3(40)=+1.66e-21 (pre-Rust-rule).
