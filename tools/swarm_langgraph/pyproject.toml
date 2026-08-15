@@ -1,0 +1,14 @@
+[project]
+name = "swarm-langgraph"
+version = "0.1.0"
+description = "LangGraph orchestrator for the riemann swarm (glue only — compute stays Rust)"
+requires-python = ">=3.12"
+dependencies = [
+    "langgraph>=1.2.11",
+    "langchain-openai>=1.5.1",
+    "langgraph-checkpoint-sqlite>=2.0.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.12.1,<0.13.0"]
+build-backend = "uv_build"
