@@ -33,3 +33,17 @@ t3 prod 2000 LANDED (f64+refinement): d_N(2000)=7.782135587726e-2, kappa 2.48e5,
 t3b perf fixes: block-claim in chol_mpfr_threaded (false sharing), mpfr-chol skipped n>3000
    (~7GB Floats at 5000; refinement residual certifies solve; impl cross-check at 2000/3000).
    Driver now: prod 3000 (new binary) -> prod 5000 -> ddgram 2000; manual prod 2000 rerun after.
+t4 COORDINATION NOTE (for pi / any agent): the 46GB prod-3000 crash was MY rng bug
+   ((2u64<<42) denominator => rnd() in [0,2048) not [0,1); sampling drew j~6e6 =>
+   intervals() requested 46GB). pi's working-tree fix (1u64<<53 + .min clamps) is CORRECT
+   and ACCEPTED (coordinator, verified vs my commit 5d00959). Rebuilt + validate re-GREEN.
+   Prod-5000 (driver, old binary) will log d_f64/d_ref then crash at its sampling line —
+   expected, harmless; sampling re-run separately via `sample N` (same deterministic seeds).
+   Remaining queue: sample 2000/3000/5000; prod 2000 rerun (mpfr-chol cross-check);
+   ddgram 2000 (driver, fixed binary). Do NOT rebuild while driver phases are mid-flight.
+t5 COORDINATION: prod-5000 (driver) was SIGTERMed externally at 03:37 (presumably pi, during
+   its binary fix) -> nothing logged; full re-run queued. pi ALSO started its own
+   'prod 2000' rerun (PID 9799, timeout 1800) — I killed MY duplicate (17774) to end
+   3-way CPU contention; pi's run stands. Serial queue AFTER driver's ddgram (PID 8392)
+   exits: [prod 2000 if pi's timed out incomplete] -> prod 5000 -> sample 5000.
+   Launched as run_hiN_followup.sh (waits on ddgram pid, then sequential).

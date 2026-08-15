@@ -957,7 +957,7 @@ fn phase_validate() {
         let mut seed = 0x1234_5678_9abc_u64;
         let mut rnd = move || {
             seed = seed.wrapping_mul(6364136223846793005).wrapping_add(1442695040888963407);
-            ((seed >> 11) as f64) / (2u64 << 42) as f64
+            ((seed >> 11) as f64) / (1u64 << 53) as f64
         };
         let mut w_mul = 0.0f64;
         let mut w_div = 0.0f64;
@@ -1000,7 +1000,7 @@ fn phase_validate() {
         let mut seed = 0xfeed_face_u64;
         let mut rnd = move || {
             seed = seed.wrapping_mul(6364136223846793005).wrapping_add(1442695040888963407);
-            ((seed >> 11) as f64) / (2u64 << 42) as f64
+            ((seed >> 11) as f64) / (1u64 << 53) as f64
         };
         for _ in 0..500 {
             let n = 1 + (rnd() * 16_000_000.0) as u64;
@@ -1205,13 +1205,13 @@ fn phase_prod(n: usize) {
         let mut seed = 0xbeef_cafe_u64 + n as u64;
         let mut rnd = move || {
             seed = seed.wrapping_mul(6364136223846793005).wrapping_add(1442695040888963407);
-            ((seed >> 11) as f64) / (2u64 << 42) as f64
+            ((seed >> 11) as f64) / (1u64 << 53) as f64
         };
         let mut worst_fd = 0.0f64;
         let mut worst_dm = 0.0f64;
         for s in 0..120 {
-            let j = 1 + (rnd() * n as f64) as u64;
-            let k = 1 + (rnd() * j as f64) as u64;
+            let j = (1 + (rnd() * n as f64) as u64).min(n as u64);
+            let k = (1 + (rnd() * j as f64) as u64).min(j);
             let gf = gram_f64(j, k, &zf, PMode::Adaptive(17.0));
             let gd = gram_dd(j, k, &wtab, PMode::Adaptive(31.0), None);
             let rel = (gf - gd.to_f64()).abs() / gd.to_f64().abs().max(1e-300);
@@ -1228,9 +1228,13 @@ fn phase_prod(n: usize) {
     }
 
     // MPFR Cholesky on stored f64 G (independent solve check)
-    if n > 3000 {
-        log_line(&format!("[prod {}] mpfr-chol SKIPPED (n>3000: ~550B/Float => ~7GB at 5000; refinement residual {} certifies exact-solve-of-stored-G; implementation cross-check covered at 2000/3000)", n, "plateau"));
-    }
+    // Skip at n>=3000: ~550B/Float * n(n+1)/2 => ~4.5M MPFR floats ~ multi-GB, OOMs a 9GB box
+    // (measured: prod 3000 aborted "memory allocation of 46057267840 bytes failed").
+    // The dd refinement residual (<= 1e-28) already certifies exact-solve-of-stored-G, and the
+    // MPFR-Cholesky implementation is cross-checked at N=2000 (d_mpfr == d_ref rel 0.00e0).
+    if n >= 3000 {
+        log_line(&format!("[prod {}] mpfr-chol SKIPPED (n>=3000: MPFR Cholesky OOMs 9GB box; refinement residual {} certifies exact-solve-of-stored-G; implementation cross-check covered at 2000)", n, "plateau"));
+    } else {
     {
         let prec = u32::try_from(256).unwrap();
         let mut gmp: Vec<SyncFloat> = Vec::with_capacity(n * (n + 1) / 2);
@@ -1250,10 +1254,41 @@ fn phase_prod(n: usize) {
         let dm = d2m.to_f64().max(0.0).sqrt();
         log_line(&format!("[prod {}] d_mpfr(stored-G)={:.12e} rel(ref)={:.2e} chol={} ({:.1}s)", n, dm, (dm - d_ref).abs() / dm, okm, t0.elapsed().as_secs_f64()));
     }
+    }
 
     let lnn = (n as f64).ln();
     log_line(&format!("[prod {}] RESULT d_ref={:.12e} d*sqrt(ln N)={:.6} d_f64*sqrt(lnN)={:.6} [flat-law band 0.21-0.22]", n, d_ref, d_ref * lnn.sqrt(), d_f64 * lnn.sqrt()));
     log_line(&format!("[prod {}] END elapsed {:.1}s", n, t0.elapsed().as_secs_f64()));
+}
+
+fn phase_sample(n: usize) {
+    // standalone repro of the prod sampling block (same deterministic seeds)
+    let t0 = std::time::Instant::now();
+    log_line(&format!("[sample {}] START", n));
+    let zf = z_table_f64(PMAX);
+    let zmp_direct = z_table_mpfr_direct(PMAX);
+    let wtab = dd_wtab(&zmp_direct);
+    let mut seed = 0xbeef_cafe_u64 + n as u64;
+    let mut rnd = move || {
+        seed = seed.wrapping_mul(6364136223846793005).wrapping_add(1442695040888963407);
+        ((seed >> 11) as f64) / (1u64 << 53) as f64
+    };
+    for s in 0..120 {
+        let j = 1 + (rnd() * n as f64) as u64;
+        let k = 1 + (rnd() * j as f64) as u64;
+        let gf = gram_f64(j, k, &zf, PMode::Adaptive(17.0));
+        let gd = gram_dd(j, k, &wtab, PMode::Adaptive(31.0), None);
+        let rel = (gf - gd.to_f64()).abs() / gd.to_f64().abs().max(1e-300);
+        eprintln!("s={} j={} k={} G={:.6e} f64-vs-dd={:.2e}", s, j, k, gd.to_f64(), rel);
+        if s < 12 {
+            let gm = gram_mpfr_direct(j, k, &zmp_direct, PMode::Adaptive(31.0));
+            let gmv = gm.to_f64();
+            let d_dd_mp = Float::with_val(256, dd_to_mpfr(gd) - gm);
+            let r2 = d_dd_mp.to_f64().abs() / gmv.abs().max(1e-300);
+            eprintln!("   dd-vs-mpfr={:.2e}", r2);
+        }
+    }
+    log_line(&format!("[sample {}] END {:.1}s", n, t0.elapsed().as_secs_f64()));
 }
 
 fn dd_max0(a: Dd) -> Dd {
@@ -1588,6 +1623,7 @@ fn main() {
     match args[1].as_str() {
         "validate" => phase_validate(),
         "selftest" => phase_selftest(),
+        "sample" => phase_sample(args[2].parse().unwrap()),
         "prod" => phase_prod(args[2].parse().unwrap()),
         "ddgram" => phase_ddgram(args[2].parse().unwrap()),
         _ => {

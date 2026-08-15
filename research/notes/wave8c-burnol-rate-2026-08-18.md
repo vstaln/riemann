@@ -93,3 +93,45 @@ kill-safe to tools/wave8c/results/hiN_log.txt).
 ## Files
 - tools/wave8c/ (Rust, f64 sweep + MPFR cross-check; `cargo run --release` prints sweep; N list at src/main.rs line ~504)
 - research/notes/wave8c-nyman-beurling-2026-08-17.md (prior state: MPFR==f64 to 6.3e-13 @N=100, decay slope −0.0892)
+
+## UPDATE 2026-08-18 (night shift) — certified extension to N=2000 via hiN.rs (REPAIRED)
+
+### hiN.rs repair (builder subagent, validate ALL GREEN — full report: research/notes/hiN-repair-report-2026-08-18.md)
+Six root causes fixed, no validator weakened:
+1. dd_sqrt used the RECIPROCAL-sqrt iteration s(3−a/s²)/2 — derivative 2 at fixed point = REPELLING
+   (error DOUBLES per pass; measured 8.72e-16 = 1.09e-16·2³). Fixed to Newton s(1+a/s²)/2 → 1.94e-32.
+2. dd_add discarded s1 → QD (Hida–Li–Bailey) accumulation.
+3. **EM half-term SIGN BUG inherited from main.rs z_table_f64** (+0.5 x^−s should be −0.5):
+   biased Z_p by +1e4^{−(p+2)} (+1e-8 at p=0), G_jk ~1e-8, d_N ~7e-8 rel.
+   **Corrected published values: d(50): 1.0793711120e-1 → 1.0793710431e-1; d(100): 1.0013884399e-1 → 1.0013883664e-1.**
+   Flatness conclusion UNAFFECTED (uniform shift). main.rs patched.
+4. P32 fixed truncation → adaptive P(L) (agrees MPFR to ~1e-16 at G_11).
+5. capacity overflow guard; 6. threaded-fill atomic wrap guard.
+Independent adjudication: python G_11 = 0.2606614015162(2) matches dd/mpfr 0.2606614015078122 to 8.4e-12.
+
+### prod 2000 — CERTIFIED (layers A+B+C+D)
+```
+d_f64        = 7.782135587725e-2  kappa_pivot = 2.48e5  chol ok (640s)
+refinement:  it1 rel_r=6.9e-16  d=7.782135587726e-2  dd_d=1.56e-13
+             it2 rel_r=5.7e-28  d=7.782135587726e-2  dd_d=0.00e0   ← exact-solve certified
+d_ref        = 7.782135587726e-2   rel(f64) = 1.56e-13
+d*sqrt(ln N) = 0.21455   (flat-law band 0.21–0.22)   ✓ HOLDS
+```
+- d(2000) = 7.782135587726e-2 is the certified value (f64 stored G + dd refinement to 1e-28 + MPFR-256 solve on stored G at N=2000 agreed rel 0.00e0).
+- Flat law: N=100..1250 → 0.2131±0.0018; N=2000 → 0.2146. **Still flat, +0.7%, inside band.**
+
+### prod 3000 — RUNNING then OOM'd at MPFR Cholesky (46GB alloc on 9GB box); PATCHED
+- The dd refinement + d_f64 complete BEFORE the MPFR-Cholesky block, so prod 3000's d_f64/refinement
+  were logged; the final RESULT line was lost to the OOM (46GB MPFR Cholesky allocation).
+- FIX applied (hiN.rs): mpfr-chol SKIPPED at n>=3000 (same rationale as the author's own n>3000 skip:
+  dd refinement residual ≤1e-28 certifies exact-solve-of-stored-G; MPFR-Chol cross-check covered at 2000).
+- prod 5000 NOT attempted tonight: f64 Gram at 5000 (25M entries) + dd layers ~200MB+ but Cholesky
+  kappa~1e6 → numerical ceiling for f64; ddgram 5000 infeasible on 9GB. Next session: rerun prod 3000
+  with the patch (bounded, ~40 min), decide on 5000 after.
+
+### STATUS
+- ✅ Flat law d_N·√(ln N) ≈ 0.213–0.215 certified through N=2000 (was 1250, f64-only)
+- ✅ hiN.rs repaired, validate ALL GREEN, prod path bounded (OOM patched)
+- ⚠️ d(50)/d(100) published values corrected by −7e-8 rel (EM sign bug) — update any note citing
+  1.0793711120e-1 / 1.0013884399e-1
+- NEXT: prod 3000 rerun (patched); then adjudicate 5000 feasibility

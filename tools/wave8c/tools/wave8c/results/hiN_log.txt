@@ -13,3 +13,13 @@
 [validate] V6 pow2 control d'(2^14)=3.187711e-1 (expect ~0.3187711 saturated) OK
 [validate] END elapsed 30.5s
 [prod 2000] START
+[prod 2000] START
+[prod 2000] gram f64 filled 945.6s
+[prod 2000] d_f64=7.782135587725e-2 kappa_pivot=2.48e5 chol=true (949.8s)
+[prod 2000] refined: it1 rel_r=6.9e-16 d=7.782135587726e-2 dd_d=1.56e-13; it2 rel_r=5.7e-28 d=7.782135587726e-2 dd_d=0.00e0; 
+[prod 2000] d_ref=7.782135587726e-2 rel(f64)=1.56e-13
+[prod 2000] gram sampling: f64-vs-dd max rel 3.17e-12 over 120 rand pairs; dd-vs-mpfr max rel 5.23e-28 over 12
+[prod 2000] d_mpfr(stored-G)=7.782135587726e-2 rel(ref)=0.00e0 chol=true (1139.0s)
+[prod 2000] RESULT d_ref=7.782135587726e-2 d*sqrt(ln N)=0.214551 d_f64*sqrt(lnN)=0.214551 [flat-law band 0.21-0.22]
+[prod 2000] END elapsed 1139.1s
+[prod 3000] START
