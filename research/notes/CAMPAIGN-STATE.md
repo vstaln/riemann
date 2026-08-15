@@ -299,3 +299,36 @@ the record chain itself.** Wave-6 joints:
   shifts to formalization + writeup + publication-grade adversarial audit.
 - Any referee BREAKS it → we learn the exact fault; fix or re-scope; record hunt continues
   with the NEW-OBJECT requirement.
+
+## UPDATE — WAVE 6 COMPLETE: the 0.673481 record survives 5 hostile blind referees (2026-08-17 ~04:10)
+
+**THE RECORD STANDS.** Five adversarial joints + coordinator checks validated the chain:
+- 6A: redistribution algebra — bridge PROVEN via tawan JOINT_WINDOW_PROOF §6–7 (minus sign
+  forced by algebra); coordinator verified to 1e-15.
+- 6B: transfer to ζ — structurally sound UNCONDITIONAL liminf (only von Mangoldt +
+  Montgomery[0,1] + integrality; no RH/PCC/RMT).
+- 6C: second machine — fresh Rust f64 reproduces 0.6734808616745137 to 1e-16.
+- 6D: endpoint r(1)=0 — CLOSED (with a correction to 6B): transfer survives via BGSTB24
+  uniformity at α=1; D_ζ(1)→1/512, E_ζ(1)→−2.5431316e-6 exactly reproducing ceiling_law256's
+  coefficient; certified quantity = v_discrete.
+- 6E: explicit (c₀,r) — record IS v_discrete (c₀=H−τ=0.6694520747005951,
+  β_v=0.0040287869739185, v=0.6734808616745137 stands; gap vs continuum ≤1e-5).
+
+**Exact theorem (unconditional):** liminf N_s(1/2,T)/N(T) ≥ 0.6734808616745137;
+distinct ≥ 0.8367404308372568 via (1+H)/2. Beats Anthropic's 0.6725/0.83625 and PRZZ 0.417.
+
+**Campaign phase shift: record-hunting → record-securing.** The mission goal is already met
+numerically; remaining work is (a) DOCUMENT the explicit certificate (c₀,r) + verify
+Σ(j/256²)r(j/256)=0.0040287869739185; (b) Lean-formalize the α=1.464/m=171 record; (c) re-run
+the 1M-node interval certificate on a second machine; (d) publication-grade writeup.
+
+**Next wave (7) candidate levers — all disjoint:**
+1. **Record-securing (docs):** write down the record's r (piecewise-linear on knots j/256),
+   verify the knot-sum identity → then 6E's (i) is certified exactly. Cheap, high value.
+2. **Record-securing (Lean):** formalize the α=1.464/m=171 redistribution chain (long).
+3. **Record-securing (machine):** re-run verify_floor (1M-node Arb interval) on a second
+   machine/toolchain.
+4. **New-object hunt (research):** the 0.6818 class ceiling is Lean-proven; the ONLY open
+   in-class gap is 0.673481 → 0.6818 via redistribution/multiplicity structure — but wave 5
+   closed all three in-class levers (m₃-read, off-centre, r′). Ceiling breaks need NEW
+   OBJECTS (proven form factor beyond |α|=1 — CONJECTURED/absent).
