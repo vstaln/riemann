@@ -1,0 +1,14 @@
+[build G N=60 in 465.267966119s]
+== wave8e CONTROL case, N=60 ==
+d_N^2 (== lambda_min of augmented Gram) = 5.284800914350e-3
+sqrt(N)*d_N = 5.631057e-1
+lambda_min(G_N) raw (n=60) = 1.528890e-3   (trivially->0: diag ~ const/k)
+lambda_min(correlation C_N) (n=60) = 2.109096e-3
+u-profile k*ln(k)*u_k: min=-2.6212e1 max=2.5000e1 max|adjacent diff|=4.3122e1
+Mellin power |sum u_k k^(-1/2-it)|^2 at t = "0.0000,4.5320,14.1347,21.0220,25.0109":
+   t=0.0000: 6.351088e-1
+   t=4.5320: 3.978764e-1
+   t=14.1347: 1.697217e0
+   t=21.0220: 4.746102e0
+   t=25.0109: 4.401339e0
+u_k (k=1..12): -2.2224e-1 -1.2956e-2 2.3230e-1 3.9344e-1 2.5223e-1 1.1740e-2 2.2571e-1 -2.3510e-1 4.7906e-2 -7.0392e-2 1.9704e-1 -2.7486e-1 

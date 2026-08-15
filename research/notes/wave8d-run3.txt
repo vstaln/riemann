@@ -1,0 +1,15 @@
+=== CONTROL (all-real zeros) ===
+  no negative T_k for k=1..29
+  min t_k = 2.532377e-1 at k = 8
+  min t_k/(1/(k+1)) = 1.162892e0  (RH-necessary would be >= 1)
+  all-real: all L_k(t) >= 0 for k=1..8 on [0,60] (global min 9.5840e-11 at k=8, t=32.40)
+=== CONTROL (planted off-line pair beta=0.35+-21.1i (replaces gamma_2)) ===
+  no negative T_k for k=1..29
+  min t_k = 2.934469e-1 at k = 11
+  min t_k/(1/(k+1)) = 1.610956e0  (RH-necessary would be >= 1)
+  planted(beta=0.35): FIRST L_k(t) < 0 at k=5, t=0.000: L_k = -9.4722e-9
+  planted(beta=0.35): FAILS Laguerre at k=5, t=0.000  -> NOT LP (non-real zeros)
+  k=0: M_k~4.971208e-1 b_k~4.971208e-1 est.rel.err=1.4e-18
+  k=20: M_k~1.213573e-7 b_k~1.487376e-55 est.rel.err=3.8e-13
+  k=40: M_k~5.951154e-6 b_k~8.315214e-125 est.rel.err=1.7e-14
+  k=60: M_k~1.140935e-1 b_k~1.705560e-200 est.rel.err=5.9e-18

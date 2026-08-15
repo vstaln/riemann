@@ -1,0 +1,54 @@
+=== CONTROL (all-real zeros) ===
+  no negative T_k for k=1..29
+  min t_k = 2.532377e-1 at k = 8
+  min t_k/(1/(k+1)) = 1.162892e0  (RH-necessary would be >= 1)
+  all-real: all L_k(t) >= 0 for k=1..8 on [0,60] (global min 9.5840e-11 at k=8, t=32.40)
+=== CONTROL (planted off-line pair beta=0.35+-21.1i (replaces gamma_2)) ===
+  no negative T_k for k=1..29
+  min t_k = 2.934469e-1 at k = 11
+  min t_k/(1/(k+1)) = 1.610956e0  (RH-necessary would be >= 1)
+  planted(beta=0.35): FIRST L_k(t) < 0 at k=5, t=0.000: L_k = -9.4722e-9
+  planted(beta=0.35): FAILS Laguerre at k=5, t=0.000  -> NOT LP (non-real zeros)
+  k=0: M_k~4.971208e-1 b_k~4.971208e-1 est.rel.err=1.0e-10
+  k=10: M_k~1.977495e-12 b_k~8.128131e-31 est.rel.err=6.7e-2
+  k=20: M_k~2.280727e-11 b_k~2.795299e-59 est.rel.err=6.7e-2
+  k=30: M_k~3.093682e-7 b_k~3.717927e-89 est.rel.err=1.9e-5
+  k=40: M_k~5.951140e-6 b_k~8.315195e-125 est.rel.err=1.8e-6
+  k=50: M_k~4.769843e-4 b_k~5.110936e-162 est.rel.err=6.6e-8
+  k=60: M_k~1.140935e-1 b_k~1.705560e-200 est.rel.err=6.8e-10
+  k=70: M_k~6.585440e1 b_k~4.891869e-240 est.rel.err=4.4e-12
+  k=80: M_k~7.922168e4 b_k~1.680304e-280 est.rel.err=2.6e-13
+  k=90: M_k~1.785134e8 b_k~8.893182e-322 est.rel.err=2.5e-13
+  k=100: M_k~6.948176e11 b_k~0.000000e0 est.rel.err=2.4e-13
+  k=110: M_k~4.384078e15 b_k~0.000000e0 est.rel.err=2.4e-13
+  k=120: M_k~4.261454e19 b_k~0.000000e0 est.rel.err=2.5e-13
+  k=130: M_k~6.120255e23 b_k~0.000000e0 est.rel.err=2.7e-13
+  k=140: M_k~1.254284e28 b_k~0.000000e0 est.rel.err=2.9e-13
+  k=150: M_k~3.561698e32 b_k~0.000000e0 est.rel.err=3.0e-13
+  k=160: M_k~1.366528e37 b_k~0.000000e0 est.rel.err=3.2e-13
+  k=170: M_k~6.931453e41 b_k~0.000000e0 est.rel.err=3.4e-13
+  k=180: M_k~4.560608e46 b_k~0.000000e0 est.rel.err=3.7e-13
+  k=190: M_k~3.827842e51 b_k~0.000000e0 est.rel.err=4.0e-13
+  k=200: M_k~4.038176e56 b_k~0.000000e0 est.rel.err=4.0e-13
+moments done in 374.9s, max est rel err = 6.7e-2
+VALIDATION: b_0 = 0.497120778206204  (xi(1/2) = 0.497120778188314)
+  VALIDATION root 1 = 23.876001  vs gamma_1 = 14.134725
+=== TURAN ===
+  !!! T_k < 0 at k = 1: T_k = -2.6692e15
+  !!! T_k < 0 at k = 3: T_k = -1.4084e2
+  !!! T_k < 0 at k = 5: T_k = -5.9160e-3
+  !!! T_k < 0 at k = 20: T_k = -3.2835e3
+  k=20: t_k=-3.28350914e3  t_k*(k+1)=-6.89536919e4
+  !!! T_k < 0 at k = 24: T_k = -1.0799e6
+  k=40: t_k=3.49811392e-2  t_k*(k+1)=1.43422671e0
+  k=60: t_k=2.41429231e-2  t_k*(k+1)=1.47271831e0
+  k=80: t_k=1.84940636e-2  t_k*(k+1)=1.49801915e0
+  k=100: t_k=1.50156719e-2  t_k*(k+1)=1.51658286e0
+  k=120: t_k=1.26534930e-2  t_k*(k+1)=1.53107265e0
+  k=140: t_k=1.09422528e-2  t_k*(k+1)=1.54285765e0
+  k=160: t_k=9.64427748e-3  t_k*(k+1)=1.55272867e0
+  k=180: t_k=8.62530948e-3  t_k*(k+1)=1.56118102e0
+
+thread 'main' (20778) panicked at src/main.rs:388:94:
+index out of bounds: the len is 201 but the index is 201
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace

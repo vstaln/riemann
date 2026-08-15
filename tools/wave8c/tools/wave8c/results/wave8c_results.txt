@@ -1,0 +1,66 @@
+=== VERIFICATION (closed form vs independent x-quadrature, m0=1e5) ===
+b_1 = 4.227843350985e-1 (closed) vs 4.227793351070e-1 (quad, leftover 1.0e-5) rel=1.2e-5 OK
+b_2 = 5.579657578292e-1 (closed) vs 5.579632578335e-1 (quad, leftover 5.0e-6) rel=4.5e-6 OK
+b_3 = 5.071322079222e-1 (closed) vs 5.071305412740e-1 (quad, leftover 3.3e-6) rel=3.3e-6 OK
+b_4 = 4.522696740546e-1 (closed) vs 4.522684240567e-1 (quad, leftover 2.5e-6) rel=2.8e-6 OK
+b_5 = 4.064444495065e-1 (closed) vs 4.064434494910e-1 (quad, leftover 2.0e-6) rel=2.5e-6 OK
+b_6 = 3.690906340544e-1 (closed) vs 3.690898007338e-1 (quad, leftover 1.7e-6) rel=2.3e-6 OK
+G_1,1 = 2.606614048227e-1 (f64) quad 2.606580606971e-1 rel_q=1.3e-5 mpfr rel_m=2.8e-15 OK
+G_1,2 = 2.722092574489e-1 (f64) quad 2.722097053103e-1 rel_q=1.6e-6 mpfr rel_m=3.4e-2 FAIL
+G_2,3 = 2.744368430525e-1 (f64) quad 2.744366440517e-1 rel_q=7.3e-7 mpfr rel_m=8.5e-1 FAIL
+G_3,5 = 2.068897704667e-1 (f64) quad 2.068902529568e-1 rel_q=2.3e-6 mpfr rel_m=9.8e-1 FAIL
+G_4,7 = 1.637126948608e-1 (f64) quad 1.637128115363e-1 rel_q=7.1e-7 mpfr rel_m=1.0e0 FAIL
+G_5,8 = 1.428118748097e-1 (f64) quad 1.428117659402e-1 rel_q=7.6e-7 mpfr rel_m=1.0e0 FAIL
+G_6,7 = 1.503665696681e-1 (f64) quad 1.503661704073e-1 rel_q=2.7e-6 mpfr rel_m=1.0e0 FAIL
+G11=2.6066140482e-1 G12=2.7220925745e-1 G22=3.8033070242e-1 det2=2.504e-2 (must be >0) OK; d1=5.605868e-1
+verification overall: FAIL
+
+=== d_N sweep (f64, Cholesky) ===
+N	d_N	d_N^2	d_N*sqrt(N)	kappa_piv
+10	1.5104104242e-1	2.2813e-2	4.776337e-1	1.7e1 (solve 0.0s, cholesky ok)
+20	1.2682300715e-1	1.6084e-2	5.671697e-1	5.2e1 (solve 0.0s, cholesky ok)
+30	1.1919202824e-1	1.4207e-2	6.528416e-1	1.1e2 (solve 0.0s, cholesky ok)
+50	1.0793711120e-1	1.1650e-2	7.632306e-1	2.6e2 (solve 0.0s, cholesky ok)
+75	1.0428405853e-1	1.0875e-2	9.031264e-1	5.1e2 (solve 0.0s, cholesky ok)
+100	1.0013884399e-1	1.0028e-2	1.001388e0	9.0e2 (solve 0.0s, cholesky ok)
+150	9.6179271596e-2	9.2505e-3	1.177951e0	2.0e3 (solve 0.0s, cholesky ok)
+200	9.3794793426e-2	8.7975e-3	1.326459e0	3.2e3 (solve 0.0s, cholesky ok)
+300	8.8860272763e-2	7.8961e-3	1.539105e0	7.1e3 (solve 0.0s, cholesky ok)
+400	8.7269966994e-2	7.6160e-3	1.745399e0	1.2e4 (solve 0.0s, cholesky ok)
+600	8.3710508670e-2	7.0074e-3	2.050480e0	2.6e4 (solve 0.1s, cholesky ok)
+800	8.1506209827e-2	6.6433e-3	2.305344e0	4.4e4 (solve 0.3s, cholesky ok)
+1000	8.0556534965e-2	6.4894e-3	2.547421e0	6.7e4 (solve 0.6s, cholesky ok)
+
+log-log slope of d_N (last 4 pts N=400..1000): -0.0892  (d_N ~ N^-0.0892)
+
+=== MPFR (256-bit) cross-check ===
+N=50: d_mpfr=0.0000000000e0 d_f64=1.0793711120e-1 rel=1.1e299
+N=100: d_mpfr=0.0000000000e0 d_f64=1.0013884399e-1 rel=1.0e299
+
+=== optimal coefficients N=1000 ===
+c_1=-9.427047e-1 c_10=-7.436691e-1 c_100=7.618218e-2 c_500=-4.651245e-1 c_N=1.089315e0
+sign-correlation with mu(k) for squarefree k<=200: 0/122 = 0.000
+negatives: 511 of 1000; sum(c)=2.0465e0; mass(k<=N/2)/mass(all)=0.6435; d_N=8.055653e-2
+first 30 c_k: -9.4270e-1 9.5874e-1 9.5403e-1 5.5669e-2 8.8702e-1 -8.0024e-1 8.3881e-1 3.5855e-4 1.3401e-2 -7.4367e-1 7.8175e-1 -6.1068e-2 7.5883e-1 -6.8769e-1 -7.2018e-1 2.2199e-3 7.1101e-1 -2.7033e-2 6.9981e-1 -3.5120e-2 -6.6659e-1 -6.5712e-1 6.9633e-1 9.4048e-3 8.9697e-3 -6.2588e-1 -1.2788e-2 -6.9720e-2 6.6251e-1 5.8404e-1 
+sample c_k at k=1..10: -9.4270e-1 9.5874e-1 9.5403e-1 5.5669e-2 8.8702e-1 -8.0024e-1 8.3881e-1 3.5855e-4 1.3401e-2 -7.4367e-1
+
+=== CONTROL: powers of 2 (expect SATURATION: d' not -> 0) ===
+pow2 up to 2^2: N=3 d'=3.406788e-1 kappa~4.2e0 cholesky ok
+pow2 up to 2^3: N=4 d'=3.214486e-1 kappa~7.1e0 cholesky ok
+pow2 up to 2^4: N=5 d'=3.189327e-1 kappa~1.4e1 cholesky ok
+pow2 up to 2^5: N=6 d'=3.187928e-1 kappa~2.7e1 cholesky ok
+pow2 up to 2^6: N=7 d'=3.187923e-1 kappa~5.3e1 cholesky ok
+pow2 up to 2^7: N=8 d'=3.187817e-1 kappa~1.1e2 cholesky ok
+pow2 up to 2^8: N=9 d'=3.187745e-1 kappa~2.1e2 cholesky ok
+pow2 up to 2^9: N=10 d'=3.187719e-1 kappa~4.3e2 cholesky ok
+pow2 up to 2^10: N=11 d'=3.187712e-1 kappa~8.5e2 cholesky ok
+pow2 up to 2^11: N=12 d'=3.187711e-1 kappa~1.7e3 cholesky ok
+pow2 up to 2^12: N=13 d'=3.187711e-1 kappa~3.4e3 cholesky ok
+pow2 up to 2^13: N=14 d'=3.187711e-1 kappa~6.8e3 cholesky ok
+pow2 up to 2^14: N=15 d'=3.187711e-1 kappa~1.4e4 cholesky ok
+
+=== CONTROL: squares {1/(k^2 x)} (same machinery, idx=k^2) ===
+squares N=10: d''=3.912257e-1 kappa~1.2e2 cholesky ok
+squares N=20: d''=3.912175e-1 kappa~6.4e2 cholesky ok
+squares N=30: d''=3.912166e-1 kappa~1.8e3 cholesky ok
+squares N=40: d''=3.912165e-1 kappa~3.9e3 cholesky ok

@@ -26,3 +26,8 @@ nohup.out
 # Lean build artifacts (regenerable; keep Lean source only)
 .lake/
 **/.lake/
+
+# LangGraph swarm + orchestrator checkpoints (runtime state, not source)
+**/swarm.sqlite*
+**/campaign.sqlite*
+research/waves/wave-*/
