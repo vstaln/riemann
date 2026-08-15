@@ -331,3 +331,18 @@ Briefs: wave8-briefs-direct-RH-2026-08-17.md. Goal reset to direct-RH mission.
   kill protocol in-brief: 8A Li (a17b490f), 8B Speiser (477dc8a8), 8C Nyman-Beurling
   (d52ca673), 8D Turán/Laguerre (67a787f2), 8E Beurling operator (d43bdc5a).
   Orchestrator tracks all five as DISPATCHED; kill-log empty.
+
+## 2026-08-17 — WAVE 8 LEVER 8B (Speiser ζ′ census) — LANDED (CHECKED NUMERICALLY)
+- **Verdict: ζ′ left-half-strip census EMPTY to T=5000** (two independent methods, certified
+  contour margins > 4.8e-2, winding 0 on all 50 slabs over [0.001,0.5]×[10,5000]) —
+  evidence consistent with RH; NOT a proof (finite computation). Control VERIFIED first:
+  fake f=ζ·G with planted off-line zeros (0.3+15i, 0.25+28i) shows f′ left-strip winding=2.
+- Theory corrections (the inversion): (i) ζ′(1/2+it)=e^{−iθ}(−θ′Z−iZ′) ⟹ ζ′ vanishes on the
+  line ONLY at multiple zeros of ζ (simple: none); interlacing belongs to ξ′ — 4521 ξ′
+  zeros on [10,5000] = RvM N(5000)+1, one per gap (matches xiprime). (ii) ζ′(σ)<0 on real
+  (0,1). Right half-strip: **2651 ζ′ zeros in [0.5,1]×[10,5000]** (step-stable), ratio
+  2651/N(5000)=0.59, per-slab ratio rising 0.15→0.69 — a live object for a future lever
+  (the ζ′ strip-zero count theorem, cf. Levinson–Montgomery/Berndt).
+- Files: tools/wave8b/ (em.rs certified Hurwitz ζ,ζ′ + winding + refine), 
+  research/notes/wave8b-speiser-2026-08-17.md, wave8b-speiser.progress (18 lines).
+- Orchestrator: lever 8B → DONE (first live closure through LangGraph).

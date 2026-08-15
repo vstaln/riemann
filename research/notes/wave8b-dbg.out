@@ -1,0 +1,22 @@
+# DBG: analytic ζ' vs central-difference of certified ζ
+  ζ'(0.3+12i): analytic = -0.163010+0.600687i  FD = -0.163010+0.600687i  |diff| = 6.176e-10  cert-err = 6.1e-14
+  ζ'(0.5+12i): analytic = -0.120240+0.524935i  FD = -0.120240+0.524935i  |diff| = 5.308e-10  cert-err = 4.2e-14
+  ζ'(0.3+14.1347i): analytic = 0.916040+0.177651i  FD = 0.916040+0.177651i  |diff| = 1.131e-9  cert-err = 6.8e-14
+  ζ'(0.25+20i): analytic = 0.955065+1.314943i  FD = 0.955065+1.314943i  |diff| = 3.463e-9  cert-err = 9.9e-14
+  ζ'(0.4+9.5i): analytic = -0.327108-0.115364i  FD = -0.327108-0.115364i  |diff| = 2.514e-10  cert-err = 4.3e-14
+  ζ'(0.5+14i): analytic = 0.748234+0.204437i  FD = 0.748234+0.204437i  |diff| = 9.175e-10  cert-err = 4.7e-14
+# DBG rect [0.02 , 0.5]×[9, 14]
+  step 0.02: winding=-0.0000 max|Δarg|=0.016 min-margin=2.959e-1 neg=0
+  step 0.005: winding=0.0000 max|Δarg|=0.004 min-margin=2.959e-1 neg=0
+  edge-min |ζ'|: bottom=2.959e-1 right=2.959e-1 top=7.757e-1 left=3.901e-1
+  contour global min |ζ'| = 2.959e-1 at (0.500, 9.000)
+# DBG rect [0.02 , 0.5]×[14, 19]
+  step 0.02: winding=0.0000 max|Δarg|=0.021 min-margin=7.757e-1 neg=0
+  step 0.005: winding=0.0000 max|Δarg|=0.005 min-margin=7.757e-1 neg=0
+  edge-min |ζ'|: bottom=7.757e-1 right=7.757e-1 top=1.264e0 left=1.144e0
+  contour global min |ζ'| = 7.757e-1 at (0.500, 14.000)
+# DBG rect [0.5 , 1]×[9, 14]
+  step 0.02: winding=0.0000 max|Δarg|=0.016 min-margin=2.212e-1 neg=0
+  step 0.005: winding=0.0000 max|Δarg|=0.004 min-margin=2.212e-1 neg=0
+  edge-min |ζ'|: bottom=2.212e-1 right=2.212e-1 top=5.198e-1 left=2.959e-1
+  contour global min |ζ'| = 2.212e-1 at (1.000, 9.000)
