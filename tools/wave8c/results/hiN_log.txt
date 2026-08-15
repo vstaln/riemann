@@ -68,3 +68,14 @@
 [sample 3000] START
 [sample 3000] END 15.4s
 [prod 2000] START
+[ddgram 2000] gram dd filled 9736.8s
+[ddgram 2000] gram dd filled 9736.8s
+[ddgram 2000] RESULT d_dd=7.782135587442e-2 d*sqrt(lnN)=0.214551 chol=true (9758.7s)
+[ddgram 2000] RESULT d_dd=7.782135587442e-2 d*sqrt(lnN)=0.214551 chol=true (9758.7s)
+[ddgram 2000] END elapsed 9758.7s
+[ddgram 2000] END elapsed 9758.7s
+== ddgram 2000 exit=0 2026-08-16T06:20:24+07:00 ==
+== followup start 2026-08-16T06:21:22+07:00 ==
+== prod 2000 (followup) start 2026-08-16T06:21:22+07:00 ==
+[prod 2000] START
+[prod 2000] START
