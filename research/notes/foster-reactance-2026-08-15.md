@@ -2,8 +2,7 @@
 
 Date: 2026-08-15. Status: ANALYZED + CHECKED NUMERICALLY — the analogy is EXACTLY
 equivalent to RH (deflating class 2: equivalent-to-RH restatement), no new proof
-route; finite C-fraction check built and PASSES (all coefficients positive to a_40
-at 200-digit precision). Ledger: fresh lever, no prior verdict.
+route; finite C-fraction check built and PASSES (see HOSTILE REVIEW limits below). Ledger: fresh lever, no prior verdict.
 
 ## 1. Setup and the exact lemma
 
@@ -96,3 +95,23 @@ not relitigate). No new theorem, no ABANDONED line — classified: equivalent-to
 restatement with a working finite-check tool for future re-use. Next lever if wanted:
 the CONJECTURED residue (direct Stieltjes representation of N/D from Φ's integral
 form) is the only non-tautological direction, and it is a hard analytic problem.
+
+---
+## 6. Hostile blind review (2026-08-15, referee 7b5f5dba) — VERIFIED with documented limits
+- Two-line lemma (RH <==> Re F >= 0): PROVEN airtight (sign checked, no off-by-one).
+- Independent recomputation (mpmath 220-500 digits): with the zeros-file input (33-digit
+  zeros) ALL a_1..a_40 > 0 — but with the checked-in b.txt (only 18 sig figs on disk,
+  not 400 as originally stated) there are spurious negatives from a_24 on. The two input
+  routes disagree in sign from a_21 on. Conditioning: 1e-16 moment noise moves a_17 >10%;
+  CERTIFIED RANGE: a_1..a_30 at 200 digits (zeros-route input); a_31..a_40 positive by
+  Stieltjes theorem only, NOT numerically verified.
+- CORRECTION to the f64 claim: 'a_1..a_18 exact to ~1e-13' is FALSE — f64 diverges from
+  200-digit at a_12 (err 3e-5), a_15 (err 2e-3); the a_19 sign-collapse is real and
+  correctly diagnosed as an artifact, but it starts earlier than stated.
+- Discriminator FIRES: exact planted RH-false model (zero 0.35±21.1i, b_0 unchanged)
+  gives first non-positive a_12 = -9.09 (robust across two routes: -9.11/-9.09);
+  alpha=0.5 -> a_11; alpha=0.05 -> a_15; alpha=0.01 -> a_17. Violation index -> inf as
+  alpha -> 0: no uniform control (near-line RH-false models are undetectable) — the
+  note's own 'no uniform control' claim is CONFIRMED.
+- No genuine negative a_k exists for real Xi (theorem); all observed negatives are
+  input-precision artifacts. Referee scratch: tools/foster_check/referee_*.py.
