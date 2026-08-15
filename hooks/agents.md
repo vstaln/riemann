@@ -3,267 +3,225 @@
 ## Mission
 
 The Riemann hypothesis (RH): every nontrivial zero of ζ(s) lies on Re(s) = 1/2.
-This project pursues a proof of RH — and alongside it, any rigorous, novel mathematics about ζ and its zeros. **We never give up on the search for a proof.** The search persists across sessions, attempts, and failures; a failed attack is a documented result, not a reason to stop.
+This project pursues a proof of RH — and alongside it, any rigorous, novel mathematics about ζ
+and its zeros. **We never give up on the search for a proof.** The search persists across
+sessions, attempts, and failures; a failed attack is a documented result, not a reason to stop.
 
-## Operative targets (each is a genuine research result)
+**Standing directive (user, binding): attack RH DIRECTLY** via parallel waves of disjoint levers
+on the classical equivalences — Li λ_n ≥ 0, Speiser ζ′ off-line zeros, Nyman–Beurling–Báez-Duarte
+d_N → 0, Ξ/Turán–Pólya total positivity, de Branges spaces — each with an RH-false control
+demand, hostile blind referees, the ledger as do-not-repeat, and RUST-ONLY compute.
+The proportion record (repo-certified 0.673481 simple / 0.836740 distinct; terminal in-class,
+0.6818 Lean-PROVEN ceiling) is the fallback, not the target. **A proportion theorem is ZERO
+RH evidence in either direction — never describe it otherwise.**
 
-1. Reproduce and understand the 67.25% lower-bound argument (Weil quadratic form + Sylvester inertia + rank–trace inequality) well enough to re-derive the constant 3/2 − (1/√2)cot(1/√2).
-2. Verify every claim numerically against known zeta-zero data before trusting it.
-3. Improve or extend: push constants, relax hypotheses, transport the technique to related problems (L-functions, simple zeros, moments).
-4. Write up anything that survives adversarial review; Lean-check where feasible.
-
-## Non-negotiables (honesty guardrails)
+## Non-negotiables (honesty guardrails — HARD RULES, never relaxed)
 
 1. Never fabricate a proof, lemma, or numerical result. No exception.
-2. Every claim is labeled: PROVEN / CHECKED NUMERICALLY / CONJECTURED / ABANDONED.
+2. Every claim is labeled: PROVEN / CHECKED NUMERICALLY / CONJECTURED / ABANDONED (reason) / INCONCLUSIVE (blocker).
 3. Nothing counts as progress until adversarial validators fail to break it.
 4. Never weaken a validator to make a result pass.
 5. A wrong, confident result is worse than no result — it poisons the whole search.
+6. Never let a self-authored check define correctness: if your check disagrees with the code's
+   behavior, suspect the check first. (8C's "0/122 sign-correlation" was exactly this — the
+   check compared +μ instead of the Nyman weights −μ; correct answer 19/19.)
+7. An RH-false control must fire BEFORE the real case is trusted. Any claim that would also
+   "prove" an RH-false model (planted zero, Epstein class-2, Davenport–Heilbronn, Beurling fake)
+   is wrong.
 
-## METHOD FIRST — compute is the last resort (binding, user directive)
+## Compute discipline (BINDING — user directive 2026-08-17, hard rule)
 
-**We are finding a METHOD, not grinding numbers.** The deliverable of this project is a
-mathematical argument — a theorem, a certificate structure, a proof idea that can be checked by
-hand or by a small verifier. Heavy computation is a sign the agent is lost, not making progress.
-
-1. **Do not calculate zeros.** No downloading/processing zeta-zero batches, no zero-counting,
-   no pair-correlation statistics over real zero data, no "empirical cross-checks" that consume
-   minutes of compute to confirm what the theory already predicts. Zero data exists; it is not
-   the frontier. The frontier is the METHOD that makes the inequality hold.
-2. **Do not grind verification runs.** One re-verification of a certified record is enough;
-   re-running the branch-and-bound at new eps values to "find a record" is compute-slop. The
-   certificate class is PROVEN exhausted at eps=0.00620 (research/notes/eps-boundary-exact.md).
-   Re-exploring it is waste.
-3. **Every task must produce a mathematical artifact**: a lemma, a proof sketch, a reduction,
-   a certificate STRUCTURE (not a number), a refutation of an approach, a literature finding
-   that changes the strategy. If a task's only possible output is a bigger number from the same
-   machinery, the task is wrong — pick a different lever or a different theorem.
-4. **Compute budget discipline**: before running anything CPU-bound, write one line saying what
-   belief the computation would change. If it changes nothing (or only confirms), skip it and
-   say so in the note. A note that says "I did not compute X because it would not change our
-   beliefs, here's why" is a good note.
-5. **LMFDB and zero data are for LITERATURE/STRUCTURE, not for counting**: use them to find what
-   theorems are known (e.g. what is the best KNOWN simple-zero proportion, what tools exist),
-   never to compute statistics. The arxiv skill is the same idea: mine the METHOD, not the data.
-6. **The 0.6818 ceiling is structural** (research/notes/structural-final-verdict.md): the
-   in-class certificate can never pass it. Pushing past 0.673481 requires a genuinely new input
-   structure or theorem. Agents that do not address that requirement are not on the goal.
+**This machine is slow. Never write long-running scripts unless necessary.**
+- Before any CPU-bound run: state in one line the belief it changes and the expected runtime.
+- Open-ended sweeps, background jobs "to see what happens", multi-hour loops: FORBIDDEN.
+- Cheap-first order: (1) closed-form math, (2) f64 scalar probes (<1 min), (3) one bounded
+  verifier run, (4) only then a small loop — and kill it the moment it stops paying for itself.
+- If a route needs >~20 minutes of compute to reach its next decision point, stop and rethink
+  the route first, or write the state to a note and revisit cheaply.
+- A note that says "I did not compute X because it would not change our beliefs, here's why"
+  is a good note.
 
 ## Language policy — Rust-first for EVERYTHING numeric (binding)
 
-Python is too slow for this project's compute-bound work. **Rust is the default for all numeric and CPU-bound code** — every computation that is not trivial one-liners or bulk network I/O. No exceptions without a documented reason.
+Python is too slow for compute-bound work. **Rust is the default for all numeric and CPU-bound
+code.** No exceptions without a documented one-line reason in the note label.
 
-- **CPU-bound / numeric work: Rust.** Every branch-and-bound, LP, sweep, search, or repeated-evaluation loop goes in Rust, built with the musl static target:
-  `export PATH=$HOME/.cargo/bin:$PATH RUSTFLAGS="-C linker=rust-lld -C link-self-contained=yes" && cargo build --release --target x86_64-unknown-linux-musl`
-- **Arbitrary-precision / interval-rigorous work: Rust `rug` (GMP/MPFR, correctly-rounded floats) for exact and directed-rounding arithmetic, and `arb-sys` (raw Arb/FLINT ball-arithmetic bindings) for certified interval enclosure.** `rug` is validated on this machine (crate 1.30.0; needs `m4`+`make`, both installed via xbps). `arb-sys` 0.3.6 compiles but is low-level (no high-level ball API) and builds FLINT/Arb from source (~13 min first build). This is the Rust replacement for `python-flint` (whose `arb` type is the *same* Arb ball arithmetic) and `mpmath`. For certified interval verification prefer `arb-sys`; for exact rationals / correctly-rounded floats prefer `rug::Integer` / `rug::Float` (with directed rounding).
-- **Python is FORBIDDEN unless absolutely necessary.** The only permitted uses: (a) bulk network I/O / crawling / API calls; (b) glue that shells out to Rust binaries. A "few-line check" in Python is still forbidden — do it in Rust `f64`. If Python is used at all, the note MUST state why Rust was impossible (one line, in the label). Any Python that does a compute-bound loop is a violation — port it to Rust or the deliverable is not complete.
-- **Existing Python verifiers in `tools/` (e.g. `tools/barrier_zoo/`, `tools/lpdual/`) may be *read* as reference but must be PORTED TO RUST as the first action of any lever touching them.** Do not extend or duplicate Python. New verification/optimization code goes in Rust. When porting, the recorded table hashes must reproduce exactly (same algorithms, same grids, same rounding modes).
-- High-precision but *exploratory* (non-rigorous) probes may use Rust `f64` when the answer only needs to be right to a few digits; anything that feeds a claim still needs the `rug` interval pass before it is labeled CHECKED NUMERICALLY.
+- CPU-bound / numeric work: Rust (`cargo build --release`; musl static target if needed:
+  `export PATH=$HOME/.cargo/bin:$PATH RUSTFLAGS="-C linker=rust-lld -C link-self-contained=yes" && cargo build --release --target x86_64-unknown-linux-musl`).
+- Arbitrary-precision / interval-rigorous: Rust `rug` (GMP/MPFR, correctly-rounded) for
+  directed-rounding arithmetic; `arb-sys` (raw Arb/FLINT ball arithmetic) for certified
+  enclosures. `rug` 1.30 is validated on this machine.
+- Python is FORBIDDEN unless absolutely necessary: (a) bulk network I/O; (b) glue that shells
+  out to Rust binaries; (c) **LangGraph swarm orchestration (user-sanctioned)**. Any Python that
+  does a compute-bound loop is a violation — port it to Rust.
+- Exploratory f64 probes: Rust f64. Anything that feeds a claim needs the rug/arb interval pass
+  before it is labeled CHECKED NUMERICALLY.
+- Existing Python verifiers in `tools/` may be READ as reference but must be PORTED TO RUST as
+  the first action of any lever touching them.
+
+## Orchestration — two layers, both alive
+
+**Layer 1 — pi subagents (the hands).** Subagents pinned `model="opencode-go/deepseek-v4-flash"`,
+background, blind + disjoint briefs, ledger-gated. Write-capable: adventurer, architect, builder,
+writer. Read-only: diagnose, planner, reviewer. Explore (default) is read-only — route any write
+task to architect/builder/writer. Never dispatch the same lever twice — check `research/notes/`
+first (duplicates waste the rate-limit budget).
+
+**Layer 2 — LangGraph swarm (the adjudication skeleton, user-set-up, `tools/swarm_langgraph/`).**
+StateGraph pipeline PLANNER → IDEA-GEN×N → GATE (novelty) → EXECUTOR×M (runs prebuilt Rust
+binaries via `rust_cmd`) → VERIFIER×K (adversarial) → JUDGE → SYNTHESIZER → CRITIQUE →
+(accept | next_round → PLANNER). Checkpointed to `research/waves/swarm.sqlite` (thread_id per
+wave); resume by rerunning with the same `--wave`. File protocol under `research/waves/wave-<N>/`.
+- **Use for**: idea generation at scale, adversarial re-derivation of claims, synthesis of
+  partial results, crash-safe multi-round adjudication. Its verifier/referee has caught real
+  flaws (Pfaffian category error; fixed-rank Fejér–Riesz objection) — that is its value.
+- **Do NOT use for**: compute (its EXECUTOR only shells out to prebuilt binaries — build those
+  in Rust first), or anything that needs <20 min (it's slower than one subagent).
+- **Known traps (fixed, don't regress)**: round must increment via `next_round` node (was
+  never incremented → infinite loop); `_safe_invoke` must `shutdown(wait=False)` (a context
+  manager blocks forever on a hung LLM); verifier/executor/idea-gen must dedup by id (idempotent
+  across resumes); file writes must carry the FULL accumulated list (append-only protocol).
+- Run it with a real frontier (`--frontier "$(cat file.md)"`) and bounded `--max-rounds 1`.
+
+## Campaign method — direct-RH wave protocol (BINDING)
+
+Adapted from Anthropic's campaign method (distilled in
+`research/notes/anthropic-campaign-method-2026-08-17.md`); repurposed for the direct-RH pivot.
+
+1. **Briefs are research memos, not tickets.** Target + objects + reading list + coordinator's
+   conjecture + stated forecast (deliberately possibly-wrong: the win is the inversion) + DEMAND
+   for an RH-false control case. Agent sees nothing but its brief + the files it is told to read.
+2. **RH-false control FIRST.** Every lever verifies its discriminator on a planted-zero/dh-type
+   control BEFORE trusting real-case numbers (8A: λ′_n<0 at n=21848; 8B: winding=2; 8D: planted
+   fails L₅(0)<0; 8C: pow2/squares saturate d′=0.3187/0.3912).
+3. **Ledger = do-not-repeat list.** Never launch a ledgered idea again; never re-derive a ledger
+   verdict — cite it.
+4. **Referee architecture.** Extraordinary claims get hostile blind referees BEFORE the
+   coordinator reads the proof; never weaken a validator.
+5. **Orphaned-proof rescue.** If a sub-agent dies mid-write, read its directory, recognize the
+   deliverable, resume the SAME agent with a checklist + launch checkers (or dispatch a finisher
+   with the note + probes on disk).
+6. **Proportion ≠ RH (firewall).** A proportion-on-the-line theorem is ZERO evidence about RH.
+7. **Coordinator reads final messages, rarely files; does its own line-by-line checks at the
+   decisive moments. When a coordinator check disagrees with an agent's reported statistic,
+   suspect the agent's check first — then verify by hand.**
 
 ## Keep trying — always (the persistence hook)
 
-- **The search is possible. Do not stop.** A failure is a documented result, not a reason to stop. This hook binds on every model in every session, forever.
-- When a computation fails, times out, or disagrees with expectations, that is the start of work, not the end: (1) record what was attempted and what actually happened; (2) find the root cause — a bug in the code, a wrong assumption, a real mathematical obstacle, or a broken claim; (3) try again by a different route: a different language or precision (Rust `rug`/`arb` where Python is slow — the same arbitrary-precision interval core Python's `python-flint`/`mpmath` wrap, at native speed (via `arb-sys`/`rug`); Rust `f64` where rigor is not needed), a different formulation, a smaller or larger case, a different attack direction.
-- When a proof attempt stalls, do not conclude "impossible". Re-derive from the contract, weaken the claim (prove less), transport the method from a neighboring problem, or decompose the blocker into sub-blockers. Consult the s4h skills (creativity, analogy, constraint, investigation, strategy) for cross-domain routes.
-- Escalate through the round protocol: PLANNER → EXECUTIONER → VALIDATOR → JUDGE → SYNTHESIZER → CRITIQUE LOOP. A rejected piece goes back to the loop, not to the trash.
-- Only the honesty guardrails can stop a line of work: a claim may be labeled ABANDONED (with the documented reason) but the *search* is never abandoned.
-- Compute is scarce on this machine: prefer Rust for anything CPU-bound, fetch data in bulk and cache it, and only run a computation when it changes what we believe. Network I/O can be done in Python.
+- **The search is possible. Do not stop.** A failure is a documented result, not a reason to
+  stop. This hook binds on every model in every session, forever.
+- When a computation fails, times out, or disagrees with expectations: (1) record what was
+  attempted and what actually happened; (2) find the root cause — a bug in the code, a wrong
+  assumption, a real mathematical obstacle, or a broken claim; (3) try again by a different
+  route (different formulation, precision, or attack direction).
+- When a proof attempt stalls, do not conclude "impossible". Re-derive from the contract, weaken
+  the claim, transport the method from a neighboring problem, or decompose the blocker.
+- Only the honesty guardrails can stop a line of work: a claim may be labeled ABANDONED (with
+  the documented reason) but the *search* is never abandoned.
 
 ## Code-backed verification + documentation (mandatory protocol)
 
-**Every numeric claim must be produced by code, and every finding must be written down. No exceptions.**
-
-1. **Confirm/deny only with code.** A "checked numerically" claim with no script behind it is not checked — it is a claim. For ANY quantitative statement (a constant, a moment, an eigenvalue, a correlation, a comparison, an empirical trend):
-   - Write the code FIRST, then run it, then report its output. Never report a number that a script did not produce.
-   - CPU-bound work goes in Rust (musl+rust-lld: `export PATH=$HOME/.cargo/bin:$PATH RUSTFLAGS="-C linker=rust-lld -C link-self-contained=yes"`, `cargo build --release --target x86_64-unknown-linux-musl`); interval-rigorous work uses the `rug` (Arb) crate. **All computation is Rust.** Exploratory f64 probes use Rust `f64`. Python is forbidden except bulk network I/O and glue that shells out to Rust binaries; any Python use must carry a one-line justification in the note label.
-   - Do NOT edit canonical `tools/` when another agent may own it: copy to a scratch dir (`/tmp/...`) or a NEW self-contained directory, and say in the note where the code lives.
-2. **Save the code with the note.** Every deliverable note in `research/notes/` must reference the exact script(s) and the exact command(s) that produced every number it reports. For Rust, cite the crate path (e.g. `tools/foo/Cargo.toml` + `cargo run --release -- --alpha 1.464`) and record the exact build command. If the code lives in a scratch dir, copy the final version into `tools/` or alongside the note before finishing (unless another agent owns that path — then say so).
-3. **Document every finding.** Every agent task ends with a deliverable note in `research/notes/` — including negatives, dead ends, refuted inputs, and blocker reports. A negative with a script is a result; a negative with no script is a rumor. Label every claim PROVEN / CHECKED NUMERICALLY (script + command cited) / CONJECTURED / ABANDONED (reason) / INCONCLUSIVE (blocker stated).
-4. **Disagreements between agents are adjudicated with code.** When two agents' numbers disagree, both must re-derive side by side in code (as P6.5 vs the third-moment closed forms did), and the resolution — including which side was wrong and why — is written into both notes. Never leave an ambiguity standing in a deliverable.
-5. **Verification tools are first-class artifacts.** `tools/verify_enclok.py`, `tools/qi_sweep.py`, `tools/nevanlinna_check.py`, `tools/lpdual/verify_exact_cert.py` are the model: a standalone script any future agent can rerun to re-verify a headline claim. New verification scripts follow the same pattern (self-contained, parse sources directly, print verdicts). New Rust verifiers must reproduce the recorded table hashes of any Python tool they replace, exactly.
+1. **Confirm/deny only with code.** A "checked numerically" claim with no script behind it is
+   not checked. Write the code FIRST, run it, report its output.
+2. **Save the code with the note.** Every deliverable note cites the exact script + command.
+3. **Document every finding**, including negatives and refuted inputs. A negative with a script
+   is a result; a negative with no script is a rumor.
+4. **Disagreements between agents are adjudicated with code** — both sides re-derive side by
+   side; the resolution is written into both notes. Never leave an ambiguity standing.
+5. **Verification tools are first-class artifacts** — self-contained, rerunnable, print verdicts.
 
 ## PONYTAIL: lazy-senior-dev mode (active for every probe you write)
 
-You write code to answer questions. The best probe is the one you never had to write. Climb this ladder, in order, and stop at the first rung that holds:
+1. Does it need to run at all? A number already saved in this repo → cite it, don't recompute.
+2. Already in this repo? Reuse the existing script before writing anything new.
+3. Stdlib / installed deps do it? Use them; never hand-roll numerics.
+4. Can it be a few lines? A few lines. A wrong-but-10-line script you can audit beats a
+   200-line one you can't.
+5. Only then: the minimum code that works.
 
-1. **Does it need to run at all?** A number already computed and saved in this repo (a verified note, a `tools/` script output) → cite it, don't recompute.
-2. **Already in this repo?** Reuse the existing script (`research/notes/`, `tools/`) before writing anything new. Re-implementing what's a few files over is the most common slop.
-3. **Stdlib / installed deps do it?** mpmath, numpy, scipy (exploratory only) — or, better, a small Rust `rug`/`f64` binary for anything compute-bound. Never hand-roll numerics.
-4. **Can it be a few lines?** A few lines. A wrong-but-10-line script you can audit beats a 200-line one you can't.
-5. **Only then:** the minimum code that works.
-
-Rules:
-- No unrequested abstractions; no scaffolding "for later". Deletion over addition. Boring over clever.
-- Cut a corner on purpose? Mark it `// ponytail: <ceiling>, <upgrade path>` and name the ceiling honestly (e.g. `// ponytail: N=3000 zeros only; extend to 10^4 if the signal is unclear`).
-- Every non-trivial probe leaves ONE runnable self-check (an `assert`-based `__main__` / `#[cfg(test)]` test), the smallest thing that fails if the logic breaks. Trivial one-liners need none.
-- Output: the numbers first, then at most three lines — what was skipped and when to add it. No essays; an explanation longer than the probe is complexity smuggled back in as prose. (Deliverable notes per the protocol above are requested prose — write them in full.)
-- NEVER lazy about rigor: labels (PROVEN / CHECKED NUMERICALLY / CONJECTURED), cited scripts, and error bounds are non-negotiable — that is the honesty charter above, not prose. Lazy means less code, never less verification.
-- Read fully, then be lazy: understand the task spec and the notes it cites before picking a rung. Laziness that skips comprehension ships a confident wrong number.
-
-## PONYTAIL: lazy-senior-dev mode (active for every probe you write)
-
-You write code to answer questions. The best probe is the one you never had to write. Climb this ladder, in order, and stop at the first rung that holds:
-
-1. **Does it need to run at all?** A number already computed and saved in this repo (a verified note, a `tools/` script output) → cite it, don't recompute.
-2. **Already in this repo?** Reuse the existing script (`research/notes/`, `tools/`) before writing anything new. Re-implementing what's a few files over is the most common slop.
-3. **Stdlib / installed deps do it?** mpmath, numpy, scipy — use them; never hand-roll numerics.
-4. **Can it be a few lines?** A few lines. A wrong-but-10-line script you can audit beats a 200-line one you can't.
-5. **Only then:** the minimum code that works.
-
-Rules:
-- No unrequested abstractions; no scaffolding "for later". Deletion over addition. Boring over clever.
-- Cut a corner on purpose? Mark it `# ponytail: <ceiling>, <upgrade path>` and name the ceiling honestly (e.g. `# ponytail: N=3000 zeros only; extend to 10^4 if the signal is unclear`).
-- Every non-trivial probe leaves ONE runnable self-check (an `assert`-based `__main__`), the smallest thing that fails if the logic breaks. Trivial one-liners need none.
-- Output: the numbers first, then at most three lines — what was skipped and when to add it. No essays; an explanation longer than the probe is complexity smuggled back in as prose. (Deliverable notes per the protocol above are requested prose — write them in full.)
-- NEVER lazy about rigor: labels (PROVEN / CHECKED NUMERICALLY / CONJECTURED), cited scripts, and error bounds are non-negotiable — that is the honesty charter above, not prose. Lazy means less code, never less verification.
-- Read fully, then be lazy: understand the task spec and the notes it cites before picking a rung. Laziness that skips comprehension ships a confident wrong number.
-
-## Method: multi-agent research protocol
-
-Each round: PLANNERS decompose the problem → EXECUTIONERS attack components → VALIDATORS (adversarial) try to break every claim → JUDGES score surviving pieces → SYNTHESIZER merges → CRITIQUE LOOP repeats until no movement. Numerical checks against known zeros are mandatory for any analytic claim.
+Rules: no unrequested abstractions; deletion over addition; cut a corner? mark it
+`// ponytail: <ceiling>, <upgrade path>`; every non-trivial probe leaves ONE runnable
+self-check; output the numbers first, then at most three lines. NEVER lazy about rigor:
+labels, cited scripts, and error bounds are the honesty charter, not prose.
 
 ## Subagent operation (binding)
 
-Config: `.commandcode/agents/*.md` in this repo (adventurer, architect, builder, diagnose, planner, reviewer, writer) — same 7 agents as the pi setup, ported to Command Code format. All pin `model: deepseek/deepseek-v4-pro`.
+Config: `~/.pi/agent/agents/*.md` (adventurer, architect, builder, diagnose, planner, reviewer,
+writer) — all pinned to `opencode-go/deepseek-v4-flash`, all background
+(`run_in_background: true`), monitor via get_subagent_result; never block the main loop.
 
-1. **Run in background always.** `background: true` is LOCKED in every agent file. The main loop dispatches and monitors via `agent_output`; it never blocks on a foreground subagent.
-2. **Write-first context discipline (the fix for context death).** Subagents have died at 85–99% context before writing deliverables. Every agent file now binds: **write the deliverable after ≤3 file reads or the first 5 tool calls, whichever first; refine with ≤3 more reads.** A committed partial note beats a dead agent. If the agent notices context ≥ 80%, it writes immediately.
-3. **Compaction is not failure.** Subagent sessions auto-compact (Command Code compaction). A compacted agent continues its task; it does not restart.
-4. **Agent roles & write access.** Write-capable: adventurer, architect, builder, writer (`write_file, edit_file`). Read-only: diagnose, planner, reviewer (return verdicts/plans, not files). The default `Explore` agent is read-only — route any write task to architect/builder/writer.
-5. **No duplicate levers.** Check `research/notes/` for an existing note on a lever before dispatching; duplicates waste the deepseek rate-limit budget (429s under concurrency) and produce nothing new.
-6. **Steer, don't kill.** A background agent that drifts (reading too much, grinding compute) is steered with a message telling it to write NOW — it is never killed and relaunched if it can still deliver.
+1. **Run in background always.** The main loop dispatches and monitors; it never blocks.
+2. **Write-first context discipline (the fix for context death).** Write the deliverable after
+   ≤3 file reads or the first 5 tool calls, whichever first; refine with ≤3 more reads. A
+   committed partial note beats a dead agent.
+3. **Compaction is normal — and now fires early.** `~/.pi/agent/settings.json` sets
+   `compaction.reserveTokens: 48000` → subagents auto-compact at ~81% of the 256k window
+   (was 93.6%, the death zone). Project-level `.pi/settings.json` mirrors it. A compacted agent
+   keeps working, not restarts.
+4. **Agent roles & write access.** Write-capable: adventurer, architect, builder, writer.
+   Read-only: diagnose, planner, reviewer. Explore (default) is read-only — use
+   architect/builder/writer for any write task.
+5. **No duplicate levers.** Check `research/notes/` for an existing note before dispatching.
+6. **Steer, don't kill.** A drifting background agent is steered with a message telling it to
+   write NOW — never killed and relaunched if it can still deliver.
 
+## Kill-robustness — survive process death (binding)
 
-## Skills: skills-for-humanity (s4h) — MANDATORY
+The host process can be KILLED at any moment. Context dies; THE DISK SURVIVES.
 
-Reference: https://github.com/human-avatar/skills-for-humanity. Installed at
-`~/.commandcode/skills/s4h*/SKILL.md` (212 skills; loadable as `/s4h-*` commands).
+1. **Write-ahead deliverable**: note file in research/notes/ after ≤3 reads or first 5 tool
+   calls — a partial note carrying plan + first findings + commit is the seed.
+2. **Progress log**: after EVERY tool call append one line to research/notes/<task>.progress.
+3. **State on disk**: every numeric result goes to a file as soon as it exists.
+4. **Idempotent resume**: resumed agents read .progress + partial note first, continue from the
+   last completed step; never restart from scratch.
+5. **Orchestrators**: the campaign state machine (tools/campaign_orchestrator/, SqliteSaver)
+   and the LangGraph swarm (tools/swarm_langgraph/, `research/waves/swarm.sqlite`) both resume
+   via checkpoint after a kill; kill_log keeps the honest audit trail.
 
-**MANDATORY (binds every agent on every task):** apply s4h thinking to every non-trivial step of
-the program — idea generation, attack selection, verification, adjudication, and synthesis. Every
-subagent task brief MUST name at least one s4h skill for the agent to read and apply; a task that
-used no s4h method is incomplete. Read the skill file fully before applying it.
+## Skills (s4h + Hermes) — load and apply
 
-- **s4h** (`~/.commandcode/skills/s4h/SKILL.md`) — the master orchestration skill; route any
-  open-ended "how do I think through this" through it.
-- **s4h-epistemology** — label epistemic status (what we KNOW vs ASSUME vs HOPE); never let a
-  CONJECTURED claim drift into a PROVEN one. This is the honest-calibration backbone.
-- **s4h-investigation** — hypothesis generation, claim decomposition, source trace, counter-hypothesis.
-- **s4h-logic** — argument validation, consistency check, constraint mapping, causality.
-- **s4h-constraint** — hardness-test the constraints (is a "wall" real or an assumption?).
-- **s4h-creativity / s4h-analogy** — transfer methods from other problems; fresh attack ideas.
-- **s4h-strategy** — which attack to fund; kill criteria; victory conditions.
+- **s4h** — the master orchestration skill; route any open-ended "how do I think through this"
+  through it. s4h-epistemology (label calibration), s4h-investigation, s4h-logic,
+  s4h-constraint (hardness-test the walls), s4h-creativity/s4h-analogy (fresh attacks),
+  s4h-strategy (which attack to fund). Every subagent brief MUST name at least one s4h skill.
+- **Hermes research skills** — `research-paper-writing` (MANDATORY before drafting any
+  publication-bound write-up; never hallucinate citations), `arxiv`, `duckduckgo-search`.
 
-The underlying methods apply even where plugin commands are unavailable — but on this machine the
-skills ARE installed, so load them directly rather than re-deriving from memory.
-
-## Skills: Hermes skill library (installed into Command Code)
-
-The full Nous Research Hermes skill library (173 skills — 72 bundled + 101 optional) is installed
-and discoverable at:
-- `~/.commandcode/skills/hermes-bundled/`
-- `~/.commandcode/skills/hermes-optional/`
-
-**MANDATORY for paper writing:** whenever you write, restructure, or revise any paper, draft,
-README, or write-up for this project (paper/main.tex, research/papers/, research/notes/ that are
-publication-bound), FIRST read and apply the **research-paper-writing** skill:
-`~/.commandcode/skills/hermes-bundled/research/research-paper-writing/SKILL.md`
-(read it fully before drafting). Its non-negotiables bind here too: never hallucinate citations
-(fetch programmatically, mark unverifiable ones `[CITATION NEEDED]`), one clear contribution in a
-single sentence, every experiment states the claim it supports, and commit drafts often.
-
-Useful companion skills (read on-demand, all under `~/.commandcode/skills/hermes-bundled/`): `arxiv` (research/arxiv — paper search), `nano-pdf` (productivity/nano-pdf — source extraction), `ocr-and-documents` (productivity), `systematic-debugging` (software-development — root-cause method), `test-driven-development` (software-development — verifier work).
-
-## Standing research context
+## Standing research context (verified 2026-08-17)
 
 - RH: open since 1859 (Millennium Prize).
-- Published unconditional record: 41.7% (PRZZ 2020). Anthropic Aug-2026 claims ≥ 2/3 simple-on-line and ≥ 5/6 distinct, unconditionally, via rank–trace inequality on a finite compression of Weil's Hermitian form (Sylvester inertia for off-line pairs); Montgomery–Taylor window gives 0.6725 / 0.8362; Lean-formalized in anthropics/zeta-23-lean. **Sources verified real 2026-08-17 (all HTTP 200; main paper + campaign narrative + E2 transcript downloaded fresh to research/papers/). Community acceptance: UNVERIFIED — the campaign's own ledger entry says "needs a human expert"; refereed only by Claude instances. Treat as live target, not established fact.**
-- Repo-certified (our own work): in-class 0.673481 simple-on-line / 0.836740 distinct (7-point stability refinement of the rank–trace inequality).
-- Clean constant: 3/2 − (1/√2)·cot(1/√2) ≈ 0.6725; simpler argument gives 2/3.
-- Prior chain: Levinson (1974) ≥ 1/3 → Conrey (1989) 40% → Bui–Conrey–Young (2011) 41.05% → Feng (2012) 41.28% → PRZZ 2020 41.7% → Anthropic 2026 (unverified) ≥ 2/3.
-- Key inputs: Bombieri (2000); Baluyot–Goldston–Suriajaya–Turnage-Butterbaugh (arXiv:2306.04799, 2501.14545); Montgomery pair correlation (1973).
-
-## Campaign method — Anthropic's actual method (BINDING, 2026-08-17)
-
-Extracted from the campaign narrative (`research/papers/anthropic-campaign-narrative.txt`;
-distilled in `research/notes/anthropic-campaign-method-2026-08-17.md`). The coordinator
-ran ~60 sub-agents over ~2 days; the two wins (≥1/2, then ≥2/3) both came from briefs that
-pointed the mechanism the WRONG way and were inverted by the agent. Rules:
-
-1. **Briefs are research memos, not tickets.** Target + objects + reading list + coordinator's
-   conjecture + stated forecast + DEMAND for an RH-false control case (Epstein class-2,
-   Davenport–Heilbronn, Beurling planted zero, fake Weil polynomial). Agent sees nothing but
-   its brief + the files it is told to read.
-2. **Ledger = do-not-repeat list.** Triage past ideas into 4 deflating classes (known theorem
-   restated / equivalent to RH / finite numerical check / near-tautology); never launch a
-   survivor again; never re-derive a ledger verdict — cite it.
-3. **Referee architecture.** Extraordinary claims get hostile referees BEFORE the coordinator
-   reads the proof; blind, forbidden to read each other, one joint each with a worked attack
-   plan; plus a re-derivation-from-scratch agent forbidden to read the proof; plus a cold-read
-   referee on paper drafts. Never weaken a validator.
-4. **Orphaned-proof rescue.** If a sub-agent dies mid-write, read its directory, recognize the
-   deliverable, resume the SAME agent with a checklist + launch checkers.
-5. **Barrier checker (rung 0).** RH-false model zoo + claim classifier (tools/barrier_zoo/,
-   under construction) disciplines every research brief. Any claim that would also "prove" an
-   RH-false model is wrong.
-6. **Proportion ≠ RH (firewall).** A proportion-on-the-line theorem is ZERO evidence about RH
-   in either direction. Never describe it otherwise.
-7. **Ladder.** Barrier checker · zero density · Beurling · off-centre positivity · construct the
-   object · RH. Launch all rungs in parallel with expectations stated ("0–2 can return theorems;
-   3 is a real shot; 4/5 is a moonshot").
-8. **Coordinator reads final messages, rarely files; does its own line-by-line checks at the
-   decisive moments.**
+- Published unconditional record: 41.7% (PRZZ 2020). Anthropic Aug-2026 claims ≥2/3 simple /
+  ≥5/6 distinct unconditionally (rank–trace inequality, Weil form + Sylvester inertia;
+  Montgomery–Taylor window gives 0.6725/0.8362; sources verified real, community acceptance
+  UNVERIFIED — treat as live target, not established fact).
+- Repo-certified (our own): in-class 0.673481 simple / 0.836740 distinct; terminal in-class
+  (0.6818 ceiling PROVEN in Lean; no unconditional |α|>1 form factor, no p₁>0.6818, no new
+  certificate input found in wave-7C census).
+- Direct-RH wave status (wave 8, all landed with probes on disk):
+  - 8A Li λ_n: on-line pairs termwise nonneg; λ_n>0 ∀n≤1000; residual r_n ~ 0.26·n^0.246
+    sub-√n; periodogram peaks at the three lowest-zero frequencies (the fluctuation IS the
+    signal). NOT a proof (finite data).
+  - 8B Speiser: ζ′ left half-strip [0.001,0.5]×[10,5000] EMPTY (winding 0, certified margins);
+    **2651 ζ′ zeros in [0.5,1]×[10,5000], per-slab ratio 0.15→0.69 rising** — live future
+    object; interlacing belongs to ξ′ (4521 = N(5000)+1).
+  - 8C Nyman–Beurling: closed forms + d_N decay measured (slope −0.089, N=10..1000, no
+    saturation); MPFR 256-bit certification FIXED and passing (rel 1e-15; the tail l-factoring
+    bug); coefficients track −μ(k) (19/19, the Nyman weights); controls saturate
+    (d′=0.3187, d″=0.3912). CHECKED NUMERICALLY, not a proof.
+  - 8D Turán/Laguerre: controls validated (planted pair FAILS L₅(0)=−9.47e-9; all-real passes
+    min 9.6e-11 at k=8,t=32.4); b₀=ξ(1/2) matched 1e-18. Real-case T_k/L_k table INCOMPLETE.
+  - 8E Beurling operator: real d_N²=1.13e-2 vs control 5.28e-3 at N=60; control-direction
+    question OPEN.
+- Key inputs: Bombieri (2000); Baluyot–Goldston–Suriajaya–Turnage-Butterbaugh
+  (arXiv:2306.04799, 2501.14545); Montgomery pair correlation (1973).
 
 ## Workspace
 
 - /home/vstaln/riemann — root
 - research/papers/ — primary sources (.pdf + .txt)
-- research/lean-zeta-23/ — Lean formalization
-- research/notes/ — proof map, literature map, verification reports, attack log
-- tools/ — numerical toolkit (Rust-first; legacy Python + mpmath where already certified)
-- PLAN.md — the plan; hooks/agents.md — these hooks
-
-## Compute discipline (BINDING — user directive 2026-08-13)
-
-- **Before any CPU-bound run, ask: "is this necessary? does it take long? minimize compute."**
-  The user's standing instruction: never launch long-running commands that could take days
-  unless there is no cheaper path, and always prefer the cheapest run that answers the question.
-- Single verification runs at a RECORDED eps (a few minutes) are fine. What is NOT allowed:
-  open-ended sweeps, loops that re-run the verifier many times, or background jobs left running
-  "to see what happens". Every run must state the belief it changes and its expected runtime.
-- Cheap-first order: (1) closed-form math, (2) float scalar probes (<1 min), (3) one bounded
-  verifier run, (4) only then a small loop — and kill it the moment it stops paying for itself.
-- If a route needs >~20 minutes of compute to reach its next decision point, stop and rethink
-  the route first (or write the state to a note and revisit cheaply).
-
-## Persistence (BINDING — user directive 2026-08-13)
-
-- **NEVER EVER STOP until a proof of the Riemann Hypothesis (or an unconditional
-  structural theorem that settles it) is found and verified.** This is the project's
-  terminal goal, standing user directive. No dead end is final: a failure is a documented
-  result that narrows the search space; every closed lever produces the next open one.
-- Between record-pushing (the 0.673481→0.6818 certified-bound ladder) and proof-seeking
-  (structural RH attack), always keep at least one thread on the structural side.
-  Never let the certified-record thread become the only activity.
-- Continue dispatching the next lever without pausing for permission. Check in with a
-  progress report only when a milestone lands (new record, theorem, or closed lever),
-  or a genuine blocker stops progress.
-
-## Kill-robustness — survive process death (binding, appended 2026-08-17)
-
-The host process can be KILLED at any moment (plugin install, crash, session end).
-Context dies; THE DISK SURVIVES. Every agent and the coordinator obey:
-
-1. **Write-ahead deliverable**: note file in research/notes/ after ≤3 reads or first 5
-   tool calls — a partial note carrying plan + first findings + commit is the seed.
-   NEVER hold the deliverable only in context.
-2. **Progress log**: after EVERY tool call append one line to
-   research/notes/<task>.progress (`t=<call#> <what happened>`). The coordinator reads
-   this after any kill to know where you stopped.
-3. **State on disk**: every numeric result goes to a file as soon as it exists;
-   stdout and memory die with the process.
-4. **Idempotent resume**: resumed agents read .progress + partial note first, continue
-   from the last completed step; never restart from scratch, never re-read.
-5. **Orchestrator**: the campaign state machine (tools/campaign_orchestrator/) is a
-   checkpointed LangGraph — after a kill, `resume` + `step` continues exactly where the
-   process died; the kill_log keeps the honest audit trail.
+- research/notes/ — proof map, literature map, verification reports, attack log, ledger
+- research/waves/ — LangGraph swarm wave artifacts + swarm.sqlite
+- tools/ — numerical toolkit (Rust-first; legacy Python where already certified)
+- tools/swarm_langgraph/ — LangGraph adjudication swarm (user-set-up)
+- PLAN.md — the plan; hooks/agents.md — these hooks (HARD RULE: read and obey)
