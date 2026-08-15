@@ -1,0 +1,18 @@
+  loaded 202 b_k values from data/bk.txt (b_0 = 0.497120778188)
+=== TURAN (k=1..200) ===
+  k=20: t_k=6.48817615e-2  t_k*(k+1)=1.36251699e0
+  k=40: t_k=3.49865911e-2  t_k*(k+1)=1.43445024e0
+  k=60: t_k=2.41429230e-2  t_k*(k+1)=1.47271830e0
+  k=80: t_k=1.84940636e-2  t_k*(k+1)=1.49801915e0
+  k=100: t_k=1.50156719e-2  t_k*(k+1)=1.51658286e0
+  k=120: t_k=1.26534930e-2  t_k*(k+1)=1.53107265e0
+  k=140: t_k=1.09422528e-2  t_k*(k+1)=1.54285765e0
+  k=160: t_k=9.64427748e-3  t_k*(k+1)=1.55272867e0
+  k=180: t_k=8.62530948e-3  t_k*(k+1)=1.56118102e0
+  k=200: t_k=7.80370138e-3  t_k*(k+1)=1.56854398e0
+  (full T_k/t_k table k=1..200 -> data/tk-table.txt)
+  min t_k = 7.80370138e-3 at k = 200
+  min t_k*(k+1) = 1.06963238e0 at k = 1   (RH-necessary: >= 1; holds = true)
+  max t_k*(k+1) = 1.56854398e0 at k = 200   (bounded above -> t_k*(k+1) does not blow up)
+  tail fit window1 k=60..120: t_k ~ 1.1005e0 * k^(-0.9326);  t_k*(k+1) ~ c*k^(0.0674)  (p=-1 means t_k ~ c/k, t_k*(k+1) -> const)
+  tail fit window2 k=140..200: t_k ~ 1.1840e0 * k^(-0.9478);  t_k*(k+1) ~ c*k^(0.0522)  (p=-1 means t_k ~ c/k, t_k*(k+1) -> const)

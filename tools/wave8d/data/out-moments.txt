@@ -1,0 +1,34 @@
+  k=0: M_k~4.971208e-1 b_k~4.971208e-1 est.rel.err=4.1e-14
+  k=10: M_k~1.367986e-6 b_k~5.622858e-25 est.rel.err=4.8e-14
+  k=20: M_k~1.213573e-7 b_k~1.487376e-55 est.rel.err=2.5e-14
+  k=30: M_k~3.093639e-7 b_k~3.717875e-89 est.rel.err=2.7e-14
+  k=40: M_k~5.951154e-6 b_k~8.315214e-125 est.rel.err=3.5e-14
+  k=50: M_k~4.769843e-4 b_k~5.110936e-162 est.rel.err=4.1e-14
+  k=60: M_k~1.140935e-1 b_k~1.705560e-200 est.rel.err=4.3e-14
+  k=70: M_k~6.585440e1 b_k~4.891869e-240 est.rel.err=4.6e-14
+  k=80: M_k~7.922168e4 b_k~1.680304e-280 est.rel.err=4.0e-14
+  k=90: M_k~1.785134e8 b_k~8.893182e-322 est.rel.err=3.1e-14
+  k=100: M_k~6.948176e11 b_k~0.000000e0 est.rel.err=2.7e-14
+  k=110: M_k~4.384078e15 b_k~0.000000e0 est.rel.err=2.5e-14
+  k=120: M_k~4.261454e19 b_k~0.000000e0 est.rel.err=2.5e-14
+  k=130: M_k~6.120255e23 b_k~0.000000e0 est.rel.err=2.4e-14
+  k=140: M_k~1.254284e28 b_k~0.000000e0 est.rel.err=2.4e-14
+  k=150: M_k~3.561698e32 b_k~0.000000e0 est.rel.err=2.5e-14
+  k=160: M_k~1.366528e37 b_k~0.000000e0 est.rel.err=2.6e-14
+  k=170: M_k~6.931453e41 b_k~0.000000e0 est.rel.err=2.6e-14
+  k=180: M_k~4.560608e46 b_k~0.000000e0 est.rel.err=2.7e-14
+  k=190: M_k~3.827842e51 b_k~0.000000e0 est.rel.err=2.9e-14
+  k=200: M_k~4.038176e56 b_k~0.000000e0 est.rel.err=3.1e-14
+moments done in 558.6s (k=0..=201), max est rel err = 5.1e-14
+  saved 202 b_k values to data/bk.txt
+VALIDATION: b_0 = 0.497120778188324  (xi(1/2) = 0.497120778188314)
+=== ROOTS (full series: bisection vs Newton; vs published gamma_j) ===
+  root 1: bisect=14.1347251417 Newton=14.1347251417 |bis-Nwt|=1.8e-15  gamma_1=14.1347251417  |Newton-gamma|=8.5e-12
+  root 2: bisect=21.0220396084 Newton=21.0220396084 |bis-Nwt|=3.6e-15  gamma_2=21.0220396388  |Newton-gamma|=3.0e-8
+  root 3: bisect=25.0108744544 Newton=25.0108744544 |bis-Nwt|=0.0e0  gamma_3=25.0108575801  |Newton-gamma|=1.7e-5
+  root 4: bisect=30.3899061593 Newton=30.3899061593 |bis-Nwt|=0.0e0  gamma_4=30.4248761259  |Newton-gamma|=3.5e-2
+=== ROOTS of Taylor truncations P_N(t) vs gamma_1..4 (convergence as N grows) ===
+  N=20: found 2 roots: root1=14.13472525 (|d|=1.1e-7) root2=19.38953994 (|d|=1.6e0)
+  N=40: found 4 roots: root1=14.13472514 (|d|=8.5e-12) root2=21.02203961 (|d|=3.0e-8) root3=25.01087451 (|d|=1.7e-5) root4=29.48340981 (|d|=9.4e-1)
+  N=80: found 4 roots: root1=14.13472514 (|d|=8.5e-12) root2=21.02203961 (|d|=3.0e-8) root3=25.01087445 (|d|=1.7e-5) root4=30.38990616 (|d|=3.5e-2)
+  N=160: found 4 roots: root1=14.13472514 (|d|=8.5e-12) root2=21.02203961 (|d|=3.0e-8) root3=25.01087445 (|d|=1.7e-5) root4=30.38990616 (|d|=3.5e-2)

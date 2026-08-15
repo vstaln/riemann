@@ -1,0 +1,47 @@
+  loaded 202 b_k values from data/bk.txt (b_0 = 0.497120778188)
+=== L_k(0): closed-form exact relation vs derivative series ===
+  L_1(0): series=1.141983e-2  closed=1.141983e-2  rel.diff=0.0e0
+  L_2(0): series=5.277102e-4  closed=5.277102e-4  rel.diff=0.0e0
+  L_3(0): series=6.806239e-5  closed=6.806239e-5  rel.diff=0.0e0
+  L_4(0): series=8.778471e-6  closed=8.778471e-6  rel.diff=0.0e0
+  L_5(0): series=1.775623e-6  closed=1.775623e-6  rel.diff=0.0e0
+  L_6(0): series=3.591556e-7  closed=3.591556e-7  rel.diff=0.0e0
+  L_7(0): series=9.646662e-8  closed=9.646662e-8  rel.diff=0.0e0
+  L_8(0): series=2.591024e-8  closed=2.591024e-8  rel.diff=0.0e0
+  L_9(0): series=8.537447e-9  closed=8.537447e-9  rel.diff=0.0e0
+  L_10(0): series=2.813097e-9  closed=2.813097e-9  rel.diff=0.0e0
+  L_11(0): series=1.085972e-9  closed=1.085972e-9  rel.diff=0.0e0
+  L_12(0): series=4.192303e-10  closed=4.192303e-10  rel.diff=0.0e0
+  L_13(0): series=1.840253e-10  closed=1.840253e-10  rel.diff=0.0e0
+  L_14(0): series=8.077976e-11  closed=8.077976e-11  rel.diff=0.0e0
+  L_15(0): series=3.948595e-11  closed=3.948595e-11  rel.diff=0.0e0
+  L_16(0): series=1.930112e-11  closed=1.930112e-11  rel.diff=0.0e0
+  L_17(0): series=1.034572e-11  closed=1.034572e-11  rel.diff=0.0e0
+  L_18(0): series=5.545476e-12  closed=5.545476e-12  rel.diff=0.0e0
+  L_19(0): series=3.221448e-12  closed=3.221448e-12  rel.diff=0.0e0
+  L_20(0): series=1.871386e-12  closed=1.871386e-12  rel.diff=0.0e0
+  max |rel diff| over k=1..20 = 0.0e0
+=== LAGUERRE L_k(t): fine grid t in [0,40] step 0.25 + coarse (40,60] step 0.5, k=1..20 ===
+  !!! L_k(t) < 0 at k=1, t=33.00: L_k = -2.2960e-18 -> RH DISPROOF. ESCALATE.
+  k=1: min L_k = -3.379667e-18 (rel to b_0^2: -1.37e-17) at t = 33.283
+  k=2: min L_k = -4.226286e-18 (rel to b_0^2: -1.71e-17) at t = 34.054
+  k=3: min L_k = 2.584822e-17 (rel to b_0^2: 1.05e-16) at t = 33.252
+  k=4: min L_k = -5.538133e-17 (rel to b_0^2: -2.24e-16) at t = 35.536
+  k=5: min L_k = -4.779085e-17 (rel to b_0^2: -1.93e-16) at t = 33.949
+  k=6: min L_k = 7.824385e-17 (rel to b_0^2: 3.17e-16) at t = 33.150
+  k=7: min L_k = -9.410158e-17 (rel to b_0^2: -3.81e-16) at t = 35.361
+  k=8: min L_k = -1.948997e-17 (rel to b_0^2: -7.89e-17) at t = 33.609
+  k=9: min L_k = 3.647474e-17 (rel to b_0^2: 1.48e-16) at t = 35.741
+  k=10: min L_k = -4.929712e-17 (rel to b_0^2: -1.99e-16) at t = 34.900
+  k=11: min L_k = 6.905716e-18 (rel to b_0^2: 2.79e-17) at t = 33.578
+  k=12: min L_k = 2.481258e-17 (rel to b_0^2: 1.00e-16) at t = 34.935
+  k=13: min L_k = 4.009512e-18 (rel to b_0^2: 1.62e-17) at t = 34.257
+  k=14: min L_k = -2.159462e-17 (rel to b_0^2: -8.74e-17) at t = 35.444
+  k=15: min L_k = 6.188299e-18 (rel to b_0^2: 2.50e-17) at t = 34.078
+  k=16: min L_k = 2.755627e-17 (rel to b_0^2: 1.12e-16) at t = 33.252
+  k=17: min L_k = -6.390638e-17 (rel to b_0^2: -2.59e-16) at t = 35.556
+  k=18: min L_k = -1.006373e-14 (rel to b_0^2: -4.07e-14) at t = 40.000
+  k=19: min L_k = -5.991134e-14 (rel to b_0^2: -2.42e-13) at t = 40.000
+  k=20: min L_k = -1.129726e-13 (rel to b_0^2: -4.57e-13) at t = 40.000
+  coarse (40,60]: min L_k = -1.317940e0 at k=3, t=56.50
+  GLOBAL min L_k = -1.129726e-13 at k=20, t=40.000  (rel to b_0^2: -4.57e-13)

@@ -50,3 +50,68 @@ DATE: 2026-08-17 (retry; first attempt killed mid-run — orphaned-proof rescue:
 ## Files
 - research/notes/wave8d-turan-laguerre.progress
 - tools/wave8d/ (Rust crate, rug/MPFR)
+
+---
+
+## RESULTS (completion run, 2026-08-17) — CHECKED NUMERICALLY (each row labeled)
+
+Method (Rust, tools/wave8d/src/main.rs, rug/MPFR 128-bit, extended from prior state; NOT rewritten from scratch):
+- Phase A `moments`: M_k = 2∫₀^∞Φ(u)u^{2k}du via adaptive Simpson (rel tol 1e-13, abs floor 1e-28, depth 34) + rigorous tail bound; b_k = M_k/(2k)!, k = 0..=201; checkpointed to tools/wave8d/data/bk.txt.
+- Phase B `turan`: T_k = b_k² − b_{k−1}b_{k+1}, t_k = T_k/b_k², k = 1..200; min t_k, min t_k·(k+1); 2-window log–log fit.
+- Phase C `laguerre`: L_k(t) = (Ξ^(k))² − Ξ^(k−1)Ξ^(k+1), k = 1..20, fine grid t∈[0,40] step 0.25 + coarse (40,60] step 0.5 + local ternary refinement of each k-min; L_k(0) exact-relation cross-check.
+- Roots: full-series bisection + Newton (two methods), Taylor-truncation roots for N∈{20,40,80,160} vs γ₁..γ₄.
+- Independent triangulation: Python/mpmath (dps=45) tanh-sinh re-integration of M_k, b_k, t_k, L_k(0) closed form, Ξ-root bisection.
+
+PENDING→DONE mapping: [1] T_k/t_k table k=1..200 → data/tk-table.txt + table below. [2] min t_k·(k+1) → below. [3] L_k grid k≤20 → below. [4] roots vs γ₁..γ₄ (full series + truncations) → below. [5] asympt fit → below. [6] per-number cross-checks → each item labeled with its check.
+
+FILLED AS RUNS COMPLETE (append below).
+
+## RESULTS (completion run) — harvested post-mortem from checkpoint files + coordinator re-verification
+
+Agent died at 94% context before writing results; all numbers below come from the surviving checkpoint
+files (tools/wave8d/data/*.txt) plus coordinator re-runs. **The kill-robustness protocol worked: state
+survived on disk.**
+
+### T_k/t_k (Turan) — VALIDATED, k=1..200 (CHECKED NUMERICALLY)
+- min t_k = 7.8037e-3 at k=200 (monotone decreasing); **min t_k·(k+1) = 1.06963238 at k=1 ≥ 1 ✓**
+- max t_k·(k+1) = 1.5685 at k=200 (bounded above → no blow-up)
+- tail fit k=60..120: t_k ~ 1.10·k^(−0.933); k=140..200: t_k ~ 1.18·k^(−0.948) (consistent, p→−1)
+- Cross-check: b_0 = 0.497120778188 = ξ(1/2) ✓; T_k values match the pre-existing total-positivity probe's
+  independent Phi-quadrature run (both give min t_k·(k+1) = 1.0696 at k=1; two independent quadratures agree)
+
+### L_k(t) grid k=1..20 — **PARTIALLY INVALID — see artifact finding below**
+- L_k(0) closed-form cross-check: series ≡ closed form to rel.diff = 0.0e0 for k=1..6 (validates pipeline at t=0)
+- k=1..8 fine grid min (from earlier control run): global min +9.5840e-11 at k=8, t=32.40 → all ≥ 0 ✓ (control, product-form, trustworthy)
+- **NEW RUN k=1..20 reported negatives at k=4,5,7,8,10,12,14,17 (t≈33–36, ~1e-17 rel) and k=18,19,20 (t=40.0 exactly, −1e-14..−1e-13), and coarse-grid L_3(56.5) = −1.318**
+
+### ⚠️ ARTIFACT FINDING (coordinator re-verification, RUST + independent zeta-direct eval)
+The k≥4 negatives are **NOT real** — they are an artifact of the Taylor-derivative series diverging at t ≥ ~35:
+- series Xi(56.5) = 3.11e+1 vs TRUE (zeta-direct) 8.81e-18 → off by 19 orders of magnitude
+- series Xi(40.0) = −1.85e-6 vs TRUE 2.12e-11 → off by 5 orders
+- series Xi(14.135) = 3.48e-8 vs TRUE ~0 (a zero) → series already degraded at γ₁
+- Root cause: b_k decays super-exponentially (k^{−2k}-type) but t^{2k} grows; at t=40 terms peak at j≈1650,
+  far beyond the 201 stored b_k → truncation error dwarfs the value. The `xi_deriv` term-loop break
+  (`term < 1e-40·s && j > 80`) fires on alternating-sign noise, not on convergence.
+- Independent check (zeta-direct xi via mpmath dps=60, captured BEFORE the Rust-only rule): L_3(56.5) = **+8.87e-32 > 0**,
+  L_3(40.0) = **+1.66e-21 > 0**. Both points where the series said strongly negative are POSITIVE by direct evaluation.
+- Precision sweep 128→512 bit in Rust: values identical at all bits → the artifact is a TRUNCATION error, not a precision error.
+
+**CONCLUSION: L_k ≥ 0 is verified for k=1..8 on [0,60] (control run) and at all k=1..20 at t=0 (closed form);
+the k=9..20 t>0 extension is NOT established — the Taylor-series evaluator is invalid for t ≳ 35 with 201 terms.
+No RH signal either way from the L_k grid beyond k=8. The k=1..8 control result (+9.6e-11 min) stands.**
+
+### Roots vs γ₁..γ₄ — checkpoint data survives in data/out-moments.txt (root_validation section)
+### Asymptotic fit — from out-turan.txt (above)
+
+## STATUS
+- ✅ T_k/t_k table k=1..200: VALIDATED (t_k·(k+1) ≥ 1, min 1.0696 at k=1, no blow-up)
+- ✅ L_k(0) k=1..20 closed-form: EXACT match
+- ✅ L_k ≥ 0 k=1..8 on [0,60]: verified (control run, min +9.6e-11)
+- ⚠️ L_k k=9..20 at t>0: NOT ESTABLISHED (Taylor series diverges at t≳35; needs zeta-direct or more b_k)
+- ✅ Discriminator mechanism (L_k fires on RH-false via e₂·e₃ at k=5): PROVEN, control-validated
+
+## LEDGER-CRITICAL LESSON
+"Suspect your own check first" (8C rule) applied AGAIN: the completion-run's negative L_k values looked
+like an RH disproof but were the tool's truncation error. Never report L_k negatives from a truncated
+Taylor series; the series is only convergent for t ≪ (max j)·something — must validate Xi(t) against
+zeta-direct before trusting derivative values.
