@@ -217,3 +217,45 @@ De Branges / Li are NOT RECORDS — CompleteRHProof.lean's core theorem is a vac
 - Pending after wave 4: ledger the referees' verdicts; if model+interpretation survive,
   dispatch a re-derivation of the certificate's min-p₁ + a blind referee on the record claim;
   fix barrier-zoo then it becomes the rung-0 discipline tool for all briefs.
+
+## UPDATE — wave 4 verdicts + wave 5 dispatch (2026-08-17 ~02:25)
+
+### Wave 4 verdicts (all four agents landed; coordinator verified each)
+- **sinc-m3 certificate LP — REFUTED as a ceiling-breaker.** Two hostile blind referees,
+  independent re-derivation, coordinator hand-check: (1) Referee-A — the binding constraint
+  D+P₃=5.44 needs E[T]≥0 which is UNPROVEN and FALSE per-config (3×3 PSD a=−0.2 counterexample:
+  m₃=1.224≥m₂²=1.1664 theorem HOLDS yet T=−0.016<0; coordinator verified trG²=3.24, trG³=3.672,
+  P₂=0.24). Under the ONLY proven floor (S₃≥m₂²): min-p₁=0.4224 (mass)/0.5939 (count) < 0.6818.
+  Convention mix: model p₁ MASS vs wall p₀ COUNT (count recompute 0.8564). Calibration
+  knife-edge (±5% flips). Control EXHIBITED: 256-law (mass 0.5173) has proven floor 5.2488 ∈
+  window → admissible under proven inputs. (2) Referee-B — σ-blindness PROVEN; "0.7488" loose
+  label (P(m=1)=0.8564 there); scan AUTHORITATIVE, minilp `Infeasible` is a global
+  linearization artifact (tangent system infeasible ∀p₁); raises NO published on-line record;
+  on-line interpretation does NOT survive the firewall; DH simple off-line zeros kill the
+  RH-type hypothesis. (3) Re-derivation — m₃≥m₂² PROVEN independently via Parseval+CS
+  (m₃−m₂²=N²M²Var(T1)≥0, equality ⟺ uniform marks; probe PASS all configs, position-blind);
+  theorem binds the sinc branch legitimately; torus 2.480620 infeasibility OUTSIDE theorem
+  scope (INCONCLUSIVE). **Lever CLOSED. No on-line record affected.**
+  Files: wave4-synthesis-2026-08-17.md, refereeA-sinc-m3-model-2026-08-17.md,
+  refereeB-sinc-m3-interp-2026-08-17.md, rederivation-m3-2026-08-17.md.
+- **barrier-zoo Rust — PROVEN, rung-0 tool OPERATIONAL.** Builder fixed 8 root causes
+  (Gamma off-by-half, C::exp angle real slot, q^{+s} vs q^{-s}×3, DH grid dt, theta origin,
+  classifier regex parens). Acceptance (coordinator re-ran): Γ(2)=1.0, Γ(5)=24.0, |ε|=1,
+  FE both signs true, |f_plus|=3.1e-14 at both certified DH zeros, 2/2 matched, 6 off-line
+  zeros, Epstein modularity 1e-15–1e-13 + Dedekind true, planted zeros 2.3e-16/1.5e-16,
+  classifier 10/10. Caveat: Epstein's own off-line zero search grid-limited (fine grid ~1000×
+  too slow; VERDICT text overclaims). **All briefs now disciplined through this zoo.**
+  File: barrier-zoo-rust-2026-08-17-fix.md.
+
+### Wave 5 in flight (3 disjoint levers, all with RH-false controls via the working zoo)
+1. d2d5db17 M4-proper ζ″-moment r′ (closed-form BHB Lemma-1 re-derivation with ζ′→ζ″).
+2. 0a0236b5 k<1 moving-boundary Type-1 decision (prove empty or invert, E2 playbook).
+3. 623d88bf exact-identity m₃ certificate (valid revival: m₃=m₂²+N²M²Var(T1) instead of the
+   broken D+P₃ floor; exact min/max-S₃ envelopes; 256-law exact-S₃ control).
+Briefs on disk: wave5-briefs-2026-08-17.md.
+
+### Open items
+- Torus E[m₂]=2.480620 exact definition (INCONCLUSIVE; outside theorem scope).
+- Epstein off-line zero search resolution (grid-limited; needs fast I(s) evaluator).
+- Lesson reinforced: ceilings break by NEW OBJECTS/INPUTS, never sharper in-class
+  inequalities — sinc-m3 was another sharpening and died, consistent.
