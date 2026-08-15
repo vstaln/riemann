@@ -1,0 +1,3 @@
+t=1 env check: rustc 1.97.1 present; tools/ exists; note naming convention confirmed
+t=2 wrote partial note research/notes/lee-yang-asano-2026-08-15.md (setup+lemma+breakdown+spec+forecast, results PENDING)
+t=3 next: write tools/lee_yang_sections.rs, compile, run, capture stdout to .results, then fill note sections 5-6

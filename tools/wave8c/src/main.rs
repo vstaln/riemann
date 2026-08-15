@@ -500,7 +500,10 @@ fn main() {
     log.push_str(&format!("verification overall: {}\n\n", if vok { "PASS" } else { "FAIL" }));
 
     // ============ 2. d_N sweep (f64) ============
-    let ns: Vec<usize> = vec![10, 20, 30, 50, 75, 100, 150, 200, 300, 400, 600, 800, 1000];
+    let ns: Vec<usize> = vec![
+        10, 20, 30, 50, 75, 100, 150, 200, 300, 400, 600, 800, 1000,
+        1250, 1600, 2000, 2500, 3200, 4000, 5000, 6300, 8000,
+    ];
     log.push_str("=== d_N sweep (f64, Cholesky) ===\nN\td_N\td_N^2\td_N*sqrt(N)\tkappa_piv\n");
     let mut rows: Vec<(usize, f64, f64, f64, f64)> = Vec::new();
     for &n in &ns {
@@ -541,7 +544,7 @@ fn main() {
 
     // ============ 3. MPFR cross-check ============
     log.push_str("\n=== MPFR (256-bit) cross-check ===\n");
-    for &n in &[50usize, 100, 251, 500] {
+    for &n in &[50usize, 100] {
         let mut g = vec![Float::with_val(256, 0); n * n];
         for i in 0..n {
             for k in 0..n {

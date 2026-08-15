@@ -1,0 +1,18 @@
+t=1 read s4h-analogy-boundary-testing skill; grep ledger for foster/reactance -> fresh lever (no prior verdict)
+t=2 grep repo for b_k/M_k sources; found jensen_ometer.py (validated gamma(k) = xi^{(2k)}(1/2) k!/(2k)! via explicit-formula tower, dps=60, cross-checked vs zero-power sums)
+t=3 wrote note draft (research/notes/foster-reactance-2026-08-15.md): Lemma PROVEN (RH <=> Re[Xi'/Xi]>=0 on RHP <=> Foster partial fraction <=> g=N/D Stieltjes <=> C-fraction coeffs positive); boundary break (a) exact equivalence, (b) no uniform control (PROVEN sketch); check spec
+t=4 wrote tools/foster_check/main.rs (Rust, log-space Edwards-Phi quadrature -> M_k); ran: b_0=NaN (logsumexp -inf init bug)
+t=5 fixed logsumexp bugs (x2: log_phi + moments); ran: b_0 = 0.7457 vs expected 0.4971, ratio 1.5; moments blow up -> Phi normalization suspect
+t=6 verified Phi(0)=0.447 by hand (correct); integral 2*int Phi = 0.746 != xi(1/2)=0.4971; ratio exactly 3/2 at k=0
+t=7 compared quad b_k vs repo b_k k=0..5: ratio NOT constant (1.50, 3.10, 4.67, 6.32, 8.06, 9.88) -> Edwards-Phi/M_k=2*int convention ABANDONED; use repo tower instead
+t=8 read jensen_ometer.py main(): moment dictionary e_j vs zero-power sums; L''(1/2)=2*sum 1/g^2; confirmed b_k = gamma(k)/k! convention
+t=9 tower at dps=400 K=124: 30s, b_0 matches, m_0 = b_1/b_0 = 0.02310499311541897 (vs published 0.023104993115418372); b_{k+1}/b_k decreasing -> realized b_k = b_0*e_k (elementary symmetric), decay ~e^{-c sqrt(k)}, NOT gamma_1^{-2k} (correction to note)
+t=10 xval: tower b vs zero-derived e_k*b_0: rel diff 3.2% at k=1 (tail truncation at 1000 zeros, matches analytic tail 7.4e-4) -> tower fine
+t=11 precision check: dps=400 vs dps=1200 for K=84: max rel diff 1.18e-244 -> dps=400 MORE than enough; b_42 ~ 3.9e-132 (no f64 underflow)
+t=12 dumped b_0..b_42 (dps=400) to tools/foster_check/b.txt; wrote final Rust (division -> moments -> regular C-fraction)
+t=13 Rust run: m_0 wrong (4.39): division had missing rho in denominator normalization -> mh_n = m_n*rho^{n+1} (print normalization only); a_19 = -3.7e-4 FAIL
+t=14 HP test (mpmath 60dps, moments from zeros): a_2 negative -> realized I stored all-positive moments (bug: series must alternate)
+t=15 HP test fixed (alternating): ALL a_1..a_40 > 0 (a_odd ~0.2, a_even grows 14..223 -> sparse-atom Stieltjes measures, real, limit claim dropped)
+t=16 final Rust with rho=199.79 (gamma_1^2, singularity at |w|=1): m_0/m_1/m_2 match to 1e-13; STILL f64 collapse at a_19 -> documented as precision collapse (HP all-positive, theorem guarantees)
+t=17 added zero-sum cross-validation of moments inside Rust (m_0..m_8, 1.25e-5 worst incl. m_0 tail approx); final VERDICT: PASS a_1..a_18 f64, a_1..a_40 @200 digits
+t=18 wrote final note + this progress log. FILES: research/notes/foster-reactance-2026-08-15.md, tools/foster_check/{main.rs,b.txt,foster_check}. VERDICT: analogy = exact equivalent of RH (restatement); check passes; no new theorem; classified equivalent-to-RH.
