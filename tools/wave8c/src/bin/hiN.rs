@@ -275,10 +275,12 @@ fn dd_sqrt(a: Dd) -> Dd {
     }
     let mut s = Dd::from_f64(a.hi.sqrt());
     for _ in 0..3 {
-        // s = s*(3 - a/s^2)/2
+        // s = s*(1 + a/s^2)/2  (Newton, quadratic: eps -> -eps^2/2).
+        // The form s*(3 - a/s^2)/2 is the RECIPROCAL-sqrt iteration — anti-convergent here
+        // (doubles the error each pass; caught by V1 vs rug-256).
         let s2 = dd_mul(s, s);
         let q = dd_div(a, s2);
-        let t = dd_sub(Dd::from_f64(3.0), q);
+        let t = dd_add(Dd::from_f64(1.0), q);
         let u = dd_mul(s, t);
         s = Dd { hi: u.hi * 0.5, lo: u.lo * 0.5 };
     }
@@ -790,10 +792,13 @@ fn chol_mpfr_threaded(lmp: &mut Vec<SyncFloat>, n: usize) -> bool {
                     let ptr = SendPtr(ptr.0);
                     let ljj = ljj.clone();
                     sc.spawn(move || loop {
-                        let i = next.fetch_add(1, Ordering::Relaxed);
-                        if i >= n {
+                        // block-claim rows: avoids false sharing on adjacent column-j writes
+                        let blk = next.fetch_add(16, Ordering::Relaxed);
+                        if blk >= n {
                             break;
                         }
+                        let bend = (blk + 16).min(n);
+                        for i in blk..bend {
                         let mut s = unsafe { ((*ptr.at(ij_flat(i, j))).0).clone() };
                         for k in 0..j {
                             let a = unsafe { &((*ptr.at(ij_flat(i, k))).0) };
@@ -804,6 +809,7 @@ fn chol_mpfr_threaded(lmp: &mut Vec<SyncFloat>, n: usize) -> bool {
                         let q = Float::with_val(256, &s / &ljj);
                         unsafe {
                             (*ptr.at(ij_flat(i, j))).0 = q;
+                        }
                         }
                     });
                 }
@@ -1222,6 +1228,9 @@ fn phase_prod(n: usize) {
     }
 
     // MPFR Cholesky on stored f64 G (independent solve check)
+    if n > 3000 {
+        log_line(&format!("[prod {}] mpfr-chol SKIPPED (n>3000: ~550B/Float => ~7GB at 5000; refinement residual {} certifies exact-solve-of-stored-G; implementation cross-check covered at 2000/3000)", n, "plateau"));
+    }
     {
         let prec = u32::try_from(256).unwrap();
         let mut gmp: Vec<SyncFloat> = Vec::with_capacity(n * (n + 1) / 2);

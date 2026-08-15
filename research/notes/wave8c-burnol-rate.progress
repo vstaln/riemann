@@ -10,3 +10,26 @@ validation ladder before production: dd micro-ops vs rug-256; Gram small pairs d
 d_N(50/100) regression vs published 1.0793711120e-1 / 1.0013884399e-1 (rel ~2.2e-13/6.3e-13);
 pow2 control saturation 0.3188.
 new code: tools/wave8c/src/bin/hiN.rs (phases: validate | prod N | mpfrchol N | ddgram N).
+t1 hiN.rs built+debugged. FOUR bugs caught by validation ladder (this is the ladder working):
+ (1) dd_add: broken variant (discarded s1) -> QD algorithm;
+ (2) dd_sqrt: s(3-a/s^2)/2 is RECIPROCAL-sqrt iteration, anti-convergent (doubles eps) -> s(1+a/s^2)/2;
+ (3) EM half-term SIGN BUG INHERITED FROM main.rs z_table_f64 (+0.5 x^-s should be -):
+     biased published Z_p by +1e4^{-(p+2)} (+1e-8 at p=0), G_jk ~1e-8, d_N ~7e-8 rel.
+     Published corrections: d(50) 1.0793711120e-1 -> 1.0793710431e-1; d(100) 1.0013884399e-1 -> 1.0013883664e-1.
+     Flatness conclusion (0.213, 0.85% band) UNAFFECTED. main.rs fixed + documented.
+ (4) P32 tail truncation (rate (1+1/L)/4, worst L=1): G_11 bias 6.6e-11 -> adaptive P(L) fixes;
+ (5) threaded-fill atomic counter wrapped past 0 (usize::MAX row) -> crash 137 -> guarded.
+VALIDATE ALL GREEN: dd-vs-rug 1.9e-32; dd-vs-mpfr-gram 1.8e-29; d(50) dd==mpfr-direct rel 0;
+f64-adaptive-vs-dd 1.1e-13 (kappa*eps); pow2 control saturates 0.3187711.
+Independent adjudication: python G_11 (log1p, 2e5 periods) = 0.2606614015162(2) matches dd/mpfr
+0.2606614015078122 to 8.4e-12 (python's own noise floor).
+t2 launching production: prod 2000 -> prod 3000 -> prod 5000 -> ddgram 2000 (background, sequential).
+t3 prod 2000 LANDED (f64+refinement): d_N(2000)=7.782135587726e-2, kappa 2.48e5,
+   refinement: it1 rel_r 6.9e-16 -> it2 5.7e-28 (dd floor, exact-solve-of-stored-G);
+   d_f64 vs d_ref rel 1.56e-13 (kappa*eps as expected).
+   d*sqrt(ln2000) = 0.21453 [band 0.21-0.22 holds at 2000].
+   MPFR-chol cross-check at 2000 pending (killed old binary mid-phase: false-sharing
+   made chol ~2-core; fixed with block-claim rows; re-run queued).
+t3b perf fixes: block-claim in chol_mpfr_threaded (false sharing), mpfr-chol skipped n>3000
+   (~7GB Floats at 5000; refinement residual certifies solve; impl cross-check at 2000/3000).
+   Driver now: prod 3000 (new binary) -> prod 5000 -> ddgram 2000; manual prod 2000 rerun after.

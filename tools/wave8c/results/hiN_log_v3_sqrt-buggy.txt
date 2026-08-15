@@ -1,0 +1,15 @@
+[validate] START
+[validate] V1 dd ops vs rug256: mul 0.00e0 div 6.09e-33 sqrt 8.72e-16 (worst 8.72e-16, expect < 1e-28) FAIL
+[validate] V1 worst-div input a=7.92143336442199826e8
+[validate] V2 dd_ln_int vs rug256: max rel 1.68e-32 (expect < 1e-27) OK
+[validate] V3a z_f64 vs z_mpfr_direct p<40: max rel 6.59e-14 (expect < 1e-13) OK
+[validate] V4 gram j,k<=40: dd-vs-mpfr max rel 1.83e-29 (expect < 1e-27) OK
+[validate] V4 f64(adaptive)-vs-mpfr max rel 5.23e-14 (expect < 2e-13: f64 rounding of cancellative closed form) OK
+[validate] V4b TRUNCATION AUDIT: G_11(P32)=2.606614014905735e-1 G_11(adp)=2.606614015078135e-1 G_11(mpfr)=2.606614015078126e-1 |P32-adp|/G=6.61e-11 max over pairs=6.61e-11
+[validate] V5 N=50: d_f64(P32)=1.0793710431e-1 d_f64(adp)=1.0793710438e-1 d_dd=1.0793710438e-1 chol true/true/true kappa~2.6e2
+[validate] V5 N=50: rel(P32,adp)=5.96e-10 rel(adp,dd)=1.24e-13 [published P32: N=50 1.0793711120e-1, N=100 1.0013884399e-1]
+[validate] V5 N=50 mpfr-direct: d_mpfr=1.0793710438e-1 rel(dd)=1.03e-14 chol=true
+[validate] V5 N=100: d_f64(P32)=1.0013883664e-1 d_f64(adp)=1.0013883671e-1 d_dd=1.0013883671e-1 chol true/true/true kappa~9.0e2
+[validate] V5 N=100: rel(P32,adp)=7.15e-10 rel(adp,dd)=6.71e-13 [published P32: N=50 1.0793711120e-1, N=100 1.0013884399e-1]
+[validate] V6 pow2 control d'(2^14)=3.187711e-1 (expect ~0.3187711 saturated) OK
+[validate] END elapsed 28.5s

@@ -11,19 +11,5 @@
 [validate] V5 N=100: d_f64(P32)=1.0013883664e-1 d_f64(adp)=1.0013883671e-1 d_dd=1.0013883671e-1 chol true/true/true kappa~9.0e2
 [validate] V5 N=100: rel(P32,adp)=7.15e-10 rel(adp,dd)=6.83e-13 [published P32: N=50 1.0793711120e-1, N=100 1.0013884399e-1]
 [validate] V6 pow2 control d'(2^14)=3.187711e-1 (expect ~0.3187711 saturated) OK
-[validate] END elapsed 22.2s
-== prod 2000 start 2026-08-16T02:28:44+07:00 ==
+[validate] END elapsed 30.5s
 [prod 2000] START
-[prod 2000] START
-[prod 2000] gram f64 filled 636.8s
-[prod 2000] gram f64 filled 636.8s
-[prod 2000] d_f64=7.782135587725e-2 kappa_pivot=2.48e5 chol=true (640.5s)
-[prod 2000] d_f64=7.782135587725e-2 kappa_pivot=2.48e5 chol=true (640.5s)
-[prod 2000] refined: it1 rel_r=6.9e-16 d=7.782135587726e-2 dd_d=1.56e-13; it2 rel_r=5.7e-28 d=7.782135587726e-2 dd_d=0.00e0; 
-[prod 2000] refined: it1 rel_r=6.9e-16 d=7.782135587726e-2 dd_d=1.56e-13; it2 rel_r=5.7e-28 d=7.782135587726e-2 dd_d=0.00e0; 
-[prod 2000] d_ref=7.782135587726e-2 rel(f64)=1.56e-13
-[prod 2000] d_ref=7.782135587726e-2 rel(f64)=1.56e-13
-== prod 2000 exit=143 2026-08-16T02:55:18+07:00 ==
-== prod 3000 start 2026-08-16T02:55:18+07:00 ==
-[prod 3000] START
-[prod 3000] START
