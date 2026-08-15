@@ -111,3 +111,65 @@ Phone mobile data dropped mid-wave (killed 2 agents). All specs now mandate cras
   recompute min-p₁, 256-law exact-S₃ control (super-law says ≈7.9 — does it survive exact
   computation?), DH flat-rows control. Verdict: beats 0.6818 or finally closes the m₃-read
   lever. File target: exact-s3-certificate-2026-08-17.md.
+- **(5C) VERDICT (exact-s3-certificate-2026-08-17.md) — m₃-READ LEVER FINALLY CLOSED, does
+  NOT beat the wall.** Identity VERIFIED (|m₃−(m₂²+N²M²Var(T1))| ≤ 5.8e-11, Rust probe
+  tools/exact_s3_probe). Its only certified consequence is min S₃(p) ≥ (E[m₂](p))² ⇒
+  min-p₁ = 0.422384 (mass) / 0.593909 (count) < wall 0.6818287 — reproduces referee-A
+  proven-floor exactly. The Var(T1) term (≥0) needs a class-level lower bound ≥ 0.19 at the
+  wall's mass-p₁=0.5173 to beat the wall; the identity gives none; per-config search finds
+  NO in-class law at p₁≈0.68 (simple families violate flat rows 19–110×; exact-CUE ramp
+  unachievable, cf. regenerate-256law). 256-law exact marked S₃ INCONCLUSIVE (config
+  private); super-law ≈7.9 is excluded by its exact value but sits ABOVE min-p₁ so cannot
+  lift the ceiling. DH control: barrier_zoo_rs dh works (6 certified off-line zeros, RH
+  false); DH violates flat rows (CONJECTURED, literature) ⇒ outside class ⇒ certificate
+  vacuous for DH, no proves-too-much. The old 0.7488 was entirely the D+P₃ artifact of the
+  false E[T]≥0. Do NOT re-run this lever.
+
+
+## 2026-08-17 — k<1 moving-boundary Type-1 decision (wave-5 B, tools/k1_count_probe/)
+- **k1-moving-boundary** — **Type-1 NO (HIGH)**: N(1/2+b/L,T)=o(T log T) at fixed b NOT reachable by any known route. (i) Shape-1 blind (PROVEN, scale-gap); (ii) count strictly stronger than density hypothesis by TWO gaps — probe CHECKED: only (eps=0,k=0) log-free ε-free DH certifies (ratio 3.7e-2→0); every known class fails ((k=13)→1.9e16, Ingham k=44→1e59); (iii) GM loses fixed log power (PROVEN, gm-box). Inversion EMPTY (D1-D6: circular/Shape-1-walled/conjectural/vacuous). DH control: box FAILS for DH (both certified zeros β−1/2=0.3085/0.1508 beyond b/L at all sampled T; zoo re-run 2/2 matched, |f|<1e-13); firewall either branch (needs zeta-specific input, absent). Plan reallocates: M4-proper (r′) stays the live lever; 0.6818 needs a NEW OBJECT. File: k1-moving-boundary-decision-2026-08-17.md.
+
+## 2026-08-17 — WAVE 5 VERDICTS (all three agents landed; coordinator probe-verified)
+
+- **(5A) M4-proper ζ″-moment r′ — lever CLOSED (forecast outcome (a) confirmed).** r′ ≥ 0
+  PROVEN by positivity (M=Σ|Bζ″(ρ)|²≥0 pointwise, c(M)≥0, c(S₂)=57/64) → negative r′
+  impossible, quadratic form cannot be broken. r′ = 3/5 REFUTED twice: un-mollified ζ″-moment
+  is (T/2π)ℒ⁶/90-scale not ℒ⁵/5 (FE substitution bracket terms carry pole orders 7/6/5 at
+  s=1 → ℒ⁶); 1/(2k+1) pattern false (k=1 gives Gonek's 1/12 not 1/3). r′ VALUE not pinned by
+  this route (needs ℳ₂,₁^ζ″ (log n)⁴-weighted character-sum, not in 1302.5018). New constant
+  −X·ℒ⁶/180 (B=1 partial-sum, Perron residue order-7 pole) CHECKED NUMERICALLY (probe ratios
+  0.445→0.485, ζ′-control reproduces validator's Gonek numbers). Consequence: b_pair ≤ 0.2237
+  ceiling STANDS; b≈0.0758 dead; binding input remains the k<1 count. Control: DH + Weil PASS;
+  firewall: world-independent positivity only, cannot force b≤0 anywhere.
+  File: m4-proper-zdouble-2026-08-17.md.
+- **(5B) k<1 moving-boundary Type-1 decision — NO (HIGH confidence): route closed, question open.** Three
+  walls PROVEN: (i) scale-gap lemma (Shape-1 blind at widths < c₀/L); (ii) NEW elementary
+  derivation (probe-checked): ratio of any density bound T^{A(1/2−b/L)}L^k to T log T is
+  T^{A(1/2−b/L)−1}L^{k−1}, with A≥2 forced → count is strictly stronger than the density
+  hypothesis by two gaps; only log-free ε-free DH (eps=0,k=0) certifies (ratio 3.7e-2 @1e10);
+  Montgomery k=13 → 1.9e16, Ingham k=44 → 1e59; crossover b*(T) grows 54→283, never fixed;
+  (iii) GM Littlewood–Jensen loses a fixed log power. Inversion hunt EMPTY (all 6 duals: D1
+  circular, D2 Shape-1-walled, D3 needs N(1/2,T) open, D4 0.6818 already proven, D5 BGSTB
+  open no unconditional input, D6 b≤0.2237 proven). DH control: box FAILS for DH at all
+  sampled T (b=0.0758 AND 0.2237; β−1/2=0.3085/0.1508, 2/2 matched) → count needs zeta-
+  specific input (absent) or holds for RH-false object (zero evidence); firewall holds either
+  branch. Plan action: 0.6818 needs a NEW OBJECT, not an in-class sharpening.
+  File: k1-moving-boundary-decision-2026-08-17.md.
+- **(5C) exact-identity m₃ certificate — m₃-read lever FINALLY CLOSED.** Identity
+  m₃=m₂²+N²M²Var(T1) verified to 5.82e-11 (probe); its only certified consequence is
+  min S₃(p) ≥ (E[m₂](p))² → min-p₁=0.4224 mass / 0.5939 count, INDEPENDENTLY reproducing
+  Referee-A's proven-floor numbers; count 0.5939 < 0.6818 → does NOT beat the wall. Old
+  0.7488 entirely an artifact of the false E[T]≥0. 256-law exact marked S₃ INCONCLUSIVE
+  (config private); super-law sibling 7.9 excluded by exact value but its count-p₁=0.679 sits
+  above min-p₁ so cannot lift ceiling. DH control: violates flat rows (CONJECTURED, lit) →
+  outside class → certificate vacuous for DH, no proves-too-much. Variance term can only
+  raise min-p₁ but the identity provides no class-level lower bound.
+  File: exact-s3-certificate-2026-08-17.md.
+- **SYNTHESIS: three consecutive in-class levers (marked-m₃ LP, off-centre positivity, M4-r′,
+  k<1 count) all closed; lesson reinforced — the 0.6818 wall needs a NEW OBJECT/INPUT, not a
+  sharper inequality.** Live threads for next wave: (i) new-object hunt (what object/input is
+  NOT in the certificate's {mean, in-band F, integrality} class?); (ii) Anthropic's own route
+  (rank–trace on finite compression of Weil's Hermitian form — the repo has 0.673481 via
+  7-point stability; pushing THAT toward 0.6818 with a better compression/weight is an
+  in-class-but-unexplored direction, distinct from the closed certificate class); (iii) the
+  torus E[m₂]=2.480620 definition (INCONCLUSIVE, cheap).
