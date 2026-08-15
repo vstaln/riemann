@@ -32,6 +32,7 @@ import sys
 from pathlib import Path
 from typing import Annotated
 
+from concurrent.futures import ThreadPoolExecutor
 from langchain_openai import ChatOpenAI
 from langgraph.checkpoint.sqlite import SqliteSaver
 from langgraph.graph import END, START, StateGraph
@@ -58,10 +59,14 @@ def make_llm(model: str = "deepseek-v4-flash") -> ChatOpenAI:
 
 
 def _safe_invoke(llm: ChatOpenAI, prompt: str) -> str:
+    pool = ThreadPoolExecutor(max_workers=1)
     try:
-        return llm.invoke(PROMPT_HARDENING + prompt).content or ""
+        fut = pool.submit(llm.invoke, PROMPT_HARDENING + prompt)
+        return fut.result(timeout=60).content or ""
     except Exception as exc:  # shared endpoint; degrade, never hang
         return f"[LLM unavailable: {type(exc).__name__}]"
+    finally:
+        pool.shutdown(wait=False)  # never block on a hung worker
 
 
 def _read_json(text: str) -> dict:
@@ -139,7 +144,9 @@ def make_idea_gen(idx: int):
              "idea": i, "label": "CONJECTURED"}
             for j, i in enumerate(ideas)
         ]
-        _write(state, f"ideas/idea-gen-{idx}.md", _dump_list(f"IDEAS (generator {idx})", ideas))
+        existing_ids = {x["id"] for x in state["ideas"]}
+        out = [x for x in out if x["id"] not in existing_ids]
+        _write(state, f"ideas/idea-gen-{idx}.md", _dump_list(f"IDEAS (generator {idx})", [i["idea"] for i in state["ideas"] + out]))
         return {"ideas": state["ideas"] + out}
     return node
 
@@ -191,8 +198,10 @@ def make_executor(idx: int):
                 "claim": claim, "script": rust_cmd or "method-note",
                 "cmd": rust_cmd, "label": label,
             })
+        existing = {c["idea_id"] for c in state["claims"]}
+        new_claims = [c for c in new_claims if c["idea_id"] not in existing]
         _write(state, f"results/executor-{idx}.md", _dump_list(
-            f"CLAIMS (executor {idx})", [c["claim"] for c in new_claims]))
+            f"CLAIMS (executor {idx})", [c["claim"] for c in state["claims"] + new_claims]))
         return {"claims": new_claims}
     return node
 
@@ -204,7 +213,9 @@ def make_verifier(idx: int):
     def node(state: SwarmState, config) -> dict:
         cfg = config["configurable"]
         llm = cfg["llm"]
-        slice_ = state["claims"][idx::cfg["verifiers"]]
+        # Only verify claims not yet verified (idempotent across resumes/rounds)
+        already = {v["claim_id"] for v in state["verdicts"]}
+        slice_ = [c for c in state["claims"][idx::cfg["verifiers"]] if c["idea_id"] not in already]
         new_verdicts = []
         for c in slice_:
             prompt = (
@@ -219,7 +230,7 @@ def make_verifier(idx: int):
                 "claim_id": c["idea_id"], "verifier": f"verifier-{idx}",
                 "verdict": raw.get("verdict", "INCONCLUSIVE"), "evidence": raw.get("evidence", ""),
             })
-        _write(state, "verdicts.md", _dump_list("VERDICTS", [f"{v['claim_id']}: {v['verdict']} — {v['evidence']}" for v in new_verdicts]))
+        _write(state, "verdicts.md", _dump_list("VERDICTS", [f"{v['claim_id']}: {v['verdict']} — {v['evidence']}" for v in state["verdicts"] + new_verdicts]))
         return {"verdicts": new_verdicts}
     return node
 
@@ -242,7 +253,7 @@ def judge_node(state: SwarmState, config) -> dict:
         + "\n".join(f"{c['idea_id']}: {c['claim'][:300]}" for c in verified)
     )
     scores = _read_json(_safe_invoke(llm, prompt)).get("scores", [])
-    _write(state, "score.md", _dump_list("SCORES", [f"{s.get('claim_id')}: {s.get('score')} — {s.get('rationale','')}" for s in scores]))
+    _write(state, "score.md", _dump_list("SCORES", [f"{s.get('claim_id')}: {s.get('score')} — {s.get('rationale','')}" for s in state["scores"] + scores]))
     return {"scores": scores}
 
 
@@ -314,6 +325,7 @@ def build_graph(cfg: dict):
     g.add_node("synthesizer", synthesizer_node)
     g.add_node("critique", critique_node)
     g.add_node("finalize", finalize_node)
+    g.add_node("next_round", lambda state: {"round": state["round"] + 1})
 
     g.add_edge(START, "planner")
     for i in range(cfg["generators"]):
@@ -328,7 +340,8 @@ def build_graph(cfg: dict):
         g.add_edge(f"verifier_{i}", "judge")
     g.add_edge("judge", "synthesizer")
     g.add_edge("synthesizer", "critique")
-    g.add_conditional_edges("critique", route_after_critique, {"planner": "planner", "finalize": "finalize"})
+    g.add_conditional_edges("critique", route_after_critique, {"planner": "next_round", "finalize": "finalize"})
+    g.add_edge("next_round", "planner")
     g.add_edge("finalize", END)
     return g
 
