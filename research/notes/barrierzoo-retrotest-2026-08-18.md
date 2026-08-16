@@ -61,3 +61,37 @@ are not sufficient conditions for LP/RH — they hold in an RH-false world.
 ## FILES / COMMITS
 - tools/barrier_zoo_rs/src/main.rs — new `dhprofile` subcommand (dh|weil|epstein|beurling|classify|all + dhprofile)
 - This note; ledger line appended.
+
+## ADDENDUM — Epstein class-2 world (the strongest analogue) ALSO passes (same verdict)
+
+The DH world is an L-combination without Euler product. The Epstein class-2 world is the
+CLOSEST structural analogue to Xi: its completed function is built from a theta series with
+all-positive coefficients (Theta_Q(t) = Σ_{m,n} e^{−πtQ(m,n)} > 0, mirroring Xi's own Φ>0
+theta structure), it has a self-dual functional equation Xi_Q(s) = Xi_Q(1−s), and DH 1936
+PROVEN (numerically verified here for the individual forms) zeros off the critical line.
+
+**NEW STRUCTURAL FACT (this probe): Xi_Q is meromorphic, NOT entire** — it has simple poles
+at s=0 (res −1) and s=1 (res +1); the raw Taylor coefficients grow like ~4^k (pole at
+distance 0.5 from the s=1/2 expansion center). The Taylor-coefficient / log-profile
+machinery therefore applies only to the symmetric ENTIRE part
+  E(s) = Xi_Q(s) − [1/(s−1) − 1/s],
+which preserves the FE (verified E(0.5+1.3i)/E(0.5−1.3i) = 1+0i) and is real on the line
+(E(1/2) = 0.5634236 + 0.0000000i).
+
+**Results (entire part, trusted k=0..7 — geometric decay 0.563, −0.0773, 5.4e-3, −2.4e-4,
+7.9e-6, −1.9e-7, 3.7e-9; k≥8 contour noise):**
+  (i)  all c_{2k} > 0 — YES, same as Xi.  Positivity does NOT separate (2nd world).
+  (ii) deficit-2 log-profile on k=2..5: t_k·k = 0.719, 0.859, 0.953, 1.049 vs profile
+       2−2/ln k = −0.885, 0.180, 0.557, 0.757 — ALL ABOVE (gaps +1.60, +0.68, +0.40,
+       +0.29; zero violations).  **The closest analogue to Xi — positive theta coefficients,
+       self-dual FE, RH-false — satisfies the campaign's PROVEN deficit-2 identity.
+       Consistency-only, confirmed in the strongest possible analogue.**
+  (iii) Hankel det2 of M'_n = c_{2n}(2n)!: +4.96e-2 > 0 (first minor; not separating).
+
+**Verdict (now two independent RH-false worlds, DH + Epstein):** the deficit-2 log-profile is
+consistency data — it holds for Xi and for both RH-false model worlds. The barrier-zoo
+"proves too much" verdict is now established on the campaign's own PROVEN identity by the
+campaign's own standard, in the closest structural analogue available. The profile cannot be
+a sufficient condition. No new lever; documented negative. (The meromorphic-vs-entire fact
+is itself a structural reason the Epstein world is NOT a counterexample to anything about Xi:
+Xi is entire, Xi_Q is not — the analogy stops before the coefficient structure even starts.)

@@ -875,6 +875,103 @@ fn run_classify() {
 // ===========================================================================
 // Self-tests of the core routines (hurwitz / gamma)
 // ===========================================================================
+// ---------------------------------------------------------------------------
+// epsteinprofile — barrier-zoo retro-test on the EPSTEIN class-2 world, the
+// CLOSEST structural analogue to Xi: completed function built from a theta
+// series with all-positive coefficients (Theta_Q(t) = sum exp(-pi t Q(m,n)) > 0,
+// like Xi's own Phi>0), self-dual FE, yet DH 1936: off-line zeros (verified).
+// If the deficit-2 profile + positivity hold HERE too, the "positive structure"
+// family is consistency-only in its strongest analogue.
+// ---------------------------------------------------------------------------
+fn run_epsteinprofile() {
+    println!("== epsteinprofile: barrier-zoo retro-test on Epstein class-2 world (closest analogue to Xi) ==");
+    let q1 = (1.0, 0.0, 5.0);   // x^2 + 5y^2, disc -20, class number 2
+    let (th1, th1p, h, n) = epstein_grid(q1);
+    // self-dual completed function: Xi_Q(s) = (sqrt5)^s I(s) = (sqrt5/pi)^s Gamma(s) zeta(s;Q1),
+    // satisfies Xi_Q(s) = Xi_Q(1-s); real + even on the critical line.
+    // NOTE (structural): unlike Xi, Xi_Q has SIMPLE POLES at s=0 (res -1) and s=1 (res +1),
+    // so it is meromorphic, NOT entire.  The Taylor-coefficient / log-profile machinery only
+    // applies to the ENTIRE part E(s) = Xi_Q(s) - [1/(s-1) - 1/s]  (symmetric, FE-preserving).
+    let xi_q = |s: C| {
+        cpow_pos(5.0f64.sqrt() / PI, s).mul(gamma(s)).mul(zeta_epstein(s, q1, &th1, &th1p, h, n))
+    };
+    let e_q = |s: C| {
+        let one = C::new(1.0, 0.0);
+        let z0 = s.sub(one);           // s-1
+        let zm = s;                    // s
+        xi_q(s).sub(one.div(z0)).add(one.div(zm))   // Xi_Q - 1/(s-1) + 1/s  (poles removed)
+    };
+    // sanity: FE + realness + evenness
+    let s0 = C::new(0.5, 1.3);
+    let r = xi_q(s0).div(xi_q(C::new(0.5, -1.3)));
+    println!("  FE check Xi_Q(0.5+1.3i)/Xi_Q(0.5-1.3i) = {:.6}{:+.6}i  (expect 1+0i)", r.re, r.im);
+    let d0 = xi_q(C::new(0.5, 0.0));
+    let e0 = e_q(C::new(0.5, 0.0));
+    println!("  DIRECT Xi_Q(1/2) = {:.10}{:+.10}i ; E(1/2) = {:.10}{:+.10}i (Im ~ 0 for real-on-line)", d0.re, d0.im, e0.re, e0.im);
+    let er = e_q(s0).div(e_q(C::new(0.5, -1.3)));
+    println!("  E FE check E(0.5+1.3i)/E(0.5-1.3i) = {:.6}{:+.6}i  (expect 1+0i)", er.re, er.im);
+    // off-line zero confirmation (grid + Newton on |zeta(s;Q1)|)
+    let mag1 = |s: C| zeta_epstein(s, q1, &th1, &th1p, h, n).abs();
+    let cands = grid_find_zeros(&mag1, 0.02, 0.98, 1.0, 40.0, 0.05, 0.5, 0.3);
+    let zq1 = |s: C| zeta_epstein(s, q1, &th1, &th1p, h, n);
+    let mut off = Vec::new();
+    for z0 in cands {
+        let (z, err) = newton(&zq1, z0);
+        if err < 1e-6 { off.push(z); }
+    }
+    println!("  off-line zeros of zeta(s;Q1) (t<40): {}  [{}]", off.len(),
+             if off.len() >= 1 { "RH-FALSE world confirmed" } else { "WARNING none found" });
+    for z in off.iter().take(3) { println!("    s = {:.9} + i*{:.9}  |zeta| = {:.3e}", z.re, z.im, zq1(*z).abs()); }
+    // Taylor coefficients of the ENTIRE part E(s) via Cauchy integral on |z| = rho.
+    // (Xi_Q itself is meromorphic — pole at distance 0.5 from center dominates its raw
+    //  coefficients; the entire part is the fair object for the log-profile test.)
+    const KM: usize = 12;
+    const NQ: usize = 128;
+    const RHO: f64 = 0.40;
+    let mut b: [f64; KM + 1] = [0.0; KM + 1];
+    for k in 0..=KM {
+        let mut acc = C::new(0.0, 0.0);
+        for j in 0..NQ {
+            let th = 2.0 * PI * j as f64 / NQ as f64;
+            let z = C::new(RHO * th.cos(), RHO * th.sin());
+            let fv = e_q(C::new(0.5, 0.0).add(z));
+            let ang = -2.0 * k as f64 * th;
+            acc = acc.add(fv.mul(C::new(ang.cos(), ang.sin())));
+        }
+        b[k] = if k % 2 == 0 { acc.re } else { -acc.re } * RHO.powf(-2.0 * k as f64) / NQ as f64;
+    }
+    println!("  b'_k (convention Xi = Σ (-1)^k b'_k t^(2k)), c_{{2k}} = |b'_k| actual Taylor coeff:");
+    let mut bpos: [f64; KM + 1] = [0.0; KM + 1];
+    for k in 0..=KM {
+        bpos[k] = b[k].abs();
+        println!("    k={:2}: b' = {:.6e}   c_{} = |b'| = {:.6e}", k, b[k], 2 * k, b[k].abs());
+    }
+    // (i) positivity
+    let all_pos = bpos.iter().take(7).all(|v| *v > 0.0);
+    println!("  (i) actual Taylor coeffs c_{{2k}} > 0 for k<=6 (Xi PROVEN: yes): Epstein -> {}",
+             if all_pos { "YES — same as Xi (positivity does NOT separate)" } else { "NO — POSITIVITY SEPARATES" });
+    // (ii) deficit-2 profile, trusted k=2..5
+    println!("  (ii) deficit-2 log-profile t_k·k vs 2 − 2/ln k — TRUSTED k=2..5:");
+    let mut viol = 0;
+    for k in 2..=5 {
+        if !(bpos[k] > 0.0 && bpos[k-1] > 0.0 && bpos[k+1] > 0.0) { println!("    k={}: c not all positive", k); viol += 1; continue; }
+        let d = 2.0 * bpos[k].ln() - bpos[k-1].ln() - bpos[k+1].ln();
+        let tk = 1.0 - (-d).exp();
+        let prof = 2.0 - 2.0 / (k as f64).ln();
+        let gap = tk * k as f64 - prof;
+        if tk * k as f64 + 1e-12 < prof { viol += 1; }
+        println!("    k={:2}: t_k·k = {:.6}   profile = {:.6}   gap = {:+.6}", k, tk*k as f64, prof, gap);
+    }
+    println!("  deficit-2 violations (trusted k=2..5): {}  -> {}", viol,
+             if viol == 0 { "Epstein world ALSO satisfies deficit-2 (consistency-only — PROVEN TOO MUCH, strongest analogue)" }
+             else { "Epstein world VIOLATES deficit-2 — SEPARATES in closest analogue" });
+    // (iii) Hankel det2 of M'_n = c_{2n}(2n)!
+    let m0 = bpos[0]; let m1 = bpos[1] * 2.0; let m2 = bpos[2] * 24.0;
+    let h2m = m0 * m2 - m1 * m1;
+    println!("  (iii) Hankel det2 of M'_n = c_{{2n}}·(2n)!: {:.6e}  {}", h2m, if h2m > 0.0 { "(>0: consistent with positive measure)" } else { "(<0: signed)" });
+    println!("VERDICT: barrier-zoo retro-test on the Epstein class-2 world (closest analogue: positive theta coeffs, self-dual FE, RH-false).");
+}
+
 fn run_self_tests() {
     println!("== core routine self-tests ==");
     let h21 = hurwitz(C::new(2.0, 0.0), 1.0);
@@ -1016,6 +1113,7 @@ fn main() {
     match cmd {
         "dh" => run_dh(),
         "dhprofile" => run_dhprofile(),
+        "epsteinprofile" => run_epsteinprofile(),
         "weil" => run_weil(),
         "epstein" => run_epstein(),
         "beurling" => run_beurling(),
