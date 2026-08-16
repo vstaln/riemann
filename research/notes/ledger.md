@@ -566,3 +566,12 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   internal argument REFUTED+replaced: "control span ⊇ even subsystem" FALSE (N=2 independence);
   correct via bounded zero-free symbol (1+c0·2^s) on Re>1/2 ⟹ control span dense. Re-label ledger
   5.28e-3 as NOT RH-false evidence. File: referee-8e-control-2026-08-18.md.
+
+## DIRECT-RH WAVE-16 — funded probes from E4's recommendation (2026-08-18)
+- **S1-saddle (456a3a85)** — closure probe: prove t_k·k → 2 via saddle-point asymptotics of
+  Φ-moments (log b_k = −2k log k + 2k log log k + O(k)), extend t_k numerically to k=10⁴,
+  dilogarithm-family scan (largest α with non-real zeros at margin α/k) ⟹ certify
+  coefficient-margin criteria (C ≤ 2) CANNOT force LP. Closure math, NOT an RH lever.
+- **S2-PNT (10e2afd6)** — the prime-counting side (never probed): explicit-formula ψ(x)−x
+  envelope vs √x(log x)^{1/2+ε} using the 924,715 cached zeros (8A), planted-zero control
+  MUST exceed the √x·log x band, literature check decides one-way (von Koch) vs trap (⟺ RH).
