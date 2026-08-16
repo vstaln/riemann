@@ -821,3 +821,20 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   RH equivalences, TP/PF-on-zeta 2023-2026. Deliverable: ranked table (NEW-vs-corpus),
   top-2-3 candidates with exact theorem statements + minimal Rust probe, honest empty-verdict
   if the sweep is genuinely empty. Read-only, no fabrication allowed.
+
+## 2026-08-18 — lit-sweep-2026 (architect, read-only)
+- **lit-sweep-2026-08-18 — CONCLUDED, EMPTY for the one-way need.** 2023-2026 sweep (arXiv API
+  title/abstract, verified-by-fetch + corpus cross-check) finds NO new sufficient-condition family
+  for LP/RH escaping the PROVEN closures: S1 margin still DEAD at Newton boundary c_crit=1; Jensen
+  route still diagnostic-only; kernel-TP premise independently CONFIRMED refuted (2602.20313 DB-Newman
+  kernel PF-order failure at order 5 = matches our schoenberg-kernel-tp2 sin(t)/t counterexample);
+  xi/Φ-moment Mellin ⟺ RH closure unchanged. ONE genuinely NEW structural theorem flagged: Holland
+  2608.08682 — joint Jensen wedge n³log²(n+2)≥Kd⁵ ⟹ J^{d,n} hyperbolic + Wigner semicircle — but it
+  is FINITE-degree (does not prove LP of Ξ), so NOT a one-way RH input (firewall: zero RH evidence).
+  File: research/notes/lit-sweep-2026-08-18.md. Next: no dispatch for the one-way need; optional
+  non-RH /builder probe on Holland's wedge (reproduce + sharp K + mechanism-class). Ledger-clean.
+- **Holland wedge probe (3ca5c592)** — the one NEW structural theorem from the lit sweep
+  (2608.08682: n³log²(n+2) ≥ K·d⁵ ⟹ J^{d,n} hyperbolic + Wigner semicircle). Question:
+  is its mechanism margin-driven (S1-dead family) or genuinely new (Hermite/spectral)? Plus
+  the S4-vs-wedge gap (empirical n₀* ≈ 7.7·d^0.97 vs proven d^{5/3} — 4-order gap) and the
+  effective-K estimate. Structural probe; NOT an RH one-way (finite-degree, firewall).
