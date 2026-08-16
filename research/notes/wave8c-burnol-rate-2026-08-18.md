@@ -222,3 +222,28 @@ truncation; pre-2026-08-18-session-2 published values carry ~7e-8 rel bias (see 
 - tools/wave8c/results/hiN_log.txt (complete kill-safe audit trail)
 - tools/wave8c/results/HARVEST.txt (digest), run_hiN_prod.sh / run_hiN_followup.sh / harvest.sh
 - research/notes/hiN-repair-report-2026-08-18.md (pi's repair report)
+
+## UPDATE 3 (2026-08-18 morning) — CHAIN COMPLETE: N=5000 CERTIFIED + layer-D ddgram confirmed
+
+HARVEST.txt (tools/wave8c/results/, 2026-08-16 08:05) — full certified table:
+
+| N     | d_ref            | kappa     | refinement | d·√(ln N) |
+|-------|------------------|-----------|------------|-----------|
+| 100   | 1.0013883664e-1  | 9.0e2     | (earlier)  | 0.2149    |
+| 1000  | 8.055653e-2      | 6.7e4     | (earlier)  | 0.2117    |
+| 2000  | 7.782135587726e-2| 2.48e5    | it2 5.7e-28| 0.214551  |
+| 3000  | 7.459524862924e-2| 5.43e5    | it2 1.3e-27| 0.2111    |
+| 5000  | 7.252577566170e-2| 1.43e6    | it2 3.9e-27| 0.211661  |
+
+- **d(5000) = 7.252577566170e-2, d·√(ln N) = 0.211661** — flat law HOLDS (band 0.21–0.22).
+- **Layer-D ddgram 2000 COMPLETE (9,758.7s)**: d_dd = 7.782135587442e-2 vs d_ref 7.782135587726e-2 →
+  agreement 3.6e-10 rel. The FULL double-double pipeline (dd Gram + dd Cholesky at N=2000, 16M-entry
+  dd ln table) confirms the f64+refinement value. Certification ladder CLOSED at N=2000:
+  f64 (1.56e-13) + dd-refinement (5.7e-28) + MPFR-Cholesky (rel 0.00e0) + layer-D dd (3.6e-10).
+- prod 5000 gram sampling: f64-vs-dd max 9.02e-12 over 120 random pairs; dd-vs-mpfr max 4.52e-27.
+- The earlier prod 5000 (driver, 03:21) was SIGTERMed externally; the followup re-ran it cleanly (5636.5s gram fill + 41s solve) — same d_f64 (7.252577566167e-2), deterministic.
+
+**FINAL VERDICT (flat law, certified): d_N·√(ln N) ∈ [0.211, 0.215] at N = 100, 1000, 2000, 3000, 5000 —
+Báez-Duarte sharp rate (log N)^(−1/2), constant ≈ 0.213, confirmed at 5 points spanning 1.7 decades,
+each dd-refined to ≤3.9e-27, layer-D end-to-end at 2000. CONJECTURED interpretation: the ±1% constant
+oscillation (0.2146@2000 → 0.2111@3000 → 0.2117@5000) matches explicit-formula oscillations in d_N.**
