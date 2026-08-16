@@ -1,0 +1,5 @@
+t=0 start g0-2
+t=1 read key notes
+t=2 inspect sources
+t=3 read s4 main
+t=4 read moment func
