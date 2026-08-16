@@ -1,0 +1,2480 @@
+
+
+===== PAGE 1 =====
+
+SHORT MOLLIFIERS OF THE RIEMANN ZETA-FUNCTION
+J. B. CONREY, D. W. FARMER, C.-H. KWAN, Y. LIN, AND C. L. TURNAGE-BUTTERBAUGH
+Abstract. We apply the calculus of variations to construct a new sequence of linear combinations
+of derivatives of the Riemann ζ-function adapted to Levinson’s method, which yield a positive
+proportion of zeros of the ζ-function on the critical line, regardless of how short the mollifier is.
+Our construction extends readily to modular L-functions. Even with Levinson’s original choice of
+mollifier, our method more than doubles the proportions of zeros on the critical line for modular
+L-functions previously obtained by Bernard and K¨ uhn–Robles–Zeindler, while relying on the same
+arithmetic inputs. This indicates that optimizing the linear combinations, an approach that has
+received relatively little attention, has a more pronounced effect than refining the mollifier when it
+is short. Curiously, our linear combinations provide non-trivial smooth approximations of Siegel’s
+f-function in the celebrated Riemann–Siegel formula.
+1. Introduction
+There are two well-known methods for proving that a positive proportion of the zeros of the
+Riemann zeta-function ζ(s) (s =σ +it) lie on the critical line σ = 1/2: Selberg’s method [Sel42]
+and Levinson’s method [Lev74]. Both of these methods involve the use of mollifiers. In Selberg’s
+method, roughly speaking, one calculates a mollified second moment of ζ(s) on the critical line,
+where the mollifier itself is a fourth power of an approximation to ζ(s)1/2; see [IK04, Chapter 24.2].
+In Levinson’s method, one calculates a second mollified moment of ζ(s) off the critical line, where
+the mollifier is an approximation to ζ(s)−1.
+Selberg’s method has the advantage of working regardless of the length of the mollifier. By
+contrast, it has long been believed that Levinson’s method suffers from a major drawback: to
+obtain a positive proportion of zeros on the critical line, the mollifier must be sufficiently long.
+This viewpoint is supported Farmer [Far94, p. 215], who provided the plot shown in Figure 1
+and remarked, “It is interesting that Levinson’s method does not yield a result if θ is too small.”
+Levinson’s method, however, tends to yield much stronger explicit bounds for the proportion, and
+in some cases, can also establish a positive proportion of simple zeros on the critical line. As
+described in [Iwa14, Chapter 16],
+Levinson’s approach seems to be a gamble, because it is not clear up front that at
+the end the numerical constants are good enough to yield a positive lower bound
+for [the number of critical zeros up to height T ].
+In this paper, we prove that Levinson’s method, as modified by Conrey [Con89], will in fact give
+a positive proportion of zeros on the critical line no matter how short the mollifier is—contrary to
+the common belief.
+1.1. Levinson’s method. Levinson’s starting point is a theorem of Speiser [Spe35], which states
+that the Riemann Hypothesis is equivalent to the assertion that all non-real zeros of ζ′(s) are in
+the half-plane σ≥ 1/2. This result was refined by Levinson and Montgomery [LM74], who proved
+Date: August 18, 2025.
+2020 Mathematics Subject Classification. 11M06, 11M26.
+Key words and phrases. Critical zeros, Riemann zeta function, mollifiers, Levinson’s method.
+1
+arXiv:2508.11108v1  [math.NT]  14 Aug 2025
+
+===== PAGE 2 =====
+
+Figure 1. Proportion of zeros on the critical line as a function of the length θ via Levinson’s
+method; reprinted from [Far94, p. 215]
+a (essentially) one-to-one correspondence between the non-real zeros of ζ(s) and those of ζ′(s) in
+the region σ <1/2 (presumably both sets are empty).
+Subsequently, Levinson [Lev74] proved that the number of zeros of ζ′(s) in the region σ <1/2,
+0 < t < Tis at most (1/3)(T/2π) logT , i.e. at most 1 /3 of the zeros are to the left of σ = 1/2.
+The same result holds for ζ(s) by the aforementioned theorem of [LM74]. The functional equation
+of ζ(s) allows us to deduce that at most 1 /3 of the zeros of ζ(s) are to the right of σ = 1/2. This
+leaves at least 1/3 of the zeros of ζ(s) on the line σ = 1/2.
+Using the functional equation again, the zeros of ζ′(s) to the left of σ = 1/2 correspond to the
+zeros of ζ(s) +L−1ζ′(s) (L := log(T/2π)) on the right of σ = 1/2. This formulation turns out to
+be more practical. The essential ingredient to Levinson’s argument is an asymptotic formula for
+the moment
+1
+T
+Z T
+0
+|(ζ +L−1ζ′)(a +it)|2|M(a +it)|2 dt, (1)
+where a is a real number slightly less than 1 /2 (see (13)), and M is a mollifier of the form
+M(s) =
+X
+n≤y
+µ(n)
+ns+1/2−a
+log(y/n)
+logy , (2)
+where µ(n) is the M¨ obiusµ-function, y = Tθ, and θ > 0 is the ‘length’ of the mollifier, the key
+parameter.
+Levinson established (1) for allθ< 1/2. The admissible range for θ was later extended by Conrey
+[Con89] to θ <4/7. With refinements to be discussed below, he showed that at least 40% of the
+zeros of ζ(s) are on the critical line [Con89, Theorem 1]. In [Far93], Farmer proposed the ‘ θ =∞’
+conjecture, that is, the admissible value for θ can be arbitrarily large. He showed that this would
+imply 100% of the zeros of ζ(s) lie on σ = 1/2. More recently, Bettin and Gonek [BG17] proved
+that ‘θ =∞’ in fact implies the Riemann Hypothesis.
+Conrey [Con89] refined Levinson’s method in two crucial ways. First, he observed that the role
+of ζ(s) +L−1ζ′(s) in (1) can be replaced by any linear combination of derivatives of ζ(s) of the
+2
+
+===== PAGE 3 =====
+
+form Q(− 1
+L
+d
+ds)ζ(s), where Q is a real polynomial that satisfies
+Q(0) = 1 and Q′(y) = Q′(1−y). (3)
+The condition (3) stems from the functional equation ofζ(s). Second, he considered a more general
+class of mollifiers of the form
+M(s,P ) :=
+X
+n≤y
+µ(n)
+ns+1/2−aP
+log(y/n)
+logy
+
+, (4)
+where P is a real polynomial with
+P (0) = 0 and P (1) = 1 . (5)
+He established an asymptotic formula for the corresponding mollified moment (see (12) and (15))
+for any such P , Q and θ< 4/7, and determined the optimal choice of P .
+1.2. Results. We prove that no matter how small θ> 0 is in (2), there exists an admissible linear
+combination of derivatives of ζ(s) that yields a positive proportion of zeros of ζ(s) on the critical
+line via Levinson’s method. Moreover, this proportion can be made quantitative; see Theorem 1.
+In fact, our linear combination is optimal with respect to the variational problem we consider (see
+Problem 1 and equation (22)). Such an optimizer (for Q) is significantly more intricate than the
+one for the mollifier polynomial P in [Con89, p. 9].
+For small values of θ, the improvement gained by choosing Q strategically is significant. For
+example, in Bernard’s work [Ber15] on critical zeros of modular (degree two)L-functions, he obtains
+a proportion of 2.97% of zeros on σ = 1/2 (using the optimal P and an empirical Q of degree 7),
+whereas we get 6.32% (using P (x) = x and our newly constructed Q), both unconditionally and
+using the same shifted convolution estimate. We have not attempted to optimize the proportion
+here (a method for full optimization is described in Section 7), but our result already comes close
+to the current record achieved in [AT21] (using the optimal P and an empirical Q of degree 27!).
+The broader goal is to initiate a systematic and theoretical study of how to select effective linear
+combinations of derivatives of the ζ- (or L-)functions in analytic applications, in contrast to the
+predominantly empirical, computer-experimental approach used to date.
+1.3. Connections to Siegel’s method. Let h(s) := π−s/2Γ(s/2). Levinson’s method detects
+zeros of ζ(s) on σ = 1/2 by identifying when arg ( hζ′)(1/2 +it)≡ π/2 (modπ) occurs. By the
+argument principle, this task reduces to bounding the number of zeros of ζ′(s) on σ <1/2. In the
+introduction to [Lev74], Levinson noted that the idea of detecting zeros of ζ(s) on the critical line
+via changes in argument and moment estimates (of a suitable function) had been used in Siegel’s
+1932 work [Sie32].
+In [Sie32], instead of working with ζ′(s) as in [Lev74], Siegel introduced an interesting entire
+function:
+f(s) :=
+Z
+L
+eiπw2
+eiπw−e−iπww−sdw, (6)
+where the line of integration L has slope 1, with Im w decreasing, and intersects the real axis at a
+point between 0 and 1. The function f(s) originates from the Riemann–Siegel formula, which is an
+integral representation of ζ(s) given by
+h(s)ζ(s) = 2 Re h(s)f(s) (Re s = 1/2). (7)
+This formula first appeared in Riemann’s 1859 memoir [Rie] but remained largely unnoticed in the
+literature until its rediscovery by Siegel.
+3
+
+===== PAGE 4 =====
+
+Whenever arg (hf)(1/2 +it)≡π/2 ( modπ) occurs, it follows from (7) that there is a zero of ζ(s)
+on the critical line. In fact, Siegel proved that
+N0(T ) > 2· #{s =σ +it : f(s) = 0, σ <1/2, 0<t<T }, (8)
+where N0(T ) is the number of zeros of ζ(s) with σ = 1/2 with 0 < t≤ T . A lower bound to the
+right-hand side of (8) can be obtained by evaluating the moment
+1
+T
+Z T
+1
+|f(σ +it)|2dt, (9)
+which turns out to be ∼Cσ·T 1/2−σ for some explicit Cσ > 0, and for σ <1/2 to be chosen. As a
+consequence, Siegel established, for T≫ 1, that
+N0(T ) > 3
+8πe−3/2T, (10)
+which improves upon the result of Hardy and Littlewood [HL21] that N0(T )≫T .
+The function f(s) can be formally interpreted in Conrey–Levinson’s set-up. Consider
+Q∞(y) :=
+
+
+
+1 if 0 ≤ y < 1/2
+1/2 if y = 1/2
+0 if 1 /2 < y≤ 1.
+(11)
+Let s = 1/2 +iT with T≫ 1, and L := log(T/2π). By the saddle point method, Siegel deduced,
+up to a negligible error of O(T−1/4), that
+f(s) =
+X
+n≤
+√
+T/ 2π
+1
+ns =
+∞X
+n=1
+n−sQ∞
+logn
+L
+
+=
+∞X
+n=1
+Q∞
+
+− 1
+L
+d
+ds
+
+n−s = Q∞
+
+− 1
+L
+d
+ds
+
+ζ(s).
+The step function Q∞(y) satisfies the condition (3) apart from failing to be differentiable at
+y = 1/2, and therefore does not qualify as an admissible function in Conrey–Levinson’s method.
+In fact, it was commented in [Lev74, p. 384] that
+It appears to me that the function f1(s) [i.e., f(s)] is not amenable to improvement
+with a mollifier.
+As Siegel noted at the end of his paper, his method itselfcannot yield a boundN0(T )≫T (log logT )1+ϵ.
+However, we will show that
+Proposition 1. For anyθ> 0, let Qθ : [0, 1]→ R be the function constructed in Theorem 1, which
+is used to define linear combinations of derivatives of ζ(s). Then as θ→ 0+, the pointwise limit of
+Qθ(y) converges to the step function Q∞(y) for any y∈ [0, 1].
+In other words, behind Theorem 1 is the idea of mollifying linear combinations of derivatives
+of ζ(s) that approximate Siegel’s function f(s). Proposition 1 shows that we are actually using
+polynomials Q of arbitrarily large degree in showing Levinson’s method works for mollifiers of any
+length θ >0. Unlike previous works on mollifiers and critical zeros, a key feature of our approach
+is that our linear combinations vary with the values of θ.
+Acknowledgments
+This work was initiated at the AIM workshop Delta Symbols and the Subconvexity Problem, held
+online during the pandemic from 2-6 November 2020. It is a pleasure to thank the AIM staff and
+organizers for their excellent support. The research was also supported by NSF DMS-1854398 FRG.
+The third author was supported by the EPSRC grant: EP/W009838/1. The fourth author was
+4
+
+===== PAGE 5 =====
+
+supported by the National Key R&D Program of China (No. 2021YFA1000700). The fifth author
+is partially supported by NSF CAREER DMS-2239681.
+All computations and plots in this article were carried out using Mathematica. The relevant
+commands are included in Appendix A. The corresponding dataset (.mx files) and notebooks (.nb
+files) are available at https://github.com/davidfarmer/shortmollifiers.
+2. Preliminary work
+2.1. Set up. Let P be a polynomial satisfying (5), Q a polynomial satisfying (3), and let R >0
+be any constant. According to [Con89, eq. (39)], if θ >0 is an admissible constant such that the
+asymptotic formula
+1
+T
+Z T
+0
+Q
+
+− 1
+L
+d
+ds
+
+ζ(a +it)M(a +it,P )
+
+2
+dt∼ c(P,Q,R ) (12)
+holds as T→∞ , where
+a = 1/2−R/ log(T/2π), (13)
+andc(P,Q,R ) is a constant depending on P,Q, andR, then the proportion of zeros of ζ(s) on the
+critical line is at least
+κ := 1− logc(P,Q,R )
+R . (14)
+By [Con89, Theorem 2], the constant c(P,Q,R ) is given by
+1 + 1
+θ
+Z 1
+0
+Z 1
+0
+ 
+w(y)P′(x) +θw′(y)P (x)
+2 dx dy, (15)
+where
+w(y) := eRyQ(y). (16)
+To simplify the exposition and illustrate the strength of our construction, we adopt Levinson’s
+original choice:
+P (x) = x. (17)
+Also, observe that the class of admissible functions Q can be extended to include all continuously
+differentiable (C1) functions Q : [0, 1]→ R with
+Q(0) = 1 and Q(y) +Q(1−y) = 1 . (18)
+Indeed, it follows from the Weierstrass approximation theorem that any such Q can be uniformly
+approximated by sequences of polynomials on [0 , 1] that satisfy (18).
+We now state our main result.
+Theorem 1. There exists θ0 > 0 such that whenever θ∈ (0,θ 0), there exists Q = Qθ∈ C1[0, 1]
+satisfying (18) such that κ defined in (14) satisfies κ> 2θ/3> 0.
+The constantθ0 is explicitly computable. In fact, our numerical evidence (see Figure 7b) suggests
+the following explicit bound for any 0 <θ ≤ 1/2:
+κ > (2/3)θ. (19)
+Moreover, we will be able to make more general choices of P and Q in Section 7.
+5
+
+===== PAGE 6 =====
+
+2.2. Simplification. Expanding the square of (15) and integrating the mixed term with the iden-
+tity
+R 1
+0 f(x)f′(x)dx = (f(1)2−f(0)2)/2, we have
+c(P,Q,R ) = 1
+2 +J(Q), (20)
+where J(Q) is the functional
+J(Q) =JR,θ(Q) :=
+Z 1
+0
+1
+θw(y)2 + θ
+3 w′(y)2
+
+dy, (21)
+andw(y) is defined in (16). Given constants R,θ> 0, we aim to find the minimum of J(Q) subject
+to the condition (18).
+The expressions can be simplified by some changes of variables. Letting
+q(y) :=Q(y + 1/2) and S(t) =SR(t) :=q(t/2R) (22)
+in (21), we have
+J(Q) = eR
+2R
+Z R
+−R
+1
+θetS(t)2 + θ
+3R2et 
+S(t) + 2S′(t)
+2
+
+dt, (23)
+and the condition (18) becomes
+S(−R) = 1 and S(t) +S(−t) = 1 . (24)
+Here,S is a real-valued,C1-function defined on [−R,R ]. It follows thatS(R) = 0, and, in particular,
+that
+Z R
+−R
+etS(t)S′(t) dt =−e−R
+2 − 1
+2
+Z R
+−R
+etS(t)2 dt.
+Hence, we may write
+J(Q) =−θ
+3R + eR
+2RK(S), (25)
+where
+K(S) =Kθ,R(S) :=
+Z R
+−R
+et
+c0S(t)2 +c1S′(t)2)
+
+dt, (26)
+and the constants c0,c 1 are given by
+c0 =c0(R,θ ) := 1
+θ− θ
+3R2 and c1 =c1(R,θ ) := 4θ
+3 R2. (27)
+By splitting the integral in (26) into the part from −R to 0 and the part from 0 to R, we may
+impose the constraint S(t) +S(−t) = 1 and further simplify K(S) to write
+K(S) =
+Z R
+0
+
+et 
+c0S(t)2 +c1S′(t)2
++e−t 
+c0(1−S(t))2 +c1S′(t)2
+dt. (28)
+We have reduced the problem to finding the minimizer of K(S) subject to (24).
+To keep our argument clean and reduce the number of variables in the course of proving Theorem
+1, we introduce the following assumption:
+Assumption 1. Assume that c0 =c1, where c0,c 1 are defined in (27).
+6
+
+===== PAGE 7 =====
+
+We emphasize, however, that the steps leading up to Section 3.1 do not depend on this assump-
+tion. A generalization is given in Section 7. The computations following Section 3.1 can also be
+extended to the general case, though at the expense of increased computational complexity.
+The assumption is equivalent to
+θ =R−1
+r
+3
+5. (29)
+In this case, we have c0 =c1 = 4/(5θ). We note that R can be taken to be any positive constant.
+We insert (29) into (28) to write
+K∗
+R(S) := 4
+5θ
+Z R
+0
+et 
+S(t)2 +S′(t)2
++e−t 
+(1−S(t))2 +S′(t)2
+dt. (30)
+Here, ‘∗’ in K∗
+R(S) signifies the use of (29). Our main problem can now be stated as follows.
+Problem 1. Given any R> 0, find the minimum value of the functional K∗
+R(S) and the minimizer
+S =SR(t) subject to the condition (24).
+In the next section, we solve this problem by using the calculus of variations.
+3. Calculus of variations
+In the following, we writeK∗(S) =K∗
+R(S). Suppose that K∗(S) attains a minimum atS, and let
+ϵ> 0 be small and ϕ(t) be an arbitrary smooth test function on [0 ,R ] such that ϕ(0) =ϕ(R) = 0.
+Then K∗(S +ϵϕ), as a function of ϵ, has a minimum at ϵ = 0. Since
+d
+dϵK∗(S +ϵϕ)
+
+ϵ=0
+= 4
+5θ
+Z R
+0
+ 
+et(2Sϕ + 2S′ϕ′) +e−t(2(S− 1)ϕ + 2S′ϕ′)
+
+dt
+= 16
+5θ
+Z R
+0
+ 
+cosh(t)S(t)− (S′(t) cosht)′− 1
+2e−t
+ϕ(t) dt,
+we must determine S for which the Euler–Lagrange equation
+d
+dt
+ 
+S′ cosht
+
+=S cosht− 1
+2e−t (31)
+is satisfied. Equation (31) can be rewritten as
+S′′(t) + (tanht)S′(t)−
+ 
+S(t)− 1
+1 +e2t
+
+= 0. (32)
+The boundary conditions for (32) are
+S(0) = 1/2 and S(R) = 0. (33)
+Before proceeding to solve for S, we incorporate the preceding steps to rewrite c(P,Q,R ) as
+defined in (20). Assume that S satisfies the differential equation (31). Then
+Z R
+0
+S′(t)2 cosht dt = S(t)S′(t) cosht
+
+R
+0
+−
+Z R
+0
+S(t)d
+dt(S′(t) cosht) dt
+= −1
+2S′(0)−
+Z R
+0
+S(t)
+ 
+S(t) cosht− 1
+2e−t
+dt.
+7
+
+===== PAGE 8 =====
+
+It follows from (28) that
+K∗(S) = 8
+5θ
+Z R
+0
+ 
+S(t)2 cosht +S′(t)2 cosht−e−tS(t)
+
+dt + 4
+5θ(1−e−R)
+= 4
+5θ
+
+1−e−R−S′(0)−
+Z R
+0
+e−tS(t) dt
+
+. (34)
+Upon substituting (29) and (34) into (25), we find that (20) becomes
+c(P,Q,R ) = 1
+2− θ
+3R + eR
+2R
+4
+5θ
+
+1−e−R−S′(0)−
+Z R
+0
+e−tS(t) dt
+
+= 1
+2 + 1√
+15
+
+− 1 + 2eR 
+1−e−R−S′(0)−
+Z R
+0
+e−tS(t) dt
+
+. (35)
+Readers should keep in mind that (35) depends only on R because of (29) and (17).
+3.1. Solving the Euler–Lagrange equation. We first present the solution to the differential
+equation
+(
+S′′(t) + tanh(t)S′(t)−S(t) + (1 +e2t)−1 = 0,
+S(0) = 1/2, and S(R) = 0. (36)
+It takes the form
+SR(t) :=C1(R)f(t) +g0(t) +g1(t)
+Z t
+0
+v1(u) du +g2(t)
+Z t
+0
+v2(u) du, (37)
+where the functionsC1,f,g 0,g 1,g 2,v 1 andv2 are all expressible in terms of the Gauss2F1-hypergeometric
+function
+2F1(a,b,c ;z) := Γ(c)
+Γ(a)Γ(b)
+∞X
+n=0
+Γ(a +n)Γ(b +n)
+Γ(c +n)
+zn
+n!. (38)
+The series (38) converges for|z|< 1 anda,b,c ∈ C withc̸= 0,−1,−2,... , and it admits an analytic
+continuation in the z-variable over C− [1, +∞). We also record Euler’s reflection formula, which
+states
+Γ(s)Γ(1−s) = π
+sin(πs), s / ∈ Z. (39)
+The component functions of SR(t) are defined as follows. To simplify the typesetting, we define
+ϕ := (1 +
+√
+5)/2;
+F +(t) := 2F1
+ 
+1/2, ϕ,1/2 +ϕ,−e2t
+; F−(t) := 2F1
+ 
+1/2,−ϕ−1, 1/2−ϕ−1;−e2t
+,
+F +
+1 (u) := 2F1
+ 
+1/2, 1 +ϕ, 1/2 +ϕ;−e2u
+, F −
+1 (u) := 2F1
+ 
+3/2,−ϕ−1, 1/2−ϕ−1;−e2u
+.
+The various components appearing on the right-hand side of (37) are given by:
+g1(t) =e−ϕ−1tF−(t), g2(t) =eϕtF +(t), f(t) =g1(t)− g1(0)
+g2(0)g2(t), g0(t) = 1
+2
+g2(t)
+g2(0),
+v1(u) = g2(u)
+W(u)(1 +e2u), v 2(u) = − g1(u)
+W(u)(1 +e2u),
+and
+C1(R) =−2F−(R)F +(0)w1(R)−e
+√
+5RF +(R)(1 + 2F +(0)w2(R))
+2F−(R)F +(0)− 2e
+√
+5RF−(0)F +(R)
+, (40)
+8
+
+===== PAGE 9 =====
+
+10 20 30 40 50 60
+-5 × 1013
+-4 × 1013
+-3 × 1013
+-2 × 1013
+-1 × 1013
+Plot for f(t)
+10 20 30 40 50 60
+1 × 1013
+2 × 1013
+3 × 1013
+4 × 1013 Plot for g0(t)
+10 20 30 40 50 60
+-1.4 × 1014
+-1.2 × 1014
+-1.0 × 1014
+-8.0 × 1013
+-6.0 × 1013
+-4.0 × 1013
+-2.0 × 1013
+Plot for g1(t)
+10 20 30 40 50 60
+1 × 1013
+2 × 1013
+3 × 1013
+4 × 1013
+5 × 1013
+6 × 1013 Plot for g2(t)
+where w1(t) :=
+Rt
+0v1(u)du, w2(t) :=
+Rt
+0v2(u)du, and
+W(u) := eu(2ϕF−(u)F +
+1 (u)−F +(u)F−
+1 (u)). (41)
+Thus,SR(t) is fully described, and plots of its component functions are included.
+We now derive (37). Recall that the 2F1-hypergeometric function can be characterized by a
+second-order linear homogeneous differential equation [DLMF, eq. (15.10.1)]. By a simple change of
+variables, one may readily observe (or check) that a set of fundamental solutions to the homogeneous
+differential equation S′′(t) + tanh(t)S′(t)−S(t) = 0 is given by {g1(t), g2(t)}. Its Wronskian can
+be computed to be exactly W(u) defined in (41).
+The standard method of variation of parameters (see [CL55, Chapter 3]) may now be used to
+solve our desired inhomogeneous equation (36), which asserts that the sum of the last two terms
+on the right side of (37) satisfies such a differential equation. The first two terms on the right side,
+which clearly satisfy the homogeneous equation, are included to ensure the boundary conditions are
+satisfied. Indeed, f(0) = 0 and g0(0) = 1/2, and C1(R) is defined such that S(R) = 0. Altogther,
+these yield a solution of the form (37). Indeed, a directMathematica check (ODE Check.nb) confirms
+that (37) satisfies (36).
+3.2. Evaluating the components of SR(t). We now record the leading order asymptotics of the
+above quantities (as t,u,R →∞ ), computed with Mathematica (see the notebook Asymp.nb 1).
+These asymptotics will be used in Section 5 to complete the proof of Theorem 1. We first apply
+1The commands used in the notebooks are also documented in Appendix A.
+9
+
+===== PAGE 10 =====
+
+0 10 20 30 40 50 60
+0.0
+0.1
+0.2
+0.3
+0.4
+Plot for v1(u) from 0 to 60
+20 30 40 50 60
+0.0000
+0.0001
+0.0002
+0.0003
+0.0004 Plot for v1(u) from 20 to 60
+0 10 20 30 40 50 60
+0.0
+0.2
+0.4
+0.6
+0.8
+Plot for v2(u) from 0 to 60
+20 30 40 50 60
+0.0000
+0.0002
+0.0004
+0.0006
+0.0008 Plot for v2(u) from 20 to 60
+0 10 20 30 40
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+1.2
+1.4
+Plot for w1(t) from 0 to 40
+0 10 20 30 40
+0.0
+0.5
+1.0
+1.5
+2.0
+2.5
+3.0 Plot for w2(t) from 0 to 40
+[DLMF, eq. (15.8.2)], which for real z <0 states
+sinπ(b−a)
+πΓ(c) 2F1(a,b,c ;z)
+= (−z)−a
+Γ(b)Γ(c−a)Γ(a−b + 1) 2F1
+
+a, a−c + 1, a−b + 1; 1
+z
+
+− (−z)−b
+Γ(a)Γ(c−b)Γ(b−a + 1) 2F1
+
+b, b−c + 1, b−a + 1; 1
+z
+
+. (42)
+10
+
+===== PAGE 11 =====
+
+0 5 10 15 20
+0
+1
+2
+3
+4
+Plot for C1(R)
+0 1 2 3 4 5
+0.0
+0.1
+0.2
+0.3
+0.4
+0.5 Plot for SR(t) with R = 5
+0 5 10 15 20
+0.0
+0.1
+0.2
+0.3
+0.4
+0.5
+Plot for SR(t) with R = 20
+0 10 20 30 40
+0.0
+0.1
+0.2
+0.3
+0.4
+0.5 Plot for lim R→∞SR(t)
+In our setting, z =−e2t, where t≥ 0, and a,b , and c are non-integer real numbers. Thus by (42),
+the power series (38), and the reflection formula (39), we have the full expansion
+sinπ(b−a)
+Γ(c) 2F1(a,b,c ;−e2t)
+=e−2ta sinπ(c−a)
+Γ(a)Γ(b)
+∞X
+n=0
+Γ(a +n)Γ(a−c + 1 +n)
+Γ(a−b + 1 +n)
+(−e−2t)n
+n!
+− e−2tb sinπ(c−b)
+Γ(a)Γ(b)
+∞X
+n=0
+Γ(b +n)Γ(b−c + 1 +n)
+Γ(b−a + 1 +n)
+(−e−2t)n
+n! . (43)
+Note that (43) implies, as t→∞ , that 2F1(a,b,c ;−e2t) = O(e−2t min{a,b}). Using (43), we may
+use Mathematica to determine the leading-order asymptotics for the functions making up SR(t)
+efficiently and precisely. First, as t→∞ , we have 2
+F +(t)∼ 1.2427...e −t and F−(t)∼− 2.75957...e (
+√
+5−1)t
+so that
+g1(t)∼− 2.75957...e
+√
+5−1
+2 t, g 2(t)∼ 1.2427...e
+√
+5−1
+2 t,
+f(t)∼−e
+√
+5−1
+2 t and g0(t)∼ 0.81855...e
+√
+5−1
+2 t.
+Next, as u→∞ , we have
+F +
+1 (u)∼ 0.85875...e −u and F−
+1 (u)∼− 6.17059...e (
+√
+5−1)u
+2In this article, the decimal values given are truncations of the actual values.
+11
+
+===== PAGE 12 =====
+
+so that
+v1(u)∼ 0.55579...e − 3−
+√
+5
+2 u and v2(u)∼ 1.23411...e − 3−
+√
+5
+2 u.
+It is now clear that lim R→∞wi(R) exist for i = 1, 2.
+Remark 1. The coefficients appearing in the asymptotics above can indeed be expressed in closed
+form. For example, we have 1.2427... = Γ(1 +
+√
+5/2)Γ(
+√
+5/2)/Γ((1 +
+√
+5)/2)2 and−2.75957... =
+csc(
+√
+5π/2), which follow readily from the Pfaff transformation formula [DLMF, eq. (15.8.1)] , the
+Gauss summation formula [DLMF, eq. (15.4.20)] , and the Euler reflection formula (39).
+Finally, we have that the numerator and denominator of C1(R) are both≍e(
+√
+5−1)R, and thus the
+limit of C1(R) as R→∞ exists. Indeed, by Mathematica, we find that
+w1(∞) = 1 .3208... and w2(∞) = 2 .8166.... (44)
+Thus,
+C1(R) ∼ 4.18979...w 1(∞)− 1.2428... − 1.88691...w 2(∞)
+−1.51827... ∼ 0.674.... (45)
+Once again, the constants 4.18979... , 1.2428... , 1.88691... , and 1.51827... appearing in (45) can
+be expressed in terms of the Γ-functions and the 2F1-hypergeometric functions evaluated atz =−1.
+Also, we note that the function lim R→∞SR(t) is of the order e
+√
+5−1
+2 t.
+Remark 2. For the readers’ convenience, we have generated tables of values for:
+• v1(u), v2(u) over the interval u∈ [0, 40] with step size = 1/5000
+(files: Tbvv140oneOver5000.mx, Tbvv240oneOver5000.mx);
+• w1(t), w2(t) over the interval t∈ [0, 40] with step size = 1/100
+(files: Tbww1t40ref1over100.mx, Tbww2t40ref1Over100.mx);
+• C1(R) over the interval R∈ [0, 40] with step size = 1/100
+(file: ConstC40oneOver100.mx);
+• limR→∞SR(t) over the interval t∈ [0, 40] with step size = 1/100
+(file: Sinf40oneOver100.mx).
+These datasets can be generated by the notebook Pre compute.nb. The graphs included can be
+created with the standard plotting functions Plot[] and ListPlot[] (or see Plot.nb).
+4. Relation to Siegel’s function: Proof of Proposition 1
+Recall from (22) that QR(y) = SR(2R(y− 1/2)). The initial condition in (36) implies that
+QR(1/2) = 0. By (24), it suffices to consider the range 1 /2<y ≤ 1.
+Let y0∈ (1/2, 1] be given. We have determined that f(t), g0(t), g1(t), g2(t) all exhibit the same
+asymptotic order e
+√
+5−1
+2 t as t→∞ . Then for any F∈{ f,g 0,g 1,g 2}, we have
+lim
+R→∞
+F(t)e−
+√
+5−1
+2 t
+
+t=2R(y0−1/2)
+= lim
+R→∞
+F(t)e−
+√
+5−1
+2 t
+
+t=R
+. (46)
+Also, it is clear that lim R→∞ wi(2R(y0− 1/2)) = limR→∞wi(R) =wi(∞) for i = 1, 2. Now, using
+(37), (45) and the initial condition, we conclude that
+lim
+R→∞
+SR(t)e−
+√
+5−1
+2 t
+
+t=2R(y0−1/2)
+= lim
+R→∞
+SR(R)e−
+√
+5−1
+2 R = 0, (47)
+and thus, limR→∞ QR(y0) = 0. This completes the proof.
+12
+
+===== PAGE 13 =====
+
+0.0 0.2 0.4 0.6 0.8 1.0
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+(a) Plot for Q5(y)
+0.0 0.2 0.4 0.6 0.8 1.0
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0 (b) Plot for Q20(y)
+5. Proof of Theorem 1
+Our goal is to show that
+κ = κ(θ) := 1 − logc(P,Q,R )
+R > 0, (48)
+where θ =R−1p
+3/5, P(x) =x, Q(y) =QR(y) =SR(2R(y− 1/2)), and
+c(P,Q,R ) = 1
+2− 1√
+15 + 2√
+15eR
+
+1−e−R−S′
+R(0)−
+Z R
+0
+e−tSR(t) dt
+
+, (49)
+which depends only on R (or equivalently, θ). In particular, we seek an upper bound for the
+expression enclosed in (··· ) in (49).
+The asymptotics given in Section 3.2 imply that the following integrals converge absolutely.
+Moreover, their numerical values can be computed with Integral kappa.nb:
+Z ∞
+0
+e−tf(t) dt =−2.1166...,
+Z ∞
+0
+e−tg0(t) dt = 1.9453...,
+Z ∞
+0
+e−tg1(t)
+Z t
+0
+v1(u) du dt=−4.294...,
+Z ∞
+0
+e−tg2(t)
+Z t
+0
+v2(u) du dt= 4.024....
+From these and (37), it follows that
+Z R
+0
+e−tSR(t) dt =−2.1166...C 1(R) + 1.675..., (50)
+and
+lim
+R→∞
+Z R
+0
+e−tSR(t) dt≥ 0.248. (51)
+Also, we have the numerical values
+f′(0) =−1.47277..., g ′
+0(0) = 0.602775..., g 1(0) =−1.07479...,
+g2(0) = 0.759136..., v 1(0) = 0.339496..., v 2(0) = 0.480664.... (52)
+By (37), (45) and the evaluation above, we obtain
+S′
+R(0) =C1(R)f′(0) +g′
+0(0) +g1(0)v1(0) +g2(0)v2(0)
+=−1.47277...C 1(R) + 0.60277... (53)
+and
+lim
+R→∞
+S′
+R(0)≥− 0.39006. (54)
+13
+
+===== PAGE 14 =====
+
+Therefore, from (50) and (53), we have
+1−e−R−S′
+R(0)−
+Z R
+0
+e−tSR(t) dt =−e−R + 3.58938...C 1(R)− 1.278.... (55)
+By (51) and (54), we have
+lim
+R→∞
+ 
+1−e−R−S′
+R(0)−
+Z R
+0
+e−tSR(t) dt
+
+≤ 1.1421.
+Since R =θ−1p
+3/5, there exists θ0> 0 such that for all 0 <θ<θ 0, we have
+1−e−R−S′
+R(0)−
+Z R
+0
+e−tSR(t) dt≤ 1.2,
+and
+c(P,Q,R )≤ 1
+2 + 1√
+15(2.2842eR− 1)≤ 0.5898eR + 0.242≤ 0.5898eR(1 + 0.411e−R).
+Using the elementary inequality log(1 + x)≤x for x> −1, it follows that
+κ≥ 1
+R
+ 
+− log 0.5898− 0.411e−R
+. (56)
+There exists θ1> 0 such that whenever 0 <θ<θ 1 we have 0.411e−R < 0.0001. Thus,
+κ≥ θ
+r
+5
+3(− log 0.5898− 0.0001)≥ 2θ/3. (57)
+for 0<θ< min{θ0,θ 1}. In particular, there is a positive proportion of zeros for ζ(s) for sufficiently
+small θ> 0. This completes the proof of Theorem 1.
+6. Some data
+We record the proportions κ =κ(θ) of zeros of ζ(s) on Res = 1/2 using (14), (35), and (37) for
+various values of θ. Here are the plots and numerics (generated with Integral kappa.nb):
+0.2 0.4 0.6 0.8 1.0 1.2 1.4
+-0.4
+-0.2
+0.0
+0.2
+0.4
+(a) Plot for κ(θ) with P (x) =x,Q(x) =QR(x),
+R =θ−1p
+3/5
+0.1 0.2 0.3 0.4 0.5 0.6
+-0.02
+-0.01
+0.00
+0.01
+0.02 (b) Plot for κ(θ)− (2/3)θ
+14
+
+===== PAGE 15 =====
+
+θ κ
+2/3 0.364...
+1/2 0.334...
+1/4 0.176...
+1/6 0.114...
+1/8 0.0854...
+5/54 = 0.092... 0.0632...
+1/100 0.00682...
+1/500 0.00136...
+The values 5/54 and 1/8 in our table for the ζ-function are of interest as they correspond to
+5/27 and 1/4 for modular L-functions in [Ber15] and [KRZ19], based on the well-known principle
+that a mollifier of length θ for a GL(n) L-function corresponds to a mollifier of length θ/n for a
+GL(1) L-function; see [Far94, pp. 215-216] and [Ber15, Theorem 5]. The proportions of 0.0297
+and 0.0297607 were obtained unconditionally in [Ber15] and [KRZ19], respectively, and 0.0693 and
+0.0693872 assuming the Ramanujan–Selberg conjecture (RSC). (It is worth noting that a two-piece
+mollifier was used in [KRZ19].) In our table, we obtain 0.0632 unconditionally and 0.0854 on RSC.
+Using stronger spectral inputs on shifted convolution sums and a more extensive computer search,
+the best-known proportions for modular L-functions are 0.0696 unconditionally and 0.0896 on RSC
+([AT21]).
+7. Generalizations and further questions
+We sketch the general set-up. LetP∈C1[0, 1] be a given real-valued function such thatP (0) = 0
+and P (1) = 1, and we let
+B :=
+Z 1
+0
+P (x)2 dx and C :=
+Z 1
+0
+P′(x)2 dx.
+Let β∈ R and R >0 be constants at our disposal. By the same reasoning as in Section 3, we
+are readily led to the problem of optimizing the functional
+K(S) :=
+Z R
+0
+
+et(c0S(t)2 +c1S′(t)2) +e−t(c0(β−S(t))2 +c1S′(t)2)
+
+dt, (58)
+with S∈C1[0,R ] and subject to boundary conditions
+S(0) = β/2 and S(R) = β− 1, (59)
+where
+c0 := C
+θ −θBR 2 and c1 := 4θBR 2.
+For anyS satisfying the constraints above and for any admissible value of θ> 0 (cf. (12)), we have
+κ = 1− 1
+R log
+1 +e2R(β− 1)2
+2 + c1
+eR
+2R
+eR(1−β)2−e−R
+2 + eR
+2RK(S)
+
+. (60)
+Furthermore, for the optimal function S, we may simplify (58) as
+K(S) =c0β2(1−e−R)−c1βS′(0) + 2(β− 1)c1S′(R) coshR−c0β
+Z R
+0
+e−tS(t) dt. (61)
+15
+
+===== PAGE 16 =====
+
+Remark 3. The constant β arises from the constraint for (real-valued) Q∈C1[0, 1]:
+Q(0) = 1 and Q(y) +Q(1−y) = β. (62)
+Again, we have S(−t) :=β−S(t) for t≥ 0 and Q(y) =S(2R(y− 1/2)) for y∈ [0, 1].
+We also let
+c :=−c0
+c1
+= 1
+4− C
+4Bθ 2R2.
+With (59), the Euler–Lagrange equation for K(S) in this general case is given by
+S′′(t) + (tanh t)S′(t) + cS(t) = cβ
+1 +e2t. (63)
+Remark 4. The Euler–Lagrange equation above depends on R > 0, β∈ R, and c < 1/4 which
+further depends on B,C,θ,R . When proving Theorem 1, the only parameter that varies is R (or
+equivalently,θ). In that case, c =−1, β = 1, B = 1/3, and C = 1.
+Let ϕc := (1 +√1− 4c)/2. A set of fundamental solutions to the homogeneous equation of (32)
+is given by
+g1(t;c) := exp( tc/ϕc) 2F1
+ 
+1/2, c/ϕc; 1/2−c/ϕc;−e2t
+,
+g2(t;c) := exp( tϕc) 2F1
+ 
+1/2, ϕc; 1/2 +ϕc;−e2t
+. (64)
+Parallel to the notations in Section 3.1, we set
+F +(t;c) := 2F1
+ 
+1/2, ϕc, 1/2 +ϕc;−e2t
+; F−(t;c) := 2F1
+ 
+1/2, c/ϕc, 1/2 +c/ϕc;−e2t
+;
+F +
+1 (u;c) := 2F1
+ 
+1/2, 1 +ϕc, 1/2 +ϕc;−e2u
+; F−
+1 (u;c) := 2F1
+ 
+3/2, c/ϕc, 1/2 +c/ϕc;−e2u
+.
+The Wronskian for{g1(t;c), g2(t;c)} can be computed to be
+W(u;c) = W(g1,g 2)(u;c) = eu(2ϕcF−(u;c)F +
+1 (u;c)−F +(u;c)F−
+1 (u;c)). (65)
+Similar to before, we introduce:
+f(t;c) =g1(t;c)− g1(0;c)
+g2(0;c)g2(t;c), g 0(t;c) = 1
+2
+g2(t;c)
+g2(0;c), (66)
+v1(u;c) := g2(u;c)
+W(u;c)
+1
+1 +e2u, v 2(u;c) := − g1(u;c)
+W(u;c)
+1
+1 +e2u. (67)
+It follows that the solution to the Euler–Lagrange equation is given by
+SR(t;c,β ) = C1(R;c,β )f(t;c) +βg0(t;c)− cβg1(t;c)
+Z t
+0
+v1(u;c) du−cβg2(t)
+Z t
+0
+v2(u;c) du,
+(68)
+where
+C1(R;c,β ) = β− 1−βg0(R;c) +cβg1(R;c)w1(R;c) +cβg2(R;c)w2(R;c)
+f(R;c) . (69)
+We conclude this article with a few questions intended to stimulate future research.
+(1) In [Con89], the following choice of P in the mollifier was used:
+P (x) = Pr(x) := sinh(rx)
+sinh(r) , (70)
+which was shown to be optimal. In this case, we have
+B = coth(r)−rcsch2(r)
+2r and C = r
+2 csch(r)(cosh(r) +rcsch(r)).
+16
+
+===== PAGE 17 =====
+
+It is natural to ask what the largest possible value of κ = κ(θ), as given in (60), would
+be when combining (70) with our constructions (61) and (68). More precisely, for which
+choices of β, r, R optimize the value of κ?
+(2) Study the optimization problem (58) jointly in the variables P and S. It is likely that P
+and S given in (70) and (68) satisfy the corresponding Euler–Lagrange equation.
+(3) Our optimal linear combination, together with the optimal (Levinson-type) mollifier, should
+give better values of κ. When θ is large, say θ = 4/7−ϵ, it is of interest to know how much
+improvement this would offer over [Con89].
+We expect that the gain may be modest, likely not matching the state-of-the-art im-
+provements achieved through more sophisticated mollifiers with multiple pieces, e.g., those
+developed in [BCY11], [Fen12] and [PR+20].
+(4) An interesting question is whether one can choose a simpler functionQ to prove our Theorem
+1, albeit at the expense of weaker numerical constants for κ.
+(5) Prove that κ(θ) > 2θ/3 for any θ ∈ (0, 1/2], using P (x) = x and Q(y) = QR(y) =
+SR(2R(y− 1/2)) with SR defined in (37).
+It suffices to establish a good lower bound for C1(R) for R≥ 2
+p
+3/5.
+(6) In view of Proposition 1, we wonder, how does the configuration of zeros for the function
+QR(− 1
+L
+d
+ds)ζ(s) changes asR varies, whereQR(y) =SR(2R(y−1/2)) is the ‘optimal’ function
+determined in Section 3.1.
+While QR(− 1
+L
+d
+ds)ζ(s) serves as (pointwise) approximations to Siegel’s function f(s), we
+suspect that, as R→∞ , its zeros are pushed to the left relatively far from the critical line.
+This should stand in contrast to the distribution of zeros of f(s) (see [Con16, Fig. 5]), which
+appears to exhibit clusters of zeros near the critical line, both to its left and right.
+Below is a contour plot of Q(− 1
+L
+d
+ds)ζ(s), where Q(y) = 0.492 + 0.602(1− 2x)− 0.08(1−
+2x)3− 0.06(1− 2x)5 + 0.046(1− 2x)7 is the polynomial used in [Con89].
+17
+
+===== PAGE 18 =====
+
+18
+
+===== PAGE 19 =====
+
+Appendix A. Mathematica commands ( ODE Check.nb, Pre compute.nb, Asymp.nb,
+Integral kappa.nb)
+(*Verifying the ODE is satisfied*)
+In[1]:= F+[t_, c_]:=Hypergeometric2F1
+1
+2
+,
+1+ 1-4 c
+2
+,
+2+ 1-4 c
+2
+,- 2 t 
+In[2]:= F-[t_, c_]:=Hypergeometric2F1
+1
+2
+,
+1- 1-4 c
+2
+,
+2- 1-4 c
+2
+,- 2 t 
+In[3]:= F1
++[t_, c_]:=Hypergeometric2F1
+1
+2
+,
+3+ 1-4 c
+2
+,
+2+ 1-4 c
+2
+,- 2 t 
+In[4]:= F1
+-[t_, c_]:=Hypergeometric2F1
+3
+2
+,
+1- 1-4 c
+2
+,
+2- 1-4 c
+2
+,- 2 t 
+In[5]:= g1[t_, c_]:=Exp1- 1-4 c*t/2*F -[t, c]
+In[6]:= g2[t_, c_]:=Exp1+ 1-4 c*t/2*F +[t, c]
+In[7]:= f[t_, c_]:=g 1[t, c] - (F -[0, c] /F +[0, c]) *g 2[t, c]
+In[8]:= g0[t_, c_]:=g 2[t, c] / (2*F +[0, c])
+In[9]:= W[u_, c_]:=Exp[u] *1+ 1-4 cF -[u, c]F 1
++[u, c] -F +[u, c]F 1
+-[u, c]
+In[10]:= v1[u_, c_]:=g 2[u, c] / (W[u, c] * (1+Exp[2 u]))
+In[11]:= v2[u_, c_]:= -g 1[u, c] / (W[u, c] * (1+Exp[2 u]))
+In[12]:= FullSimplify[D[g1[t, c],{t, 2}] +Tanh[t] *D[ g1[t, c],{t, 1}] +c* g1[t, c]]
+Out[12]=
+0
+In[14]:= FullSimplify[D[g2[t, c],{t, 2}] +Tanh[t] *D[g 2[t, c],{t, 1}] +c*g 2[t, c]]
+Out[14]=
+0
+In[15]:= FullSimplify[Expand[Wronskian[{g1[t, c], g 2[t, c]}, t] -W[t, c]]]
+Out[15]=
+0
+In[16]:= P3=D[g 1[t, c] *Integrate[v 1[u, c],{u, 0, t}],{t, 2}] +
+Tanh[t] *D[g 1[t, c] *Integrate[v 1[u, c],{u, 0, t}],{t, 1}] -
+g1[t, c] *Integrate[v 1[u, c],{u, 0, t}];
+In[17]:= P4=D[g 2[t, c] *Integrate[v 2[u, c],{u, 0, t}],{t, 2}] +
+Tanh[t] *D[g 2[t, c] *Integrate[v 2[u, c],{u, 0, t}],{t, 1}] -
+g2[t, c] *Integrate[v 2[u, c],{u, 0, t}];
+In[20]:= FullSimplify[(P3/. c-1) + (P4/. c-1)]
+Out[20]=
+-
+1
+1+2 t
+19
+
+===== PAGE 20 =====
+
+(*Set-up and Pre-compute v i[u], w j[t], C_1[R]*)
+In[1]:= T[a_, b_, c_, x_]:= (-x)^(-a) /Gamma[b] /Gamma[c-a] /Gamma[a-b+1]
+Hypergeometric2F1[a, a-c+1, a-b+1, 1/x] *Pi Gamma[c] /Sin[Pi(b-a)] -
+(-x)^(-b) /Gamma[a] /Gamma[c-b] /Gamma[b-a+1]
+Hypergeometric2F1[b, b-c+1, b-a+1, 1/x] *Pi*Gamma[c] /Sin[Pi(b-a)]
+In[2]:= F+[t_]:=T[1/2,(1+Sqrt[5]) /2,(2+Sqrt[5]) /2,-Exp[2 t] ]
+In[3]:= F-[t_]:=T[1/2,(1-Sqrt[5]) /2,(2-Sqrt[5]) /2 ,-Exp[2 t]]
+In[4]:= F1
++[t_]:=T[1/2,(3+Sqrt[5]) /2,(2+Sqrt[5]) /2,-Exp[2 t] ]
+In[5]:= F1
+-[t_]:=T[3/2,(1-Sqrt[5]) /2,(2-Sqrt[5]) /2,-Exp[2 t] ]
+In[6]:= g1[t_]:=Exp[(1-Sqrt[5]) *t/2] *F -[t]
+In[7]:= g2[t_]:=Exp[(1+Sqrt[5]) *t/2] *F +[t]
+In[8]:= f[t_]:=g 1[t] - (F -[0] /F +[0]) *g 2[t]
+In[9]:= g0[t_]:=g 2[t] / (2*F +[0])
+In[10]:= W[u_]:=Exp[u] * ((1+Sqrt[5])F -[u]F 1
++[u] -F +[u]F 1
+-[u])
+In[11]:= v1[u_]:=g2[u] / (W[u] * (1+Exp[2 u]))
+In[12]:= v2[u_]:= -g 1[u] / (W[u] * (1+Exp[2 u]))
+In[13]:= vv1[u_]:= - 2 2 u 
+5
+4 -
+5
+4 Cos
+5π
+2
+
+2
+Gamma-
+5
+2
+Gamma
+1
+2
+-
+5
+2
+
+2
+Gamma2+
+5
+2
+
+2 u 
+5
+2 πGamma1+ 5
+2 Hypergeometric2F1 1
+2 , 1
+2 1- 5, 1- 5
+2 ,- -2 u 
+Gamma1- 5
+2 
+-
+Gamma
+1
+2
+1+ 5
+2
+Hypergeometric2F1
+1
+2
+,
+1
+2
+1+ 5,
+1
+2
+2+ 5,- -2 u  
+1+ 2 u  π3 5+2 5  2 u Hypergeometric2F1
+1
+2
+,
+1
+2
+1- 5,-
+5
+2
+,- -2 u 
+Hypergeometric2F1
+1
+2
+,
+1
+2
+1+ 5,
+1
+2
+2+ 5,- -2 u -
+1+ 5Hypergeometric2F1
+1
+2
+,
+1
+2
+1- 5, 1-
+5
+2
+,- -2 u 
+Hypergeometric2F1
+3
+2
+,
+1
+2
+3+ 5,
+1
+2
+4+ 5,- -2 u 
+20
+
+===== PAGE 21 =====
+
+In[14]:= vv2[u_]:= 2 u 
+5
+4 -
+5
+4 1+Cos 5πGamma-
+5
+2
+
+Gamma2+
+5
+2
+Gamma
+1
+2
+1+ 5
+2
+2 u 
+5
+2 Gamma
+1
+2
+-
+5
+2
+
+2
+Gamma1+
+5
+2
+Hypergeometric2F1
+1
+2
+,
+1
+2
+1- 5, 1-
+5
+2
+,- -2 u -
+πGamma1-
+5
+2
+Hypergeometric2F1
+1
+2
+,
+1
+2
+1+ 5,
+1
+2
+2+ 5,- -2 u  
+1+ 2 u  π3 Gamma1+
+5
+2
+ 5+2 5  2 u Hypergeometric2F1
+1
+2
+,
+1
+2
+1- 5,
+-
+5
+2
+,- -2 u Hypergeometric2F1
+1
+2
+,
+1
+2
+1+ 5,
+1
+2
+2+ 5,- -2 u -
+1+ 5Hypergeometric2F1
+1
+2
+,
+1
+2
+1- 5, 1-
+5
+2
+,- -2 u 
+Hypergeometric2F1
+3
+2
+,
+1
+2
+3+ 5,
+1
+2
+4+ 5,- -2 u 
+In[15]:= Simplify[PowerExpand[Cancel[FullSimplify[v1[u]] /vv1[u]]]]
+Out[15]=
+1
+In[16]:= Simplify[PowerExpand[Cancel[FullSimplify[v2[u]] /vv2[u]]]]
+Out[16]=
+1
+In[17]:= Tbvv1[t_, r_]:=Table[N[vv1[u], 15],{u, 0, t, r}]
+In[18]:= Tbvv140=Tbvv1[40, 1/5000];
+Export["Tbvv140oneOver5000.mx", Tbvv140]
+In[19]:= Tbvv2[t_, r_]:=Table[N[vv2[u], 15],{u, 0, t, r}]
+In[20]:= Tbvv240=Tbvv2[40, 1/5000];
+Export["Tbvv240oneOver5000.mx", Tbvv240]
+In[21]:= ww1[t_]:=
+Total[Flatten[Select[Transpose[{Range[0, 40, 1/5000], Tbvv140}],#〚1〛 ≤t &]]〚
+2;;;;2〛] *1/5000
+In[22]:= Tbww1t40ref=Table[ww1[t],{t, 0, 40, 1/100}];
+Export["Tbww1t40ref1over100.mx", Tbww1t40ref]
+In[23]:= ww2[t_]:=
+Total[Flatten[Select[Transpose[{Range[0, 40, 1/5000], Tbvv240}],#〚1〛 ≤t &]]〚
+2 ;; ;; 2〛] *1/5000
+In[24]:= Tbww2t40ref=Table[ww2[t],{t, 0, 40, 1/100}];
+2     Pre_compute.nb
+21
+
+===== PAGE 22 =====
+
+Export["Tbww2t40ref1Over100.mx", Tbww2t40ref]
+(*D0, N1, N2, N3 are determined in the "Asymptotic" file.*)
+In[25]:= D0= -2 Hypergeometric2F1
+1
+2
+,
+1
+2
+1+ 5,
+1
+2
+2+ 5,-1;
+In[26]:= N1= -
+1
+5π 2
+4 Cos
+5π
+2
+Cot
+5π
+2
+Gamma
+1
+2
+-
+5
+2
+
+2
+Gamma1+
+5
+2
+
+2
+Hypergeometric2F1
+1
+2
+,
+1
+2
+1- 5, 1-
+5
+2
+,-1+
+1
+5π 3
+4 Cos
+5π
+2
+Cot
+5π
+2
+Gamma
+1
+2
+-
+5
+2
+
+2
+Gamma1-
+5
+2
+Gamma1+
+5
+2
+
+Gamma
+1
+2
+1+ 5
+2
+Hypergeometric2F1
+1
+2
+,
+1
+2
+1+ 5,
+1
+2
+2+ 5,-1;
+In[27]:= N2= -
+πCsc 5π
+2 Gamma1+ 5
+2 
+Gamma1- 5
+2 Gamma 1
+2 1+ 5
+2
+;
+In[28]:= N3= -
+2π 2 Csc 5π
+2 
+2
+Gamma1+ 5
+2 
+2
+Hypergeometric2F1 1
+2 , 1
+2 1- 5, 1- 5
+2 ,-1
+Gamma1- 5
+2 
+2
+Gamma 1
+2 1+ 5
+4
++
+2πCsc
+5π
+2
+
+2
+Gamma1+
+5
+2
+Hypergeometric2F1
+1
+2
+,
+1
+2
+1+ 5,
+1
+2
+2+ 5,-1 Gamma1-
+5
+2
+Gamma
+1
+2
+1+ 5
+2
+;
+In[34]:= cLim=N[(N1*Tbww1t40ref〚-1〛+N2+N3*Tbww2t40ref〚-1〛) /D0, 15];
+In[35]:= Sinfdata=cLim*Table[N[f[t], 15],{t, 0, 40, 1/100}] +
+Table[N[g0[t], 15],{t, 0, 40, 1/100}] +
+Table[N[g1[t], 15],{t, 0, 40, 1/100}] *Tbww1t40ref+
+Table[N[g2[t],15],{t,0,40,1/100}] *Tbww2t40ref;
+Export["Sinf40oneOver100.mx", Sinfdata];
+In[36]:= ConstCnum=
+-2*Table[N[F -[R], 15],{R, 0, 40, 1/100}] *N[F +[0], 15] *Tbww1t40ref-
+Table[N[Exp[Sqrt[5] *R] *F +[R], 15],{R, 0, 40, 1/100}] -2*N[F +[0], 15] *
+Table[N[Exp[Sqrt[5] *R] *F +[R],15],{R,0,40,1/100}] *Tbww2t40ref;
+In[37]:= ConstCdenom=2*N[F +[0], 15] *Table[N[F -[R], 15],{R, 0, 40, 1/100}] -
+2*N[F-[0],15]*Table[N[Exp[Sqrt[5]*R]*F +[R],15],{R,0,40,1/100}];
+In[38]:= TbConstC=ConstCnum/ConstCdenom;
+Export["ConstC40oneOver100.mx", TbConstC];
+(*Consistency check for integrals of v 1[u], v 2[u], and value of C 1[R]*)
+Pre_compute.nb    3
+22
+
+===== PAGE 23 =====
+
+In[39]:= c1[R_]:= (-2*F -[R] *F +[0] *NIntegrate[vv1[u],{u, 0, R}] -
+Exp[Sqrt[5] *R] *F +[R] (1+2*F +[0] *NIntegrate[vv2[u],{u, 0, R}]) ) /
+(2*F -[R] *F +[0] -2*Exp[Sqrt[5] *R] *F -[0] *F +[R])
+In[41]:= TBNIntvv1=Table[NIntegrate[vv1[u],{u, 0, t}],{t, 0, 40, 1/100}];
+In[45]:= Count[Abs[TBNIntvv1-Tbww1t40ref], x_ /; x<10 ^-4]
+Out[45]=
+4001
+In[47]:= Length[TBNIntvv1]
+Out[47]=
+4001
+In[48]:= TBNIntvv2=Table[NIntegrate[vv2[u],{u, 0, t}],{t, 0, 40, 1/100}];
+In[52]:= Count[Abs[TBNIntvv2-Tbww2t40ref],x_/;x<2*10 ^-4]
+Out[52]=
+4001
+In[56]:= NIntegrate[vv1[u],{u, 0, 40}]
+Out[56]=
+1.32084
+In[57]:= Tbww1t40ref〚-1〛
+Out[57]=
+1.32087512814678
+In[58]:= NIntegrate[vv2[u],{u, 0, 40}]
+Out[58]=
+2.81665
+In[59]:= Tbww2t40ref〚-1〛
+Out[59]=
+2.81669456818713
+In[60]:= cLim
+Out[60]=
+0.67408914132169
+In[61]:= TBNConstC=Table[c 1[R],{R, 0, 40, 1/100}];
+In[63]:= Count[Abs[TBNConstC-TbConstC], x_ /; x<10 ^-4]
+Out[63]=
+4000
+In[64]:= TbConstC〚-1〛
+Out[64]=
+0.6740891413217
+In[65]:= c1[40]
+Out[65]=
+0.674123
+4     Pre_compute.nb
+23
+
+===== PAGE 24 =====
+
+(*Mathematica code for the asymptotics of the components of S _{R}(t)*)
+(*T[a_,b_,c_,x_], F +[t_], F -[t_], F 1+[t_],
+F1-[t_], f[t_], g 0[t_], g 1[t_], g 2[t_]as before! *)
+In[10]:= G[u_]:= (1+Exp[2 u]) * ((1+Sqrt[5])F -[u]F 1
++[u] -F +[u]F 1
+-[u])
+In[11]:= v1[u_]:= (Exp[(Sqrt[5] -1) *u/2] *F +[u]) /G[u]
+In[12]:= v2[u_]:= -Exp[(-Sqrt[5] -1) *u/2] *F -[u] /G[u]
+In[13]:= Expand[N[FullSimplify[Series[F+[t],{t, Infinity, 0}]], 9]]
+Out[13]=
+0.66377719× 2.71828183-7.23606798 t+O
+1
+t 2
+-1.05406313 × 2.71828183-5.23606798 t+O
+1
+t 2
++
+1.05684133 × 2.71828183-5.00000000 t+O
+1
+t 
+2
++2.75957310 × 2.71828183-3.23606798 t+O
+1
+t 
+2
+-
+3.25368611 × 2.71828183-3.00000000 t+O
+1
+t 
+2
++1.24279751 × 2.71828183-t+O
+1
+t 
+2
+In[14]:= Expand[N[FullSimplify[Series[F-[t],{t, Infinity, 0}]], 9]]
+Out[14]=
+-1.28034171 × 2.71828183-5.00000000 t+O
+1
+t 2
++2.03315363 × 2.71828183-3.00000000 t+O
+1
+t 2
+-
+2.34666620 × 2.71828183-2.76393202 t+O
+1
+t 
+2
+-5.3228653 × 2.71828183-t+O
+1
+t 
+2
++
+7.2246562 × 2.71828183-0.763932023 t+O
+1
+t 
+2
+-2.75957310 × 2.718281831.23606798 t+O
+1
+t 
+2
+In[15]:= Expand[N[FullSimplify[Series[f[t],{t, Infinity, 0}]], 9]]
+Out[15]=
+-0.34055508 × 2.71828183-5.61803399 t+O1
+t2
++0.54079375 × 2.71828183-3.61803399 t+O1
+t2
+-
+0.85037291 × 2.71828183-3.38196601 t+O
+1
+t 
+2
+-1.41581641 × 2.71828183-1.61803399 t+O
+1
+t 
+2
++
+2.61803399 × 2.71828183-1.38196601 t+O
+1
+t 
+2
+-1.00000000 × 2.718281830.618033989 t+O
+1
+t 
+2
+In[16]:= Expand[N[FullSimplify[Series[g0[t],{t, Infinity, 0}]], 9]]
+Out[16]=
+0.43719207× 2.71828183-5.61803399 t+O
+1
+t 2
+-0.69425110 × 2.71828183-3.61803399 t+O
+1
+t 2
++
+0.69608094 × 2.71828183-3.38196601 t+O
+1
+t 
+2
++1.81757297 × 2.71828183-1.61803399 t+O
+1
+t 
+2
+-
+2.14301695 × 2.71828183-1.38196601 t+O
+1
+t 
+2
++0.81855964 × 2.718281830.618033989 t+O
+1
+t 
+2
+In[17]:= Expand[N[FullSimplify[Series[g1[t],{t, Infinity, 0}]], 9]]
+Out[17]=
+-1.28034171 × 2.71828183-5.61803399 t+O
+1
+t 2
++2.03315363 × 2.71828183-3.61803399 t+O
+1
+t 2
+-
+2.34666620 × 2.71828183-3.38196601 t+O
+1
+t 
+2
+-5.3228653 × 2.71828183-1.61803399 t+O
+1
+t 
+2
++
+7.2246562 × 2.71828183-1.38196601 t+O
+1
+t 
+2
+-2.75957310 × 2.718281830.618033989 t+O
+1
+t 
+2
+In[18]:= Expand[N[FullSimplify[Series[g2[t],{t,Infinity,0}]],9]]
+Out[18]=
+0.66377719× 2.71828183-5.61803399 t+O
+1
+t 
+2
+-1.05406313 × 2.71828183-3.61803399 t+O
+1
+t 
+2
++
+1.05684133 × 2.71828183-3.38196601 t+O
+1
+t 
+2
++2.75957310 × 2.71828183-1.61803399 t+O
+1
+t 
+2
+-
+3.25368611 × 2.71828183-1.38196601 t+O
+1
+t 
+2
++1.24279751 × 2.718281830.618033989 t+O
+1
+t 
+2
+24
+
+===== PAGE 25 =====
+
+In[19]:= Expand[N[FullSimplify[Series[F1
++[u],{u, Infinity, 0}]], 9]]
+Out[19]=
+0.90106767× 2.71828183-9.23606798 u+O
+1
+u 2
+-0.82047372 × 2.71828183-7.23606798 u+O
+1
+u 2
++
+0.65144684 × 2.71828183-5.23606798 u+O
+1
+u 
+2
+-0.57606832 × 2.71828183-5.00000000 u+O
+1
+u 
+2
+-
+0.237353203 × 2.71828183-3.00000000 u+O
+1
+u 
+2
++0.85875196 × 2.71828183-u+O
+1
+u 
+2
+In[20]:= Expand[N[FullSimplify[Series[F1
+-[u],{u, Infinity, 0}]], 9]]
+Out[20]=
+-5.6244313 × 2.71828183-7.00000000 u+O1
+u2
++5.1213668 × 2.71828183-5.00000000 u+O1
+u2
+-
+4.0663073 × 2.71828183-3.00000000 u+O
+1
+u 
+2
++4.1393597 × 2.71828183-2.76393202 u+O
+1
+u 
+2
++
+1.70550997 × 2.71828183-0.763932023 u+O
+1
+u 
+2
+-6.1705930 × 2.718281831.23606798 u+O
+1
+u 
+2
+In[21]:= Expand[FullSimplify[Series[G[u],{u, Infinity, 0}]]]
+Out[21]=
+-
+1
+4437+ 5
+1350 -12 u+O
+1
+u 
+2
++90 5 -12 u+O
+1
+u 
+2
+-1995 -10 u+O
+1
+u 
+2
+-903 5 -10 u+O
+1
+u 
+2
++225 -8 u+O
+1
+u 
+2
++
+345 5 -8 u+O
+1
+u 
+2
++3350 -6 u+O
+1
+u 
+2
+-290 5 -6 u+O
+1
+u 
+2
++
+5+37 5
+37+ 5
++O
+1
+u
+
+1
+In[22]:= (*For v_1[u]...*)
+In[23]:= Expand[N[FullSimplify[
+Series[(Exp[(Sqrt[5] -1) *u/2] *F +[u]) /Sqrt[5],{u, Infinity, 0}]], 9]]
+Out[23]=
+0.296850182× 2.71828183-6.61803399 u+O
+1
+u 2
+-0.471391363 × 2.71828183-4.61803399 u+O
+1
+u 2
++
+0.47263381 × 2.71828183-4.38196601 u+O
+1
+u 
+2
++1.23411861 × 2.71828183-2.61803399 u+O
+1
+u 
+2
+-
+1.45509266 × 2.71828183-2.38196601 u+O
+1
+u 
+2
++0.55579594 × 2.71828183-0.381966011 u+O
+1
+u 
+2
+In[24]:= (*For v_2[u]...*)
+In[25]:= Expand[N[FullSimplify[
+Series[-Exp[(-Sqrt[5] -1) *u/2] *F -[u] /Sqrt[5],{u,Infinity,0}]],9]]
+Out[25]=
+0.57258622× 2.71828183-6.61803399 u+O
+1
+u 2
+-0.90925394 × 2.71828183-4.61803399 u+O
+1
+u 2
++
+1.04946103 × 2.71828183-4.38196601 u+O
+1
+u 
+2
++2.38045773 × 2.71828183-2.61803399 u+O
+1
+u 
+2
+-
+3.23096447 × 2.71828183-2.38196601 u+O
+1
+u 
+2
++1.23411861 × 2.71828183-0.381966011 u+O
+1
+u 
+2
+In[26]:= (*The asymptotic for the denominator of C_1[R]...*)
+In[27]:= Expand[FullSimplify[Series[
+(2*F -[R] *F +[0] -2*Exp[Sqrt[5] *R] *F -[0] *F +[R]),{R, Infinity, 0}]]];
+2     30Jul25_asymp_old_useful.nb
+25
+
+===== PAGE 26 =====
+
+In[28]:= N[Expand[FullSimplify[Series[
+(2*F -[R] *F +[0] -2*Exp[Sqrt[5] *R] *F -[0] *F +[R]),{R, Infinity, 0}]]]]
+Out[28]=
+-0.517056 × 2.71828-5. R+O
+1
+R 2
++0.821073 × 2.71828-3. R+O
+1
+R 2
+-
+1.2911 × 2.71828-2.76393 R+O
+1
+R 
+2
+-2.1496 × 2.71828-R+O
+1
+R 
+2
++
+3.97489 × 2.71828-0.763932 R+O
+1
+R 
+2
+-1.51827 × 2.718281.23607 R+O
+1
+R 
+2
+In[29]:= (*So, the denominator is of order Exp[(Sqrt[5]-1)R]with coefficient-1.5182*)
+In[30]:= D0= -2 Hypergeometric2F1
+1
+2
+,
+1
+2
+1+ 5,
+1
+2
+2+ 5,-1;
+In[31]:= (*The asymptotic for the numerator of C_1[R]...consists of 3 terms*)
+(*Firstly...*)
+In[32]:= Expand[FullSimplify[Series[-2*F -[R] *F +[0],{R,Infinity,0}]]];
+In[33]:= N[Expand[FullSimplify[Series[-2*F -[R] *F +[0],{R, Infinity, 0}]]]]
+Out[33]=
+1.94391 × 2.71828-5. R+O
+1
+R 2
+-3.08688 × 2.71828-3. R+O
+1
+R 2
++3.56288 × 2.71828-2.76393 R+O
+1
+R 2
++
+8.08157 × 2.71828-R+O
+1
+R 
+2
+-10.969 × 2.71828-0.763932 R+O
+1
+R 
+2
++4.18979 × 2.718281.23607 R+O
+1
+R 
+2
+In[34]:= N1= -
+1
+5π 2
+4 Cos
+5π
+2
+Cot
+5π
+2
+Gamma
+1
+2
+-
+5
+2
+
+2
+Gamma1+
+5
+2
+
+2
+Hypergeometric2F1
+1
+2
+,
+1
+2
+1- 5, 1-
+5
+2
+,-1+
+1
+5π 3
+4 Cos
+5π
+2
+Cot
+5π
+2
+Gamma
+1
+2
+-
+5
+2
+
+2
+Gamma1-
+5
+2
+Gamma1+
+5
+2
+
+Gamma
+1
+2
+1+ 5
+2
+Hypergeometric2F1
+1
+2
+,
+1
+2
+1+ 5,
+1
+2
+2+ 5,-1;
+In[35]:= N[N1]
+Out[35]=
+4.18979
+In[36]:= (*Secondly, ...*)
+In[37]:= Expand[FullSimplify[Series[-Exp[Sqrt[5] *R] *F +[R],{R, Infinity, 0}]]];
+In[38]:= N[Expand[FullSimplify[Series[-Exp[Sqrt[5] *R] *F +[R],{R,Infinity,0}]]]]
+Out[38]=
+-0.663777 × 2.71828-5. R+O
+1
+R 
+2
++1.05406 × 2.71828-3. R+O
+1
+R 
+2
+-
+1.05684 × 2.71828-2.76393 R+O
+1
+R 
+2
+-2.75957 × 2.71828-R+O
+1
+R 
+2
++
+3.25369 × 2.71828-0.763932 R+O
+1
+R 
+2
+-1.2428 × 2.718281.23607 R+O
+1
+R 
+2
+In[39]:= N2= -
+πCsc 5π
+2 Gamma1+ 5
+2 
+Gamma1- 5
+2Gamma1
+21+ 52
+;
+30Jul25_asymp_old_useful.nb    3
+26
+
+===== PAGE 27 =====
+
+In[40]:= N[N2]
+Out[40]=
+-1.2428
+In[41]:= (*Thirdly,...*)
+In[42]:= Expand[
+FullSimplify[Series[-Exp[Sqrt[5] *R] *F +[R] (2*F +[0]),{R, Infinity, 0}]]];
+In[43]:= N[Expand[
+FullSimplify[Series[-Exp[Sqrt[5] *R] *F +[R] (2*F +[0]),{R, Infinity, 0}]]]]
+Out[43]=
+-1.0078 × 2.71828-5. R+O
+1
+R 2
++1.60036 × 2.71828-3. R+O
+1
+R 2
+-1.60457 × 2.71828-2.76393 R+O
+1
+R 2
+-
+4.18979 × 2.71828-R+O
+1
+R 
+2
++4.93999 × 2.71828-0.763932 R+O
+1
+R 
+2
+-1.88691 × 2.718281.23607 R+O
+1
+R 
+2
+In[44]:= N3= -
+2π 2 Csc 5π
+2 
+2
+Gamma1+ 5
+2 
+2
+Hypergeometric2F1 1
+2 , 1
+2 1- 5, 1- 5
+2 ,-1
+Gamma1- 5
+2 
+2
+Gamma 1
+2 1+ 5
+4
++
+2πCsc
+5π
+2
+
+2
+Gamma1+
+5
+2
+Hypergeometric2F1
+1
+2
+,
+1
+2
+1+ 5,
+1
+2
+2+ 5,-1 Gamma1-
+5
+2
+Gamma
+1
+2
+1+ 5
+2
+;
+In[45]:= N[N3]
+Out[45]=
+-1.88691
+In[46]:= (*Conclusion: C_1[R]is asymptotic to(N1*w1[Infinity]+N2+N3*w2[Infinity])/D0*)
+4     30Jul25_asymp_old_useful.nb
+27
+
+===== PAGE 28 =====
+
+I n [ ] : = (*Computing integrals for Theorem 1*)
+(*T[a_,b_,c_,x_], F +[t_], F -[t_], F 1+[t_], F 1-[t_], f[t_], g 0[t_],
+g1[t_], g 2[t_], v 1[u_], v 2[u_], vv1[u_], vv2[u_]as before! *)
+In[15]:= SetDirectory[NotebookDirectory[]];
+In[16]:= TbConstC=Import["ConstC40oneOver100.mx"];
+In[17]:= c1[R_]:= (-2*F -[R] *F +[0] *NIntegrate[vv1[u],{u, 0, R}] -
+Exp[Sqrt[5] *R] *F +[R] (1+2*F +[0] *NIntegrate[vv2[u],{u, 0, R}]) ) /
+(2*F -[R] *F +[0] -2*Exp[Sqrt[5] *R] *F -[0] *F +[R])
+In[18]:= Intexpf=NIntegrate[Exp[-t] *f[t],{t, 0, 40}]
+Out[18]=
+-2.11661
+In[19]:= Intexpg0=NIntegrate[Exp[-t] *g 0[t],{t, 0, 80}]
+Out[19]=
+1.9453
+In[20]:= Auxw1[t_? NumericQ]:=NIntegrate[vv1[u],{u, 0, t}]
+In[21]:= Intexpg1v1=NIntegrate[Exp[-t] *g 1[t] *Auxw1[t],{t, 0, 80}]
+Out[21]=
+-4.29439
+In[22]:= Auxw2[t_? NumericQ]:=NIntegrate[vv2[u],{u, 0, t}]
+In[23]:= Intexpg2v2=NIntegrate[Exp[-t] *g 2[t] *Auxw2[t],{t, 0, 80}]
+Out[23]=
+4.02455
+In[24]:= Sum3Int=Intexpg0+Intexpg1v1+Intexpg2v2
+Out[24]=
+1.67545
+In[25]:= IntLimexpSRt=Intexpf*TbConstC〚-1〛+Sum3Int
+Out[25]=
+0.248666
+In[26]:= fd0=N[D[f[t], t] /.{t0}, 15]
+Out[26]=
+-1.47277008628940
+In[27]:= N[D[g0[t], t] /.{t0}, 15]
+Out[27]=
+0.602775072614097
+In[28]:= N[g1[0], 15]
+Out[28]=
+-1.07479835721849
+In[29]:= N[g2[0], 15]
+Out[29]=
+0.759136812431294
+28
+
+===== PAGE 29 =====
+
+In[30]:= N[v1[0], 15]
+Out[30]=
+0.339496303363776
+In[31]:= N[v2[0], 15]
+Out[31]=
+0.480664437769128
+In[32]:= SLimder0=TbConstC〚-1〛*N[D[f[t], t] /.{t0}, 15] +N[D[g 0[t], t] /.{t0}, 15] +
+N[g1[0], 15] *N[v 1[0], 15] +N[g 2[0], 15] *N[v 2[0], 15]
+Out[32]=
+-0.3900032502170
+In[33]:= Sum3Der=N[D[g 0[t], t] /.{t0}, 15] +
+N[g1[0], 15] *N[v 1[0], 15] +N[g 2[0], 15] *N[v 2[0], 15]
+Out[33]=
+0.60277507261410
+In[34]:= 1-SLimder0-IntLimexpSRt
+Out[34]=
+1.14134
+In[35]:= 1- (fd0*x+Sum3Der) - (Intexpf*x+Sum3Int)
+Out[35]=
+-1.27823+3.58938 x
+In[36]:= Kappa[Th_]:=1- (Sqrt[3/5] /Th)^(-1) *
+Log[1/2-1/Sqrt[15] + (2/Sqrt[15]) *Exp[Sqrt[3/5] /Th] *
+(1-Exp[-Sqrt[3/5] /Th] - (fd0*c 1[Sqrt[3/5] /Th] +Sum3Der) -
+(Intexpf*c 1[Sqrt[3/5] /Th] +Sum3Int))]
+In[37]:= Kappa[2/3]
+Out[37]=
+0.36477
+In[38]:= Kappa[1/2]
+Out[38]=
+0.334112
+In[39]:= Kappa[1/4]
+Out[39]=
+0.176131
+In[40]:= Kappa[1/6]
+Out[40]=
+0.114663
+In[41]:= Kappa[1/8]
+Out[41]=
+0.0854501
+In[43]:= Kappa[5/54]
+Out[43]=
+0.0631965
+2     30Jul_integral_useNInt_compute_mode.nb
+29
+
+===== PAGE 30 =====
+
+In[44]:= Kappa[1/10]
+Out[44]=
+0.0682642
+In[45]:= Kappa[1/100]
+Out[45]=
+0.00682382
+In[46]:= Kappa[1/500]
+Out[46]=
+0.00136476
+In[47]:= ListPlot[Table[{Th, Kappa[Th]},{Th, 0, 1.5, 1/100}],
+PlotRange{{0,1.5},{-0.4,0.4}}]
+In[48]:= ListPlot[Table[{Th, Kappa[Th] - (2/3) *Th},{Th, 0, 0.8, 1/500}],
+PlotRange{{0,0.6},{-0.02,0.02}}]
+30Jul_integral_useNInt_compute_mode.nb    3
+References
+[AT21] Andersen, Nickolas; Thorner, Jesse. Zeros of GL 2 L-functions on the critical line. Forum Math. 33 (2021),
+no. 2, 477–491.
+[Ber15] Bernard, Damien. Modular case of Levinson’s theorem. Acta Arith. 167 (2015), no. 3, 201–237.
+[BCY11] Bui, H. M.; Conrey, Brian; Young, Matthew P. More than 41% of the zeros of the zeta function are on the
+critical line. Acta Arith. 150 (2011), no. 1, 35-64.
+[BG17] Bettin, Sandro; Gonek, Steven M. The θ = ∞ conjecture implies the Riemann hypothesis. Mathematika 63
+(2017), no. 1, 29–33.
+[CL55] Coddington, E. A.; Levinson, N. Theory of ordinary differential equations. McGraw-Hill Book Co., Inc.,
+New York-Toronto-London, 1955. xii+429 pp
+[Con82] Conrey, Brian. Zeros of derivatives of Riemann’s ξ-function on the critical line. J. Number Theory 16 (1983),
+no. 1, 49–74.
+[Con89] Conrey, J. B. More than two fifths of the zeros of the Riemann zeta function are on the critical line. J. Reine
+Angew. Math. 399 (1989), 1–26.
+[Con16] Conrey, Brian. Riemann’s hypothesis. In: The legacy of Bernhard Riemann after one hundred and fifty
+years, Vol. I. Adv. Lect. Math. (ALM) Vol. 35.1. 107–190. Int. Press, Somerville, MA. (2016)
+[DLMF] NIST Digital Library of Mathematical Functions. http://dlmf.nist.gov/, Release 1.2.3, 2024-12-15.
+[Far93] Farmer, David W. Long mollifiers of the Riemann zeta-function. Mathematika 40 (1993), no. 1, 71–87.
+[Far94] Farmer, David W. Mean value of Dirichlet series associated with holomorphic cusp forms. J. Number Theory
+49 (1994), no. 2, 209–245.
+[Fen12] Feng, Shaoji. Zeros of the Riemann zeta function on the critical line. J. Number Theory 132 (2012), no. 4,
+511-542.
+[HL21] Hardy, G.H.; Littlewood, J.E. The zeros of Riemann’s zeta-function on the critical line, Math. Z., 10 (1921),
+283-317.
+[Lev74] Levinson, Norman. More than one third of zeros of Riemann’s zeta-function are on σ = 1/2. Advances in
+Math. 13 (1974), 383–436.
+[LM74] Levinson, Norman; Montgomery, Hugh L. Zeros of the derivatives of the Riemann zeta-function. Acta Math.
+133 (1974), 49–65.
+[IK04] Iwaniec, H.; Kowalski, E. Analytic number theory. Vol. 53. American Mathematical Society Colloquium
+Publications. American Mathematical Society, Providence, RI, 2004.
+[Iwa14] Iwaniec, H. Lectures on the Riemann zeta function. University Lecture Series, 62. American Mathematical
+Society, Providence, RI, 2014. viii+119 pp.
+[KRZ19] K¨ uhn, Patrick; Robles, Nicolas; Zeindler, Dirk. On mean values of mollifiers and L-functions associated to
+primitive cusp forms. Math. Z. 291 (2019), no. 1-2, 661–709.
+[PR+20] Pratt, Kyle; Robles, Nicolas; Zaharescu, Alexandru; Zeindler, Dirk. More than five-twelfths of the zeros of
+ζ are on the critical line. Res. Math. Sci. 7 (2020), no. 2, Paper No. 2, 74 pp.
+[Rie] Riemann, Bernhard. Ueber die Anzahl der Primzahlen unter einer gegebenen Gr¨ osse, 1859. (English
+translation by David Wilkins available at: https://www.claymath.org/wp-content/uploads/2023/04/
+Wilkins-translation.pdf)
+[Sel42] Selberg, Atle. On the zeros of Riemann’s zeta-function. Skr. Norske Vid.-Akad. Oslo I 1942 (1942), no. 10,
+59 pp.
+30
+
+===== PAGE 31 =====
+
+[Sie32] Siegel, Carl Ludwig. ¨Uber Riemanns Nachlaß zur analytischen Zahlentheorie. Quellen Studien zur Geschichte
+der Math. Astron. und Phys. Abt. B: Studien 2, 45-80, 1932. Reprinted in Gesammelte Abhandlungen,
+Vol. 1. Berlin: Springer-Verlag, 1966. (English translation by Eric Barkan and David Sklar available at:
+https://arxiv.org/abs/1810.05198)
+[Spe35] Speiser, Andreas. Geometrisches zur Riemannschen Zetafunktion. (German) Math. Ann. 110 (1935), no. 1,
+514–521.
+American Institute of Mathematics, 1200 E California Blvd, Pasadena CA 91125
+Email address: conrey@aimath.org
+American Institute of Mathematics, 1200 E California Blvd, Pasadena CA 91125
+Email address: farmer@aimath.org
+University College London, 25 Gordon Street, London WC1H 0AY, United Kingdom
+Email address: ucahckw@ucl.ac.uk
+Data Science Institute, Shandong University, Jinan 250100, China
+Email address: yongxiao.lin@sdu.edu.cn
+Carleton College, 1 North College Street Northfield, MN 57707, USA
+Email address: cturnageb@carleton.edu
+31

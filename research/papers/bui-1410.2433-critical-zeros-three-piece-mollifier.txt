@@ -1,0 +1,3006 @@
+
+
+===== PAGE 1 =====
+
+arXiv:1410.2433v1  [math.NT]  9 Oct 2014
+CRITICAL ZEROS OF THE RIEMANN ZET A-FUNCTION
+H. M. BUI
+Abstract. In this unpublished note, we sketch an idea of using a three-p iece molliﬁer to
+slightly improve the known percentages of zeros and simple zeros of the Riemann zeta-function
+on the critical line. This uses the recent result of Bettinet al. [2] on the twisted fourth moment
+of the Riemann zeta-function.
+1. Introduction
+Let ζ(s) be the Riemann zeta-function. Let N(T ) denote the number of zeros of ζ(s),
+ρ = β +iγ, with 0 < γ ≤ T counted with multiplicity. Also let N0(T ) denote the number
+of such critical zeros with β = 1/ 2, and N ∗
+0 (T ) denote the number of such critical zeros with
+β = 1/ 2 and being simple. Deﬁne κ and κ∗ by
+κ = lim inf
+T →∞
+N0(T )
+N(T ), κ ∗ = lim inf
+T →∞
+N ∗
+0 (T )
+N(T ) .
+Selberg [11] was the ﬁrst to prove that a positive proportion of zeros lie on the critical line.
+Following the approach of Levinson [ 10] and the observation of Heath-Brown [ 9], it is now
+known that [3,7]
+κ> 0. 410725 and κ∗ > 0. 40582. (1)
+Remark 1.1. Bui et al. [3] showed that κ > 0. 4105 and κ∗ > 0. 40582. Shortly after that,
+Feng [8; version 1] put a paper on arXiv claiming that κ> 0. 4173 and κ∗ > 0. 4075. Feng also
+used Levinson’s method, but instead chose the molliﬁer as a s um of various pieces of diﬀerent
+shapes ∑
+n≤T ϑ 1 +... + ∑
+n≤T ϑ l. At this point, Feng took ϑ 1 =... =ϑ l = 4/ 7 −ε. The choice
+ϑ 1 = 4/ 7 −ε was from Conrey [ 4], but it was not clear why, say, ϑ 2 < 4/ 7 is admissible.
+Conrey then emailed Feng requesting for the veriﬁcation of t hat statement. Feng later agreed
+that that was a mistake, and subsequently replaced it with the second version. In this updated
+version [8; version 2], which is the same as the published one [ 7], he chose ϑ 1 = 4/ 7 −ε and
+ϑ 2 = ... = ϑ l = 1/ 2 −ε. With this Feng obtained κ > 0. 4128, but no claim on the lower
+bound for κ∗. Feng still did not give any explanation as to why, say, the ra nge ϑ 2 < 1/ 2 is
+admissible. This is doubtful and can be problematic. Note th at if one just applies the result
+of Balasubramanian et al. [1] on the twisted second moment of the Riemann zeta-function t o,
+say, the cross term
+∫
+|ζ(1/ 2+it)|2 ∑
+n≤T ϑ 1
+∑
+n≤T ϑ 2dt, then one needs ϑ 1 +ϑ 2< 1. So without
+extra work, one can only take ϑ 1 = 4/ 7 −ε andϑ 2 =... =ϑ l = 3/ 7 −ε in Feng’s paper. This
+numerically leads to the above bound κ> 0. 410725 in (1).
+In this paper we shall prove
+Theorem 1.1. We have
+κ> 0. 410918 and κ ∗ > 0. 40589.
+Remark 1.2. Rigourously speaking this is not yet a theorem. Here we assum e a result
+on the twisted third moment of the Riemann zeta-function (se e Theorem 5.1 for the precise
+2010 Mathematics Subject Classiﬁcation. 11M06, 11M26.
+Key words and phrases. Riemann zeta-function, zeros on the critical line, molliﬁe r method, moments.
+1
+
+===== PAGE 2 =====
+
+2 H. M. BUI
+statement). We leave that unproved. It is possible that the i deas of Bettin et al. [2] work in
+this context as well.
+2. Reduction to mean-value theorems
+2.1. The molliﬁer. To get lower bounds forN0(T ) andN ∗
+0 (T ) it suﬃces to consider a certain
+molliﬁed second moment of the Riemann zeta-function and its derivatives. This is well-known,
+so we shall simply state the conclusion.
+Let Q(x) be a real polynomial satisfying Q(0) = 1, and deﬁne
+V (s) =Q
+(
+− 1
+L
+d
+ds
+)
+ζ(s),
+where for large T we denote
+L = logT.
+Suppose ψ (s) is a “molliﬁer”. Littlewood’s lemma and the arithmetic-me an, geometric-mean
+inequality give
+κ ≥ 1 − 1
+R log
+( 1
+T
+∫ T
+1
+⏐
+⏐Vψ (σ0 +it)
+⏐
+⏐2dt
+)
++o(1), (2)
+whereσ0 = 1/ 2 −R/ L, and R is a bounded positive real number to be chosen later. Actuall y,
+by choosing Q(x) to be a linear polynomial, we obtain a lower bound for the pro portion of
+simple zeros, κ∗.
+We choose a molliﬁer of the form
+ψ (s) =ψ 1(s) +ψ 2(s) +ψ 3(s),
+where ψ 1, ψ 2 and ψ 3 are molliﬁers of quite diﬀerent shapes. Here ψ 1 is the usual molliﬁer
+ψ 1(s) =
+∑
+n≤y1
+µ(n)P1
+( log y1/n
+log y1
+)
+nσ0−1/2
+ns
+and ψ 2 is the second piece molliﬁer used in [ 3]
+ψ 2(s) =χ(s + 1
+2 −σ0)
+∑
+mn≤y2
+µ 2(m)P2
+( log y2/mn
+log y2
+)
+mσ0−1/2n1/2−σ0
+msn1−s ,
+where µ 2(m) are the coeﬃcients of 1 /ζ 2(s), and P1(x) = ∑
+jajxj and P2(x) = ∑
+jbjxj are
+certain polynomials satisfying P1(0) = 0 and P2(0) = P ′
+2(0) = P ′′
+2 (0) = 0. For the third
+molliﬁer, we take1
+ψ 3(s) =ζ(s + 1
+2 −σ0)
+∑
+n≤y3
+µ 2(n)P3
+( log y3/n
+log y3
+)
+nσ0−1/2
+ns ,
+whereP3(x) = ∑
+jcjxj is a certain polynomial satisfyingP3(0) =P ′
+3(0) =P ′′
+3 (0) =P ′′′
+3 (0) = 0.
+We also require the condition that P1(1) +P3(1) = 1 (see the below remark). Throughout the
+paper we denote y1 =T ϑ1, y2 =T ϑ2 and y3 =T ϑ3, where 0 <ϑ 3 <ϑ 2<ϑ 1< 1 (we shall see
+later what conditions are required on ϑ 1, ϑ 2 and ϑ 3). Note that formally
+ζ(s)
+∞∑
+n=1
+µ 2(n)
+ns = 1
+ζ(s),
+which explains why ψ 3(s) may also be a useful choice of a molliﬁer.
+1It was originally an idea of K. Soundararajan to make use of th e twisted fourth moment of the Riemann
+zeta-function and use a two-piece molliﬁer of the form ψ 1 +ψ 3. The author learned about this from Brian
+Conrey, Chris Hughes and K. Soundararajan. However, the imp lied proportion of critical zeros using this
+two-piece molliﬁer has never been worked out explicitly.
+
+===== PAGE 3 =====
+
+CRITICAL ZEROS OF THE RIEMANN ZETA-FUNCTION 3
+Remark 2.1. We can apply Levinson’s method (see, for example, Appendix A of [5]) to our
+choice of ψ =ψ 1 +ψ 2 +ψ 3. It is important to note that when applying Littlewood’s lem ma,
+we need to estimate the integral on the right side of a rectang le. Assume that ψ 1(s) +ψ 3(s)
+can be expressed as a Dirichlet series, ψ 1(s) +ψ 3(s) = ∑
+na(n)n−s, that integral is negligible
+given that a(1) = 1. That is why we require P1(1) +P3(1) = 1.
+2.2. A smoothing argument. It simpliﬁes some calculations to smooth out the integral in
+(2). We introduce a smooth function w(t) with the following properties
+i) 0 ≤w(t) ≤ 1 for all t ∈ R,
+ii) w has compact support in [T/ 4, 2T ],
+iii) w(j)(t) ≪ ∆−j for each j = 0, 1, 2..., where ∆ = T L−1.
+Theorem 2.1. Supposeϑ 1 < 4/ 7, ϑ 2 < 1/ 2 and ϑ 3 < 1/ 4. Then we have
+∫ ∞
+−∞
+⏐
+⏐Vψ (σ0 +it)
+⏐
+⏐2w(t)dt =c(P1,P 2,P 3,Q,R,ϑ 1,ϑ 2,ϑ 3) ˆw(0) +Oε(T L−1+ε), (3)
+wherec(P1,P 2,P 3,Q,R,ϑ 1,ϑ 2,ϑ 3) = c1 +c2 +c3 + 2c12 + 2c23 + 2c31, and the ci and cij are
+given below by (4)–(9).
+2.3. Numerical evaluations. It is a standard exercise to deduce from Theorem 2.1 the
+unsmoothed version∫ T
+1
+⏐
+⏐Vψ (σ0 +it)
+⏐
+⏐2dt =c(P1,P 2,P 3,Q,R,ϑ 1,ϑ 2,ϑ 3)T +Oε(T L−1+ε).
+Hence
+κ ≥ 1 − logc(P1,P 2,P 3,Q,R,ϑ 1,ϑ 2,ϑ 3)
+R +o(1).
+Using Mathematica, with R = 1. 26,
+Q(x) = 0. 49068 + 0. 61077(1 − 2x) − 0. 14199(1 − 2x)3 + 0. 04054(1 − 2x)5,
+P1(x) = 0. 83651x + 0. 09758x2 − 0. 29393x3 + 0. 73372x4 − 0. 3753x5,
+P2(x) = 0. 0237x3 − 0. 00744x4 + 0. 00174x5
+and
+P3(x) = 0. 00155x4 − 0. 00013x5,
+we get κ> 0. 410918. To get κ∗ > 0. 40589 we take R = 1. 12, Q(x) = 1 − 1. 03232x,
+P1(x) = 0. 82653x + 0. 02626x2 − 0. 00774x3 + 0. 34803x4 − 0. 19371x5,
+P2(x) = 0. 0324x3 − 0. 00759x4 + 0. 00742x5
+and
+P3(x) = 0. 00094x4 − 0. 00031x5.
+3. The mean-value results
+Writingψ =ψ 1 +ψ 2 +ψ 3 and opening the square, we get∫ ⏐
+⏐Vψ
+⏐
+⏐2w =
+∫ ⏐
+⏐Vψ 1
+⏐
+⏐2w +
+∫ ⏐
+⏐Vψ 2
+⏐
+⏐2w +
+∫ ⏐
+⏐Vψ 3
+⏐
+⏐2w
++2Re
+{ ∫ ⏐
+⏐V
+⏐
+⏐2ψ 1
+ψ 2w
+}
++ 2Re
+{ ∫ ⏐
+⏐V
+⏐
+⏐2ψ 2
+ψ 3w
+}
++ 2Re
+{ ∫ ⏐
+⏐V
+⏐
+⏐2ψ 3
+ψ 1w
+}
+=: I1 +I2 +I3 + 2Re(I12) + 2Re(I23) + 2Re(I31).
+We shall compute the integrals in turn. It turns out that I12, I23 and I31 are asymptotically
+real.
+
+===== PAGE 4 =====
+
+4 H. M. BUI
+3.1. The main terms. First we quote Theorem 2 of Conrey [ 4]. Conrey’s theorem is for the
+unsmoothed version, but the following smoothed version fol lows easily from that.
+Theorem 3.1 (Conrey). Supposeϑ 1 < 4/ 7 and P1(0) = 0. Then we have
+∫ ∞
+−∞
+⏐
+⏐Vψ 1(σ0 +it)
+⏐
+⏐2w(t)dt =c1 ˆw(0) +Oε(T L−1+ε),
+where
+c1 =P1(1)2 + 1
+ϑ1
+∫ 1
+0
+∫ 1
+0
+e2Rt
+(
+Q(t)P ′
+1(u) +ϑ 1Q′(t)P1(u) +ϑ 1RQ(t)P1(u)
+) 2
+dtdu. (4)
+The terms I12 and I2 are evaluated in [ 3].
+Theorem 3.2 (Bui, Conrey and Young) . Suppose ϑ 2 < ϑ1 < 4/ 7 and P1(0) = 0 = P2(0) =
+P ′
+2(0). Then we have
+∫ ∞
+−∞
+|V |2ψ 1ψ 2(σ0 +it)w(t)dt =c12 ˆw(0) +Oε(T L−1+ε),
+where
+c12 = 4ϑ2
+2
+ϑ2
+1
+d2
+dx1dx2
+[ ∫ 1
+0
+∫ ∫
+t1+t2≤u
+t1,t2≥0
+eR
+(
+1−ϑ1(x1−x2)+ϑ2(t1−t2)
+)
+(1 −u)Q(−ϑ 1x1 +ϑ 2t1)
+Q(1 +ϑ 1x2 −ϑ 2t2)P1
+(
+x1 +x2 + 1 − ϑ2
+ϑ1
+(1 −u)
+)
+P ′′
+2 (u −t1 −t2)dt1dt2du
+]
+x1=x2=0
+. (5)
+Theorem 3.3 (Bui, Conrey and Young) . Suppose ϑ 2 < 1
+2 and P2(0) = P ′
+2(0) = P ′′
+2 (0) = 0 .
+Then we have ∫ ∞
+−∞
+⏐
+⏐Vψ 2(σ0 +it)
+⏐
+⏐2w(t)dt =c2 ˆw(0) +Oε(T L−1+ε),
+where
+c2 = 2
+3ϑ 2
+d4
+dx2
+1dx2
+2
+[ ∫
+[0,1]4
+e−ϑ2R
+(
+x1+x2−t1(x1+u)−t2(x2+u)
+)
++2Rt3
+(
+1+ϑ2(x1+x2−t1(x1+u)−t2(x2+u))
+)
+(
+1 +ϑ 2
+(
+x1 +x2 −t1(x1 +u) −t2(x2 +u)
+) )
+(x1 +u)(x2 +u)(1 −u)4
+Q
+(
+ϑ 2
+(
+−x1 +t2(x2 +u)
+)
++t3
+(
+1 +ϑ 2
+(
+x1 +x2 −t1(x1 +u) −t2(x2 +u)
+) ) )
+Q
+(
+ϑ 2
+(
+−x2 +t1(x1 +u)
+)
++t3
+(
+1 +ϑ 2
+(
+x1 +x2 −t1(x1 +u) −t2(x2 +u)
+) ) )
+P ′′
+2
+(
+(x1 +u)(1 −t1))
+)
+P ′′
+2
+(
+(x2 +u)(1 −t2)
+)
+dt1dt2dt3du
+]
+x1=x2=0
+. (6)
+We are left to evaluate I3, I23 and I31, which are
+I3 =
+∫ ∞
+−∞
+⏐
+⏐V (σ0 +it)ζ( 1
+2 +it)
+⏐
+⏐2 ∑
+m≤y3
+µ 2(m)P3
+( log y3/m
+log y3
+)
+m1/2+it
+∑
+l≤y3
+µ 2(l)P3
+( log y3/l
+log y3
+)
+l1/2−it w(t)dt,
+I23 =
+∫ ∞
+−∞
+⏐
+⏐V (σ0 +it)
+⏐
+⏐2ζ( 1
+2 +it)
+∑
+mn≤y2
+µ 2(m)P2
+( log y2/mn
+log y2
+)
+m1/2+itn1/2−it
+∑
+l≤y3
+µ 2(l)P3
+( log y3/l
+log y3
+)
+l1/2−it w(t)dt
+
+===== PAGE 5 =====
+
+CRITICAL ZEROS OF THE RIEMANN ZETA-FUNCTION 5
+and
+I31 =
+∫ ∞
+−∞
+⏐
+⏐V (σ0 +it)
+⏐
+⏐2ζ( 1
+2 +it)
+∑
+m≤y1
+µ(m)P1
+( log y1/m
+log y1
+)
+m1/2−it
+∑
+l≤y3
+µ 2(l)P3
+( log y3/l
+log y3
+)
+l1/2+it w(t)dt.
+Theorem 3.4. Supposeϑ 3 < 1/ 4 and P3(0) =P ′
+3(0) =P ′′
+3 (0) =P ′′′
+3 (0) = 0. Then we have
+I3 =c3 ˆw(0) +Oε(T L−1+ε),
+where
+c3 = 1
+12ϑ4
+3
+d8
+dx2
+1dx2
+2dx2
+3dx2
+4
+[ ∫
+[0,1]5
+e−ϑ3R(x2+x3)+Rt1(1−t4)(1+ϑ3(x1+x3))+Rt2(1−t3)(1+ϑ3(x2+x4))
+eRt3
+(
+t1+ϑ3(−x1+x2+(x1+x3)t1)
+)
++Rt4
+(
+t2+ϑ3(x3−x4+(x2+x4)t2)
+)
+(
+t1 −t2 +ϑ 3
+(
+−x1 +x2 + (x1 +x3)t1 − (x2 +x4)t2
+) )
+(
+t1 −t2 +ϑ 3
+(
+−x3 +x4 + (x1 +x3)t1 − (x2 +x4)t2
+) )
+(
+1 +ϑ 3(x1 +x3)
+)(
+1 +ϑ 3(x2 +x4)
+)
+(1 −u)3
+Q
+(
+−ϑ 3x2 +t2(1 −t3)
+(
+1 +ϑ 3(x2 +x4)
+)
++t3
+(
+t1 +ϑ 3
+(
+−x1 +x2 + (x1 +x3)t1
+) ) )
+Q
+(
+−ϑ 3x3 +t1(1 −t4)
+(
+1 +ϑ 3(x1 +x3)
+)
++t4
+(
+t2 +ϑ 3
+(
+x3 −x4 + (x2 +x4)t2
+) ) )
+P3(x1 +x2 +u)P3(x3 +x4 +u)dt1dt2dt3dt4du
+]
+x
+=0
+. (7)
+Theorem 3.5. Suppose ϑ 2 < 1/ 2, ϑ 3 < 1/ 4 and P2(0) = P ′
+2(0) = P ′′
+2 (0) = 0 = P3(0) =
+P ′
+3(0) =P ′′
+3 (0) =P ′′′
+3 (0). Then we have
+I23 =c23 ˆw(0) +Oε(T L−1+ε),
+where
+c23 = 2
+3ϑ2
+2
+d6
+dx2
+1dx2
+2dx2
+3
+[ ∫
+[0,1]5
+e−R(ϑ2x1+ϑ3x2)+Rt1t2(1−t3−t3t4)(ϑ2(1+x1)−ϑ3(1−u))
+eRt3(1+t4)(1+ϑ2x1+ϑ3x2)+R(1−t4)
+(
+ϑ3(x2−x3)−t1(2t2−1)(ϑ2(1+x1)−ϑ3(1−u))
+)
+(
+−ϑ 3
+(
+x2 −x3) +t1(2t2 − 1)
+(
+ϑ 2(1 +x1) −ϑ 3(1 −u)
+)
++t3
+(
+1 +ϑ 2x1 +ϑ 3x2 −t1t2
+(
+ϑ 2(1 +x1) −ϑ 3(1 −u)
+) ) )
+(
+1 +ϑ 2x1 +ϑ 3x2 −t1t2
+(
+ϑ 2(1 +x1) −ϑ 3(1 −u)
+) )
+t1
+(
+x1 + 1 − ϑ3
+ϑ2
+(1 −u)
+) 2
+(1 −u)3
+Q
+(
+−ϑ 3x2 +t1t2(1 −t3t4)
+(
+ϑ 2(1 +x1) −ϑ 3(1 −u)
+)
++t3t4(1 +ϑ 2x1 +ϑ 3x2)
++(1 −t4)
+(
+ϑ 3(x2 −x3) −t1(2t2 − 1)
+(
+ϑ 2(1 +x1) −ϑ 3(1 −u)
+) ) )
+Q
+(
+−ϑ 2x1 +t3
+(
+1 +ϑ 2x1 +ϑ 3x2 −t1t2
+(
+ϑ 2(1 +x1) −ϑ 3(1 −u)
+) ) )
+P ′′
+2
+( (
+x1 + 1 − ϑ3
+ϑ2
+(1 −u)
+)
+(1 −t1)
+)
+P3
+(
+x2 +x3 +u
+)
+dt1dt2dt3dt4du
+]
+x=0
+. (8)
+
+===== PAGE 6 =====
+
+6 H. M. BUI
+Theorem 3.6. Supposeϑ 1 < 4/ 7, ϑ 3 < 1/ 4 and P1(0) = 0 =P3(0) =P ′
+3(0). Then we have
+I31 =c31 ˆw(0) +Oε(T L−1+ε),
+where
+c31 = 1
+ϑ2
+1
+d4
+dx1dx2dx2
+3
+[ ∫
+[0,1]3
+e−R(ϑ1x2+ϑ3x3)+Rt1(1+t2)(1+ϑ1x1+ϑ3x3)−ϑ1Rt2(x1−x2)
+(
+−ϑ 1(x1 −x2) +t1(1 +ϑ 1x1 +ϑ 3x3)
+)
+(1 +ϑ 1x1 +ϑ 3x3)(1 −u)
+Q
+(
+−ϑ 1x2 +t1t2(1 +ϑ 1x1 +ϑ 3x3) −ϑ 1t2(x1 −x2)
+)
+Q
+(
+−ϑ 3x3 +t1(1 +ϑ 1x1 +ϑ 3x3)
+)
+P1
+(
+x1 +x2 + 1 − ϑ3
+ϑ1
+(1 −u)
+)
+P3(x3 +u)dt1dt2du
+]
+x=0
+. (9)
+3.2. The shift parameters. Rather than working directly with V (s), we shall instead con-
+sider the following three general integrals
+I3(α,β,γ,δ ) =
+∫ ∞
+−∞
+ζ( 1
+2 +α +it)ζ( 1
+2 +β +it)ζ( 1
+2 +γ −it)ζ( 1
+2 +δ −it)
+∑
+m≤y3
+µ 2(m)P3
+( log y3/m
+log y3
+)
+m1/2+it
+∑
+l≤y3
+µ 2(l)P3
+( log y3/l
+log y3
+)
+l1/2−it w(t)dt, (10)
+I23(α,β,γ ) =
+∫ ∞
+−∞
+ζ( 1
+2 +α +it)ζ( 1
+2 +β +it)ζ( 1
+2 +γ −it)
+∑
+mn≤y2
+µ 2(m)P2
+( log y2/mn
+log y2
+)
+m1/2+itn1/2−it
+∑
+l≤y3
+µ 2(l)P3
+( log y3/l
+log y3
+)
+l1/2−it w(t)dt (11)
+and
+I31(α,β,γ ) =
+∫ ∞
+−∞
+ζ( 1
+2 +α +it)ζ( 1
+2 +β +it)ζ( 1
+2 +γ −it)
+∑
+m≤y1
+µ(m)P1
+( log y1/m
+log y1
+)
+m1/2−it
+∑
+l≤y3
+µ 2(l)P3
+( log y3/l
+log y3
+)
+l1/2+it w(t)dt. (12)
+Our main goal in the rest of the paper is to prove the following lemmas.
+Lemma 3.1. Supposeϑ 3< 1/ 4 and P3(0) =P ′
+3(0) =P ′′
+3 (0) =P ′′′
+3 (0) = 0. Then we have
+I3(α,β,γ,δ ) =c3(α,β,γ,δ ) ˆw(0) +Oε(T L−1+ε),
+uniformly for α,β,γ,δ ≪ L −1, where c3(α,β,γ,δ ) is given by
+1
+12ϑ4
+3
+d8
+dx2
+1dx2
+2dx2
+3dx2
+4
+[ ∫
+[0,1]5
+yαx1+βx2+γx3+δx4
+3 (Ty x1+x3
+3 )−(α+γ)t1(Ty x2+x4
+3 )−(β+δ)t2
+(
+T t1−t2y−x1+x2+(x1+x3)t1−(x2+x4)t2
+3
+) −(β−α)t3 (
+T t1−t2y−x3+x4+(x1+x3)t1−(x2+x4)t2
+3
+) −(δ−γ)t4
+(
+t1 −t2 +ϑ 3
+(
+−x1 +x2 + (x1 +x3)t1 − (x2 +x4)t2
+) )
+(13)
+(
+t1 −t2 +ϑ 3
+(
+−x3 +x4 + (x1 +x3)t1 − (x2 +x4)t2
+) ) (
+1 +ϑ 3(x1 +x3)
+)
+(
+1 +ϑ 3(x2 +x4)
+)
+(1 −u)3P3(x1 +x2 +u)P3(x3 +x4 +u)dt1dt2dt3dt4du
+]
+x
+=0
+.
+
+===== PAGE 7 =====
+
+CRITICAL ZEROS OF THE RIEMANN ZETA-FUNCTION 7
+Remark 3.1. In the special case α = β = γ = δ = 0, Lemma 3.1 agrees with the molliﬁed
+fourth moment of the Riemann zeta-function predicted by Conrey and Snaith using the ratios
+conjecture [6; Theorem 6.1].
+Lemma 3.2. Supposeϑ 2 < 1/ 2, ϑ 3< 1/ 4 andP2(0) =P ′
+2(0) =P ′′
+2 (0) = 0 =P3(0) =P ′
+3(0) =
+P ′′
+3 (0) =P ′′′
+3 (0). Then we have
+I23(α,β,γ ) =c23(α,β,γ ) ˆw(0) +Oε(T L−1+ε),
+uniformly for α,β,γ ≪ L −1, where c23(α,β,γ ) is given by
+2
+3ϑ2
+2
+d6
+dx2
+1dx2
+2dx2
+3
+[ ∫
+[0,1]5
+y
+γx1−
+(
+αt2+β(1−t2)
+)
+t1(1+x1)
+2 y
+αx2+βx3+
+(
+αt2+β(1−t2)
+)
+t1(1−u)
+3
+(
+Ty x1−t1t2(1+x1)
+2 yx2+t1t2(1−u)
+3
+) −(α+γ)t3
+(
+yt1(2t2−1)(1+x1)
+2 y−x2+x3−t1(2t2−1)(1−u)
+3
+(
+Ty x1−t1t2(1+x1)
+2 yx2+t1t2(1−u)
+3
+) t3
+) −(β−α)t4
+(
+−ϑ 3
+(
+x2 −x3) +t1(2t2 − 1)
+(
+ϑ 2(1 +x1) −ϑ 3(1 −u)
+)
+(14)
++t3
+(
+1 +ϑ 2x1 +ϑ 3x2 −t1t2
+(
+ϑ 2(1 +x1) −ϑ 3(1 −u)
+) ) )
+(
+1 +ϑ 2x1 +ϑ 3x2 −t1t2
+(
+ϑ 2(1 +x1) −ϑ 3(1 −u)
+) )
+t1
+(
+x1 + 1 − ϑ3
+ϑ2
+(1 −u)
+) 2
+(1 −u)3P ′′
+2
+( (
+x1 + 1 − ϑ3
+ϑ2
+(1 −u)
+)
+(1 −t1)
+)
+P3
+(
+x2 +x3 +u
+)
+dt1dt2dt3du
+]
+x=0
+.
+Lemma 3.3. Supposeϑ 1< 4/ 7, ϑ 3< 1/ 4 and P1(0) = 0 =P3(0) =P ′
+3(0). Then we have
+I31(α,β,γ ) =c31(α,β,γ ) ˆw(0) +Oε(T L−1+ε),
+uniformly for α,β,γ ≪ L −1, where c31(α,β,γ ) is given by
+1
+ϑ2
+1
+d4
+dx1dx2dx2
+3
+[ ∫
+[0,1]3
+yαx1+βx2
+1 yγx3
+3 (Ty x1
+1 yx3
+3 )−(α+γ)t1
+(
+y−x1+x2
+1 (Ty x1
+1 yx3
+3 )t1
+) −(β−α)t2
+(
+−ϑ 1(x1 −x2) +t1(1 +ϑ 1x1 +ϑ 3x3)
+)
+(1 +ϑ 1x1 +ϑ 3x3) (15)
+(1 −u)P1
+(
+x1 +x2 + 1 − ϑ3
+ϑ1
+(1 −u)
+)
+P3(x3 +u)dt1dt2du
+]
+x=0
+.
+We now prove that Theorems 3.4–3.6 follow from Lemmas 3.1–3. 3, respectively. Let I⋆
+denote either I23 or I31. We ﬁrst note that
+I3 =Q
+( −1
+L
+d
+dβ
+)
+Q
+( −1
+L
+d
+dγ
+)
+I3(α,β,γ,δ )
+⏐
+⏐
+⏐
+⏐
+α=δ=0, β =γ=−R/L
+(16)
+and
+I⋆ =Q
+( −1
+L
+d
+dβ
+)
+Q
+( −1
+L
+d
+dγ
+)
+I⋆(α,β,γ )
+⏐
+⏐
+⏐
+⏐
+α=0, β =γ=−R/L
+. (17)
+We then argue that we can obtain either c3 or c⋆ by applying the above diﬀerential operator
+to the corresponding c3(α,β,γ,δ ) or c⋆(α,β,γ ). Since I3(α,β,γ,δ ), I⋆(α,β,γ ), c3(α,β,γ,δ )
+and c⋆(α,β,γ ) are holomorphic with respect to α,β,γ,δ small, the derivatives appearing in
+(16) and (17) can be obtained as integrals of radii ≍ L −1 around the points α = δ = 0,
+β = γ = −R/ L, using Cauchy’s integral formula. Since the error terms hol d uniformly on
+
+===== PAGE 8 =====
+
+8 H. M. BUI
+these contours, the same error terms that hold for I3(α,β,γ,δ ) and I⋆(α,β,γ ) also hold for I3
+and I⋆.
+Next we check that applying the above diﬀerential operator to c3(α,β,γ,δ ) and c⋆(α,β,γ )
+does indeed give c3 and c⋆. Notice the formula
+Q
+( −1
+L
+d
+dβ
+)
+X −β =Q
+( logX
+L
+)
+X −β. (18)
+Using (18) and (15), we have
+Q
+( −1
+L
+d
+dβ
+)
+Q
+( −1
+L
+d
+dγ
+)
+c31(0,β,γ ) = 1
+ϑ2
+1
+d4
+dx1dx2dx2
+3
+[ ∫
+[0,1]3
+yβx2
+1 yγx3
+3 (Ty x1
+1 yx3
+3 )−γt1
+(
+y−x1+x2
+1 (Ty x1
+1 yx3
+3 )t1
+) −βt2
+(
+−ϑ 1(x1 −x2) +t1(1 +ϑ 1x1 +ϑ 3x3)
+)
+(1 +ϑ 1x1 +ϑ 3x3)
+(1 −u)Q
+(
+−ϑ 1x2 −ϑ 1t2(x1 −x2) +t1t2(1 +ϑ 1x1 +ϑ 3x3)
+)
+Q
+(
+−ϑ 3x3 +t1(1 +ϑ 1x1 +ϑ 3x3)
+)
+P1
+(
+x1 +x2 + 1 − ϑ3
+ϑ1
+(1 −u)
+)
+P3(x3 +u)dt1dt2du
+]
+x=0
+.
+Setting β =γ = −R/ L and simplifying gives (9). A similar argument produces (8) f rom (14)
+and produces (7) from (13).
+We prove Lemma 3.3 in Section 5, Lemma 3.2 in Section 6 and Lemm a 3.1 in Section 7.
+4. V arious lemmas
+4.1. The Euler-Maclaurin formula. The following two lemmas are easy consequences of
+the Euler-Maclaurin formula, see [ 3; Lemmas 4.4 and 4.6].
+Lemma 4.1. Suppose y2 ≤ y1, |z| ≪ (logy2)−1, and that f1 and f2 are smooth functions.
+Then we have
+∑
+n≤y2
+dk(n)
+n
+( y2
+n
+) z
+f1
+( logy1/n
+logy1
+)
+f2
+( logy2/n
+logy2
+)
+= (logy2)k
+(k − 1)!
+∫ 1
+0
+yzu
+2 (1 −u)k−1f1
+(
+1 − (1 −u) logy2
+logy1
+)
+f2(u)du +O
+(
+(logy2)k−1)
+.
+Lemma 4.2. Suppose −1 ≤σ ≤ 0. Then we have
+∑
+n≤y1
+dk(n)
+n
+( y1
+n
+) σ
+≪ (logy1)k−1 min
+{
+|σ |−1, logy1
+}
+.
+4.2. Mellin pairs. By convention, we setPj(x) = 0 for j = 1, 2, 3 and x ≤ 0. Note that with
+this deﬁnition we have
+P1
+( logy1/n
+logy1
+)
+=
+∑
+j
+ajj!
+(logy1)j
+1
+2πi
+∫
+(1)
+( y1
+n
+) u du
+uj+1 (19)
+for all n. Similar expressions holds for P2
+( log y2/n
+log y2
+)
+and P3
+( log y3/n
+log y3
+)
+.
+5. Proof of Lemma 3.3
+5.1. Reduction to a contour integral. We shall used the following unproved twisted third
+moment of the Riemann zeta-function.
+
+===== PAGE 9 =====
+
+CRITICAL ZEROS OF THE RIEMANN ZETA-FUNCTION 9
+Theorem 5.1. SupposeH and K satisfyH ≤T 4/7−ε and K ≤T 1/4−ε, or HK ≤T 3/4−ε and
+K ≤T 1/2−ε2. Then we have
+∑
+h≤H
+k≤K
+ahak√
+hk
+∫ ∞
+−∞
+ζ( 1
+2 +α +it)ζ( 1
+2 +β +it)ζ( 1
+2 +γ −it)
+( h
+k
+) it
+w(t)dt
+=
+∑
+h≤H
+k≤K
+ahak√
+hk
+∫ ∞
+−∞
+w(t)
+{
+Zα,β,γ(h,k ) +
+( t
+2π
+) −(α+γ)
+Z−γ,β, −α(h,k )
++
+( t
+2π
+) −(β+γ)
+Zα,−γ,−β(h,k )
+}
+dt +Oε(T 1−ε)
+uniformly for α,β,γ ≪ L −1, where
+Zα,β,γ(h,k ) =
+∑
+kab=hc
+1
+a1/2+αb1/2+βc1/2+γ.
+Recall that I31(α,β,γ ) is deﬁned by (12). We have
+I31(α,β,γ ) =I 1
+31 +I 2
+31 +I 3
+31 +Oε(T 1−ε),
+where
+I 1
+31 = ˆw(0)
+∑
+l,m
+µ(m)µ 2(l)P1
+( log y1/m
+log y1
+)
+P3
+( log y3/l
+log y3
+)
+√
+lm
+∑
+lab=mc
+1
+a1/2+αb1/2+βc1/2+γ,
+I 2
+31 is obtained by multiplying I 1
+31 with T −(α+γ) and changing the shifts α ↔ −γ, γ ↔ −α,
+andI 3
+31 is obtained by multiplyingI 1
+31 withT −(β+γ) and changing the shiftsβ ↔ −γ,γ ↔ −β.
+We shall ﬁrst work on I 1
+31. In view of (19) we get
+I 1
+31 = ˆw(0)
+∑
+i,j
+aicji!j!
+(logy1)i(logy3)j
+( 1
+2πi
+) 2 ∫
+(1)
+∫
+(1)
+yu
+1yv
+3
+∑
+lab=mc
+µ(m)µ 2(l)
+m1/2+ul1/2+va1/2+αb1/2+βc1/2+γ
+du
+ui+1
+dv
+vj+1.
+The Euler product implies that
+∑
+lab=mc
+µ(m)µ 2(l)
+m1/2+ul1/2+va1/2+αb1/2+βc1/2+γ
+=A(α,β,γ,u,v )ζ(1 +α +γ)ζ(1 +β +γ)ζ(1 +u +v)2
+ζ(1 +α +u)ζ(1 +β +u)ζ(1 +γ +v)2, (20)
+whereA(α,β,γ,u,v ) is an arithmetical factor converging absolutely in a product of half-planes
+containing the origin. Hence
+I 1
+31 = ˆw(0)ζ(1 +α +γ)ζ(1 +β +γ)
+∑
+i,j
+aicji!j!
+(logy1)i(logy3)jJi,j, (21)
+where
+Ji,j =
+( 1
+2πi
+) 2 ∫
+(1)
+∫
+(1)
+yu
+1yv
+3
+A(α,β,γ,u,v )ζ(1 +u +v)2
+ζ(1 +α +u)ζ(1 +β +u)ζ(1 +γ +v)2
+du
+ui+1
+dv
+vj+1.
+2Theorem 5.1 is likely to hold for larger ranges of H and K. These conditions, however, suﬃce for our
+purposes.
+
+===== PAGE 10 =====
+
+10 H. M. BUI
+Using the Dirichlet series for ζ(1 + u +v)2 and reversing the order of summation and
+integration, we obtain
+Ji,j =
+∑
+n≤y3
+d(n)
+n
+( 1
+2πi
+) 2 ∫
+(1)
+∫
+(1)
+( y1
+n
+) u( y3
+n
+) v
+A(α,β,γ,u,v )
+ζ(1 +α +u)ζ(1 +β +u)ζ(1 +γ +v)2
+du
+ui+1
+dv
+vj+1. (22)
+Note that here we are able to restrict the sum over n ton ≤y3 by moving thev-integral far to
+the right. We now move the contours of integration to Re( u) = Re(v) ≍ L −1. Bounding the
+integrals trivially shows that Ji,j ≪ L i+j−2. Hence from the Taylor series A(α,β,γ,u,v ) =
+A(0, 0, 0, 0, 0) +O(L−1) +O(|u| + |v|), we can replace A(α,β,γ,u,v ) by A(0, 0, 0, 0, 0) in Ji,j
+with an error of size O(Li+j−3). By letting α =β =γ =u =v =s in (20), it is easy to verify
+that A(0, 0, 0, 0, 0) = 1. The u and v variables in (22) are now separated so that
+Ji,j =
+∑
+n≤y3
+d(n)
+n Mi(α,β )Mj(γ) +O(Li+j−3), (23)
+where
+Mi(α,β ) = 1
+2πi
+∫
+(L− 1)
+( y1
+n
+) u 1
+ζ(1 +α +u)ζ(1 +β +u)
+du
+ui+1
+and
+Mj(γ) = 1
+2πi
+∫
+(L− 1)
+( y3
+n
+) v 1
+ζ(1 +γ +v)2
+dv
+vj+1.
+The expression Mi(α,β ) was evaluated in [ 3; Lemma 5.7]
+Mi(α,β ) = 1
+i!(logy1)2
+d2
+dx1dx2
+[
+yαx1+βx2
+1
+(
+(x1+x2) logy1+logy1/n
+) i]
+x1=x2=0
++O(Li−3). (24)
+We evaluateMj(γ) with the following lemma.
+Lemma 5.1. Supposej ≥ 2. Then for some ν ≍ (log logy3)−1 we have
+Mj(γ) = 1
+j!(logy3)2
+d2
+dx2
+3
+[
+yγx3
+3
+(
+x3 logy3 + logy3/n
+) j
+]
+x3=0
++O(Lj−3) +Oε
+( ( y3
+n
+) −ν
+Lε
+)
+.
+Proof. Let Y = o(T ) be a large parameter to be chosen later. By Cauchy’s theorem , Mj(γ)
+is equal to the residue at v = 0 plus integrals over the line segments C1 = {v = L−1 +it,t ∈
+R, |t| ≥ Y }, C2 = {v =σ ±iY, − c
+log Y ≤σ ≤ L −1} and C3 = {v = − c
+log Y +it, |t| ≤ Y }, where
+c is some ﬁxed positive constant such that ζ(1 +γ +v) has no zeros in the region on the right
+hand side of the contour determined by the Cj. Furthermore, we require that for such c we
+have 1/ζ (σ +it) ≪ log(2 + |t|) in this region (see [ 12; Theorem 3.11]). Then the integral over
+C1 is
+≪ (logY )2/Y j ≪εY −2+ε,
+since j ≥ 2. The integral over C2 is
+≪ (logY )/Y j+1 ≪εY −3+ε.
+Finally, the contribution from C3 is
+≪ (logY )j
+( y3
+n
+) −c/ log Y
+≪ε
+( y3
+n
+) −c/ log Y
+Y ε.
+Choosing Y ≍ L gives an error so far of size Oε
+(
+(y3/n )−νLε)
++Oε(L−2+ε).
+For the residue at v = 0, we write this as
+1
+2πi
+∮ ( y3
+n
+) v 1
+ζ(1 +γ +v)2
+dv
+vj+1,
+
+===== PAGE 11 =====
+
+CRITICAL ZEROS OF THE RIEMANN ZETA-FUNCTION 11
+where the contour is a circle of radius ≍ L −1 around the origin. This integral is trivially
+bounded byO(Lj−2), hence by taking the ﬁrst term in the Taylor series of ζ(1 +γ +v) we get
+Resv=0 = γ2(logy3/n )j
+j! + 2γ(logy3/n )j−1
+(j − 1)! + (logy3/n )j−2
+(j − 2)! +O(Lj−3).
+The above main term can be written in a compact form
+1
+j!(logy3)2
+d2
+dx2
+3
+[
+yγx3
+3
+(
+x3 logy3 + logy3/n
+) j
+]
+x3=0
+and the lemma follows. □
+In view of (23), (24) and Lemma 5.1 we get
+Ji,j = (logy1)i−2(logy3)j−2
+i!j!
+d4
+dx1dx2dx2
+3
+[
+yαx1+βx2
+1 yγx3
+3
+∑
+n≤y3
+d(n)
+n
+(
+x1 +x2 + logy1/n
+logy1
+) i(
+x3 + logy3/n
+logy3
+) j]
+x=0
++Oε
+(
+Li−2+ε ∑
+n≤y3
+d(n)
+n
+( y3
+n
+) −ν)
++O(Li+j−3).
+Using Lemmas 4.1 and 4.2 this is equal to
+(logy1)i−2(logy3)j
+i!j!
+d4
+dx1dx2dx2
+3
+[
+yαx1+βx2
+1 yγx3
+3
+∫ 1
+0
+(1 −u)
+(
+x1 +x2 + 1 − ϑ3
+ϑ1
+(1 −u)
+) i
+(x3 +u)jdu
+]
+x=0
++Oε(Li−1+ε) +O(Li+j−3).
+As j ≥ 2, putting this back to (21) we get
+I 1
+31 = ˆw(0)
+(logy1)2ζ(1 +α +γ)ζ(1 +β +γ) d4
+dx1dx2dx2
+3
+[
+yαx1+βx2
+1 yγx3
+3
+∫ 1
+0
+(1 −u)P1
+(
+x1 +x2 + 1 − ϑ3
+ϑ1
+(1 −u)
+)
+P3(x3 +u)du
+]
+x=0
++Oε(T L−1+ε).
+5.2. Deduction of Lemma 3.3. CombiningI 1
+31, I 2
+31 and I 3
+31 we have
+I31 = ˆw(0)
+(logy1)2
+d4
+dx1dx2dx2
+3
+[ ∫ 1
+0
+U1(x
+)(1 −u)P1
+(
+x1 +x2 + 1 − ϑ3
+ϑ1
+(1 −u)
+)
+P3(x3 +u)du
+]
+x=0
++Oε(T L−1+ε),
+where
+U1 = yαx1+βx2
+1 yγx3
+3
+(α +γ)(β +γ) − T −(α+γ)y−γx1+βx2
+1 y−αx3
+3
+(α +γ)(β −α) − T −(β+γ)yαx1−γx2
+1 y−βx3
+3
+(α −β)(β +γ) .
+Using the identity
+1
+(α +γ)(β +γ) = 1
+(α +γ)(β −α) + 1
+(α −β)(β +γ)
+and the integral formula
+1 −z−(α+β)
+α +β = (logz)
+∫ 1
+0
+z−(α+β)tdt, (25)
+
+===== PAGE 12 =====
+
+12 H. M. BUI
+we can write
+U1 = yαx1+βx2
+1 yγx3
+3 −T −(α+γ)y−γx1+βx2
+1 y−αx3
+3
+(α +γ)(β −α) − yαx1+βx2
+1 yγx3
+3 −T −(β+γ)yαx1−γx2
+1 y−βx3
+3
+(β −α)(β +γ)
+= yαx1+βx2
+1 yγx3
+3
+β −α
+( 1 − (Ty x1
+1 yx3
+3 )−(α+γ)
+α +γ
+)
+− yαx1+βx2
+1 yγx3
+3
+β −α
+( 1 − (Ty x2
+1 yx3
+3 )−(β+γ)
+β +γ
+)
+= L
+β −α (1 +ϑ 1x1 +ϑ 3x3)yαx1+βx2
+1 yγx3
+3
+∫ 1
+0
+(Ty x1
+1 yx3
+3 )−(α+γ)t1dt1
+− L
+β −α (1 +ϑ 1x2 +ϑ 3x3)yαx1+βx2
+1 yγx3
+3
+∫ 1
+0
+(Ty x2
+1 yx3
+3 )−(β+γ)t1dt1.
+Hence
+I31 = ˆw(0)L
+(β −α)(logy1)2
+d4
+dx1dx2dx2
+3
+[ ∫ 1
+0
+∫ 1
+0
+yαx1+βx2
+1 yγx3
+3 (Ty x1
+1 yx3
+3 )−(α+γ)t1(1 +ϑ 1x1 +ϑ 3x3)
+(1 −u)P1
+(
+x1 +x2 + 1 − ϑ3
+ϑ1
+(1 −u)
+)
+P3(x3 +u)dt1du
+]
+x=0
+− ˆw(0)L
+(β −α)(logy1)2
+d4
+dx1dx2dx2
+3
+[ ∫ 1
+0
+∫ 1
+0
+yαx1+βx2
+1 yγx3
+3 (Ty x2
+1 yx3
+3 )−(β+γ)t1(1 +ϑ 1x2 +ϑ 3x3)
+(1 −u)P1
+(
+x1 +x2 + 1 − ϑ3
+ϑ1
+(1 −u)
+)
+P3(x3 +u)dt1du
+]
+x=0
++Oε(T L−1+ε).
+Changing the roles of the variables x1 and x2 in the second term we obtain
+I31 = ˆw(0)L
+(logy1)2
+d4
+dx1dx2dx2
+3
+[ ∫ 1
+0
+∫ 1
+0
+V1(x
+)(1 +ϑ 1x1 +ϑ 3x3) (26)
+(1 −u)P1
+(
+x1 +x2 + 1 − ϑ3
+ϑ1
+(1 −u)
+)
+P3(x3 +u)dt1du
+]
+x=0
++Oε(T L−1+ε),
+where
+V1 = yαx1+βx2
+1 yγx3
+3 (Ty x1
+1 yx3
+3 )−(α+γ)t1 −yαx2+βx1
+1 yγx3
+3 (Ty x1
+1 yx3
+3 )−(β+γ)t1
+β −α .
+Using (25) again we have
+V1 = yαx1+βx2
+1 yγx3
+3 (Ty x1
+1 yx3
+3 )−(α+γ)t1
+( 1 −
+(
+y−x1+x2
+1 (Ty x1
+1 yx3
+3 )t1
+) −(β−α)
+β −α
+)
+= L
+(
+−ϑ 1(x1 −x2) +t1(1 +ϑ 1x1 +ϑ 3x3)
+)
+yαx1+βx2
+1 yγx3
+3 (Ty x1
+1 yx3
+3 )−(α+γ)t1
+∫ 1
+0
+(
+y−x1+x2
+1 (Ty x1
+1 yx3
+3 )t1
+) −(β−α)t2
+dt2.
+Lemma 3.3 follows from this and (26).
+6. Proof of Lemma 3.2
+6.1. Reduction to a contour integral. Recall thatI23(α,β,γ ) is deﬁned by (11). We have
+I23(α,β,γ ) =I 1
+23 +I 2
+23 +I 3
+23,
+where
+I 1
+23 = ˆw(0)
+∑
+l,m,n
+µ 2(m)µ 2(l)P2( log y2/mn
+log y2
+)P3( log y3/l
+log y3
+)
+√
+lmn
+∑
+mab=lnc
+1
+a1/2+αb1/2+βc1/2+γ,
+
+===== PAGE 13 =====
+
+CRITICAL ZEROS OF THE RIEMANN ZETA-FUNCTION 13
+I 2
+23 is obtained by multiplying I 1
+23 with T −(α+γ) and changing the shifts α ↔ −γ, γ ↔ −α,
+andI 3
+23 is obtained by multiplyingI 1
+23 withT −(β+γ) and changing the shiftsβ ↔ −γ,γ ↔ −β.
+We ﬁrst work on I 1
+23. In view of (19) we get
+I 1
+23 = ˆw(0)
+∑
+i,j
+bicji!j!
+(logy2)i(logy3)j
+( 1
+2πi
+) 2 ∫
+(1)
+∫
+(1)
+yu
+2yv
+3
+∑
+mab=lnc
+µ 2(m)µ 2(l)
+(mn)1/2+ul1/2+va1/2+αb1/2+βc1/2+γ
+du
+ui+1
+dv
+vj+1.
+The arithmetical sum is
+∑
+mab=lnc
+µ 2(m)µ 2(l)
+(mn)1/2+ul1/2+va1/2+αb1/2+βc1/2+γ (27)
+=B(α,β,γ,u,v )ζ(1 +α +γ)ζ(1 +β +γ)ζ(1 +α +u)ζ(1 +β +u)ζ(1 +u +v)4
+ζ(1 +α +v)2ζ(1 +β +v)2ζ(1 +γ +u)2ζ(1 + 2u)2 ,
+whereB(α,β,γ,u,v ) is an arithmetical factor converging absolutely in a product of half-planes
+containing the origin. So
+I 1
+23 = ˆw(0)ζ(1 +α +γ)ζ(1 +β +γ)
+∑
+i,j
+bicji!j!
+(logy2)i(logy3)jKi,j, (28)
+where
+Ki,j =
+( 1
+2πi
+) 2 ∫
+(1)
+∫
+(1)
+yu
+2yv
+3
+B(α,β,γ,u,v )ζ(1 +α +u)ζ(1 +β +u)ζ(1 +u +v)4
+ζ(1 +α +v)2ζ(1 +β +v)2ζ(1 +γ +u)2ζ(1 + 2u)2
+du
+ui+1
+dv
+vj+1.
+Using the Dirichlet series for ζ(1 + u +v)4 and changing the order of summation and
+integration, we have
+Ki,j =
+∑
+n≤y3
+d4(n)
+n
+( 1
+2πi
+) 2 ∫
+(1)
+∫
+(1)
+( y2
+n
+) u( y3
+n
+) v
+B(α,β,γ,u,v )ζ(1 +α +u)ζ(1 +β +u)
+ζ(1 +α +v)2ζ(1 +β +v)2ζ(1 +γ +u)2ζ(1 + 2u)2
+du
+ui+1
+dv
+vj+1. (29)
+Note that here we are able to restrict the sum over n ton ≤y3 by moving thev-integral far to
+the right. We now move the contours of integration to Re( u) = Re(v) ≍ L −1. Bounding the
+integrals trivially shows that Ki,j ≪ L i+j−2. Hence from the Taylor series B(α,β,γ,u,v ) =
+B(0, 0, 0, 0, 0) +O(L−1) +O(|u| + |v|), we can replace B(α,β,γ,u,v ) by B(0, 0, 0, 0, 0) in Ki,j
+with an error of size O(Li+j−3). By letting α =β =γ =u =v =s in (27), it is easy to verify
+that B(0, 0, 0, 0, 0) = 1. The u and v variables in (29) are now separated so that
+Ki,j =
+∑
+n≤y3
+d4(n)
+n Ni(α,β,γ )Nj(α,β ) +O(Li+j−3), (30)
+where
+Ni(α,β,γ ) = 1
+2πi
+∫
+(L− 1)
+( y2
+n
+) uζ(1 +α +u)ζ(1 +β +u)
+ζ(1 +γ +u)2ζ(1 + 2u)2
+du
+ui+1
+and
+Nj(α,β ) = 1
+2πi
+∫
+(L− 1)
+( y3
+n
+) v 1
+ζ(1 +α +v)2ζ(1 +β +v)2
+dv
+vj+1. (31)
+We evaluateNi(α,β,γ ) and Nj(α,β ) with the following lemmas.
+
+===== PAGE 14 =====
+
+14 H. M. BUI
+Lemma 6.1. Supposei ≥ 3. Then we have
+Ni(α,β,γ ) = 4
+(i − 2)!(logy2)2
+d2
+dx2
+1
+[ ∫ 1
+0
+∫ 1
+0
+y
+γx1−
+(
+α(1−t2)+βt2
+)
+t1x1
+2
+( y2
+n
+) −
+(
+α(1−t2)+βt2
+)
+t1
+(1 −t1)i−2t1
+(
+x1 logy2 + (logy2/n )
+) i
+dt1dt2
+]
+x1=0
++O(Li−3).
+Proof. An argument on the level of the prime number theorem shows tha tNi(α,β,γ ) is equal
+to the residue at u = 0 plus an error of size (log y2/n )−B for any B >0. Since n ≤ y3, we
+have (logy2/n ) ≥ log(y2/y 3) = (ϑ 2 −ϑ 3)L so that this error is negligible.
+We write the residue at u = 0 as
+1
+2πi
+∮
+quζ(1 +α +u)ζ(1 +β +u)
+ζ(1 +γ +u)2ζ(1 + 2u)2
+du
+ui+1,
+where q =y2/n and the contour is a circle of radius ≍ L −1 around the origin. This integral
+is trivially bounded by O(Li−2). Hence by taking the ﬁrst terms in the Taylor series of the
+zeta-functions we have
+Ni(α,β,γ ) = 4
+2πi
+∮
+qu (γ +u)2
+(α +u)(β +u)
+du
+ui−1 +O(Li−3).
+We next use the identity
+(γ +u)2 = 1
+(logy2)2
+d2
+dx2
+1
+y(γ+u)x1
+2
+⏐
+⏐
+⏐
+⏐
+x1=0
+,
+to write
+Ni(α,β,γ ) = 4
+(logy2)2
+d2
+dx2
+1
+yγx1
+2 N(x1)
+⏐
+⏐
+⏐
+⏐
+x1=0
+,
+where
+N(x1) = 1
+2πi
+∮ (
+yx1
+2 q
+) u 1
+(α +u)(β +u)
+du
+ui−1.
+Taking the power series gives
+N(x1) =
+∑
+k≥0
+(x1 logy2 + logq)k
+k!
+1
+2πi
+∮ uk−i+1
+(α +u)(β +u)du.
+As there are three poles inside the contour, it is slightly ea sier to compute the residue at
+inﬁnity. In other words, changing the variable u → 1/u yields
+N(x1) =
+∑
+k≥0
+(x1 logy2 + logq)k
+k!
+1
+2πi
+∮ ui−k−1
+(1 +αu)(1 +βu)du.
+In view of the power series of (1 + αu)−1 and (1 +βu)−1, we have
+N(x1) =
+∑
+k≥0
+(x1 logy2 + logq)k
+k!
+∑
+l1,l2≥0
+(−α)l1(−β)l2 1
+2πi
+∮
+ui+l1+l2−k−1du.
+The integral picks out the terms k =i +l1 +l2, giving
+N(x1) = (x1 logy2 + logq)i ∑
+l1,l2≥0
+(−α)l1(−β)l2(x1 logy2 + logq)l1+l2
+(i +l1 +l2)! . (32)
+We now separate the variablesl1,l 2 andi by using the standard beta function and its integral
+representation
+1
+(i +l1 +l2)! = B(i − 1,l 1 +l2 + 2) 1
+(i − 2)!(l1 +l2 + 1)!
+
+===== PAGE 15 =====
+
+CRITICAL ZEROS OF THE RIEMANN ZETA-FUNCTION 15
+= B(i − 1,l 1 +l2 + 2)B(l1 + 1,l 2 + 1) 1
+(i − 2)!l1!l2!
+= 1
+(i − 2)!l1!l2!
+∫ 1
+0
+∫ 1
+0
+(1 −t1)i−2tl1+l2+1
+1 (1 −t2)l1tl2
+2dt1dt2.
+Putting this into (32) we obtain
+N(x1) = (x1 logy2 + logq)i
+(i − 2)!
+∫ 1
+0
+∫ 1
+0
+(1−t1)i−2t1e−α(x1 log y2+log q)t1(1−t2)−β(x1 log y2+log q)t1t2dt1dt2,
+and the lemma follows. □
+Lemma 6.2. Supposej ≥ 4. Then for some ν ≍ (log logy3)−1 we have
+Nj(α,β ) = 1
+j!(logy3)4
+d4
+dx2
+2dx2
+3
+[
+yαx2+βx3
+3
+(
+(x2 +x3) logy3 + logy3/n
+) j]
+x2=x3=0
++O(Lj−5) +O
+( ( y3
+n
+) −ν
+Lε
+)
+.
+Proof. Similarly to Lemma 5.1, Nj(α,β ) equals the residue at v = 0 plus an error of size
+Oε
+(
+(y3/n )−νLε)
++Oε(L−2+ε).
+For the residue at v = 0, we write this as
+1
+2πi
+∮ ( y3
+n
+) v 1
+ζ(1 +α +v)2ζ(1 +β +v)2
+dv
+vj+1,
+where the contour is a circle of radius ≍ L −1 around the origin. This integral is trivially
+bounded byO(Lj−4). Hence by taking the ﬁrst terms in the Taylor series of the zeta-functions
+we have
+Resv=0 = 1
+2πi
+∮ ( y3
+n
+) v
+(α +v)2(β +v)2 dv
+vj+1 +O(Lj−5).
+The above integral can be written in a compact form as
+1
+j!(logy3)4
+d4
+dx2
+2dx2
+3
+[
+yαx2+βx3
+3
+(
+(x2 +x3) logy3 + logy3/n
+) j]
+x2=x3=0
+,
+and the lemma follows. □
+In view of (30) and Lemmas 6.1 and 6.2 we get
+Ki,j = 4(logy2)i−2(logy3)j−4
+(i − 2)!j!
+d6
+dx2
+1dx2
+2dx2
+3
+[ ∫ 1
+0
+∫ 1
+0
+( y2
+y3
+) −
+(
+α(1−t2)+βt2
+)
+t1
+y
+γx1−
+(
+α(1−t2)+βt2
+)
+t1x1
+2 yαx2+βx3
+3 (1 −t1)i−2t1
+∑
+n≤y3
+d4(n)
+n
+( y3
+n
+) −
+(
+α(1−t2)+βt2
+)
+t1(
+x1 + logy2/n
+logy2
+) i(
+x2 +x3 + logy3/n
+logy3
+) j
+dt1dt2
+]
+x=0
++Oε
+(
+Li−2+ε ∑
+n≤y3
+d4(n)
+n
+( y3
+n
+) −ν)
++O(Li+j−3).
+Using Lemmas 4.1 and 4.2, the O-terms are ≪ε Li+1+ε + Li+j−3, while the ﬁrst term is
+2(logy2)i−2(logy3)j
+3(i − 2)!j!
+d6
+dx2
+1dx2
+2dx2
+3
+[ ∫ 1
+0
+∫ 1
+0
+∫ 1
+0
+y
+γx1−
+(
+α(1−t2)+βt2
+)
+t1(1+x1)
+2 y
+αx2+βx3+
+(
+α(1−t2)+βt2
+)
+t1(1−u)
+3 (1 −t1)i−2t1(1 −u)3
+
+===== PAGE 16 =====
+
+16 H. M. BUI
+(
+x1 + 1 − ϑ3
+ϑ2
+(1 −u)
+) i
+(x2 +x3 +u)jdt1dt2du
+]
+x=0
++O(Li+j−3).
+Putting this back to (28) and using the assumption that j ≥ 4 we get
+I 1
+23 = 2 ˆw(0)
+3(logy2)2ζ(1 +α +γ)ζ(1 +β +γ) d6
+dx2
+1dx2
+2dx2
+3
+[ ∫ 1
+0
+∫ 1
+0
+∫ 1
+0
+y
+γx1−
+(
+α(1−t2)+βt2
+)
+t1(1+x1)
+2 y
+αx2+βx3+
+(
+α(1−t2)+βt2
+)
+t1(1−u)
+3 t1
+(
+x1 + 1 − ϑ3
+ϑ2
+(1 −u)
+) 2
+(1 −u)3
+P ′′
+2
+( (
+x1 + 1 − ϑ3
+ϑ2
+(1 −u)
+)
+(1 −t1)
+)
+P3(x2 +x3 +u)dt1dt2du
+]
+x=0
++Oε(L−1+ε).
+6.2. Deduction of Lemma 3.2. CombiningI 1
+23, I 2
+23 and I 3
+23 we have
+I23 = 2 ˆw(0)
+3(logy2)2
+d6
+dx2
+1dx2
+2dx2
+3
+[ ∫ 1
+0
+∫ 1
+0
+∫ 1
+0
+U2(x
+)t1
+(
+x1 + 1 − ϑ3
+ϑ2
+(1 −u)
+) 2
+(1 −u)3
+P ′′
+2
+( (
+x1 + 1 − ϑ3
+ϑ2
+(1 −u)
+)
+(1 −t1)
+)
+P3(x2 +x3 +u)dt1dt2du
+]
+x=0
++Oε(T L−1+ε),
+where
+U2 = y
+γx1−
+(
+α(1−t2)+βt2
+)
+t1(1+x1)
+2 y
+αx2+βx3+
+(
+α(1−t2)+βt2
+)
+t1(1−u)
+3
+(α +γ)(β +γ)
+−T −(α+γ)y
+−αx1−
+(
+−γ(1−t2)+βt2
+)
+t1(1+x1)
+2 y
+−γx2+βx3+
+(
+−γ(1−t2)+βt2
+)
+t1(1−u)
+3
+(α +γ)(β −α)
+−T −(β+γ)y
+−βx1−
+(
+α(1−t2)−γt2
+)
+t1(1+x1)
+2 y
+αx2−γx3+
+(
+α(1−t2)−γt2
+)
+t1(1−u)
+3
+(α −β)(β +γ) .
+As in the previous section we can write
+U2 = y
+γx1−
+(
+α(1−t2)+βt2
+)
+t1(1+x1)
+2 y
+αx2+βx3+
+(
+α(1−t2)+βt2
+)
+t1(1−u)
+3
+β −α
+( 1 −
+(
+Ty x1−t1(1−t2)(1+x1)
+2 yx2+t1(1−t2)(1−u)
+3
+) −(α+γ)
+α +γ
+)
+−y
+γx1−
+(
+α(1−t2)+βt2
+)
+t1(1+x1)
+2 y
+αx2+βx3+
+(
+α(1−t2)+βt2
+)
+t1(1−u)
+3
+β −α
+( 1 −
+(
+Ty x1−t1t2(1+x1)
+2 yx3+t1t2(1−u)
+3
+) −(β+γ)
+β +γ
+)
+.
+Applying (25) leads to
+U2 = L
+β −α
+(
+1 +ϑ 2x1 +ϑ 3x2 −t1(1 −t2)
+(
+ϑ 2(1 +x1) −ϑ 3(1 −u)
+) )
+y
+γx1−
+(
+α(1−t2)+βt2
+)
+t1(1+x1)
+2 y
+αx2+βx3+
+(
+α(1−t2)+βt2
+)
+t1(1−u)
+3∫ 1
+0
+(
+Ty x1−t1(1−t2)(1+x1)
+2 yx2+t1(1−t2)(1−u)
+3
+) −(α+γ)t3
+dt3
+− L
+β −α
+(
+1 +ϑ 2x1 +ϑ 3x3 −t1t2
+(
+ϑ 2(1 +x1) −ϑ 3(1 −u)
+) )
+
+===== PAGE 17 =====
+
+CRITICAL ZEROS OF THE RIEMANN ZETA-FUNCTION 17
+y
+γx1−
+(
+α(1−t2)+βt2
+)
+t1(1+x1)
+2 y
+αx2+βx3+
+(
+α(1−t2)+βt2
+)
+t1(1−u)
+3∫ 1
+0
+(
+Ty x1−t1t2(1+x1)
+2 yx3+t1t2(1−u)
+3
+) −(β+γ)t3
+dt3.
+Changing t2 → 1 −t2 in the ﬁrst term, and changing the roles of the variables x2 with x3 in
+the second term yields
+I23 = 2 ˆw(0)L
+3(logy2)2
+d6
+dx2
+1dx2
+2dx2
+3
+[ ∫
+[0,1]4
+V2(x
+)
+(
+1 +ϑ 2x1 +ϑ 3x2 −t1t2
+(
+ϑ 2(1 +x1) −ϑ 3(1 −u)
+) )
+t1
+(
+x1 + 1 − ϑ3
+ϑ2
+(1 −u)
+) 2
+(1 −u)3P ′′
+2
+( (
+x1 + 1 − ϑ3
+ϑ2
+(1 −u)
+)
+(1 −t1)
+)
+P3
+(
+x2 +x3 +u
+)
+dt1dt2dt3du
+]
+x=0
++Oε(T L−1+ε),
+where
+V2 = 1
+β −α
+(
+y
+γx1−
+(
+αt2+β(1−t2)
+)
+t1(1+x1)
+2 y
+αx2+βx3+
+(
+αt2+β(1−t2)
+)
+t1(1−u)
+3
+(
+Ty x1−t1t2(1+x1)
+2 yx2+t1t2(1−u)
+3
+) −(α+γ)t3
+−y
+γx1−
+(
+α(1−t2)+βt2
+)
+t1(1+x1)
+2 y
+αx3+βx2+
+(
+α(1−t2)+βt2
+)
+t1(1−u)
+3
+(
+Ty x1−t1t2(1+x1)
+2 yx2+t1t2(1−u)
+3
+) −(β+γ)t3
+)
+.
+Using (25) again implies that V2 equals
+y
+γx1−
+(
+αt2+β(1−t2)
+)
+t1(1+x1)
+2 y
+αx2+βx3+
+(
+αt2+β(1−t2)
+)
+t1(1−u)
+3
+(
+Ty x1−t1t2(1+x1)
+2 yx2+t1t2(1−u)
+3
+) −(α+γ)t3
+( 1 −
+(
+yt1(2t2−1)(1+x1)
+2 y−x2+x3−t1(2t2−1)(1−u)
+3
+(
+Ty x1−t1t2(1+x1)
+2 yx2+t1t2(1−u)
+3
+) t3
+) −(β−α)
+β −α
+)
+= L
+(
+−ϑ 3
+(
+x2 −x3) +t1(2t2 − 1)
+(
+ϑ 2(1 +x1) −ϑ 3(1 −u)
+)
++t3
+(
+1 +ϑ 2x1 +ϑ 3x2 −t1t2
+(
+ϑ 2(1 +x1) −ϑ 3(1 −u)
+) ) )
+y
+γx1−
+(
+αt2+β(1−t2)
+)
+t1(1+x1)
+2 y
+αx2+βx3+
+(
+αt2+β(1−t2)
+)
+t1(1−u)
+3
+(
+Ty x1−t1t2(1+x1)
+2 yx2+t1t2(1−u)
+3
+) −(α+γ)t3
+∫ 1
+0
+(
+yt1(2t2−1)(1+x1)
+2 y−x2+x3−t1(2t2−1)(1−u)
+3
+(
+Ty x1−t1t2(1+x1)
+2 yx2+t1t2(1−u)
+3
+) t3
+) −(β−α)t4
+dt4,
+and the lemma follows.
+7. Proof of Lemma 3.1
+7.1. Reduction to a contour integral. We ﬁrst state the twisted fourth moment of the
+Riemann zeta-function [ 2].
+Theorem 7.1 (Bettin, Bui, Li and Radziwi/suppress l/suppress l). SupposeH,K ≤T 1/4−ε. Then we have
+∑
+h≤H
+k≤K
+ahak√
+hk
+∫ ∞
+−∞
+ζ( 1
+2 +α +it)ζ( 1
+2 +β +it)ζ( 1
+2 +γ −it)ζ( 1
+2 +δ −it)
+( h
+k
+) it
+w(t)dt
+
+===== PAGE 18 =====
+
+18 H. M. BUI
+=
+∑
+h≤H
+k≤K
+ahak√
+hk
+∫ ∞
+−∞
+w(t)
+{
+Zα,β,γ,δ (h,k ) +
+( t
+2π
+) −(α+γ)
+Z−γ,β, −α,δ(h,k )
++
+( t
+2π
+) −(α+δ)
+Z−δ,β,γ, −α(h,k ) +
+( t
+2π
+) −(β+γ)
+Zα,−γ,−β,δ(h,k )
++
+( t
+2π
+) −(β+δ)
+Zα,−δ,γ,−β(h,k ) +
+( t
+2π
+) −(α+β+γ+δ)
+Z−γ,−δ,−α,−β(h,k )
+}
+dt +Oε(T 1−ε)
+uniformly for α,β,γ,δ ≪ L −1, where
+Zα,β,γ,δ (h,k ) =
+∑
+kab=hcd
+1
+a1/2+αb1/2+βc1/2+γd1/2+δ.
+Recall that I3(α,β,γ,δ ) is deﬁned by (10). We write
+I3(α,β,γ,δ ) =I 1
+3 +I 2
+3 +I 3
+3 +I 4
+3 +I 5
+3 +I 6
+3 +Oε(T 1−ε)
+correspondingly to the decomposition in Theorem 7.1. We ﬁrs t work on I 1
+3, which is equal to
+ˆw(0)
+∑
+l,m
+µ 2(m)µ 2(l)P3
+( log y3/m
+log y3
+)
+P3
+( log y3/l
+log y3
+)
+√
+lm
+∑
+mab=lcd
+1
+a1/2+αb1/2+βc1/2+δd1/2+γ.
+In view of (19) we get
+I 1
+3 = ˆw(0)
+∑
+i,j
+cicji!j!
+(logy3)i+j
+( 1
+2πi
+) 2 ∫
+(1)
+∫
+(1)
+yu+v
+3
+∑
+mab=lcd
+µ 2(m)µ 2(l)
+m1/2+ul1/2+va1/2+αb1/2+βc1/2+γd1/2+δ
+du
+ui+1
+dv
+vj+1.
+The arithmetical sum is
+∑
+mab=lcd
+µ 2(m)µ 2(l)
+m1/2+ul1/2+va1/2+αb1/2+βc1/2+γd1/2+δ (33)
+=C(α,β,γ,δ,u,v )ζ(1 +α +γ)ζ(1 +α +δ)ζ(1 +β +γ)ζ(1 +β +δ)ζ(1 +u +v)4
+ζ(1 +α +v)2ζ(1 +β +v)2ζ(1 +γ +u)2ζ(1 +δ +u)2 ,
+where C(α,β,γ,δ,u,v ) is an arithmetical factor converging absolutely in a produ ct of half-
+planes containing the origin. Hence
+I 1
+3 = ˆw(0)ζ(1 +α +γ)ζ(1 +α +δ)ζ(1 +β +γ)ζ(1 +β +δ)
+∑
+i,j
+cicji!j!
+(logy3)i+jLi,j, (34)
+where
+Li,j =
+( 1
+2πi
+) 2 ∫
+(1)
+∫
+(1)
+yu+v
+3
+C(α,β,γ,δ,u,v )ζ(1 +u +v)4
+ζ(1 +α +v)2ζ(1 +β +v)2ζ(1 +γ +u)2ζ(1 +δ +u)2
+du
+ui+1
+dv
+vj+1.
+Using the Dirichlet series for ζ(1 + u +v)4 and reversing the order of summation and
+integration, we have
+Li,j =
+∑
+n≤y3
+d4(n)
+n
+( 1
+2πi
+) 2 ∫
+(1)
+∫
+(1)
+( y3
+n
+) u+v
+C(α,β,γ,δ,u,v )
+ζ(1 +α +v)2ζ(1 +β +v)2ζ(1 +γ +u)2ζ(1 +δ +u)2
+du
+ui+1
+dv
+vj+1. (35)
+Here we are able to restrict the sum over n to n ≤y3 by moving the u,v -integrals far to the
+right. We now move the contours of integration to Re( u) = Re( v) ≍ L −1. Bounding the
+
+===== PAGE 19 =====
+
+CRITICAL ZEROS OF THE RIEMANN ZETA-FUNCTION 19
+integrals trivially shows that Li,j ≪ L i+j−4. As before we can replace C(α,β,γ,δ,u,v ) by
+C(0, 0, 0, 0, 0, 0) in Li,j with an error of sizeO(Li+j−5). By letting α =β =γ =δ =u =v =s
+in (33), it is easy to verify that C(0, 0, 0, 0, 0, 0) = 1. The u and v variables in (35) are now
+separated so that
+Li,j =
+∑
+n≤y3
+d4(n)
+n Ni(γ,δ )Nj(α,β ) +O(Li+j−5),
+where the function Nj(α,β ) is deﬁned in (31). Using Lemma 6.2 we obtain
+Li,j = (logy3)i+j−8
+i!j!
+d8
+dx2
+1dx2
+2dx2
+3dx2
+4
+[
+yαx1+βx2+γx3+δx4
+3
+∑
+n≤y3
+d4(n)
+n
+(
+x3 +x4 + logy3/n
+logy3
+) i(
+x1 +x2 + logy3/n
+logy3
+) j]
+x=0
++Oε
+( (
+Li−4+ε + Lj−4+ε) ∑
+n≤y3
+d4(n)
+n
+( y3
+n
+) −ν)
++O(Li+j−5).
+In view of Lemmas 4.1 and 4.2, the O-terms are ≪ε Li−1+ε + Lj−1+ε + Li+j−5, while the ﬁrst
+term is
+(logy3)i+j−4
+6i!j!
+d8
+dx2
+1dx2
+2dx2
+3dx2
+4
+[ ∫ 1
+0
+yαx1+βx2+γx3+δx4
+3 (1 −u)3(x3 +x4 +u)i(x1 +x2 +u)jdu
+]
+x
+=0
++O(Li+j−5).
+Combining this with (34), and using the assumption i,j ≥ 4, we get
+I 1
+3 = ˆw(0)
+6(logy3)4ζ(1 +α +γ)ζ(1 +α +δ)ζ(1 +β +γ)ζ(1 +β +δ) d8
+dx2
+1dx2
+2dx2
+3dx2
+4
+[ ∫ 1
+0
+yαx1+βx2+γx3+δx4
+3 (1 −u)3P3(x1 +x2 +u)P3(x3 +x4 +u)du
+]
+x
+=0
++Oε(L−1+ε).
+7.2. Deduction of Lemma 3.1. Recall thatI 2
+3 is essentially obtained by multiplyingI 1
+3 with
+T −(α+γ) and changing the shifts α ↔ −γ, I 3
+3 is obtained by multiplying I 1
+3 with T −(α+δ) and
+changing the shifts α ↔ −δ, I 4
+3 is obtained by multiplying I 1
+3 with T −(β+γ) and changing the
+shiftsβ ↔ −γ,I 5
+3 is obtained by multiplyingI 1
+3 withT −(β+δ) and changing the shiftsβ ↔ −δ,
+and I 6
+3 is obtained by multiplying I 1
+3 with T −(α+β+γ+δ) and changing the shifts α ↔ −γ and
+β ↔ −δ. Hence
+I3(α,β,γ,δ ) = ˆw(0)
+6(logy3)4
+d8
+dx2
+1dx2
+2dx2
+3dx2
+4
+[ ∫ 1
+0
+(36)
+U(x
+)(1 −u)3P3(x1 +x2 +u)P3(x3 +x4 +u)du
+]
+x=0
++Oε(L−1+ε),
+where
+U = yαx1+βx2+γx3+δx4
+3
+(α +γ)(α +δ)(β +γ)(β +δ) − T −(α+γ)y−γx1+βx2−αx3+δx4
+3
+(α +γ)(−γ +δ)(β −α)(β +δ)
+− T −(α+δ)y−δx1+βx2+γx3−αx4
+3
+(−δ +γ)(α +δ)(β +γ)(β −α) − T −(β+γ)yαx1−γx2−βx3+δx4
+3
+(α −β)(α +δ)(β +γ)(−γ +δ)
+− T −(β+δ)yαx1−δx2+γx3−βx4
+3
+(α +γ)(α −β)(−δ +γ)(β +δ) + T −(α+β+γ+δ)y−γx1−δx2−αx3−βx4
+3
+(α +γ)(γ +β)(δ +α)(β +δ) .
+
+===== PAGE 20 =====
+
+20 H. M. BUI
+We write
+yαx1+βx2+γx3+δx4
+3
+(α +γ)(α +δ)(β +γ)(β +δ) = yαx1+βx2+γx3+δx4
+3
+(α +γ)(−γ +δ)(β −α)(β +δ)
+− yαx1+βx2+γx3+δx4
+3
+(−γ +δ)(α +δ)(β +γ)(β −α)
+and
+T −(α+β+γ+δ)y−γx1−δx2−αx3−βx4
+3
+(α +γ)(α +δ)(β +γ)(β +δ) = T −(α+β+γ+δ)y−γx1−δx2−αx3−βx4
+3
+(α +γ)(−γ +δ)(β −α)(β +δ)
+−T −(α+β+γ+δ)y−γx1−δx2−αx3−βx4
+3
+(−γ +δ)(α +δ)(β +γ)(β −α). (37)
+Notice that we can change the roles ofx1 withx2, or ofx3 withx4 in any term ofU(x) without
+aﬀecting the value of I3(α,β,γ,δ ) in (36). Applying both changes to the last term in (37), we
+can replace U(x) with
+yαx1+βx2+γx3+δx4
+3
+(−γ +δ)(β −α)
+( 1 − (Ty x1+x3
+3 )−(α+γ)
+α +γ
+)( 1 − (Ty x2+x4
+3 )−(β+δ)
+β +δ
+)
+−yαx1+βx2+γx3+δx4
+3
+(−γ +δ)(β −α)
+( 1 − (Ty x1+x4
+3 )−(α+δ)
+α +δ
+)( 1 − (Ty x2+x3
+3 )−(β+γ)
+β +γ
+)
+.
+Using (25) we then get
+I3(α,β,γ,δ ) = L2 ˆw(0)
+6(logy3)4
+d8
+dx2
+1dx2
+2dx2
+3dx2
+4
+[ ∫
+[0,1]3
+V1(x
+,t 1,t 2) −V2(x,t 1,t 2)
+(−γ +δ)(β −α)
+(1 −u)3P3(x1 +x2 +u)P3(x3 +x4 +u)dt1dt2du
+]
+x=0
++Oε(L−1+ε),
+where
+V1 =yαx1+βx2+γx3+δx4
+3 (Ty x1+x3
+3 )−(α+γ)t1(Ty x2+x4
+3 )−(β+δ)t2
+(
+1 +ϑ 3(x1 +x3)
+)(
+1 +ϑ 3(x2 +x4)
+)
+and
+V2 =yαx1+βx2+γx3+δx4
+3 (Ty x1+x4
+3 )−(α+δ)t1(Ty x2+x3
+3 )−(β+γ)t2
+(
+1 +ϑ 3(x1 +x4)
+)(
+1 +ϑ 3(x2 +x3)
+)
+.
+Again notice that I3(α,β,γ,δ ) is unchanged if we swap any of these pairs of variables
+x1 ↔x2, x3 ↔x4 and t1 ↔t2 in V1(x
+,t 1,t 2) or V2(x,t 1,t 2). We next replace V1 −V2 in the
+integrand with
+1
+2
+(
+V1(x1,x 2,x 3,x 4,t 1,t 2) −V2(x2,x 1,x 3,x 4,t 2,t 1) −V2(x1,x 2,x 4,x 3,t 1,t 2)
++V1(x2,x 1,x 4,x 3,t 2,t 1)
+)
+,
+which is(
+1 +ϑ 3(x1 +x3)
+)(
+1 +ϑ 3(x2 +x4)
+)
+2
+(
+yαx1+βx2+γx3+δx4
+3 (Ty x1+x3
+3 )−(α+γ)t1(Ty x2+x4
+3 )−(β+δ)t2
+−yαx2+βx1+γx3+δx4
+3 (Ty x2+x4
+3 )−(α+δ)t2(Ty x1+x3
+3 )−(β+γ)t1
+−yαx1+βx2+γx4+δx3
+3 (Ty x1+x3
+3 )−(α+δ)t1(Ty x2+x4
+3 )−(β+γ)t2
++yαx2+βx1+γx4+δx3
+3 (Ty x2+x4
+3 )−(α+γ)t2(Ty x1+x3
+3 )−(β+δ)t1
+)
+=
+(
+1 +ϑ 3(x1 +x3)
+)(
+1 +ϑ 3(x2 +x4)
+)
+2 yαx1+βx2+γx3+δx4
+3
+
+===== PAGE 21 =====
+
+CRITICAL ZEROS OF THE RIEMANN ZETA-FUNCTION 21
+(Ty x1+x3
+3 )−(α+γ)t1(Ty x2+x4
+3 )−(β+δ)t2
+(
+1 −
+(
+T t1−t2y−x1+x2+(x1+x3)t1−(x2+x4)t2
+3
+) −(β−α))
+(
+1 −
+(
+T t1−t2y−x3+x4+(x1+x3)t1−(x2+x4)t2
+3
+) −(δ−γ))
+.
+Using (25) again and simplifying we obtain Lemma 3.1.
+References
+[1] R. Balasubramanian, J. B. Conrey, D. R. Heath-Brown, Asymptotic mean square of the product of the
+Riemann zeta-function and a Dirichlet polynomial , J. Reine Angew. Math. 357 (1985), 161–181.
+[2] S. Bettin, H. M. Bui, X. Li, M. Radziwi/suppress l/suppress l, preprint.
+[3] H. M. Bui, J. B. Conrey, M. P. Young, More than 41% of the zeros of the zeta function are on the critical
+line, Acta Arith. 150 (2011), 35–64.
+[4] J. B. Conrey, More than two ﬁfths of the zeros of the Riemann zeta function a re on the critical line , J.
+Reine Angew. Math. 399 (1989), 1–26.
+[5] J. B. Conrey, H. Iwaniec, K. Soundararajan, Critical zeros of Dirichlet L-functions , J. Reine Angew. Math.
+681 (2013), 175–198.
+[6] J. B. Conrey, N. C. Snaith, Applications of the L-functions ratios conjectures, Proc. Lond. Math. Soc. 94
+(2007), 594–646.
+[7] S. Feng, Zeros of the Riemann zeta function on the critical line , J. Number Theory 132 (2012), 511–542.
+[8] S. Feng, Zeros of the Riemann zeta function on the critical line , arXiv http://arxiv.org/abs/1003.0059
+[9] D. R. Heath-Brown, Simple zeros of the Riemann zeta function on the critical lin e, Bull. London Math.
+Soc. 11 (1979), 17–18.
+[10] N. Levinson, More than one third of the zeros of Riemann ’s zeta function ar e on σ = 1/ 2. Adv. Math. 13
+(1974), 383–436.
+[11] A. Selberg, On the zeros of Riemann ’s zeta-function, Skr. Norske Vid. Akad. Oslo I. (1942), no. 10, 59 pp.
+[12] E. C. Titchmarsh, The theory of the Riemann zeta-function , revised by D. R. Heath-Brown, Clarendon
+Press, second edition, 1986.
+School of Mathematics, University of Bristol, Bristol BS8 1 TW, UK
+E-mail address : hung.bui@bristol.ac.uk
