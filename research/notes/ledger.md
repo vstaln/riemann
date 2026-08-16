@@ -813,3 +813,11 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   SUPPORTED. Dip = genuine localized finite-size feature of the Báez-Duarte optimal-coefficient
   structure, mechanism unidentified. Honest verdict, NOT an RH lever. DO NOT re-run
   single-beat/divisor/condition routes (closed). Tool: tools/wave8c/src/bin/dipscan.rs.
+
+## WAVE-22 — literature sweep for genuinely new one-way input (2023–2026)
+- **lit-sweep (b8588bc4, read-only architect)** — search arXiv/corpus for NEW results that
+  escape the S1 Newton-boundary closure: new LP sufficient conditions, Jensen-beyond-GJT,
+  xi-moment/Phi-function identities, Turán refinements, dBN post-Rodgers-Tao, attackable
+  RH equivalences, TP/PF-on-zeta 2023-2026. Deliverable: ranked table (NEW-vs-corpus),
+  top-2-3 candidates with exact theorem statements + minimal Rust probe, honest empty-verdict
+  if the sweep is genuinely empty. Read-only, no fabrication allowed.
