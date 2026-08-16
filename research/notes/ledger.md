@@ -447,3 +447,19 @@ Briefs: wave8-briefs-direct-RH-2026-08-17.md. Goal reset to direct-RH mission.
   (single-use, result in note), ramanujan_kernel_search (single-use, result in note). Never deleted.
 - **verifier-rs INCONCLUSIVE** (2026-08-18, D-verifier) — ROOT CAUSE PROVEN: Rust port lacks the convex-tangent prune (Python use_tangent=True is load-bearing: ainta 93,735 / tawan 18,182 tangent prunes; Python with use_tangent=False fails identically to Rust). Enclosure NOT the bug (sinc_iv agrees with Arb ball; old "TIGHTER" header claim retracted). SECOND FINDING: current Python file certifies 0.00620 FALSE (terminal low=0.00619595, prec 128/256/512) contradicting eps-boundary-exact 2026-08-13 note (True @1,096,556) — env/version discrepancy, unresolved. Fix path (tangent_lower port: w table, LDL with pivot margin, tangent-plane bound) documented, NOT completed. Rust marked NOT-FOR-CERTIFICATION. File: verifier-rs-fix-2026-08-18.md.
 - **coboundary_search-rs DONE (2026-08-18)**: Rust crate tools/coboundary_search/ (948e3a7f) ports the redistribution max-min LP + DE global-floor search, pure Rust (self-written bounded simplex; HiGHS build blocked: no cmake/libclang). LP v* matches scipy/HiGHS EXACTLY (9 digits) at all 6 (α,mode,c_bound) combos tested; global float floors within 5.2e-4 of recorded scipy-DE values, ~0.6s/case vs 50 min Python. Sym LP at α=1.464 is DEGENERATE: simplex picks a different optimal vertex than HiGHS (v* identical) → floor gap 5.2e-4 mixes vertex choice + DE stochasticity. Tool is a SEARCH HEURISTIC, certifies nothing; lever itself remains CLOSED. Note: coboundary-search-rs-2026-08-18.md.
+- **Python→Rust cleanup COMPLETE (2026-08-18)**:
+  (1) **verifier-rs fix INCONCLUSIVE-but-root-caused** — Rust port lacks the load-bearing
+    convex-tangent prune (hardcoded use_tangent=false); enclosure itself matches Python (proven
+    by term-breakdown + sinc_iv probes). RECORD SAFE: coordinator re-verified current env
+    reproduces certified counts EXACTLY — 0.00620 True @ 1,096,556 nodes (222,047 tangent prunes),
+    0.00621 False @ 519,206 (terminal low 0.006198271). Agent's "env drift" finding was its own
+    range(6)-vs-range(7) probe bug (dropped 7th weight point). Fix path (tangent_lower port:
+    2nd-deriv table via rug, LDL pivot≥1e-9, tl = value − Σ|grad_i|·radius_i) documented in
+    research/notes/verifier-rs-fix-2026-08-18.md. Rust port marked NOT-FOR-CERTIFICATION.
+  (2) **coboundary_search DONE** (tools/coboundary_search/, pure Rust, no C deps) — LP v* exact
+    match 6/6 cases (9 digits), DE global floor within 1e-3, ~0.6s/case vs 50-min scipy DE.
+    Self-contained bounded two-phase simplex (HiGHS blocked: no cmake/libclang). Search heuristic
+    only — never certifies. File: coboundary-search-rs-2026-08-18.md.
+  (3) **6 dead tools archived** to tools/_archive/ (manifest README): beat673 (retracted),
+    twotone-verify (refuted), pt_symmetric_metric_solver / adversarial_riemann_solver /
+    fourth_moment_rmt / ramanujan_kernel_search (zero-ref single-use). Never deleted.
