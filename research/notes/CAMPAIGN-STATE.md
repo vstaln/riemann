@@ -353,3 +353,34 @@ and 0.8367404308372568 (distinct), both UNCONDITIONAL, both above Anthropic's cl
 (b) Lean formalization of the specific α=1.464/m=171 chain (long), (c) publication-grade
 writeup + external peer review. Nothing here proves RH (proportion-on-line theorem carries
 zero evidence about RH — charter firewall).
+
+## 2026-08-18 evening — waves 18–19 closed; one-way sufficient-condition space FULLY MAPPED
+- **Wave-18 (8B-right) CLOSED**: ζ′ right-strip census extended 5000→12000 (8228 zeros,
+  density ratio 0.5865→0.6572 strictly rising, σ-min drift 0.78→0.506, no flattening/anomaly).
+  "2651 unexplained" RESOLVED: N₁(T) ~ N(T) classical law + finite-T deficit D ≈ 0.74·T/log^{0.36}
+  (fit CONJECTURED; must bend down to satisfy N₁(T)/N(T)→1). Count-law citation upgraded to
+  PROVEN from primary source (Levinson–Montgomery 1974, Acta Math 133:49–65; saved to
+  research/papers/). Wave-8B CLOSED as a lever: left-strip disproof channel infeasible >3·10¹²
+  (Platt–Trudgian PROVEN), right-strip fully explained by literature.
+- **Wave-19 (S4 region-size) CLOSED + referee-corrected**: n₀*(d) ≈ 7.7·d^{0.97} (clean d ≤ 12),
+  RH-difficult region ≈ 3.9·d², transition ≪ Holland d^{5/3} wedge. Zero non-hyperbolic J_{d,n}
+  on d ≤ 20, n ≤ 200. Referee corrections: (i) mpmath "|Im|≡0 exactly" = real-axis confinement
+  artifact, not verification; (ii) residual check = honest classifier (d ≤ 17 genuine roots;
+  d = 20 fails even at 256 bits, 1e-484 range); (iii) Sturm chain-collapse at 1e-484 breaks
+  the FLAG mechanism; (iv) d=20 INCONCLUSIVE numerically but PROVEN hyperbolic by GORTTW
+  Cor 1.3 via Platt RH₀. Region-size map = frontier data, zero RH weight (E4 forecast held).
+- **One-way sufficient-condition space: FULLY MAPPED, EXHAUSTED.** S1 DEAD (Newton boundary
+  c_crit=1, PROVEN counterexample family). S2 = von Koch restated (deflated). S4 = GJT trap
+  (small-n ⟺ RH). GJT large-n = only unconditional sufficient-direction theorem, fully
+  numerically consistent. Every classical ⟺ RH reformulation (Li, Speiser, Nyman–Beurling,
+  Turán–Laguerre, de Bruijn heat, Herglotz, Jensen, Weil subclasses) closed with
+  consistency-only evidence; every finite-range empirical check RH-consistent; NO disproof
+  signal anywhere (18+ independent levers).
+- **Honest bottom line**: the search persists (persistence hook), but the classical toolbox is
+  exhausted — no surviving one-way sufficient condition with attackable proof, no anomaly.
+  The ζ′ Speiser channel is the only remaining *disproof-capable* route and it is
+  computationally infeasible beyond 3·10¹². Remaining concrete options: (a) g0-2
+  certified-moment INFRA (E4-endorsed infra only); (b) N=700 dip mechanism (structure, not a
+  lever); (c) genuinely new mathematical input (fresh idea/literature), which the s4h loop
+  should keep hunting; (d) record-side work is CLOSED at the redistribution-class ceiling
+  (0.673481/0.836740, terminal in-class, Lean/peer-review path pending).
