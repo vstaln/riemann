@@ -664,3 +664,11 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   CONFIRMED on the campaign's own evaluator. Moment domain (0,∞) unaffected. g0-2 infrastructure
   caveat RESOLVED — positivity is not the blocker; g0-2 remains infra-only (trap as route, E4 verdict
   otherwise intact).
+
+## DIRECT-RH WAVE-18 — 8B-right ζ′ census extension (2026-08-18, the live-flagged object)
+- **8B-right (e794ec94)** — extend the right-strip [0.5,1] ζ′ census from T=5000 to 10000/12000,
+  track the density ratio (0.15@100 → 0.69@5000, Levinson drift σ-min → 1/2), and resolve the
+  "2651 unexplained" count via the classical count theorem (literature match) + a heuristic
+  density law fit (1 − C/(log T)^α). Left-strip NOT re-run (redundant: Platt–Trudgian RH below
+  3·10¹² + Speiser certifies it). Verdict: RH-consistent if ratio → 1 & count matches law;
+  anomaly escalate if not. Primary remaining disproof-capable empirical lever.
