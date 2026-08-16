@@ -656,3 +656,11 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   Margin-2 LP-consistent but not decisive (perturbed ~1.88 non-LP). CLOSES the coefficient-criterion
   class: no decaying-margin theorem can yield a one-way sufficient condition for RH. Not an RH lever.
   Files: s1-margin-probe-2026-08-18.md, tools/s1margin/ (probe.rs, probe2.rs, probe3.rs).
+- **COORDINATOR CHECK — Φ positivity (2026-08-18)**: E4's fresh-object-hunt claim "verified Φ form
+  gives Φ(0) < 0" is WRONG (its own evaluation slip, likely from the brief's wrong transcription
+  2πn²e^{9u/2}−3πn²e^{5u/2} no-outer-2 — wave8d note explicitly flags that form as wrong). Verified
+  form Φ(u)=2Σ(2π²n⁴e^{9u/2}−3πn²e^{5u/2})e^{−πn²e^{2u}} gives Φ(0)=+0.89339380 (direct eval), and
+  Φ > 0 strictly on (0,∞) (fine grid to u=1.2, min +7.6e-12 tail). Classical de Bruijn positivity
+  CONFIRMED on the campaign's own evaluator. Moment domain (0,∞) unaffected. g0-2 infrastructure
+  caveat RESOLVED — positivity is not the blocker; g0-2 remains infra-only (trap as route, E4 verdict
+  otherwise intact).
