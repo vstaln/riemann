@@ -95,3 +95,15 @@ campaign's own standard, in the closest structural analogue available. The profi
 a sufficient condition. No new lever; documented negative. (The meromorphic-vs-entire fact
 is itself a structural reason the Epstein world is NOT a counterexample to anything about Xi:
 Xi is entire, Xi_Q is not — the analogy stops before the coefficient structure even starts.)
+
+## ADDENDUM 2 — Hankel-TP at det3 does NOT separate either (last positivity hope closed)
+
+Completed the (iii) test to det3 for both worlds (M'_n = c_{2n}·(2n)!, n=0..4 from the
+trusted contour head):
+  DH world:      det2 = +1.175876e-1,  det3 = +1.473272e-3  (TP)
+  Epstein world: det2 = +4.957459e-2,  det3 = +3.118803e-3  (TP)
+So the positive-measure / Hankel-TP structure of M_n (PROVEN for Xi at det1/2/3, frontier
+probe) is ALSO satisfied by both RH-false worlds at the tested orders.  Positivity structure
+does NOT separate Xi from an RH-false world either — consistent-only at every tested order.
+Combined with the frontier probe (gamma(n)=n!M_n/(2n)! itself NOT a moment sequence, the
+M→gamma bridge broken), there is no positivity-based separator left at the trusted orders.
