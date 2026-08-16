@@ -371,6 +371,10 @@ fn gamma_complex_stirling_mpfr(re: &Float, im: &Float) -> (Float, Float, Float) 
     li += neg(im);
     let inv_re = div(re, &z2);
     let inv_im = div(&neg(im), &z2);
+    // Stirling term k uses z^{1-2k}; step by z^{-2} between terms (referee finding:
+    // stepping by z^{-1} gave z^{-k}, wrong for all k >= 2, |Xi|^2 off ~1.4e-5).
+    let inv2_re = sub(&mul(&inv_re, &inv_re), &mul(&inv_im, &inv_im));
+    let inv2_im = add(&mul(&inv_re, &inv_im), &mul(&inv_im, &inv_re));
     let mut p_re = inv_re.clone();
     let mut p_im = inv_im.clone();
     let mut prev_mag = Float::new(prec);
@@ -391,8 +395,8 @@ fn gamma_complex_stirling_mpfr(re: &Float, im: &Float) -> (Float, Float, Float) 
         li += ti;
         prev_mag = tmag;
         k_used = k;
-        let nr = sub(&mul(&p_re, &inv_re), &mul(&p_im, &inv_im));
-        let ni = add(&mul(&p_re, &inv_im), &mul(&p_im, &inv_re));
+        let nr = sub(&mul(&p_re, &inv2_re), &mul(&p_im, &inv2_im));
+        let ni = add(&mul(&p_re, &inv2_im), &mul(&p_im, &inv2_re));
         p_re = nr;
         p_im = ni;
     }

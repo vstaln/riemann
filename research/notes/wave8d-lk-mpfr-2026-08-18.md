@@ -87,3 +87,19 @@ vs |u^(n)|~1e19 → Im/|u| ~ 1e-59: log Xi computed as a real function to ~60 di
 ## Files
 - tools/wave8d/src/bin/lk_zeta_mpfr.rs (new; f64 lk_zeta.rs untouched)
 - research/notes/wave8d-lk-mpfr-run-2026-08-18.txt (full output)
+
+## REFEREE VERDICT + FIX (2026-08-18, hostile blind referee f4ea49ff)
+- **CLAIM HOLDS — CHECKED NUMERICALLY**: independent 256-bit probe (different derivative mechanism:
+  unsigned-Stirling Pochhammer + correct |Γ| modulus + finite-difference route over ln|ξ| with no
+  derivative machinery) confirms ALL 7 L_k > 0; q matches to 7 digits; positivity survives by ≥5
+  orders even against honest error. No RH disproof. File: referee-lk-mpfr-2026-08-18.md.
+- **REAL BUG FOUND + FIXED** (does not flip verdict): gamma_complex_stirling loop stepped p *= z^{-1}
+  giving z^{-k} instead of z^{-(2k-1)} → |Xi|² off ~1.4e-5 rel (L_20 = 2.048938e-20 vs correct
+  2.048909e-20). The claimed "certified error ~1e-33" was therefore NOT a valid certified bound
+  (honest systematic error ~1e-25). FIXED (step by z^{-2}); re-run now matches the referee's correct-Γ
+  values to the printed digit at all 7 points (L_20=2.04890928475603536160675251662865427e-20, exact),
+  err<1e-51 (30+ orders below signal). Sign convention verified (L_k = Xi²·q, q from u-derivs only,
+  Γ-independent). "sign pattern FAILED" at 62.1/66.1 = expectation-list bug (2 zeros γ13/γ14 between
+  57.9 and 62.1); computed signs correct.
+- **FINAL: L_k(t) > 0 at all 7 flagged points (t=40 k=18/19/20; controls t=56.5 k=3, t=33.6 k=8,
+  t=35.5 k=4, t=40 k=3) — triple-implementation-confirmed, error-honest. NO RH DISPROOF. NO INCONCLUSIVE.**
