@@ -1,4 +1,12 @@
-# SDP Pair-Correlation Bounds on Σ_ρ (m_ρ − 1) via the Unconditional Montgomery Theorem — Certificate Structure
+# SDP Pair-Correlation Bounds
+
+**UPDATE 2026-08-18 (night, wave9-9A-refutation):** this note's structural reading is
+CONFIRMED and now decisive: the unconditional transfer of CGdL's SDP class is REFUTED at the
+object-identity step — BGSTB24's F (w(u)=4/(4-u^2), argument rho-rho', real parts enter) agrees
+with Montgomery's ordinate-only F only under RH, so the [0,1] datum does not plug into CGdL's
+identity (8). The strip-positive/Tsang cone conclusion here (line ~184: 'CGdL primal cone does
+not transfer') is the correct end-state; the subsequent wave-9 9A claim of a clean 'sign-drop
+replaces bandlimitation' transfer was WRONG and has been retracted. See wave9-9A-refutation-2026-08-18.md. on Σ_ρ (m_ρ − 1) via the Unconditional Montgomery Theorem — Certificate Structure
 
 **Agent:** builder. **Date:** 2026-08-14.
 **Task:** Candidate 3 of `structural-thread-newinput-2026-08-14.md`, worked out concretely as a
