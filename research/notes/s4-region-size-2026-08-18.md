@@ -74,3 +74,41 @@ See s4-region-size-2026-08-18.progress. Next steps: (1) write + build Rust binar
 2. **CONJECTURED:** the GJT regime-transition onset n₀(d) ≈ 7.7·d^{0.97} (clean d ≤ 12); the RH-difficult region by the literal definition has size 0 on the accessible grid; by the regime-transition definition ≈ 3.9·d².
 3. **INCONCLUSIVE:** the d≥13 high-n breakdown cells (128-bit Aberth non-convergence + Sturm collapse at 1e-484 coefficient range). Not a disproof signal; every independent check (mpmath, theorems) says hyperbolic. Re-check at 300+ bits if ever wanted.
 4. **Honest framing (S4 trap, from fresh-object-hunt §4):** this is a region-size map, NOT an RH probe and NOT RH progress. RH ⟺ the small-n part; the small-n part's computable range is fully hyperbolic; the uncomputable gap is d > 9.36e20. The Jensen route remains closed as a certificate input (attack-jensen-ometer verdict); this probe adds the quantitative frontier map (region size ≈ 0 in the literal sense, ≈ 3.9·d² in the regime-transition sense) — the last bounded informative item of the E4 campaign.
+
+## 7. COORDINATOR REFEREE (256-bit, independent, added 2026-08-18)
+
+**Method:** referee256.rs — same γ (verified vs 60-digit table at 1e-30), Aberth at 256 bits,
+plus a **residual check** max|P(r)|/scale (the decisive test the agent's run lacked), plus
+Sturm. Ran on the 5 mpmath-claimed points + 3 extra flags.
+
+**Findings (the corrections the agent's note needed):**
+1. **"|Im|/|Re| ≡ 0 exactly" is a solver artifact, not verification.** With all-real
+   coefficients and all-real initial guesses, Aberth iterates stay on the real axis forever
+   (max|Im|/scale = 0.0 at every point). Both the agent's Rust run AND the mpmath run inherit
+   this — the "≡ 0 exactly" is real-axis confinement, NOT evidence the roots are real. The
+   mpmath "independent check" was therefore NOT independent at the classification level.
+2. **The residual check is the honest classifier.** max|P(r)|/scale at the 8 referee points:
+   (13,200): 1.3e-18 | (14,141): 1.5e-19 | (14,145): 3.9e-18 | (15,141): 9.2e-18 |
+   (17,163): 5.5e-5 | (20,184): 7.0e-5 | **(20,183): 1.0e0 | (20,200): 1.0e0**.
+   ⟹ For d ≤ 17 the found real parts ARE roots (residual ≤ 5.5e-5, and the d≤15 ones are
+   ≤ 1e-17) — those cells are CHECKED NUMERICALLY hyperbolic. For d=20 the 256-bit Aberth
+   does NOT find roots at all (residual O(1) — coefficient range 1e-484 defeats it): those
+   cells are INCONCLUSIVE by numerics.
+3. **Sturm counts (1–10 vs degree 13–20) are garbage at this range** — remainder-chain
+   collapse from coefficient underflow (expected at 1e-484); the FLAG mechanism (Aberth-vs-
+   Sturm disagreement) is itself broken for d ≥ 13 high-n. The agent's "INCONCLUSIVE" label
+   for those cells was right for the right reason.
+4. **The INCONCLUSIVE cells are PROVEN hyperbolic by the literature anyway**: GORTTW Cor 1.3
+   (via Platt's verified RH₀(3.06·10¹⁰)) gives hyperbolicity for d ≤ 9.36·10²⁰, ALL n. Since
+   d=20 ≤ 9.36·10²⁰, the entire accessible grid d ≤ 20, n ≤ 200 is PROVEN hyperbolic
+   unconditionally — the numerics here are a verification exercise, and every failure is a
+   numerical artifact, not a signal.
+
+**Referee verdict:** the note's conclusions stand (zero non-hyperbolic hits; region-size
+n₀(d) ≈ 7.7·d^{0.97} on the clean d ≤ 12 data; RH-difficult region tiny; no RH signal). Two
+corrections applied: (i) "≡ 0 exactly" downgraded from verification to solver artifact;
+(ii) d=20 cells re-labeled "INCONCLUSIVE by this probe's numerics; PROVEN hyperbolic by
+GORTTW/Platt" — removing any hint that the probe's failure carries information. The S4
+region-size probe is CLOSED: it maps the frontier (n₀(d) ≈ 7.7·d, region ≈ 3.9·d²,
+transition ≪ Holland's d^{5/3} wedge), confirms hyperbolicity on the accessible grid, and
+adds zero RH weight (as forecast).

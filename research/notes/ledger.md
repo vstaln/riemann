@@ -711,3 +711,12 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   accessible grid — size 0; the gap RH must fill sits at d > 9.36e20, numerically unreachable.
   (3) γ(k) verified to 1e-38..1e-42 vs the 60-digit table, k=0..220. Honest framing: region-size
   map, NOT an RH probe, NOT RH progress. Do not re-launch.
+- **S4 region-size CLOSED (2026-08-18, 8a60d746 + coordinator referee)**: n₀*(d) ≈ 7.7·d^{0.97}
+  (clean d ≤ 12; region ≈ 3.9·d²; transition ≪ Holland d^{5/3} wedge). Zero non-hyperbolic J_{d,n}
+  on d ≤ 20, n ≤ 200 — no RH disproof (none expected). **Referee corrections**: (i) the
+  mpmath "|Im|/|Re| ≡ 0 exactly" was real-axis confinement (solver artifact), not verification;
+  (ii) residual check max|P(r)|/scale is the honest classifier — d ≤ 17 cells genuine roots
+  (≤5.5e-5, d≤15 ≤1e-17), d=20 Aberth fails even at 256 bits (residual 1.0, 1e-484 range);
+  (iii) Sturm counts garbage at 1e-484 (chain collapse — FLAG mechanism broken d≥13 high-n);
+  (iv) INCONCLUSIVE cells PROVEN hyperbolic by GORTTW Cor 1.3 (d ≤ 9.36e20 all n via Platt RH₀).
+  Region-size map = frontier data only, zero RH weight (as E4 forecast). Wave-19 CLOSED.
