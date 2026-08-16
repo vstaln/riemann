@@ -631,3 +631,28 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   give all-real zeros; perturbation test (ε·cos(ω ln k)) probes robustness at c=2; mixed family
   probes effective c<2. Verdict: S1 genuine (if lit theorem c≤1.0696) / plausible-unproven (threshold
   c_crit>1.0696) / DEAD (counterexample at c≤1.0696). NOT an RH lever — closure/feasibility probe.
+- **S1-MARGIN PROBE (2026-08-18, builder)** — VERDICT: **S1 DEAD at c_crit = 1 (Newton boundary)**.
+  The one-way sufficient condition "positive coeffs + t_k >= C/(k+1) for all k, C > 1 ⟹ F(t)=Σ(-1)^k
+  b_k t^{2k} ∈ LP" is FALSE for every C > 1. Killing counterexample (CHECKED NUMERICALLY, full-series
+  Newton-polished): b_k = k^{-1.0696·k} satisfies t_k >= 1.0696/(k+1) ∀k (min t_k·(k+1)=1.07084 over
+  k≤400, asymptotic 1.0696 from above) yet F has genuine non-real zeros at |t|=4.471@26.9° (|F|=3.4e-12)
+  and 6.372@32.9° (|F|=1.3e-9). Genuine non-real zeros also at margins c=1, 1.3, 1.5, 1.7 (b_k=k^{-ck})
+  and in perturbed margin-2 families b_k=k^{-2k}(1+ε cos(ω ln k)) at pointwise margins up to 1.8786;
+  none at clean c≥1.8 (LP-consistent, like J₀(2t) and real Ξ). Part A: no decaying-margin sufficiency
+  theorem exists in literature (CONJECTURED to my knowledge; collection + one ddgs search); sharpest
+  sufficient = Hutchinson constant q_k≥4 (t_k≥3/4, 1926 per returned source); sharpest necessary =
+  Newton (t_k≥1/(k+1), margin 1 = the exact cutoff). Margin-accounting correction: task family
+  a_k=k^{-ck}, b=a/(2k)! has b-margin c+2 (verified), not c; direct-b scan used for the window.
+  Structure (PROVEN-class): LP ⟺ all higher Jensen degrees real-rooted; Newton margin is only the d=2
+  slice ⟹ decaying margins cannot capture LP. Not an RH lever — real Ξ (min margin 1.0696, asymptotic 2)
+  untouched; coefficient-criterion class closed. Files: s1-margin-probe-2026-08-18.md + run txts,
+  tools/s1margin/{probe,probe2,probe3}.rs.
+- **S1-margin probe (2026-08-18, 270dfa66)** — S1 DEAD at threshold c_crit = 1 (Newton boundary).
+  Counterexample: b_k = k^{−1.0696k} satisfies t_k ≥ 1.0696/(k+1) ∀k (min 1.07084 ≤ 400, asymptotic
+  1.0696+0.4976/k) yet F(t)=Σ(−1)^k b_k t^{2k} has GENUINE non-real zeros (±3.99±2.02i, ±5.35±3.46i,
+  |F| ≤ 1.9e-9 full-series Newton). Hurwitz continuity: margin-1 family (b_k=k^{−k}) non-real zeros
+  ⟹ counterexamples for EVERY C > 1. Newton's inequality (t_k ≥ 1/(k+1)) PROVEN necessary boundary;
+  Hutchinson constant margin 3/4 (1926) is the only sufficiency that works; decaying margins don't.
+  Margin-2 LP-consistent but not decisive (perturbed ~1.88 non-LP). CLOSES the coefficient-criterion
+  class: no decaying-margin theorem can yield a one-way sufficient condition for RH. Not an RH lever.
+  Files: s1-margin-probe-2026-08-18.md, tools/s1margin/ (probe.rs, probe2.rs, probe3.rs).

@@ -1,0 +1,50 @@
+--- CONTROL J0(2t): candidates from section must be ARTIFACT ---
+J0 |t|=19.213 @6° | start z=19.10775+2.00831i | Newton steps: 3.3e-1 4.9e-1 8.8e-1 3.3e-1 2.8e-1 1.4e0 5.2e-1 3.8e-1 3.9e-1 4.4e-1 3.8e-1 1.5e-1 3.4e-1 2.8e-1 | final |F|=4.99e-1 | ARTIFACT
+J0 |t|=21.171 @11.1° | start z=20.77495+4.07588i | Newton steps: 4.2e-1 4.3e-1 5.0e-1 4.0e-1 6.1e-1 5.0e-1 6.7e-1 3.5e-1 4.8e-1 4.5e-1 7.2e-1 4.7e-1 2.5e-1 1.6e-1 | final |F|=3.32e2 | ARTIFACT
+J0 |t|=23.252 @15.2° | start z=22.43856+6.09642i | Newton steps: 1.8e-1 5.6e-1 2.8e-1 2.7e0 7.1e-2 2.2e-1 1.4e0 5.1e-1 5.2e-1 6.4e-1 5.7e-1 8.5e-1 3.8e-1 2.0e-1 | final |F|=3.74e0 | ARTIFACT
+--- DIRECT margin-c families ---
+FAMILY c=1 (margin 1)
+  |t|=4.234 @30.9° | start z=3.63305+2.17433i | Newton steps: 3.7e-3 2.0e-5 5.8e-10 4.1e-12 4.9e-12 6.3e-12 1.4e-12 1.8e-12 3.0e-12 9.5e-13 3.0e-12 3.4e-12 3.7e-12 2.2e-12 | final |F|=1.90e-12 | GENUINE
+  |t|=5.865 @36.5° | start z=4.71462+3.48864i | Newton steps: 1.7e-3 6.3e-6 2.8e-9 3.3e-9 2.3e-9 4.6e-9 2.7e-9 2.8e-9 2.9e-9 1.9e-9 3.2e-9 3.6e-9 5.0e-9 2.9e-9 | final |F|=2.69e-9 | likely GENUINE (slow)
+  |t|=7.151 @38.8° | start z=5.57305+4.48084i | Newton steps: 5.2e-3 6.9e-5 1.0e-6 9.2e-7 9.0e-7 2.5e-6 2.3e-6 8.8e-7 1.4e-6 1.7e-6 2.4e-6 4.4e-6 3.1e-6 8.7e-7 | final |F|=7.12e-7 | likely GENUINE (slow)
+  |t|=8.25 @40.1° | start z=6.31060+5.31402i | Newton steps: 6.5e-3 1.5e-3 1.9e-3 5.0e-4 2.6e-3 1.6e-3 3.3e-3 4.0e-3 2.3e-3 1.2e-3 8.4e-4 1.4e-3 5.4e-4 1.5e-3 | final |F|=2.19e-3 | ARTIFACT
+FAMILY c=1.0696 (margin 1.0696)
+  |t|=4.471 @26.9° | start z=3.98723+2.02284i | Newton steps: 3.3e-3 1.4e-5 2.6e-10 5.9e-13 2.9e-12 1.2e-12 1.7e-12 1.1e-12 1.2e-12 2.4e-12 4.7e-12 1.4e-12 1.3e-12 2.6e-12 | final |F|=3.43e-12 | likely GENUINE (slow)
+  |t|=6.372 @32.9° | start z=5.35006+3.46111i | Newton steps: 2.7e-3 1.3e-5 1.2e-9 2.7e-9 4.1e-9 5.8e-10 4.3e-9 1.7e-9 2.8e-9 2.6e-9 8.0e-10 1.4e-9 1.7e-9 2.0e-9 | final |F|=1.30e-9 | likely GENUINE (slow)
+  |t|=7.891 @35.3° | start z=6.44014+4.55987i | Newton steps: 6.7e-3 9.7e-5 1.3e-6 2.0e-6 1.8e-6 4.9e-6 4.5e-6 1.5e-6 2.2e-6 2.6e-6 4.2e-6 2.5e-6 1.3e-6 1.9e-6 | final |F|=2.21e-6 | likely GENUINE (slow)
+  |t|=9.195 @36.7° | start z=7.37233+5.49516i | Newton steps: 3.2e-3 2.1e-3 1.2e-3 1.6e-3 1.2e-3 1.7e-3 4.3e-4 1.4e-3 2.8e-3 1.4e-3 1.0e-3 2.3e-3 8.8e-4 1.2e-3 | final |F|=1.04e-3 | ARTIFACT
+FAMILY c=1.3 (margin 1.3)
+  |t|=5.194 @12.9° | start z=5.06291+1.15956i | Newton steps: 7.6e-4 5.4e-7 3.1e-12 1.4e-12 2.7e-12 1.4e-12 2.2e-12 2.1e-12 2.2e-12 2.6e-12 4.3e-13 2.9e-12 1.7e-12 2.4e-12 | final |F|=1.13e-13 | likely GENUINE (slow)
+  |t|=8.248 @20.7° | start z=7.71554+2.91546i | Newton steps: 4.4e-3 2.1e-5 2.5e-9 1.7e-9 1.7e-9 4.2e-9 2.4e-9 2.1e-9 4.1e-9 2.7e-9 2.2e-10 3.1e-9 3.2e-9 3.9e-9 | final |F|=3.07e-9 | likely GENUINE (slow)
+  |t|=10.762 @23.8° | start z=9.84680+4.34295i | Newton steps: 4.8e-3 2.9e-5 3.1e-6 2.1e-6 3.3e-6 2.5e-6 1.5e-6 1.8e-6 4.2e-6 4.5e-6 6.9e-7 3.0e-6 2.3e-6 1.8e-6 | final |F|=1.19e-6 | likely GENUINE (slow)
+  |t|=12.998 @25.4° | start z=11.74155+5.57530i | Newton steps: 3.8e-3 3.8e-4 8.7e-4 1.1e-3 2.1e-3 9.8e-4 1.7e-3 4.1e-3 4.0e-3 6.4e-4 3.8e-5 1.0e-3 1.7e-3 2.0e-3 | final |F|=1.09e-3 | ARTIFACT
+  |t|=14.461 @18° | start z=13.75323+4.46869i | Newton steps: 9.5e-3 8.0e-2 8.7e-3 1.1e-1 2.1e-2 6.4e-2 2.4e-1 2.2e-1 2.0e-1 2.7e-1 2.0e-1 2.4e-1 1.0e-1 1.6e-1 | final |F|=4.50e-2 | ARTIFACT
+  |t|=15.736 @31.3° | start z=13.44576+8.17515i | Newton steps: 2.5e-1 7.0e-2 2.0e-1 5.7e-2 1.2e-1 1.7e-1 9.4e-2 1.2e0 3.1e-1 2.9e-1 2.9e-1 3.7e-1 2.4e-1 3.1e-1 | final |F|=1.80e-1 | ARTIFACT
+FAMILY c=1.5 (margin 1.5)
+  |t|=10.173 @10.2° | start z=10.01222+1.80148i | Newton steps: 1.2e-3 1.2e-6 1.2e-9 8.9e-10 1.7e-9 1.8e-9 2.4e-9 1.3e-9 3.6e-10 8.3e-10 1.9e-9 4.0e-9 1.8e-9 3.1e-9 | final |F|=7.21e-10 | likely GENUINE (slow)
+  |t|=13.872 @13.8° | start z=13.47157+3.30894i | Newton steps: 1.0e-2 9.5e-5 1.2e-6 2.8e-6 3.7e-6 5.7e-6 2.0e-6 1.8e-6 2.2e-6 1.3e-7 3.6e-6 2.9e-6 3.5e-6 1.1e-6 | final |F|=7.64e-7 | likely GENUINE (slow)
+  |t|=17.275 @15.7° | start z=16.63050+4.67462i | Newton steps: 1.3e-2 4.1e-3 2.5e-4 2.0e-4 1.4e-3 3.4e-3 4.9e-3 4.6e-3 4.5e-4 4.8e-3 5.0e-3 2.5e-3 3.4e-3 1.3e-3 | final |F|=3.78e-5 | ARTIFACT
+  |t|=20.164 @3.8° | start z=20.11967+1.33635i | Newton steps: 2.0e0 4.1e0 6.6e1 1.4e-1 6.2e-1 1.2e-1 2.3e-1 4.8e-1 3.9e-1 3.0e-1 2.6e-1 3.9e-1 8.0e-1 1.1e0 | final |F|=9.93e70 | ARTIFACT
+FAMILY c=1.7 (margin 1.7)
+  |t|=17.632 @3.7° | start z=17.59525+1.13783i | Newton steps: 8.0e-3 4.2e-5 1.7e-6 1.6e-6 4.8e-6 6.3e-6 6.1e-6 1.6e-6 1.7e-6 1.5e-6 3.2e-6 1.8e-6 1.5e-6 1.5e-6 | final |F|=5.63e-7 | likely GENUINE (slow)
+  |t|=22.658 @5.9° | start z=22.53798+2.32907i | Newton steps: 1.6e-2 1.3e-3 1.0e-3 1.0e-3 1.9e-4 4.6e-4 8.8e-4 3.2e-4 1.6e-3 2.0e-3 4.0e-4 2.6e-4 4.4e-3 3.1e-3 | final |F|=2.32e-4 | ARTIFACT
+  |t|=27.22 @8.5° | start z=26.92101+4.02337i | Newton steps: 1.5e-1 4.4e-1 9.5e-1 4.8e-1 1.2e-1 1.9e-1 3.8e-1 7.5e-2 1.2e-1 2.9e-1 3.6e-1 5.2e-1 4.6e-1 4.1e-1 | final |F|=2.16e-1 | ARTIFACT
+  |t|=29.372 @13.1° | start z=28.60762+6.65720i | Newton steps: 5.1e-1 1.1e0 5.1e-1 1.5e0 7.4e-1 1.3e0 6.4e-1 4.9e-1 2.6e-1 2.6e-1 7.6e-1 7.6e-1 1.3e0 3.1e-1 | final |F|=3.31e-1 | ARTIFACT
+FAMILY c=1.8 (margin 1.8)
+  |t|=31.639 @5.3° | start z=31.50373+2.92251i | Newton steps: 9.2e-3 1.0e-1 2.4e-1 1.7e-1 1.3e-1 9.7e-2 3.5e-1 8.6e-2 2.2e-1 2.5e-1 2.4e-1 3.2e-1 6.6e-2 3.4e-1 | final |F|=3.98e-1 | ARTIFACT
+  |t|=34.879 @9.6° | start z=34.39056+5.81673i | Newton steps: 3.9e-1 4.3e-1 2.7e-1 5.7e-1 2.8e-1 4.6e-1 1.1e-1 2.6e-1 5.9e-1 3.9e-1 9.9e-1 6.6e-1 1.7e0 1.7e0 | final |F|=9.62e0 | ARTIFACT
+  |t|=37.378 @14.4° | start z=36.20370+9.29553i | Newton steps: 7.6e-1 7.8e-1 7.2e-1 2.2e-1 5.2e-1 5.2e-1 1.2e0 1.0e0 2.4e-1 5.1e-2 2.9e-1 8.1e-1 7.5e-1 1.5e0 | final |F|=1.02e3 | ARTIFACT
+  |t|=40.309 @18.9° | start z=38.13575+13.05679i | Newton steps: 3.7e-1 4.7e-1 1.7e0 5.6e-1 6.4e-1 3.8e-1 2.6e-1 7.6e-1 1.0e0 1.0e0 2.4e-1 3.8e-1 1.5e-1 1.8e-1 | final |F|=3.00e3 | ARTIFACT
+FAMILY c=1.9 (margin 1.9)
+  |t|=38.14 @2.8° | start z=38.09447+1.86313i | Newton steps: 2.3e-1 1.8e-1 2.5e-1 3.4e-1 5.1e-1 5.0e-1 4.5e-1 8.0e-1 9.5e-1 3.6e0 1.1e0 1.0e0 9.0e-1 8.9e-1 | final |F|=1.81e0 | ARTIFACT
+  |t|=51.472 @17.9° | start z=48.98047+15.82026i | Newton steps: 7.9e-1 1.0e0 1.1e0 9.1e-1 2.1e0 3.0e0 1.9e0 2.9e-1 7.7e-1 8.1e-1 1.8e0 4.7e-1 6.2e-1 1.2e0 | final |F|=3.32e5 | ARTIFACT
+FAMILY c=2 (margin 2)
+  |t|=50.834 @6.3° | start z=50.52701+5.57823i | Newton steps: 2.3e0 1.1e0 1.2e0 1.1e1 1.4e0 1.4e0 1.4e0 1.4e0 1.4e0 1.4e0 1.4e0 1.4e0 1.6e0 2.3e0 | final |F|=8.06e0 | ARTIFACT
+  |t|=55.459 @11.7° | start z=54.30672+11.24638i | Newton steps: 9.1e-3 6.1e-1 3.2e-1 6.0e-2 4.6e-1 3.2e0 1.8e0 1.3e0 4.6e-1 5.7e-1 7.5e-1 6.4e-1 8.6e-1 3.9e-1 | final |F|=2.35e4 | ARTIFACT
+  |t|=60.856 @16.1° | start z=58.46918+16.87626i | Newton steps: 2.4e-1 4.2e-1 1.4e-1 1.0e0 1.1e0 2.8e0 1.1e0 7.0e-1 6.3e-1 8.6e-1 7.1e-1 7.9e-1 6.5e-1 7.5e-1 | final |F|=3.10e5 | ARTIFACT
+--- PERTURBED margin-2 ---
+  eps=0.01 w=5 |t|=21.512 @23.1° | start z=19.78720+8.43996i | Newton steps: 1.4e-2 1.1e-4 7.6e-9 7.2e-11 3.1e-11 2.8e-11 1.5e-11 7.3e-11 2.2e-11 5.4e-11 4.8e-11 2.2e-11 3.1e-11 4.1e-11 | final |F|=2.03e-8 | likely GENUINE (slow)
+  eps=0.05 w=3 |t|=10.836 @13.5° | start z=10.53660+2.52961i | Newton steps: 3.9e-3 7.5e-6 2.8e-11 5.9e-13 2.1e-13 9.0e-13 4.6e-13 3.6e-13 3.6e-13 7.0e-13 7.0e-13 2.5e-14 | final |F|=1.24e-12 | GENUINE
+  eps=0.05 w=5 |t|=6.48 @15.1° | start z=6.25626+1.68807i | Newton steps: 4.1e-3 9.2e-6 4.5e-11 2.0e-15 | final |F|=1.60e-13 | GENUINE
+  eps=0.05 w=5 |t|=20.4 @38.6° | start z=15.94302+12.72714i | Newton steps: 2.7e-4 4.9e-8 2.8e-12 2.7e-12 1.0e-12 1.1e-12 1.5e-12 3.4e-13 1.1e-12 1.4e-12 5.3e-13 4.5e-13 4.2e-13 3.2e-13 | final |F|=8.77e-9 | GENUINE
+DONE

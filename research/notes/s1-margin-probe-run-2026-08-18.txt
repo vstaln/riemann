@@ -1,0 +1,161 @@
+FAMILY CONTROL J0(2t) b=1/(k!)^2 (margin 2, expect ALL real) | min t_k*(k+1)=1.50000 | t_10*10=1.7355 | t_100*100=1.9704
+  N=40 S=15.77 | trusted posreal=7 negreal-w=0 nonreal-w=0 | outside=33 maxres=1e-16
+  N=60 S=23.19 | trusted posreal=10 negreal-w=0 nonreal-w=0 | outside=50 maxres=1e-16
+  N=80 S=30.60 | trusted posreal=11 negreal-w=0 nonreal-w=4 | outside=65 maxres=5e-17
+    nonreal-w: w=0.3532-0.0387i |t|=18.24  w=0.3533+0.0387i |t|=18.24  w=0.4135-0.1129i |t|=20.03  w=0.4136+0.1129i |t|=20.03
+FAMILY DIRECT c=0.5 nu=0 (margin 0.5) | min t_k*(k+1)=0.50375 | t_10*10=0.4885 | t_100*100=0.4988
+  N=60 S=2.78 | trusted posreal=1 negreal-w=0 nonreal-w=0 | outside=59 maxres=3e-16
+  N=80 S=2.99 | trusted posreal=1 negreal-w=0 nonreal-w=0 | outside=79 maxres=4e-16
+  N=100 S=3.16 | trusted posreal=1 negreal-w=0 nonreal-w=0 | outside=99 maxres=4e-16
+  N=120 S=3.31 | trusted posreal=1 negreal-w=0 nonreal-w=0 | outside=119 maxres=4e-16
+FAMILY DIRECT c=1 nu=0 (margin 1) | min t_k*(k+1)=1.00498 | t_10*10=0.9531 | t_100*100=0.9950
+  N=60 S=7.75 | trusted posreal=1 negreal-w=0 nonreal-w=2 | outside=57 maxres=2e-16
+    nonreal-w: w=0.1407-0.2635i |t|=4.23  w=0.1407+0.2635i |t|=4.23
+  N=80 S=8.94 | trusted posreal=1 negreal-w=0 nonreal-w=4 | outside=75 maxres=3e-16
+    nonreal-w: w=0.1055+0.1976i |t|=4.23  w=0.1055-0.1976i |t|=4.23  w=0.1255-0.4113i |t|=5.86  w=0.1255+0.4113i |t|=5.86
+  N=100 S=10.00 | trusted posreal=1 negreal-w=0 nonreal-w=4 | outside=95 maxres=1e-16
+    nonreal-w: w=0.0844+0.1581i |t|=4.23  w=0.0844-0.1581i |t|=4.23  w=0.1004-0.3290i |t|=5.86  w=0.1004+0.3290i |t|=5.86
+  N=120 S=10.95 | trusted posreal=1 negreal-w=0 nonreal-w=6 | outside=113 maxres=1e-16
+    nonreal-w: w=0.0704+0.1318i |t|=4.23  w=0.0704-0.1318i |t|=4.23  w=0.0836+0.2742i |t|=5.86  w=0.0836-0.2742i |t|=5.86  w=0.0909+0.4163i |t|=7.15  w=0.0909-0.4163i |t|=7.15
+FAMILY DIRECT c=1.0696 nu=0 (margin 1.0696) | min t_k*(k+1)=1.07456 | t_10*10=1.0160 | t_100*100=1.0639
+  N=60 S=8.93 | trusted posreal=1 negreal-w=0 nonreal-w=2 | outside=57 maxres=1e-16
+    nonreal-w: w=0.1477+0.2024i |t|=4.47  w=0.1477-0.2024i |t|=4.47
+  N=80 S=10.42 | trusted posreal=1 negreal-w=0 nonreal-w=4 | outside=75 maxres=1e-16
+    nonreal-w: w=0.1086+0.1488i |t|=4.47  w=0.1086-0.1488i |t|=4.47  w=0.1537-0.3412i |t|=6.37  w=0.1537+0.3412i |t|=6.37
+  N=100 S=11.74 | trusted posreal=1 negreal-w=0 nonreal-w=6 | outside=93 maxres=4e-17
+    nonreal-w: w=0.0855-0.1172i |t|=4.47  w=0.0855+0.1172i |t|=4.47  w=0.1210+0.2687i |t|=6.37  w=0.1210-0.2687i |t|=6.37  w=0.1494+0.4265i |t|=7.89  w=0.1494-0.4265i |t|=7.89
+  N=120 S=12.94 | trusted posreal=1 negreal-w=0 nonreal-w=6 | outside=113 maxres=1e-16
+    nonreal-w: w=0.0704+0.0965i |t|=4.47  w=0.0704-0.0965i |t|=4.47  w=0.0996-0.2211i |t|=6.37  w=0.0996+0.2211i |t|=6.37  w=0.1229-0.3509i |t|=7.89  w=0.1229+0.3509i |t|=7.89
+FAMILY DIRECT c=1.5 nu=0 (margin 1.5) | min t_k*(k+1)=1.50372 | t_10*10=1.3951 | t_100*100=1.4888
+  N=60 S=21.56 | trusted posreal=3 negreal-w=0 nonreal-w=4 | outside=53 maxres=7e-17
+    nonreal-w: w=0.2087+0.0776i |t|=10.17  w=0.2087-0.0776i |t|=10.17  w=0.3672-0.1913i |t|=13.87  w=0.3672+0.1913i |t|=13.87
+  N=80 S=26.75 | trusted posreal=3 negreal-w=0 nonreal-w=6 | outside=71 maxres=2e-17
+    nonreal-w: w=0.1356+0.0504i |t|=10.17  w=0.1356-0.0504i |t|=10.17  w=0.2385+0.1242i |t|=13.87  w=0.2385-0.1242i |t|=13.87  w=0.3562+0.2167i |t|=17.27  w=0.3562-0.2167i |t|=17.27
+  N=100 S=31.62 | trusted posreal=3 negreal-w=0 nonreal-w=13 | outside=84 maxres=1e-16
+    nonreal-w: w=0.0970+0.0361i |t|=10.17  w=0.0970-0.0361i |t|=10.17  w=0.1707+0.0889i |t|=13.87  w=0.1707-0.0889i |t|=13.87  w=0.2550-0.1551i |t|=17.28  w=0.2550+0.1551i |t|=17.28  w=0.4029-0.0544i |t|=20.16  w=0.4031+0.0543i |t|=20.17
+  N=120 S=36.26 | trusted posreal=5 negreal-w=0 nonreal-w=18 | outside=97 maxres=9e-17
+    nonreal-w: w=0.0738-0.0274i |t|=10.17  w=0.0738+0.0274i |t|=10.17  w=0.1298-0.0676i |t|=13.87  w=0.1298+0.0676i |t|=13.87  w=0.1939+0.1179i |t|=17.27  w=0.1939-0.1179i |t|=17.27  w=0.2769+0.0981i |t|=19.65  w=0.2770-0.0982i |t|=19.65
+FAMILY DIRECT c=1.7 nu=0 (margin 1.7) | min t_k*(k+1)=1.70252 | t_10*10=1.5658 | t_100*100=1.6857
+  N=60 S=32.47 | trusted posreal=5 negreal-w=0 nonreal-w=4 | outside=51 maxres=5e-17
+    nonreal-w: w=0.2925-0.0377i |t|=17.63  w=0.2925+0.0377i |t|=17.63  w=0.4767-0.1001i |t|=22.66  w=0.4767+0.1001i |t|=22.66
+  N=80 S=41.46 | trusted posreal=6 negreal-w=0 nonreal-w=6 | outside=68 maxres=2e-17
+    nonreal-w: w=0.1794+0.0231i |t|=17.63  w=0.1794-0.0231i |t|=17.63  w=0.2922+0.0616i |t|=22.66  w=0.2922-0.0616i |t|=22.66  w=0.3983+0.1162i |t|=26.71  w=0.3984-0.1162i |t|=26.71
+  N=100 S=50.12 | trusted posreal=5 negreal-w=0 nonreal-w=16 | outside=79 maxres=4e-17
+    nonreal-w: w=0.1227+0.0158i |t|=17.63  w=0.1227-0.0158i |t|=17.63  w=0.2000+0.0420i |t|=22.66  w=0.2000-0.0420i |t|=22.66  w=0.2822-0.0859i |t|=27.22  w=0.2822+0.0860i |t|=27.22  w=0.2938-0.0372i |t|=27.27  w=0.2939+0.0372i |t|=27.28
+  N=120 S=58.52 | trusted posreal=7 negreal-w=0 nonreal-w=18 | outside=95 maxres=4e-17
+    nonreal-w: w=0.0900-0.0116i |t|=17.63  w=0.0900+0.0116i |t|=17.63  w=0.1467+0.0308i |t|=22.66  w=0.1467-0.0308i |t|=22.66  w=0.2111+0.0632i |t|=27.47  w=0.2111-0.0633i |t|=27.47  w=0.2339+0.0373i |t|=28.48  w=0.2344-0.0374i |t|=28.51
+FAMILY DIRECT c=1.9 nu=0 (margin 1.9) | min t_k*(k+1)=1.85641 | t_10*10=1.7330 | t_100*100=1.8821
+  N=60 S=48.89 | trusted posreal=9 negreal-w=0 nonreal-w=0 | outside=51 maxres=2e-17
+  N=80 S=64.26 | trusted posreal=10 negreal-w=0 nonreal-w=4 | outside=66 maxres=7e-17
+    nonreal-w: w=0.3418-0.0377i |t|=37.68  w=0.3418+0.0377i |t|=37.68  w=0.3985-0.1149i |t|=41.38  w=0.3985+0.1148i |t|=41.38
+  N=100 S=79.43 | trusted posreal=10 negreal-w=0 nonreal-w=10 | outside=80 maxres=4e-17
+    nonreal-w: w=0.2295-0.0224i |t|=38.14  w=0.2295+0.0224i |t|=38.14  w=0.2779-0.0799i |t|=42.71  w=0.2779+0.0800i |t|=42.71  w=0.3231-0.0638i |t|=45.58  w=0.3232+0.0637i |t|=45.59  w=0.3106-0.1618i |t|=47.01  w=0.3106+0.1618i |t|=47.01
+  N=120 S=94.45 | trusted posreal=12 negreal-w=0 nonreal-w=14 | outside=94 maxres=3e-17
+    nonreal-w: w=0.1680+0.0142i |t|=38.78  w=0.1680-0.0142i |t|=38.78  w=0.1961-0.0634i |t|=42.88  w=0.1961+0.0634i |t|=42.88  w=0.2178-0.1136i |t|=46.81  w=0.2178+0.1135i |t|=46.81  w=0.2382-0.1674i |t|=50.97  w=0.2382+0.1674i |t|=50.97
+FAMILY DIRECT c=2 nu=0 (margin 2) | min t_k*(k+1)=1.87500 | t_10*10=1.8154 | t_100*100=1.9802
+  N=60 S=60.00 | trusted posreal=10 negreal-w=0 nonreal-w=0 | outside=50 maxres=7e-17
+  N=80 S=80.00 | trusted posreal=11 negreal-w=0 nonreal-w=4 | outside=65 maxres=5e-17
+    nonreal-w: w=0.3568-0.0269i |t|=47.85  w=0.3568+0.0268i |t|=47.86  w=0.4045-0.1023i |t|=51.67  w=0.4045+0.1023i |t|=51.67
+  N=100 S=100.00 | trusted posreal=13 negreal-w=0 nonreal-w=8 | outside=79 maxres=1e-16
+    nonreal-w: w=0.2522+0.0561i |t|=50.83  w=0.2523-0.0562i |t|=50.84  w=0.2824+0.1218i |t|=55.46  w=0.2825-0.1218i |t|=55.46  w=0.3137+0.1969i |t|=60.86  w=0.3137-0.1969i |t|=60.86  w=0.3478-0.2841i |t|=67.02  w=0.3478+0.2841i |t|=67.02
+  N=120 S=120.00 | trusted posreal=11 negreal-w=0 nonreal-w=16 | outside=93 maxres=2e-17
+    nonreal-w: w=0.1551-0.0145i |t|=47.36  w=0.1551+0.0145i |t|=47.37  w=0.1761-0.0494i |t|=51.32  w=0.1762+0.0493i |t|=51.33  w=0.1994+0.0909i |t|=56.17  w=0.1994-0.0909i |t|=56.17  w=0.2234+0.1405i |t|=61.64  w=0.2234-0.1405i |t|=61.65
+FAMILY DIRECT c=2.1 nu=0 (margin 2.1) | min t_k*(k+1)=1.89118 | t_10*10=1.8970 | t_100*100=2.0781
+  N=60 S=73.63 | trusted posreal=11 negreal-w=0 nonreal-w=0 | outside=49 maxres=2e-17
+  N=80 S=99.60 | trusted posreal=12 negreal-w=0 nonreal-w=4 | outside=64 maxres=4e-17
+    nonreal-w: w=0.3795+0.0297i |t|=61.45  w=0.3796-0.0295i |t|=61.46  w=0.4556+0.0963i |t|=67.96  w=0.4558-0.0961i |t|=67.98
+  N=100 S=125.89 | trusted posreal=12 negreal-w=0 nonreal-w=10 | outside=78 maxres=1e-16
+    nonreal-w: w=0.2256+0.0281i |t|=60.02  w=0.2256-0.0281i |t|=60.03  w=0.2662+0.0800i |t|=66.38  w=0.2663-0.0799i |t|=66.38  w=0.3056-0.1509i |t|=73.50  w=0.3057+0.1509i |t|=73.50  w=0.3845+0.0673i |t|=78.65  w=0.3845-0.0673i |t|=78.66
+  N=120 S=152.45 | trusted posreal=15 negreal-w=0 nonreal-w=14 | outside=91 maxres=2e-17
+    nonreal-w: w=0.1727-0.0149i |t|=63.48  w=0.1729+0.0147i |t|=63.50  w=0.1961-0.0583i |t|=68.96  w=0.1962+0.0583i |t|=68.97  w=0.2169+0.1053i |t|=74.86  w=0.2169-0.1054i |t|=74.86  w=0.2351-0.1617i |t|=81.44  w=0.2352+0.1617i |t|=81.44
+FAMILY DIRECT c=2.5 nu=0 (margin 2.5) | min t_k*(k+1)=1.93750 | t_10*10=2.2152 | t_100*100=2.4690
+  N=60 S=166.99 | trusted posreal=13 negreal-w=0 nonreal-w=0 | outside=47 maxres=2e-17
+  N=80 S=239.26 | trusted posreal=16 negreal-w=0 nonreal-w=2 | outside=62 maxres=8e-17
+    nonreal-w: w=0.4376-0.0693i |t|=159.26  w=0.4377+0.0693i |t|=159.27
+  N=100 S=316.23 | trusted posreal=16 negreal-w=0 nonreal-w=8 | outside=76 maxres=3e-17
+    nonreal-w: w=0.2470-0.0444i |t|=158.42  w=0.2470+0.0444i |t|=158.43  w=0.2971-0.0908i |t|=176.27  w=0.2971+0.0909i |t|=176.27  w=0.3428-0.1434i |t|=192.76  w=0.3428+0.1435i |t|=192.78  w=0.3813+0.2213i |t|=209.97  w=0.3814-0.2212i |t|=209.97
+  N=120 S=397.17 | trusted posreal=18 negreal-w=0 nonreal-w=12 | outside=90 maxres=1e-16
+    nonreal-w: w=0.1703+0.0314i |t|=165.29  w=0.1704-0.0315i |t|=165.31  w=0.2057+0.0687i |t|=184.96  w=0.2057-0.0688i |t|=184.97  w=0.2342-0.1017i |t|=200.70  w=0.2343+0.1017i |t|=200.71  w=0.2547-0.1533i |t|=216.56  w=0.2548+0.1533i |t|=216.57
+FAMILY DIRECT c=3 nu=0 (margin 3) | min t_k*(k+1)=1.96875 | t_10*10=2.5955 | t_100*100=2.9555
+  N=60 S=464.76 | trusted posreal=15 negreal-w=0 nonreal-w=0 | outside=45 maxres=3e-17
+  N=80 S=715.54 | trusted posreal=19 negreal-w=0 nonreal-w=0 | outside=61 maxres=5e-18
+  N=100 S=1000.00 | trusted posreal=19 negreal-w=0 nonreal-w=6 | outside=75 maxres=8e-17
+    nonreal-w: w=0.2607-0.0263i |t|=511.86  w=0.2607+0.0263i |t|=511.89  w=0.3239-0.0722i |t|=576.03  w=0.3239+0.0723i |t|=576.09  w=0.3983+0.1326i |t|=647.89  w=0.3983-0.1326i |t|=647.90
+  N=120 S=1314.53 | trusted posreal=19 negreal-w=0 nonreal-w=14 | outside=87 maxres=2e-17
+    nonreal-w: w=0.1458+0.0160i |t|=503.47  w=0.1458-0.0160i |t|=503.48  w=0.1773+0.0474i |t|=563.16  w=0.1773-0.0474i |t|=563.17  w=0.2150+0.0851i |t|=632.18  w=0.2150-0.0851i |t|=632.18  w=0.2566-0.1322i |t|=706.30  w=0.2567+0.1322i |t|=706.32
+FAMILY DIRECT c=1.0696 nu=1 (margin 1.0696) | min t_k*(k+1)=0.71440 | t_10*10=0.9252 | t_100*100=1.0540
+  N=60 S=9.24 | trusted posreal=1 negreal-w=0 nonreal-w=2 | outside=57 maxres=6e-17
+    nonreal-w: w=-0.0378-0.2427i |t|=4.58  w=-0.0378+0.2427i |t|=4.58
+  N=80 S=10.71 | trusted posreal=1 negreal-w=0 nonreal-w=4 | outside=75 maxres=8e-17
+    nonreal-w: w=-0.0282-0.1809i |t|=4.58  w=-0.0282+0.1809i |t|=4.58  w=-0.0237-0.3706i |t|=6.52  w=-0.0237+0.3706i |t|=6.52
+  N=100 S=12.01 | trusted posreal=1 negreal-w=0 nonreal-w=6 | outside=93 maxres=1e-16
+    nonreal-w: w=-0.0224+0.1437i |t|=4.58  w=-0.0224-0.1437i |t|=4.58  w=-0.0188+0.2945i |t|=6.52  w=-0.0188-0.2945i |t|=6.52  w=-0.0100-0.4489i |t|=8.05  w=-0.0100+0.4489i |t|=8.05
+FAMILY DIRECT c=1.5 nu=1 (margin 1.5) | min t_k*(k+1)=1.17529 | t_10*10=1.3082 | t_100*100=1.4790
+  N=60 S=22.31 | trusted posreal=1 negreal-w=0 nonreal-w=6 | outside=53 maxres=4e-17
+    nonreal-w: w=0.0321+0.0863i |t|=6.77  w=0.0321-0.0863i |t|=6.77  w=0.1164-0.2094i |t|=10.92  w=0.1164+0.2094i |t|=10.92  w=0.2325-0.3581i |t|=14.57  w=0.2325+0.3581i |t|=14.57
+  N=80 S=27.49 | trusted posreal=1 negreal-w=0 nonreal-w=8 | outside=71 maxres=2e-17
+    nonreal-w: w=0.0211+0.0568i |t|=6.77  w=0.0211-0.0568i |t|=6.77  w=0.0766-0.1378i |t|=10.92  w=0.0766+0.1378i |t|=10.92  w=0.1531+0.2357i |t|=14.57  w=0.1531-0.2357i |t|=14.57  w=0.2460-0.3478i |t|=17.94  w=0.2460+0.3478i |t|=17.94
+  N=100 S=32.36 | trusted posreal=1 negreal-w=0 nonreal-w=10 | outside=89 maxres=3e-17
+    nonreal-w: w=0.0153+0.0410i |t|=6.77  w=0.0153-0.0410i |t|=6.77  w=0.0553+0.0995i |t|=10.92  w=0.0553-0.0995i |t|=10.92  w=0.1105+0.1701i |t|=14.57  w=0.1105-0.1701i |t|=14.57  w=0.1776+0.2510i |t|=17.94  w=0.1776-0.2510i |t|=17.94
+FAMILY DIRECT c=2 nu=1 (margin 2) | min t_k*(k+1)=1.59534 | t_10*10=1.7328 | t_100*100=1.9704
+  N=60 S=62.08 | trusted posreal=1 negreal-w=0 nonreal-w=8 | outside=51 maxres=3e-17
+    nonreal-w: w=0.0202-0.0153i |t|=9.87  w=0.0202+0.0153i |t|=9.87  w=0.0803+0.0352i |t|=18.38  w=0.0803-0.0352i |t|=18.38  w=0.1787+0.0571i |t|=26.89  w=0.1787-0.0571i |t|=26.89  w=0.3152-0.0802i |t|=35.41  w=0.3152+0.0802i |t|=35.41
+  N=80 S=82.22 | trusted posreal=1 negreal-w=0 nonreal-w=16 | outside=63 maxres=8e-17
+    nonreal-w: w=0.0115+0.0087i |t|=9.87  w=0.0115-0.0087i |t|=9.87  w=0.0458-0.0201i |t|=18.38  w=0.0458+0.0201i |t|=18.38  w=0.1019-0.0325i |t|=26.89  w=0.1019+0.0325i |t|=26.89  w=0.1797-0.0457i |t|=35.41  w=0.1797+0.0457i |t|=35.41
+  N=100 S=102.33 | trusted posreal=3 negreal-w=0 nonreal-w=18 | outside=79 maxres=9e-17
+    nonreal-w: w=0.0074+0.0056i |t|=9.87  w=0.0074-0.0056i |t|=9.87  w=0.0296-0.0130i |t|=18.38  w=0.0296+0.0130i |t|=18.38  w=0.0658-0.0210i |t|=26.89  w=0.0658+0.0210i |t|=26.89  w=0.1160-0.0295i |t|=35.41  w=0.1160+0.0295i |t|=35.41
+FAMILY LITERAL a_k=k^-{ck}, b=a/(2k)! c=0.5 (b-margin 2.5) | min t_k*(k+1)=1.83333 | t_10*10=2.1767 | t_100*100=2.4642
+  N=60 S=126.30 | trusted posreal=13 negreal-w=0 nonreal-w=0 | outside=47 maxres=3e-17
+  N=80 S=179.88 | trusted posreal=15 negreal-w=0 nonreal-w=4 | outside=61 maxres=2e-17
+    nonreal-w: w=0.3851+0.0425i |t|=111.97  w=0.3852-0.0424i |t|=111.98  w=0.4663-0.1166i |t|=124.71  w=0.4664+0.1166i |t|=124.72
+  N=100 S=236.86 | trusted posreal=15 negreal-w=0 nonreal-w=10 | outside=75 maxres=1e-16
+    nonreal-w: w=0.2180-0.0236i |t|=110.92  w=0.2180+0.0236i |t|=110.92  w=0.2556+0.0685i |t|=121.85  w=0.2556-0.0685i |t|=121.85  w=0.2968-0.1248i |t|=134.39  w=0.2968+0.1248i |t|=134.39  w=0.3427-0.1930i |t|=148.55  w=0.3427+0.1930i |t|=148.55
+FAMILY LITERAL a_k=k^-{ck}, b=a/(2k)! c=2 (b-margin 4) | min t_k*(k+1)=1.97917 | t_10*10=3.2681 | t_100*100=3.9163
+  N=60 S=2722.89 | trusted posreal=17 negreal-w=0 nonreal-w=0 | outside=43 maxres=6e-18
+  N=80 S=4811.71 | trusted posreal=22 negreal-w=0 nonreal-w=0 | outside=58 maxres=3e-18
+  N=100 S=7490.05 | trusted posreal=25 negreal-w=0 nonreal-w=4 | outside=71 maxres=3e-18
+    nonreal-w: w=0.3591-0.0169i |t|=4490.63  w=0.3591+0.0168i |t|=4490.77  w=0.4798-0.0588i |t|=5207.63  w=0.4799+0.0588i |t|=5208.06
+FAMILY LITERAL a_k=k^-{ck}, b=a/(2k)! c=3 (b-margin 5) | min t_k*(k+1)=1.99479 | t_10*10=3.9097 | t_100*100=4.8724
+  N=60 S=21091.39 | trusted posreal=18 negreal-w=0 nonreal-w=0 | outside=42 maxres=1e-17
+  N=80 S=43037.21 | trusted posreal=24 negreal-w=0 nonreal-w=0 | outside=56 maxres=2e-17
+  N=100 S=74900.45 | trusted posreal=30 negreal-w=0 nonreal-w=0 | outside=70 maxres=4e-17
+FAMILY PERTURB c=2 eps=0.01 w=2 | min t_k*(k+1)=1.87724 | t_10*10=1.8167 | t_100*100=1.9797
+  N=60 S=60.00 | trusted posreal=10 negreal-w=0 nonreal-w=0 | outside=50 maxres=7e-17
+  N=100 S=100.00 | trusted posreal=11 negreal-w=0 nonreal-w=10 | outside=79 maxres=1e-17
+    nonreal-w: w=0.2297+0.0113i |t|=47.96  w=0.2297-0.0112i |t|=47.96  w=0.2555-0.0622i |t|=51.28  w=0.2555+0.0622i |t|=51.28  w=0.2838-0.1210i |t|=55.55  w=0.2838+0.1210i |t|=55.55  w=0.3109+0.1921i |t|=60.46  w=0.3109-0.1921i |t|=60.46
+FAMILY PERTURB c=2 eps=0.01 w=3 | min t_k*(k+1)=1.87806 | t_10*10=1.8200 | t_100*100=1.9802
+  N=60 S=60.00 | trusted posreal=10 negreal-w=0 nonreal-w=0 | outside=50 maxres=2e-17
+  N=100 S=100.00 | trusted posreal=11 negreal-w=0 nonreal-w=10 | outside=79 maxres=5e-17
+    nonreal-w: w=0.2282+0.0235i |t|=47.90  w=0.2283-0.0235i |t|=47.90  w=0.2570-0.0719i |t|=51.66  w=0.2570+0.0719i |t|=51.66  w=0.2883-0.1294i |t|=56.21  w=0.2883+0.1294i |t|=56.21  w=0.3165+0.1954i |t|=60.99  w=0.3165-0.1954i |t|=60.99
+FAMILY PERTURB c=2 eps=0.01 w=5 | min t_k*(k+1)=1.87862 | t_10*10=1.8286 | t_100*100=1.9793
+  N=60 S=60.00 | trusted posreal=8 negreal-w=0 nonreal-w=2 | outside=50 maxres=4e-17
+    nonreal-w: w=0.0889-0.0929i |t|=21.51  w=0.0889+0.0929i |t|=21.51
+  N=100 S=100.00 | trusted posreal=9 negreal-w=0 nonreal-w=12 | outside=79 maxres=7e-17
+    nonreal-w: w=0.0320-0.0334i |t|=21.51  w=0.0320+0.0334i |t|=21.51  w=0.2511+0.0165i |t|=50.16  w=0.2511-0.0165i |t|=50.17  w=0.2788+0.0734i |t|=53.70  w=0.2788-0.0735i |t|=53.70  w=0.3075-0.1458i |t|=58.34  w=0.3075+0.1458i |t|=58.34
+FAMILY PERTURB c=2 eps=0.05 w=2 | min t_k*(k+1)=1.88558 | t_10*10=1.8225 | t_100*100=1.9779
+  N=60 S=60.01 | trusted posreal=10 negreal-w=0 nonreal-w=0 | outside=50 maxres=1e-17
+  N=100 S=100.03 | trusted posreal=13 negreal-w=0 nonreal-w=10 | outside=77 maxres=5e-17
+    nonreal-w: w=0.2555+0.0461i |t|=50.96  w=0.2555-0.0461i |t|=50.97  w=0.2941+0.1129i |t|=56.14  w=0.2941-0.1130i |t|=56.15  w=0.3371+0.1897i |t|=62.21  w=0.3372-0.1898i |t|=62.22  w=0.3916-0.2167i |t|=66.92  w=0.3919+0.2164i |t|=66.93
+FAMILY PERTURB c=2 eps=0.05 w=3 | min t_k*(k+1)=1.86866 | t_10*10=1.8381 | t_100*100=1.9804
+  N=60 S=59.98 | trusted posreal=8 negreal-w=0 nonreal-w=2 | outside=50 maxres=3e-17
+    nonreal-w: w=0.0291-0.0148i |t|=10.84  w=0.0291+0.0148i |t|=10.84
+  N=100 S=99.99 | trusted posreal=9 negreal-w=0 nonreal-w=12 | outside=79 maxres=4e-17
+    nonreal-w: w=0.0105-0.0053i |t|=10.84  w=0.0105+0.0053i |t|=10.84  w=0.2413+0.0224i |t|=49.22  w=0.2413-0.0224i |t|=49.22  w=0.2640+0.0813i |t|=52.55  w=0.2640-0.0813i |t|=52.55  w=0.2878-0.1494i |t|=56.94  w=0.2878+0.1494i |t|=56.94
+FAMILY PERTURB c=2 eps=0.05 w=5 | min t_k*(k+1)=1.73812 | t_10*10=1.8829 | t_100*100=1.9764
+  N=60 S=60.00 | trusted posreal=6 negreal-w=0 nonreal-w=4 | outside=50 maxres=1e-16
+    nonreal-w: w=0.0101+0.0059i |t|=6.48  w=0.0101-0.0059i |t|=6.48  w=0.0256+0.1127i |t|=20.40  w=0.0256-0.1127i |t|=20.40
+  N=100 S=100.01 | trusted posreal=7 negreal-w=0 nonreal-w=14 | outside=79 maxres=5e-17
+    nonreal-w: w=0.0036+0.0021i |t|=6.48  w=0.0036-0.0021i |t|=6.48  w=0.0092+0.0406i |t|=20.40  w=0.0092-0.0406i |t|=20.40  w=0.2614-0.0074i |t|=51.15  w=0.2614+0.0074i |t|=51.15  w=0.2962+0.0653i |t|=55.09  w=0.2963-0.0653i |t|=55.09
+FAMILY MIXED direct lam=0.5 (margin 2) | min t_k*(k+1)=1.87500 | t_10*10=1.8154 | t_100*100=1.9802
+  N=60 S=46.73 | trusted posreal=10 negreal-w=0 nonreal-w=0 | outside=50 maxres=4e-17
+  N=100 S=77.88 | trusted posreal=13 negreal-w=0 nonreal-w=8 | outside=79 maxres=1e-16
+    nonreal-w: w=0.2523-0.0562i |t|=39.59  w=0.2523+0.0562i |t|=39.59  w=0.2824-0.1218i |t|=43.19  w=0.2825+0.1218i |t|=43.19  w=0.3137-0.1969i |t|=47.40  w=0.3137+0.1969i |t|=47.40  w=0.3478-0.2842i |t|=52.19  w=0.3479+0.2841i |t|=52.19
+FAMILY MIXED direct lam=1 (margin 2) | min t_k*(k+1)=1.87500 | t_10*10=1.8154 | t_100*100=1.9802
+  N=60 S=36.39 | trusted posreal=10 negreal-w=0 nonreal-w=0 | outside=50 maxres=5e-17
+  N=100 S=60.65 | trusted posreal=13 negreal-w=0 nonreal-w=8 | outside=79 maxres=8e-17
+    nonreal-w: w=0.2497-0.0566i |t|=30.69  w=0.2497+0.0567i |t|=30.69  w=0.2821-0.1221i |t|=33.63  w=0.2821+0.1221i |t|=33.63  w=0.3144-0.1976i |t|=36.96  w=0.3144+0.1976i |t|=36.96  w=0.3473+0.2886i |t|=40.76  w=0.3473-0.2886i |t|=40.76
+FAMILY MIXED literal lam=0.5 (b-margin 4) | min t_k*(k+1)=1.97917 | t_10*10=3.2681 | t_100*100=3.9163
+  N=60 S=2120.59 | trusted posreal=17 negreal-w=0 nonreal-w=0 | outside=43 maxres=2e-18
+  N=100 S=5833.25 | trusted posreal=25 negreal-w=0 nonreal-w=2 | outside=73 maxres=inf
+    nonreal-w: w=0.3593+0.0166i |t|=3498.21  w=0.3593-0.0166i |t|=3498.29
+DONE
