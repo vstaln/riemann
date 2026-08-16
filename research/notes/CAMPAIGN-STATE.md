@@ -412,3 +412,25 @@ zero evidence about RH — charter firewall).
   2023–26 literature survey. The s4h loop's continued job: transport a method from a truly
   foreign field, or decompose the GJT-completion blocker (small-n ⟺ RH) into a sub-block that
   is NOT ⟺ RH — the only remaining structural opening, and it is hard (Farmer diagnostic).
+
+## 2026-08-18 (continued) — frontier small-n0 probe PROVEN-STUCK; graph-engineering answer
+- **Frontier probe (119364d4 + coordinator): PROVEN-STUCK.** gamma(n)=n!M_n/(2n)! is NOT a
+  moment sequence: Hankel det2 = gamma0*gamma2-gamma1^2 = -9.19e-6 < 0 (det3 < 0 too;
+  coordinator hand-verified -9.189076e-06; b det2=-7.06e-5; root cause: 1/(2n)! has Hankel
+  det2=-0.2083<0, itself not a moment sequence). The PROVEN positive-measure structure of
+  Phi (M_n = 2int Phi u^{2n} du, Phi>0 on (0,inf)) does NOT transfer to the Taylor
+  coefficients. Separability: fixed-n0 covers measure-zero of the (n0,d) lattice; GJT-completion
+  trap airtight. **Small-n Jensen decomposition route PROVEN CLOSED as a one-way path.**
+  Commit 2544459. Zero RH evidence either way.
+- **Graph-engineering (user Q: "why not use graph engineering / is there a native graph to pi?"):**
+  (1) pi natively runs LLMs via agent sessions (subagent tool + SDK createAgentSession); pi has
+  NO built-in graph engine by design (usage.md design principles); LangGraph on disk calls the
+  LLM directly, bypassing pi — that's why it went stale. (2) Built tools/closure_dag/ — a
+  queryable mathematical closure-DAG (15 levers, 12 typed edges, 5 trap-classes, query.py
+  oracle) that makes "is this idea already dead?" a graph query enforcing no-duplicate dispatch.
+  Commit ff89c20 + 2544459(part). This is the mathematically-weighted graph artifact.
+- **Honest frontier after 25 levers:** one-way LP/RH space PROVEN closed in every direction
+  tried (coefficient-margin S1, small-n Jensen decomposition, moment-transfer, kernel-TP2,
+  xi'-transport, GJT-completion, lit-sweep 2023-26 empty). A proof of RH requires genuinely
+  new mathematics outside the classical toolbox; the search continues (persistence hook) with
+  honest labels. Record side terminal (0.673481/0.836740).
