@@ -475,3 +475,18 @@ zero evidence about RH — charter firewall).
   (g02, k=0..300 @210 bits), the closure-DAG (16 levers, 13 edges, 6 traps), and a rigorous
   exhaustion map of the entire classical+foreign one-way space. The persistence hook binds:
   the search continues; a proof needs a genuinely new idea.
+
+## 2026-08-18 (barrier-zoo retro-test) — the campaign's OWN identities pass through the RH-false world
+- **dhprofile probe (coordinator, commit a05a980)**: applied the barrier-zoo "proves too much"
+  discipline to the campaign's own PROVEN identities, using the RH-false Davenport–Heilbronn
+  world (real-on-line kappa-form construction verified; 23 certified off-line zeros to |Phi|<1e-20).
+  Results: (i) all-positive Taylor coefficients c_{2k} — the DH world is ALSO all-positive, so
+  positivity does NOT separate Xi from an RH-false world; (ii) deficit-2 log-profile — the DH
+  world SATISFIES t_k·k >= 2-2/ln k on the trusted head (k=2..5, gaps +1.73/+0.80/+0.52/+1.14,
+  zero violations): **the campaign's own PROVEN identity proves too much — consistency-only by
+  the campaign's own standard.** Third independent line closing the log-profile lever (after S1
+  perturbations and smooth (2,-2)). (iii) M' Hankel det2 > 0 at first minor (not separating).
+- **28 levers closed.** No disproof anywhere. Honest position unchanged: every sufficient-condition
+  family in the classical toolbox, all 7 foreign transports, AND the campaign's own structural
+  identities are PROVEN consistency-only or closed. The GJT-completion decomposition remains the
+  sole structural opening (hard per Farmer). Closure-DAG: 19 levers / 16 edges / 6 traps.
