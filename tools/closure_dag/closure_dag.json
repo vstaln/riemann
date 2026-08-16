@@ -23,7 +23,8 @@
     {"id": "g0-2-oracle", "verdict": "PROVEN", "claim": "certified M_k/b_k/gamma(k) k=0..300 @210 bits; deficit constant = 2 PROVEN: t_k k = 2 - 2/ln k + O(lnln k/ln^2 k); theta identity Phi=2e^{u/2}(2x^2 theta'' + 3x theta'), x=e^{2u} PROVEN exact.", "file": "research/notes/g02-moments-oracle-2026-08-18.md"},
     {"id": "Holland-wedge", "verdict": "PROVEN non-margin, NOT an RH lever", "claim": "n^3 log^2(n+2) >= K d^5 ==> J^{d,n} hyperbolic + Wigner semicircle (2608.08682). Mechanism = real-rooted-comparison + bounded-analytic-multiplier stability. Genuinely non-margin (escapes S1) but finite-degree; complement <==> RH = GJT-completion trap. No path to LP without RH.", "trap_class": "GJT-completion", "file": "research/notes/holland-wedge-probe-2026-08-18.md"},
     {"id": "xi-prime-transport", "verdict": "INVALID (PROVEN)", "claim": "xi'-distinct-two-trace transport structurally invalid: read-class identical (rank-trace), double zeta zero collapses to simple xi' zero (Rho_xi=0.5 with Rho_xi'=1.0 compatible). 0.836740 distinct terminal.", "trap_class": "xi-prime-transport", "file": "research/notes/wave20-xi-prime-transport-2026-08-18.md"},
-    {"id": "lit-sweep", "verdict": "EMPTY (CONCLUDED)", "claim": "2023-2026 literature adds no new sufficient-condition family escaping the PROVEN closures; Holland flagged only NEW structural theorem.", "file": "research/notes/lit-sweep-2026-08-18.md"}
+    {"id": "lit-sweep", "verdict": "EMPTY (CONCLUDED)", "claim": "2023-2026 literature adds no new sufficient-condition family escaping the PROVEN closures; Holland flagged only NEW structural theorem.", "file": "research/notes/lit-sweep-2026-08-18.md"},
+    {"id": "frontier-smalln0-slice", "verdict": "PROVEN-STUCK", "claim": "gamma(n)=n!M_n/(2n)! is NOT a moment sequence (Hankel det2=-9.19e-6<0, hand-verified); Phi>0 positive-measure structure does NOT transfer to Taylor coefficients; fixed-n0 covers measure-zero of (n0,d) lattice; GJT-completion trap airtight. Small-n Jensen decomposition route PROVEN CLOSED.", "trap_class": "moment-sequence-to-gamma", "file": "research/notes/frontier-smalln0-slice-2026-08-18.md"}
   ],
   "edges": [
     {"from": "S1-margin", "to": "8D-Phi-moment", "type": "refutes", "note": "coefficient-route is the S1 margin class"},
@@ -35,9 +36,9 @@
     {"from": "g0-2-oracle", "to": "moment-to-gamma", "type": "depends_on", "note": "M_n = moment seq of positive measure (Phi>0), but gamma(n)=n! M_n/(2n)! renormalization may break Hankel TP"},
     {"from": "g0-2-oracle", "to": "S1-margin", "type": "depends_on", "note": "margin profile t_k k -> 2 with deficit exactly 2 is the data the S1 closure acts on"},
     {"from": "xi-prime-transport", "to": "record-distinct-0.836740", "type": "refutes", "note": "0.836740 STANDS terminal; xi'-transport invalid"},
-    {"from": "lit-sweep", "to": "frontier", "type": "subsumes", "note": "no new input 2023-2026; frontier needs genuinely new mathematics or GJT-completion decomposition"}
+    {"from": "lit-sweep", "to": "frontier", "type": "subsumes", "note": "no new input 2023-2026; frontier needs genuinely new mathematics or GJT-completion decomposition"},
+    {"from": "frontier-smalln0-slice", "to": "moment-to-gamma", "type": "refutes", "note": "positive-measure M_n does NOT imply Hankel TP on gamma; renormalization breaks the bridge at the first non-trivial minor"},
+    {"from": "g0-2-oracle", "to": "frontier-smalln0-slice", "type": "depends_on", "note": "uses certified M_k/gamma(k) + the PROVEN relation gamma(k)=k!M_k/(2k)!"}
   ],
-  "active_frontier": [
-    {"id": "frontier-smalln0-slice", "status": "IN-FLIGHT", "agent": "119364d4", "question": "Is fixed-n0 Jensen slice (n0=0) hyperbolic-for-all-d provable by moment structure alone, independent of RH? Uses M_n moment-positivity + gamma(n)=n!M_n/(2n)! renormalization. Forecast: PROVEN-stuck (renormalization destroys Hankel TP; fixed-n0 covers measure-zero of the (n0,d) lattice => GJT-completion airtight)."}
-  ]
+  "active_frontier": []
 }
