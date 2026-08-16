@@ -1,1 +1,4 @@
 t=0 start: dispatched. Reading lit-sweep + s4-region-size, fetching Holland paper.
+t=1 read lit-sweep + s4-region-size notes. Partial note written. Now fetching Holland paper.
+t=8 fetched+read Holland paper (full HTML→txt). Mechanism PROVEN: real-rooted comparison (Laguerre/Jacobi/finite-free) + bounded analytic multiplier stability (Prop 2.2, match R0..R4, sup|c-1|<<d^{5/2}/(n^{3/2}log n)); wedge = that error small. NOT margin family (S1 untouched). Effective-K: no K matches empirical (wedge d^{5/3} vs onset d^0.97, gap d^{2/3}); task's 63 mis-cube-root corrected to ~27. Verdict written to note. appending ledger.
+t=9 FINAL: note complete (research/notes/holland-wedge-probe-2026-08-18.md), ledger line appended. Deliverable locked to disk.

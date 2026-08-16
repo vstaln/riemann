@@ -838,3 +838,19 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   is its mechanism margin-driven (S1-dead family) or genuinely new (Hermite/spectral)? Plus
   the S4-vs-wedge gap (empirical n₀* ≈ 7.7·d^0.97 vs proven d^{5/3} — 4-order gap) and the
   effective-K estimate. Structural probe; NOT an RH one-way (finite-degree, firewall).
+- 2608.08682 Holland wedge probe (2026-08-18): mechanism = real-rooted comparison (Laguerre/Jacobi/finite-free) + bounded-analytic-multiplier stability, matched R_0..R_4, controlled by saddle sup|c-1| << d^{5/2}/(n^{3/2} log n); wedge n^3 log^2(n+2) >= K d^5. PROVEN (read from proof) genuinely DIFFERENT from S1 coefficient-margin family (no pointwise margin; q_k only model-matching coords). YET finite-degree/large-n diagnostic class (GORZ/GORTTW/GJT); complement (small-n) == RH exactly (paper cites Farmer; GJT-completion trap). Wedge far from sharp on real xi: literal boundary 0 (proven grid), wedge boundary ~d^{5/3}; no effective K matches (growth gap d^{2/3}). Zero RH evidence (firewall). NOT an RH lever; one-way space still closed.
+- **Holland wedge PROVEN non-margin; finite-degree; no new RH lever (2026-08-18, 3ca5c592)**:
+  2608.08682's mechanism = real-rooted-comparison (Laguerre/Jacobi/finite-free) + order-5-exact-
+  coefficient-matching + bounded-holomorphic-multiplier stability (Prop 2.2, sup|c−1|≪
+  d^{5/2}/(n^{3/2}log n) analytic estimate); wedge n³log²(n+2)≥K·d⁵ ⟺ "that error is small";
+  Wigner semicircle transfer (Thm 1.2). **PROVEN NOT margin-driven** — S1 closure untouched
+  (Holland uses no pointwise margin; ξ's t_k·k→2 deficit-2 sits far below Hutchinson 3/4).
+  New family named: real-rooted-comparison + bounded-analytic-multiplier stability (JOINT
+  (n,d) refinement of GJT/GORZ). BUT: finite-degree, large-n only; complement (small-n, all d)
+  ⟺ RH = exactly the GJT-completion trap (paper itself cites Farmer). **No path from Holland's
+  wedge to LP without ⟺ RH. No new RH lever.** Wedge FAR from sharp on real ξ: n_H(d)≈
+  K^{1/3}d^{5/3} vs empirical onset n₀*≈7.7·d^0.97 / literal boundary 0 (sharpness gap ∝ d^{2/3};
+  no positive K matches — structural). Correction: K=1 wedge n at d=12 is ≈27 (log² divides cube
+  root, not multiplies). Independent value: proves the margin cohort is not the whole story —
+  perturbation/comparison family is open at finite-degree. Firewall: zero RH evidence.
+  Tool: fetched 2608.08682 (html).
