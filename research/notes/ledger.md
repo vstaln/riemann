@@ -408,3 +408,22 @@ Briefs: wave8-briefs-direct-RH-2026-08-17.md. Goal reset to direct-RH mission.
   only, NOT a proof step).
 - Referees: dispatch blind hostile referee per landed result (R1→bound arithmetic+verifier independence;
   D2→L_k sign; D3→DN-direction claim).
+- **8D L_k zeta-direct COMPLETE** (2026-08-18, D2 7475232a) — NO RH DISPROOF. Certified evaluator
+  (zeta_em_ders zeta^(0..21), n=600 EM override, Stirling polygamma, Bell composition; sin_cos phase
+  bug found by sanity gate and FIXED). 4/7 decisive POSITIVE (L3(56.5)=+8.868e-32 mpmath 0.4%,
+  L8(33.6)=+2.166e-17 CD 0.3%, L4(35.5)=+1.022e-18, L3(40)=+1.657e-21 mpmath 0.2%); 3/7 INCONCLUSIVE
+  (k=18/19/20 @ t=40, error ≥ signal, one neg −3.95e-19 within 1.6e-18 error — no RH signal).
+  ROOT CAUSE CONFIRMED: earlier L_k negatives = Taylor-truncation artifacts (series diverges t≳35).
+  File: wave8d-lk-zeta-direct-2026-08-18.md (+ run txt). 8D closed: no disproof, no positive RH evidence either (positivity of L_k is NOT RH — known to hold numerically to 1e5).
+- **de Bruijn heat lever CLOSED** (2026-08-18, D3 54250369) — DIRECTION VERDICT PROVEN: wave-20
+  g2-2 t>0 route EMPTY (premise ⟺ Λ≤0 ⟺ RH by de Bruijn–Newman + Rodgers–Tao; proving it is RH).
+  "Single t>0" version FALSE (Gaussian counterexample: H_0 all non-real → H_0.5 real-rooted, verified).
+  t<0 probe CHECKED NUMERICALLY: first-8 zeros real t∈[−0.98,+0.5]; first collision γ4+γ5 in
+  (−0.99,−0.98), pair 33.1151±0.15054i at t=−1 (expected under RH per Rogers–Tao: non-real zeros
+  for EVERY t<0). No non-real zero at any t>0 tested (t_RT∈{0.004..2}) — the only non-circular
+  disproof signal — NONE FOUND. RH-consistent evidence only. File: dbheat-deformation-2026-08-18.md.
+- **R1 coboundary reopt CLOSED** (2026-08-18, harvest) — record lever: tawan (l,c) globally optimal
+  (LP family beats v*=0.00877 vs 0.00780 but global floor 0.0057 < 0.0063 loses; symLP ties exactly
+  0.007612214 but global 0.006038 < 0.006222); m=171 exact bound-chain optimum (B(m)=Φ_m(ε(m−6))
+  m-dependent; sweep m=20..400 peaks at 171). Record 0.673481 = certified ceiling of redistribution
+  class. eps>0.0062 impossible in-class. File: coboundary-reopt-2026-08-18.md.
