@@ -438,3 +438,10 @@ Briefs: wave8-briefs-direct-RH-2026-08-17.md. Goal reset to direct-RH mission.
   showed global floor losing (0.00561<0.00634) — the t=4-6 DE was confirmation overkill that killed
   the agent's write budget. Rule going forward: sanctioned-Python = arb interval verifier ONLY;
   heuristics in Rust or cut; stop searching when the decision is already made.
+- **Python→Rust cleanup (2026-08-18)**: (1) verifier-rs fix agent (7b61cc61) dispatched — Rust port of
+  the record certifier FAILED to reproduce Python ground truth (False vs certified True @ eps=0.00620,
+  α=1.464) → fixing with strict acceptance (4 configs); (2) coboundary_search Rust port (948e3a7f)
+  dispatched — reusable LP+DE-global-floor search without scipy; (3) ARCHIVED 6 dead tools to
+  tools/_archive/ (manifest README): beat673 (retracted double-normalization), twotone-verify (refuted),
+  pt_symmetric_metric_solver (0 refs), adversarial_riemann_solver (0 refs), fourth_moment_rmt
+  (single-use, result in note), ramanujan_kernel_search (single-use, result in note). Never deleted.
