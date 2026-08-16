@@ -463,3 +463,15 @@ Briefs: wave8-briefs-direct-RH-2026-08-17.md. Goal reset to direct-RH mission.
   (3) **6 dead tools archived** to tools/_archive/ (manifest README): beat673 (retracted),
     twotone-verify (refuted), pt_symmetric_metric_solver / adversarial_riemann_solver /
     fourth_moment_rmt / ramanujan_kernel_search (zero-ref single-use). Never deleted.
+
+## DIRECT-RH WAVE-14 (2026-08-18, 3 background agents, RUST ONLY)
+- **D4 (01894c73) L_k MPFR** — resolve 8D k=18/19/20 @ t=40 at ~200-bit (rug port of zeta_em_ders):
+  last open disproof-capable check (L_k≥0 ⟺ RH). Verdict rules: POSITIVE / INCONCLUSIVE / RH-DISPROOF-escalate.
+- **D5 (5fed70fc) d_N oscillation** — dense d·√(ln N) at 19 N values (100..2000, f64, W8C_NMAX cap),
+  fit c + A₁cos(2πlnN/P₁+φ₁)+..., test γ₁=14.1347 period (P=0.4446 log-N-units) in the ±1.8% wobble.
+  CONJECTURED: explicit-formula origin of the 0.213 constant's oscillation (Burnol zero-sum theory).
+- **D6 (b88a2b48) Herglotz probe** — Xi′/Xi Herglotz (Im H(x+iy) ≥ 0 ∀y>0) ⟺ all-real-zeros ⟺ RH (PROVEN
+  equivalence). Probe: complex EM+Stirling evaluation of Im H on a grid; Im<0 ⇒ RH-DISPROOF signal.
+  Structural note: finite grid can only find violations, never prove RH.
+- Referees: blind hostile referee per landed result (D4: sign convention + sanity; D5: fit honesty +
+  γ₁-periodicity vs spurious; D6: Herglotz direction + evaluation).

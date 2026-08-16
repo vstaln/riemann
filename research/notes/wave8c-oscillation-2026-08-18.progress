@@ -1,0 +1,2 @@
+t=0 start: task wave8c-oscillation. Plan: dense f64 prod runs N=100..2000 (19 pts), fit oscillation, test gamma1 periodicity. Writing deliverable seed next.
+t=1 read burnol-rate note. Certified series: N=100 0.21489, 1000 0.21172, 2000 0.214551, 3000 0.2111, 5000 0.211661. Flat law c~0.213 band 1.8%. Oscillation CONJECTURED explicit-formula. Now reading hiN.rs.
