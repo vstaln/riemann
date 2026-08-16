@@ -910,3 +910,13 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   correct-duality SINC/PF∞. Each: mechanism, xi-input, verdict (trap/consistency/one-way/
   impossible). Deliverable: honest table + surviving candidates with minimal Rust probe.
   Read-only, no fabrication.
+- **crossdomain-hunt-2026-08-18 (6744babd, read-only architect)** — 7 foreign-field sufficient-condition transports assessed: (1) Lee-Yang/section — IMPOSSIBLE (closed repo, roots in |w|<1 from N=12; integral handle ⟺ RH); (2) HB/operator — TRAP (NEW lemma this session: |Ξ(−iz)|=|Ξ(iz̄)| identically, HB inequality vacuous ⟹ de Branges route ⟺ RH by construction); (3) RMT — CONSISTENCY-ONLY (no theorem forces real zeros from moments); (4) Weil–Deligne — STRUCTURALLY IMPOSSIBLE (no cohomology/algebraic-integer structure for ζ/Q); (5) potential theory/explicit formula — TRAP (FE on the line = evenness; Weil positivity ⟺ RH; no new inequality exists; moment structure exhausted); (6) Sturm/_1F_1 — STRUCTURALLY IMPOSSIBLE (Ξ satisfies no 2nd-order ODE, not confluent — t·ln x exponent breaks all special-function classes); (7) SINC-PF∞ duality — IMPOSSIBLE (NEW: Φ ∉ PF∞ PROVEN unconditionally — Hardy ⟹ Ξ has a real zero ⟹ 1/Ξ meromorphic ⟹ Φ not PF∞ by the correct duality; real-zero LP is not FT of PF, repo). NO survivor, no probe funded. Bottom line: every known real-zero mechanism needs a hypothesis Ξ provably violates (product/PF, ODE, cohomology) or is ⟺ RH; RH requires genuinely new mathematics; GJT-completion decomposition = only structural opening. File: crossdomain-hunt-2026-08-18.md. Read-only; literature claims labeled PROVEN-literature/UNVERIFIED-in-repo.
+- **crossdomain-hunt COMPLETE (6744babd) — all 7 foreign transports closed**: Lee-Yang (section
+  lemma fails N>=12, repo), HB/operator theory (NEW PROVEN lemma: |Xi(-iz)|=|Xi(iz̄)| identically
+  ⟹ HB/de Branges route vacuous ⟺ RH — coordinator hand-verified), RMT (consistency-only), Weil-
+  Deligne (structurally impossible: zeros transcendental, no Frobenius), potential theory/
+  explicit formula (trap ⟺ RH; FE = evenness admits off-line zeros), Sturm/_1F_1 (no 2nd-order
+  ODE for Xi, PROVEN), SINC-PF∞ duality (direction mismatch; Phi ∉ PF∞ PROVEN via Hardy+duality).
+  NO survivor, no probe funded. Structural reason: every real-zero-forcing mechanism needs
+  product/PF structure, ODE membership, or cohomology — Xi provably violates all three; the rest
+  are ⟺ traps. The 4 hypothesis classes Xi provably violates documented.

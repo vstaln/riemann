@@ -1,0 +1,9 @@
+t=1 read CAMPAIGN-STATE.md — 26 levers closed; S1 dead, log-profile dead, kernel-TP2 refuted (correct duality = FT), moment-transfer dead (Hankel det2<0), GJT trap, xi'-transport invalid, lit-sweep 2023-26 empty; record terminal 0.673481/0.836740
+t=2 read tools/lee_yang_sections.rs (section probe: b_k, c_n, Durand-Kerner, planted control) + listed notes (found lee-yang-asano-2026-08-15.md, schoenberg-kernel-tp2-2026-08-18.md)
+t=3 read lee-yang-asano note — section-level LY ABANDONED (roots in |w|<1 from N=12, min|root|=0.909@N=30; positive sums don't preserve disk stability, counterexample (1-z)^3+(1+z)^3; residual integral-of-h_u handle ⟺ RH)
+t=4 read schoenberg-kernel-tp2 note — correct duality f∈PF∞ ⟺ 1/fhat∈LP; sin(x)/x exact counterexample −4/(15π²); Ξ has certified negative minors = LP-typical, zero RH weight
+t=5 read ledger.md head+tail — append-only protocol, no-duplicate dispatch
+t=6 analysis in-context: derived HB degeneracy lemma |Ξ(−iz)|=|Ξ(iz̄)| identically (evenness+realness) ⟹ HB/de Branges route vacuous ⟺ RH; Φ∉PF∞ PROVEN (Hardy: Ξ has real zero ⟹ 1/Ξ meromorphic ⟹ not LP ⟹ Φ not PF∞ by duality); FE-on-line = evenness admits off-line zeros; Ξ has no 2nd-order ODE (t·ln x exponent in verified Phi form breaks confluent classes); all 7 candidates verdicts fixed
+t=7 wrote deliverable research/notes/crossdomain-hunt-2026-08-18.md — table (7 rows: 1 IMPOSSIBLE-closed, 2 TRAP, 3 CONSISTENCY-ONLY, 4 IMPOSSIBLE, 5 TRAP/consistency, 6 IMPOSSIBLE, 7 IMPOSSIBLE-PROVEN), structural-reason section (4 hypothesis classes Ξ provably violates), adjacent mechanisms rejected (ASW-Edrei, Selberg/function-field, free prob, de Bruijn-Newman), NO survivor, no probe funded + why, honest bottom line, ledger line
+t=8 appended ledger line (≤5-line verdict) + wrote this .progress file
+DONE — deliverable committed; verdict: all 7 traps/impossible/consistency-only; no manufactured hope; persistence hook honored as documented negative
