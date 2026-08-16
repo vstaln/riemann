@@ -400,3 +400,102 @@ s=119 j=3958 k=968 G=4.658196e-4 f64-vs-dd=7.33e-13
 [prod 2000] START
 [prod 1600] START[prod 1800] START
 
+[prod 675] START
+[prod 650] START
+[prod 725] START
+[prod 750] START[prod 700] START
+
+[prod 775] START
+[prod 650] gram f64 filled 64.2s
+[prod 650] d_f64=8.326529939628e-2 kappa_pivot=2.94e4 chol=true (65.0s)
+[prod 650] refined: it1 rel_r=1.7e-16 d=8.326529939628e-2 dd_d=4.45e-14; it2 rel_r=7.9e-29 d=8.326529939628e-2 dd_d=0.00e0; 
+[prod 650] d_ref=8.326529939628e-2 rel(f64)=4.45e-14
+[prod 675] gram f64 filled 70.5s
+[prod 675] d_f64=8.254233128240e-2 kappa_pivot=3.18e4 chol=true (70.8s)
+[prod 675] refined: it1 rel_r=4.4e-16 d=8.254233128241e-2 dd_d=3.18e-14; it2 rel_r=7.9e-29 d=8.254233128241e-2 dd_d=0.00e0; 
+[prod 675] d_ref=8.254233128241e-2 rel(f64)=3.18e-14
+[prod 700] gram f64 filled 77.8s
+[prod 700] d_f64=8.171888410557e-2 kappa_pivot=3.37e4 chol=true (78.4s)
+[prod 700] refined: it1 rel_r=3.2e-16 d=8.171888410557e-2 dd_d=3.89e-14; it2 rel_r=7.4e-29 d=8.171888410557e-2 dd_d=0.00e0; 
+[prod 700] d_ref=8.171888410557e-2 rel(f64)=3.89e-14
+[prod 650] gram sampling: f64-vs-dd max rel 9.20e-13 over 120 rand pairs; dd-vs-mpfr max rel 3.04e-28 over 12
+[prod 725] gram f64 filled 84.4s
+[prod 725] d_f64=8.166425007984e-2 kappa_pivot=3.65e4 chol=true (84.9s)
+[prod 725] refined: it1 rel_r=5.8e-16 d=8.166425007983e-2 dd_d=1.01e-13; it2 rel_r=8.8e-29 d=8.166425007983e-2 dd_d=0.00e0; 
+[prod 725] d_ref=8.166425007983e-2 rel(f64)=1.01e-13
+[prod 750] gram f64 filled 86.0s
+[prod 750] d_f64=8.158556687962e-2 kappa_pivot=3.95e4 chol=true (86.4s)
+[prod 750] refined: it1 rel_r=7.1e-16 d=8.158556687962e-2 dd_d=5.44e-15; it2 rel_r=9.9e-29 d=8.158556687962e-2 dd_d=0.00e0; 
+[prod 750] d_ref=8.158556687962e-2 rel(f64)=5.44e-15
+[prod 675] gram sampling: f64-vs-dd max rel 7.30e-13 over 120 rand pairs; dd-vs-mpfr max rel 1.27e-28 over 12
+[prod 700] gram sampling: f64-vs-dd max rel 8.78e-13 over 120 rand pairs; dd-vs-mpfr max rel 1.37e-28 over 12
+[prod 775] gram f64 filled 93.3s
+[prod 775] d_f64=8.153759717695e-2 kappa_pivot=4.09e4 chol=true (93.6s)
+[prod 775] refined: it1 rel_r=7.1e-16 d=8.153759717694e-2 dd_d=9.67e-14; it2 rel_r=1.0e-28 d=8.153759717694e-2 dd_d=0.00e0; 
+[prod 775] d_ref=8.153759717694e-2 rel(f64)=9.67e-14
+[prod 750] gram sampling: f64-vs-dd max rel 1.35e-12 over 120 rand pairs; dd-vs-mpfr max rel 6.30e-29 over 12
+[prod 725] gram sampling: f64-vs-dd max rel 1.17e-12 over 120 rand pairs; dd-vs-mpfr max rel 2.69e-28 over 12
+[prod 650] d_mpfr(stored-G)=8.326529939628e-2 rel(ref)=0.00e0 chol=true (96.3s)
+[prod 650] RESULT d_ref=8.326529939628e-2 d*sqrt(ln N)=0.211909 d_f64*sqrt(lnN)=0.211909 [flat-law band 0.21-0.22]
+[prod 650] END elapsed 96.3s
+[prod 775] gram sampling: f64-vs-dd max rel 8.28e-13 over 120 rand pairs; dd-vs-mpfr max rel 1.89e-28 over 12
+[prod 675] d_mpfr(stored-G)=8.254233128241e-2 rel(ref)=0.00e0 chol=true (101.5s)
+[prod 675] RESULT d_ref=8.254233128241e-2 d*sqrt(ln N)=0.210681 d_f64*sqrt(lnN)=0.210681 [flat-law band 0.21-0.22]
+[prod 675] END elapsed 101.6s
+[prod 700] d_mpfr(stored-G)=8.171888410557e-2 rel(ref)=0.00e0 chol=true (103.5s)
+[prod 700] RESULT d_ref=8.171888410557e-2 d*sqrt(ln N)=0.209160 d_f64*sqrt(lnN)=0.209160 [flat-law band 0.21-0.22]
+[prod 700] END elapsed 103.5s
+[prod 725] d_mpfr(stored-G)=8.166425007983e-2 rel(ref)=1.70e-16 chol=true (111.1s)
+[prod 725] RESULT d_ref=8.166425007983e-2 d*sqrt(ln N)=0.209579 d_f64*sqrt(lnN)=0.209579 [flat-law band 0.21-0.22]
+[prod 725] END elapsed 111.1s
+[prod 750] d_mpfr(stored-G)=8.158556687962e-2 rel(ref)=1.70e-16 chol=true (111.4s)
+[prod 750] RESULT d_ref=8.158556687962e-2 d*sqrt(ln N)=0.209916 d_f64*sqrt(lnN)=0.209916 [flat-law band 0.21-0.22]
+[prod 750] END elapsed 111.4s
+[prod 775] d_mpfr(stored-G)=8.153759717694e-2 rel(ref)=0.00e0 chol=true (113.6s)
+[prod 775] RESULT d_ref=8.153759717694e-2 d*sqrt(ln N)=0.210311 d_f64*sqrt(lnN)=0.210311 [flat-law band 0.21-0.22]
+[prod 775] END elapsed 113.6s
+[prod 850] START
+[prod 875] START
+[prod 825] START
+[prod 800] START
+[prod 900] START
+[prod 800] gram f64 filled 111.1s
+[prod 800] d_f64=8.150620050462e-2 kappa_pivot=4.40e4 chol=true (112.5s)
+[prod 800] refined: it1 rel_r=9.5e-16 d=8.150620050461e-2 dd_d=9.06e-14; it2 rel_r=1.1e-28 d=8.150620050461e-2 dd_d=0.00e0; 
+[prod 800] d_ref=8.150620050461e-2 rel(f64)=9.06e-14
+[prod 825] gram f64 filled 118.7s
+[prod 850] gram f64 filled 119.4s
+[prod 825] d_f64=8.145259338891e-2 kappa_pivot=4.60e4 chol=true (119.7s)
+[prod 825] refined: it1 rel_r=4.9e-16 d=8.145259338891e-2 dd_d=2.91e-14; it2 rel_r=1.2e-28 d=8.145259338891e-2 dd_d=0.00e0; 
+[prod 825] d_ref=8.145259338891e-2 rel(f64)=2.91e-14
+[prod 850] d_f64=8.131126093320e-2 kappa_pivot=4.92e4 chol=true (120.1s)
+[prod 850] refined: it1 rel_r=3.0e-16 d=8.131126093320e-2 dd_d=4.54e-14; it2 rel_r=1.2e-28 d=8.131126093320e-2 dd_d=0.00e0; 
+[prod 850] d_ref=8.131126093320e-2 rel(f64)=4.54e-14
+[prod 875] gram f64 filled 123.3s
+[prod 875] d_f64=8.124005922401e-2 kappa_pivot=5.23e4 chol=true (123.8s)
+[prod 875] refined: it1 rel_r=8.0e-16 d=8.124005922402e-2 dd_d=9.02e-14; it2 rel_r=1.2e-28 d=8.124005922402e-2 dd_d=0.00e0; 
+[prod 875] d_ref=8.124005922402e-2 rel(f64)=9.02e-14
+[prod 800] gram sampling: f64-vs-dd max rel 1.50e-12 over 120 rand pairs; dd-vs-mpfr max rel 1.38e-28 over 12
+[prod 825] gram sampling: f64-vs-dd max rel 1.44e-12 over 120 rand pairs; dd-vs-mpfr max rel 2.23e-28 over 12
+[prod 900] gram f64 filled 128.5s
+[prod 900] d_f64=8.117948325339e-2 kappa_pivot=5.54e4 chol=true (129.0s)
+[prod 900] refined: it1 rel_r=7.4e-16 d=8.117948325339e-2 dd_d=1.54e-15; it2 rel_r=1.2e-28 d=8.117948325339e-2 dd_d=0.00e0; 
+[prod 900] d_ref=8.117948325339e-2 rel(f64)=1.54e-15
+[prod 875] gram sampling: f64-vs-dd max rel 1.43e-12 over 120 rand pairs; dd-vs-mpfr max rel 1.48e-28 over 12
+[prod 850] gram sampling: f64-vs-dd max rel 1.11e-12 over 120 rand pairs; dd-vs-mpfr max rel 2.00e-28 over 12
+[prod 900] gram sampling: f64-vs-dd max rel 1.34e-12 over 120 rand pairs; dd-vs-mpfr max rel 2.79e-28 over 12
+[prod 800] d_mpfr(stored-G)=8.150620050461e-2 rel(ref)=0.00e0 chol=true (145.8s)
+[prod 800] RESULT d_ref=8.150620050461e-2 d*sqrt(ln N)=0.210731 d_f64*sqrt(lnN)=0.210731 [flat-law band 0.21-0.22]
+[prod 800] END elapsed 145.8s
+[prod 825] d_mpfr(stored-G)=8.145259338891e-2 rel(ref)=0.00e0 chol=true (150.1s)
+[prod 825] RESULT d_ref=8.145259338891e-2 d*sqrt(ln N)=0.211077 d_f64*sqrt(lnN)=0.211077 [flat-law band 0.21-0.22]
+[prod 825] END elapsed 150.1s
+[prod 850] d_mpfr(stored-G)=8.131126093320e-2 rel(ref)=0.00e0 chol=true (154.4s)
+[prod 850] RESULT d_ref=8.131126093320e-2 d*sqrt(ln N)=0.211178 d_f64*sqrt(lnN)=0.211178 [flat-law band 0.21-0.22]
+[prod 850] END elapsed 154.4s
+[prod 875] d_mpfr(stored-G)=8.124005922402e-2 rel(ref)=0.00e0 chol=true (154.9s)
+[prod 875] RESULT d_ref=8.124005922402e-2 d*sqrt(ln N)=0.211446 d_f64*sqrt(lnN)=0.211446 [flat-law band 0.21-0.22]
+[prod 875] END elapsed 155.0s
+[prod 900] d_mpfr(stored-G)=8.117948325339e-2 rel(ref)=0.00e0 chol=true (157.4s)
+[prod 900] RESULT d_ref=8.117948325339e-2 d*sqrt(ln N)=0.211727 d_f64*sqrt(lnN)=0.211727 [flat-law band 0.21-0.22]
+[prod 900] END elapsed 157.4s

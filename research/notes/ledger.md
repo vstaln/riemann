@@ -509,3 +509,48 @@ Briefs: wave8-briefs-direct-RH-2026-08-17.md. Goal reset to direct-RH mission.
   check + funding rec for wave-20 unfunded briefs (g0-2/g3-1/g4-1).
 - Referees: hostile blind per landed result (E1: minor sign convention + controls; E3: bootstrap
   honesty; E2: direction-vs-theory).
+
+## 2026-08-18 — fresh-object-hunt (architect, IDEA-GEN, read-only) — negative structural verdict
+- **fresh-object-hunt** — one-way sufficient-condition space NEARLY EXHAUSTED structurally. Taxonomy (PROVEN by derivation): (1) quantitative sharpenings of ⟺-RH statements NOT implied by RH — S2 PNT error π(x)=li(x)+O(√x(log x)^{1/2+ε}) (one-way via von Koch criterion; RH ↛ sharp log-power open; attackability nil), S3 Báez–Duarte sharp rate (8C-adjacent, NOT fresh), S1 Turán margin t_k≥C/(k+1) — saddle analysis CONJECTURED t_k·k→2 (provable), crux DEAD: dilogarithm Σz^k/k² has t_k≈2/k + non-real zeros ⟹ no margin≤2 coefficient-criterion can force LP (g3-2 wall confirmed from new angle); (2) RH+simplicity (no mechanism); (3) Λ<0 (believed false, Newman); (4) GJT Jensen completion = TRAP (after GJT unconditional large-n, small-n part ⟺ RH). Trap-inventory: Weil-subclass positivity ⟺ RH; Hutchinson 4-ratio one-way-but-FALSE (t_k→0); zero-free region c(T)/log T, c(T)→∞ ⟺ RH as propositions (sucker); Mertens √x/(log x)^c FALSE (O–teR). FUNDED next wave: S1-saddle closure probe (t_k·k→2 + coefficient-criterion closure, Rust) + S2-PNT discriminator probe (explicit-formula ψ(x)−x to 1e10 with 924k cached zeros + planted-zero control + lit-check log-power). E1 interaction: g3-1 Schoenberg ladder + g4-1 Toeplitz frame fold INTO E1's completion (do NOT fund separately); g0-2 fund as certified-moment INFRA only (trap as route; Φ pointwise positivity near u=0 needs re-verify: verified branch form gives Φ(0)<0, "classical positivity" claim SUSPECT); g3-2/g4-0 DEAD (ledgered); g1-1/g1-2/g2-2 closed. File: fresh-object-hunt-2026-08-18.md.
+
+## 2026-08-18 — E3 d_N slow-period pin (builder) — γ₂−γ₃ BEAT: CONJECTURED (consistent), dip NOT explained
+- **E3 (wave8c-slow-period-2026-08-18.md)** — dense dip region (11 fresh dd-exact runs, N=650..900
+  step 25; 700/800/900 reproduce certified digits EXACTLY) + slowfit.rs (Rust, std-only) + 500-perm
+  bootstrap null. FINDINGS: (1) N≥300 window: free-P optimum 1.5219, only 3.4% from beat 1.5752;
+  RMS(beat)=0.000722 vs RMS(free)=0.000716 (indistinguishable); beat-amplitude p=0.0%, slow-structure
+  p=0.2% (both real, NOT noise; noise prefers short P, null median 0.39). (2) N=700 dip (−0.0035 from
+  full mean, certified) is DEEPER than the beat cosine by −0.00165/−0.00223 (2.3× RMS) — localized
+  extra feature; beat alone REFUTED as the dip's full cause. (3) Explicit two-zero-period linear
+  basis 1.7× worse (wobble lives at the slow beat frequency; no fast γ content). (4) Flat law
+  STRENGTHENED: 27 pts, band [0.20916,0.21590]. NOT RH evidence either way. Verdict: CONJECTURED
+  (beat consistent, period resolution ±0.15 cannot uniquely identify); dip mechanism OPEN. Referees
+  (blind): check bootstrap null design (M0-residual permutation), dip-residual claim, period resolution.
+
+## 2026-08-18 — Schoenberg shift-kernel TP2 probe (builder) — premise REFUTED, RH-CONSISTENT
+- **schoenberg-kernel-tp2-2026-08-18** — K(x,y)=Ξ(x−y) 2×2 minors via certified hybrid Taylor
+  (|t|≤12, b_k from Φ-moments) + mpfr-Stirling (|t|>12, prec=100, n_em=600). Label:
+  **DISPROOF-CAPABLE-as-briefed but premise FALSE; RH-CONSISTENT, zero evidential weight.
+  DO NOT RE-RUN.** The brief's "f ∈ LP ⟺ shift kernel TP (Schoenberg)" is FALSE — PROVEN by
+  exact counterexample: sin(x)/x = Π(1−x²/(nπ)²) ∈ LP yet det[[f(0−(−5π/4)),f(0−(−π/2))],
+  [f(π/4−(−5π/4)),f(π/4−(−π/2))]] = −4/(15π²) < 0; numerically min −2.28e-1, 47% of random
+  2×2 minors negative (both f64 and mpfr runs). Correct Schoenberg duality is FT-based
+  (PF∞ ⟺ 1/f̂ ∈ LP with imaginary-zero factors), NOT "LP ⟹ shift-kernel TP". Ξ kernel: certified
+  negative minors min −3.9e-4 (cert err 8e-13, margin 5e8), negative rate 36–37% — the EXPECTED
+  signature of an even LP function with real zeros (matches sin(t)/t structurally), so ZERO RH
+  weight. No disproof signal, no escalation. Disproof-capable RH direction remains the CLOSED
+  Hankel/Turán lever (2026-08-15). Machinery notes: f64 Stirling invalid near t=0 (Xi(0)=0.5053,
+  1.6% high; mpfr Stirling 0.4423±0.079 with honest cert err); f64 Taylor invalid t≳25
+  (cancellation, terms~1e14); hybrid crossover |t|=12 cross-validated at γ₁ (diff 4e-14).
+  File: schoenberg-kernel-tp2-2026-08-18.md; probe: tools/wave8d/src/bin/schoenberg_tp2_mpfr.rs.
+
+## E2 RESOLVED (2026-08-18) — 8E control-direction (wave8e-control-direction-2026-08-18.md)
+**VERDICT (CHECKED NUMERICALLY): the implemented 8E control was NOT an RH-false model — index/Mellin bug.**
+The control {1/(kx)} + c0{2/(kx)} has Mellin factor 2^{+s} (Mellin mode: ratio 1.3712 vs 2^{+0.5}=1.4142),
+so its planted zeros sit at Re = -(1/2+δ) < 0, NOT 1/2+δ as the note claimed; the stated symbol
+ζ(1+c0·2^{-s}) requires {1/(2kx)} = Λ_{2k}. span{{1/(kx)}+c0{2/(kx)}} provably ⊇ {Λ_j: j even} (dense under RH)
+⟹ code-control d_N → 0, never saturates, never crosses; its smaller d²(60)=5.28e-3 vs real 1.13e-2 is
+expected (richer family) and meaningless. Corrected control Λ'_k = {1/(kx)} + c0{1/(2kx)} (control2 mode in
+tools/wave8e, added 2026-08-18): symbol 2^{-s} (verified 0.7223 vs 0.7071), exact zero at 1/2+δ+iπ/ln2;
+d²_corr(60) ≥ d²_{120}(real) ≈ 9.7e-3 by span-inclusion ⟹ right direction at N=60 (within 15% of real),
+saturation > 0 forced by Beurling criterion. Original 8E control numbers are NOT RH-false evidence.
+Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fake before trusting it.
