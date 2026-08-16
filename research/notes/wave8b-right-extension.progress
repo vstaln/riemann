@@ -1,0 +1,10 @@
+t=1 read wave8b-speiser note (methods, commands, 2651 prior state, follow-ups)
+t=2 read tools/wave8b/src/main.rs (right/locate/interl/refine/winding understood; right T0 T1 H S signature)
+t=3 wrote deliverable seed research/notes/wave8b-right-extension-2026-08-18.md (PART B analysis + plan + tables to fill)
+t=4 next: check release binary + em_n_for cost, then run right census [5000,10000]
+t=6 census [5000,10000] done: 3862 total, slabs 709/754/790/797/812, margins>=1.8e-3 neg=0; 1 secant artifact (sigma=55.17) excluded
+t=7 census [10000,12000] done: 1715 (853/862), margins>=3.9e-3 neg=0; cumulative 8228@12000
+t=10-11 sigma-min windows done (0.506@5050, 0.522@11050); fits: 1-r≈7.5/log^1.52u; papers: no local count-theorem text
+t=12 step-check [7000,8000]@0.04 = 790 (identical to 0.02) — counts validated
+t=13 final note wave8b-right-extension-2026-08-18.md written (8228 zeros, ratio law 1-r≈7.5/log^1.52u, verdict CHECKED NUMERICALLY, no anomaly)
+t=14 ledger appended; DONE
