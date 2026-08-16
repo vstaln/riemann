@@ -1,0 +1,90 @@
+=== 8D zeta-direct L_k check (flagged points) ===
+L_k = (Xi^(k))^2 - Xi^(k-1) Xi^(k+1);  Xi(t)=xi(1/2+it). n_em = 600
+L_k >= 0 is NECESSARY for RH (LP-class log-concavity). Positives: RH-consistent only.
+
+-- certified zeta error at each point (n=600) --
+t=  56.5: zeta err=2.84e-12  zeta' err=1.46e-11  zeta^(21) err=4.18e4
+t=  40.0: zeta err=2.04e-12  zeta' err=1.04e-11  zeta^(21) err=2.99e4
+t=  40.0: zeta err=2.04e-12  zeta' err=1.04e-11  zeta^(21) err=2.99e4
+t=  40.0: zeta err=2.04e-12  zeta' err=1.04e-11  zeta^(21) err=2.99e4
+t=  33.6: zeta err=1.73e-12  zeta' err=8.84e-12  zeta^(21) err=2.53e4
+t=  35.5: zeta err=1.82e-12  zeta' err=9.31e-12  zeta^(21) err=2.67e4
+
+-- xi sanity (sign pattern + zeros) --
+-- phase components --
+t=  0.0: zeta=(-1.460355e0,+0.000000e0) err=1.3e-13 gamma=(+3.685481e0,+0.000000e0) argzeta=+3.1416 argGamma=+0.0000 theta=+0.0000 phaseTot=+6.2832 cos=+1.0000
+   xi_complex( 0.0) = (+5.053299e-1, -0.000000e0)   replicated = (+0.000000e0, +5.053299e-1)
+t=  7.6: zeta=(+1.151424e0,+3.883954e-1) err=4.6e-13 gamma=(+2.914504e-3,+3.549289e-3) argzeta=+0.3253 argGamma=+0.8833 theta=-3.4667 phaseTot=+0.0002 cos=+1.0000
+   xi_complex( 7.6) = (+1.215843e-1, +2.935481e-5)   replicated = (-8.058952e-2, -9.103892e-2)
+t= 17.6: zeta=(+2.300520e0,+2.945022e-1) err=9.5e-13 gamma=(-1.252555e-6,-7.197652e-7) argzeta=+0.1273 argGamma=-2.6200 theta=-12.6937 phaseTot=-9.4247 cos=-1.0000
+   xi_complex(17.6) = (-3.900952e-4, -1.556407e-8)   replicated = (+3.756416e-4, -1.052030e-4)
+t= 31.7: zeta=(+9.254223e-1,+1.346761e-2) err=1.6e-12 gamma=(-1.453686e-11,+1.275309e-11) argzeta=+0.0146 argGamma=+2.4215 theta=-15.7225 phaseTot=-12.5664 cos=+1.0000
+   xi_complex(31.7) = (+6.756293e-9, +7.938830e-14)   replicated = (+6.670391e-9, +1.073957e-9)
+t= 40.0: zeta=(+7.930450e-1,-1.041275e0) err=2.0e-12 gamma=(-6.727067e-15,+2.606608e-14) argzeta=-0.9199 argGamma=+1.8234 theta=-21.0712 phaseTot=-18.8495 cos=+1.0000
+   xi_complex(40.0) = (+2.117621e-11, +1.543738e-16)   replicated = (-2.058869e-11, -4.953574e-12)
+t= 56.5: zeta=(+5.130311e-2,+1.154341e-1) err=2.8e-12 gamma=(-5.661685e-20,+1.324943e-20) argzeta=+1.1526 argGamma=+2.9117 theta=-29.4269 phaseTot=-25.1327 cos=+1.0000
+   xi_complex(56.5) = (+8.806697e-18, +3.173439e-23)   replicated = (-8.476760e-18, -2.387980e-18)
+Xi(0) = 0.505329907780255  (expect 0.497120778188314)
+|Xi(gamma_ 1)| at t=14.134725 = 1.960e-10  (Re=+1.960e-10 Im=+1.244e-14)
+|Xi(gamma_ 2)| at t=21.022040 = 6.412e-12  (Re=+6.412e-12 Im=+1.766e-16)
+|Xi(gamma_ 3)| at t=25.010858 = 5.312e-13  (Re=-5.312e-13 Im=-1.019e-17)
+|Xi(gamma_ 4)| at t=30.424876 = 3.035e-15  (Re=-3.035e-15 Im=-3.878e-20)
+|Xi(gamma_ 5)| at t=32.935062 = 1.686e-15  (Re=-1.686e-15 Im=-1.837e-20)
+|Xi(gamma_ 6)| at t=37.586178 = 2.971e-17  (Re=-2.971e-17 Im=-2.462e-22)
+|Xi(gamma_ 7)| at t=40.918719 = 1.481e-19  (Re=+1.481e-19 Im=+1.220e-24)
+|Xi(gamma_ 8)| at t=43.327073 = 7.025e-19  (Re=-7.025e-19 Im=-4.348e-24)
+|Xi(gamma_ 9)| at t=48.005150 = 5.721e-20  (Re=+5.721e-20 Im=+2.879e-25)
+|Xi(gamma_10)| at t=49.773832 = 7.454e-21  (Re=-7.454e-21 Im=-3.471e-26)
+|Xi(gamma_11)| at t=52.970321 = 1.155e-21  (Re=+1.155e-21 Im=+4.739e-27)
+|Xi(gamma_12)| at t=56.446248 = 5.208e-23  (Re=+5.208e-23 Im=+1.904e-28)
+Xi(  7.6) = +1.2158e-1  sign +1 expect +1  OK
+Xi( 17.6) = -3.9010e-4  sign -1 expect -1  OK
+Xi( 23.1) = +5.4384e-6  sign +1 expect +1  OK
+Xi( 27.7) = -3.7982e-7  sign -1 expect -1  OK
+Xi( 31.7) = +6.7563e-9  sign +1 expect +1  OK
+Xi( 34.7) = -2.1011e-9  sign -1 expect -1  OK
+Xi( 39.2) = +5.3057e-11  sign +1 expect +1  OK
+Xi( 42.1) = -3.8235e-12  sign -1 expect -1  OK
+Xi( 45.7) = +8.5014e-13  sign +1 expect +1  OK
+Xi( 48.9) = -1.5088e-14  sign -1 expect -1  OK
+Xi( 51.4) = +6.6376e-15  sign +1 expect +1  OK
+Xi( 54.7) = -7.8907e-16  sign -1 expect -1  OK
+Xi( 57.9) = +4.3557e-17  sign +1 expect +1  OK
+Xi( 62.1) = +2.9863e-18  sign +1 expect -1  MISMATCH
+Xi( 66.1) = -5.5111e-20  sign -1 expect +1  MISMATCH
+Xi( 56.5) (flagged) = +8.8067e-18  sign +1
+Xi( 40.0) (flagged) = +2.1176e-11  sign +1
+Xi( 40.0) (flagged) = +2.1176e-11  sign +1
+Xi( 40.0) (flagged) = +2.1176e-11  sign +1
+Xi( 33.6) (flagged) = -1.8767e-9  sign -1
+Xi( 35.5) (flagged) = -1.3200e-9  sign -1
+sign pattern: FAILED — Stirling phase broken, STOP
+
+-- route A: central differences + Richardson (h, h/2, h/4) --
+t=  56.5 k= 3: L(h=1e-3)=+8.849e-32 L(h/2)=+8.217e-32 L(h/4)=+4.438e-32  R2=+8.006e-32 R4=+4.186e-32  err~+3.8e-32  -> POSITIVE
+t=  40.0 k=18: L(h=5e-2)=+6.653e-4 L(h/2)=+2.797e7 L(h/4)=+8.147e15  R2=+3.729e7 R4=+8.690e15  err~+8.7e15  -> INCONCLUSIVE
+t=  40.0 k=19: L(h=5e-2)=+2.561e-1 L(h/2)=+4.145e10 L(h/4)=+2.941e19  R2=+5.526e10 R4=+3.137e19  err~+3.1e19  -> INCONCLUSIVE
+t=  40.0 k=20: L(h=5e-2)=+9.786e1 L(h/2)=+6.228e13 L(h/4)=+5.510e22  R2=+8.304e13 R4=+5.877e22  err~+5.9e22  -> INCONCLUSIVE
+t=  33.6 k= 8: L(h=3e-2)=+2.096e-17 L(h/2)=-1.146e-16 L(h/4)=+7.914e-13  R2=-1.598e-16 R4=+8.442e-13  err~+8.4e-13  -> INCONCLUSIVE
+t=  35.5 k= 4: L(h=1e-3)=-3.952e-18 L(h/2)=+1.694e-16 L(h/4)=+1.571e-15  R2=+2.272e-16 R4=+1.664e-15  err~+1.4e-15  -> POSITIVE
+t=  40.0 k= 3: L(h=1e-3)=+1.658e-21 L(h/2)=+1.691e-21 L(h/4)=+2.493e-21  R2=+1.702e-21 R4=+2.547e-21  err~+8.4e-22  -> POSITIVE
+
+-- route B: analytic EM differentiation (zeta^(0..21), Stirling polygamma, Bell) --
+t=  56.5 k= 3: L_k = +8.868421e-32  err_est~+8.5e-43  (bracket=+1.1435e3, Bk_scale=2.6e4, max|Im u'..u^(4)|=1.2e-5)
+    u-derivatives: u^1=+1.770e1 u^2=-3.465e2 u^3=+1.288e4 u^4=-7.187e5
+    -> POSITIVE (RH-consistent)
+t=  40.0 k=18: L_k = +3.259541e-20  err_est~+6.7e-20  (bracket=+7.2688e1, Bk_scale=5.1e15, max|Im u'..u^(19)|=4.9e3)
+    -> INCONCLUSIVE
+t=  40.0 k=19: L_k = -3.946202e-19  err_est~+1.6e-18  (bracket=-8.8000e2, Bk_scale=1.0e17, max|Im u'..u^(20)|=1.1e5)
+    -> INCONCLUSIVE
+t=  40.0 k=20: L_k = +1.102067e-17  err_est~+9.2e-17  (bracket=+2.4576e4, Bk_scale=2.1e18, max|Im u'..u^(21)|=2.4e6)
+    -> INCONCLUSIVE
+t=  33.6 k= 8: L_k = +2.166168e-17  err_est~+2.7e-27  (bracket=+6.1506e0, Bk_scale=2.7e5, max|Im u'..u^(9)|=3.1e-5)
+    -> POSITIVE (RH-consistent)
+t=  35.5 k= 4: L_k = +1.021757e-18  err_est~+2.2e-33  (bracket=+5.8640e-1, Bk_scale=1.4e0, max|Im u'..u^(5)|=2.9e-5)
+    -> POSITIVE (RH-consistent)
+t=  40.0 k= 3: L_k = +1.657263e-21  err_est~+5.5e-36  (bracket=+3.6957e0, Bk_scale=9.2e0, max|Im u'..u^(4)|=2.5e-5)
+    u-derivatives: u^1=-1.617e0 u^2=-1.555e0 u^3=-2.491e0 u^4=-8.654e0
+    -> POSITIVE (RH-consistent)
+
+=== done. ===

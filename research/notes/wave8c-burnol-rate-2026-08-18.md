@@ -187,12 +187,16 @@ everything ~106-bit; ln table 4.6s, dd Gram fill 9736.8s):
 ```
 d_dd(2000) = 7.782135587442e-2    d*sqrt(lnN) = 0.214551
 ```
-vs f64-path d_ref(2000) = 7.782135587726e-2 → **END-TO-END measured gap 3.6e-12 relative**
+vs f64-path d_ref(2000) = 7.782135587726e-2 → **END-TO-END measured gap 2.84e-12 absolute / 3.65e-11 relative**
+(CORRECTED at harvest 2026-08-18: the earlier printed "3.6e-12 relative" was a factor-10
+slip — 3.6e-12 is the absolute gap; relative is 3.7e-11.)
 (covers Gram closed-form truncation + f64 storage + solve — the entire pipeline, not just
 the solve). The flat-law figure 0.214551 agrees on both paths to 6 decimals.
-This certifies the certified-d_N protocol: d_ref(N) is accurate to ~1e-11..1e-12 modulo
-this measured end-to-end gap (entry-level f64-vs-dd worst 3.2e-12@2000, 5.2e-12@3000;
-the gap is far below the κ·δ worst-case bound — errors are benign, not adversarial).
+This certifies the certified-d_N protocol: d_ref(N) is accurate to ~4e-11 relative
+(2.8e-12 absolute) modulo this measured end-to-end gap (entry-level f64-vs-dd worst
+3.2e-12@2000, 5.2e-12@3000; the observed d-level gap 3.7e-11 is ~11x the per-entry error,
+i.e. benign linear amplification — far below the κ·δ worst-case bound ~7.9e-7; errors are
+benign, not adversarial).
 CHECKED NUMERICALLY. Remaining in queue (autonomous): prod-2000 MPFR-chol cross-check,
 prod 5000, sample 5000 → results/HARVEST.txt.
 
@@ -207,8 +211,9 @@ mpfr-chol at 5000: skipped by design (9GB box; solve certified by refinement res
 **VERDICT (CHECKED NUMERICALLY, layered certification):** the flat law
 d_N ~ c/sqrt(log N) with c in [0.211, 0.215] (mean 0.2129) holds across N=50..5000
 (two decades), every point from N=2000 on solved to the double-double floor, entries
-cross-checked against MPFR-256 at the 1e-27 level, end-to-end pipeline gap 3.6e-12
-(measured at 2000 by the full dd pipeline). The constant OSCILLATES +-1%
+cross-checked against MPFR-256 at the 1e-27 level, end-to-end pipeline gap 2.8e-12
+absolute / 3.7e-11 relative (measured at 2000 by the full dd pipeline; corrected from
+the earlier factor-10 "3.6e-12 relative" slip at harvest 2026-08-18). The constant OSCILLATES +-1%
 (0.2146@2000, 0.2111@3000, 0.2117@5000) instead of converging monotonically —
 consistent with expected explicit-formula oscillations in d_N (CONJECTURED reading).
 This STRENGTHENS the Baez-Duarte (log N)^(-1/2) sharp-rate conjecture; it is NOT RH
@@ -216,6 +221,80 @@ evidence either way (the NB theorem is a dichotomy at N->inf, not a rate stateme
 
 Corrected-value protocol note: all d_N here use the EM-sign-fixed z-table + adaptive
 truncation; pre-2026-08-18-session-2 published values carry ~7e-8 rel bias (see CORRECTIONS).
+
+## HARVEST VERDICT (2026-08-18, chain fully drained — prod 2000/3000/5000 + ddgram 2000 + samples 100/2000/3000/5000)
+
+Chain state at harvest: no hiN processes running; results/HARVEST.txt and /tmp/chain_result.txt
+both marked CHAIN COMPLETE. All values below were re-verified by independent arithmetic
+(python3) against the RESULT lines in hiN_log.txt — they match to printed digits.
+
+### (a) ddgram 2000 — layer-D belt-and-suspenders check: AGREES, pipeline certified end-to-end
+```
+d_dd(2000)  = 7.782135587442e-2   (full dd Gram: exact dd integer-ln table 16,000,003 entries,
+                                   dd Cholesky; ln table 4.6s, Gram fill 9736.8s, total 9758.7s)
+d_ref(2000) = 7.782135587726e-2   (f64 Gram + dd refinement it2 rel_r 5.7e-28 + MPFR-256 stored-G
+                                   cross-check rel 0.00e0)
+abs gap 2.84e-12, rel gap 3.65e-11
+```
+- **NOT a new bug.** The gap is exactly the f64-Gram-STORAGE error budget: per-entry f64-vs-dd
+  max rel 3.17e-12 (sampling, 120 pairs), amplified ~11x through the solve to the d-level
+  3.65e-11 — benign linear propagation, far below the κ·δ worst-case bound (~2.48e5 · 3.2e-12
+  ≈ 7.9e-7). The dd refinement certifies exact-solve-of-the-stored-f64-G; the ddgram certifies
+  the Gram itself. d_ref(2000) is accurate to ~4e-11 relative.
+- **Correction to the published record (honest):** the earlier "END-TO-END measured gap
+  3.6e-12 relative" (and "pipeline gap 3.6e-12" in the FINAL section) was a **factor-10 slip** —
+  3.6e-12 is the ABSOLUTE gap (measured 2.84e-12), the relative gap is 3.7e-11. Fixed above.
+  Conclusion unchanged (agreement, benign errors), only the quoted number is corrected.
+
+### (b) prod 5000 — d_ref harvested, flat law HOLDS at N=5000
+```
+d_f64       = 7.252577566167e-2   kappa_pivot = 1.43e6  chol ok (gram f64 5636.5s, total 5677.4s)
+refinement: it1 rel_r=1.8e-15  d=7.252577566170e-2  dd_d=4.24e-13
+            it2 rel_r=3.9e-27  d=7.252577566170e-2  dd_d=0.00e0   ← exact-solve certified
+d_ref       = 7.252577566170e-2   rel(f64) = 4.24e-13
+d*sqrt(ln 5000) = 0.211661   (flat-law band 0.21–0.22)   ✓ HOLDS
+mpfr-chol at 5000: SKIPPED by design (9GB box; refinement residual certifies
+  exact-solve-of-stored-G; implementation cross-check done at 2000: rel 0.0)
+gram sampling at 5000: f64-vs-dd max rel 9.02e-12 (120 pairs); dd-vs-mpfr-direct max rel 4.52e-27 (12)
+```
+The coordinator's feasibility call was right: prod-5000 needs only f64 Gram (100MB) + f64
+Cholesky + dd refinement — the refinement defeats kappa 1.43e6 exactly as predicted (2-iteration
+convergence to the dd floor, residual 3.9e-27).
+
+### (c) Certified flat-law series N=100..5000 (two decades)
+| N     | d_ref            | d·√(ln N) | certified? |
+|-------|------------------|-----------|------------|
+| 100   | 1.0013883664e-1  | 0.21489   | yes (dd==MPFR-direct rel 0.0) |
+| 1000  | 8.055653e-2      | 0.21172   | f64-sweep value (7 digits), not dd-refined in this chain |
+| 2000  | 7.782135587726e-2| 0.21455   | yes (refined 5.7e-28 + MPFR-chol rel 0.0 + ddgram 0.214551) |
+| 3000  | 7.459524862924e-2| 0.21107   | yes (refined 1.3e-27) |
+| 5000  | 7.252577566170e-2| 0.21166   | yes (refined 3.9e-27) |
+- Certified-4 mean (100,2000,3000,5000) = **0.21304**, band 1.79%; all-5 mean 0.21278,
+  band 1.80% — matches the published 0.21296 ± 1.8% to rounding.
+- d·√(ln N) ∈ [0.2111, 0.2149] across N=100..5000, i.e. within [0.211, 0.215]. **The Báez-Duarte
+  sharp rate (log N)^(−1/2) with constant ≈ 0.213 is certified at 4 dd-exact points spanning
+  two decades, plus the full layer-D dd pipeline at 2000.**
+- Constant OSCILLATES ±1% (0.2149@100, 0.2146@2000, 0.2111@3000, 0.2117@5000) rather than
+  converging monotonically — consistent with expected explicit-formula oscillations in d_N
+  (CONJECTURED reading; not a monotone-drift signal).
+
+### (d) Anomalies (all cosmetic or already-documented, none affecting the verdict)
+1. **Factor-10 slip in the published end-to-end gap** (3.6e-12 relative → actually 2.84e-12
+   absolute / 3.65e-11 relative) — corrected in this note.
+2. hiN_log.txt lines appear doubled (every line printed twice) — driver double-write to the
+   log; harmless, digest values identical.
+3. The N=1000 row in the earlier "certified series" table is f64-sweep precision (7 digits,
+   8.055653e-2), not dd-refined — flagged so it is not mistaken for a 1e-27-certified point.
+   (f64 at N=1000 carries kappa ~ 1e5 → ~11 digits retained; band unaffected.)
+4. Log timestamps read 2026-08-16 while notes read 2026-08-18 — container clock skew between
+   sessions; no effect on numbers.
+
+### Bottom line
+d_N ~ c/√(log N), c ≈ 0.213 (0.211..0.215 band) — **CHECKED NUMERICALLY through N=5000, every
+point N≥2000 solved to the double-double floor, MPFR cross-checks at 1e-27, layer-D dd pipeline
+agreement 3.7e-11 relative**. This is NOT RH evidence either way (NB theorem is a dichotomy at
+N→∞); it strengthens the sharp-rate conjecture that underlies the N-B lever's empirical
+structure. No new compute launched; harvest only, as instructed.
 
 ## Files (final)
 - tools/wave8c/src/bin/hiN.rs (phases validate|selftest|sample|prod|ddgram)
@@ -237,9 +316,11 @@ HARVEST.txt (tools/wave8c/results/, 2026-08-16 08:05) — full certified table:
 
 - **d(5000) = 7.252577566170e-2, d·√(ln N) = 0.211661** — flat law HOLDS (band 0.21–0.22).
 - **Layer-D ddgram 2000 COMPLETE (9,758.7s)**: d_dd = 7.782135587442e-2 vs d_ref 7.782135587726e-2 →
-  agreement 3.6e-10 rel. The FULL double-double pipeline (dd Gram + dd Cholesky at N=2000, 16M-entry
-  dd ln table) confirms the f64+refinement value. Certification ladder CLOSED at N=2000:
-  f64 (1.56e-13) + dd-refinement (5.7e-28) + MPFR-Cholesky (rel 0.00e0) + layer-D dd (3.6e-10).
+  agreement 2.84e-12 abs / 3.65e-11 rel (gap corrected at harvest 2026-08-18; the earlier
+  "3.6e-10 rel" was a slip — absolute gap is 2.84e-12). The FULL double-double pipeline (dd Gram +
+  dd Cholesky at N=2000, 16M-entry dd ln table) confirms the f64+refinement value. Certification
+  ladder CLOSED at N=2000: f64 (1.56e-13) + dd-refinement (5.7e-28) + MPFR-Cholesky (rel 0.00e0)
+  + layer-D dd (3.65e-11 rel).
 - prod 5000 gram sampling: f64-vs-dd max 9.02e-12 over 120 random pairs; dd-vs-mpfr max 4.52e-27.
 - The earlier prod 5000 (driver, 03:21) was SIGTERMed externally; the followup re-ran it cleanly (5636.5s gram fill + 41s solve) — same d_f64 (7.252577566167e-2), deterministic.
 
@@ -247,3 +328,5 @@ HARVEST.txt (tools/wave8c/results/, 2026-08-16 08:05) — full certified table:
 Báez-Duarte sharp rate (log N)^(−1/2), constant ≈ 0.213, confirmed at 5 points spanning 1.7 decades,
 each dd-refined to ≤3.9e-27, layer-D end-to-end at 2000. CONJECTURED interpretation: the ±1% constant
 oscillation (0.2146@2000 → 0.2111@3000 → 0.2117@5000) matches explicit-formula oscillations in d_N.**
+(Authoritative harvest writeup: the HARVEST VERDICT section above, which also corrects the
+published end-to-end gap to 2.84e-12 abs / 3.65e-11 rel.)

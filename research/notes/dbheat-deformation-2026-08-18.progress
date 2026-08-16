@@ -1,0 +1,15 @@
+t=1 read tools/wave8d/src/main.rs (phi eval + adaptive Simpson + gammas) and grepped notes for dBN/Newman/heat: found attack-jensen-ometer (RH<==>Lambda<=0, Lambda>=0 RT PROVEN, Lambda<1/2 Polymath, heat-flow margin exactly 0), lee-yang-integral-handle (dBN frame adopted, no closure theorem), wave20-swarm-harvest Idea 3 (the t>0 idea), paper-finder-jensen (RT/Polymath/Dobner abstracts).
+t=2 checked tools/ layout: standalone crates (no workspace), wave8d uses rug; probe will be plain f64 (numeric, non-rigorous) — no rug needed.
+t=3 DIRECTION VERDICT derived (PROVEN, pure math): wave-20 premise "H_t all-real for all t>0" is EQUIVALENT to RH via DBN (zeros all real iff t>=Lambda; RH iff Lambda<=0; RT Lambda>=0 so RH iff Lambda=0). Hurwitz step (premise=>H_0 all-real) is VALID but empty — premise is already RH. The "some t>0" version is FALSE: explicit counterexample Phi~=exp(-(u-5)^2)+exp(-(u+5)^2)+3exp(-u^2): H_0 has non-real zeros z=(pi+2pik)/5 +/- i*0.1925 (exact), H_0.5 ~ real-rooted cos(10x)-like. Will verify numerically in probe.
+t=4 writing research/notes/dbheat-deformation-2026-08-18.md (partial: theory verdict) + tools/dbheat_probe/src/main.rs (H_t eval, complex Newton continuation, t in {0,-.001,-.005,-.01,-.02,-.05,-.1,-.2,-.35,-.5} and {+.001,+.01,+.05,+.1,+.25,+.5}, first 8 zeros, plus gaussian counterexample probe).
+t=5 build probe (release), validate t=0 zeros vs published gamma_1..8.
+t=6 run t<0 and t>0 zero tracking; write Im(gamma_j(t)) table.
+t=7 run gaussian counterexample probe (track Im of the k=0 pair through t=0..0.5).
+t=8 finalize note with results + honest labels.
+t=4 wrote partial note + main.rs
+t=5 built release OK
+t=6 fixed thresholds+seeding (envelope-limited precision at high j understood: |H|~1e-15 at t=43, H(gamma8)~1e-17)
+t=7 main probe ran: t<0 first-8 all real down to -0.5 (Im~1e-300); t>0 all real to +0.5; t=-1 row has crossings + a genuine-looking pair at 33.115+-0.1505i (RT-expected); counterexample G_0 non-real (0.6283+-0.1925i, matches analytic) -> G_0.5 real zeros at (pi/2+kpi)/10 confirmed. Adding verify mode for fine t-continuation.
+t=8 verified: at t=-1 pair 33.1150940+-0.1505390i (fresh Newton 4 seeds, |H|~1e-17), no real zeros of H_-1 in [30,36]; collision between -0.95 and -1.0. Pinning interval.
+t=9 collision pinned: gamma4+gamma5 merge in (-0.99,-0.98); all first-8 real for t in [-0.98, +0.5] (w8d units). Finalizing note.
+t=10 note finalized (corrected table rows: only measured values; -1.0 pair spans gamma4&gamma5). Deliverable complete.

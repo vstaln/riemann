@@ -12,3 +12,7 @@ t=3 ran selfcheck/horizon/missing_class/final_verify (all exit 0, quick).
   but GLOBAL float floor LP 0.00561 < tawan 0.00634; LP dips negative (-0.02) at huge-gap
   configs g=(1.04,30,1.04,...) despite kappa>=0 rows. Prior verdicts re-confirmed.
 t=4 next: run coboundary_symmetric_lp.py (covers alpha=1.464 + 1.49) with timeout.
+t=5 symmetric LP: alpha=1.464 v*=0.007612214 == tawan's floor on 578-family EXACTLY.
+  => tawan is optimal within symmetric relaxation at 1.464; symLP tie-solution loses
+  globally (0.006038 < tawan 0.006222). Symmetric subspace = dead end (tawan at ceiling).
+t=6 next: full asymmetric LP at alpha=1.49, sqrt2 (as-is) + temp copy at alpha=1.464.
