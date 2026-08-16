@@ -8,12 +8,13 @@
       "implies_trap": "this lever shows the target reduces to an RH-equivalence (consistency-only)"
     },
     "trap_classes": [
-      "GJT-completion",
-      "coefficient-margin (S1)",
-      "kernel-TP2 (Schoenberg)",
       "moment-sequence-to-gamma",
       "xi-prime-transport",
-      "log-profile-margin-2"
+      "levinson-theta-infinity",
+      "log-profile-margin-2",
+      "kernel-TP2 (Schoenberg)",
+      "coefficient-margin (S1)",
+      "GJT-completion"
     ]
   },
   "levers": [
@@ -140,6 +141,16 @@
       "claim": "barrier-zoo retro-test of the campaign's own PROVEN identities against the RH-false DH world: all-positive Taylor coeffs do NOT separate (DH all-positive); deficit-2 log-profile SATISFIES t_k*k>=2-2/ln k in DH world (trusted k=2..5, zero violations) \u2014 proves too much, consistency-only (3rd independent line); M' Hankel det2>0 not separating at first minor. No new lever. Epstein addendum: closest analogue (positive theta coeffs, self-dual FE) ALSO satisfies deficit-2 on entire part E(s) (gaps +1.60/+0.68/+0.40/+0.29, zero violations); NEW fact: Xi_Q meromorphic not entire (poles s=0,1). Two RH-false worlds confirm. Addendum2: Hankel det3 TP (>0) in both RH-false worlds too \u2014 M_n Hankel-TP does NOT separate (consistency-only at every tested order).",
       "trap_class": "log-profile-margin-2",
       "file": "research/notes/barrierzoo-retrotest-2026-08-18.md"
+    },
+    {
+      "id": "sdp-paircorr-transfer",
+      "verdict": "OPEN-STRUCTURAL anywhere-axis / CLOSED on-line-axis",
+      "claim": "CGdL 1810.08843 SDP relaxed class (f_hat<=0 for |x|>=1) transfers UNCONDITIONALLY to N*/anywhere axis via BGSTB24 Thm 1 (F real even nonneg, F=T^-2a(logT+O(1))+a+O(.) up to a=1 explicit errors). RH enters CGdL only via (9) [0,1] datum; tail dropped by sign (f_hat<=0 + F>=0). Divide: simple-ANYWHERE>=67.92% candidate (CONJECTURED-STRUCTURALLY, literature-numeric 1.3208), NOT on-line records 0.673481/0.836740 (need positive-in-strip kernels + rank-trace, signed fns no grip). No RH evidence (firewall)."
+    },
+    {
+      "id": "levinson-variational-Q",
+      "verdict": "DUPLICATE-TRAP (moment class)",
+      "claim": "Conrey-Farmer-Kwan-Lin-TTB 2508.11108 variational Q family = Levinson counting method (proportion != RH), FE enters only as even-symmetry; output kappa>2theta/3 for any theta>0, numerics below PRZZ/record (theta=2/3->0.364). Bettin-Gonek theta=infty->RH = DUPLICATE of moment/coefficient-margin trap (conjectural long-mollifier moment asymptotic, not algebraically explicit). Siegel-f prop: same argument-principle as closed xi-prime-transport. Register levinson-theta-infinity as named member of moment trap node."
     }
   ],
   "edges": [
@@ -237,6 +248,18 @@
       "to": "barrierzoo-retrotest",
       "type": "refutes",
       "note": "campaign's own PROVEN deficit-2 profile holds in the RH-false DH world (trusted k=2..5, 23 off-line zeros) \u2014 proves too much, consistency-only by the campaign's own barrier-zoo standard"
+    },
+    {
+      "from": "sdp-paircorr-transfer",
+      "to": "wave9-9A",
+      "type": "documented",
+      "note": "coordinator-completed from preserved 9A transcript (agent died at 80% ctx, quiet-hours guard blocked tools); referee-verified from source"
+    },
+    {
+      "from": "levinson-variational-Q",
+      "to": "wave9-9B",
+      "type": "documented",
+      "note": "agent-completed; DUPLICATE-TRAP classification"
     }
   ],
   "active_frontier": []

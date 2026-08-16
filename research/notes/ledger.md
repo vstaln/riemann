@@ -935,3 +935,7 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   own standard (THIRD independent line closing the log-profile lever); (iii) M' Hankel det2 > 0,
   not separating at first minor. No new lever; identities that hold in an RH-false world cannot
   be sufficient conditions. Tool: barrier_zoo_rs dhprofile; k>=6 contour noise excluded.
+
+## wave-9 (2026-08-18, literature-driven) — 2 levers
+- **9A sdp-paircorr-transfer** — OPEN-STRUCTURAL anywhere-axis / CLOSED on-line-axis. CGdL 1810.08843 relaxed SDP class transfers unconditionally to N*/anywhere via BGSTB24 Thm 1; simple-anywhere ≥ 67.92% candidate (CONJECTURED-STRUCTURALLY, literature-numeric); on-line records 0.673481/0.836740 untouched. Coordinator-completed (agent died at 80% ctx inside quiet-hours guard blockage). Note: wave9-9A-*.md.
+- **9B levinson-variational-Q** — DUPLICATE-TRAP (moment class). Conrey-Farmer-Kwan-Lin-TTB 2508.11108 variational Q = Levinson counting method; Bettin-Gonek θ=∞ ⟹ RH duplicates moment trap (new member levinson-theta-infinity); Siegel-f = closed ξ′-strand. Note: wave9-9B-*.md.
