@@ -868,3 +868,13 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   NOTE: NO-duplicate rule + RH-trap detection are now queriable, not prose-grep. The LangGraph
   orchestrator existed since wave-8 but went stale under manual dispatch; the closure-DAG is the
   mathematically-weighted graph artifact (process graph alone would not change verdicts).
+- **Frontier probe small-n0 slice — PROVEN-STUCK (2026-08-18, 119364d4 + coordinator)**:
+  gamma is NOT a moment sequence. Hankel minors: M det2=9.45e-4>0 (moment-consistent), but
+  gamma det2 = gamma0*gamma2-gamma1^2 = -9.19e-6 < 0 and det3 < 0 (coordinator hand-verified
+  -9.189076e-06; b det2=-7.06e-5; root cause: 1/(2n)! itself has Hankel det2=-0.2083 <0, not a
+  moment sequence). The positive-measure structure of Phi (PROVEN) does NOT transfer to the
+  Taylor coefficients through gamma(k)=k!M_k/(2k)!. Separability argument: a fixed-n0 proof
+  covers measure-zero of the (n0,d) lattice; GJT-completion trap airtight. Small-n Jensen
+  decomposition route PROVEN CLOSED as a one-way path. Zero RH evidence either way. Tool:
+  tools/g02-oracle/src/bin/minors.rs. DO NOT re-dispatch (registered in closure-DAG trap class
+  moment-sequence-to-gamma).
