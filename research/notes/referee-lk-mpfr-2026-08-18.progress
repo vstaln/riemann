@@ -1,0 +1,10 @@
+t=1 start referee lk-mpfr: reading binary + em.rs
+t=2 read binary; found: Bell-raw-deriv correct; polygamma sign correct; SUSPECT gamma Stirling z^{-k} vs z^{-(2k-1)} exponent bug. checking em.rs signature
+t=3 build ok; running binary
+t=4 binary ran: all 7 L_k positive, err<<val; polygamma sane; sign-pattern FAILED is expectation-list bug (2 zeros between 57.9 and 62.1); SUSPECT gamma-Stirling exponent bug. writing independent probe
+t=5 probe written
+t=6 probe compiles; running
+t=7 probe patched (cached stirling+fact); em.rs uses same N=n+1 split; investigating 2.5e-9 zeta gap + Im u 6e-6
+t=8 probe: added caches + diagnostics; suspect own bug (q_3 off 1.7e-5 vs binary)
+t=9 INDEPENDENT PROBE VALIDATES binary: zeta/psi exact, u^16..21 match 4+ digits, q_k match all 7 pts (7 digits), L_k agree ~1.4e-5 = Gamma-Stirling exponent bug in binary's xi2 (q unaffected, sign unaffected). Getting central-diff q_3.
+t=10 verdict written + ledger appended
