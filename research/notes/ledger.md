@@ -736,3 +736,32 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   of the M_k sequence, TP of the measure dμ=Φdu, Padé table of Ξ). Ranked fundable
   candidates ONLY if one-way AND not-ledgered; "space closed" is an acceptable honest verdict
   if excavation is genuine. Do-not-repeat list binding (ledger).
+
+## 2026-08-18 — fresh-corner hunt (architect, read-only, corners a-e)
+- **fresh-hunt-corners** — TERMINAL one-way verdict: no fundable NEW one-way sufficient condition
+  for RH in corners (a)-(e). (a) theta-structure: D=2x²∂²+3x∂ annihilates x^{−1/2} (new, RH-inert);
+  the moments M_k=G(2k+1) with G(s)=2∫Φ(u)u^{s−1}du = Riemann-1859 ξ object ⟹ FE acting on moments =
+  Riemann FE restated (class 2); reduces to closed de Bruijn. (b) exact b_k: saddle/deficit already
+  harvested (g02: deficit constant=2 PROVEN); b_k=M_k/(2k)! = ξ Taylor data, no independent closed
+  form. (c) N=700 dip: mechanism OPEN (E3: beat refuted as full cause), structure-only, zero RH
+  weight. (d) ξ′-two-trace distinct transport (0.92919→ζ distinct >0.836740?): the ONLY fundable
+  avenue but a RECORD, not RH (firewall; simplicity ⟂ RH both ways); read-class-overlap probe decides
+  in-class-ceiling vs escape. (e) all four transfers closed/automatic: (i) J-fraction of M_k POSITIVE
+  AUTOMATIC (Φ>0 measure, Stieltjes — same object as closed foster/stieltjes), zero discriminability;
+  (ii) measure-TP = closed alternating-signature lever (8/15); (iii) entropy/energy RH-inert;
+  (iv) Padé pole-reality ⟺ LP ⟺ RH. Space closed for one-way RH; fund only (d) as record if valued.
+  File: fresh-hunt-corners-2026-08-18.md.
+
+2026-08-18 g0-2 certified-moment oracle: BUILT (k=0..300, ~60 digits; gamma(0..8) validated to table; theta-identity Phi=2e^{u/2}(2x^2 th''+3x th') PROVEN). S1-saddle deficit constant = 2 (PROVEN from saddle: D=(2-k*t_k)ln k = 2 + 2(ln ln k -1 -c)/ln k + O(ln ln k/ln^2 k); verified to 10^6 where D=2.306 descending toward 2). Brief's 2.35 is finite-k drift, NOT the limit. INFRA only, no RH claim.
+- **g0-2 oracle CLOSED (2026-08-18, db8ef228 + coordinator verification)**: certified
+  M_k/b_k/γ(k) oracle k=0..300 @210 bits (γ(0..8) matches 60-digit table to printed digit;
+  coordinator independently confirmed D(k) values k=100/200/299 from the exact-moment path).
+  **Theta identity PROVEN (exact algebraic)**: Φ(u) = 2e^{u/2}(2x²θ″(x)+3xθ′(x)), x=e^{2u},
+  θ=Σe^{−πn²x} — no numerics needed (pure substitution). **S1-saddle deficit constant = 2,
+  PROVEN**: D(k)=(2−k·t_k)·ln k = 2 + 2(ln ln k − 1 − c)/ln k + O(ln ln k/ln²k) → 2
+  (all corrections O(lnL/L)→0); empirically D descends 2.2954@100 → 2.3390@299 →
+  2.3557@10³ → 2.3511@10⁴ → 2.3294@10⁵ → **2.3061@10⁶**; the "2.35" plateau was finite-k
+  drift, NOT a limit (referee's 2.35 caution confirmed). First exact structural identity
+  beyond t_k·k→2: **t_k·k = 2 − 2/ln k + O(ln ln k/ln²k)**. Free-fit C=1.87–1.97 = overfit
+  (4 params/9 pts, oscillating signs); fixed C=2 rmse 1.3e-3 consistent. INFRA delivered;
+  no RH claim (as briefed).
