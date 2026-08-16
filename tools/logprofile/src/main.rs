@@ -220,7 +220,7 @@ fn xi_profile() {
     for line in txt.lines() {
         let t: Vec<&str> = line.split_whitespace().collect();
         if t.len() < 4 { continue; }
-        let k: usize = t[0].parse().unwrap();
+        let Ok(k) = t[0].parse::<usize>() else { continue; };
         if k < 302 { lb[k] = logparse(t[2]); }
     }
     // sanity: t_100*100 should be ~1.5016 (g02 note table)
