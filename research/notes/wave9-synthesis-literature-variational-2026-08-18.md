@@ -63,3 +63,18 @@ NOT a proof candidate (RH-false worlds can differ; barrier-zoo discipline applie
   unconditional world records as certified.
 - Honest progress this night: one false theorem prevented (9A), one genuine framework
   identified and banked (GS-2026 diagonal bridge), 4 remaining batch papers classified.
+## Addendum (end of night): effective-diagonal consistency certificate for the record
+
+GS-bridge reverse-lens sanity check (arithmetic, exact):
+- Our record: simple-on-line ≥ 0.6734808616745137 UNCONDITIONAL.
+- GS Thm 2 form: diagonal C would give simple ≥ 2−C AND critical ≥ 2−C. Our strength
+  corresponds to C = 2 − 0.6734808616745137 = 1.3265191383254864.
+- Montgomery conditional (RH): 4/3 = 1.3333 → 2/3. CGdL conditional SDP (RH): 1.3208 →
+  67.92% (simple-anywhere). BGSTB25 box-conditional best: b=0.001 → 67.25%.
+- Consequence: our UNCONDITIONAL 0.673481 exceeds (a) Montgomery's conditional 2/3,
+  (b) BGSTB25's best conditional box theorem 67.25%. It sits just below CGdL's
+  RH-conditional SDP 67.92% — and the gap is exactly the diagonal-identification content
+  that remains RH-conditional (the 9A refutation point). Structural robustness certificate:
+  the redistribution record cannot be an artifact of pair-correlation-level bounds.
+- No new lever from this; GS bridge hypothesis (unconditional diagonal C<2) remains the
+  single open quantity, zero-density-blocked (off-line symmetric zeros share ordinates).
