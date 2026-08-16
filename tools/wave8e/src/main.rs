@@ -184,10 +184,64 @@ fn min_eig(g: &[f64], n: usize, iters: usize) -> (f64, Vec<f64>) {
     (lam, v)
 }
 
+/// M[{a1/(kx)}](s) = (a1/k)^s * ∫_{a1/k}^∞ {u} u^{-s-1} du  (complex s, f64 arithmetic)
+fn mellin(a1: usize, k: usize, s_re: f64, s_im: f64) -> (f64, f64) {
+    let xp = |x: f64, w_re: f64, w_im: f64| -> (f64, f64) {
+        let l = x.ln();
+        let e = (w_re * l).exp();
+        (e * (w_im * l).cos(), e * (w_im * l).sin())
+    };
+    let (a, kk) = (a1 as f64, k as f64);
+    let lo = a / kk;
+    let den = (1.0 - s_re).powi(2) + s_im * s_im;
+    let sden = s_re * s_re + s_im * s_im;
+    let (inv1mr, inv1mi) = ((1.0 - s_re) / den, s_im / den);
+    let (invsr, invsi) = (s_re / sden, -s_im / sden);
+    // (lo, 1): {u}=u, ∫ u^{-s} du = u^{1-s}/(1-s)
+    let (p1, q1) = xp(1.0, 1.0 - s_re, -s_im);
+    let (p0, q0) = xp(lo, 1.0 - s_re, -s_im);
+    let mut re = (p1 - p0) * inv1mr - (q1 - q0) * inv1mi;
+    let mut im = (p1 - p0) * inv1mi + (q1 - q0) * inv1mr;
+    // [1,∞): unit intervals, ∫_m^{m+1} (u-m) u^{-s-1} du = [u^{1-s}/(1-s) + m u^{-s}/s]_m^{m+1}
+    let mmax: usize = 100_000;
+    for m in 1..=mmax {
+        let mf = m as f64;
+        let (a1r, a1i) = xp(mf + 1.0, 1.0 - s_re, -s_im);
+        let (b1r, b1i) = xp(mf, 1.0 - s_re, -s_im);
+        let (c1r, c1i) = xp(mf + 1.0, -s_re, -s_im);
+        let (d1r, d1i) = xp(mf, -s_re, -s_im);
+        let (d1, d1i2) = (a1r - b1r, a1i - b1i);
+        let (d2, d2i) = (c1r - d1r, c1i - d1i);
+        re += d1 * inv1mr - d1i2 * inv1mi + mf * (d2 * invsr - d2i * invsi);
+        im += d1 * inv1mi + d1i2 * inv1mr + mf * (d2 * invsi + d2i * invsr);
+    }
+    // tail beyond mmax: {u}≈1/2 ⟹ (1/2)∫_{mmax}^∞ u^{-s-1}du = (1/2) mmax^{-s}/s
+    let (tr, ti) = xp(mmax as f64, -s_re, -s_im);
+    re += 0.5 * (tr * invsr - ti * invsi);
+    im += 0.5 * (tr * invsi + ti * invsr);
+    // multiply by (a1/k)^s
+    let g = (a / kk).powf(s_re);
+    let ang = s_im * (a / kk).ln();
+    let (gr, gi) = (g * ang.cos(), g * ang.sin());
+    (re * gr - im * gi, re * gi + im * gr)
+}
+
 fn main() {
     let args: Vec<String> = std::env::args().collect();
     let mode = args.get(1).map(|s| s.as_str()).unwrap_or("real");
     let n: usize = args.get(2).and_then(|s| s.parse().ok()).unwrap_or(600);
+
+    // ---- Mellin factor check: distinguishes 2^{+s} (original control) from 2^{-s} (corrected) ----
+    if mode == "mellin" {
+        let s = 0.5;
+        let m1 = mellin(1, 100, s, 0.0);
+        let m2 = mellin(2, 100, s, 0.0);
+        let m3 = mellin(1, 200, s, 0.0);
+        println!("M[{{1/(100x)}}](0.5) = {:.8e}", m1.0);
+        println!("M[{{2/(100x)}}](0.5) = {:.8e}   ratio = {:.6e}   vs 2^(+s) = {:.6e}   (ORIGINAL code control symbol)", m2.0, m2.0 / m1.0, 2f64.powf(s));
+        println!("M[{{1/(200x)}}](0.5) = {:.8e}   ratio = {:.6e}   vs 2^(-s) = {:.6e}   (corrected control symbol)", m3.0, m3.0 / m1.0, 2f64.powf(-s));
+        return;
+    }
 
     // ---- cross-check vs rug (independent x-space breakpoint integration) ----
     if mode == "xcheck" {
@@ -285,8 +339,26 @@ fn main() {
     for k in 0..n { c[k] = c_a(1, k + 1); }
 
     let control = mode == "control";
+    let control2 = mode == "control2";
     let c0 = 2.0f64.powf(0.6); // 2^(1/2+delta), delta=0.1
-    if control {
+    if control2 {
+        // CORRECTED control (genuinely RH-false): Lambda'_k = {1/(kx)} + c0 {1/(2kx)} = L_k + c0 L_{2k}.
+        // Mellin symbol (1 + c0 2^-s) zeta(s): exact zero at s = 1/2+delta + i pi/ln2 (mod 2pi i/ln2).
+        // (The ORIGINAL control mode uses {2/(kx)}, Mellin factor 2^{+s}, zeros at Re = -(1/2+delta)<0:
+        //  NOT an RH-false model — its span stays dense under RH.)
+        for j in 0..n {
+            for k in 0..n {
+                let base = g[j * n + k];
+                let g12 = gram_entry(1, j + 1, 1, 2 * (k + 1));     // <L_j, L_{2k}>
+                let g21 = gram_entry(1, 2 * (j + 1), 1, k + 1);     // <L_{2j}, L_k>
+                let g22 = gram_entry(1, 2 * (j + 1), 1, 2 * (k + 1)); // <L_{2j}, L_{2k}>
+                g[j * n + k] = base + c0 * (g12 + g21) + c0 * c0 * g22;
+            }
+        }
+        for k in 0..n {
+            c[k] = c_a(1, k + 1) + c0 * c_a(1, 2 * (k + 1));
+        }
+    } else if control {
         for j in 0..n {
             for k in 0..n {
                 let base = g[j * n + k];
@@ -346,7 +418,8 @@ fn main() {
         mpower.push(re * re + im * im);
     }
 
-    println!("== wave8e {} case, N={} ==", if control { "CONTROL" } else { "real" }, n);
+    let label = if control2 { "CONTROL2(corrected)" } else if control { "CONTROL" } else { "real" };
+    println!("== wave8e {} case, N={} ==", label, n);
     println!("d_N^2 (== lambda_min of augmented Gram) = {:.12e}", d2);
     println!("sqrt(N)*d_N = {:.6e}", (n as f64).sqrt() * d2.sqrt());
     println!("lambda_min(G_N) raw (n={}) = {:.6e}   (trivially->0: diag ~ const/k)", n.min(400), lmin);

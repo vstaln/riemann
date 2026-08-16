@@ -1,1 +1,13 @@
 t=1 start: task begins. Reading 8E note, wave8c note, locating tool.
+t=2 locate wave8e tool + numbers
+t=3 reading 8E source + ledger
+t=4 build
+t=5 rebuild after garbage removal
+t=6 rebuild
+t=7 rebuild
+t=8 run probes N=60 + mellin
+t=9 control+control2 runs
+t=10 bg relaunch
+t=11 ledger line
+t=12 harvest
+t=13 harvest2
