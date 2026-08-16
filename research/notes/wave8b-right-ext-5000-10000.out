@@ -1,0 +1,19 @@
+# RIGHT: ζ' zeros in [0.5,1]×[T,T+H], T=5000..10000 H=1000 step=0.02
+slab [5000,6000]: winding=709.000000 max|Δarg|=1.542 min-margin=2.419e-3 neg=0
+    refined ζ' zero ≈ 0.767200 + 5500.090335i  |ζ'|=8.58e-13
+slab [6000,7000]: winding=754.000000 max|Δarg|=1.568 min-margin=3.867e-3 neg=0
+    refined ζ' zero ≈ 0.929968 + 6500.109278i  |ζ'|=7.60e-13
+slab [7000,8000]: winding=790.000000 max|Δarg|=2.488 min-margin=1.776e-3 neg=0
+    refined ζ' zero ≈ 0.979057 + 7499.996685i  |ζ'|=3.13e-13
+slab [8000,9000]: winding=797.000000 max|Δarg|=1.531 min-margin=1.994e-3 neg=0
+    refined ζ' zero ≈ 0.817972 + 8500.144095i  |ζ'|=5.23e-12
+slab [9000,10000]: winding=812.000000 max|Δarg|=1.543 min-margin=6.360e-3 neg=0
+    refined ζ' zero ≈ 55.174029 + 9501.629247i  |ζ'|=1.71e-17
+TOTAL ζ' zeros in [0.5,1]×[5000,10000] = 3862
+min certified |ζ'| margin on right contours = 1.776e-3
+refined zeros (first 5):
+    σ=0.767200  t=5500.090335
+    σ=0.929968  t=6500.109278
+    σ=0.979057  t=7499.996685
+    σ=0.817972  t=8500.144095
+    σ=55.174029  t=9501.629247

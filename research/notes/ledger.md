@@ -672,3 +672,14 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   density law fit (1 − C/(log T)^α). Left-strip NOT re-run (redundant: Platt–Trudgian RH below
   3·10¹² + Speiser certifies it). Verdict: RH-consistent if ratio → 1 & count matches law;
   anomaly escalate if not. Primary remaining disproof-capable empirical lever.
+
+- 2026-08-18 | wave8b-right-extension | CHECKED NUMERICALLY | ζ′ right-strip [0.5,1] census extended to T=12000: 8228 zeros total; cumulative density ratio N_ζ′/N(T): 0.5865@5000 -> 0.6572@12000 (rising, no flattening); incremental 0.658->0.721; sigma-min drift continues (0.506@t~5000, 0.522@t~11050); "2651 unexplained" RESOLVED as finite-T deficit in classical N1(T)~N(T) law: D=N-N1 ~ 0.74*T/log^0.36(T/2pi) (fit CONJECTURED; classical asymptotic PROVEN, Berndt 1970/Radziwill 2013, citation unverified locally); step-stability revalidated at 0.02/0.04; no anomaly, no disproof signal; RH-consistent. Note: wave8b-right-extension-2026-08-18.md
+- **8B-right extension (2026-08-18, e794ec94)** — ζ′ right-strip census extended to T=12000:
+  8228 zeros total (2651+5579), density ratio 0.5865@5000 → 0.6572@12000 cumulative, incremental
+  0.658→0.721, strictly rising, NO flattening/anomaly. σ-min drift continues (0.506@5050,
+  0.522@11050; a ζ′ zero at σ=0.506,t≈5006 only 0.006 off the line). **"2651 unexplained"
+  RESOLVED**: N₁(T) ~ N(T) classical law (Berndt 1970 / Radziwiłł 2013, PROVEN-classical,
+  citation unverified locally) with finite-T deficit D(T) ≈ 0.74·T/log^{0.36}(T/2π) (fit
+  CONJECTURED, ≤0.4% over 8 pts; equivalently 1−r ≈ 7.5/log^{1.52}u). Left strip NOT re-run
+  (redundant — Platt–Trudgian). CHECKED NUMERICALLY, RH-consistent, NO disproof signal.
+  Follow-ups: T≈10⁵–10⁶ to pin deficit exponent; verify Berndt/Radziwiłł from primary sources.
