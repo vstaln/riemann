@@ -432,3 +432,9 @@ Briefs: wave8-briefs-direct-RH-2026-08-17.md. Goal reset to direct-RH mission.
   a ~200-bit MPFR (rug) port of zeta_em_ders machinery — ports directly per wave8d-lk-zeta-direct
   note. Not attempted (out of budget). Low priority: L_k≥0 is RH-necessary with zero evidential
   weight; k≤8 coverage is clean and positive.
+- **Wave-13 lesson (Python scope)**: R1's 50-min DE global floor (scipy.optimize.differential_evolution)
+  was pure-Python heuristic that didn't need to be — LP solve is HiGHS/C (0.0s), DE is ~50 lines of
+  Rust, interval verifier (arb/python-flint) is the only genuine Python exception. Also: t=3 already
+  showed global floor losing (0.00561<0.00634) — the t=4-6 DE was confirmation overkill that killed
+  the agent's write budget. Rule going forward: sanctioned-Python = arb interval verifier ONLY;
+  heuristics in Rust or cut; stop searching when the decision is already made.
