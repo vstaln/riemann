@@ -455,3 +455,23 @@ zero evidence about RH — charter firewall).
   xi'-transport, lit-sweep 2023-26 empty) is PROVEN closed. RH remains unproven; no disproof anywhere;
   record 0.673481/0.836740 stands certified. The search continues (persistence hook) — the next
   advance requires genuinely new mathematics outside the coefficient/margin/Jensen toolbox.
+
+## 2026-08-18 (final) — cross-domain hunt closed (27 levers); the honest terminal structure
+- **crossdomain-hunt (6744babd)**: 7 foreign-field transports (Lee-Yang stat-mech, HB/operator
+  theory/de Branges, RMT, Weil-Deligne cohomology, potential-theory/explicit-formula, Sturm/
+  confluent-hypergeometric, SINC-PF∞ correct duality) — ALL closed. New PROVEN lemma: HB
+  degeneracy |Xi(-iz)| = |Xi(iz̄)| identically ⟹ the Hermite-Biehler/de Branges route for Xi
+  is vacuous (⟺ RH by construction); coordinator hand-verified. Structural theorem of the
+  hunt: every literature mechanism that FORCES real zeros needs Xi to be in one of four
+  hypothesis classes (product/PF structure, ODE membership, cohomology/algebraic-integer,
+  or an ⟺ RH reformulation) — Xi provably violates the first three and every instance of the
+  fourth is the trap. **This closes the foreign-field direction too.**
+- **Honest terminal structure (27 levers, all closed):** RH requires genuinely new mathematics.
+  Every sufficient-condition family (constant margin S1, decaying log-profile, variable rate,
+  moment-transfer, kernel-TP2, Jensen finite-degree GJT trap, xi'-transport, 2023-26 lit-sweep,
+  7 foreign transports) is PROVEN closed. No disproof anywhere. Record side terminal
+  (0.673481/0.836740, certified, untouched). The campaign's real output: PROVEN new identities
+  (deficit constant = 2; theta identity; HB degeneracy lemma), the certified moment oracle
+  (g02, k=0..300 @210 bits), the closure-DAG (16 levers, 13 edges, 6 traps), and a rigorous
+  exhaustion map of the entire classical+foreign one-way space. The persistence hook binds:
+  the search continues; a proof needs a genuinely new idea.
