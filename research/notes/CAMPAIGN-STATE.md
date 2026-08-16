@@ -526,3 +526,43 @@ zero evidence about RH — charter firewall).
   positivity of coefficients, and the moment structure are all consistency data in every
   testable direction. A proof of RH requires genuinely new mathematics; the search continues
   under the persistence hook; no disproof signal anywhere; record untouched (certified).
+
+---
+
+## WAVE-9 CLOSURE (2026-08-18 night) — LITERATURE BATCH FULLY ADJUDICATED
+
+### New closures this session
+- **9A sdp-paircorr-transfer — CLOSED-REFUTED** (object-identity step). The campaign's own draft
+  claim ("unconditional N* ≤ 1.3208N ⟹ ≥ 67.92% simple-anywhere") was WRONG and was caught by the
+  hostile-referee pass against primary LaTeX: BGSTB24's unconditional F (w(u)=4/(4−u²), argument
+  ρ−ρ′, real parts enter) ≠ CGdL's ordinate-only Montgomery F (w=4/(4+u²), T^{ix(γ−γ′)}) unless RH.
+  The [0,1] datum for the ordinate-only F remains Goldston–Montgomery RH-conditional. Internal
+  contradiction: BGSTB24's own Thm-1 application (61.7% simple under thin box, sech kernels
+  ≈1.38–1.39) below the claimed-free 67.92%. Note: wave9-9A-refutation-2026-08-18.md (committed ac046cc).
+- **9B levinson-variational-Q — DUPLICATE-TRAP** (banked prior session; levinson-theta-infinity trap member).
+- **wu-1206.3737 (distinct 66.036%)** — Farmer combination-method lineage; below our 0.836740; no threat.
+- **rezvyakova-2411.18492** — positive on-line proportion for Epstein zeta (Selberg-method lineage);
+  consistency antecedent only; our barrier-zoo Epstein world already covered.
+- **garunkstis-1904.03123** — extended Selberg class; feeds ξ′-transport (closed lever); no new content.
+
+### New knowledge banked
+- **GS 2511.20059 (Feb 2026) Theorem 2/3 — diagonal-count bridge (DAG node gs-2026-diagonal-bridge):
+  IF diagonal pair count Σ_{γ=γ′}1 ≤ (C+o(1))N with 1≤C<2, THEN ≥ 2−C simple AND ≥ 2−C on the
+  critical line.** The decomposition is unconditional; the missing input is any unconditional
+  diagonal bound. Gap = off-line symmetric zeros (β+iγ & 1−β+iγ share ordinates) + horizontal
+  terms — zero-density-type control our soundstate machinery does not provide. GS-2603.28104
+  (narrow box) confirms: BGSTB25 Thm 2 at b=0.001 gives 67.25% simple-and-on-line under the box
+  hypothesis — our 0.673481 unconditional record stands ABOVE the known conditional box theorem.
+- **Search state: 29 levers + coordinator probes CLOSED** (9A added tonight by refutation; 9B prior).
+  22 DAG nodes / 20 edges / 7 trap classes. No disproof anywhere. No new lever survives wave-9.
+
+### Honest ledger for the night
+- One false theorem PREVENTED (9A — would have been banked as "campaign's first new unconditional
+  theorem"; now correctly labeled).
+- One genuine framework identified and banked (GS-2026 diagonal bridge) — reframes simple/critical
+  record-axes as functions of a single diagonal count, with the open quantity explicit.
+- Records 0.673481 / 0.836740 UNTOUCHED (certified, 5 hostile referees), remain the state of the art.
+- Next-step surfaces (all CONJECTURED open, no funded probe): (a) any unconditional diagonal bound
+  C<2 (GS bridge would convert it into simple+critical ≥ 2−C); (b) GJT-completion small-n ⟺ RH
+  (sole surviving structural opening, hard per Farmer); (c) record-side in-class ceiling 0.6818
+  PROVEN terminal without new objects.
