@@ -1,0 +1,16 @@
+t=1 reads done (3 notes); t=2 seed note written
+t=3 explored papers+toolchain
+t=4 extracted wagner LP paper
+t=5 compiled+ran probe
+t=6 debug exit 127
+t=7 found compile error
+t=8 probe ran, output:
+t=9 probe2 ran
+t=10 debug probe2 compile
+t=11 probe2 ran
+t=12 probe3 ran
+t=13 probe3 ran
+t=14 search attempt
+t=15 search retry
+t=16 FINAL: note written + ledger appended
+t=17 verified all artifacts on disk
