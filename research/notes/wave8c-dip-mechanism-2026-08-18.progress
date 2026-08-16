@@ -1,2 +1,12 @@
 t=0 start dip-mechanism task; reading notes + machinery
 t=1 read notes done; reading machinery
+t=2 read slowfit; checking data + hiN
+t=3 checking prod log format + phase_prod
+t=4 writing partial note
+t=5 writing dipscan.rs
+t=6 building dipscan
+t=7 rebuild dipscan
+t=8 run dipscan
+t=9 grep kappa across runs
+t=10 finalizing note + ledger
+t=11 ledger written; done

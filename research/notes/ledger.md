@@ -794,3 +794,22 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   **No inequality ξ′-distinct ⟹ ζ-distinct exists. 0.836740 distinct STANDS terminal. No new
   record.** Firewall: zero RH evidence (proportion theorem). Corner (d) closed honestly.
   Tool: tools/xiprime_transport_probe/.
+
+## wave8c-dip-mechanism-2026-08-18 (builder)
+- VERDICT: INCONCLUSIVE. Certified N=700 dip (d_N·√(ln N)=0.209160, depth −0.0035, real to 7.4e-29) resists all clean mechanisms tested.
+  - Artifact (a): REFUTED — three precision paths in prod_700.log agree digit-for-digit (f64 / dd-refined 7.4e-29 / MPFR-256 stored-G), kappa=3.37e4 normal/smooth.
+  - Zero-pair beat (b): REFUTED for ALL 15 pairs i<j≤6 — every fixed-cosine leaves residual ≥1.3× RMS at N=700 (γ₂−γ₃ beat: −0.00165=2.3×RMS, confirmed & extended).
+  - Coefficient degeneracy (c): NOT SUPPORTED — kappa_pivot smooth/monotonic through 700, no spike.
+  - Divisor resonance (d): NOT SUPPORTED — d(700)=18 not unique (d(684)=18, d(720)=30 richer, no dip near 720).
+  - Dip = genuine localized finite-size feature of Báez-Duarte coefficient structure near N=700. NOT an RH lever; zero RH evidence either way.
+  - Tool: tools/wave8c/src/bin/dipscan.rs. Files: research/notes/wave8c-dip-mechanism-2026-08-18.md.
+  - DO NOT re-run: single-beat cosine and divisor/condition-number routes for this dip are closed.
+- **N=700 dip mechanism — INCONCLUSIVE, CLOSED (2026-08-18, 42b1df51)**: artifact REFUTED
+  (three independent precision paths — f64, dd-refined 7.4e-29, MPFR-256 stored-G — all
+  digit-for-digit 8.171888410557e-2; kappa_pivot 3.37e4 normal, smooth monotonic through
+  700); zero-pair beat REFUTED for ALL 15 pairs i<j≤6 (residual 1.3–2.3× RMS at 700 — the
+  γ₂−γ₃ refutation extended to the full pair set); divisor resonance NOT SUPPORTED
+  (d(700)=18 not unique; d(720)=30 richer, no dip there); condition-number degeneracy NOT
+  SUPPORTED. Dip = genuine localized finite-size feature of the Báez-Duarte optimal-coefficient
+  structure, mechanism unidentified. Honest verdict, NOT an RH lever. DO NOT re-run
+  single-beat/divisor/condition routes (closed). Tool: tools/wave8c/src/bin/dipscan.rs.
