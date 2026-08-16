@@ -1,0 +1,7698 @@
+
+
+===== PAGE 1 =====
+
+MORE THAN FIVE-TWELFTHS OF THE ZEROS OF ζ
+ARE ON THE CRITICAL LINE
+KYLE PRATT, NICOLAS ROBLES, ALEXANDRU ZAHARESCU, AND DIRK ZEINDLER
+Dedicated to Brian Conrey on the occasion of the 30th anniversary of his ‘Two-ﬁfths’ paper.
+Abstract. The second moment of the Riemann zeta-function twisted by a normalized Dirichlet polynomial
+with coeﬃcients of the form ( µ⋆ Λ⋆k1
+1 ⋆ Λ⋆k2
+2 ⋆··· ⋆ Λ⋆kd
+d ) is computed unconditionally by means of the
+autocorrelation of ratios of ζ techniques from Conrey, Farmer, Keating, Rubinstein and Snaith [18], Conrey,
+Farmer and Zirnbauer [22] as well as Conrey and Snaith [25]. This in turn allows us to describe the
+combinatorial process behind the molliﬁcation of
+ζ(s) +λ1
+ζ′(s)
+logT +λ2
+ζ′′(s)
+log2T +··· +λd
+ζ(d)(s)
+logdT
+,
+where ζ(k) stands for the kth derivative of the Riemann zeta-function and {λk}d
+k=1 are real numbers.
+Improving on recent results on long molliﬁers and sums of Kloosterman sums due to Pratt and Robles [58],
+as an application, we increase the current lower bound of critical zeros of the Riemann zeta-function to
+slightly over ﬁve-twelfths.
+Contents
+1. Introduction 2
+1.1. Integral moments and autocorrelation ratios of L-functions 2
+1.2. The ratios conjecture 3
+1.3. Motivation and choice of the molliﬁers 6
+2. Preliminary tools 9
+3. Constructing a molliﬁer 12
+3.1. The zeroth order case d = 0. 12
+3.2. The linear case d = 1. 12
+3.3. The quadratic case d = 2. 13
+3.4. The general d≥ 0 case 14
+3.5. Combinatorial interpretation of the molliﬁer 15
+4. Main result for the moment integral 18
+5. The square-free terms and Feng’s conjecture 21
+5.1. Proof of Feng’s conjecture 23
+6. Specializing the coeﬃcients 27
+6.1. The linear case d = 1 27
+6.2. Choosing the truncation 𝓁 31
+7. The general case d≥ 0 40
+7.1. Example: the quadratic case d = 2 46
+7.2. Resuming the general case d≥ 0 49
+8. Numerical aspects 56
+9. Further remarks and future work 56
+10. Acknowledgments 58
+References 58
+2010 Mathematics Subject Classiﬁcation. Primary: 11M26, 11L07; Secondary: 11M06, 05A18.
+Keywords and phrases : Riemann zeta-function, critical line, zeros, molliﬁer, incomplete Kloosterman sums, autocorrelation
+ratios, generalized von Mangoldt functions, convolution structure, Bell diagrams.
+1
+arXiv:1802.10521v3  [math.NT]  15 Sep 2019
+
+===== PAGE 2 =====
+
+2 KYLE PRATT, NICOLAS ROBLES, ALEXANDRU ZAHARESCU, AND DIRK ZEINDLER
+1. Introduction
+1.1. Integral moments and autocorrelation ratios of L-functions. Although applications of random
+matrix theory in number theory started with Montgomery’s pair correlation conjecture [54] in the mid 1970’s,
+it is during the last two decades that the use of random matrices as a tool in the study of L-functions has
+become indispensable.
+A local statistic is a ﬁgure that involves exclusively correlations between zeros separated on a scale of a
+few mean spacings. In [54], Montgomery conjectured that in the limit of a large height T on the critical line,
+any local statistic is supplied by the associated statistic for eigenvalues from the Gaussian unitary ensem-
+ble (GUE). These conjectures were numerically tested by Odlyzko and found to have incredible agreement
+[57]. The leading order of statistics involving zeros of ζ and statistics involving eigenvalues is identical and
+asymptotically no factors of arithmetical nature appear [25, p. 594]. On the other hand, from the work of
+Bogomolny and Keating [6], it is expected that arithmetical contributions will be signiﬁcant in the lower
+order terms.
+The zeros of ζ are not the only quantities of interest, naturally one is interested in the zeros of other
+L-functions and their assocations to other types of matrices. Katz and Sarnak [43, 44] proposed that local
+statistics of zeros of families of L-functions could be understood by the eigenvalues of matrices coming from
+classical compact groups, see also the work of Rudnick and Sarnak in [62]. It is thus believed that families
+of L-functions can be modeled by the characteristic polynomials from such groups. These could be unitary,
+sympletic or orthogonal. The calculation performed by Iwaniec, Luo and Sarnark [40] for the one-level den-
+sities of families of L-functions with each symmetry type was in agreement with random matrix theory and
+further showed that there is no arithmetic component in the leading terms.
+It is only recently that global, rather local, statistics were contrasted with classical compact groups. A
+distinct feature of global statistics is that an arithmetical factor does appear in the leading order terms.
+Keating and Snaith argued in groundbreaking papers [41, 42] (ﬁrst conjectured by Conrey and Ghosh
+[23]) that the leading terms of the moments of an L-function are the product of a characteristic polynomial
+from a random matrix and an Euler product. Namely, for the general 2 k moment we expect that
+∫ T
+0
+|ζ( 1
+2 +it)|2kdt∼ akgk
+Γ(k2 + 1)T logk2
+T.
+where ak is the Euler product
+ak =
+∏
+p
+((
+1− 1
+p
+)k2 ∞∑
+r=0
+d2
+k(pr)
+pr
+)
+=
+∏
+p
+(
+1− 1
+p
+)k2 ∞∑
+k=0
+(k +m− 1
+m
+)2
+p−m.
+The value ofgk is the quantity associated with the eigenvalues of random matrices. Prior to [41, 42], Conrey
+and Ghosh [23] had conjectured that g3 = 42 and that in general gk is an integer. Conrey and Gonek
+[24] later conjectured that g4 = 24024. Using the above mentioned techniques from random matrix theory,
+Keating and Snaith conjectured a closed formula for gk which is given by the product
+gk =k2!
+k−1∏
+j=0
+j!
+(k +j)!.
+Proving that the above candidate formula for gk is an integer is not a trivial matter, [32, p. 196].
+This type of result can be generalized by considering averages of ratios of products of L-functions (on the
+number theoretical side) or of characteristic polynomials (on the random matrix side). These results were
+mostly established and illustrated, sometimes conjecturally when it comes to the number theoretical aspect,
+by Conrey, Farmer, Keating, Rubinstein and Snaith [18], Conrey, Farmer and Zirnbaheur [22], and Conrey
+and Snaith [25] among others.
+
+===== PAGE 3 =====
+
+MORE THAN FIVE-TWELFTHS OF THE ZEROS OF ζ ARE ON THE CRITICAL LINE 3
+These conjectures on the averages of ratios of products of ζ functions (autocorrelation of ratios) are useful
+not only for global statistics of zeros, as one would naturally expect, but also for local statistics. It has been
+suggested in fact that autocorrelation ratios of characteristic polynomials are more fundamental to random
+matrices than correlation functions ([7] and [25, p. 595]). Thus the same thing could be argued for auto-
+correlation ratios in the L-function universe. The reason why autocorrelation ratios are useful is because
+they provide many local or global statistic ( n-level correlations, discrete moments, etc...). Moreover, the
+ratios conjectures imply Montgomery’s pair correlation conjecture [22, p. 594], and they contain additional
+information that can be utilized to make precise conjectures about the distributions of zeros of L-functions.
+Autocorrelation ratios with usually one or two L-functions in the numerator and in the denominator are
+enough to cover a very wide spectrum of applications, but there is no limit to the size they can accommodate.
+A salient feature of this paper is that later we will need many zeta functions in both the numerator and in
+the denominator and this carries a heavy combinatorial price. On the other hand, Bogomolny and Keating
+[6] needed a heavy duty analysis of the Hardy-Littlewood prime pair conjectures to obtain the lower order
+terms of local statistics where arithmetical components appear. A nice feature of autocorrelations of ratios
+of L-functions is that they bypass those issues [25, p. 595].
+Molliﬁers are fundamentally important objects in the study of the moments of zeta and their arithmetic
+consequences. There will be plenty to say about this in a moment, but, roughly speaking, they are used to
+mine information about small values of L-functions, specially zeros, as well as to bound the number of zeros
+either in a vertical strip to the right of Re( s) = 1
+2 or at Re(s) = 1
+2. Molliﬁers have also been employed to
+extract non-vanishing results at the central point for families ofL-functions (see, among very many examples,
+[46, 47, 53, 65]).
+Unfortunately, none of these results ever comes cheap. Even the simplest examples require sophisticated
+and very long analysis and regrettably this paper is no exception. Improvements on the underlying tech-
+nology have somewhat decreased the length and complexity of the calculations. For example, using the
+autocorrelation ratios technique, Young [71] was able to shorten Levinson’s original proof that more than
+one third of the zeros of zeta are on the critical line from ﬁfty pages to eight 1. Further reﬁnements on
+molliﬁers still require lengthy calculations, however.
+What is surprising is that unlike other averages of families considered in [25, p. 596], ‘there does not seem
+to be a random matrix analogue of mollifying as there is nothing that naturally corresponds to a partial
+Dirichlet series’.
+Before we move on to describe the mechanism of autocorrelation ratios, we mention that the ratios can
+also be used to study moments of |ζ′(ρ +a)| and allied quantities. Speciﬁcally, Conrey and Snaith showed
+how to obtain all the other lower order terms for these averages in [25, §7].
+While diﬃcult computations can be simpliﬁed with the autocorrelation ratios, it must be stressed that
+one needs to assume the Riemann hypothesis (RH), or generalized Riemann hypothesis depending on the
+L-function, and therefore there is a limit to how useful they are. In this paper, we provide unconditional
+results by using the underlying techniques and ideas behind the autocorrelation of ratios of ζ but without
+using the conjectures themselves. This is of particular importance because the application we provide is an
+improvement on the proportion of zeros on the Riemann zeta-function on the critical line, see Theorem 1.2.
+Naturally, RH cannot be assumed for this type of application. Having said this, it is also important to add
+that, as an illustrative check, Conrey and Snaith obtained the leading terms of the simplest molliﬁed moment
+in [25,§5.1] as well as higher molliﬁed moments [25, §6] under the ratios conjecture (and hence under RH).
+1.2. The ratios conjecture. Since we are only concerned with the Riemann zeta-function, we need not
+step outside the unitary family. Assume the Riemann hypothesis, set s = 1
+2 +it and let us follow §2.1 of
+1At one point in Levinson’s original paper there are twenty four cancellations going on simultaneously! See [51, p. 308] for
+further details.
+
+===== PAGE 4 =====
+
+4 KYLE PRATT, NICOLAS ROBLES, ALEXANDRU ZAHARESCU, AND DIRK ZEINDLER
+[25]. Farmer [30, 31] was the ﬁrst to put forward the asymptotic conjecture
+R(α,β,γ,δ ) :=
+∫ T
+0
+ζ(s +α)ζ(1−s +β)
+ζ(s +γ)ζ(1−s +δ)dt∼T (α +δ)(β +γ)
+(α +β)(γ +δ)−T 1−α−β (δ−β)(γ−α)
+(α +β)(γ +δ)
+as T→∞ , provided that Re(γ), Re(δ)> 0.
+The approximate functional equation states that
+ζ(s) =
+∑
+n≤X
+1
+ns +χ(s)
+∑
+n≤Y
+1
+n1−s +O(R),(1.1)
+where R is a remainder and XY = t/(2π). Now, use (1.1) for the zeta functions that appear in the
+numerator of the integrand and use ordinary Dirichlet series for the zeta functions in the denominator
+( 1
+ζ(s) =∑µ(n)n−s). A rule of thumb (the so-called ‘recipe’ [18, p. 52]) tells us we only need to be concerned
+with the pieces for which there is the same number of χ(s) and χ(1−s) due to oscillations. The next step
+is to integrate term-by-term and keep only the diagonal pieces and complete all the sums that we arrive at.
+For the ﬁrst term of (1.1), this procedure boils down to
+∑
+hm=kn
+µ(h)µ(k)
+m1/2+αn1/2+βh1/2+γk1/2+δ =
+∏
+p
+∑
+h+m=k+n
+µ(ph)µ(pk)
+p(1/2+α)m+(1/2+β)n+(1/2+γ)h+(1/2+δ)k.
+This is the perennial expression that appears, in some way or another, in all calculations involving auto-
+correlations of ratios of L-functions and it is what allowed Young to simplify Levinson’s proof from ﬁfty to
+eight pages. Now, we only have 0 and 1 as possibilities for h and k. Thus a simple analysis (it will not be
+this easy again later) shows that the sum on the right-hand side is equal to
+1
+1− 1
+p1+α+β
+(
+1− 1
+p1+β+γ− 1
+p1+α+δ + 1
+p1+γ+δ
+)
+.
+This means that the Euler product on the right-hand side is given by the following ratio of products of ζ
+ζ(1 +α +β)ζ(1 +γ +δ)
+ζ(1 +α +δ)ζ(1 +β +δ)A(α,β,γ,δ ),
+where A is the ‘arithmetical factor’
+A(α,β,γ,δ ) =
+∏
+p
+(1− 1
+p1+γ+δ )(1− 1
+p1+β+γ− 1
+p1+α+δ− 1
+p1+γ+δ )
+(1− 1
+p1+β+γ )(1− 1
+p1+α+δ ) .
+As will become clearer later in our exposition, the piece from the other term coming from (1.1) is essentially
+the same except that α is replaced by−β, β is replaced by−α and it is aﬀected by a multiplication by
+χ(s +α)χ(1−s +β) =
+( t
+2π
+)−α−β(
+1 +O
+( 1
+|t|
+))
+.
+These manipulations allowed Conrey, Farmer and Zirnbaeur [22] to obtain a more precise ratios conjecture.
+Conjecture 1.1 (Conrey, Farmer and Zirnbaeur, 2006) . If− 1
+4 < Re(α) < 1
+4, 1
+logT ≪ Re(δ) < 1
+4 and
+Im(α), Im(δ)≪ε T 1−ε for every ε> 0, then
+R(α,β,γ,δ ) =
+∫ T
+0
+ζ(1 +α +β)ζ(1 +γ +δ)
+ζ(1 +α +δ)ζ(1 +β +δ)A(α,β,γ,δ )
++
+( t
+2π
+)−α−βζ(1−α−β)ζ(1 +γ +δ)
+ζ(1−β +δ)ζ(1−α +δ)A(−β,−α,γ,δ )dt +O(T 1/2+ε).
+The key to obtaining lower order term in the pair correlations is embedded in the above conjecture.
+One needs to diﬀerentiate with respect to α and β and then set γ = α and δ = β. It is important (and
+substantially more so later on) to note that A(α,β,α,β ) = 1. It is also useful to see that
+∂
+∂α
+f(α,γ )
+ζ(1−α +γ)
+⏐⏐⏐⏐
+γ=α
+=−f(α,α ).
+Unfortunately, we will not have recourse to such neat formulas in our analysis. This diﬀerentiation process
+turns the above into the following.
+
+===== PAGE 5 =====
+
+MORE THAN FIVE-TWELFTHS OF THE ZEROS OF ζ ARE ON THE CRITICAL LINE 5
+Theorem 1.1 (Conrey and Snaith, 2007) . If Conjecture 1.1 is true, then
+∫ T
+0
+ζ′
+ζ (s +α)ζ′
+ζ (1−s +β)dt
+=
+∫ T
+0
+((ζ′
+ζ (1 +α +β)
+)′
++
+( t
+2π
+)−α−β
+ζ(1 +α +β)ζ(1−α−β)
+∏
+p
+(1− 1
+p1+α+β )(1− 2
+p + 1
+p1+α+β )
+(1− 1
+p)2
+−
+∑
+p
+( logp
+p1+α+β− 1
+)2)
+dt +O(T 1/2+ε),
+provided that 1/ logT≪ Re(α), Re(β)< 1
+4.
+The last sum over p will appear frequently in the latter sections.
+One example of moments of logarithmic derivatives is taken from [22, p. 628]. It illustrates the presence
+of the arithmetical factor. Assuming a variant of the ratios conjecture one has
+1
+T
+∫ T
+0
+⏐⏐⏐⏐
+ζ′
+ζ
+(1
+2 +r +it
+)⏐⏐⏐⏐
+2
+dt =
+(ζ′
+ζ
+)′
+(1 + 2r) +
+(T
+2π
+)−2r
+A(−r,−r,r,r )ζ(1− 2r)ζ(1 + 2r)
+1− 2r
++c(r) +O(T−1/2+ε),
+where c(r) is a function of r which is uniformly bounded for |r|< 1/4−ε and is given by
+c(r) =
+∑
+p
+(−p1+2r log2p
+(p1+2r− 1)2 +
+∫ 1
+0
+log2p
+(e(θ)p1/2+r− 1)2dθ
+)
+.
+Oddly enough, although we are working in the context of global statistics and we thus expect arithmetical
+terms to be present, it so happens that only the simplest ones survive after undergoing a certain combina-
+torial process. Indeed, the arithmetical factors A and their derivatives, which are sums over primes like the
+one above, conspire to either become zero or to get absorbed in an error term, thus (luckily) leaving us only
+with terms for which the arithmetical factor is equal to one.
+It is important to mention the celebrated ‘Five authors’ (Conrey, Farmer, Keating, Rubinstein, and
+Snaith) conjecture [18, p. 44] regarding the 2 k moments of zeta. First, we recall the Vandermonde
+∆(z1,··· ,zm) =
+∏
+1≤i<j≤m
+(zj−zi)
+and the notation e(z) =e2πiz.
+Conjecture 1.2 (CFKRS, 2005). Supposeg(t) is a suitable weight function. Then
+∫ ∞
+−∞
+|ζ( 1
+2 +it)|2kg(t)dt =
+∫ ∞
+−∞
+Pk
+(
+log t
+2π
+)
+(1 +O(t−1/2+ε))g(t)dt,
+wherePk is a polynomial of degree k2 given by the 2k-fold residue
+Pk(x) = (−1)k
+(k!)2
+1
+(2πi)2k
+∮
+···
+∮ G(z1,··· ,z 2k)∆2(z1,··· ,z 2k)
+∏2k
+j=1z2k
+j
+e(x/2) ∑k
+j=1zj−zk+jdz1··· z2k,
+where one integrates over small circles about zi = 0, with
+G(z1,··· ,z 2k) =Ak(z1,··· ,z 2k)
+k∏
+i=1
+k∏
+j=1
+ζ(1 +zi−zk+j),
+and Ak is the Euler product
+Ak(z) =
+∏
+p
+k∏
+i=1
+k∏
+j=1
+(
+1− 1
+p1+zi−zk+j
+)∫ 1
+0
+k∏
+j=1
+(
+1− e(θ)
+p1/2+zj
+)−1(
+1− e(−θ)
+p1/2−zk+j
+)−1
+dθ.
+
+===== PAGE 6 =====
+
+6 KYLE PRATT, NICOLAS ROBLES, ALEXANDRU ZAHARESCU, AND DIRK ZEINDLER
+More generally
+Iζ,α,g :=
+∫ ∞
+−∞
+ζ( 1
+2 +α1 +it)··· ζ( 1
+2 +α2k +it)g(t)dt =
+∫ ∞
+−∞
+Pk
+(
+log t
+2π,α
+)
+(1 +O(t−1/2+ε))g(t)dt,
+where
+Pk(x,α ) = (−1)k
+(k!)2
+1
+(2πi)2k
+∮
+···
+∮ G(z1,··· ,z 2k)∆2(z1,··· ,z 2k)
+∏2k
+j=1
+∏2k
+i=1(zj−αi)
+e(x/2) ∑k
+j=1zj−zk+jdz1··· z2k,
+with the path of integration being small circles surrounding the poles αi.
+This conjecture displays the rich structure behind the moments of zeta. We shall be needing a special
+type of moment related to the case k = 1 for our purposes and we have chosen to write our result (Theorem
+7.1) in a way that parallels the structure of Conjecture 1.2.
+Moreover in [18, 22, 25], a lot of eﬀort is invested in explicating the combinatorial structure of the permuta-
+tions sums, arithmetical factors as well as double products that appear in certain formulae (notable results in
+this direction are given by [18, Lemma 2.5.1,§2.7], [25,§5] and [22,§6.4,§7.2]). In our ﬁndings we also come
+across formulae and concepts that require a similar eﬀort but for which the existing ideas that have appeared
+in the literature do not seem to apply directly as far as the enumeration and the combinatorics are concerned.
+Lastly, in the words of Conrey and Snaith [25, p. 596] ‘before embarking on such a [moment] calculation,
+it would be useful to know ahead of time what the answer is’. Calling it a ‘painful calculation’, as they do,
+is nothing short of accurate. The presentation we have decided to adopt follows this philosophy closely. We
+have started with simple examples where the combinatorics are undemanding so that objects can be counted
+‘by hand’ before moving on to the general principles. Even when considering the general principles, we have
+paused at critical steps to fall back to special cases (which have not have appeared in the literature before)
+to better illustrate the underlying blueprint of our results.
+1.3. Motivation and choice of the molliﬁers. We set s = σ +it with σ,t ∈ R and denote by ζ(s) =∑
+n≥1n−s the Riemann zeta-function for σ >1, and otherwise by analytic continuation. Now, let
+• N(T ) denote the number of zeros ρ =β +iγ, counted with multiplicity, of ζ(s) inside the rectangle
+0<β < 1 and 0 <γ <T ,
+• N0(T ) denote the number of zeros, counted with multiplicity, ofζ(s) such thatβ = 1
+2 and 0<γ <T .
+It is well-known [66, Ch. IX] that the asymptotic formula for N(T ) is given
+N(T ) = T
+2π
+(
+log T
+2π− 1
+)
++ 7
+8 +S(T ) +O
+( 1
+T
+)
+,
+where the term S(T ) is
+S(T ) := 1
+π argζ
+(1
+2 +it
+)
+≪ logT
+as T→∞ . Let κ be the proportion of zeros on the critical line, i.e.
+κ := lim inf
+T→∞
+N0(T )
+N(T ).
+In 1942, Selberg [63] showed that 1 ≥ κ >0. This means that a positive proportion of non-trivial zeros of
+the Riemann zeta-function lies on the critical line.
+Let Q(x) be a real polynomial satisfying Q(0) = 1 and Q′(x) = Q′(1−x). Set d to be the degree of Q,
+so that d = deg(Q)≥ 1. We then deﬁne the diﬀerential operator V by
+V (s) :=Q
+(
+− 1
+L
+d
+ds
+)
+ζ(s),
+where, for large T , we set
+L := logT.
+
+===== PAGE 7 =====
+
+MORE THAN FIVE-TWELFTHS OF THE ZEROS OF ζ ARE ON THE CRITICAL LINE 7
+Using the functional equation of ζ(s), Littlewood’s lemma and the arithmetic and geometric mean inequali-
+ties, Conrey [16] (see also [50]) showed that
+κ≥ 1− 1
+R log
+( 1
+T
+∫ T
+1
+|Vψ (σ0 +it)|2dt
+)
++o(1).(1.2)
+Here σ0 = 1/2−R/L where R is a bounded positive real of our choice and ψ is a molliﬁer.
+A molliﬁer is a regular function designed to dampen the large values ofζ(s) so the productVψ is expected
+to be smaller than V . To mollify ζ, one uses a Dirichlet polynomial
+ψ(s) :=
+∑
+n≤y
+b(n,y )
+ns
+with suitable coeﬃcients b(n,y ) and an acceptable length y =Tθ, where 0 <θ< 1.
+A wide range of coeﬃcients b(n,y ) have been studied in the literature. Levinson [50] ﬁrst used
+b(n,y ) =µ(n)nσ0−1/2 log(y/n)
+logy
+with θ = 1
+2−ε. Along with the choice Q(x) = 1−x Levinson was able to prove that κ> 1
+3 in 1974.
+In [19, p. 7], a comparison between Selberg’s and Levinson’s methods is made. Essentially these two
+methods are ‘diametrically opposed’. Indeed, Selberg’s method is based on counting sign changes of the
+suitably normalized and molliﬁed Riemann zeta-function and this is a very safe, if not entirely eﬀective,
+procedure. One cannot get a negative (worse than trivial) bound for the counting number. However, due,
+among other things, to the fact that the zeros are not evenly spaced, Selberg’s method fails to produce sig-
+niﬁcant values ofκ. On the other hand, Levinson’s method is a gamble as it could produce negative bounds
+for the counting number of critical zeros if the pertinent estimates are wasteful. If the molliﬁcation is ‘nearly
+perfect’, then it opens the possibility for 100%, or at least substantially higher values of κ. Therefore, it
+behooves us to perfect the technique of Levinson’s method as much as possible and present it in its greatest
+ﬂexibility and generality. This is indeed one of the goals of this article.
+The next reﬁnement is due to Conrey [15] who further generalized the molliﬁer to
+bC(n,y ) =µ(n)nσ0−1/2P
+(log(y/n)
+logy
+)
+(1.3)
+where P (x) is a real polynomial such that P (0) = 0 and P (1) = 1. Combined with further reﬁnements on
+the polynomial Q, such as taking d = 5 and keeping θ = 1
+2−ε, Conrey showed that κ> 0.36581 along with
+other results on the proportion of zeros of derivatives of the Riemann zeta-function on Re( s) = 1
+2.
+The next improvement would be arithmetical in nature. In [2], Balasubramanian, Conrey and Heath-
+Brown examined the error terms from the mean value integral in (1.2) and the resulting exponential sums.
+In particular they showed using Vaughan’s identity [67] on 1 /ζ(s) and Weil’s bound for Kloosterman sums
+that one could push the size of the length θ past the 1
+2 barrier to 9
+17 when the coeﬃcients are given by (1.3).
+The consequences of Hooley’s conjecture R∗, see [38], are also discussed.
+Further improvements of this result using (1.3) are worked out by Conrey in [16], where he uses results
+from Deshouillers and Iwaniec [26, 27] on exponential sums to unconditionally prove that θ = 4
+7−ε which
+results in κ> 0.4088.
+Further choices ofb(n,y ) have been proposed. Following the work of Luo and Yao [52], Feng [33] proposed
+bF (n,yF ) =µ(n)nσ0−1/2
+K∑
+k=2
+∑
+p1···pk|n
+logp1··· logpk
+logkyF
+Pk
+(log(yF/n)
+logyF
+)
+,
+
+===== PAGE 8 =====
+
+8 KYLE PRATT, NICOLAS ROBLES, ALEXANDRU ZAHARESCU, AND DIRK ZEINDLER
+where K = 2, 3,··· is an integer of our choice and y =Tθ for some 0 <θ< 1. The set {pi}k
+i=1 is composed
+of distinct primes and Pk are certain polynomials not unlike P above. Working with the two-piece molliﬁer
+ψ(s) =
+∑
+n≤yC
+bC(n,y )
+ns +
+∑
+n≤yF
+bF (n,y )
+ns
+where yC =TθC and yF =TθF with θC = 4
+7−ε and θF = 3
+7−ε, Feng proved that κ> 0.4107.
+The size of θF was initially taken to be 4
+7 and Feng later reduced it to 1
+2. The proportion of zeros asso-
+ciated to θF = 1
+2−ε is κ >0.4128. However, in [8, 48, 58, 60], a gap was found in Feng’s argument which
+reduces the size to 3
+7, unless some work is done at the exponential sum level of the error terms. In [58], it is
+shown, by decomposing the error terms associated to bF (n,y ) into Type I and Type II sums and handling
+the resulting incomplete Kloosterman sums, that one can take θF = 6
+11−ε, thereby validating Feng’s claim
+that θF = 1
+2−ε and κ> 0.4128.
+The best bound for an arbitrary coeﬃcient an of a generic Dirichlet series ∑
+n≤Tθann−s is θ = 17
+33−ε.
+This is due to Bettin, Chandee and Radziwi l l [4]. Its key ingredient is an improvement of a result of Duke,
+Friedlander and Iwaniec [29] on trilinear Kloosterman sums due to Bettin and Chandee [3]. We also remark
+that in [61], Robles and Zaharescu along with Roy proved that the bilinear Kloosterman sums of [29] lead
+to θ = 48
+95−ε, but this result was obtained shortly after the publication of [4].
+Somewhat inspired by [52] and certainly drawing from the autocorrelation of ratios, Bui, Conrey and
+Young [10] introduced a second piece to Conrey’s molliﬁer, namely they worked with
+ψ(s) =
+∑
+n≤yC
+bC(n,y )
+ns +χ(s + 1
+s−σ0)
+∑
+hk≤y2
+µ2(h)hσ0−1/2k1/2−σ0
+hsk1−s P2
+(log(y2/hk)
+logy2
+)
+.(1.4)
+Here µ2 is given by the Dirichlet convolution µ2(h) = (µ⋆µ )(h) and χ(s) is such that ζ(s) = χ(s)ζ(1−s),
+i.e. χ(s) = 2sπs−1 sin( 1
+2πs)Γ(1−s). In this case y2 =T 1/2−ε andP2 is a polynomial with similar properties
+to those of P1. They obtained κ> 0.4105.
+In [33, p. 515] and [10, p. 36] the idea of crossing all molliﬁers
+ψ(s) =
+∑
+n≤yC
+bC(n,y )
+ns +
+∑
+n≤yF
+bF (n,y )
+ns +χ(s + 1
+s−σ0)
+∑
+hk≤y2
+µ2(h)hσ0−1/2k1/2−σ0
+hsk1−s P2
+(log(y2/hk)
+logy2
+)
+was remarked and it was hinted at that this would be a ‘technically diﬃcult’ thing to do. This was accom-
+plished in [60].
+Lastly, a family of molliﬁers that generalizes (1.4) was studied in [49] and independently and almost si-
+multaneously by Sono in [64].
+It was suspected from an argument of Farmer (‘ θ =∞ conjecture’), see [30] and [5, p. 1], that molliﬁers
+might be optimal when their size is 1 −ε in that they produce 100% of zeros on the critical line. However,
+another intriguing recent result in this direction is due to Bettin and Gonek [5]. They prove with a very short
+and elegant argument involving Mellin transforms and Parseval’s formula that if one takes θ =∞, then RH
+would follow (not just 100%). Of course, we are very far away from such lengths of molliﬁers. Nevertheless,
+theoretically this approach opens the door to a direction towards RH via the moments.
+In this paper we propose to mollify the whole perturbed Riemann zeta-function. In other words, we mollify
+V (s) for a general d. As pointed out in the literature, see e.g. [16, § 3] and [33, p. 515], the idea behind Sel-
+berg’s method is to mollify ζ(s) directly. However, in Levinson’s framework, what one needs to mollify is the
+whole perturbed function V (s). This is not an easy task and one runs into serious combinatorial diﬃculties.
+Indeed, as remarked in [33, Remark (c)], ‘it is too complicated to optimize exactly the coeﬃcients of the molli-
+ﬁer.’ It is in fact too complicated to even display the terms of the molliﬁed moment, let alone optimize them.
+
+===== PAGE 9 =====
+
+MORE THAN FIVE-TWELFTHS OF THE ZEROS OF ζ ARE ON THE CRITICAL LINE 9
+To accomplish this task, we examine the behavior of the inverse 1/V (s) as the degreed increases. Namely,
+we will be studying the expression
+M(s,d ) := 1
+ζ(s) +λ1
+ζ′(s)
+logT +λ2
+ζ′′(s)
+log2T +··· +λd
+ζ(d)(s)
+logdT
+(1.5)
+as a function ofd and the complex variables. We shall be able to compute the mean value integral appearing
+in (1.2) with any desired degree of accuracy in terms of d.
+In other words, instead of examining
+1
+ζ(s)
+(
+ζ(s) +c1
+ζ′(s)
+logT +c2
+ζ′′(s)
+log2T +··· +cd
+ζ(d)(s)
+logdT
+)
+we examine
+1
+ζ(s) +λ1
+ζ′(s)
+logT +λ2
+ζ′′(s)
+log2T +··· +λd
+ζ(d)(s)
+logdT
+(
+ζ(s) +c1
+ζ′(s)
+logT +c2
+ζ′′(s)
+log2T +··· +cd
+ζ(d)(s)
+logdT
+)
+,(1.6)
+and provide the clarity needed to extract the rich features that this eventual autocorrelation of ratios of
+products of ζ functions has to oﬀer. More explicitly, as mentioned in the discussion after Conjecture 1.2
+above, the object of study is the k = 1 case of the autocorrelation functions (sometimes called shifted mo-
+ments, see [17, p. 1]). In our case, the shifts have their origins in (1.2). It will become clearer as we proceed
+that (1.6) will lead to integrals of a ratios of several products of shifted zeta functions (see (6.3) and (7.4)
+below) such as G(z1,··· ,z 2k) in Conjecture 1.2 and [22, equation (5.12)].
+Although computing the moment integrals of the zeta function twisted by a general Dirichlet series
+associated to the molliﬁcation is the main and most diﬃcult target of our research (see Theorem 7.1), we can
+give an immediate application. An interim optimization of the parameters at our disposal yieldsκ> 0.417293
+and κ∗≥ 0.407511 where κ∗ denotes the proportion of simple zeros on the critical line.
+Theorem 1.2. More than ﬁve-twelfths of the non-trivial zeros of the Riemann zeta-function are on the
+critical line.
+One of the most satisfactory features of the result we present for the twisted second moment is the amount
+of adjustability that it exhibits. Therefore we expect computational enthusiasts to push the boundaries of the
+terms we present. Moreover, if or when the length of present or future molliﬁers is increased, number theorists
+should be able to use the theoretical and numerical procedures we present in this article to reﬁne κ or other
+arithmetical quantities of interest (see e.g. [25] for applications of autocorrelation ratios in pair correlations,
+distributions, discrete moments, connections to random matrix theory, etc). We end our discussion with
+some problems for future work in §9.
+Remark 1.1. Shortly before we presented this paper, Wu [70] uploaded his result on the twisted mean square
+and the critical zeros of Dirichlet L-functions. Our conclusions partially overlap and the methodologies are
+independent of each other. Our bounds for the critical zeros (of Riemann or Dirichlet) are in agreement.
+2. Preliminary tools
+We shall devote this section to presenting the tools we will need throughout the paper. Let ν(n) denote
+the number of distinct primes of n. We use n = p1p2··· pr to denote the prime factorization of a general
+square-free number. If n is a square-free number, then ν(n) =r and µ(n) = (−1)r.
+The generalized von Mangoldt function Λk(n) is deﬁned as (see [39, 59] and [13] for applications to zeros)
+Λk(n) := (µ⋆ logk)(n)
+for k∈ N. If k = 1, then we have Λ 1(n) = Λ(n), the usual von Mangoldt function. For Re( s) > 1, its
+Dirichlet series is given by
+ζ(k)
+ζ (s) = (−1)k
+∞∑
+n=1
+Λk(n)
+ns ,
+
+===== PAGE 10 =====
+
+10 KYLE PRATT, NICOLAS ROBLES, ALEXANDRU ZAHARESCU, AND DIRK ZEINDLER
+where ζ(k) stands for the kthe derivative of ζ(s) with respect to s. We also note the following identity
+d
+ds
+(ζ(k)
+ζ (s)
+)
+= ζ(k+1)
+ζ (s)− ζ′
+ζ (s)ζ(k)
+ζ (s).
+Arithmetically, this means that
+Λk+1(n) = Λk(n) log(n) + (Λ⋆ Λk)(n).(2.1)
+Moreover, for Re(s)> 1, we can write
+dm−1
+dsm−1
+ζ′
+ζ (s) = (−1)m
+∞∑
+n=1
+Λ(n) logm−1n
+ns = (−1)m
+∞∑
+n=1
+ΛL,m−1(n)
+ns
+where
+ΛL,k(n) := Λ(n) logkn =
+{
+𝓁k logk+1p, if n =p𝓁 for some prime p and positive integer 𝓁,
+0, otherwise.
+The advantage of working with Λ L,k instead of Λk(n) is that ΛL,k will be zero when n is not a power of
+a prime, whereas this is certainly not the case for the much more combinatorially complicated arithmetical
+function Λk(n).
+We denote byP(k) the representation of unordered partitions of k into positive parts [45, p. 14], i.e.
+P(k) :=
+{
+(ϑ1,ϑ 2,··· ,ϑk) such that ϑ1,ϑ 2,··· ,ϑk≥ 0 and
+k∑
+i=1
+iϑi =k
+}
+,
+andC(k,n ) stands for the ordered partitions of the integer k inton nonnegative parts, i.e.
+C(k,n ) :=
+{
+(λ1,λ 2,··· ,λn) such that λ1,λ 2,··· ,λn≥ 0 and
+n∑
+i=1
+λi =k
+}
+.
+Moreover, we also deﬁne
+C∗(n,m ) :=
+{
+(k1,k 2,··· ,km) such that k1,k 2,··· ,km > 0 and
+m∑
+i=1
+ki =n
+}
+.
+The multinomial coeﬃcients are given by
+( n
+k1,k 2,··· ,km
+)
+= n!
+k1!k2!··· km!.
+An identity involving Λk that can occasionally become useful is
+Λk(n) =
+∑
+(i1,···,ir)∈C∗(k,r)
+( k
+i1,··· ,ir
+)
+logi1p1··· logirpr(2.2)
+for square-free n as described earlier.
+The polynomials Bn,k(x1,x 2,··· ,xn−k+1) denote the partial or incomplete exponential Bell polynomials,
+whereasBn(x1,x 2,··· ,xn) will denote the nth complete exponential Bell polynomials. A good introduction
+to these combinatorial objects can be found for instance in [14, § 3.3]. For the sake of completeness, and
+given the role they will play shortly, we shall deﬁne and illustrate their main properties.
+The Bell polynomials are deﬁned by
+Bn,k(x1,x 2,··· ,xn−k+1) :=
+∑
+⋇(k,n)
+n!
+j1!j2!··· jn−k+1!
+(x1
+1!
+)j1(x2
+2!
+)j2
+···
+( xn−k+1
+(n−k + 1)!
+)jn−k+1
+.
+where ⋇(k,n ) indicates that the sum is over {j1,··· ,jn−k+1}∈C (k,n )∩P (k). The complete exponential
+Bell polynomials are given by the sum
+Bn(x1,x 2,··· ,xn) =
+n∑
+k=1
+Bn,k(x1,x 2,··· ,xn−k+1).
+
+===== PAGE 11 =====
+
+MORE THAN FIVE-TWELFTHS OF THE ZEROS OF ζ ARE ON THE CRITICAL LINE 11
+The partial Bell polynomials can be computed eﬃciently by a recursion relation
+Bn,k =
+n−k+1∑
+i=1
+(n− 1
+i− 1
+)
+xiBn−i,k−i,
+where B0,0 = 1, Bn,0 = 0 for all n≥ 1 and B0,k = 0 for k≥ 1. When it comes to the complete Bell
+polynomials we have the recursion
+Bn+1(x1,x 2,··· ,xn+1) =
+n∑
+i=0
+(n
+i
+)
+Bn−i(x1,x 2,··· ,xn−i)xi+1,
+with B0 = 1. Lastly, the generating function is given by
+exp
+( ∞∑
+i=0
+xi
+i!ti
+)
+=
+∞∑
+n=0
+1
+n!Bn(x1,x 2,··· ,xn)tn.
+The exponential Bell polynomial encodes the information related to the ways a set can be partitioned,
+and given a Bell polynomial Bn we can separate the partial Bell polynomial Bn,k by collecting all those
+monomials with degree k. We shall now illustrate some examples.
+Let us for instance take B3,k(x1,x 2,x 3). We immediately ﬁnd
+B3,1(x1,x 2,x 3) =x3, B 3,2(x1,x 2,x 3) = 3x1x2, and B3,3(x1,x 2,x 3) =x3
+1,
+which we can represent pictorially as in [28, 69]:
+Figure 2.1. B3,3(x1,x 2,x 3) (extreme left), B3,2(x1,x 2,x 3) (3 middle diagrams) and
+B3,1(x1,x 2,x 3) (extreme right).
+In this case, x1 indicates the presence of a block with a single element, x2 the presence of a block with
+two elements andx3 a block with three elements. Since the coeﬃcient of B3,2 is 3, we obtain three diﬀerent
+ways of partitioning a block of 3 elements into 2 blocks, one block of 1 element and one block of 2 elements.
+We also note that B3(1, 1, 1) =B3 = 5, which is the Bell number associated to 3. This represents the total
+number of diagrams.
+Similarly, if we now consider B4,k(x1,x 2,x 3,x 4) for k = 1, 2, 3, 4 then we obtain
+B4,1(x1,x 2,x 3,x 4) =x4, B 4,2(x1,x 2,x 3,x 4) = 3x2
+2 + 4x1x3,
+B4,3(x1,x 2,x 3,x 4) = 6x2
+1x2, B 4,4(x1,x 2,x 3,x 4) =x4
+1.
+Figure 2.2. B4,k(x1,x 2,x 3,x 4) for k = 1, 2, 3, 4.
+
+===== PAGE 12 =====
+
+12 KYLE PRATT, NICOLAS ROBLES, ALEXANDRU ZAHARESCU, AND DIRK ZEINDLER
+We remark again that the total number of diagrams, or Bell number, is B4 = 15. With these tools in
+mind, let us now proceed.
+3. Constructing a mollifier
+In this section we will present the ideas behind the construction of a molliﬁer and we will capitalize on
+how they have been constructed up until now before we explain the approach we have taken.
+3.1. The zeroth order case d = 0. In this case, going back to (1.5) with d = 0, one simply has
+M(s, 0) = 1
+ζ(s) =
+∞∑
+n=1
+µ(n)
+ns
+from which we get a molliﬁer of the form
+ψd=0(s) =
+∑
+n≤y0
+µ(n)nσ0−1/2
+ns P0
+(log(y0/n)
+logy0
+)
+.(3.1)
+When we impose that the cutoﬀs on the polynomial P0, i.e. P0 be such that P0(0) = 0 and P0(1) = 1, we
+then see that this is in agreement with (1.3).
+3.2. The linear case d = 1. Now we have to deal with the ﬁrst derivative. This is the case contemplated
+by Feng [33]. Going back to (1.5) we formally get
+M(s, 1) = 1
+ζ(s) + ζ′(s)
+logT
+= 1
+ζ(s)
+(
+1 + 1
+logT
+ζ′
+ζ (s)
+)−1
+=
+∞∑
+k=0
+(−1)k 1
+logkT
+1
+ζ(s)
+(ζ′
+ζ (s)
+)k
+=
+∞∑
+k=0
+1
+logkT
+1
+ζ(s)
+(
+− ζ′
+ζ (s)
+)k
+=
+∞∑
+k=0
+1
+logkT
+∞∑
+n=1
+(µ⋆ Λ⋆k)(n)
+ns ,(3.2)
+by the use of the binomial theorem for fractional powers
+(1 +x)−1 =
+∞∑
+k=0
+(−1
+k
+)
+xk =
+∞∑
+k=0
+(−1)kxk.
+Here Λ⋆k stands for convolving Λ with itself exactly k times. Suppose that n is square-free, then
+(µ⋆ Λ⋆k)(n) =
+∑
+d0d1···dk=n
+µ(d0)Λ(d1)··· Λ(dk) =
+∑
+cyclic
+Λ(p1)··· Λ(pk)µ(pk+1··· pr)
+= (−1)r+k ∑
+p1···pk|n
+logp1··· logpk = (−1)kµ(n)
+∑
+p1···pk|n
+logp1··· logpk.(3.3)
+According to Feng’s conjecture ([33, p. 516]), if n had had a square divisor, then the coeﬃcients coming
+from (3.2) would contribute a lower order term to the mean value integrals
+∫
+|Vψ (σ0 +it)|2dt. This means
+that we could simply ignore the n’s for which µ2(n) = 0. However, since Feng’s claim is not substantiated,
+we must operate by supposing that n is square-free. Otherwise, the computation of the convolution (3.3)
+becomes very diﬃcult. Therefore, by keeping n square-free, we get
+M(s, 1) =
+∞∑
+k=0
+1
+logkT
+∞∑
+n=1
+1
+ns (−1)kµ(n)
+∑
+p1···pk
+logp1··· logpk =
+∞∑
+n=1
+µ(n)
+ns
+∞∑
+k=0
+(−1)k ∑
+p1···pk|n
+logp1··· logpk
+logkT
+.
+Here the pi denote distinct primes. This suggests a molliﬁer of the form
+ψd=1(s) =
+∑
+n≤y1
+µ(n)nσ0−1/2
+ns
+K∑
+k=2
+∑
+p1···pk|n
+logp1··· logpk
+logky1
+P1,k
+(log(y1/n)
+logy1
+)
+.(3.4)
+The conditions on P1,k are that P1,k(0) = 0 for all k. We note the following remarks.
+(1) Feng has set the convention of starting at K = 2.
+
+===== PAGE 13 =====
+
+MORE THAN FIVE-TWELFTHS OF THE ZEROS OF ζ ARE ON THE CRITICAL LINE 13
+(2) Here K = 2, 3,··· is an integer of our choice coming from the truncation of the inﬁnite sum over k.
+The higher K is, the more precise the molliﬁcation. However, this is achieved at the cost of adding
+extra terms that require taxing computational resources.
+(3) The sign alternator (−1)k has been absorbed into the polyonimals P1,k, i.e.
+(−1)kP1,k(x) = (−1)k
+degP∑
+i=0
+a1,k,ixi =
+deg ˜P∑
+i=0
+˜a1,k,ixi = ˜P1,k(x)
+where {
+˜a1,k,i = (−1)ka1,k,i,
+degP = deg ˜P.
+(4) Alternatively, we could have written
+ψd=1(s) =
+∑
+n≤y1
+µ2(n)nσ0−1/2
+ns
+K∑
+k=2
+1
+logky1
+(µ⋆ Λ⋆k)(n)P1,k
+(log(y1/n)
+logy1
+)
+,
+since µ2(n) will discriminate square-free numbers.
+3.3. The quadratic case d = 2. Before proceeding with the general case, it will be instructive to see how
+adding the second derivative increases substantially the complexity of the combinatorics associated to this
+problem. The degree d is small enough that a trick that changes ζ′′/ζ into derivatives ofζ′/ζ is suﬃcient to
+obtain a useful molliﬁer. The eﬀect of working with d = 2 is that the expression M in (1.5) becomes
+M(s, 2) = 1
+ζ(s) + ζ′(s)
+logT + ζ′′(s)
+logT
+= 1
+ζ(s)
+(
+1 + 1
+logT
+ζ′
+ζ (s) + 1
+log2T
+ζ′′
+ζ (s)
+)−1
+= 1
+ζ(s)
+∞∑
+k=0
+(−1)k
+( 1
+logT
+ζ′
+ζ (s) + 1
+log2T
+ζ′′
+ζ (s)
+)k
+= 1
+ζ(s)
+∞∑
+k=0
+(−1)k
+k∑
+j=0
+(k
+j
+) 1
+(logT )k+j
+(ζ′′
+ζ (s)
+)j(ζ′
+ζ (s)
+)k−j
+.
+Now we use k = 1 in (2.1) to replace ζ′′/ζ by an expression involving only ζ′/ζ and hence
+M(s, 2) = 1
+ζ(s)
+∞∑
+k=0
+(−1)k
+k∑
+j=0
+(k
+j
+) 1
+(logT )k+j
+( d
+ds
+ζ′
+ζ (s) +
+(ζ′
+ζ (s)
+)2)j(ζ′
+ζ (s)
+)k−j
+=
+∞∑
+k=0
+k∑
+j=0
+(k
+j
+) 1
+(logT )k+j
+j∑
+i=0
+(−1)k+k−j+2i
+(j
+i
+) ∞∑
+n=1
+(µ⋆ Λ⋆k−j+2i⋆ Λ⋆j−i
+L,1 )(n)
+ns .
+Let us then look at the Dirichlet convolution a little bit more closely. For n square-free, in a general power
+setting, we have
+(µ⋆ Λ⋆a⋆ Λ⋆b
+L,1)(n) =
+∑
+d0d1···dada+1···da+b=n
+µ(d0)Λ(d1)··· Λ(da)ΛL,1(da+1)··· ΛL,1(da+b)
+=
+∑
+cyclic
+µ(d0)Λ(p1)··· Λ(pa)ΛL,1(pa+1)··· ΛL,1(pa+b)
+=µ(pa+b+1··· pr)
+∑
+p1···pa+b|n
+log(p1)··· log(pa) log2(pa+1)··· log2(pa+b)
+= (−1)a+bµ(n)
+∑
+p1···pa+b|n
+log(p1)··· log(pa) log2(pa+1)··· log2(pa+b).
+
+===== PAGE 14 =====
+
+14 KYLE PRATT, NICOLAS ROBLES, ALEXANDRU ZAHARESCU, AND DIRK ZEINDLER
+Usinga =k−j +2i as well asb =j−i and inserting this into the above expression forM(s, 2) while keeping
+n square-free yields
+M(s, 2) =
+∞∑
+k=0
+k∑
+j=0
+(−1)j
+(k
+j
+) 1
+(logT )k+j
+j∑
+i=0
+(j
+i
+) ∞∑
+n=1
+(−1)k+iµ(n)
+ns
+×
+∑
+p1···pk+i|n
+logp1··· pk−j+2i log2pk−j+2i−1··· log2pk+i
+=
+∞∑
+n=1
+µ(n)
+ns
+∞∑
+k=0
+k∑
+j=0
+j∑
+i=0
+(−1)i+j+k
+(k
+j
+)(j
+i
+)
+×
+∑
+p1···pk+i|n
+logp1··· pk−j+2i log2pk−j+2i−1··· log2pk+i
+(logT )k+j .
+Hence, the molliﬁer should be of the form
+ψd=2(s) =
+∑
+n≤y2
+µ(n)nσ0−1/2
+ns
+K∑
+k=0
+k∑
+j=0
+j∑
+i=0
+(−1)i+j+k
+(k
+j
+)(j
+i
+)
+×
+∑
+p1···pk+i|n
+logp1··· pk−j+2i log2pk−j+2i−1··· log2pk+i
+(logT )k+j P2,k,j,i
+(log(y2/n)
+logy2
+)
+.
+Again K = 2, 3,··· is a positive integer of our choice. We see that there are as many polynomials are there
+are primes (in this case k +i polynomials). We could also have written
+ψd=2(s) =
+∑
+n≤y2
+µ2(n)nσ0−1/2
+ns
+K∑
+k=1
+k∑
+j=0
+j∑
+i=0
+(−1)j
+(k
+j
+)(j
+i
+)(µ⋆ Λ⋆k−j+2i⋆ Λ⋆j−i
+L,1 )(n)
+(logy2)k+j P2,k+i
+(log(y2/n)
+logy2
+)
+,
+since the term µ2(n) will discriminate square-free numbers.
+3.4. The general d≥ 0 case. We now relax the condition on n and forgo the computation of the Dirichlet
+convolution. The advantage of operating this way will become clearer in the proof of our main result, see
+§5.1 and§6. The general d≥ 0 molliﬁer we want to use is given by
+M(d,s ) = 1
+ζ(s) + ζ′(s)
+logT + ζ′′(s)
+log2T +··· + ζ(d)(s)
+logdT
+= 1
+ζ(s)
+(
+1 +ζ′
+ζ (s) + 1
+log2T
+ζ′′
+ζ (s) +··· + 1
+logdT
+ζ(d)
+ζ (s)
+)−1
+= 1
+ζ(s)
+∞∑
+k=0
+(−1)k
+(ζ′
+ζ (s) + 1
+log2T
+ζ′′
+ζ (s) +··· + 1
+logdT
+ζ(d)
+ζ (s)
+)k
+= 1
+ζ(s)
+∞∑
+k=0
+(−1)k ∑
+k1+k2+···+kd=k
+( k
+k1,k 2,··· ,kd
+) d∏
+m=1
+( 1
+logmT
+ζ(m)
+ζ (s)
+)km
+=
+∞∑
+k=0
+(−1)k ∑
+k1+k2+···+kd=k
+( k
+k1,k 2,··· ,kd
+) 1
+(logT )
+∑d
+m=1mkm
+1
+ζ(s)
+d∏
+m=1
+(ζ(m)
+ζ (s)
+)km
+.
+We now use the convolution
+1
+ζ(s)
+d∏
+m=1
+(ζ(m)
+ζ (s)
+)km
+= (−1)1×k1+2×k2+···+d×kd
+∞∑
+n=1
+(µ⋆ Λ⋆k1⋆ Λ⋆k2
+2 ⋆··· ⋆ Λ⋆kd
+d )(n)
+ns(3.5)
+so that we end up with
+M(d,s ) =
+∞∑
+k=0
+(−1)k ∑
+k1+k2+···+kd=k
+( k
+k1,k 2,··· ,kd
+)(−1)1×k1+2×k2+···+d×kd
+(logT )
+∑d
+m=1mkm
+
+===== PAGE 15 =====
+
+MORE THAN FIVE-TWELFTHS OF THE ZEROS OF ζ ARE ON THE CRITICAL LINE 15
+×
+∞∑
+n=1
+(µ⋆ Λ⋆k1⋆ Λ⋆k2
+2 ⋆··· ⋆ Λ⋆kd
+d )(n)
+ns .
+This suggests a molliﬁer of the form
+ψd(s) =
+K∑
+𝓁=0
+(−1)𝓁 ∑
+𝓁1+𝓁2+···+𝓁d=𝓁
+(−1)1×𝓁1+2×𝓁2+···+d×𝓁d
+( 𝓁
+𝓁1,𝓁 2,··· ,𝓁d
+)
+×
+∑
+n≤yd
+nσ0−1/2
+ns
+(µ⋆ Λ⋆𝓁1⋆ Λ⋆𝓁2
+2 ⋆··· ⋆ Λ⋆𝓁d
+d )(n)
+(logyd)
+∑d
+r=1r𝓁r
+Pd,𝓁
+(log(yd/n)
+logyd
+)
+.(3.6)
+Here the polynomials P are such that if d = 0, then P0,𝓁≡ P0 with P0(0) = 0 as well as P0(1) = 1; and if
+d> 0, then Pd,𝓁(0) = 0 for all 𝓁≥ 0.
+As a check we observe thatµ⋆ Λ⋆0 =µ and also whend = 0 theK-truncation disappears (i.e. K =𝓁 = 0)
+so we are left with the molliﬁer
+ψ0(s) =
+∑
+n≤y0
+µ(n)nσ0−1/2
+ns P0
+(log(y0/n)
+logy0
+)
+,(3.7)
+which is the Conrey-Levinson molliﬁer with y0 =Tθ0 where θ0 = 4
+7−ε. We shall take yd =N =Tθd with
+θd = 4
+7−ε for all d≥ 0. As we shall explain in §6, there is no need to be concerned with µ2(n).
+3.5. Combinatorial interpretation of the molliﬁer. Before proceeding with the mean value integral it
+is worth pausing to see from a diﬀerent angle the structure of these molliﬁers. Another way to interpret the
+combinatorial meaning behind this molliﬁcation is to apply Fa` a di Bruno’s formula [14]
+dn
+dxnf(g(x)) =
+n∑
+k=1
+f(k)(g(x))Bn,k(g′(x),g′′(x),··· ,g (n−k+1)(x)),
+to exp(logζ(s)) so that we can write the following representation
+ζ(m)
+ζ (s) =
+m∑
+k=1
+Bm,k
+(ζ′
+ζ (s), d
+ds
+ζ′
+ζ (s),··· , dm−k
+dsm−k
+ζ′
+ζ (s)
+)
+=Bm
+(ζ′
+ζ (s), d
+ds
+ζ′
+ζ (s),··· , dm−1
+dsm−1
+ζ′
+ζ (s)
+)
+Therefore, picking up fromM(d,s ) we arrive at
+M(d,s ) = 1
+ζ(s)
+∞∑
+k=0
+(−1)k ∑
+k1+k2+···+kd=k
+( k
+k1,k 2,··· ,kd
+) d∏
+m=1
+1
+(logT )mkm
+(ζ(m)
+ζ (s)
+)km
+= 1
+ζ(s)
+∞∑
+k=0
+(−1)k ∑
+k1+k2+···+kd=k
+( k
+k1,k 2,··· ,kd
+)
+×
+d∏
+m=1
+1
+(logT )mkm
+(
+Bm
+(ζ′
+ζ (s), d
+ds
+ζ′
+ζ (s),··· , dm−1
+dsm−1
+ζ′
+ζ (s)
+))km
+.
+Let us set
+xi = di
+dsi
+ζ′
+ζ (s) for i = 0, 1, 2,··· ,m.
+We place ourselves in a general setting of two Bell polynomials and three powers
+∑
+m1+m2=3
+( 3∑
+k1=0
+B1,k1(x1)
+)m1( 3∑
+k2=0
+B2,k2(x1,x 2)
+)m2
+=x3
+1 +x4
+1 +x5
+1 +x6
+1
++x2
+1x2 + 2x3
+1x2 + 3x4
+1x2 +x1x2
+2 + 3x2
+1x2
+2 +x3
+2.(3.8)
+
+===== PAGE 16 =====
+
+16 KYLE PRATT, NICOLAS ROBLES, ALEXANDRU ZAHARESCU, AND DIRK ZEINDLER
+This allows us to now plot the exact representations of the Bell diagrams. We ﬁrst note that
+∑
+m1+m2=3
+( 3∑
+k1=0
+B1,k1(1)
+)m1( 3∑
+k2=0
+B2,k2(1, 1)
+)m2
+= 15,
+which means that we will have 15 diagrams.
+Figure 3.1. Pictorial representation of (3.8).
+As additional examples we will now increase the precision of the truncation by keeping two Bell polynomials
+but taking more powers. That means
+∑
+m1+m2=4
+( 3∑
+k1=0
+B1,k1(x1)
+)m1( 3∑
+k2=0
+B2,k2(x1,x 2)
+)m2
+=x4
+1 +x5
+1 +x6
+1 +x7
+1 +x8
+1 +x3
+1x2 + 2x4
+1x2 + 3x5
+1x2
++ 4x6
+1x2 +x2
+1x2
+2 + 3x3
+1x2
+2 + 6x4
+1x2
+2 +x1x3
+2
++ 4x1x3
+2 +x4
+2.(3.9)
+This produces
+∑
+m1+m2=4
+( 3∑
+k1=0
+B1,k1(1)
+)m1( 3∑
+k2=0
+B2,k2(1, 1)
+)m2
+= 31
+diagrams:
+Figure 3.2. Pictorial representation of (3.9).
+
+===== PAGE 17 =====
+
+MORE THAN FIVE-TWELFTHS OF THE ZEROS OF ζ ARE ON THE CRITICAL LINE 17
+Furthermore, if we instead increase the number of polynomials and keep three powers, then
+∑
+m1+m2+m3=3
+( 3∑
+k1=0
+B1,k1(x1)
+)m1( 3∑
+k2=0
+B2,k2(x1,x 2)
+)m2( 3∑
+k3=0
+B3,k3(x1,x 2,x 3)
+)m3
+=x3
+1 +x4
+1 + 2x5
+1 + 2x6
+1 + 2x7
+1 +x8
+1 +x9
+1 +x2
+1x2 + 5x3
+1x2 + 7x4
+1x2 + 11x5
+1x2 + 7x6
+1x2
++ 9x7
+1x2 +x1x2
+2 + 6x2
+1x2
+2 + 16x3
+1x2
+2 + 15x4
+1x2
+2 + 27x5
+1x2
+2 +x3
+2 + 3x1x3
+2 + 9x2
+1x3
+2
++ 27x3
+1x3
+2 +x2
+1x3 +x3
+1x3 + 3x4
+1x3 + 2x5
+1x3 + 3x6
+1x3 +x1x2x3
++ 8x2
+1x2x3 + 8x3
+1x2x3 + 18x4
+1x2x3 +x2
+2x3 + 6x1x2
+2x3 + 27x2
+1x2
+2x3
++x1x2
+3 +x2
+1x2
+3 + 3x3
+1x2
+3 +x2x2
+3 + 9x1x2x2
+3 +x3
+3.(3.10)
+Setting x1 =x2 =x3 = 1 in (3.10) yields 250 diagrams
+Figure 3.3. Pictorial representation of (3.10).
+
+===== PAGE 18 =====
+
+18 KYLE PRATT, NICOLAS ROBLES, ALEXANDRU ZAHARESCU, AND DIRK ZEINDLER
+4. Main result for the moment integral
+Recall that L := logT and let
+ψ1(s) :=
+∑
+n≤N
+an
+ns, ψ 2(s) :=
+∑
+n≤N
+bn
+ns, with an,bn≪ε nε, N :=Tθ and θ< 1.
+Moreover, we shall denote the twisted second moment by
+I(α,β ) :=
+∫ ∞
+−∞
+ζ( 1
+2 +α +it)ζ( 1
+2 +β−it)ψ1ψ2( 1
+2 +it)Φ
+(t
+T
+)
+dt,
+where Φ is a smooth function supported on [1 , 2] and satisfying Φ (j)(x)≪j logjT . The starting point is the
+following improvement of [58, Theorem 1.2].
+Theorem 4.1. Letα,β ≪L−1. Then one has
+I(α,β ) =
+∑∑
+1≤d,e≤N
+adbe
+[d,e ]
+(d,e )α+β
+dαeβ
+∫ ∞
+−∞
+(
+ζ(1 +α +β) +ζ(1−α−β)
+( 2πde
+t(d,e )2
+)α+β)
+Φ
+(t
+T
+)
+dt +O(E),
+withE given by the following choices
+E =
+
+
+
+T
+3
+20N
+33
+20 +N
+1
+2T
+1
+2 +ε, if an≪nε,
+Tε(N
+11
+6 +N
+11
+12T
+1
+2 ), if an =µ2(n)(µ⋆ Λ⋆k1
+1 ⋆ Λ⋆k2
+2 ⋆··· ⋆ Λ⋆kD
+D )(n),
+Tε(N
+7
+4 +N
+7
+8T
+1
+2 ), if an = (µ⋆ Λ⋆k1
+1 ⋆ Λ⋆k2
+2 ⋆··· ⋆ Λ⋆kD
+D )(n).
+We note that the second case was only proved for D = 1 in [58], but the proof below shows that it can
+be adapted to D≥ 0. This second case will no longer be needed as we can ‘improve’ it to the third case
+by relaxing the condition that discriminates square-free numbers 2. However, we leave it in the theorem for
+chronological accuracy or in case it becomes useful in another moment integral problem of this type. The
+ﬁrst case (when α = β = 0) is due to Bettin, Chandee and Radziwi l l [4]. As mentioned earlier, the key to
+that result is the recent improvement of bilinear Kloosterman sums of Duke, Friedlander and Iwaniec [29]
+due to Bettin and Chandee [3].
+Eﬀectively, this means that if one considers a Dirichlet polynomial whose coeﬃcients are given by the
+third case, then one can ‘push’ the size of θ from 6
+11 to 4
+7. Also note that if D = 0 in the third case, then one
+recoversµ⋆ Λ⋆0 =µ, that is the Conrey-Levinson molliﬁer. This means that the Feng molliﬁer [33, 48, 60]
+and all its generalizations can be taken to have size θd = 4
+7−ε for D≥ 0 just as in Conrey’s molliﬁer.
+Proof of Theorem 4.1. We need to adapt the proof appearing in [58, §3.2.5] since only the error terms are
+aﬀected and the main terms remain exactly the same.
+We assume familiarity with [58] and its notation. Following through the proof of [58, §3.2.5], we must
+bound the quantity
+∑
+0<|a|<A
+νx,y(a)
+∑∑
+(n1,n2)=1
+adn1FN1(dn1)r(n2)
+nα+w
+1
+e
+(
+−an1
+n2
+)
+,
+where|r(n)|≪ nϵ is some function. Recall that ni≍ Ni/d and n1≤ N. The coeﬃcients am are a ﬁnite
+linear combination of functions, so using linearity and the deﬁnition of the am we see it suﬃces to bound
+∑
+0<|a|<A
+νx,y(a)
+∑∑
+(n1,n2)=1
+n
+σ0− 1
+2
+1 (µ⋆ Λ⋆𝓁1⋆··· ⋆ Λ⋆𝓁d
+d )(dn1)FN1(dn1)P
+(
+log(N/dn1)
+logN
+)
+r(n2)
+nα+w
+1
+e
+(
+−an1
+n2
+)
+.
+Using the binomial theorem and the additivity of the logarithm we may separate d andn1 from one another
+in the polynomial P . We see it suﬃces to bound
+∑
+0<|a|<A
+νx,y(a)
+∑∑
+(n1,n2)=1
+n
+σ0− 1
+2
+1 (logn1)j(µ⋆ Λ⋆𝓁1⋆··· ⋆ Λ⋆𝓁d
+d )(dn1)FN1(dn1)r(n2)
+nα+w
+1
+e
+(
+−an1
+n2
+)
+,
+where j is some ﬁxed, nonnegative integer.
+2It is not exactly an improvement but rather a diﬀerent problem altogether.
+
+===== PAGE 19 =====
+
+MORE THAN FIVE-TWELFTHS OF THE ZEROS OF ζ ARE ON THE CRITICAL LINE 19
+We are now faced with the task of separating d and n1 in the arithmetic factor
+(µ⋆ Λ⋆𝓁1⋆··· ⋆ Λ⋆𝓁d
+d )(dn1)FN1(dn1).
+In the second case of the theorem we had a µ2 factor in our coeﬃcients which meant we could automatically
+taked and n1 to be coprime to one another, and this simpliﬁed things somewhat.
+We factorn1→hn1, where h|d∞ and n1 is coprime to d. The quantity to bound therefore becomes
+∑
+h|d∞
+h≪N1/d
+hσ0− 1
+2
+hα+w
+∑
+0<|a|<A
+νx,y(a)
+×
+∑∑
+n1≤N
+n1≍N1/dh
+N2≍N2/d
+(n1,dn2)=1
+(n2,h)=1
+n
+σ0− 1
+2
+1 (loghn1)j(µ⋆ Λ⋆𝓁1⋆··· ⋆ Λ⋆𝓁d
+d )(dhn1)FN1(dhn1)r(n2)
+nα+w
+1
+e
+(
+−ahn1
+n2
+)
+.
+By the additivity of the logarithm and the binomial theorem we may separate h and n1 in (loghn1)j, so
+that we must bound
+∑
+h|d∞
+h≪N1/d
+hσ0− 1
+2 (logh)k
+hα+w
+∑
+0<|a|<A
+νx,y(a)
+×
+∑∑
+n1≤N
+n1≍N1/dh
+N2≍N2/d
+(n1,dn2)=1
+(n2,h)=1
+n
+σ0− 1
+2
+1 (logn1)j(µ⋆ Λ⋆𝓁1⋆··· ⋆ Λ⋆𝓁d
+d )(dhn1)FN1(dhn1)r(n2)
+nα+w
+1
+e
+(
+−ahn1
+n2
+)
+for some nonnegative integers j and k (j is not necessarily the same as before).
+We claim that for all k≥ 1 we may write Λk(n) as a ﬁnite linear combination of functions of the form
+(logj1 Λ⋆ logj2 Λ⋆··· ⋆ logjR Λ)(n),
+where theji are nonnegative integers. We proceed by induction. The base case k = 1 is trivial. Now assume
+it is true for k. The recurrence formula gives
+Λk+1(n) = log(n)Λk(n) + (Λ⋆ Λk)(n).
+By the induction hypothesis Λk is a linear combination of functions of the desired form, and therefore so is
+Λ⋆ Λk. To see that log(n)Λk(n) is also of the desired form, it suﬃces to apply the induction hypothesis and
+note that for any arithmetic functions f1,··· ,fJ we have
+log(n)(f1⋆··· ⋆fJ)(n) =
+J∑
+i=1
+(g1,i⋆··· ⋆gJ,i)(n),
+where gj,i =fj if i⁄=j, and gi,i =fi log.
+The quantity to bound is therefore a ﬁnite linear combination of quantities of the form
+∑
+h|d∞
+h≪N1/d
+hσ0− 1
+2 (logh)k
+hα+w
+∑
+0<|a|<A
+νx,y(a)
+×
+∑∑
+n1≤N
+n1≍N1/dh
+N2≍N2/d
+(n1,dn2)=1
+(n2,h)=1
+n
+σ0− 1
+2
+1 (logn1)j(µ⋆ logj1 Λ⋆··· ⋆ logjR Λ)(dhn1)FN1(dhn1)r(n2)
+nα+w
+1
+e
+(
+−ahn1
+n2
+)
+.
+
+===== PAGE 20 =====
+
+20 KYLE PRATT, NICOLAS ROBLES, ALEXANDRU ZAHARESCU, AND DIRK ZEINDLER
+We now give the argument that shows how to separate n1 from dh in expressions of this form. We have
+(µ⋆ logj1 Λ⋆··· ⋆ logjR Λ)(dhn1) =
+∑
+···
+∑
+m𝓁1···𝓁R=dhn1
+µ(m) logj1(𝓁1)Λ(𝓁1)··· logjR(𝓁R)Λ(𝓁R).
+Since log(𝓁i)jiΛ(𝓁i) is supported on prime powers and n1 is coprime to dh, we see that ( µ⋆ logj1 Λ⋆··· ⋆
+logjR Λ)(dhn1) is the sum of a bounded number of functions of the form
+∑
+···
+∑
+m𝓁1···𝓁R=dhn1
+𝓁i1,···,𝓁is|dh
+𝓁is+1,···,𝓁iR|n1
+µ(m) logj1(𝓁1)Λ(𝓁1)··· logjR(𝓁R)Λ(𝓁R).
+We writem =m′m′′, where m′|dh and m′′|n1 to see that this last quantity is
+(µ⋆ logji1 Λ⋆··· ⋆ logjis Λ)(dh)(µ⋆ logjis+1 Λ⋆··· ⋆ logjiR Λ)(n1),
+which gives the desired separation. It follows that the quantity in question is a ﬁnite linear combination of
+sums of the form
+∑
+h|d∞
+h≪N1/d
+G(h)
+hα+w
+∑
+0<|a|<A
+ν(a)
+×
+∑∑
+n1≤N
+n1≍N1/dh
+n2≍N2/d
+(n1,dn2)=1
+(n2,h)=1
+n
+σ0− 1
+2
+1 (logn1)j(µ⋆ logj1 Λ⋆··· ⋆ logjR Λ)(n1)FN1(dhn1)r(n2)
+nα+w
+1
+e
+(
+−ahn1
+n2
+)
+,
+whereG is some function satisfying|G(h)|≪ τ(dh)O(1)(logN)O(1), and the ji are nonnegative integers that
+are not necessarily the same as before.
+Now that we have separated the variables, we perform a combinatorial decomposition on the function
+(µ⋆ logj1 Λ⋆··· ⋆ logjR Λ)(n1) to reduce to Type I and Type II exponential sums. For n≤x and K≥ 1 a
+ﬁxed integer, the multinomial theorem and Heath-Brown’s identity [36] imply
+(logn)JΛ(n) =
+K∑
+j=1
+(−1)j−1
+(K
+j
+) ∑
+···
+∑
+k1+···+k2j=J
+( J
+k1,...,k 2j
+)
+×
+∑
+···
+∑
+m1···m2j=n
+mi≤x1/K, i≤j
+µ(m1)··· µ(mj) log(m2j)
+2j∏
+t=1
+logkt(mt).
+Performing the usual dyadic decompositions and combinatorial maneuvers (see [58] for more details), we see
+that the sum in question is a linear combination of O((N1/dh)ϵ) sums of the form
+∑
+0<|a|<A
+ν(a)
+∑
+v≍V
+(v,h)=1
+r(v)
+∑
+u≤N
+u≍U
+(u,dv)=1
+uσ0− 1
+2 (logu)k
+uα+w (α⋆β )(u)FN1(dhu) e
+(
+−ahu
+v
+)
+,
+where α and β are arithmetic functions supported on dyadic intervals, U ≍ N1/dh,V ≍ N2/d. We have
+dropped the h summation, temporarily, but we shall return to it later. In the Type I case we have that
+α is supported on integers n≤ W and β = logS for some nonnegative integer S. Here W ≪ (N1/dh)1/3
+is a parameter at our disposal. In the Type II case we have that α and β are supported on integers in
+[W, (N1/dh)W−1].
+Let us consider ﬁrst the case of a Type I sum. Using the binomial theorem to separate variables, we have
+∑
+0<|a|<A
+ν(a)
+∑
+v≍V
+(v,h)=1
+r(v)
+∑
+e≍E
+(e,dv)=1
+α(e)
+∑
+f≤N/e
+f≍U/E
+(f,dv)=1
+fσ0− 1
+2 (logf)j
+fα+w FN1(dhef) e
+(
+−ahef
+v
+)
+,
+
+===== PAGE 21 =====
+
+MORE THAN FIVE-TWELFTHS OF THE ZEROS OF ζ ARE ON THE CRITICAL LINE 21
+whereα is not necessarily the same as before, and E≪W . We use summation by parts and the usual Weil
+bound for incomplete Kloosterman sums [68] to obtain that the sum on f is
+≪ (1 +|w|)TϵV 1/2(a,v )
+(
+1 + U
+EV
+)
+.
+Summing over all our variables and recalling E≪W , we obtain a Type I bound of
+(1 +|w|)Tϵ(AV 3/2W +AUV 1/2).
+We now turn to a Type II sum. We use the binomial theorem to separate variables in log j and the Mellin
+transform to separate variables in FN1. We obtain
+∑
+0<|a|<A
+ν(a)
+∑
+v≍V
+(v,h)=1
+r(v)
+∑∑
+e≍E
+f≍F
+(ef,v)=1
+α(e)β(f) e
+(
+−ahef
+v
+)
+,
+where EF ≍ U and W≪ E≪ F≪ UW−1. By a result of Deshouillers and Iwaniec ([27, Lemma 1], the
+variableh corresponds to ρ and bounds on h arise from that lemma) we obtain
+≪ E−1/2A1/2UV +h1/4AUV 1/2 +h1/4E1/4A3/4UV 1/2 +h1/4E−1/4AU3/4V
++h1/2E1/4AU3/4V 3/4 +h1/4E1/4A1/2U3/4V +h1/2E3/4A1/2U3/4V 3/4.
+We now setW =U1/4 to balance the Type I and Type II bounds. We use the bound E−a≪W−a =U−a/4
+for a< 0, and Eb≪Ub/2 for b> 0, and note that in each term the power of h is smaller than the power of
+U. The variable U is of size N1/dh, thus when U appears there is a hidden h. The signiﬁcance of the power
+ofh being less than the power of U is that we need some positive power of h in the denominator at the end
+of the day so we can sum over h and not have it blow up. Since
+∑
+h|d∞
+G(h)
+hϵ ≪ (dT )ϵ,
+we ﬁnd that, in the notation of [58], we have
+A∗
+M,N1,N2≪ Tϵ
+d (T 1/2N7/8 +N7/4).
+Thus, taking N =T
+4
+7−ε is permissible. □
+5. The square-free terms and Feng’s conjecture
+We pause at this point to explain what happened to Feng’s conjecture (unproved claim, rather) that only
+square-free terms contribute to the integral appearing in Theorem 4.1. It is not entirely clear how Feng
+guessed that numbers containing a square would ‘contribute a lower order term for the mean value integral’,
+[33, p. 516].
+It is plausible that the approach Feng followed, which is a mixture of elementary inductions juxtaposed
+with Mertens’s formulas ∑
+p≤y
+logp
+p = logy +O(1) and ∑
+p|n
+logp
+p ≪ log logn, only works reasonably well if
+n is square-free. Feng re-writes the molliﬁer by removing the Dirichlet convolutions and explicitly writing
+their result. He uses
+(µ⋆ Λ⋆k)(n) = (−1)kµ(n)
+∑
+p1p2···pk|n
+logp1 logp2··· logpk,(5.1)
+which is only valid when n is square-free. Attempting to obtain a general formula for ( µ⋆ Λ⋆k)(n) when
+n contains a square runs into combinatorial diﬃculties (see also [51, p. 309] for a similar commentary on
+mollifying 1
+ζ′ instead of ζ′
+ζ ). In fact, a key result of this is Lemma 9. This lemma explicitly demands that we
+deal only with square-free numbers when multiplying molliﬁers. Again, adapting such a result for arbitrary
+n would not be easy.
+For𝓁 = 1, (µ ⋆Λ⋆𝓁) =µ2(n)(µ ⋆Λ⋆𝓁),the plots below illustrate the diﬀerences between the unrestricted
+convolution (µ⋆ Λ⋆𝓁) and the ‘square-free convolution’ µ2(n)(µ⋆ Λ⋆𝓁) for 𝓁 = 2 and 𝓁 = 3, respectively.
+
+===== PAGE 22 =====
+
+22 KYLE PRATT, NICOLAS ROBLES, ALEXANDRU ZAHARESCU, AND DIRK ZEINDLER
+200 400 600 800 1000
+-6
+-4
+-2
+2
+4
+6
+200 400 600 800 1000
+-1.0
+-0.5
+0.5
+1.0
+Figure 5.1. Left: Plots of µ2(n)(µ⋆2⋆ logn)(n) in yellow, (µ⋆2⋆ logn)(n) in blue. Right :
+Plot of (µ⋆2⋆ logn)(n)−µ2(n)(µ⋆2⋆ logn)(n), for 1≤n≤ 1000.
+Next
+200 400 600 800 1000
+-30
+-20
+-10
+0
+10
+20
+30
+200 400 600 800 1000
+-10
+-5
+0
+5
+10
+Figure 5.2. Left: Plots of µ2(n)(µ⋆3⋆log⋆2n)(n) in yellow, (µ⋆3⋆log⋆2n)(n) in blue. Right:
+Plot of (µ⋆3⋆ log⋆2n)(n)−µ2(n)(µ⋆3⋆ log⋆2n)(n), for 1≤n≤ 1000.
+Moreover
+200 400 600 800 1000
+-100
+-50
+50
+200 400 600 800 1000
+-40
+-20
+0
+20
+40
+Figure 5.3. Left: Plots of µ2(n)(µ⋆4⋆log⋆3n)(n) in yellow, (µ⋆4⋆log⋆3n)(n) in blue. Right:
+Plot of (µ⋆4⋆ log⋆3n)(n)−µ2(n)(µ⋆4⋆ log⋆3n)(n), for 1≤n≤ 1000.
+The plots below illustrate the diﬀerence between the partial sums of the restricted and unrestricted
+convolutions.
+
+===== PAGE 23 =====
+
+MORE THAN FIVE-TWELFTHS OF THE ZEROS OF ζ ARE ON THE CRITICAL LINE 23
+200 400 600 800 1000
+200
+400
+600
+800
+1000
+1200
+200 400 600 800 1000
+-60
+-40
+-20
+0
+Figure 5.4. Left: Plots of ∑
+n≤x(µ⋆ Λ⋆2)(n) in blue and∑
+n≤xµ2(n)(µ⋆ Λ⋆2)(n) in orange
+for 1≤x≤ 1000. Right : Plots of ∑
+n≤x(µ⋆ Λ⋆2)(n)−∑
+n≤xµ2(n)(µ⋆ Λ⋆2)(n) for 1≤x≤
+1000
+200 400 600 800 1000
+500
+1000
+1500
+2000
+2500
+3000
+3500
+0 200 400 600 800 1000
+100
+200
+300
+400
+500
+600
+700
+Figure 5.5. Left: Plots of ∑
+n≤x(µ⋆ Λ⋆3)(n) in blue and∑
+n≤xµ2(n)(µ⋆ Λ⋆3)(n) in orange
+for 1≤x≤ 1000. Right : Plots of ∑
+n≤x(µ⋆ Λ⋆3)(n)−∑
+n≤xµ2(n)(µ⋆ Λ⋆3)(n) for 1≤x≤
+1000
+5.1. Proof of Feng’s conjecture. We examine here only the case K = 2; the case of higher values of K
+works out similarly. We examine the main term
+TˆΦ(0)ζ(1 +α +β)
+∑∑
+d,e≤N
+adae
+[d,e ]
+(d,e )α+β
+dαeβ ,(5.2)
+where ad is our molliﬁer coeﬃcient for K = 2, i.e.
+an = (µ⋆ Λ⋆2)(n)P
+(logN/n
+logN
+)
+,
+where P is a polynomial satisfying P (0) = 0. We write ad =bd +cd, where bd is the Feng coeﬃcient
+bd =µ(d)P
+(logN/d
+logN
+)∑∑
+q1⁄=q2|d
+(logq1)(logq2)
+(logN)2
+and cd is the diﬀerence of ad and bd. The reader may like to prove, as an exercise, that cd vanishes unless d
+is of the form d =pkm, where p is a prime, k≥ 2, and m is a squarefree integer coprime to p, in which case
+one has
+cd = 1
+(logN)2 (logp)2µ(m).
+
+===== PAGE 24 =====
+
+24 KYLE PRATT, NICOLAS ROBLES, ALEXANDRU ZAHARESCU, AND DIRK ZEINDLER
+Putting ad =bd +cd into (5.2) we get the “Feng” part, which has bd and be, and then three other terms all
+of which involve at least one of cd or ce. We expect that these latter three terms are negligible.
+We investigate the crossed case with bd and ce. Write h(d) for the sum over q1 and q2. Using what we
+know about ce, and ignoring the factor of TˆΦ(0), we see we may write this expression as
+ζ(1 +α +β)
+(logN)2
+∑
+d≤N
+µ(d)h(d)P
+(
+logN/d
+logN
+)
+dα
+∑∑
+pkm≤N
+k≥2
+(m,p)=1
+(logp)2µ(m)(d,pkm)α+β
+[d,pkm]pkβmβ P
+(logN/pkm
+logN
+)
+.
+Now we put the sum on pk as the outermost sum. There are two cases to consider: p| d and p ∤ d. We
+consider here only the “generic” case p ∤d. We therefore have
+ζ(1 +α +β)
+(logN)2
+∑
+pk≤N
+k≥2
+(logp)2
+p(1+β)k
+∑
+d≤N
+(d,p)=1
+µ(d)h(d)P
+(
+logN/d
+logN
+)
+dα
+∑
+m≤N/pk
+(m,p)=1
+µ(m)(d,m )α+β
+[d,m ]mβ P
+(logN/pkm
+logN
+)
+.
+We now change variablesm→em, where e|d and (m,d ) = 1, and arrive at
+ζ(1 +α +β)
+(logN)2
+∑
+pk≤N
+k≥2
+(logp)2
+p(1+β)k
+∑
+d≤N
+(d,p)=1
+µ(d)h(d)P
+(
+logN/d
+logN
+)
+d1+α
+×
+∑
+e|d
+e≤N/pk
+µ(e)eα ∑
+m≤N/epk
+(m,dp)=1
+µ(m)
+m1+βP
+(logN/epkm
+logN
+)
+.
+Next, we interchange the order of summation so the e-sum is the next sum after the pk-sum. We change
+variablesd→ed to get
+ζ(1 +α +β)
+(logN)2
+∑
+pk≤N
+k≥2
+(logp)2
+p(1+β)k
+∑
+e≤N/pk
+(e,p)=1
+µ2(e)
+e
+∑
+d≤N/e
+(d,ep)=1
+µ(d)h(de)P
+(
+logN/de
+logN
+)
+d1+α
+×
+∑
+m≤N/epk
+(m,dep)=1
+µ(m)
+m1+βP
+(logN/epkm
+logN
+)
+.
+To make the d- and m-sums independent from one another, we apply M¨ obius inversion to remove the
+condition that m and d are coprime. Interchanging orders of summation and changing variables yet again,
+we obtain
+ζ(1 +α +β)
+(logN)2
+∑
+pk≤N
+k≥2
+(logp)2
+p(1+β)k
+∑
+e≤N/pk
+(e,p)=1
+µ2(e)
+e
+∑
+r≤N/epk
+(r,ep)=1
+µ2(r)
+p2+α+β
+∑
+d≤N/er
+(d,epr)=1
+µ(d)h(der)P
+(
+logN/der
+logN
+)
+d1+α
+×
+∑
+m≤N/epkr
+(m,epr)=1
+µ(m)
+m1+βP
+(logN/empkr
+logN
+)
+.
+Observe that for coprime squarefree integers m,n we have
+h(mn) =h(m) +h(n) + 2(logm)(logn)
+(logN)2 .
+By two applications of this rule and exploiting the additivity of the logarithm we ﬁnd
+h(der) =h(d) +h(e) +h(r) + 2(logd)(loge)
+(logN)2 + 2(logd)(logr)
+(logN)2 + 2(loge)(logr)
+(logN)2 .
+Thus, we have six diﬀerent cases to consider.
+
+===== PAGE 25 =====
+
+MORE THAN FIVE-TWELFTHS OF THE ZEROS OF ζ ARE ON THE CRITICAL LINE 25
+5.1.1. The m-sum. Before we consider these cases, let us estimate the sum over m, which does not depend
+on which of the six cases we are in. For technical reasons we do not proceed immediately to writing the sum
+as an integral. Instead, it is advantageous to use M¨ obius inversion to deal with the coprimality condition
+(m,er ) = 1. Our sum becomes
+∑
+f|er
+f≤N/epkr
+µ2(f)
+f1+β
+∑
+m≤N/efpkr
+(m,fp)=1
+µ(m)
+m1+βP
+(logN/efmpkr
+logN
+)
+.
+It turns out to be helpful to have this averaging over f at our disposal.
+We write
+P (x) =
+∑
+1≤j≤deg(P)
+cjxj,
+so our sum becomes
+∑
+f|er
+f≤N/epkr
+µ2(f)
+f1+β
+∑
+1≤j≤deg(P)
+cj
+(logN)j
+∑
+m≤N/efpkr
+(m,fp)=1
+µ(m)
+m1+β log(N/efmpkr)j.
+Writing the logarithm as an integral and interchanging the order of summation and integration, we have
+1
+(logN)j
+∑
+m≤N/efpkr
+(m,fp)=1
+µ(m)
+m1+β log(N/efmpkr)j = j!
+(logN)j
+1
+2πi
+∫
+(c)
+( N
+efpkr
+)s( ∑
+(m,fp)=1
+µ(m)
+m1+s+β
+) ds
+sj+1.
+Here c = 1
+logN , say. By an Euler product computation we see that the integrand (apart from the s−j−1) is
+equal to
+( N
+efpkr
+)s(
+1− 1
+p1+s+β
+)−1∏
+q|f
+(
+1− 1
+q1+s+β
+)−1 1
+ζ(1 +s +β).
+We use the classical zero-free region for ζ and some bounds for ζ−1 close to the 1-line, see [66, Ch. III]. We
+can show that the m-sum is equal to
+O
+( τ(f)
+logN exp
+(
+−c
+√
+log(N/efpkr)
+))
+plus
+j!
+(logN)j ress=0
+(( N
+efpkr
+)s(
+1− 1
+p1+s+β
+)−1∏
+q|f
+(
+1− 1
+q1+s+β
+)−1 1
+ζ(1 +s +β)
+1
+sj+1
+)
+.
+We calculate this residue by taking j derivatives ins and then letting s→ 0. One can bound this term by
+O
+((log log 3f)OP (1)
+logN
+)
+;
+here we have used the fact that
+∑
+p|n
+(logp)k
+p ≪k (log log 3n)k.
+It is also important that |β|≍ 1
+logN . We therefore obtain a total bound of
+∑
+m≤N/efpkr
+(m,fp)=1
+µ(m)
+m1+βP
+(logN/efmpkr
+logN
+)
+≪ τ(f)(log log 3f)O(1)
+logN ,
+and upon summing over f we obtain
+∑
+m≤N/epkr
+(m,epr)=1
+µ(m)
+m1+βP
+(logN/empkr
+logN
+)
+≪ (log log 3er)O(1)
+logN .
+
+===== PAGE 26 =====
+
+26 KYLE PRATT, NICOLAS ROBLES, ALEXANDRU ZAHARESCU, AND DIRK ZEINDLER
+5.1.2. The d-sums. Let us now turn to the various cases for the sum over d. Due to symmetry, there are
+actually only two d-sums we need to consider:
+∑
+d≤N/er
+(d,epr)=1
+µ(d)h(d)P
+(
+logN/der
+logN
+)
+d1+α
+as well as
+1
+logN
+∑
+d≤N/er
+(d,epr)=1
+µ(d)(logd)P
+(
+logN/der
+logN
+)
+d1+α .
+We start with the sum involving h(d). Opening up h(d) and interchanging the order of summation, we
+have
+1
+(logN)2
+∑∑
+q1q2≤N/er
+q1⁄=q2
+(q1q2,epr)=1
+(logq1)(logq2)
+q1+α
+1 q1+α
+2
+∑
+d≤N/erq1q2
+(d,epq1q2r)=1
+µ(d)P
+(
+logN/derq1q2
+logN
+)
+d1+α .
+This inner sum ond is almost identical to them-sum we estimated earlier. We similarly use M¨ obius inversion
+to handle the condition (d,er ) = 1, and then write the sum as an integral and use the zero-free region for ζ.
+We ﬁnd the sum on d is
+≪ (log log 3er)O(1)
+logN ,
+and we obtain the sum bound upon summing over q1 and q2.
+Let us now turn to the other type of d-sum. We wish to estimate
+1
+logN
+∑
+d≤N/er
+(d,epr)=1
+µ(d)(logd)P
+(
+logN/der
+logN
+)
+d1+α .
+Since d is squarefree, we may write
+log(d) =
+∑
+p|d
+log p,
+where p is a prime (we have used all the Roman letters traditionally associated with primes, so we have to
+branch out a bit). We interchange the order of the p- and d-summations, and then argue as before. The
+bounds we obtain are of a similar shape.
+5.1.3. Clean-up. It is now a routine matter to sum up all of the bounds, obtaining a ﬁnal bound of
+TˆΦ(0)ζ(1 +α +β)
+∑∑
+d,e≤N
+bdce
+[d,e ]
+(d,e )α+β
+dαeβ ≪T (log logN)O(1)
+(logN)2 .
+Observe that we could have aﬀorded to lose one more logarithm, and we still would have had an acceptable
+bound. The reason for this is that since we are looking at Feng’s K = 2, we get to divide by two logarithms
+in order to make the coeﬃcients bounded. However, the diﬀerence between Feng’s K = 2 and our K = 2
+is like a Conrey molliﬁer on average, which already has bounded coeﬃcients. This accounts for our bound
+being one logarithm smaller than we actually need it to be.
+
+===== PAGE 27 =====
+
+MORE THAN FIVE-TWELFTHS OF THE ZEROS OF ζ ARE ON THE CRITICAL LINE 27
+6. Specializing the coefficients
+Let us now take
+an = anPa
+(log(N/n)
+logN
+)
+and bn = bnPb
+(log(N/n)
+logN
+)
+,
+whereP(·) is a polynomial associated to the coeﬃcients a orb satisfying some conditions such as P(·)(0) = 0
+and P(·)(1) = 1. For the moment an and bn will be arbitrary coeﬃcients that will later have certain
+parameters that will also aﬀect P(·). By the Mellin representation of P we may write
+Pa
+(log(N/n)
+logN
+)
+=
+degPa∑
+i=0
+pa,i
+logiN
+(log(N/n))i =
+∑
+i
+pa,ii!
+logiN
+1
+2πi
+∫
+(1)
+(N
+n
+)s ds
+si+1,
+as well as
+Pb
+(log(N/n)
+logN
+)
+=
+degPb∑
+j=0
+pb,j
+logjN
+(log(N/n))j =
+∑
+j
+pb,jj!
+logjN
+1
+2πi
+∫
+(1)
+(N
+n
+)u du
+uj+1.
+We go back to the right-hand side of Theorem 4.1 and write
+I(α,β ) =
+∑∑
+i,j
+pa,ipb,ji!j!
+logi+jN
+1
+(2πi)2
+∫
+(1)
+∫
+(1)
+∑∑
+1≤d,e≤∞
+adbe
+[d,e ]
+(d,e )α+β
+dα+seβ+u
+×
+∫ ∞
+−∞
+(
+ζ(1 +α +β) +ζ(1−α−β)
+( 2πde
+t(d,e )2
+)α+β)
+Φ
+(t
+T
+)
+dtNs+u ds
+si+1
+du
+uj+1 +O(E).(6.1)
+The double sum over d and e, which we call S, requires a closer look. We will handle the ﬁrst term of the
+t-integral, that is the term involving ζ(1 +α +β), as the second term will have the symmetries α→−β and
+β→−α as well as a premultiplication by T−α−β.
+We have reached the point where we need some structure ona and b that we may exploit to our advantage.
+6.1. The linear case d = 1. To get a taste of things to come, let us ﬁrst assume that
+an := (µ⋆ Λ⋆𝓁1
+1 )(n)
+log𝓁1N
+= (µ⋆ (µ⋆ log)⋆··· ⋆ (µ⋆ log))(n)
+log𝓁1N
+= (µ⋆𝓁1+1⋆ log⋆𝓁1)(n)
+log𝓁1N
+,
+as well as
+bn := (µ⋆ Λ⋆𝓁2
+1 )(n)
+log𝓁2N
+= (µ⋆ (µ⋆ log)⋆··· ⋆ (µ⋆ log))(n)
+log𝓁2N
+= (µ⋆𝓁2+1⋆ log⋆𝓁2)(n)
+log𝓁2N
+.
+This means that (leaving out the denominator (log N)𝓁1+𝓁2 for I1)
+S1 : =
+∑∑
+1≤d,e≤∞
+adbe
+[d,e ]
+(d,e )α+β
+dα+seβ+u =
+∑∑
+d,e
+(µ⋆𝓁1+1⋆ log⋆𝓁1)(d)(µ⋆𝓁2+1⋆ log⋆𝓁2)(e)
+[d,e ]
+(d,e )α+β
+dα+seβ+u.
+Writed =d0d1··· d𝓁1 and e =e0e1··· e𝓁2 so that
+S1 =
+∑∑
+d0,d1,···,d𝓁1
+e0,e1,···,e𝓁2
+µ⋆𝓁1+1(d0) logd1··· logd𝓁1µ⋆𝓁2+1(e0) loge1··· loge𝓁2
+[d0d1··· d𝓁1,e 0e1··· e𝓁2]
+(d0d1··· d𝓁1,e 0e1··· e𝓁2)α+β
+(d0d1··· d𝓁1)α+s(e0e1··· e𝓁2)β+u.
+We now employ the incredibly useful formula
+logx =− ∂
+∂γ
+1
+xγ
+⏐⏐⏐⏐
+γ=0
+=− 1
+2πi
+∮ 1
+xz
+dz
+z2,(6.2)
+where the contour of integration is a small circle around the origin. This leads us to
+S1 = (−1)𝓁1+𝓁2 1
+(2πi)𝓁1
+∮
+···
+∮ 1
+(2πi)𝓁2
+∮
+···
+∮ ∑∑
+d0,d1,d2,···,d𝓁1
+e0,e1,e2,···,e𝓁2
+µ⋆𝓁1+1(d0)µ⋆𝓁2+1(e0)
+[d0d1d2··· d𝓁1,e 0e1e2··· e𝓁2]
+× (d0d1d2··· d𝓁1,e 0e1e2··· e𝓁2)α+β
+dα+s
+0 dα+s+z1
+1 dα+s+z2
+2 ··· d
+α+s+z𝓁1
+𝓁1
+eβ+u
+0 eβ+u+w1
+1 eβ+u+w2
+2 ··· e
+β+u+w𝓁2
+𝓁2
+dz1
+z2
+1
+··· dz𝓁1
+z2
+𝓁1
+dw1
+w2
+1
+··· dw𝓁2
+w2
+𝓁2
+.
+
+===== PAGE 28 =====
+
+28 KYLE PRATT, NICOLAS ROBLES, ALEXANDRU ZAHARESCU, AND DIRK ZEINDLER
+The advantage of this formula is that in the inner sum ofS1 we now have products of multiplicative functions
+(the µ’s) and completely multiplicative functions (the dx’s and the ey’s) instead of log’s and Λ’s. The next
+step is to write this as an Euler product so that
+S1 = (−1)𝓁1
+(2πi)𝓁1
+∮
+···
+∮ (−1)𝓁2
+(2πi)𝓁2
+∮
+···
+∮ ∏
+p
+∑∑
+pd0,pd1,pd2,···,p
+d𝓁1
+pe0,pe1,pe2,···,p
+e𝓁2
+µ⋆𝓁1+1(pd0)µ⋆𝓁2+1(pe0)
+[pd0pd1pd2··· pd𝓁1,pe0pe1pe2··· pe𝓁2 ]
+× (pd0pd1pd2··· pd𝓁1,pe0pe1pe2··· pe𝓁2 )α+β
+(pd0)α+s(pd1)α+s+z1··· (pd𝓁1 )α+s+z𝓁1 (pe0)β+u(pe1)β+u+w1··· (pe𝓁2 )β+u+w𝓁2
+dz1
+z2
+1
+··· dz𝓁1
+z2
+𝓁1
+dw1
+w2
+1
+··· dw𝓁2
+w2
+𝓁2
+.
+To recover the constant ( p0) and linear terms ( p1), we restrict the choices of the d’s and the e’s to the
+following nine possibilities. To enumerate them in a simple and fast manner, we shall denote the choices by
+the labels{d0,di,e 0,ej} where i = 1, 2,··· ,𝓁 1 and j = 1, 2,··· ,𝓁 2.
+(1) For{0, 0, 0, 0} we get 1 in the Euler product. This is our constant term.
+(2) The case {1, 0, 0, 0} yields
+µ⋆𝓁1+1(p)
+[p, 1]
+(p, 1)α+β
+pα+s =− 𝓁1 + 1
+p1+α+s.
+(3) The case {1, 0, 1, 0} yields
+µ⋆𝓁1+1(p)µ⋆𝓁2+1(p)
+[p,p ]
+(p,p )α+β
+pα+spβ+u = (𝓁1 + 1)(𝓁2 + 1)
+p1+s+u .
+(4) The case {1, 0, 0, 1} yields
+µ⋆𝓁1+1(p)
+[p,p ]
+(p,p )α+β
+pα+spβ+u+wj
+=− 𝓁1 + 1
+p1+s+u+wj
+.
+(5) The case {0, 1, 0, 0} yields
+1
+[p, 1]
+(p, 1)α+β
+pα+s+zi
+= 1
+p1+α+s+zi
+.
+(6) By symmetry with {1, 0, 0, 1}, the case{0, 1, 1, 0} yields
+− 𝓁2 + 1
+p1+s+u+zi
+.
+(7) The case {0, 1, 0, 1} is the most diﬃcult as it mixes the variables z and w. We have
+1
+[p,p ]
+(p,p )α+β
+pα+s+zipβ+u+wj
+= 1
+p1+s+u+zi+wj
+.
+(8) By symmetry with {1, 0, 0, 0}, the case{0, 0, 1, 0} yields
+− 𝓁2 + 1
+p1+β+u.
+(9) Lastly, the case {0, 0, 0, 1} is symmetric with respect to {0, 1, 0, 0} and hence we get
+1
+p1+β+u+wj
+.
+If we now insert these terms into S1, then we arrive at
+S1 = (−1)𝓁1
+(2πi)𝓁1
+∮
+···
+∮ (−1)𝓁2
+(2πi)𝓁2
+∮
+···
+∮ ∏
+p
+(
+1− 𝓁1 + 1
+p1+α+s + (𝓁1 + 1)(𝓁2 + 1)
+p1+s+u −
+𝓁2∑
+j=1
+𝓁1 + 1
+p1+s+u+wj
++
+𝓁1∑
+i=1
+1
+p1+α+s+zi
+−
+𝓁1∑
+i=1
+𝓁2 + 1
+p1+s+u+zi
++
+𝓁1∑
+i=1
+𝓁2∑
+j=1
+1
+p1+s+u+zi+wj
+− 𝓁2 + 1
+p1+β+u +
+𝓁2∑
+j=1
+1
+p1+β+u+wj
+)
+×Aα,β(z1,··· ,z𝓁1,w 1,··· ,w𝓁2;s,u )dz1
+z2
+1
+··· dz𝓁1
+z2
+𝓁1
+dw1
+w2
+1
+··· dw𝓁2
+w2
+𝓁2
+.
+
+===== PAGE 29 =====
+
+MORE THAN FIVE-TWELFTHS OF THE ZEROS OF ζ ARE ON THE CRITICAL LINE 29
+We can write this more concisely with an autocorrelation-type ratio of zeta functions [18, 22, 25] as
+S1 = (−1)𝓁1(−1)𝓁2 1
+(2πi)𝓁1
+∮
+···
+∮ 1
+(2πi)𝓁2
+∮
+···
+∮ ζ(1 +s +u)(𝓁1+1)(𝓁2+1)
+ζ(1 +α +s)𝓁1+1ζ(1 +β +u)𝓁2+1
+×
+(∏𝓁1
+i=1ζ(1 +α +s +zi))(∏𝓁2
+j=1ζ(1 +β +u +wj))(∏𝓁1
+i=1
+∏𝓁2
+j=1ζ(1 +s +u +zi +wj))
+(∏𝓁2
+j=1ζ(1 +s +u +wj)𝓁1+1)(∏𝓁1
+i=1ζ(1 +s +u +zi)𝓁2+1)
+×Aα,β(z1,··· ,z𝓁1,w 1,··· ,w𝓁2;s,u )dz1
+z2
+1
+··· dz𝓁1
+z2
+𝓁1
+dw1
+w2
+1
+··· dw𝓁2
+w2
+𝓁2
+.(6.3)
+Here A =Aα,β(z1,··· ,z𝓁1,w 1,··· ,w𝓁2;s,u ) is an arithmetical factor that is absolutely convergent in some
+half-plane containing the origin. Examination of the nine cases above indicates that it is given by
+A =
+∏
+p
+(
+1− 1
+p1+s+u
+)(𝓁1+1)(𝓁2+1)(
+1− 1
+p1+α+s
+)−(𝓁1+1)(
+1− 1
+p1+β+u
+)−(𝓁2+1)
+×
+𝓁1∏
+i=1
+𝓁2∏
+j=1
+(
+1− 1
+p1+s+u+zi+wj
+) 𝓁2∏
+j=1
+(
+1− 1
+p1+s+u+wj
+)−(𝓁1+1) 𝓁1∏
+i=1
+(
+1− 1
+p1+s+u+zi
+)−(𝓁2+1)
+×
+𝓁1∏
+i=1
+(
+1− 1
+p1+α+s+zi
+) 𝓁2∏
+j=1
+(
+1− 1
+p1+β+u+wj
+){
+1− 𝓁1 + 1
+p1+α+s + (𝓁1 + 1)(𝓁2 + 1)
+p1+s+u −
+𝓁2∑
+j=1
+𝓁1 + 1
+p1+s+u+wj
++
+𝓁1∑
+i=1
+1
+p1+α+s+zi
+−
+𝓁1∑
+i=1
+𝓁2 + 1
+p1+s+u+zi
++
+𝓁1∑
+i=1
+𝓁2∑
+j=1
+1
+p1+s+u+zi+wj
+− 𝓁2 + 1
+p1+β+u +
+𝓁2∑
+j=1
+1
+p1+β+u+wj
+}
+.
+We may now go back to I1, the ﬁrst half of I, and tidy up a bit so that
+I1(α,β ) =TˆΦ(0)
+∑∑
+i,j
+p𝓁1,ip𝓁2,ji!j!
+logi+jN
+1
+(2πi)2
+∫
+(1)
+∫
+(1)
+(−1)𝓁1(−1)𝓁2
+log𝓁1+𝓁2N
+× 1
+(2πi)𝓁1
+∮
+···
+∮ 1
+(2πi)𝓁2
+∮
+···
+∮ ζ(1 +s +u)(𝓁1+1)(𝓁2+1)ζ(1 +α +β)
+ζ(1 +α +s)𝓁1+1ζ(1 +β +u)𝓁2+1
+×
+( 𝓁1∏
+i=1
+𝓁2∏
+j=1
+ζ(1 +s +u +zi +wj)
+)( 𝓁1∏
+i=1
+ζ(1 +α +s +zi)
+ζ(1 +s +u +zi)𝓁2+1
+)( 𝓁2∏
+j=1
+ζ(1 +β +u +wj)
+ζ(1 +s +u +wj)𝓁1+1
+)
+×Aα,β(z1,··· ,z𝓁1,w 1,··· ,w𝓁2;s,u )dz1
+z2
+1
+··· dz𝓁1
+z2
+𝓁1
+dw1
+w2
+1
+··· dw𝓁2
+w2
+𝓁2
+Ns+u ds
+si+1
+du
+uj+1 +O(E3),(6.4)
+whereE3 is the third case of Theorem 4.1 and where
+Aα,β(z, w;s,u ) =
+∏
+p
+{ (1− 1
+p1+s+u )(𝓁1+1)(𝓁2+1)
+(1− 1
+p1+α+s )(𝓁1+1)(1− 1
+p1+β+u )(𝓁2+1)
+( 𝓁1∏
+i=1
+𝓁2∏
+j=1
+(
+1− 1
+p1+s+u+zi+wj
+))
+×
+( 𝓁1∏
+i=1
+1− 1
+p1+α+s+zi
+(1− 1
+p1+s+u+zi )(𝓁2+1)
+)( 𝓁2∏
+j=1
+1− 1
+p1+β+u+wj
+(1− 1
+p1+s+u+wj )(𝓁1+1)
+)
+×
+[
+1− 𝓁1 + 1
+p1+α+s− 𝓁2 + 1
+p1+β+u + (𝓁1 + 1)(𝓁2 + 1)
+p1+s+u −
+𝓁2∑
+j=1
+𝓁1 + 1
+p1+s+u+wj
+−
+𝓁1∑
+i=1
+𝓁2 + 1
+p1+s+u+zi
++
+𝓁1∑
+i=1
+1
+p1+α+s+zi
++
+𝓁2∑
+j=1
+1
+p1+β+u+wj
++
+𝓁1∑
+i=1
+𝓁2∑
+j=1
+1
+p1+s+u+zi+wj
+]}
+.(6.5)
+Let us deﬁne the integrand to be
+Mα,β(z, w;s,u ) = ζ(1 +s +u)(𝓁1+1)(𝓁2+1)ζ(1 +α +β)
+ζ(1 +α +s)𝓁1+1ζ(1 +β +u)𝓁2+1 Aα,β(z1,··· ,z𝓁1,w 1,··· ,w𝓁2;s,u )
+
+===== PAGE 30 =====
+
+30 KYLE PRATT, NICOLAS ROBLES, ALEXANDRU ZAHARESCU, AND DIRK ZEINDLER
+×
+( 𝓁1∏
+i=1
+𝓁2∏
+j=1
+ζ(1 +s +u +zi +wj)
+)( 𝓁1∏
+i=1
+ζ(1 +α +s +zi)
+ζ(1 +s +u +zi)𝓁2+1
+)( 𝓁2∏
+j=1
+ζ(1 +β +u +wj)
+ζ(1 +s +u +wj)𝓁1+1
+)
+.
+Our ﬁrst observation is that
+Mα,β(z, w;β,α ) =ζ(1 +α +β)𝓁1𝓁2Aα,β(z1,··· ,z𝓁1,w 1,··· ,w𝓁2;β,α )
+×
+( 𝓁1∏
+i=1
+𝓁2∏
+j=1
+ζ(1 +α +β +zi +wj)
+)( 𝓁1∏
+i=1
+1
+ζ(1 +α +β +zi)𝓁2
+)( 𝓁2∏
+j=1
+1
+ζ(1 +α +β +wj)𝓁1
+)
+,
+and hence at z = w = 0 we end up with
+Mα,β(0, 0;β,α ) =ζ(1 +α +β)𝓁1𝓁2Aα,β(0,··· , 0, 0,··· , 0;β,α )
+×
+( 𝓁1∏
+i=1
+𝓁2∏
+j=1
+ζ(1 +α +β)
+)( 𝓁1∏
+i=1
+1
+ζ(1 +α +β)𝓁2
+)( 𝓁2∏
+j=1
+1
+ζ(1 +α +β)𝓁1
+)
+=Aα,β(0, 0;β,α ).
+On the other hand, for the arithmetical factor A we ﬁnd that
+Aα,β(z, w;β,α ) =
+∏
+p
+{(
+1− 1
+p1+α+β
+)𝓁1𝓁2−1( 𝓁1∏
+i=1
+𝓁2∏
+j=1
+(
+1− 1
+p1+α+β+zi+wj
+))
+×
+( 𝓁1∏
+i=1
+1
+(1− 1
+p1+α+β+zi )𝓁2
+)( 𝓁2∏
+j=1
+1
+(1− 1
+p1+α+β+wj )𝓁1
+)
+×
+[
+1− 𝓁1 + 1
+p1+α+β− 𝓁2 + 1
+p1+α+β + (𝓁1 + 1)(𝓁2 + 1)
+p1+α+β −
+𝓁2∑
+j=1
+𝓁1 + 1
+p1+α+β+wj
+−
+𝓁1∑
+i=1
+𝓁2 + 1
+p1+α+β+zi
++
+𝓁1∑
+i=1
+1
+p1+α+β+zi
++
+𝓁2∑
+j=1
+1
+p1+α+β+wj
++
+𝓁1∑
+i=1
+𝓁2∑
+j=1
+1
+p1+α+β+zi+wj
+]}
+,
+and hence at z = w = 0 we arrive at
+Aα,β(0, 0;β,α ) =
+∏
+p
+{(
+1− 1
+p1+α+β
+)−1[
+1− 1
+p1+α+β
+]}
+= 1.(6.6)
+The property that Mα,β(0, 0;β,α ) =Aα,β(0, 0;β,α ) = 1 will become useful shortly.
+We will ﬁnd it expedient to examine the logarithm of A in order to turn the products into sums. One has
+logAα,β(z, w;s,u ) =
+∑
+p
+{
+log
+(1− 1
+p1+s+u )(𝓁1+1)(𝓁2+1)
+(1− 1
+p1+α+s )(𝓁1+1)(1− 1
+p1+β+u )(𝓁2+1) +
+𝓁1∑
+i=1
+𝓁2∑
+j=1
+log
+(
+1− 1
+p1+s+u+zi+wj
+)
++
+𝓁1∑
+i=1
+log
+1− 1
+p1+α+s+zi
+(1− 1
+p1+s+u+zi )(𝓁2+1) +
+𝓁2∑
+j=1
+log
+1− 1
+p1+β+u+wj
+(1− 1
+p1+s+u+wj )(𝓁1+1)
++ log
+[
+1− 𝓁1 + 1
+p1+α+s− 𝓁2 + 1
+p1+β+u + (𝓁1 + 1)(𝓁2 + 1)
+p1+s+u −
+𝓁2∑
+j=1
+𝓁1 + 1
+p1+s+u+wj
+−
+𝓁1∑
+i=1
+𝓁2 + 1
+p1+s+u+zi
++
+𝓁1∑
+i=1
+1
+p1+α+s+zi
++
+𝓁2∑
+j=1
+1
+p1+β+u+wj
++
+𝓁1∑
+i=1
+𝓁2∑
+j=1
+1
+p1+s+u+zi+wj
+]}
+.(6.7)
+For all cosmetic purposes, (6.4) combined with (6.5) and (6.6) and supplemented with (6.7) is as far as
+we can go before things take an ugly turn due to the combinatorics involved in this situation. Indeed, this
+is the price to pay for having used (6.2). However, it is customary [10, 49, 60, 71] to decouple the complex
+variabless and u and then perform the sums over the indices i and j to give cleaner terms.
+We will start with 𝓁1 =𝓁2 = 1, and 𝓁1 =𝓁2 = 2 in d = 1, then move on to d = 2.
+
+===== PAGE 31 =====
+
+MORE THAN FIVE-TWELFTHS OF THE ZEROS OF ζ ARE ON THE CRITICAL LINE 31
+6.2. Choosing the truncation 𝓁.
+6.2.1. The case 𝓁1 = 𝓁2 = 1. In order to keep things readable, we shall specialize to 𝓁1 = 𝓁2 = 1 and then
+delineate the path to general 𝓁1 and 𝓁2. In this simpler case, a direct residue calculus computation shows
+that
+1
+(2πi)2
+∮ ∮
+Mα,β(z1,w 1;s,u )dz1
+z2
+1
+dw1
+w2
+1
+= ζ(1 +s +u)ζ(1 +α +β)
+ζ(1 +α +s)ζ(1 +β +u)
+×
+[
+Aα,β(0, 0;s,u )
+{ζ′′
+ζ (1 +s +u) +ζ′
+ζ (1 +α +s)ζ′
+ζ (1 +β +u)
+− ζ′
+ζ (1 +s +u)ζ′
+ζ (1 +β +u)− ζ′
+ζ (1 +s +u)ζ′
+ζ (1 +α +s)
+}
++A(1,0)
+α,β (0, 0;s,u )
+{ζ′
+ζ (1 +β +u)− ζ′
+ζ (1 +s +u)
+}
++A(0,1)
+α,β (0, 0;s,u )
+{ζ′
+ζ (1 +α +s)− ζ′
+ζ (1 +s +u)
+}
++A(1,1)
+α,β (0, 0;s,u )
+]
+.
+Here the notation f(a,b)(x,y ) indicates the a-th derivative with respect to x and the b-th derivative with
+respect to y. Therefore
+I1(α,β ) = TˆΦ(0)
+log2N
+∑∑
+i,j
+p𝓁1,ip𝓁2,ji!j!
+(logN)i+j J1 +O(E3),
+where
+J1 = 1
+(2πi)2
+∫
+(δ)
+∫
+(δ)
+ζ(1 +s +u)ζ(1 +α +β)
+ζ(1 +α +s)ζ(1 +β +u)
+×
+[
+Aα,β(0, 0;s,u )
+{ζ′′
+ζ (1 +s +u) +ζ′
+ζ (1 +α +s)ζ′
+ζ (1 +β +u)
+− ζ′
+ζ (1 +s +u)ζ′
+ζ (1 +β +u)− ζ′
+ζ (1 +s +u)ζ′
+ζ (1 +α +s)
+}
++A(1,0)
+α,β (0, 0;s,u )
+{ζ′
+ζ (1 +β +u)− ζ′
+ζ (1 +s +u)
+}
++A(0,1)
+α,β (0, 0;s,u )
+{ζ′
+ζ (1 +α +s)− ζ′
+ζ (1 +s +u)
+}
++A(1,1)
+α,β (0, 0;s,u )
+]
+Ns+u ds
+si+1
+du
+uj+1,
+by deforming the path of integration of thes,u -integrals to Re(s) = Re(u) =δ withδ >0. Next use Dirichlet
+series to see that
+J1 = 1
+(2πi)2
+∫
+(δ)
+∫
+(δ)
+ζ(1 +α +β)
+ζ(1 +α +s)ζ(1 +β +u)
+×
+[
+Aα,β(0, 0;s,u )
+∑
+n≤N
+{(1⋆ Λ2)(n)
+n1+s+u + 1
+n1+s+u
+ζ′
+ζ (1 +α +s)ζ′
+ζ (1 +β +u)
++ (1⋆ Λ)(n)
+n1+s+u
+ζ′
+ζ (1 +β +u) + (1⋆ Λ)(n)
+n1+s+u
+ζ′
+ζ (1 +α +s)
+}
++ζ(1 +s +u)A(1,0)
+α,β (0, 0;s,u )
+{ζ′
+ζ (1 +β +u)− ζ′
+ζ (1 +s +u)
+}
++ζ(1 +s +u)A(0,1)
+α,β (0, 0;s,u )
+{ζ′
+ζ (1 +α +s)− ζ′
+ζ (1 +s +u)
+}
++A(1,1)
+α,β (0, 0;s,u )
+∑
+n≤N
+1
+n1+s+u
+]
+Ns+u ds
+si+1
+du
+uj+1.
+
+===== PAGE 32 =====
+
+32 KYLE PRATT, NICOLAS ROBLES, ALEXANDRU ZAHARESCU, AND DIRK ZEINDLER
+We have used the Dirichlet convolution
+ζ(1 +s +u)ζ′′
+ζ (1 +s +u) =
+∞∑
+n=1
+(1⋆ Λ2)(n)
+n1+s+u , Re(s +u)> 0, etc.
+Now we take δ≍ L−1 and bound integrals trivially to get J1≪ Li+j+2. We then use a Taylor expansion
+so that A(m,n)
+α,β (0, 0;s,u ) =A(m,n)
+α,β (0, 0;β,α ) +O(|s−β| +|u−α|) for m,n∈{ 0, 1}. Each factor of s and u
+saves a factor of log T and α,β ≪ 1/ logT . We know that A(0,0)
+α,β (0, 0;β,α ) = 1 and we use (6.7) to ﬁnd the
+other three values that we are missing in the expression for J1.
+By logarithmic diﬀerentiation we have that
+∂
+∂z1
+logAα,β(z1,w 1;s,u ) =
+A(1,0)
+α,β (z1,w 1;s,u )
+Aα,β(z1,w 1;s,u ) .
+We concentrate on the left-hand side and observe from (6.7) that
+∂
+∂z1
+logAα,β(z1,w 1;s,u )
+⏐⏐⏐⏐
+w1=z1=0
+=
+∑
+p
+(
+− logp
+−1 +p1+s+u
++ pα+s(−1 +p1+α+β) logp
+(−1 +p1+α+s)(pα+β−pα+s +pu(−pβ +p1+α+β+s))
+)
+.
+Consequently
+∂
+∂z1
+logAα,β(z1,w 1;β,α )
+⏐⏐⏐⏐
+w1=z1=0
+=
+∑
+p
+(
+− logp
+−1 +p1+β+α + logp
+−1 +p1+α+β
+)
+= 0.
+Therefore
+A(1,0)
+α,β (0, 0;β,α ) =Aα,β(0, 0;β,α ) ∂
+∂z1
+logAα,β(z1,w 1;β,α )
+⏐⏐⏐⏐
+w1=z1=0
+= 1× 0 = 0.
+By symmetry one also gets that A(0,1)
+α,β (0, 0;β,α ) = 0. We next move on to the derivative with respect to z1
+and with respect to w1. Unfortunately, the trick with the logarithmic derivative will not work as cleanly as
+it has hitherto. To ﬁnd A(1,1)
+α,β we make use of Fa` a di Bruno’s formula
+∂
+∂z1
+··· ∂
+∂z𝓁1
+∂
+∂z𝓁1+1
+··· ∂
+∂z𝓁2
+logAα,β(z;s,u ) =
+∑
+π∈Π(𝓁1+𝓁2)
+(−1)π−1(π− 1)!
+Aα,β(z;s,u )π
+∏
+B∈π
+∂|B|
+∏
+k∈B∂zk
+Aα,β(z;s,u ),
+(6.8)
+where we have found it useful to temporarily consolidate the notation from z = (z1,··· ,z𝓁1) and w =
+(w1,··· ,w𝓁2) to simply z = (z1,··· ,z𝓁1,z𝓁1+1,··· ,z𝓁2). Here π runs through the set Π( 𝓁1 +𝓁2) of all
+partitions of{1, 2,··· ,𝓁 1 +𝓁2} andB∈π indicates that the variable B runs through the list of all blocks of
+the partition π. For 𝓁1 =𝓁2 = 1, the left-hand side of (6.8) is given by the expression
+∂2
+∂z1∂w1
+logAα,β(z1,w 1;s,u )
+⏐⏐⏐⏐
+w1=z1=0
+=
+∑
+p
+(
+− p1+s+u log2p
+(p1+s+u− 1)2 + pα+α+s+u(p1+α+β− 1) log2p
+(pα+β−p−α+s +pβ+u +p1+α+α+s+u)2
+)
+.
+Consequently
+∂2
+∂z1∂w1
+logAα,β(z1,w 1;β,α )
+⏐⏐⏐⏐
+w1=z1=0
+=
+∑
+p
+(
+− p1+α+β log2p
+(p1+α+β− 1)2 + log2p
+p1+α+β− 1
+)
+=−
+∑
+p
+log2p
+(p1+α+β− 1)2.
+For the right-hand side of (6.8) we get
+1
+Aα,β(z1,w 1;s,u )
+∂2Aα,β(z1,w 1;s,u )
+∂z1∂w1
+− 1
+Aα,β(z1,w 1;s,u )2
+(∂Aα,β(z1,w 1;s,u )
+∂z1
+∂Aα,β(z1,w 1;s,u )
+∂w1
+)
+.
+SinceAα,β(0, 0;β,α ) = 1 and A(1,0)
+α,β (0, 0;β,α ) =A(0,1)
+α,β (0, 0;β,α ) = 0, we ﬁnally see that at w1 =z1 = 0 and
+s =β and u =α the above expression reduces to
+∂2Aα,β(z1,w 1;β,α )
+∂z1∂w1
+⏐⏐⏐⏐
+z1=w1=0
+=A(1,1)
+α,β (0, 0;β,α ).
+
+===== PAGE 33 =====
+
+MORE THAN FIVE-TWELFTHS OF THE ZEROS OF ζ ARE ON THE CRITICAL LINE 33
+Hence comparing the left- and right-hand sides of (6.8) we obtain
+A(1,1)
+α,β (0, 0;β,α ) =−
+∑
+p
+( logp
+p1+α+β− 1
+)2
+.
+Note that this is the term appearing in [25, Theorem 2.5]. We remark that for |α +β|≤ ε< 1
+4 we get
+|A(1,1)
+α,β (0, 0;β,α )|<ζ (2) and A(1,1)
+0,0 (0, 0; 0, 0)≈ 1.385603705.
+We can assemble our ﬁndings back in J1 to obtain
+J1 =ζ(1 +α +β) 1
+(2πi)2
+∫
+(δ)
+∫
+(δ)
+1
+ζ(1 +α +s)ζ(1 +β +u)
+×
+[
+Aα,β(0, 0;β,α )
+∑
+n≤N
+{(1⋆ Λ2)(n)
+n1+s+u + 1
+n1+s+u
+ζ′
+ζ (1 +α +s)ζ′
+ζ (1 +β +u)
++ (1⋆ Λ)(n)
+n1+s+u
+ζ′
+ζ (1 +β +u) + (1⋆ Λ)(n)
+n1+s+u
+ζ′
+ζ (1 +α +s)
+}
++A(1,1)
+α,β (0, 0;β,α )
+∑
+n≤N
+1
+n1+s+u
+]
+Ns+u ds
+si+1
+du
+uj+1
+=:J1,1 +J1,2 +J1,3 +J1,4 +J1,5.
+We quickly explain how to get the main terms in rough strokes before moving on the general idea. For J1,1
+we may now write
+J1,1 = 1
+α +β
+∑
+n≤N
+(1⋆ Λ2)(n)
+n L1,1L1,2,
+where
+L1,1 = 1
+2πi
+∫
+≍(L−1)
+(N
+n
+)s 1
+ζ(1 +α +s)
+ds
+si+1 and L1,2 = 1
+2πi
+∫
+≍(L−1)
+(N
+n
+)u 1
+ζ(1 +β +u)
+du
+uj+1.
+The critical thing to notice is that the variables s and u have been separated. These integrals are special
+cases of Lemma 7.1 that will proved later in the wider narrative of the general case. This will require a
+careful use of the standard zero-free region of the Riemann zeta-function and the Laurent series arounds = 0
+ζ(1 +s) = 1
+s +C0 +O(s),
+where C0 is the Euler constant. At any rate, these integrals are seen to be equal to [71, p. 546]
+J1,1 = 1
+α +β
+∑
+n≤N
+(1⋆ Λ2)(n)
+n
+1
+(2πi)2
+∮ ∮ (N
+n
+)s
+(α +s)
+(N
+n
+)u
+(β +u) ds
+si+1
+du
+uj+1 +O(Li+j),
+where the contours are small circles of radii one centered around the origin. Some re-arrangements lead to
+J1,1 = d2
+dxdyeαx+βy 1
+α +β
+∑
+n≤N
+(1⋆ Λ2)(n)
+n
+1
+(2πi)2
+∮ ∮ (N
+nex
+)s(N
+ney
+)u ds
+si+1
+du
+uj+1 +O(Li+j)
+⏐⏐⏐⏐
+x=y=0
+= 1
+i!j!
+d2
+dxdyeαx+βy 1
+α +β
+∑
+n≤N
+(1⋆ Λ2)(n)
+n
+(
+x + logN
+n
+)i(
+y + logN
+n
+)j
++O(Li+j)
+⏐⏐⏐⏐
+x=y=0
+= 1
+α +β
+1
+i!j!
+(logN)i+j
+log2N
+d2
+dxdyNαx+βy ∑
+n≤N
+(1⋆ Λ2)(n)
+n
+(
+x + log(N/n)
+logN
+)i(
+y + log(N/n)
+logN
+)j⏐⏐⏐⏐
+x=y=0
++O(Li+j),
+by the change of variables x→x logN and y→y logN. Going back to I1 we can perform the sums over i
+and j so that
+I1,1(α,β ) = TˆΦ(0)
+log4N
+1
+α +β
+d2
+dxdyNαx+βy ∑
+n≤N
+(1⋆ Λ2)(n)
+n
+
+===== PAGE 34 =====
+
+34 KYLE PRATT, NICOLAS ROBLES, ALEXANDRU ZAHARESCU, AND DIRK ZEINDLER
+×
+∑∑
+i,j
+p𝓁1,ip𝓁2,j
+(
+x + log(N/n)
+logN
+)i(
+y + log(N/n)
+logN
+)j⏐⏐⏐⏐
+x=y=0
++O(T/L)
+= TˆΦ(0)
+log4N
+1
+α +β
+d2
+dxdyNαx+βy ∑
+n≤N
+(1⋆ Λ2)(n)
+n P1
+(
+x + log(N/n)
+logN
+)
+P2
+(
+y + log(N/n)
+logN
+)⏐⏐⏐⏐
+x=y=0
++O(T/L).
+Using Euler-Maclaurin summation (see [10, Corollary 4.5], [48, Lemma 2.7] and [60, Lemma 3.6]) the above
+can be turned into
+I1,1(α,β ) = TˆΦ(0)
+logN
+1
+α +β
+d2
+dxdyNαx+βy
+∫ 1
+0
+(1−u)2P1(x +u)P2(y +u)du
+⏐⏐⏐⏐
+x=y=0
++O(T/L).
+Next, we look at J1,2. The procedure parallels the one above. We see that
+J1,2 = 1
+α +β
+∑
+n≤N
+1
+nL2,1L2,2,
+where
+L2,1 = 1
+2πi
+∫
+≍(L−1)
+(N
+n
+)s 1
+ζ(1 +α +s)
+ζ′
+ζ (1 +α +s) ds
+si+1,
+as well as
+L2,2 = 1
+2πi
+∫
+≍(L−1)
+(N
+n
+)u 1
+ζ(1 +β +u)
+ζ′
+ζ (1 +β +u) du
+uj+1.
+Now use the standard zero-free region and bounds of ζ, as well as the Laurent series around s = 0
+ζ′
+ζ (1 +s) =−1
+s +C0 +O(s),
+(more on this later in Lemma 7.1) so that
+J1,2(α,β ) = 1
+α +β
+∑
+n≤N
+1
+n
+1
+(2πi)2
+∮ ∮ (N
+n
+)s+u ds
+si+1
+du
+uj+1 +O(Li+j+1)
+= 1
+α +β
+∑
+n≤N
+1
+n
+1
+i!j!
+(
+logN
+n
+)i+j
++O(Li+j+1).
+Again we sum over i and j and obtain
+I1,2(α,β ) = TˆΦ(0)
+log2N
+1
+α +β
+∑
+n≤N
+1
+n
+∑∑
+i,j
+p𝓁1,ip𝓁2,ji!j!
+logi+jN
+1
+i!j!
+(
+logN
+n
+)i+j
++O(T/L)
+= TˆΦ(0)
+log2N
+1
+α +β
+∑
+n≤N
+1
+nP1
+(log(N/n)
+logN
+)
+P2
+(log(N/n)
+logN
+)
++O(T/L).
+Euler-Maclaurin summation turns this into
+I1,2(α,β ) = TˆΦ(0)
+logN
+1
+α +β
+∫ 1
+0
+P1(u)P2(u)du +O(T/L).
+The cases J1,3 and J1,4 are identical, up to the obvious symmetries. We do J1,3. The same strategy as
+before leads us to
+J1,3 = 1
+α +β
+∑
+n≤N
+(1⋆ Λ1)(n)
+n L1,1L2,2
+=− 1
+α +β
+∑
+n≤N
+(1⋆ Λ1)(n)
+n
+1
+i!
+logiN
+logN
+d
+dxNαx
+(
+x + log(N/n)
+logN
+)i 1
+j!
+(
+logN
+n
+)j⏐⏐⏐⏐
+x=0
++O(Li+j).
+
+===== PAGE 35 =====
+
+MORE THAN FIVE-TWELFTHS OF THE ZEROS OF ζ ARE ON THE CRITICAL LINE 35
+Summing over i and j yields
+I1,3(α,β ) =−TˆΦ(0)
+log2N
+(logN)−1
+α +β
+d
+dxNαx ∑
+n≤N
+(1⋆ Λ1)(n)
+n
+∑∑
+i,j
+p𝓁1,ip𝓁2,j
+(
+x + log(N/n)
+logN
+)i(log(N/n)
+logN
+)j⏐⏐⏐⏐
+x=0
++O(T/L)
+=−TˆΦ(0)
+log3N
+1
+α +β
+d
+dxNαx ∑
+n≤N
+(1⋆ Λ1)(n)
+n P1
+(
+x + log(N/n)
+logN
+)
+P2
+(log(N/n)
+logN
+)⏐⏐⏐⏐
+x=0
++O(T/L).
+Lastly, Euler-Maclaurin transforms this into
+I1,3(α,β ) =−TˆΦ(0)
+logN
+1
+α +β
+d
+dxNαx
+∫ 1
+0
+(1−u)P1(x +u)P2(u)du
+⏐⏐⏐⏐
+x=0
++O(T/L).
+By symmetry
+I1,4(α,β ) =−TˆΦ(0)
+logN
+1
+α +β
+d
+dyNβy
+∫ 1
+0
+(1−u)P1(u)P2(y +u)du
+⏐⏐⏐⏐
+y=0
++O(T/L).
+Finally, the last term is very similar to the ﬁrst one since
+J1,5 =− 1
+α +β
+∑
+p
+( logp
+p1+α+β− 1
+)2 ∑
+n≤N
+1
+nL1,1L1,2,
+so that the sum over i and j takes us to
+I1,5 =−TˆΦ(0)
+log3N
+∑
+p
+( logp
+p1+α+β− 1
+)2 1
+α +β
+d2
+dxdyNαx+βy
+∫ 1
+0
+P1(x +u)P2(y +u)du
+⏐⏐⏐⏐
+x=y=0
++O(T/L).
+We remark that with respect to log N this last term is of smaller order of magnitude smaller than the other
+terms I1,i for i∈{ 1, 2, 3, 4}.
+The ﬁnal step is to assemble backI1(α,β ) withI2(α,β ), whereI2 was given by the second part of Theorem
+4.1 or of equation (6.1). This is an easy step that produces a lot of attrition. We start with I1,1, I1,2 and
+move on chronologically. For the very ﬁrst term we see that
+I1(α,β ) =I1,1(α,β ) +I2,1(α,β ) =I1,1(α,β ) +T−α−βI1,1(−β,−α) +O(T/L)
+=
+ˆΦ(0)
+logN
+d2
+dxdy
+Nαx+βy−T−α−βN−βx−αy
+α +β
+∫ 1
+0
+(1−u)2P1(x +u)P2(y +u)du
+⏐⏐⏐⏐
+x=y=0
++O(T/L).
+However, if we focus on the part involving α and β only, then
+Nαx+βy−T−α−βN−βx−αy
+α +β =Nαx+βy 1−N−αx−βyT−α−βN−βx−αy
+α +β
+=Nαx+βy 1− (Nx+yT )−α−β
+α +β
+=Nαx+βy log(Nx+yT )
+∫ 1
+0
+(Nx+yT )−t(α+β)dt.
+Next, we bring in the diﬀerential operators Q to get
+Q
+( −1
+logT
+∂
+∂α
+)
+Q
+( −1
+logT
+∂
+∂β
+)Nαx+βy−T−α−βN−βx−αy
+α +β
+= log(Nx+yT )Q
+( −1
+logT
+∂
+∂α
+)
+Q
+( −1
+logT
+∂
+∂β
+)∫ 1
+0
+(Nt(x+y)−yTt)−α(Nt(x+y)−xTt)−βdt
+= log(Nx+yT )
+∫ 1
+0
+Q
+(logNt(x+y)−yTt
+logT
+)
+Q
+(logNt(x+y)−xTt
+logT
+)
+(Nt(x+y)−yTt)−α(Nt(x+y)−xTt)−βdt
+= log(Tθ(x+y)+1)
+∫ 1
+0
+Q(θt(x +y)−θy +t)Q(θt(x +y)−θx +t)(Tθt(x+y)−θy+t)−α(Tθt(x+y)−θx+t)−βdt.
+
+===== PAGE 36 =====
+
+36 KYLE PRATT, NICOLAS ROBLES, ALEXANDRU ZAHARESCU, AND DIRK ZEINDLER
+Atα =β =−R/L the above reduces to
+Q
+( −1
+logT
+∂
+∂α
+)
+Q
+( −1
+logT
+∂
+∂β
+)Nαx+βy−T−α−βN−βx−αy
+α +β
+⏐⏐⏐⏐
+α=β=−R/L
+= log(Tθ(x+y)+1)
+∫ 1
+0
+Q(θt(x +y)−θy +t)Q(θt(x +y)−θx +t)eR[θt(x+y)−θy+t]eR[θt(x+y)−θx+t]dt.
+Finally, the main term coming from this subdivision of I is given by
+I1 :=Q
+( −1
+logT
+∂
+∂α
+)
+Q
+( −1
+logT
+∂
+∂β
+)
+I1(α,β )
+⏐⏐⏐⏐
+α=β=−R/L
+,
+and putting all these things back together produces
+I1 =TˆΦ(0) d2
+dxdy
+θ(x +y) + 1
+θ
+∫ 1
+0
+∫ 1
+0
+(1−u)2P1(x +u)P2(y +u)eR[θt(x+y)−θy+t]eR[θt(x+y)−θx+t]
+×Q(θt(x +y)−θy +t)Q(θt(x +y)−θx +t)
+⏐⏐⏐⏐
+x=y=0
+dudt +O(T/L).
+Next, for I2 we had
+I2(α,β ) =I2,1(α,β ) +I2,2(α,β ) =I2,1(α,β ) +T−α−βI2,1(−β,−α) +O(T/L)
+=T
+ˆΦ(0)
+logN
+1−T−α−β
+α +β
+∫ 1
+0
+P1(u)P2(u)du +O(T/L) +O(T/L)
+=T
+ˆΦ(0)
+θ
+∫ 1
+0
+∫ 1
+0
+T−t(α+β)P1(u)P2(u)dtdu +O(T/L).
+Moreover,
+Q
+( −1
+logT
+∂
+∂α
+)
+Q
+( −1
+logT
+∂
+∂β
+)
+T−tα−tβ
+⏐⏐⏐⏐
+α=β=−R/L
+=Q(t)2e2Rt,
+and therefore
+I2 =T
+ˆΦ(0)
+θ
+∫ 1
+0
+∫ 1
+0
+Q(t)2e2RtP1(u)P2(u)dtdu +O(T/L).
+We move onI3 following the same strategy as before. For this term
+Nαx−T−α−βN−βx
+α +β =Nαx 1− (TNx)−α−β
+α +β =Nαx log(TNx)
+∫ 1
+0
+(TNx)−t(α+β)dt.
+Also
+Q
+( −1
+logT
+∂
+∂α
+)
+Q
+( −1
+logT
+∂
+∂β
+)
+(TtNxt)−α(N−xTtNxt)−β
+⏐⏐⏐⏐
+α=β=−R/L
+=Q(t +θxt)Q(−θx +t +θxt)eR[t+θxt]eR[−θx+t+θxt].
+Therefore
+I3 =−TˆΦ(0)1 +θx
+θ
+d
+dx
+∫ 1
+0
+∫ 1
+0
+(1−u)P1(x +u)P2(u)eR[t+θxt]eR[−θx+t+θxt]
+×Q(t +θxt)Q(−θx +t +θxt)dtdu
+⏐⏐⏐⏐
+x=0
++O(T/L).
+By symmetry
+I4 =−TˆΦ(0)1 +θy
+θ
+d
+dy
+∫ 1
+0
+∫ 1
+0
+(1−u)P1(u)P2(y +u)eR[t+θyt]eR[−θy+t+θyt]
+×Q(t +θyt)Q(−θy +t +θyt)dtdu
+⏐⏐⏐⏐
+y=0
++O(T/L).
+
+===== PAGE 37 =====
+
+MORE THAN FIVE-TWELFTHS OF THE ZEROS OF ζ ARE ON THE CRITICAL LINE 37
+Finally, we come to the last term that was of smaller order of magnitude in log N. This term is similar
+to I1 except for the presence of (1 −u)2 in the integrand and the power of log N in the denominator. The
+sum over primes is less than ζ(2) and
+d2
+dxdyNαx+βy
+∫ 1
+0
+P1(x +u)P2(y +u)du≪ 1
+at T→∞ , and since N =Tθ and α,β ≪L−1
+d2
+dxdyNαx+βy
+⏐⏐⏐⏐
+x=y=0
+= (logN)(α +β)Nαx+βy
+⏐⏐⏐⏐
+x=y=0
+= (logN)(α +β)≪ 1.
+Thus for the integral in the term
+I5,1(α,β ) =−TˆΦ(0)
+log3NA(1,1)
+α,β (0, 0;β,α ) 1
+α +β
+d2
+dxdyNαx+βy
+∫ 1
+0
+P1(x +u)P2(y +u)du +O(T/L)
+we will get a term of size T
+log3N logT≪ T
+log2T , and hence I5,1(α,β ) +T−α−βI5,1(−β,−α) is an error term
+of size T/L2 +T/L≪T/L.
+Alternatively, to deal with I5 we set n = 2 in [56, Entry 2.5] so that
+1
+(a +x)2 =− 1
+2πi
+∫
+(c)
+πas−2(s− 1) csc(πs)x−sds with 0 <c< 2.
+Using c = 3
+2, a =−1 and x =p1+α+β we can turn the denominator in the sum into an integral
+−
+∑
+p
+log2p
+(p1+α+β− 1)2 =π
+∑
+p
+(log2p)
+( 1
+2πi
+∫
+( 3
+2 )
+(−1)s(s− 1) csc(πs)p−s(ps)−α(ps)−βds
+)
+.
+For this last part we have
+I5,1(α,β ) +I5,2(α,β ) =I5,1(α,β ) +T−α−βI5,1(−β,−α) +O(T/L)
+= πTˆΦ(0)
+log3N
+d2
+dxdy
+∑
+p
+(log2p)
+( 1
+2πi
+∫
+( 3
+2 )
+Nαx+βy(ps)−α(ps)−β−Tα−βN−βx−αy(ps)β(ps)α
+α +β
+× (−1)s(s− 1) csc(πs)p−sds
+∫ 1
+0
+P1(x +u)P2(y +u)du
+)⏐⏐⏐⏐
+x=y=0
++O(T/L).
+We examine the term containing α and β and observe that
+Nαx+βy(ps)−α(ps)−β−T−α−βN−βx−αy(ps)β(ps)α
+α +β
+=Nαx+βy(ps)−α−β log(Nx+y(p−2s)T )
+∫ 1
+0
+(Nx+y(p−2s)T )−t(α+β)dt.
+Bring in the diﬀerential operators Q to get
+Q
+( −1
+logT
+∂
+∂α
+)
+Q
+( −1
+logT
+∂
+∂β
+)Nαx+βy(ps)−α(ps)−β−T−α−βN−βx−αy(ps)β(ps)α
+α +β
+⏐⏐⏐⏐
+α=β=−R/L
+=
+(
+θ(x +y) + 1 +−2s logp
+logT
+)
+(logT )eR[−θy+θt(x+y)+t+ (s−2st) logp
+logT ]eR[−θx+θt(x+y)+t+ (s−2st) logp
+logT ]
+×Q
+(
+−θx +tθ(x +y) +t + (s− 2st) logp
+logT
+)
+Q
+(
+−θy +tθ(x +y) +t + (s− 2st) logp
+logT
+)
+.
+Thus we are left with
+I5 = πTˆΦ(0) logT
+θ3 log3T
+d2
+dxdy
+∑
+p
+(log2p) 1
+2πi
+∫
+( 3
+2 )
+∫ 1
+0
+∫ 1
+0
+(
+θ(x +y) + 1 +−2s logp
+logT
+)
+×Q
+(
+−θx +tθ(x +y) +t + (s− 2st) logp
+logT
+)
+Q
+(
+−θy +tθ(x +y) +t + (s− 2st) logp
+logT
+)
+×eR[−θy+θt(x+y)+t+ (s−2st) logp
+logT ]eR[−θx+θt(x+y)+t+ (s−2st) logp
+logT ]
+
+===== PAGE 38 =====
+
+38 KYLE PRATT, NICOLAS ROBLES, ALEXANDRU ZAHARESCU, AND DIRK ZEINDLER
+× (−1)s(s− 1) csc(πs)p−sP1(x +u)P2(y +u)dtduds
+⏐⏐⏐⏐
+x=y=0
++O(T/L)
+≪T/L.
+Hence the term associated to A(1,1)
+α,β (0, 0;β,α ) is an error term.
+We also remark that
+ζ′′
+ζ (s)−
+(ζ′
+ζ (s)
+)2
+=
+∑
+p
+log2p
+ps +O
+(log2p
+p2−ε
+)
+could prove useful in other scenarios to turn the sum into zeta functions.
+6.2.2. The case𝓁1 =𝓁2 = 2. Suppose we now move on to𝓁1 =𝓁2 = 2. We know thatAα,β(0, 0, 0, 0;β,α ) = 1
+and a direct calculation from (6.7) shows that
+∂
+∂z1
+logAα,β(z1,z 2,w 1,w 2;β,α )
+⏐⏐⏐⏐
+z1=z2=w1=w2=0
+= 0,
+∂
+∂z2
+logAα,β(z1,z 2,w 1,w 2;β,α )
+⏐⏐⏐⏐
+z1=z2=w1=w2=0
+= 0,
+∂
+∂w1
+logAα,β(z1,z 2,w 1,w 2;β,α )
+⏐⏐⏐⏐
+z1=z2=w1=w2=0
+= 0,
+∂
+∂w2
+logAα,β(z1,z 2,w 1,w 2;β,α )
+⏐⏐⏐⏐
+z1=z2=w1=w2=0
+= 0.
+Next, for the second derivatives
+∂2
+∂z1∂z2
+logAα,β(z1,z 2,w 1,w 2;β,α )
+⏐⏐⏐⏐
+z1=z2=w1=w2=0
+= 0,
+∂2
+∂w1∂w2
+logAα,β(z1,z 2,w 1,w 2;β,α )
+⏐⏐⏐⏐
+z1=z2=w1=w2=0
+= 0,
+∂2
+∂z1∂w1
+logAα,β(z1,z 2,w 1,w 2;β,α )
+⏐⏐⏐⏐
+z1=z2=w1=w2=0
+=−
+∑
+p
+( logp
+p1+α+β− 1
+)2
+,
+∂2
+∂z2∂w2
+logAα,β(z1,z 2,w 1,w 2;β,α )
+⏐⏐⏐⏐
+z1=z2=w1=w2=0
+=−
+∑
+p
+( logp
+p1+α+β− 1
+)2
+,
+∂2
+∂z2∂w1
+logAα,β(z1,z 2,w 1,w 2;β,α )
+⏐⏐⏐⏐
+z1=z2=w1=w2=0
+=−
+∑
+p
+( logp
+p1+α+β− 1
+)2
+,
+∂2
+∂z1∂w2
+logAα,β(z1,z 2,w 1,w 2;β,α )
+⏐⏐⏐⏐
+z1=z2=w1=w2=0
+=−
+∑
+p
+( logp
+p1+α+β− 1
+)2
+.
+For the triple and fourth derivatives
+∂3
+∂z1∂z2∂w1
+logAα,β(z1,z 2,w 1,w 2;β,α )
+⏐⏐⏐⏐
+z1=z2=w1=w2=0
+= 0,
+∂3
+∂z1∂z2∂w2
+logAα,β(z1,z 2,w 1,w 2;β,α )
+⏐⏐⏐⏐
+z1=z2=w1=w2=0
+= 0,
+∂3
+∂z1∂w1∂w2
+logAα,β(z1,z 2,w 1,w 2;β,α )
+⏐⏐⏐⏐
+z1=z2=w1=w2=0
+= 0,
+∂3
+∂z2∂w1∂w2
+logAα,β(z1,z 2,w 1,w 2;β,α )
+⏐⏐⏐⏐
+z1=z2=w1=w2=0
+= 0,
+∂4
+∂z1∂z2∂w1∂w2
+logAα,β(z1,z 2,w 1,w 2;β,α )
+⏐⏐⏐⏐
+z1=z2=w1=w2=0
+= 0.
+
+===== PAGE 39 =====
+
+MORE THAN FIVE-TWELFTHS OF THE ZEROS OF ζ ARE ON THE CRITICAL LINE 39
+The ﬁrst four equations imply that
+∂
+∂z1
+Aα,β(z1,z 2,w 1,w 2;β,α )
+⏐⏐⏐⏐
+z1=z2=w1=w2=0
+= 0,
+∂
+∂z2
+Aα,β(z1,z 2,w 1,w 2;β,α )
+⏐⏐⏐⏐
+z1=z2=w1=w2=0
+= 0,
+∂
+∂w1
+Aα,β(z1,z 2,w 1,w 2;β,α )
+⏐⏐⏐⏐
+z1=z2=w1=w2=0
+= 0,
+∂
+∂w2
+Aα,β(z1,z 2,w 1,w 2;β,α )
+⏐⏐⏐⏐
+z1=z2=w1=w2=0
+= 0
+We now use (6.8) to see that
+0 = ∂2
+∂z1∂z2
+logAα,β(z1,z 2,w 1,w 2;β,α )
+⏐⏐⏐⏐
+z1=z2=w1=w2=0
+=−
+A(1,0,0,0)
+α,β (0, 0, 0, 0;β,α )A(0,1,0,0)
+α,β (0, 0, 0, 0;β,α )
+Aα,β(0, 0, 0, 0;β,α )2 +
+A(1,1,0,0)
+α,β (0, 0, 0, 0;β,α )
+Aα,β(0, 0, 0, 0;β,α )
+=A(1,1,0,0)
+α,β (0, 0, 0, 0;β,α ).
+By symmetry
+A(0,0,1,1)
+α,β (0, 0, 0, 0;β,α ) = 0.
+Likewise
+−
+∑
+p
+( logp
+p1+α+β− 1
+)2
+= ∂2
+∂z1∂w1
+logAα,β(z1,z 2,w 1,w 2;β,α )
+⏐⏐⏐⏐
+z1=z2=w1=w2=0
+=−
+A(1,0,0,0)
+α,β (0, 0, 0, 0;β,α )A(0,0,1,0)
+α,β (0, 0, 0, 0;β,α )
+Aα,β(0, 0, 0, 0;β,α )2 +
+A(1,0,1,0)
+α,β (0, 0, 0, 0;β,α )
+Aα,β(0, 0, 0, 0;β,α )
+=A(1,0,1,0)
+α,β (0, 0, 0, 0;β,α ).
+By symmetry
+A(1,0,0,1)
+α,β (0, 0, 0, 0;β,α ) =A(0,1,0,1)
+α,β (0, 0, 0, 0;β,α ) =A(0,1,1,0)
+α,β (0, 0, 0, 0;β,α ) =−
+∑
+p
+( logp
+p1+α+β− 1
+)2
+.
+For the triple derivatives we get
+0 = ∂3
+∂z1∂z2∂w1
+logAα,β(z1,z 2,w 1,w 2;β,α )
+⏐⏐⏐⏐
+z1=z2=w1=w2
+=
+2A(1,0,0,0)
+α,β (0, 0, 0, 0;β,α )A(0,1,0,0)
+α,β (0, 0, 0, 0;β,α )A(0,0,1,0)
+α,β (0, 0, 0, 0;β,α )
+Aα,β(0, 0, 0, 0;β,α )3
+−
+A(0,1,1,0)
+α,β (0, 0, 0, 0;β,α )A(1,0,0,0)
+α,β (0, 0, 0, 0;β,α )
+Aα,β(0, 0, 0, 0;β,α )2
+−
+A(0,1,0,0)
+α,β (0, 0, 0, 0;β,α )A(1,0,1,0)
+α,β (0, 0, 0, 0;β,α )
+Aα,β(0, 0, 0, 0;β,α )2
++
+A(1,1,1,0)
+α,β (0, 0, 0, 0;β,α )
+Aα,β(0, 0, 0, 0;β,α ) =A(1,1,1,0)
+α,β (0, 0, 0, 0;β,α ).
+By symmetry
+A(1,1,0,1)
+α,β (0, 0, 0, 0;β,α ) =A(1,0,1,1)
+α,β (0, 0, 0, 0;β,α ) =A(0,1,1,1)
+α,β (0, 0, 0, 0;β,α ) = 0.
+
+===== PAGE 40 =====
+
+40 KYLE PRATT, NICOLAS ROBLES, ALEXANDRU ZAHARESCU, AND DIRK ZEINDLER
+Finally, (presenting only the surviving terms to save space)
+0 = ∂4
+∂z1∂z2∂w1∂w2
+logAα,β(z1,z 2,w 1,w 2;β,α )
+⏐⏐⏐⏐
+z1=z2=w1=w2
+=−
+A(0,1,1,0)
+α,β (0, 0, 0, 0;β,α )A(1,0,0,1)
+α,β (0, 0, 0, 0;β,α )
+Aα,β(0, 0, 0, 0;β,α )2 −
+A(0,1,0,1)
+α,β (0, 0, 0, 0;β,α )A(1,0,1,0)
+α,β (0, 0, 0, 0;β,α )
+Aα,β(0, 0, 0, 0;β,α )2
++
+A(1,1,1,1)
+α,β (0, 0, 0, 0;β,α )
+Aα,β(0, 0, 0, 0;β,α ) =−2
+(∑
+p
+( logp
+p1+α+β− 1
+)2)2
++A(1,1,1,1)
+α,β (0, 0, 0, 0;β,α ).
+In other words
+A(1,1,1,1)
+α,β (0, 0, 0, 0;β,α ) = 2
+(∑
+p
+( logp
+p1+α+β− 1
+)2)2
+.
+Computing the contour integrals directly leads us to
+1
+(2πi)4
+∮ ∮ ∮ ∮
+~Mα,β(z1,z 2,w 1,w 2;s,u )dz1
+z2
+1
+dz2
+z2
+2
+dw1
+w2
+1
+dw2
+w2
+2
+= ζ(1 +s +u)ζ(1 +α +β)
+ζ(1 +α +s)ζ(1 +β +u)
+×
+[
+2
+(ζ′′
+ζ (1 +s +u)
+)2
+−
+(ζ′
+ζ (1 +s +u)
+)4
++ 2
+(ζ′
+ζ (1 +s +u)
+)3ζ′
+ζ (1 +α +s)
++ 2
+(ζ′
+ζ (1 +s +u)
+)3ζ′
+ζ (1 +β +u) +
+(ζ′
+ζ (1 +s +u)
+)2(ζ′
+ζ (1 +α +s)
+)2
++
+(ζ′
+ζ (1 +s +u)
+)2(ζ′
+ζ (1 +β +u)
+)2
+− 2
+(ζ′
+ζ (1 +β +u)
+)2ζ′
+ζ (1 +α +s)ζ′
+ζ (1 +s +u)
+− 2
+(ζ′
+ζ (1 +α +s)
+)2ζ′
+ζ (1 +β +u)ζ′
+ζ (1 +s +u) +
+(ζ′
+ζ (1 +α +s)
+)2(ζ′
+ζ (1 +β +u)
+)2
++ 4ζ′′
+ζ (1 +s +u)ζ′
+ζ (1 +α +s)ζ′
+ζ (1 +β +u)− 4ζ′′
+ζ (1 +s +u)ζ′
+ζ (1 +s +u)ζ′
+ζ (1 +β +u)
+− 4ζ′′
+ζ (1 +s +u)ζ′
+ζ (1 +s +u)ζ′
+ζ (1 +α +s)
+]
+.
+Here ~Mα,β(z1,z 2,w 1,w 2;s,u ) is the same as Mα,β(z1,z 2,w 1,w 2;s,u ) but with Aα,β(z1,z 2,w 1,w 2;s,u ) re-
+placed by 1. The reason behind this change is that most of the terms of
+1
+(2πi)4
+∮ ∮ ∮ ∮
+Mα,β(z1,z 2,w 1,w 2;s,u )dz1
+z2
+1
+dz2
+z2
+2
+dw1
+w2
+1
+dw2
+w2
+2
+involve partial derivatives of A that are zero and the ones that are not zero will eventually become error
+terms of sizeO(T/L). Thus, for practical purposes we only really need to retain the terms that are multiplied
+by Aα,β(0, 0, 0, 0;s,u ). It is now clear that the process to achieve the main terms from here is the same as
+in the case 𝓁1 =𝓁2 = 1, only that there are lot more of them.
+7. The general case d≥ 0
+We now specialize the coeﬃcients to
+an := (µ⋆ Λ⋆𝓁1
+1 ⋆ Λ⋆𝓁2
+2 ⋆··· ⋆ Λ⋆𝓁d
+d )(n)
+(logN)
+∑d
+r=1r𝓁r
+,(7.1)
+as well as
+bn := (µ⋆ Λ∗¯𝓁1
+1 ⋆ Λ⋆¯𝓁2
+2 ⋆··· ⋆ Λ⋆¯𝓁d
+d )(n)
+(logN)
+∑d
+¯r=1 ¯r¯𝓁¯r
+.(7.2)
+
+===== PAGE 41 =====
+
+MORE THAN FIVE-TWELFTHS OF THE ZEROS OF ζ ARE ON THE CRITICAL LINE 41
+The task ahead is to compute the arithmetical sumSd =∑
+hm=kn appearing in (6.1). This is precisely where
+the autocorrelation of ratios of ζ technique plays again a fundamental role and where we appreciate why it
+is unnecessary to discriminate square-free numbers n as discussed in§3. To this end, deﬁne
+Sd : =
+∑∑
+1≤d,e≤∞
+adbe
+[d,e ]
+(d,e )α+β
+dα+seβ+u
+=
+∑
+d,e
+(µ⋆Ld+1⋆ (log𝓁1)⋆ (log2)𝓁2⋆··· ⋆ (logd)𝓁d)(d)(µ⋆¯Ld+1⋆ (log
+¯𝓁1)⋆ (log2)¯𝓁2⋆··· ⋆ (logd)¯𝓁d)(e)(d,e )α+β
+[d,e ]dα+seβ+u(logN)
+∑d
+r=1r𝓁r(logN)
+∑d
+¯r=1 ¯r¯𝓁¯r
+,
+by writing the generalized von Mangoldt function as Λ q =µ⋆ logq and setting Ld :=𝓁1 +𝓁2 +··· +𝓁d.
+We have the rather unfortunate situation where it becomes diﬃcult to recycle the alphabet but it should
+be clear that only the d’s in (d,e ), [d,e ] and dα+s are being summed. The d’s involved in the logs are a
+parameter of our choice.
+We now write
+d =d0(
+∏
+1≤i≤𝓁1
+d1,i)(
+∏
+1≤i≤𝓁2
+d2,i)··· (
+∏
+1≤i≤𝓁d
+dd,i),
+and
+e =e0(
+∏
+1≤j≤¯𝓁1
+e1,j)(
+∏
+1≤j≤¯𝓁2
+e2,j)··· (
+∏
+1≤j≤¯𝓁d
+ed,j).
+so thatSd becomes
+Sd =
+∑
+···
+∑
+d0,d1,1,···,d1,𝓁1,d2,1,···,d2,𝓁1···dd,1···dd,𝓁1
+e0,e1,1,···,e1,𝓁2,e2,1,···,e2,𝓁2···ed,1···ed,𝓁2
+µ⋆Ld+1(d0)µ⋆¯Ld+1(e0)
+×
+(d0(∏
+1≤i≤𝓁1
+d1,i)(∏
+1≤i≤𝓁2
+d2,i)··· (∏
+1≤i≤𝓁d
+dd,i),e 0(∏
+1≤j≤¯𝓁1
+e1,j)(∏
+1≤j≤¯𝓁2
+e2,j)··· (∏
+1≤j≤¯𝓁d
+ed,j))α+β
+[d0(∏
+1≤i≤𝓁1
+d1,i)(∏
+1≤i≤𝓁2
+d2,i)··· (∏
+1≤i≤𝓁d
+dd,i),e 0(∏
+1≤j≤¯𝓁1
+e1,j)(∏
+1≤j≤¯𝓁2
+e2,j)··· (∏
+1≤j≤¯𝓁d
+ed,j)]
+×
+(∏
+1≤i≤𝓁1 logd1,i)(∏
+1≤i≤𝓁2 logd2,i)··· (∏
+1≤i≤𝓁d
+logdd,i)
+(d0(∏
+1≤i≤𝓁1d1,i)(∏
+1≤i≤𝓁2d2,i)··· (∏
+1≤i≤𝓁d
+dd,i))α+s(logN)
+∑d
+r=1r𝓁r
+×
+(∏
+1≤j≤¯𝓁1 loge1,j)(∏
+1≤j≤¯𝓁2 loge2,j)··· (∏
+1≤j≤¯𝓁d
+loged,j)
+(e0(∏
+1≤j≤¯𝓁1e1,i)(∏
+1≤j≤¯𝓁2e2,j)··· (∏
+1≤j≤¯𝓁d
+ed,j))β+u(logN)
+∑d
+¯r=1 ¯r¯𝓁¯r
+.
+To remove the various powers of log, we now employ Cauchy’s integral formula
+logqx = (−1)q ∂q
+∂γq
+1
+xγ
+⏐⏐⏐⏐
+γ=0
+= (−1)q q!
+2πi
+∮ 1
+xq
+dz
+zq+1, q = 1, 2,··· ,(7.3)
+where the contour of integration is a small circle around the origin. This further transforms Sd into
+Sd = 1
+(2πi)𝓁1
+∮
+···
+∮ 1
+(2πi)𝓁2
+∮
+···
+∮
+··· 1
+(2πi)𝓁d
+∮
+···
+∮
+(−1)1×𝓁1(−1)2×𝓁2··· (−1)d×𝓁d
+× 1
+(2πi)¯𝓁1
+∮
+···
+∮ 1
+(2πi)¯𝓁2
+∮
+···
+∮
+··· 1
+(2πi)¯𝓁d
+∮
+···
+∮
+(−1)1×¯𝓁1(−1)2×¯𝓁2··· (−1)d×¯𝓁d
+×
+∑
+···
+∑
+d0,d1,1,···,d1,𝓁1,d2,1,···,d2,𝓁1···dd,1···dd,𝓁1
+e0,e1,1,···,e1,𝓁2,e2,1,···,e2,𝓁2···ed,1···ed,𝓁2
+µ⋆Ld+1(d0)µ⋆¯Ld+1(e0)
+×
+(d0(∏
+1≤i≤𝓁1d1,i)(∏
+1≤i≤𝓁2d2,i)··· (∏
+1≤i≤𝓁d
+dd,i),e 0(∏
+1≤j≤¯𝓁1e1,j)(∏
+1≤j≤¯𝓁2e2,j)··· (∏
+1≤j≤¯𝓁d
+ed,j))α+β
+[d0(∏
+1≤i≤𝓁1d1,i)(∏
+1≤i≤𝓁2d2,i)··· (∏
+1≤i≤𝓁d
+dd,i),e 0(∏
+1≤j≤¯𝓁1e1,j)(∏
+1≤j≤¯𝓁2e2,j)··· (∏
+1≤j≤¯𝓁d
+ed,j)]
+× 1
+dα+s
+0 (∏
+1≤i≤𝓁1dα+s+z1,i
+1,i )(∏
+1≤i≤𝓁2dα+s+z2,i
+2,i )··· (∏
+1≤i≤𝓁d
+dα+s+zd,i
+d,i )(logN)
+∑d
+r=1r𝓁r
+× 1
+eβ+u
+0 (∏
+1≤j≤¯𝓁1eβ+u+w1,j
+1,i )(∏
+1≤j≤¯𝓁2eβ+u+w2,j
+2,j )··· (∏
+1≤j≤¯𝓁d
+eβ+u+wd,j
+d,j )(logN)
+∑d
+¯r=1 ¯r¯𝓁¯r
+
+===== PAGE 42 =====
+
+42 KYLE PRATT, NICOLAS ROBLES, ALEXANDRU ZAHARESCU, AND DIRK ZEINDLER
+× dz1,1
+z1+1
+1,1
+··· dz1,𝓁1
+z1+1
+1,𝓁1
+dz2,1
+z2+1
+2,1
+··· dz2,𝓁2
+z2+1
+2,𝓁2
+··· dzd,1
+zd+1
+d,1
+··· dzd,𝓁d
+zd+1
+d,𝓁d
+dw1,1
+w1+1
+1,1
+··· dw1,¯𝓁1
+w1+1
+1,¯𝓁1
+dw2,1
+w2+1
+2,1
+··· dw2,¯𝓁2
+w2+1
+2,¯𝓁2
+··· dwd,1
+wd+1
+d,1
+··· dzw,¯𝓁d
+zd+1
+w,¯𝓁d
+.
+The multiplicativity of the above expression is now conducive for a representation as an Euler product
+format. One has that
+Sd = 1
+(2πi)𝓁1
+∮
+···
+∮ 1
+(2πi)𝓁2
+∮
+···
+∮
+··· 1
+(2πi)𝓁d
+∮
+···
+∮
+(−1)1×𝓁1(−1)2×𝓁2··· (−1)d×𝓁d
+× 1
+(2πi)¯𝓁1
+∮
+···
+∮ 1
+(2πi)¯𝓁2
+∮
+···
+∮
+··· 1
+(2πi)¯𝓁d
+∮
+···
+∮
+(−1)1×¯𝓁1(−1)2×¯𝓁2··· (−1)d×¯𝓁d
+×
+∏
+p
+∑
+···
+∑
+pd0,pd1,1,···,p
+d1,𝓁1,pd2,1,···,p
+d2,𝓁1···pdd,1···p
+dd,𝓁1
+pe0,pe1,1,···,p
+e1,𝓁2,pe2,1,···,p
+e2,𝓁2,···,ped,1,···,p
+ed,𝓁2
+µ⋆Ld+1(pd0)µ⋆¯Ld+1(pe0)
+×
+gcd(pd0(∏
+1≤i≤𝓁1pd1,i)(∏
+1≤i≤𝓁2pd2,i)··· (∏
+1≤i≤𝓁d
+pdd,i),
+lcm[pd0(∏
+1≤i≤𝓁1pd1,i)(∏
+1≤i≤𝓁2pd2,i)··· (∏
+1≤i≤𝓁d
+pdd,i),
+pe0(∏
+1≤j≤¯𝓁1pe1,j)(∏
+1≤j≤¯𝓁2pe2,j)×···× (∏
+1≤j≤¯𝓁d
+ped,j))α+β
+pe0(∏
+1≤j≤¯𝓁1
+pe1,j)(∏
+1≤j≤¯𝓁2
+pe2,j)×···× (∏
+1≤j≤¯𝓁d
+ped,j)]
+× 1
+(pd0)α+s(∏
+1≤i≤𝓁1(pd1,i)α+s+z1,i)(∏
+1≤i≤𝓁2(pd2,i)α+s+z2,i)··· (∏
+1≤i≤𝓁d
+(pdd,i)α+s+zd,i)(logN)
+∑d
+r=1r𝓁r
+× 1
+(pe0)β+u(∏
+1≤j≤¯𝓁1(pe1,i)β+u+w1,j)(∏
+1≤j≤¯𝓁2(pe2,j)β+u+w2,j)··· (∏
+1≤j≤¯𝓁d
+(ped,j)β+u+wd,j)(logN)
+∑d
+¯r=1 ¯r¯𝓁¯r
+× dz1,1
+z1+1
+1,1
+··· dz1,𝓁1
+z1+1
+1,𝓁1
+dz2,1
+z2+1
+2,1
+··· dz2,𝓁2
+z2+1
+2,𝓁2
+··· dzd,1
+zd+1
+d,1
+··· dzd,𝓁d
+zd+1
+d,𝓁d
+dw1,1
+w1+1
+1,1
+··· dw1,¯𝓁1
+w1+1
+1,¯𝓁1
+dw2,1
+w2+1
+2,1
+··· dw2,¯𝓁2
+w2+1
+2,¯𝓁2
+··· dwd,1
+wd+1
+d,1
+··· dzw,¯𝓁d
+zd+1
+w,¯𝓁d
+.
+To recover the main terms, we ﬁnd the constant ( p0) and linear (p1) terms of the above Euler product. To
+do so, we must constrain the choices of the d’s and the e’s to nine possibilities, much like in the d = 1
+case. While the computation is not complicated, it is so cumbersome that we provide it below for the
+beneﬁt of the reader. The enumeration will be as follows. Label the choices by {d0,dq,i,e 0,e ¯q,j} for some
+q, ¯q∈{ 1, 2,··· ,d}, some i∈{ 1, 2,··· ,𝓁 1} and some j∈{ 1, 2,··· ,𝓁 2}.
+(1) For{0, 0, 0, 0} we naturally get 1 in the Euler product. This will be the constant term.
+(2) The case {1, 0, 0, 0} yields
+µ⋆Ld+1(p)
+[p, 1]
+(p, 1)α+β
+pα+s =−Ld + 1
+p1+α+s.
+(3) By symmetry the case {0, 0, 1, 0} yields
+−
+¯Ld + 1
+p1+β+u.
+(4) From the case {1, 0, 1, 0} we obtain
+µ⋆Ld+1(p)µ⋆¯Ld+1(p)
+[p,p ]
+(p,p )α+β
+pα+spβ+u = (Ld + 1)(¯Ld + 1)
+p1+s+u .
+(5) The case {1, 0, 0, 1} is
+µ⋆Ld+1(p)
+[p,p ]
+(p,p )α+β
+pα+spβ+u+w¯q,j
+=− Ld + 1
+p1+s+u+w¯q,j
+.
+(6) The symmetric case to (5), which is {0, 1, 1, 0}, is given by
+−
+¯Ld + 1
+p1+s+u+zq,i
+.
+(7) The case {0, 1, 0, 0} yields
+1
+[p, 1]
+(p, 1)α+β
+pα+s+zq,i
+= 1
+p1+α+s+zq,i
+.
+
+===== PAGE 43 =====
+
+MORE THAN FIVE-TWELFTHS OF THE ZEROS OF ζ ARE ON THE CRITICAL LINE 43
+(8) Immediately, we see that for {0, 0, 0, 1} we get
+1
+p1+β+u+w¯q,j
+.
+(9) The last case is the most unpleasant one because it mixes z’s and w’s. For{0, 1, 0, 1} we arrive at
+1
+[p,p ]
+(p,p )α+β
+pβ+u+w¯q,jpα+s+zq,i
+= 1
+p1+s+u+zq,i+w¯q,j
+.
+We now insert these terms back into Sd and write
+Sd = 1
+(2πi)𝓁1
+∮
+···
+∮ 1
+(2πi)𝓁2
+∮
+···
+∮
+··· 1
+(2πi)𝓁d
+∮
+···
+∮
+(−1)1×𝓁1(−1)2×𝓁2··· (−1)d×𝓁d
+× 1
+(2πi)¯𝓁1
+∮
+···
+∮ 1
+(2πi)¯𝓁2
+∮
+···
+∮
+··· 1
+(2πi)¯𝓁d
+∮
+···
+∮
+(−1)1×¯𝓁1(−1)2×¯𝓁2··· (−1)d×¯𝓁d
+×
+∏
+p
+(
+1− Ld + 1
+p1+α+s−
+¯Ld + 1
+p1+β+u + (Ld + 1)(¯Ld + 1)
+p1+s+u −
+d∑
+¯q=1
+¯𝓁¯q∑
+j=1
+Ld + 1
+p1+s+u+w¯q,j
+−
+d∑
+q=1
+𝓁q∑
+i=1
+¯Ld + 1
+p1+s+u+zq,i
++
+d∑
+q=1
+𝓁q∑
+i=1
+1
+p1+α+s+zq,i
++
+d∑
+¯q=1
+¯𝓁¯q∑
+j=1
+1
+p1+β+u+w¯q,j
++
+d∑
+q=1
+𝓁q∑
+i=1
+d∑
+¯q=1
+¯𝓁¯q∑
+j=1
+1
+p1+s+u+zq,i+w¯q,j
+)Aα,β({zq,i},{w¯q,j};s,u )
+(logN)
+∑r𝓁r(logN)
+∑ ¯r¯𝓁¯r
+× dz1,1
+z1+1··· dz1,𝓁1
+z1+1
+dz2,1
+z2+1··· dz2,𝓁2
+z2+1 ··· dzd,1
+zd+1··· dzd,𝓁d
+zd+1
+dw1,1
+w1+1··· dw1,¯𝓁1
+w1+1
+dw2,1
+w2+1··· dw2,¯𝓁2
+w2+1 ··· dwd,1
+wd+1··· dzw,¯𝓁d
+wd+1 .
+The last step is to write this in as an autocorrelation ratio of zeta functions. This naturally leads us to
+Sd = 1
+(2πi)𝓁1
+∮
+···
+∮ 1
+(2πi)𝓁2
+∮
+···
+∮
+··· 1
+(2πi)𝓁d
+∮
+···
+∮
+(−1)1×𝓁1(−1)2×𝓁2··· (−1)d×𝓁d
+× 1
+(2πi)¯𝓁1
+∮
+···
+∮ 1
+(2πi)¯𝓁2
+∮
+···
+∮
+··· 1
+(2πi)¯𝓁d
+∮
+···
+∮
+(−1)1×¯𝓁1(−1)2×¯𝓁2··· (−1)d×¯𝓁d
+× ζ(1 +s +u)(Ld+1)(¯Ld+1)
+ζ(1 +α +s)Ld+1ζ(1 +β +u)¯Ld+1Aα,β({zq,i},{w¯q,j};s,u )
+×
+( d∏
+q=1
+𝓁q∏
+i=1
+d∏
+¯q=1
+¯𝓁¯q∏
+j=1
+ζ(1 +s +u +zq,i +w¯q,j)
+)
+×
+( d∏
+q=1
+𝓁q∏
+i=1
+ζ(1 +α +s +zq,i)
+ζ(1 +s +u +zq,i)¯Ld+1
+)( d∏
+¯q=1
+¯𝓁¯q∏
+j=1
+ζ(1 +β +u +z¯q,j)
+ζ(1 +s +u +w¯q,j)Ld+1
+)
+× dz1,1
+z1+1
+1,1
+··· dz1,𝓁1
+z1+1
+1,𝓁1
+dz2,1
+z2+1
+2,1
+··· dz2,𝓁2
+z2+1
+2,𝓁2
+··· dzd,1
+zd+1
+d,1
+··· dzd,𝓁d
+zd+1
+d,𝓁d
+× dw1,1
+w1+1
+1,1
+··· dw1,¯𝓁1
+w1+1
+1,¯𝓁1
+dw2,1
+w2+1
+2,1
+··· dw2,¯𝓁2
+w2+1
+2,¯𝓁2
+··· dwd,1
+wd+1
+d,1
+··· dzw,¯𝓁d
+zd+1
+w,¯𝓁d
+1
+(logN)
+∑r𝓁r(logN)
+∑ ¯r¯𝓁¯r
+.(7.4)
+Here A = Aα,β({zq,i},{w¯q,j};s,u ) = Aα,β(z, w;s,u ) is again an arithmetical factor that is absolutely con-
+vergent in some half-plane containing the origin. We can re-construct this arithmetical term by assembling
+back the nine cases above. The term Aα,β is given by
+Aα,β(z, w;s,u ) =
+∏
+p
+{ (1− 1
+p1+s+u )(Ld+1)(¯Ld+1)
+(1− 1
+p1+α+s )(Ld+1)(1− 1
+p1+β+u )(¯Ld+1)
+( d∏
+q=1
+𝓁q∏
+i=1
+d∏
+¯q=1
+¯𝓁¯q∏
+j=1
+(
+1− 1
+p1+s+u+zq,i+w¯q,j
+))
+×
+( d∏
+q=1
+𝓁q∏
+i=1
+1− 1
+p1+α+s+zq,i
+(1− 1
+p1+s+u+zq,i )(¯Ld+1)
+)( d∏
+¯q=1
+¯𝓁¯q∏
+j=1
+1− 1
+p1+β+u+w¯q,j
+(1− 1
+p1+s+u+w¯q,j )(Ld+1)
+)
+×
+[
+1− Ld + 1
+p1+α+s−
+¯Ld + 1
+p1+β+u + (Ld + 1)(¯Ld + 1)
+p1+s+u −
+d∑
+¯q=1
+¯𝓁¯q∑
+j=1
+Ld + 1
+p1+s+u+w¯q,j
+−
+d∑
+q=1
+𝓁q∑
+i=1
+¯Ld + 1
+p1+s+u+zq,i
+
+===== PAGE 44 =====
+
+44 KYLE PRATT, NICOLAS ROBLES, ALEXANDRU ZAHARESCU, AND DIRK ZEINDLER
++
+d∑
+q=1
+𝓁q∑
+i=1
+1
+p1+α+s+zq,i
++
+d∑
+¯q=1
+¯𝓁¯q∑
+j=1
+1
+p1+β+u+w¯q,j
++
+d∑
+q=1
+𝓁q∑
+i=1
+d∑
+¯q=1
+¯𝓁¯q∑
+j=1
+1
+p1+s+u+zq,i+w¯q,j
+]}
+.(7.5)
+We remark that
+Aα,β(z, w;β,α ) =
+∏
+p
+{(
+1− 1
+p1+α+β
+)Ld ¯Ld−1( d∏
+q=1
+𝓁q∏
+i=1
+d∏
+¯q=1
+¯𝓁¯q∏
+j=1
+(
+1− 1
+p1+α+β+zq,i+w¯q,j
+))
+×
+( d∏
+q=1
+𝓁q∏
+i=1
+1
+(1− 1
+p1+α+β+zq,i )¯Ld
+)( d∏
+¯q=1
+¯𝓁¯q∏
+j=1
+1
+(1− 1
+p1+α+β+w¯q,j )Ld
+)
+×
+[
+1− Ld + 1
+p1+β+α−
+¯Ld + 1
+p1+α+β + (Ld + 1)(¯Ld + 1)
+p1+α+β −
+d∑
+¯q=1
+¯𝓁¯q∑
+j=1
+Ld + 1
+p1+α+β+w¯q,j
+−
+d∑
+q=1
+𝓁q∑
+i=1
+¯Ld + 1
+p1+α+β+zq,i
++
+d∑
+q=1
+𝓁q∑
+i=1
+1
+p1+β+α+zq,i
++
+d∑
+¯q=1
+¯𝓁¯q∑
+j=1
+1
+p1+α+β+w¯q,j
++
+d∑
+q=1
+𝓁q∑
+i=1
+d∑
+¯q=1
+¯𝓁¯q∑
+j=1
+1
+p1+α+β+zq,i+w¯q,j
+]}
+.
+Hence at z = w = 0 we obtain
+Aα,β(0, 0;β,α ) =
+∏
+p
+{(
+1− 1
+p1+α+β
+)−1[
+1− 1
+p1+α+β
+]}
+= 1.
+Finally, we may deﬁne ζ(1 +α +β)× (integrand) to be
+Mα,β(z, w;s,u ) := ζ(1 +s +u)(Ld+1)(¯Ld+1)ζ(1 +α +β)
+ζ(1 +α +s)Ld+1ζ(1 +β +u)¯Ld+1 Aα,β(z, w;s,u )
+×
+( d∏
+q=1
+𝓁q∏
+i=1
+d∏
+¯q=1
+¯𝓁¯q∏
+j=1
+ζ(1 +s +u +zq,i +w¯q,j)
+)
+×
+( d∏
+q=1
+𝓁q∏
+i=1
+ζ(1 +α +s +zq,i)
+ζ(1 +s +u +zq,i)¯Ld+1
+)( d∏
+¯q=1
+¯𝓁¯q∏
+j=1
+ζ(1 +β +u +w¯q,j)
+ζ(1 +s +u +w¯q,j)Ld+1
+)
+,(7.6)
+and observe that
+Mα,β(z, w;β,α ) :=ζ(1 +α +β)Ld ¯LdAα,β(z, w;β,α )
+×
+( d∏
+q=1
+𝓁q∏
+i=1
+d∏
+¯q=1
+¯𝓁¯q∏
+j=1
+ζ(1 +α +β +zq,i +w¯q,j)
+)
+×
+( d∏
+q=1
+𝓁q∏
+i=1
+1
+ζ(1 +α +β +zq,i)¯Ld
+)( d∏
+¯q=1
+¯𝓁¯q∏
+j=1
+1
+ζ(1 +α +β +w¯q,j)Ld
+)
+,
+so that Mα,β(0, 0;β,α ) = 1. Indeed the formulas
+Aα,β(0, 0;β,α ) = Mα,β(0, 0;β,α ) = 1 (7.7)
+are key properties that will be used frequently. We summarize this result below.
+Theorem 7.1. Let ad and be be given by (7.1) and (7.2), respectively and set
+DX = DXd,𝓁d := dx1,1
+x1+1
+1,1
+··· dx1,𝓁1
+x1+1
+1,𝓁1
+dx2,1
+x2+1
+2,1
+··· dx2,𝓁2
+x2+1
+2,𝓁2
+··· dxd,1
+xd+1
+d,1
+··· dxd,𝓁d
+xd+1
+d,𝓁d
+.
+One has that
+∑∑
+1≤d,e≤∞
+adbe
+[d,e ]
+(d,e )α+β
+dα+seβ+uPd,𝓁d
+(log(N/d)
+logN
+)
+Pd,¯𝓁d
+(log(N/e)
+logN
+)
+
+===== PAGE 45 =====
+
+MORE THAN FIVE-TWELFTHS OF THE ZEROS OF ζ ARE ON THE CRITICAL LINE 45
+×
+∫ ∞
+−∞
+(
+ζ(1 +α +β) +ζ(1−α−β)
+( 2πde
+t(d,e )2
+)α+β)
+Φ
+(t
+T
+)
+dt +O(E3)
+=
+∑∑
+i,j
+pd,𝓁d,ipd,¯𝓁d,ji!j!
+(logN)i+j
+1
+(2πi)2
+∫
+(1)
+∫
+(1)
+1
+(logN)
+∑r𝓁r(logN)
+∑ ¯r¯𝓁¯r
+× 1
+(2πi)Ld+¯Ld
+(∮ ∮
+Mα,β(z, w;s,u )DZDW
+−
+∮ ∮
+T−α−βM−β,−α(z, w;s,u )DZDW
+) ds
+si+1
+du
+uj+1 +O(T 1−ε),
+where Mα,β is given by (7.6).
+Again, this is as far as one can go before things get out of hand and in fact it is bad enough as it is
+already. The procedure to obtain the main terms is exactly the same as it was in the case d = 1. We give
+the general recipe below before we proceed.
+(1) Choose the degree d of the polynomial Q. The higher the degree, the more taxing the calculation.
+(2) Choose a truncation 𝓁, ¯𝓁. Once more, the higher the truncation, the more taxing the calculation.
+(3) Use the logarithmic derivative of (7.5) in conjunction with Fa` a di Bruno’s formula (6.8) and with
+(7.7) to isolate the derivatives of Aα,β({zq,i},{w¯q,j};s,u ) at s =α, u =β and{zq,i} ={w¯q,j} = 0.
+Most of the derivatives will be 0 and the remaining ones will go into an error term of size ≪T/L.
+In other words, only the terms that have a coeﬃcient Aα,β(0, 0;s,u ) will survive.
+(4) Insert the results back into I1 (recall thatI2 is basically the same asI1 up to symmetries) and deform
+the paths of integration to Re( s) = Re(u) = δ with δ >0 then take δ≍ L−1 and bound trivially.
+This allows us to change Aα,β(0, 0;s,u ) into Aα,β(0, 0;β,α ) with an acceptable error term.
+(5) Use Dirichlet convolutions of appropriate 1⋆ Λk1
+1 ⋆ Λk2
+2 ⋆··· ⋆ Λkd
+d to separate the complex variables
+s and u along with knowledge of (7.7). The truncation of the n-sum will be at N.
+(6) Divide and conquer strategy: separate the resulting terms and apply Lemma 7.1 below to each one
+of them.
+(7) Sum over i and j to recover the polynomials Pd,𝓁 and Pd,¯𝓁.
+(7) Use Euler-Maclaurin result (Lemma 7.2) below to turn the remaining sums involving arithmetical
+functions into integrals.
+Remark 7.1. If we look at the nine cases that we considered earlier in this section to get to the autocorre-
+lation ratio ofSd, it is clear that each of these cases would remain unaﬀected by the presence of µ2(d) and
+µ2(e). Indeed each case would be multiplied by either µ2(p0) = µ2(1) = 1 or µ2(p1) = µ2(p) = (−1)2 = 1,
+where p is always a prime. We will be explicit about this important point. If we had taken
+an = µ2(n)(µ⋆ Λ⋆𝓁1
+1 ⋆ Λ⋆𝓁2
+2 ⋆··· ⋆ Λ⋆𝓁d
+d )(n)
+(logN)
+∑r𝓁r
+,(7.8)
+instead of (7.1), then the aﬀected possibilities (once symmetries are accounted for) in the Euler product are
+(1) The case {0, 0, 0, 0} yields
+µ2(1)µ2(1)
+1× 1 = 1.
+(2) The case {1, 0, 0, 0} yields
+µ2(p)µ⋆Ld+1(p)µ2(1)
+[p, 1]
+(p, 1)α+β
+pα+s =−Ld + 1
+p1+α+s.
+(4) The case {1, 0, 1, 0} yields
+µ2(p)µ⋆Ld+1(p)µ2(p)µ⋆¯Ld+1(p)
+[p,p ]
+(p,p )α+β
+pα+spβ+u = (Ld + 1)(¯Ld + 1)
+p1+s+u .
+(5) The case {1, 0, 0, 1} yields
+µ2(p)µ⋆Ld+1(p)µ2(1)
+[p,p ]
+(p,p )α+β
+pα+spβ+u+w¯q,j
+=− Ld + 1
+p1+s+u+w¯q,j
+.
+
+===== PAGE 46 =====
+
+46 KYLE PRATT, NICOLAS ROBLES, ALEXANDRU ZAHARESCU, AND DIRK ZEINDLER
+(7) The case {0, 1, 0, 0} yields
+µ2(1)µ2(1)
+[p, 1]
+(p, 1)α+β
+pα+s+zq,i
+= 1
+p1+α+s+zq,i
+.
+(9) The case {0, 1, 0, 1} yields
+µ2(1)µ2(1)
+[p,p ]
+(p,p )α+β
+pβ+u+w¯q,jpα+s+zq,i
+= 1
+p1+s+u+zq,i+w¯q,j
+.
+Moreover, the arithmetical factor that would arise from (7.8) also behaves nicely.
+It is likely that the present authors would have not noticed this had they not used the autocorrelation of
+ratios approach. Indeed this shows that the powerful autocorrelation of ratios technique is really the ‘way
+to do things’.
+In any case, Feng’s approach is certainly commendable for his main terms are accurate and his outstanding
+intuition about the size of the molliﬁer was spot on.
+7.1. Example: the quadratic case d = 2. We have illustrated the mechanism of this twisted moment in
+its easiest manifestation, that is when d = 1 and when the truncations are small, i.e. 𝓁1,𝓁 2≤ 2. Now that
+we have given the general procedure, it is advisable to see what happens when the degree of Q is increased
+from 1 to 2. Indeed, this will make the above presentation more agreeable and in fact these terms have never
+before appeared in the literature.
+With d = 2, we have Ld = 𝓁1 +𝓁2 and ¯Ld = ¯𝓁1 + ¯𝓁2. Let us set 𝓁1 = 𝓁2 = ¯𝓁1 = ¯𝓁2 = 1 for simplicity
+and use~Mα,β(z1,1,z 2,1,w 1,1,w 2,1;s,u ) to denote Mα,β(z1,1,z 2,1,w 1,1,w 2,1;s,u ) with the arithmetical factor
+Aα,β replaced by 1.
+We start with the arithmetical product. We can compute the logarithm from (7.5) of Aα,β so that
+logAα,β(z, w;s,u ) =
+∑
+p
+{
+log
+(1− 1
+p1+s+u )(Ld+1)(¯Ld+1)
+(1− 1
+p1+α+s )(Ld+1)(1− 1
+p1+β+u )(¯Ld+1)
++
+d∑
+q=1
+𝓁q∑
+i=1
+d∑
+¯q=1
+¯𝓁¯q∑
+j=1
+log
+(
+1− 1
+p1+s+u+zq,i+w¯q,j
+)
++
+d∑
+q=1
+𝓁q∑
+i=1
+1− 1
+p1+α+s+zq,i
+(1− 1
+p1+s+u+zq,i )(¯Ld+1) +
+d∑
+¯q=1
+¯𝓁¯q∑
+j=1
+1− 1
+p1+β+u+w¯q,j
+(1− 1
+p1+s+u+w¯q,j )(Ld+1)
++ log
+[
+1− Ld + 1
+p1+α+s−
+¯Ld + 1
+p1+β+u + (Ld + 1)(¯Ld + 1)
+p1+s+u
+−
+d∑
+¯q=1
+¯𝓁¯q∑
+j=1
+Ld + 1
+p1+s+u+w¯q,j
+−
+d∑
+q=1
+𝓁q∑
+i=1
+¯Ld + 1
+p1+s+u+zq,i
++
+d∑
+q=1
+𝓁q∑
+i=1
+1
+p1+α+s+zq,i
++
+d∑
+¯q=1
+¯𝓁¯q∑
+j=1
+1
+p1+β+u+w¯q,j
++
+d∑
+q=1
+𝓁q∑
+i=1
+d∑
+¯q=1
+¯𝓁¯q∑
+j=1
+1
+p1+s+u+zq,i+w¯q,j
+]}
+.(7.9)
+Using (7.9) it is straightforward to show that
+∂
+∂z1,1
+logAα,β(z, w;β,α )
+⏐⏐⏐⏐
+z=w=0
+= 0,
+∂2
+∂z2
+2,1
+logAα,β(z, w;β,α )
+⏐⏐⏐⏐
+z=w=0
+= 0,
+
+===== PAGE 47 =====
+
+MORE THAN FIVE-TWELFTHS OF THE ZEROS OF ζ ARE ON THE CRITICAL LINE 47
+∂3
+∂z1,1∂z2
+2,1
+logAα,β(z, w;β,α )
+⏐⏐⏐⏐
+z=w=0
+= 0,
+∂2
+∂z1,1∂w1,1
+logAα,β(z, w;β,α )
+⏐⏐⏐⏐
+z=w=0
+=
+∑
+p
+( log2p
+p1+α+β− p1+α+β log2p
+(p1+α+β− 1)2
+)
+,
+∂3
+∂z1,1∂w2
+2,1
+logAα,β(z, w;β,α )
+⏐⏐⏐⏐
+z=w=0
+=
+∑
+p
+(p1+α+β(1 +p1+α+β) log3p
+(p1+α+β− 1)3 − log3p
+p1+α+β
+)
+,
+∂4
+∂z2
+2,1∂w2
+2,1
+logAα,β(z, w;β,α )
+⏐⏐⏐⏐
+z=w=0
+=
+∑
+p
+( log4p
+p1+α+β− p1+α+β(1 +p1+α+β(4 +p1+α+β)) log4p
+(p1+α+β− 1)4
+)
+,
+∂4
+∂z1,1∂z2
+2,1∂w1,1
+logAα,β(z, w;β,α )
+⏐⏐⏐⏐
+z=w=0
+= 0,
+∂5
+∂z1,1∂z2
+2,1∂w1,1∂w2,1
+logAα,β(z, w;β,α )
+⏐⏐⏐⏐
+z=w=0
+= 0,
+∂6
+∂z1,1∂z2
+2,1∂w1,1∂w2
+2,1
+logAα,β(z, w;β,α )
+⏐⏐⏐⏐
+z=w=0
+= 0,
+etc... The pattern as to what terms will survive becomes clearer (some of the ‘balanced’ mixed derivatives).
+However, it does not really matter because these surviving terms will get absorbed in an error term of size
+O(T/L) much like in the case d = 1 that we handled previously.
+A lengthy residue calculus computation, again we are paying the toll for having used (7.3), shows that
+(Mathematica 11.2 was used to produce this)
+∮ ∮ ∮ ∮
+~Mα,β(z1,1,z 2,1,w 1,1,w 2,1;s,u )dz1,1
+z2
+1,1
+dz2,1
+z3
+2,1
+dw1,1
+w2
+1,1
+dw2,1
+w3
+2,1
+= ζ(1 +s +u)ζ(1 +α +β)
+ζ(1 +α +s)ζ(1 +β +u)
+×
+{
+12ζ′(1 +s +u)6
+ζ(1 +s +u)6 + 12ζ′(1 +α +s)ζ′(1 +s +u)5
+ζ(1 +α +s)ζ(1 +s +u)5
++ 12ζ′(1 +β +u)ζ′(1 +s +u)5
+ζ(1 +β +u)ζ(1 +s +u)5 − 8ζ′(1 +α +s)2ζ′(1 +s +u)4
+ζ(1 +α +s)2ζ(1 +s +u)4
+− 8ζ′(1 +β +u)2ζ′(1 +s +u)4
+ζ(1 +β +u)2ζ(1 +s +u)4 − 32ζ′(1 +α +s)ζ′(1 +β +u)ζ′(1 +s +u)4
+ζ(1 +α +s)ζ(1 +β +u)ζ(1 +s +u)4
+− 4 ζ′′(1 +α +s)ζ′(1 +s +u)4
+ζ(1 +α +s)2ζ(1 +β +u)ζ(1 +s +u)3− 4ζ′′(1 +β +u)ζ′(1 +s +u)4
+ζ(1 +β +u)ζ(1 +s +u)4
+− 48ζ′′(1 +s +u)ζ′(1 +s +u)4
+ζ(1 +s +u)5 + 8ζ′(1 +α +s)ζ′(1 +β +u)2ζ′(1 +s +u)3
+ζ(1 +α +s)ζ(1 +β +u)2ζ(1 +s +u)3
++ 8ζ′(1 +α +s)2ζ′(1 +β +u)ζ′(1 +s +u)3
+ζ(1 +α +s)2ζ(1 +β +u)ζ(1 +s +u)3 − 2ζ′(1 +α +s)ζ′′(1 +α +s)ζ′(1 +s +u)3
+ζ(1 +α +s)2ζ(1 +s +u)3
++ 4ζ′(1 +β +u)ζ′′(1 +α +s)ζ′(1 +s +u)3
+ζ(1 +α +s)ζ(1 +β +u)ζ(1 +s +u)3 + 4ζ′(1 +α +s)ζ′′(1 +β +u)ζ′(1 +s +u)3
+ζ(1 +α +s)ζ(1 +β +u)ζ(1 +s +u)3
+− 2ζ′(1 +β +u)ζ′′(1 +β +u)ζ′(1 +s +u)3
+ζ(1 +β +u)2ζ(1 +s +u)3 − 2ζ′(1 +α +s)ζ′′(1 +s +u)ζ′(1 +s +u)3
+ζ(1 +α +s)ζ(1 +s +u)4
+− 2ζ′(1 +β +u)ζ′′(1 +s +u)ζ′(1 +s +u)3
+ζ(1 +β +u)ζ(1 +s +u)4 + 8ζ(3)(1 +s +u)ζ′(1 +s +u)3
+ζ(1 +s +u)4
++ 43ζ′′(1 +s +u)2ζ′(1 +s +u)2
+ζ(1 +s +u)4 + 4ζ′(1 +α +s)ζ′(1 +β +u)ζ′′(1 +α +s)ζ′(1 +s +u)2
+ζ(1 +α +s)2ζ(1 +β +u)ζ(1 +s +u)2
++ 4ζ′(1 +α +s)ζ′(1 +β +u)ζ′′(1 +β +u)ζ′(1 +s +u)2
+ζ(1 +α +s)ζ(1 +β +u)2ζ(1 +s +u)2
++ 14ζ′(1 +α +s)2ζ′′(1 +s +u)ζ′(1 +s +u)2
+ζ(1 +α +s)2ζ(1 +s +u)3
+
+===== PAGE 48 =====
+
+48 KYLE PRATT, NICOLAS ROBLES, ALEXANDRU ZAHARESCU, AND DIRK ZEINDLER
++ 14ζ′(1 +β +u)2ζ′′(1 +s +u)ζ′(1 +s +u)2
+ζ(1 +β +u)2ζ(1 +s +u)3
++ 40ζ′(1 +α +s)ζ′(1 +β +u)ζ′′(1 +s +u)ζ′(1 +s +u)2
+ζ(1 +α +s)ζ(1 +β +u)ζ(1 +s +u)3
++ 7ζ′′(1 +α +s)ζ′′(1 +s +u)ζ′(1 +s +u)2
+ζ(1 +α +s)ζ(1 +s +u)3 + 7ζ′′(1 +β +u)ζ′′(1 +s +u)ζ′(1 +s +u)2
+ζ(1 +β +u)ζ(1 +s +u)3
++ 8ζ′(1 +α +s)ζ(3)(1 +s +u)ζ′(1 +s +u)2
+ζ(1 +α +s)ζ(1 +s +u)3 + 8ζ′(1 +β +u)ζ(3)(1 +s +u)ζ′(1 +s +u)2
+ζ(1 +β +u)ζ(1 +s +u)3
+− 25ζ′(1 +α +s)ζ′′(1 +s +u)2ζ′(1 +s +u)
+ζ(1 +α +s)ζ(1 +s +u)3 − 25ζ′(1 +β +u)ζ′′(1 +s +u)2ζ′(1 +s +u)
+ζ(1 +β +u)ζ(1 +s +u)3
+− 2ζ′(1 +α +s)ζ′(1 +β +u)2ζ′′(1 +α +s)ζ′(1 +s +u)
+ζ(1 +α +s)2ζ(1 +β +u)2ζ(1 +s +u)
+− 2ζ′(1 +α +s)2ζ′(1 +β +u)ζ′′(1 +β +u)ζ′(1 +s +u)
+ζ(1 +α +s)2ζ(1 +β +u)2ζ(1 +s +u)
+− ζ′(1 +α +s)ζ′′(1 +α +s)ζ′′(1 +β +u)ζ′(1 +s +u)
+ζ(1 +α +s)2ζ(1 +β +u)ζ(1 +s +u)
+− ζ′(1 +β +u)ζ′′(1 +α +s)ζ′′(1 +β +u)ζ′(1 +s +u)
+ζ(1 +α +s)ζ(1 +β +u)2ζ(1 +s +u)
+− 16ζ′(1 +α +s)ζ′(1 +β +u)2ζ′′(1 +s +u)ζ′(1 +s +u)
+ζ(1 +α +s)ζ(1 +β +u)2ζ(1 +s +u)2
+− 16ζ′(1 +α +s)2ζ′(1 +β +u)ζ′′(1 +s +u)ζ′(1 +s +u)
+ζ(1 +α +s)2ζ(1 +β +u)ζ(1 +s +u)2
++ ζ′(1 +α +s)ζ′′(1 +α +s)ζ′′(1 +s +u)ζ′(1 +s +u)
+ζ(1 +α +s)2ζ(1 +s +u)2
+− 8ζ′(1 +β +u)ζ′′(1 +α +s)ζ′′(1 +s +u)ζ′(1 +s +u)
+ζ(1 +α +s)ζ(1 +β +u)ζ(1 +s +u)2
+− 8ζ′(1 +α +s)ζ′′(1 +β +u)ζ′′(1 +s +u)ζ′(1 +s +u)
+ζ(1 +α +s)ζ(1 +β +u)ζ(1 +s +u)2
++ ζ′(1 +β +u)ζ′′(1 +β +u)ζ′′(1 +s +u)ζ′(1 +s +u)
+ζ(1 +β +u)2ζ(1 +s +u)2
+− 2ζ′(1 +α +s)2ζ(3)(1 +s +u)ζ′(1 +s +u)
+ζ(1 +α +s)2ζ(1 +s +u)2 − 2ζ′(1 +β +u)2ζ(3)(1 +s +u)ζ′(1 +s +u)
+ζ(1 +β +u)2ζ(1 +s +u)2
+− 16ζ′(1 +α +s)ζ′(1 +β +u)ζ(3)(1 +s +u)ζ′(1 +s +u)
+ζ(1 +α +s)ζ(1 +β +u)ζ(1 +s +u)2
+− ζ′′(1 +α +s)ζ(3)(1 +s +u)ζ′(1 +s +u)
+ζ(1 +α +s)ζ(1 +s +u)2
+− ζ′′(1 +β +u)ζ(3)(1 +s +u)ζ′(1 +s +u)
+ζ(1 +β +u)ζ(1 +s +u)2 − 20ζ′′(1 +s +u)ζ(3)(1 +s +u)ζ′(1 +s +u)
+ζ(1 +s +u)3
+− ζ′(1 +α +s)ζ(4)(1 +s +u)ζ′(1 +s +u)
+ζ(1 +α +s)ζ(1 +s +u)2 − ζ′(1 +β +u)ζ(4)(1 +s +u)ζ′(1 +s +u)
+ζ(1 +β +u)ζ(1 +s +u)2
++ 4ζ′′(1 +s +u)3
+ζ(1 +s +u)3 − 2ζ′(1 +α +s)2ζ′′(1 +s +u)2
+ζ(1 +α +s)2ζ(1 +s +u)2
+− 2ζ′(1 +β +u)2ζ′′(1 +s +u)2
+ζ(1 +β +u)2ζ(1 +s +u)2 + 16ζ′(1 +α +s)ζ′(1 +β +u)ζ′′(1 +s +u)2
+ζ(1 +α +s)ζ(1 +β +u)ζ(1 +s +u)2
+− ζ′′(1 +α +s)ζ′′(1 +s +u)2
+ζ(1 +α +s)ζ(1 +s +u)2 − ζ′′(1 +β +u)ζ′′(1 +s +u)2
+ζ(1 +β +u)ζ(1 +s +u)2
+
+===== PAGE 49 =====
+
+MORE THAN FIVE-TWELFTHS OF THE ZEROS OF ζ ARE ON THE CRITICAL LINE 49
++ ζ(3)(1 +s +u)2
+ζ(1 +s +u)2 + ζ(1 +s +u)ζ′(1 +α +s)ζ′(1 +β +u)ζ′′(1 +α +s)ζ′′(1 +β +u)
+ζ(1 +α +s)2ζ(1 +β +u)2ζ(1 +s +u)
++ 4ζ′(1 +α +s)2ζ′(1 +β +u)2ζ′′(1 +s +u)
+ζ(1 +α +s)2ζ(1 +β +u)2ζ(1 +s +u) + 2ζ′(1 +β +u)2ζ′′(1 +α +s)ζ′′(1 +s +u)
+ζ(1 +α +s)ζ(1 +β +u)2ζ(1 +s +u)
+− ζ′(1 +α +s)ζ′(1 +β +u)ζ′′(1 +α +s)ζ′′(1 +s +u)
+ζ(1 +α +s)2ζ(1 +β +u)ζ(1 +s +u) + 2ζ′(1 +α +s)2ζ′′(1 +β +u)ζ′′(1 +s +u)
+ζ(1 +α +s)2ζ(1 +β +u)ζ(1 +s +u)
+− ζ′(1 +α +s)ζ′(1 +β +u)ζ′′(1 +β +u)ζ′′(1 +s +u)
+ζ(1 +α +s)ζ(1 +β +u)2ζ(1 +s +u) + ζ′′(1 +α +s)ζ′′(1 +β +u)ζ′′(1 +s +u)
+ζ(1 +α +s)ζ(1 +β +u)ζ(1 +s +u)
++ 2ζ′(1 +α +s)ζ′(1 +β +u)2ζ(3)(1 +s +u)
+ζ(1 +α +s)ζ(1 +β +u)2ζ(1 +s +u) + 2ζ′(1 +α +s)2ζ′(1 +β +u)ζ(3)(1 +s +u)
+ζ(1 +α +s)2ζ(1 +β +u)ζ(1 +s +u)
++ ζ′(1 +β +u)ζ′′(1 +α +s)ζ(3)(1 +s +u)
+ζ(1 +α +s)ζ(1 +β +u)ζ(1 +s +u) + ζ′(1 +α +s)ζ′′(1 +β +u)ζ(3)(1 +s +u)
+ζ(1 +α +s)ζ(1 +β +u)ζ(1 +s +u)
++ 5ζ′(1 +α +s)ζ′′(1 +s +u)ζ(3)(1 +s +u)
+ζ(1 +α +s)ζ(1 +s +u)2 + 5ζ′(1 +β +u)ζ′′(1 +s +u)ζ(3)(1 +s +u)
+ζ(1 +β +u)ζ(1 +s +u)2
++ ζ′(1 +α +s)ζ′(1 +β +u)ζ(4)(1 +s +u)
+ζ(1 +α +s)ζ(1 +β +u)ζ(1 +s +u) + ζ′′(1 +s +u)ζ(4)(1 +s +u)
+ζ(1 +s +u)2
+}
+.
+Each of these cases is now treated as in §5.1 with the assistance of Lemma 7.1 and Lemma 7.2, see below.
+A way to automate this process would be most welcome.
+7.2. Resuming the general case d≥ 0. We shall ﬁnish our delineation of the main terms. An inspection
+shows that a general term of (using the compactiﬁed notation of Theorem 7.1)
+1
+(2πi)Ld+¯Ld
+∮ ∮
+Mα,β(w, z;s,u )DZDW
+is of the form
+ζ(1 +s +u)ζ(1 +α +β)
+ζ(1 +α +s)ζ(1 +β +u)Ψ(k1,k 2,··· ,kd;l1,l 2,··· ,ld;m1,m 2,··· ,md)
+×
+(ζ′
+ζ (1 +s +u)
+)k1(ζ′′
+ζ (1 +s +u)
+)k2
+×···×
+(ζ(d+d)
+ζ (1 +s +u)
+)kd
+×
+(ζ′
+ζ (1 +α +s)
+)l1(ζ′′
+ζ (1 +α +s)
+)l2
+×···×
+(ζ(d)
+ζ (1 +α +s)
+)ld
+×
+(ζ′
+ζ (1 +β +u)
+)m1(ζ′′
+ζ (1 +β +u)
+)m2
+×···×
+(ζ(d)
+ζ (1 +β +u)
+)md
+,(7.10)
+where Ψ(k1,k 2,··· ,kd;l1,l 2,··· ,ld;m1,m 2,··· ,md) is a constant independent of the complex variables
+α,β,s and u. The combinatorial meaning of
+k ={k1,k 2,··· ,kd}, l ={l1,l 2,··· ,ld} and m ={m1,m 2,··· ,md}
+follows from the residue calculus process and it involves partitioning the structure of d and Ld, ¯Ld. What
+is critically important about this is not so much the powers and coeﬃcients, which are achievable in an
+elementary if ugly way as we just showed, but its structure in terms of the variables α,β,s andu. In§9, we
+raise the question of whether some of the combinatorial tools such as [18, Lemma 2.5.1] could be helpful in
+elucidating the meaning of these contour integrals. In any case, in what follows, we will need to decouple s
+and u and to do this, we shall use the Dirichlet convolution
+(1⋆ Λ⋆k1
+1 ⋆ Λ⋆k2
+2 ⋆··· ⋆ Λ⋆kd
+d+d)(n).(7.11)
+This should not be surprising as it somewhat tallies up with the structure of the coeﬃcients in Theorem 4.1.
+Going back to (6.1) with these new coeﬃcients and considering only the ﬁrst part of the integral (i.e. the
+one involving ζ(1 +α +β)) yields
+I1,d(α,β ) = TˆΦ(0)
+(logN)
+∑r𝓁r(logN)
+∑ ¯r¯𝓁¯r
+∑∑
+i,j
+pd,𝓁d,ipd,¯𝓁d,ji!j!
+(logN)i+j J1,d +O(E3),
+
+===== PAGE 50 =====
+
+50 KYLE PRATT, NICOLAS ROBLES, ALEXANDRU ZAHARESCU, AND DIRK ZEINDLER
+where
+J1,d = 1
+(2πi)2
+∫
+(1)
+∫
+(1)
+1
+(2πi)Ld+¯Ld
+∮ ∮
+Mα,β(w, z;s,u )DZDWNs+u ds
+si+1
+du
+uj+1.
+Deforming the path of integration of the s,u-integrals to Re(s) = Re(u) =δ withδ >0, we come to see that
+J1,d = 1
+(2πi)2
+∫
+(δ)
+∫
+(δ)
+ζ(1 +s +u)ζ(1 +α +β)
+ζ(1 +α +s)ζ(1 +β +u)A(m,n)
+α,β (0, 0;s,u )
+∑
+k,l,m
+Ψ(k, l, m)
+×
+(ζ′
+ζ (1 +s +u)
+)k1(ζ′′
+ζ (1 +s +u)
+)k2
+×···×
+(ζ(d+d)
+ζ (1 +s +u)
+)kd
+×
+(ζ′
+ζ (1 +α +s)
+)l1(ζ′′
+ζ (1 +α +s)
+)l2
+×···×
+(ζ(d)
+ζ (1 +α +s)
+)ld
+×
+(ζ′
+ζ (1 +β +u)
+)m1(ζ′′
+ζ (1 +β +u)
+)m2
+×···×
+(ζ(d)
+ζ (1 +β +u)
+)md
+Ns+u ds
+si+1
+du
+uj+1.
+Following the recipe take δ≍L−1 and bound trivially to get J1,d≪Li+j+∑r𝓁r+∑ ¯r𝓁¯r. Next, use a Taylor
+expansionA(m,n)
+α,β (0, 0;s,u ) =A(m,n)
+α,β (0, 0;β,α ) +O(|s−β| +|u−α|). This puts us in the following situation
+J1,d = 1
+α +β
+∑
+n≤N
+(1⋆ Λ⋆k1
+1 ⋆ Λ⋆k2
+2 ⋆··· ⋆ Λ⋆kd
+d+d)(n)
+n
+∑
+k,l,m
+Ψ(k, l, m)Ld(l;α,i,n )Ld(m;β,j,n ),
+by the aid of (7.11) and where
+Ld(l;α,i,n ) = 1
+2πi
+∫
+≍(L−1)
+1
+ζ(1 +α +s)
+×
+(ζ′
+ζ (1 +α +s)
+)l1(ζ′′
+ζ (1 +α +s)
+)l2
+×···×
+(ζ(d)
+ζ (1 +α +s)
+)ld(N
+n
+)s ds
+si+1,
+as well as
+Ld(m;β,j,n ) = 1
+2πi
+∫
+≍(L−1)
+1
+ζ(1 +β +u)
+×
+(ζ′
+ζ (1 +β +u)
+)m1(ζ′′
+ζ (1 +β +u)
+)m2
+×···×
+(ζ(d)
+ζ (1 +β +u)
+)md(N
+n
+)u du
+uj+1.
+We shall need one further tool from complex analysis before proceeding.
+Lemma 7.1. Suppose 0<δ ≍L−1,i≥ 1 andα≪L−1. Let N≥n≥ 0 andlr = 0, 1, 2,··· forr = 1,··· ,d .
+One then has for some ν≍ log logN that
+1
+2πi
+∫
+(δ)
+(N
+n
+)s 1
+ζ(1 +α +s)
+(ζ′
+ζ (1 +α +s)
+)l1(ζ′′
+ζ (1 +α +s)
+)l2
+×···×
+(ζ(d)
+ζ (1 +α +s)
+)ld
+ds
+si+1
+= Υ(d, l) +O(L
+∑d
+r=1rlr−2+i) +O
+((N
+n
+)−ν
+log(N)ε
+)
+,
+where
+Υ(d, l) := (1!(−1)1)l1(2!(−1)2)l2··· (d!(−1)d)ld 1
+2πi
+∮ 1
+(α +s)1×l1+2×l2+···+d×ld−1
+(N
+n
+)s ds
+si+1,
+with the contour of integration being a circle of radius one centered at the origin and enclosing −α.
+Proof. The idea behind this proof is to use the standard zero-free region of ζ, see for instance [10, Lemma
+6.1]. Let U be a large parameter with U →∞ and U = o(T ) as T →∞ , which will be chosen at the
+end of the proof. The above integral is, by Cauchy’s theorem, equal to the sum of the residues at s = 0
+and at s = −α plus the sum over line integrals over the segments γ1 = {s = it : t ∈ R, |t| ≥U},
+γ2 ={s = σ±iU : −c/ logU≤ σ≤ 0}, and γ3 ={s =−c/ logU +it : |t|≤ U}, where c is some ﬁxed
+
+===== PAGE 51 =====
+
+MORE THAN FIVE-TWELFTHS OF THE ZEROS OF ζ ARE ON THE CRITICAL LINE 51
+positive constant such that ζ(1 +α +s) has no zeros in the region on the right-hand side of the contour
+determined by the γi’s. Another two requirements on c are that the estimate
+1
+ζ(σ +it)≪ log(2 +|t|)
+holds in this region, and that
+ζ(j)
+ζ (σ +it)≪ logj(4 +|t|), j = 1, 2,··· ,
+see [55, Theorem 6.7]. The below diagram 7.2 illustrates the contour of integration.
+0
+iU
+−iU
+− c
+logU
+Figure 7.1. Curveγ in the proof of Lemma 7.1.
+Then, one has ∫
+γ1
+≪
+∫ ∞
+U
+(logt)1+∑d
+r=1rlr
+ti+1 dt≪ (logU)1+∑d
+r=1rlr
+Ui ,
+since i≥ 1. Moreover, since n≤N
+∫
+γ2
+≪
+∫ 0
+−c/ logU
+(logU)1+∑d
+r=1rlr
+(N
+n
+)x 1
+Ui+1 dx≪ (logU)
+∑d
+r=1rlr
+Ui+1 ,
+and ﬁnally
+∫
+γ3
+≪
+∫ U
+−U
+(log(4 +|t|))1+∑d
+r=1rlr (N/n)−c/ logU
+(c2/ log2U +t2)(i+1)/2 dt
+≪ (N/n)−c/ logU
+(∫ c/ logU
+0
++
+∫ 1
+c/ logU
++
+∫ U
+1
+)(log(4 +|t|))1+∑d
+r=1rlr
+(c2/ log2U +t2)(i+1)/2 dt
+≪ (N/n)−c/ logU
+∫ c/ logU
+0
+(log 5)1+∑d
+r=1rlr
+|c/ logU|(i+1) dt + (N/n)−c/ logU
+∫ 1
+c/ logU
+(log 5)1+∑d
+r=1rlr
+t(i+1) dt
++ (N/n)−c/ logU
+∫ U
+1
+(log(4 +U))1+∑d
+r=1rlr
+t(i+1) dt
+≪ (N/n)−c/ logU(logiU + (logU)1+∑d
+r=1rlr).
+
+===== PAGE 52 =====
+
+52 KYLE PRATT, NICOLAS ROBLES, ALEXANDRU ZAHARESCU, AND DIRK ZEINDLER
+Appropriately choosing U≍ logN gives an error of size O((log logN)i+∑d
+r=1rlr) = O(logN). The last
+thing we need to do is collect the residues, which we write as the contour integral
+1
+2πi
+∮
+Ω
+(N
+n
+)s 1
+ζ(1 +α +s)
+(ζ′
+ζ (1 +α +s)
+)l1(ζ′′
+ζ (1 +α +s)
+)l2
+×···×
+(ζ(d)
+ζ (1 +α +s)
+)ld
+ds
+si+1,
+where the contour is now a small circle Ω of radius ≍ L−1 centered around the origin such that −α∈ Ω.
+Since the radius of the circle tends to zero as T→∞ , we may use the Laurent expansions around s =−α
+1
+ζ(1 +α +s) = (α +s) (1 +O(α +s)),
+where, we recall, C0 is the Euler constant, as well as
+(ζ(r)
+ζ (1 +α +s)
+)lr
+=
+(r!(−1)r
+(α +s)r
+)lr
+(1 +O(α +s)),
+to ﬁnally arrive at
+1
+2πi
+∮
+Ω
+(N
+n
+)s 1
+ζ(1 +α +s)
+(ζ′
+ζ (1 +α +s)
+)l1(ζ′′
+ζ (1 +α +s)
+)l2
+×···×
+(ζ(d)
+ζ (1 +α +s)
+)ld
+ds
+si+1
+= 1
+2πi
+∮ (N
+n
+)s
+(α +s)
+( 1!(−1)1
+(α +s)1
+)l1( 2!(−1)2
+(α +s)2
+)l2
+×···×
+(d!(−1)d
+(α +s)d
+)ld
+(1 +O(α +s)) ds
+si+1.
+Using a direct estimation yields that the right-hand side above is equal to
+(1!(−1)1)l1(2!(−1)2)l2··· (d!(−1)d)ld 1
+2πi
+∮ 1
+(α +s)1×l1+2×l2+···+d×ld−1
+(N
+n
+)s ds
+si+1,
+which is precisely the deﬁnition of Υ( d, l) given in the statement of the lemma. □
+The resulting contour integral leads to three very diﬀerent cases which we now need to distinguish. Set
+ω(d, l) := 1×l1 + 2×l2 +··· +d×ld− 1 (7.12)
+7.2.1. Case A: Terms for which ω(d, l) =−1. In this case we have
+ΥA(d, l) =U(d, l) 1
+2πi
+∮
+(α +s)
+(N
+n
+)s ds
+si+1 =U(d, l) d
+dxeαx 1
+2πi
+∮ (Nex
+n
+)s ds
+si+1
+⏐⏐⏐⏐
+x=0
+=U(d, l) 1
+i!
+d
+dxeαx
+(
+x + logN
+n
+)i⏐⏐⏐⏐
+x=0
+=U(d, l) logiN
+i! logN
+d
+dxNαx
+(
+x + log(N/n)
+logN
+)i⏐⏐⏐⏐
+x=0
+,
+by the change of variable x→x logN and where we have adopted the shorter notation
+U(d, l) = 1{ω(d, l) =−1}(1!(−1)1)l1(2!(−1)2)l2··· (d!(−1)d)ld,(7.13)
+with
+1{ω(d, l) =−1} =
+{
+1, if ω(d, l) =−1,
+0, otherwise.
+We take the chance now to sum over i (the index coming from the polynomial decomposition of Pd,𝓁), so
+that
+∑
+i
+pd,𝓁d,ii!
+logiN
+U(d, l) logiN
+i! logN
+d
+dxNαx
+(
+x + log(N/n)
+logN
+)i⏐⏐⏐⏐
+x=0
+=U(d, l)
+logN
+d
+dxNαxPd,𝓁
+(
+x + log(N/n)
+logN
+)⏐⏐⏐⏐
+x=0
+.
+
+===== PAGE 53 =====
+
+MORE THAN FIVE-TWELFTHS OF THE ZEROS OF ζ ARE ON THE CRITICAL LINE 53
+7.2.2. Case B: Terms for which ω(d, l) = 0. We now deal with
+ΥB(d, l) =V(d, l) 1
+2πi
+∮ (N
+n
+)s ds
+si+1 =−V(d, l)logiN
+i!
+(log(N/n)
+logN
+)i
+,
+by the use of Cauchy’s integral theorem and where
+V(d, l) = 1{ω(d, l) = 0}(1!(−1)1)l1(2!(−1)2)l2··· (d!(−1)d)ld.(7.14)
+We perform the sum over i so that
+∑
+i
+pd,𝓁d,ii!
+logiN
+V(d, l)logiN
+i!
+(log(N/n)
+logN
+)i
+=−V(d, l)Pd,𝓁
+(log(N/n)
+logN
+)
+.
+7.2.3. Case C: Terms for which ω(d, l)> 0. This is the most complicated case. We have
+ΥC(d, l) =W(d, l) 1
+2πi
+∮ 1
+(α +s)ω(d,l)
+(N
+n
+)s ds
+si+1,
+where
+W(d, l) = 1{ω(d, l)> 0}(1!(−1)1)l1(2!(−1)2)l2··· (d!(−1)d)ld.(7.15)
+For the third case we employ
+∫ 1
+1/q
+tα+s−1 logτtdt = (−1)ττ!
+(α +s)τ+1− q−α−s
+(α +s)τ+1P (s,α, logq),(7.16)
+forτ = 0, 1, 2,··· . Here P is a polynomial in logq of degree τ, see [10, p. 56] and [60, p. 285]. Only the ﬁrst
+term of the right-hand side above contributes when we insert this expression into Υ( d, l). This is because
+the contribution from the second term vanishes by taking the contour to be arbitrary large. The explicit
+calculation is as follows (temporarily set τ =ω(d, l)− 1 and q = N
+n ):
+ΥC(d, l) =W(d, l) 1
+2πi
+∮
+(α +s)−ω(d,l)
+(N
+n
+)s ds
+si+1 =W(d, l) 1
+2πi
+∮ 1
+(α +s)τ+1
+(N
+n
+)s ds
+si+1
+=W(d, l) 1
+2πi
+∮ (N
+n
+)s∫ 1
+1/q
+1
+(−1)ττ!tα+s−1 logτtdt ds
+si+1
+=W(d, l) 1
+(−1)ττ!
+∫ 1
+1/q
+( 1
+2πi
+∮
+(qt)s ds
+si+1
+)
+tα−1 logτtdt
+=W(d, l) 1
+(−1)ω(d,l)−1(ω(d, l)− 1)!
+1
+i!
+∫ 1
+1/q
+(logqt)itα−1(logt)ω(d,l)−1dt
+=W(d, l) (−1)1−ω(d,l)
+i!(ω(d, l)− 1)!
+(
+logN
+n
+)i+ω(d,l)∫ 1
+0
+(1−a)iaω(d,l)−1
+(N
+n
+)−αa
+da
+=W(d, l) (−1)1−ω(d,l)
+i!(ω(d, l)− 1)!(logN)ω(d,l)
+(log(N/n)
+logN
+)ω(d,l)(
+logN
+n
+)i∫ 1
+0
+(1−a)iaω(d,l)−1
+(N
+n
+)−αa
+da,
+by the use of the change of variables t =q−a. Lastly we do the sum over i and obtain
+∑
+i
+pd,𝓁d,ii!
+logiN
+W(d, l) (−1)1−ω(d,l)
+i!(ω(d, l)− 1)!(logN)ω(d,l)
+(log(N/n)
+logN
+)ω(d,l)(
+logN
+n
+)i∫ 1
+0
+(1−a)iaω(d,l)−1
+(N
+n
+)−αa
+da
+=W(d, l) (−1)1−ω(d,l)
+(ω(d, l)− 1)!(logN)ω(d,l)
+(log(N/n)
+logN
+)ω(d,l)∫ 1
+0
+Pd,𝓁
+(
+(1−a)log(N/n)
+logN
+)
+aω(d,l)−1
+(N
+n
+)−αa
+da.
+Let us now recap. We had Id(α,β ) =I1,d(α,β ) +I2,d(α,β ) =I1,d(α,β ) +T−α−βI1,d(−β,−α) +O(T/L),
+where
+I1,d(α,β ) = TˆΦ(0)
+(logN)
+∑d
+r=1r𝓁r(logN)
+∑d
+¯r=1 ¯r¯𝓁¯r
+1
+α +β
+∑
+k,l,m
+Ψ(k, l, m)
+
+===== PAGE 54 =====
+
+54 KYLE PRATT, NICOLAS ROBLES, ALEXANDRU ZAHARESCU, AND DIRK ZEINDLER
+×
+∑
+n≤N
+(1⋆ Λ⋆k1
+1 ⋆ Λ⋆k2
+2 ⋆··· ⋆ Λ⋆kd
+d+d)(n)
+n Fd(l,α,n )Fd(k,β,n ).
+The terms Fd are given by the three diﬀerent cases
+Fd(l,β,n ) =
+
+
+
+U(d,l)
+logN
+d
+dxNαxPd,𝓁(x + log(N/n)
+logN )|x=0,
+V(d, l)Pd,𝓁( log(N/n)
+logN ),
+W(d, l) (−1)1−ω(d,l)
+(ω(d,l)−1)! (logN)ω(d,l)( log(N/n)
+logN )ω(d,l)∫ 1
+0 Pd,𝓁((1−a) log(N/n)
+logN )aω(d,l)−1(N
+n )−αada,
+depending on whether ω(d, l) =−1, ω(d, l) = 0 and ω(d, l)> 0, respectively. Similarly
+Fd(k,α,n ) =
+
+
+
+U(d,k)
+logN
+d
+dyNβyPd,𝓁(y + log(N/n)
+logN )|y=0,
+V(d, k)Pd,𝓁( log(N/n)
+logN ),
+W(d, k) (−1)1−ω(d,k)
+(ω(d,k)−1)! (logN)ω(d,k)( log(N/n)
+logN )ω(d,k)∫ 1
+0 Pd,𝓁((1−b) log(N/n)
+logN )bω(d,k)−1(N
+n )−βbdb,
+depending on whether ω(d, k) =−1, ω(d, k) = 0 and ω(d, k)> 0, respectively. Here U,V andW are given
+by (7.12), (7.13), (7.14), (7.15).
+So we must now cross each of all possible 3 × 3 = 9 terms. In fact, due to symmetries, there will only be
+six diﬀerent cases, much like in the Euler product.
+To deal with the sum over n we will need the following Euler-Maclaurin lemma.
+Lemma 7.2. We have
+∑
+n≤z
+(dk⋆ Λ⋆k1
+1 ⋆··· ⋆ Λ⋆km
+m )(n)
+n1+s F
+(log(x/n)
+logx
+)
+H
+(log(z/n)
+logz
+)
+= 1k1(2!)k2··· (m!)km(logz)k+1×k1+···m×km
+zs(k + 1×k1 +··· m×km− 1)!
+∫ 1
+0
+(1−u)k+1×k1+···m×km−1F
+(
+1− (1−u) logz
+logx
+)
+H(u)zusdu
++O
+(
+(logz)k+1×k1+···m×km−1)
+,
+for smooth functions F and H in the interval [0, 1].
+Proof. Let g(n) be an arithmetic function with
+∑
+n≤z
+g(n) =cgz logkg−1z +O(z logkg−2z) (7.17)
+for some cg > 0 and kg≥ 1. Then
+∑
+n≤z
+g(n)
+n1+sF
+(log(x/n)
+logx
+)
+H
+(log(z/n)
+logz
+)
+= cg logkgz
+zs
+∫ 1
+0
+(1−u)kg−1F
+(
+1− (1−u) logz
+logx
+)
+H(u)zusdu
++O(logkg−1)
+for F , H and s as in the lemma. The proof of this statement is almost the same as the proof of [48,
+Lemma 2.4] and we thus omit it. It is thus enough to show that
+∑
+n≤z
+(dk⋆ Λ⋆k1
+1 ⋆··· ⋆ Λ⋆km
+m )(n) = 1k1(2!)k2··· (m!)km
+(k + 1×k1 +... +m×km− 1)!z(logz)(k+1·k1+...+m·km)−1
+×
+(
+1 +O(log−1z)
+)
+(7.18)
+To prove (7.18), we need
+∑
+n≤z
+g(n) log(n) =cgz logkgz +O(z logkg−1z) (7.19)
+∑
+n≤z
+g(n) log𝓁(n)
+n = cgz logkg+𝓁−1z
+kg +𝓁 +O(z logkg+𝓁−2z)
+∑
+n≤z
+(g⋆ Λ)(n) = cgz logkgz
+kg
++O(z logkg−1z) (7.20)
+
+===== PAGE 55 =====
+
+MORE THAN FIVE-TWELFTHS OF THE ZEROS OF ζ ARE ON THE CRITICAL LINE 55
+with g(n) as in (7.17). The proof of these three equations use partial summation and we omit the details.
+Finally, letf(n) be an arithmetic function with
+∑
+n≤z
+f(n) =cfz logkf−1z +O(z logkf−2z),
+then
+∑
+n≤z
+(g⋆f )(n) =cfcgz(logz)kf+kg−1 (kf− 1)!(kg− 1)!
+(kf +kg− 1)! +O(z logkf+kg−2z).(7.21)
+We have∑
+n≤z
+(g⋆f )(n) =
+∑
+a≤z
+g(a)
+∑
+z/a
+f(b) =
+∑
+a≤z
+g(a)
+(
+cf
+z
+a logkf−1(z/a) +O(z logkf−2z)
+)
+=cfz
+(∑
+a≤z
+g(a)
+a logkf−1(z/a)
+)
++O(z logkf+kg−2z)
+=cfz
+(kf−1∑
+j=0
+(kf− 1
+j
+)
+(−1)j∑
+a≤z
+g(a)
+a logj(a) logkf−1−j(z)
+)
++O(z logkf+kg−2z)
+=cfcgz
+(kf−1∑
+j=0
+(kf− 1
+j
+)
+(−1)j 1
+kg +j
+)
+logkf+kg−1(z) +O(z logkf+kg−2z).
+We now have
+kf−1∑
+j=0
+(kf− 1
+j
+)
+(−1)j 1
+kg +j =
+kf−1∑
+j=0
+(kf− 1
+j
+)
+(−1)j
+∫ 1
+0
+ukg+j−1du
+=
+∫ 1
+0
+ukg−1(1−u)kf−1du = (kf− 1)!(kg− 1)!
+(kf +kg− 1)! .
+The last equality can be proved for instance by induction over kf, which completes the proof of (7.21). We
+now can show that we have for each k≥ 1∑
+n≤z
+Λk(n) =kz logk−1z +O(z logk−2z).
+We prove this equation by induction. We have Λ 1 = Λ and thus the case k = 1 is trivial. We thus assume
+the statement holds for a given k. We use (2.1) together with (7.19) and (7.20) and get
+∑
+n≤z
+Λk+1(n) =
+∑
+n≤z
+Λk(n) logn +
+∑
+n≤z
+(Λk⋆ Λ)(n) =kz logkz +kz logkz
+k +O(z logk−1z)
+= (k + 1)z logkz +O(z logk−1z).
+In a similar way, one can show that
+∑
+n≤z
+dk(n) = z logk−1z
+(k− 1)! +O(z logk−2z).
+We now can prove (7.18) and thus complete the proof of the lemma. We argue by induction. The case
+k1 =k2 =... =km = 0 follows immediately from (7.21). Suppose now that (7.18) for given k1, k2, . . .km.
+We then get with (7.21)
+∑
+n≤z
+(dk⋆ Λ⋆k1
+1 ⋆··· ⋆ Λ⋆km+1
+m )(n) =
+∑
+n≤z
+((dk⋆ Λ⋆k1
+1 ⋆··· ⋆ Λ⋆km
+m )⋆ Λm)(n)
+=z(logz)(k+1·k1+...+m·km)+km−1
+( 1k1(2!)k2··· (m!)km
+(k + 1·k1 +... +m·km− 1)!
+)
+km
+×
+(
+(k + 1·k1 +... +m·km)− 1
+)
+!(km− 1)!(
+(k + 1·k1 +... +m·km) +km− 1
+)
+! .
+
+===== PAGE 56 =====
+
+56 KYLE PRATT, NICOLAS ROBLES, ALEXANDRU ZAHARESCU, AND DIRK ZEINDLER
+This ends the proof. □
+All but one of the logN’s in I1,d will cancel with the logN’s coming from the Euler-Maclaurin expression
+leaving us only with 1
+logN in I1,d.
+The last step is to apply the diﬀerential operators Q on I1,d(α,β ) +T−α−βI1,d(−β,−α)
+Id =Q
+( −1
+logT
+∂
+∂α
+)
+Q
+( −1
+logT
+∂
+∂β
+)
+[I1,d(α,β ) +T−α−βI1,d(−β,−α)]
+⏐⏐⏐⏐
+α=β=−R/L
+.
+From the above procedure a term of the form log N (such as log(Nx+yT ) for example) will come out.
+This term will be combined with the term 1
+logN above to produce an expression like log(Nx+yT)
+logN = θ(x+y)+1
+θ ,
+thereby removing the logT dependence. For the terms involving derivatives of the arithmetical factorAα,β, it
+can be seen that the resulting expression after the application of the twoQ’s will be of the form logN
+log2N≍ 1
+logT ,
+thereby producing error terms of size T ˆΦ(0)
+logT ≪T/L.
+This ends our delineation of the ﬁnal main terms.
+8. Numerical aspects
+The below numerical calculations are similar to the ones that appeared in the older version of Feng’s
+paper on the arXiv. Feng obtains κ≥ 0.417288 which was rounded up to 0.4173. Since we were never able
+to achieve a 4
+7 length in the past, we had to rely on our code of the main terms (which matched Feng’s).
+However we are now able to reach 4
+7, we are only too happy to give credit to Feng and recover part of his
+numerical setup. Let us set d = 1 and K = 3 in (3.4) as well as
+θ = 4
+7−ε and R = 1.3036.
+Moreover, we slightly increase the number of terms of the polynomials P of the molliﬁers (Feng only used
+degP1 = 4, degP2 = 2 and degP3 = 1) and take
+P1(x) =x + 0.261076x(1−x)− 1.071007x(1−x)2− 0.236840x(1−x)3 + 0.260233x(1−x)4,
+P2(x) = 1.048274x + 1.319912x2− 0.940058x3,
+P3(x) = 0.522811x− 0.686510x2− 0.049923x3,
+as well as
+Q(x) = 0.490464 + 0.636851(1− 2x)− 0.159327(1− 2x)3 + 0.032011(1− 2x)5.
+Letting ε→ 0 yields κ≥ 0.417293962. Using only a linear polynomial in Q yields the proportion of simple
+zeros on the critical line, see [1, 37, 51]. Taking
+P1(x) =x + 0.052703x(1−x)− 0.657999x(1−x)2− 0.003193x(1−x)3− 0.101832x(1−x)4
+P2(x) = 1.049837x− 0.097446x2
+P3(x) = 0.035113x− 0.156465x2,
+as well as
+Q(x) = 0.483777 + (1− 0.483777)(1− 2x);
+along with R = 1.1167, θ = 4
+7, d = 1 and K = 3 and letting ε→ 0 yields κ∗≥ 0.407511457.
+9. Further remarks and future work
+We end our paper with some questions and discussions on how the methodology we have presented could
+be used in future work.
+(1) Naturally, the most pressing question is whether these ideas can be applied to other L-functions in
+the Selberg class. Along with this comes their associations with compact groups.
+(2) Equally important would be the eﬀect of these molliﬁcation reﬁnements on other arithmetical objects
+such as discrete moments, logarithmic moments, k-th moments, and pair correlations as illustrated
+in e.g. [25].
+
+===== PAGE 57 =====
+
+MORE THAN FIVE-TWELFTHS OF THE ZEROS OF ζ ARE ON THE CRITICAL LINE 57
+(3) In the proof of Theorem 4.1, it was important to exploit the additivity of the logarithm in an∼
+(µ⋆ log)(n). This allowed us to use Vaughan and Heath-Brown identities [36, 67] and get θ = 4
+7−ε.
+Moreover, in [4] it is shown that the best size one can take for coeﬃcients an about which we know
+nothing (other thanan≪ε nε) isθ = 17
+33−ε. It is an interesting question to ask how one can increase
+the length of the Dirichlet polynomials without specializing the coeﬃcients an too much.
+(4) As mentioned in §1.3, the mixing of (1.4) and the Feng molliﬁer ( d = 1) is technically diﬃcult. It is
+possible to obtain a better result for κ by working with a molliﬁer of the form
+ψ(s) =
+K∑
+𝓁=0
+(−1)𝓁 ∑
+𝓁1+𝓁2+···+𝓁d=𝓁
+( 𝓁
+𝓁1,𝓁 2,··· ,𝓁d
+)
+×
+∑
+n≤yd
+nσ0−1/2
+ns
+(µ⋆ Λ⋆𝓁1⋆ Λ⋆𝓁2
+2 ⋆··· ⋆ Λ⋆𝓁d
+d )(n)
+(logyd)
+∑d
+r=1r𝓁r
+Pd,𝓁
+(log(yd/n)
+logyd
+)
++χ(s + 1
+s−σ0)
+∑
+hk≤y2
+µ2(h)hσ0−1/2k1/2−σ0
+hsk1−s P2
+(log(y2/hk)
+logy2
+)
+.
+If necessary, then further pieces from [49, 64] may be brought in. This would qualify as a painful
+calculation. Moreover, it would also be interesting to set d = 1 and analyze how a large truncation of
+𝓁 could yield terms from a higher degree d≥ 2. What would be a good balance between the degree
+d and the truncation 𝓁?
+(5) Is there a way to ﬁnd a better expression (if possible a comfortable one such as [18, Lemma 2.5.1])
+for the contour integrals that yield the logarithmic derivatives of ζ? See for instance the end of §6.2
+and§7.1. Another way to re-write Mα,β in (7.6) is
+Mα,β(z, w;s,u ) = (−1)1×𝓁1+2×𝓁2+···d×𝓁d(−1)1×¯𝓁1+2×¯𝓁2+···d×¯𝓁d
+× ζ(1 +s +u)(Ld+1)(¯Ld+1)ζ(1 +α +β)
+ζ(1 +β +u)¯Ld+1ζ(1 +α +s)Ld+1
+×
+( d∏
+q=1
+𝓁q∏
+i=1
+∂q
+∂zq
+q,i
+)( d∏
+¯q=1
+¯𝓁¯q∏
+j=1
+∂ ¯q
+∂w ¯q
+¯q,j
+){( d∏
+q=1
+𝓁q∏
+i=1
+d∏
+¯q=1
+¯𝓁¯q∏
+j=1
+ζ(1 +s +u +wq,i +z¯q,j)
+)
+×
+( d∏
+q=1
+𝓁q∏
+i=1
+ζ(1 +α +s +zq,i)
+ζ ¯Ld+1(1 +s +u +zq,i)
+)( d∏
+¯q=1
+¯𝓁¯q∏
+j=1
+ζ(1 +β +u +w¯q,j)
+ζLd+1(1 +s +u +w¯q,j)
+)
+×Aα,β(z, w,s,u )
+}⏐⏐⏐⏐
+z=w=0
+.
+Some attempts to obtain a closed formula for this problem indicate that it is much too cumbersome
+and that the easiest way is to proceed with mathematical software.
+(6) In [34], Feng and Wu used the d = 1 version of a close variant of ψd to show that inﬁnitely often
+consecutive non-trivial zeros of the Riemann zeta-function diﬀer by at least 2.7327 times the average
+spacing, and inﬁnitely often they diﬀer by at most 0.5154 times the average spacing, under RH. In
+other words, if
+λ = lim sup(γ−γ′)logγ
+2π and µ = lim inf(γ−γ′)logγ
+2π ,
+then, under RH, they prove that λ >2.7327 and µ <0.5154. See also [9, 12] among others. Since
+ψd=1 is a special case of a wider general family, can one improve the results of Feng and Wu with
+a higher degree d? In a recent paper of Bui and Milinovich [11], these bounds are improved. The
+question remains whether the technique could be useful. Very recently, Goldston and Turnage-
+Butterbaugh [35] have assumed RH and improved results in this direction. In particular using the
+weights developed by Wu (which have their root in Feng’s molliﬁer), they have shown that there
+are inﬁnitely many zeros of the zeta function whose diﬀerences are smaller than 0 .50412 times the
+average space.
+
+===== PAGE 58 =====
+
+58 KYLE PRATT, NICOLAS ROBLES, ALEXANDRU ZAHARESCU, AND DIRK ZEINDLER
+(7) In [20, 21], the asymptotic large sieve is used along with Levinson’s method to obtain lower bounds
+for the proportion of simple zeros on the critical line of the twists by primitive Dirichlet characters of
+a ﬁxed L-function of degree 1, 2, or 3. For a certain family of Dirichlet L-functions, Conrey, Iwaniec
+and Soundararajan prove that at least 56% of the zeros are on the critical line and are simple. For
+aesthetic reasons, it would be desirable to increase this proportion to more than 3
+5. This would
+necessitate an analysis of more complicated molliﬁers. The asymptotic large sieve technology would
+not apply directly, and additional diﬃculties would arise.
+10. Acknowledgments
+The authors would like to acknowledge Matthew Faust of the Illinois Geometry Lab project for helping
+them write the code that produced their results as well as Siegfried Baluyot for proofreading an earlier
+version of this manuscript. Moreover, the authors would like to thank Hung Bui and Arindam Roy for useful
+discussions.
+For part of this work the ﬁrst author was supported by NSF grant DMS-1501982.
+The authors are extremely grateful to the anonymous referees for their meticulous checking, for thoroughly
+reporting countless typos and inaccuracies as well as for their valuable comments. These corrections and
+additions have made the manuscript clearer and more readable.
+References
+[1] R. J. Anderson. Simple zeros of the Riemann zeta-function . J. Number Theory, (17):176–182, 1983.
+[2] R. Balasubramanian, B. Conrey, and D. R. Heath-Brown. Asymptotic mean square of the product of the Riemann zeta-
+function and a Dirichlet polynomial . J. reine angew. Math., (357):161–181, 1985.
+[3] S. Bettin, and V. Chandee. Trilinear forms with Kloosterman fractions . Adv. Math., (328):1234–1262, 2018.
+[4] S. Bettin, V. Chandee, and M. Radziwi l l. The mean square of the product of ζ(s) with Dirichlet polynomials . J. reine
+angew. Math., (729):51–79, 2017.
+[5] S. Bettin, and S. Gonek. The θ =∞ conjecture implies the Riemann hypothesis . Mathematika, Volume 63, Issue 1:29–33,
+2017.
+[6] E. B. Bogomolny, and J. P. Keating. Gutziller’s trace formula and spectral statistics: beyond the diagonal approximation .
+Phys. Rev. Lett., 77, 1472–1475, 1996.
+[7] A. Borodin and E. Strahov. Averages of characteristic polynomials in random matrix theory . Comm. Pure Appl. Math.,
+59, 161–253, 2006.
+[8] H. M. Bui. Critical zeros of the Riemann zeta-function . Preprint, arxiv.org/abs/1410.2433
+[9] H. M. Bui. Large gaps between consecutive zeros of the Riemann zeta-function . J. Number Theory, (131):67–95, 2011.
+[10] H. M. Bui, B. Conrey, and M. P. Young. More than 41% of the zeros of the zeta function are on the critical line . Acta
+Arith., (150.1):35–64, 2011.
+[11] H. M. Bui and M. B. Milinovich Gaps between zeros of the Riemann zeta-function . The Quarterly Journal of Mathematics,
+(69):403–423, 2018.
+[12] H. M. Bui, M. B. Milinovich, and N. Ng. A note on the gaps between consecutive zeros of the Riemann zeta-function .
+Proc. Amer. Math. Soc., 138(12):4147–4175, 2010.
+[13] S. Chaubey, A. Malik, N. Robles, and A. Zaharescu. Zeros of normalized combinations of ξ(k)(s) on Re(s) = 1/2. J. Math.
+Anal. Appl., (461):1771–1785, 2018.
+[14] L. Comtet. Advanced Combinatorics. Reidel, 1974.
+[15] J. B. Conrey. Zeros of derivatives of the Riemann’s ξ-function on the critical line . J. Number Theory, (16):49–74, 1983.
+[16] J. B. Conrey. More than two ﬁfths of the zeros of the Riemann zeta function are on the critical line . J. reine angew. Math.,
+(399):1–26, 1989.
+[17] J. B. Conrey, D. W. Farmer, J. P. Keating, M. O. Rubinstein, and N. C. Snaith. Autocorrelation of Random Matrix
+Polynomials. Commun. Math. Phys., (237):365–395, 2003.
+[18] J. B. Conrey, D. W. Farmer, J. P. Keating, M. O. Rubinstein, and N. C. Snaith. Integral moments of L-functions. Proc.
+London Math. Soc., (3)91:33–104, 2005.
+[19] J. B. Conrey, and H. Iwaniec. Critical zeros of lacunary L-functions. Preprint, arxiv.org/abs/1607.03288
+[20] J. B. Conrey, H. Iwaniec, and K. Soundararajan. Critical zeros of Dirichlet L-functions . J. reine angew. Math., (681):175–
+198, 2013.
+[21] J. B. Conrey, H. Iwaniec, and K. Soundararajan. Critical zeros of Dirichlet L-functions . Preprint,
+arxiv.org/abs/1105.1176
+[22] J. B. Conrey, D. W. Farmer, and M. R. Zirnbaeur. Autocorrelation of ratios ofL-functions. Comm. Number Theory Phys.,
+(2):593–636, 2008.
+[23] J. B. Conrey, and A. Ghosh. A conjecture for the sixth power moment of the Riemann zeta-function . Int. Math. Res. Not.,
+15:775–780, 1998.
+[24] J. B. Conrey, and S. M. Gonek. High moments of the Riemann zeta function . Duke Math. J., 107:577–604, 2001.
+
+===== PAGE 59 =====
+
+MORE THAN FIVE-TWELFTHS OF THE ZEROS OF ζ ARE ON THE CRITICAL LINE 59
+[25] J. B. Conrey, and N. C. Snaith. Applications of theL-functions ratios conjectures. Proc. London Math. Soc., (3) 94:594–646,
+2007.
+[26] J. M. Deshouillers, and H. Iwaniec. Kloosterman sums and Fourier coeﬃcients of cusp forms . Invent. Math., (70):219–288,
+1982.
+[27] J. M. Deshouillers, and H. Iwaniec. Power mean values of the Riemann zeta function II. Acta Arith., (48):305–312, 1984.
+[28] R. Dickau. Bell Number Diagrams . Wolfram Demonstrations Project, Published: March 7 2011, website available at
+http://demonstrations.wolfram.com/BellNumberDiagrams/.
+[29] W. Duke, J. Friendlander, and H. Iwaniec. Bilinear forms with Kloosterman fractions . Invent. math., (128):23–43, 1997.
+[30] D. W. Farmer. Long molliﬁers of the Riemann zeta-function . Mathematika, 40:71–87, 1993.
+[31] D. W. Farmer. Mean value of Dirichlet series associated with holomorphic cusp forms . J. Number Theory, (49):209–245,
+1994.
+[32] D. W. Farmer. Basic analytic number theory , in: Recent Perspectives in Random Matrix Theory and Number Theory,
+edited by F. Mezzadri and N. C. Snaith. London Mathematical Society Lecture Note Series. 322, 2007
+[33] S. Feng. Zeros of the Riemann zeta function on the critical line . J. Number Theory, (132):511–542, 2012.
+[34] S. Feng, and X. Wu. On gaps between zeros of the Riemann zeta-function . J. Number Theory, (132):1385–1397, 2012.
+[35] D. A. Goldston, and C. L. Turnage-Butterbaugh. A note on small gaps between zeros of the Riemann zeta-function .
+Preprint, arxiv.org/abs/1904.06001
+[36] D. R. Heath-Brown. Prime numbers in short intervals and a generalized Vaughan identity . Canad. J. Math. 34 (1982), no.
+6, 1365–1377.
+[37] D. R. Heath-Brown. Simple zeros of the Riemann zeta-function on the critical line . Bull. London Math. Soc. 11, 17–18
+(1979).
+[38] C. Hooley. On the greatest prime factor of a cubic polynomial . J. reine angew. Math., (303/304):21–50, 1978.
+[39] A. Ivi´ c.On the asymptotic formulas for a generalization of von Mangoldt’s function . Rend. Mat., (6)10: 51-59, 1977.
+[40] H. Iwaniec, W. Luo, and P. Sarnak. Low lying zeros of families of L-functions . Inst. Hautes ´Etudes Sci. Publ. Math., (91):
+55–131, 2000.
+[41] J. P. Keating, and N. C. Snaith. Random matrix theory and ζ(1/2 +it). Comm. Math. Phys., (214): 57–89, 2000.
+[42] J. P. Keating, and N. C. Snaith. Random matrix theory and L-functions at s = 1/2. Comm. Math. Phys., (214): 91–110,
+2000.
+[43] N. M. Katz, and P. Sarnak. Random matrices, Frobenius eigenvalues, and monodromy . American Mathematical Society
+Colloquium Publications, 45 (AMS Providence, RI, 1999).
+[44] N. M. Katz, and P. Sarnak. Zeroes of zeta functions and symmetry . Bull. Amer. Math. Soc. (N.S.), 36, 1–26, 1999.
+[45] E. R. Knafo. Variance of Distribution of Almost Primes in Arithmetic Progressions . PhD Thesis, University of Toronto,
+2006.
+[46] E. Kowalski, P. Michel and J. VanderKam. Non-vanishing of high derivatives of automorphic L-functions at the center of
+the critical strip . J. reine angew. Math., (526):1–34, 2000.
+[47] E. Kowalski, P. Michel and J. VanderKam. Molliﬁcation of the fourth moment of automorphic L-functions and arithmetic
+applications. Invent. Math., (142):95–151, 2000.
+[48] P. K¨ uhn, N. Robles, and D. Zeindler.On a molliﬁer of the perturbed Riemann zeta-function . J. Number Theory, (174):274–
+321, 2017.
+[49] P. K¨ uhn, N. Robles, and D. Zeindler. On mean values of molliﬁers and L-functions associated to primitive cusp forms .
+Mathematische Zeitschrift, (291):661–709, 2019.
+[50] N. Levinson. More than One Third of Zeros of Riemann’s Zeta-Function are on σ = 1
+2 . Adv. Math., (13):383–436, 1974.
+[51] N. Levinson. Selected Papers of Norman Levinson, Volume 2, edited by J. A. Nohel and D. H. Sattinger Birkhauser Boston
+(1996).
+[52] S. Luo, and Q. Yao. A lower bound for zeros of Riemann’s zeta function on the line σ = 1
+2 . Acta Math. Sinica (Chin.
+Ser.), (24):390–400, 1981.
+[53] M. B. Milinovich. Mean-Value Estimates for the Derivative of the Riemann Zeta-Function . PhD Thesis, University of
+Rochester, 2008.
+[54] H. L. Montgomery. The pair correlation of zeros of the zeta function . Analytic number theory, St. Louis, MO, (ed. H.
+G. Diamond), Proceedings of Symposia in Pure Mathematics 23 (American Mathematical Society, Providence, RI, 1973),
+181–193 (1972).
+[55] H. L. Montgomery, and R. C. Vaughan. Multiplicative Number Theory I: Classical Theory. Cambridge Studies in Advanced
+Mathematics (2007).
+[56] F. Oberhettinger. Tables of Mellin Transforms . Springer-Verlag, Berlin (1974).
+[57] M. Odlyzko. On the distribution of spacings between zeros of the zeta function . Math. Comp., (48):273–308, 1987.
+[58] K. Pratt, and N. Robles. Perturbed moments and a longer molliﬁer for critical zeros of ζ. Research in Number Theory,
+4:9, 2018.
+[59] N. Robles, and A. Roy. Unexpected average values of generalized von Mangoldt functions in residue classes . Submitted.
+[60] N. Robles, A. Roy, and A. Zaharescu. Twisted second moments of the Riemann zeta-function and applications . J. Math.
+Anal. Appl., (434):271–314, 2016.
+[61] N. Robles, A. Roy, and A. Zaharescu. Moments of the Riemann zeta-function twisted by a Dirichlet series . Unpublished,
+2016.
+[62] Z. Rudnick, and P. Sarnak. Zeros of principal L-functions and random matrix theory . A celebration of John F. Nash Jr,
+Duke Math. J., 81, 269–322, 1996.
+
+===== PAGE 60 =====
+
+60 KYLE PRATT, NICOLAS ROBLES, ALEXANDRU ZAHARESCU, AND DIRK ZEINDLER
+[63] A. Selberg. On the zeros of Riemann’s zeta-function . Skr. Norske Vid. Akad. Oslo I, (10):1–59, 1942.
+[64] K. Sono. An application of generalized molliﬁers to the Riemann zeta-function . Kyushu Journal of Mathematics, Kyushu
+J. Math. 72, 35–69, 2018.
+[65] K. Soundararajan. Nonvanishing of quadratic Dirichlet L-functions at s = 1
+2 . Annals of Mathematics, (152):447–488, 2000.
+[66] E. C. Titchmarsh. The Theory of the Riemann Zeta-Function . Oxford University Press, 2nd edition, 1986.
+[67] R. C. Vaughan. Sommes trigonom´ etriques sur les nombres premiers. Proc. C.R. Acad. Sci. Paris S´ er. A, (285):981–983,
+1977.
+[68] A. Weil. On some exponential sums . Proc. Nat. Acad. Sci. USA, (34):204–207, 1948.
+[69] E. W. Weisstein. Bell numbers . From MathWorld – A Wolfram Web Resource, website available at
+http://mathworld.wolfram.com/BellNumber.html.
+[70] X. Wu. The twisted mean square and critical zeros of Dirichlet L-functions. Mathematische Zeitschrift,
+https://doi.org/10.1007/s00209-018-2209-8, 2018.
+[71] M. P. Young. A short proof of Levinson’s theorem . Arch. Math., (95):539–548, 2010.
+Department of Mathematics, University of Illinois, 1409 West Green Street, Urbana, IL 61801, United States
+E-mail address: kpratt4@illinois.edu
+Department of Mathematics, University of Illinois, 1409 West Green Street, Urbana, IL 61801, United States
+and Wolfram Research Inc, 100 Trade Center Dr, Champaign, IL 61820, United States
+E-mail address: nirobles@illinois.edu
+E-mail address: nicolasr@wolfram.com
+Department of Mathematics, University of Illinois, 1409 West Green Street, Urbana, IL 61801, United States
+and Simion Stoilow Institute of Mathematics of the Romanian Academy, P.O. Box 1-764, RO-014700 Bucharest,
+Romania
+E-mail address: zaharesc@illinois.edu
+Department of Mathematics and Statistics, Lancaster University, Fylde College, Bailrigg, Lancaster LA1
+4YF, United Kingdom
+E-mail address: d.zeindler@lancaster.ac.uk
