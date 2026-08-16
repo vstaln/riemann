@@ -1,0 +1,74 @@
+\begin{thebibliography}{BGSTB25}
+
+\bibitem[BGSTB25]{BGST-CL}
+Siegfred Alan~C. Baluyot, Daniel~Alan Goldston, Ade~Irma Suriajaya, and
+  Caroline~L. Turnage-Butterbaugh.
+\newblock Pair correlation of zeros of the {R}iemann zeta function {I}:
+  Proportions of simple zeros and critical zeros.
+\newblock {\em arXiv:2501.14545}, 2025.
+
+\bibitem[BH95]{BomHej95}
+E.~Bombieri and D.~A. Hejhal.
+\newblock On the distribution of zeros of linear combinations of euler
+  products.
+\newblock {\em Duke Math. J.}, 80(3):821--862, 1995.
+
+\bibitem[BHB13]{BuiHB}
+H.~M. Bui and D.~R. Heath-Brown.
+\newblock On simple zeros of the {R}iemann zeta-function.
+\newblock {\em Bull. Lond. Math. Soc.}, 45(5):953--961, 2013.
+
+\bibitem[CGdL20]{CGL2020}
+Andr\'es Chirre, Felipe Gon\c{c}alves, and David de~Laat.
+\newblock Pair correlation estimates for the zeros of the zeta function via
+  semidefinite programming.
+\newblock {\em Adv. Math.}, 361:106926, 22, 2020.
+
+\bibitem[CGG98]{CGG98}
+J.~B. Conrey, A.~Ghosh, and S.~M. Gonek.
+\newblock Simple zeros of the {R}iemann zeta-function.
+\newblock {\em Proc. London Math. Soc. (3)}, 76(3):497--522, 1998.
+
+\bibitem[GLSS25a]{GLSS1}
+Daniel~A. Goldston, Junghun Lee, Jordan Schettler, and Ade~Irma Suriajaya.
+\newblock Pair {C}orrelation {C}onjecture for the zeros of the {R}iemann
+  zeta-function {I}: simple and critical zeros.
+\newblock {\em arXiv:2503.15449 [math.NT]}, 2025.
+
+\bibitem[GLSS25b]{GLSS2}
+Daniel~A. Goldston, Junghun Lee, Jordan Schettler, and Ade~Irma Suriajaya.
+\newblock Pair {C}orrelation {C}onjecture for the zeros of the {R}iemann
+  zeta-function {II}: The alternative hypothesis.
+\newblock {\em arXiv:2507.06823 [math.NT]}, 2025.
+
+\bibitem[GM78]{GaMu78}
+P.~X. Gallagher and Julia~H. Mueller.
+\newblock Primes and zeros in short intervals.
+\newblock {\em J. Reine Angew. Math.}, 303/304:205--220, 1978.
+
+\bibitem[Mon73]{Montgomery73}
+H.~L. Montgomery.
+\newblock The pair correlation of zeros of the zeta function.
+\newblock In {\em Analytic number theory ({P}roc. {S}ympos. {P}ure {M}ath.,
+  {V}ol. {XXIV}, {S}t. {L}ouis {U}niv., {S}t. {L}ouis, {M}o., 1972)}, volume
+  Vol. XXIV of {\em Proc. Sympos. Pure Math.}, pages 181--193. Amer. Math.
+  Soc., Providence, RI, 1973.
+
+\bibitem[PRZZ20]{Pra20}
+Kyle Pratt, Nicolas Robles, Alexandru Zaharescu, and Dirk Zeindler.
+\newblock More than five-twelfths of the zeros of {$\zeta$} are on the critical
+  line.
+\newblock {\em Res. Math. Sci.}, 7(2):Paper No. 2, 74, 2020.
+
+\bibitem[PT21]{PlaTru21}
+D.~Platt and T.~Trudgian.
+\newblock The riemann hypothesis is true up to $3\cdot 10^{12}$.
+\newblock {\em Bull. of the LMS}, 53(3):792--797, 2021.
+
+\bibitem[Sel92]{SelCollected2}
+Atle Selberg.
+\newblock {\em Old and new conjectures and results about a class of {D}irichlet
+  series}.
+\newblock Univ. Salerno, Salerno, 1992.
+
+\end{thebibliography}
