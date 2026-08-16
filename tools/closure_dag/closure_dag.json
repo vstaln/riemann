@@ -144,13 +144,17 @@
     },
     {
       "id": "sdp-paircorr-transfer",
-      "verdict": "OPEN-STRUCTURAL anywhere-axis / CLOSED on-line-axis",
-      "claim": "CGdL 1810.08843 SDP relaxed class (f_hat<=0 for |x|>=1) transfers UNCONDITIONALLY to N*/anywhere axis via BGSTB24 Thm 1 (F real even nonneg, F=T^-2a(logT+O(1))+a+O(.) up to a=1 explicit errors). RH enters CGdL only via (9) [0,1] datum; tail dropped by sign (f_hat<=0 + F>=0). Divide: simple-ANYWHERE>=67.92% candidate (CONJECTURED-STRUCTURALLY, literature-numeric 1.3208), NOT on-line records 0.673481/0.836740 (need positive-in-strip kernels + rank-trace, signed fns no grip). No RH evidence (firewall)."
+      "verdict": "CLOSED-REFUTED 2026-08-18 (identification step)",
+      "claim": "CGdL 1810.08843 SDP relaxed class transfers UNCONDITIONALLY to N*/anywhere via BGSTB24 Thm 1 - REFUTED: BGSTB24 F uses w(u)=4/(4-u^2), complex argument (rho-rho') (real parts enter; agrees with Montgomery ordinate-only F ONLY under RH, UnconditionalPC_230606.tex line 143), while CGdL identity (8) needs ordinate-only F (w=4/(4+u^2), T^{ix(gamma-gamma')}). Object identity fails; ordinate-only [0,1] asymptotics remain Goldston-Montgomery RH-conditional. BGSTB24's OWN application of their Thm 1 gives only 61.7% simple under thin box (sech/strip-positive kernels, constants 1.38-1.39, Lemma 6c strip-positivity = unconditional price) < 67.92% - internal contradiction. 67.92% stays RH-conditional as published. Surviving NEW: GS 2511.20059 Thm 2/3 (Feb 2026) framework: diagonal pair count (5.2) <= (C+o(1))N with C<2 IMPLIES >= 2-C simple AND >= 2-C on the critical line - genuinely new bridge; open: any unconditional diagonal C<2; campaign on-line records have equivalent strength 2-C ~ 0.6735 but no unconditional C<2 is known."
     },
     {
       "id": "levinson-variational-Q",
       "verdict": "DUPLICATE-TRAP (moment class)",
       "claim": "Conrey-Farmer-Kwan-Lin-TTB 2508.11108 variational Q family = Levinson counting method (proportion != RH), FE enters only as even-symmetry; output kappa>2theta/3 for any theta>0, numerics below PRZZ/record (theta=2/3->0.364). Bettin-Gonek theta=infty->RH = DUPLICATE of moment/coefficient-margin trap (conjectural long-mollifier moment asymptotic, not algebraically explicit). Siegel-f prop: same argument-principle as closed xi-prime-transport. Register levinson-theta-infinity as named member of moment trap node."
+    },
+    {
+      "id": "gs-2026-diagonal-bridge",
+      "verdict": "NEW-FRAMEWORK-BANKED (knowledge node, not a lever): GS 2511.20059 Thm 2/3 (Feb 2026). IF diagonal pair count (5.2) \u03a3_{\u03b3=\u03b3'}1 <= (C+o(1))N with 1<=C<2, THEN >= 2-C simple AND >= 2-C on critical line. Montgomery simple-zero proof = (a) Fejer sum eval (pair-correlation datum) + (b) diagonal = \u03a3 m_rho under RH; (b) fails without RH (symmetric off-line zeros share ordinates, H(\u03b3) counts them). Remove-RH \u2260 make-F-unconditional: need the DIAGONAL count bounded \u2014 an on-line statement. Open: any unconditional diagonal C<2. Campaign on-line records ~ strength 2-C=0.6735 \u27f9 would need unconditional C<=1.3265 \u2014 no such diagonal bound is known unconditionally. New lens on record chain, NOT a new lever."
     }
   ],
   "edges": [
@@ -260,6 +264,16 @@
       "to": "wave9-9B",
       "type": "documented",
       "note": "agent-completed; DUPLICATE-TRAP classification"
+    },
+    {
+      "from": "gs-2026-diagonal-bridge",
+      "to": "sdp-paircorr-transfer",
+      "relation": "refutes-identification-step; frames remaining open question (unconditional diagonal C<2)"
+    },
+    {
+      "from": "gs-2026-diagonal-bridge",
+      "to": "xi-prime-transport",
+      "relation": "lens: on-line records equivalent-strength to 2-C; need unconditional diagonal bound to lift"
     }
   ],
   "active_frontier": []

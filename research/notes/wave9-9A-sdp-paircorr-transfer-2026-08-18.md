@@ -1,11 +1,6 @@
-# WAVE 9A — SDP pair-correlation → UNCONDITIONAL transfer (completed by coordinator from preserved agent transcript + referee verification)
+# CORRECTED 2026-08-18 (night refutation): see wave9-9A-refutation-2026-08-18.md. The unconditional Nstar-transfer claim was REFUTED: BGSTB24 Thm 1 is about a different F (w(u)=4/(4-u^2), argument rho-rho') than the ordinate-only Montgomery F that CGdL identity (8) uses; they agree only under RH. Verdict for sdp-paircorr-transfer lever: CLOSED-REFUTED (identification step). No new unconditional theorem.
 
-Date: 2026-08-18. Agent: 9A (f64a98ac) — died at 80% context inside quiet-hours guard blockage (21 tool uses, final analysis message preserved). Coordinator completed the deliverable from the preserved transcript + independent referee re-verification from source. Status: **COMPLETE** (coordinator-completed).
-
-## VERDICT UP FRONT
-
-**The CGdL SDP relaxed-class inequality transfers UNCONDITIONALLY to the N*/multiplicity axis (simple-anywhere, distinct-anywhere) — a live structural thread, the first genuine proportion-side find in waves.** It does NOT move the certified on-line record axes (0.673481 simple-on-line, 0.836740 distinct-on-line via (1+s)/2). Honest boundary: the transfer is structurally confirmed (referee-verified from source); the full formal writeup "N*(T) ≤ (Z_opt + o(1))N(T) unconditionally" is CONJECTURED-STRUCTURALLY, funded as a technical writeup, NOT a record movement.
-
+# (ORIGINAL COMPLETED-9A NOTE, SUPERSEDED)
 ## The verified structure (referee line, all from source)
 
 CGdL (1810.08843 §3.1) derive, for Montgomery's

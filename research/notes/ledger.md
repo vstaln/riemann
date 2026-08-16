@@ -937,5 +937,29 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   be sufficient conditions. Tool: barrier_zoo_rs dhprofile; k>=6 contour noise excluded.
 
 ## wave-9 (2026-08-18, literature-driven) — 2 levers
-- **9A sdp-paircorr-transfer** — OPEN-STRUCTURAL anywhere-axis / CLOSED on-line-axis. CGdL 1810.08843 relaxed SDP class transfers unconditionally to N*/anywhere via BGSTB24 Thm 1; simple-anywhere ≥ 67.92% candidate (CONJECTURED-STRUCTURALLY, literature-numeric); on-line records 0.673481/0.836740 untouched. Coordinator-completed (agent died at 80% ctx inside quiet-hours guard blockage). Note: wave9-9A-*.md.
+- **9A sdp-paircorr-transfer — CLOSED-REFUTED** (see night refutation below): the claimed unconditional
+  transfer of CGdL's SDP relaxed class to N*/anywhere via BGSTB24 Thm 1 fails at the object-identity
+  step (BGSTB24 F ≠ CGdL F unless RH). 67.92% simple-anywhere remains RH-conditional as published.
+  Records 0.673481/0.836740 untouched.
 - **9B levinson-variational-Q** — DUPLICATE-TRAP (moment class). Conrey-Farmer-Kwan-Lin-TTB 2508.11108 variational Q = Levinson counting method; Bettin-Gonek θ=∞ ⟹ RH duplicates moment trap (new member levinson-theta-infinity); Siegel-f = closed ξ′-strand. Note: wave9-9B-*.md.
+
+## 2026-08-18 (night) — wave-9 9A REFUTED + GS-2026 framework banked
+- **9A sdp-paircorr-transfer — CLOSED-REFUTED** (identification step). Referee pass against arXiv
+  LaTeX of all three papers (CGdL LPBandZETAV_17.tex; BGSTB24 UnconditionalPC_230606.tex; GS
+  1-CriticalZeros.tex) caught the error: BGSTB24's unconditional Theorem 1 concerns THEIR F
+  (w(u)=4/(4−u²), complex argument ρ−ρ′, real parts enter; agrees with Montgomery's ordinate-only
+  F ONLY under RH — UnconditionalPC line 143), while CGdL identity (8) requires the ordinate-only
+  F (w=4/(4+u²), T^{ix(γ−γ′)}). The [0,1] asymptotics of the ordinate-only Montgomery F remain
+  Goldston–Montgomery, RH-conditional. The 67.92% simple-anywhere claim stays RH-conditional as
+  published. Internal contradiction: BGSTB24's own application of their Thm 1 (61.7% simple,
+  thin box, sech/strip-positive kernels ≈1.38–1.39) is BELOW 67.92% — impossible if the transfer
+  were free. NO new unconditional theorem; records untouched; no RH evidence. Note:
+  wave9-9A-refutation-2026-08-18.md; supersedes wave9-9A-unconditional-Nstar + wave9-9A-sdp-paircorr-transfer (corrected headers).
+- **GS 2511.20059 (Feb 2026) framework — NEW-FRAMEWORK-BANKED** (DAG knowledge node
+  gs-2026-diagonal-bridge): IF diagonal pair count Σ_{γ=γ′}1 ≤ (C+o(1))N with C<2, THEN ≥ 2−C
+  simple AND ≥ 2−C on the critical line. Montgomery's zero-proof splits into (a) Fejér-sum
+  evaluation via the pair-correlation datum and (b) diagonal = Σ m_ρ under RH; (b) fails without
+  RH (off-line symmetric zeros share ordinates). "Removing RH from the form-factor" ≠ "removing
+  RH from the simple-zero proof": the diagonal count is the on-line-sensitive object. Open:
+  any unconditional diagonal C<2. Campaign records ~ equivalent strength (2−C=0.6735 needs
+  unconditional C≤1.3265, not known).

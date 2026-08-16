@@ -1,0 +1,126 @@
+\begin{thebibliography}{CGdL20}
+
+\bibitem[Ary22]{Ary22}
+F.~Aryan.
+\newblock On an extension of the {L}andau-{G}onek formula.
+\newblock {\em J. Number Theory}, 233:389--404, 2022.
+
+\bibitem[BHB13]{BuiHB}
+H.~M. Bui and D.~R. Heath-Brown.
+\newblock On simple zeros of the riemann zeta-function.
+\newblock {\em Bull. London Math. Soc.}, 45(5):953--961, 2013.
+
+\bibitem[Bou00]{Bou00}
+Jean Bourgain.
+\newblock On large values estimates for {D}irichlet polynomials and the density
+  hypothesis for the {R}iemann zeta function.
+\newblock {\em Internat. Math. Res. Notices}, 2000(3):133--146, 2000.
+
+\bibitem[CG93]{CheerGold}
+A.~Y. Cheer and D.~A. Goldston.
+\newblock Simple zeros of the {R}iemann zeta-function.
+\newblock {\em Proc. Amer. Math. Soc.}, 118(2):365--372, 1993.
+
+\bibitem[CGdL20]{CGL2020}
+Andrés Chirre, Felipe Gonçalves, and David de~Laat.
+\newblock Pair correlation estimates for the zeros of the zeta function via
+  semidefinite programming.
+\newblock {\em Adv. Math.}, 361(106926):22 pp., 2020.
+
+\bibitem[CGG98]{CGG98}
+J.~B. Conrey, A.~Ghosh, and S.~M. Gonek.
+\newblock Simple zeros of the riemann zeta-function.
+\newblock {\em Proc. London Math. Soc.}, 76(3):497--522, 1998.
+
+\bibitem[CIS13]{CIS13}
+J.~Brian Conrey, Henryk Iwaniec, and Kannan Soundararajan.
+\newblock Critical zeros of {D}irichlet {$L$}-functions.
+\newblock {\em J. Reine Angew. Math.}, 681:175--198, 2013.
+
+\bibitem[GM87]{GM87}
+D.~A. Goldston and H.~L. Montgomery.
+\newblock Pair correlation of zeros and primes in short intervals.
+\newblock In {\em Analytic Number Theory and Diophantine Problems (A. C.
+  Adolphson and et al., eds.)}, volume~70 of {\em Progr. Math., Proc. of a
+  Conference at Oklahoma State University (1984)}, pages 183--203. Birkhauser
+  Verlag, 1987.
+
+\bibitem[Gol81]{Gold81}
+D.~A. Goldston.
+\newblock Large differences between consecutive prime numbers.
+\newblock {\em Thesis}, U. C. Berkeley:1--75, 1981.
+
+\bibitem[IK04]{IK04}
+H.~Iwaniec and E.~Kowalski.
+\newblock {\em Analytic number theory}, volume~53 of {\em Amer. Math. Soc.
+  Colloq. Publ.}
+\newblock American Mathematical Society, Providence, RI, 2004.
+
+\bibitem[Ing90]{Ingham1932}
+A.~E. Ingham.
+\newblock {\em The Distribution of Prime Numbers}.
+\newblock Cambridge Mathematical Library, Cambridge University Press,
+  Cambridge, 1990.
+\newblock Reprint of the 1932 original; With a foreword by R. C. Vaughan.
+
+\bibitem[Ivi85]{ivic}
+A.~Ivi\'c.
+\newblock {\em The {R}iemann zeta-function}.
+\newblock John {W}iley \& {S}ons, New York, 1985.
+
+\bibitem[Lan09]{Lan09}
+Edmund Landau.
+\newblock {\em Handbuch der {L}ehre von der {V}erteilung der {P}rimzahlen}.
+\newblock Teubner, Berlin, 1909.
+
+\bibitem[LPZ17]{LPZ17}
+A.~Languasco, A.~Perelli, and A.~Zaccagnini.
+\newblock An extended pair correlation conjecture and primes in short
+  intervals.
+\newblock {\em Trans. Amer. Math. Soc.}, 369:4235--4250, 2017.
+
+\bibitem[Mon73]{Montgomery73}
+H.~L. Montgomery.
+\newblock The {P}air {C}orrelation of {Z}eros of the {Z}eta {F}unction.
+\newblock In {\em Analytic Number Theory ({P}roc. {S}ympos. {P}ure {M}ath.,
+  {V}ol. {XXIV}, {S}t. {L}ouis {U}niv., {S}t. {L}ouis, {M}o., 1972)}, pages
+  181--193. Amer. Math. Soc., Providence, R.I., 1973.
+
+\bibitem[Mon74]{Montgomery74}
+H.~L. Montgomery.
+\newblock Distribution of zeros of the riemann zeta function.
+\newblock In {\em Proc. Int. Cong. Math. Vancouver, 1974}, pages 379--381. IMU,
+  1974.
+
+\bibitem[MV07]{MontgomeryVaughan2007}
+H.~L. Montgomery and R.~C. Vaughan.
+\newblock {\em Multiplicative Number Theory I: Classical Theory}, volume~97 of
+  {\em Cambridge Studies in Advanced Mathematics}.
+\newblock Cambridge University Press, Cambridge, 2007.
+
+\bibitem[PRZZ20]{Pra20}
+Kyle Pratt, Nicolas Robles, Alexandru Zaharescu, and Dirk Zeindler.
+\newblock More than five-twelfths of the zeros of $\zeta$ are on the critical
+  line.
+\newblock {\em Res. Math. Sci.}, 7(2):74pp, 2020.
+
+\bibitem[Sel91]{SelCollected2}
+A.~Selberg.
+\newblock {\em Old and new conjectures and results about a class of Dirichlet
+  series, Collected papers. {V}ol. {II}}.
+\newblock Springer-Verlag, Berlin, 1991.
+\newblock With a foreword by K. Chandrasekharan.
+
+\bibitem[Tit86]{Titchmarsh}
+E.~C. Titchmarsh.
+\newblock {\em The theory of the {R}iemann zeta-function}.
+\newblock The Clarendon Press, Oxford University Press, New York, second
+  edition, 1986.
+\newblock Edited and with a preface by D. R. Heath-Brown.
+
+\bibitem[Tsa93]{Tsang3}
+K.-M. Tsang.
+\newblock The large values of the {R}iemann zeta-function.
+\newblock {\em Mathematika}, 40(2):203--214, 1993.
+
+\end{thebibliography}
