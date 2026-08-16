@@ -2,11 +2,18 @@
 //! Port of tools/verify_coboundary_floor.py. Uses a rigorous interval type
 //! (rug Float lo/hi pairs with directed rounding) instead of Arb balls.
 //!
-//! IMPORTANT DIFFERENCE: our kernel cell enclosure exploits sinc's exact
-//! extrema (roots of x=tan x) and is TIGHTER than python-flint's arb ball
-//! enclosure. Both are valid lower bounds. Verdicts may therefore differ
-//! from the Python verifier on borderline eps; any NEW certification must be
-//! independently confirmed (mpmath high-precision infimum) before trust.
+//! KNOWN GAP (2026-08-18): this port does NOT implement the convex-tangent
+//! prune (Python verify_floor defaults use_tangent=True; tangent_lower uses
+//! an exact arb LDL). Python's certified configs depend on it (ainta: 93,735
+//! tangent prunes of 707,901 nodes; tawan: 18,182 of 209,236). Without it
+//! this port certifies LESS than Python on every certified config — it is
+//! NOT-FOR-CERTIFICATION until tangent_lower (second-derivative table +
+//! LDL + tangent-plane bound) is ported. See research/notes/verifier-rs-fix-2026-08-18.md.
+//!
+//! ENCLOSURE CLAIM (corrected): sinc_iv (exact extrema via roots of x=tan x)
+//! agrees with Arb's ball enclosure cell-by-cell; it is NOT meaningfully
+//! tighter. The earlier header claim that it is "TIGHTER than python-flint's
+//! arb ball enclosure" was unsubstantiated and is retracted.
 
 use rug::float::Round;
 use rug::ops::CompleteRound;
@@ -411,7 +418,6 @@ fn verify_floor(alpha: f64, weights: &HashMap<(usize, usize), f64>, pressure: f6
 fn sum_firsts(b: &BBox) -> i64 { b.coords.iter().map(|&(l, _)| l).sum() }
 
 fn main() {
-    let alpha = 1.464;
     let grid = 4000i64;
     let q = 6usize;
     let mut weights = HashMap::new();
@@ -424,9 +430,19 @@ fn main() {
         .map(|c| c / 1_920_000.0).collect();
     let q_coeff: Vec<f64> = vec![31343.0/100000.0, 1.0/3.0, 105971.0/300000.0,
                                  105971.0/300000.0, 1.0/3.0, 31343.0/100000.0];
+    // acceptance config 3: ainta sanity (MT kernel, uniform, p=1/3000, 19/5000)
+    let ainta_alpha = std::f64::consts::SQRT_2;
+    let r = verify_floor(ainta_alpha, &weights, 1.0/3000.0, q, 19.0/5000.0, grid,
+                         "h", None, None, Some(5_000_000), false);
+    println!("AINTA RESULT: {r}");
+    // acceptance config 4: tawan baseline (cosine 1.47, coboundary, 577/1e5)
+    let r = verify_floor(1.47, &weights, 1.0/3000.0, q, 577.0/100000.0, grid,
+                         "coboundary", Some(&p_coeff), Some(&q_coeff),
+                         Some(5_000_000), false);
+    println!("TAWAN RESULT: {r}");
     for eps in [0.00620f64, 0.00621f64] {
         println!("=== eps={eps} ===");
-        let r = verify_floor(alpha, &weights, 1.0/3000.0, q, eps, grid,
+        let r = verify_floor(1.464, &weights, 1.0/3000.0, q, eps, grid,
                              "coboundary", Some(&p_coeff), Some(&q_coeff),
                              Some(5_000_000), false);
         println!("RESULT: {r}");

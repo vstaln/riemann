@@ -2,3 +2,12 @@ t=1 start verifier-rs fix task: read main.rs + verify_coboundary_floor.py, compa
 t=2 ledger+notes checked; differences identified: (1) tangent prune missing in Rust, (2) w-table enclosure differs, (3) k0 midpoint
 t=3 built verifier-rs; check build status
 t=4 rust run1 done exit=0; terminal cell + low captured
+t=5 diag run: term breakdown at terminal cell captured
+t=6 probe: sinc_iv/k_on_cell direct values captured
+t=7 all-4 configs run in Rust (no tangent): ainta/tawan status + uv availability
+t=8 python control probe: no-tangent verdicts captured
+t=9 precision sweep 256/512 done
+t=10 searched certification artifacts + git history
+t=11 python main() ainta+tawan verdicts captured
+t=12 cleanup build ok; writing deliverable
+t=13 deliverable written + ledger appended
