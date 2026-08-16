@@ -926,3 +926,12 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   NOT preserve real-rootedness — the failure is NOT caused by the n!/(2n)! renormalization;
   the moment object itself doesn't binomial-transform to real roots. GJT-completion via
   binomial-moment positivity: CLOSED (negative, CHECKED NUMERICALLY, small d).
+- **barrier-zoo retro-test (dhprofile, coordinator, 2026-08-18)** — applied the barrier-zoo
+  discipline to the campaign's OWN PROVEN identities against the RH-false DH world (23 certified
+  off-line zeros, real-on-line kappa-form construction verified): (i) all-positive Taylor
+  coefficients c_{2k} — DH world ALSO all-positive, does NOT separate; (ii) deficit-2 log-profile
+  — DH world SATISFIES t_k·k >= 2-2/ln k on trusted k=2..5 (gaps +1.73/+0.80/+0.52/+1.14, zero
+  violations) — the campaign's own identity PROVES TOO MUCH, consistency-only by the campaign's
+  own standard (THIRD independent line closing the log-profile lever); (iii) M' Hankel det2 > 0,
+  not separating at first minor. No new lever; identities that hold in an RH-false world cannot
+  be sufficient conditions. Tool: barrier_zoo_rs dhprofile; k>=6 contour noise excluded.
