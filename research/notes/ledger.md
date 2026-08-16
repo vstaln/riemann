@@ -720,3 +720,19 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   (iii) Sturm counts garbage at 1e-484 (chain collapse — FLAG mechanism broken d≥13 high-n);
   (iv) INCONCLUSIVE cells PROVEN hyperbolic by GORTTW Cor 1.3 (d ≤ 9.36e20 all n via Platt RH₀).
   Region-size map = frontier data only, zero RH weight (as E4 forecast). Wave-19 CLOSED.
+
+## WAVE-20 — g0-2 certified-moment INFRA + fresh-corner hunt (2026-08-18, post-S1-closure)
+- **g0-2-oracle (db8ef228)** — certified M_k/b_k/γ(k) oracle (k ≤ 300, ≥50 digits, rug/GL
+  quadrature, validated vs 60-digit table); theta-derivative identity check
+  (2x²θ″+3xθ′ = the two-term Φ summand — the unexploited structural fact); THEN the sharp
+  question: pin the deficit constant C = lim (2−k·t_k)·log k (referee's 2.356/2.351/2.331
+  un-identified, ~1% uncertain) and attempt exact identification (γ/log2/π/ζ3 combos +
+  analytic prediction from the saddle next-order terms). INFRA + one structural identity;
+  NOT an RH lever.
+- **fresh-corners (924e1d6b, read-only architect)** — hunt restricted to the NEVER-examined
+  corners: (a) theta-structure of Φ / functional equation acting on moments, (b) exact b_k
+  identities, (c) N=700 dip mechanism, (d) record-side transportability (0.836740 ceiling vs
+  Lean ξ′-two-trace), (e) never-tried domain transfers (moment-functional J-fraction/Stieltjes
+  of the M_k sequence, TP of the measure dμ=Φdu, Padé table of Ξ). Ranked fundable
+  candidates ONLY if one-way AND not-ledgered; "space closed" is an acceptable honest verdict
+  if excavation is genuine. Do-not-repeat list binding (ledger).
