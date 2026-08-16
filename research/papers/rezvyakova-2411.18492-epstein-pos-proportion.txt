@@ -1,0 +1,8224 @@
+
+
+===== PAGE 1 =====
+
+arXiv:2411.18492v1  [math.NT]  27 Nov 2024
+The Epstein zeta-function contains a positive proportion o f
+non-trivial zeros on the critical line.
+I.S. Rezvyakova
+Steklov Mathematical Institute of RAS, Moscow
+To my teacher
+Professor Anatoly Alekseevich Karatsuba
+and to my friends
+We prove that the Epstein zeta-function corresponding to a b inary positive deﬁnite quadratic
+form with integer coeﬃcients has a positive proportion of it s non-trivial zeros on the critical line.
+§1. Introduction.
+The famous Riemann hypothesis claims that all non-trivial zeros of t he Riemann zeta
+function ζ(s) lie on the critical line Re s = 1/ 2. Moreover, similar hypothesis (called the
+GRH (generalised Riemann hypothesis)) exists for a large class of L- functions. For example,
+L-functions from S class (or Selberg class) introduced by A. Selber g in [35] are expected to
+satisfy the GRH. In 1942 A. Selberg [34] expanded our knowledge on distribution of non-
+trivial zeros of ζ(s). His breakthrough result proves that a positive proportion of no n-trivial
+zeros of the Riemann zeta-function lie on the critical line (some earlie r results about zeros of
+ζ(s) on the critical line are given in [9], [33], for example). Selberg’s method provides similar
+result for Dirichlet L-functions and, therefore, establishes the p ositive proportion result for
+all L-functions from Selberg class of degree one (see necessary n otation and properties of
+L-functions from Selberg class of degree one in [19], [39] and in the af orementioned work
+[35]).
+It was not until 1983 that the positive proportion result was prove d by J.L. Hafner for
+L-function of degree two from Selberg class [7]. He established it for L-functions attached to
+holomorphic cusp forms of an even weight for the full modular group and trivial character
+which are also eigenfunctions of all the Hecke operators. In 1987, Hafner [8] proved similar
+result for L-functions of degree two attached to Maass wave for ms. In [26] we extended the
+Keywords: L-functions, Riemann zeta-function, Hecke L-functions, Epste in zeta-function, critical line
+zeros, Selberg class, Selberg distribution theorem, density theor em, additive problem, linear combination of
+L-functions, automorphic forms.
+AMS 2020 Mathematics Subject Classiﬁcation: 11M41, 11M26.
+1
+
+===== PAGE 2 =====
+
+result of [7] and proved the positive proportion theorem for L-fu nctions of degree 2 attached
+to automorphic eigen cusp forms for the Hecke congruence group of any integer weight k ≥ 1
+and any character. But there is no result of such type for any prim itive L-function from
+Selberg class of degree 3 or higher (this problem resembles the prob lem on even moments of
+zeta-function of order 6 or higher). We mention here that there is a conjecture which states
+that a degree of L-function from Selberg class is a non-negative int eger. This conjecture
+is true when the degree of L-function is not greater than 2 (see [31 ], [18]). Nevertheless,
+the structure of Selberg class of degree 2 (as well as of higher inte ger degrees) is not yet
+completely described.
+For deeper understanding of the RH, we shall now switch our atten tion to linear combina-
+tions of L-functions from Selberg class. Such examples are the Dav enport-Heilbronn function
+(which is a linear combination of functions of degree one from Selberg class) or the Epstein
+zeta-function of a binary positive deﬁnite quadratic form (which is a linear combination of
+functions of degree 2). They illustrate that linear combinations of L -functions could satisfy
+all the properties of an element from Selberg class (even posess a f unctional equation of the
+Riemann type) except having an Euler-product representation an d, therefore, have many
+zeros outside the critical line ([5], [41]) and violate the RH. Neverthele ss, there is a conjec-
+ture stating that almost all non-trivial zeros of such linear combina tions lie on the critical
+line. This conjecture was conditionally proved, for example, for the Epstein zeta-function
+by E. Bombieri and D. Hejhal [2], [3] under the GRH and the Montgome ry pair correlation
+conjecture for Hecke L-functions. So, it seems that solely the Eu ler-product representation
+forces L-function to satisfy the RH.
+What is known about the zeros of such type linear combinations? It is known, that all
+non-trivial zeros of such linear combinations lie in some strip | Res| ≤ a, where a = aL is
+some constant depending on the linear combination L(s) (and we may suppose that aL is
+the minimal such value). If we denote by NL(T ) the number of zeros of linear combination
+L(s) in the region 0 < Ims ≤T then
+NL(T ) ≍T logT
+as in the case of the Riemann zeta-function (the proof uses merely the functional equation).
+Setting NL(σ1,σ 2,T ) to be the number of zeros of L(s) in the region σ1 ≤ Res ≤σ2, 0<
+Ims ≤T , where 1/ 2<σ 1 <σ 2 ≤aL, we have
+NL(σ1,σ 2,T ) ≍T,
+which shows that quite a few non-trivial zeros lie outside the critical line. Denote by N0(g,T )
+the number of zeros of the Davenport-Heilbronn function g(s) on the interval (1/ 2+iT, 1/ 2+
+2iT ) of the critical line. Following the ideas of [9] one can show that
+N0(g,T ) ≫T.
+2
+
+===== PAGE 3 =====
+
+It was ﬁrst S.M. Voronin [42], who showed that the critical line Re s = 1
+2 is an exceptional
+set for the Davenport-Heilbronn function. Namely, for suﬃciently large T , Voronin proved
+that if Ω g(t) = N0(g,T )/T , then
+Ωg(t) ≫ exp( 1
+20
+√
+log log log logT ).
+In 1989, A.A. Karatsuba [20], [21] obtained the following result
+Ωg(t) ≫ (logT )1/ 2−ε (1)
+for arbitrary ε > 0 and T ≥ T0(ε). Finally, in the late 90s, A. Selberg [37] proved that
+a positive proportion of non-trivial zeros of the Davenport-Heilbr onn function (or a linear
+combination of degree one L-functions which also obeys a functiona l equation) lie on the
+critical line (see also [27] for extra details and for an improved const ant in the proportion
+which is in inverse ratio to the number of functions of a linear combinat ion). A substantial
+improvement made by Selberg was possible after employing in the proo f the value distribution
+result for the values of L-functions on the critical line (see [6], [40] for value-distribution
+results).
+When we make a step from degree 1 to degree 2 L-functions (even in the simpliest case
+of just one function in linear combination) we come across an obstac le called an “additive
+problem” (which also appears in the estimation of the fourth moment of the Riemann zeta-
+function). Having overcome this problem what is left for us are the d etailed calculations
+leading us ﬁnally to the solution of the initial problem. This was done in [7 ], [8], [26] for certian
+degree 2 L-functions from Selberg class. Applying an extra value-d istribution ingredient
+introduced in [37] for a linear combination of L-functions from [26], w e were able to get the
+result of [28]. For example, we proved that a linear combination with re al coeﬃcients of L-
+functions attached to complex Hecke ideal class group character s of the quadratic imaginary
+extension of the ﬁeld of rational numbers has a positive proportion of non-trivial zeros on
+the critical line Re s = 1/ 2 (the previous result is presented in [25]).
+In the current paper we prove a similar result, announced in [29], for the Epstein zeta
+function corresponding to a binary positive deﬁnite quadratic form with integer coeﬃcients
+(which is a linear combination of Hecke L-functions with complex and re al ideal class group
+characters). The diﬃculty which arises now is the presence of L-fu nctions with real Hecke
+characters in a linear combination (in comparison to the situation of [2 8]) and the main term
+in the additive problem in this case.
+In §2 we formulate the statement of the main result of the work . The ide as of the proof
+introduced by Selberg in [37] are presented in §3. Further sections contain necessary results
+for L-functions with real Hecke characters to prove the main the orem.
+§2. Deﬁnitions and statement of the main result
+3
+
+===== PAGE 4 =====
+
+We recall the deﬁnition of Hecke characters of the ideal class grou p. Let Q(
+√
+−D) be the
+imaginary quadratic extension of the ﬁeld of rational numbers Q, and −D be the fundamental
+discriminant. We denote by I =ZQ(√−D) the ring of algebraic integers of the ﬁled Q(
+√
+−D)
+and by O the ring of principal ideals. The quotient group I∗/ O∗ is an Abelian group of ﬁnite
+order h = [ I∗ : O∗]. Its elements are the equivalence classes of non-zero ideals of the ring I
+with respect to the following equivalence relation:
+a ∼ b (a, b ∈ I∗)
+if there is a non-zero principle ideal ( ω ) such that a = (ω )b. The number h = h(−D) is
+the class number of the ﬁeld Q(
+√
+−D). For k = 1, 2,...,h , we deﬁne a homomorphism
+ψ : I∗ → C∗ on the equivalence classes Ik and set
+ψ (a) = ψ (Ik), if a ∈Ik.
+The function ψ (a) deﬁned on non-zero ideals a of the ring I is called a Hecke character of
+the ideal class group . All non-zero principle ideals form an identity class in the ideals class
+group. Hence, ψ (a) = 1 if a is a principle ideal. Also, for any non-zero ideal a we have
+(ψ (a))h = 1.
+A principle Hecke characterψ 0 is given by the relation ψ 0(a) = 1 for every a. We say that
+a Hecke character ψ is complex if it takes at least one complex (non-real) value, i.e. ψ 2 ⁄=ψ 0.
+An ideal p is prime if it is divisible by no ideals other than p and ( 1). Every ideal in
+I∗ can be represented uniquely as a product of prime ideals. The norm o f an ideal a is the
+number of residue classes in I modulo a. The norm Na is a totally multiplicative function
+(see [12]). For Re s> 1, the Hecke L-function is deﬁned by the formula
+Lψ (s) =
+∑
+a∈I∗
+ψ (a)
+Nas =
++∞∑
+n=1
+rψ (n)
+ns ,
+where
+rψ (n) =
+∑
+N a=n
+ψ (a).
+The series Lψ (s) can be written via the Euler product in the right half-plane Re s> 1 as
+Lψ (s) =
+∏
+p
+(
+1 − ψ (p)
+Nps
+) −1
+,
+where the product goes over all prime ideals.
+The quadratic ﬁeld theory gives us some more information on Lψ (s). All the prime ideals
+of I are included among the factors of principle ideals ( p), where p runs through all the prime
+4
+
+===== PAGE 5 =====
+
+numbers. In addition,
+(p) =
+
+
+
+
+
+
+
+
+
+p1p2, if χD(p) = 1 (Np1 =Np2 =p),
+p, if χD(p) = −1 (Np =p2),
+p2, if χD(p) = 0 (Np =p),
+where p, p1, p2 are prime ideals. We introduce three sets P0,P 1,P −1 ranging all prime numbers
+by the following criterion:
+p ∈Pe if χD(p) = e, where e = 0, ±1.
+Thus, we have an identity
+L(s,ψ ) =
+∏
+p∈P0
+(
+1 − ψ (p)
+ps
+) −1 ∏
+p∈P−1
+(
+1 − 1
+p2s
+) −1∏
+p∈P1
+(
+1 − ψ (p1)
+ps
+) −1(
+1 − ψ (p2)
+ps
+) −1
+,
+We see that if p ∈P0, then
+(p) = p2, ψ (p) = ±1,
+and if p ∈P1, then
+(p) = p1p2, ψ (p1) = ψ (p2).
+Thus the coeﬃcients of the series L(s,ψ ) =
++∞∑
+n=1
+rψ (n)
+ns are real and satisfy
+rψ (1) = 1, |rψ (n)| ≤ τ(n),
+where τ(n) is the divisor function. Therefore we note, that two complex conj ugate Hecke
+characters deﬁne one and the same Hecke L-function.
+The function Lψ (s) has a meromorphic continuation to the whole complex plane. For
+the principle character ψ = ψ 0, the function L(s,ψ ) has the only pole (which is simple) at
+s = 1, and for ψ ⁄=ψ 0 it has an analytic continuation to the whole complex plane C without
+singularities. E. Hecke ([11], [13]) established a functional equation f or Lψ (s).
+Lemma 1. Let
+Λψ (s) =
+( 2π√
+D
+) −s
+Γ(s)Lψ (s). (2)
+Then
+Λψ (s) = Λ ψ (1 −s). (3)
+5
+
+===== PAGE 6 =====
+
+He has also revealed a connection between Hecke L-functions and m odular forms. For
+z ∈ H = {z : Im z >0} set
+fψ (z) =
++∞∑
+n=1
+rψ (n)e2πinz.
+If ψ is a complex Hecke character, then fψ (z) is a holomorphic cusp form of weight 1 for
+Γ 0(D) and the character χD(·) = ( −D
+· ). In other words, for every matrix γ =
+( a b
+c d
+)
+of
+the group Γ 0(D) (which is a subgroup of SL 2(Z) that consists of all the matrices γ with
+c ≡ 0 (mod D)) the following relation holds:
+fψ (γz) = χD(γ)(cz +d)fψ (z),
+where χD(γ) = χD(d) (see [13], [15]).
+The Hecke L-function associated with a real character is actually a product of two
+Dirichlet L-functions due to Kronecker’s theorem. Namely, it is repr esented as the prod-
+uct Lχd1
+(s)Lχd2
+(s), where χdj are primitive real Dirichlet characters such that D = d1d2,
+(d1,d 2) = 1, χd1χd2 =χD.
+Now, for Re s> 1, we deﬁne the Epstein zeta-function ζQ(s) by the formula
+ζQ(s) =
+∑
+(n,m )⁄=(0, 0)
+(Q(n,m ))−s,
+whereQ(n,m ) = an2+bnm+cm2 is a positive deﬁnite quadratic form with integer coeﬃcients
+and −D =b2 − 4ac< 0 is the fundamental discriminant. It is well known, that ζQ(s) can be
+represented as a linear combination of L-functions with Hecke ideal class group characters
+of imaginary quadratic extension of Q(
+√
+−D). Namely,
+ζQ(s) = ε−D
+h(−D)
+h∑
+j=1
+ψj(IQ)L(s,ψ j), (4)
+where again h =h(−D) is the class number, ε−D is the number of units and IQ is the ideal
+IQ =
+(
+a,b −i
+√
+D
+2
+)
+.
+Combining in the sum (4) each pair of L-functions corresponding to c omplex conjugate Hecke
+characters, we see that ζQ(s) is a linear combination of distinct Hecke L -functions with real
+coeﬃcients. And it also satisﬁes the functional equation of lemma 1:
+( 2π√
+D
+) −s
+Γ(s)ζQ(s) =
+( 2π√
+D
+) −1+s
+Γ(1 −s)ζQ(1 −s)
+In this work we shall prove that the Epstein zeta-function ζQ(s) has a positive proportion
+of non-trivial zeros on the critical line. More generally, we prove th e following theorem.
+6
+
+===== PAGE 7 =====
+
+Theorem 1. Suppose that
+F (s) =
+P∑
+j=1
+cjLj(s) (5)
+is a linear combination of P distinct Hecke L-functions attached to ideal class group charac-
+ters of the ﬁeld Q(
+√
+−D) formed with the real coeﬃcients cj. Then a positive proportion of
+non-trivial zeros of F (s) lie on the critical line. Namely, if we denote by N0(T ) the number
+of zeros of F (s) on the interval {s = 1/ 2 +it,T ≤t ≤ 2T }, then for any large positive T we
+have
+N0(T ) ≫T logT.
+§3. Selberg’s method for linear combinations
+We present in this section the core of the proof introduced by A. Se lberg in [37]. The
+basic idea of catching a zero of odd order of a real-valued continuou s function f (u) on some
+interval consists in comparison of the following two integrals. If for some t and H > 0 the
+inequality
+t+H∫
+t
+|f (u)|du>
+⏐
+⏐
+⏐
+⏐
+⏐
+⏐
+t+H∫
+t
+f (u)du
+⏐
+⏐
+⏐
+⏐
+⏐
+⏐
+(6)
+holds, then f (·) changes its sign on ( t,t +H) and, thus, has a zero of odd order on that
+interval. This idea was used by E. Landau, H. Bohr, H. Hardy and J. L ittlewood. Note, that
+from the functional equation (3), it follows that critical line zeros o fF (s) from (5) correspond
+to real zeros of the real-valued function
+( 2π
+√
+D
+) −1/ 2+iu
+Γ(1/ 2 +iu)F (1/ 2 +iu). (7)
+So we have a candidate for investigating the inequality (6) and, ther efore, zeros of F (s) on
+the critical line.
+Now, if the subset E = {t ∈ (T, 2T ) : (6) holds } has the measure µE , then the number of
+zeros of f on the interval (T, 2T ) is not less than µE
+2H − 1 (which is not diﬃcult to show). The
+measure of the subset E can be calculated during the evaluation of the mean-square of both
+sides of (6). Applying the method of [9] to (7) can only give us the res ult like N0(T ) ≫T .
+A. Selberg substantially supplemented the initial idea in [34] and prove d the positive
+proportion theorem for ζ(s). He introduced the so-called “molliﬁer” which has only even
+zeros and, therefore, does not aﬀect on the zeros of odd order of a continuous real function (if
+it is multiplied by the“molliﬁer”). But at the same time the product beco mes less oscillating
+function, the Cauchy inequality becomes more precise dealing with th e mean-square of both
+sides of (6) and, therefore, one is able to establish the inequality (6 ) on the subset of maximal
+order for smaller H.
+7
+
+===== PAGE 8 =====
+
+For ﬁxedL(s) with Euler product, it turned out that a good candidate for the “m olliﬁer”
+is the square of an approximation to L−1/ 2(s) by a ﬁnite Dirichlet series. In [34] A. Selberg
+oﬀered as a “molliﬁer” a smoothed Dirichlet polynomial attached to ζ−1/ 2(s) which allowed
+him to solve the positive proportion problem for the Riemann zeta-fu nction. The same can
+be done for Dirichlet L-functions. In case of the Davenport-Heilbr onn function, A.A. Karat-
+suba noticed that the two Dirichlet L-functions in the linear combinat ion have the same
+Euler product decomposition on one-half of primes. And it is turned o ut that constructing a
+“molliﬁer” on the part of Euler-product which is the same for both L- functions allows (with
+some extra trick) to get the result (1). The method of A.A. Karats uba allows to obtain
+a non-trivial result for a linear combination of L-functions with comp lex Hecke ideal class
+group characters [25] (but, unfortunately, not for the Epstein zeta-function).
+Let us present now the method of [37] which allows to get the positiv e proportion result
+for a class of linear combinations of L-functions. For a given L-function a “molliﬁer” is
+connected to L−1/ 2(s) (as we have seen) and we choose it as follows. Let ψj be any Hecke
+character of the ideal class group of Q(
+√
+−D). For Lj(s) := Lψj (s) deﬁne αj(ν) by the
+relation (assuming that Re s> 1)
++∞∑
+ν=1
+αj(ν)ν−s =L−1/ 2
+j (s).
+ForX ≥ 3, deﬁne ηj(s) as the following Dirichlet polynomial
+ηj(s) =
+∑
+ν<
+√
+X
+αj(ν)
+νs +
+∑
+√
+X≤ν≤X
+αj(ν)
+νs
+(
+2 logX/ν
+logX
+)
+:=
+∑
+ν≤X
+βj(ν)
+νs ,
+where
+βj(ν) = αj(ν)L(ν)
+and
+L(ν) =
+
+
+
+
+
+
+
+
+
+1 for ν <
+√
+X,
+2 logX/ν
+logX for
+√
+X ≤ν ≤X,
+0 otherwise .
+Let T be large enough, 1
+logT ≤ H ≤ 1 and X be a small (but ﬁxed) power of T (i.e.,
+logX ≍ logT ). Deﬁne
+Ij(t,H ) =
+t+H∫
+t
+Λj
+( 1
+2 +iu
+) ⏐
+⏐
+⏐
+⏐ηj
+( 1
+2 +iu
+) ⏐
+⏐
+⏐
+⏐
+2
+exp
+(( π
+2 − 1
+T
+)
+u
+)
+du,
+where Λ j(·) is deﬁned by (2), and suppose that the following estimates hold:
+2T∫
+T
+|Ij(t,H )|2dt =O
+( TH 2
+(H logT )1/ 3
+)
+, (8)
+8
+
+===== PAGE 9 =====
+
+2T∫
+T
+|Lj(1/ 2 +it)η2
+j (1/ 2 +it)|2dt =O(T ), (9)
+and, setting
+Mj(t,H ) =
+t+H∫
+t
+Lj(1/ 2 +iu)η2
+j (1/ 2 +iu)du −H,
+that
+2T∫
+T
+|Mj(t,H )|2dt =O
+( TH 2
+(H logT )1/ 3
+)
+. (10)
+It follows from [26], for example, that the estimates (8)–(10) for Lj(s) imply that a positive
+proportion of non-trivial zeros of Lj(s) lie on the critical line Re s = 1/ 2. Moreover, the
+estimate (9) allows to prove the following Selberg’s density theorem f or Lj(s) (see §4 in
+[28]).
+Lemma 2. Let σ ≥ 1/ 2, T ≥ 3, Nj(σ,T ) be the number of zeros of Lj(s) in the region
+Res ≥σ, T ≤ Ims ≤ 2T . Then
+Nj(σ,T ) ≪T 1−c(σ −1/ 2) logT
+for some absolute constant c> 0.
+This estimate is of a precise order for σ = 1/ 2 and implies that almost all non-trivial
+zeros of Lj(s) lie in the vicinity of the critical line. Namely, for any function φ(T ) → +∞
+when T → +∞, the estimate
+Nj
+( 1
+2 + φ(T )
+logT,T
+)
+≪ (T logT )e−cφ (T ) =o(T logT )
+holds when T → +∞.
+Selberg’s novelty in the proof of the positive proportion theorem fo r linear combinations
+was an application of the following result on the value distribution of log |Lj(1/ 2 +it)| which
+relies on the above density theorem. If we have two distinct Hecke L -functions, then the
+diﬀerence log |Lj(1/ 2 +it)| − log |Lj′(1/ 2 +it)|√
+(nj +nj′)π log logt
+has a normal distribution, where nj equals to 1 or 2 depending on weather ψj is a complex or
+a real Hecke character, respectively. More precisely: let κa,b denote the characteristic function
+of the interval (a,b ), then
+2T∫
+T
+κa,b
+(
+log |Lj(1/ 2 +it)| − log |Lj′(1/ 2 +it)|√
+(nj +nj′)π log logT
+)
+dt =T
+b∫
+a
+e−πu 2
+du +O (Tϕ (T )), (11)
+9
+
+===== PAGE 10 =====
+
+where ϕ (T ) → 0 as T → +∞. The core of the proof of this value distribution formula are
+the following mean estimates:
+2T∫
+T
+⏐
+⏐
+⏐
+⏐
+⏐log |Lψ (1/ 2 +it)| − Re
+∑
+p<z
+rψ (p)
+p1/ 2+it
+⏐
+⏐
+⏐
+⏐
+⏐
+2k
+dt =O(T (Ck )4k) (12)
+where logz
+logT ≍ 1
+k . A skeleton of the proof of (11) is presented in § 6 in [28]. A very sharp
+estimate on ϕ (T ) was obtained for the Riemann zeta function by K.M. Tsang in his Ph.D.
+thesis [40]. Namely, he proved that
+ϕ (T ) ≪ (log log logT )2
+√log logT .
+An easier method of A. Ghosh [6] gives a weaker estimate, but for ou r task we can use any
+non-trivial result
+ϕ (T ) = o(1).
+Fix 0 < ε <1/ 2 and suppose that we have (11) with a monotonically decreasing fun ction
+ϕ (T ) such that ϕ (T ) ≫ (log logT )− 1
+2 +ε. Whence, the subset of the interval ( T, 2T ) where
+the inequality
+|log |Lj(1/ 2 +it)| − log |Lj′(1/ 2 +it)|| ≤ (log logT )ε
+holds has the measure O (Tϕ (T )). Thus, most of the time one of Lj(1/ 2 + it) dominates
+all the other decisively. We show further that this dominance is some what persistant over
+stretches quite long compared to 1
+logT . Suppose 1 ≤H logT ≤ϕ −1(T ). Deﬁne
+∆ j(t,H ) = 1
+H
+t+H∫
+t
+log |Lj(1/ 2 +iu)|du.
+For 0 ≤u ≤H and any positive integer k one can show from (12) that (see §6 in [28])
+2T∫
+T
+(∆ j(t,H ) − log |Lj(1/ 2 +i(t +u))|)2kdt =O
+(
+TCk(
+k4k +kk logk(H logT )
+))
+. (13)
+Integrating over u, we obtain
+2T∫
+T
+H∫
+0
+(∆ j(t,H ) − log |Lj(1/ 2 +i(t +u))|)2kdudt =O
+(
+THC k(
+k4k +kk(log log logT )k))
+.
+If we denote by Wj(t) the subset of u ∈ [0,H ] for which
+|∆ j(t,H ) − log |Lj(1/ 2 +i(t +u))||> (log logT )
+ε
+2,
+10
+
+===== PAGE 11 =====
+
+we ﬁnd, choosing k so large that kε >7, that the measure of this subset can be estimated
+from above as
+µ (Wj(t)) ≤ H
+(log logT )3,
+except for a subset of t from (T, 2T ) of measure O (T (log logT )−3).
+Now we exclude from ( T, 2T ) all t such that
+|log |Lj(1/ 2 +it)| − log |Lj′(1/ 2 +t)|| ≤ (log logT )ε
+for some j ⁄= j′, and also exclude all t such that µ (Wj(t)) > H
+(log logT )3 for some j and get
+that the interval ( T, 2T ) apart from a subset of measure O(Tϕ (T )) can be divided into P
+(the number of diﬀerent L-functions in the linear combination) sets Sj such that for each
+t ∈Sj we have for j′ ⁄=j
+log |Lj(1/ 2 +it)| − log |Lj′(1/ 2 +it)|> (log logT )ε,
+and for u ∈Ht := (0,H ) \
+P⋃
+k=1
+Wk(t)
+log |Lj(1/ 2 +i(t +u))| − log |Lj′(1/ 2 +i(t +u))| = (log |Lj(1/ 2 +i(t +u))| − ∆ j(t,H ))
+− (log |Lj(1/ 2 +it)| − ∆ j(t,H )) − (log |Lj′(1/ 2 +i(t +u))| − ∆ j′(t,H ))
++ (log |Lj′(1/ 2 +it)| − ∆ j′(t,H )) + (log |Lj(1/ 2 +it)| − log |Lj′(1/ 2 +it)|)
+> (log logT )ε − 4 (log logT )
+ε
+2 > 1
+2 (log logT )ε.
+From (9) we see that
+t+H∫
+t
+|Lj(1/ 2 +iu)η2
+j (1/ 2 +iu)|2dt<H log logT
+except for a subset of t ∈ (T, 2T ) of measure O
+( T
+log logT
+)
+. We also exclude those t from
+Sj without renaming them.
+Deﬁne F(t) attached to the linear combination (5) by the formula
+F(t) =
+P∑
+j=1
+cjΛj
+( 1
+2 +it
+)
+.
+Notice, that this is a real-valued function for real t, and its real zeros are the zeros of our
+linear combination on the critical line.
+Now, for t ∈Sj, compare two values:
+I(t,H ) =
+∫
+Ht
+F(t +u)
+⏐
+⏐
+⏐
+⏐ηj
+( 1
+2 +i(t +u)
+) ⏐
+⏐
+⏐
+⏐
+2
+exp
+(( π
+2 − 1
+T
+)
+(t +u)
+)
+du,
+J(t,H ) =
+∫
+Ht
+⏐
+⏐
+⏐
+⏐F(t +u)η2
+j
+( 1
+2 +i(t +u)
+) ⏐
+⏐
+⏐
+⏐exp
+(( π
+2 − 1
+T
+)
+(t +u)
+)
+du.
+11
+
+===== PAGE 12 =====
+
+IfJ(t,H )> |I(t,H )|, then F(·) changes its sign on ( t,t +H) and so has at least one zero of
+odd order there. Using Cauchy’s inequality, we ﬁnd
+I(t,H ) = cj
+∫
+u∈Ht
+Λj
+( 1
+2 +i(t +u)
+) ⏐
+⏐
+⏐
+⏐ηj
+( 1
+2 +i(t +u)
+) ⏐
+⏐
+⏐
+⏐
+2
+exp
+(( π
+2 − 1
+T
+)
+(t +u)
+)
+du
++O
+
+
+∫
+u∈Ht
+⏐
+⏐
+⏐
+⏐Lj
+( 1
+2 +i(t +u)
+) ⏐
+⏐
+⏐
+⏐
+⏐
+⏐
+⏐
+⏐ηj
+( 1
+2 +i(t +u)
+) ⏐
+⏐
+⏐
+⏐
+2
+e− 1
+2 (log logT )ε
+du
+
+
+=cj
+H∫
+0
+Λj
+( 1
+2 +i(t +u)
+) ⏐
+⏐
+⏐
+⏐ηj
+( 1
+2 +i(t +u)
+) ⏐
+⏐
+⏐
+⏐
+2
+exp
+(( π
+2 − 1
+T
+)
+(t +u)
+)
+du
++O
+( √
+H
+(log logT )3 ·
+√
+H log logT
+)
++O
+( √
+H ·H log logT
+e(log logT )ε
+)
+=cjIj(t,H ) +O
+( H
+log logT
+)
+.
+Similarly we get
+J(t,H ) = cjJj(t,H ) +O
+( H
+log logT
+)
+,
+where
+Jj(t,H ) =
+t+H∫
+t
+|Λj(1/ 2 +iu)||ηj(1/ 2 +iu)|2 exp
+(( π
+2 − 1
+T
+)
+u
+)
+du.
+ForT ≤t ≤ 2T , by means of Stirling’s formula for the Gamma function we obtain
+Jj(t,H ) ≥e−3
+t+H∫
+t
+|Lj(1/ 2 +iu)η2
+j (1/ 2 +iu)|du ≥e−3 (H − |Mj(t,H )|).
+From (8) and (10) it follows, that
+|Ij(t,H )| ≤ H
+3e3 and |Mj(t,H )| ≤ H
+3
+outside a set of measure O
+(
+T
+(H logT )1/ 3
+)
+. Therefore, for t ∈Sj except for a subset of measure
+O
+(
+T
+(H logT )1/ 3
+)
+the inequality
+|I(t,H )|
+cj
+≤ H
+3e3 +O
+( H
+log logT
+)
+< H
+2e3 < 2H
+3e3 −O
+( H
+log logT
+)
+≤ J(t,H )
+cj
+,
+or
+|I(t,H )|<J (t,H )
+12
+
+===== PAGE 13 =====
+
+holds. Taking into account all j we get that the linear combination (5) changes its sign on
+(t,t +H) for t from a subset of ( T, 2T ) of measure
+P∑
+j=1
+µ(Sj) −O
+( PT
+(H logT )1/ 3
+)
+=T −O
+( PT
+(H logT )1/ 3
+)
+,
+which produces more than c
+P 3T logT zeros (c> 0) of F taking H = AP 3
+logT with large enough
+constantA.
+Therefore, to prove the main theorem we are left to establish the e stimates (8)–(10). For
+a complex Hecke character ψj those estimates are proved in [28], since in this case Lj(s)
+corresponds to an automorphic cusp form of weight one for Hecke congruence group. For
+any Hecke L-function the estimate (10) follows from (9) as it is prov ed in §4 of [28]. The
+estimate (9) follows from the following one
++∞∫
+−∞
+⏐
+⏐
+⏐
+⏐Λj
+( 1
+2 +it
+)
+η2
+j
+( 1
+2 +it
+)
+exp
+(( π
+2 − 1
+T
+)
+t
+) ⏐
+⏐
+⏐
+⏐
+2
+dt =O (T )
+as can be seen by Stirling’s formula for Gamma-function. We shall see in the next section that
+for L-function attached to real Hecke character (i.e., when L-fu nction is a certain product of
+two Dirichlet L-functions) the above estimate and (8) follow from th e result of lemma 3 and
+theorem 2 we are only left to obtain therefore. In the end of this se ction, we shall introduce
+some notations that are used throughout the paper.
+Notation.
+• χD(·) =
+( −D
+·
+)
+is the Dirichlet character deﬁned by the Kronecker symbol, where −D <
+0 is the fundamental discriminant.
+• χd1(·),χ d2(·) are real primitive Dirichlet characters such that ( d1,d 2) = 1, d1d2 = D
+and χd1χd2 =χD.
+• Forj = 1, 2 and Re s> 1, Lχdj
+(s) =
++∞∑
+n=1
+χdj (n)
+ns .
+• The coeﬃcients r(n) of the Dirichlet series L(s) =
++∞∑
+n=1
+r(n)
+ns are deﬁned by the relation
+L(s) = Lχd1
+(s)Lχd2
+(s).
+• T is large enough number, δ =T −1, X is a small ﬁxed power of T .
+• φ(u) = 1+cos4δ
+cos4δ+u−4.
+• α (·) is a multiplicative function deﬁned by the following relation L−1/ 2(s) =
++∞∑
+ν=1
+α (ν)
+νs .
+13
+
+===== PAGE 14 =====
+
+• L(ν) =
+
+
+
+
+
+
+
+
+
+1 for ν <
+√
+X,
+2 logX/ν
+logX for
+√
+X ≤ν ≤X,
+0 otherwise .
+.
+• β (ν) = α (ν)L(ν).
+• Λ(s) =
+(
+2π√
+D
+) −s
+Γ(s)L(s).
+• F (t) = Λ
+( 1
+2 +it
+)
+⏐
+⏐
+⏐
+⏐
+⏐
+∑
+ν≤X
+β (ν)
+n
+1
+2 +it
+⏐
+⏐
+⏐
+⏐
+⏐
+2
+exp
+(( π
+2 − 1
+T
+)
+t
+)
+is a real-valued function.
+• I(t,H ) =
+t+H∫
+t
+F (u)du.
+• For positive integers m and d the expression m | d∞ means that all prime divisors of
+m divide d.
+• (a,b ) denotes the greatest common divisor of the two positive integers a and b.
+• ∏
+p
+denotes the product over all prime numbers.
+• K1, 1(m,z ) = 1
+(m,d ∞
+1 )zχd1 ((m,d ∞
+2 ))χd2 ((m,d ∞
+1 ))× ∏
+(p,D )=1,
+pα ||m
+(
+1 − 1
+p2
+) −1(
+1 − χD(p)
+pz
+) −1(
+1 − χD(p)
+p
+)
+×
+χd1(pα )
+(
+1 − 1
+pz+1 + χD(pα +1)
+pαz +1
+(
+1 − 1
+pz−1
+))
+,
+• K2, 2(m,z ) = 1
+(m,d ∞
+2 )zχd1 ((m,d ∞
+2 ))χd2 ((m,d ∞
+1 ))× ∏
+(p,D )=1,
+pα ||m
+(
+1 − 1
+p2
+) −1(
+1 − χD(p)
+pz
+) −1(
+1 − χD(p)
+p
+)
+×
+χd2(pα )
+(
+1 − 1
+pz+1 + χD(pα +1)
+pαz +1
+(
+1 − 1
+pz−1
+))
+,
+• Form1,m 2 such that (m1,m 2) = 1, d2 |m1, d1 |m2 we set
+K1, 2(m1,m 2,z ) = χd1 (m1)χd2 (m2) ∑
+q|(m1m2/D,D ∞)
+1
+qz ×
+∏
+(p,D )=1,
+pα ||m1m2
+(
+1 − χ 2
+D(p)
+p2
+) −1(
+1 − 1
+pz
+) −1(
+1 − χD(p)
+p
+)(
+1 − χD(p)
+pz+1 + χD(p)
+pαz +1
+(
+1 − χD(p)
+pz−1
+))
+,
+• GN =∏
+p|N
+(
+1 + 1
+p3/ 4
+) 2
+,
+• C,C 1,... are some absolute constants which may diﬀer at diﬀerent occurenc es.
+§4. The main assertion
+14
+
+===== PAGE 15 =====
+
+Lemma 3. Let us deﬁne
+G(y) =
+⏐
+⏐
+⏐
+⏐
+∑
+n,ν 1,ν 2
+r(n)β (ν1)β (ν2)
+ν2
+exp
+(
+−2πnν 1√
+Dν2
+y(sinδ +i cosδ)
+) ⏐
+⏐
+⏐
+⏐
+2
+. (14)
+Then
++∞∫
+−∞
+|I(t,H )|2dt ≤ 8H 2
+e1/H
+∫
+1
+G(y)dy + 8
++∞∫
+e1/H
+G(y)
+log2ydy,
+and also
++∞∫
+−∞
+|F (t)|2dt =
++∞∫
+1
+G(y)dy,
+whereI(t,H ) and F (t)are deﬁned in the end of §3.
+The proof of this result is contained in [25] (see there lemmas 3 and 4) .
+Theorem 2. Forx ≥ 1 and G(y) given by (14), let us deﬁne
+J(x,θ ) =
+∫ +∞
+x
+G(u)u−θdu.
+If log−1T ≤θ ≤
+(
+log logT
+logT
+) 2/ 3
+and X ≤T 1/ 50, then the estimates
+J(x,θ ) ≤J(1,θ ) ≪ T
+(θ logT )1/ 3
+hold.
+The statement of this theorem is the core of the work. Its proof is contained in §6 and §8
+(corresponding to estimation of diagonal and non-diagonal terms respectively). Let us derive
+from it the estimates (8), (9) for 1
+logT ≤H ≤
+(
+log logT
+logT
+) 2/ 3
+.
+First, we shall obtain the estimate (9) from the results of lemma 3 an d theorem 2. We
+only need to show due to lemma 3 that
++∞∫
+1
+G(y)dy ≪T.
+Let us apply theorem 2 with x = 1 and θ = 1
+logT and get
+∫ T 2
+1
+G(u)du ≪
+∫ +∞
+1
+G(u)u−1/ logTdu ≪T.
+15
+
+===== PAGE 16 =====
+
+Recalling the deﬁnition (14) of G(y), we estimate the integral over ( T 2, +∞) as follows:
+∫ +∞
+T 2
+G(u)du ≪
+∑
+n1,n 2
+ν1,ν 2,ν 3,ν 4
+|r(n1)r(n2)β (ν1)β (ν2)β (ν3)β (ν4)|
+ν2ν4
+×
+∫ +∞
+T 2
+exp
+(
+− 2π√
+D
+( n1ν1
+ν2
++ n2ν3
+ν4
+)
+T −1u
+)
+du.
+Using the identity ∫ +∞
+T 2
+exp(−ax)dx = e−aT 2
+a ,
+we obtain:
+∫ +∞
+T 2
+G(u)du ≪T
+∑
+n1,n 2
+ν1,ν 2,ν 3,ν 4
+|r(n1)r(n2)β (ν1)β (ν2)β (ν3)β (ν4)|
+(n1ν1ν4 +n2ν2ν3)
+× exp
+(
+− 2π√
+D
+T
+( n1ν1
+ν2
++ n2ν3
+ν4
+))
+≪T
+∑
+n1,n 2
+ν1,ν 2,ν 3,ν 4
+|r(n1)r(n2)β (ν1)β (ν2)β (ν3)β (ν4)|√n1n2ν1ν2ν3ν4
+× exp
+(
+− 2π√
+D
+T
+( n1ν1
+ν2
++ n2ν3
+ν4
+))
+≤T
+( ∑
+ν1,ν 2≤X
+1√ν1ν2
+∑
+n
+|r(n)|√n exp
+(
+− 2π√
+D
+nν1
+ν2
+T
+)) 2
+.
+Since |r(n)| ≤ τ(n) and ν2 ≤X ≤T 1/ 3, we have
++∞∑
+n=1
+|r(n)|√n exp
+(
+− 2π√
+D
+nν1
+ν2
+T
+)
+≪ exp
+(
+−
+√
+T
+)
+.
+Hence, ∫ +∞
+T 2
+G(u)du ≪TX exp
+(
+−
+√
+T
+)
+≪ 1.
+The proof of the estimate (9) is now completed.
+It follows from lemma 3 that to prove (8) we need to show that
+∫ e1/H
+1
+G(x)dx ≪ T
+(H logT )1/ 3,
+∫ +∞
+e1/H
+G(x)
+log2xdx ≪ TH 2
+(H logT )1/ 3.
+Setting θ =H in theorem 2 and noting that xθ ≪ 1 for 1 ≤x ≤e1/H , we obtain
+∫ e1/H
+1
+G(x)dx = −
+∫ e1/H
+1
+xθ d
+dxJ(x,θ )dx = −xθJ(x,θ )
+⏐
+⏐
+⏐
+e1/H
+x=1
++θ
+∫ e1/H
+1
+xθ−1J(x,θ )dx
+≪ T
+(θ logT )1/ 3
+(
+1 + θ
+H
+)
+≪ T
+(H logT )1/ 3.
+16
+
+===== PAGE 17 =====
+
+Since
+H∫
+0
+ax−ada = −Hx −H log−1x − (x−H − 1) log−2x,
+then for x ≥e1/H (i.e., when log −1x ≤H)
+log−2x ≤ 2
+H∫
+0
+ax−ada + 2x−HH 2.
+Therefore,
+∫ +∞
+e1/H
+G(x)
+log2xdx ≤ 2
+H∫
+0
+aJ(e1/H ,a )da + 2H 2J(e1/H ,H ).
+For 0 ≤ a ≤ (log−1T ) we shall use the estimate J(e1/H ,a ) ≤
++∞∫
+1
+G(x)dx ≪ T , which we
+have just obtained. For the remaining interval a ∈ (log−1T,H ) we shall use the estimate
+J(e1/H ,a ) ≪ T
+(a logT )1/ 3 . Overall, we get
+∫ +∞
+e1/H
+G(x)
+log2xdx ≪ T
+log2T + TH 2
+(H logT )1/ 3 ≪ TH 2
+(H logT )1/ 3
+sinceH ≥ log−1T . The estimate (8) is completed. Therefore, our aim is to prove theo rem 2.
+§5. Estimation of Selberg sums coming from the “diagonal” and
+“non-diagonal” terms in case of a real ideal class group Heck e character.
+Lemma 9 below corresponds to the estimation of the so-called “diago nal” term arising in
+the proof of theorem 2. An analogue of this lemma in case of a complex Hecke character can be
+found in [26] (lemma 3) or [28] (lemma 1). Lemma 10 below corresponds to estimation of the
+“non-diagonal” term which turns out to be at least of the same orde r as the “diagonal” term
+in contrast to the situation in [26], where the “non-diagonal” term is very small compared to
+the “diagonal” term. The reason to such a diﬀerence is a non-zero m ain term in the additive
+problem with coeﬃcients of L-function of a real Hecke character ( see lemma 13). We shall
+formulate and prove several auxiliary lemmas in the beginning of this p aragraph.
+Lemma 4. Let
+K(m,s ) =
+∏
+p|m
+(
+1 + r2(p)
+ps + r2(p2)
+p2s + · · ·
+) −1
+×
+∏
+pα ‖m
+(
+r(pα ) + r(pα +1)r(p)
+ps + r(pα +2)r(p2)
+p2s + · · ·
+)
+.
+17
+
+===== PAGE 18 =====
+
+For ﬁxedm, the function K(m,s ) is analytic in the region Res> 0 and satisﬁes the following
+relations when Res ≥ 1/ 2:
+|K(m,s )| ≤ τ2000(m),
+K(p,s ) = r(p) +O(p− Res).
+Proof. By virtue of the equality (28) given below, we have for Re s> 1
+(
+1 + r2(p)
+ps + r2(p2)
+p2s + · · ·
+) −1
+=
+(
+1 −χ 2
+d1(p)
+ps
+)(
+1 − χ 2
+d2(p)
+ps
+)(
+1 − χD(p)
+ps
+) 2(
+1 −χ 2
+D(p)
+p2s
+) −1
+.
+HenceK(m,s ) is analytic in the region Re s> 0 for a ﬁxed m. Furthermore, using the bound
+|r(n)| ≤ τ(n) we ﬁnd the following estimate when Re s ≥ 1
+2:
+|K(m,s )| ≤
+∏
+p|m
+(
+1 − 1
+2
+) −1(
+1 + 1√
+2
+) 4
+τ(m)
+×
+∏
+pα ‖m
+(
+1 +
+α +2
+α +1 · 2
+21/ 2 +
+α +3
+α +1 · 3
+2 +
+α +4
+α +1 · 4
+23/ 2 + · · ·
+)
+≤τ(m)
+∏
+p|m
+(
+1 +
+3
+2 · 2
+21/ 2 +
+4
+2 · 3
+2 +
+5
+2 · 4
+23/ 2 + · · ·
+)
+2
+(
+1 + 1√
+2
+) 4
+=τ(m)
+∏
+p|m
+( ∑
+n≥2
+n(n − 1)
+2n/ 2
+)
+2
+(
+1 + 1√
+2
+) 4
+≤τ(m)
+∏
+p|m
+1000 ≤τ(m)τ1000(m) ≤τ2000(m). (15)
+Further, since by deﬁnition r(p) = χd1(p) + χd2(p) for a prime p, and χdj (·) are real
+characters, we ﬁnd that r(p) = 0, ±1, ±2. For Re s> 1/ 2, if |r(p)| ⁄= 0 we write:
+K(p,s ) =
+(
+1 − χ 2
+d1(p)
+ps
+)(
+1 − χ 2
+d2(p)
+ps
+)(
+1 −χD(p)
+ps
+) 2(
+1 − χ 2
+D(p)
+p2s
+) −1
+×
+×
+(
+r(p) + r(p2)r(p)
+ps + r(p3)r(p2)
+p2s + · · ·
+)
+=r(p) +O(p− Res),
+which also holds true when r(p) = 0. This completes the proof of the lemma. □
+Lemma 5. ForKl,l (m,z ) (l = 1, 2), K1, 2(m1,m 2,z ), deﬁned in the end of §3, the following
+formulae hold:
+Kl,l (m,z ) = 1
+(m,d ∞
+l )zχdl ((m, (D/d l)∞))χD/d l ((m,d ∞
+l )) ×
+×
+∏
+(p,D )=1,
+pα ||m
+(
+1 + χD(p)
+p
+) −1
+χdl(pα )×
+18
+
+===== PAGE 19 =====
+
+×
+(
+1 + χD(p)
+pz + χD(p2)
+p2z +... + χD(pα )
+pαz − 1
+pz+1
+(
+1 + χD(p)
+pz +... + χD(pα −2)
+p(α −2)z
+))
+.
+(16)
+K1, 2(m1,m 2,z ) = χd1 (m1)χd2 (m2)
+∑
+q|(m1m2/D,D ∞)
+1
+qz
+∏
+(p,D )=1,
+pα ||m1m2
+(
+1 + χD(p)
+p
+) −1
+×
+×
+(
+1 + 1
+pz + 1
+p2z +... + 1
+pαz − χD(p)
+pz+1
+(
+1 + 1
+pz +... + 1
+p(α −2)z
+))
+. (17)
+Also, for a prime p posessing the property (p,D ) = 1 , we have that
+Kl,l (p,z ) =
+(
+χdl(p) + χD/d l(p)
+pz
+)(
+1 + χD(p)
+p
+) −1
+. (18)
+and, for p |D and Rez ≥ 0, that
+|Kl,l (pα,z )| ≤ 1 (19)
+Proof. The equality (16) is easy to prove. We observe that
+− 1
+pz+1 + χD(pα +1)
+pαz +1 = − 1
+pz+1
+(
+1 −χD(pα −1)
+p(α −1)z
+)
+= − 1
+pz+1
+(
+1 −χD(p)
+pz
+)(
+1 + χD(p)
+pz +... + χD(pα −2)
+p(α −2)z
+)
+and that similar calculations hold for the diﬀerence
+1 −χD(pα +1)
+p(α +1)z =
+(
+1 − χD(p)
+pz
+)(
+1 + χD(p)
+pz +... + χD(pα )
+p(α )z
+)
+.
+Also, for (p,D ) = 1 we have
+(
+1 − 1
+p2
+) −1(
+1 −χD(p)
+p
+)
+=
+(
+1 + χD(p)
+p
+) −1
+.
+All this and the deﬁnition of Kl,l (m,z ) imply (16). The formulae (18) and (19) easily follow
+from (16). The proof of (17) is similar to that of (16). □
+Lemma 6. For Rez ≥ 0, we have
+|Kl,l (pα,z )| ≤
+(
+1 − 1
+p
+) −1(
+α + 1 + α − 1
+p
+)
+≤ 3α + 1 (20)
+and
+|Kl,l (pα,z )| ≤ 3τ(pα ) for α ≥ 2,
+|Kl,l (m,z )| ≤ τ2(m),
+|Kl,j (m1,m 2,z )| ≤ τ2(m1m2),⏐
+⏐
+⏐
+⏐
+d
+dzKl,l (m,z )
+⏐
+⏐
+⏐
+⏐ ≤τ2(m) logm.
+(21)
+19
+
+===== PAGE 20 =====
+
+Moreover, if z =it, 0 ≤t ≤ 1, χD(2) = −1, then
+|Kl,l (4,z )| ≤ 1. (22)
+Proof. For Rez >0, from (18), (19) we have
+|Kl,l (p,z )| ≤ 2 · 2 = 4 = τ2(p).
+We can write the following estimate from above when Re z ≥ 0 and p ≥ 2:
+|Kl,l (pα,z )| ≤
+(
+1 − 1
+p
+) −1(
+α + 1 + α − 1
+p
+)
+≤ 3α + 1.
+Thus, for α ≥ 2, we get
+|Kl,l (pα,z )| ≤ 3(α + 1) ≤ 3τ(pα ) ≤τ2(pα ).
+Since Kl,l (·,z ) is a multiplicative function, we obtain the following inequality for Re z ≥ 0:
+|Kl,l (m,z )| ≤ τ2(m).
+Similarly, for l ⁄=j, we obtain from (17) that
+|Kl,j (m1,m 2,z )| ≤ τ((m1m2,D ∞))
+∏
+(p,D )=1,
+pα ||m1m2
+2
+(
+α + 1 + α − 1
+p
+)
+≤τ2(m1m2).
+Now, if (2,D ) = 1, Re z ≥ 0, then we get from (16)
+|Kl,l (4,z )| ≤ 2
+⏐
+⏐
+⏐
+⏐1 + χD(2)
+2z + χD(22)
+22z − 1
+2z+1
+⏐
+⏐
+⏐
+⏐.
+For z = it (t ∈ R), set 2 −z = e−it log 2 = a +ib (a = cos(t log 2), b = − sin(t log 2) =
+−
+√
+1 −a2). If χD(2) = −1 and 0 ≤t ≤ 1, we therefore obtain
+⏐
+⏐
+⏐
+⏐1 + χD(2)
+2z + χD(22)
+22z − 1
+2z+1
+⏐
+⏐
+⏐
+⏐
+2
+=
+⏐
+⏐
+⏐
+⏐1 − 3
+2 (a +ib) + (a +ib)2
+⏐
+⏐
+⏐
+⏐
+2
+=
+⏐
+⏐
+⏐
+⏐−3
+2a + 2a2 −i3
+2b +i2ab
+⏐
+⏐
+⏐
+⏐
+2
+= |a +ib|2
+⏐
+⏐
+⏐
+⏐2a − 3
+2
+⏐
+⏐
+⏐
+⏐
+2
+=
+⏐
+⏐
+⏐
+⏐2a − 3
+2
+⏐
+⏐
+⏐
+⏐
+2
+.
+Since 0. 7692 ≤ cos(log 2) ≤a ≤ 1, then
+⏐
+⏐2a − 3
+2
+⏐
+⏐ ≤ 1
+2. Hence, (22) holds true.
+Now, for Re z ≥ 0, let us estimate the derivative d
+dzKl,l (m,z ) by means of the following
+formula
+⏐
+⏐
+⏐
+⏐
+d
+dzKl,l (m,z )
+⏐
+⏐
+⏐
+⏐ ≤
+⏐
+⏐
+⏐
+⏐Kl,l (m,z ) d
+dz logKl,l (m,z )
+⏐
+⏐
+⏐
+⏐.
+20
+
+===== PAGE 21 =====
+
+Using (16) we ﬁnd
+d
+dz logKl,l (m,z ) = − log(m,d ∞
+l )
+−
+∑
+(p,D )=1,
+pα ||m
+logp
+(
+1 + χD(p)
+pz + χD(p2)
+p2z +... + χD(pα )
+pαz − 1
+pz+1
+(
+1 + χD(p)
+pz +... + χD(pα −2)
+p(α −2)z
+)) −1
+×
+×
+( χD(p)
+pz + 2χD(p2)
+p2z +... + αχ D(pα )
+pαz − 1
+p
+( 1
+pz + 2χD(p)
+p2z +... + (α − 1)χD(pα −2)
+p(α −1)z
+))
+.
+Hence,
+⏐
+⏐
+⏐
+⏐
+d
+dzKl,l (m,z )
+⏐
+⏐
+⏐
+⏐ ≤ |Kl,l (m,z )| log(m,d ∞
+l ) +
+∑
+pα ||m,
+(p,D )=1
+⏐
+⏐
+⏐
+⏐1 + χD(p)
+p
+⏐
+⏐
+⏐
+⏐
+−1
+|Kl,l (m/p α,z )| ×
+× logp
+⏐
+⏐
+⏐
+⏐
+χD(p)
+pz +... + αχ D(pα )
+pαz − 1
+p
+( 1
+pz +... + (α − 1)χD(pα −2)
+p(α −1)z
+) ⏐
+⏐
+⏐
+⏐
+≤ |Kl,l (m,z )| log(m,d ∞
+l ) +
+∑
+pα ||m,
+(p,D )=1
+(
+1 − 1
+p
+) −1
+logp |Kl,l (m/p α,z )| ×
+×
+(
+1 + 2 +... +α + 1
+p (1 + 2 +... + (α − 1))
+)
+≤ |Kl,l (m,z )| log(m,d ∞
+l ) +
+∑
+pα ||m,
+(p,D )=1
+2 logp |Kl,l (m/p α,z )|
+(
+α (α + 1)/ 2 + 1
+pα (α − 1)/ 2
+)
+≤τ2(m) log(m,d ∞
+l ) +
+∑
+pα ||m,
+(p,D )=1
+2(logp)τ2(m/p α )α (α + 1) 3
+4
+≤τ2(m) log(m,d ∞
+l ) +
+∑
+pα ||m,
+(p,D )=1
+(α logp)τ2(m/p α )2(α + 1) ≤τ2(m) logm
+since 2(α + 1) ≤τ2(pα ) for a prime p. The lemma is completely proved. □
+Lemma 7. For a prime p such that (p,d 1d2) = 1 , the following relations for the coeﬃcients
+of the series
++∞∑
+n=1
+α (n)
+ns =L−1/ 2
+χd1 (s)L−1/ 2
+χd2 (s) hold:
+α (p) = −1
+2 (χd1(p) +χd2(p)),
+α (p2) = −1
+8 (χ 2
+d1(p) +χ 2
+d2(p)) + 1
+4χD(p),
+α (pk) = 0 for odd k ≥ 3,
+|α (pk)| ≤ 1
+2 · 3
+4 ·... · k − 3
+k − 2 · 1
+k ≤ 1
+2k for even k ≥ 4.
+21
+
+===== PAGE 22 =====
+
+Proof. Note that L−1/ 2
+χdj (s) = ∏
+p
+(
+1 −χdj (p)
+ps
+) 1/ 2
+and, thus, the equality for α (p) follows
+from the Taylor series expansion
+(
+1 −χdj (p)
+ps
+) 1/ 2
+= 1 − 1
+2
+χdj (p)
+ps −....
+Now, we prove further statements of the lemma. If ( p,d 1d2) = 1 and χd1,χ d2 are real char-
+acters, then there are two options:
+(
+1 −χd1(p)
+ps
+) 1/ 2(
+1 − χd2(p)
+ps
+) 1/ 2
+=
+
+
+
+
+
+
+
+(
+1 − 1
+p2s
+) 1/ 2
+if χd1(p)χd2(p) = −1,
+(
+1 − χd1(p)
+ps
+)
+if χd1(p) = χd2(p).
+In the second option α (pk) = 0 for k ≥ 2 and the proof of the lemma is completed in this
+case. In the ﬁrst option the statements of the lemma for α (p2) and α (pk) for odd k are clear.
+For even powers, using the Taylor series expansion
+(
+1 − 1
+p2s
+) 1/ 2
+=
++∞∑
+k=1
+α (p2k)
+p2ks ,
+we get for k ≥ 2 that
+α (p2k) = −1
+2 · 1
+2 · 3
+2... 2k − 3
+2 · 1
+k! = − 1
+2k · 1
+2 · 1 · 3
+2 · 2... 2k − 3
+2 · (k − 1),
+which completes the proof of the lemma.
+□
+Lemma 8. Forz =it, 0 ≤t ≤ 1, the following estimate holds
+|α (2)Kl,l (2,z )|
+2 + |α (4)Kl,l (4,z )|
+4 ≤
+
+
+
+2
+3 if (2,D ) = 1,
+1
+3 if (2,D )> 1
+and for a prime p ≥ 3 and Rez ≥ 0 the estimate
+|α (p)Kl,l (p,z )|
+p + |α (p2)Kl,l (p2,z )|
+p2 ≤
+
+
+
+5
+9 if (p,D ) = 1,
+1
+5 if (p,D )> 1
+is valid.
+Proof. If χD(p) = −1 (i.e χd1(p) = −χd2(p)), then α (p) = 0 (see lemma 7) and, therefore,
+α (p)Kl,l (p,z ) = 0.
+22
+
+===== PAGE 23 =====
+
+If χD(p) = 1, we see from the deﬁnition of α (·) and formula (18) that
+α (p)Kl,l (p,z ) = −1
+2 (χd1(p) +χd2(p))
+(
+χdl(p) + χD/d l(p)
+pz
+)(
+1 + χD(p)
+p
+) −1
+= −1
+2 (1 +χD(p))
+(
+1 + 1
+pz
+)(
+1 + χD(p)
+p
+) −1
+= −
+(
+1 + 1
+pz
+)(
+1 + 1
+p
+) −1
+.
+In case χD(p) = 0 (i.e. ( p,D ) > 1) we shall employ the estimates |Kl,l (p,z )| ≤ 1 for
+Rez ≥ 0 (see (19)) and the estimate |α (p)| ≤ 1
+2 (by deﬁnition). Consequently, if Re z ≥ 0 we
+get the following inequality:
+|α (p)Kl,l (p,z )| ≤
+
+
+
+
+
+
+
+
+
+0 for χD(p) = −1,
+2 ·
+(
+1 + 1
+p
+) −1
+for χD(p) = 1,
+1
+2 for χD(p) = 0.
+(23)
+Now, if χD(p) = 1, then α (p2) = 0 and, hence, α (p2)Kl,l (p2,z ) = 0. Consequently, for
+Rez ≥ 0, by lemma 7 and formulae (19), (20) we conclude that
+|α (p2)Kl,l (p2,z )| ≤
+
+
+
+
+
+
+
+
+
+3 + 1
+p for χD(p) = −1,
+0, for χD(p) = 1,
+1
+8 for χD(p) = 0.
+(24)
+Therefore, if (2,D )> 1 then
+|α (2)Kl,l (2,z )|
+2 + |α (4)Kl,l (4,z )|
+4 ≤ 1
+4 + 1
+32 < 1
+3.
+If p ≥ 3 and (p,D )> 1, then
+|α (p)Kl,l (p,z )|
+p + |α (p2)Kl,l (p2,z )|
+p2 ≤ 1
+6 + 1
+72 < 1
+5.
+If (2,D ) = 1 then one of the two values among α (2)Kl,l (2,z ) and α (4)Kl,l (4,z ) is zero. And
+hence, for Re z ≥ 0, we have
+|α (2)Kl,l (2,z )|
+2 + |α (4)Kl,l (4,z )|
+4 ≤ max
+( 1
+3, 2
+3, 7
+8
+)
+= 7
+8.
+Similarly, if p ≥ 3, (p,D ) = 1 and Re z ≥ 0, then
+|α (p)Kl,l (p,z )|
+p + |α (p2)Kl,l (p2,z )|
+p2 ≤ max
+( 2
+p + 1, 3 + 1/p
+p(p − 1)
+)
+≤ max
+( 1
+2, 5
+9
+)
+= 5
+9.
+23
+
+===== PAGE 24 =====
+
+Forz =it, 0 ≤t ≤ 1, we get the following ﬁner estimate with the help of (22):
+|α (2)Kl,l (2,z )|
+2 + |α (4)Kl,l (4,z )|
+4 ≤ max
+( 2
+3, 1
+8
+)
+= 2
+3
+and the lemma is completely proved now. □
+Now we shall formulate two main statements of this paragraph.
+Lemma 9. For complex z, let us deﬁne S(z) by the relation
+S(z) := SX(z) =
+∑
+ν1,...,ν 4≤X
+β (ν1)β (ν2)β (ν3)β (ν4)
+ν2ν4
+( q
+ν1ν3
+) 1−z
+K
+( ν1ν4
+q , 1 −z
+)
+K
+( ν2ν3
+q , 1 −z
+)
+,
+where q = (ν1ν4,ν 2ν3) and K(·, ·) is deﬁned in lemma 4. There exists an absolute constant
+C ≥ 1 such that for |z| ≤ C −1 with Rez ≥ − 1
+logX the estimate
+S(z) ≪ X 2|z|
+(logX)2
+holds.
+Lemma 10. Let us deﬁne Sl,l (z) (l = 1, 2) by the formula
+Sl,l (z) := Sl,l (z,X ) =
+∑
+ν1,...,ν 4≤X
+β (ν1)β (ν2)β (ν3)β (ν4)
+ν2ν4
+( q
+ν1ν3
+) 1−z
+Kl,l
+( ν1ν4
+q ,z
+)
+Kl,l
+( ν2ν3
+q ,z
+)
+,
+whereq = (ν1ν4,ν 2ν3) (andKl,l (m,z ) are deﬁned on page 14). Then, for 0 ≤ Rez ≤ log logX
+logX ,
+the estimate
+|Sl,l (z)| ≪
+
+
+
+log4(|z| + 3),
+(|z| + log−1X)2 if | Imz| ≤ 1
+holds true. And for z =it with
+log−1X ≤t ≤ (logX)−1/ 3(log logX)−2/ 3 (25)
+the following asymptotic formula holds:
+Sl,l (z) =
+∑
+d≤X 2
+∑
+m|d
+µ(m)
+( d
+m
+) 1−z
+(Main term )2 +O
+(
+|z|3/ 2 log−1/ 2X
+)
+, (26)
+where
+Main term =
+∑
+δ1δ4≡0 (mod d)
+δj |d∞
+α (δ1)α (δ4)
+δ1−z
+1 δ4
+Kl,l
+( δ1δ4m
+d ,z
+)
+24
+
+===== PAGE 25 =====
+
+×
+∑
+(n,d )=1
+1
+n2−z
+∑
+(r,nd )=1
+µ(r)
+r2−z
+∑
+k1,k 4|n∞,
+(k1,k 4)=1
+α (nk1)α (nk4)Kl,l (n2k1k4,z )
+k1−z
+1 k4
+×
+∑
+lj |r∞
+α (rl1)α (rl4)
+l1−z
+1 l4
+Kl,l (rl1,z )Kl,l (rl4,z ) ·
+Cl|z|(R(l,l )
+z,ndrH (l,l )
+z, 1 (1))2
+log2X
+×
+(
+log1/ 2 (max (1,X/ (δ1k1l1nr))) − log1/ 2(max
+(
+1,
+√
+X/ (δ1k1l1nr)
+)
+)
+)
+×
+×
+(
+log1/ 2 (max (1,X/ (δ4k4l4nr))) − log1/ 2(max
+(
+1,
+√
+X/ (δ4k4l4nr)
+)
+)
+)
+, (27)
+Cl is some absolute constant, and H (l,l )
+z,N (·), R(l,l )
+z,ndr (·) are deﬁned in (33), (39).
+To prove lemmas 9, 10 we shall use some extra statements.
+Lemma 11. LetX1 ≥ 1, N be any positive integer, and set for complex numbers z,γ
+Sz(X1,γ,N ) =
+∑
+ν≤X1
+(ν,N )=1
+α (ν)K(ν, 1 −z)
+ν1−γ logX1
+ν .
+If Rez ≤ 1/ 2 and |γ| ≤ C −1, where C is a suﬃciently large absolute constant, then the
+estimate
+Sz(X1,γ,N ) ≪X |γ |
+1 GN
+holds true.
+Proof.
+We may suppose thatX1 is large enough (otherwise the statement of the lemma is trivial).
+The proof of the lemma in case of a real character is carried out simila rly as in the complex
+case (see [28], lemma 1). First, for Re s> 1, we deﬁne the generating function
+hz,N (s) =
+∑
+(n,N )=1
+α (n)K(n, 1 −z)
+ns =
+∏
+(p,N )=1
+(
+1 + α (p)K(p, 1 −z)
+ps + α (p2)K(p2, 1 −z)
+p2s +...
+)
+=
+∏
+p
+(
+1 + r2(p)
+ps + r2(p2)
+p2s +...
+) −1/ 2
+×
+∏
+p|N
+(
+1 + r2(p)
+ps + r2(p2)
+p2s +...
+) 1/ 2
+×
+×
+∏
+(p,N )=1
+(
+1 + r2(p)
+ps + r2(p2)
+p2s +...
+) 1/ 2
+×
+×
+(
+1 + α (p)K(p, 1 −z)
+ps + α (p2)K(p2, 1 −z)
+p2s +...
+)
+.
+25
+
+===== PAGE 26 =====
+
+We ﬁnd from lemma 4 that the product
+Pz(s) =
+∏
+(p,N )=1
+(
+1 + r2(p)
+ps + r2(p2)
+p2s +...
+) 1/ 2
+×
+×
+(
+1 + α (p)K(p, 1 −z)
+ps + α (p2)K(p2, 1 −z)
+p2s +...
+)
+=
+∏
+(p,N )=1
+(
+1 + r2(p)
+2ps +Oσ
+( 1
+p2σ
+))(
+1 − r2(p)
+2ps +Oσ
+( 1
+pσ +1−Rez
+)
++Oσ
+( 1
+p2σ
+))
+=
+∏
+(p,N )=1
+(
+1 +Oσ
+( 1
+p2σ
+)
++Oσ
+( 1
+pσ +1−Rez
+))
+deﬁnes an analytic function for Re z ≤ 1/ 2 in the half-plane Re s> 1/ 2.
+Now, for Re s> 1 and
+D(s) =
+∏
+p
+(
+1 + r2(p)
+ps + r2(p2)
+p2s +...
+)
+=
++∞∑
+n=1
+r2(n)
+ns ,
+the following formula holds (see [15], p.232):
+D(s) = Lχ 2
+1
+(s)Lχ 2
+2
+(s)L2
+χD (s)/L χ 2
+D
+(2s). (28)
+Hence, the following identity holds for the generating function:
+hz,N (s) = (D(s))−1/ 2Pz(s)GN (s),
+where
+GN (s) =
+∏
+p|N
+(
+1 + r2(p)
+ps + r2(p2)
+p2s +...
+) 1/ 2
+.
+Note, that for ﬁxed σ >1/ 2 and Re s ≥σ the following estimate holds:
+|GN (s)| ≤ GN (σ) ≪
+∏
+p|N
+(
+1 + r2(p)
+pσ
+) 1/ 2
+≪
+∏
+p|N
+(
+1 + r2(p)
+2pσ
+)
+≪
+∏
+p|N
+(
+1 + 2
+pσ
+)
+≪
+∏
+p|N
+(
+1 + 1
+pσ
+) 2
+.
+Now an application of Perron’s summation formula gives
+Sz(X1,γ,N ) = 1
+2πi
+1+i∞∫
+1−i∞
+hz,N (s + 1 −γ)Xs
+1
+s2 ds
+= Xγ
+1
+2πi
+1+i∞∫
+1−i∞
+Xs
+1
+(s +γ)2
+Pz(s + 1)GN (s + 1)
+(D(1 +s))1/ 2 ds.
+26
+
+===== PAGE 27 =====
+
+Let us move the path of integration in the last formula from the line Re s = 1 to the contour,
+constructed by the union of the following ones:
+K1 = {Res = 0, | Ims| ≥ 1},
+K2 = {−2C −1 ≤ Res ≤ 0, | Ims| = 1},
+K3 = {Res = −2C −1, | Ims| ≤ 1}.
+Here C > 4 is large enough constant so that there are no zeros of D(s) for Re s > 1 −
+4
+C, | Ims| ≤ 2. Note, that D−1/ 2(1 + s) is analytic to the right of the new contour (the
+regularity at s = 0 is provided by the truth of the formula D−1(1 +s) = s2(c +O(s)), c ⁄= 0,
+in the vicinity of s = 0). We shall also pass a pole of the integrand at s = −γ.
+Thanks to the following bound for Dirichlet L-functions
+L−1
+χ (1 +it) ≪ log(|t| + 2),
+on K1 we shall use the estimate
+D(1 +it)−1/ 2 ≪ log2(|t| + 3).
+Also, on K1,K 2,K 3 the following bounds hold:
+Pz(1 +s) ≪ 1 for Re z ≤ 1/ 2,
+GN (1 +s) ≪GN (1 +σ) ≪
+∏
+p|N
+(
+1 + 1
+p3/ 4
+) 2
+:=GN.
+On K1 the corresponding integral can be estimated from above as
+X Reγ
+1 GN
++∞∫
+1
+log2(t + 3)
+(t − |γ|)2 dt ≪X Reγ
+1 GN.
+On K2 the corresponding integral can be estimated from above as
+X Reγ
+1 GN
+0∫
+−C−1
+Xσ
+1dσ ≪X Reγ
+1 GN.
+On K3 the corresponding integral can be estimated from above as
+X Reγ −C−1
+1 GN
+2∫
+0
+dt
+t2 + 1dt ≪X Reγ −C−1
+1 GN ≪X Reγ
+1 GN.
+27
+
+===== PAGE 28 =====
+
+The contribution from the residue is the following (suppose X1 is large enough compared to
+C):
+1
+2πi
+∫
+|s+γ |=1/ logX1
+Xs+γ
+1
+(s +γ)2
+Pz(1 +s)GN (s + 1)
+(D(s + 1))1/ 2 ds ≪GN (logX1)
+(
+|γ| + 1
+logX1
+)
+≪GN (|γ| logX1 + 1) ≪X |γ |
+1 GN.
+Therefore, the lemma is completely proved.
+□
+Lemma 12. Let X1 be suﬃciently large, N be a positive integer and z ⁄= 0 be a complex
+number. For l = 1, 2, deﬁne
+S(l,l )
+z (X1,γ,N ) =
+∑
+ν≤X1
+(ν,N )=1
+α (ν)Kl,l (ν,z )
+ν1−γ logX1
+ν .
+Supposeγ = 0 or γ =z(⁄= 0). The following estimates hold true:
+S(l,l )
+z (X1,γ,N ) ≪
+
+
+
+X Reγ
+1 GN log(|z| + 3)(logX1)1/ 2, Rez ≥ 0,
+X Reγ
+1 GN (|z| logX1 + 1)1/ 2, 0 ≤ Rez ≤ log logX1
+logX1
+, | Imz| ≤ 1.
+(29)
+If, moreover,
+4 log−1X1 ≤ |z| ≤ (C log logX1)−1, Rez = 0 (30)
+(whereC is some large absolute constant) then
+S(l,l )
+z (X1,γ,N ) = C(D,d l)Γ −1(3/ 2)R(l,l )
+z,N (1)H (l,l )
+z, 1 (1)((z − 2γ) logX1)1/ 2
++O
+(
+GN |z logX1|1/ 2|z| log logN +GN
+)
+.
+(31)
+Proof. The proof of this lemma starts similar to that of lemma 11. For Re s> 1, we deﬁne
+the generating function with multiplicative coeﬃcients
+h(l,l )
+z,N (s) =
+∑
+(n,N )=1
+α (n)Kl,l (n,z )
+ns =
+∏
+(p,N )=1
+(
+1 + α (p)Kl,l (p,z )
+ps + α (p2)Kl,l (p2,z )
+p2s +...
+)
+An application of Perron’s summation formula yields
+S(l,l )
+z (X1,γ,N ) = 1
+2πi
+1+i∞∫
+1−i∞
+h(l,l )
+z,N (s + 1 −γ)Xs
+1
+s2 ds. (32)
+28
+
+===== PAGE 29 =====
+
+Let us investigate the behaviour of h(l,l )
+z,N (s). If a prime p obeys the condition ( p,D ) = 1,
+then it follows from (18) that
+α (p)Kl,l (p,z ) = −1
+2 (χd1(p) +χd2(p))
+(
+χdl(p) + χD/d l(p)
+pz
+)(
+1 +O
+( 1
+p
+))
+= −1
+2
+(
+χ 2
+dl(p) +
+χ 2
+D/d l
+(p)
+pz +χD(p)
+(
+1 + 1
+pz
+) ) (
+1 +O
+( 1
+p
+))
+.
+We shall approximate the coeﬃcient at p−s of the generating function h(l,l )
+(z,N )(s) by
+Al(p,z ) = −1
+2
+(
+χ 2
+dl(p) +χ 2
+D/d l(p)p−z +χD(p)(1 +p−z)
+)
+,
+which, in turn, is also the coeﬃcient at p−s in the Euler product representation for
+L−1/ 2
+χ 2
+dl
+(s)L−1/ 2
+χ 2
+D/d l
+(s +z)LχD (s)−1/ 2LχD (s +z)−1/ 2. Therefore, we come to the equality
+h(l,l )
+z,N (s) = L−1/ 2
+χ 2
+dl
+(s)L−1/ 2
+χ 2
+D/d l
+(s +z)LχD (s)−1/ 2LχD (s +z)−1/ 2H (l,l )
+z,N (s),
+where the function H (l,l )
+z,N (s) for Re z ≥ 0 is analytic in the region Re s > 1/ 2 and can be
+written as the product
+H (l,l )
+z,N (s) = H(l,l )
+z,N (s)G(l,l )
+z,N (s), (33)
+where
+G(l,l )
+z,N (s) =
+∏
+p|N
+(
+1 −χ 2
+dl(p)
+ps
+) −1/ 2(
+1 −
+χ 2
+D/d l
+(p)
+ps+z
+) −1/ 2(
+1 − χD(p)
+ps
+) −1/ 2(
+1 − χD(p)
+ps+z
+) −1/ 2
+and, setting σ = Res,
+H(l,l )
+z,N (s) =
+∏
+(p,N )=1
+(
+1 −χ 2
+dl(p)
+ps
+) −1/ 2(
+1 −
+χ 2
+D/d l
+(p)
+ps+z
+) −1/ 2(
+1 − χD(p)
+ps
+) −1/ 2(
+1 − χD(p)
+ps+z
+) −1/ 2
+×
+×
+(
+1 + α (p)Kl,l (p,z )
+ps + α (p2)Kl,l (p2,z )
+p2s +...
+)
+=
+∏
+(p,ND )=1
+(
+1 − Al(p,z )
+ps +O
+( 1
+p2σ
+))(
+1 + Al(p,z )
+ps +O
+( 1
+pσ +1
+)
++O
+( 1
+p2σ
+))
+×
+×
+∏
+(p,N )=1,p |D
+(
+1 +O
+( 1
+pσ
+))
+=
+∏
+(p,N )=1
+(
+1 +O
+( 1
+pσ +1
+)
++O
+( 1
+p2σ
+)) ∏
+(p,N )=1,p |D
+(
+1 +O
+( 1
+pσ
+))
+.
+(34)
+29
+
+===== PAGE 30 =====
+
+To prove the ﬁrst estimate of the lemma we shall move the path of int egration in (32)
+from the line Re s = 1 to the line Re s = Reγ + 1/ logX1. On the new contour we shall use
+the following estimates for Re w ≥ 0:
+H(l,l )
+z,N (1 +w) ≪ 1,
+G(l,l )
+z,N (1 +w) ≪
+∏
+p|N
+(
+1 + 1
+p
+) 2
+≤GN,
+L−1
+|χ 2|(1 +w) ≪ min(|w|, log(|w| + 3)),
+L−1
+χD (1 +w) ≪ log(|w| + 3).
+Therefore, we obtain the following inequality:
+S(l,l )
+z (X1,γ,N ) ≪GN
++∞∫
+−∞
+X Reγ
+1
+log−2X1 +t2
+(
+min(|t − Imγ| + log−1X1, log(|t − Imγ| + 3)
+) 1/ 2
+×
+min
+(
+|t + Imz − Imγ| + log−1X1, log(|t + Imz − Imγ| + 3)
+) 1/ 2
+×
+× log1/ 2(|t − Imγ| + 3) log1/ 2(|t + Imz − Imγ| + 3)dt.
+Sinceγ equals either 0 or z, we note that the pair of numbers ( t − Imγ,t + Imz − Imγ) can
+get two values, namely, ( t,t + Imz) or (t − Imz,t ). Consequently, for |t| ≤ log−1X1
+min(|t|, |t ± Imz|) ≤ log−1X1.
+Hence, we get
+S(l,l )
+z (X1,γ,N ) ≪GNX Reγ
+1
+∫
+|t|≤log−1X1
+log2X1 · log−1/ 2X1 · log(| Imz| + 3)dt
++GNX Reγ
+1
+∫
+log−1X1≤|t|≤1
+t−2t1/ 2 log(| Imz| + 3)dt
++GNX Reγ
+1
+∫
+|t|≥1
+t−2 log(|t| + 3) log(|t ± Imz| + 3)dt
+≪GNX Reγ
+1 (logX1)1/ 2 log(| Imz| + 3).
+To obtain the second estimate of the lemma in case
+0 ≤ Rez ≤ log logX1
+logX1
+, | Imz| ≤ 1, (35)
+we change the path of integration in (32) in a more subtle way. Suppo se that the constant
+C is large enough that there are no zeros of Lχ 2
+dj
+(s),L χD (s) in the region
+| Ims| ≤ 8 log4X1, Res ≥ 1 − 8
+C log logX1
+30
+
+===== PAGE 31 =====
+
+for every X1 ≥ 10. If | Imz| ≤ log−1X1, set the new contour of integration as the union of
+the following segments:
+˜K1 = {s : Res = Reγ, | Ims| ≥ 4 log4X1},
+˜K2 = {s : −2(C log logX1)−1 + Reγ ≤ Res ≤ Reγ, | Ims| = 4 log4X1},
+˜K3 = {s : Res = −2(C log logX1)−1 + Reγ, 2 log−1X1 < | Ims| ≤ 4 log4X1},
+˜K4 = {s : −2(C log logX1)−1 + Reγ ≤ Res ≤ Reγ, | Ims| = 2 log−1X1},
+˜K5 = {s : |s − Reγ| = 2 log−1X1eiφ, |φ| ≤ π}.
+We see that h(l,l )
+z,N (s + 1 −γ) is analytic to the right of the new contour for z satisfying (35)
+if X1 is large enough (say, when 4 Re z ≤ (C log logX1)−1).
+The integral over ˜K1 from the integrand of (32) can be estimated from above as
+X Reγ
+1 GN
++∞∫
+4 log4X1
+log2t
+t2 dt ≪X Reγ
+1 GN
+log logX1
+log4X1
+≪GN,
+since
+X Reγ
+1
+logX1
+≤ X
+log logX1
+logX1
+1
+logX1
+≪ 1.
+On ˜K2 the corresponding integral can be estimated from above as
+X Reγ
+1 GN
+0∫
+−2(C log logX1)−1
+Xσ
+1
+(log logX1)2
+log8X1
+dσ ≪X Reγ
+1 GN
+(log logX1)2
+log9X1
+≪GN.
+On ˜K3 the corresponding integral can be estimated from above as
+X Reγ −2(C log logX1)−1
+1 GN
+∫
+|t|≤5 log4X1
+(log logX1)2
+(C log logX1)−2 +t2dt
+≪X Reγ −2(C log logX1)−1
+1 GN (log logX1)3 ≪GN.
+On ˜K4 we can estimate the integral from above as
+GN
+Reγ∫
+−2(C log logX1)−1+Reγ
+Xσ
+1
+|σ + 2i log−1X1|3/ 2 (|σ + 2i log−1X1| + |z|)1/ 2dσ
+≪X Reγ
+1 GN
+0∫
+−2(C log logX1)−1
+Xσ
+1
+|σ + Reγ + 2i log−1X1|3/ 2 (|σ + Reγ + 2i log−1X1|1/ 2 + |z|1/ 2)dσ
+≪X Reγ
+1 GN
++∞∫
+0
+X −σ
+1
+( 1
+log−1X1
++ |z|1/ 2
+log−3/ 2X1
+)
+dσ ≪X Reγ
+1 GN
++∞∫
+0
+e−σ
+(
+1 + |z|1/ 2 log1/ 2X1
+)
+dσ
+≪X Reγ
+1 GN (1 + |z| logX1)1/ 2.
+31
+
+===== PAGE 32 =====
+
+On ˜K5 we can estimate the integral from above as
+X Reγ
+1 GN
+(| Reγ − Rez| + log−1X1)1/ 2
+(Reγ + log−1X1)3/ 2 logX1
+≪X Reγ
+1 GN
+(|z| + log−1X1)1/ 2
+log−1/ 2X1
+≪X Reγ
+1 GN (1 + |z| logX1)1/ 2.
+If log −1X1 ≤ | Imz| ≤ 1 set the new contour of integration as the union of the following
+segments:
+K1 = {s : Res = Reγ, | Ims − Imγ| ≥ 4 log4X1},
+K2 = {s : −2(C log logX1)−1 + Reγ ≤ Res ≤ Reγ, | Ims − Imγ| = 4 log4X1},
+K3 = {s : Res = −2(C log logX1)−1 + Reγ, {0< | Ims − Imγ| ≤ 4 log4X1}
+∩ {| Ims − Imγ + Imz|> 0}},
+K4 = {s : −2(C log logX1)−1 + Reγ ≤ Res ≤ −r1, | Ims| = +0},
+K ′
+4 = {s : −2(C log logX1)−1 + Reγ ≤ Res< 2 Reγ − Rez, | Ims − 2 Imγ + Imz| = +0},
+K5 = {s : |s| = 1
+2 (logX1)−1eiφ, |φ|<π },
+K ′
+5 = {s : |s +z − 2γ| =reiφ, |φ|<π, r = +0}.
+Again, h(l,l )
+z,N (s + 1 −γ) is analytic to the right of the new contour for z satisfying (35).
+Similarly to the above estimates, the integral over K1 admits the following estimate from
+above
+X Reγ
+1 GN
++∞∫
+3 log4X1
+log2t
+t2 dt ≪X Reγ
+1 GN
+log logX1
+log4X1
+≪GN
+as well as over K2 and K3. On K ′
+5 we can estimate the integral from above as
+X Reγ
+1 GN lim
+r→+0
+||γ −z| +r|1/ 2|γ +r|1/ 2
+|z|2 r ≪X Reγ
+1 GN lim
+r→+0
+r3/ 2
+|z|3/ 2 = 0
+On K ′
+4 we can estimate the integral from above as
+GN
+2 Reγ −Rez∫
+−2(C log logX1)−1+Reγ
+Xσ
+1
+|σ +i Im(2γ −z)|3/ 2 |σ + Rez − 2 Reγ|1/ 2dσ
+≪GNX 2 Reγ −Rez
+1
+0∫
+−2(C log logX1)−1+Rez−Reγ
+Xσ
+1
+|σ + 2γ −z|3/ 2 |σ|1/ 2dσ
+≪GNX Reγ
+1
++∞∫
+0
+X −σ
+1 σ 1/ 2
+| −σ +z|3/ 2dσ ≪GNX Reγ
+1
++∞∫
+0
+X −σ
+1 σ 1/ 2
+| Imz|3/ 2dσ
+≪GNX Reγ
+1
++∞∫
+0
+e−σσ 1/ 2
+(| Imz| logX1)3/ 2dσ ≪GNX Reγ
+1 (| Imz| logX1)−3/ 2 ≪GNX Reγ
+1 .
+32
+
+===== PAGE 33 =====
+
+Let us get, ﬁrst, the upper bound for the integrals over K4 ∪K5.
+On K5 we can estimate the integral from above as
+GN (log3/ 2X1)|z|1/ 2 log−1X1 ≪GN |z logX1|1/ 2.
+On K4 we can estimate the integral from above as
+GN
+−(C logX1)−1
+∫
+−2(C log logX1)−1
+Xσ
+1
+|σ|2 |σ|1/ 2|σ +z|1/ 2dσ
+≪GN
+−(C logX1)−1
+∫
+−2(C log logX1)−1
+Xσ
+1
+|σ|dσ +GN
+−(C logX1)−1
+∫
+−2(C log logX1)−1
+Xσ
+1 |z|1/ 2
+|σ|3/ 2 dσ
+≪GN
++∞∫
+C−1
+e−tt−1dt +GN |z logX1|1/ 2
++∞∫
+C−1
+e−tt−3/ 2dt ≪GN
+(
+|z logX1|1/ 2 + 1
+)
+.
+Now, if z satisﬁes (30), then we shall obtain exact expression for the integ ral over the
+path K4 ∪K5 to prove (31). Without loss of generality we may suppose that
+|z| log logN ≤ 1, (36)
+since otherwise the statement (31) follows from (29). Let us estim ate trivially the integral
+over the two segments ( −2(C log logX1)−1 ±i · 0, −X0 ±i · 0), where X0 is a parameter to
+be chosen later as |z|/ 2, but generally
+log−1X1 ≤X0 ≤ |z|/ 2. (37)
+This part can be estimated from above as
+GN
+−X0∫
+−2(C log logX1)−1
+Xσ
+1
+|σ|2 |σ|1/ 2|σ +z|1/ 2dσ ≪GN
+−X0∫
+−2(C log logX1)−1
+Xσ
+1 (|z|1/ 2 + |σ|1/ 2)
+|σ|3/ 2 dσ
+≪GN |z logX1|1/ 2
++∞∫
+X0 logX1
+e−tt−3/ 2dt +GN
++∞∫
+X0 logX1
+e−tt−1dt
+≪GN |z logX1|1/ 2 (X0 logX1)−3/ 2
++∞∫
+X0 logX1
+e−tdt +GN (X0 logX1)−1
++∞∫
+X0 logX1
+e−tdt
+≪GNe−X0 logX1 (X0 logX1)−1(
+|z/X 0|1/ 2 + 1
+)
+≪GNe−X0 logX1 (X0 logX1)−1 |z/X 0|1/ 2.
+On the remaining path (which is the loop L, that starts at the point −X0 −i · 0, then
+passes around zero in the positive direction and ﬁnishes at the point −X0 +i · 0) we shall
+33
+
+===== PAGE 34 =====
+
+approximate the integrand by its value at s = 0. Note that
+(
+(s −γ)Lχ 2
+dl
+(1 +s −γ)
+) −1/ 2
+,
+(
+(s +z −γ)Lχ 2
+D/d l
+(1 +s +z −γ)
+) −1/ 2
+are analytic functions for |s| ≤ c and |s| + |z| ≤ c
+respectively (where c> 0 is some absolute constant). Moreover, for |z|> 2|s|
+(s ±z)1/ 2 = (±z)1/ 2 ·
+(
+1 ± s
+z
+) 1/ 2
+= (±z)1/ 2 ·
+(
+1 +O
+( |s|
+|z|
+))
+.
+Hence, on the loop L and for z satisfying (30) we have the relation
+h(l,l )
+z,N (1 +s −γ) = C(D,d l)s1/ 2(z − 2γ)1/ 2
+(
+1 +O
+( |s|
+|z|
+)
++O(|z|)
+)
+H (l,l )
+z,N (1 +s −γ) (38)
+for some constant C(D,d l) (note that this constant coincide for l = 1, 2). We shall further
+approximateH (l,l )
+z,N (1 +s −γ) by its value at 1. Notice that
+H (l,l )
+z,N (1 +s −γ) = H(l,l )
+z, 1 (1 +s −γ)R(l,l )
+z,N (1 +s −γ),
+where
+R(l,l )
+z,N (1 +w) =
+∏
+p|N
+(1 +fp(l,z,w ))−1
+fp(l,z,w ) = α (p)Kl,l (p,z )
+p1+w + α (p2)Kl,l (p2,z )
+p2(1+w) +...
+(39)
+Recall that H(l,l )
+z, 1 (1 + s −γ) is holomorphic in the region 0 ≤ Rez ≤ 1/ 200, Re s >
+−1/ 2 + 1/ 200. Thus, in the domain
+0 ≤ Rez ≤ 1/ 200,
+|s| ≪ 1, Res ≥ −1/ 2 + 1/ 200
+we can write
+H(l,l )
+z, 1 (1 +s −γ) = H(l,l )
+z, 1 (1) +O(|s −γ|),
+where the constant in O is absolute (this can be explained by means of the Taylor series
+expansion for a holomorphic function and the Cauchy integral form ula for the coeﬃcients of
+the Taylor series). We shall show next that for z satisfying (30) and
+−1/ 200 ≤s ≤ 1/ 200 (40)
+the function R(l,l )
+z,N (1 + s −γ) is analytic (of course, the analyticity will be in some open
+domains over s and z, which contain the aforementioned intervals). For this, we exploit t he
+statements of lemma 7 and 8 and show that 1 + fp(l,z,w ) (deﬁned in (39)) is never close to
+zero. We may suppose that the parameter X0 ≤ 1/ 200 (since X1 is large enough). Deﬁne
+w =s −γ. (41)
+34
+
+===== PAGE 35 =====
+
+Note, that
+1/ 200 ≥ Rew ≥ −X0 − Rez = −X0 ≥ −0. 01.
+For every p ≥ 2 we exploit the statements of lemmas 6-8 and (24), (23) to show th at the
+following estimate holds:
+|fp(l,z,w )| ≤ max
+( 2
+3 · 20. 02, max
+p≥3
+( 2
+p + 1, 3 + 1/p
+p2
+)
+p−2 Rew
+)
++
+∑
+k≥2
+1
+4k · (6k + 1) 1
+p2k(1+Rew)
+≤ 2
+3 · 20. 02 + 13
+8 ·
+∑
+k≥2
+1
+22k(1+Rew) = 2
+3 · 20. 02 + 13
+8 · 2−4(1+Rew)(
+1 − 2−2(1+Rew)) −1
+≤ 2
+3 · 20. 02 + 13
+8 · 1
+24
+(
+1 − 2−1. 98) −1
+20. 04 ≤ 0. 82.
+Therefore,
+|1 +fp(l,z,w )|−1 ≤ (0. 18)−1
+which proves analyticity of R(l,l )
+z,N (1 +s −γ) in some domain over s,z containing the intervals
+(40), (30). Let us also estimate d
+dzR(l,l )
+z,N (1) via lemma 6, which we shall use later:
+d
+dzR(l,l )
+z,N (1) = −R(l,l )
+z,N (1)
+∑
+p|N
+(
+1 + α (p)Kl,l (p,z )
+p + α (p2)Kl,l (p2,z )
+p2 +...
+) −1
+×
+×
+( α (p)
+p
+d
+dzKl,l (p,z ) + α (p2)
+p2
+d
+dzKl,l (p2,z ) +...
+)
+≪ |R(l,l )
+z,N (1)|
+∑
+p|N
+( τ2(p) logp
+p + τ2(p2) logp2
+p2 +...
+)
+≪ |R(l,l )
+z,N (1)|
+∑
+p|N
+logp
+p
+≪ |R(l,l )
+z,N (1)| log logN.
+Now, let us approximate the value of R(l,l )
+z,N (1 +w) for w =s −γ (γ = 0 or γ =z) in the
+domain (40) by the value of R(l,l )
+z,N (1) with some error. It is clear that
+(1 +fp(l,z,w ))−1 = (1 + fp(l,z, 0))−1
+(
+1 + rp(l,z,w )
+1 +fp(l,z, 0)
+) −1
+, (42)
+where
+rp(l,z,w ) = fp(l,z,w ) −fp(l,z, 0) = α (p)Kl,l (p,z )
+p
+(
+p−w − 1
+)
++ α (p2)Kl,l (p2,z )
+p2
+(
+p−2w − 1
+)
++...
+=
+(
+p−w − 1
+) ( α (p)Kl,l (p,z )
+p + α (p2)Kl,l (p2,z )
+p2
+(
+p−w + 1
+)
++...
+)
+35
+
+===== PAGE 36 =====
+
+and (1. 82)−1 ≤ |1 +fp(l,z,w )|−1 ≤ (0. 18)−1 for Rew ≥ −0. 01 (therefore, the second multi-
+plier in (42) is holomorphic). Therefore,
+(1 +fp(l,z,w ))−1 = (1 + fp(l,z, 0))−1 (1 +O (|rp(l,z,w )|))
+and, hence,
+R(l,l )
+z,N (1 +w) = R(l,l )
+z,N (1) exp
+
+O
+
+∑
+p|N
+|rp(l,z,w )|
+
+
+
+. (43)
+We see from lemma 7 that α (pk) ≤k−1 for k ≥ 1 and from (20), that Kl,l (pk,z ) ≤ 3k + 1.
+Therefore, α (pk)Kl,l (pk,z ) ≤ 3 +k−1 ≤ 4. Thus,
+|rp(l,z,w )| ≪
+⏐
+⏐p−w − 1
+⏐
+⏐
+⏐
+⏐
+⏐
+⏐
+4
+p + 4
+p2 2p− Rew + 4
+p3 3p− Rew +...
+⏐
+⏐
+⏐
+⏐ ≪ 1
+p
+⏐
+⏐p−w − 1
+⏐
+⏐.
+In case |w| logp ≪ 1, we may use the bound
+⏐
+⏐p−w − 1
+⏐
+⏐ =
+⏐
+⏐e−w logp − 1
+⏐
+⏐ ≪ |w| logp.
+Also, if 1
+|w| ≤ logp ≤ 1
+| Rew|, then
+⏐
+⏐p−w − 1
+⏐
+⏐ ≤p− Rew + 1 ≪ |w| logp.
+Besides, we have the trivial estimate when |w| logp ≥ 1:
+⏐
+⏐p−w − 1
+⏐
+⏐ ≤ 1 +p− Rew ≤ 2 max(1,p − Rew) ≪ max(|w| logp,p − Rew).
+Consequently, recalling (40), (41)
+∑
+p|N
+|rp(l,z,w )| ≪
+∑
+p|N
+1
+p |w| logp +
+∑
+p|N,
+p>e
+1
+X0
+p−1−Rew ≪ |w| log logN + (e
+1
+X0 )−1+X0X0 logN
+≪ |w| log logN +e− 1
+X0X0 logN.
+Further, from (43) we get, recalling that |s−γ| ≪ |z| on the loop L and that |z| log logN ≤ 1:
+R(l,l )
+z,N (1 +s −γ) = R(l,l )
+z,N (1)
+(
+1 +O
+(
+|s −γ| log logN +e− 1
+X0X0 logN
+))
+and, ﬁnally,
+H (l,l )
+z,N (1 +s −γ) = (H (l,l )
+z, 1 (1) +O(|s −γ|))R(l,l )
+z,N (1)
+(
+1 +O
+(
+|s −γ| log logN +e− 1
+X0X0 logN
+))
+,
+where
+R(l,l )
+z,N (1) ≪
+∏
+p|N
+(
+1 + 2
+p
+)
+≪GN,H (l,l )
+z, 1 (1) = O(1),
+36
+
+===== PAGE 37 =====
+
+and the above estimates do not depend on z. Hence, (38) and the last equality give
+E(l,l )
+z,N (s −γ) := h(l,l )
+z,N (1 +s −γ) −C(D,d l)s1/ 2(z − 2γ)1/ 2R(l,l )
+z,N (1)H (l,l )
+z, 1 (1)
+≪GN |z|1/ 2|s|1/ 2
+( |s|
+|z| + |z| log logN +e− 1
+X0X0 logN
+)
+.
+(44)
+The contribution of the error term E(l,l )
+z,N (s −γ) to the initial integral over L does not change
+if we consider the integral over the loop ˜L, which starts and ﬁnishes at the same points as
+L but goes over the circle around zero with radius 1 / logX1. Therefore
+∫
+˜L
+Xs
+1
+s2 E(l,l )
+z,N (s −γ)ds =
+∫
+˜L
+es logX1 1
+s2E(l,l )
+z,N (s −γ)ds
+≪GN |z|1/ 2
+⏐
+⏐
+⏐
+⏐
+⏐
+⏐
+∫
+˜L
+(
+|s|−3/ 2
+(
+|z| log logN +e− 1
+X0X0 logN
+)
++ |s|−1/ 2|z|−1
+)
+ds
+⏐
+⏐
+⏐
+⏐
+⏐
+⏐
+≪GN |z|1/ 2
+((
+|z| log logN +e− 1
+X0X0 logN
+)
+log1/ 2X1 + |z|−1X 1/ 2
+0
+)
+≪GN |z logX1|1/ 2
+(
+|z| log logN +e− 1
+X0X0 logN + |z|−1
+( X0
+logX1
+) 1/ 2)
+.
+We see from(44) that to ﬁnd the main term of the integral (32), we need to evaluate the
+integral
+1
+2πi
+∫
+L
+Xs
+1
+s3/ 2ds = 1
+2πi
+∫
+logX1·L
+es
+s3/ 2
+√
+logX1ds,
+which is, due to the Hankel integral formula,
+√logX1
+Γ(3/ 2) plus an error term, which can be
+estimated as √logX1 multiplied by the integral
+1
+π
+−X0 logX1∫
+−∞
+es
+|s|3/ 2ds ≪ (X0 logX1)−3/ 2
+−X0 logX1∫
+−∞
+esds ≪ (X0 logX1)−3/ 2e−X0 logX1. (45)
+Therefore, collecting all the results, we ﬁnd for z, N and X0 satisfying (30), (36) and (37)
+that the sum of the lemma equals
+C(D,d l)Γ −1(3/ 2)R(l,l )
+z,N (1)H (l,l )
+z, 1 (1)((z − 2γ) logX1)1/ 2
++O
+(
+GN |z logX1|1/ 2
+(
+|z| log logN +e− 1
+X0X0 logN
+))
++O
+(
+GN (X0 logX1)−1e−X0 logX1
+( |z|
+X0
+) 1/ 2
++GNX Rez
+1
+)
+.
+Therefore, we can put X0 = |z|/ 2 in the last expression and obtain (31), since, by (30) and
+(36),
+(|z| logX1)−1e− 1
+2 |z| logX1 ≪ 1,
+e− 2
+|z| |z| logN ≪ |z| log logN.
+37
+
+===== PAGE 38 =====
+
+The proof of the lemma is now complete.
+□
+Proof of Lemma 9.
+Using M¨ obius inversion formula
+f (q) =
+∑
+d|q
+∑
+m|d
+µ(m)f
+( d
+m
+)
+,
+we have
+S(z) =
+∑
+ν1,...,ν 4≤X
+β (ν1)β (ν2)β (ν3)β (ν4)
+ν2ν4(ν1ν3)1−z
+∑
+d|q
+∑
+m|d
+µ(m)
+( d
+m
+) 1−z
+×K
+( ν1ν4m
+d , 1 −z
+)
+K
+( ν2ν3m
+d , 1 −z
+)
+=
+∑
+d≤X 2
+∑
+m|d
+µ(m)
+( d
+m
+) 1−z
+g2
+z (d,m ),
+where
+gz(d,m ) =
+∑
+ν1ν4≡0 (mod d)
+νj ≤X
+β (ν1)β (ν4)
+ν1−z
+1 ν4
+K
+( ν1ν4m
+d , 1 −z
+)
+.
+Since α (·) and K(·,s ) are multiplicative funcions, as in [28] (see the proof of lemma 1) we
+ﬁnally obtain the following exact formula
+gz(d,m ) =
+∑
+δ1δ4≡0 (mod d)
+δj|d∞,δj ≤X
+α (δ1)α (δ4)
+δ1−z
+1 δ4
+K
+( δ1δ4m
+d , 1 −z
+)
+×
+∑
+(n,d )=1
+1
+n2−z
+∑
+(r,nd )=1
+µ(r)
+r2−z
+∑
+k1,k 4|n∞,
+(k1,k 4)=1
+α (nk1)α (nk4)K(n2k1k4, 1 −z)
+k1−z
+1 k4
+×
+∑
+lj |r∞
+α (rl1)α (rl4)
+l1−z
+1 l4
+K(rl1, 1 −z)K(rl4, 1 −z)
+×
+∑
+νjδjkjljnr≤X
+(νj,ndr )=1
+α (ν1)α (ν4)
+ν1−z
+1 ν4
+K(ν1, 1 −z)K(ν4, 1 −z)L(ν1l1δ1k1nr)L(ν4l4δ4k4nr).
+Set
+Sz(X,R,γ,N ) =
+∑
+ν≤X/R
+(ν,N )=1
+α (ν)K(ν, 1 −z)
+ν1−γ L(Rν).
+From the deﬁnition of L(ν) we obtain
+Sz(X,R,γ,N ) =
+∑
+1≤ν<
+√
+X/R
+(ν,N )=1
+α (ν)K(ν, 1 −z)
+ν1−γ +
+∑
+√
+X/R ≤ν≤X/R
+(ν,N )=1
+α (ν)K(ν, 1 −z)
+ν1−γ 2 log X
+Rν
+logX.
+38
+
+===== PAGE 39 =====
+
+Forν <
+√
+X/R , using the identity
+2 log X
+Rν
+logX − 2 log
+√
+X
+Rν
+logX = 1,
+we ﬁnd that
+Sz(X,R,γ,N ) = 2
+logX
+(
+Sz(X/R,γ,N ) −Sz(
+√
+X/R,γ,N )
+)
+,
+where the function Sz(X,γ,N ) of three variables is deﬁned in lemma 11.
+Thus, it follows that the last sum over ν1,ν 4 in the formula for gz(d,m ) equals to the
+following expression
+4
+log2X
+(
+Sz(X/ (δ1k1l1nr),z,ndr ) −Sz(
+√
+X/ (δ1k1l1nr),z,ndr )
+)
+×
+(
+Sz(X/ (δ4k4l4nr), 0,ndr ) −Sz(
+√
+X/ (δ4k4l4nr), 0,ndr )
+)
+and by the lemma 11 this can be estimated from above (up to some con stant) by
+1
+log2X
+( X
+δ1k1l1nr
+) |z| ∏
+p|(ndr)
+(
+1 + 1√p
+) 4
+.
+Now
+|gz(d,m )| ≪ X |z|
+log2X
+∏
+p|d
+(
+1 + 1√p
+) 4 ∑
+δ1δ4≡0 (mod d)
+δj |d∞,δ j ≤X
+|α (δ1)α (δ4)|
+δ1δ4
+⏐
+⏐
+⏐
+⏐K
+( δ1δ4m
+d , 1 −z
+) ⏐
+⏐
+⏐
+⏐
+≤ X |z|
+log2X
+1
+d
+∏
+p|d
+(
+1 + 1√p
+) 4∑
+n|d∞
+|K(nm, 1 −z)|
+n
+∑
+δ1δ4=nd
+δj |d∞,δ j ≤X
+|α (δ1)α (δ4)|.
+We need some extra bounds to proceed further with the estimation of gz(d,m ). Since
+α (n) is a multiplicative function, the function
+b(n) =
+∑
+n1n2=n
+|α (n1)α (n2)|
+is also multiplicative and satisﬁes the relations (see [28], the proof of lemma 1)
+b(n) ≤τ(n),
+b(p) = |r(p)| for a prime p.
+We deﬁne the multiplicative function B(n) by the formulae
+B(p) = |r(p)|, B (pβ ) = τ(pβ ) for β >1. (46)
+39
+
+===== PAGE 40 =====
+
+Recalling that |K(n,s )| ≤ τ2000(n) for Re s> 1/ 2 and using the equality
+|K(nm,s )| ≤ τ2000(n)τ2000(m),
+we see that
+|gz(d,m )| ≪ X |z|
+log2X
+τ2000(m)
+d
+∏
+p|d
+(
+1 + 1√p
+) 4∑
+n|d∞
+τ2000(n)
+n b(nd)
+≪ X |z|
+log2X
+τ2000(m)
+d
+∏
+pβ ||d
+(
+1 + 1√p
+) 4(
+b(pβ ) + b(pβ +1)τ2000(p)
+p + b(pβ +2)τ2000(p2)
+p2 +...
+)
+≪ X |z|
+log2X
+τ2000
+d
+∏
+pβ ||d
+(
+1 + 1√p
+) 4(
+B(pβ ) + B(pβ +1)C
+p
+)
+with some positive constant C. Hence, we obtain
+|S(z)| ≪ X 2|z|
+log4X
+∑
+d≤X 2
+1
+d1+Rez
+∏
+pβ ||d
+(
+1 + 1√p
+) 8(
+B(pβ ) + B(pβ +1)C
+p
+) 2∑
+m|d
+µ 2(m)τ2
+2000(m)
+m1−Rez
+≪ X 2|z|
+log4X
+∑
+d≤X 2
+1
+d1+Rez
+∏
+pβ ||d
+(
+1 + 1√p
+) 8(
+1 + τ2
+2000(p)
+p1−Rez
+)(
+B(pβ ) + B(pβ +1)C
+p
+) 2
+≪ X 2|z|
+log4X
+∑
+d≤X 2
+1
+d1+Rez
+∏
+pβ ||d
+(
+1 + 1√p
+) 9(
+B(pβ ) + B(pβ +1)C
+p
+) 2
+.
+As in the end of the proof of lemma 1 in [28] we see that
+|S(z)| ≪ X 2|z|
+log4X
+∑
+d≤X 2
+r2(d)
+d1+Rez ≪ X 2|z|
+log2X,
+since ∑
+d≤u
+r2(d)/d ≪ log2u thanks to the pole of order two at s = 1 of D(s). Hence the lemma
+is proved.
+□
+Proof of Lemma 10.
+The proof of this lemma is similar to the proof above. Using M¨ obius inve rsion formula,
+we have
+Sl,l (z) =
+∑
+ν1,...,ν 4≤X
+β (ν1)β (ν2)β (ν3)β (ν4)
+ν2ν4(ν1ν3)1−z
+∑
+d|q
+∑
+m|d
+µ(m)
+( d
+m
+) 1−z
+×Kl,l
+( ν1ν4m
+d ,z
+)
+Kl,l
+( ν2ν3m
+d ,z
+)
+=
+∑
+d≤X 2
+∑
+m|d
+µ(m)
+( d
+m
+) 1−z
+g2
+l,l (d,m,z ), (47)
+where
+gl,l (d,m,z ) =
+∑
+ν1ν4≡0 (mod d)
+νj≤X
+β (ν1)β (ν4)
+ν1−z
+1 ν4
+Kl,l
+( ν1ν4m
+d ,z
+)
+40
+
+===== PAGE 41 =====
+
+As in [28] we ﬁnally obtain the following exact formula
+gl,l (d,m,z ) =
+∑
+δ1δ4≡0 (mod d)
+δj |d∞
+α (δ1)α (δ4)
+δ1−z
+1 δ4
+Kl,l
+( δ1δ4m
+d ,z
+)
+×
+∑
+(n,d )=1
+1
+n2−z
+∑
+(r,nd )=1
+µ(r)
+r2−z
+∑
+k1,k 4|n∞,
+(k1,k 4)=1
+α (nk1)α (nk4)Kl,l (n2k1k4,z )
+k1−z
+1 k4
+×
+∑
+lj |r∞
+α (rl1)α (rl4)
+l1−z
+1 l4
+Kl,l (rl1,z )Kl,l (rl4,z )
+×
+∑
+νjδjkjljnr≤X
+(νj,ndr )=1
+α (ν1)α (ν4)
+ν1−z
+1 ν4
+Kl,l (ν1,z )Kl,l (ν4,z )L(ν1l1δ1k1nr)L(ν4l4δ4k4nr). (48)
+From the deﬁnition of L(ν) it follows, that the last sum over ν1,ν 4 in (48) equals to the
+following expression
+4
+log2X
+(
+S(l,l )
+z (X/ (δ1k1l1nr),z,ndr ) −S(l,l )
+z (
+√
+X/ (δ1k1l1nr),z,ndr )
+)
+×
+×
+(
+S(l,l )
+z (X/ (δ4k4l4nr), 0,ndr ) −S(l,l )
+z (
+√
+X/ (δ4k4l4nr), 0,ndr )
+)
+, (49)
+where the function S(l,l )
+z (X1,γ,N ) of three variables is deﬁned and estimated in lemma 12
+(note, that N =ndr ≤X 3). Thus, the last expression can be bounded from above by
+|z| logX + 1
+log2X
+( X
+δ1k1l1nr
+) Rez ∏
+p|(ndr)
+(
+1 + 1√p
+) 4
+for | Imz| ≤ 1, and by
+log2(|z| + 3)
+logX
+( X
+δ1k1l1nr
+) Rez ∏
+p|(ndr)
+(
+1 + 1√p
+) 4
+for all z satisfying conditions of the lemma.
+For | Imz| ≤ 1 we, therefore, obtain
+|gl,l (d,m,z )| ≪ X Rez(|z| logX + 1)
+log2X
+∏
+p|d
+(
+1 + 1√p
+) 4 ∑
+δ1δ4≡0 (mod d)
+δj |d∞
+|α (δ1)α (δ4)|
+δ1δ4
+⏐
+⏐
+⏐
+⏐Kl,l
+( δ1δ4m
+d ,z
+) ⏐
+⏐
+⏐
+⏐
+≤ X Rez(|z| logX + 1)
+log2X
+1
+d
+∏
+p|d
+(
+1 + 1√p
+) 4∑
+n|d∞
+|Kl,l (nm,z )|
+n
+∑
+δ1δ4=nd
+δj |d∞
+|α (δ1)α (δ4)|.
+As in the proof of lemma 9, by (46) and the inequality |Kl,l (n,s )| ≪ τ2(n) for Res> 1/ 2,
+we see that
+|gl,l (d,m,z )| ≪ X Rez(|z| logX + 1)
+log2X
+τ2(m)
+d
+∏
+pβ ||d
+(
+1 + 1√p
+) 4(
+B(pβ ) + B(pβ +1)C
+p
+)
+41
+
+===== PAGE 42 =====
+
+with some positive constant C. Hence, we obtain
+|S(l,l )(z)| ≪ X 2 Rez(|z| logX + 1)2
+log4X
+∑
+d≤X 2
+1
+d1+Rez
+∏
+pβ ||d
+(
+1 + 1√p
+) 9(
+B(pβ ) + B(pβ +1)C
+p
+) 2
+≪X 2 Rez (|z| logX + 1)2
+log4X
+∑
+d≤X 2
+r2(d)
+d1+Rez ≪X 2 Rez (|z| logX + 1)2
+log2X .
+Similarly, if 0 ≤ Rez ≤ log logX
+logX we get
+|S(l,l )(z)| ≪ X 2 Rez log4(|z| + 3).
+Now, let us write the more elaborate but precise formula for gl,l (d,m,z ) (when z satisﬁes
+(25)), inserting the exact formula (31) into (49). Note, that in (4 9) the parameter X1 from
+(31) takes the value between 1 and X. If |z| = A1
+logX , where 10 ≤ A1 ≤
+(
+logX
+C log logX
+)
+we can
+use the asymptotic formula (31) in case X1 satisﬁes log X1 ≥ 4 logX
+A1
+(or, |z| ≥ 4
+logX1
+) and the
+trivial asymptotic formula with the same main term but with an error t erm written as
+O
+(
+GN
+( √
+|z| logX1 + 1
+))
+for any X1 (which is actually O (GN ) for |z| logX1 ≤ 4).
+For |z| logX1 ≥ 4, the error term in (31) is estimated as
+O
+(
+GNA3/ 2
+1 (logX)−1 log logX +GN
+)
+≪GN
+if A1 ≤
+(
+logX
+log logX
+) 2/ 3
+and X is large. Thus, we shall use asymptotic formula (31) (which is
+sometimes trivial) for the sums S(l,l )
+z (·, ·, ·) in (49) with the error term O(GN ). Then we get
+gl,l (d,m,z ) = Main term + Error term , (50)
+where the “Main term” is given by (27) and and the error term can be estimated from above
+as
+Error term ≪ X Rez|z|1/ 2
+log3/ 2X
+τ2(m)
+d
+∏
+pβ ||d
+(
+1 + 1√p
+) 4(
+B(pβ ) + B(pβ +1)C
+p
+)
+.
+Thus, we shall obtain (26) following the above calculations on the est imate ofS(l,l )(z). Hence,
+lemma 10 is proved.
+□
+§6. Estimation of the diagonal term for the case of the real Hec ke character.
+42
+
+===== PAGE 43 =====
+
+First, let us introduce a non-negative function φ(u) deﬁned by the formula
+φ(u) = 1 + ∆ 4
+∆ 4 +u−4, ∆ = cos δ.
+Note, that
+• φ(u) is increasing and non-negative for u ≥ 0,
+• φ(u) ≥ 1 for u ≥ 1, φ(u) is bounded for u ≥ 0.
+Therefore, we have
+J(x,θ ) =
++∞∫
+x
+G(u)u−θdu ≤J(1,θ ) =
++∞∫
+1
+G(u)u−θdu ≤
++∞∫
+0
+φ(u)G(u)u−θdu.
+To estimate the above integral we rewrite G(u) as in [25] (in the proof of lemma 5), asserting
+r( · ) to be zero for non-integer argument:
+G(u) =
+∑
+ν1,ν 2,ν 3,ν 4
+β (ν1)β (ν2)β (ν3)β (ν4)
+ν2ν4
+( +∞∑
+n=1
+r(n)r
+( nm1
+m2
+)
+exp
+(
+− 4π√
+D
+nm1
+Q u sinδ
+)
++ 2 Re
+∑
+l≥1
+exp
+(
+− 2πi√
+D
+l
+Qu cosδ
+)
+×
+×
++∞∑
+n=1
+r(n)r
+( nm1 +l
+m2
+)
+exp
+(
+− 4π√
+D
+(nm1 + l
+2)
+Q u sinδ
+))
+,
+where
+m1 = ν1ν4
+(ν1ν4,ν 2ν3),
+m2 = ν2ν3
+(ν1ν4,ν 2ν3),
+Q = ν2ν4
+(ν1ν4,ν 2ν3).
+Deﬁne
+Em1,m 2(y,l ) =
++∞∑
+n=1
+r(n)r
+( m1n +l
+m2
+)
+exp
+(
+−y
+(
+m1n + l
+2
+))
+,
+Em1,m 2(y) = Em1,m 2(y, 0),
+B = 4π sinδ√
+DQ
+, B 1 = cosδ√
+DQ
+.
+Then we obtain
+J(1,θ ) ≪
+∑
+ν1,ν 2,ν 3,ν 4
+β (ν1)β (ν2)β (ν3)β (ν4)
+ν2ν4
+( ∫ +∞
+0
+φ(u)Em1,m 2(Bu)u−θdu
+43
+
+===== PAGE 44 =====
+
++ 2
+∑
+l≥1
+∫ +∞
+0
+φ(u) cos(2πlB 1u)Em1,m 2(Bu,l )u−θdu
+)
+.
+Forc> 1 (say, c = 2), the Mellin transform formula yields
+Em1,m 2(y,l ) = 1
+2πi
+∫ c+i∞
+c−i∞
+Dm1,m 2(s,l )Γ(s)y−sds,
+where
+Dm1,m 2(s,l ) =
+∑
+n
+r(n)r
+( m1n+l
+m2
+)
+(m1n + l
+2)s .
+Eventually we ﬁnd
+J(1,θ ) ≪J1(1,θ ) +J2(1,θ ),
+where
+J1(1,θ ) =
+∑
+ν1,ν 2,ν 3,ν 4
+β (ν1)β (ν2)β (ν3)β (ν4)
+ν2ν4
+1
+2πi
+∫ c+i∞
+c−i∞
+Dm1,m 2(s, 0)Γ(s)B−sΦ(s +θ, 0)ds,
+J2(1,θ ) =
+∑
+ν1,ν 2,ν 3,ν 4
+β (ν1)β (ν2)β (ν3)β (ν4)
+ν2ν4
+Re
+∑
+l≥1
+1
+2πi
+∫ c+i∞
+c−i∞
+Dm1,m 2(s,l )Γ(s)B−sΦ(s +θ,B 1l)ds
+and
+Φ(s,y ) =
+∫ +∞
+0
+φ(u)u−s cos(2πyu )du for 1 < Res< 5
+(since φ(+∞) ≪ 1 and φ(u) ≍u4 for u ≍ 0).
+Let us now estimate J1(x,θ ) (the “diagonal” term). First, we ﬁnd a meromorphic con-
+tinuation for Dm1,m 2(s, 0) to the left of the half-plane Re s > 1. Since ( m1,m 2) = 1, we
+have
+Dm1,m 2(s) = Dm1,m 2(s, 0) = 1
+(m1m2)s
++∞∑
+n=1
+r(nm2)r(nm1)
+ns
+= 1
+(m1m2)s
+∑
+k|(m1m2)∞
+r(m1k)r(m2k)
+ks
+∑
+(n,m 1m2)=1
+r2(n)
+ns
+= 1
+(m1m2)s
+∑
+k1|m∞
+1
+r(m1k1)r(k1)
+ks
+1
+∑
+k2|m∞
+2
+r(m2k2)r(k2)
+ks
+2
+×
++∞∑
+n=1
+r2(n)
+ns
+∏
+p|(m1m2)∞
+(
+1 + r2(p)
+ps + r2(p2)
+p2s + · · ·
+) −1
+= 1
+(m1m2)sK(m1,s )K(m2,s )D(s),
+44
+
+===== PAGE 45 =====
+
+where
+D(s) =
++∞∑
+n=1
+r2(n)
+ns ,
+K(m,s ) =
+∑
+k|m∞
+r(mk)r(k)
+ks
+( ∑
+k|m∞
+r2(k)
+ks
+) −1
+=
+∏
+p|m
+(
+1 + r2(p)
+ps +r2(p2)
+p2s + · · ·
+) −1
+×
+∏
+pα ‖m
+(
+r(pα ) + r(pα +1)r(p)
+ps + r(pα +2)r(p2)
+p2s + · · ·
+)
+.
+So, Dm1,m 2(s) is a meromorphic function on the half-plane Re s > 1
+2 due to lemma 4 and
+formula (28).
+Let us continue the function Φ( s, 0) to the left of the half-plane Re s > 1. Integrating
+once by parts, we get (supposing that 1 < Res< 5)
+(s − 1)Φ(s, 0) = −(s − 1)φ(u)u1−s⏐
+⏐+∞
+0 +
+∫ +∞
+0
+φ ′(u)u1−sdu =
+∫ +∞
+0
+φ ′(u)u−s+1du.
+Since φ ′(u) = −4u−5(1 + ∆ 4)(∆ 4 +u−4)−2, then
+φ ′(u) ≍
+
+
+
+u3 if u → +0,
+u−5 if u → +∞,
+and also φ ′′(u) ≍
+
+
+
+u2 if u → +0,
+u−6 if u → +∞.
+(51)
+Therefore, the function
+Φ ∗(s) :=
+∫ +∞
+0
+φ ′(u)u−s+1du
+is well-deﬁned in the region −3< Res <5 and gives us a continuation of ( s − 1)Φ(s, 0) in
+that region. Note, that the estimate
+Φ ∗(s) ≪ 1
+holds uniformly if | Res| ≤ 2, for example.
+Let us move the contour of integration in
+∫ c+i∞
+c−i∞
+Dm1,m 2(s)Γ(s)B−sΦ(s +θ, 0)ds
+=
+∫ c+i∞
+c−i∞
+K(m1,s )K(m2,s )D(s)Γ(s)Φ ∗(s +θ)(Bm1m2)−s
+s +θ − 1 ds
+to the line Re s = 2
+3. We then pass through a simple pole at s = 1 −θ and a second order
+pole at s = 1. By virtue of lemma 4 and Stirling’s formula for Γ( s), we conclude that
+1
+2πi
+∫ c+i∞
+c−i∞
+Dm1,m 2(s)Γ(s)B−sΦ(s +θ, 0)ds
+45
+
+===== PAGE 46 =====
+
+= 1
+2πi
+∫
+|s−(1−θ)|=r
+K(m1,s )K(m2,s )D(s)Γ(s)Φ ∗(s +θ)(Bm1m2)−s
+s − (1 −θ) ds
++ 1
+2πi
+∫
+|s−1|=r
+K(m1,s )K(m2,s )D(s)Γ(s)Φ ∗(s +θ)(Bm1m2)−s
+s +θ − 1 ds +O
+( (m1m2)1/ 3
+(Bm1m2)2/ 3
+)
+,
+wherer = 1
+2 logX . Having in mind that Bm1m2 = ν1ν3
+q
+4π sinδ√
+D
+and inserting the last equality
+into the expression of J1, we get
+J1(1,θ ) ≤ 1
+2πi
+∫
+|s−(1−θ)|=r
+D(s)Γ(s)Φ ∗(s +θ)
+s − 1 +θ
+( 4π sinδ√
+D
+) −s
+S(1 −s)ds
++ 1
+2πi
+∫
+|s−1|=r
+D(s)Γ(s)Φ ∗(s +θ)
+s − 1 +θ
+( 4π sinδ√
+D
+) −s
+S(1 −s)ds
++O
+(
+δ−2/ 3 ∑
+ν1,...,ν 4≤X
+(ν1ν3)−1/ 3(ν2ν4)−2/ 3
+)
+,
+whereS(z) is deﬁned in lemma 9. We shall estimate the two integrals from the last expression
+taking the maximum of the absolute value of the integrand and, then , trivially integrating
+|dz| over the circles. Therefore, using the estimates sin δ ≍δ andD(1 −z) ≪ |z|−2 (for small
+|z|), we get
+J1(1,θ ) ≪ 1
+θ2δ1−θ+r max
+|z−θ|=r
+|S(z)| + 1
+θrδ1+r max
+|z|=r
+|S(z)| +O(δ−2/ 3X 2).
+Using the result of lemma 9, we obtain the relation
+J1(1,θ ) ≪ X 2θ
+θ2δ1−θ log2X + logX
+θδ log2X +δ−2/ 3X 2
+≪ δ−1
+θ logX
+(
+1 + (X 2δ)θ +X 2δ1/ 3(θ logX)
+)
+≪ δ−1
+θ logX,
+since δ1/ 3X 2 logX ≪ 1.
+§7. Auxiliary statements for the non-diagonal part.
+We shall formulate several main statements.
+Lemma 13. LetN ≫ 1, (m1,m 2) = 1 , (l,m j) = 1 , m9
+1m11
+2 ≤N 2, l ≤N 11/ 13, and
+S =
+∑
+m2n2−m1n1=l,
+n1≤N −1
+r(n2)r(n1).
+46
+
+===== PAGE 47 =====
+
+Then for any ε> 0 the following formula holds:
+S =σ(l,m 1,m 2)π 2h2(−D)N
+m2
++Oε
+(
+N
+11
+13 +εm9/ 13
+1 m−2/ 13
+2
+)
+,
+where
+σ(l,m 1,m 2) =
++∞∑
+q=1
+εq(l) (q,m 1m2)
+q2√r1r2
+, (52)
+rj = D
+(qj,D ), q j = q
+(q,m j),
+εq(l) =
+∑
+0<a∗<q
+aa∗≡1( mod q)
+e−2πial
+q
+( G(χd1)√d1
+χd1(am′
+1)χd2
+( q1
+d1
+)
++ G(χd2)√d2
+χd2(am′
+1)χd1
+( q1
+d2
+))
+×
+×
+(
+G(χd1)√d1
+χd1(am′
+2)χd2
+( q2
+d1
+)
++ G(χd2)√d2
+χd2(am′
+2)χd1
+( q2
+d2
+) )
+,
+m′
+j = mj
+(mj,q ), and G(χ ) is the quadratic Gauss sum for the character χ and we suppose that
+χ (·) is zero for non-integer values. Also, the following estimat e hold:
+σ(l,m 1,m 2) ≪τ2(m1m2)τ(l).
+Proof. The proof of this result is given in [30], but the statement there is cor rect when
+m1 = m2 = 1. To get the correct statement in the general case one needs t o operate along
+the proof with the precise value of the parameter σ from [17] on p. 278. See [17], [10] for
+similar result in certain cases ( m1 = m2 = 1 or d1 = 1 consequently). To get the estimate
+forσ(l,m 1,m 2), note that it is a sum of four terms introduced in the beginning of th e proof
+of lemma 14 (corresponding to all q in the sum (52) of non-zero terms satisfy one of the
+four diﬀerent conditions). In each case εq(l) is estimated from above by the absolute value of
+Ramanujan sum with non-primitive Dirichlet character (see again the transformations in the
+proof of lemma 14) and, hence, by (110) from [10] we get the bound εq(l) ≪τ(q)√q(l,q )1/ 2.
+Therefore,
+σ(l,m 1,m 2) ≪
++∞∑
+q=1
+τ(q)(q,m 1m2)(l,q )1/ 2
+q3/ 2 =
+∑
+d|m1m2
+∑
+(q,m 1m2)=d
+τ(q)(q,m 1m2)(l,q )1/ 2
+q3/ 2
+≤
+∑
+d|m1m2
+τ(d)(l,d )1/ 2
+d1/ 2
+∑
+(q,m 1m2)=1
+τ(q)(l,q )1/ 2
+q3/ 2 ≤
+∑
+d|m1m2
+τ(d)(l,d )1/ 2
+d1/ 2
+∑
+d1|l
+τ(d)
+d
++∞∑
+q=1
+τ(q)
+q3/ 2
+≪
+∑
+d|m1m2
+τ(d)
+∑
+d1|l
+1 ≪τ2(m1m2)τ(l).
+□
+From lemma 13 we get
+47
+
+===== PAGE 48 =====
+
+Corollary 1. Consider the function
+Dm1,m 2(s,l ) =
++∞∑
+n=1
+r(n)r
+( m1n+l
+m2
+)
+(
+m1n + l
+2
+) s .
+Then the diﬀerence
+Dm1,m 2(s,l ) − π 2h2(−D)σ(l,m 1,m 2)
+ms
+1m2
+ζ(s)
+with σ(l,m 1,m 2) deﬁned by (52) is analytic in the half-plane Res ≥ 11
+13 +ε0 and, for 0 <
+ε0 ≤ 2
+13 , in the region 11
+13 +ε0 ≤ Res ≤ 2 the estimate
+Dm1,m 2(s,l )−π 2h2(−D)σ(l,m 1,m 2)
+ms
+1m2
+ζ(s) ≪ε0
+|s|
+m11/ 13+ε0
+1 m2
+((m9/ 2
+1 m11/ 2
+2 )2/ 13−ε0/ 2+l2/ 11−13ε0/ 22)
+holds.
+Proof. TakeN = max
+(
+m9/ 2
+1 m11/ 2
+2 ,l 13/ 11)
+. Using the inequality τ(n) ≪ε0 nε0/ 8, for Re s =
+σ ≥ 11
+13 +ε0 we obtain
+S1(s) :=
+∑
+n≤N
+r(n)r
+( m1n+l
+m2
+)
+(
+m1n + l
+2
+) s ≪
+∑
+n≤N
+m1n≡−l (modm2)
+τ(n)τ(m1n+l
+m2
+)(
+m1n + l
+2
+) σ
+≪ε0 N 3ε0/ 8
+∑
+n≤N
+m1n≡−l (modm2)
+1
+(m1n)11/ 13+ε0
+≪ε0
+N 2/ 13−ε0/ 2
+m11/ 13+ε0
+1 m2
+.
+By Abel’s partial summation formula, for Re s> 1 and M >N ,
+∑
+N<n ≤M
+r(n)r
+( m1n+l
+m2
+)
+(
+m1n + l
+2
+) s −π 2h2(−D)σ(l,m 1,m 2)
+m2
+∑
+N<n ≤M
+1(
+m1n + l
+2
+) s
+=s
+∫ M
+N
+C(u)m1
+(
+m1u + l
+2
+) s+1du + C(M)(
+m1M + l
+2
+) s,
+where
+C(u) =
+∑
+N<n ≤u
+(
+r(n)r
+( m1n +l
+m2
+)
+− π 2h2(−D)σ(l,m 1,m 2)
+m2
+)
+.
+Letting M → +∞, we arrive at the relation
+S2(s) :=
+∑
+n>N
+r(n)r
+( m1n+l
+m2
+)
+−π 2h2(−D)σ(l,m 1,m 2)/m 2
+(
+m1n + l
+2
+) s =s
+∫ +∞
+N
+C(u)m1
+(
+m1u + l
+2
+) s+1du. (53)
+Sinceu ≥N, by lemma 13 we see that C(u) ≪εu11/ 13+εm9/ 13
+1 m−2/ 13
+2 . Hence the right-hand
+side of (53) deﬁnes a holomorphic function in the region Re s > 11
+13 and, furthermore, for
+Res ≥ 11
+13 +ε0 it obeys the estimate
+S2(s) ≪ε0 |s|
+∫ +∞
+N
+m9/ 13
+1 m−2/ 13
+2 u11/ 13+ε0/ 2m1
+(m1u)11/ 13+ε0+1 du
+48
+
+===== PAGE 49 =====
+
+≪ε0 |s|(m1m2)−2/ 13m−ε0
+1 N −ε0/ 2 ≪ε0
+|s|N 2/ 13−ε0/ 2
+m11/ 13+ε0
+1 m2
+.
+Also, for 11/ 13 +ε0 ≤ Res ≤ 2, since 0 < l
+2m1
+<l ≤N 11/ 13, we have
+∑
+n>N
+1(
+m1n + l
+2
+) s −
+∑
+n>N
+1(
+m1n
+) s = 1
+ms
+1
+
+ ∑
+n>N +[l/ 2m1]
+(
+1
+(
+n + { l
+2m1
+}
+) s − 1
+ns
+)
+−
+∑
+N<n ≤N +[l/ 2m1]
+1
+ns
+
+
+≪m−11/ 13−ε0
+1
+
+N −11/ 13−ε0N 11/ 13 +
+∑
+n>N +[l/ 2m1]
+|s|
+n1+11/ 13+ε0
+
+ ≪ |s|m−11/ 13−ε0
+1 N −ε0,
+and
+∑
+n≤N
+1
+ns ≪N 2/ 13−ε0.
+Since, by lemma 13, σ(l,m 1,m 2) ≪τ2(m1m2)τ(l) ≪Nε0/ 2, we thus come to the statement
+of the corollary.
+Lemma 14. For (m1,m 2) = 1 and σ(l,m 1,m 2) deﬁned by (52), the function
+Zm1,m 2(s) =
++∞∑
+l=1
+σ(l,m 1,m 2)
+ls
+has a meromorphic continuation to the whole complex plane wi th a simple pole at s = 1 only
+in case d1 = 1 or d2 = 1 and with a simple pole at s = 0. Moreover, we can write Zm1,m 2(s)
+as the sum of four terms
+Zm1,m 2(s) = Z (1, 1)
+m1,m 2(w) +Z (2, 2)
+m1,m 2(w) +Z (1, 2)
+m1,m 2(w) +Z (2, 1)
+m1,m 2(w),
+where for j = 1, 2
+Z (j,j )
+m1,m 2(w) = ζ(s)ζ(s + 1)
+ζ(2)ds
+jD
+∏
+p|dj
+(
+1 −ps−1) ∏
+p|(D/d j)
+(
+1 − 1
+ps+1
+) ∏
+p|D
+(
+1 − 1
+p2
+) −1
+Kj,j (m1m2,s ),
+and for k ⁄=j
+Z (k,j )
+m1,m 2(w) = G2(χdj )
+dj
+D−1/ 2LχD (s)LχD (s + 1)L−1
+χD(2)K1, 2(mk,m j,s ),
+whereKk,j (·) are deﬁned on page 14.
+Proof. We follow [10] here. Write σ(l,m 1,m 2) as the sum of four summands as follows:
+σ(l,m 1,m 2) =
+2∑
+k,j =1
+σk,j (l,m 1,m 2), σ k,j (l,m 1,m 2) =
+∑
+q∈Qk,j
+εq(l) (q,m 1m2)
+q2√r1r2
+,
+49
+
+===== PAGE 50 =====
+
+where for the givend1,d 2,m 1,m 2 the four non-intersecting classesQk,j (k,j = 1, 2) of positive
+integers q (that correspond to non-zero terms in σ(l,m 1,m 2)) are deﬁned by the following
+conditions. We say that q ∈Qk,j if
+( q
+(q,m 1),d 1d2
+)
+=dk,
+( q
+(q,m 2),d 1d2
+)
+=dj.
+Consider , ﬁrst, all q ∈Q1, 1 and write the explicit form for them. The above conditions imply
+that d1|q and, since ( m1,m 2) = 1 and ( d1,d 2) = 1, that ( q,d 2) = 1. Suppose that a prime
+p divides (m1,d 1) and that pα 1||d1 , pβ 1||m1 (notice, that α 1 = 1 for all prime p except for
+at most p = 2 since −D = d1d2 is the fundamental discriminant). From our conditions we
+deduce that ( q
+(q,p β 1),p α 1
+)
+=pα 1,
+which implies that pα 1+β 1|q. So, all q ∈Q1, 1 can be represented as
+q =d1(m1m2,d ∞
+1 )f1, 1f,
+where (f,D ) = 1, f1, 1|d∞
+1 .
+Similarly, for q ∈Q2, 2 we get the representation
+q =d2(m1m2,d ∞
+2 )f2, 2f,
+where (f,D ) = 1, f2, 2|d∞
+2 .
+Let q ∈ Q2, 1. It follows that D|q, d1|m1, d2|m2, (d2,m 1) = 1, ( d1,m 2) = 1. Also, if
+pα 1||d1,p β 1||m1/d 1, then our conditions give
+( q
+(q,p α 1+β 1),p α 1
+)
+= 1, p α 1|q,
+and, thus, the following representation in case d1|m1, d2|m2:
+q =Df2, 1f,
+where (f,D ) = 1, f2, 1|(m1m2/D,D ∞).
+The same representation for q ∈Q1, 2 is valid when d1|m2, d2|m1.
+All the rest values of q (which do not belong to any of Qk,j ) correspond to zero terms of
+σ(l,m 1,m 2).
+Let us transform now the value
+σ1, 1(l,m 1,m 2) =
+∑
+q∈Q1, 1
+εq(l) (q,m 1m2)
+q2√r1r2
+.
+50
+
+===== PAGE 51 =====
+
+For q ∈ Q1, 1 (i.e. when ( qj,d 1d2) = d1 for j = 1 , 2) we may write q in the form q =
+d1(m1m2,d ∞
+1 )f1, 1f . Therefore, we have rj = d2 (j = 1, 2) and, hence, denoting by cq(l) the
+Ramanujan sum
+cq(l) =
+∑
+a( mod q)
+(a,q )=1
+e−2πil a
+q,
+we can write
+εq(l) = cq(l)εq,
+where (with m′
+j deﬁned in lemma13)
+εq =χd1(m′
+1m′
+2)χd2
+( q1
+d1
+· q2
+d1
+)
+=χd1
+( m1m2
+(q,m 1m2)
+)
+χd2
+( q2
+d2
+1(q,m 1m2)
+)
+=χd1
+( m1m2
+(m1m2,d ∞
+1 )(m1m2,f )
+)
+χd2
+( (f1, 1f )2(m1m2,d ∞
+1 )
+(f,m 1m2)
+)
+=χd1
+( m1m2
+(m1m2,d ∞
+1 )
+)
+χd2 ((m1m2,d ∞
+1 ))χD ((f,m 1m2)).
+Using the formula
+cq(l) =
+∑
+d|(q,l )
+dµ
+( q
+d
+)
+,
+we see that ∞∑
+l=1
+cq(l)
+ls =ζ(s)
+∑
+d|q
+µ(d)
+( q
+d
+) 1−s
+.
+Therefore,
+∞∑
+l=1
+σ1, 1(l,m 1,m 2)
+ls =ζ(s)
+∑
+q∈Q1, 1
+εq
+(q,m 1m2)
+qs+1√r1r2
+∑
+d|q
+µ(d)ds−1
+= ζ(s)
+ds
+1D(m1m2,d ∞
+1 )sχd1 ((m1m2,d ∞
+2 ))χd2 ((m1m2,d ∞
+1 ))χd1
+( m1m2
+(m1m2,D ∞)
+)
+×
+×
+∑
+q1|d∞
+1
+1qs+1
+1
+∏
+p|d1
+(1 −ps−1)
+∑
+(q,D )=1
+χD ((q,m 1m2)) (q,m 1m2)
+qs+1
+∏
+p|q
+(1 −ps−1)
+= ζ(s)
+ds
+1D(m1m2,d ∞
+1 )sχd1 ((m1m2,d ∞
+2 ))χd2 ((m1m2,d ∞
+1 ))χd1
+( m1m2
+(m1m2,D ∞)
+)
+×
+×
+∏
+p|d1
+(
+1 − 1
+ps+1
+) −1(
+1 −ps−1) ∏
+(p,Dm 1m2)=1
+(
+1 + (1 −ps−1)
+( 1
+ps+1 + 1
+p2(s+1) +...
+))
+×
+×
+∏
+(p,D )=1,
+pα ||m1m2
+(
+1 + (1 −ps−1)
+(
+χD(p)
+ps + χD(p2)
+p2s +... + χD(pα )
+pαs + χD(pα )
+p(α +1)s+1
+(
+1 − 1
+ps+1
+) −1))
+= ζ(s)
+ds
+1D(m1m2,d ∞
+1 )sχd1 ((m1m2,d ∞
+2 ))χd2 ((m1m2,d ∞
+1 ))χd1
+( m1m2
+(m1m2,D ∞)
+)
+×
+51
+
+===== PAGE 52 =====
+
+×
+∏
+p|d1
+(
+1 − 1
+ps+1
+) −1(
+1 −ps−1) ∏
+(p,Dm 1m2)=1
+(
+1 − 1
+ps+1
+) −1(
+1 − 1
+p2
+)
+×
+×
+∏
+(p,D )=1,
+pα ||m1m2
+(
+1 + (1 −ps−1)
+(
+χD(p)
+ps
+(
+1 −χD(pα )
+pαs
+)(
+1 − χD(p)
+ps
+) −1
++ χD(pα )
+p(α +1)s+1
+(
+1 − 1
+ps+1
+) −1))
+= ζ(s)ζ(s + 1)
+ζ(2)ds
+1D(m1m2,d ∞
+1 )sχd1 ((m1m2,d ∞
+2 ))χd2 ((m1m2,d ∞
+1 ))χd1
+( m1m2
+(m1m2,D ∞)
+)
+×
+×
+∏
+p|d1
+(
+1 −ps−1) ∏
+p|d2
+(
+1 − 1
+ps+1
+) ∏
+p|D
+(
+1 − 1
+p2
+) −1 ∏
+(p,D )=1,
+pα ||m1m2
+(
+1 − 1
+p2
+) −1(
+1 − χD(p)
+ps
+) −1
+×
+×
+((
+1 − χD(p)
+ps
+)(
+1 − 1
+ps+1
+)
++
++(1 −ps−1)
+( χD(p)
+ps
+(
+1 −χD(pα )
+pαs
+)(
+1 − 1
+ps+1
+)
++ χD(pα )
+p(α +1)s+1
+(
+1 −χD(p)
+ps
+)))
+= ζ(s)ζ(s + 1)
+ζ(2)ds
+1D(m1m2,d ∞
+1 )sχd1 ((m1m2,d ∞
+2 ))χd2 ((m1m2,d ∞
+1 ))χd1
+( m1m2
+(m1m2,D ∞)
+)
+×
+×
+∏
+p|d1
+(
+1 −ps−1) ∏
+p|d2
+(
+1 − 1
+ps+1
+) ∏
+p|D
+(
+1 − 1
+p2
+) −1
+×
+×
+∏
+(p,D )=1,
+pα ||m1m2
+(
+1 − 1
+p2
+) −1(
+1 − χD(p)
+ps
+) −1(
+1 − χD(p)
+p
+)
+×
+(
+1 − 1
+ps+1 + χD(pα +1)
+pαs +1
+(
+1 − 1
+ps−1
+))
+= ζ(s)ζ(s + 1)
+ζ(2)ds
+1D
+∏
+p|d1
+(
+1 −ps−1) ∏
+p|d2
+(
+1 − 1
+ps+1
+) ∏
+p|D
+(
+1 − 1
+p2
+) −1
+K1, 1(m1m2,s ).
+Similarly, we get
+∞∑
+l=1
+σ2, 2(l,m 1,m 2)
+ls = ζ(s)ζ(s + 1)
+ζ(2)ds
+2D
+∏
+p|d1
+(
+1 −ps−1) ∏
+p|d2
+(
+1 − 1
+ps+1
+) ∏
+p|D
+(
+1 − 1
+p2
+) −1
+K2, 2(m1m2,s ).
+Now, fordj |mj, consider the quantity σ2, 1(l,m 1,m 2) corresponding to all the summands
+inσ(l,m 1,m 2) withq ∈Q2, 1 (i.e. when (q1,d 1d2) = d2, (q2,d 1d2) = d1). For suchq we already
+get the representation q =Df2, 1f , where f2, 1|(m1m2/D,D ∞), (f,D ) = 1. Hence, r1r2 =D
+and
+εq(l) = G(χd1)√d1
+G(χd2)√d2
+χd1
+( q1
+d2
+)
+χd2
+( q2
+d1
+)
+χd2(m′
+1)χd1(m′
+2)
+q∑
+a=1,
+(a,q )=1
+e−2πil a
+qχD(a).
+First of all, we note that
+χd2
+( m1
+(q,m 1)
+)
+χd1
+( m2
+(q,m 2)
+)
+χd1
+( q
+d2(q,m 1)
+)
+χd2
+( q
+d1(q,m 2)
+)
+52
+
+===== PAGE 53 =====
+
+=χd1
+( m2/d 2
+(f2, 1,d ∞
+2 )(m2,f )
+)
+χd2
+( m1/d 1
+(f2, 1,d ∞
+1 )(m1,f )
+)
+×
+×χd1
+( f (f2, 1,d ∞
+2 )
+(f,m 1)
+)
+χd2
+( f (f2, 1,d ∞
+1 )
+(f,m 2)
+)
+=χd1 (m2/d 2)χd2 (m1/d 1)χD(f/ (m1m2,f )).
+Second, for q ≡ 0( mod D) we shall use the formula (see lemma 4 of [10])
+cq(l,χ D) :=
+q∑
+a=1,
+(a,q )=1
+χD(a)e−2πial
+q =G(χD)
+∑
+d|(q/D,l )
+dµ
+( q/D
+d
+)
+χD
+( q/D
+d
+)
+χD
+( l
+d
+)
+to see that ∞∑
+l=1
+cq(l,χ D)
+ls =LχD (s)G(χD)
+∑
+d|q/D
+µ(d)χD(d)
+( q
+Dd
+) 1−s
+.
+Therefore,
+∞∑
+l=1
+σ2, 1(l,m 1,m 2)
+ls = G(χd1)G(χd2)G(χD)LχD (s)Ds−1
+√
+D
+χd1 (m2/d 2)χd2 (m1/d 1) ×
+×
+∑
+q∈Q2, 1
+(q,m 1m2)
+qs+1 χD(f/ (m1m2,f ))
+∑
+d|q/D
+µ(d)χD(d)ds−1.
+We transform further the double sum from the last expression:
+∑
+q∈Q2, 1
+(q,m 1m2)
+qs+1 χD(f/ (m1m2,f ))
+∑
+d|q/D
+µ(d)χD(d)ds−1
+=
+∑
+q1|(m1m2/D,D ∞)
+1
+qs
+1Ds
+∑
+(q,D )=1
+χD
+( q
+(q,m 1m2)
+) (q,m 1m2)
+qs+1
+∏
+p|q
+(1 −χD(p)ps−1)
+=D−s
+∑
+q1|(m1m2/D,D ∞)
+1
+qs
+1
+∏
+(p,Dm 1m2)=1
+(
+1 + (1 −χD(p)ps−1)
+( χD(p)
+ps+1 + χD(p2)
+p2(s+1) +...
+))
+×
+×
+∏
+(p,D )=1,
+pα ||m1m2
+(
+1 + (1 −χD(p)ps−1)
+(
+1
+ps + 1
+p2s +... + 1
+pαs + χD(p)
+p(α +1)s+1
+(
+1 −χD(p)
+ps+1
+) −1))
+=D−s
+∑
+q1|(m1m2/D,D ∞)
+1
+qs
+1
+∏
+(p,Dm 1m2)=1
+(
+1 + (1 −χD(p)ps−1)χD(p)
+ps+1
+(
+1 −χD(p)
+ps+1
+) −1)
+×
+×
+∏
+(p,D )=1,
+pα ||m1m2
+(
+1 + (1 −χD(p)ps−1)
+(
+1
+ps
+(
+1 − 1
+pαs
+)(
+1 − 1
+ps
+) −1
++ χD(p)
+p(α +1)s+1
+(
+1 −χD(p)
+ps+1
+) −1))
+=D−s ∑
+q1|(m1m2/D,D ∞)
+1
+qs
+1
+∏
+(p,Dm 1m2)=1
+(
+1 − χD(p)
+ps+1
+) −1(
+1 − χ 2
+D(p)
+p2
+)
+×
+53
+
+===== PAGE 54 =====
+
+×
+∏
+(p,D )=1,
+pα ||m1m2
+(
+1 − 1
+ps
+) −1(
+1 −χD(p)
+ps+1
+) −1(
+1 −χD(p)
+p
+)
+×
+×
+(
+1 − χD(p)
+ps+1 + χD(p)
+pαs +1
+(
+1 −χD(p)
+ps−1
+))
+.
+Finally, we get
+∞∑
+l=1
+σ2, 1(l,m 1,m 2)
+ls =G(χd1)G(χd2)G(χD)D−3/ 2LχD (s)LχD(s + 1)L−1
+χ 2
+D
+(2)χd1 (m2/d 2)χd2 (m1/d 1) ×
+×
+∑
+q|(m1m2/D,D ∞)
+1
+qs
+∏
+(p,D )=1,
+pα ||m1m2
+(
+1 −χ 2
+D(p)
+p2
+) −1(
+1 − 1
+ps
+) −1(
+1 − χD(p)
+p
+)
+×
+×
+(
+1 − χD(p)
+ps+1 + χD(p)
+pαs +1
+(
+1 −χD(p)
+ps−1
+))
+=G(χd1)G(χd2)G(χD)D−3/ 2χd1(d2)χd2(d1)LχD (s)LχD (s + 1)L−1
+χD(2)K1, 2(m2,m 1,s ).
+Using the equality (see §4 of chapter 1 in [4] or (3.16) in [16])
+G(χD) = G(χd1)G(χd2)χd1(d2)χd2(d1), (54)
+for real primitive characters χd1,χ d2 with the property χD(·) = χd1(·)χd2(·), we ﬁnally get
+∞∑
+l=1
+σ2, 1(l,m 1,m 2)
+ls = (G(χd1))2d−1
+1 D−1/ 2LχD (s)LχD(s + 1)L−1
+χD(2)K1, 2(m2,m 1,s ).
+Similarly, if d2|m1 and d1|m2, we have
+∞∑
+l=1
+σ1, 2(l,m 1,m 2)
+ls = (G(χd2))2d−1
+2 D−1/ 2LχD (s)LχD(s + 1)L−1
+χD(2)K1, 2(m1,m 2,s ).
+□
+Lemma 15.
+K1, 1(m, −s)m−s =K2, 2(m,s ),
+Proof. Since Kj,j (·,z ) is the multiplicative function, we have to prove the desired equality
+for m =pα where p |D (p is a prime) or ( p,D ) = 1.
+In case p |D we have to show that
+(pα,d ∞
+1 )sp−αs = (pα,d ∞
+2 )−s
+which is true since D =d1d2 and (d1,d 2) = 1.
+54
+
+===== PAGE 55 =====
+
+In case (p,D ) = 1 we have to show that
+χd1(pα )p−αs (1 −χD(p)ps)−1(
+1 −ps−1 +χD(pα +1)pαs −1(
+1 −ps+1))
+=χd2(pα )
+(
+1 −χD(p)
+ps
+) −1(
+1 − 1
+ps+1 +χD(pα +1)
+pαs +1
+(
+1 − 1
+ps−1
+)) (55)
+We transform, for example, the left side (L.S.) of (55) as follows.
+L.S. =χd1(pα )χD(p)p−s(
+1 −χD(p)p−s) −1
+χD(pα +1)p−αs(
+pαs −1(
+ps+1 − 1
+)
++χD(pα +1)(ps−1 − 1)
+)
+=χd2(pα )
+(
+1 −χD(p)
+ps
+) −1(
+1 − 1
+ps+1 + χD(pα +1)
+pαs +1
+(
+1 − 1
+ps−1
+))
+.
+(56)
+The proof is completed.
+□
+Corollary 2. Let
+˜S1, 1(w) = S1, 1(w)d−w/ 2
+1 dw/ 2
+2
+∏
+p|d1
+(1 −pw−1)
+∏
+p|d2
+(1 −p−w−1),
+˜S2, 2(w) = S2, 2(w)d−w/ 2
+2 dw/ 2
+1
+∏
+p|d2
+(1 −pw−1)
+∏
+p|d1
+(1 −p−w−1).
+Then
+˜S2, 2(−w) = ˜S1, 1(w).
+Proof. The statement can be proved just by substituting the result of th e previous lemma
+to the formulae for Sj,j (w) of lemma 11 and making the substitutions ν1 ↔ν3, ν2 ↔ν4. □
+§8. Estimation of the non-diagonal part.
+We shall estimate in this section
+J2(1,θ ) =
+∑
+ν1,ν 2,ν 3,ν 4
+β (ν1)β (ν2)β (ν3)β (ν4)
+ν2ν4
+×
+×
+
+Re
+∑
+l≥1
+1
+2πi
+2+i∞∫
+2−i∞
+Dm1,m 2(s,l )Γ(s)B−sΦ(s +θ,B 1l)ds
+
+,
+where
+Dm1,m 2(s,l ) =
+∑
+n
+r(n)r
+(
+m1n+l
+m2
+)
+(m1n +l/ 2)s ,
+Φ(s,y ) =
++∞∫
+0
+φ(u)u−s cos(2πyu )du,
+B = 4π sinδ√
+DQ
+, B 1 = cosδ√
+DQ
+,
+q = (ν1ν4,ν 2ν3), Q = ν2ν4
+q , m 1 = ν1ν4
+q , m 2 = ν2ν3
+q .
+55
+
+===== PAGE 56 =====
+
+Let us move the path of integration in J2(1,θ ) to the line Re s = 11/ 13 +ε0 (which is
+admissible since Γ(s) decreases exponentially when |s| → +∞, and other terms increase only
+polynomially for large |s|), passing a simple pole at s = 1 (see corollary 1), which gives us
+the main contribution. Let us estimate the integral over Re s = 11/ 13 +ε0. For y >0 and
+1< Res< 3, using (51) and integrating by parts twice, we have imply
+Φ(s,y ) = −
++∞∫
+0
+( φ
+′′
+(u)
+us − 2sφ
+′
+(u)
+us+1 +s(s + 1)φ(u)
+us+2
+) cos(2πyu )
+(2πy )2 du.
+Therefore, we obtain an analytic continuation of Φ( s,y ) to the region −1 < Res <3, and,
+in addition, for −1/ 2 ≤ Res ≤ 2 we get the estimate Φ( s,y ) = O
+( |s|2 + 1
+y2
+)
+. Hence, the
+integral over the line Re s = 11/ 13 +ε0 can be estimated by means of corollary 1 as follows:
+∑
+ν1,...,ν 4≤X
+1
+ν2ν4
+∑
+l≥1
+1
+B11/ 13B2
+1l2
+(
+(m1m2)−2/ 13 +l2/ 11m−11/ 13
+1 m−1
+2
+)
+≪δ−11/ 13
+∑
+ν1,...,ν 4≤X
+Q2+11/ 13
+ν2ν4
+(m1m2)−2/ 13 ≪δ−11/ 13
+∑
+ν1,...,ν 4≤X
+Q1+11/ 13
+q(m1m2)2/ 13
+≪δ−11/ 13 ∑
+ν1,...,ν 4≤X
+Q1+11/ 13
+(ν1ν2ν3ν4)2/ 13 ≪δ−11/ 13(X 2)1+ 11
+13 (X
+11
+13 )4
+≪δ−11/ 13X 92/ 13 ≪ δ−1
+log2X,
+since X ≤δ−1/ 50.
+Now we shall estimate the residue R at s = 1. For any v ≥ 0 we have Φ(1 + θ,v ) ≪
+Φ(1 + θ, 0) ≪θ−1 (0<θ ≤ 1) and for v ≥ 1 that Φ(1 + θ,v ) ≪v−2. Therefore, the integral
+M1+θ(w) =
+∞∫
+0
+Φ(1 + θ,v )vw−1dv
+is absolutely convergent when 0 < Rew <2. Consequently, the theory of Mellin transforms
+yields
+Φ(1 + θ,y ) = 1
+2πi
+3/ 2+i∞∫
+3/ 2−i∞
+M1+θ(w)y−wdw.
+We then have the following expression for R by means of corollary 1 with the notation
+56
+
+===== PAGE 57 =====
+
+of lemma 13 and lemma 14 :
+R = Re
+∑
+ν1,ν 2,ν 3,ν 4
+β (ν1)β (ν2)β (ν3)β (ν4)
+ν2ν4
+B−1∑
+l≥1
+Φ(1 + θ,B 1l) Res
+s=1
+Dm1,m 2(s,l )
+=Cδ−1 Re
+∑
+ν1,ν 2,ν 3,ν 4
+β (ν1)β (ν2)β (ν3)β (ν4)
+ν2ν4
+Q
+m1m2
+∑
+l≥1
+σ(l,m 1,m 2) 1
+2πi
+3/ 2+i∞∫
+3/ 2−i∞
+M1+θ(w)(lB1)−wdw
+=Cδ−1 Re 1
+2πi
+3/ 2+i∞∫
+3/ 2−i∞
+M1+θ(w)
+( cosδ√
+D
+) −w ∑
+ν1,ν 2,ν 3,ν 4
+β (ν1)β (ν2)β (ν3)β (ν4)
+ν2ν4
+Q1+w
+m1m2
+Zm1,m 2(w)dw
+=Cδ−1 Re 1
+2πi
+3/ 2+i∞∫
+3/ 2−i∞
+M1+θ(w)
+( cosδ√
+D
+) −w ∑
+ν1,ν 2,ν 3,ν 4
+β (ν1)β (ν2)β (ν3)β (ν4)
+ν1ν3
+( q
+ν2ν4
+) 1−w
+Zm1,m 2(w)dw
+(where C is some absolute constant). According to the partition (see lemma 1 4)
+Zm1,m 2(w) = Z (1, 1)
+m1,m 2(w) +Z (2, 2)
+m1,m 2(w) +Z (1, 2)
+m1,m 2(w) +Z (2, 1)
+m1,m 2(w),
+the residue R can be therefore written as the sum of four terms:
+R =R(1, 1) +R(2, 2) +R(1, 2) +R(2, 1).
+Now we proceed with estimation of R(1, 2) +R(2, 1). By deﬁnition of Z (l,j )
+m1,m 2(w) from lemma 14
+(for l ⁄=j), the following formula holds with some real constant C:
+R(l,j ) =Cδ−1 Re 1
+2πi
+3/ 2+i∞∫
+3/ 2−i∞
+M1+θ(w)
+( cosδ√
+D
+) −w
+(G(χdj ))2d−1
+j LχD (w)LχD(1 +w)Sl,j (w)dw,
+where
+Sl,j (w) =
+∑
+ν1,ν 2,ν 3,ν 4
+β (ν1)β (ν2)β (ν3)β (ν4)
+ν1ν3
+( q
+ν2ν4
+) 1−w
+K1, 2(ml,m j,w )
+Since S1, 2(w) = S2, 1(w) as can be seen by the change of variables ν1 ↔ ν3, ν2 ↔ ν4, and
+since
+G2(χd1)
+d1
++ G2(χd2)
+d2
+= 0
+(which can be seen by the equality (54) and the properties G(χdj ) =
+√
+±dj,G(χD) = i
+√
+D)
+we get, therefore, that
+R(1, 2) +R(2, 1) = 0.
+We are left to get the estimate
+R(1, 1) +R(2, 2) ≪ T
+(θ logT )1/ 3.
+57
+
+===== PAGE 58 =====
+
+By deﬁnition of Z (j,j )
+m1,m 2(w) (j = 1, 2) of lemma 14, the following formula holds with some
+real constant C (which does not depend on j):
+R(j,j ) =Cδ−1 Re 1
+2πi
+3/ 2+i∞∫
+3/ 2−i∞
+M1+θ(w)
+( cosδ√
+D
+) −w
+ζ(w)ζ(1 +w)Sj,j (w)d−w
+j ×
+×
+∏
+p|dj
+(1 −pw−1)
+∏
+p|(D/d j)
+(1 −p−w−1)dw,
+where Sj,j (w) is deﬁned in lemma 10. From the theory of Mellin transforms we know t hat
++∞∫
+0
+cos(cv)vw−1dv =c−wΓ(w) cos(πw/ 2),c> 0,
++∞∫
+0
+(c +v)−1vw−1dv =cw−1Γ(w)Γ(1 −w) = πcw−1/ sin(πw ), 0< Rew <1.
+Also, for two given functions f1,f 2 denote
+Fj(w) =
++∞∫
+0
+fj(v)vw−1dv,
+fα (v) =
++∞∫
+0
+u−αf1(vu)f2(u)du.
+The theory of Mellin transforms yields:
++∞∫
+0
+fα (v)vw−1dv =F1(w)F2(1 −w −α ),
++∞∫
+0
+fj(v−l)vw−1dv =l−1Fj(−w/l ).
+Hence, setting f1(v) = cos(2πv ),f2(v) = 1 + ∆ 4
+∆ 4 +v−4 ,α = 1 +θ in the notation of f (v) above,
+we obtain
+M1+θ(w) = 1
+4 (∆ 4 + 1)(∆ 4)
+w+θ
+4 −1(2π)−wΓ(w) cos(πw/ 2)π sin−1(π(w +θ)/ 4)
+= 1
+4 (1 + ∆ −4)∆ w+θ(2π)−wΓ(w) cos(πw/ 2)π sin−1(π(w +θ)/ 4).
+(57)
+We can write the functional equation for the Riemann zeta-functio n in the form
+21−sπ −sζ(s)Γ(s) cos(πs/ 2) = ζ(1 −s).
+58
+
+===== PAGE 59 =====
+
+Hence,
+R(j,j ) =Cδ−1(1 + ∆ −4)∆ θ Re 1
+2πi
+3/ 2+i∞∫
+3/ 2−i∞
+ζ(1 −w)ζ(1 +w) sin−1(π(w +θ)/ 4)×
+×Sj,j (w)d−w/ 2
+j (D/d j)w/ 2∏
+p|dj
+(1 −pw−1)
+∏
+p|(D/d j)
+(1 −p−w−1)dw
+=Cδ−1(1 + ∆ −4)∆ θ Re 1
+2πi
+3/ 2+i∞∫
+3/ 2−i∞
+ζ(1 −w)ζ(1 +w) sin−1(π(w +θ)/ 4)×
+× ˜Sj,j (w)dw
+for some absolute constant C (which does not depend on j), where ˜Sj,j (w) is deﬁned in
+the corollary 2. We shall move the path of integration from the line Re s = 3/ 2 to the
+contour Γ which consists of the two rays Re w = 0, | Imw| ≥ log−1X and the semicircle
+|w| = log −1X, Rew >0.
+We shall show that the contribution to the sum R(1, 1) +R(2, 2) from the integrals over
+the two rays with | Imw| ≥ 1 is of desired order (we denote this contribution from R(1, 1)
+and R(2, 2) by R1). To obtain this we shall use the functional equation between ˜S1, 1(w) and
+˜S2, 2(w) from the corollary 2 and the property sin( −s) = − sins. In the above formula for
+R(2, 2) let us make the change of variables w → −w in the integral and use the functional
+equation from the corollary 2. We thus obtain
+R1 =C(θ, ∆)δ−1 1
+2π
++∞∫
+1
+ζ(1 −it)ζ(1 +it)( ˜S1, 1(it) + ˜S1, 1(−it))×
+×
+( 1
+sin(π(it +θ)/ 4) + 1
+sin(π(−it +θ)/ 4)
+)
+dt,
+whereC(θ, ∆) is a constant depending on θ and ∆, and which is bounded for 0 ≤θ ≤ 1, 0<
+δ ≤ 1/ 2.
+We shall transform the sum of inverse sinuses in R1 as follows
+( 1
+sin(π(it +θ)/ 4) + 1
+sin(π(−it +θ)/ 4)
+)
+= 4 sin πθ
+4 (eπt/ 4 +e−πt/ 4)
+eπt/ 2 +e−πt/ 2 − 2 cos πθ
+2
+which is O(θe−πt
+4 ) for t ≥ 1. Now, the estimate of S1, 1 from lemma 10 gives
+R1 ≪δ−1θ
++∞∫
+1
+log6(t + 3)
+eπt/ 4 dt ≪δ−1θ.
+59
+
+===== PAGE 60 =====
+
+Forw on the part of the contour Γ with the property | Imw| ≤ 1 we shall use the bound
+( 1
+sin(π(w +θ)/ 4) + 1
+sin(π(−w +θ)/ 4)
+)
+= 4 sin πθ
+4 (eiπw/ 4 +e−iπw/ 4)
+2 cosπw
+2 − 2 cos πθ
+2
+≪ θ
+|w|2 +θ2
+(58)
+due to the inequality | Rew|<θ/ 2 and
+ζ(1 +w) ≪ |w| + 1
+|w| log(| Imw| + 3). (59)
+The contribution from R(1, 1) and R(2, 2) which comes from the integrals over the part of the
+contour Γ with the property | Imw| ≤ θ/ √θ logX we denote by R2 and estimate it from
+above by means of the estimate from lemma 10 as
+R2 ≪δ−1
+
+
+θ−1 log−1X +
+θ/ √
+θ logX∫
+log−1X
+θ−1dt
+
+
+ ≪δ−1(θ logX)−1/ 2.
+We denote by R3 the contribution from R(1, 1) and R(2, 2) which comes from the integrals
+over the part of the contour Γ with the property √
+θ logXθ ≤ | Imw| ≤ 1. We then have by
+(58), (59) and lemma 8
+R3 ≪δ−1
+1∫
+θ√θ logX
+θt−2dt ≪δ−1(θ logX)−1/ 2.
+By R0 we denote the main contribution into R(1, 1) and R(2, 2) which comes from the
+integrals over the leftover part of the contour Γ satisfying θ/
+√
+A ≤ | Imw| ≤ θ
+√
+A, where
+A =θ logX. We then have by corollary 2
+R0 =C(θ, ∆)δ−1 1
+π
+θ
+√
+A∫
+θ/
+√
+A
+ζ(1 −it)ζ(1 +it)( ˜S1, 1(it) + ˜S1, 1(−it))×
+×
+( 1
+sin(π(it +θ)/ 4) + 1
+sin(π(−it +θ)/ 4)
+)
+dt
+=C(θ, ∆)δ−1 1
+π Re
+θ
+√
+A∫
+θ/
+√
+A
+ζ(1 −it)ζ(1 +it)S1, 1(it)d−it/ 2
+1 dit/ 2
+2
+∏
+p|d1
+(1 −pit−1)
+∏
+p|d2
+(1 −p−it−1)×
+×
+( 1
+sin(π(it +θ)/ 4) + 1
+sin(π(−it +θ)/ 4)
+)
+dt
+60
+
+===== PAGE 61 =====
+
+with some bounded constant C(θ, ∆). First, we shall estimate the part of R0 coming from
+the error term of (26). By means of (58), (59) this part can be es timated from above up to
+some absolute constant as
+δ−1
+θ
+√
+A∫
+θ/
+√
+A
+θ
+θ2 +t2 · t3/ 2 log−1/ 2X
+t2 dt
+≪δ−1
+
+
+
+θ∫
+θ/
+√
+A
+θ−1(t logX)−1/ 2dt +
+θ
+√
+A∫
+θ
+θt−2(t logX)−1/ 2)dt
+
+
+
+≪δ−1(θ logX)−1/ 2 ≪δ−1A−1/ 2.
+Now, from (27) and (26) we get, that the main term of R0 is the sum of four terms of
+the following type:
+δ−1C1(θ, ∆)
+log4X
+∑
+d≤X 2
+d
+∑
+m|d
+µ(m)
+m
+∑
+δ1δ4≡0 (mod d)
+δj |d∞
+α (δ1)α (δ4)
+δ1δ4
+×
+∑
+(n,d )=1
+1
+n2
+∑
+k1,k 4|n∞,
+(k1,k 4)=1
+α (nk1)α (nk4)
+k1k4
+×
+×
+∑
+(r,nd )=1
+µ(r)
+r2
+∑
+lj |r∞
+α (rl1)α (rl4)
+l1l4
+(
+log (max (1,X a/ (δ1k1l1nr))) log
+(
+max
+(
+1,X b/ (δ4k4l4nr)
+))) 1/ 2
+×
+×
+∑
+δ′
+1δ′
+4≡0 (mod d)
+δ′
+j |d∞
+α (δ′
+1)α (δ′
+4)
+δ′
+1δ′
+4
+×
+∑
+(n′,d )=1
+1
+n′2
+∑
+k′
+1,k ′
+4|n′∞,
+(k′
+1,k ′
+4)=1
+α (n′k′
+1)α (n′k′
+4)
+k′
+1k′
+4
+∑
+(r′,n ′d)=1
+µ(r′)
+r′2
+×
+∑
+l′
+j|r′∞
+α (r′l′
+1)α (r′l′
+4)
+l′
+1l′
+4
+(
+log
+(
+max
+(
+1,X a′
+/ (δ′
+1k′
+1l′
+1n′r′)
+))
+log
+(
+max
+(
+1,X b′
+/ (δ′
+4k′
+4l′
+4n′r′)
+))) 1/ 2
+×
+× Re
+θ
+√
+A∫
+θ/
+√
+A
+( d√d1√d2mδ1δ′
+1nn′rr′k1k′
+1l1l′
+1
+) −it
+F (t)dt, (60)
+where each of a,a ′,b,b ′ can take one of the two values, namely, 1 / 2 or 1,
+f (t) := f (t,θ,d,m,δ 1,δ 4,δ ′
+1,δ ′
+4,n,n ′,r,r ′,k 1,k 4,k ′
+1k′
+4,l 1,l 4,l ′
+1,l ′
+4)
+=F0(t)F1(t)...F 11(t)
+and
+F0(t) =
+∏
+p|d1
+(1 −pit−1)
+∏
+p|d2
+(1 −p−it−1),
+F1(t) = t2ζ(1 −it)ζ(1 +it),
+F2(t) = H (j,j )
+it, 1 (1)4,
+F3(t) =
+( 1
+sin(π(it +θ)/ 4) + 1
+sin(π(−it +θ)/ 4)
+)
+,
+61
+
+===== PAGE 62 =====
+
+F4(t) = (R(j,j )
+it,ndr )2,
+F5(t) = (R(j,j )
+it,n ′dr′)2,
+F6(t) = Kj,j
+( δ1δ4m
+d ,it
+)
+,
+F7(t) = Kj,j (n2k1k4,it ),
+F8(t) = Kj,j (rl1,it )Kj,j (rl4,it ),
+F9(t) = Kj,j
+( δ′
+1δ′
+4m
+d ,it
+)
+,
+F10(t) = Kj,j (n′2k′
+1k′
+4,it ),
+F11(t) = Kj,j (r′l′
+1,it )Kj,j (r′l′
+4,it ).
+We state (and show further) that for 0 <t< 1
+F0(t) ≪ 1, dF0(t)
+dt ≪ 1,
+F1(t) ≪ 1, dF1(t)
+dt ≪ 1,
+F2(t) ≪ 1, dF2(t)
+dt ≪ 1,
+F3(t) ≪ θ
+θ2 +t2 ≪θ−1, dF3(t)
+dt ≪ θt
+θ4 +t4,
+F4(t) ≪Gndr ≪ε (nr)εGd, dF4(t)
+dt ≪Gndr log log(ndr + 2) ≪ε (nr)εGd log log(d + 2),
+F5(t) ≪Gn′dr′ ≪ε (n′r′)εGd, dF5(t)
+dt ≪Gn′dr′ log log(n′dr′ + 2) ≪ε (n′r′)εGd log log(d + 2),
+F6(t) ≪τ2
+( δ1δ4
+d
+)
+τ2(m) ≪ε
+( δ1δ4m
+d
+) ε
+, dF6(t)
+dt ≪τ2
+( δ1δ4
+d
+)
+τ2(m) logδ1δ4m
+d ≪ε
+( δ1δ4m
+d
+) ε
+,
+F7(t) ≪τ2(n2)τ2(k1)τ2(k4) ≪ε (nk1k4)ε, dF7(t)
+dt ≪τ2(n2)τ2(k1)τ2(k4) log(n2k1k4) ≪ε (nk1k4)ε,
+F8(t) ≪τ4(r)τ2(l1)τ2(l4) ≪ε (rl1l4)ε, dF8(t)
+dt ≪τ4(r)τ2(l1)τ2(l4) log(rl1) log(rl4) ≪ε (rl1l4)ε
+whereε> 0 is as small as we wish (also similar estimates hold true for other Fj (j = 9, 10, 11)
+and their ﬁrst derivatives). Indeed, the estimate for F0 is evident, since d1,d 2 are absolute
+constants. The estimates for F1 hold true since z2ζ(1 −z)ζ(1 +z) is an analytic function for
+|z| ≤ 1. The estimate for F2 follows from (34). Also, we can write by (34) the equality
+H (j,j )
+it, 1 (1) =
+∏
+(p,D )=1
+(
+1 + Bj(p,it )
+p2
+) ∏
+p|D
+(
+1 + Bj(p,it )
+p
+)
+,
+where, for every p and 0 <t< 1,
+Bj(p,it ) ≪ 1,
+62
+
+===== PAGE 63 =====
+
+d
+dtBj(p,it ) ≪ logp.
+Thus, the estimate for d
+dzF2(t) is clear. For F4,F 5 the above estimates follow from (23),
+lemma 6 and the bound ∑
+p|N
+logp
+p ≪ log log(N + 2).
+The estimates for Fj, j = 6,... 11 are consequences of lemma 6 and the property τ(xy) ≤
+τ(x)τ(y) (for any x,y ∈ N). We are left to estimate dF3(t)
+dt , which we manage to do by Taylor
+series expansion for sin z and cosz:
+dF3(t)
+dt = −iπ
+4
+cos(π(it +θ)/ 4)
+sin2(π(it +θ)/ 4) +iπ
+4
+cos(π(−it +θ)/ 4)
+sin2(π(−it +θ)/ 4)
+≪ |(it +θ)2 − (it −θ)2| +O(|it +θ|4)
+|it +θ|2 · |it −θ|2 ≪ θt
+θ4 +t4
+for 0 < θ≤ 1, 0 ≤t ≤ 1. Or, we can get just the same result using the series expansion at
+z = 0 for meromorphic in the region |z| ≤ 2 function.
+Now, if
+⏐
+⏐
+⏐
+⏐log d√
+d1√d2mδ1δ′
+1nn′rr′k1k′
+1l1l′
+1
+⏐
+⏐
+⏐
+⏐ ≥ log(d + 2)A−2/ 3
+, (61)
+we shall take the integral in (60) once by parts and get
+θ
+√
+A∫
+θ/
+√
+A
+( d√d1√d2mδ1δ′
+1nn′rr′k1k′
+1l1l′
+1
+) −it
+F (t)dt =
+(
+−i log d√d1√d2mδ1δ′
+1nn′rr′k1k′
+1l1l′
+1
+) −1
+×
+×
+(( d√d1√d2mδ1δ′
+1nn′rr′k1k′
+1l1l′
+1
+) −it
+F (t)
+⏐
+⏐
+⏐
+⏐
+⏐
+θ
+√
+A
+θ/
+√
+A
+−
+θ
+√
+A∫
+θ/
+√
+A
+( d√d1√d2mδ1δ′
+1nn′rr′k1k′
+1l1l′
+1
+) −it
+dF (t)
+)
+≪ (log(d + 2)A−2/ 3
+)−1
+(
+max
+t∈[0, 1]
+|F (t)| +
+θ
+√
+A∫
+θ/
+√
+A
+|dF (t)|
+)
+.
+Therefore, the contribution into (60) of the terms satisfying (61 ) can be estimated from
+above by means of the above estimates for Fj and their derivatives as
+δ−1C1(θ, ∆)
+log2X
+∑
+d≤X 2
+A2/ 3d1−2εG2
+d
+log(d + 2)
+∑
+m|d
+µ 2(m)
+m1−2ε
+
+
+θ−1 +
+1∫
+θ/
+√
+A
+θt
+θ4 +t4dt + log log(d + 2)
+1∫
+θ/
+√
+A
+θ
+θ2 +t2dt
+
+
+ ×
+(62)
+63
+
+===== PAGE 64 =====
+
+×
+
+
+
+
+∑
+δ1δ4≡0 (mod d)
+δj |d∞
+|α (δ1)α (δ4)|
+(δ1δ4)1−ε ×
+∑
+(n,d )=1
+1
+n2−2ε
+∑
+k1,k 4|n∞,
+(k1,k 4)=1
+1
+(k1k4)1−ε
+∑
+(r,nd )=1
+1
+r2−2ε
+∑
+lj |r∞
+1
+(l1l4)1−ε
+
+
+
+
+2
+,
+The sum over n,k 1,k 4 (as well as over r,l 1,l 4) is estimated from above by the following value:
++∞∑
+n=1
+1
+n2−2ε
+
+∑
+k|n∞
+1
+k1−ε
+
+
+2
+≪
+∏
+p
+(
+1 + 1
+p2(1−ε)
+(
+1 − 1
+p1−ε
+) −2
++ 1
+p4(1−ε)
+(
+1 − 1
+p1−ε
+) −2
++...
+)
+≪ 1.
+We rewrite the sum over δ1,δ 4 as follows:
+∑
+δ1δ4≡0 (mod d)
+δj |d∞
+|α (δ1)α (δ4)|
+(δ1δ4)1−ε =d−1+ε∑
+n|d∞
+n−1+ε ∑
+δ1δ4=nd
+|α (δ1)α (δ4)| =d−1+ε∑
+n|d∞
+n−1+εb(nd).
+Also
+1∫
+θ/
+√
+A
+θ
+θ2 +t2dt ≪ 1,
+1∫
+θ/
+√
+A
+θt
+θ4 +t4dt ≪θ−1.
+Therefore, (62) is not of the greater order than
+δ−1
+log2X
+∑
+d≤X 2
+A2/ 3G2
+d
+d log(d + 2)
+∑
+m|d
+µ 2(m)
+m1−2ε
+(
+θ−1 + log log(d + 2)
+)
+
+∑
+n|d∞
+n−1+εb(nd)
+
+
+2
+. (63)
+Since (as in proof of lemma 10)
+∑
+d≤X 2
+G2
+d
+d
+∑
+m|d
+µ 2(m)
+m1−2ε
+
+∑
+n|d∞
+n−1+εb(nd)
+
+
+2
+≪
+∑
+d≤X 2
+1
+d
+∏
+pβ ||d
+(
+1 + 1
+p1−2ε
+)(
+B(pβ ) + B(pβ +1)C
+p1−ε
+) 2(
+1 + 1
+p3/ 4
+) 4
+≪
+∑
+d≤X 2
+r2(d)
+d ≪ log2X,
+then by Abel’s partial summation formula we get the estimate
+∑
+d≤X 2
+G2
+d
+d log(d + 2)
+∑
+m|d
+µ 2(m)
+m1−2ε
+
+∑
+n|d∞
+n−1+εb(nd)
+
+
+2
+≪ logX.
+Finally, the contribution of terms satisfying (61) into (60), estimat ed from above by the
+expression (63), is less than
+δ−1
+log2XA2/ 3 logX
+(
+θ−1 + log logX
+)
+≪ δ−1A2/ 3
+θ logX ≪δ−1A−1/ 3.
+64
+
+===== PAGE 65 =====
+
+Now we are left to evaluate the contribution into (60) from the term s satisfying
+⏐
+⏐
+⏐
+⏐log d√
+d1√d2mδ1δ′
+1nn′rr′k1k′
+1l1l′
+1
+⏐
+⏐
+⏐
+⏐< log(d + 2)A−2/ 3
+. (64)
+Denote this condition by ( C) and by 1(C) its characteristic function. We shall estimate the
+integral in (60) trivially (by a constant) in this case and get the follow ing contribution from
+above into (60) of the terms satisfying (64):
+δ−1C1(θ, ∆)
+log2X
+∑
+d≤X 2
+dG2
+d
+∑
+m|d
+µ 2(m)
+m
+∑
+δ1δ4≡0 (mod d)
+δj |d∞
+|α (δ1)α (δ4)|
+δ1δ4
+τ2
+( δ1δ4
+d
+)
+τ2(m)×
+×
+∑
+(n,d )=1
+Gn
+n2
+∑
+k1,k 4|n∞,
+(k1,k 4)=1
+1
+k1k4
+τ2(n2)τ2(k1)τ2(k4)
+∑
+(r,nd )=1
+Gr
+r2
+∑
+lj|r∞
+1
+l1l4
+τ4(r)τ2(l1)τ2(l4)×
+×
+∑
+δ′
+1δ′
+4≡0 (mod d)
+δ′
+j |d∞
+|α (δ′
+1)α (δ′
+4)|
+δ′
+1δ′
+4
+τ2
+( δ′
+1δ′
+4
+d
+)
+τ2(m)
+∑
+(n′,d )=1
+Gn′
+n′2
+∑
+k′
+1,k ′
+4|n′∞,
+(k′
+1,k ′
+4)=1
+1
+k′
+1k′
+4
+τ2(n′2)τ2(k′
+1)τ2(k′
+4)×
+×
+∑
+(r′,n ′d)=1
+Gr′
+r′2
+∑
+l′
+j|r′∞
+1
+l′
+1l′
+4
+τ4(r′)τ2(l′
+1)τ2(l′
+4)1(C). (65)
+If variables satisfy (64), then either
+max(m,n,n ′,r,r ′,k 1,k ′
+1,l 1,l ′
+1) ≥d1/ 20 (66)
+or 
+
+
+max(m,n,n ′,r,r ′,k 1,k ′
+1,l 1,l ′
+1) ≤d1/ 20,
+d(d+2)−A−2/ 3 √
+d1√d2mnn′rr′k1k′
+1l1l′
+1
+≤δ1δ′
+1 ≤ d(d+2)A−2/ 3 √d1√d2mnn′rr′k1k′
+1l1l′
+1
+.
+(67)
+We shall, ﬁrst, estimate from above the contribution into (65) of th e terms staifying (66).
+Now suppose, for example, that k1 ≥d1/ 20. Then the following inequalities hold:
+∑
+k1|n∞,
+k1≥d1/ 20
+τ2(k1)
+k1
+≤d−1/ 40 ∑
+k1|n∞
+τ2(k1)√k1
+=d−1/ 40∏
+p|n
+(
+1 + τ2(p)√p + τ2(p2)
+p + τ2(p3)√
+p3
++...
+)
+≪d−1/ 40
+∏
+p|n
+(
+1 + τ2(p)√p + τ2(p2)
+p
+)
+≪d−1/ 40
+∏
+p|n
+(
+1 + 1
+p1/ 4
+)
+≤d−1/ 40
+∑
+k|n
+1
+k1/ 4
+and, hence,
+∑
+(n,d )=1
+Gn
+n2
+∑
+k1,k 4|n∞,
+(k1,k 4)=1,
+k1≥d1/ 20
+1
+k1k4
+τ2(n2)τ2(k1)τ2(k4) ≤d−1/ 40
+∑
+(n,d )=1
+τ4(n2)
+n2
+∏
+p|n
+(
+1 + 1
+p
+) 4∑
+k|n
+1
+k1/ 4
+65
+
+===== PAGE 66 =====
+
+≪d−1/ 40
++∞∑
+k=1
+1
+k9/ 4
++∞∑
+n=1
+τ4(n2k2)τ4(nk)
+n2 ≪d−1/ 40
++∞∑
+k=1
+τ4(k)τ4(k2)
+k9/ 4
++∞∑
+n=1
+τ4(n2)τ4(n)
+n2 ≪d−1/ 40.
+So, the subsum in (65) satisfying the condition k1 ≥ d1/ 20 totally amounts (up to some
+constant) δ−1 log−2X from above. Almost the same calculations can be performed to show
+that all the terms satisfying (66) contribute the same.
+The last sum we are left to consider is the subsum of (65) with summat ion parameters
+satisfying (67).This part can be estimated from above by (using Gn ≪τ2(n))
+∞∑
+n=1
+τ2(n)τ2(n2)
+n2
+∑
+k1,k 4|n∞
+τ2(k1)τ2(k4)
+k1k4
+∞∑
+r=1
+τ6(r)
+r2
+∑
+lj|r∞
+τ2(l1)τ2(l4)
+l1l4
+×
+∞∑
+n′=1
+τ2(n′)τ2(n′2)
+n′2
+∑
+k′
+1,k ′
+4|n′∞
+τ2(k′
+1)τ2(k′
+4)
+k′
+1k′
+4
+∞∑
+r′=1
+τ6(r′)
+r′2
+∑
+l′
+j|r′∞
+τ2(l′
+1)τ2(l′
+4)
+l′
+1l′
+4
+×
+δ−1C1(θ)
+log2X
+∑
+d≤X 2
+dG2
+d
+∑
+m|d
+µ 2(m)τ4(m)
+m
+∑
+δ1δ4≡0 (mod d)
+δj|d∞,δj ≤X
+|α (δ1)α (δ4)|
+δ1δ4
+τ2
+( δ1δ4
+d
+)
+×
+×
+∑
+δ′
+1δ′
+4≡0 (mod d)
+δ′
+j |d∞,δ ′
+j≤X,
+d(d+2)−A−2/ 3 √
+d1√
+d2δ1mnn′rr′k1k′
+1l1l′
+1
+≤δ′
+1≤
+d(d+2)A−2/ 3 √
+d1√
+d2δ1mnn′rr′k1k′
+1l1l′
+1
+|α (δ′
+1)α (δ′
+4)|δ′
+1δ′
+4
+τ2
+( δ′
+1δ′
+4
+d
+)
+. (68)
+For ﬁxed n,n ′,r,r ′,k 1,k ′
+1,l 1,l ′
+1 deﬁne N = √d2nn′rr′k1k′
+1l1l′
+1/ √d1 and notice that since all
+the summands in (68) are positive, we can relax the limits of summation in the last sum by
+the following
+(3X)−2A−2/ 3
+≤ mNδ1δ′
+1
+d ≤ (3X)2A−2/ 3
+(recalling that d + 2 ≤X 2 + 2 ≤ (3X)2). Therefore, if we estimate from above the sum
+W (X,N ) =
+∑
+d≤X 2
+dG2
+d
+∑
+m|d
+µ 2(m)τ4(m)
+m
+∑
+δ1δ4≡0 (mod d)
+δj |d∞,δ j ≤X
+|α (δ1)α (δ4)|
+δ1δ4
+τ2
+( δ1δ4
+d
+)
+×
+∑
+δ′
+1δ′
+4≡0 (mod d)
+δ′
+j |d∞,δ ′
+j ≤X,
+(3X)−2A−2/ 3
+≤
+mδ1δ ′
+1N
+d ≤(3X)2A−2/ 3
+|α (δ′
+1)α (δ′
+4)|
+δ′
+1δ′
+4
+τ2
+( δ′
+1δ′
+4
+d
+)
+(69)
+by A−1/ 3 log2X for all N, then the expression in (68) is bounded from above by δ−1A−1/ 3
+which completes the proof of the estimate R0 ≪ δ−1A−1/ 3. Let us proceed with estimation
+66
+
+===== PAGE 67 =====
+
+of W (X,N ). Transform its summation as follows:
+W (X,N ) =
+∑
+δ1,δ ′
+1≤X
+|α (δ1)α (δ′
+1)|
+∑
+m≤X 2
+µ 2(m)τ4(m)
+m
+∑
+d≤X 2,m |d
+(3X)−2A−2/ 3
+≤ d
+δ1δ ′
+1mN ≤(3X)2A−2/ 3
+,
+δ1,δ ′
+1|d∞
+G2
+d
+d ×
+×
+∑
+n,n ′|d∞,
+nd/δ 1≤X,n ′d/δ ′
+1≤X,
+nd≡0( mod δ1),
+n′d≡0( mod δ′
+1)
+|α (nd/δ 1)α (n′d/δ ′
+1)|
+nn′ τ2(n)τ2(n′)
+≤
+∑
+δ1,δ ′
+1≤X
+|α (δ1)α (δ′
+1)|
+∑
+m≤X 2
+µ 2(m)τ4(m)
+m2
+∑
+d≤X 2/m,
+(3X)−2A−2/ 3
+≤ d
+δ1δ ′
+1N ≤(3X)2A−2/ 3
+,
+δ1,δ ′
+1|(md)∞
+G2
+md
+d ×
+×
+∑
+n,n ′|(dm)∞,
+nmd/δ 1≤X,n ′md/δ ′
+1≤X,
+nmd≡0( mod δ1),
+n′md≡0( mod δ′
+1)
+|α (nmd/δ 1)α (n′md/δ ′
+1)|
+nn′ τ2(n)τ2(n′).
+For ﬁxed δ1,δ ′
+1, in the last expression we divide the inner sum over m,d,... into τ(δ1)τ(δ′
+1)
+subsums according to the condition
+(md,δ 1) = δ,
+(md,δ ′
+1) = δ′,
+where δ |δ1 and δ′ |δ′
+1. We then have
+md = δδ′
+(δ,δ ′)k,
+( md
+δ , δ1
+δ
+)
+= 1,
+( md
+δ′ , δ′
+1
+δ′
+)
+= 1,
+δ1
+δ |δ∞, δ′
+1
+δ′ |δ′∞.
+Since nmd ≡ 0( mod δ1) and n | (dm)∞, we have n = δ1
+δl (where l | (δδ′k)∞) and
+nmd =δmd
+δ
+δ1
+δl =δ1
+md
+δ l =δ1
+δ′
+(δ,δ ′)kl.
+And similarly, since n′md ≡ 0( mod δ′
+1), we have n′ = δ′
+1
+δ′l′ (where l′ | (δδ′k)∞) and
+n′md =δmd
+δ′
+δ′
+1
+δ′l′ =δ′
+1
+md
+δ′ l′ =δ′
+1
+δ
+(δ,δ ′)kl′.
+67
+
+===== PAGE 68 =====
+
+Therefore,
+m2dnn′ = (mnd)(mn′d)/d = δ1δ′kl
+(δ,δ ′)
+δ′
+1δkl′
+(δ,δ ′)
+m(δ,δ ′)
+kδδ′ = δ1δ′
+1kll ′m
+(δ,δ ′)
+and
+W (X,N ) ≤
+∑
+δ1,δ ′
+1≤X
+|α (δ1)α (δ′
+1)|
+δ1δ′
+1
+∑
+δ|δ1,δ ′|δ′
+1,
+δ1
+δ |δ∞,
+δ ′
+1
+δ ′ |δ′∞
+(δ,δ ′)
+∑
+k≤X 2 (δ,δ ′)
+δδ ′ ,
+(3X)−2A−2/ 3
+≤ kδδ ′
+δ1δ ′
+1(δ,δ ′)N ≤(3X)2A−2/ 3
+,
+(
+δ ′
+(δ,δ ′)k, δ1
+δ
+)
+=1,
+(
+δ
+(δ,δ ′)k,
+δ ′
+1
+δ ′
+)
+=1
+G2
+δδ ′
+(δ,δ ′)k
+k ×
+×
+∑
+m|k δδ ′
+(δ,δ ′)
+µ 2(m)τ4(m)
+m
+∑
+l≤X (δ,δ ′)
+kδ ′ ,
+l′≤X (δ,δ ′)
+kδ ,
+l,l ′|(δδ′k)∞
+|α (δkl′/ (δ,δ ′))α (δ′kl/ (δ,δ ′))|
+ll′
+≤
+∑
+δ,δ ′≤X
+(δ,δ ′)
+δδ′
+∑
+ρ1≤X/δ,ρ ′
+1≤X/δ ′,
+ρ1|δ∞,ρ ′
+1|δ′∞
+|α (δρ1)α (δ′ρ′
+1)|
+ρ1ρ′
+1
+∏
+p| δδ ′
+(δ,δ ′)
+(
+1 + τ4(p)
+p
+)
+×
+×
+∑
+k≤X 2 (δ,δ ′)
+δδ ′ ,(
+δ ′
+(δ,δ ′)k,ρ 1
+)
+=1,
+(
+δ
+(δ,δ ′)k,ρ ′
+1
+)
+=1,
+(3X)−2A−2/ 3
+≤ k
+ρ 1ρ ′
+1(δ,δ ′)N ≤(3X)2A−2/ 3
+G2
+δδ ′
+(δ,δ ′)k
+k
+∑
+m|k,
+(m,δδ ′ )=1
+µ 2(m)τ4(m)
+m ×
+×
+∑
+l≤X (δ,δ ′)
+kδ ′ ,
+l′≤X (δ,δ ′)
+kδ ,
+l,l ′|(δδ′k)∞
+|α (δkl′/ (δ,δ ′))α (δ′kl/ (δ,δ ′))|
+ll′ .
+We shall use once again the M¨ obius summation formula
+f (q) =
+∑
+s|q
+∑
+t|s
+µ(t)f (s/t ),
+with q = (δ,δ ′) and the inequality
+∑
+m|k
+µ 2(m)τ4(m)
+m =
+∏
+p|k
+(
+1 + τ4(p)
+p
+)
+≤G8
+k
+to get
+W (X,N ) ≤
+∑
+δ,δ ′≤X
+(Gδδ′)10
+δδ′
+∑
+s|(δ,δ ′)
+∑
+t|s
+µ(t)s
+t
+∑
+ρ1≤X/δ,ρ ′
+1≤X/δ ′,
+ρ1|δ∞,ρ ′
+1|δ′∞
+|α (δρ1)α (δ′ρ′
+1)|
+ρ1ρ′
+1
+×
+68
+
+===== PAGE 69 =====
+
+×
+∑
+k≤X 2 s
+tδδ ′,(
+δ ′t
+s k,ρ 1
+)
+=1, (δt
+sk,ρ ′
+1)=1,
+(3X)−2A−2/ 3
+≤ kt
+ρ 1ρ ′
+1sN ≤(3X)(32A−2/ 3
+G10
+k
+k
+∑
+l≤X s
+ktδ ′,
+l′≤X s
+ktδ,
+l,l ′|(δδ′k)∞
+|α (δkl′t/s )α (δ′klt/s )|
+ll′
+≤
+∑
+s≤X
+∑
+t|s
+µ 2(t)s
+t
+∑
+j,j ′≤X/s,
+j,j ′|s∞
+(Gs)10
+s2jj ′
+∑
+h≤X/ (sj),h ′≤X/ (sj′),
+(hh′,s )=1
+(Ghh′)10
+hh′ ×
+×
+∑
+ρ≤X/sj,ρ ′≤X/sj ′,
+ρ|s∞,ρ ′|s∞
+|α (sjρ)α (sj′ρ′)|
+ρρ′
+∑
+ρ1≤X/ (sjhρ ),ρ ′
+1≤X/ (sj′h′ρ′),
+ρ1|h∞,ρ ′
+1|h′∞
+|α (hρ1)α (h′ρ′
+1)|
+ρ1ρ′
+1
+×
+×
+∑
+k≤X 2 1
+tsjj ′hh′,
+(j′th′k,ρρ 1)=1, (jthk,ρ ′ρ′
+1)=1,
+(3X)−2A−2/ 3
+≤ kt
+ρ 1ρ ′
+1ρρ ′sN ≤(3X)2A−2/ 3
+G10
+k
+k
+∑
+l≤X 1
+ktjh,
+l′≤X 1
+ktj′h′,
+l,l ′|(shh′k)∞
+|α (jthkl ′)α (j′th′kl)|
+ll′ . (70)
+Similarly, we represent the sum over k (as well as over l,l ′) in (70) as the sum over ks,k hh′,k ,
+where ks |s∞,k hh′ | (hh′)∞, (k,shh ′) = 1. So, we get that the sums over k,l,l ′ in (70) equal
+to
+∑
+ks|s∞,
+ks≤X 2 1
+tsjj ′hh′,
+(j′tks,ρ )=1, (jtks,ρ ′)=1
+G10
+ks
+ks
+∑
+khh′ |(hh′)∞,
+khh′ ≤X 2 1
+tsjj ′kshh′,
+(h′khh′,ρ 1)=1, (hkhh′,ρ ′
+1)=1
+G10
+khh′
+khh′
+∑
+k≤X 2 1
+tsjj ′hh′kskhh′
+,
+(k,shh ′)=1,
+(3X)−2A−2/ 3
+≤
+kkskhh′t
+ρ 1ρ ′
+1ρρ ′sN ≤(3X)2A−2/ 3
+G10
+k
+k ×
+×
+∑
+ls,l ′
+s|s∞
+∑
+lhh′,l ′
+hh′ |(hh′)∞
+∑
+l≤X 1
+lslhh′kkskhh′tjh,
+l′≤X 1
+l′
+sl′
+hh′kkskhh′tj′h′,
+l,l ′|k∞
+|α (jtksl′
+s)α (j′tksls)α (hkhh′l′
+hh′)α (h′khh′lhh′)α (kl′)α (kl)|
+lsl′slhh′l′
+hh′ll′ .
+Thus,
+W (X,N ) ≤
+∑
+s≤X
+G10
+s
+s
+∑
+t|s
+µ 2(t)
+t
+∑
+j,j ′|s∞
+1
+jj ′
+∑
+ρ|s∞,ρ ′|s∞
+|α (sjρ)α (sj′ρ′)|
+ρρ′
+∑
+ks|s∞
+G10
+ks
+ks
+∑
+ls,l ′
+s|s∞
+|α (jtksl′
+s)α (j′tksls)
+lsl′
+s
+×
+∑
+h≤X,h ′≤X
+(Ghh′)10
+hh′
+∑
+ρ1|h∞,ρ ′
+1|h′∞
+|α (hρ1)α (h′ρ′
+1)|
+ρ1ρ′
+1
+∑
+khh′ |(hh′)∞
+G10
+khh′
+khh′
+∑
+lhh′,l ′
+hh′ |(hh′)∞
+|α (hkhh′l′
+hh′)α (h′khh′lhh′)|
+lhh′l′
+hh′
+×
+×
+∑
+k≤X 2,
+(3X)−2A−2/ 3
+≤
+kkskhh′t
+ρ 1ρ ′
+1ρρ ′sN ≤(3X)2A−2/ 3
+G10
+k
+k
+∑
+l,l ′|k∞
+|α (kl′)α (jkl )|
+ll′ . (71)
+Let us estimate from above the sum over k,l,l ′, using the inequality
+G10
+k ≪
+∏
+p|k
+(
+1 + 1
+√p
+)
+69
+
+===== PAGE 70 =====
+
+and the notation N1 = max(1, (3X)−2A−2/ 3
+ρ1ρ′
+1ρρ ′sN
+kskhh′t ), N2 = min(X 2, (3X)2A−2/ 3
+ρ1ρ′
+1ρρ ′sN
+kskhh′t ) for the
+variables from (71):
+∑
+N1<k≤N2
+G10
+k
+k
+∑
+l,l ′|k∞
+|α (kl′)α (kl)|
+ll′ ≪
+∑
+N1<k≤N2
+1
+k
+∏
+pβ ||k
+(
+1 + 1√p
+)(
+|α (pβ )| + |α (pβ +1)|
+p +...
+) 2
+≪
+∑
+N1<k≤N2
+1
+k
+∏
+pβ ||k
+(
+1 + 1√p
+)(
+|α (pβ )|2 + 5
+p
+)
+, (72)
+where we appealed to |α (pβ )| ≤ 1 and 1
+p + 1
+p2 +... = 1
+p(1−1/p ) ≤ 2
+p. In order to estimate the
+last quantity we write the following chain of formal equalities
++∞∑
+k=1
+1
+ks
+∏
+pβ ||k
+(
+1 + 1√p
+)(
+|α (pβ )|2 + 5
+p
+)
+=
+∏
+p
+(
+1 + 1
+ps
+(
+1 + 1√p
+)(
+|α (p)|2 + 5
+p
+)
++ 1
+p2s
+(
+1 + 1√p
+)(
+|α (p2)|2 + 5
+p
+)
++...
+)
+=
++∞∑
+k=1
+1
+ks
+( ∑
+k1k2=k
+b1(k1)b2(k2)
+)
+,
+where
++∞∑
+n=1
+b1(n)
+ns =
+∏
+p
+(
+1 + |α (p)|2
+ps
+)
+,
++∞∑
+n=1
+b2(n)
+ns =
+∏
+p
+
+1 + 1
+ps
+5
+p + 5
+p3/ 2 + |α (p)|2
+p1/ 2
+1 + |α (p)|2
+ps
++ 1
+p2s
+(
+1 + 1√p
+)(
+|α (p2)|2 + 5
+p
+)
+1 + |α (p)|2
+ps
++...
+
+.
+Therefore, the sum in (72) is less (up to some absolute constant) t han
+∑
+N1<k1·k2≤N2
+b1(k1)b2(k2)
+k1k2
+≤
+∑
+k2≤N2
+b2(k2)
+k2
+∑
+N1/k 2<k1≤N2/k 2
+b1(k1)
+k1
+≪ max
+k2≤N2
+∑
+N1/k 2<k1≤N2/k 2
+b1(k1)
+k1
+,
+since
++∞∑
+n=1
+b2(n)
+n =
+∏
+p
+(
+1 +O
+( 1
+p3/ 2
+))
+≪ 1.
+So, let K1,K 2 satisfy the following constraints
+1 ≤K1 <K 2 ≤X 2,
+K2
+K1
+≤ (3X)
+4
+A2/ 3. (73)
+It is convenient for us to get an upper bound for the sum ∑
+K1<k≤K2
+b1(k1)
+k1
+for every K1,K 2
+satisfying (73) that will depend only on X and A. Let us provide such a bound using the
+70
+
+===== PAGE 71 =====
+
+Abel’s partial summation formula. Since we already have the bound
+C(u) =
+∑
+k≤u
+b1(k) ≪ u√logu (74)
+then
+∑
+K1<k≤K2
+b1(k)
+k ≤ C(K2)
+K2
++
+K2∫
+K1
+C(u)
+u2 du ≪ 1 +
+K2∫
+K1
+1
+u√logudu ≪ 1 + (
+√
+logK2 −
+√
+logK1)
+≪ 1 + logK2 − logK1√logK2 + √logK1
+≪ 1 + min
+( √
+logK2, logX
+A2/ 3√logK2
+)
+≪A−1/ 3√
+logX,
+due to (73). So, the sum in (72) (which is the sum over k,l,l ′ in (71)) is less than A−1/ 3√logX
+(up to some absolute constant).
+Similarly, we get that the sum over s,t,j,j ′,ρ,ρ ′,k s,l s,l ′
+s in (71) can be ﬁnally estimated
+by
+∑
+s≤X
+b1(s)
+s ≪
+X∫
+1
+du
+u√logu ≪
+√
+logX.
+The sum over h,h ′,ρ 1,ρ ′
+1,k hh′,l hh′,l ′
+hh′ in (71) by means of
+∑
+l|h
+1
+l ≪
+∏
+p|h
+(
+1 + 1
+p + 1
+p2 +...
+)
+≪
+∏
+p|h
+(
+1 + 1
+p
+)
+,
+∑
+k|h
+1
+k
+∏
+p|k
+(
+1 + 1
+p3/ 4
+) j
+≪
+∏
+p|h
+(
+1 + 1
+p
+(
+1 + 1
+p3/ 4
+) j
++ 1
+p2
+(
+1 + 1
+p3/ 4
+) j
++...
+)
+≪j
+∏
+p|h
+(
+1 + 1
+p
+)
+can be estimated by the expression:
+∑
+h≤X,h ′≤X
+(Ghh′)10
+hh′
+∑
+ρ1|h∞,ρ ′
+1|h′∞
+|α (hρ1)α (h′ρ′
+1)|
+ρ1ρ′
+1
+∑
+khh′ |(hh′)∞
+G10
+khh′
+khh′
+∑
+lhh′,l ′
+hh′ |(hh′)∞
+1
+lhh′l′
+hh′
+≪
+∑
+h≤X,h ′≤X
+(GhGh′)10
+hh′
+∑
+ρ1|h∞,ρ ′
+1|h′∞
+|α (hρ1)α (h′ρ′
+1)|
+ρ1ρ′
+1
+∏
+p|hh′
+(
+1 + 1
+p
+) 3
+≤
+
+∑
+h≤X
+G10
+h
+h
+∑
+ρ1|h∞
+|α (hρ1)|
+ρ1
+∏
+p|h
+(
+1 + 1
+p
+) 3
+
+
+2
+≪
+
+∑
+h≤X
+1
+h
+∏
+p|h
+(
+1 + 1√p
+) ∑
+ρ1|h∞
+|α (hρ1)|
+ρ1
+
+
+2
+≪
+
+∑
+h≤X
+1
+h
+∏
+pβ |h
+(
+1 + 1√p
+)(
+|α (pβ )| + |α (pβ +1)|
+p +...
+) 
+
+2
+≪
+( ∑
+h≤X
+µ 2(h)|α (h)|
+h
+) 2
+,
+where the last bound is obtained similar to the estimation of (72). By s tandard technique,
+since ∑
+p≤P
+|α (p)| ∼ P
+2
+71
+
+===== PAGE 72 =====
+
+(or since the coeﬃcients of the series, given by the Euler product ∏
+p
+(
+1 + |α (p)|
+ps
+)
+are equal to
+the coeﬃcients of the series, given by the Euler product ∏
+(p,D )=1
+(
+1 + |α (p)|2
+ps
+) ∏
+p|D
+(
+1 + 2|α (p)|2
+ps
+)
+)
+we get that ( ∑
+h≤X
+µ 2(h)|α (h)|
+h
+) 2
+≪ logX
+and the sum over h,h ′,ρ 1,ρ ′
+1,k hh′,l hh′,l ′
+hh′ in (71) is bounded from above by log X. Finally,
+W (X,N ) ≪A−1/ 3 log2X.
+Therefore, (68) (as well as (65), (60)) and, ﬁnally, R(j,j ) is estimated from above by δ−1A−1/ 3.
+Acknowledgements.
+I express my deepest gratitude to all the members of the Departm ent of Number Theory
+of Steklov Mathematical Institute of Russian Academy of Sciences and D.O. Orlov for their
+encouragement.
+References
+[1] E. Bombieri, A. Ghosh, Around the Davenport-Heilbronn function, Russ. Math. Surv.
+vol. 66 (2) (2011), p. 221–270.
+[2] E. Bombieri, D.A. Hejhal, Sur les z´ eros des fonctions zˆ eta d’Epstein, C.R. Acad.Sci.
+Paris S´ er.I, v.304 (1987), p. 213–217.
+[3] E. Bombieri, D.A. Hejhal, On the distribution of zeros of linear combinations of Euler
+products, Duke Math. J. vol. 80 (3) (1995), p. 821-862.
+E. Bombieri, D. A. Hejhal
+[4] N.G. Chudakov, Vvedenije v teoriju L-funkcij Dirichlet. — OGIZ: Moscow-Leningrad ,
+1947 (in Russian).
+[5] H. Davenport, H. Heilbronn, On the zeros of certain Dirichlet series, J. Lon. Math. Soc.
+vol. 11 (1936), p. 181–185, 307–312.
+[6] A. Ghosh, On the Riemann zeta-function - Mean value theorems and the distrib ution
+of |S(T )|, J. Numb. Th. v. 17:1 (1983), p. 93–102.
+[7] J.L. Hafner, Zeros on the critical line of Dirichlet series attached to certain cusp forms,
+Math. Ann. vol. 264 (1983), p. 21–37.
+[8] J.L. Hafner, Zeros on the critical line for Maass wave form L-functions, J. Reine Angew.
+Math. vol. 377 (1987), p. 127–158.
+72
+
+===== PAGE 73 =====
+
+[9] G. H. Hardy, J. E. Littlewood, The zeros of Riemann’s zeta-function on the critical line,
+Math. Z., 10:3-4 (1921), p. 283–317
+[10] W Heap, The twisted second moment of the Dedekind zeta function of a quad ratic ﬁeld,
+Int.J.Number Theory, 10 (2014), p. 238–281
+[11] E. Hecke, ¨Uber die Zetafunktion beliebiger algebraischer Zahlk¨ orper, Nach. Ges. Wiss.
+G¨ ottingen. Mat.-Phys. Kl. t.1917 (1917), S. 77–89.
+[12] E. Hecke, Vorlesungen uber die Theorie der algebraischen Zahle n, Akademische Verlag,
+Leipzig 1923; Russian transl., GITTL, Moscow-Leningrad 1940.
+[13] E. Hecke, Zur Theorie der elliptischen Modulfunktionen, Mathematische Annale n. Bd.
+97 (1926), S. 210—242.
+[14] E. Hecke, ¨Uber Modulfunktionen und die Dirichletschen Reihen mit Eulerscher Pr o-
+duktentwicklung. I, Math. Ann. v. 114 (1937), p. 1–28.
+[15] H. Iwaniec, Topics in classical automorphic forms. — AMS: Graduate studies in Ma th.,
+vol. 17, 1997.
+[16] H. Iwaniec, E. Kowalski Analytic number theory. — AMS: Coll. Publ., vol. 53, 2004.
+[17] J.B.Conrey, H. Iwaniec, Spacing of zeros of Hecke L-functions and the class number
+problem, Acta Arith. v. 103 (2002), p. 259–312.
+[18] J. Kaczorowski, A. Perelli, On the structure of the Selberg class, VII: 1 <d< 2, Ann.
+Math. v. 173:3 (2011), p. 1397–1441.
+[19] J. Kaczorowski, A. Perelli, On the structure of the Selberg class, I: 0 ≤ d ≤ 2, Acta
+Math. v. 182:3 (1999), p. 207–241.
+[20] A. A. Karatsuba, On the zeros of the Davenport-Heilbronn function lying on the critic al
+line, Izv. Acad. Nauk SSSR Ser. Mat. v. 54 :2 (1990), p. 303–315 [Izv. Math. USSR
+(1991),36:2, 311–324].
+[21] A. A. Karatsuba, A new approach to the problem of the zeros of some Dirichlet series,
+Trudy Mat. Inst. Steklova v. 207 (1994), p. 180–196 [Proc. Steklov Inst. Math. (1995),
+207, 163–177].
+[22] Y. Lee, On the zeros of Epstein zeta functions, arxiv.org:1204.6297.
+[23] W. Luo, Zeros of Hecke L-functions associated with cusp forms, Acta Arit h. v. 71:2
+(1995), p. 139–158.
+73
+
+===== PAGE 74 =====
+
+[24] R.A. Rankin, Contributions to the theory of Ramanujan’s function τ(n) and similar
+arithmetical questions II, Proc. Camb.Phil. Soc. v. 35 (1939), p. 357–372.
+[25] I. S. Rezvyakova, Zeros of linear combinations of Hecke L - functions on the critical line,
+Izv. Math. vol. 74 : 6 (2010), p.1277–1314.
+[26] I. S. Rezvyakova, On the zeros on the critical line of L-functions corresponding to au to-
+morphic cusp forms, Math. Notes. 88:3 (2010), p. 423–439.
+[27] I. S. Rezvyakova, Selberg’s method in the problem about zeros of linear combinations
+of L-functions on the critical line, Dokl. Math. vol. 463 : 3 (2015), p. 274–277 (English
+transl. in vol. 92 : 1 (2015), p. 448–451).
+[28] I. S. Rezvyakova, On the zeros of linear combinations of L - functions of degree two on
+the critical line. Selberg’s approach, Izv. Math. vol. 80 : 3 (2016), p. 602–622.
+[29] I. S. Rezvyakova, On the zeros of the Epstein zeta-function on the critical line Russia n,
+Math. Surveys, 70:4 (2015), p. 785–787
+[30] I. S. Rezvyakova, Additive problem with the coeﬃcients of Hecke L-functions, Proc.
+Steklov Inst. Math. vol. 296 (2017), p. 234–242.
+[31] H. Richert, ¨Uber Dirichletreihen mit Funktionalgleichung, Acad. Serbe Sci. Publ. I nst.
+Math. v. 11 (1957), p. 73–124.
+[32] A. Sankaranarayanan, On Hecke L -functions associated with cusp forms. II: On the
+sign changes of S(T ), Ann. Acad. Scient. Fenn. Math. v. 31 : 1 (2006), p. 213–238.
+[33] A. Selberg, On the zeros of the zeta-function of Riemann, Kgl. Norske Vidensk . Selsk.
+Forh B. XV, No. 16 (1942), p. 59–62.
+[34] A. Selberg, On the zeros of Riemann’s zeta-function, Skr. Norske Vid. Akad. O slo. v.
+10 (1942), p. 1–59.
+[35] A. Selberg, Old and new conjectures about class of Dirichlet series, Collected pa pers,
+vol. II. Springer-Verlag, Berlin, 1991. p. 47–63.
+[36] A. Selberg, Zeros on the critical line of linear combinations of Euler prod-
+ucts (The talk on the Analisis seminar at Uppsala University on 08.09.19 98,
+http://publications.ias.edu/sites/default/ﬁles/DOCuu98.pdf).
+[37] A. Selberg, Linear combinations of L-functions and zeros on the critical Line (T he talk
+at MSRI on a Workshop “Random Matrices and their Applications”, Ju ne 7-11, 1999,
+see http://www.msri.org/realvideo/ln/msri/1999/random/selberg /1/main.html)
+74
+
+===== PAGE 75 =====
+
+[38] A. Selberg, Contributions to the theory of the Riemann zeta-function // Arch . Math.
+Naturvid. (1946). v. 48: 5. p. 89–155.
+[39] K. Soundararajan, Degree 1 elements of Selberg class // Expos. Math. (2005). v. 23: 1.
+p. 65–70.
+[40] K.-M. Tsang, The distribution of the values of the Riemann zeta-function // Ph. D .
+thesis, Princeton, 1984.
+[41] S. M. Voronin, On the zeros of zeta-function of quadratic forms // Trudy Mat. I nst.
+Steklova. v. 142 (1976). p. 135–147 [Proc. Steklov Inst. Math. 1979, issue 3, p. 1 43–155].
+[42] S. M. Voronin, On the zeros of some Dirichlet series lying on the critical line // Izv.
+Acad. Nauk SSSR Ser. Mat. (1980) v. 44 (1). p. 63–91 [Izv. Math. USSR (1981),16:1,
+55–82].
+75
