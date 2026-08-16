@@ -1,0 +1,8 @@
+t=1 read 3 source notes (fresh-object-hunt §1 S1, wave8d turan, wave8d lk-zeta-direct)
+t=2 wrote progress file
+t=3 wrote partial note s1-saddle-closure-2026-08-18.md (derivation: t_k*k -> 2 - 4/log k + 4/log^2 k; dilogarithm crux pre-analysis: REFUTED both counts - margin negative, Li2 one real zero in disk)
+t=4 wrote tools/s1saddle/src/main.rs (Phase A saddle quadrature + Phase B polylog scan)
+t=5 build OK (after E0308 fix)
+t=6 running probe (Phase A t_k table + big-k + Phase B polylog)
+t=7 fixed ln_1p bug in log_phi (logM0 residual 2e-7 -> ~1e-10); reran; output saved to s1-saddle-closure-run-2026-08-18.txt
+t=8 final note written (s1-saddle-closure-2026-08-18.md) + ledger line appended. DONE.
