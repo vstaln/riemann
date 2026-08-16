@@ -394,3 +394,17 @@ Briefs: wave8-briefs-direct-RH-2026-08-17.md. Goal reset to direct-RH mission.
   of c(N)=d_N*sqrt(ln N) vs low-zero frequencies (periodogram, cf. wave8a residual analysis);
   (b) N=8000+ needs only patience (f64+refinement; ~4.5h/N on this box).
 - **8C-chain-complete** (2026-08-18 08:05) — CHECKED NUMERICALLY, CERTIFIED: d(5000)=7.252577566170e-2, d·√(ln N)=0.211661; flat law d_N·√(ln N)∈[0.211,0.215] at N=100/1000/2000/3000/5000 (1.7 decades, dd≤3.9e-27). Layer-D ddgram 2000 (9,758s): d_dd=7.782135587442e-2 vs d_ref 7.782135587726e-2 (3.6e-10) — full dd pipeline confirms; certification ladder closed at 2000 (f64+dd-ref+MPFR+layer-D). HARVEST.txt in tools/wave8c/results/. File: wave8c-burnol-rate-2026-08-18.md (UPDATE 3).
+
+## SWARM WAVE-13 DISPATCH (2026-08-18 morning, pi-native background agents, Anthropic recipe)
+- **R1 (f1e7a6f1) coboundary-reopt** — record lever: LP search for redistribution (l,c) certifying
+  eps>0.0062 (tawan's eps ceiling; test-family PROVEN closed at H=0.6725007). Fallback: m-sweep on
+  bound (H−τ)/(1−B/m). Ground truth = interval verifier tools/verify_coboundary_floor.py.
+- **D1 (e4e01e05) 8C-chain-harvest** — harvest ddgram2000/prod5000/sample5000 → flat-law verdict N≤5000.
+  (SUPERSEDED by coordinator's own commit 2698c23: chain already complete, N=5000 certified.)
+- **D2 (7475232a) lk_zeta zeta-direct** — build+run tools/wave8d/src/bin/lk_zeta.rs, error-bound pass
+  (Richardson h/2,h/4), verdict per flagged point; xi sanity check vs γ₁..γ₄ first. INCONCLUSIVE valid.
+- **D3 (54250369) de Bruijn heat probe** — direction verdict first (t>0 direction EMPTY per DN-constant
+  equivalence Λ≤0⟺RH; heating is the wrong side), then t<0 zero-tracking probe (RH-consistent evidence
+  only, NOT a proof step).
+- Referees: dispatch blind hostile referee per landed result (R1→bound arithmetic+verifier independence;
+  D2→L_k sign; D3→DN-direction claim).
