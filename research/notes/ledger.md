@@ -612,3 +612,12 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   KNOWN THEOREM RESTATED (von Koch criterion; hypothesis strictly stronger than RH, zero proof
   leverage) ⟹ CLOSED as a proof lever; discriminator family (prime-counting side) banked reusable.
   Files: s2-pnt-discriminator-2026-08-18.md, tools/s2pnt/.
+- **REFEREE s1-crux (2026-08-18, blind hostile, agent 456a3a85)** — VERDICT: crux-refutation HOLDS; no flaw found. (1) t_k closed form for k^{−α}/(k+1)^{−α}: NEGATIVE ∀k≥2, exact rationals −7/9, −17/64 (k=2,α=2) verified; ≈−α/k²; log-convex, NOT margin 2/k (PROVEN). (2) Li_α one zero (z=0) in |z|<1 ∀α∈(0.5,3): Cl_α(θ)=Σsin(kθ)/k^α>0 on (0,π) PROVEN for ALL α>0 via Laplace transform; winding=1 at r=0.5,0.9,0.99,0.999 for α∈{0.5,0.6,1,1.5,2,2.7,3} (independent run); Li₂(−1)=−π²/12 exact. Subtlety: α<1 boundary curve not closed (z=1 singularity), winding must run at r<1 — not a flaw. (3) Category-error analysis coherent. (4) Saddle: k·t_k→2, (2−kt)·ln k = 2.356/2.351/2.331 at k=10³/10⁴/10⁵ (probe AND independent 6-digit agreement); claim's "2.35 stable" ≈1% accurate, slight nit. Probe model column (2−4/L+4/L²) stale, cosmetic. E4's "margin≤2 cannot force LP" NOT established; S1 stays CONJECTURED with proven tail. Files: referee-s1-crux-2026-08-18.md, tools/s1saddle/referee_indep.rs.
+- **REFEREE S1-crux (2026-08-18, 70f71c35)**: CRUX-REFUTATION HOLDS — all 4 sub-claims verified.
+  (1) t_k closed form negative for a_k=k^{−α},(k+1)^{−α} (exact rationals, PROVEN); (2) Li_α one
+  zero at z=0 for ALL α>0 (referee proved stronger: Cl_α(θ)>0 on (0,π) via Laplace transform;
+  winding=1 at r=0.5..0.999 independent impl); (3) category-error analysis coherent; (4) saddle
+  k·t_k→2 confirmed to 6 digits independent (k=10³:1.659, 10⁴:1.745, 10⁵:1.798; deficit
+  (2−kt)·ln k ≈ 2.34 slowly decreasing; nit: claim said "2.35 stable"). ⟹ E4's "margin≤2
+  criteria cannot force LP" NOT established; margin question RE-OPENED; S1 stays CONJECTURED with
+  numerically-proven tail. File: referee-s1-crux-2026-08-18.md.
