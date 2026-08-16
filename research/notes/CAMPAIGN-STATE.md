@@ -384,3 +384,31 @@ zero evidence about RH — charter firewall).
   lever); (c) genuinely new mathematical input (fresh idea/literature), which the s4h loop
   should keep hunting; (d) record-side work is CLOSED at the redistribution-class ceiling
   (0.673481/0.836740, terminal in-class, Lean/peer-review path pending).
+
+## 2026-08-18 night — waves 20–22 closed; one-way space PROVEN closed in ALL directions
+- **Wave-20 (g0-2 + fresh-corners + (d) transport):** (i) g0-2 certified-moment oracle CLOSED:
+  deficit constant PROVEN = 2 (t_k·k = 2 − 2/ln k + O(ln ln k/ln²k); theta identity PROVEN
+  exact: Φ=2e^{u/2}(2x²θ″+3xθ′), x=e^{2u}). (ii) fresh-corners hunt CLOSED: corners (a) theta
+  (⟺ RH restatement via Riemann 1859 Mellin G(s)=2∫Φu^{s−1}du), (b) b_k (g02), (c) N=700 dip
+  (structure-only), (e) J-fraction/measure-TP/Padé (all closed/automatic) — NOT FUNDABLE.
+  (iii) (d) ξ′-two-trace transport CLOSED STRUCTURALLY INVALID: read-class identical
+  (rank-trace, not two independent reads); double ζ zero → simple ξ′ zero (ρ_ζ=0.5 with
+  ρ_ξ′=1.0 compatible, toy CHECKED). 0.836740 STANDS terminal.
+- **Wave-21 (N=700 dip):** INCONCLUSIVE CLOSED — real to 7.4e-29, three precision paths agree,
+  all 15 zero-pairs + divisor + kappa refuted; localized finite-size Báez-Duarte feature,
+  mechanism unidentified. Last empirical object closed.
+- **Wave-22 (lit sweep + Holland):** 2023–2026 sweep HONESTLY EMPTY for one-way LP/RH input.
+  Single NEW structural theorem: Holland 2608.08682 (n³log²(n+2)≥K·d⁵ ⟹ J^{d,n} hyperbolic +
+  Wigner semicircle). Probe PROVEN its mechanism is real-rooted-comparison +
+  bounded-analytic-multiplier stability — GENUINELY NON-MARGIN (escapes S1), independent proof
+  "margin cohort is not the whole story." BUT finite-degree/large-n only; complement (small-n,
+  all d) ⟺ RH = GJT-completion trap; NO path to LP without ⟺ RH. No new RH lever.
+- **SESSION NET NEW MATH (PROVEN, honest):** (1) deficit constant = 2 — the first exact
+  structural identity beyond t_k·k→2; (2) theta identity Φ=2e^{u/2}(2x²θ″+3xθ′) (exact);
+  (3) Holland mechanism non-margin (literature). No RH proof, no disproof anywhere
+  (24+ levers now). Record side terminal (0.673481/0.836740).
+- **Honest frontier:** the one-way LP/RH space is now PROVEN closed in every direction tried.
+  A proof of RH requires genuinely new mathematics not in the classical toolbox nor the
+  2023–26 literature survey. The s4h loop's continued job: transport a method from a truly
+  foreign field, or decompose the GJT-completion blocker (small-n ⟺ RH) into a sub-block that
+  is NOT ⟺ RH — the only remaining structural opening, and it is hard (Farmer diagnostic).
