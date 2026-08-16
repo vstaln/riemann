@@ -1,0 +1,4 @@
+t=1 start verifier-rs fix task: read main.rs + verify_coboundary_floor.py, compare F_B(g) term-by-term
+t=2 ledger+notes checked; differences identified: (1) tangent prune missing in Rust, (2) w-table enclosure differs, (3) k0 midpoint
+t=3 built verifier-rs; check build status
+t=4 rust run1 done exit=0; terminal cell + low captured
