@@ -1,0 +1,93 @@
+=== herglotz probe: H(t)=Xi'(t)/Xi(t); Im H >= 0 in UHP <=> RH ===
+H(t) = i*A(1/2+it);  Im H(x+iy) = Re A((0.5-y)+ix);  n_em = 600
+psi(0.25) = -4.227453533 (expect -4.227453534)   psi(1) = -0.577215665 (expect -0.577215665)
+
+[gate1] |H(0)| = |A(0.5)| = 7.105e-15  (expect < 1e-12)
+[gate2] max |Im H(t)| for real t in [0,120] = 4.958e-13  (expect ~1e-13)
+[gate3] gamma_1: (t-g)H(t) = (+1.001361e0, +7.012517e-11)  |·-1| = 1.36e-3
+[gate3] gamma_2: (t-g)H(t) = (+9.963252e-1, -7.919413e-11)  |·-1| = 3.67e-3
+[gate3] gamma_3: (t-g)H(t) = (+9.957604e-1, +3.353613e-11)  |·-1| = 4.24e-3
+[gate3] gamma_4: (t-g)H(t) = (+1.001165e0, -3.726694e-11)  |·-1| = 1.16e-3
+[gate4] H(9.7) analytic = (-5.607311030e-1, +1.787459070e-14); FD log-Xi = (-5.607276518e-1, -3.163862022e-5); |diff| = 3.18e-5
+Phi(-0.5) = +6.037745e-2
+Phi(+0.0) = +8.933938e-1
+Phi(+0.5) = +6.037745e-2
+Phi(+1.0) = +2.755628e-7
+Phi(+1.5) = +1.297679e-23
+Phi(+2.0) = +1.020400e-69
+Phi min over u in [-0.6, 2.0] = +1.020400e-69 at u = +2.0
+
+-- grid probe: min Im H(x+iy) over x (Herglotz requires >= 0) --
+y= 0.1: min Im H = -1.002431032e1 at x =  48.00   (cert. zeta err there = 2.1e-11; row max err = 2.7e-11)   Im H(x=gamma1) = -1.000677e1 (expect ~10.0000)  -> NEGATIVE -> ESCALATE
+y= 0.5: min Im H = -2.241908517e0 at x =  48.00   (cert. zeta err there = 2.0e-10; row max err = 2.5e-10)   Im H(x=gamma1) = -2.033773e0 (expect ~2.0000)  -> NEGATIVE -> ESCALATE
+y= 1.0: min Im H = -1.527615926e0 at x =  60.00   (cert. zeta err there = 4.5e-9; row max err = 4.5e-9)   Im H(x=gamma1) = -1.067140e0 (expect ~1.0000)  -> NEGATIVE -> ESCALATE
+y= 2.0: min Im H = -1.308594558e0 at x =  60.00   (cert. zeta err there = 1.7e-6; row max err = 1.7e-6)   Im H(x=gamma1) = -6.312435e-1 (expect ~0.5000)  -> NEGATIVE -> ESCALATE
+y= 5.0: min Im H = -2.061221195e1 at x =   2.00   (cert. zeta err there = 1.2e1; row max err = 1.8e2)   Im H(x=gamma1) = -4.606289e-1 (expect ~0.2000)  -> INCONCLUSIVE
+
+-- Im H(x+iy) table, y = 0.1 --
+  x =   0.0: Im H = -4.620924281e-3   (zeta err = 1.0e-12)
+  x =   2.0: Im H = -4.712493916e-3   (zeta err = 1.7e-12)
+  x =   4.0: Im H = -5.018850752e-3   (zeta err = 2.5e-12)
+  x =   6.0: Im H = -5.666199997e-3   (zeta err = 3.3e-12)
+  x =   8.0: Im H = -7.038338180e-3   (zeta err = 4.2e-12)
+  x =  10.0: Im H = -1.061955053e-2   (zeta err = 5.0e-12)
+  x =  12.0: Im H = -2.733565643e-2   (zeta err = 5.9e-12)
+  x =  14.0: Im H = -3.558941053e0   (zeta err = 6.7e-12)
+  x =  16.0: Im H = -3.792067507e-2   (zeta err = 7.6e-12)
+  x =  18.0: Im H = -2.412122381e-2   (zeta err = 8.5e-12)
+  x =  20.0: Im H = -1.067738529e-1   (zeta err = 9.3e-12)
+  x =  22.0: Im H = -1.221464266e-1   (zeta err = 1.0e-11)
+  x =  24.0: Im H = -1.170153303e-1   (zeta err = 1.1e-11)
+  x =  26.0: Im H = -1.177323194e-1   (zeta err = 1.2e-11)
+  x =  28.0: Im H = -4.021833257e-2   (zeta err = 1.3e-11)
+  x =  30.0: Im H = -5.487550207e-1   (zeta err = 1.4e-11)
+  x =  32.0: Im H = -1.654276314e-1   (zeta err = 1.4e-11)
+  x =  34.0: Im H = -1.124797111e-1   (zeta err = 1.5e-11)
+  x =  36.0: Im H = -6.562804596e-2   (zeta err = 1.6e-11)
+  x =  38.0: Im H = -5.792556217e-1   (zeta err = 1.7e-11)
+  x =  40.0: Im H = -1.540531970e-1   (zeta err = 1.8e-11)
+  x =  42.0: Im H = -1.583254262e-1   (zeta err = 1.9e-11)
+  x =  44.0: Im H = -2.459336173e-1   (zeta err = 2.0e-11)
+  x =  46.0: Im H = -5.986877081e-2   (zeta err = 2.1e-11)
+  x =  48.0: Im H = -1.002431032e1   (zeta err = 2.1e-11)
+  x =  50.0: Im H = -1.685088523e0   (zeta err = 2.2e-11)
+  x =  52.0: Im H = -1.475596706e-1   (zeta err = 2.3e-11)
+  x =  54.0: Im H = -1.317989263e-1   (zeta err = 2.4e-11)
+  x =  56.0: Im H = -5.145332464e-1   (zeta err = 2.5e-11)
+  x =  58.0: Im H = -1.244871383e-1   (zeta err = 2.6e-11)
+  x =  60.0: Im H = -3.960289470e-1   (zeta err = 2.7e-11)
+
+-- Im H(x+iy) table, y = 2 --
+  x =   0.0: Im H = -9.183442270e-2   (zeta err = 5.9e-8)
+  x =   2.0: Im H = -9.357127218e-2   (zeta err = 1.1e-7)
+  x =   4.0: Im H = -9.933135958e-2   (zeta err = 1.6e-7)
+  x =   6.0: Im H = -1.112293094e-1   (zeta err = 2.2e-7)
+  x =   8.0: Im H = -1.351501409e-1   (zeta err = 2.7e-7)
+  x =  10.0: Im H = -1.894238642e-1   (zeta err = 3.3e-7)
+  x =  12.0: Im H = -3.408861398e-1   (zeta err = 3.8e-7)
+  x =  14.0: Im H = -6.269416112e-1   (zeta err = 4.4e-7)
+  x =  16.0: Im H = -4.402440454e-1   (zeta err = 5.0e-7)
+  x =  18.0: Im H = -3.840764839e-1   (zeta err = 5.5e-7)
+  x =  20.0: Im H = -6.173215374e-1   (zeta err = 6.1e-7)
+  x =  22.0: Im H = -7.053087651e-1   (zeta err = 6.7e-7)
+  x =  24.0: Im H = -7.236688640e-1   (zeta err = 7.2e-7)
+  x =  26.0: Im H = -7.000759775e-1   (zeta err = 7.8e-7)
+  x =  28.0: Im H = -5.819027472e-1   (zeta err = 8.4e-7)
+  x =  30.0: Im H = -8.669032126e-1   (zeta err = 8.9e-7)
+  x =  32.0: Im H = -9.500380640e-1   (zeta err = 9.5e-7)
+  x =  34.0: Im H = -8.108742890e-1   (zeta err = 1.0e-6)
+  x =  36.0: Im H = -7.412228467e-1   (zeta err = 1.1e-6)
+  x =  38.0: Im H = -9.319174692e-1   (zeta err = 1.1e-6)
+  x =  40.0: Im H = -9.578658020e-1   (zeta err = 1.2e-6)
+  x =  42.0: Im H = -1.047549479e0   (zeta err = 1.2e-6)
+  x =  44.0: Im H = -9.461271185e-1   (zeta err = 1.3e-6)
+  x =  46.0: Im H = -8.030428328e-1   (zeta err = 1.3e-6)
+  x =  48.0: Im H = -1.129889580e0   (zeta err = 1.4e-6)
+  x =  50.0: Im H = -1.157284732e0   (zeta err = 1.5e-6)
+  x =  52.0: Im H = -1.025980747e0   (zeta err = 1.5e-6)
+  x =  54.0: Im H = -9.890335465e-1   (zeta err = 1.6e-6)
+  x =  56.0: Im H = -1.069248118e0   (zeta err = 1.6e-6)
+  x =  58.0: Im H = -1.123175244e0   (zeta err = 1.7e-6)
+  x =  60.0: Im H = -1.308594558e0   (zeta err = 1.7e-6)
+
+=== done. ===

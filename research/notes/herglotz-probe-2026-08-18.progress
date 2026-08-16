@@ -1,1 +1,12 @@
 t=1 start herglotz probe task
+t=2 read em.rs + lk_zeta.rs structure
+t=3 read lk_zeta + cargo
+t=4 write probe code
+t=5 build fail E0614
+t=6 fixed deref
+t=7 run probe
+t=8 fix polygamma sign + psi prints
+t=9 rebuild+run after fmt fix
+t=10 verify lk_zeta polygamma branch + check anti-Herglotz sign theory
+t=11 final note written; append ledger
+t=12 DONE. Deliverable: herglotz-probe-2026-08-18.md + .out + ledger line. Verdict: RH-CONSISTENT; g4-2 sign error; lk_zeta polygamma bug flagged.
