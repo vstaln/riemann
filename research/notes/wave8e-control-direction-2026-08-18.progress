@@ -11,3 +11,5 @@ t=10 bg relaunch
 t=11 ledger line
 t=12 harvest
 t=13 harvest2
+t=14 harvest3(final)
+t=15 DONE. Deliverable: wave8e-control-direction-2026-08-18.md (verdict CHECKED NUMERICALLY on Mellin split + real reproduction; control2 saturation PENDING). Ledger line appended. Background chain pid 22538 still running: control60 -> control2_60 -> control2_90, writes /tmp/c60.txt /tmp/c2_60.txt /tmp/c2_90.txt. Harvest point for resume.
