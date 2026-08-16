@@ -31,16 +31,30 @@ def cmd_status():
 def cmd_query(text):
     tl = text.lower()
     hits = []
-    # 1) trap-class keyword check
+    stop = {"the","this","that","with","from","into","over","under","then","than","have","has","had","for","and","not","are","was","were","but","its","all","any","can","may","must","via","per","pro","new","prove","proof","real","zero","zeros","forcing","class","idea","would","could","should","which","their","there","about","does","force","using","used"}
+    def tokens(s):
+        return {w for w in s.lower().replace("("," ").replace(")"," ").replace(":"," ").replace(","," ").replace("."," ").replace("/"," ").replace("-"," ").replace("_"," ").split() if len(w)>2 and w not in stop}
+    qt = tokens(text)
+    # 1) trap-class keyword check (word-boundary, multi-token phrases to avoid 'log' in 'local')
+    import re
     for t in traps:
-        if any(k in tl for k in t.replace("-"," ").split()):
-            hits.append(("TRAP", t, "this idea belongs to an RH-equivalence / dead class"))
-    # 2) closed-lever fuzzy match
+        words = [w for w in t.replace("-"," ").split() if w]
+        if len(words) >= 2:
+            phrase = r"\b" + r"\s+".join(re.escape(w) for w in words) + r"\b"
+            if re.search(phrase, tl):
+                hits.append(("TRAP", t, "this idea belongs to an RH-equivalence / dead class"))
+        else:
+            if re.search(r"\b" + re.escape(words[0]) + r"\b", tl):
+                hits.append(("TRAP", t, "this idea belongs to an RH-equivalence / dead class"))
+    # 2) closed-lever match: id fuzzy OR claim keyword overlap
     for lv in levers:
-        if lv["verdict"].startswith("DEAD") or "REFUTED" in lv["verdict"] or lv["verdict"].startswith("INVALID"):
-            score = difflib.SequenceMatcher(None, tl, lv["id"].lower()).ratio()
-            if score > 0.5:
-                hits.append(("CLOSED-LEVER", lv["id"], f"{lv['verdict']} — {lv['claim'][:120]}"))
+        closed = lv["verdict"].startswith("DEAD") or "REFUTED" in lv["verdict"] or lv["verdict"].startswith("INVALID") or lv["verdict"].startswith("PROVEN-STUCK") or lv["verdict"].startswith("ALL CLOSED") or lv["verdict"].startswith("CLOSED")
+        if not closed: continue
+        score = difflib.SequenceMatcher(None, tl, lv["id"].lower()).ratio()
+        ck = tokens(lv["claim"])
+        overlap = qt & ck
+        if score > 0.5 or len(overlap) >= 2:
+            hits.append(("CLOSED-LEVER", lv["id"], f"{lv['verdict']} — {lv['claim'][:120]}"))
     # 3) edge: reach any 'refutes' from a closed lever
     if not hits:
         for e in edges:
