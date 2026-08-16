@@ -1,0 +1,10 @@
+[package]
+name = "coboundary_search"
+version = "0.1.0"
+edition = "2021"
+description = "Rust port of the coboundary-redistribution max-min LP + global float floor search (reusable record-object hunt tool; the redistribution lever itself is CLOSED)."
+
+[dependencies]
+
+[profile.release]
+opt-level = 3

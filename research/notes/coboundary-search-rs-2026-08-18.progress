@@ -1,0 +1,15 @@
+t=1 read both Python LPs (reopt 221L, symmetric 241L) + env check (cargo 1.97.1 ok)
+t=2 progress written; tooling check: no numpy/scipy/cmake in base env; g++/gcc present
+t=3 pip disabled -> uv available
+t=4 uv tool install cmake + uv run numpy dump (family_578/839) + uv run scipy ref_lp -> got exact scipy v*: sym 1.464=0.007612214, 1.49=0.007797184, sqrt2=0.007322010; full 1.49 cb 0.06/0.02/0.15 = 0.008771241/0.008629757/0.009089580. NOTE: reopt family is 1089 cfgs (intermediate(500) returns 750), fixed dump (family_1089.txt, deleted stale family_839.txt)
+t=5 wrote Cargo.toml + main.rs (good_lp+highs plan); fixed dump_cfgs.py
+t=6 cargo build FAILED: bindgen needs libclang (HiGHS C++ compiled ok)
+t=7 no system libclang (only libclang-cpp.so); no sudo
+t=8 uv pip libclang failed (no wheel)
+t=9 DECISION: replace HiGHS with self-written bounded-variable two-phase simplex (pure Rust). Rewrote solve_full_lp/solve_sym_lp + bounded_simplex; removed good_lp dep.
+t=10-12 compile fixes (E0435 dim const, fn-pointer casts, tuple parens) -> BUILD OK
+t=13 RUN sym 1.464: LP v*=0.007612214 EXACT match! but (a1,b1) differ from scipy -> symmetric LP is DEGENERATE (multiple optimal vertices). DE garbage -1.4e310 in some cases: unconstrained NM escapes to g->-inf (F_B unbounded below via P0*sum g)
+t=14 bounded NM to [0.4,21] -> huge-gap floors sane, but DE box still garbage: root cause = unclamped DE trial fallback lets pop/best escape box and drift exponentially (best reached 1e50)
+t=15 fixed DE trial to m.clamp(lo,hi) (scipy clamps too); removed debug lines
+t=16 FINAL RUNS all 6 cases: LP v* exact match everywhere; global floors: sym1.464=0.005519 (rec 0.006038, 5.2e-4, degenerate vertex+stochastic), full 0.06=0.005576 (rec 0.005674, 1.0e-4), 0.02=0.005828 (rec 0.005392, 4.4e-4), 0.15=0.006011 (rec 0.005674, 3.4e-4). ~0.6s/case vs 50min Python.
+t=17 note + ledger + README written. DONE.
