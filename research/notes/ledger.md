@@ -554,3 +554,15 @@ tools/wave8e, added 2026-08-18): symbol 2^{-s} (verified 0.7223 vs 0.7071), exac
 d²_corr(60) ≥ d²_{120}(real) ≈ 9.7e-3 by span-inclusion ⟹ right direction at N=60 (within 15% of real),
 saturation > 0 forced by Beurling criterion. Original 8E control numbers are NOT RH-false evidence.
 Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fake before trusting it.
+- **REFEREE (hostile, blind) 2026-08-18 — schoenberg-kernel-tp2-2026-08-18: REFUTATION HOLDS.** Independently re-derived the sin(t)/t 2×2 shift minor from scratch: exact config (x1,y1,x2,y2)=(π,0,3π/2,5π/2) gives M=−4/(9π²)=−0.0450316372 (verified 10 digits); grid min −0.2559; negative rate 47.2% (probe's own control: −2.466e-1, 46.3%); −4/(15π²) attained. Premise "LP ⟹ shift-kernel TP2" is FALSE (Schoenberg duality is FT-based: PF ⟺ 1/f̂∈LP; even LP ∩ TP = Gaussian only). Ξ's negative minors (probe: −5.6e-3..−7.4e-3, ~38%; certified −3.9e-4) are LP-typical, RH-weightless. COSMETIC ledger slip: cited example config computes +0.081, not −4/(15π²) — correct the example, keep the verdict. Do-not-rerun CONFIRMED.
+- **REFEREE Schoenberg kernel-TP2 (2026-08-18, d2102dff)**: REFUTATION HOLDS — premise "f∈LP ⟹
+  shift kernel TP2" FALSE. Cleaner exact counterexample found: u=π,d=5π/2,s=π/2 ⟹ minor −4/(9π²)
+  (sin t/t ∈ LP, matrix [[0,−2/3π],[−2/3π,0]]). Ledger's cited worked example had a SIGN SLIP
+  (+0.081 under standard convention; fix: cite u=π,d=5π/2,s=π/2). Verdict unaffected: probe not
+  disproof-capable, zero RH weight, DO NOT RE-RUN. File: referee-schoenberg-2026-08-18.md.
+- **REFEREE 8E control-bug (2026-08-18, 58395f53)**: HOLDS — Mellin 2^{+s} (zeros Re=−0.6, NOT an
+  RH-false model) PROVEN; control2 Λ''_k=Λ_k+c0Λ_{2k} zero at 0.6±4.532i, d''_N² ≥ 9.57e-3 ALL N
+  (obstruction functional, PROVEN) while real d²→0 — discriminator correct once index-fixed. One
+  internal argument REFUTED+replaced: "control span ⊇ even subsystem" FALSE (N=2 independence);
+  correct via bounded zero-free symbol (1+c0·2^s) on Re>1/2 ⟹ control span dense. Re-label ledger
+  5.28e-3 as NOT RH-false evidence. File: referee-8e-control-2026-08-18.md.
