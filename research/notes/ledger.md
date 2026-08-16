@@ -903,3 +903,10 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   k~92), deficit D(k)=2.24-2.33 -> 2 from above. No margin-profile sufficient condition opened.
   Tool: tools/logprofile/. Pipeline validated by exact reproduction of S1 c=1.7 (17.632@3.674 deg).
   Commits: 071ebdc (referee), 3edbe43 (closure-DAG), this (harvest).
+- **Cross-domain hunt (6744babd, read-only architect)** — after 26 closed levers, the only
+  remaining direction is genuinely foreign transport. Assessing 7 candidates: Lee-Yang/
+  statistical mechanics, operator theory/PDS kernels, RMT, algebraic cohomology (Weil),
+  potential theory/explicit formula, special-function Sturm comparison (Bessel anchor J_0),
+  correct-duality SINC/PF∞. Each: mechanism, xi-input, verdict (trap/consistency/one-way/
+  impossible). Deliverable: honest table + surviving candidates with minimal Rust probe.
+  Read-only, no fabrication.
