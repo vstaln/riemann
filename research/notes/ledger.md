@@ -467,6 +467,15 @@ Briefs: wave8-briefs-direct-RH-2026-08-17.md. Goal reset to direct-RH mission.
 ## DIRECT-RH WAVE-14 (2026-08-18, 3 background agents, RUST ONLY)
 - **D4 (01894c73) L_k MPFR** — resolve 8D k=18/19/20 @ t=40 at ~200-bit (rug port of zeta_em_ders):
   last open disproof-capable check (L_k≥0 ⟺ RH). Verdict rules: POSITIVE / INCONCLUSIVE / RH-DISPROOF-escalate.
+  **LANDED (2026-08-18): ALL 7 FLAGGED POINTS POSITIVE.** L_18(40)=+1.984e-20, L_19(40)=+2.028e-20,
+  L_20(40)=+2.049e-20 (each err<~1e-33, 13-16 orders below signal; 200<->256-bit agree 3.4e-63,
+  n=600<->900 agree 1.2e-62; sanity all pass: Xi(0)=0.4971207781883141 exact, zeros ~1e-43..1e-47,
+  sign pattern OK). Controls match mpmath: L_3(40)=1.657396e-21, L_8(33.6)=2.166795e-17;
+  L_3(56.5)=8.869039e-32, L_4(35.5)=1.021881e-18 (ψ-fix shifted L_3(56.5) 0.02%, stays POSITIVE).
+  f64 route-B k=18-20 values were noise; k=19 f64-negative ruled out at 2e-20±1e-33. NO RH DISPROOF;
+  k=18/19/20 POSITIVE, not merely INCONCLUSIVE. Two f64 bugs fixed in port (ψ m=0 Stirling sign +
+  missing (2k)! factor in ALL polygamma Stirling coefs — f64 k≥3 verdicts survive; gamma k=2 term).
+  File: research/notes/wave8d-lk-mpfr-2026-08-18.md. RH-consistent only (L_k≥0 necessary, restatement class).
 - **D5 (5fed70fc) d_N oscillation** — dense d·√(ln N) at 19 N values (100..2000, f64, W8C_NMAX cap),
   fit c + A₁cos(2πlnN/P₁+φ₁)+..., test γ₁=14.1347 period (P=0.4446 log-N-units) in the ±1.8% wobble.
   CONJECTURED: explicit-formula origin of the 0.213 constant's oscillation (Burnol zero-sum theory).
@@ -475,3 +484,5 @@ Briefs: wave8-briefs-direct-RH-2026-08-17.md. Goal reset to direct-RH mission.
   Structural note: finite grid can only find violations, never prove RH.
 - Referees: blind hostile referee per landed result (D4: sign convention + sanity; D5: fit honesty +
   γ₁-periodicity vs spurious; D6: Herglotz direction + evaluation).
+- 2026-08-18 herglotz-probe (g4-2, H=Xi'/Xi Herglotz): PROVEN equiv, class=equivalent-to-RH. Probe Im H<0 everywhere y>0 (margins>=1e3, y<=2 certified), RH-CONSISTENT, not disproof. g4-2 stated sign WRONG: H is ANTI-Herglotz; -H is the Herglotz object. No new attackable identity (CONJECTURED). SECONDARY: lk_zeta.rs m=0 polygamma sign slip (psi(0.25) off 1.03e-4; fix verified vs exact values) -> wave8d route-B L_k (1e-32 level) SUSPECT, re-run with fix.
+- **8C-oscillation** (2026-08-18) — CHECKED NUMERICALLY: dense d_N·√(ln N) table N=100..5000 (19 pts, 16 fresh dd-refined + 3 certified; N=1600/1800 skipped, >330s timeout on loaded box). Flat law HOLDS everywhere: [0.20916, 0.21590], mean 0.21262, sd 0.78% (was 0.21296±1.8% on 5 pts). Oscillation shape: NOT a γ₁ cosine — sign-agreement vs cos(γ₁lnN+φ) max 0.684 (chance-level p~0.3-0.4); fixed-γ₁ fit explains ~9% of wobble variance. Dominant structure is SLOW: N≥300 best period ~1.5 log-units (amplitude 0.0015, 43% variance), deepest feature dip at N=700 (−0.0035, certified 7.4e-29). burnol-rate note's "low-zero oscillation" conjecture REVISED: single-γ₁ REFUTED as wobble shape; zero-sum origin INCONCLUSIVE (γ₂−γ₃ beat 1.575 ≈ slow 1.51, but window = 1.9 cycles, poorly constrained). NOT RH evidence either way. Files: research/notes/wave8c-oscillation-2026-08-18.md, tools/wave8c/src/bin/oscfit.rs. Next: dense 700..900 & 2000..3000 to pin dip width/slow period; fit on d_N².

@@ -1,0 +1,80 @@
+=== 8D L_k — MPFR (rug) zeta-direct, k=18/19/20 @ t=40, 200 bits ===
+L_k(t) = (Xi^(k))^2 - Xi^(k-1) Xi^(k+1), Xi(t) = xi(1/2+it).
+L_k >= 0 for all (t,k) is NECESSARY for RH (LP-class log-concavity). Positive = RH-consistent only.
+
+-- |B_2k|/(2k)!: MPFR vs f64 table --
+k= 1: mpfr=8.33333333333316634e-2  f64=8.33333333333333287e-2  rel=2.0e-14
+k= 2: mpfr=1.38888888888886119e-3  f64=1.38888888888888894e-3  rel=2.0e-14
+k= 3: mpfr=3.30687830687824069e-5  f64=3.30687830687830710e-5  rel=2.0e-14
+k= 4: mpfr=8.26719576719560237e-7  f64=8.26719576719576754e-7  rel=2.0e-14
+k= 5: mpfr=2.08767569878676833e-8  f64=2.08767569878681002e-8  rel=2.0e-14
+k= 6: mpfr=5.28419013868738775e-10  f64=5.28419013868749322e-10  rel=2.0e-14
+k= 7: mpfr=1.33825365306844107e-11  f64=1.33825365306846789e-11  rel=2.0e-14
+k= 8: mpfr=3.38968029632251506e-13  f64=3.38968029632258272e-13  rel=2.0e-14
+k= 9: mpfr=8.58606205627767320e-15  f64=8.58606205627784517e-15  rel=2.0e-14
+k=10: mpfr=2.17486869855801829e-16  f64=2.17486869855806192e-16  rel=2.0e-14
+k=11: mpfr=5.50900282836011937e-18  f64=5.50900282836022953e-18  rel=2.0e-14
+k=12: mpfr=1.39544646858122455e-19  f64=1.39544646858125223e-19  rel=2.0e-14
+
+-- polygamma sanity (real axis, vs hardcoded constants) --
+psi(1/2) = -1.96351002602142347944098e+0  |dev|=3.3e-51
+psi(1)   = -5.77215664901532860606512e-1  |dev|=2.5e-60
+psi'(1/2)= 4.93480220054467930941725e+0  |dev|=5.0e-60
+psi(1/4) = -4.22745353337626540808953e+0  |dev|=5.0e-60
+
+-- certified zeta error (n=600) --
+t= 40.0: err(zeta)=1.12e-56 err(zeta')=5.75e-56 err(zeta^(21))=1.65e-40  zeta=+7.930450e-1-1.041275e0i
+t= 33.6: err(zeta)=9.48e-57 err(zeta')=4.86e-56 err(zeta^(9))=5.53e-50  zeta=-2.059843e-2+1.032361e0i
+t= 56.5: err(zeta)=1.57e-56 err(zeta')=8.07e-56 err(zeta^(4))=1.35e-53  zeta=+5.130311e-2+1.154341e-1i
+
+-- xi sanity --
+Xi(0) = 4.9712077818831410991e-1  (true 0.497120778188314...; zeta(1/2)=-1.46035450880958684e0 err=5.5e-58)
+|Xi(gamma_1)| at t=14.134725141734693790457251983562470270784 = 3.555e-43  (Re=+3.555e-43 Im=+4.955e-48)
+|Xi(gamma_2)| at t=21.022039638771554992628479593896902777334 = 6.044e-45  (Re=-6.044e-45 Im=-2.572e-50)
+|Xi(gamma_3)| at t=25.010857580145688763213790992562821818660 = 5.698e-46  (Re=-5.698e-46 Im=-1.441e-51)
+|Xi(gamma_4)| at t=30.424876125859513210311897530584091320182 = 1.061e-47  (Re=+1.061e-47 Im=+1.492e-53)
+Xi(  7.6) = +1.2161e-1  sign +1 expect +1  OK
+Xi( 17.6) = -3.9011e-4  sign -1 expect -1  OK
+Xi( 23.1) = +5.4385e-6  sign +1 expect +1  OK
+Xi( 27.7) = -3.7982e-7  sign -1 expect -1  OK
+Xi( 31.7) = +6.7564e-9  sign +1 expect +1  OK
+Xi( 34.7) = -2.1012e-9  sign -1 expect -1  OK
+Xi( 39.2) = +5.3057e-11  sign +1 expect +1  OK
+Xi( 42.1) = -3.8236e-12  sign -1 expect -1  OK
+Xi( 45.7) = +8.5015e-13  sign +1 expect +1  OK
+Xi( 48.9) = -1.5088e-14  sign -1 expect -1  OK
+Xi( 51.4) = +6.6376e-15  sign +1 expect +1  OK
+Xi( 54.7) = -7.8907e-16  sign -1 expect -1  OK
+Xi( 57.9) = +4.3557e-17  sign +1 expect +1  OK
+Xi( 62.1) = +2.9863e-18  sign +1 expect -1  MISMATCH
+Xi( 66.1) = -5.5111e-20  sign -1 expect +1  MISMATCH
+Xi( 33.6) (flagged) = -1.8767e-9  sign -1
+Xi( 35.5) (flagged) = -1.3200e-9  sign -1
+Xi( 40.0) (flagged) = +2.1176e-11  sign +1
+Xi( 56.5) (flagged) = +8.8067e-18  sign +1
+sign pattern: FAILED
+
+-- L_k (analytic EM route, MPFR, n=600) --
+t= 40.0 k= 3 [control]: L_k = +1.657396e-21  err<+7.0e-35  bracket q=+3.695929e0  Bk_scale=9.2e0  -> POSITIVE (RH-consistent)
+      L_k (36 digits) = 1.65739618310265222587132235507709391e-21
+t= 33.6 k= 8 [control]: L_k = +2.166795e-17  err<+1.1e-29  bracket q=+6.152223e0  Bk_scale=2.7e5  -> POSITIVE (RH-consistent)
+      L_k (36 digits) = 2.16679519055152386783479309432127937e-17
+t= 56.5 k= 3 [control]: L_k = +8.869039e-32  err<+1.5e-47  bracket q=+1.143530e3  Bk_scale=2.6e4  -> POSITIVE (RH-consistent)
+      L_k (36 digits) = 8.86903860261006855332786559199110904e-32
+t= 35.5 k= 4 [control]: L_k = +1.021881e-18  err<+2.4e-31  bracket q=+5.864657e-1  Bk_scale=1.4e0  -> POSITIVE (RH-consistent)
+      L_k (36 digits) = 1.02188146283085930216522667696662775e-18
+t= 40.0 k=18 [main]: L_k = +1.984181e-20  err<+8.4e-34  bracket q=+4.424645e1  Bk_scale=5.1e15  -> POSITIVE (RH-consistent)
+      L_k (36 digits) = 1.98418056215491059776289274990778229e-20
+      u^(16)..u^( 19): u^16=-5.077e12 u^17=-8.841e13 u^18=-1.636e15 u^19=-3.205e16  (max|Im u|=1.7e-42)
+t= 40.0 k=19 [main]: L_k = +2.028007e-20  err<+8.5e-34  bracket q=+4.522376e1  Bk_scale=1.0e17  -> POSITIVE (RH-consistent)
+      L_k (36 digits) = 2.02800690365247749861567070733651025e-20
+      u^(17)..u^( 20): u^17=-8.841e13 u^18=-1.636e15 u^19=-3.205e16 u^20=-6.629e17  (max|Im u|=3.7e-41)
+t= 40.0 k=20 [main]: L_k = +2.048938e-20  err<+8.6e-34  bracket q=+4.569051e1  Bk_scale=2.1e18  -> POSITIVE (RH-consistent)
+      L_k (36 digits) = 2.04893764502210301966670380208203316e-20
+      u^(18)..u^( 21): u^18=-1.636e15 u^19=-3.205e16 u^20=-6.629e17 u^21=-1.443e19  (max|Im u|=8.4e-40)
+
+-- cross-checks (rounding: 200 vs 256 bit; EM truncation: n=600 vs 900) --
+k=20 t=40: L(200bit)=2.04893764502210301966670380208203316e-20  L(256bit)=2.04893764502210301966670380208203316e-20  |diff|=3.36e-63
+k=20 t=40: L(n=600)=2.04893764502210301966670380208203316e-20  L(n=900)=2.04893764502210301966670380208203316e-20  |diff|=1.15e-62
+
+=== done. ===
