@@ -1,1 +1,12 @@
-t=0 start: corner (d) — test if xi'-two-trace distinct transport beats 0.836740 world record
+t=1 start: corner (d) xi'-two-trace distinct transport
+t=2 reading infrastructure
+t=3 wave7 src
+t=4 structure
+t=5 locate wave7+cache
+t=6 cache+src
+t=7 cache sanity
+t=8 write note+ledger tail
+t=9 toy rust
+t=10 run toy
+t=11 ledger done
+t=12 finalize
