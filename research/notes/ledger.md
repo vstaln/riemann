@@ -854,3 +854,9 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   root, not multiplies). Independent value: proves the margin cohort is not the whole story —
   perturbation/comparison family is open at finite-degree. Firewall: zero RH evidence.
   Tool: fetched 2608.08682 (html).
+- **Frontier probe: small-n0 Jensen slice vs moment structure (119364d4)** — the single
+  sharpest opening: does M_n = moment sequence of positive measure (Phi>0 PROVEN) + gamma(n)
+  = n!·b_n = n!·M_n/(2n)! give an INDEPENDENT proof of J^{d,0} hyperbolicity (all d)? Plus
+  the separability question: does fixed-n0 cover measure-zero of the (n0,d) lattice (⟹
+  GJT-completion trap airtight)? Forecast: PROVEN-stuck via renormalization destroying Hankel
+  TP + fixed-n0 measure-zero. Rust-only, honest labels.
