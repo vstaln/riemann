@@ -893,3 +893,13 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   The log-profile is consistency data, NOT a sufficient condition. The probe's central question
   was answered from EXISTING S1 data — a near-miss on re-dispatching a closed question (sign
   convention obscured it). Agent 07db05a8 steered to document-only (D*(C) map for the record).
+2026-08-18 log-profile boundary probe: LEVER CLOSED. Deficit-2 class {t_k*k >= 2 - 2/ln k} is NOT LP-consistent — PROVEN via existing S1 certified perturbed families (b_k=k^{-2k}(1+eps cos(w ln k)), in class for all k<=2e5, non-LP) + independently corroborated in the smooth family: (C,D)=(2,-2) = k^{-2k}(ln k)^{2k} has margin 2-2/lnk+2/ln^2k (min class gap +0.052, in class) yet genuine non-real zeros |t|=4.47,6.84,9.00,11.02 (CHECKED NUMERICALLY, pipeline validated vs S1 c=1.7 exact match). Boundary map D*(C) ~ 3.7-2.2C (fuzzy), does NOT pass through (2,-2). Xi certified profile is BELOW the deficit-2 curve (min gap -0.064 at k=92, D(k)=2.24-2.33>2) — Xi not in the class either. No margin-profile sufficient condition for Xi; lever dead like S1. No RH claim.
+- **logprofile-boundary COMPLETE (07db05a8) — LEVER CLOSED, corroborates referee**: (i) deficit-2
+  class {t_k*k>=2-2/ln k} NOT LP-consistent (S1 perturbed families in class, PROVEN non-LP; PLUS
+  smooth member (2,-2) = b_k=k^{-2k}(ln(k+2))^{2k} itself NON-LP with genuine zeros |t|=4.472,
+  6.844, 8.995, 11.019, |F|<=2e-10 — min t_k*(k+1)=1.3668, min class gap +0.0517, in class).
+  (ii) Boundary D*(C) ~ 3.7-2.2C (fuzzy ±0.5), does NOT pass through (2,-2) — (2,-2) deep inside
+  non-LP region. (iii) Xi NOT in the class: certified profile below curve (min gap -0.0642 at
+  k~92), deficit D(k)=2.24-2.33 -> 2 from above. No margin-profile sufficient condition opened.
+  Tool: tools/logprofile/. Pipeline validated by exact reproduction of S1 c=1.7 (17.632@3.674 deg).
+  Commits: 071ebdc (referee), 3edbe43 (closure-DAG), this (harvest).

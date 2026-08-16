@@ -4,3 +4,7 @@ t=5 read probe.rs: t_k=1-exp(d2 log b_k), margin=t_k*(k+1); Aberth on R_N(w), tr
 t=6 read probe3.rs (full-series Newton); wrote tools/logprofile/main.rs (scan binary, modes coarse/refine/point/xi)
 t=7 build failed E0601, diagnosing
 t=8 ran decisive point (2,-2) + coarse grid; outputs saved
+t=9 refine grid + Xi profile done; (2,-2) NON-LP confirmed, class dead
+t=10 xi parser fixed; Xi profile computed
+t=11 final note + ledger line written
+t=12 DONE: note complete, ledger appended. Handoff: deficit-2 class PROVEN non-LP (S1 data + (2,-2) corroboration); boundary D*(C)~3.7-2.2C documented; Xi below curve, not in class; lever CLOSED.

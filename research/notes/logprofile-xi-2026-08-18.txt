@@ -1,0 +1,6 @@
+Xi k=50 | k*t_k=1.42734 | deficit-2 profile 2-2/lnk-2(lnL-1-c)/L^2=1.38216 | D(k)=(2-k*t_k)lnk=2.2403
+Xi k=100 | k*t_k=1.50157 | deficit-2 profile 2-2/lnk-2(lnL-1-c)/L^2=1.47340 | D(k)=(2-k*t_k)lnk=2.2954
+Xi k=150 | k*t_k=1.53774 | deficit-2 profile 2-2/lnk-2(lnL-1-c)/L^2=1.51616 | D(k)=(2-k*t_k)lnk=2.3162
+Xi k=200 | k*t_k=1.56074 | deficit-2 profile 2-2/lnk-2(lnL-1-c)/L^2=1.54280 | D(k)=(2-k*t_k)lnk=2.3273
+Xi k=250 | k*t_k=1.57723 | deficit-2 profile 2-2/lnk-2(lnL-1-c)/L^2=1.56166 | D(k)=(2-k*t_k)lnk=2.3343
+Xi min gap vs (2-2/lnk) over k=10..250: -0.0642 at k=92
