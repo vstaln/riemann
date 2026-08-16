@@ -878,3 +878,9 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   decomposition route PROVEN CLOSED as a one-way path. Zero RH evidence either way. Tool:
   tools/g02-oracle/src/bin/minors.rs. DO NOT re-dispatch (registered in closure-DAG trap class
   moment-sequence-to-gamma).
+- **Log-profile margin-2 boundary probe (07db05a8)** — the gap in the S1 closure: S1 killed
+  CONSTANT margins (counterexample k^{-1.0696k}, margin 1.0696 — NOT in the class
+  {t_k·k >= 2 - 2/ln k}). Question: is the deficit-2 log-profile (PROVEN for Xi) a candidate
+  one-way sufficient condition, or does the class contain non-LP members? Scan b_k =
+  k^{-Ck}(ln(k+2))^{-Dk} over (C,D) grid, find the boundary curve D*(C), test whether it
+  passes through (2,2), locate Xi's certified profile relative to it. Rust-only, coarse-first.
