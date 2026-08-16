@@ -1,1 +1,16 @@
 t=1 start s4-region-size probe
+t=2 read fresh-object-hunt §4 + survey wave8d
+t=3 survey wave8d cargo/src
+t=4 em.rs survey
+t=5 partial note written
+t=6 env check for offline mpfr build
+t=7 build (offline, reuse wave8d target)
+t=8 rebuild
+t=9 rebuild round 2
+t=10 run probe
+t=10 run probe
+t=10 run probe (fixed cwd)
+t=11 rebuild + rerun
+t=12 debug run
+t=13 rebuild + rerun with continuation init
+t=14 detailed trace

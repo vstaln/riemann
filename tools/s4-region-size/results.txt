@@ -1,0 +1,1162 @@
+gamma verification: ALL OK at 1e-30
+gamma[0] = 4.97120778188314109912773739685e-1
+gamma[1] = 1.14859721575727187676249382488e-2
+gamma[2] = 2.46904036140636013780691582990e-4
+gamma[3] = 4.99413288831316243202855235507e-6
+gamma[4] = 9.58134372322592921934064863128e-8
+gamma[5] = 1.75392309121331530348945713318e-9
+gamma[6] = 3.07766883278652836952615124216e-11
+gamma[7] = 5.19605157184747530407134885336e-13
+gamma[8] = 8.46627186645889992367064282339e-15
+gamma[9] = 1.33472384073531948207392723505e-16
+gamma[10] = 2.04042256128767744809320225950e-18
+gamma[11] = 3.03038770773441421758336210504e-20
+gamma[12] = 4.37967586839938980083220224926e-22
+gamma[13] = 6.16855320522205488412445841259e-24
+gamma[14] = 8.47782155937547749525107246037e-26
+gamma[15] = 1.13827818678680936705332048792e-27
+gamma[16] = 1.49461669433340438390069937116e-29
+gamma[17] = 1.92105729520398924751916260585e-31
+gamma[18] = 2.41910787264874919710038482999e-33
+gamma[19] = 2.98688349432069162669048433079e-35
+gamma[20] = 3.61864089808604453706815806350e-37
+gamma[21] = 4.30455754743396471069810390876e-39
+gamma[22] = 5.03080511335466129405985912337e-41
+gamma[23] = 5.77994039044405465834401362936e-43
+gamma[24] = 6.53160519862906578063284936891e-45
+gamma[25] = 7.26349464437423896320708930821e-47
+gamma[26] = 7.95252430545559379994599103819e-49
+gamma[27] = 8.57610513395058878476447889023e-51
+gamma[28] = 9.11342285551312020572375805185e-53
+gamma[29] = 9.54661775420713672462236082044e-55
+gamma[30] = 9.86177085347197960187228151450e-57
+gamma[31] = 1.00496221059069633567157726839e-58
+gamma[32] = 1.01059726351860398071670855552e-60
+gamma[33] = 1.00317529915602011544094258347e-62
+gamma[34] = 9.83276925783084998059981259687e-65
+gamma[35] = 9.51916543698838819370451631616e-67
+gamma[36] = 9.10466131094080528616596903304e-69
+gamma[37] = 8.60563826405718362885768356856e-71
+gamma[38] = 8.04015083034876266169124216313e-73
+gamma[39] = 7.42693934065479163054998539229e-75
+gamma[40] = 6.78451020727776558789831154285e-77
+gamma[41] = 6.13033682257417360674067813413e-79
+gamma[42] = 5.48021775620163518613934683724e-81
+gamma[43] = 4.84781188800226516304458292309e-83
+gamma[44] = 4.24435404401324253579949292983e-85
+gamma[45] = 3.67854095010543246696241913309e-87
+gamma[46] = 3.15656674543023866976070875913e-89
+gamma[47] = 2.68228029008128730358858920298e-91
+gamma[48] = 2.25743301378429770478580901912e-93
+gamma[49] = 1.88198570392893628216552302319e-95
+gamma[50] = 1.55444481508089128512974100279e-97
+gamma[51] = 1.27220287830416072698168583552e-99
+gamma[52] = 1.03186266393270373406511402899e-101
+gamma[53] = 8.29530237521383324082762407744e-104
+gamma[54] = 6.61067394585661816825751928542e-106
+gamma[55] = 5.22298758600333119776695598446e-108
+gamma[56] = 4.09172820547733734067223224864e-110
+gamma[57] = 3.17879265428147876358755480038e-112
+gamma[58] = 2.44927062745616515093691853497e-114
+gamma[59] = 1.87189069073691094778874507758e-116
+gamma[60] = 1.41919430506920990083944584578e-118
+gamma[61] = 1.06750037357874666545790639340e-120
+gamma[62] = 7.96718341540105502262504085312e-123
+gamma[63] = 5.90060749375425464703385792949e-125
+gamma[64] = 4.33697656546884429938453003015e-127
+gamma[65] = 3.16386539180048193730925114497e-129
+gamma[66] = 2.29102857974303856230987834791e-131
+gamma[67] = 1.64688979325533365657257645473e-133
+gamma[68] = 1.17532775638170337105498138737e-135
+gamma[69] = 8.32821211795947923732114914273e-138
+gamma[70] = 5.85976024309508281564052288213e-140
+gamma[71] = 4.09429595747013046479128799481e-142
+gamma[72] = 2.84109060946425586779963709716e-144
+gamma[73] = 1.95808572603679075752423484374e-146
+gamma[74] = 1.34045599566580369969742516013e-148
+gamma[75] = 9.11549701440753543385349271869e-151
+gamma[76] = 6.15810376717004480133174299409e-153
+gamma[77] = 4.13317412395470530673294652341e-155
+gamma[78] = 2.75626476142594439861496938339e-157
+gamma[79] = 1.82636885717869645522105850630e-159
+gamma[80] = 1.20258427009981157673687108412e-161
+gamma[81] = 7.86919862482934782731170709041e-164
+gamma[82] = 5.11754108002807492508441259314e-166
+gamma[83] = 3.30776990161701933067564778101e-168
+gamma[84] = 2.12509853350547681326143752578e-170
+gamma[85] = 1.35712178845902134987011924331e-172
+gamma[86] = 8.61549328039640654864383154847e-175
+gamma[87] = 5.43736045275627312375903125202e-177
+gamma[88] = 3.41167238995585301885016476695e-179
+gamma[89] = 2.12834395782006379236614237224e-181
+gamma[90] = 1.32018625010833756658215794042e-183
+gamma[91] = 8.14274112180114363939505801843e-186
+gamma[92] = 4.99425563812418335280629110193e-188
+gamma[93] = 3.04619624092640615578922345572e-190
+gamma[94] = 1.84779497666242061907342523294e-192
+gamma[95] = 1.11475620046540206605852966036e-194
+gamma[96] = 6.68893902851249093063549297285e-197
+gamma[97] = 3.99214614482408454254156060325e-199
+gamma[98] = 2.36999663847449515815530411666e-201
+gamma[99] = 1.39959059712316338153369795424e-203
+gamma[100] = 8.22215797322758892678051904031e-206
+gamma[101] = 4.80530891011848402415307559394e-208
+gamma[102] = 2.79399962249033406932062183899e-210
+gamma[103] = 1.61629051669989363182654130273e-212
+gamma[104] = 9.30290852101123526011198212057e-215
+gamma[105] = 5.32772993482691890747841878424e-217
+gamma[106] = 3.03603908888031443632756710284e-219
+gamma[107] = 1.72159702533136258094265418108e-221
+gamma[108] = 9.71475006278547867261640386878e-224
+gamma[109] = 5.45537309649773374964852358199e-226
+gamma[110] = 3.04878235317693765829336311304e-228
+gamma[111] = 1.69571826746787282689284450844e-230
+gamma[112] = 9.38690021570160939818657235367e-233
+gamma[113] = 5.17186987250938931343788442931e-235
+gamma[114] = 2.83625499900827392859679433815e-237
+gamma[115] = 1.54821199034126926734215851139e-239
+gamma[116] = 8.41236251984670056322777238157e-242
+gamma[117] = 4.55011776678161231698708006175e-244
+gamma[118] = 2.44995934313841714275647059987e-246
+gamma[119] = 1.31323049292610247851428365915e-248
+gamma[120] = 7.00781977177221828892185313731e-251
+gamma[121] = 3.72304776492838518180500789193e-253
+gamma[122] = 1.96925355895685210976247511677e-255
+gamma[123] = 1.03706372884496478514056383007e-257
+gamma[124] = 5.43780035251659056664939851300e-260
+gamma[125] = 2.83901782753722634442813225553e-262
+gamma[126] = 1.47588623273826394605284714514e-264
+gamma[127] = 7.63994468175873375341018726100e-267
+gamma[128] = 3.93815320316619701622832862613e-269
+gamma[129] = 2.02149362417533395996804193157e-271
+gamma[130] = 1.03333624579008500034803864126e-273
+gamma[131] = 5.26032338620551345969987859140e-276
+gamma[132] = 2.66683734584971146625125320507e-278
+gamma[133] = 1.34649754358983826124530261544e-280
+gamma[134] = 6.77097245048101441343230301384e-283
+gamma[135] = 3.39112898449861018490476594964e-285
+gamma[136] = 1.69159556192624684548199384440e-287
+gamma[137] = 8.40463327507488431322527072676e-290
+gamma[138] = 4.15931578497453774240951102456e-292
+gamma[139] = 2.05029647029228417235543407505e-294
+gamma[140] = 1.00673156846806206195051092411e-296
+gamma[141] = 4.92406113542590179066983095276e-299
+gamma[142] = 2.39914363733885967051899461799e-301
+gamma[143] = 1.16445399520667865058353875244e-303
+gamma[144] = 5.63030303143954820060513912466e-306
+gamma[145] = 2.71203009929647001099638855869e-308
+gamma[146] = 1.30142866605197013458767945897e-310
+gamma[147] = 6.22184324673181494138161004578e-313
+gamma[148] = 2.96346758649865962403280897192e-315
+gamma[149] = 1.40628448586010166446683890561e-317
+gamma[150] = 6.64886372272255155054758333887e-320
+gamma[151] = 3.13207504994054031297149069231e-322
+gamma[152] = 1.47006487374590518464513019521e-324
+gamma[153] = 6.87494889590754949127864144039e-327
+gamma[154] = 3.20361261525437457700943103789e-329
+gamma[155] = 1.48749965066467265704086562657e-331
+gamma[156] = 6.88222413001343241367891070342e-334
+gamma[157] = 3.17295869534582542715213753124e-336
+gamma[158] = 1.45771357321152916222407906018e-338
+gamma[159] = 6.67360590294294016227230713180e-341
+gamma[160] = 3.04465302843885396261861707765e-343
+gamma[161] = 1.38424245964535813862777670647e-345
+gamma[162] = 6.27179362047222241274085898719e-348
+gamma[163] = 2.83194371984482278553486632368e-350
+gamma[164] = 1.27437923940580512451897861973e-352
+gamma[165] = 5.71533674205335465608859016904e-355
+gamma[166] = 2.55459345325580773557578888827e-357
+gamma[167] = 1.13801054259847390032118672380e-359
+gamma[168] = 5.05269281634731866787088582527e-362
+gamma[169] = 2.23593484260463623259288244276e-364
+gamma[170] = 9.86194250593229702010643735158e-367
+gamma[171] = 4.33551028797250087778108411757e-369
+gamma[172] = 1.89976414621805216697924322851e-371
+gamma[173] = 8.29751538129409623973245503294e-374
+gamma[174] = 3.61237214198510908648271224773e-376
+gamma[175] = 1.56761710407673934523012379030e-378
+gamma[176] = 6.78105974912362952126945216971e-381
+gamma[177] = 2.92396468624342228775550007656e-383
+gamma[178] = 1.25681247964936477329689090411e-385
+gamma[179] = 5.38517001975958912363083281610e-388
+gamma[180] = 2.30020012938446639500615541655e-390
+gamma[181] = 9.79435237721035621434347381478e-393
+gamma[182] = 4.15753854346668006640173335453e-395
+gamma[183] = 1.75935628427478772466138292256e-397
+gamma[184] = 7.42223486095404915251869984957e-400
+gamma[185] = 3.12165812408310306852621941818e-402
+gamma[186] = 1.30891678860256610783166216811e-404
+gamma[187] = 5.47168431576316664660122576923e-407
+gamma[188] = 2.28043923461882948213736707409e-409
+gamma[189] = 9.47568406909087294183580845754e-412
+gamma[190] = 3.92557517632906124212084890722e-414
+gamma[191] = 1.62144673455258555223396972183e-416
+gamma[192] = 6.67751206295589435182063382375e-419
+gamma[193] = 2.74185934558462293854788162728e-421
+gamma[194] = 1.12253526235061756968091113856e-423
+gamma[195] = 4.58231478686995843287516951375e-426
+gamma[196] = 1.86511527706178486540317044478e-428
+gamma[197] = 7.56951302352082924400117494896e-431
+gamma[198] = 3.06321388146337662286944986024e-433
+gamma[199] = 1.23605953155003190184501986760e-435
+gamma[200] = 4.97347174050734181634274759689e-438
+gamma[201] = 1.99546256878453325582145280603e-440
+gamma[202] = 7.98356003187882256566313345777e-443
+gamma[203] = 3.18510716308593249115336408822e-445
+gamma[204] = 1.26715943863640709875359032832e-447
+gamma[205] = 5.02716924504874266591721989735e-450
+gamma[206] = 1.98886818906621170684590586262e-452
+gamma[207] = 7.84664353152317558030746247487e-455
+gamma[208] = 3.08718319445249435984714040270e-457
+gamma[209] = 1.21128550471610132475635319601e-459
+gamma[210] = 4.73959594265824486605946524884e-462
+gamma[211] = 1.84948917512091905422819260357e-464
+gamma[212] = 7.19752026814686965106745395061e-467
+gamma[213] = 2.79344121509696468253985466639e-469
+gamma[214] = 1.08125114607674170947108893785e-471
+gamma[215] = 4.17396549465444867095001340752e-474
+gamma[216] = 1.60698247904438463956688487024e-476
+gamma[217] = 6.17046915314526037566322101421e-479
+gamma[218] = 2.36305967630486021442779244087e-481
+gamma[219] = 9.02579190918765574455742803386e-484
+gamma[220] = 3.43838648887164933237768398063e-486
+FLAG (d,n)=(13,200): aberth_hyp=true conv=false sturm_count=11 sturm_hyp=false
+FLAG (d,n)=(14,141): aberth_hyp=true conv=false sturm_count=12 sturm_hyp=false
+FLAG (d,n)=(14,142): aberth_hyp=true conv=false sturm_count=12 sturm_hyp=false
+FLAG (d,n)=(14,143): aberth_hyp=true conv=false sturm_count=12 sturm_hyp=false
+FLAG (d,n)=(14,144): aberth_hyp=true conv=false sturm_count=12 sturm_hyp=false
+FLAG (d,n)=(14,145): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(14,146): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(14,147): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(14,148): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(14,149): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(14,150): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(14,151): aberth_hyp=true conv=false sturm_count=10 sturm_hyp=false
+FLAG (d,n)=(14,152): aberth_hyp=true conv=false sturm_count=10 sturm_hyp=false
+FLAG (d,n)=(14,153): aberth_hyp=true conv=false sturm_count=10 sturm_hyp=false
+FLAG (d,n)=(14,154): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(14,155): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(14,156): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(14,157): aberth_hyp=true conv=false sturm_count=10 sturm_hyp=false
+FLAG (d,n)=(14,158): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(14,159): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(14,160): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(14,161): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(14,162): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(14,163): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(14,164): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(14,165): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(14,166): aberth_hyp=true conv=false sturm_count=10 sturm_hyp=false
+FLAG (d,n)=(14,167): aberth_hyp=true conv=false sturm_count=1 sturm_hyp=false
+FLAG (d,n)=(14,168): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(14,169): aberth_hyp=true conv=false sturm_count=10 sturm_hyp=false
+FLAG (d,n)=(14,170): aberth_hyp=true conv=false sturm_count=10 sturm_hyp=false
+FLAG (d,n)=(14,171): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(14,172): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(14,173): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(14,174): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(14,175): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(14,176): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(14,177): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(14,178): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(14,179): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(14,180): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(14,181): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(14,182): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(14,183): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(14,184): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(14,185): aberth_hyp=true conv=false sturm_count=10 sturm_hyp=false
+FLAG (d,n)=(14,186): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(14,187): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(14,188): aberth_hyp=true conv=false sturm_count=1 sturm_hyp=false
+FLAG (d,n)=(14,189): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(14,190): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(14,191): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(14,192): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(14,193): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(14,194): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(14,195): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(14,196): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(14,197): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(14,198): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(14,199): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(14,200): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(15,127): aberth_hyp=true conv=false sturm_count=13 sturm_hyp=false
+FLAG (d,n)=(15,128): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(15,129): aberth_hyp=true conv=false sturm_count=13 sturm_hyp=false
+FLAG (d,n)=(15,130): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(15,131): aberth_hyp=true conv=false sturm_count=13 sturm_hyp=false
+FLAG (d,n)=(15,132): aberth_hyp=true conv=false sturm_count=13 sturm_hyp=false
+FLAG (d,n)=(15,133): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(15,134): aberth_hyp=true conv=false sturm_count=11 sturm_hyp=false
+FLAG (d,n)=(15,135): aberth_hyp=true conv=false sturm_count=13 sturm_hyp=false
+FLAG (d,n)=(15,136): aberth_hyp=true conv=false sturm_count=12 sturm_hyp=false
+FLAG (d,n)=(15,137): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(15,138): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(15,139): aberth_hyp=true conv=false sturm_count=13 sturm_hyp=false
+FLAG (d,n)=(15,140): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(15,141): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(15,142): aberth_hyp=true conv=false sturm_count=11 sturm_hyp=false
+FLAG (d,n)=(15,143): aberth_hyp=true conv=false sturm_count=12 sturm_hyp=false
+FLAG (d,n)=(15,144): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(15,145): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(15,146): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(15,147): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(15,148): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(15,149): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(15,150): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(15,151): aberth_hyp=true conv=false sturm_count=11 sturm_hyp=false
+FLAG (d,n)=(15,152): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(15,153): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(15,154): aberth_hyp=true conv=false sturm_count=11 sturm_hyp=false
+FLAG (d,n)=(15,155): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(15,156): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(15,157): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(15,158): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(15,159): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(15,160): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(15,161): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(15,162): aberth_hyp=true conv=false sturm_count=10 sturm_hyp=false
+FLAG (d,n)=(15,163): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(15,164): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(15,165): aberth_hyp=true conv=false sturm_count=10 sturm_hyp=false
+FLAG (d,n)=(15,166): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(15,167): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(15,168): aberth_hyp=true conv=false sturm_count=11 sturm_hyp=false
+FLAG (d,n)=(15,169): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(15,170): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(15,171): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(15,172): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(15,173): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(15,174): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(15,175): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(15,176): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(15,177): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(15,178): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(15,179): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(15,180): aberth_hyp=true conv=false sturm_count=1 sturm_hyp=false
+FLAG (d,n)=(15,181): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(15,182): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(15,183): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(15,184): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(15,185): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(15,186): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(15,187): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(15,188): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(15,189): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(15,190): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(15,191): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(15,192): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(15,193): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(15,194): aberth_hyp=true conv=false sturm_count=10 sturm_hyp=false
+FLAG (d,n)=(15,195): aberth_hyp=true conv=false sturm_count=1 sturm_hyp=false
+FLAG (d,n)=(15,196): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(15,197): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(15,198): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(15,199): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(15,200): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(16,72): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(16,73): aberth_hyp=true conv=false sturm_count=14 sturm_hyp=false
+FLAG (d,n)=(16,74): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(16,75): aberth_hyp=true conv=false sturm_count=12 sturm_hyp=false
+FLAG (d,n)=(16,76): aberth_hyp=true conv=false sturm_count=11 sturm_hyp=false
+FLAG (d,n)=(16,77): aberth_hyp=true conv=false sturm_count=1 sturm_hyp=false
+FLAG (d,n)=(16,78): aberth_hyp=true conv=false sturm_count=10 sturm_hyp=false
+FLAG (d,n)=(16,79): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(16,80): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(16,81): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(16,82): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(16,83): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(16,84): aberth_hyp=true conv=false sturm_count=10 sturm_hyp=false
+FLAG (d,n)=(16,85): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(16,86): aberth_hyp=true conv=false sturm_count=10 sturm_hyp=false
+FLAG (d,n)=(16,87): aberth_hyp=true conv=false sturm_count=10 sturm_hyp=false
+FLAG (d,n)=(16,88): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(16,89): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(16,90): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(16,91): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(16,92): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(16,93): aberth_hyp=true conv=false sturm_count=10 sturm_hyp=false
+FLAG (d,n)=(16,94): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(16,95): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(16,96): aberth_hyp=true conv=false sturm_count=10 sturm_hyp=false
+FLAG (d,n)=(16,97): aberth_hyp=true conv=false sturm_count=10 sturm_hyp=false
+FLAG (d,n)=(16,98): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(16,99): aberth_hyp=true conv=false sturm_count=11 sturm_hyp=false
+FLAG (d,n)=(16,100): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(16,101): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(16,102): aberth_hyp=true conv=false sturm_count=10 sturm_hyp=false
+FLAG (d,n)=(16,103): aberth_hyp=true conv=false sturm_count=10 sturm_hyp=false
+FLAG (d,n)=(16,104): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(16,105): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(16,106): aberth_hyp=true conv=false sturm_count=10 sturm_hyp=false
+FLAG (d,n)=(16,107): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(16,108): aberth_hyp=true conv=false sturm_count=10 sturm_hyp=false
+FLAG (d,n)=(16,109): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(16,110): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(16,111): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(16,112): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(16,113): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(16,114): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(16,115): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(16,116): aberth_hyp=true conv=false sturm_count=10 sturm_hyp=false
+FLAG (d,n)=(16,117): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(16,118): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(16,119): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(16,120): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(16,121): aberth_hyp=true conv=false sturm_count=10 sturm_hyp=false
+FLAG (d,n)=(16,122): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(16,123): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(16,124): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(16,125): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(16,126): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(16,127): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(16,128): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(16,129): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(16,130): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(16,131): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(16,132): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(16,133): aberth_hyp=true conv=false sturm_count=10 sturm_hyp=false
+FLAG (d,n)=(16,134): aberth_hyp=true conv=false sturm_count=10 sturm_hyp=false
+FLAG (d,n)=(16,135): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(16,136): aberth_hyp=true conv=false sturm_count=10 sturm_hyp=false
+FLAG (d,n)=(16,137): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(16,138): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(16,139): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(16,140): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(16,141): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(16,142): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(16,143): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(16,144): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(16,145): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(16,146): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(16,147): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(16,148): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(16,149): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(16,150): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(16,151): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(16,152): aberth_hyp=true conv=false sturm_count=10 sturm_hyp=false
+FLAG (d,n)=(16,153): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(16,154): aberth_hyp=true conv=false sturm_count=10 sturm_hyp=false
+FLAG (d,n)=(16,155): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(16,156): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(16,157): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(16,158): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(16,159): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(16,160): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(16,161): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(16,162): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(16,163): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(16,164): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(16,165): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(16,166): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(16,167): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(16,168): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(16,169): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(16,170): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(16,171): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(16,172): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(16,173): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(16,174): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(16,175): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(16,176): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(16,177): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(16,178): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(16,179): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(16,180): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(16,181): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(16,182): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(16,183): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(16,184): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(16,185): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(16,186): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(16,187): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(16,188): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(16,189): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(16,190): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(16,191): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(16,192): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(16,193): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(16,194): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(16,195): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(16,196): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(16,197): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(16,198): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(16,199): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(16,200): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(17,50): aberth_hyp=true conv=false sturm_count=15 sturm_hyp=false
+FLAG (d,n)=(17,51): aberth_hyp=true conv=false sturm_count=1 sturm_hyp=false
+FLAG (d,n)=(17,52): aberth_hyp=true conv=false sturm_count=15 sturm_hyp=false
+FLAG (d,n)=(17,53): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(17,54): aberth_hyp=true conv=false sturm_count=13 sturm_hyp=false
+FLAG (d,n)=(17,55): aberth_hyp=true conv=false sturm_count=13 sturm_hyp=false
+FLAG (d,n)=(17,56): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(17,57): aberth_hyp=true conv=false sturm_count=1 sturm_hyp=false
+FLAG (d,n)=(17,58): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(17,59): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(17,60): aberth_hyp=true conv=false sturm_count=11 sturm_hyp=false
+FLAG (d,n)=(17,61): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(17,62): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(17,63): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(17,64): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(17,65): aberth_hyp=true conv=false sturm_count=11 sturm_hyp=false
+FLAG (d,n)=(17,66): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(17,67): aberth_hyp=true conv=false sturm_count=1 sturm_hyp=false
+FLAG (d,n)=(17,68): aberth_hyp=true conv=false sturm_count=11 sturm_hyp=false
+FLAG (d,n)=(17,69): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(17,70): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(17,71): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(17,72): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(17,73): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(17,74): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(17,75): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(17,76): aberth_hyp=true conv=false sturm_count=1 sturm_hyp=false
+FLAG (d,n)=(17,77): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(17,78): aberth_hyp=true conv=false sturm_count=11 sturm_hyp=false
+FLAG (d,n)=(17,79): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(17,80): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(17,81): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(17,82): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(17,83): aberth_hyp=true conv=false sturm_count=11 sturm_hyp=false
+FLAG (d,n)=(17,84): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(17,85): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(17,86): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(17,87): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(17,88): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(17,89): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(17,90): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(17,91): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(17,92): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(17,93): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(17,94): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(17,95): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(17,96): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(17,97): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(17,98): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(17,99): aberth_hyp=true conv=false sturm_count=1 sturm_hyp=false
+FLAG (d,n)=(17,100): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(17,101): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(17,102): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(17,103): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(17,104): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(17,105): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(17,106): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(17,107): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(17,108): aberth_hyp=true conv=false sturm_count=1 sturm_hyp=false
+FLAG (d,n)=(17,109): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(17,110): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(17,111): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(17,112): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(17,113): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(17,114): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(17,115): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(17,116): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(17,117): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(17,118): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(17,119): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(17,120): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(17,121): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(17,122): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(17,123): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(17,124): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(17,125): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(17,126): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(17,127): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(17,128): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(17,129): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(17,130): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(17,131): aberth_hyp=true conv=false sturm_count=1 sturm_hyp=false
+FLAG (d,n)=(17,132): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(17,133): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(17,134): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(17,135): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(17,136): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(17,137): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(17,138): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(17,139): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(17,140): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(17,141): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(17,142): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(17,143): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(17,144): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(17,145): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(17,146): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(17,147): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(17,148): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(17,149): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(17,150): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(17,151): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(17,152): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(17,153): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(17,154): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(17,155): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(17,156): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(17,157): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(17,158): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(17,159): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(17,160): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(17,161): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(17,162): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(17,163): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(17,164): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(17,165): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(17,166): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(17,167): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(17,168): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(17,169): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(17,170): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(17,171): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(17,172): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(17,173): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(17,174): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(17,175): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(17,176): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(17,177): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(17,178): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(17,179): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(17,180): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(17,181): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(17,182): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(17,183): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(17,184): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(17,185): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(17,186): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(17,187): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(17,188): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(17,189): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(17,190): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(17,191): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(17,192): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(17,193): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(17,194): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(17,195): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(17,196): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(17,197): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(17,198): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(17,199): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(17,200): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,37): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(18,38): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(18,39): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(18,40): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(18,41): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(18,42): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(18,43): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(18,44): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,45): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(18,46): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(18,47): aberth_hyp=true conv=false sturm_count=14 sturm_hyp=false
+FLAG (d,n)=(18,48): aberth_hyp=true conv=false sturm_count=12 sturm_hyp=false
+FLAG (d,n)=(18,49): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(18,50): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(18,51): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(18,52): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(18,53): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(18,54): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(18,55): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(18,56): aberth_hyp=true conv=false sturm_count=12 sturm_hyp=false
+FLAG (d,n)=(18,57): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,58): aberth_hyp=true conv=false sturm_count=1 sturm_hyp=false
+FLAG (d,n)=(18,59): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(18,60): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(18,61): aberth_hyp=true conv=false sturm_count=12 sturm_hyp=false
+FLAG (d,n)=(18,62): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(18,63): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(18,64): aberth_hyp=true conv=false sturm_count=10 sturm_hyp=false
+FLAG (d,n)=(18,65): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(18,66): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(18,67): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(18,68): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(18,69): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,70): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(18,71): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(18,72): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(18,73): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,74): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(18,75): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(18,76): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(18,77): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(18,78): aberth_hyp=true conv=false sturm_count=0 sturm_hyp=false
+FLAG (d,n)=(18,79): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(18,80): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(18,81): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(18,82): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,83): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(18,84): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(18,85): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(18,86): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(18,87): aberth_hyp=true conv=false sturm_count=10 sturm_hyp=false
+FLAG (d,n)=(18,88): aberth_hyp=true conv=false sturm_count=1 sturm_hyp=false
+FLAG (d,n)=(18,89): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,90): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,91): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(18,92): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(18,93): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(18,94): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,95): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(18,96): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(18,97): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(18,98): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(18,99): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(18,100): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(18,101): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(18,102): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(18,103): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,104): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(18,105): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(18,106): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,107): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,108): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,109): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,110): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,111): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,112): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(18,113): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(18,114): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(18,115): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,116): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,117): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(18,118): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(18,119): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(18,120): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(18,121): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(18,122): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(18,123): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,124): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,125): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,126): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(18,127): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(18,128): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(18,129): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(18,130): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(18,131): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(18,132): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(18,133): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(18,134): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(18,135): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(18,136): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(18,137): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(18,138): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,139): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(18,140): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,141): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(18,142): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(18,143): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,144): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,145): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,146): aberth_hyp=true conv=false sturm_count=1 sturm_hyp=false
+FLAG (d,n)=(18,147): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,148): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,149): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(18,150): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,151): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,152): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,153): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(18,154): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(18,155): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(18,156): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(18,157): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(18,158): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,159): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,160): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,161): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,162): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(18,163): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(18,164): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,165): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(18,166): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,167): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(18,168): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,169): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(18,170): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,171): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(18,172): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,173): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(18,174): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(18,175): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(18,176): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(18,177): aberth_hyp=true conv=false sturm_count=0 sturm_hyp=false
+FLAG (d,n)=(18,178): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(18,179): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,180): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,181): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(18,182): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,183): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(18,184): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(18,185): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,186): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(18,187): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(18,188): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,189): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(18,190): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(18,191): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,192): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(18,193): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,194): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,195): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(18,196): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(18,197): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(18,198): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(18,199): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(18,200): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(19,31): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(19,32): aberth_hyp=true conv=false sturm_count=17 sturm_hyp=false
+FLAG (d,n)=(19,33): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(19,34): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(19,35): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(19,36): aberth_hyp=true conv=false sturm_count=15 sturm_hyp=false
+FLAG (d,n)=(19,37): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(19,38): aberth_hyp=true conv=false sturm_count=15 sturm_hyp=false
+FLAG (d,n)=(19,39): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(19,40): aberth_hyp=true conv=false sturm_count=13 sturm_hyp=false
+FLAG (d,n)=(19,41): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(19,42): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(19,43): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(19,44): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(19,45): aberth_hyp=true conv=false sturm_count=11 sturm_hyp=false
+FLAG (d,n)=(19,46): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(19,47): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(19,48): aberth_hyp=true conv=false sturm_count=1 sturm_hyp=false
+FLAG (d,n)=(19,49): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(19,50): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(19,51): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(19,52): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(19,53): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(19,54): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(19,55): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(19,56): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(19,57): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(19,58): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(19,59): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(19,60): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(19,61): aberth_hyp=true conv=false sturm_count=10 sturm_hyp=false
+FLAG (d,n)=(19,62): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(19,63): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(19,64): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(19,65): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(19,66): aberth_hyp=true conv=false sturm_count=1 sturm_hyp=false
+FLAG (d,n)=(19,67): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(19,68): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(19,69): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(19,70): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(19,71): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(19,72): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(19,73): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(19,74): aberth_hyp=true conv=false sturm_count=1 sturm_hyp=false
+FLAG (d,n)=(19,75): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(19,76): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(19,77): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(19,78): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(19,79): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(19,80): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(19,81): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(19,82): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(19,83): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(19,84): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(19,85): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(19,86): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(19,87): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(19,88): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(19,89): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(19,90): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(19,91): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(19,92): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(19,93): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(19,94): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(19,95): aberth_hyp=true conv=false sturm_count=1 sturm_hyp=false
+FLAG (d,n)=(19,96): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(19,97): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(19,98): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(19,99): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(19,100): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(19,101): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(19,102): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(19,103): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(19,104): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(19,105): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(19,106): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(19,107): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(19,108): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(19,109): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(19,110): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(19,111): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(19,112): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(19,113): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(19,114): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(19,115): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(19,116): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(19,117): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(19,118): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(19,119): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(19,120): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(19,121): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(19,122): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(19,123): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(19,124): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(19,125): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(19,126): aberth_hyp=true conv=false sturm_count=10 sturm_hyp=false
+FLAG (d,n)=(19,127): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(19,128): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(19,129): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(19,130): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(19,131): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(19,132): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(19,133): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(19,134): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(19,135): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(19,136): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(19,137): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(19,138): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(19,139): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(19,140): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(19,141): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(19,142): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(19,143): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(19,144): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(19,145): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(19,146): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(19,147): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(19,148): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(19,149): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(19,150): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(19,151): aberth_hyp=true conv=false sturm_count=1 sturm_hyp=false
+FLAG (d,n)=(19,152): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(19,153): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(19,154): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(19,155): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(19,156): aberth_hyp=true conv=false sturm_count=1 sturm_hyp=false
+FLAG (d,n)=(19,157): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(19,158): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(19,159): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(19,160): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(19,161): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(19,162): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(19,163): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(19,164): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(19,165): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(19,166): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(19,167): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(19,168): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(19,169): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(19,170): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(19,171): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(19,172): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(19,173): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(19,174): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(19,175): aberth_hyp=true conv=false sturm_count=1 sturm_hyp=false
+FLAG (d,n)=(19,176): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(19,177): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(19,178): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(19,179): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(19,180): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(19,181): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(19,182): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(19,183): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(19,184): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(19,185): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(19,186): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(19,187): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(19,188): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(19,189): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(19,190): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(19,191): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(19,192): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(19,193): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(19,194): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(19,195): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(19,196): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(19,197): aberth_hyp=true conv=false sturm_count=1 sturm_hyp=false
+FLAG (d,n)=(19,198): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(19,199): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(19,200): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(20,18): aberth_hyp=true conv=false sturm_count=18 sturm_hyp=false
+FLAG (d,n)=(20,19): aberth_hyp=true conv=false sturm_count=10 sturm_hyp=false
+FLAG (d,n)=(20,20): aberth_hyp=true conv=false sturm_count=14 sturm_hyp=false
+FLAG (d,n)=(20,21): aberth_hyp=true conv=false sturm_count=1 sturm_hyp=false
+FLAG (d,n)=(20,22): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(20,23): aberth_hyp=true conv=false sturm_count=16 sturm_hyp=false
+FLAG (d,n)=(20,24): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(20,25): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(20,26): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(20,27): aberth_hyp=true conv=false sturm_count=12 sturm_hyp=false
+FLAG (d,n)=(20,28): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(20,29): aberth_hyp=true conv=false sturm_count=12 sturm_hyp=false
+FLAG (d,n)=(20,30): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(20,31): aberth_hyp=true conv=false sturm_count=11 sturm_hyp=false
+FLAG (d,n)=(20,32): aberth_hyp=true conv=false sturm_count=11 sturm_hyp=false
+FLAG (d,n)=(20,33): aberth_hyp=true conv=false sturm_count=10 sturm_hyp=false
+FLAG (d,n)=(20,34): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(20,35): aberth_hyp=true conv=false sturm_count=12 sturm_hyp=false
+FLAG (d,n)=(20,36): aberth_hyp=true conv=false sturm_count=10 sturm_hyp=false
+FLAG (d,n)=(20,37): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(20,38): aberth_hyp=true conv=false sturm_count=12 sturm_hyp=false
+FLAG (d,n)=(20,39): aberth_hyp=true conv=false sturm_count=11 sturm_hyp=false
+FLAG (d,n)=(20,40): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(20,41): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(20,42): aberth_hyp=true conv=false sturm_count=10 sturm_hyp=false
+FLAG (d,n)=(20,43): aberth_hyp=true conv=false sturm_count=10 sturm_hyp=false
+FLAG (d,n)=(20,44): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(20,45): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(20,46): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(20,47): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(20,48): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(20,49): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(20,50): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(20,51): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(20,52): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(20,53): aberth_hyp=true conv=false sturm_count=9 sturm_hyp=false
+FLAG (d,n)=(20,54): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(20,55): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(20,56): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(20,57): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(20,58): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(20,59): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(20,60): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(20,61): aberth_hyp=true conv=false sturm_count=10 sturm_hyp=false
+FLAG (d,n)=(20,62): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(20,63): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(20,64): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(20,65): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(20,66): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(20,67): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(20,68): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(20,69): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(20,70): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(20,71): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(20,72): aberth_hyp=true conv=false sturm_count=10 sturm_hyp=false
+FLAG (d,n)=(20,73): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(20,74): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(20,75): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(20,76): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(20,77): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(20,78): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(20,79): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(20,80): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(20,81): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(20,82): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(20,83): aberth_hyp=true conv=false sturm_count=0 sturm_hyp=false
+FLAG (d,n)=(20,84): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(20,85): aberth_hyp=true conv=false sturm_count=10 sturm_hyp=false
+FLAG (d,n)=(20,86): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(20,87): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(20,88): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(20,89): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(20,90): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(20,91): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(20,92): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(20,93): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(20,94): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(20,95): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(20,96): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(20,97): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(20,98): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(20,99): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(20,100): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(20,101): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(20,102): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(20,103): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(20,104): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(20,105): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(20,106): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(20,107): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(20,108): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(20,109): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(20,110): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(20,111): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(20,112): aberth_hyp=true conv=false sturm_count=1 sturm_hyp=false
+FLAG (d,n)=(20,113): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(20,114): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(20,115): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(20,116): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(20,117): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(20,118): aberth_hyp=true conv=false sturm_count=0 sturm_hyp=false
+FLAG (d,n)=(20,119): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(20,120): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(20,121): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(20,122): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(20,123): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(20,124): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(20,125): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(20,126): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(20,127): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(20,128): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(20,129): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(20,130): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(20,131): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(20,132): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(20,133): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(20,134): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(20,135): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(20,136): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(20,137): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(20,138): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(20,139): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(20,140): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(20,141): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(20,142): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(20,143): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(20,144): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(20,145): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(20,146): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(20,147): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(20,148): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(20,149): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(20,150): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(20,151): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(20,152): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(20,153): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(20,154): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(20,155): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(20,156): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(20,157): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(20,158): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(20,159): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(20,160): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(20,161): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(20,162): aberth_hyp=true conv=false sturm_count=1 sturm_hyp=false
+FLAG (d,n)=(20,163): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(20,164): aberth_hyp=true conv=false sturm_count=8 sturm_hyp=false
+FLAG (d,n)=(20,165): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(20,166): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(20,167): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(20,168): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(20,169): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(20,170): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(20,171): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(20,172): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(20,173): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(20,174): aberth_hyp=true conv=false sturm_count=1 sturm_hyp=false
+FLAG (d,n)=(20,175): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(20,176): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(20,177): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(20,178): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(20,179): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(20,180): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(20,181): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(20,182): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(20,183): aberth_hyp=true conv=false sturm_count=7 sturm_hyp=false
+FLAG (d,n)=(20,184): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(20,185): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(20,186): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(20,187): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+FLAG (d,n)=(20,188): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(20,189): aberth_hyp=true conv=false sturm_count=3 sturm_hyp=false
+FLAG (d,n)=(20,190): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(20,191): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(20,192): aberth_hyp=true conv=false sturm_count=5 sturm_hyp=false
+FLAG (d,n)=(20,193): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(20,194): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(20,195): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(20,196): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(20,197): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(20,198): aberth_hyp=true conv=false sturm_count=2 sturm_hyp=false
+FLAG (d,n)=(20,199): aberth_hyp=true conv=false sturm_count=6 sturm_hyp=false
+FLAG (d,n)=(20,200): aberth_hyp=true conv=false sturm_count=4 sturm_hyp=false
+
+onset literal n0*(d): [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+onset drift-1e-2: [0, 0, 13, 23, 32, 39, 46, 52, 58, 64, 69, 74, 79, 84, 200, 200, 200, 200, 200, 200, 200]
+onset drift-1e-3: [0, 0, 77, 122, 156, 186, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200]
+region size eps=1e-2: cumulative [0, 13, 36, 68, 107, 153, 205, 263, 327, 396, 470, 549, 633, 833, 1033, 1233, 1433, 1633, 1833, 2033]
+region size eps=1e-3: cumulative [0, 77, 199, 355, 541, 741, 941, 1141, 1341, 1541, 1741, 1941, 2141, 2341, 2541, 2741, 2941, 3141, 3341, 3541]
+fit eps=1e-2: n0 ~ 5.130 d**1.233, R2=0.9325
+fit eps=1e-3: n0 ~ 95.322 d**0.291, R2=0.6262

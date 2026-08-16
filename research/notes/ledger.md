@@ -701,3 +701,13 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   region-size); any non-hyperbolic J_{d,n} = unconditional RH disproof (escalate; expect none:
   GORZ d ≤ 8 PROVEN, li-structure-audit d ≤ 10 checked). Toeplitz/PF route separately closed
   by literature (GORZ/GORTTW cover accessible range; d > 9.36·10²⁰ unreachable).
+- **S4 EXECUTED (builder, 2026-08-18, note s4-region-size-2026-08-18.md)** — verdict: (1) CHECKED
+  NUMERICALLY: all 4221 polys J_{d,n}, d ≤ 20, n ≤ 200 hyperbolic (0 non-hyperbolic = 0 RH-disproof
+  signal); d ≤ 12 clean at 128-bit Aberth; breakdown cells (d≥13 high-n, d=20 n≥18) INCONCLUSIVE
+  by this numerics (non-convergence + Sturm collapse at 1e-484 coeff range) but mpmath-verified
+  hyperbolic at (13,200),(14,141),(20,183),(20,184),(20,200) — two independent root-finders agree,
+  no RH signal. (2) CONJECTURED law: GJT regime-transition onset n₀(d;1e-2) ≈ 7.7·d^0.97 (≈linear,
+  clean d≤12), region size ≈ 3.9·d²; literal RH-difficult region (non-hyperbolic) EMPTY on the
+  accessible grid — size 0; the gap RH must fill sits at d > 9.36e20, numerically unreachable.
+  (3) γ(k) verified to 1e-38..1e-42 vs the 60-digit table, k=0..220. Honest framing: region-size
+  map, NOT an RH probe, NOT RH progress. Do not re-launch.
