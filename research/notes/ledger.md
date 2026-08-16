@@ -884,3 +884,12 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   one-way sufficient condition, or does the class contain non-LP members? Scan b_k =
   k^{-Ck}(ln(k+2))^{-Dk} over (C,D) grid, find the boundary curve D*(C), test whether it
   passes through (2,2), locate Xi's certified profile relative to it. Rust-only, coarse-first.
+- **COORDINATOR REFEREE: deficit-2 log-profile class PROVEN non-LP (2026-08-18, before scan finished)**:
+  The S1 note's PROVEN-non-LP perturbed families b_k = k^{-2k}(1+eps*cos(omega*ln k)) for
+  (eps,omega)=(0.01,5),(0.05,3),(0.05,5) — certified genuine non-real zeros (|t|=6.480, |F|=1.6e-13,
+  etc.) — satisfy t_k*k >= 2 - 2/ln k for ALL k up to 2e5 (zero violations). Convention verified
+  against S1's reported margins (1.8687, 1.7381 — EXACT match; t = 1-exp(-d), d=2*lb[k]-lb[k-1]-lb[k+1]).
+  ⟹ The deficit-2 log-profile {t_k*k >= 2-2/ln k} is NOT LP-consistent: it contains non-LP members.
+  The log-profile is consistency data, NOT a sufficient condition. The probe's central question
+  was answered from EXISTING S1 data — a near-miss on re-dispatching a closed question (sign
+  convention obscured it). Agent 07db05a8 steered to document-only (D*(C) map for the record).

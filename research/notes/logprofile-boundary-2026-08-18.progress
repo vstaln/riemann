@@ -1,0 +1,6 @@
+t=1 dirs+notes read: ls research/notes, tools; wc of s1+g02 notes (185+53 lines)
+t=4 read s1+g02 notes, coordinator sign correction (deficit-2 = (2,-2) not (2,2)); partial note written
+t=5 read probe.rs: t_k=1-exp(d2 log b_k), margin=t_k*(k+1); Aberth on R_N(w), trust |t|<=0.7S
+t=6 read probe3.rs (full-series Newton); wrote tools/logprofile/main.rs (scan binary, modes coarse/refine/point/xi)
+t=7 build failed E0601, diagnosing
+t=8 ran decisive point (2,-2) + coarse grid; outputs saved
