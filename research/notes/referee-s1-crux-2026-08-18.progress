@@ -1,0 +1,9 @@
+t=1 started: hostile blind referee on claim 456a3a85 (S1-saddle t_k closure)
+t=2 listed s1saddle src
+t=3 read main.rs part 2
+t=4 built+ran probe
+t=5 ran independent check
+t=6 ran independent check v2
+t=7 read ledger tail
+t=8 verdict written + ledger appended
+t=9 verified ledger + cleaned binary
