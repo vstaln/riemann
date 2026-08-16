@@ -137,7 +137,7 @@
     {
       "id": "barrierzoo-retrotest",
       "verdict": "CONSISTENCY-ONLY (CONFIRMED)",
-      "claim": "barrier-zoo retro-test of the campaign's own PROVEN identities against the RH-false DH world: all-positive Taylor coeffs do NOT separate (DH all-positive); deficit-2 log-profile SATISFIES t_k*k>=2-2/ln k in DH world (trusted k=2..5, zero violations) \u2014 proves too much, consistency-only (3rd independent line); M' Hankel det2>0 not separating at first minor. No new lever.",
+      "claim": "barrier-zoo retro-test of the campaign's own PROVEN identities against the RH-false DH world: all-positive Taylor coeffs do NOT separate (DH all-positive); deficit-2 log-profile SATISFIES t_k*k>=2-2/ln k in DH world (trusted k=2..5, zero violations) \u2014 proves too much, consistency-only (3rd independent line); M' Hankel det2>0 not separating at first minor. No new lever. Epstein addendum: closest analogue (positive theta coeffs, self-dual FE) ALSO satisfies deficit-2 on entire part E(s) (gaps +1.60/+0.68/+0.40/+0.29, zero violations); NEW fact: Xi_Q meromorphic not entire (poles s=0,1). Two RH-false worlds confirm.",
       "trap_class": "log-profile-margin-2",
       "file": "research/notes/barrierzoo-retrotest-2026-08-18.md"
     }
