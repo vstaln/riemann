@@ -860,3 +860,11 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   the separability question: does fixed-n0 cover measure-zero of the (n0,d) lattice (⟹
   GJT-completion trap airtight)? Forecast: PROVEN-stuck via renormalization destroying Hankel
   TP + fixed-n0 measure-zero. Rust-only, honest labels.
+
+## graph-engineering INFRA (user request)
+- **closure-DAG built (tools/closure_dag/)**: persistent JSON lever-roster + typed edge graph
+  (refutes/subsumes/depends_on/implies_trap) + trap-classes + query.py oracle. Makes "is this
+  idea already dead?" a graph query. Sanity-verified (catches "C=1.5 margin inequality" as S1-trap).
+  NOTE: NO-duplicate rule + RH-trap detection are now queriable, not prose-grep. The LangGraph
+  orchestrator existed since wave-8 but went stale under manual dispatch; the closure-DAG is the
+  mathematically-weighted graph artifact (process graph alone would not change verdicts).
