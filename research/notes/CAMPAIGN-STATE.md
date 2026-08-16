@@ -490,3 +490,20 @@ zero evidence about RH — charter firewall).
   family in the classical toolbox, all 7 foreign transports, AND the campaign's own structural
   identities are PROVEN consistency-only or closed. The GJT-completion decomposition remains the
   sole structural opening (hard per Farmer). Closure-DAG: 19 levers / 16 edges / 6 traps.
+
+## 2026-08-18 (final addendum) — barrier-zoo applied to campaign's own identities, TWO RH-false worlds
+- **Epstein class-2 world (6142a9a)**: the closest structural analogue to Xi (positive theta
+  coefficients, self-dual FE, DH-1936 off-line zeros) SATISFIES the deficit-2 log-profile on
+  its entire part E(s) = Xi_Q − [1/(s−1) − 1/s] (trusted k=2..5, gaps +1.60/+0.68/+0.40/+0.29,
+  zero violations) and has all-positive Taylor coefficients — same verdict as the DH world.
+  NEW structural fact: Xi_Q is meromorphic (poles s=0,1), not entire — the analogy to Xi
+  stops before the coefficient structure starts.
+- **Final verdict on the deficit-2 log-profile: consistency data, PROVEN too much, by the
+  campaign's own barrier-zoo standard, on TWO independent RH-false worlds.** Three independent
+  lines close the log-profile lever (S1 perturbations; smooth (2,−2); now both model worlds).
+  28 levers closed. No disproof anywhere. Closure-DAG 19 levers/16 edges/6 traps.
+- Honest position unchanged and now maximally hardened: every sufficient-condition family in
+  the classical toolbox, all 7 foreign-field transports, AND the campaign's own PROVEN
+  structural identities are consistency-only or closed. A proof of RH requires genuinely new
+  mathematics — the search continues under the persistence hook, the GJT-completion
+  decomposition remains the sole (hard) structural opening.
