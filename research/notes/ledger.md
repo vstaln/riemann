@@ -427,3 +427,8 @@ Briefs: wave8-briefs-direct-RH-2026-08-17.md. Goal reset to direct-RH mission.
   0.007612214 but global 0.006038 < 0.006222); m=171 exact bound-chain optimum (B(m)=Φ_m(ε(m−6))
   m-dependent; sweep m=20..400 peaks at 171). Record 0.673481 = certified ceiling of redistribution
   class. eps>0.0062 impossible in-class. File: coboundary-reopt-2026-08-18.md.
+- **8D follow-up (staged, untested)**: k=18/19/20 @ t=40 INCONCLUSIVE (f64 cannot resolve ~30-order
+  Bell cancellation; u-derivs ~1e-12-accurate, B_k~0.07 from 1e15-1e18-scale terms). Resolving needs
+  a ~200-bit MPFR (rug) port of zeta_em_ders machinery — ports directly per wave8d-lk-zeta-direct
+  note. Not attempted (out of budget). Low priority: L_k≥0 is RH-necessary with zero evidential
+  weight; k≤8 coverage is clean and positive.
