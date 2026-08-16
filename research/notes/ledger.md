@@ -765,3 +765,13 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   beyond t_k·k→2: **t_k·k = 2 − 2/ln k + O(ln ln k/ln²k)**. Free-fit C=1.87–1.97 = overfit
   (4 params/9 pts, oscillating signs); fixed C=2 rmse 1.3e-3 consistent. INFRA delivered;
   no RH claim (as briefed).
+- **fresh-corners hunt CLOSED (2026-08-18, 924e1d6b)**: corners (a) theta-structure
+  (M_k = G(2k+1), G = Riemann's 1859 Mellin integral ⟹ FE restated; D=2x²∂²+3x∂ annihilates
+  x^{−1/2} — NEW but RH-inert), (b) exact b_k (already g02), (c) N=700 dip (structure-only),
+  (e) J-fraction (AUTOMATIC positive from Φ>0 ⟹ Stieltjes — same closed foster/stieltjes
+  object), measure-TP (closed alternating), Padé (⟺ LP ⟺ RH) — ALL NOT FUNDABLE. **Only
+  fundable avenue: (d) ξ′-two-trace distinct transport (0.92919 ξ′-distinct Lean PROVEN →
+  ζ distinct > 0.836740?) — a RECORD avenue, zero RH evidence (firewall binding).**
+- **(d) transport (f2b4d846)** — read-class overlap analysis (two-trace vs {mean+in-band
+  F+integrality} single-read class) + ζ distinct two-window re-run on cached γ's; verdict:
+  new record if > 0.836740, ceiling-confirmed if capped. RECORD probe, no RH claims.
