@@ -434,3 +434,24 @@ zero evidence about RH — charter firewall).
   xi'-transport, GJT-completion, lit-sweep 2023-26 empty). A proof of RH requires genuinely
   new mathematics outside the classical toolbox; the search continues (persistence hook) with
   honest labels. Record side terminal (0.673481/0.836740).
+
+## 2026-08-18 (late) — margin/approach-rate family FULLY EXHAUSTED (26 levers)
+- **logprofile-boundary (07db05a8) — LEVER CLOSED, doubly-confirmed**: the deficit-2 log-profile
+  class {t_k*k >= 2-2/ln k} is NOT LP-consistent. Two independent lines: (1) S1's PROVEN-non-LP
+  log-periodic perturbations b_k=k^{-2k}(1+eps cos(omega ln k)) lie INSIDE the class (t_k*k >=
+  2-2/ln k for all k<=2e5, convention exact-matched); (2) the smooth member (2,-2)=k^{-2k}(ln(k+2))^{2k}
+  is itself NON-LP (genuine zeros |t|=4.472..11.019, |F|<=2e-10; min t_k*(k+1)=1.3668; in class).
+  Boundary D*(C)~3.7-2.2C (fuzzy ±0.5), does NOT pass through (2,-2). Xi's certified profile sits
+  BELOW the curve (deficit D(k)=2.24-2.33 -> 2 from above) — Xi not covered by the dead class.
+  **The entire margin/approach-rate sufficient-condition family is now exhausted**: constant margins
+  (S1, dead), decaying profiles (log-profile, dead), variable rates (this). Only the full Jensen
+  coefficient structure remains — and that is the GJT-completion trap (⟺ RH).
+- **Coordinator referee caught a near-miss**: the log-profile question was answerable from EXISTING
+  S1 data; the sign convention (t=1-exp(-d) vs t=1-exp(d)) briefly obscured it. Lesson recorded:
+  verify the t_k convention from source (tools/s1margin/probe.rs margin_stats) before any margin claim.
+- **Closure-DAG updated**: 16 levers, 13 edges, 6 trap classes (added log-profile-margin-2).
+- **Honest position after 26 levers**: every sufficient-condition family in the classical toolbox
+  (constant margin, decaying margin, variable rate, kernel-TP2, moment-transfer, Jensen finite-degree,
+  xi'-transport, lit-sweep 2023-26 empty) is PROVEN closed. RH remains unproven; no disproof anywhere;
+  record 0.673481/0.836740 stands certified. The search continues (persistence hook) — the next
+  advance requires genuinely new mathematics outside the coefficient/margin/Jensen toolbox.
