@@ -575,3 +575,40 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
 - **S2-PNT (10e2afd6)** — the prime-counting side (never probed): explicit-formula ψ(x)−x
   envelope vs √x(log x)^{1/2+ε} using the 924,715 cached zeros (8A), planted-zero control
   MUST exceed the √x·log x band, literature check decides one-way (von Koch) vs trap (⟺ RH).
+  RESULT (2026-08-18): **one-way, NOT trap; known-theorem-restated, CLOSED as lever.** Rust probe
+  (tools/s2pnt/, run2.out): real ψ(x)−x envelope with the 924k cached zeros is FLAT — E(x) ≤
+  0.49√x for x ≤ 3×10^11, max E/√(log x) = 0.126 (8× under the √x(log x)^{1/2} band), max
+  E/log x = 0.041 (24× under von Koch √x·log x); truncation certified (|full−100k| ≤ 1.2e-2
+  E-units at 3e11). Planted-zero controls (8A pattern, (β,γ1)+(1−β,γ1)): β=0.7 fires (band
+  crossed at x=4.5e7, ratio 4.83), β=0.65 fires (1.9e10), β=0.6 never in range (needs x~1e16;
+  detection threshold β−1/2 ≳ 0.13 at T=5.6e5, CONJECTURED); envelope exponent δ recovers
+  β−1/2 to ±0.02. Literature (PROVEN from corpus): no RH-conditional O(√x(log x)^{1/2+ε}) PNT
+  bound cited anywhere in research/; von Koch's O(√x log x) is the best cited ⟹ S2 is one-way.
+  BUT forward direction is itself PROVEN classical (√x(log x)^{1/2+ε}=O(x^{1/2+ε}) + von Koch
+  criterion π=li+O(x^{1/2+ε}) ⟺ RH) and the hypothesis is strictly stronger than RH ⟹ S2 =
+  known theorem restated (class 1), provability nil. Discriminator family (prime-counting side)
+  validated and reusable. File: s2-pnt-discriminator-2026-08-18.md.
+
+## 2026-08-18 — S1-saddle closure probe (builder)
+- t_k*k -> 2 for S1 real-xi saddle: PROVEN (Laplace/envelope; log b_k = -2k log k + 2k log log k + 2k(1-2log2) - 2k(loglogk-c)/logk - 2k/logk + (5/4)log k + O(1)) + CHECKED NUMERICALLY to k=1e5 (min t_k*(k+1)=1.06963238@k=1, t_200*201=1.5685, exact 8D anchors; (2-k*t_k)*log k ~ 2.35).
+- Dilogarithm crux: REFUTED. a_k=1/(k+1)^2 has t_k ~ -2/k^2 < 0 (log-convex, NEGATIVE margin), NOT t_k ~ 2/k; Li_2 has exactly ONE zero in |z|<1 (z=0, real; winding=1), NO non-real zeros; same for ALL Li_alpha, alpha in {0.5..3.0} -> no alpha_crit threshold exists for this family. DO NOT re-run: power-law polylog families cannot provide margin-<=2 counterexamples (negative margins), and the "non-real zeros" crux is false in the disk.
+- Threshold (margin-<=2 coefficient criteria cannot force LP): NOT certified; not refuted either (negative-margin families are not counterexamples). S1 uniform lower bound remains CONJECTURED.
+- Lesson: truncated alternating series at large argument = cancellation garbage (B4 invalid for t>~10; alpha=0 control printed 358 sign changes where cos t has ~13). Same as 8D artifact.
+- **S1-saddle closure (2026-08-18, 456a3a85)** — t_k·k → 2 PROVEN via saddle asymptotics
+  (log b_k = −2k log k + 2k log log k + 2k(1−2log2) − 2k(ℓ−c)/L − 2k/L + (5/4)log k + O(1); deficit
+  (2−k·t_k)·log k ≈ 2.35, verified to k=10⁵). **E4's dilogarithm crux REFUTED on both counts**:
+  a_k=k^{−α} ⟹ t_k ≈ −α/k² < 0 (log-convex, negative Turán — NOT margin 2/k, closed form PROVEN);
+  Li_α has exactly one zero in |z|<1 (z=0, real) for all α∈(0.5,3) (winding=1; Cl₂ argument PROVEN
+  for α=2). Category error: memo conflated Li_α (MGF) with the LP-relevant Bessel-type f(t)=Σ(−1)^k
+  b_k t^{2k}. ⟹ "margin≤2 coefficient criteria cannot force LP" NOT established; the g3-2 wall claim
+  is REFUTED; S1 (t_k≥C/(k+1), C>1) remains CONJECTURED with proven tail. B4 real-zero scan INVALID
+  for t≳10 (cancellation; no claim). Files: s1-saddle-closure-2026-08-18.md + run txt, tools/s1saddle/.
+- **S2-PNT discriminator (2026-08-18, 10e2afd6)** — prime-counting side, FIRST probe. Explicit-formula
+  ψ(x)−x to x≤3×10¹¹ with cached zeros (truncation certified ≤1.2e-2): real envelope flat δ=0.013
+  (max E/√(log x)=0.126, 8× under band; E/log x ≤ 0.041, 24× under von Koch). Planted-zero controls
+  β∈{0.6,0.65,0.7} FIRE: β=0.7 crosses √x(log x)^{1/2} band at x=4.5×10⁷, β=0.65 at 1.9×10¹⁰; δ
+  recovers β−1/2 to ±0.02. Detection threshold β−1/2≳0.13 (CONJECTURED, x≲3×10¹¹). Literature:
+  NO RH-conditional (log x)^{1/2+ε} PNT bound cited anywhere ⟹ S2 one-way NOT trap — BUT S2 is a
+  KNOWN THEOREM RESTATED (von Koch criterion; hypothesis strictly stronger than RH, zero proof
+  leverage) ⟹ CLOSED as a proof lever; discriminator family (prime-counting side) banked reusable.
+  Files: s2-pnt-discriminator-2026-08-18.md, tools/s2pnt/.

@@ -1,0 +1,10 @@
+t=3 compile+run
+t=4 run done
+t=6 recompile v2
+t=7 run2 done
+t=8 recompile v2b
+t=9 run2b done
+t=10 lit check
+t=11 extract key rows
+t=12 ledger append
+t=13 done

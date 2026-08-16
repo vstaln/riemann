@@ -32,8 +32,11 @@ Obstruction functional ℓ(f) = M[f](ρ), ρ = 1/2+δ + iπ/ln2 = 0.6 + 4.532i.
 Real d_N² → 0 under RH (Báez-Duarte). Hence d''_N² − d_N² → ≥ 9.6e-3 > 0: **discriminator points the right way in the limit, once index-fixed.** Consistent independent bound: span{Λ''_k : k≤N} ⊆ span{Λ_j : j ≤ 2N} ⟹ d''²(N) ≥ d²(2N) ≈ 9.7e-3 at N=60 (two bounds agree at 9.6–9.7e-3).
 Caveat (not a break): at N=60 control2 d² ≈ 9.7e-3 is still slightly BELOW real d²(60) = 1.13e-2 (the direction only reverses at larger N where real → 0); the claim asserts saturation in the limit, which is correct.
 
-## 4. Empirical verification (to run: build once, then mellin / control 60,100 / control2 60)
-[PENDING — see below]
+## 4. Empirical verification (fresh runs, same binary, 2026-08-18)
+- mellin mode: M[{2/(100x)}]/M[{1/(100x)}] = 1.3712 → 2^{+0.5} (k→∞); M[{1/(200x)}]/M[{1/(100x)}] = 0.7223 → 2^{−0.5}. Matches my hand value 1.3712 exactly (finite-k correction 0.9696 = ∫_{0.02}^∞/∫_{0.01}^∞). The two symbols are cleanly separated. ✓
+- real d²(60) = 1.1267e-2 (fresh, reproduces ledger 1.13e-2).
+- control (buggy {2/(kx)}) d²(60) = 5.2848e-3 (fresh, reproduces ledger 5.28e-3 — the number under re-label is real and reproducible).
+- control2 (corrected Λ_k + c0·Λ_{2k}) d²(60) = **3.8809e-2** — ABOVE real d²(60)=1.1267e-2 by 3.4× at N=60 already (direction REVERSED and correct, stronger than the "within 15%" prediction), and ≥ proven lower bound 9.57e-3 ✓. The discriminator points the right way once index-fixed — confirmed numerically, not just in the limit.
 
 ## Verdict
 **HOLDS.** (1) Mellin factor 2^{+s} and zero placement Re=−(1/2+δ) for the implemented control: PROVEN (hand + code numerics). (2) The specific containment "control span ⊇ even-index subsystem" is REFUTED for the sum family (N=2 independence argument), but the operative conclusion — control span dense under RH, d_N → 0, 5.28e-3 is meaningless — holds via the bounded-zero-free-symbol argument. (3) control2 places the zero at Re=1/2+δ and d''_N² provably saturates ≥ 9.57e-3 while real → 0: PROVEN. The ledger 8E numbers (5.28e-3) are NOT evidence about RH-false behavior; re-labeling is justified. One claim-internal statement needs rewriting (containment → symbol argument).
