@@ -494,3 +494,18 @@ Briefs: wave8-briefs-direct-RH-2026-08-17.md. Goal reset to direct-RH mission.
   exactly (L20=2.048909284756...e-20). Sign-pattern FAILED at 62.1/66.1 = expectation-list bug.
   FINAL: all 7 POSITIVE, NO DISPROOF, NO INCONCLUSIVE. Files: referee-lk-mpfr-2026-08-18.md,
   wave8d-lk-mpfr-2026-08-18.md, tools/wave8d/src/bin/lk_zeta_mpfr.rs (fixed).
+
+## DIRECT-RH WAVE-15 — "PROVE RH" full-stack push (2026-08-18, s4h-designed, 4 background agents)
+- **E1 (be4aeadb) Schoenberg kernel TP2** — DISPROOF-CAPABLE, never-run object: RH ⟺ Ξ∈LP (de
+  Bruijn) + Schoenberg: f∈LP ⟺ K(x,y)=f(x−y) TP∞. Any 2×2 minor of K=Ξ(x−y) < 0 ⟹ RH FALSE
+  (escalate). Controls: exp(−t²) all-minors≥0 (positive), non-LP some<0 (negative). NOT the closed
+  8/15 Hankel lever (that was Taylor-coefficient Hankel, RH forces ALTERNATING).
+- **E2 (fb431369) 8E control-direction** — resolve OPEN ledger question: real d_N²=1.13e-2 vs
+  control 5.28e-3 at N=60 — which direction does theory predict, and does the discriminator work?
+- **E3 (f9eda817) d_N slow-period pin** — test γ₂−γ₃ beat hypothesis (P=2π/(γ₃−γ₂)=1.575 log-units)
+  vs the dense dip at N=700: dense 650..900 + bootstrap null. Structure only, NOT RH evidence.
+- **E4 (1e4ce1a3) fresh-object hunt** (architect, read-only) — the campaign's structural need: a
+  ONE-WAY sufficient condition S (S provable ⟹ RH, S not ⟺ RH). 3-6 candidates + honesty trap
+  check + funding rec for wave-20 unfunded briefs (g0-2/g3-1/g4-1).
+- Referees: hostile blind per landed result (E1: minor sign convention + controls; E3: bootstrap
+  honesty; E2: direction-vs-theory).
