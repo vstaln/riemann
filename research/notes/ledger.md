@@ -775,3 +775,22 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
 - **(d) transport (f2b4d846)** — read-class overlap analysis (two-trace vs {mean+in-band
   F+integrality} single-read class) + ζ distinct two-window re-run on cached γ's; verdict:
   new record if > 0.836740, ceiling-confirmed if capped. RECORD probe, no RH claims.
+- **(d) ξ'-transport distinct CLOSED (2026-08-18, xiprime-transport-distinct-2026-08-18.md)**:
+  the ξ'-two-trace DISTINCT certificate (0.92919) does NOT raise ζ distinct beyond 0.836740.
+  Two independent reasons: (1) read-class is THE SAME {mean + in-band pair-density + integrality}
+  single-window class (attack-xiprime §3: both ζ and ξ' are rank-trace two-trace certs, differing
+  only in WHICH density sits in the 2nd trace; "two-trace" ≠ two in-band reads at different
+  heights), so it is INSIDE the ceiling_law256 class, not outside; (2) transport structurally
+  INVALID — a double ζ zero collapses to a SIMPLE ξ' zero, so ξ' distinct-on-line is blind to the
+  ζ multiplicity collapse that lowers ζ distinct (toy CHECKED NUMERICALLY: all-double ζ gives
+  ρ_ζ=0.5 but ρ_ξ'=1.0). 0.836740 stands terminal. RECORD probe, zero RH evidence (firewall).
+- **(d) ξ′-two-trace transport CLOSED — STRUCTURALLY INVALID (2026-08-18, f2b4d846)**: two
+  independent decisive reasons: (1) READ-CLASS: "two-trace" = rank-trace structure (mean trace +
+  pair-density trace), present in BOTH ζ and ξ′ methods — NOT two independent in-band reads;
+  ξ′-read is INSIDE the ceiling's {mean+in-band F+integrality} data class. (2) TRANSPORT:
+  ξ′ distinct is BLIND to ζ multiplicity collapse — a double ζ zero collapses to a SIMPLE ξ′
+  zero (Rolle), so ρ_ζ=0.5 with ρ_ξ′=1.0 is fully compatible (toy interlacing CHECKED
+  NUMERICALLY: [2×10] → 0.500/1.000; [1×10] → 1.000/1.000; one triple → 0.833/0.909).
+  **No inequality ξ′-distinct ⟹ ζ-distinct exists. 0.836740 distinct STANDS terminal. No new
+  record.** Firewall: zero RH evidence (proportion theorem). Corner (d) closed honestly.
+  Tool: tools/xiprime_transport_probe/.
