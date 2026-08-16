@@ -693,3 +693,11 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   to PROVEN (primary source); empirical deficit fit stays CONJECTURED (must bend down to
   satisfy (1.3); needs T≈10⁵–10⁶ to pin — out of budget). Wave-8B now CLOSED as a lever:
   remaining value = Speiser left-strip disproof channel (infeasible >3·10¹² here).
+
+## WAVE-19 — S4 region-size probe (2026-08-18, the last bounded informative item)
+- **S4 (8a60d746)** — map n₀*(d): the empirical boundary where GJT's unconditional large-n
+  Jensen hyperbolicity kicks in, over d ≤ 20, n ≤ 200. Output: the size of the RH-difficult
+  region {(d,n): n < n₀*(d)} as a function of d, + the law n₀*(d). NOT an RH probe (E4 §4(d):
+  region-size); any non-hyperbolic J_{d,n} = unconditional RH disproof (escalate; expect none:
+  GORZ d ≤ 8 PROVEN, li-structure-audit d ≤ 10 checked). Toeplitz/PF route separately closed
+  by literature (GORZ/GORTTW cover accessible range; d > 9.36·10²⁰ unreachable).
