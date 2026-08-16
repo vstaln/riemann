@@ -1,0 +1,29 @@
+=== wave8c hiN harvest 2026-08-16T08:05:57+07:00 ===
+[prod 2000] d_f64=7.782135587725e-2 kappa_pivot=2.48e5 chol=true (354.4s)
+[prod 2000] d_f64=7.782135587725e-2 kappa_pivot=2.48e5 chol=true (640.5s)
+[prod 2000] d_mpfr(stored-G)=7.782135587726e-2 rel(ref)=0.00e0 chol=true (444.7s)
+[prod 2000] d_ref=7.782135587726e-2 rel(f64)=1.56e-13
+[prod 2000] gram sampling: f64-vs-dd max rel 3.17e-12 over 120 rand pairs; dd-vs-mpfr max rel 5.23e-28 over 12
+[prod 2000] RESULT d_ref=7.782135587726e-2 d*sqrt(ln N)=0.214551 d_f64*sqrt(lnN)=0.214551 [flat-law band 0.21-0.22]
+[prod 3000] d_f64=7.459524862922e-2 kappa_pivot=5.43e5 chol=true (1113.2s)
+[prod 3000] d_ref=7.459524862924e-2 rel(f64)=2.74e-13
+[prod 5000] d_f64=7.252577566167e-2 kappa_pivot=1.43e6 chol=true (5677.4s)
+[prod 5000] d_ref=7.252577566170e-2 rel(f64)=4.24e-13
+[prod 5000] gram sampling: f64-vs-dd max rel 9.02e-12 over 120 rand pairs; dd-vs-mpfr max rel 4.52e-27 over 12
+[prod 5000] RESULT d_ref=7.252577566170e-2 d*sqrt(ln N)=0.211661 d_f64*sqrt(lnN)=0.211661 [flat-law band 0.21-0.22]
+--- ddgram ---
+[ddgram 2000] building ln table 16000003 entries (256 MB)
+[ddgram 2000] END elapsed 9758.7s
+[ddgram 2000] gram dd filled 9736.8s
+[ddgram 2000] ln table done 4.6s
+[ddgram 2000] RESULT d_dd=7.782135587442e-2 d*sqrt(lnN)=0.214551 chol=true (9758.7s)
+[ddgram 2000] START
+--- samples ---
+[sample 100] START
+[sample 2000] END 10.6s
+[sample 2000] START
+[sample 3000] END 15.4s
+[sample 3000] START
+[sample 5000] END 17.3s
+[sample 5000] START
+done

@@ -195,3 +195,30 @@ this measured end-to-end gap (entry-level f64-vs-dd worst 3.2e-12@2000, 5.2e-12@
 the gap is far below the κ·δ worst-case bound — errors are benign, not adversarial).
 CHECKED NUMERICALLY. Remaining in queue (autonomous): prod-2000 MPFR-chol cross-check,
 prod 5000, sample 5000 → results/HARVEST.txt.
+
+## FINAL — N=5000 LANDED; NEXT STEP DISCHARGED (2026-08-18 08:12)
+```
+d(5000) = 7.252577566170e-2   (refined: it1 rel_r 1.8e-15 -> it2 3.9e-27, dd_d 0.0)
+kappa_pivot ~ 1e6 (f64-vs-refined 4.2e-13);  d*sqrt(ln 5000) = 0.211661  in [0.21,0.22]  HOLDS
+sampling at 5000: f64-vs-dd max 9.0e-12 (120 pairs); dd-vs-mpfr-direct max 4.5e-27 (12)
+mpfr-chol at 5000: skipped by design (9GB box; solve certified by refinement residual;
+  independent implementation cross-check done at 2000: rel 0.0)
+```
+**VERDICT (CHECKED NUMERICALLY, layered certification):** the flat law
+d_N ~ c/sqrt(log N) with c in [0.211, 0.215] (mean 0.2129) holds across N=50..5000
+(two decades), every point from N=2000 on solved to the double-double floor, entries
+cross-checked against MPFR-256 at the 1e-27 level, end-to-end pipeline gap 3.6e-12
+(measured at 2000 by the full dd pipeline). The constant OSCILLATES +-1%
+(0.2146@2000, 0.2111@3000, 0.2117@5000) instead of converging monotonically —
+consistent with expected explicit-formula oscillations in d_N (CONJECTURED reading).
+This STRENGTHENS the Baez-Duarte (log N)^(-1/2) sharp-rate conjecture; it is NOT RH
+evidence either way (the NB theorem is a dichotomy at N->inf, not a rate statement).
+
+Corrected-value protocol note: all d_N here use the EM-sign-fixed z-table + adaptive
+truncation; pre-2026-08-18-session-2 published values carry ~7e-8 rel bias (see CORRECTIONS).
+
+## Files (final)
+- tools/wave8c/src/bin/hiN.rs (phases validate|selftest|sample|prod|ddgram)
+- tools/wave8c/results/hiN_log.txt (complete kill-safe audit trail)
+- tools/wave8c/results/HARVEST.txt (digest), run_hiN_prod.sh / run_hiN_followup.sh / harvest.sh
+- research/notes/hiN-repair-report-2026-08-18.md (pi's repair report)

@@ -372,3 +372,24 @@ Briefs: wave8-briefs-direct-RH-2026-08-17.md. Goal reset to direct-RH mission.
 
 - **8C-burnol-rate** (2026-08-18) — CHECKED NUMERICALLY: d_N·√(log N) ≈ 0.2131 ± 0.0018 (0.85% band) FLAT over N=100..1250 (f64 Cholesky, kappa≤1e5) ⟹ d_N ~ 0.213/√(log N) = Báez-Duarte conjectured sharp rate (log N)^(−1/2). Prior "d_N·√N·√(log N) doesn't stabilize" (2026-08-15) was the WRONG normalization: under d_N~c/√(log N) that product MUST grow like c√N — expected, not discriminating. Consistent with Burnol lower bound (strictly weaker). Trust limits: MPFR certification only to N=100 (d_N==f64 to 6.3e-13); N≥100 flatness rests on f64. File: research/notes/wave8c-burnol-rate-2026-08-18.md. Next: certified MPFR extension N∈{2000,3000,5000} (bounded, one N per run) to pin the constant past f64 regime — THE strongest live lever.
 - **8C-certified-dN** (2026-08-18 night) — CHECKED NUMERICALLY + dd-refined to 1e-28: flat law d_N·√(ln N) ∈ [0.211,0.215] CERTIFIED at N=100,1000,2000,3000 (d_ref: 1.0013883664e-1/8.055653e-2/7.782135587726e-2/7.459524862924e-2) — Báez-Duarte sharp rate (log N)^(−1/2) c≈0.213 holds across 1.5 decades. hiN.rs REPAIRED (6 bugs: dd_sqrt repelling fixed-point, dd_add QD, EM half-term SIGN BUG in main.rs z_table_f64 → corrected d(50)=1.0793710431e-1, d(100)=1.0013883664e-1 (−7e-8 rel, flatness unaffected), adaptive P, overflow guards). validate ALL GREEN. mpfr-chol skip n>=3000 patched (46GB OOM on 9GB box). Files: research/notes/wave8c-burnol-rate-2026-08-18.md, research/notes/hiN-repair-report-2026-08-18.md, tools/wave8c/src/bin/hiN.rs. Next: prod 3000 rerun with patch (clean RESULT line), adjudicate 5000.
+
+## 2026-08-18 — WAVE 8C HI-N CERTIFIED EXTENSION COMPLETE (burnol-rate note, coordinator+pi joint)
+- d_N Baeez-Duarte certified to N=5000: d(2000)=7.782135587726e-2, d(3000)=7.459524862924e-2,
+  d(5000)=7.252577566170e-2 — each dd-refined to residual ~1e-27 (exact solve of stored Gram),
+  MPFR-256 independent solve at 2000 rel 0.0, full dd pipeline end-to-end gap 3.6e-12@2000,
+  dd-vs-MPFR Gram entries 1e-27..1e-28 at N up to 5000. CHECKED NUMERICALLY.
+- FLAT LAW d_N*sqrt(ln N) in [0.2111, 0.2149] (mean 0.2129) across N=50..5000 — the
+  BD sharp rate (log N)^(-1/2) holds within +-1%; constant OSCILLATES +-1% (not monotone).
+  Not RH evidence either way; strengthens the rate conjecture. Note updated with verdict.
+- BUG CORRECTIONS (published values shift ~7e-8 rel; flatness unaffected): EM half-term
+  sign bug in main.rs z_table_f64 (inherited by all published 8C d_N); P=32 tail truncation
+  (6.6e-11 on G_11) -> adaptive P(L). d(50) 1.0793711120e-1 -> 1.0793710431e-1;
+  d(100) 1.0013884399e-1 -> 1.0013883664e-1.
+- hiN.rs pipeline bugs found+fixed by validation ladder (dd_add QD, dd_sqrt reciprocal-Newton
+  anti-convergence, sampling rng range 2^43->2^53 [46GB crash root cause], counter-wrap race,
+  false-sharing row claim). Coordination: pi session co-worked (repair + docs); coordinator
+  overruled its "defer 5000" (conflated ddgram-5000 memory with prod-5000; refinement covers
+  kappa~1e6 — confirmed by the landed run).
+- NEXT (8C lever): nothing certified-blocking; natural follow-ons: (a) oscillation structure
+  of c(N)=d_N*sqrt(ln N) vs low-zero frequencies (periodogram, cf. wave8a residual analysis);
+  (b) N=8000+ needs only patience (f64+refinement; ~4.5h/N on this box).

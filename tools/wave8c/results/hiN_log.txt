@@ -79,3 +79,177 @@
 == prod 2000 (followup) start 2026-08-16T06:21:22+07:00 ==
 [prod 2000] START
 [prod 2000] START
+[prod 2000] gram f64 filled 351.2s
+[prod 2000] gram f64 filled 351.2s
+[prod 2000] d_f64=7.782135587725e-2 kappa_pivot=2.48e5 chol=true (354.4s)
+[prod 2000] d_f64=7.782135587725e-2 kappa_pivot=2.48e5 chol=true (354.4s)
+[prod 2000] refined: it1 rel_r=6.9e-16 d=7.782135587726e-2 dd_d=1.56e-13; it2 rel_r=5.7e-28 d=7.782135587726e-2 dd_d=0.00e0; 
+[prod 2000] refined: it1 rel_r=6.9e-16 d=7.782135587726e-2 dd_d=1.56e-13; it2 rel_r=5.7e-28 d=7.782135587726e-2 dd_d=0.00e0; 
+[prod 2000] d_ref=7.782135587726e-2 rel(f64)=1.56e-13
+[prod 2000] d_ref=7.782135587726e-2 rel(f64)=1.56e-13
+[prod 2000] gram sampling: f64-vs-dd max rel 3.17e-12 over 120 rand pairs; dd-vs-mpfr max rel 5.23e-28 over 12
+[prod 2000] gram sampling: f64-vs-dd max rel 3.17e-12 over 120 rand pairs; dd-vs-mpfr max rel 5.23e-28 over 12
+[prod 2000] d_mpfr(stored-G)=7.782135587726e-2 rel(ref)=0.00e0 chol=true (444.7s)
+[prod 2000] d_mpfr(stored-G)=7.782135587726e-2 rel(ref)=0.00e0 chol=true (444.7s)
+[prod 2000] RESULT d_ref=7.782135587726e-2 d*sqrt(ln N)=0.214551 d_f64*sqrt(lnN)=0.214551 [flat-law band 0.21-0.22]
+[prod 2000] RESULT d_ref=7.782135587726e-2 d*sqrt(ln N)=0.214551 d_f64*sqrt(lnN)=0.214551 [flat-law band 0.21-0.22]
+[prod 2000] END elapsed 444.7s
+[prod 2000] END elapsed 444.7s
+== prod 2000 exit=0 ==
+== prod 5000 (followup) start 2026-08-16T06:28:46+07:00 ==
+[prod 5000] START
+[prod 5000] START
+[prod 5000] gram f64 filled 5636.5s
+[prod 5000] gram f64 filled 5636.5s
+[prod 5000] d_f64=7.252577566167e-2 kappa_pivot=1.43e6 chol=true (5677.4s)
+[prod 5000] d_f64=7.252577566167e-2 kappa_pivot=1.43e6 chol=true (5677.4s)
+[prod 5000] refined: it1 rel_r=1.8e-15 d=7.252577566170e-2 dd_d=4.24e-13; it2 rel_r=3.9e-27 d=7.252577566170e-2 dd_d=0.00e0; 
+[prod 5000] refined: it1 rel_r=1.8e-15 d=7.252577566170e-2 dd_d=4.24e-13; it2 rel_r=3.9e-27 d=7.252577566170e-2 dd_d=0.00e0; 
+[prod 5000] d_ref=7.252577566170e-2 rel(f64)=4.24e-13
+[prod 5000] d_ref=7.252577566170e-2 rel(f64)=4.24e-13
+[prod 5000] gram sampling: f64-vs-dd max rel 9.02e-12 over 120 rand pairs; dd-vs-mpfr max rel 4.52e-27 over 12
+[prod 5000] gram sampling: f64-vs-dd max rel 9.02e-12 over 120 rand pairs; dd-vs-mpfr max rel 4.52e-27 over 12
+[prod 5000] mpfr-chol SKIPPED (n>=3000: MPFR Cholesky OOMs 9GB box; refinement residual plateau certifies exact-solve-of-stored-G; implementation cross-check covered at 2000)
+[prod 5000] mpfr-chol SKIPPED (n>=3000: MPFR Cholesky OOMs 9GB box; refinement residual plateau certifies exact-solve-of-stored-G; implementation cross-check covered at 2000)
+[prod 5000] RESULT d_ref=7.252577566170e-2 d*sqrt(ln N)=0.211661 d_f64*sqrt(lnN)=0.211661 [flat-law band 0.21-0.22]
+[prod 5000] RESULT d_ref=7.252577566170e-2 d*sqrt(ln N)=0.211661 d_f64*sqrt(lnN)=0.211661 [flat-law band 0.21-0.22]
+[prod 5000] END elapsed 5696.8s
+[prod 5000] END elapsed 5696.8s
+== prod 5000 exit=0 ==
+[sample 5000] START
+[sample 5000] START
+s=0 j=4801 k=1779 G=3.362617e-4 f64-vs-dd=2.87e-13
+   dd-vs-mpfr=1.07e-27
+s=1 j=4698 k=3732 G=2.633446e-4 f64-vs-dd=4.63e-14
+   dd-vs-mpfr=3.26e-28
+s=2 j=1769 k=1666 G=6.886689e-4 f64-vs-dd=5.40e-13
+   dd-vs-mpfr=8.08e-28
+s=3 j=2095 k=1783 G=5.819634e-4 f64-vs-dd=4.53e-13
+   dd-vs-mpfr=6.02e-28
+s=4 j=2837 k=2194 G=4.389682e-4 f64-vs-dd=8.42e-13
+   dd-vs-mpfr=1.46e-27
+s=5 j=2215 k=1682 G=5.656675e-4 f64-vs-dd=1.30e-12
+   dd-vs-mpfr=1.14e-27
+s=6 j=3589 k=3349 G=3.390137e-4 f64-vs-dd=5.41e-12
+   dd-vs-mpfr=3.96e-27
+s=7 j=2671 k=966 G=6.102273e-4 f64-vs-dd=2.38e-12
+   dd-vs-mpfr=2.05e-28
+s=8 j=4282 k=835 G=4.555303e-4 f64-vs-dd=2.47e-12
+   dd-vs-mpfr=3.34e-28
+s=9 j=4357 k=1759 G=3.607886e-4 f64-vs-dd=3.14e-12
+   dd-vs-mpfr=4.52e-27
+s=10 j=3919 k=1251 G=4.355712e-4 f64-vs-dd=2.11e-12
+   dd-vs-mpfr=1.70e-27
+s=11 j=4430 k=1580 G=3.703787e-4 f64-vs-dd=2.78e-13
+   dd-vs-mpfr=2.59e-29
+s=12 j=1715 k=233 G=1.235995e-3 f64-vs-dd=8.17e-13
+s=13 j=569 k=504 G=2.131547e-3 f64-vs-dd=1.10e-13
+s=14 j=3885 k=1452 G=4.144113e-4 f64-vs-dd=8.88e-13
+s=15 j=3551 k=3380 G=3.439839e-4 f64-vs-dd=2.94e-12
+s=16 j=3529 k=1587 G=4.324124e-4 f64-vs-dd=3.69e-12
+s=17 j=2982 k=786 G=6.009834e-4 f64-vs-dd=6.13e-15
+s=18 j=1104 k=746 G=1.184545e-3 f64-vs-dd=7.80e-13
+s=19 j=4218 k=2461 G=3.273291e-4 f64-vs-dd=3.26e-12
+s=20 j=3526 k=530 G=5.873765e-4 f64-vs-dd=2.64e-13
+s=21 j=3317 k=2188 G=3.983608e-4 f64-vs-dd=4.01e-14
+s=22 j=1789 k=1349 G=7.024791e-4 f64-vs-dd=5.97e-13
+s=23 j=2328 k=2063 G=5.216195e-4 f64-vs-dd=2.02e-12
+s=24 j=1169 k=169 G=1.794130e-3 f64-vs-dd=1.38e-12
+s=25 j=2158 k=1874 G=5.635563e-4 f64-vs-dd=1.36e-12
+s=26 j=3166 k=268 G=7.456565e-4 f64-vs-dd=1.05e-12
+s=27 j=1893 k=1756 G=6.421109e-4 f64-vs-dd=2.80e-12
+s=28 j=1642 k=930 G=8.524196e-4 f64-vs-dd=7.72e-13
+s=29 j=4146 k=2645 G=3.212016e-4 f64-vs-dd=4.63e-12
+s=30 j=1761 k=275 G=1.163944e-3 f64-vs-dd=5.22e-15
+s=31 j=631 k=192 G=2.715516e-3 f64-vs-dd=1.47e-14
+s=32 j=3017 k=1549 G=4.950018e-4 f64-vs-dd=3.80e-12
+s=33 j=1543 k=1160 G=8.157527e-4 f64-vs-dd=2.49e-12
+s=34 j=811 k=666 G=1.511679e-3 f64-vs-dd=7.50e-13
+s=35 j=406 k=232 G=3.427780e-3 f64-vs-dd=5.44e-15
+s=36 j=1667 k=1012 G=8.140644e-4 f64-vs-dd=2.32e-13
+s=37 j=3668 k=1362 G=4.397617e-4 f64-vs-dd=2.24e-12
+s=38 j=746 k=541 G=1.700755e-3 f64-vs-dd=7.82e-14
+s=39 j=2381 k=917 G=6.686173e-4 f64-vs-dd=2.92e-12
+s=40 j=972 k=971 G=1.293078e-3 f64-vs-dd=1.12e-12
+s=41 j=577 k=345 G=2.366275e-3 f64-vs-dd=3.60e-13
+s=42 j=139 k=1 G=1.869463e-2 f64-vs-dd=2.62e-14
+s=43 j=3017 k=2299 G=4.148008e-4 f64-vs-dd=7.67e-12
+s=44 j=643 k=56 G=3.624350e-3 f64-vs-dd=5.40e-13
+s=45 j=89 k=28 G=1.880732e-2 f64-vs-dd=2.01e-14
+s=46 j=703 k=24 G=3.949390e-3 f64-vs-dd=1.05e-13
+s=47 j=4110 k=3070 G=3.068512e-4 f64-vs-dd=3.23e-13
+s=48 j=4307 k=1148 G=4.144090e-4 f64-vs-dd=3.66e-12
+s=49 j=1944 k=891 G=7.825283e-4 f64-vs-dd=2.22e-15
+s=50 j=2022 k=515 G=9.019940e-4 f64-vs-dd=2.37e-12
+s=51 j=523 k=89 G=3.838494e-3 f64-vs-dd=6.78e-13
+s=52 j=2700 k=963 G=6.075401e-4 f64-vs-dd=1.55e-13
+s=53 j=3680 k=3530 G=3.326804e-4 f64-vs-dd=1.80e-13
+s=54 j=3497 k=2949 G=3.491996e-4 f64-vs-dd=1.48e-12
+s=55 j=3939 k=3203 G=3.122235e-4 f64-vs-dd=8.98e-12
+s=56 j=4212 k=2272 G=3.416442e-4 f64-vs-dd=8.41e-13
+s=57 j=906 k=560 G=1.485214e-3 f64-vs-dd=4.73e-13
+s=58 j=4552 k=3480 G=2.746380e-4 f64-vs-dd=1.73e-13
+s=59 j=869 k=560 G=1.526139e-3 f64-vs-dd=1.14e-12
+s=60 j=3307 k=1159 G=5.004802e-4 f64-vs-dd=3.21e-12
+s=61 j=3334 k=1939 G=4.146254e-4 f64-vs-dd=2.66e-12
+s=62 j=2183 k=1884 G=5.575026e-4 f64-vs-dd=9.74e-13
+s=63 j=3993 k=3357 G=3.060061e-4 f64-vs-dd=2.75e-13
+s=64 j=1811 k=1115 G=7.447564e-4 f64-vs-dd=1.42e-12
+s=65 j=3175 k=1335 G=4.880750e-4 f64-vs-dd=3.74e-13
+s=66 j=3820 k=96 G=7.752559e-4 f64-vs-dd=2.24e-15
+s=67 j=4880 k=3711 G=2.566754e-4 f64-vs-dd=1.08e-12
+s=68 j=1507 k=472 G=1.133637e-3 f64-vs-dd=7.80e-13
+s=69 j=1538 k=1312 G=7.923824e-4 f64-vs-dd=1.16e-12
+s=70 j=158 k=128 G=7.743618e-3 f64-vs-dd=2.42e-14
+s=71 j=1702 k=737 G=9.034423e-4 f64-vs-dd=4.47e-13
+s=72 j=1508 k=1225 G=8.154328e-4 f64-vs-dd=1.46e-12
+s=73 j=1 k=1 G=2.606614e-1 f64-vs-dd=3.41e-15
+s=74 j=3052 k=2779 G=3.978094e-4 f64-vs-dd=4.74e-13
+s=75 j=3908 k=2020 G=3.798684e-4 f64-vs-dd=9.76e-14
+s=76 j=2789 k=219 G=8.591282e-4 f64-vs-dd=7.45e-13
+s=77 j=2303 k=1316 G=6.058311e-4 f64-vs-dd=1.16e-14
+s=78 j=4271 k=2202 G=3.483757e-4 f64-vs-dd=3.02e-12
+s=79 j=899 k=706 G=1.378379e-3 f64-vs-dd=1.29e-12
+s=80 j=4208 k=572 G=5.043007e-4 f64-vs-dd=5.96e-13
+s=81 j=4564 k=4386 G=2.684192e-4 f64-vs-dd=4.17e-12
+s=82 j=2754 k=1708 G=4.884000e-4 f64-vs-dd=1.72e-12
+s=83 j=1684 k=880 G=8.732530e-4 f64-vs-dd=5.26e-13
+s=84 j=824 k=604 G=1.534997e-3 f64-vs-dd=3.33e-14
+s=85 j=4708 k=1097 G=3.934339e-4 f64-vs-dd=4.45e-12
+s=86 j=2356 k=1182 G=6.509485e-4 f64-vs-dd=1.41e-13
+s=87 j=4447 k=4316 G=2.765457e-4 f64-vs-dd=7.72e-12
+s=88 j=2617 k=1868 G=4.882303e-4 f64-vs-dd=1.16e-12
+s=89 j=555 k=168 G=3.089450e-3 f64-vs-dd=1.43e-13
+s=90 j=4999 k=22 G=7.597092e-4 f64-vs-dd=2.75e-12
+s=91 j=1751 k=909 G=8.443497e-4 f64-vs-dd=2.48e-12
+s=92 j=675 k=215 G=2.523463e-3 f64-vs-dd=1.55e-13
+s=93 j=1942 k=1570 G=6.340680e-4 f64-vs-dd=4.64e-13
+s=94 j=2293 k=424 G=8.571503e-4 f64-vs-dd=1.43e-12
+s=95 j=2085 k=1326 G=6.392435e-4 f64-vs-dd=1.24e-13
+s=96 j=2128 k=713 G=8.039132e-4 f64-vs-dd=3.95e-13
+s=97 j=3961 k=2074 G=3.708575e-4 f64-vs-dd=1.66e-13
+s=98 j=3473 k=815 G=5.325875e-4 f64-vs-dd=3.06e-12
+s=99 j=1845 k=370 G=1.058425e-3 f64-vs-dd=3.85e-13
+s=100 j=410 k=293 G=3.108145e-3 f64-vs-dd=2.60e-13
+s=101 j=1690 k=1019 G=8.059212e-4 f64-vs-dd=3.22e-12
+s=102 j=1302 k=463 G=1.260687e-3 f64-vs-dd=7.16e-13
+s=103 j=939 k=717 G=1.330719e-3 f64-vs-dd=4.72e-13
+s=104 j=4803 k=1768 G=3.369650e-4 f64-vs-dd=3.46e-12
+s=105 j=4418 k=291 G=5.628898e-4 f64-vs-dd=4.19e-12
+s=106 j=2461 k=288 G=8.921339e-4 f64-vs-dd=2.61e-12
+s=107 j=578 k=404 G=2.223786e-3 f64-vs-dd=3.29e-13
+s=108 j=3778 k=3740 G=3.294683e-4 f64-vs-dd=3.64e-13
+s=109 j=2769 k=1970 G=4.618175e-4 f64-vs-dd=2.11e-12
+s=110 j=3173 k=1614 G=4.750758e-4 f64-vs-dd=9.28e-13
+s=111 j=2446 k=406 G=8.346679e-4 f64-vs-dd=2.51e-13
+s=112 j=4241 k=3050 G=3.003818e-4 f64-vs-dd=9.02e-12
+s=113 j=161 k=44 G=1.085434e-2 f64-vs-dd=9.65e-14
+s=114 j=2599 k=943 G=6.263589e-4 f64-vs-dd=1.37e-13
+s=115 j=3026 k=2032 G=4.342561e-4 f64-vs-dd=1.02e-13
+s=116 j=6 k=2 G=2.041684e-1 f64-vs-dd=9.52e-16
+s=117 j=4587 k=1595 G=3.624980e-4 f64-vs-dd=4.95e-13
+s=118 j=264 k=150 G=5.273024e-3 f64-vs-dd=8.47e-14
+s=119 j=3958 k=968 G=4.658196e-4 f64-vs-dd=7.33e-13
+[sample 5000] END 17.3s
+[sample 5000] END 17.3s
+== sample 5000 done ==
