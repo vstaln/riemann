@@ -683,3 +683,13 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   CONJECTURED, ≤0.4% over 8 pts; equivalently 1−r ≈ 7.5/log^{1.52}u). Left strip NOT re-run
   (redundant — Platt–Trudgian). CHECKED NUMERICALLY, RH-consistent, NO disproof signal.
   Follow-ups: T≈10⁵–10⁶ to pin deficit exponent; verify Berndt/Radziwiłł from primary sources.
+- **8B count-law VERIFIED from primary source (2026-08-18)**: fetched Levinson–Montgomery
+  "Zeros of the derivatives of the Riemann zeta-function" Acta Math 133 (1974) 49–65 (saved to
+  research/papers/). Verified: (1.1) N′⁻(T)=N⁻(T)+O(log T); Corollary RH ⟺ ζ′ zero-free in
+  0<σ<½ (Speiser); (1.3) N₁(T)=(T/2π)(log T−1)+O(log T) (Berndt, by-product Thm 2); Thm 2
+  ζ′-zeros cluster at σ=½ (≪ T·loglogT/(δ·logT) outside δ-strip); Thm 5 Levinson drift
+  Σ(σ′−½)=(U/2π)·loglogT+O(U). The wave-18 empirical census (ratio→1, σ-min→½, 2651 deficit)
+  is the finite-T manifestation of these theorems — all CONFIRMED. Count-law label upgraded
+  to PROVEN (primary source); empirical deficit fit stays CONJECTURED (must bend down to
+  satisfy (1.3); needs T≈10⁵–10⁶ to pin — out of budget). Wave-8B now CLOSED as a lever:
+  remaining value = Speiser left-strip disproof channel (infeasible >3·10¹² here).
