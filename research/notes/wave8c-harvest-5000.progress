@@ -1,2 +1,8 @@
 t=1 read 2 notes + chain state: chain COMPLETE (no hiN running; HARVEST.txt + chain_result.txt have prod5000 RESULT + ddgram2000 RESULT; samples 100/2000/3000/5000 done)
 ---
+t=2 arithmetic verified (python3): ddgram-vs-ref abs 2.840e-12 / rel 3.649e-11; d(5000)*sqrt(ln5000)=0.211661 matches harvest; flat-law mean 0.21278 (all5) / 0.21304 (cert4), band ~1.8%
+t=3 corrected factor-10 slip in note (2 places: '3.6e-12 relative' -> 2.84e-12 abs / 3.65e-11 rel); appended HARVEST VERDICT section (a-d) before Files(final)
+t=4 DONE: chain fully drained, verdict written to wave8c-burnol-rate-2026-08-18.md
+t=5 fixed UPDATE3: '3.6e-10 rel' -> 2.84e-12 abs / 3.65e-11 rel (x2 spots), removed duplicated EOF tail, added pointer to HARVEST VERDICT. File clean, 5-point flat-law table through N=5000 in place.
+t=6 REAPPLIED LAYER-D correction (first edit had silently not matched despite 'success' report); verified via git diff. All gap numbers now correct: 2.84e-12 abs / 3.65e-11 rel everywhere. Note clean.
+t=7 VERIFIED: grep confirms zero uncorrected gap claims; LAYER-D line now '2.84e-12 absolute / 3.65e-11 relative'. Deliverable complete. No compute launched, no processes left running.

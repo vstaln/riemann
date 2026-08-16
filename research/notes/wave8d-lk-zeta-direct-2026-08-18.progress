@@ -1,0 +1,7 @@
+t=1 read lk_zeta.rs (full), em.rs (full), Cargo.toml. KEY FINDINGS: (a) zeta_em uses em_n_for(t)=11 at t=40 -> EM unconverged (terms ~1e41 at K=40), certified err huge -> must override n (plan: n=600, err~1e-100). (b) complex-step log-derivative recursion breaks at order>=3 (Im-chain gives 2*G2+O(eps) off real line) -> cannot resolve k=18-20. (c) plan: analytic EM differentiation route (zeta_em_ders for zeta^(0..21), polygamma Stirling, Bell composition) = only route to definitive high-k verdict; CD+Richardson required pass kept for validation at low k + controls.
+t=2 wrote this progress file. Next: read research/notes/wave8d-lk-zeta-direct-2026-08-18.md, write partial note.
+t=3 partial note appended
+t=4 extended em.rs with zeta_em_ders (zeta^(0..m_max), certified Cauchy bounds m!/delta^m)
+t=6 final results captured (post-sin_cos-fix run saved to research/notes/wave8d-lk-zeta-direct-run-2026-08-18.txt); debug block cleaned; source builds clean
+t=7 final RESULTS appended to wave8d-lk-zeta-direct-2026-08-18.md
+t=8 DONE. Deliverables: em.rs+zeta_em_ders, lk_zeta.rs (fixed), run output txt, RESULTS section in note. Verdict: no RH disproof; 4/7 decisive POSITIVE; 3/7 (k=18-20@t=40) INCONCLUSIVE; flagged negatives = series artifacts.
