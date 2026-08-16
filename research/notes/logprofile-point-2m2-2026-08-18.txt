@@ -1,0 +1,6 @@
+POINT point (C=2,D=-2) | min t_k*(k+1)=1.36680 | k*t_k@300=1.7054 | asy(C+D/ln300)=1.6494 | min gap vs (2-2/lnk)=+0.0517
+   N=80: 8 candidate nonreal-t roots
+   N=120: 22 candidate nonreal-t roots
+   N=160: 32 candidate nonreal-t roots
+   VERDICT: NON-LP | genuine nonreal zeros: |t|=4.472@25.4780206744863° (|F|=2.0e-13)  |t|=6.844@-23.286839515736283° (|F|=2.0e-10)  |t|=8.995@-22.227645750671506° (|F|=1.0e-7)  |t|=11.018@-21.540439550303095° (|F|=2.1e-5)
+
