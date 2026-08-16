@@ -920,3 +920,9 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   NO survivor, no probe funded. Structural reason: every real-zero-forcing mechanism needs
   product/PF structure, ODE membership, or cohomology — Xi provably violates all three; the rest
   are ⟺ traps. The 4 hypothesis classes Xi provably violates documented.
+- **Binomial-transform positivity probe (coordinator, quick, 2026-08-18)**: J^{d,0} built from
+  the TRUE Hankel-TP moments M_j (NOT the renormalized gamma) already fails: d=3 all-real,
+  d=4/5 non-real roots (max|Im|=6.34/5.35). So binomial transform of a moment sequence does
+  NOT preserve real-rootedness — the failure is NOT caused by the n!/(2n)! renormalization;
+  the moment object itself doesn't binomial-transform to real roots. GJT-completion via
+  binomial-moment positivity: CLOSED (negative, CHECKED NUMERICALLY, small d).
