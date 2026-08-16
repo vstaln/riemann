@@ -507,3 +507,22 @@ zero evidence about RH — charter firewall).
   structural identities are consistency-only or closed. A proof of RH requires genuinely new
   mathematics — the search continues under the persistence hook, the GJT-completion
   decomposition remains the sole (hard) structural opening.
+
+## 2026-08-18 (final) — barrier-zoo retro-test COMPLETE: every PROVEN Xi identity is consistency-only
+- **Addendum 2 (d8ba806)**: Hankel det3 of the M'-analogue is TP (>0) in BOTH RH-false worlds
+  (DH +1.47e-3, Epstein +3.12e-3). The campaign's PROVEN M_n Hankel-TP does NOT separate Xi
+  from an RH-false world. Combined with the frontier probe (gamma itself not a moment
+  sequence; M→gamma bridge broken), **there is no positivity-based separator left at the
+  trusted orders**.
+- **Barrier-zoo retro-test — final accounting** (commits a05a980, 6142a9a, d8ba806):
+  every PROVEN Xi identity tested against the RH-false worlds (DH, Epstein) comes back
+  consistency-only: (i) Taylor-coefficient positivity — both worlds all-positive; (ii)
+  deficit-2 log-profile — both worlds satisfy it; (iii) Hankel-TP of M'-analogue — both
+  worlds TP at det2/det3. The barrier-zoo "proves too much" discipline, which the cross-
+  domain hunt prescribed for any future lemma, has now been applied to the campaign's own
+  identities and returns the same verdict everywhere.
+- **28 levers closed, closure-DAG 19 levers/16 edges/6 traps.** Honest position unchanged
+  and now maximally hardened on the positivity/moment/profile axis: the deficit-2 profile,
+  positivity of coefficients, and the moment structure are all consistency data in every
+  testable direction. A proof of RH requires genuinely new mathematics; the search continues
+  under the persistence hook; no disproof signal anywhere; record untouched (certified).
