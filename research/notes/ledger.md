@@ -621,3 +621,13 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   (2−kt)·ln k ≈ 2.34 slowly decreasing; nit: claim said "2.35 stable"). ⟹ E4's "margin≤2
   criteria cannot force LP" NOT established; margin question RE-OPENED; S1 stays CONJECTURED with
   numerically-proven tail. File: referee-s1-crux-2026-08-18.md.
+
+## DIRECT-RH WAVE-17 — S1-margin theorem probe (2026-08-18, the live one-way thread)
+- **S1-margin (270dfa66)** — the campaign's one live thread toward a genuine one-way sufficient
+  condition. Question: does ANY classical theorem (Hutchinson/Kurtz/Edrei/ASW/Craven-Csordas/GJT)
+  force LP from a DECAYING margin t_k ≥ c/k with c ≤ 2? Part A: literature survey (PROVEN/CONJECTURED,
+  no fabricated citations). Part B: threshold scan (Rust, Aberth-Ehrlich): families a_k = k^{−ck−ν}
+  with LP-relevant F(t)=Σ(−1)^k b_k t^{2k}, b_k=a_k/(2k)! (t_k·k → c); positive control J₀(2√t) must
+  give all-real zeros; perturbation test (ε·cos(ω ln k)) probes robustness at c=2; mixed family
+  probes effective c<2. Verdict: S1 genuine (if lit theorem c≤1.0696) / plausible-unproven (threshold
+  c_crit>1.0696) / DEAD (counterexample at c≤1.0696). NOT an RH lever — closure/feasibility probe.
