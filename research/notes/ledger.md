@@ -1,5 +1,10 @@
 # Wave Ledger — shared state for swarm agents
 
+- **direct-rh-theta-semigroup-2026-08-18** — **ABANDONED (PROVEN false)**: theta identity (★) and off-line system (★★) are FE/equivalence reformulations. The proposed strictly stronger uniform phase-gap ΘC is refuted on the actual zeta: at critical-line zeros, δ→0 gives normalized gap → 2|xi′(rho)|, and Stirling plus convexity makes |xi′(rho_n)|→0 along Hardy’s infinitely many line zeros. Rust probe also had a documented complex phase bug; its real-axis checks are not RH evidence. File: `research/notes/direct-rh-theta-semigroup-2026-08-18.md`.
+
+
+- **direct-rh-entire-growth-2026-08-18** — **NO SURVIVOR (PROVEN, structural)**: Cartwright-class/indicator/canonical-product/zero-free-sector/complex-asymptotics family screened; every candidate fails the barrier-zoo firewall by construction (modulus-blindness lemma: {order-1 maximal type, real even, FE symmetries, strip |Im τ|<1/2, count ~(T/π)log T, indicator, power sums} sees only ordinate/modulus data; the real-zero twin ∏(1−z²/γ_n²) over DH ordinates shares all of it with an RH-false world having b≠0). Indicator half-sums = auto-identities (conjugate pairing); zero-free sectors = weak consequences or ⟺-RH; moments underdetermined (one equation, infinitely many b_n). Strongest candidate (axis-modulus/defect-sum forcing) dies at the RvF/BSY ⟺-RH trap: missing unconditional real-axis lower-bound lemma = closed potential-theory class. No code run (contingent probe spec §5 t1–t3, barrier_zoo_rs reusable; firewall fires by construction, not measurement). File: research/notes/direct-rh-entire-growth-2026-08-18.md.
+
 - **direct-rh-transfer-lane-2026-08-18** — **ABANDONED (PROVEN family collapse; probe CHECKED NUMERICALLY)**: repaired Rust model probe (fixture now uses +/-i gamma pairs) exits 0; 120-family correlations of singular-value slope, numerical-range radius, and log sigma-min with axis deviation are +0.010, +0.231, +0.081. Exact unitary-invariance obstruction remains decisive; no RH claim. File: `research/notes/direct-rh-transfer-lane-2026-08-18.md`.
 
 
