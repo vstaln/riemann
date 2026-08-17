@@ -225,3 +225,6 @@ The host process can be KILLED at any moment. Context dies; THE DISK SURVIVES.
 - tools/ — numerical toolkit (Rust-first; legacy Python where already certified)
 - tools/swarm_langgraph/ — LangGraph adjudication swarm (user-set-up)
 - PLAN.md — the plan; hooks/agents.md — these hooks (HARD RULE: read and obey)
+
+## Gravity one-shot cross-check (user directive)
+When an architect or adventurer is asked for a Gravity second opinion, run a fresh non-interactive `agy -p` with `--model gemini-3.7-flash-high --effort high` exactly once in that session. Multiple independent `agy` sessions are allowed; never resume one or ask it a follow-up. Treat its output as an idea source only: closure-DAG gate, RH-false control, and Rust verification still decide.
