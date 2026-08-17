@@ -1,0 +1,18 @@
+Phi(0) = 0.446696900467  (known 0.8933938...)
+u	Phi	L(u)=Phi*Phi''-Phi'^2
+-2.0000	-9.802277e-16	-5.135e-27
+-1.6509	-1.750775e-15	-3.344e-27
+-1.3017	1.853061e-15	-9.963e-26
+-0.9526	9.017363e-7	-2.434e-9
+-0.6035	7.017714e-3	-2.998e-2
+-0.2544	2.378405e-1	-5.614e0
+0.0948	4.104758e-1	-7.611e0
+0.4439	5.659121e-2	-8.799e-1
+0.7930	1.368944e-4	-2.760e-5
+1.1421	1.286449e-10	-1.120e-16
+1.4913	0.000000e0	0.000e0
+---
+min L on meaningful support: -7.612716e0 at Phi>1e-6
+max L: -4.485923e-9 at u=-0.9439
+L > 0 count: 0 of 402 grid points (meaningful region)
+VERDICT: Phi log-concave on sampled meaningful region (L<=0 everywhere)

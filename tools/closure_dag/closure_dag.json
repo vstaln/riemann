@@ -19,6 +19,12 @@
  },
  "levers": [
   {
+   "id": "operator-lane-polya-density-2026-08-18",
+   "verdict": "ABANDONED (PROVEN obstruction)",
+   "claim": "Theta-density PF-infinity would force real zeros but Phi not PF-infinity is already proven; weakening to even log-concavity fails by the exact logistic control rho=(1/4)sech^2(x/2), whose Fourier transform pi*z/sinh(pi*z) has non-real zeros.",
+   "file": "research/notes/direct-rh-operator-route-2026-08-18.md"
+  },
+  {
    "id": "agy-fresh2-2026-08-18",
    "verdict": "INCONCLUSIVE (NO SURVIVOR)",
    "claim": "Fresh BSY-excluded Antigravity search found no candidate satisfying exact one-way H(zeta)=>RH, RH-false control, and non-equivalence; no probe or proof produced.",

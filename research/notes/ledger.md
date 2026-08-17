@@ -1,5 +1,8 @@
 # Wave Ledger — shared state for swarm agents
 
+- **operator-lane-polya-density-2026-08-18** — **ABANDONED (PROVEN obstruction)**: theta-density log-concavity probe is negative only as a consistency fact (recompiled Phi(0)=0.893393800934; L<=0 on sampled support), while the needed implication is false: even log-concave logistic density rho=(1/4)sech²(x/2) has Fourier transform pi*z/sinh(pi*z) with non-real zeros z=i n. PF∞ would force real zeros but Phi∉PF∞ is already proven. File: `research/notes/direct-rh-operator-route-2026-08-18.md`.
+
+
 - **agy-fresh2-2026-08-18** — **INCONCLUSIVE / NO SURVIVOR**: a fresh BSY-excluded Antigravity search returned no candidate meeting one-way implication + RH-false control + non-equivalence. Its four-channel obstruction summary agrees with the existing closure map; no code or numeric result was produced. File: `research/notes/agy-fresh2-closure-2026-08-18.md`.
 
 
