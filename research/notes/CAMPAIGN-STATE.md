@@ -566,3 +566,22 @@ zero evidence about RH — charter firewall).
   C<2 (GS bridge would convert it into simple+critical ≥ 2−C); (b) GJT-completion small-n ⟺ RH
   (sole surviving structural opening, hard per Farmer); (c) record-side in-class ceiling 0.6818
   PROVEN terminal without new objects.
+
+## Wave-10 (2026-08-18, night cont.): Feb–Aug 2026 literature window — CLOSED
+- **Jin 2608.08714 (Jacobi Endpoint Pencils)** — looks like the GJT toolkit, NOT-A-LEVER:
+  (a) strip condition Z(F)⊆S_√(15/28) is AUTOMATIC (|β−1/2|<1/2<0.732 for every critical-strip
+  zero, RH-independent → consistency-only, holds in RH-false worlds too);
+  (b) object identity fails: centered binomial samples = POINT EVALUATIONS H(j−d/2) at half-integers,
+  ≠ GJT moment-coefficient Jensen polynomials γ(n)=n!M_n/(2n)! whose hyperbolicity ⟺ RH;
+  theorem = special-value interlacing / signed resultants for Dedekind-zeta derivatives (not ξ,
+  not zero-location). Toolkit banked (Jacobi spectral multiplier / Bernstein variation diminution /
+  finite Jacobi-matrix TN) as reference for any future idea involving point-value samples of Ξ.
+- **Turnage-Butterbaugh 2607.04632 (Guth–Maynard 2024 zero-density, expository)** — NOT-A-LEVER:
+  GM improves Ingham away from 1/2 (primes in short intervals); at σ→1/2⁺ the exponent → 1
+  (Ingham 3(1−σ)/(2−σ)→1; GM likewise), so near-line zeros remain uncontrolled = the exact
+  S(T)-type obstruction blocking the GS-2026 diagonal bound. No input to record class either.
+- Sweep sidelines (small-gaps 2604.05733, pair-correlation-primes 2607.14515, truncated-Weil
+  2605.20224, hyperfunctions 2606.07312, low-lying L-functions 2605.09282): no bearing.
+- DAG: **24 nodes / 22 edges / 7 traps**. Surviving openings unchanged: GJT-completion
+  (small-n ⟺ RH, hard; Jin's strip theorem cannot reach the moment-coefficient family) and
+  GS-2026 diagonal bound C<2 (zero-density/near-line blocked).
