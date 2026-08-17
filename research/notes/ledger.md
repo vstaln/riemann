@@ -1,5 +1,8 @@
 # Wave Ledger — shared state for swarm agents
 
+- **direct-rh-nonclassical-domains-2026-08-18** — **INCONCLUSIVE / NO CANDIDATE IN SPECIFIED DOMAINS**: optimal transport, nonlinear PDE, information geometry, Toda/integrability, and entropy objects were screened. Individual closures include FE auto-identities, harmonicity, positive-moment proves-too-much, Taylor Hankel failure, and modulus blindness; the memo’s broad universal obstruction is not promoted beyond its stipulated input class. Prime-sensitive search remains open. File: `research/notes/direct-rh-nonclassical-domains-2026-08-18.md`.
+
+
 - **direct-rh-theta-semigroup-2026-08-18** — **ABANDONED (PROVEN false)**: theta identity (★) and off-line system (★★) are FE/equivalence reformulations. The proposed strictly stronger uniform phase-gap ΘC is refuted on the actual zeta: at critical-line zeros, δ→0 gives normalized gap → 2|xi′(rho)|, and Stirling plus convexity makes |xi′(rho_n)|→0 along Hardy’s infinitely many line zeros. Rust probe also had a documented complex phase bug; its real-axis checks are not RH evidence. File: `research/notes/direct-rh-theta-semigroup-2026-08-18.md`.
 
 
