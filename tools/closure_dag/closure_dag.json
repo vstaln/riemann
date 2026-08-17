@@ -19,6 +19,18 @@
  },
  "levers": [
   {
+   "id": "direct-rh-fullcomplex-skeptic-2026-08-18",
+   "verdict": "INCONCLUSIVE (DISCRIMINATOR ONLY)",
+   "claim": "Line-separation energy from antisymmetric Im(xi'/xi) is a genuine full-complex discriminator candidate, but fixed-window finiteness, summability, and proportion ceilings block an RH implication; no verified Rust run.",
+   "file": "research/notes/direct-rh-fullcomplex-skeptic-2026-08-18.md"
+  },
+  {
+   "id": "direct-rh-prime-skeptic-2026-08-18",
+   "verdict": "ABANDONED (PROVEN equivalence collapse)",
+   "claim": "Prime-zeta P(s) transfer has P-log zeta holomorphic on Re>1/2, so holomorphy of P there is exactly RH; no non-equivalent prime object survived.",
+   "file": "research/notes/direct-rh-prime-skeptic-2026-08-18.md"
+  },
+  {
    "id": "direct-rh-nonclassical-domains-2026-08-18",
    "verdict": "INCONCLUSIVE (NO CANDIDATE IN SPECIFIED DOMAINS)",
    "claim": "Five non-classical domains screened; individual closures documented, but the memo's broad obstruction is not a theorem beyond its stipulated input class. Prime-sensitive new objects remain open.",
