@@ -1,0 +1,2 @@
+2026-08-17T17:03:59+07:00 native verifier performance: tables 12.4s; 100k nodes 111s; stopped before full 8M to avoid opaque long run
+2026-08-17T17:38:49+07:00 three identical sanctioned arb certifications complete; native Rust full parity pending

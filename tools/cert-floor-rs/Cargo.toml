@@ -1,0 +1,7 @@
+[package]
+name = "cert-floor-rs"
+version = "0.1.0"
+edition = "2021"
+description = "Certification-floor chain: record bound (H - tau)/(1 - B/m), eps-sweep, param-sweep. Port of tools/cert_floor_driver.py + tools/cert_param_sweep.py families."
+
+[dependencies]

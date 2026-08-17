@@ -1,3 +1,47 @@
+# CURRENT FINAL CERTIFIED RECORD — 2026-08-18
+
+**Status:** CHECKED NUMERICALLY; native Rust full certification complete. This updates the prior record below. The result is a proportion theorem only and is **not evidence for RH**.
+
+## Current record
+
+- **Simple zeros on the critical line:** `>= 0.6735310829992681328867805395...` (67.3531083%)
+- **Distinct zeros:** `>= 0.8367655414996340664433902697...` (83.6765541%), by the PROVEN affine corollary `(1+H)/2`.
+
+Improvement over the prior banked record:
+
+- simple: `+0.000050221324754...`
+- distinct: `+0.000025110662377...`
+
+## Certified configuration
+
+| parameter | value |
+|---|---|
+| cosine alpha | `1.464` |
+| dilation lambda | `1.15` |
+| p coefficients | `lambda*[946,1177,877,877,1177,946]/1920000` |
+| q coefficients | `lambda*[0.31343,1/3,105971/300000,105971/300000,1/3,0.31343]` |
+| pair weights | `2/(7-(j-i))`, all `0 <= i < j <= 6` |
+| pressure convention | `1/3000` |
+| certified floor | `epsilon=0.0069800` |
+| optimizing m | `153` |
+| verifier | native `tools/verifier-rs` hybrid interval verifier |
+| native result | `CASE D verified=true, nodes=838372` |
+
+Native Rust hostile acceptance set on the same code path:
+
+- **A:** old baseline `epsilon=0.0062` → `verified=true`, `nodes=1,094,486`.
+- **B:** ceiling `epsilon=0.0063` → `verified=false`, terminal cell low `0.006289525020944827`.
+- **D:** lambda-dilation candidate above → `verified=true`, `nodes=838,372`.
+- The three independent sanctioned arb reference runs also agreed at `838,742` nodes; native Rust D is the decisive certification used for this record.
+
+The independent 200-bit Rust bound computation gives `m=153` and the value above. The full native run used outward-rounded interval tables, LDL convexity checks, and the tighter point-tangent fallback only when the cell tangent did not resolve a box.
+
+## RH firewall
+
+This is a **CHECKED NUMERICALLY** proportion-on-line record, not a proof of RH and not evidence for RH. Direct-RH levers remain open and must continue under the campaign protocol.
+
+---
+
 # 🏆 FINAL CERTIFIED RECORD (session 2026-08-13) — 0.673481 simple-on-line, 0.836740 distinct
 
 **Status:** CHECKED NUMERICALLY (Arb interval verifier, grid 4000), independently re-run 3× with identical node counts.

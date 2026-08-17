@@ -976,3 +976,5 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
 - Sweep sidelines (small-gaps, pair-correlation-primes, truncated Weil, hyperfunctions): no bearing.
 - DAG: 24 nodes / 22 edges. Files: wave10-2026-summer-sweep-jacobi-guthmaynard-2026-08-18.md;
   papers: jacobi-pencils-2608.08714.txt, guth-maynard-2607.04632.txt.
+
+- **lambda-dilation record raise (2026-08-18)** — **CHECKED NUMERICALLY**: native Rust verifier CASE D certifies alpha=1.464, lambda=1.15, eps=0.0069800 at 838372 nodes with pressure=1/3000; 200-bit Rust chain gives simple 0.6735310829992681 and distinct 0.8367655414996341. CASE A baseline passes; CASE B epsilon=0.0063 fails terminal-cell. File: research/notes/dilation-lambda-2026-08-18.md. Next: continue direct-RH hunt; proportion != RH.
