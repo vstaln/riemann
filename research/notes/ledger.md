@@ -1,5 +1,8 @@
 # Wave Ledger — shared state for swarm agents
 
+- **arxiv-2608.11520-contour-hankel-2026-08-18** — **CLOSED (PROVEN equivalence)**: new contour-Hankel paper gives exact inertia counting nonreal conjugate pairs; its Corollary 3.7 states PSD for all real-centered disks is equivalent to RH, and Remark 3.8 leaves independent positivity unresolved. Moving-contour dynamics are a diagnostic only; no Rust reproduction funded. File: `research/notes/arxiv-2608.11520-hankel-triage-2026-08-18.md`.
+
+
 - **direct-rh-fullcomplex-skeptic-2026-08-18** — **INCONCLUSIVE / DISCRIMINATOR ONLY**: new line-separation energy LSE from the antisymmetric Im(xi′/xi) across sigma=1/2±delta is not symmetry-blind and should flag planted off-line poles, but fixed-window limsup has a finiteness ceiling, summable weights are automatic, and density normalization becomes Speiser/proportion. No Rust probe survived restart; no RH claim. File: `research/notes/direct-rh-fullcomplex-skeptic-2026-08-18.md`.
 
 - **direct-rh-prime-skeptic-2026-08-18** — **NO SURVIVOR (closure at mechanism level, PROVEN)**: prime-zeta transfer collapses to H iff RH by P(s)-log zeta(s) holomorphic on Re>1/2; no non-equivalent prime object survived. File: `research/notes/direct-rh-prime-skeptic-2026-08-18.md`.
