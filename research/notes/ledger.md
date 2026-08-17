@@ -1,5 +1,8 @@
 # Wave Ledger — shared state for swarm agents
 
+- **arxiv-direct-rh-sweep-2026-08-18** — **NO NEW SURVIVOR FOUND**: 2608.11520 is the Hankel/RH equivalence; 2607.04316 is RH-conditional local diagnostics; 2607.04338 is explicitly withdrawn for mistakes; 2607.16795 is a tail wedge that says it makes no RH progress; 2607.25002 is expository RH-equivalence material. No external claim promoted. File: `research/notes/arxiv-direct-rh-sweep-2026-08-18.md`.
+
+
 - **arxiv-2608.11520-contour-hankel-2026-08-18** — **CLOSED (PROVEN equivalence)**: new contour-Hankel paper gives exact inertia counting nonreal conjugate pairs; its Corollary 3.7 states PSD for all real-centered disks is equivalent to RH, and Remark 3.8 leaves independent positivity unresolved. Moving-contour dynamics are a diagnostic only; no Rust reproduction funded. File: `research/notes/arxiv-2608.11520-hankel-triage-2026-08-18.md`.
 
 
