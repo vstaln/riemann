@@ -61,3 +61,18 @@ sum. It does not refute RH and does not rule out a different resolvent inequalit
 
 Decision: **ABANDONED as stated**. The phase-velocity line remains the only Gravity survivor,
 label **INCONCLUSIVE** pending a one-way lemma and DH phase-defect control.
+
+## Closure-DAG adjudication — phase-velocity line
+
+The existing `research/notes/crossdomain-hunt-2026-08-18.md` already closes the Hermite–Biehler/
+de Branges route for Xi: the identity `|E(z)|=|E(conj(z))|` follows from Xi being real-entire
+and even, so the HB inequality is vacuous and the remaining assertion is equivalent to RH.
+The phase-velocity suggestion therefore adds no unclosed one-way condition. No redundant Rust
+probe is funded.
+
+## Comparative verdict
+
+Gravity was useful as a one-shot idea generator but worse than the existing frontier as a
+mathematical route: prime-resolvent is **ABANDONED as stated**, vertical Hankel is **ABANDONED
+as stated**, and phase velocity is **CLOSED by the existing PROVEN trap**. The direct-RH goal
+remains active; the next idea must be genuinely new and pass the closure DAG first.
