@@ -19,6 +19,12 @@
  },
  "levers": [
   {
+   "id": "arxiv-direct-rh-sweep-2026-08-18",
+   "verdict": "NO NEW SURVIVOR FOUND",
+   "claim": "Targeted math.NT arXiv sweep: relevant papers were an RH-equivalent Hankel criterion, conditional/local diagnostics, an explicitly withdrawn proof, a tail-only wedge stating no RH progress, and expository Mertens equivalences.",
+   "file": "research/notes/arxiv-direct-rh-sweep-2026-08-18.md"
+  },
+  {
    "id": "arxiv-2608.11520-contour-hankel-2026-08-18",
    "verdict": "CLOSED (PROVEN equivalence)",
    "claim": "Contour Hankel inertia exactly counts nonreal conjugate pairs; PSD over all real-centered disks is stated as equivalent to RH, while independent positivity remains unresolved. Diagnostic only.",
