@@ -44,3 +44,13 @@ The sweep found no new direct one-way RH mechanism. The withdrawn proof is rejec
 conditional/local and tail results are not sufficient conditions, and the Möbius material is an
 equivalence. Continue searching for genuinely new mathematics rather than relabeling any of
 these results. The proportion certificate remains entirely outside the RH evidence channel.
+
+### Full-text check: 2607.04316
+
+The full text confirms the abstract-level triage. Its Theorem 3.3 gives an explicit
+prime-force defect formula, but the localization Theorem 7.4 assumes finite-window damping,
+pole damping, and shifted-contour regularity. Theorem 7.6 additionally assumes RH for the full
+critical-line local profile. The paper calls the construction a local diagnostic and does not
+state an unconditional implication from defect positivity or profile shape to RH. The exact
+zero-side formula is explicit-formula/selected-residue data; no new one-way lemma or
+RH-false-controlled proof route was found. No Rust implementation funded.
