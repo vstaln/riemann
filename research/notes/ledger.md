@@ -963,3 +963,16 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   RH from the simple-zero proof": the diagonal count is the on-line-sensitive object. Open:
   any unconditional diagonal C<2. Campaign records ~ equivalent strength (2−C=0.6735 needs
   unconditional C≤1.3265, not known).
+
+## 2026-08-18 (cont.) — Wave-10: Feb–Aug 2026 sweep — CLOSED
+- **jacobi-pencils-2608** (Jin 2608.08714): NOT-A-LEVER (object identity + automatic strip).
+  Strip Z(F)⊆S_√(15/28) is RH-independent (|β−1/2|<1/2<0.732 always); centered binomial samples =
+  point evaluations ≠ GJT moment-coefficient family γ(n)=n!M_n/(2n)!; theorem = special-value
+  interlacing (signed resultants for Dedekind-zeta derivatives), no zero-location content. Banked
+  as new toolkit reference only. GJT-completion opening unchanged.
+- **guth-maynard-zerodensity** (TB 2607.04632, expository of GM 2024): NOT-A-LEVER. GM improves
+  Ingham away from 1/2 (primes in short intervals) but exponent → 1 at σ→1/2⁺; near-line zeros
+  (the S(T)-type obstruction) uncontrolled — no input to GS-2026 diagonal bound C<2.
+- Sweep sidelines (small-gaps, pair-correlation-primes, truncated Weil, hyperfunctions): no bearing.
+- DAG: 24 nodes / 22 edges. Files: wave10-2026-summer-sweep-jacobi-guthmaynard-2026-08-18.md;
+  papers: jacobi-pencils-2608.08714.txt, guth-maynard-2607.04632.txt.
