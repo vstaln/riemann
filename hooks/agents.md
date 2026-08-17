@@ -228,3 +228,6 @@ The host process can be KILLED at any moment. Context dies; THE DISK SURVIVES.
 
 ## Gravity one-shot cross-check (user directive)
 When an architect or adventurer is asked for a Gravity second opinion, run a fresh non-interactive `agy -p` with `--model gemini-3.7-flash-high --effort high` exactly once in that session. Multiple independent `agy` sessions are allowed; never resume one or ask it a follow-up. Treat its output as an idea source only: closure-DAG gate, RH-false control, and Rust verification still decide.
+
+## Context ceiling (user directive)
+Keep the coordinator and every future subagent at a hard `contextWindow <= 256000` and `maxTokens <= 64000`; retain compaction with `reserveTokens=48000` and write deliverables before compaction. Never expand the cap to consume more context.
