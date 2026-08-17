@@ -19,6 +19,12 @@
  },
  "levers": [
   {
+   "id": "arxiv-2608.11520-contour-hankel-2026-08-18",
+   "verdict": "CLOSED (PROVEN equivalence)",
+   "claim": "Contour Hankel inertia exactly counts nonreal conjugate pairs; PSD over all real-centered disks is stated as equivalent to RH, while independent positivity remains unresolved. Diagnostic only.",
+   "file": "research/notes/arxiv-2608.11520-hankel-triage-2026-08-18.md"
+  },
+  {
    "id": "direct-rh-fullcomplex-skeptic-2026-08-18",
    "verdict": "INCONCLUSIVE (DISCRIMINATOR ONLY)",
    "claim": "Line-separation energy from antisymmetric Im(xi'/xi) is a genuine full-complex discriminator candidate, but fixed-window finiteness, summability, and proportion ceilings block an RH implication; no verified Rust run.",
