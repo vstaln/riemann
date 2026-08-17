@@ -1,5 +1,12 @@
 # Wave Ledger — shared state for swarm agents
 
+- **direct-rh-fullcomplex-skeptic-2026-08-18** — **INCONCLUSIVE / DISCRIMINATOR ONLY**: new line-separation energy LSE from the antisymmetric Im(xi′/xi) across sigma=1/2±delta is not symmetry-blind and should flag planted off-line poles, but fixed-window limsup has a finiteness ceiling, summable weights are automatic, and density normalization becomes Speiser/proportion. No Rust probe survived restart; no RH claim. File: `research/notes/direct-rh-fullcomplex-skeptic-2026-08-18.md`.
+
+- **direct-rh-prime-skeptic-2026-08-18** — **NO SURVIVOR (closure at mechanism level, PROVEN)**: prime-zeta transfer collapses to H iff RH by P(s)-log zeta(s) holomorphic on Re>1/2; no non-equivalent prime object survived. File: `research/notes/direct-rh-prime-skeptic-2026-08-18.md`.
+
+
+- **direct-rh-prime-skeptic-2026-08-18** — **NO SURVIVOR (closure at mechanism level, PROVEN)**: single candidate H★ = "prime zeta P(s)=Σ_p p^{−s} holomorphic on Re>1/2 except s=1" collapses at R2 (non-equivalence): Möbius identity P=Σ_k μ(k)logζ(ks)/k gives P−logζ holomorphic on Re>1/2 (k≥2 terms holomorphic by Euler-product zero-freeness on Re>1; elementary), so singularities of P = {1} ∪ {zeros ρ: Re ρ>1/2} ⟹ H★ ⟺ RH (identity-level, not a new one-way condition). Lane trichotomy PROVEN: every well-posed prime/Euler-product condition is (i) provable-and-inert, (ii) singularity-forcing ⟹ ⟺-RH, or (iii) ill-posed across the abscissa (Σ_p p^{−s}, ΣΛ(n)n^{−s}, Σ log p·p^{−σ−it} diverge for σ≤1). Named controls: DH can't express P (no Euler product → vacuous); fake-Weil/Beurling fails H★ but only at the ⟺ price. Missing lemma for any survivor = fixed-strip zero-free from prime data without singularity interrogation = RH's own content. No code run (logical equivalence; probe spec §3.5). Prime compressed to R2; direct-RH hunt continues on non-prime formats (8B ξ′ interlacing, GS-2026 diagonal bridge). File: `research/notes/direct-rh-prime-skeptic-2026-08-18.md`.
+
 - **direct-rh-nonclassical-domains-2026-08-18** — **INCONCLUSIVE / NO CANDIDATE IN SPECIFIED DOMAINS**: optimal transport, nonlinear PDE, information geometry, Toda/integrability, and entropy objects were screened. Individual closures include FE auto-identities, harmonicity, positive-moment proves-too-much, Taylor Hankel failure, and modulus blindness; the memo’s broad universal obstruction is not promoted beyond its stipulated input class. Prime-sensitive search remains open. File: `research/notes/direct-rh-nonclassical-domains-2026-08-18.md`.
 
 

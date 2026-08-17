@@ -1,0 +1,8 @@
+t=1 env+layout scan
+t=2 reading required files
+t=3 located state+closure
+t=4 searched for state/closure
+t=7 cargo scan for reuse
+t=8 inspected zeta.rs
+t=9 probe dir ready
+t=10 WRAP: memo committed; probe dir tools/direct-rh-fullcomplex-skeptic/src/ created (empty); probe code NOT yet written (turn limit). Resume: write probe main.rs+zeta.rs per memo §4, cargo build --release, run, append outputs to memo §4 + update .progress. Math analysis complete in memo (Lemmas 1-3, finiteness/vacuity/proportion ceilings, Trap D missing lemma, non-equivalence witness, closed-form hump numbers in Appendix A).
