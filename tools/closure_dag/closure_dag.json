@@ -1,280 +1,306 @@
 {
-  "_meta": {
-    "description": "Mathematical closure-DAG of the Riemann campaign: each LEVER node carries a verdict (PROVEN/CHECKED NUMERICALLY/CONJECTURED/ABANDONED/INCONCLUSIVE) and typed edges to what it refutes/subsumes/depends-on. Purpose: make 'is this idea already dead?' a graph query, not a prose grep; enforce no-duplicate re-dispatch and the RH-equivalence-trap detection. Faithful to research/notes/CAMPAIGN-STATE.md + ledger.md as of 2026-08-18.",
-    "edge_types": {
-      "refutes": "this lever PROVEN the target family cannot work (target node is killed)",
-      "subsumes": "this lever's result is a stronger/equal cover of the target's question",
-      "depends_on": "this lever's conclusion relies on the target's verdict",
-      "implies_trap": "this lever shows the target reduces to an RH-equivalence (consistency-only)"
-    },
-    "trap_classes": [
-      "moment-sequence-to-gamma",
-      "xi-prime-transport",
-      "levinson-theta-infinity",
-      "log-profile-margin-2",
-      "kernel-TP2 (Schoenberg)",
-      "coefficient-margin (S1)",
-      "GJT-completion"
-    ]
+ "_meta": {
+  "description": "Mathematical closure-DAG of the Riemann campaign: each LEVER node carries a verdict (PROVEN/CHECKED NUMERICALLY/CONJECTURED/ABANDONED/INCONCLUSIVE) and typed edges to what it refutes/subsumes/depends-on. Purpose: make 'is this idea already dead?' a graph query, not a prose grep; enforce no-duplicate re-dispatch and the RH-equivalence-trap detection. Faithful to research/notes/CAMPAIGN-STATE.md + ledger.md as of 2026-08-18.",
+  "edge_types": {
+   "refutes": "this lever PROVEN the target family cannot work (target node is killed)",
+   "subsumes": "this lever's result is a stronger/equal cover of the target's question",
+   "depends_on": "this lever's conclusion relies on the target's verdict",
+   "implies_trap": "this lever shows the target reduces to an RH-equivalence (consistency-only)"
   },
-  "levers": [
-    {
-      "id": "S1-margin",
-      "verdict": "DEAD (PROVEN)",
-      "claim": "No decaying-margin coefficient criterion with C>1 forces LP; Newton boundary c_crit=1 is the exact necessary limit; counterexample b_k=k^{-1.0696.k} has min t_k(k+1)=1.07084 yet genuine non-real zeros. Hutchinson 3/4 is the only classical sufficiency; Xi fails it.",
-      "trap_class": "coefficient-margin (S1)",
-      "file": "research/notes/s1-margin-probe-2026-08-18.md"
-    },
-    {
-      "id": "S2-PNT",
-      "verdict": "DEFLATED (PROVEN)",
-      "claim": "restates von Koch; no independent one-way content.",
-      "file": "research/notes/wave16-s2-pnt-2026-08-18.md"
-    },
-    {
-      "id": "S4-region-size",
-      "verdict": "CLOSED (PROVEN)",
-      "claim": "n0*(d)~7.7 d^0.97; region ~3.9 d^2; zero non-hyperbolic J_{d,n} on d<=20,n<=200; GOR TW Cor 1.3 proves hyperbolic d<=9.36e20 all n via Platt's RH0. Jensen finite-degree = GJT-completion trap.",
-      "trap_class": "GJT-completion",
-      "file": "research/notes/s4-region-size-2026-08-18.md"
-    },
-    {
-      "id": "Schoenberg-kernel-TP2",
-      "verdict": "REFUTED (PROVEN)",
-      "claim": "sin(t)/t in LP yet shift kernel has 47% negative 2x2 minors; correct duality is FT (f in PF_inf <==> 1/fhat in LP), not shift-kernel TP2.",
-      "trap_class": "kernel-TP2 (Schoenberg)",
-      "file": "research/notes/wave15-schoenberg-2026-08-18.md"
-    },
-    {
-      "id": "8E-Mellin",
-      "verdict": "CLOSED (PROVEN)",
-      "claim": "Mellin 2^{+s} control bug fixed; consistency-only.",
-      "file": "research/notes/wave15-8e-mellin-2026-08-18.md"
-    },
-    {
-      "id": "Herglotz",
-      "verdict": "CORRECTED (PROVEN)",
-      "claim": "anti-Herglotz correction applied.",
-      "file": "research/notes/wave14-herglotz-2026-08-18.md"
-    },
-    {
-      "id": "Li-criterion",
-      "verdict": "CLOSED (PROVEN)",
-      "claim": "Li(lambda_n) <=> RH restatement; consistency-only.",
-      "file": "research/notes/wave8a-li-criterion-2026-08-17.md"
-    },
-    {
-      "id": "8B-right",
-      "verdict": "CLOSED (PROVEN)",
-      "claim": "zeta' right-strip census: 8228 zeros [0.5,1]x[10,12000], density ratio 0.5865->0.6572; N1(T)~N(T) PROVEN by Levinson-Montgomery 1974 primary source; left strip redundant (Platt-Trudgian < 3e12 + Speiser).",
-      "file": "research/notes/wave8b-right-extension-2026-08-18.md"
-    },
-    {
-      "id": "8C-dip",
-      "verdict": "INCONCLUSIVE (CLOSED)",
-      "claim": "N=700 dip real to 7.4e-29, artifact-excluded, all 15 zero-pairs + divisor + kappa refuted; localized finite-size feature, mechanism unidentified. Not an RH lever.",
-      "file": "research/notes/wave8c-dip-mechanism-2026-08-18.md"
-    },
-    {
-      "id": "8D-Phi-moment",
-      "verdict": "CLOSED (PROVEN)",
-      "claim": "coefficient route = S1-closed; Phi(0)=+0.8933938, Phi>0 on (0,inf).",
-      "file": "research/notes/wave8d-lk-zeta-direct-2026-08-18.md"
-    },
-    {
-      "id": "g0-2-oracle",
-      "verdict": "PROVEN",
-      "claim": "certified M_k/b_k/gamma(k) k=0..300 @210 bits; deficit constant = 2 PROVEN: t_k k = 2 - 2/ln k + O(lnln k/ln^2 k); theta identity Phi=2e^{u/2}(2x^2 theta'' + 3x theta'), x=e^{2u} PROVEN exact.",
-      "file": "research/notes/g02-moments-oracle-2026-08-18.md"
-    },
-    {
-      "id": "Holland-wedge",
-      "verdict": "PROVEN non-margin, NOT an RH lever",
-      "claim": "n^3 log^2(n+2) >= K d^5 ==> J^{d,n} hyperbolic + Wigner semicircle (2608.08682). Mechanism = real-rooted-comparison + bounded-analytic-multiplier stability. Genuinely non-margin (escapes S1) but finite-degree; complement <==> RH = GJT-completion trap. No path to LP without RH.",
-      "trap_class": "GJT-completion",
-      "file": "research/notes/holland-wedge-probe-2026-08-18.md"
-    },
-    {
-      "id": "xi-prime-transport",
-      "verdict": "INVALID (PROVEN)",
-      "claim": "xi'-distinct-two-trace transport structurally invalid: read-class identical (rank-trace), double zeta zero collapses to simple xi' zero (Rho_xi=0.5 with Rho_xi'=1.0 compatible). 0.836740 distinct terminal.",
-      "trap_class": "xi-prime-transport",
-      "file": "research/notes/wave20-xi-prime-transport-2026-08-18.md"
-    },
-    {
-      "id": "lit-sweep",
-      "verdict": "EMPTY (CONCLUDED)",
-      "claim": "2023-2026 literature adds no new sufficient-condition family escaping the PROVEN closures; Holland flagged only NEW structural theorem.",
-      "file": "research/notes/lit-sweep-2026-08-18.md"
-    },
-    {
-      "id": "frontier-smalln0-slice",
-      "verdict": "PROVEN-STUCK",
-      "claim": "gamma(n)=n!M_n/(2n)! is NOT a moment sequence (Hankel det2=-9.19e-6<0, hand-verified); Phi>0 positive-measure structure does NOT transfer to Taylor coefficients; fixed-n0 covers measure-zero of (n0,d) lattice; GJT-completion trap airtight. Small-n Jensen decomposition route PROVEN CLOSED.",
-      "trap_class": "moment-sequence-to-gamma",
-      "file": "research/notes/frontier-smalln0-slice-2026-08-18.md"
-    },
-    {
-      "id": "logprofile-boundary",
-      "verdict": "DEAD (PROVEN)",
-      "claim": "deficit-2 log-profile class {t_k*k >= 2-2/ln k} is NOT LP-consistent: S1 PROVEN-non-LP perturbed families b_k=k^{-2k}(1+eps*cos(omega*ln k)) satisfy t_k*k>=2-2/ln k for ALL k (verified to 2e5, convention exact-match to S1 margins 1.8687/1.7381) yet have certified genuine non-real zeros (|F|=1.6e-13). Log-profile = consistency data, NOT a sufficient condition. Scan (07db05a8) demoted to documentation (D*(C) map).",
-      "trap_class": "log-profile-margin-2",
-      "file": "research/notes/logprofile-boundary-2026-08-18.md"
-    },
-    {
-      "id": "crossdomain-hunt",
-      "verdict": "ALL CLOSED (7 transports)",
-      "claim": "7 foreign-field sufficient-condition transports assessed: Lee-Yang (section lemma fails N>=12), HB/operator theory (NEW PROVEN HB degeneracy lemma |Xi(-iz)|=|Xi(iz-bar)| identically => HB/de Branges route vacuous, hand-verified), RMT (consistency-only), Weil-Deligne (structurally impossible: zeros transcendental), potential-theory/explicit-formula (trap, FE=evenness admits off-line zeros), Sturm/_1F_1 (no 2nd-order ODE for Xi), SINC-PF-infinity duality (direction mismatch, Phi not PF-infinity PROVEN via Hardy+duality). NO survivor. Every literature real-zero-forcing mechanism needs product/PF structure, ODE, or cohomology - Xi violates all; rest are traps.",
-      "trap_class": "GJT-completion",
-      "file": "research/notes/crossdomain-hunt-2026-08-18.md"
-    },
-    {
-      "id": "binomial-moment",
-      "verdict": "CLOSED (negative)",
-      "claim": "binomial transform of a moment sequence does NOT preserve real-rootedness: J^{d,0} from TRUE Hankel-TP moments M_j fails at d=4/5 (max|Im|=6.34/5.35). Failure is NOT caused by the n!/(2n)! renormalization - the moment object itself doesn't binomial-transform to real roots. GJT-completion via binomial-moment positivity: closed (CHECKED NUMERICALLY small d).",
-      "trap_class": "moment-sequence-to-gamma",
-      "file": "research/notes/ledger.md"
-    },
-    {
-      "id": "barrierzoo-retrotest",
-      "verdict": "CONSISTENCY-ONLY (CONFIRMED)",
-      "claim": "barrier-zoo retro-test of the campaign's own PROVEN identities against the RH-false DH world: all-positive Taylor coeffs do NOT separate (DH all-positive); deficit-2 log-profile SATISFIES t_k*k>=2-2/ln k in DH world (trusted k=2..5, zero violations) \u2014 proves too much, consistency-only (3rd independent line); M' Hankel det2>0 not separating at first minor. No new lever. Epstein addendum: closest analogue (positive theta coeffs, self-dual FE) ALSO satisfies deficit-2 on entire part E(s) (gaps +1.60/+0.68/+0.40/+0.29, zero violations); NEW fact: Xi_Q meromorphic not entire (poles s=0,1). Two RH-false worlds confirm. Addendum2: Hankel det3 TP (>0) in both RH-false worlds too \u2014 M_n Hankel-TP does NOT separate (consistency-only at every tested order).",
-      "trap_class": "log-profile-margin-2",
-      "file": "research/notes/barrierzoo-retrotest-2026-08-18.md"
-    },
-    {
-      "id": "sdp-paircorr-transfer",
-      "verdict": "CLOSED-REFUTED 2026-08-18 (identification step)",
-      "claim": "CGdL 1810.08843 SDP relaxed class transfers UNCONDITIONALLY to N*/anywhere via BGSTB24 Thm 1 - REFUTED: BGSTB24 F uses w(u)=4/(4-u^2), complex argument (rho-rho') (real parts enter; agrees with Montgomery ordinate-only F ONLY under RH, UnconditionalPC_230606.tex line 143), while CGdL identity (8) needs ordinate-only F (w=4/(4+u^2), T^{ix(gamma-gamma')}). Object identity fails; ordinate-only [0,1] asymptotics remain Goldston-Montgomery RH-conditional. BGSTB24's OWN application of their Thm 1 gives only 61.7% simple under thin box (sech/strip-positive kernels, constants 1.38-1.39, Lemma 6c strip-positivity = unconditional price) < 67.92% - internal contradiction. 67.92% stays RH-conditional as published. Surviving NEW: GS 2511.20059 Thm 2/3 (Feb 2026) framework: diagonal pair count (5.2) <= (C+o(1))N with C<2 IMPLIES >= 2-C simple AND >= 2-C on the critical line - genuinely new bridge; open: any unconditional diagonal C<2; campaign on-line records have equivalent strength 2-C ~ 0.6735 but no unconditional C<2 is known."
-    },
-    {
-      "id": "levinson-variational-Q",
-      "verdict": "DUPLICATE-TRAP (moment class)",
-      "claim": "Conrey-Farmer-Kwan-Lin-TTB 2508.11108 variational Q family = Levinson counting method (proportion != RH), FE enters only as even-symmetry; output kappa>2theta/3 for any theta>0, numerics below PRZZ/record (theta=2/3->0.364). Bettin-Gonek theta=infty->RH = DUPLICATE of moment/coefficient-margin trap (conjectural long-mollifier moment asymptotic, not algebraically explicit). Siegel-f prop: same argument-principle as closed xi-prime-transport. Register levinson-theta-infinity as named member of moment trap node."
-    },
-    {
-      "id": "gs-2026-diagonal-bridge",
-      "verdict": "NEW-FRAMEWORK-BANKED (knowledge node, not a lever): GS 2511.20059 Thm 2/3 (Feb 2026). IF diagonal pair count (5.2) \u03a3_{\u03b3=\u03b3'}1 <= (C+o(1))N with 1<=C<2, THEN >= 2-C simple AND >= 2-C on critical line. Montgomery simple-zero proof = (a) Fejer sum eval (pair-correlation datum) + (b) diagonal = \u03a3 m_rho under RH; (b) fails without RH (symmetric off-line zeros share ordinates, H(\u03b3) counts them). Remove-RH \u2260 make-F-unconditional: need the DIAGONAL count bounded \u2014 an on-line statement. Open: any unconditional diagonal C<2. Campaign on-line records ~ strength 2-C=0.6735 \u27f9 would need unconditional C<=1.3265 \u2014 no such diagonal bound is known unconditionally. New lens on record chain, NOT a new lever."
-    }
-  ],
-  "edges": [
-    {
-      "from": "S1-margin",
-      "to": "8D-Phi-moment",
-      "type": "refutes",
-      "note": "coefficient-route is the S1 margin class"
-    },
-    {
-      "from": "S1-margin",
-      "to": "Holland-wedge",
-      "type": "depends_on",
-      "note": "Holland escapes S1 by NOT using margin (verified non-margin) \u2014 so S1 does NOT refute Holland, but Holland is finite-degree"
-    },
-    {
-      "from": "Schoenberg-kernel-TP2",
-      "to": "kernel-TP2",
-      "type": "refutes"
-    },
-    {
-      "from": "S4-region-size",
-      "to": "Jensen-route",
-      "type": "subsumes",
-      "note": "finite-degree Jensen hyperbolicity proven on whole accessible grid; still diagnostic-only"
-    },
-    {
-      "from": "Holland-wedge",
-      "to": "Jensen-route",
-      "type": "subsumes",
-      "note": "sharpest finite-degree hyperbolicity theorem; still diagnostic-only (Farmer)"
-    },
-    {
-      "from": "8B-right",
-      "to": "zeta'-channel",
-      "type": "implies_trap",
-      "note": "right-strip fully explained by PROVEN count law; left-strip infeasible and redundant"
-    },
-    {
-      "from": "g0-2-oracle",
-      "to": "moment-to-gamma",
-      "type": "depends_on",
-      "note": "M_n = moment seq of positive measure (Phi>0), but gamma(n)=n! M_n/(2n)! renormalization may break Hankel TP"
-    },
-    {
-      "from": "g0-2-oracle",
-      "to": "S1-margin",
-      "type": "depends_on",
-      "note": "margin profile t_k k -> 2 with deficit exactly 2 is the data the S1 closure acts on"
-    },
-    {
-      "from": "xi-prime-transport",
-      "to": "record-distinct-0.836740",
-      "type": "refutes",
-      "note": "0.836740 STANDS terminal; xi'-transport invalid"
-    },
-    {
-      "from": "lit-sweep",
-      "to": "frontier",
-      "type": "subsumes",
-      "note": "no new input 2023-2026; frontier needs genuinely new mathematics or GJT-completion decomposition"
-    },
-    {
-      "from": "frontier-smalln0-slice",
-      "to": "moment-to-gamma",
-      "type": "refutes",
-      "note": "positive-measure M_n does NOT imply Hankel TP on gamma; renormalization breaks the bridge at the first non-trivial minor"
-    },
-    {
-      "from": "g0-2-oracle",
-      "to": "frontier-smalln0-slice",
-      "type": "depends_on",
-      "note": "uses certified M_k/gamma(k) + the PROVEN relation gamma(k)=k!M_k/(2k)!"
-    },
-    {
-      "from": "S1-margin",
-      "to": "logprofile-boundary",
-      "type": "refutes",
-      "note": "S1's PROVEN-non-LP log-periodic perturbations (b_k=k^{-2k}(1+eps cos(omega ln k))) lie INSIDE the deficit-2 class; no new scan needed"
-    },
-    {
-      "from": "crossdomain-hunt",
-      "to": "frontier-smalln0-slice",
-      "type": "subsumes",
-      "note": "all foreign-field transports closed; GJT-completion remains the sole structural opening"
-    },
-    {
-      "from": "crossdomain-hunt",
-      "to": "binomial-moment",
-      "type": "depends_on",
-      "note": "binomial-moment probe funded by coordinator after cross-domain hunt identified GJT-completion as sole opening"
-    },
-    {
-      "from": "logprofile-boundary",
-      "to": "barrierzoo-retrotest",
-      "type": "refutes",
-      "note": "campaign's own PROVEN deficit-2 profile holds in the RH-false DH world (trusted k=2..5, 23 off-line zeros) \u2014 proves too much, consistency-only by the campaign's own barrier-zoo standard"
-    },
-    {
-      "from": "sdp-paircorr-transfer",
-      "to": "wave9-9A",
-      "type": "documented",
-      "note": "coordinator-completed from preserved 9A transcript (agent died at 80% ctx, quiet-hours guard blocked tools); referee-verified from source"
-    },
-    {
-      "from": "levinson-variational-Q",
-      "to": "wave9-9B",
-      "type": "documented",
-      "note": "agent-completed; DUPLICATE-TRAP classification"
-    },
-    {
-      "from": "gs-2026-diagonal-bridge",
-      "to": "sdp-paircorr-transfer",
-      "relation": "refutes-identification-step; frames remaining open question (unconditional diagonal C<2)"
-    },
-    {
-      "from": "gs-2026-diagonal-bridge",
-      "to": "xi-prime-transport",
-      "relation": "lens: on-line records equivalent-strength to 2-C; need unconditional diagonal bound to lift"
-    }
-  ],
-  "active_frontier": []
+  "trap_classes": [
+   "moment-sequence-to-gamma",
+   "xi-prime-transport",
+   "levinson-theta-infinity",
+   "log-profile-margin-2",
+   "kernel-TP2 (Schoenberg)",
+   "coefficient-margin (S1)",
+   "GJT-completion"
+  ]
+ },
+ "levers": [
+  {
+   "id": "S1-margin",
+   "verdict": "DEAD (PROVEN)",
+   "claim": "No decaying-margin coefficient criterion with C>1 forces LP; Newton boundary c_crit=1 is the exact necessary limit; counterexample b_k=k^{-1.0696.k} has min t_k(k+1)=1.07084 yet genuine non-real zeros. Hutchinson 3/4 is the only classical sufficiency; Xi fails it.",
+   "trap_class": "coefficient-margin (S1)",
+   "file": "research/notes/s1-margin-probe-2026-08-18.md"
+  },
+  {
+   "id": "S2-PNT",
+   "verdict": "DEFLATED (PROVEN)",
+   "claim": "restates von Koch; no independent one-way content.",
+   "file": "research/notes/wave16-s2-pnt-2026-08-18.md"
+  },
+  {
+   "id": "S4-region-size",
+   "verdict": "CLOSED (PROVEN)",
+   "claim": "n0*(d)~7.7 d^0.97; region ~3.9 d^2; zero non-hyperbolic J_{d,n} on d<=20,n<=200; GOR TW Cor 1.3 proves hyperbolic d<=9.36e20 all n via Platt's RH0. Jensen finite-degree = GJT-completion trap.",
+   "trap_class": "GJT-completion",
+   "file": "research/notes/s4-region-size-2026-08-18.md"
+  },
+  {
+   "id": "Schoenberg-kernel-TP2",
+   "verdict": "REFUTED (PROVEN)",
+   "claim": "sin(t)/t in LP yet shift kernel has 47% negative 2x2 minors; correct duality is FT (f in PF_inf <==> 1/fhat in LP), not shift-kernel TP2.",
+   "trap_class": "kernel-TP2 (Schoenberg)",
+   "file": "research/notes/wave15-schoenberg-2026-08-18.md"
+  },
+  {
+   "id": "8E-Mellin",
+   "verdict": "CLOSED (PROVEN)",
+   "claim": "Mellin 2^{+s} control bug fixed; consistency-only.",
+   "file": "research/notes/wave15-8e-mellin-2026-08-18.md"
+  },
+  {
+   "id": "Herglotz",
+   "verdict": "CORRECTED (PROVEN)",
+   "claim": "anti-Herglotz correction applied.",
+   "file": "research/notes/wave14-herglotz-2026-08-18.md"
+  },
+  {
+   "id": "Li-criterion",
+   "verdict": "CLOSED (PROVEN)",
+   "claim": "Li(lambda_n) <=> RH restatement; consistency-only.",
+   "file": "research/notes/wave8a-li-criterion-2026-08-17.md"
+  },
+  {
+   "id": "8B-right",
+   "verdict": "CLOSED (PROVEN)",
+   "claim": "zeta' right-strip census: 8228 zeros [0.5,1]x[10,12000], density ratio 0.5865->0.6572; N1(T)~N(T) PROVEN by Levinson-Montgomery 1974 primary source; left strip redundant (Platt-Trudgian < 3e12 + Speiser).",
+   "file": "research/notes/wave8b-right-extension-2026-08-18.md"
+  },
+  {
+   "id": "8C-dip",
+   "verdict": "INCONCLUSIVE (CLOSED)",
+   "claim": "N=700 dip real to 7.4e-29, artifact-excluded, all 15 zero-pairs + divisor + kappa refuted; localized finite-size feature, mechanism unidentified. Not an RH lever.",
+   "file": "research/notes/wave8c-dip-mechanism-2026-08-18.md"
+  },
+  {
+   "id": "8D-Phi-moment",
+   "verdict": "CLOSED (PROVEN)",
+   "claim": "coefficient route = S1-closed; Phi(0)=+0.8933938, Phi>0 on (0,inf).",
+   "file": "research/notes/wave8d-lk-zeta-direct-2026-08-18.md"
+  },
+  {
+   "id": "g0-2-oracle",
+   "verdict": "PROVEN",
+   "claim": "certified M_k/b_k/gamma(k) k=0..300 @210 bits; deficit constant = 2 PROVEN: t_k k = 2 - 2/ln k + O(lnln k/ln^2 k); theta identity Phi=2e^{u/2}(2x^2 theta'' + 3x theta'), x=e^{2u} PROVEN exact.",
+   "file": "research/notes/g02-moments-oracle-2026-08-18.md"
+  },
+  {
+   "id": "Holland-wedge",
+   "verdict": "PROVEN non-margin, NOT an RH lever",
+   "claim": "n^3 log^2(n+2) >= K d^5 ==> J^{d,n} hyperbolic + Wigner semicircle (2608.08682). Mechanism = real-rooted-comparison + bounded-analytic-multiplier stability. Genuinely non-margin (escapes S1) but finite-degree; complement <==> RH = GJT-completion trap. No path to LP without RH.",
+   "trap_class": "GJT-completion",
+   "file": "research/notes/holland-wedge-probe-2026-08-18.md"
+  },
+  {
+   "id": "xi-prime-transport",
+   "verdict": "INVALID (PROVEN)",
+   "claim": "xi'-distinct-two-trace transport structurally invalid: read-class identical (rank-trace), double zeta zero collapses to simple xi' zero (Rho_xi=0.5 with Rho_xi'=1.0 compatible). 0.836740 distinct terminal.",
+   "trap_class": "xi-prime-transport",
+   "file": "research/notes/wave20-xi-prime-transport-2026-08-18.md"
+  },
+  {
+   "id": "lit-sweep",
+   "verdict": "EMPTY (CONCLUDED)",
+   "claim": "2023-2026 literature adds no new sufficient-condition family escaping the PROVEN closures; Holland flagged only NEW structural theorem.",
+   "file": "research/notes/lit-sweep-2026-08-18.md"
+  },
+  {
+   "id": "frontier-smalln0-slice",
+   "verdict": "PROVEN-STUCK",
+   "claim": "gamma(n)=n!M_n/(2n)! is NOT a moment sequence (Hankel det2=-9.19e-6<0, hand-verified); Phi>0 positive-measure structure does NOT transfer to Taylor coefficients; fixed-n0 covers measure-zero of (n0,d) lattice; GJT-completion trap airtight. Small-n Jensen decomposition route PROVEN CLOSED.",
+   "trap_class": "moment-sequence-to-gamma",
+   "file": "research/notes/frontier-smalln0-slice-2026-08-18.md"
+  },
+  {
+   "id": "logprofile-boundary",
+   "verdict": "DEAD (PROVEN)",
+   "claim": "deficit-2 log-profile class {t_k*k >= 2-2/ln k} is NOT LP-consistent: S1 PROVEN-non-LP perturbed families b_k=k^{-2k}(1+eps*cos(omega*ln k)) satisfy t_k*k>=2-2/ln k for ALL k (verified to 2e5, convention exact-match to S1 margins 1.8687/1.7381) yet have certified genuine non-real zeros (|F|=1.6e-13). Log-profile = consistency data, NOT a sufficient condition. Scan (07db05a8) demoted to documentation (D*(C) map).",
+   "trap_class": "log-profile-margin-2",
+   "file": "research/notes/logprofile-boundary-2026-08-18.md"
+  },
+  {
+   "id": "crossdomain-hunt",
+   "verdict": "ALL CLOSED (7 transports)",
+   "claim": "7 foreign-field sufficient-condition transports assessed: Lee-Yang (section lemma fails N>=12), HB/operator theory (NEW PROVEN HB degeneracy lemma |Xi(-iz)|=|Xi(iz-bar)| identically => HB/de Branges route vacuous, hand-verified), RMT (consistency-only), Weil-Deligne (structurally impossible: zeros transcendental), potential-theory/explicit-formula (trap, FE=evenness admits off-line zeros), Sturm/_1F_1 (no 2nd-order ODE for Xi), SINC-PF-infinity duality (direction mismatch, Phi not PF-infinity PROVEN via Hardy+duality). NO survivor. Every literature real-zero-forcing mechanism needs product/PF structure, ODE, or cohomology - Xi violates all; rest are traps.",
+   "trap_class": "GJT-completion",
+   "file": "research/notes/crossdomain-hunt-2026-08-18.md"
+  },
+  {
+   "id": "binomial-moment",
+   "verdict": "CLOSED (negative)",
+   "claim": "binomial transform of a moment sequence does NOT preserve real-rootedness: J^{d,0} from TRUE Hankel-TP moments M_j fails at d=4/5 (max|Im|=6.34/5.35). Failure is NOT caused by the n!/(2n)! renormalization - the moment object itself doesn't binomial-transform to real roots. GJT-completion via binomial-moment positivity: closed (CHECKED NUMERICALLY small d).",
+   "trap_class": "moment-sequence-to-gamma",
+   "file": "research/notes/ledger.md"
+  },
+  {
+   "id": "barrierzoo-retrotest",
+   "verdict": "CONSISTENCY-ONLY (CONFIRMED)",
+   "claim": "barrier-zoo retro-test of the campaign's own PROVEN identities against the RH-false DH world: all-positive Taylor coeffs do NOT separate (DH all-positive); deficit-2 log-profile SATISFIES t_k*k>=2-2/ln k in DH world (trusted k=2..5, zero violations) \u2014 proves too much, consistency-only (3rd independent line); M' Hankel det2>0 not separating at first minor. No new lever. Epstein addendum: closest analogue (positive theta coeffs, self-dual FE) ALSO satisfies deficit-2 on entire part E(s) (gaps +1.60/+0.68/+0.40/+0.29, zero violations); NEW fact: Xi_Q meromorphic not entire (poles s=0,1). Two RH-false worlds confirm. Addendum2: Hankel det3 TP (>0) in both RH-false worlds too \u2014 M_n Hankel-TP does NOT separate (consistency-only at every tested order).",
+   "trap_class": "log-profile-margin-2",
+   "file": "research/notes/barrierzoo-retrotest-2026-08-18.md"
+  },
+  {
+   "id": "sdp-paircorr-transfer",
+   "verdict": "CLOSED-REFUTED 2026-08-18 (identification step)",
+   "claim": "CGdL 1810.08843 SDP relaxed class transfers UNCONDITIONALLY to N*/anywhere via BGSTB24 Thm 1 - REFUTED: BGSTB24 F uses w(u)=4/(4-u^2), complex argument (rho-rho') (real parts enter; agrees with Montgomery ordinate-only F ONLY under RH, UnconditionalPC_230606.tex line 143), while CGdL identity (8) needs ordinate-only F (w=4/(4+u^2), T^{ix(gamma-gamma')}). Object identity fails; ordinate-only [0,1] asymptotics remain Goldston-Montgomery RH-conditional. BGSTB24's OWN application of their Thm 1 gives only 61.7% simple under thin box (sech/strip-positive kernels, constants 1.38-1.39, Lemma 6c strip-positivity = unconditional price) < 67.92% - internal contradiction. 67.92% stays RH-conditional as published. Surviving NEW: GS 2511.20059 Thm 2/3 (Feb 2026) framework: diagonal pair count (5.2) <= (C+o(1))N with C<2 IMPLIES >= 2-C simple AND >= 2-C on the critical line - genuinely new bridge; open: any unconditional diagonal C<2; campaign on-line records have equivalent strength 2-C ~ 0.6735 but no unconditional C<2 is known."
+  },
+  {
+   "id": "levinson-variational-Q",
+   "verdict": "DUPLICATE-TRAP (moment class)",
+   "claim": "Conrey-Farmer-Kwan-Lin-TTB 2508.11108 variational Q family = Levinson counting method (proportion != RH), FE enters only as even-symmetry; output kappa>2theta/3 for any theta>0, numerics below PRZZ/record (theta=2/3->0.364). Bettin-Gonek theta=infty->RH = DUPLICATE of moment/coefficient-margin trap (conjectural long-mollifier moment asymptotic, not algebraically explicit). Siegel-f prop: same argument-principle as closed xi-prime-transport. Register levinson-theta-infinity as named member of moment trap node."
+  },
+  {
+   "id": "gs-2026-diagonal-bridge",
+   "verdict": "NEW-FRAMEWORK-BANKED (knowledge node, not a lever): GS 2511.20059 Thm 2/3 (Feb 2026). IF diagonal pair count (5.2) \u03a3_{\u03b3=\u03b3'}1 <= (C+o(1))N with 1<=C<2, THEN >= 2-C simple AND >= 2-C on critical line. Montgomery simple-zero proof = (a) Fejer sum eval (pair-correlation datum) + (b) diagonal = \u03a3 m_rho under RH; (b) fails without RH (symmetric off-line zeros share ordinates, H(\u03b3) counts them). Remove-RH \u2260 make-F-unconditional: need the DIAGONAL count bounded \u2014 an on-line statement. Open: any unconditional diagonal C<2. Campaign on-line records ~ strength 2-C=0.6735 \u27f9 would need unconditional C<=1.3265 \u2014 no such diagonal bound is known unconditionally. New lens on record chain, NOT a new lever."
+  },
+  {
+   "id": "jacobi-pencils-2608",
+   "paper": "Jin 2608.08714 Jacobi Endpoint Pencils (centered binomial samples, GJT toolkit)",
+   "verdict": "NOT-A-LEVER (type: object identity) 2026-08-18: strip cond Z(F)\u2286S_\u221a(15/28) AUTOMATIC (|\u03b2\u22121/2|<1/2<0.732 for ALL critical-strip zeros, RH-independent); object identity fails: centered binomial samples = POINT EVALUES H(j\u2212d/2), GJT Jensen polys = MOMENT coefficients \u03b3(n)=n!M_n/(2n)!; theorem = special-value interlacing/signed resultants for Dedekind-zeta derivatives, no zero-location content; \u03be not even the target",
+   "trap": "consistency-only (automatic strip) + object-identity",
+   "date": "2026-08-18"
+  },
+  {
+   "id": "guth-maynard-zerodensity",
+   "paper": "Turnage-Butterbaugh 2607.04632 (expository, GM 2024 zero-density breakthrough)",
+   "verdict": "NOT-A-LEVER (type: near-line obstruction) 2026-08-18: GM improves Ingham for \u03c3 away from 1/2 (feeds primes-in-short-intervals); at \u03c3\u21921/2+ exponent still \u21921 (Ingham 3(1\u2212\u03c3)/(2\u2212\u03c3)\u21921, GM likewise) so NEAR-LINE zeros uncontrolled = the S(T)-type obstruction blocking GS-2026 diagonal bound \u03a3_{\u03b3=\u03b3\u2032}1 \u2264 C\u00b7N; no input to record class either (bandwidth-1 F data unchanged)",
+   "trap": "near-line zero-density obstruction",
+   "date": "2026-08-18"
+  }
+ ],
+ "edges": [
+  {
+   "from": "S1-margin",
+   "to": "8D-Phi-moment",
+   "type": "refutes",
+   "note": "coefficient-route is the S1 margin class"
+  },
+  {
+   "from": "S1-margin",
+   "to": "Holland-wedge",
+   "type": "depends_on",
+   "note": "Holland escapes S1 by NOT using margin (verified non-margin) \u2014 so S1 does NOT refute Holland, but Holland is finite-degree"
+  },
+  {
+   "from": "Schoenberg-kernel-TP2",
+   "to": "kernel-TP2",
+   "type": "refutes"
+  },
+  {
+   "from": "S4-region-size",
+   "to": "Jensen-route",
+   "type": "subsumes",
+   "note": "finite-degree Jensen hyperbolicity proven on whole accessible grid; still diagnostic-only"
+  },
+  {
+   "from": "Holland-wedge",
+   "to": "Jensen-route",
+   "type": "subsumes",
+   "note": "sharpest finite-degree hyperbolicity theorem; still diagnostic-only (Farmer)"
+  },
+  {
+   "from": "8B-right",
+   "to": "zeta'-channel",
+   "type": "implies_trap",
+   "note": "right-strip fully explained by PROVEN count law; left-strip infeasible and redundant"
+  },
+  {
+   "from": "g0-2-oracle",
+   "to": "moment-to-gamma",
+   "type": "depends_on",
+   "note": "M_n = moment seq of positive measure (Phi>0), but gamma(n)=n! M_n/(2n)! renormalization may break Hankel TP"
+  },
+  {
+   "from": "g0-2-oracle",
+   "to": "S1-margin",
+   "type": "depends_on",
+   "note": "margin profile t_k k -> 2 with deficit exactly 2 is the data the S1 closure acts on"
+  },
+  {
+   "from": "xi-prime-transport",
+   "to": "record-distinct-0.836740",
+   "type": "refutes",
+   "note": "0.836740 STANDS terminal; xi'-transport invalid"
+  },
+  {
+   "from": "lit-sweep",
+   "to": "frontier",
+   "type": "subsumes",
+   "note": "no new input 2023-2026; frontier needs genuinely new mathematics or GJT-completion decomposition"
+  },
+  {
+   "from": "frontier-smalln0-slice",
+   "to": "moment-to-gamma",
+   "type": "refutes",
+   "note": "positive-measure M_n does NOT imply Hankel TP on gamma; renormalization breaks the bridge at the first non-trivial minor"
+  },
+  {
+   "from": "g0-2-oracle",
+   "to": "frontier-smalln0-slice",
+   "type": "depends_on",
+   "note": "uses certified M_k/gamma(k) + the PROVEN relation gamma(k)=k!M_k/(2k)!"
+  },
+  {
+   "from": "S1-margin",
+   "to": "logprofile-boundary",
+   "type": "refutes",
+   "note": "S1's PROVEN-non-LP log-periodic perturbations (b_k=k^{-2k}(1+eps cos(omega ln k))) lie INSIDE the deficit-2 class; no new scan needed"
+  },
+  {
+   "from": "crossdomain-hunt",
+   "to": "frontier-smalln0-slice",
+   "type": "subsumes",
+   "note": "all foreign-field transports closed; GJT-completion remains the sole structural opening"
+  },
+  {
+   "from": "crossdomain-hunt",
+   "to": "binomial-moment",
+   "type": "depends_on",
+   "note": "binomial-moment probe funded by coordinator after cross-domain hunt identified GJT-completion as sole opening"
+  },
+  {
+   "from": "logprofile-boundary",
+   "to": "barrierzoo-retrotest",
+   "type": "refutes",
+   "note": "campaign's own PROVEN deficit-2 profile holds in the RH-false DH world (trusted k=2..5, 23 off-line zeros) \u2014 proves too much, consistency-only by the campaign's own barrier-zoo standard"
+  },
+  {
+   "from": "sdp-paircorr-transfer",
+   "to": "wave9-9A",
+   "type": "documented",
+   "note": "coordinator-completed from preserved 9A transcript (agent died at 80% ctx, quiet-hours guard blocked tools); referee-verified from source"
+  },
+  {
+   "from": "levinson-variational-Q",
+   "to": "wave9-9B",
+   "type": "documented",
+   "note": "agent-completed; DUPLICATE-TRAP classification"
+  },
+  {
+   "from": "gs-2026-diagonal-bridge",
+   "to": "sdp-paircorr-transfer",
+   "relation": "refutes-identification-step; frames remaining open question (unconditional diagonal C<2)"
+  },
+  {
+   "from": "gs-2026-diagonal-bridge",
+   "to": "xi-prime-transport",
+   "relation": "lens: on-line records equivalent-strength to 2-C; need unconditional diagonal bound to lift"
+  },
+  {
+   "from": "jacobi-pencils-2608",
+   "to": "GJT-completion",
+   "type": "consistency-only",
+   "note": "strip automatic (|beta-1/2|<1/2<0.732); point-evaluation family != moment-coefficient family; no zero-location content"
+  },
+  {
+   "from": "guth-maynard-zerodensity",
+   "to": "gs-2026-diagonal-bridge",
+   "type": "near-line-obstruction",
+   "note": "GM exponent -> 1 at sigma -> 1/2+; near-line zeros uncontrolled; does not supply diagonal C<2"
+  }
+ ],
+ "active_frontier": []
 }
