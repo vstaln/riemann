@@ -1,0 +1,8 @@
+t=1 read ledger.md head (closure inventory, wave 1-20 verdicts)
+t=2 read ledger.md rest + CAMPAIGN-STATE.md head + repo tree (closure_dag.json found at tools/closure_dag/)
+t=3 read CAMPAIGN-STATE full context (wave 3-8, direct-RH pivots, rust-only directive, firewall)
+t=4 WRITE-AHEAD: direct-rh-mellin-lane-2026-08-18.md seeded (candidates A-D, verdict: no survivor, closest route = Dirichlet-multiplier zero-free transfer, fatal flaw = no mechanism gives ζ-independent certified half-plane Re>1/2)
+t=5 PENDING refine: read tools/closure_dag/closure_dag.json (structure), direct-rh-operator-route-2026-08-18.md (twin lane), hooks/agents.md, skills s4h-investigation-counter-hypothesis + s4h-logic-argument-validation; then append refinements to note
+t=6 FINAL: cross-check closure list against note (no excluded family served), append verdict, close
+t=7 read closure_dag.json full node list (24 nodes) + twin operator-lane note + agy-fresh2 + hooks + both skills; confirmed: Candidate A family absent from DAG (not a duplicate); twin covers Fourier/PF side only; SKILLS applied (counter-hypothesis rivals R1-R4; argument-validation on Candidate A: premise P3 unsustainable, fallacies: appeal-to-novelty, Line-vs-Half-Plane equivocation, circularity)
+t=8 refined note (sections 8.x: non-duplication, skills, final verdict, closest route + fatal flaw), appended ledger verdict, note complete. NO CODE RUN (adventurer read-only); t1-t3 probe spec funded-forward in note §2. CLOSED.

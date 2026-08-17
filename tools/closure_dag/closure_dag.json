@@ -19,6 +19,12 @@
  },
  "levers": [
   {
+   "id": "direct-rh-transfer-lane-2026-08-18",
+   "verdict": "ABANDONED (PROVEN family collapse; CHECKED NUMERICALLY)",
+   "claim": "Non-self-adjoint transfer, dissipativity, singular-value, and variational frames reduce to excluded spectral/HB/Weil classes; pure singular-value axis detection fails by unitary invariance. Repaired Rust toy probe exits 0 with weak correlations.",
+   "file": "research/notes/direct-rh-transfer-lane-2026-08-18.md"
+  },
+  {
    "id": "operator-lane-polya-density-2026-08-18",
    "verdict": "ABANDONED (PROVEN obstruction)",
    "claim": "Theta-density PF-infinity would force real zeros but Phi not PF-infinity is already proven; weakening to even log-concavity fails by the exact logistic control rho=(1/4)sech^2(x/2), whose Fourier transform pi*z/sinh(pi*z) has non-real zeros.",

@@ -1,0 +1,9 @@
+t=1 read hooks/agents.md, ledger.md, both s4h skills; CAMPAIGN-STATE.md ENOENT at root (it lives in research/notes/)
+t=2 wrote deliverable research/notes/direct-rh-transfer-lane-2026-08-18.md (ABANDONED family-collapse verdict, dependency map, H_SV unitary-invariance killer, ζ-gap lemma §5, DH control, probe spec)
+t=3 reading closure_dag.json + research/notes/CAMPAIGN-STATE.md + ls research/notes for adjacent lanes (grey out any duplicate: operator-lane, agy-fresh2, agy-bsy, wave8E Beurling)
+t=4 write+run Rust probe tools/direct-rh-transfer_lane/ (model battery: companion spectrum vs singular values vs numerical range for all-real vs planted-complex; forecast: no separation)
+t=5 append probe output to note §10, append ledger line, finisht=6 closure_dag.json + CAMPAIGN-STATE.md + wave9-synthesis read: adjacent closures confirmed (levinson-variational-Q moment trap; sdp-paircorr-transfer; GS-2026 diagonal = excluded "GS diagonal"; agy-fresh2 no-survivor)
+t=7 wrote tools/direct-rh-transfer_lane/ probe (Cargo.toml + src/main.rs, f64 no-deps: companion SVD + numerical range + correlation battery)
+t=8 first build FAILED (type errors in roots_to_poly: p initialized as Vec<f64>, fixed to Vec<Cplx>)
+t=9 TURN LIMIT reached mid-build. RESUME: rebuild `cargo build --release && ./target/release/lane_probe` (expect <1 min), append stdout to note §10, add ledger line. Note + progress on disk = deliverable; verdict already written: ABANDONED (family collapse, PROVEN structural).
+t=10 coordinator root-cause repair: fixed model fixture from positive-only +i gamma roots to conjugate +/-i gamma pairs; preserved assertion; cargo run --release exits 0; 120-family correlations +0.010/+0.231/+0.081; lane closed.
