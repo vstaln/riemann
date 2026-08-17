@@ -19,6 +19,12 @@
  },
  "levers": [
   {
+   "id": "direct-rh-nonclassical-domains-2026-08-18",
+   "verdict": "INCONCLUSIVE (NO CANDIDATE IN SPECIFIED DOMAINS)",
+   "claim": "Five non-classical domains screened; individual closures documented, but the memo's broad obstruction is not a theorem beyond its stipulated input class. Prime-sensitive new objects remain open.",
+   "file": "research/notes/direct-rh-nonclassical-domains-2026-08-18.md"
+  },
+  {
    "id": "direct-rh-entire-growth-2026-08-18",
    "verdict": "ABANDONED (PROVEN structural blindness)",
    "claim": "Cartwright/indicator/canonical-product/growth conditions see modulus/ordinate data and are shared by a real-zero twin and certified RH-false DH world; strongest real-axis defect route collapses to BSY potential theory.",
