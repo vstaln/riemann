@@ -32,8 +32,8 @@
   },
   {
    "id": "direct-rh-fullcomplex-skeptic-2026-08-18",
-   "verdict": "INCONCLUSIVE (DISCRIMINATOR ONLY)",
-   "claim": "Line-separation energy from antisymmetric Im(xi'/xi) is a genuine full-complex discriminator candidate, but fixed-window finiteness, summability, and proportion ceilings block an RH implication; no verified Rust run.",
+   "verdict": "ABANDONED (PROVEN symmetry collapse)",
+   "claim": "The proposed LSE Im(xi'/xi) difference is identically zero by the FE minus sign; prior discriminator claims were arithmetic-error artifacts, and the Rust salvage gives machine-floor output in on-line, planted, and DH-depth worlds.",
    "file": "research/notes/direct-rh-fullcomplex-skeptic-2026-08-18.md"
   },
   {
