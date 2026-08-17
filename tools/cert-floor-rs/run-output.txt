@@ -1,0 +1,71 @@
+   Compiling cert-floor-rs v0.1.0 (/home/vstaln/riemann/tools/cert-floor-rs)
+    Finished `release` profile [optimized] target(s) in 0.59s
+     Running `target/release/cert-floor-rs`
+cert-floor-rs — certification-floor chain (port of cert_floor_driver.py / cert_param_sweep.py)
+Honesty: [C] = CERTIFIED input eps (interval-verified elsewhere), chain arithmetic = f64 FLOAT-PROBE (not interval).
+
+=== RECORD CHAIN (tawanerguo) ===
+  H(1.464) = 0.672467425578000   [C input: window value; truncated to 12 digits]
+  eps = 0.0062, psum = 1/320 [C: local floor eps], m = 171
+  bound     = 0.6734808616747269
+  target    = 0.6734808616745137  (record bound)
+  |diff|    = 2.132e-13   (pass <= 1e-12: true)
+  H_cos(1.464) in f64 = 0.672467425577788  (bound with this H: 0.6734808616745140)
+  [cross-check] tawanerguo F4 alpha=1.47, local=577/1e5 [C], m=183, tax=59/19520: 0.673192911473142
+    (repo committed 0.6731929114731423; f64 chain arithmetic)
+
+=== EPS-SWEEP (H = 0.672467425578 [C H], psum = 1/320 [C]) ===
+  argmax m per eps (float chain):
+    eps=0.0056  m*=188  bound=0.673091003353064
+    eps=0.0057  m*=185  bound=0.673156126543914
+    eps=0.0058  m*=182  bound=0.673221192861670
+    eps=0.0059  m*=179  bound=0.673286200129333
+    eps=0.0060  m*=176  bound=0.673351143990589
+    eps=0.0061  m*=174  bound=0.673416029636515
+    eps=0.0062  m*=171  bound=0.673480861674727
+    eps=0.0063  m*=169  bound=0.673545631155111
+    eps=0.0064  m*=166  bound=0.673610340737074
+    eps=0.0065  m*=164  bound=0.673675002034849
+    eps=0.0066  m*=162  bound=0.673739600449059
+    eps=0.0067  m*=160  bound=0.673804139332846
+    eps=0.0068  m*=158  bound=0.673868621179485
+
+  fine table around the optimum (eps x m, rows = eps, cols = m):
+       eps\m          167         168         169         170         171         172         173         174         175         176
+0.0056   0.673088573  0.673088712  0.673088849  0.673088984  0.673089118  0.673089250  0.673089380  0.673089510  0.673089637  0.673089763 
+0.0058   0.673219084  0.673219252  0.673219418  0.673219581  0.673219743  0.673219903  0.673220061  0.673220217  0.673220372  0.673220525 
+0.0060   0.673349646  0.673349843  0.673350037  0.673350229  0.673350419  0.673350607  0.673350793  0.673350971  0.673351093  0.673351144 
+0.0062   0.673480258  0.673480484  0.673480686  0.673480812  0.673480862* 0.673480837  0.673480740  0.673480572  0.673480336  0.673480033 
+0.0064   0.673610332  0.673610244  0.673610078  0.673609837  0.673609523  0.673609138  0.673608683  0.673608160  0.673607572  0.673606919 
+0.0066   0.673738511  0.673738055  0.673737525  0.673736922  0.673736250  0.673735508  0.673734701  0.673733828  0.673732893  0.673731896 
+0.0068   0.673864822  0.673864004  0.673863114  0.673862155  0.673861128  0.673860036  0.673858881  0.673857663  0.673856386  0.673855050 
+  argmax at eps=0.0062: m = 171, bound = 0.673480861674727  (expect m=171)
+  argmax at eps=0.0061: m = 174, bound = 0.673416029636515
+  argmax at eps=0.0063: m = 169, bound = 0.673545631155111
+
+=== PARAM-SWEEP (a): pressure sum psum x m, eps=0.0062 [C], H=0.672467425578 [C] ===
+  psum=0.001563 = 1/640   best m = 176, bound = 0.674998353693481
+  psum=0.002083 = 1/480   best m = 174, bound = 0.674492374492700
+  psum=0.003125 = 1/320   best m = 171, bound = 0.673480861674727
+  psum=0.004167 = 1/240   best m = 168, bound = 0.672469978233582
+  psum=0.006250 = 1/160   best m = 60, bound = 0.670584285893285
+  (bound rises as psum drops: pressure charge lowers the bound)
+
+=== PARAM-SWEEP (b): coefficient-family table (external formula families, exact repo constants) ===
+  H0 (ainta) = 0.672500703679412
+  F1 ainta 3pt     : bound = 0.672519767113678   [C eps 221/1e6]
+  F2 ainta 7pt     : bound = 0.673008527927780   [C eps 19/5000, m=269, p=1/3000, q=6]
+  F3 trmdy         : bound = 0.673137630699345   [C eps 1/200, H=672457/1e6, p=1/2300, m=257]
+  F4 tawanerguo    : bound = 0.673192911473142   [C local 577/1e5, alpha=1.47, m=183, tax 59/19520]
+  F4 via master    : bound = 0.673193093656732  (python-equivalence, drops eta -> mismatch 1.8e-7)
+  F4 via master    : bound = 0.673192911473142  (with eta = R/A in p -> match to roundoff, diff 0.0e0)
+
+  (c) sensitivity: trmdy/tawanerguo chain vs pressure p at fixed eps:
+    p=0.000217: F3 trmdy = 0.674428157992925   F4 tawan = 0.674712754007119
+    p=0.000435: F3 trmdy = 0.673137630699345   F4 tawan = 0.673193093656732
+    p=0.000870: F3 trmdy = 0.670556576112184   F4 tawan = 0.670153772955959
+    (nominal F4 p_q=6 = 0.00050652; bound decreases as pressure charge p rises)
+
+=== VERDICT ===
+  record bound reproduced to 2.132e-13 (tolerance 1e-12): PASS
+  all chain arithmetic = f64 FLOAT-PROBE; certified inputs are the eps values (interval-verified by the sanctioned verifier) and H constants.

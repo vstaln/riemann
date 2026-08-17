@@ -169,6 +169,12 @@
    "verdict": "NOT-A-LEVER (type: near-line obstruction) 2026-08-18: GM improves Ingham for \u03c3 away from 1/2 (feeds primes-in-short-intervals); at \u03c3\u21921/2+ exponent still \u21921 (Ingham 3(1\u2212\u03c3)/(2\u2212\u03c3)\u21921, GM likewise) so NEAR-LINE zeros uncontrolled = the S(T)-type obstruction blocking GS-2026 diagonal bound \u03a3_{\u03b3=\u03b3\u2032}1 \u2264 C\u00b7N; no input to record class either (bandwidth-1 F data unchanged)",
    "trap": "near-line zero-density obstruction",
    "date": "2026-08-18"
+  },
+  {
+   "id": "lambda-dilation-record-2026-08-18",
+   "verdict": "NEW RECORD (CHECKED NUMERICALLY)",
+   "claim": "Native Rust full interval certification at alpha=1.464, lambda=1.15, epsilon=0.0069800, pressure=1/3000 gives simple proportion 0.6735310829992681 and distinct proportion 0.8367655414996341; CASE A baseline passes and CASE B epsilon=0.0063 fails.",
+   "file": "research/notes/dilation-lambda-2026-08-18.md"
   }
  ],
  "edges": [
@@ -302,5 +308,5 @@
    "note": "GM exponent -> 1 at sigma -> 1/2+; near-line zeros uncontrolled; does not supply diagonal C<2"
   }
  ],
- "active_frontier": []
+ "active_frontier": ["direct-RH-hunt"]
 }

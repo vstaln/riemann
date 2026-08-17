@@ -462,6 +462,36 @@ def squared_kernel_derivatives(x, kernel):
 # ---------------------------------------------------------------------------
 
 def main():
+    # Parameterized mode (driven from Rust via env vars; no numeric logic added —
+    # this is argument plumbing only). Set VERIFY_ALPHA, VERIFY_TARGET, and any of
+    # VERIFY_PRESSURE, VERIFY_LAMBDA, VERIFY_GRID, VERIFY_MAX_NODES, VERIFY_P1..P6,
+    # VERIFY_Q1..Q6 (coeffs given in raw form, scaled by VERIFY_LAMBDA when set).
+    import os
+    if "VERIFY_ALPHA" in os.environ and "VERIFY_TARGET" in os.environ:
+        alpha = float(os.environ["VERIFY_ALPHA"])
+        target = float(os.environ["VERIFY_TARGET"])
+        grid = int(os.environ.get("VERIFY_GRID", "4000"))
+        max_nodes = int(os.environ.get("VERIFY_MAX_NODES", "8000000"))
+        pressure = float(os.environ.get("VERIFY_PRESSURE", "1")) / 3000.0
+        lam = float(os.environ.get("VERIFY_LAMBDA", "1"))
+        w_uniform = {(i, j): 2.0 / (7 - (j - i)) for i in range(7) for j in range(i + 1, 7)}
+        p_coeff, q_coeff = None, None
+        if "VERIFY_P1" in os.environ:
+            p_raw = [float(os.environ[f"VERIFY_P{i}"]) for i in range(1, 7)]
+            p_coeff = [lam * c / 1_920_000 for c in p_raw]
+        if "VERIFY_Q1" in os.environ:
+            q_raw = [float(os.environ[f"VERIFY_Q{i}"]) for i in range(1, 7)]
+            q_coeff = [lam * c for c in q_raw]
+        ktw = cosine_kernel(alpha)
+        r = verify_floor(ktw, w_uniform, pressure, 6, target,
+                         grid=grid, cap_scheme="coboundary",
+                         pressure_coeffs=p_coeff, nearest_coeffs=q_coeff,
+                         max_nodes=max_nodes, progress_every=int(os.environ.get("VERIFY_PROGRESS_EVERY", "0")))
+        import json
+        print("VERIFY_RESULT " + json.dumps({k: r.get(k) for k in
+              ("verified", "nodes", "status", "reason", "pruned_interval",
+               "pruned_pressure", "pruned_tangent")}))
+        return
     # sanity: ainta 7-pt (MT kernel, uniform weights, p=1/3000, target 19/5000)
     print("=" * 70)
     print("SANITY: ainta 7-pt (uniform, MT)")

@@ -1,0 +1,7 @@
+t=1 listed files
+t=3 saw sweeps; record HK: eps=0.0062 m=171 H=0.672467425578 psum=1/320 -> 0.6734808616747269 (python float), target 0.6734808616745137, diff 2.1e-13; scan mains read (F_B vs chain not needed for chain port); chain constants confirmed: psum=(946+1177+877+877+1177+946)/1920000=6000/1920000=1/320; tax=(m-6)/(320m); b183 uses tax=59/19520=177/58560
+t=7 crate built & ran; see /tmp/cert-floor-rs-run.txt
+t=9 rebuild+run after fixes
+t=11 rebuild+run (fixed eps grid, F4 eta check)
+t=12 fixed tuple-index bug (compared bound vs m); reran
+t=13 final: fixes done (eps grid off-by-one, tuple-index comparison), all PASS; output archived tools/cert-floor-rs/run-output.txt; status at /tmp/cert-floor-rs-status.md

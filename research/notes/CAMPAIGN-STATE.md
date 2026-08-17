@@ -1,3 +1,15 @@
+# CURRENT UPDATE — 2026-08-18
+
+## Proportion record raised — CHECKED NUMERICALLY
+
+The lambda-dilation certificate is now fully checked in native Rust. At alpha=1.464, lambda=1.15, epsilon=0.0069800, pressure=1/3000, and m=153, the 200-bit Rust bound is `0.6735310829992681328867805395...`; the affine distinct bound is `0.8367655414996340664433902697...`. Native `tools/verifier-rs` CASE D returns `verified=true` after 838,372 nodes. Native hostile acceptance: baseline CASE A passes at epsilon=0.0062 (1,094,486 nodes), ceiling CASE B fails at epsilon=0.0063 with terminal low 0.006289525020944827. Three sanctioned arb reference runs independently returned true at 838,742 nodes. The prior record was 0.6734808616745137 / 0.8367404308372568.
+
+The code repair was a sound precomputed-cell interval tangent plus tighter outward-rounded point-tangent fallback. It removed per-node trigonometric MPFR work while retaining directed rounding and LDL positivity. The full candidate certification is now native Rust; no Python numeric loop is part of the decisive run.
+
+**Firewall:** this is a proportion theorem, not an RH proof and not RH evidence. Continue the direct-RH search; the goal is not cleared.
+
+---
+
 # Campaign State — Full Audit Trail (2026-08-17, wave 3)
 
 **Purpose:** This is the memory document. It records WHAT FAILED, WHAT BROKE, WHAT'S PROMISING,
