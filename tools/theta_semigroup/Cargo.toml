@@ -1,0 +1,4 @@
+[package]
+name = "theta_semigroup"
+version = "0.1.0"
+edition = "2021"
