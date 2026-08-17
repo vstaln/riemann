@@ -19,6 +19,13 @@
  },
  "levers": [
   {
+   "id": "agy-BSY-Poisson-logmodulus",
+   "verdict": "DUPLICATE-TRAP (PROVEN)",
+   "claim": "Balazard-Saias-Yor Poisson log-modulus criterion: I=sum_{beta>1/2} log|rho/(rho-1)|>=0 and I<=0=>RH, but I=0<=>RH; consistency-only wrapper, already covered by potential-theory/explicit-formula closure.",
+   "trap_class": "explicit-formula/potential-theory",
+   "file": "research/notes/agy-bsy-triage-2026-08-18.md"
+  },
+  {
    "id": "S1-margin",
    "verdict": "DEAD (PROVEN)",
    "claim": "No decaying-margin coefficient criterion with C>1 forces LP; Newton boundary c_crit=1 is the exact necessary limit; counterexample b_k=k^{-1.0696.k} has min t_k(k+1)=1.07084 yet genuine non-real zeros. Hutchinson 3/4 is the only classical sufficiency; Xi fails it.",

@@ -1,5 +1,9 @@
 # Wave Ledger — shared state for swarm agents
 
+- **agy-BSY-Poisson-2026-08-18** — **DUPLICATE / CONSISTENCY-ONLY (CLOSED)**: fresh Antigravity proposed the classical Balazard–Saias–Yor log-modulus criterion; `I>=0` plus `I<=0 => RH` is exactly `I=0 <=> RH`, already covered by the explicit-formula/potential-theory trap. Claimed finite-T values were unverified and no Rust probe was funded. File: `research/notes/agy-bsy-triage-2026-08-18.md`.
+
+# Wave Ledger — shared state for swarm agents
+
 **Rule (ledger protocol):** every completed agent appends a ≤5-line verdict here: result, labels, file, next move. New agents read ONLY this ledger + their task slice — do not re-read the full wave notes (ponytail rung 1-2; the re-read tax was the swarm's #1 waste). Never re-derive a ledger verdict — cite it.
 
 ---
