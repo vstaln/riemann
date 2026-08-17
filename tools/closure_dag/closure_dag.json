@@ -19,6 +19,12 @@
  },
  "levers": [
   {
+   "id": "agy-fresh2-2026-08-18",
+   "verdict": "INCONCLUSIVE (NO SURVIVOR)",
+   "claim": "Fresh BSY-excluded Antigravity search found no candidate satisfying exact one-way H(zeta)=>RH, RH-false control, and non-equivalence; no probe or proof produced.",
+   "file": "research/notes/agy-fresh2-closure-2026-08-18.md"
+  },
+  {
    "id": "agy-BSY-Poisson-logmodulus",
    "verdict": "DUPLICATE-TRAP (PROVEN)",
    "claim": "Balazard-Saias-Yor Poisson log-modulus criterion: I=sum_{beta>1/2} log|rho/(rho-1)|>=0 and I<=0=>RH, but I=0<=>RH; consistency-only wrapper, already covered by potential-theory/explicit-formula closure.",
