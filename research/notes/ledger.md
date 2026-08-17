@@ -1,5 +1,8 @@
 # Wave Ledger — shared state for swarm agents
 
+- **agy-fresh2-2026-08-18** — **INCONCLUSIVE / NO SURVIVOR**: a fresh BSY-excluded Antigravity search returned no candidate meeting one-way implication + RH-false control + non-equivalence. Its four-channel obstruction summary agrees with the existing closure map; no code or numeric result was produced. File: `research/notes/agy-fresh2-closure-2026-08-18.md`.
+
+
 - **agy-BSY-Poisson-2026-08-18** — **DUPLICATE / CONSISTENCY-ONLY (CLOSED)**: fresh Antigravity proposed the classical Balazard–Saias–Yor log-modulus criterion; `I>=0` plus `I<=0 => RH` is exactly `I=0 <=> RH`, already covered by the explicit-formula/potential-theory trap. Claimed finite-T values were unverified and no Rust probe was funded. File: `research/notes/agy-bsy-triage-2026-08-18.md`.
 
 # Wave Ledger — shared state for swarm agents
