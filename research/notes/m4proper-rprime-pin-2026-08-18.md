@@ -31,19 +31,23 @@ consistency: S₁/law1 → 1 observed, see below)
 | 600 | 341 | 1.2636 | **0.8623** |
 | 900 | 565 | 1.2334 | **0.8688** |
 | 3000 | 2403 | 1.1725 | **0.8882** |
+| 6000 | 5401 | 1.1475 | **0.8979** |
 
 - S₁/law1 with law1 = (T/2π)·L⁴/12 (the Gonek/Milinovich–Ng first-moment law shape):
   1.40 → 1.35 → 1.26, **trending toward 1 as T grows** — this validates the zero set and the
   derivative pipeline (the first-moment law is the classical anchor; at the same heights the
   second-moment ratio sits far above 3/5).
-- **r′(T) is NOT 3/5: measured 0.817 → 0.845 → 0.862 → 0.869 → 0.888 (T=150/300/600/900/3000), rising monotonically.**
-  The gap to 3/5 is ~0.29 at T=3000 and widening from the measured side.
-- **Limit separation (T=3000 added, T=6000 running):** candidates were 0.87 vs 0.89 vs 0.90.
-  The 0.87 candidate is DEAD (data passed through it at T≈2000 and kept rising). 1/L (log⁻¹) fit:
-  r∞ ≈ **0.963** (MSE 7.0e-7, best of the three laws); 1/L²: r∞ ≈ 0.910 (MSE 4.9e-6); 1/L³: r∞ ≈ 0.892 (MSE 1.8e-5).
-  Two-parameter least squares on all five points plus last-four subsets: 1/L gives 0.963/0.960,
-  1/L² gives 0.910/0.914 — **both laws favor r∞ ≳ 0.91, and the better-fitting 1/L law places it near 0.96**.
-  Discriminating measurement: T=6000 predicts r′ ≈ 0.955 (1/L law) vs ≈ 0.930 (1/L² law). [CHECKED NUMERICALLY — fits on 5 finite-height points; the limit remains an extrapolation, not a proof.]
+- **r′(T) is NOT 3/5: measured 0.817 → 0.845 → 0.862 → 0.869 → 0.888 → 0.898 (T=150/300/600/900/3000/6000), rising monotonically.**
+  The gap to 3/5 is ~0.30 at T=6000 and widening from the measured side.
+- **Limit separation (6 points, T=6000 in):** the discriminating prediction FAILED — the 6000
+  value (0.8979) came in BELOW both power-law projections (1/L→0.955, 1/L²→0.930), so both
+  pure laws are too steep at the tail. Six-point least squares: 1/L → **r∞≈0.965** (MSE 1.05e-6,
+  best), logL/L² → **0.940** (MSE 1.39e-6), 1/L² → 0.914 (MSE 1.16e-5), 1/L³ → 0.897. The
+  3000→6000 increment (+0.0097) gives a local 1/L slope −0.59, close to the global −0.47
+  (under 1/L² the implied coefficient jumps to −1.92 vs global −1.01 — inconsistent). So the
+  1/L family is preferred and the limit leans toward the 0.94–0.97 end. [CHECKED NUMERICALLY —
+  fits on 6 finite-height points; the limit remains an extrapolation, not a proof.]
+  Conservative bracket: r∞ ∈ (0.91, 0.97); 0.87 dead, 0.90 disfavored, CUE 0.90 not seen.
 
 ## Interpretation (labels)
 
@@ -51,9 +55,9 @@ consistency: S₁/law1 → 1 observed, see below)
    T=600 value and the measured sequence is monotone increasing — no sign of a nearby limit at
    3/5. [CHECKED NUMERICALLY; the infinite-T limit itself remains unknown, CONJECTURED to be
    in ~(0.86, 0.92) by the trend.]
-2. **Consequence for the BHB box target: b gets SMALLER, not larger.** With r′ ≈ 0.89–0.96:
-   E/S₂ ≤ 8b²(0.0777 + 0.89..0.96) ⇒ b² ≤ 0.0311/(8·0.97..1.04) ⇒ **b ≤ 0.061–0.063**,
-   versus the old target b ≈ 0.0758 (r′ = 3/5). The box must be ~17–19% narrower to clear
+2. **Consequence for the BHB box target: b gets SMALLER, not larger.** With r′ ≈ 0.90–0.97:
+   E/S₂ ≤ 8b²(0.0777 + 0.90..0.97) ⇒ b² ≤ 0.0311/(8·0.98..1.05) ⇒ **b ≤ 0.059–0.063**,
+   versus the old target b ≈ 0.0758 (r′ = 3/5). The box must be ~17–22% narrower to clear
    E/S₂ < 0.0311. This makes the (already blocked) moving-boundary count harder, not easier —
    consistent with the decomposition verdict that NO partial unconditionalization clears p₀
    today. [PROVEN arithmetic on the box inequality; the required count is the known blocker.]
@@ -73,7 +77,7 @@ If c₂ stabilizes, r′ is pinned to ~10⁻²; the T=900/1200 rows in the table
 ## Honesty
 
 - Derivative order is exact (mp.diff, adaptive, dps=40); zeros bisection-refined to 1e-30.
-- Finite-height only: r′(T) is a function of T; the limit r′ = lim r′(T) is CONJECTURED ≈ 0.91–0.96 (5-point fit-ladder: 1/L→0.963, 1/L²→0.910; T=6000 running to separate).
+- Finite-height only: r′(T) is a function of T; the limit r′ = lim r′(T) is CONJECTURED ≈ 0.94–0.97 (6-point fit-ladder: 1/L→0.965, logL/L²→0.940, 1/L²→0.914; both pure laws failed the T=6000 discriminator, 1/L family preferred).
 - No RH claim anywhere; this pin only sharpens the BHB box arithmetic. Firewall applies (even a
   proven r′ ≫ 3/5 cannot clear p₀ because the required count has no known route).
 - Files: tools/m4proper_probe.py; /tmp/m4_hi.log (hi-T continuation).
