@@ -29,14 +29,14 @@ consistency: S₁/law1 → 1 observed, see below)
 | 150 | 52 | 1.4031 | **0.8168** |
 | 300 | 138 | 1.3514 | **0.8447** |
 | 600 | 341 | 1.2636 | **0.8623** |
-| 900 | (running) | — | — |
-| 1200 | (running) | — | — |
+| 900 | 565 | 1.2334 | **0.8688** |
+| 1200 | — | — | (killed after 27 CPU-min; 4-point trend sufficient) |
 
 - S₁/law1 with law1 = (T/2π)·L⁴/12 (the Gonek/Milinovich–Ng first-moment law shape):
   1.40 → 1.35 → 1.26, **trending toward 1 as T grows** — this validates the zero set and the
   derivative pipeline (the first-moment law is the classical anchor; at the same heights the
   second-moment ratio sits far above 3/5).
-- **r′(T) is NOT 3/5: measured 0.817 → 0.845 → 0.862, rising toward ≈ 0.87–0.90.**
+- **r′(T) is NOT 3/5: measured 0.817 → 0.845 → 0.862 → 0.869 (T=150/300/600/900), rising toward ≈ 0.87–0.88.**
   The gap to 3/5 is ~0.26 at T=600 and not closing from the measured side (the trend is
   increasing, away from 0.6).
 
@@ -68,7 +68,7 @@ If c₂ stabilizes, r′ is pinned to ~10⁻²; the T=900/1200 rows in the table
 ## Honesty
 
 - Derivative order is exact (mp.diff, adaptive, dps=40); zeros bisection-refined to 1e-30.
-- Finite-height only: r′(T) is a function of T; the limit r′ = lim r′(T) is CONJECTURED ≈ 0.87–0.92.
+- Finite-height only: r′(T) is a function of T; the limit r′ = lim r′(T) is CONJECTURED ≈ 0.87–0.89 (4-point monotone trend).
 - No RH claim anywhere; this pin only sharpens the BHB box arithmetic. Firewall applies (even a
   proven r′ ≫ 3/5 cannot clear p₀ because the required count has no known route).
 - Files: tools/m4proper_probe.py; /tmp/m4_hi.log (hi-T continuation).
