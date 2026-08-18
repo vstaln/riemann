@@ -58,7 +58,7 @@ def make_llm(model: str = "deepseek-v4-flash") -> ChatOpenAI:
         temperature=0.4,
         timeout=240,
         max_retries=1,
-        max_tokens=4000,
+        max_tokens=16000,       # 4000 starved visible content: reasoning ate the budget
         reasoning_effort="high",  # user directive: max reasoning for this session
     )
 
