@@ -26,19 +26,23 @@ stated (re-statement). The windowed version is a legitimate *measurement* of the
 unconditionally. Probe not funded for novelty; the finite-T measurement is what `wave8c`/8C
 infrastructure can already do.
 
-### 2. Soundstate SDP with pinned Ingham covariance — **MATCHES ledgered Direction-2 next probe (still unfunded)**
+### 2. Soundstate SDP with pinned Ingham covariance — **DUPLICATE of Direction 2, CLOSED BY CONVEXITY (batch2) — NOT fundable**
 `Σ = [[1, −√3/2],[−√3/2, 1]]`, condition `μ* = inf_{P≥0, P₁₁≥1 on |x|≤1} Tr(Σ P̂(0)) < 1` under
-mollifier length θ = 0.55. This is the exact "soundstate 2×2 covariance SDP objective" that
-agy-batch2 adjudication (`agy-batch2-adjudication-2026-08-18.md`) already identified as the
-NEXT PROBE, unfunded. agy adds: an Epstein-class-2 control claim (failure of Euler product
-⟹ diagonal covariance, μ* ≥ 1.25). That control claim is NEW and checkable. The claimed
-implication `μ*<1 ⟹ RH` is NOT established (rank-2 necessary-not-sufficient stands — collapse
-could still occur at SDP-constraint level); the honest reading is CONJECTURED Levinson-type
-barrier, not a one-way RH lemma. Verdict: KNOWN-LIVE (Direction-2 next probe); agy's Epstein
-control is a useful addition to the probe spec. **Fund the probe: build the soundstate SDP
-objective in Rust and run it on the certified covariance** — this is the single funded-item
-candidate from this batch. Note: 2×2 PSD polynomial matrix SDP is small (dozen vars); a
-bounded convex solve is feasible; propose rust `clarabel`/manual SD-cancel via SOS.
+mollifier length θ = 0.55. **CORRECTION: this is NOT "the funded next probe".** agy-batch2
+adjudication (`agy-batch2-adjudication-2026-08-18.md`, CLOSURE section, same session) already
+answered the SDP-objective question at mechanism level: the 2×2 PSD bandlimited matrix minorant
+**collapses by convexity** — zero detection is a codimension-1 scalar event, the objective and
+the counting constraint are both linear over the PSD-kernel cone, extreme rays are rank 1
+(Φ* = v*(s)v*(s′)ᵀ·uuᵀ), the Euler–Lagrange quotient concentrates on the dominant eigenvector
+mode alone (C₂ = 0), and the measured corr = −√3/2 is exactly what the Levinson shift
+parameter c ≈ −0.7 diagonalizes. No matrix test function can extract additional variance
+(Choquet/extreme-point argument, structure-level PROVEN). The covariance probes were necessary
+and stand (rank-2 real, phase-collapse absent, asymptotics −√3/2/1/√3 cross-validated vs
+Ingham), but the SDP that would use them collapses to the scalar LP before any RH content.
+agy's Epstein class-2 control claim (μ* ≥ 1.25) is consistent but moot under the collapse.
+Verdict: **ABANDONED-FUNDING (closed mechanism); NOT-a-funded-probe.** Removed from the funded
+list. Record-side alternatives remain long-mollifier (wave9-9B screened trap) or new
+non-minorant objects — not this probe.
 
 ### 3. Guth–Maynard log-derivative dispersion — **INCONCLUSIVE / structurally deficient as stated**
 `E(T,σ₀) = (1/T)∫_T^{2T} |ζ′/ζ(σ₀+it) + Σ_{n≤X} Λ(n)n^{−σ₀−it}|² dt ≤ K(σ₀)(log T)^{2(1−σ₀)/(3−2σ₀)}`.
