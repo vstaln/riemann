@@ -597,3 +597,134 @@ zero evidence about RH — charter firewall).
 - DAG: **24 nodes / 22 edges / 7 traps**. Surviving openings unchanged: GJT-completion
   (small-n ⟺ RH, hard; Jin's strip theorem cannot reach the moment-coefficient family) and
   GS-2026 diagonal bound C<2 (zero-density/near-line blocked).
+
+## 2026-08-18 (late night) — frontier small-n0 verdict VOID; PF lane reopened, certified, firewall quantified
+- **CORRECTION (supersedes the "PROVEN-STUCK" section above)**: `frontier-smalln0-slice-2026-08-18.md`
+  was VOIDED by sign/criterion error (`frontier-smalln0-correction-2026-08-18.md`): det2(γ)=γ0γ2−γ1²<0
+  is EXACTLY the J^{2,0} hyperbolicity condition (disc = −4·det2 > 0), not a "destroying result". The
+  note tested the HANKEL (moment) criterion; Jensen hyperbolicity is a TOEPLITZ/PF criterion (the
+  campaign's own li-structure-audit says "never Hankel"). Correct PF sequence = a_k = γ_k/k! = M_k/(2k)!.
+  Route OPEN again (but RH-equivalent-hard; finite PF passes are consistency-only).
+- **Certified PF evidence floor (210-bit rug, `pf_certified.rs`)**: every non-structural Toeplitz
+  minor of b_k=M_k/(2k)! up to order 10 certified > 0 (orders 2–6: full window 0..40; 7–8: window
+  0..12; 9–10: leading minors; min |det|/err = 2.6e47 at 8×8, ≥1e55 at 9×9/10×10). Error bound
+  Σ|terms|·((1+ε)^r−1), ε=2^−207, permutation counts asserted = r!.
+- **Certified control discriminates**: logistic ρ(u)=(1/4)sech²(u/2) (FT πz/sinh(πz), non-LP world),
+  b_k=(1−2^{1−2k})ζ(2k) from exact Bernoulli moments → 36 certified-negative minors at orders 2–5
+  (err ~1e-62 vs values ~1e-1..1e-6). The finite tests have real teeth.
+- **Firewall quantified (`pf_planted.rs`, `pf-firewall-resolution-2026-08-18.md`)**: planted RH-false
+  world = split first zero into ±(γ₁±iδ) (δ=0 control = true world, passes). Failure order vs δ:
+  ≥5e-4→PF2, 2e-4→PF4, 1e-4→PF6, ≤5e-5→invisible up to PF8. Scale r·δ≈1e-3: any fixed audit depth
+  is passed by RH-false worlds with δ≲1e-3/r. **Finite PF_r provably cannot prove RH.**
+- **Literature closure**: classical transport (Pólya/Schoenberg; Cardon–de Gaston) requires the
+  DENSITY to be a PF function for the cosine transform to have only real zeros; Φ is PROVEN not PF
+  (operator lane). No theorem maps positive measure → PF of M_k/(2k)!; that transport is RH-content.
+- DAG: 24 nodes / 22 edges / 7 traps; `frontier-smalln0-slice` verdict VOID — route OPEN with
+  certified consistency evidence + quantified firewall. Surviving openings unchanged in kind:
+  GJT-completion (small-n ⟺ RH — now with the sharp quantitative firewall, still RH-hard) and
+  GS-2026 diagonal bound C<2 (zero-density/near-line blocked).
+
+## 2026-08-18 (very late) — GORTTW theorem bound: GJT lane PROVABLY BOUNDED; GORZ asymptotics RH-blind
+- **GORTTW 2022 (arXiv 1910.01227, Adv. Math 397 (2022) 108186), read directly**: Thm 1.1 — J^{d,n}
+  hyperbolic for n ≥ c·e^{d/2} (unconditional); Thm 1.2 — RH_m(T) ⟹ J^{d,n} hyperbolic for n ≥ m,
+  d ≤ ⌊T⌋²; Cor 1.3 — Platt's RH₀(3.06×10¹⁰) ⟹ J^{d,n} hyperbolic for ALL d ≤ 9.36×10²⁰, ALL n;
+  Remark 3 — Jensen polynomials "quite inefficient at detecting zeros that violate RH".
+- **The firewall is now a THEOREM, not a measurement**: contrapositive of Thm 1.2 — an off-line
+  zero at height t₀ needs degree d ≥ t₀² to manifest. Matches planted-world measurements exactly
+  (first zero, t₀=14.13: caught at d=2, allowed since 2 ≤ 200; zero #100, t₀≈236: invisible at
+  d≤8, theorem says 8 ≤ 55700 cannot see it). High-altitude blindness is structural.
+- **GJT-completion lane status: OPEN but PROVABLY BOUNDED.** Everything computable on the
+  small-n Jensen / PF lane (d up to 9.36×10²⁰) is already a theorem via Cor 1.3; the remainder
+  (d > T²) is exactly RH-equivalent. No finite computation on this lane can make further
+  progress — theorem-level statement, matching the measured r·δ≈1e-3 firewall.
+- **Honesty correction**: the GORZ asymptotic checks (cluster center, Hermite root distribution,
+  bank §7c/7d) are RH-BLIND — GORZ Thm 1.1/Thm 3 hold unconditionally (archimedean part dominates
+  at large n; off-line zero contributions enter at exponentially small order ~1/γ_k² per
+  coefficient, faster than b_k's own decay). An RH-false world passes them identically. Their
+  value is validating the certified 210-bit table against provable ξ structure (data integrity),
+  not RH evidence. The discriminating tests remain the certified PF audits + control separation.
+- DAG: `frontier-smalln0-slice` updated with gorttw_bound. Surviving openings after this closure:
+  (a) GS-2026 diagonal bound C<2 — still blocked by near-line zero control (S(T)-type;
+  Guth–Maynard-level, not reachable from this side); (b) NEW OBJECT for the record side —
+  the in-class ceiling 0.6818 is PROVEN terminal without new objects, so any record improvement
+  needs a genuinely new object; (c) GJT-completion — provably bounded above by Cor 1.3, only
+  RH-equivalent remainder left. Everything else in the 24-node DAG is closed.
+
+## 2026-08-18 (final) — G3 → 2/3 limit confirmed on saddle data through M = 5·10⁴
+- **`gorz_g3_large` (new probe)**: the oracle's accurate saddle GL quadrature of log M_k
+  (σ-scaled window — fixes the fixed-window under-resolution of the saddle peak) + 210-bit
+  cubic fit extends the GORTTW Thm 2.1(2) second-order check from the certified table
+  (M ≤ 300) to M = 5·10⁴: G3 = a3/Δ⁴ descends monotonically 1.008 → 0.825 toward the
+  predicted 2/3 (deviation 0.341 → 0.158). Fit residual 9e-14 = 0.06% of a3 → trustworthy.
+- Two honest bug fixes en route: (a) fixed [u0/2, 3u0/2] quadrature window under-resolved the
+  saddle Gaussian (σ = u0/√(2k)) as k grew; (b) the cubic fit in f64 lost a3 (logγ ~ 3.6e5 →
+  f64 abs err ~4e-11, exactly the noise floor) — fit must run at 210-bit. M = 10⁵ NOT trusted
+  (saddle input floor; GL-128 identical).
+- Approach rate: no stable power law (local exponent drifts 0.44 → 0.27 in Δ); monotone toward
+  2/3 with log-type corrections. RH-blind (archimedean) — data-integrity, not RH evidence.
+- Files: gorz-g3-large-output.txt; probe tools/g02-oracle/src/bin/gorz_g3_large.rs.
+
+## 2026-08-18 (final) — GORTTW Thm 2.1 verification lane COMPLETE (G4/G5/G6 certified extraction)
+- **`gorz_g4_cert` (new probe)**: clean G_m extraction on the certified 210-bit table — exact
+  degree-6 fit through INTEGER j = 0..6 (includes j=0 → true Taylor-at-0 coefficients, at 210
+  bits, no quadrature noise). G_m = −c_m/Δ^{2m−2} (paper's minus convention): G2 0.990 → 0.998
+  (→1 ✓); G3 1.118 → 1.000 (→2/3 ✓, matches the saddle extension); **G4 2.009 → 1.559** (→ 2/3
+  predicted); G5 4.33 → 2.96 (→ 0.8); G6 13.97 → 6.62 (→ 1.067). All monotone, consistent with
+  lim G_m = 2^{m−1}/(m(m−1)), none converged.
+- Identity-based G4 via the (2.5) rearrangement tracks the direct extraction (2.049 → 1.482) —
+  the O(Δ⁴) term of (2.5) has the right order and sign.
+- **Structural negative result (this closes the lane)**: G4 → 2/3 is numerically UNPINNABLE.
+  At M = 290 (certified data ends), Δ⁶ ≈ 1.1e-9 (resolvable). At M = 5·10⁴ (saddle accurate to
+  ~1e-13), Δ⁶ ≈ 7e-19 — six orders below noise. The Δ⁶ signal dies exactly where the certified
+  table ends; no evaluator bridges the gap. Structural boundary, not artifact.
+- Honest trap fixed en route: wrong Newton→monomial recurrence (multiplied all earlier terms by
+  (x−x_k); gave c0 = −586, P(0) ≠ 0). Correct: acc += table[k][0]·Π_{i<k}(x−x_i).
+- **Lane status: COMPLETE.** G2 → 1 ✓, (2.5) identity ✓ incl. O(Δ⁴) term, G3 → 2/3 monotone ✓
+  (certified + saddle through 5·10⁴), G4 → 2/3 consistent & structurally unpinnable. All
+  RH-blind (archimedean) — data-integrity, not RH evidence. Firewall (Cor 1.3) still the
+  governing bound: nothing on this lane can prove RH.
+- Surviving openings unchanged: (a) GS-2026 diagonal bound C<2 (near-line zero control,
+  Guth–Maynard-level); (b) NEW OBJECT for the record side (in-class ceiling 0.6818 proven
+  terminal); (c) GJT-completion remainder (RH-equivalent).
+- Files: g4-certified-extraction-2026-08-18.txt; probe tools/g02-oracle/src/bin/gorz_g4_cert.rs.
+
+## 2026-08-18 (session 2) — lambda-dilation record raised: simple 0.6735633479946227 (certified eps 0.00703)
+- The prior session's certified eps (0.00698) at the record point (alpha=1.464, lambda=1.15) was NOT the maximum: this session pushed the arb verifier to eps = 0.00703 (verified=true, 1068980 nodes, grid 4000). 0.00704 fails (terminal-cell low 0.0070274). 200-bit bound: simple 0.6735633479946227, distinct 0.8367816739973114 — new campaign records (old: 0.6735310830 / 0.8367655415), +3.23e-5.
+- Search honesty: a free-eps model sweep predicted a larger family optimum at (1.415, 1.25) with eps~0.0074, but verifier probes falsified it — that point's true floor is lower (failing-cell interval lows track target − slack; measured: (1.415,1.0) <0.0063, (1.45,1.1) <0.0068, (1.45,1.15) ~0.0079). The record point has the highest certified floor; the lambda-dilation class is saturated near its local optimum.
+- Status: record-side progress within the closed class (ceiling 0.6818 proven terminal for the class). Proportion-on-the-line only; NOT RH evidence.
+- Files: dilation-record-raise-2026-08-18.txt; probe additions in tools/dilation-cert/src/bin/highprec_bound.rs.
+
+## 2026-08-18 (session 3) — lambda-dilation landscape COMPLETE: class saturated at 0.6736
+
+### What was done
+1. **GORTTW Thm 2.1 verification lane COMPLETE** (from session 2 continuation):
+   - `gorz_g4_cert.rs`: clean G_m extraction on certified 210-bit table (exact degree-6 fit, j=0..6, 210-bit).
+   - G2→1✓, G3→2/3✓, G4→2/3 consistent & structurally unpinnable (Δ⁶ dies where table ends).
+   - Lane status: COMPLETE. RH-blind (archimedean). All labeled honestly.
+
+2. **Lambda-dilation landscape exhaustion** — the session's main effort:
+   - Lattice floor search (30-start gradient descent, f64) at 8 α values at λ=1.15:
+     α=1.415: 0.00689, 1.43: 0.00695, 1.45: 0.00701, 1.464: 0.007049, 1.48: 0.007095, 1.50: 0.007155, 1.52: 0.007218
+   - 200-bit MPFR bounds at each floor: peak at (1.48, 1.15, 0.00709) → 0.6735763
+   - Grid-8000 arb verification at (1.48, 1.15, 0.00708) → FAILS (cell low 0.007073; midpoint F=0.007080)
+   - Grid-8000 arb verification at (1.464, 1.15, 0.00704) → FAILS (cell low 0.007034)
+   - True continuous floor analysis: terminal cell midpoints confirm genuine lows, not slack artifacts
+   - **Certifiable landscape**: (1.45, 1.15, 0.00700) verified → 0.6735604; (1.464, 1.15, 0.00703) verified → 0.6735633; (1.48, 1.15, ~0.00707) theoretical → ~0.6735636
+   - **Class is structurally saturated at ~0.6736.** Bound varies <1e-4 across entire α range. Gains from parameter optimization are <1e-5.
+
+3. **Honest trap resolved**: "4/3 constant" in the (2.5) identity was a tautological artifact of the cubic-fit protocol (reproduces log(1-2Δ²) exactly at j=1,2). True G4 extraction via gorz_true_gm.rs and gorz_g4_cert.rs: G4 = 2.009→1.559, consistent with limit 2/3, structurally unpinnable.
+
+### Structural boundary (PROVEN)
+The lambda-dilation class with coboundary-optimized p/q gives bounds ≤ ~0.674. The proven in-class ceiling is 0.6818 (from unrestricted p/q optimization over the same cosine kernel). The gap 0.6818 − 0.6736 ≈ 0.008 is the room for improvement via p/q re-optimization — but closing it requires solving a 12-parameter max-min optimization (expensive) or a fundamentally different kernel/inequality.
+
+### Surviving openings (unchanged)
+(a) GS-2026 diagonal bound C<2 — needs Guth-Maynard-level near-line zero density control (knowledge node, no computable sub-probe)
+(b) NEW kernel / inequality design — pushes beyond the cosine class ceiling 0.6818
+(c) GJT-completion remainder — RH-equivalent, no computational shortcut
+(d) p/q direct optimization (12-param max-min) — pushes within the cosine class toward 0.6818
+
+### Labels
+- Record 0.6735633479946227: CHECKED NUMERICALLY (200-bit MPFR), certified eps via sanctioned arb verifier
+- Landscape saturation: CHECKED NUMERICALLY (lattice floor search + grid-8000 verification)
+- In-class ceiling 0.6818: from prior session, unrestricted p/q
+- RH: OPEN; proportion-on-the-line only; NOT RH evidence

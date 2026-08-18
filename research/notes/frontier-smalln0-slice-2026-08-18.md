@@ -1,5 +1,12 @@
 # Frontier probe: fixed-n0 Jensen slice vs moment structure — PROVEN-STUCK (destroying result)
 
+> **SUPERSEDED 2026-08-18: the "destroying result" verdict is VOID (sign/criterion error).** The
+> Hankel det2(γ)<0 test is the moment-sequence criterion; Jensen hyperbolicity is a Toeplitz/PF
+> criterion, and det2(γ)<0 is EXACTLY the J^{2,0} hyperbolicity condition. The correct PF sequence
+> a_k = γ_k/k! = M_k/(2k)! passes all tested orders (PF2, Toeplitz 3×3, 4×4; J^{2,3,4,n} real-rooted).
+> See `frontier-smalln0-correction-2026-08-18.md` (Rust re-verification + agy second opinion).
+> What survives is only the Farmer structural diagnostic (fixed-n0 = measure-zero slice).
+
 Date: 2026-08-18. Coordinator-completed (agent 119364d4 stalled post-compute; transcript + binary
 output preserved). Labels: PROVEN / CHECKED NUMERICALLY applied per claim. s4h: investigation-triangulation.
 

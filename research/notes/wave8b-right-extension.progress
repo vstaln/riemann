@@ -8,3 +8,7 @@ t=10-11 sigma-min windows done (0.506@5050, 0.522@11050); fits: 1-r≈7.5/log^1.
 t=12 step-check [7000,8000]@0.04 = 790 (identical to 0.02) — counts validated
 t=13 final note wave8b-right-extension-2026-08-18.md written (8228 zeros, ratio law 1-r≈7.5/log^1.52u, verdict CHECKED NUMERICALLY, no anomaly)
 t=14 ledger appended; DONE
+---
+t=15 (certleft follow-up) citations verified: Berndt 1970 J. London Math. Soc. (2) 2, 577-580 (N1(T) ~ N(T) count law for zeta-prime zeros) + Radziwill arXiv:1301.3232 intro confirms N(T) ~ (T/2pi)logT for both zeta and zeta-prime. 8B follow-up (ii) CLOSED.
+t=16 added certified zeta'' to tools/wave8b/src/em.rs (EM pole/half/Bernoulli + Cauchy 2!/delta^2 remainder); fixed bugs: missing 2! factor, disk-radius 2delta->delta; validated vs FD of zeta-prime and SD of zeta to ~1e-9 (caught pole-term bug where g=u/(s-1)^2 bracket was wrong — f'' formula with g=u/(s-1)^2 is actually f', fixed by correct decomposition f=N^{1-s}·g, f''=N^{1-s}[lnN^2·g - 2lnN·g' + g'']).
+t=17 added certleft mode to main.rs (certified arc control via Taylor drift M1+M2·(L/2), max|Delta-arg| <= (M1+M2 L/2)L/min|z'|, threshold pi/2) -> ran on [0.001,0.5]x[998,1004]: 12 slabs all winding=0, min certified margin 1.849, max|Delta-arg| 0.034 -> PROVEN zeta-prime emptiness in that band. Note wave8b-certleft-2026-08-18.md written; output certleft-998-1004.txt saved; ledger appended. 8B follow-up (iii) CLOSED (finite band). Remaining 8B follow-up: T≈10^5-10^6 deficit-exponent pinning (out of budget).

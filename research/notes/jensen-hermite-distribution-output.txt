@@ -1,0 +1,13 @@
+loaded b_k k=0..300
+[sanity] H_2(1)=-1.000000 (want -1), H_3(1)=-5.000000 (want -5)
+n= 10 A=  -4.19601 delta=  0.116725 eA=     0.015 | d=2 maxdev= 0.40645 | d=3 maxdev= 0.70656 | d=4 maxdev= 1.00803 |
+n= 20 A=  -4.42276 delta=  0.093995 eA=     0.012 | d=2 maxdev= 0.31735 | d=3 maxdev= 0.56335 | d=4 maxdev= 0.81754 |
+n= 40 A=  -4.70121 delta=  0.073186 eA=     0.009 | d=2 maxdev= 0.24040 | d=3 maxdev= 0.43321 | d=4 maxdev= 0.63680 |
+n= 60 A=  -4.88604 delta=  0.062467 eA=     0.008 | d=2 maxdev= 0.20237 | d=3 maxdev= 0.36701 | d=4 maxdev= 0.54248 |
+n=100 A=  -5.13971 delta=  0.050675 eA=     0.006 | d=2 maxdev= 0.16172 | d=3 maxdev= 0.29508 | d=4 maxdev= 0.43847 |
+n=150 A=  -5.35610 delta=  0.042655 eA=     0.005 | d=2 maxdev= 0.13476 | d=3 maxdev= 0.24680 | d=4 maxdev= 0.36788 |
+n=200 A=  -5.51700 delta=  0.037645 eA=     0.004 | d=2 maxdev= 0.11820 | d=3 maxdev= 0.21691 | d=4 maxdev= 0.32391 |
+n=250 A=  -5.64571 delta=  0.034122 eA=     0.004 | d=2 maxdev= 0.10667 | d=3 maxdev= 0.19603 | d=4 maxdev= 0.29309 |
+
+(GORZ full-content check: normalized roots X_k=(1+e^A x)/delta vs exact H_d roots.
+ maxdev -> 0 as n -> oo confirms the complete first-order asymptotics on certified coefficients.)
