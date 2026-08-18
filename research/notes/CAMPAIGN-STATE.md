@@ -1,12 +1,40 @@
-# CURRENT UPDATE — 2026-08-18
+# CURRENT UPDATE — 2026-08-19 (late night, wave 22–23, r′ resolution)
 
-## Proportion record raised — CHECKED NUMERICALLY
+## r′ S₂-limit — RESOLVED NUMERICALLY (m4proper-rprime-pin): 6 points, monotone rising
 
-The lambda-dilation certificate is now fully checked in native Rust. At alpha=1.464, lambda=1.15, epsilon=0.0069800, pressure=1/3000, and m=153, the 200-bit Rust bound is `0.6735310829992681328867805395...`; the affine distinct bound is `0.8367655414996340664433902697...`. Native `tools/verifier-rs` CASE D returns `verified=true` after 838,372 nodes. Native hostile acceptance: baseline CASE A passes at epsilon=0.0062 (1,094,486 nodes), ceiling CASE B fails at epsilon=0.0063 with terminal low 0.006289525020944827. Three sanctioned arb reference runs independently returned true at 838,742 nodes. The prior record was 0.6734808616745137 / 0.8367404308372568.
+r′(T) = (Σ|ζ″(ρ)|²)/(L²·Σ|ζ′(ρ)|²) at real zeros: 0.8168/0.8447/0.8623/0.8688/0.8882/0.8979
+at T=150/300/600/900/3000/6000 (N=52/138/341/565/2403/5401; S₁/law1 → 1.15 down toward 1 —
+pipeline validated). **r′ ≫ 3/5 at every height** (the Gonek-derived 3/5 anchor is dead).
+T=6000 came in BELOW both pure power-law predictions → the tail is shallower than 1/L or 1/L².
+6-point fits: 1/L → r∞=0.965 (MSE 1.05e-6 best), logL/L² → 0.940, 1/L² → 0.914, 1/L³ → 0.897.
+1/L family preferred (local 3000→6000 slope −0.59 vs global −0.47, consistent under 1/L,
+inconsistent under 1/L²). Bracket r∞ ∈ (0.91, 0.97), lean 0.94–0.97. 0.87 dead; CUE 0.90 disfavored.
+**Consequence: BHB box target narrows to b ≤ 0.059–0.063 (17–22% below the old r′=3/5 0.0758)** —
+the required moving-boundary count is HARDER, so BHB partial-unconditionalization stays blocked.
 
-The code repair was a sound precomputed-cell interval tangent plus tighter outward-rounded point-tangent fallback. It removed per-node trigonometric MPFR work while retaining directed rounding and LDL positivity. The full candidate certification is now native Rust; no Python numeric loop is part of the decisive run.
+## Wave 22–23 grid (all closed, committed)
 
-**Firewall:** this is a proportion theorem, not an RH proof and not RH evidence. Continue the direct-RH search; the goal is not cleared.
+- **wave-22 swarm (8b21891):** 6 REFUTED/3 INCONCLUSIVE; verifier g1-0 Gram spectral-gap
+  objection MEASURED dead: λ_min(G_N)≈0.634·N^(−1.837), 10⁶× below 1/log N at N=2^16.
+- **gramlam basis correction (2d43766):** first draft ported Gram over k=2..N; wave8c uses
+  k=1..N. Corrected port reproduces certified d_N exactly (0.151041/0.126823/0.119192 at
+  N=10/20/30). Δ(N)=d_N²·logN is FLAT 0.048–0.052 (not the earlier "rising" artifact).
+  λ_min(DGD)≈4e-11≈0: D_N(1,1)=√log1=0 → first row/col of DGD vanish → exactly singular
+  (verifier's structural point fully vindicated). Spectral-gap route to B–D sharp rate: DEAD.
+- **agy wave-22 (d7fcfcb):** C1 spectral c_BD REFUTED by divergence; C2 α₁ law REFUTED;
+  C3 Speiser curvature trivially loose; C4 sub-prime Weil duplicate; C5 pair repulsion vacuous.
+- **wave-23 swarm (2eee068):** 6 REFUTED/3 INCONCLUSIVE; generators degenerated to identical
+  Li/Speiser/d_N duplicates; verifier killed all (incl. sharp g2-2: weighted-L² d_N(θ²ⁱ) shifts
+  the Mellin line to Re=θ+1/2, so d_N(θ)→0 ⟺ no zeros on that single line, not RH).
+- **agy wave-23 (2eee068):** L1 superseded by measurement; L2 Δ(N) correction REFUTED
+  (C₀≈0.040 not 0.22–0.28); **L3 Ξ-jet Q-form REFUTED numerically (Q(Ξ)<0 at 25/501 pts,
+  clean t=10 negative, components moderate — not a 1e-12 artifact; DH also negative)**;
+  L4 spacing-variance ABANDONED (needs Odlyzko 10¹² height).
+- **8C finite-N correction (open lane #2):** now measured flat-with-bend, no C₁/√logN law —
+  closed as stated.
+
+**Firewall:** nothing above is RH evidence or an RH proof. All direct-RH lanes tested today are
+closed or blocked; the search continues (see next section).
 
 ---
 
@@ -118,8 +146,12 @@ disk without re-deriving. Every claim cites its source note. Labels: PROVEN / CH
 4. **Bui–Heath-Brown partial unconditionalization** (L1's lever #3) — untested.
 5. **T-2 derivative-tower — STATUS CORRECTED 2026-08-18: "realized 68.77%" was an arbitrary 0.45 interpolation, NOT certified (correction-2tower-realized-bound-2026-08-18.md). Real: interlacing 20/20 @60 digits CHECKED NUMERICALLY; ξ″ rung-2 kill (κ₁^(2)≥κ₁^(1)); G²/H Cauchy route FATAL under full Gonek. Alive question: any honest positive-simple certificate on (ξ,ξ′/ξ″) jets — unsolved; needs a real SDP solve or rigorous inequality.**
    Farmer 0.6603 distinct-ζ record; interlacing CHECKED at 60 digits (20/20).
-6. **Binding open inputs (M6):** k<1 moving-boundary count N(1/2+b/L,T)=o(T log T) at b≈0.0758;
-   M4 ζ″-moment r′; pair-correlation box-width inputs; BGSTB strong ZDH.
+6. **Binding open inputs (M6):** k<1 moving-boundary count N(1/2+b/L,T)=o(T log T) at b≈0.059–0.063
+   (hardened by the r′ resolution); M4 ζ″-moment r′ — RESOLVED (0.91–0.97, see update above, no
+   RH route); pair-correlation box-width inputs — closed (GS/BGSTB, as above); BGSTB strong ZDH;
+   **ξ-jet positive-simple certificate on (ξ,ξ′/ξ″) jets vs the rung-2 kill — the single open
+   structural question (needs a real SDP/dual solve or an impossibility proof; DH must fail any
+   candidate).**
 
 ## 5. The method going forward (what to do every session)
 
