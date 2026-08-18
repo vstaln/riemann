@@ -135,12 +135,12 @@ def main():
 
     rows = []
     for n in (12, 15, 18, 24, 30, 40):
-        dim = n - 1
-        G = [[gram(i + 2, j + 2) for j in range(dim)] for i in range(dim)]
+        dim = n
+        G = [[gram(i + 1, j + 1) for j in range(dim)] for i in range(dim)]
         M = mp.matrix(G)
         D = mp.matrix(dim, dim)
         for i in range(dim):
-            D[i, i] = mp.sqrt(mp.log(mp.mpf(i + 2)))
+            D[i, i] = mp.sqrt(mp.log(mp.mpf(i + 1)) if i>0 else mp.mpf('1e-9'))
         MD = D * M * D
         lg = eig_min(M)
         ld = eig_min(MD)

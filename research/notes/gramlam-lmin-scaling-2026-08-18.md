@@ -48,12 +48,25 @@ Moreover the verifier's second point is structural: with the basis including k=1
 D_N(1,1) = √log 1 = 0, so D_N G_N D_N has a zero first row/column and cannot be
 strictly diagonally dominant — the hypothesis of the argument fails on its face.
 
-**Mechanism of the (still-valid) sharp rate — where the actual information lives:**
-d_N² = 1 − vᵀG⁻¹v with v_k = ⟨1, ρ_{1/k}⟩ = (log k + 1 − γ)/k. Direct solve reproduces
-the measured d_N (0.222 → 0.212 as N: 10 → 30; d_N²·logN 0.113→0.153 rising slowly).
-So d_N ~ c/√(log N) is controlled by the *projection of the specific vector* 1 into the
-span — NOT by the worst-direction condition number. The tiny λ_min means the Gram matrix
-is extremely ill-conditioned (some nearly-degenerate directions exist), but the constant
+**CORRECTED BASIS (k=1..N):** the measurement above used k=1..N for DGD (matching wave8c's
+convention) but my first draft ported the Gram over k=2..N — the shift drops ρ_{1/1}={1/x}
+from the basis. That wrong-basis d_N reproduction (0.222 → 0.212, Δ(N)=d_N²·logN 0.113→0.153
+"rising") is RETRACTED. Correct-basis check against wave8c's certified values:
+
+| N | k=1..N d_N (port) | d_N·√logN | wave8c certified |
+|---|-------------------|-----------|------------------|
+| 10 | 0.151041 | 0.2292 | 0.151041 |
+| 20 | 0.126823 | 0.2195 | 0.126823 |
+| 30 | 0.119192 | 0.2198 | 0.119192 |
+
+Exact match (0.151041/0.126823/0.119192). So Δ(N) = d_N²·logN: 0.0525/0.0482/0.0483 —
+FLAT ~0.048–0.052, consistent with the wave8c band (0.211–0.215 in d·√logN form).
+The earlier "rising 0.113→0.153" curve was a wrong-basis artifact and is retracted.
+
+Where the information lives: d_N² = 1 − vᵀG⁻¹v with v_k = ⟨1, ρ_{1/k}⟩ = (log k + 1 − γ)/k.
+The sharp rate is controlled by the *projection of the specific vector* 1 into the span —
+NOT by the worst-direction condition number. The tiny λ_min means the Gram matrix is
+extremely ill-conditioned (some nearly-degenerate directions exist), but the constant
 function 1 is not aligned with those directions. Spectral-gap/diagonal-dominance attacks
 on d_N ≤ C/log N are therefore structurally dead; only direct structure of the vector v
 (equivalently, of ζ on Re s = 1/2 / the Wiener-Tauberian side) can produce the rate.
