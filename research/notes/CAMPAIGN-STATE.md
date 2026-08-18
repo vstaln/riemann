@@ -116,7 +116,7 @@ disk without re-deriving. Every claim cites its source note. Labels: PROVEN / CH
    Weil polynomial) + 4-class claim classifier. Every future brief gets checked against it.
 3. **Goldston–Suriajaya double-sum + Guth–Maynard zero-density** (L1's lever #2) — untested.
 4. **Bui–Heath-Brown partial unconditionalization** (L1's lever #3) — untested.
-5. **T-2 derivative-tower (ξ″/ξ‴ cert + weighted distinct-ζ)** — ALIVE, score 375, target
+5. **T-2 derivative-tower — STATUS CORRECTED 2026-08-18: "realized 68.77%" was an arbitrary 0.45 interpolation, NOT certified (correction-2tower-realized-bound-2026-08-18.md). Real: interlacing 20/20 @60 digits CHECKED NUMERICALLY; ξ″ rung-2 kill (κ₁^(2)≥κ₁^(1)); G²/H Cauchy route FATAL under full Gonek. Alive question: any honest positive-simple certificate on (ξ,ξ′/ξ″) jets — unsolved; needs a real SDP solve or rigorous inequality.**
    Farmer 0.6603 distinct-ζ record; interlacing CHECKED at 60 digits (20/20).
 6. **Binding open inputs (M6):** k<1 moving-boundary count N(1/2+b/L,T)=o(T log T) at b≈0.0758;
    M4 ζ″-moment r′; pair-correlation box-width inputs; BGSTB strong ZDH.
