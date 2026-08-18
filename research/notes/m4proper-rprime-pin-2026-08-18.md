@@ -73,7 +73,7 @@ If c₂ stabilizes, r′ is pinned to ~10⁻²; the T=900/1200 rows in the table
 ## Honesty
 
 - Derivative order is exact (mp.diff, adaptive, dps=40); zeros bisection-refined to 1e-30.
-- Finite-height only: r′(T) is a function of T; the limit r′ = lim r′(T) is CONJECTURED ≈ 0.87–0.89 (4-point monotone trend).
+- Finite-height only: r′(T) is a function of T; the limit r′ = lim r′(T) is CONJECTURED ≈ 0.91–0.96 (5-point fit-ladder: 1/L→0.963, 1/L²→0.910; T=6000 running to separate).
 - No RH claim anywhere; this pin only sharpens the BHB box arithmetic. Firewall applies (even a
   proven r′ ≫ 3/5 cannot clear p₀ because the required count has no known route).
 - Files: tools/m4proper_probe.py; /tmp/m4_hi.log (hi-T continuation).
