@@ -30,15 +30,20 @@ consistency: S₁/law1 → 1 observed, see below)
 | 300 | 138 | 1.3514 | **0.8447** |
 | 600 | 341 | 1.2636 | **0.8623** |
 | 900 | 565 | 1.2334 | **0.8688** |
-| 1200 | — | — | (killed after 27 CPU-min; 4-point trend sufficient) |
+| 3000 | 2403 | 1.1725 | **0.8882** |
 
 - S₁/law1 with law1 = (T/2π)·L⁴/12 (the Gonek/Milinovich–Ng first-moment law shape):
   1.40 → 1.35 → 1.26, **trending toward 1 as T grows** — this validates the zero set and the
   derivative pipeline (the first-moment law is the classical anchor; at the same heights the
   second-moment ratio sits far above 3/5).
-- **r′(T) is NOT 3/5: measured 0.817 → 0.845 → 0.862 → 0.869 (T=150/300/600/900), rising toward ≈ 0.87–0.88.**
-  The gap to 3/5 is ~0.26 at T=600 and not closing from the measured side (the trend is
-  increasing, away from 0.6).
+- **r′(T) is NOT 3/5: measured 0.817 → 0.845 → 0.862 → 0.869 → 0.888 (T=150/300/600/900/3000), rising monotonically.**
+  The gap to 3/5 is ~0.29 at T=3000 and widening from the measured side.
+- **Limit separation (T=3000 added, T=6000 running):** candidates were 0.87 vs 0.89 vs 0.90.
+  The 0.87 candidate is DEAD (data passed through it at T≈2000 and kept rising). 1/L (log⁻¹) fit:
+  r∞ ≈ **0.963** (MSE 7.0e-7, best of the three laws); 1/L²: r∞ ≈ 0.910 (MSE 4.9e-6); 1/L³: r∞ ≈ 0.892 (MSE 1.8e-5).
+  Two-parameter least squares on all five points plus last-four subsets: 1/L gives 0.963/0.960,
+  1/L² gives 0.910/0.914 — **both laws favor r∞ ≳ 0.91, and the better-fitting 1/L law places it near 0.96**.
+  Discriminating measurement: T=6000 predicts r′ ≈ 0.955 (1/L law) vs ≈ 0.930 (1/L² law). [CHECKED NUMERICALLY — fits on 5 finite-height points; the limit remains an extrapolation, not a proof.]
 
 ## Interpretation (labels)
 
@@ -46,9 +51,9 @@ consistency: S₁/law1 → 1 observed, see below)
    T=600 value and the measured sequence is monotone increasing — no sign of a nearby limit at
    3/5. [CHECKED NUMERICALLY; the infinite-T limit itself remains unknown, CONJECTURED to be
    in ~(0.86, 0.92) by the trend.]
-2. **Consequence for the BHB box target: b gets SMALLER, not larger.** With r′ ≈ 0.86–0.90:
-   E/S₂ ≤ 8b²(0.0777 + 0.86..0.90) ⇒ b² ≤ 0.0311/(8·0.94..0.98) ⇒ **b ≤ 0.063–0.064**,
-   versus the old target b ≈ 0.0758 (r′ = 3/5). The box must be ~16% narrower to clear
+2. **Consequence for the BHB box target: b gets SMALLER, not larger.** With r′ ≈ 0.89–0.96:
+   E/S₂ ≤ 8b²(0.0777 + 0.89..0.96) ⇒ b² ≤ 0.0311/(8·0.97..1.04) ⇒ **b ≤ 0.061–0.063**,
+   versus the old target b ≈ 0.0758 (r′ = 3/5). The box must be ~17–19% narrower to clear
    E/S₂ < 0.0311. This makes the (already blocked) moving-boundary count harder, not easier —
    consistent with the decomposition verdict that NO partial unconditionalization clears p₀
    today. [PROVEN arithmetic on the box inequality; the required count is the known blocker.]
