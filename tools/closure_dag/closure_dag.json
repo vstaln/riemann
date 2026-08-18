@@ -176,10 +176,13 @@
   },
   {
    "id": "frontier-smalln0-slice",
-   "verdict": "PROVEN-STUCK",
-   "claim": "gamma(n)=n!M_n/(2n)! is NOT a moment sequence (Hankel det2=-9.19e-6<0, hand-verified); Phi>0 positive-measure structure does NOT transfer to Taylor coefficients; fixed-n0 covers measure-zero of (n0,d) lattice; GJT-completion trap airtight. Small-n Jensen decomposition route PROVEN CLOSED.",
-   "trap_class": "moment-sequence-to-gamma",
-   "file": "research/notes/frontier-smalln0-slice-2026-08-18.md"
+   "verdict": "VOID (sign/criterion error) \u2014 route OPEN but PROVABLY BOUNDED by GORTTW (all checkable cases are theorems; remainder is RH-equivalent)",
+   "claim": "ORIGINAL VERDICT VOID 2026-08-18: the PROVEN-STUCK closure tested the HANKEL (moment) criterion with an inverted sign. det2(gamma)=-9.19e-6<0 is EXACTLY the J^{2,0} hyperbolicity condition (disc = -4*det2 > 0), and Jensen hyperbolicity is a Toeplitz/PF criterion, never Hankel (campaign's own li-structure-audit). The correct PF sequence a_k = gamma_k/k! = M_k/(2k)! passes: PF2 all n<=39, Toeplitz 3x3 all >=0, 4x4 = +1.1e-9; J^{2,n} (n<=19), J^{3,n} (n<=11), J^{4,n} (n<=7) all real-rooted (certified 210-bit table). gamma itself fails Toeplitz 3x3 (-7.0e-8) \u2014 k! factor destroys TP; irrelevant to Jensen. What survives: fixed-n0 covers measure-zero of the lattice (Farmer diagnostic) \u2014 the route is OPEN but RH-equivalent-hard; finite PF passes are consistency-only.",
+   "trap_class": "moment-sequence-to-gamma (HANKEL-vs-TOEPLITZ category error \u2014 trap itself is the bug)",
+   "file": "research/notes/frontier-smalln0-correction-2026-08-18.md",
+   "certified_evidence": "2026-08-18 CERTIFIED PF2-PF10 (210-bit rug, pf_certified.rs): FULL PF_2..PF_5 (all row/col selections, window 0..8) certified > 0 with zero inconclusive cases (min |det|/err 7.2e55); consecutive-index family through order 8 (min 2.6e47) + leading 9x9/10x10 (>=1e55); structural exact-zeros allowed. CERTIFIED control: logistic b_k=(1-2^{1-2k})zeta(2k) (exact Bernoulli moments) has 36 certified-negative minors at orders 2-5 (err ~1e-62 vs values ~1e-1..1e-6) \u2014 non-LP world fails rigorously where zeta passes. Still not a proof: finite PF_r cannot certify PF_infinity; missing transport M (positive measure) -> PF of M/(2k)! is RH-content (control shows positivity+decay insufficient).",
+   "firewall_resolution": "2026-08-18 CERTIFIED planted-world measurement (pf_planted.rs): RH-false worlds = split first zero into off-line cluster +-(g1+-i*d), coefficients = certified b_k convolved with exact correction series (delta=0 control = true world, passes). Failure order vs delta: 5e-4..1e-1 -> PF2, 2e-4 -> PF4, 1e-4 -> PF6, <=5e-5 -> invisible up to PF8. Scale: r ~ 1e-3/delta. Firewall quantified: any fixed audit depth r is passed by RH-false worlds with delta <= ~1e-3/r; finite PF_r cannot prove RH. Literature: classical transport (Polya/Schoenberg, Cardon-de Gaston) requires the DENSITY to be a PF function for real zeros of the cosine transform; Phi is PROVEN not PF (operator lane) \u2014 no theorem maps positive measure -> PF of M_k/(2k)!, the transport is RH-content. Note: pf-firewall-resolution-2026-08-18.md High-altitude blindness (pf_planted_high.rs): displacing zero #10 (g=49.8) or #100 (g=236.5) by 10x its ordinate shows NO certified-negative minor at any order <= 8 \u2014 the first ~18 Taylor coefficients are small-zero-dominated (1/g_k^2 decay), so finite PF tests only see the first few zeros, exactly where de Bruijn-Newman would place a real disproof. Output: pf-planted-high-output.txt.",
+   "gorttw_bound": "2026-08-18 GORTTW THEOREM (arXiv 1910.01227, Adv. Math 397 (2022)): Thm 1.2 contrapositive \u2014 an off-line zero at height t0 needs degree d >= t0^2 to manifest in J^{d,n}; Cor 1.3 (Platt RH0(3.06e10)) proves J^{d,n} hyperbolic for ALL d <= 9.36e20, ALL n. Consequence: everything computable on this lane is already a theorem (d <= 9.36e20, beyond any PF audit); the remainder d > T^2 is exactly RH-equivalent. The firewall is provable, not numerical: matches planted-world (first zero caught at d=2 <= 200; zero #100 invisible at d<=8 <= 55700). GORZ asymptotics (jensen_gap, jensen_hermite) are RH-BLIND (archimedean part dominates; RH-false world passes identically) \u2014 data-integrity checks only. Route: OPEN but PROVABLY BOUNDED; no finite computation can make further progress. See jensen-pf-cosine-bank-2026-08-18.md \u00a77e."
   },
   {
    "id": "logprofile-boundary",
@@ -239,9 +242,23 @@
   },
   {
    "id": "lambda-dilation-record-2026-08-18",
-   "verdict": "NEW RECORD (CHECKED NUMERICALLY)",
+   "verdict": "NEW RECORD (CHECKED NUMERICALLY): certified eps raised to 0.00703 at (alpha=1.464, lambda=1.15) -> simple 0.6735633479946227, distinct 0.8367816739973114 (200-bit; prior 0.6735310830/0.8367655415). Lambda-dilation class saturated near local optimum; in-class ceiling 0.6818 PROVEN terminal. Proportion-on-the-line only; NOT RH evidence.",
    "claim": "Native Rust full interval certification at alpha=1.464, lambda=1.15, epsilon=0.0069800, pressure=1/3000 gives simple proportion 0.6735310829992681 and distinct proportion 0.8367655414996341; CASE A baseline passes and CASE B epsilon=0.0063 fails.",
    "file": "research/notes/dilation-lambda-2026-08-18.md"
+  },
+  {
+   "id": "jensen-pf-cosine-bank-2026-08-18",
+   "verdict": "BANKED STRUCTURE (CHECKED NUMERICALLY, not a lever/proof)",
+   "claim": "Xi(z)=xi(1/2+iz)=2*int_0^inf Phi(u)cos(zu)du verified to 1.6e-15 (certified 210-bit table, incl. first zero 14.1347); RH <-> PF_infinity of b_k=M_k/(2k)! (Edrei/ASW, exact); PF2-PF6 all pass on zeta b_k (log-concavity k<=49, 120 3x3 / 60 4x4 / 24 5x5 / 6 6x6 minors >= 0); Jensen J^{d,n} real-rooted d<=7, n<=5; CONTROL logistic rho=(1/4)sech^2(u/2) (FT=pi*z/sinh(pi*z), non-LP) FAILS PF3 (s=8..12 negative) and PF5 (s=5: -1.4e-21) -> finite PF tests DO discriminate. Not a proof: finite PF_r cannot certify PF_infinity; missing transport M (positive measure) -> PF of M/(2k)! is RH-content. Reopens small-n Jensen lane (see frontier-smalln0-slice VOID).",
+   "file": "research/notes/jensen-pf-cosine-bank-2026-08-18.md"
+  },
+  {
+   "id": "agy-batch2-record-directions-2026-08-18",
+   "verdict": "ADJUDICATED + FOUR probes FUNDED + CLOSED by convexity (2026-08-18): all 7 directions NOT-A-LEVER/CLOSED. Direction 2 (2x2 matrix minorant) probes established: corr(Re zeta, Im zeta'/theta') -> -sqrt(3)/2 EXACTLY (Ingham), rank-2 covariance real, phase NOT concentrated \u2014 BUT the SDP-objective level collapses by extreme-ray linearity: the zero-counting functional is linear over the PSD matrix-kernel cone, infimum at a rank-1 extreme ray Phi* = v*v*^T uu^T, Euler-Lagrange uncouples into scalar cosine modes, min concentrates on dominant mode; measured covariance already absorbed by Levinson shift c. No matrix-minorant theorem improves critical-line zero counting (Carneiro-Vaaler/Chandee/Littmann literature position). Record improvements need longer mollifiers theta > 4/7 or multi-piece P_k (both screened long-mollifier trap class). Files: agy-batch2-adjudication-2026-08-18.md, covar-probe*.txt.",
+   "claim": "agy batch2 brainstorm screened against 26-node DAG. Direction 2 (2x2 matrix-valued extremal minorant on (zeta M, (zeta M)') vector) is the ONLY genuinely new object - not a duplicate of scalar-minorant nodes; probe = 2x2 covariance SDP from soundstate machinery; collapse risk to scalar Levinson-Conrey barrier is structural. Direction 1 (asymmetric bilinear mollifier) new object in Levinson class but blocked by Ramanujan-Peterssen at level q=mn (Kim-Sarnak 7/64). Directions 3-7 map to closed nodes/known ceilings. Firewall (proportion != RH) applies to all. No one-way RH input; near-line obstruction class unchanged.",
+   "file": "research/notes/agy-batch2-adjudication-2026-08-18.md",
+   "trap_class": "n/a (adjudication note; no probe funded)",
+   "probe": "tools/argprinciple/src/covar_probe_main.rs v2 (Jacobi 4x4 eig); outputs covar-probe-v2-Y{1,10,100,1000}-output.txt; certified EM zeta; caveat: single stretch T in [1e6, 1e6+400], P(Re>0) stretch-dependent"
   }
  ],
  "edges": [
@@ -375,5 +392,7 @@
    "note": "GM exponent -> 1 at sigma -> 1/2+; near-line zeros uncontrolled; does not supply diagonal C<2"
   }
  ],
- "active_frontier": ["direct-RH-hunt"]
+ "active_frontier": [
+  "direct-RH-hunt"
+ ]
 }

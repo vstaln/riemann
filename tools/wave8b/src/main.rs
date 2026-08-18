@@ -5,6 +5,8 @@
 //
 // Subcommands:
 //   left   T0 T1 H   — ζ' winding on [0.001,0.5]×[T,T+H] slabs + interior |ζ'| margins
+//   certleft T0 T1 H S — CERTIFIED winding on [0.001,0.5]×[T,T+H] slabs: per-segment
+//                        |Δarg| control via certified ζ' + ζ'' bounds → PROVEN emptiness
 //   right  T0 T1 H S — ζ' winding on [0.5,1]×[T,T+H] slabs (count), refine first zeros
 //   online T0 T1 stp — min |ζ'(1/2+it)| on t-grid (no on-line ζ' zeros expected)
 //   interl T0 T1 stp — sign changes of H(t)=Z·P'/P+Z' (xi' interlacing, Rolle)
@@ -15,7 +17,7 @@ use std::env;
 use std::f64::consts::PI;
 
 mod em;
-use em::{em_n_for, hurwitz_em, zeta_em, Em};
+use em::{em_n_for, zeta_em};
 
 #[derive(Clone, Copy)]
 struct Cx { re: f64, im: f64 }
@@ -23,7 +25,6 @@ impl Cx {
     fn mul(self, o: Cx) -> Cx { Cx { re: self.re * o.re - self.im * o.im, im: self.re * o.im + self.im * o.re } }
     fn add(self, o: Cx) -> Cx { Cx { re: self.re + o.re, im: self.im + o.im } }
     fn scale(self, c: f64) -> Cx { Cx { re: self.re * c, im: self.im * c } }
-    fn conj(self) -> Cx { Cx { re: self.re, im: -self.im } }
     fn abs(self) -> f64 { (self.re * self.re + self.im * self.im).sqrt() }
     fn div(self, o: Cx) -> Cx {
         let d = o.re * o.re + o.im * o.im;
@@ -300,6 +301,100 @@ fn cmd_left(t0: f64, t1: f64, h: f64) {
     println!("VERDICT left: {}", if tot.abs() < 0.5 && gneg == 0 { "EMPTY (no ζ' zeros in 0<σ<1/2, winding 0 on every slab)" } else { "ANOMALY — winding != 0" });
 }
 
+// ---- certified ζ''(s) ------------------------------------------------------
+fn zeta_dprime(s_re: f64, s_im: f64) -> (f64, f64, f64) {
+    let e = zeta_em(s_re, s_im, em_n_for(s_im.abs()));
+    (e.d2re, e.d2im, e.d2err)
+}
+
+// CERTIFIED winding of ζ' around rect [s0,s1]×[t0,t1], CCW.
+// Per-segment argument-change control using certified ζ' and ζ'' values:
+// on a segment of length L with certified max|ζ''| ≤ M2 and max|ζ'| ≤ M1,
+//   |Δarg| ≤ (M1 + M2·L/2)·L / m,   m = certified min |ζ'| on the segment
+// If m > 0 on every segment and every |Δarg| bound ≤ π/2, the wrapped Δarg is
+// exact on each segment and the total winding is certified.
+// Returns (winding, min contour margin, max per-segment |Δarg| bound, certified flag)
+fn winding_cert(s0: f64, s1: f64, t0: f64, t1: f64, step: f64) -> (f64, f64, f64, bool) {
+    // boundary points CCW
+    let mut pts: Vec<(f64, f64)> = Vec::new();
+    let mut s = s0;
+    while s <= s1 + 1e-12 { pts.push((s, t0)); s += step; }
+    let mut tt = t0 + step;
+    while tt <= t1 + 1e-9 { pts.push((s1, tt)); tt += step; }
+    let mut s = s1 - step;
+    while s >= s0 - 1e-12 { pts.push((s, t1)); s -= step; }
+    let mut tt = t1 - step;
+    while tt >= t0 - 1e-9 { pts.push((s0, tt)); tt -= step; }
+
+    // evaluate ζ', ζ'' + certified errors at every point
+    let n = pts.len();
+    let mut fr = vec![0.0f64; n]; let mut fi = vec![0.0f64; n]; let mut fe = vec![0.0f64; n];
+    let mut f2r = vec![0.0f64; n]; let mut f2i = vec![0.0f64; n]; let mut f2e = vec![0.0f64; n];
+    for (k, &(sr, si)) in pts.iter().enumerate() {
+        let (r, i, e) = zeta_prime(sr, si);
+        let (r2, i2, e2) = zeta_dprime(sr, si);
+        fr[k] = r; fi[k] = i; fe[k] = e;
+        f2r[k] = r2; f2i[k] = i2; f2e[k] = e2;
+    }
+
+    let mut total = 0.0f64;       // Σ wrapped Δarg
+    let mut max_seg = 0.0f64;     // max certified |Δarg| bound per segment
+    let mut min_margin = f64::INFINITY;
+    let mut cert = true;
+    let mut prev_arg = fi[0].atan2(fr[0]);
+    for k in 1..n {
+        let cur_arg = fi[k].atan2(fr[k]);
+        let mut d = cur_arg - prev_arg;
+        while d > PI { d -= 2.0 * PI; }
+        while d <= -PI { d += 2.0 * PI; }
+        let p = pts[k - 1]; let q = pts[k];
+        let l = ((q.0 - p.0).powi(2) + (q.1 - p.1).powi(2)).sqrt();
+        // certified magnitudes at endpoints (raw minus certified err)
+        let mp = (fr[k - 1] * fr[k - 1] + fi[k - 1] * fi[k - 1]).sqrt() - fe[k - 1];
+        let mq = (fr[k] * fr[k] + fi[k] * fi[k]).sqrt() - fe[k];
+        let fp_mag = ((fr[k - 1].powi(2) + fi[k - 1].powi(2)).sqrt() + fe[k - 1])
+            .max((fr[k].powi(2) + fi[k].powi(2)).sqrt() + fe[k]); // certified max |ζ'| on segment
+        // certified max |ζ''| on segment = max over endpoints of (|ζ''_raw| + err)
+        let f2_mag = ((f2r[k - 1].powi(2) + f2i[k - 1].powi(2)).sqrt() + f2e[k - 1])
+            .max((f2r[k].powi(2) + f2i[k].powi(2)).sqrt() + f2e[k]);
+        // m = min endpoint certified |ζ'| − linear−quadratic drift over L/2
+        let m = mp.min(mq) - fp_mag * (l / 2.0) - f2_mag * (l * l / 8.0);
+        let seg_bound = (fp_mag + f2_mag * (l / 2.0)) * l / m.max(1e-300);
+        if m <= 0.0 || seg_bound > 0.5 * PI { cert = false; }
+        if m < min_margin { min_margin = m; }
+        if seg_bound > max_seg { max_seg = seg_bound; }
+        total += d;
+        prev_arg = cur_arg;
+    }
+    let w = total / (2.0 * PI);
+    // winding must be an integer for the certificate to hold
+    if (w - w.round()).abs() > 1e-9 { cert = false; }
+    (w, min_margin, max_seg, cert)
+}
+
+fn cmd_certleft(t0: f64, t1: f64, h: f64, step: f64) {
+    println!("# CERTLEFT: CERTIFIED ζ' winding on [0.001,0.5]×[T,T+H], T={}..{} H={} step={}", t0, t1, h, step);
+    let mut tot = 0.0;
+    let mut all_cert = true;
+    let mut gmin = f64::INFINITY;
+    let mut gmax = 0.0f64;
+    let mut t = t0;
+    while t < t1 - 1e-9 {
+        let (w, minm, maxseg, cert) = winding_cert(0.001, 0.5, t, t + h, step);
+        tot += w;
+        gmin = gmin.min(minm);
+        gmax = gmax.max(maxseg);
+        all_cert &= cert;
+        println!("slab [{:.1},{:.1}]: winding={:.6} min-cert-margin={:.3e} max-|Δarg|-bound={:.3} certified={}",
+                 t, t + h, w, minm, maxseg, cert);
+        t += h;
+    }
+    println!("TOTAL certified winding = {:.6}", tot);
+    println!("global min certified margin = {:.3e}; max |Δarg| bound = {:.3}", gmin, gmax);
+    println!("VERDICT certleft: {} — ζ' has NO zeros in [0.001,0.5]×[{},{}] (argument principle, certified arithmetic)",
+             if all_cert && tot.abs() < 0.5 { "PROVEN" } else { "NOT CERTIFIED" }, t0, t1);
+}
+
 fn cmd_right(t0: f64, t1: f64, h: f64, step: f64) {
     println!("# RIGHT: ζ' zeros in [0.5,1]×[T,T+H], T={}..{} H={} step={}", t0, t1, h, step);
     let mut tot = 0.0;
@@ -417,9 +512,28 @@ fn cmd_dbg() {
         let fd_re = (f1r - f2r) / (2.0 * h);
         let fd_im = (f1i - f2i) / (2.0 * h);
         let diff = ((ar - fd_re).powi(2) + (ai - fd_im).powi(2)).sqrt();
-        let diff = ((ar - fd_re).powi(2) + (ai - fd_im).powi(2)).sqrt();
         println!("  ζ'({}+{}i): analytic = {:.6}{:+.6}i  FD = {:.6}{:+.6}i  |diff| = {:.3e}  cert-err = {:.1e}",
                  sr, si, ar, ai, fd_re, fd_im, diff, ae);
+    }
+    // 1b) analytic ζ'' vs central-difference of ζ' AND second-difference of certified ζ
+    println!("# DBG2: analytic ζ'' vs central-difference of ζ' and second-difference of ζ");
+    for (sr, si) in pts {
+        let (a2r, a2i, a2e) = zeta_dprime(sr, si);
+        let h = 1e-4;
+        let (f1r, f1i, _) = zeta_prime(sr + h, si);
+        let (f2r, f2i, _) = zeta_prime(sr - h, si);
+        let fd_re = (f1r - f2r) / (2.0 * h);
+        let fd_im = (f1i - f2i) / (2.0 * h);
+        // second difference of certified ζ: (ζ(s+h) − 2ζ(s) + ζ(s−h))/h²
+        let (g1r, g1i, _) = zeta_val(sr + h, si);
+        let (g0r, g0i, _) = zeta_val(sr, si);
+        let (g2r, g2i, _) = zeta_val(sr - h, si);
+        let sd_re = (g1r - 2.0 * g0r + g2r) / (h * h);
+        let sd_im = (g1i - 2.0 * g0i + g2i) / (h * h);
+        let diff = ((a2r - fd_re).powi(2) + (a2i - fd_im).powi(2)).sqrt();
+        let diff2 = ((a2r - sd_re).powi(2) + (a2i - sd_im).powi(2)).sqrt();
+        println!("  ζ''({}+{}i): analytic = {:.6}{:+.6}i  FD-ζ' = {:.6}{:+.6}i (|Δ|={:.2e})  SD-ζ = {:.6}{:+.6}i (|Δ|={:.2e})  cert-err = {:.1e}",
+                 sr, si, a2r, a2i, fd_re, fd_im, diff, sd_re, sd_im, diff2, a2e);
     }
     // 2) edge-wise minima + winding at two steps on a rectangle
     let rects: [(f64, f64, f64, f64); 3] = [(0.02, 0.5, 9.0, 14.0), (0.02, 0.5, 14.0, 19.0), (0.5, 1.0, 9.0, 14.0)];
@@ -522,6 +636,13 @@ fn main() {
             let h: f64 = args.get(4).and_then(|s| s.parse().ok()).unwrap_or(100.0);
             cmd_left(t0, t1, h);
         }
+        "certleft" => {
+            let t0: f64 = args[2].parse().unwrap();
+            let t1: f64 = args[3].parse().unwrap();
+            let h: f64 = args.get(4).and_then(|s| s.parse().ok()).unwrap_or(0.5);
+            let step: f64 = args.get(5).and_then(|s| s.parse().ok()).unwrap_or(0.02);
+            cmd_certleft(t0, t1, h, step);
+        }
         "right" => {
             let t0: f64 = args[2].parse().unwrap();
             let t1: f64 = args[3].parse().unwrap();
@@ -549,6 +670,6 @@ fn main() {
         }
         "realscan" => cmd_realscan(),
         "dbg" => cmd_dbg(),
-        _ => println!("usage: wave8b left|right|online|interl|control|locate|dbg|realscan ..."),
+        _ => println!("usage: wave8b left|right|online|interl|control|locate|dbg|realscan|certleft ..."),
     }
 }

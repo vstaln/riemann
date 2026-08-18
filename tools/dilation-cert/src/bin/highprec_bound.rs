@@ -50,21 +50,28 @@ fn bound_hp(eps: f64, m: usize, alpha: f64, psum: f64) -> Float {
 fn main() {
     let rec = f(0.6734808616745137_f64); // record's decimal, as f64 — acceptable for margin sign
     println!("H(1.464) @200bit : {}", h_window_hp(1.464));
-    let cases: Vec<(f64, f64)> = vec![
-        (1.00, 0.0062),
-        (1.05, 0.00645),
-        (1.10, 0.0066774),
-        (1.15, 0.00698),
-        (1.20, 0.00718),
+    let cases: Vec<(f64, f64, f64)> = vec![
+        // === certified points (the record path) ===
+        (1.464, 1.15, 0.00703), // VERIFIED 2026-08-18 (1068980 nodes, grid 4000)
+        (1.450, 1.15, 0.00700), // VERIFIED 2026-08-18 (1120338 nodes, grid 4000)
+        // === lattice-floor landscape at lam=1.15 ===
+        (1.415, 1.15, 0.00689), // floor 0.006892
+        (1.43, 1.15, 0.00695),  // floor 0.006946
+        (1.45, 1.15, 0.00700),  // floor 0.007009
+        (1.464, 1.15, 0.00704), // floor 0.007049
+        (1.48, 1.15, 0.00707),  // floor 0.007095 (certifiable ~0.00707 per g8k)
+        (1.48, 1.15, 0.00709),  // lattice floor upper bound
+        (1.50, 1.15, 0.00714),  // floor 0.007155
+        (1.52, 1.15, 0.00720),  // floor 0.007218
     ];
     let psum_base = 1.0 / 320.0;
-    let mut best_overall: Option<(f64, f64, usize, Float)> = None;
-    for (lam, eps) in cases {
+    let mut best_overall: Option<(f64, f64, f64, usize, Float)> = None;
+    for (alpha, lam, eps) in cases {
         let psum = psum_base * lam;
         let mut best_m = 0usize;
         let mut best = f(-1e300_f64);
         for m in 40..=400 {
-            let b = bound_hp(eps, m, 1.464, psum);
+            let b = bound_hp(eps, m, alpha, psum);
             if b > best {
                 best = b;
                 best_m = m;
@@ -72,22 +79,22 @@ fn main() {
         }
         let delta = best.clone() - rec.clone();
         let verdict = if delta > f(0.0) { "BEATS RECORD" } else { "below record" };
-        println!("lam={:.2} eps={:.7} best m={} bound={} delta={} => {}", lam, eps, best_m, best,
+        println!("alpha={} lam={:.2} eps={:.7} best m={} bound={} delta={} => {}", alpha, lam, eps, best_m, best,
                  delta, verdict);
         if delta > f(0.0) {
             let mut replace = true;
-            if let Some((_, _, _, ref bo)) = best_overall {
+            if let Some((_, _, _, _, ref bo)) = best_overall {
                 if !(best > *bo) {
                     replace = false;
                 }
             }
             if replace {
-                best_overall = Some((lam, eps, best_m, best));
+                best_overall = Some((alpha, lam, eps, best_m, best));
             }
         }
     }
-    if let Some((lam, eps, m, b)) = best_overall {
-        println!("BEST: lam={} eps={} m={} bound={} (all Rust, 200-bit MPFR)", lam, eps, m, b);
+    if let Some((alpha, lam, eps, m, b)) = best_overall {
+        println!("BEST: alpha={} lam={} eps={} m={} bound={} (all Rust, 200-bit MPFR)", alpha, lam, eps, m, b);
     } else {
         println!("NO case beats the record at 200-bit precision — finding REFUTED");
     }
