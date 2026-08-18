@@ -1,0 +1,29 @@
+loaded b_k k=0..300, gamma_1 = 14.134725141735
+
+delta      | first fail | worst minor | notes
+-----------+----------------------------------------------------+--------------+-----------------------------------------
+1e-1       | PF2                                                | -2.318e-44   | 
+1e-2       | PF2                                                | -2.536e-61   | 
+1e-3       | PF2                                                | -6.288e-74   | 
+1e-4       | PF6                                                | -1.513e-174  | 
+1e-5       | none (<=8)                                         | 0.000e0      | 
+1e-6       | none (<=8)                                         | 0.000e0      | 
+1e-7       | none (<=8)                                         | 0.000e0      | 
+0e0        | none (<=8)                                         | 0.000e0      | control: true world (delta=0, must pass)
+
+Failure order vs delta (first certified-negative PF order):
+  delta        first failing order
+       5e-2   PF2  (worst minor -7.55e-50)
+       2e-2   PF2  (worst minor -1.06e-55)
+       1e-2   PF2  (worst minor -2.54e-61)
+       5e-3   PF2  (worst minor -4.72e-64)
+       2e-3   PF2  (worst minor -2.41e-69)
+       1e-3   PF2  (worst minor -6.29e-74)
+       5e-4   PF2  (worst minor -1.39e-79)
+       2e-4   PF4  (worst minor -1.67e-137)
+       1e-4   PF6  (worst minor -1.51e-174)
+       5e-5   none up to PF8
+       1e-5   none up to PF8
+
+Interpretation: the smallest certified-detected displacement and the depth needed
+quantify the firewall — for any fixed audit depth there are RH-false worlds that pass.

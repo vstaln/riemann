@@ -1,0 +1,33 @@
+# Gaussian-Perron defect probe v3 (CORRECTED: convergent P, not divergent 1-W sum)
+# alpha=0.2 sigma=0.75 sieve N=100000000
+# primes up to 100: 25
+# self-check psi(100) = 94.045311
+# self-check psi(1e5) = 100051.564026
+# self-check psi(1e5) method B = 100051.564026  (match: true)
+
+## t = 0
+# zeta'/zeta(0.75+0i) = 4.627582469 0.000000000i
+X    logX    Re[P-z'/z]   |Delta|   log|Delta|
+10000 9.2103 -4.093172e1 1.023293e1 2.3256
+30000 10.3090 -5.401733e1 1.350433e1 2.6030
+100000 11.5129 -7.320825e1 1.830206e1 2.9070
+300000 12.6115 -9.661246e1 2.415311e1 3.1844
+1000000 13.8155 -1.309361e2 3.273404e1 3.4884
+# fitted slope = 0.2525   predicted pole-term slope = 0.2525
+# => H1 (uniform boundedness over sigma>1/2, fixed t) FALSE (pole main term grows)
+
+## t = 1
+# zeta'/zeta(0.75+1i) = 0.804284654 0.742919296i
+X    logX    Re[P-z'/z]   |Delta|   log|Delta|
+10000 9.2103 1.463595e0 1.717021e0 0.5406
+30000 10.3090 8.434736e0 2.168522e0 0.7740
+100000 11.5129 6.122728e0 2.800758e0 1.0299
+300000 12.6115 -7.303296e0 3.537234e0 1.2633
+1000000 13.8155 -1.791102e1 4.568489e0 1.5192
+# fitted slope = 0.2125   predicted pole-term slope = 0.2125
+# => H1 (uniform boundedness over sigma>1/2, fixed t) FALSE (pole main term grows)
+
+# NOTE: |Delta| = (sigma-1/2)|P - zeta'/zeta|; at generic t the zero sum is
+# exponentially damped (Gaussian factor e^( -alpha^2 Y (gamma-t)^2 )) so the pole term
+# dominates: slope = (1-sigma) + alpha^2((1-sigma)^2 - t^2). At sigma=0.75, alpha=0.2:
+# t=0 -> 0.2525, t=1 -> 0.2125. The v2 probe's 1-W divergent-sum was a cutoff artifact.

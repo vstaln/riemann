@@ -1,0 +1,14 @@
+=== 2x2 covariance probe: V = (Re f, Im f'/theta'), f = (zeta*M)(1/2+it), M len Y=2 ===
+range: [1000000 , 1000400], samples 800, zeta max err 2.34e-6, |f| max 1.72e1
+
+mean(V1) = 1.018747e0   mean(V2) = -3.780957e-2
+Cov(V1,V1) = 3.174393e0
+Cov(V2,V2) = 5.435682e0
+Cov(V1,V2) = -3.696679e0
+corr(V1,V2) = -0.88992692
+
+Residual R = Im f'/theta' + Re f :  mean 9.809375e-1, var 1.216717e0, max |R| 6.327382e0
+|R|_rms / sqrt(Var V1) = 6.191052e-1   (fraction of independent info in the derivative)
+
+VERDICT: corr = -0.889927 not near -1 => derivative carries independent info;
+matrix minorant does NOT trivially collapse. Residual variance fraction 0.6191.

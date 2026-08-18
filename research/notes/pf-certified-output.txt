@@ -1,0 +1,65 @@
+loaded b_k = M_k/(2k)! at 210 bits, k=0..300 (all entries > 0: true)
+
+=== ZETA: certified Toeplitz minors of b_k (consecutive rows/cols; Fekete: consecutive minors suffice for TP) ===
+  order 2: 818 certified > 0, 703 exact-zero (structural), 0 tiny/inconclusive over window 0..40; min |det|/err = 1.9e60
+  order 3: 778 certified > 0, 666 exact-zero (structural), 0 tiny/inconclusive over window 0..40; min |det|/err = 2.5e57
+  order 4: 739 certified > 0, 630 exact-zero (structural), 0 tiny/inconclusive over window 0..40; min |det|/err = 1.0e54
+  order 5: 701 certified > 0, 595 exact-zero (structural), 0 tiny/inconclusive over window 0..40; min |det|/err = 2.4e50
+  order 6: 664 certified > 0, 561 exact-zero (structural), 0 tiny/inconclusive over window 0..40; min |det|/err = 5.2e46
+  order 7: 26 certified > 0, 10 exact-zero (structural), 0 tiny/inconclusive over window 0..12; min |det|/err = 9.7e48
+  order 8: 19 certified > 0, 6 exact-zero (structural), 0 tiny/inconclusive over window 0..12; min |det|/err = 2.6e47
+
+  FULL PF check (all row/col selections), orders 2..=5 over index window 0..=8:
+  order 2: 540 certified > 0, 756 exact-zero, 1296 total all-selection minors over window 0..8; min |det|/err = 8.7e60
+  order 3: 2520 certified > 0, 4536 exact-zero, 7056 total all-selection minors over window 0..8; min |det|/err = 1.5e59
+  order 4: 5292 certified > 0, 10584 exact-zero, 15876 total all-selection minors over window 0..8; min |det|/err = 2.4e57
+  order 5: 5292 certified > 0, 10584 exact-zero, 15876 total all-selection minors over window 0..8; min |det|/err = 7.2e55
+  order 9: 1 certified > 0, 0 exact-zero (structural), 0 tiny/inconclusive (leading minor); min |det|/err = 7.3e55
+  order 10: 1 certified > 0, 0 exact-zero (structural), 0 tiny/inconclusive (leading minor); min |det|/err = 1.0e55
+  VERDICT (zeta): no certified-negative minor up to order 10 — RH-consistent (PF2..PF10 pass, no disproof).
+
+=== CONTROL: logistic rho(u)=(1/4)sech^2(u/2), b_k=(1-2^{1-2k})zeta(2k) (FT pi z/sinh(pi z), RH-false in LP sense) ===
+  control b_k (k=0..12): 1.0000, 0.8225, 0.9470, 0.9856, 0.9962, 0.9990, 0.9998, 0.9999, 1.0000, 1.0000, 1.0000, 1.0000, 1.0000, 1.0000
+  order 2: most negative minor = -2.706e-1  at 2x2 rows([1, 2]) cols([0, 1])
+  order 3: most negative minor = -1.590e-2  at 3x3 rows([1, 2, 3]) cols([0, 1, 2])
+  order 4: most negative minor = -1.871e-6  at 4x4 rows([3, 4, 5, 6]) cols([0, 1, 2, 3])
+  order 5: most negative minor = -2.463e-2  at 5x5 rows([1, 2, 3, 4, 5]) cols([0, 1, 2, 3, 4])
+  VERDICT (control): 36 certified-negative minor(s) — the non-LP control FAILS where zeta passes:
+    2x2 rows([1, 2]) cols([0, 1]): det=-2.706e-1 err=1.6e-62  CERTIFIED < 0 ✗✗ (RH disproof!)
+    2x2 rows([2, 3]) cols([1, 2]): det=-2.706e-1 err=1.6e-62  CERTIFIED < 0 ✗✗ (RH disproof!)
+    2x2 rows([3, 4]) cols([2, 3]): det=-2.706e-1 err=1.6e-62  CERTIFIED < 0 ✗✗ (RH disproof!)
+    2x2 rows([4, 5]) cols([3, 4]): det=-2.706e-1 err=1.6e-62  CERTIFIED < 0 ✗✗ (RH disproof!)
+    2x2 rows([5, 6]) cols([4, 5]): det=-2.706e-1 err=1.6e-62  CERTIFIED < 0 ✗✗ (RH disproof!)
+    2x2 rows([6, 7]) cols([5, 6]): det=-2.706e-1 err=1.6e-62  CERTIFIED < 0 ✗✗ (RH disproof!)
+    2x2 rows([7, 8]) cols([6, 7]): det=-2.706e-1 err=1.6e-62  CERTIFIED < 0 ✗✗ (RH disproof!)
+    2x2 rows([8, 9]) cols([7, 8]): det=-2.706e-1 err=1.6e-62  CERTIFIED < 0 ✗✗ (RH disproof!)
+    2x2 rows([9, 10]) cols([8, 9]): det=-2.706e-1 err=1.6e-62  CERTIFIED < 0 ✗✗ (RH disproof!)
+    2x2 rows([10, 11]) cols([9, 10]): det=-2.706e-1 err=1.6e-62  CERTIFIED < 0 ✗✗ (RH disproof!)
+    2x2 rows([11, 12]) cols([10, 11]): det=-2.706e-1 err=1.6e-62  CERTIFIED < 0 ✗✗ (RH disproof!)
+    3x3 rows([1, 2, 3]) cols([0, 1, 2]): det=-1.590e-2 err=4.5e-62  CERTIFIED < 0 ✗✗ (RH disproof!)
+    3x3 rows([2, 3, 4]) cols([1, 2, 3]): det=-1.590e-2 err=4.5e-62  CERTIFIED < 0 ✗✗ (RH disproof!)
+    3x3 rows([3, 4, 5]) cols([2, 3, 4]): det=-1.590e-2 err=4.5e-62  CERTIFIED < 0 ✗✗ (RH disproof!)
+    3x3 rows([4, 5, 6]) cols([3, 4, 5]): det=-1.590e-2 err=4.5e-62  CERTIFIED < 0 ✗✗ (RH disproof!)
+    3x3 rows([5, 6, 7]) cols([4, 5, 6]): det=-1.590e-2 err=4.5e-62  CERTIFIED < 0 ✗✗ (RH disproof!)
+    3x3 rows([6, 7, 8]) cols([5, 6, 7]): det=-1.590e-2 err=4.5e-62  CERTIFIED < 0 ✗✗ (RH disproof!)
+    3x3 rows([7, 8, 9]) cols([6, 7, 8]): det=-1.590e-2 err=4.5e-62  CERTIFIED < 0 ✗✗ (RH disproof!)
+    3x3 rows([8, 9, 10]) cols([7, 8, 9]): det=-1.590e-2 err=4.5e-62  CERTIFIED < 0 ✗✗ (RH disproof!)
+    3x3 rows([9, 10, 11]) cols([8, 9, 10]): det=-1.590e-2 err=4.5e-62  CERTIFIED < 0 ✗✗ (RH disproof!)
+    3x3 rows([10, 11, 12]) cols([9, 10, 11]): det=-1.590e-2 err=4.5e-62  CERTIFIED < 0 ✗✗ (RH disproof!)
+    4x4 rows([3, 4, 5, 6]) cols([0, 1, 2, 3]): det=-1.871e-6 err=4.0e-61  CERTIFIED < 0 ✗✗ (RH disproof!)
+    4x4 rows([4, 5, 6, 7]) cols([1, 2, 3, 4]): det=-1.871e-6 err=4.0e-61  CERTIFIED < 0 ✗✗ (RH disproof!)
+    4x4 rows([5, 6, 7, 8]) cols([2, 3, 4, 5]): det=-1.871e-6 err=4.0e-61  CERTIFIED < 0 ✗✗ (RH disproof!)
+    4x4 rows([6, 7, 8, 9]) cols([3, 4, 5, 6]): det=-1.871e-6 err=4.0e-61  CERTIFIED < 0 ✗✗ (RH disproof!)
+    4x4 rows([7, 8, 9, 10]) cols([4, 5, 6, 7]): det=-1.871e-6 err=4.0e-61  CERTIFIED < 0 ✗✗ (RH disproof!)
+    4x4 rows([8, 9, 10, 11]) cols([5, 6, 7, 8]): det=-1.871e-6 err=4.0e-61  CERTIFIED < 0 ✗✗ (RH disproof!)
+    4x4 rows([9, 10, 11, 12]) cols([6, 7, 8, 9]): det=-1.871e-6 err=4.0e-61  CERTIFIED < 0 ✗✗ (RH disproof!)
+    5x5 rows([1, 2, 3, 4, 5]) cols([0, 1, 2, 3, 4]): det=-2.463e-2 err=2.7e-61  CERTIFIED < 0 ✗✗ (RH disproof!)
+    5x5 rows([2, 3, 4, 5, 6]) cols([1, 2, 3, 4, 5]): det=-2.463e-2 err=2.7e-61  CERTIFIED < 0 ✗✗ (RH disproof!)
+    5x5 rows([3, 4, 5, 6, 7]) cols([2, 3, 4, 5, 6]): det=-2.463e-2 err=2.7e-61  CERTIFIED < 0 ✗✗ (RH disproof!)
+    5x5 rows([4, 5, 6, 7, 8]) cols([3, 4, 5, 6, 7]): det=-2.463e-2 err=2.7e-61  CERTIFIED < 0 ✗✗ (RH disproof!)
+    5x5 rows([5, 6, 7, 8, 9]) cols([4, 5, 6, 7, 8]): det=-2.463e-2 err=2.7e-61  CERTIFIED < 0 ✗✗ (RH disproof!)
+    5x5 rows([6, 7, 8, 9, 10]) cols([5, 6, 7, 8, 9]): det=-2.463e-2 err=2.7e-61  CERTIFIED < 0 ✗✗ (RH disproof!)
+    5x5 rows([7, 8, 9, 10, 11]) cols([6, 7, 8, 9, 10]): det=-2.463e-2 err=2.7e-61  CERTIFIED < 0 ✗✗ (RH disproof!)
+    5x5 rows([8, 9, 10, 11, 12]) cols([7, 8, 9, 10, 11]): det=-2.463e-2 err=2.7e-61  CERTIFIED < 0 ✗✗ (RH disproof!)
+
+(PF_∞ is still not certified for zeta: finite orders cannot prove the infinite property.)

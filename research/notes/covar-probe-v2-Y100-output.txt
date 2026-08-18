@@ -1,0 +1,25 @@
+=== 4x4 covariance probe: W = (Re f, Im f, Re f'/t', Im f'/t'), f=(zeta*M), Y=100 ===
+range [1000000 , 1000400], samples 800, zeta max err 2.34e-6
+
+Covariance matrix (rows a, cols b):
+  [  3.9755e0 -5.9820e-1 -1.1309e0 -6.9452e0 ]
+  [ -5.9820e-1  2.5410e0  4.4954e0  1.1302e0 ]
+  [ -1.1309e0  4.4954e0  9.0005e0  2.1773e0 ]
+  [ -6.9452e0  1.1302e0  2.1773e0  1.3455e1 ]
+
+RMS ratios and correlations:
+  |Im f|/|Re f| rms           = 0.712694
+  corr(Re f, Im f)            = -0.188210
+  corr(Re f, Im f'/t')        = -0.949620
+  corr(Im f, Re f'/t')        = 0.940000
+  corr(Re f', Im f')          = 0.197852
+  corr(Re f, Re f'/t')        = -0.189060
+
+2x2 minor (Re f, Im f'/t') eigenvalues: 17.1235 , 0.3068
+4x4 eigenvalues: 0.0133 , 0.2925 , 8.4528 , 16.9960
+4x4 condition number: 1.275e3
+
+VERDICT: phase NOT concentrated (|Im f|/|Re f| = 0.7127, corr(Re,Im) = -0.1882)
+=> no phase-alignment collapse; matrix minorant has a live 2D structure to exploit.
+(caveat: this measures the covariance of the mollified function along a fixed stretch;
+ the SDP objective over bandlimited matrix minorants is the definitive test.)

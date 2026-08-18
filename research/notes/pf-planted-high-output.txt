@@ -1,0 +1,13 @@
+loaded b_k k=0..300, zeros 1..120 (gamma_100 = 236.524230)
+
+Detection threshold: smallest delta at which a certified-negative minor appears,
+for planted displacement of zero #k (gamma_k = 14.13 / 49.77 / 236.5):
+  k    PF2        PF3        PF4        PF6        PF8       
+  1    (  14.1) 1e-5       >10        1e-6       1e-6       1e-6      
+  10   (  49.8) >10        >10        >10        >10        >10       
+  100  ( 236.5) >10        >10        >10        >10        >10       
+  (thresholds shown as relative delta/gamma_k; absolute = gamma_k * value)
+
+Interpretation: the detection threshold is the SMALLEST displacement detected at that
+order. If it rises with gamma_k, the finite tests are blind exactly where an RH-false
+world would live (large height, per de Bruijn-Newman).

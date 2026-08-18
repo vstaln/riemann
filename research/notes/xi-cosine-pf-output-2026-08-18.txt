@@ -1,0 +1,38 @@
+loaded M,b,gamma for k=0..300
+
+(1) Cosine-transform identity: Xi(z) = 2*int Phi(u) cos(zu)du vs Taylor series
+  z=  0.0000: cos-int = +4.9712077819e-1 (err<1e-100)   taylor = +4.9712077819e-1   |diff| = 6.11e-16
+  z=  0.5000: cos-int = +4.9425698791e-1 (err<1e-100)   taylor = +4.9425698791e-1   |diff| = 6.66e-16
+  z=  1.0000: cos-int = +4.8575742967e-1 (err<1e-100)   taylor = +4.8575742967e-1   |diff| = 0.00e0
+  z=  2.0000: cos-int = +4.5309985831e-1 (err<1e-100)   taylor = +4.5309985831e-1   |diff| = 4.44e-16
+  z=  3.0000: cos-int = +4.0316520726e-1 (err<1e-100)   taylor = +4.0316520726e-1   |diff| = 5.00e-16
+  z=  5.0000: cos-int = +2.7554999734e-1 (err<1e-100)   taylor = +2.7554999734e-1   |diff| = 1.22e-15
+  z=  8.0000: cos-int = +1.0330273283e-1 (err<1e-100)   taylor = +1.0330273283e-1   |diff| = 1.25e-16
+  z= 10.0000: cos-int = +3.7967850311e-2 (err<1e-100)   taylor = +3.7967850311e-2   |diff| = 5.55e-17
+  z= 14.1347: cos-int = +3.4764463123e-8 (err<1e-100)   taylor = +3.4764462966e-8   |diff| = 1.56e-16
+
+(2) Toeplitz PF audit on a_k = M_k/(2k)! (Taylor coefficients of Xi)
+  PF2 (log-concavity, k=0..49): true
+  PF3: 120 consecutive 3x3 minors all >= 0: true
+  PF4: 60 consecutive 4x4 minors all >= 0: true
+  PF5: 24 consecutive 5x5 minors all >= 0: true
+  leading 2x2 minor: 7.055699e-5  ✓
+  leading 3x3 minor: 3.112143e-7  ✓
+  leading 4x4 minor: 1.116675e-9  ✓
+  leading 5x5 minor: 3.499488e-12  ✓
+  PF6: 6 consecutive 6x6 minors all >= 0: true
+  leading 6x6 minor: 1.003049e-14  ✓
+
+(3) Jensen J^(5,n), J^(6,n) real-root checks (sign changes on [-200,0])
+  J^(5,0) : 5 real roots  ✓
+  J^(5,1) : 5 real roots  ✓
+  J^(5,2) : 5 real roots  ✓
+  J^(5,n) n=0..5 all 5 real roots: true
+  J^(6,0) : 6 real roots  ✓
+  J^(6,1) : 6 real roots  ✓
+  J^(6,2) : 6 real roots  ✓
+  J^(6,n) n=0..5 all 6 real roots: true
+  J^(7,0) : 7 real roots  ✓
+  J^(7,1) : 7 real roots  ✓
+  J^(7,2) : 7 real roots  ✓
+  J^(7,n) n=0..5 all 7 real roots: true

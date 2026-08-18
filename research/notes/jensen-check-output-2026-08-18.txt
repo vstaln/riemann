@@ -1,0 +1,82 @@
+loaded γ(k) for k=0..300
+γ0=4.9712077819e-1 γ1=1.1485972158e-2 γ2=2.4690403614e-4 γ3=4.9941328883e-6
+
+[Hankel/moment test — NOT the Jensen criterion]
+  Hankel det2(γ) = γ0γ2−γ1² = -9.186430e-6  (note: -9.189076e-6)
+  ⟹ γ is NOT a Hankel moment sequence (det2 ≥ 0 needed).
+
+[Correct criterion — log-concavity γ(n+1)²−γ(n)γ(n+2) = Toeplitz 2×2 minor]
+  n= 0: γ(n+1)²−γ(n)γ(n+2) = 9.186430e-6  log-concave ✓ (J^{2,n} hyperbolic)
+  n= 1: γ(n+1)²−γ(n)γ(n+2) = 3.599132e-9  log-concave ✓ (J^{2,n} hyperbolic)
+  n= 2: γ(n+1)²−γ(n)γ(n+2) = 1.284639e-12  log-concave ✓ (J^{2,n} hyperbolic)
+  n= 3: γ(n+1)²−γ(n)γ(n+2) = 4.208898e-16  log-concave ✓ (J^{2,n} hyperbolic)
+  n= 4: γ(n+1)²−γ(n)γ(n+2) = 1.274259e-19  log-concave ✓ (J^{2,n} hyperbolic)
+  n= 5: γ(n+1)²−γ(n)γ(n+2) = 3.585706e-23  log-concave ✓ (J^{2,n} hyperbolic)
+  n= 6: γ(n+1)²−γ(n)γ(n+2) = 9.425709e-27  log-concave ✓ (J^{2,n} hyperbolic)
+  n= 7: γ(n+1)²−γ(n)γ(n+2) = 2.324820e-30  log-concave ✓ (J^{2,n} hyperbolic)
+  n= 8: γ(n+1)²−γ(n)γ(n+2) = 5.401052e-34  log-concave ✓ (J^{2,n} hyperbolic)
+  n= 9: γ(n+1)²−γ(n)γ(n+2) = 1.185935e-37  log-concave ✓ (J^{2,n} hyperbolic)
+  n=10: γ(n+1)²−γ(n)γ(n+2) = 2.468602e-41  log-concave ✓ (J^{2,n} hyperbolic)
+  n=11: γ(n+1)²−γ(n)γ(n+2) = 4.884529e-45  log-concave ✓ (J^{2,n} hyperbolic)
+  all 40 tested: YES — J^{2,n} hyperbolic ∀n≤39
+
+[Toeplitz 3×3 minors — PF test, the correct Jensen-adjacent structure]
+  rows(1,2,3),cols(0,1,2): det = -7.009068e-8  FAIL
+  rows(2,3,4),cols(0,1,2): det = 4.667821e-15  ✓
+  rows(3,4,5),cols(0,1,2): det = 2.712373e-20  ✓
+  rows(4,5,6),cols(0,1,2): det = 1.403968e-25  ✓
+  rows(5,6,7),cols(0,1,2): det = 6.531038e-31  ✓
+  rows(6,7,8),cols(0,1,2): det = 2.750434e-36  ✓
+  all tested: some negative
+
+[Direct: roots of J^(d,n)(X)=Σ C(d,j)γ(n+j)X^j]
+  J^(2,0): disc = 3.674572e-5  real roots ✓
+  J^(2,1): disc = 1.439653e-8  real roots ✓
+  J^(2,2): disc = 5.138556e-12  real roots ✓
+  J^(2,3): disc = 1.683559e-15  real roots ✓
+  J^(2,4): disc = 5.097037e-19  real roots ✓
+  J^(2,5): disc = 1.434282e-22  real roots ✓
+  J^(2,n) n=0..19 all real-rooted: true
+  J^(3,0): cubic disc = 2.016952e-13  3 real roots ✓
+  J^(3,1): cubic disc = 2.489117e-20  3 real roots ✓
+  J^(3,2): cubic disc = 2.610030e-27  3 real roots ✓
+  J^(3,3): cubic disc = 2.350665e-34  3 real roots ✓
+  J^(3,4): cubic disc = 1.836613e-41  3 real roots ✓
+  J^(3,5): cubic disc = 1.256142e-48  3 real roots ✓
+  J^(3,n) n=0..11: all 3 real roots ✓
+
+  [J^(4,n): real-root count by sign changes]
+  J^(4,0): 4 real roots ["-80.193", "-60.369", "-43.018", "-24.913"]  ✓ 4 real
+  J^(4,1): 4 real roots ["-82.455", "-62.737", "-45.493", "-27.828"]  ✓ 4 real
+  J^(4,2): 4 real roots ["-84.630", "-64.996", "-47.847", "-30.482"]  ✓ 4 real
+  J^(4,3): 4 real roots ["-86.727", "-67.164", "-50.093", "-32.940"]  ✓ 4 real
+  J^(4,n) n=0..7: 4 real roots ✓
+
+[Correct PF sequence: a_k = gamma_k/k! = M_k/(2k)! (Taylor coefficients of Xi)]
+  PF2 n=0: a(n+1)^2−a(n)a(n+2) = 7.055699e-5  ✓
+  PF2 n=1: a(n+1)^2−a(n)a(n+2) = 5.679989e-9  ✓
+  PF2 n=2: a(n+1)^2−a(n)a(n+2) = 1.999672e-13  ✓
+  PF2 n=3: a(n+1)^2−a(n)a(n+2) = 3.772144e-18  ✓
+  PF2 n=4: a(n+1)^2−a(n)a(n+2) = 4.297889e-23  ✓
+  PF2 n=5: a(n+1)^2−a(n)a(n+2) = 3.203116e-28  ✓
+  a log-concave (PF2) all n<=39: true
+  Toeplitz 3x3 rows(1,2,3),cols(0,1,2): det = 3.112143e-7  ✓
+  Toeplitz 3x3 rows(2,3,4),cols(0,1,2): det = 1.470465e-13  ✓
+  Toeplitz 3x3 rows(3,4,5),cols(0,1,2): det = 2.229955e-20  ✓
+  Toeplitz 3x3 rows(4,5,6),cols(0,1,2): det = 1.411418e-27  ✓
+  Toeplitz 3x3 rows(5,6,7),cols(0,1,2): det = 4.371387e-35  ✓
+  Toeplitz 3x3 rows(6,7,8),cols(0,1,2): det = 7.379281e-43  ✓
+  Toeplitz 3x3 rows(7,8,9),cols(0,1,2): det = 7.342829e-51  ✓
+  Toeplitz 3x3 rows(8,9,10),cols(0,1,2): det = 4.571887e-59  ✓
+  a: Toeplitz 3x3 all >= 0: true
+  Toeplitz 4x4 rows(1..4),cols(0..3): det = 1.116675e-9  ✓
+
+[The note's own unreported check — g[n]²−g[n−1]g[n+1] (log-concavity)]
+  n=1: γ_n² − γ_(n−1)γ_(n+1) = 9.186430e-6  ✓ log-concave
+  n=2: γ_n² − γ_(n−1)γ_(n+1) = 3.599132e-9  ✓ log-concave
+  n=3: γ_n² − γ_(n−1)γ_(n+1) = 1.284639e-12  ✓ log-concave
+  n=4: γ_n² − γ_(n−1)γ_(n+1) = 4.208898e-16  ✓ log-concave
+
+SUMMARY: Hankel det2(γ)<0 is the MOMENT-sequence failure (irrelevant to Jensen);
+the Jensen criterion (log-concavity / Toeplitz minors / real roots) is what matters,
+and it PASSES at all tested orders.
