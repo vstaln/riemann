@@ -19,13 +19,22 @@ Deliverable is a quantized model file + tokenizer + threshold/calibration file +
 | Numbers we can quote | none |
 | Blockers | (B1) generator API key for fresh-corpus build, (B2) target phone spec for latency budget |
 
-## NEXT 3 ACTIONS (exact commands, no interpretation needed)
+## NEXT 3 ACTIONS
 
-1. `python -m slop.data.build_human --config config/human_sources.yaml` → writes `data/human/*.parquet` + `data/manifest.json`
-2. `python -m slop.features.extract --in data/human --out data/features/human.parquet` → interpretable feature table (CPU, no GPU)
-3. `python -m slop.eval.harness --baseline lexicon-lr --report reports/baseline_lr.md` → first honest numbers on all eval slices
+All commands run from `isthisaislop/` (the package root), after a one-time
+`cd isthisaislop && pip install -e .`. **The `slop` package does not exist yet** — action 1 creates
+it, so these are the acceptance commands for Phase 0, not commands that run today. Paths below are
+relative to `isthisaislop/`; from the repo root they will not resolve.
 
-Nothing may be reported as a result until step 3 exists and prints per-slice TPR@1%FPR.
+1. Scaffold the package (`pyproject.toml`, `slop/`, `config/human_sources.yaml`), then
+   `python -m slop.data.build_human --config config/human_sources.yaml --out data/human`
+   → `data/human/*.parquet` + `data/manifest.json`
+2. `python -m slop.features.extract --in data/human --out data/features/human.parquet`
+   → interpretable feature table (CPU, no GPU)
+3. `python -m slop.eval.harness --baseline lexicon-lr --report reports/baseline_lr.md`
+   → first honest numbers on every eval slice
+
+Nothing may be reported as a result until command 3 runs and prints per-slice TPR@1%FPR.
 
 ## STOP CONDITIONS (hard)
 
