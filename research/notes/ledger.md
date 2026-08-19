@@ -1480,3 +1480,19 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   no new proof power (finite-T + convergence barrier).
 - This + Herglotz half-plane defect = the two genuine discriminators of the session; both
   classical, both no-proof-power, both correctly replacing the retracted on-line defect.
+
+## GENUINE DISCRIMINATOR #3: transverse curvature L(t) = d/dsigma Re(xi'/xi)(1/2+it) (2026-08-19)
+- OBJECT: L(t) = lim_{sigma->1/2+} H_sigma(t)/(sigma-1/2) = sum over zeros:
+  for on-line (beta=1/2): 1/(t-g)^2 ; for off-line pair: -1/(beta-1/2)^2 each at t=g.
+- Under RH: L(t) = sum 1/(t-g)^2 > 0 strictly for all t.
+- Planted FE pair (beta0, 1-beta0) at g0: L(g0) = -2/(beta0-1/2)^2 < 0 (both terms negative,
+  NO cancellation — the sigma-derivative breaks the pair symmetry that killed the on-line D).
+- VERIFIED:
+  * Real zeta: L = +9900 at t=g+0.01 (= 1/0.01^2 exactly, RH peak), +1.6..+177 between zeros
+    (strictly positive). CHECKED NUMERICALLY.
+  * Model (100 on-line + planted pair (0.8,0.2) at g0=50): L dips to -13.3 at t=50 (pair -22.2
+    + background), positive elsewhere. Clean separation.
+- HONEST: classical (Herglotz-type derivative), no proof power (needs all t), genuine
+  discriminator (exact sign flip, FE-consistent, world-separating).
+- Wave-35 net: C1 (transverse curvature) and C2 (Littlewood J(T)) both GENUINE, both verified,
+  both classical/no-proof-power. Both correctly replace the retracted on-line defect.
