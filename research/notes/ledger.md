@@ -1784,3 +1784,13 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
 - Also this wave: higher-derivative FE-blindness PROVEN (+12/d^4, numeric-verified to 2.7e-10);
   weighted-L integral REFUTED (planted -2/d^2 local-only). Transverse-curvature channel
   exhausted (unique symmetry-breaker, pointwise-only separation).
+
+## Nonlinear-L pointwise probe (2026-08-19, wave-47 candidate a) — REFUTED (honest)
+- At the largest-gap midpoint t*=17.58 (the Herglotz margin location), planted world has
+  L_BIGGER (0.290 vs 0.210): the pair's background term 2((t-g1)^2-d^2)/D^2 is POSITIVE at
+  t-g1 ~ 3.44 (far from pair center). 1/L, log L, L^2 all reflect this (planted > RH).
+- The -2/d^2 dip exists ONLY at t = g1 exactly; everywhere else the planted world looks
+  like or MORE positive than RH. No pointwise nonlinear functional separates worlds except
+  exactly at the pair ordinate (where the classic L dip, wave-35, already does).
+- VERDICT: pointwise functional channel REFUTED (no new separation; planted is locally
+  negative at g1 only, globally more-positive).
