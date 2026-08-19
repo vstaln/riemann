@@ -1754,3 +1754,17 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   channel separates worlds only at a single point, not in aggregate — hence no finite-N
   aggregate discriminator from this mechanism. The local L(t) dip (wave-35, exact -2/delta^2)
   remains the only usable object, and it's classical (needs continuum evaluation = the firewall).
+
+## Higher-derivative FE-blindness PROVEN (2026-08-19, wave-46 candidate b)
+- DERIVED (exact, symbolic): for an off-line FE pair (1/2+-delta at ordinate g), the pair
+  contribution to d^2L/dt^2 (4th-order t-derivative of Re(xi'/xi), where L = sigma-derivative)
+  at the pair's ordinate is +12/delta^4 > 0 — SAME sign as the on-line contribution.
+  Derivation: L_pair(x) = 2(x^2-d^2)/(x^2+d^2)^2, u=x^2; L'(0) = 6/d^4, d^2L/dx^2 at x=0 =
+  2 L'(0) = 12/d^4.
+- CONSEQUENCE: among low-order derivative objects, ONLY the sigma-derivative (transverse
+  curvature, -2/delta^2) breaks the FE pair symmetry. t-derivatives of any order contribute
+  positively from the pair (the pair's ordinate is fixed, so t-derivatives see a smooth
+  positive bump). No higher-t-derivative aggregate discriminator exists via this channel.
+- HONEST STATUS: PROVEN structural closure — the transverse curvature is unique as the FE
+  symmetry-breaker; and it separates only pointwise (previous probe: any global integral
+  washes it out). The channel is exhausted.
