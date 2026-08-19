@@ -1183,3 +1183,13 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   (gen-0=gen-1 identical). Synthesis headline d_N^2 >= C N^{2 delta} provably false.
   Lesson: swarm VERIFIED labels need elementary-bound scrutiny; never let a validator define
   correctness when simple math contradicts it.
+
+## agy wave-29 (2026-08-19) — collapse-pattern-breaking attempt; all dead
+- C1 ternary shift hyperdeterminant REFUTED: Det(A)=-0.52/-1.17/-40.1 at T=100/200/400
+  (grows, NOT ->0 at T^-1/4); mixes zeta(1/2+it) with zeta(1/2-it') -> FE-determined (closed
+  antisymmetry family). C2 prime-zero cross-Gram delocalization RESTATEMENT: coherent rank-1
+  term (p_m p_l)^(beta-1/2) IS the explicit-formula off-line term (stored mechanism); zeta
+  side R*M=1.30/1.19/1.46 not ->1 (delocalization premise false). C3 shifted-zeta Hankel minor
+  unprobed; mechanism = pole-penetration/rank-deficiency (restatement). Wave-29 no survivor.
+  The "fill the gap" prompt (tensors, correlations, Hankel minors, FE+Euler-together) produced
+  candidates that still collapse into FE-family or explicit-formula restatements.
