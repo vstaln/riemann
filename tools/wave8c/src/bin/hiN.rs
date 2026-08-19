@@ -672,28 +672,49 @@ fn ij_flat(i: usize, j: usize) -> usize {
 }
 
 // factors lower-tri G in place; returns (ok, kappa_pivot)
+// Threaded: per column j, compute the diagonal first (serial), then parallelize the
+// off-diagonal rows i>j (independent given columns <j and the diagonal).
 fn chol_f64(g: &mut Vec<f64>, n: usize) -> (bool, f64) {
     let mut ok = true;
     let mut mn = f64::INFINITY;
     let mut mx = 0.0f64;
+    let nthreads = 8.min(n);
     for j in 0..n {
-        for i in j..n {
-            let mut s = g[ij_flat(i, j)];
-            for k in 0..j {
-                s -= g[ij_flat(i, k)] * g[ij_flat(j, k)];
-            }
-            if i == j {
-                if s <= 0.0 {
-                    ok = false;
-                    s = 1e-300;
-                }
-                g[ij_flat(i, i)] = s.sqrt();
-                mn = mn.min(s);
-                mx = mx.max(s);
-            } else {
-                g[ij_flat(i, j)] = s / g[ij_flat(j, j)];
-            }
+        // diagonal first (serial, needs L[j][k] for k<j which are already done)
+        let mut sval = g[ij_flat(j, j)];
+        for k in 0..j {
+            sval -= g[ij_flat(j, k)] * g[ij_flat(j, k)];
         }
+        if sval <= 0.0 {
+            ok = false;
+            sval = 1e-300;
+        }
+        g[ij_flat(j, j)] = sval.sqrt();
+        mn = mn.min(sval);
+        mx = mx.max(sval);
+        let djj = g[ij_flat(j, j)];
+        // off-diagonal rows i in (j, n) parallel
+        let base = SendPtr(g.as_mut_ptr());
+        let col = j;
+        let nn = n;
+        let next = AtomicUsize::new(col + 1);
+        thread::scope(|s| {
+            for _ in 0..nthreads {
+                let next = &next;
+                let base = SendPtr(base.0);
+                s.spawn(move || loop {
+                    let i = next.fetch_add(1, Ordering::Relaxed);
+                    if i >= nn {
+                        break;
+                    }
+                    let mut sval = unsafe { *base.at(ij_flat(i, col)) };
+                    for k in 0..col {
+                        sval -= unsafe { *base.at(ij_flat(i, k)) } * unsafe { *base.at(ij_flat(col, k)) };
+                    }
+                    unsafe { *base.at(ij_flat(i, col)) = sval / djj };
+                });
+            }
+        });
     }
     (ok, if mn > 0.0 { mx / mn } else { f64::INFINITY })
 }
