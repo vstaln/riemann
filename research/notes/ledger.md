@@ -1384,3 +1384,13 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
 - This gives a NEW finite-t consistency check: D_zeta(t) ~ 0 densely <-> first ~100 zeros
   on the line. Adds no proof power (finite-t) but is a clean new probe.
 - CHECKED NUMERICALLY (consistency-level).
+
+## Real-part defect — gamma-mismatch nuance (2026-08-19)
+- Full identity check on planted model: D_measured - D_summed = 0.347 CONSTANT at all t.
+  Reason: the planted model Z(s) = zeta(s)(1+c 2^-s) does NOT have zeta's completed form
+  (the factor breaks the FE), so subtracting zeta's gamma leaves a constant offset.
+- CLEAN STATEMENT (exact): for zeta ITSELF, D_zeta(t) = Re(zeta'/zeta) - gamma_zeta(t) =
+  sum_rho (1/2-beta)/|s-rho|^2 EXACTLY (gamma_zeta is zeta's true gamma), so
+  D_zeta == 0 (all t)  <=>  RH. The planted-model constant offset is expected (wrong gamma
+  for that object) and does not affect the zeta-side criterion.
+- The zeta-side D_zeta(t) ~ 0 to 1e-41 at tested t (200+ pts) stands as the clean measurement.
