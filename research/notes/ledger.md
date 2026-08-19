@@ -1809,3 +1809,12 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   washout, pointwise-only separation, and now fires-on-control kills in the swarm.
 - ALSO (my probes this session): nonlinear-L pointwise REFUTED (planted more-positive
   everywhere except exactly at the pair ordinate).
+
+## Wave-48 outcome (2026-08-19) — 0 survivors, six-wave streak
+- 3 REFUTED: g0-0 (no control), g2-0 (no control + Gram determinant death-list + "must be
+  measured" no derivation), g4-0 (fabrication kill: no derived number/script, method-note only).
+  Judge REJECTED synthesis ("truncated, unverified equivalences, incomplete derivations").
+- Waves 43-48: 0 survivors each (six consecutive). The verifiers are precise and reliable;
+  every candidate dies on control-mandatory / fires-on-control / fabrication / death-list.
+- The five-direction firewall holds; the swarm's generators re-package closed channels; the
+  honest value is the documented barrier, not discovery.
