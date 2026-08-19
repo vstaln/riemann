@@ -1512,3 +1512,24 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   gap structure. CHECKED NUMERICALLY.
 - Net: the Herglotz family is now fully characterized (Re channel discriminates, Im doesn't,
   decay is linear). All classical, no proof power.
+
+## GENUINE DISCRIMINATOR #4 (STRONGEST): midpoint gap-resolvent Phi_k = d_k^2 * L(m_k) >= 8 (2026-08-19)
+- OBJECT: for adjacent zero pair (g_k, g_{k+1}), midpoint m_k, gap d_k, transverse curvature
+  L(t) = d/dsigma Re(xi'/xi)(1/2+it) = sum 1/(t-g)^2 (on RH):
+  Phi_k = d_k^2 * L(m_k) = 8 + d_k^2 * sum_{n != k,k+1} 1/(m_k - g_n)^2 >= 8  (UNIVERSAL floor).
+  The 8 = 4+4 comes from the two bounding zeros alone (each contributes 1/(d/2)^2, times d^2 = 4).
+- VERIFIED (CHECKED NUMERICALLY): all 99 adjacent pairs of first 100 zeros: Phi min=8.27,
+  max=14.41, mean=10.15, ALL >= 8, zero violations. Min at pair 34 (gap 111.030-111.875).
+- PLANTED VIOLATION (model): off-line pair (1/2+delta at m_1) gives Phi_1 = -1043.9 (delta=0.3),
+  -9476.8 (delta=0.1), -84.7 (delta=1.0) — catastrophic 2(d/delta)^2 term. Violates >= 8 whenever
+  delta < d_k/2 (then 2(d/delta)^2 > 8).
+- STRENGTHS: exact finite universal bound; computable from zeros only; translates gap structure
+  directly; any off-line zero with delta < d_k/2 at ANY midpoint is caught (sign flip).
+- HONEST LIMITS: (a) deep off-line zero (delta > d_max/2 ~ 3.44) not caught by the midpoint test
+  alone — but still drops Phi anomalously (2(d/delta)^2 from its floor); (b) needs knowing all
+  pairs (finite check); (c) the bound is classical in spirit (transverse curvature = second-order
+  Herglotz), novelty is the exact d_k^2-normalized universal floor; (d) NO PROOF POWER: certifying
+  Phi_k >= 8 needs the full L(t) which needs all zeros (finite) — it's a finite-N consistency
+  statement, not a theorem about the infinite zero set.
+- This is the strongest of the session's 4 discriminators: exact, universal, world-separating,
+  numerically bulletproof on first 100 zeros.
