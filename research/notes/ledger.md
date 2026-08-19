@@ -1543,3 +1543,25 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
 - The universal floor Phi_k = d_k^2 * L(m_k) >= 8 is CONFIRMED by direct computation.
 - Small-gap pairs sit closest to the floor (other-zeros term small) — the bound is tightest
   there; a planted zero in a small gap with delta < d/2 would violate most visibly.
+
+## MAJOR PATTERN: general even-order resolvent floor Phi_k^(2r) >= 2^(2r+1) (2026-08-19)
+- GENERAL THEOREM (finite-N, verified numerically): for every adjacent zero pair (g_k, g_{k+1}),
+  midpoint m_k, gap d_k:  Phi_k^(2r) = d_k^(2r) * sum_n 1/(m_k - g_n)^(2r) >= 2^(2r+1)  for all r>=1.
+- Floor = 2 * [d_k/(d_k/2)]^(2r) = 2 * 2^(2r) = 2^(2r+1): exactly "two bounding zeros, each
+  contributing 2^(2r)".
+- VERIFIED (first 100 zeros, all 99 pairs, r=1..4):
+  r=1 (order 2): floor 8,  min 8.2695,  mean 10.1489,  viol 0
+  r=2 (order 4): floor 32, min 32.0110, mean 33.1105,  viol 0
+  r=3 (order 6): floor 128,min 128.0008,mean 129.0831, viol 0
+  r=4 (order 8): floor 512,min 512.0001,mean 513.3040, viol 0
+- Ultra-sharpness grows with r: non-bounding zeros at distance >= 3d/2 suppressed by (1/3)^(2r)
+  (r=4 excess 0.0001). Smallest-gap pair (k=34, d=0.845) always the min.
+- Planted off-line pair at 1/2+delta at m_k: injects -2*(d_k/delta)^(2r) -> catastrophic
+  violation at EVERY order when delta < d_k/2.
+- Triple-adjacent coupling (wave-38 C2): Phi_k + Phi_{k+1} >= 152/9 = 16.8889, verified
+  (min 18.10, viol 0). Cross-excess f(r)=(1+2r)^-2 + r^2/(2+r)^2 >= 2/9 at r=1.
+- HONEST STATUS: exact finite-N consistency family (no infinite-proof power); the floors are
+  elementary (two-bounding-zero argument); the hierarchy is a genuinely clean new structure for
+  the campaign — every order is an independent planted-zero violation test. Classical in spirit
+  (partial-fraction/transverse-curvature), novelty = the exact d_k^(2r)-normalized universal
+  floors + the sharpness hierarchy.
