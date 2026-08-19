@@ -1358,3 +1358,22 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
     It is a genuine one-way discriminator (RH => D=0; not-RH => D != 0 somewhere).
 - This is the first survivor in the session: a real discriminator with the exact-identity
   structure the search demanded, PLUS a correction of a prior mislabeled theorem.
+
+## Real-part defect D(t) — DH control measured (2026-08-19)
+- D_DH(vs zeta gamma) = -0.8047190 EXACTLY constant at t = 9.83/14.3/21/30/50 (all -0.8047190).
+  This is the gamma-factor MISMATCH (DH's completed form uses (5/pi)^((s+1)/2)Gamma((s+1)/2),
+  not zeta's pi^{-s/2}Gamma(s/2)) — a trivial "different L-function" offset, NOT the
+  off-line-zero signature per se.
+- CLEANEST control = the PLANTED model (same gamma as zeta, off-line zero): D = -10.35/-5.35/
+  -0.45 at t = g0/g0+0.1/g0+1.0 (matches -0.1/|s-rho0|^2 exactly), asymptote -0.42. Unambiguous.
+- SEPARATION TABLE (all measured):
+    zeta:     D = 0 to 1e-41
+    DH:       D = -0.8047190 (constant; gamma mismatch offset)
+    planted:  D = -10.4 near planted zero, -0.42 asymptote (off-line pole signature)
+- VERDICT: D_zeta(t) = Re(zeta'/zeta)(1/2+it) - [log(pi)/2 - 0.5 Re psi(1/4+it/2)] is a genuine
+  one-way discriminator: == 0 (all t) iff RH; nonzero in planted worlds; computable directly;
+  not circular. The zeta-side measurement D=1e-41 is consistency (finite-t check), not a proof.
+- Novelty: CONJECTURED-likely-classical (real part of the Hadamard/explicit formula); the
+  CAMPAIGN's novelty is the correction of d644dd4's wrong "zero-config" reading and the
+  clean numerical separation. Label: CHECKED NUMERICALLY (discriminator validity), CONJECTURED
+  (novelty).
