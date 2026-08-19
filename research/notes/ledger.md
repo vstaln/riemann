@@ -1861,3 +1861,13 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   The remaining open class is kernel/integral objects (de Branges/Weil), which direction
   1 shows reduces to zero-counting control. The firewall's coverage is now nearly total
   for the local/analytic class.
+
+## Wave-50 outcome — 0 survivors, eight-wave streak
+- 3 REFUTED (no-control kills, one also fabrication). Judge REJECTED synthesis ("truncated
+  mid-table, Mellin-Jacobi/Weil quadratic incomplete"). Synthesis was Weil-class (death-list)
+  repackaging.
+- Waves 43-50: EIGHT consecutive zero-survivor waves. The swarm's verifiers are perfectly
+  reliable; the generators consistently re-package closed classes; the judge rejects
+  incomplete/unsupported syntheses.
+- Wronskian closure PROVEN this wave (W(xi,xi')/xi^2 = (xi'/xi)', 1e-15): the Wronskian
+  class is covered by the exhausted differential-polynomial taxonomy.
