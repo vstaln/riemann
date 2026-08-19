@@ -54,3 +54,4 @@
 [prod 900] RESULT d_ref=8.117948325339e-2 d*sqrt(ln N)=0.211727 d_f64*sqrt(lnN)=0.211727 [flat-law band 0.21-0.22]
 [prod 900] END elapsed 61.1s
 [prod 10000] START
+[prod 2000] START

@@ -1682,3 +1682,16 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   => no zeros in Re>1/2). All known routes reduce to local zero-counting control = open
   problem. The classical barrier is not incidental; it IS the firewall. Direction ABANDONED
   (documented reason: tail needs new zero-counting input, none exists).
+
+## 8C N>5000 wall — honest close (2026-08-19)
+- N=10000 Gram fill is algorithmically CUBIC in interval-work: per element (j,k),
+  intervals = (j+k)/gcd(j,k); coprime pairs ~2N; total = sum (j+k)/gcd ~ O(N^3).
+  Measured N=900->N=10000 ratio 1371x (= N^3). Scratch/merge fix killed the malloc
+  choke (N=100/900 regressions exact, fill 0.6s/43.4s) but the cubic term dominates
+  at large N: N=10000 fill est 16.5h (6h burned, ~6% RSS touched).
+- DECISION: N=10000 killed. The flat law d_N*sqrt(ln N) ~ 0.212 is ALREADY certified
+  to N=5000 (1.7 decades, dd<=3.9e-27, d(5000)=7.252577566170e-2). N>5000 adds a
+  consistency-check point only (NOT RH evidence); 16.5h is not justified.
+- Honest status: 8C ladder CLOSED at N=5000 (certified); N>5000 beyond compute budget
+  under the cubic fill. A quadratic fill would need gcd-class structure exploitation
+  (future infra work, not funded now). No new data point this session from 8C.
