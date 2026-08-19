@@ -1113,3 +1113,10 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   N<=40, and no planted-zero control run. OPEN lane #5 probe (background subagent e0173b1e). C4
   (Mellin-Mobius Hankel radius) RESTATEMENT (radius of conv of 1/zeta at s=2 = pole-location
   = RH restated). No survivor as stated; corrected C3-object is the only genuinely new thread.
+- **w24c3-lane5-coefenergy-2026-08-19.md** — C3 coefficient-energy lane #5, AGREED CLOSED.
+  Real-world U(N)=sum k*a_k^2: no clean law (log-log slope ~1.4, noisy at N<=56); agy's
+  normalized V/(N logN) ~ 19-26, ~100x above claimed 0.182 (REFUTED, two independent runs).
+  Honest planted control: the PROVEN part is just the stored BD-criterion (RH <-> d_N->0),
+  a NEW separator (true planted Gram, generalized-prime inner products) NOT computed;
+  trajectory CONJECTURED. ABANDONED: consistency-only, restatement-risk, not a new one-way
+  discriminant. Lane #5 stays open for genuinely new objects.

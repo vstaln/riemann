@@ -3,3 +3,6 @@ t=2 grep lane5/V(N)/coefenergy → no prior lane5 note; read agy-wave24 adjudica
 t=3 read agy-wave24-adjudication note lines 1-45 (context: C3 REFUTED, open question stated)
 t=4 wrote plan note w24c3-lane5-coefenergy-2026-08-19.md (context cited, plan, honesty contract for planted control)t=5 wrote probe script w24c3-lane5-probe-2026-08-19.py (gram engine verbatim p-range 90, gates, fits, planted control)
 t=6 launching probe run (uv run --quiet --with mpmath --with numpy), output -> research/notes/w24c3-lane5-probe-run-2026-08-19.txt
+t=7 rewrote probe: 8-worker fork pool for Gram build (N=50 was killed by timeout at 1800s in t=6; N<=45 data good, gates PASS)
+t=8 full run (parallel, 8 workers) -> w24c3-lane5-probe-run-2026-08-19.txt
+t=9 rerun after starmap fix -> w24c3-lane5-probe-run-2026-08-19.txt
