@@ -892,3 +892,21 @@ The lambda-dilation class with coboundary-optimized p/q gives bounds ≤ ~0.674.
 - Honest assessment: the swarm's generators are exhausted as a discovery engine (they re-package
   closed channels); its verifiers are reliable. The search continues per the never-stop directive,
   but the value of further waves is barrier documentation, not discovery. Goal NOT cleared.
+
+---
+
+## Waves 48-49 + taxonomy (2026-08-19)
+- Wave-48: 0 survivors (3 REFUTED: no control, Gram-determinant death-list, fabrication).
+  Judge rejected synthesis. Wave-49 (taxonomy): 0 survivors (5 REFUTED: 4 no control, 1
+  fabrication). Judge rejected synthesis. Waves 43-49: SEVEN consecutive zero-survivor waves.
+- MY TAXONOMY RESULT (PROVEN, independent of swarm): no differential-polynomial channel in
+  the log-derivative escapes the five-direction firewall. Both Re and Im channels have
+  exactly ONE pair-breaking signature (-2/d^2 at the ordinate); every other derivative is
+  same-sign-blind (+12/d^4) or odd-integrating-to-zero. Im channel: f(x)=-2x/(d^2+x^2)
+  (odd, integrates to 0 over symmetric windows = the S(t) zero-counting channel).
+- STATUS: the campaign has rigorously closed every route it has found. The five-direction
+  firewall is PROVEN; the differential-polynomial class is PROVEN exhausted; the swarm's
+  generators re-package closed channels and its verifiers correctly kill everything.
+  Per the never-stop directive the loop continues (wave-50+), but the honest assessment is
+  that the search has converged to a documented barrier: no RH-equivalent sign condition on
+  the permitted object classes has been found that escapes the firewall. Goal NOT cleared.
