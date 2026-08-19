@@ -1662,3 +1662,23 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   (old code's cubic appearance was the alloc choke).
 - RELAUNCH: N=10000 pid 16441/16443 (~365% CPU), ETA fill ~1.3h + threaded Cholesky.
 - Old log's [prod 2000] 636.8s / [prod 3000] 1105.8s were malloc-choked; obsolete.
+
+## Gap-certificate subagent verdict (2026-08-19, 389abb3f) — classical barrier confirmed rigorously
+- QUESTION: does the largest-gap structure (which sets Herglotz margin 0.2149) admit any
+  PROVABLE unconditional bound usable as a certificate input?
+- ROUTE A (zero-density theorems): PROVEN reduction-to-open-problem. N(σ,T) bounds count
+  OFF-line zeros; vacuous on all-on-line configs (any gap structure). On-line gap control
+  needs local counts N(T+h)-N(T) = S(T) control; best unconditional gap bound is O(log T)
+  (growing), margin needs d(t) << (log t)^-1/2 at every height. Reduces to RH-adjacent
+  zero-counting.
+- ROUTE B (Hadamard far-tail): PROVEN unconditional tail bound: sum_{|g-t|>=R} 1/(g-t)^2
+  <= (1+s0^2/R^2) H_s0(t)/(s0-1), s0>1 (H_s0 from Gamma alone, zero-free). But H_3/2(t) ~
+  (1/4)log t -> tail bound grows with height; no t-uniform constant. Same reduction.
+- ROUTE C (numerical verification): PROVEN finite-height certificate. Rigorous interval
+  enclosures (Platt-Trudgian) give PROVEN margin G(s) >= (8/d_max,verified^2)(s-1/2) for
+  t <= T_v; c_v ~ 0.169 vs observed 0.2149 (other zeros add positively, floor predicts).
+  Consistency-only; tail t > T_v untouched.
+- SYNTHESIS: any continuum certificate IS a proof of RH (G(s)>=c(s-1/2) all t => H_s>0 all t
+  => no zeros in Re>1/2). All known routes reduce to local zero-counting control = open
+  problem. The classical barrier is not incidental; it IS the firewall. Direction ABANDONED
+  (documented reason: tail needs new zero-counting input, none exists).
