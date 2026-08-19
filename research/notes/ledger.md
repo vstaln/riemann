@@ -1741,3 +1741,16 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   angle prompts. The swarm's value remains in its VERIFIERS (which REFUTE correctly), not
   its generators. Consistent with waves 43/44: generator collapse is a persistent LLM
   behavior; adversarial verification is the only reliable component.
+
+## Weighted-L integral probe (2026-08-19, wave-46 candidate a) — REFUTED (honest)
+- HYPOTHESIS: weight vanishing at zeros (sin^2(pi(t-g_k)/d_k) per gap) kills on-line poles,
+  leaves the planted -2/delta^2 background -> integral flips negative on planted.
+- MEASURED: I_rh = +5.74/+11.67/+29.22 vs I_pl = +6.09/+12.02/+29.59 (K=3/5/10 gaps).
+  NO FLIP. The -2/delta^2 background (constant ~ -22.2) is swamped by the other zeros'
+  positive contribution, which grows with the window.
+- GENERAL PATTERN (PROVEN by the two probes): the planted -2/delta^2 from the transverse
+  curvature is LOCAL (dip at the planted ordinate) but any GLOBAL integral or sum over a
+  growing window is dominated by the positive on-line contribution. The transverse-curvature
+  channel separates worlds only at a single point, not in aggregate — hence no finite-N
+  aggregate discriminator from this mechanism. The local L(t) dip (wave-35, exact -2/delta^2)
+  remains the only usable object, and it's classical (needs continuum evaluation = the firewall).
