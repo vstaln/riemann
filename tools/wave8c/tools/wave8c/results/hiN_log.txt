@@ -25,3 +25,13 @@
 [prod 3000] START
 [prod 10000] START
 [prod 10000] START
+[prod 100] START
+[prod 100] gram f64 filled 0.4s
+[prod 100] d_f64=1.001388367112e-1 kappa_pivot=8.98e2 chol=true (0.5s)
+[prod 100] refined: it1 rel_r=3.7e-16 d=1.001388367112e-1 dd_d=9.70e-15; it2 rel_r=2.4e-30 d=1.001388367112e-1 dd_d=0.00e0; 
+[prod 100] d_ref=1.001388367112e-1 rel(f64)=9.70e-15
+[prod 100] gram sampling: f64-vs-dd max rel 7.51e-14 over 120 rand pairs; dd-vs-mpfr max rel 1.63e-29 over 12
+[prod 100] d_mpfr(stored-G)=1.001388367112e-1 rel(ref)=0.00e0 chol=true (0.8s)
+[prod 100] RESULT d_ref=1.001388367112e-1 d*sqrt(ln N)=0.214895 d_f64*sqrt(lnN)=0.214895 [flat-law band 0.21-0.22]
+[prod 100] END elapsed 0.8s
+[prod 10000] START
