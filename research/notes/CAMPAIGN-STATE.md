@@ -1,4 +1,30 @@
-# CURRENT UPDATE — 2026-08-19 (late night, wave 22–23, r′ resolution)
+# CURRENT UPDATE — 2026-08-19 (waves 24–31, ξ-jet lane PROVEN-closed)
+
+## Session net (waves 24–31 + ξ-jet closure; all committed)
+
+- **Waves 24–31: 0 survivors.** Every LLM-generated discriminator candidate died — either
+  REFUTED by numeric probe, RESTATEMENT (pole/zero detection, explicit-formula projections,
+  nodal count = definition of RH), TAUTOLOGY (moment matrix of positive measure always PSD),
+  CIRCULAR (needs the answer β_k to compute), FE-family (mixes ζ(s) with ζ(1−s̄)), or
+  dipole-detector (fires on both worlds). Wave-31 (forced with the new frontier facts +
+  full blocklist) produced 3/3 dead on triage — the strongest meta-confirmation that the LLM
+  generator adds no discriminator capability; the swarm's value is its hostile verifiers.
+- **ξ-jet lane #3 PROVEN-closed with NEW PROOF (732593f, verified d644dd4):**
+  any (ξ,ξ′) jet certificate using jet positivity + Cauchy/weighted sums + explicit formula
+  has ZERO asymptotic content. Key new fact (independently verified to 1e-13):
+  **Re(ζ′/ζ)(1/2+it) = log(π)/2 − ½Re ψ(1/4+it/2)** — pure gamma-factor, ZERO dependence on
+  the zero configuration. Real jets carry no config info; the imaginary channel is a dipole
+  detector (never separates). Lane closed structurally.
+- **mp.zeta(s,1) BUG in this mpmath version** (returns ζ(s), not ζ′). Audit clean: no
+  recorded verdict used it (wave-24 C4 used mp.diff; wave-30 caught the bug and re-ran).
+  Caution for all future probes: use mp.diff(mp.zeta, s, n).
+- **8C d_N ladder** certified to N=5000 (d_N·√logN ≈ 0.212 flat); N=10000 is a compute-cost
+  wall, not a structural question.
+
+**Firewall:** nothing above is RH evidence or an RH proof. All direct-RH lanes tested are
+closed or blocked; the search continues.
+
+---
 
 ## r′ S₂-limit — RESOLVED NUMERICALLY (m4proper-rprime-pin): 6 points, monotone rising
 
