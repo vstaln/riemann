@@ -1193,3 +1193,16 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   unprobed; mechanism = pole-penetration/rank-deficiency (restatement). Wave-29 no survivor.
   The "fill the gap" prompt (tensors, correlations, Hankel minors, FE+Euler-together) produced
   candidates that still collapse into FE-family or explicit-formula restatements.
+
+## Self-derived wave-30 (2026-08-19) — Fejer-weighted Im(-Z'/Z); INCONCLUSIVE-likely-dead
+- Object: F(m_n) = Fejer-smoothed Im(-Z'/Z)(1/2+it) at zero midpoints. Real zeta: F(m) small
+  sign-flipping (+0.03 mean, signflips present), offsets antisymmetric (F(m+gap/4)=-0.28 vs
+  F(m-gap/4)=+0.33) — the expected on-line dipole structure. DH control: too slow to run in
+  budget (L_dirichlet eval cost). VERDICT: INCONCLUSIVE, and structurally it is a zero-location/
+  dipole detector — the collapse-mode class that has never separated worlds (on-line zero wells
+  = off-line wells; wave-24 C1, wave-27 C2). Likely-dead by pattern; not funded further.
+- NOTE: discovered mp.zeta(s, 1) is BROKEN in this mpmath version (returns zeta(s) itself, not
+  the derivative) — must use mp.diff(mp.zeta, s, 1). This invalidates any prior probe that
+  used zeta(s,1); wave-24 C1 used zeta(s,1) for zeta''? No — C1 used Hessian on log|Xi| via
+  numerical 5-pt, not zeta(s,1). The w24b C4 probe DID use zeta(s,3)... mp.zeta(s,3) may also
+  be broken. FLAG: re-check any probe using mp.zeta(s, n>=1).
