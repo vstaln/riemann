@@ -1565,3 +1565,19 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   the campaign — every order is an independent planted-zero violation test. Classical in spirit
   (partial-fraction/transverse-curvature), novelty = the exact d_k^(2r)-normalized universal
   floors + the sharpness hierarchy.
+
+## Phi_k hierarchy — tail resolution + full-xi confirmation (2026-08-19)
+- Question: why did xi-side L(m_k) differ 7% from the 100-zero ordinate sum at k=1?
+- RESOLVED: it's the TRUNCATED-SUM TAIL, not an error or offset. The identity
+  Re(xi'/xi)(sigma+it) = sum_ALL (sigma-beta)/[(sigma-beta)^2+(t-g)^2] holds exactly.
+  The "constant offset" C(t) I chased decays with t (0.00140->0.00068 at sigma=0.6,
+  t=17.6->120) and scales ~ (sigma-1/2): it's the positive tail of the ordinate sum over
+  zeros beyond the truncation, decaying glacially (1/log) because the density integral
+  dN ~ (1/2pi) log(g/2pi) dg is log-dominated. Confirmed: xi-minus-ordsum shrinks
+  1.5e-3 -> 1.03e-3 as N goes 100->600.
+- CONSEQUENCE: the Phi_k >= 8 hierarchy used TRUNCATED ordinate sums, which are LOWER
+  bounds (tail is positive). The full-xi Phi (central difference in sigma, infinite sum):
+  k=1: 10.93, k=34: 8.28, k=51: 8.86, k=67: 10.20 — all comfortably >= 8. Hierarchy
+  ROBUST; the floor is a lower bound on the true (full) Phi.
+- Method note: central difference (H(0.5+eps)-H(0.5-eps))/(2eps) kills the O(eps) bias;
+  earlier forward difference had O(eps) bias (~0.0004 at eps=1e-3) — minor, the 7% was tail.
