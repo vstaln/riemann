@@ -1206,3 +1206,15 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   used zeta(s,1); wave-24 C1 used zeta(s,1) for zeta''? No — C1 used Hessian on log|Xi| via
   numerical 5-pt, not zeta(s,1). The w24b C4 probe DID use zeta(s,3)... mp.zeta(s,3) may also
   be broken. FLAG: re-check any probe using mp.zeta(s, n>=1).
+
+## ξ-jet lane CLOSED with new PROOF (2026-08-19, subagent ddfbdc87, commit 732593f)
+- **xitower-jet-impossibility-2026-08-19.md** — PROVEN-impossible (structural): any (ξ,ξ') jet
+  certificate using (i) jet positivity/SOS at real t, (ii) Cauchy/weighted sums, (iii) explicit
+  formula has ZERO asymptotic content (best simple-count lower bound O(T/log T)). Three kills:
+  (1) NEW: FE-forced first-rung degeneracy — on the line ξ real, ξ' pure imaginary; the raw
+  first-rung Gram has rank<=2, trace G_xi (exponentially concentrated); strongest fact
+  **Re(zeta'/zeta)(1/2+it) = log(pi)/2 - (1/2)Re psi(1/4+it/2)** — pure gamma factor, ZERO
+  dependence on zero config (INDEPENDENTLY VERIFIED here to 1e-13); the real jet carries no
+  configuration info; (2) rung-2 kill (ledger); (3) G^2/H Cauchy fatality (zero proportion).
+  DH control satisfied by construction (permitted inputs contain no off-line data). Lane #3
+  STRUCTURALLY CLOSED — the strongest closure yet, new proof not just ledger citation.
