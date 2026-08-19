@@ -1794,3 +1794,18 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   exactly at the pair ordinate (where the classic L dip, wave-35, already does).
 - VERDICT: pointwise functional channel REFUTED (no new separation; planted is locally
   negative at g1 only, globally more-positive).
+
+## Wave-47 outcome (2026-08-19) — 0 survivors, fires-on-control kill verified
+- 3 REFUTED verdicts: g0-0 (mechanism PROVES the planted control — fires-on-control kill,
+  check 2 working), g0-1 (no control), g1-0 (no control).
+- Synthesis: CONJECTURED "Curvature Obstruction & Spectral Flow" — repackages the exhausted
+  curvature/Hessian channel (Hessian of log|xi'| is death-list; transverse phase gradient
+  Omega = Im(d/ds log xi') is the transverse channel that wave-46 proved higher-derivative
+  FE-blind). Status "running" (judge accepted, low value).
+- HONEST READ: waves 43-47 all 0 survivors. The swarm's verifiers are reliable and correct
+  (control-mandatory + fires-on-control + fabrication kills all working). The generators
+  repeatedly re-package exhausted channels (curvature/Hessian/spectral-flow). The firewall
+  holds from every direction: PROVEN closure of gap routes, derivative blindness, integral
+  washout, pointwise-only separation, and now fires-on-control kills in the swarm.
+- ALSO (my probes this session): nonlinear-L pointwise REFUTED (planted more-positive
+  everywhere except exactly at the pair ordinate).
