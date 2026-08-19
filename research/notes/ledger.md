@@ -1768,3 +1768,19 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
 - HONEST STATUS: PROVEN structural closure — the transverse curvature is unique as the FE
   symmetry-breaker; and it separates only pointwise (previous probe: any global integral
   washes it out). The channel is exhausted.
+
+## Wave-46 outcome (2026-08-19) — 0 survivors, machinery verified end-to-end
+- 6/6 generators with DISTINCT angles (file-write fix confirmed: HESSIAN, TOPOLOGICAL-CHARGE,
+  GAP-STRUCTURE, ARITHMETIC-DUALITY, CONTROL — genuine diversity, no accumulation artifact).
+- Gate rejected 3 death-list ideas. Verifiers REFUTED 3 claims: g0-1 (no RH-false control),
+  g2-0 (no control + death-list Nyman-Beurling + asserted d_N>=0.021), g2-1 (fabrication kill:
+  d_inf^2>=c(delta) neither derived nor scripted). Judge REJECTED synthesis (incomplete,
+  unscripted numbers N=400/T=3000).
+- The swarm machinery now works as designed: diverse gen -> death-list gate -> adversarial
+  verifiers (control-mandatory, fabrication-kill) -> judge that rejects unsupported synthesis.
+  0 survivors; firewall intact. Same honest conclusion as waves 43-45: generators produce
+  candidate mechanisms, verifiers correctly kill them; no mechanism with a derived RH-false
+  prediction has survived.
+- Also this wave: higher-derivative FE-blindness PROVEN (+12/d^4, numeric-verified to 2.7e-10);
+  weighted-L integral REFUTED (planted -2/d^2 local-only). Transverse-curvature channel
+  exhausted (unique symmetry-breaker, pointwise-only separation).
