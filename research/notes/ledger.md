@@ -1818,3 +1818,17 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   every candidate dies on control-mandatory / fires-on-control / fabrication / death-list.
 - The five-direction firewall holds; the swarm's generators re-package closed channels; the
   honest value is the documented barrier, not discovery.
+
+## Im-channel taxonomy PROVEN (2026-08-19) + correction to prior claim
+- Im(xi'/xi)(1/2+it) pair contribution f(x) = -2x/(d^2+x^2) (x = t-g): ODD in x, so any
+  symmetric global integral is exactly 0 (verified int_{-1}^1 = 0). The Im channel IS the
+  S(t) zero-counting channel (direction 1).
+- f'(0) = -2/d^2 EXACTLY (numeric -22.22222 = -2/0.09) — mirrors the Re sigma-derivative.
+  f'''(0) = +12/d^4 EXACTLY (series: f = -2x/d^2 + 2x^3/d^4 - ..., f''' = 3!*2/d^4 = 12/d^4;
+  numeric 1481.48148). CORRECTION: my first symbolic claim said f''' is odd->0; WRONG —
+  f''' of an odd function is EVEN, value +12/d^4 (same sign as on-line -> blind).
+- STRUCTURE (PROVEN): in BOTH Re and Im channels there is EXACTLY ONE pair-breaking
+  signature (-2/d^2 at the pair ordinate); every other derivative is either same-sign blind
+  (+12/d^4-type) or odd-integrating-to-zero. No differential-polynomial channel escapes the
+  five-direction firewall. Taxonomy thesis (wave-49 question A) supported PROVEN for
+  differential polynomials in the log-derivative.
