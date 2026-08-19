@@ -1502,10 +1502,13 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   is a superposition of Lorentzians; a planted FE pair just shifts it smoothly (diff -1.82/+1.82
   odd about g0) — magnitude/shape difference only, no sign/zero structure. Matches the
   dipole-detector collapse mode. CONFIRMED KILL.
-- Herglotz decay: G(sigma) = min_t H_sigma(t) measured (RH formula model, subsampled zeros):
-  G = 8.229e-4/8.229e-5/8.229e-6 at eps=1e-2/1e-3/1e-4 — EXACTLY linear in (sigma-1/2),
-  const 0.0823 set by the largest zero gaps. Positivity margin decays linearly; the constant
-  needs gap bounds (classical barrier) => no proof power, but a clean measurable window into
+- Herglotz decay: G(sigma) = min_t H_sigma(t) measured with ALL 100 zeros (first attempt
+  subsampled every-2nd zero -> artifact 0.0823; CORRECTED): G = 2.149e-3/2.149e-4/2.149e-5 at
+  eps=1e-2/1e-3/1e-4 — EXACTLY linear in (sigma-1/2), const 0.2149. The min occurs at t*=17.499
+  inside the LARGEST gap (14.135-21.022, d=6.887); 8/d^2 = 0.169 vs measured 0.215 (11% diff =
+  other zeros contribute at the min). Effective gap sqrt(8/0.2149)=6.10 ~ d_max (11% match).
+  => Herglotz margin constant is set by the LARGEST zero gap (interpretation confirmed).
+  Needs gap bounds (classical barrier) => no proof power, but a clean measurable window into
   gap structure. CHECKED NUMERICALLY.
 - Net: the Herglotz family is now fully characterized (Re channel discriminates, Im doesn't,
   decay is linear). All classical, no proof power.
