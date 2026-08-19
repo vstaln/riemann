@@ -1394,3 +1394,27 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   D_zeta == 0 (all t)  <=>  RH. The planted-model constant offset is expected (wrong gamma
   for that object) and does not affect the zeta-side criterion.
 - The zeta-side D_zeta(t) ~ 0 to 1e-41 at tested t (200+ pts) stands as the clean measurement.
+
+## CRITICAL RETRACTION: real-part defect D_zeta is NOT an RH discriminator (2026-08-19)
+- KILL: FE-symmetric off-line zero PAIRS cancel EXACTLY in D(t) = sum (1/2-beta)/|s-rho|^2.
+  Verified: pair (0.6, 1-0.6=0.4) at g0=14.1347 gives term1=-10.0, term2=+10.0, SUM=0 at the
+  zero, and 0 at every t. The pair (beta, 1-beta) always cancels because
+  (1/2-beta)/[..] + (1/2-(1-beta))/[..] = 0 identically.
+- CONSEQUENCE: D_zeta(t) == 0 does NOT imply RH. Any FE-symmetric RH-false world (off-line
+  zeros come in FE pairs) has D == 0 too. DH: D=-0.8047 constant (gamma mismatch, NOT the
+  off-line signature). The planted model Z=zeta(1+c 2^-s) broke the FE (no 1-beta partner),
+  so its D=-10.4 was an FE-VIOLATION signature, not RH content.
+- RETRACTION: commits 949bf5e, 79e633f, cc37c3b claimed D_zeta is "the first genuine one-way
+  discriminator" — WRONG. The real-part defect is an FE-structure detector (measures
+  FE-symmetry breaking), NOT an RH discriminator. Retracted fully.
+- LESSON (sharp): any object built from Re(zeta'/zeta) - gamma is FE-forced to 0 by the
+  pair-symmetry of the FE; it cannot see off-line zeros in any FE-consistent world. This is
+  the correct reading of the "FE-forced" identity from d644dd4: it's the FE pair-symmetry,
+  and it makes the REAL-part channel blind to RH-failure (not because of "zero-config" but
+  because of pair-cancellation).
+- Wave 34 candidates (transverse curvature K(t), half-plane barrier D_sigma(t)) inherit the
+  same flaw at the pair level: K(t) = sum [(t-g)^2 - d^2]/[((t-g)^2+d^2)^2]; for a pair
+  (d=beta-1/2, -d): [(t-g)^2-d^2] + [(t-g)^2-(-d)^2] = 2(t-g)^2 - 2d^2 = 2[(t-g)^2-d^2],
+  NOT cancelling... CHECK NEEDED. The half-plane D_sigma(t) with sigma>1/2: pair contribution
+  (sigma-beta)/[(sigma-beta)^2+u^2] + (sigma-(1-beta))/[(sigma-1+beta)^2+u^2] — this does NOT
+  cancel (denominators differ) — MAY be a real discriminator. Probe it.
