@@ -1236,3 +1236,10 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   (tautology, circularity, restatement). This is the strongest evidence yet that the LLM
   generator adds no discriminator capability beyond what the verifiers kill — the swarm's value
   is its hostile verifiers, not its generators.
+
+## FE-forced-ness is 0th-order ONLY (2026-08-19, new clean result)
+- Probe: does the FE-forced identity extend to higher log-derivatives? NO.
+  - 0th: Re(zeta'/zeta)(1/2+it) = log(pi)/2 - 0.5 Re psi(1/4+it/2) — FE-forced, ZERO config content (verified 1e-13, commit d644dd4).
+  - 1st: 2Re((zeta'/zeta)')(1/2+it) measured = 2/(t-gamma)^2 with ratio 1.0000/1.0006/1.0709 at t-gamma = 0.01/0.1/1.0 — PURE zero-location content (double-pole coefficient, dipole detector). NOT FE-forced.
+- Reason: d/ds conj(f(s)) = conj(df/dsbar) with dsbar/ds = -1 on the line inserts a sign; the FE differentiates to a tautology for the real part, and the pole terms dominate.
+- CLOSES: any "higher real jet of log-zeta is FE-forced-dead" extension attempt is REFUTED — the higher jets carry EXACTLY the zero config (as dipole detectors, which never separate RH from RH-false worlds). The FE-forced kill applies to 0th-order real data only.
