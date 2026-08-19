@@ -1,0 +1,5 @@
+t=1 read /tmp/w24_probe.py + /tmp/dN_recheck.py (validated Gram engine, C3 V(N) code, certified d_N), ls research/notes
+t=2 grep lane5/V(N)/coefenergy → no prior lane5 note; read agy-wave24 adjudication C3 refutation (19.2/25.8/30.5, rising; claim dead)
+t=3 read agy-wave24-adjudication note lines 1-45 (context: C3 REFUTED, open question stated)
+t=4 wrote plan note w24c3-lane5-coefenergy-2026-08-19.md (context cited, plan, honesty contract for planted control)t=5 wrote probe script w24c3-lane5-probe-2026-08-19.py (gram engine verbatim p-range 90, gates, fits, planted control)
+t=6 launching probe run (uv run --quiet --with mpmath --with numpy), output -> research/notes/w24c3-lane5-probe-run-2026-08-19.txt
