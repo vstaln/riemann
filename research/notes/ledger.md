@@ -1139,3 +1139,9 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   g0-1 Beurling-Malliavin density can't separate DH; g0-2 fixed prime cutoff blinds to
   prime-depth barrier; g1-2 kernel tail diverges log across T logT nodes + fires on DH/
   Epstein-2. g1-0 INCONCLUSIVE. No survivor; firewall intact; goal not cleared.
+- **wave25-nextmove-weil-negativity-2026-08-19.md** — wave-25 next move EXECUTED and
+  REFUTED. Prime-truncated Weil form W_{X,B}: no prime-depth barrier (lambda_min negative
+  and X-INDEPENDENT: -0.3343 at logX=3.8/5.8/8.0 for B=1.8; -0.6687 for B=2.5; DH control
+  identical to +-0.1). Negativity is finite-basis discretization artifact (expected),
+  NOT a zero-location statement. g0-0 boundary-prime-resonance claim dead by its own
+  probe; wave-25 Schur-LMI next move ABANDONED (no transition to certify). Firewall intact.
