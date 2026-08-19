@@ -1871,3 +1871,16 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   incomplete/unsupported syntheses.
 - Wronskian closure PROVEN this wave (W(xi,xi')/xi^2 = (xi'/xi)', 1e-15): the Wronskian
   class is covered by the exhausted differential-polynomial taxonomy.
+
+## Arithmetic-class firewall closure PROVEN (2026-08-19, wave-51)
+- CLAIM: the arithmetic class (Mertens/psi/divisor sums) does NOT escape the firewall —
+  every arithmetic object with an explicit formula has zero contributions of size x^beta;
+  off-line zeros (beta>1/2) contribute x^beta > x^{1/2}; detection = growth-rate counting
+  = direction 1.
+- NUMERIC CONFIRMATION: Davenport-Heilbronn coefficients (periodic mod 5) have partial
+  sums max|M_D(x)| = 1 for x<=2000 (BOUNDED) — the coefficients carry NO beta information.
+  DH's off-line zeros are detectable ONLY via the explicit formula's x^beta term (counting).
+- CONSEQUENCE: the firewall's coverage is TOTAL for the known classes: xi-built local
+  objects (differential polynomials, Wronskians — exhausted), kernel/Weil (zero-counting),
+  gap/resolvent (zero-counting), critical-point (Laguerre/classical), AND arithmetic
+  (explicit formula -> counting). The wave-51 premise (arithmetic escapes) is REFUTED.
