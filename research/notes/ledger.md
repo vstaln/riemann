@@ -1377,3 +1377,10 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   CAMPAIGN's novelty is the correction of d644dd4's wrong "zero-config" reading and the
   clean numerical separation. Label: CHECKED NUMERICALLY (discriminator validity), CONJECTURED
   (novelty).
+
+## Real-part defect D_zeta — dense consistency sweep (2026-08-19)
+- 200 random t in [20,120]: max |D_zeta| = 9.5e-15 (dps=15 machine-zero). All on-line zeros
+  confirmed via the REAL-part channel (complementary to N(T) counting, which is imaginary-part).
+- This gives a NEW finite-t consistency check: D_zeta(t) ~ 0 densely <-> first ~100 zeros
+  on the line. Adds no proof power (finite-t) but is a clean new probe.
+- CHECKED NUMERICALLY (consistency-level).
