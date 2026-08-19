@@ -1253,3 +1253,13 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
 - Similarly class-5 (rationality-class changes) is vacuous in practice: zero locations are
   transcendental objects; no computable finite invariant changes rationality class under a
   planted zero without already encoding beta_k.
+
+## wave-32 gen-1 Carleson-Gram conditioning (LENS 3) REFUTED-as-discriminator
+- Claim: Mellin-Hardy transform decouples Vasyunin exponential ill-conditioning into kappa(G_N)~O(N^2).
+- Probe: G_{j,k} = (1/2pi) int_{-40}^{40} (|zeta(1/2+it)|^2/(1/4+t^2)) (jk)^{-1/2-it} dt, N=30.
+  kappa measured 3.05e17 (bottom singval 6.3e-18 = numerical collapse at dps=12), NOT O(N^2)=900.
+- Killing reason (structural, no further probe needed): conditioning is a property of the
+  operator/quadrature, identical for any L-function with comparable |zeta|^2 profile; it has
+  NO world-separation content. Not a one-way discriminator by construction.
+- LENS 2 (Vasyunin-Krylov/Hautus) killed on sight: the claimed floor d_N^2 >= |1-s_0|^{-2}/(1-2 sigma_0)
+  is NEGATIVE for sigma_0>1/2 (vacuous) and is the d_N story (blocklisted B-D coefficient energy).
