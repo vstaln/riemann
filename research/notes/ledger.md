@@ -1884,3 +1884,13 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   objects (differential polynomials, Wronskians — exhausted), kernel/Weil (zero-counting),
   gap/resolvent (zero-counting), critical-point (Laguerre/classical), AND arithmetic
   (explicit formula -> counting). The wave-51 premise (arithmetic escapes) is REFUTED.
+
+## Wave-51 (arithmetic class) outcome — 0 claims survived, 0 survivors
+- 6 ideas, 3 gate-rejects (death-list kills), NO claims reached executors/verifiers.
+  Final: "No claims survived this wave." Consistent with the PROVEN arithmetic-class
+  closure (explicit formula -> x^beta counting = direction 1): the arithmetic candidates
+  are all death-list (Mertens/psi/von Koch restatements).
+- Waves 43-51: NINE consecutive zero-survivor waves. The firewall's coverage is TOTAL
+  for all known classes (PROVEN this session): xi-built local objects exhausted,
+  Wronskians reduce, kernel/Weil reduce, gap/resolvent reduce, arithmetic reduce via
+  explicit formula.
