@@ -1441,3 +1441,18 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
 - VERDICT: genuine one-way object for the campaign (exact sign criterion, computable,
   world-separating, not in the stored blocklist), CHECKED NUMERICALLY; novelty classical;
   no proof power. This is the CORRECT version of the earlier retracted claim.
+
+## Herglotz half-plane defect — certificate question analysis (2026-08-19)
+- Can H_sigma(t) > 0 be CERTIFIED on an interval [a,b] with finite computation? 
+- H_sigma(t) = sum (sigma-beta)/[(sigma-beta)^2+(t-g)^2]. The between-zero dips are bounded
+  below by the zero-gap structure: min over t in [a,b] of the sum depends on the gaps
+  (close zeros -> deep dips). Certifying positivity on an interval REQUIRES knowing the zero
+  spacing there — the classical barrier (gaps can be arbitrarily small, and are unproven
+  below the exponential-small scale).
+- So the Herglotz certificate hits the SAME wall as every other certificate: it needs
+  zero-spacing control, which is exactly the open problem. No new leverage.
+- VERDICT: Herglotz half-plane defect is a clean classical characterization (genuine
+  discriminator, world-separating, CHECKED NUMERICALLY) but provides NO new proving leverage
+  — the certificate question reduces to zero-gap control (classical barrier). Value is
+  conceptual: it's the correct statement replacing the retracted on-line real-part defect,
+  and it cleanly explains WHY the real-part channel is blind on the line (FE pair-cancellation).
