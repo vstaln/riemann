@@ -1832,3 +1832,17 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   (+12/d^4-type) or odd-integrating-to-zero. No differential-polynomial channel escapes the
   five-direction firewall. Taxonomy thesis (wave-49 question A) supported PROVEN for
   differential polynomials in the log-derivative.
+
+## Wave-49 (taxonomy wave) outcome — 0 survivors, 7-wave streak
+- 5 REFUTED (4 missing control, 1 fabrication on Markov moment m1(50)). Judge REJECTED
+  synthesis ("truncated, framework claims unlabeled/incomplete").
+- Candidates proposed (Hessian differential invariants Q = P1^3 - 3P1P2 + 2P3 of log Gamma
+  at s=1; de Branges dissipation E(z)=xi(1/2-iz)-i xi'(1/2-iz); weighted Markov moments
+  m1(T) = int x E'/E dx) — all killed: no control named, no derived values.
+- MY TAXONOMY RESULT (PROVEN, independent of the swarm): for differential polynomials in
+  the log-derivative, both Re and Im channels have EXACTLY ONE pair-breaking signature
+  (-2/d^2 at the ordinate); every other derivative is same-sign-blind (+12/d^4) or
+  odd-integrating-to-zero. No differential-polynomial channel escapes the five-direction
+  firewall. (Im channel: f(x)=-2x/(d^2+x^2) odd, f'(0)=-2/d^2, f'''(0)=+12/d^4.)
+- Waves 43-49: 0 survivors each (seven consecutive). The firewall holds from every
+  direction, now including the Im-channel/differential-polynomial taxonomy.
