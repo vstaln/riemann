@@ -1,34 +1,35 @@
-# CURRENT UPDATE — 2026-08-19 (waves 24–35, ξ-jet closure, retraction + 3 genuine discriminators)
+# CURRENT UPDATE — 2026-08-19 (waves 24–38, ξ-jet closure, retraction + 4 discriminators + resolvent hierarchy)
 
-## Session net (waves 24–35 + ξ-jet closure; all committed)
+## Session net (waves 24–38 + ξ-jet closure; all committed)
 
-- **THREE GENUINE DISCRIMINATORS (all CHECKED NUMERICALLY, all classical, all no-proof-power):**
-  1. **Herglotz half-plane defect** H_σ(t) = Re(ξ′/ξ)(σ+it) = Σ(σ−β)/[(σ−β)²+(t−γ)²]: positive
-     ∀t ⟺ no zeros in Re(s)>σ (ba33f99). Verified: real ζ positive at 300 pts × 3 σ (min
-     +4.7e-4 at σ=0.51), planted pair dips to −4.98 at its ordinate.
-  2. **Littlewood-Carleman J(T)** = Σ_{ρ in [1/2,σ₁]×[−T,T]}(β_ρ−1/2): exact 0 under RH,
-     +0.300 step with planted pair (59425f9). FE pair SPLIT by the Re=1/2 boundary (no
-     cancellation).
-  3. **Transverse curvature L(t)** = ∂_σ Re(ξ′/ξ)(1/2+it): >0 ∀t ⟺ no off-line zeros
-     (9f5c0f8). Verified: real ζ +9900 peak at zeros (=1/(t−γ)²), +1.6..177 between; planted
-     pair forces −13.3 dip at its ordinate.
-  Common mechanism: they EXPLOIT the FE pair-structure (derivative across the line, or strip
-  boundary split) instead of being blind to it. All classical (Herglotz/Nevanlinna, Littlewood),
-  all no proof power (finite checks), but genuine one-way objects.
-- **CRITICAL RETRACTION** (56449c6): the "real-part defect" D_ζ (commits 949bf5e/79e633f/
-  cc37c3b) was WRONG — FE-symmetric off-line pairs cancel EXACTLY in the on-line real part
-  (verified −10.0+10.0=0). The real-part channel on the line is FE-pair-symmetry-blind.
-- **Waves 24–33: 0 survivors** before the wave-35 discriminators. Generator collapse confirmed
-  (waves 23, 25, 28, 32).
-- **ξ-jet lane #3 PROVEN-closed** (732593f) — the "FE-forced" identity at its core is now
-  understood as FE-pair-symmetry (RH-equivalent, not zero-config).
+- **RESOLVENT INEQUALITY HIERARCHY (strongest structural finding, 9223563):**
+  Φ_k^(2r) = d_k^(2r)·Σ_n 1/(m_k−γ_n)^(2r) ≥ 2^(2r+1) for every adjacent zero pair, all r≥1
+  (floor = two bounding zeros, each 2^(2r)). Verified r=1..4 (orders 2..8): min 8.27/32.01/
+  128.0008/512.0001, zero violations, ultra-sharpness grows as (1/3)^(2r). Triple coupling
+  Φ_k+Φ_{k+1} ≥ 152/9 verified (min 18.10). Every order is an independent planted-zero test;
+  exact finite-N consistency family (no infinite-proof power).
+- **FOUR GENUINE DISCRIMINATORS (all CHECKED NUMERICALLY, all classical, all no-proof-power):**
+  1. **Herglotz half-plane defect** H_σ(t) = Re(ξ′/ξ)(σ+it): positive ∀t ⟺ no zeros in Re(s)>σ
+     (ba33f99). Decay G(σ) = min H_σ = 0.2149·(σ−1/2), set by the largest gap (b837fa6).
+  2. **Littlewood-Carleman J(T)** = Σ_{ρ in strip}(β_ρ−1/2): exact 0 under RH; planted pair
+     split by Re=1/2 boundary → +0.300 step (59425f9).
+  3. **Transverse curvature L(t)** = ∂_σ Re(ξ′/ξ)(1/2+it) = Σ1/(t−γ)² on RH (>0); planted pair
+     → −13.3 dip (9f5c0f8).
+  4. **Midpoint gap-resolvent Φ_k = d_k²·L(m_k) ≥ 8** (449ffb7, 1feb5db) — the r=1 case of the
+     hierarchy above; verified all 99 pairs + direct ξ-jet.
+- **CRITICAL RETRACTION** (56449c6): the "real-part defect" D_ζ (949bf5e/79e633f/cc37c3b)
+  WRONG — FE pairs cancel exactly on the line (verified −10.0+10.0=0).
+- **Im-channel at σ>1/2**: NOT a discriminator (Lorentzian superposition, magnitude-only,
+  dipole-detector mode) — wave-36 kill.
+- **Waves 24–33: 0 survivors** before wave-35's pair-exploiting objects. Generator collapse
+  confirmed (waves 23, 25, 28, 32).
+- **ξ-jet lane #3 PROVEN-closed** (732593f) — "FE-forced" identity = FE-pair-symmetry.
 - **mp.zeta(s,1) BUG** (returns ζ(s)); audit clean.
 - **8C d_N ladder** certified to N=5000 (d_N·√logN ≈ 0.212 flat); N=10000 running.
-- **8C d_N RH-false control structurally unavailable** (planted Beurling has wrong coefficients).
 
-**Firewall:** nothing above is RH evidence or an RH proof. The three discriminators are genuine
-characterizations with clean numerics but no proving power (finite checks; certifying any of
-them over a continuum needs zero-gap control = the classical barrier). Proportion records stand
+**Firewall:** nothing above is RH evidence or an RH proof. The discriminators/hierarchy are
+genuine exact characterizations with clean numerics but no proving power (finite-N consistency;
+certifying over a continuum needs gap bounds = the classical barrier). Proportion records stand
 firewalled. The search continues.
 
 ---
