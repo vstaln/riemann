@@ -254,7 +254,15 @@ def make_idea_gen(idx: int):
                 f"{state['tried_levers'][:15]}.\nTASK: {task}\n"
                 'Reply ONLY JSON: {"ideas": ["idea1", "idea2", "idea3"]}'
             )
-        ideas = _read_json(_safe_invoke(llm, prompt)).get("ideas", [])
+        raw = _safe_invoke(llm, prompt)
+        ideas = _read_json(raw).get("ideas", [])
+        # agy (the idea co-author) returns markdown candidates, not the JSON
+        # {"ideas": [...]} shape; parse "Candidate N" sections as ideas.
+        if not ideas and "Candidate" in raw:
+            import re as _re
+            ideas = [_re.sub(r"^#{1,6}\s*", "", s).strip()
+                     for s in _re.split(r"(?=^#{1,6}\s*Candidate)", raw, flags=_re.M)
+                     if "Candidate" in s][:3]
         ideas = [str(i) for i in ideas if str(i).strip()][:3]
         out = [
             {"id": f"g{idx}-{j}", "generator": f"idea-gen-{idx}", "task": task,
