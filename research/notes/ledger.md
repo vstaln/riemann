@@ -1617,3 +1617,13 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   doesn't prove RH). It joins the Herglotz family as a genuine-but-classical discriminator.
 - NET: wave-40 no new proof power; the object is a Laguerre-family reformulation, verified
   cleanly. The search's structural wall (finite-N consistency vs continuum proof) holds.
+
+## Wave-41: critical-point consistency at height + off-line critical-point scan (2026-08-19)
+- "Exactly 1 critical point per gap" EXTENDED to zeros 100-120: all 21 gaps = 1 (0 anomalies).
+  Finite-N consistency now on first 121 zeros.
+- Off-line critical points of xi (zeros of xi' with sigma != 0.5) in [0.45,0.55]x[-T,T]:
+  ZERO found for T=30/60/100 (clean grid, 6 sigma values x 401 t). Consistent with Laguerre/RH
+  (all critical points real). CHECKED NUMERICALLY.
+- HONEST: both are Laguerre-family consistency checks — genuine but classical, no proof power.
+  The off-line critical-point scan is a finite-region zero-search for xi'-zeros (restatement-
+  adjacent: it's checking the Laguerre equivalence's predictions on known-consistent data).
