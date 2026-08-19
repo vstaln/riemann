@@ -1099,3 +1099,14 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   sub-diffusive law. Consistent with wave-23 agy L2 refutation. d_N·√logN ≈ 0.212 flat =
   sharp-rate constant reproduced. Consistency-level; RH-false Beurling control stated not run.
 - LEVER STATUS: 8C sharp-rate lane remains open-but-consistency-only; no new one-way object.
+
+## agy wave-24 batch — all 4 killed (2026-08-19)
+- **agy-wave24-adjudication-2026-08-19.md** — fresh agy one-shot on corrected frontier. C1
+  (zero-curvature ratio Q_n) INCONCLUSIVE-as-specified: its own probe (zeta'' at zeros) is
+  numerically unstable, returns ~1e29 spurious values, not usable as a discriminant. C2
+  (4th-order Turan jet Phi>0) STRUCTURALLY DEAD (lane #3 PROVEN closed: rung-2 kill + G2/H
+  Cauchy fatality; sibling of refuted agy-L3). C3 (B-D energy center-of-mass V(N)/(N log N)
+  <= C=0.182) REFUTED numerically: measured V/(N log N)=19.2->25.8->30.5 (N=10/20/30), ~150x
+  above claimed 0.182 and rising (validated B-D basis reproduces wave8c d_N exactly). C4
+  (Mellin-Mobius Hankel radius) RESTATEMENT (radius of conv of 1/zeta at s=2 = pole-location
+  = RH restated). No survivor. Controls not reached (candidates died before meaningful control run).
