@@ -1581,3 +1581,20 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   ROBUST; the floor is a lower bound on the true (full) Phi.
 - Method note: central difference (H(0.5+eps)-H(0.5-eps))/(2eps) kills the O(eps) bias;
   earlier forward difference had O(eps) bias (~0.0004 at eps=1e-3) — minor, the 7% was tail.
+
+## agy wave-39 ("new math entirely" ask) — C1 REFUTED, C2 restatement; no survivor (2026-08-19)
+- Prompt forced: invent something with NO precedent in any death-list class; offered new-math
+  dimensions (function-space functionals, topological invariants, transplanted fields, gap-gap
+  correlations, trivial-zero coupling). Results:
+  - C1 Trivial-Zero Resolvent Duality: Delta(k) = Sigma_N + Tail_N - E(k), claimed = 0 under RH
+    via FE. PROBE: Delta = +0.142 (k=1), +0.0257 (k=2), +1.27e-4 (k=3), -0.00906 (k=4) — NOT
+    zero. The E(k) formula is WRONG (fabricated identity; wave-26 meta confirmed: agy gaps are
+    fabricated). Also structurally = explicit-formula/pole-count restatement.
+  - C2 Nodal Braid Holonomy: W(T) = winding of (Re,Im)(xi'/xi) around [0.55,1.2]x[10,T].
+    PROBE: real zeta W = -0.000 at T=20/25/30 (matches RH prediction). BUT: argument
+    principle restatement — W = Z(xi' in box) - Z(xi in box); "W=0 because no zeros in
+    Re>1/2" is zero-search in disguise (death-list #1). DH control untested but mechanism
+    dead by structure.
+- VERDICT: the "new math entirely" ask produced a fabricated formula and a topological
+  repackaging of zero-counting. Generator collapse + structural exhaustion confirmed for the
+  Nth time. No survivor.
