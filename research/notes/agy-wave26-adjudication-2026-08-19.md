@@ -49,3 +49,23 @@ and the predicted gaps specifically must be ignored as untrustworthy.
 ## Files
 - prompt: /tmp/agy-wave26-prompt.txt; output: /tmp/agy-wave26.out;
   probes: /tmp/w26_c1.py, /tmp/w26_c2.py (zeta-side) + inline Epstein attempts.
+
+## C3 probe completed (follow-up run, same session)
+
+C3 — prime-fiber defect Φ_K < 5e-4: **REFUTED — CHECKED NUMERICALLY.**
+Φ_25 measured: zeta = **0.350 / 0.398 / 0.0457** at (0.8085,86.845)/(0.75,86.845)/(0.70,50);
+DH = 0.724/0.745/0.137. The real zeta value at the claimed point is **~11,000× ABOVE the
+5e-4 condition it is supposed to satisfy** (agy claimed 3.12e-5). DH gap = 0.48× (not the
+claimed 4570×). Third fabricated prediction confirmed (C1: 0.4× vs 2.25e4×; C3: 0.48× vs
+4570×; both wrong by 4-5 orders and in the wrong direction — the real world FAILS the
+claimed condition).
+
+## FINAL wave-26 verdict
+
+- C1 REFUTED (Bohr–Toeplitz, 0.4× gap, real≈control), C2 INCONCLUSIVE (pole-contaminated;
+  control OOM), C3 REFUTED (Φ_zeta=0.35 ≫ 5e-4 threshold; 0.48× gap). **No survivor.**
+- The "short-window average of |ζ|² or log|ζ| vs Euler expectation" family is now tested
+  in three instances (Bohr–Toeplitz, commutator, prime-fiber) — none separates worlds;
+  the real zeta often FAILS the claimed condition, controls behave identically.
+- Meta-finding confirmed on 2/2 testable candidates: agy's predicted gaps are fabricated
+  (wrong by 4-5 orders, wrong direction). Trust nothing agy asserts numerically.

@@ -1155,3 +1155,9 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   META-FINDING: agy's predicted separation gaps are fabricated — asserted without compute,
   the testable one wrong by 5+ orders in the wrong direction. Trust agy candidates only after
   running; ignore its predicted numbers.
+- **agy wave-26 C3 REFUTED (probe completed)** — prime-fiber defect Phi_25: zeta=0.350 at
+  (0.8085,86.845) vs claimed 3.12e-5 (11,000x ABOVE the 5e-4 condition); DH gap 0.48x vs
+  claimed 4570x. Third fabricated prediction (C1 0.4x vs 2.25e4x, C3 0.48x vs 4570x — both
+  4-5 orders wrong, wrong direction). Wave-26 fully dead: C1 REFUTED, C2 INCONCLUSIVE
+  (pole-contaminated), C3 REFUTED. Short-window average family (Bohr-Toeplitz/commutator/
+  prime-fiber) tested 3 ways — no separation; real zeta fails its own condition.
