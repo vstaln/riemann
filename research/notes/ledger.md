@@ -1283,3 +1283,13 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   argument structurally wrong: no interior stagnation point with index +1 appears; the
   Poincare-Hopf index of the vector field doesn't trap anything in finite boxes).
 - Not a discriminator; recorded as consistency evidence for the Speiser structure.
+
+## Wave 32 (swarm) — 6/6 REFUTED, no survivor; coordinator probes
+- Verdicts: g0-0 dipole-dominance REFUTED (DH balances digamma drift), g0-1 hydrodynamic index
+  REFUTED (saddle index -1 not +1; DH identical), g0-2 transversality REFUTED (det J = |xi''|^2
+  > 0 holds for DH too), g1-0 Vasyunin-Krylov REFUTED (BD: discrete ≡ unconstrained L2),
+  g1-1 Hautus REFUTED (1-2Re(s0)<0 vacuous for s0>1/2), g1-2 Carleson conditioning REFUTED.
+- Coordinator probes: xi'-winding = 0 both sides of critical line (t<30) — Speiser consistency,
+  confirms g0-1; Carleson kappa 8e7->2e18 exponential REAL (verifier's truncation claim wrong,
+  verdict kept — conditioning is operator-only). Generator collapse 5th consecutive wave.
+- final-verdict.md written (swarm finalizer still churning on rate limits; coordinator closed).
