@@ -1145,3 +1145,13 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   identical to +-0.1). Negativity is finite-basis discretization artifact (expected),
   NOT a zero-location statement. g0-0 boundary-prime-resonance claim dead by its own
   probe; wave-25 Schur-LMI next move ABANDONED (no transition to certify). Firewall intact.
+
+## agy wave-26 (2026-08-19) — one-way discriminators; C1 REFUTED, meta: predictions fabricated
+- **agy-wave26-adjudication-2026-08-19.md** — lane #5 hard-mode batch. C1 Bohr-Toeplitz
+  resolvent defect REFUTED (predicted 2.25e4x DH gap, measured 0.4x; delta_zeta=1.75e-7 vs
+  delta_DH=4.99e-7, identical worlds; predicted 0.0412 wrong by 2.4e5x). C2 Dirichlet
+  commutator INCONCLUSIVE (zeta-side <= threshold but T=3.82 window pole-contaminated;
+  Epstein control too slow to run; agy numbers uncomputed). C3 prime-fiber defect unprobed.
+  META-FINDING: agy's predicted separation gaps are fabricated — asserted without compute,
+  the testable one wrong by 5+ orders in the wrong direction. Trust agy candidates only after
+  running; ignore its predicted numbers.
