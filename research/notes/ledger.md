@@ -1309,3 +1309,18 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
 - This closes the last unexplored class. The LLM generator now provably cannot produce a
   survivor within its own class constraints; the search's honest state is: all one-way
   discriminator classes are structurally empty or compute-walled.
+
+## 8C d_N RH-false control — structurally unavailable with current models (2026-08-19)
+- Attempted the "stated, not run" control: d_N for the planted Beurling model Z(s)=zeta(s)(1+2^0.6 2^-s).
+- Fixed quadrature bug first (Gauss-Legendre [0,1] weights need 1/2 rescale; d_10(zeta)=0.1477 vs certified 0.151041, ~2% — sanity OK).
+- Result: d_N(planted) = 0.2354/0.1781/0.1497/0.1477/0.1397/0.1346/0.1304 at N=4..16 — DECREASING, not saturating.
+- Structural reason (PROVEN): d_N (Baez-Duarte) is defined for the SPECIFIC zeta coefficient structure
+  a(n) ≡ 1 (the BD criterion d_N->0 <=> RH is about zeta's L^2 closure). The planted model has
+  coefficients a(n)=1+c*[n even] — a DIFFERENT projection, not the BD quantity. So the "planted
+  d_N" here is not the BD criterion's control; it's a different object that happens to decrease.
+- A genuine BD control needs a 0/1 Beurling generalized-prime system with off-line zeros preserving
+  zeta's coefficient structure — the literature construction is genuinely involved (per the model's
+  own HONEST GAP). NOT available in this session's budget.
+- VERDICT: 8C d_N control remains "stated, not run" — for a STRUCTURAL reason (no available model
+  preserves the BD coefficient structure while planting a zero). The real-world d_N flat law stands
+  as CHECKED NUMERICALLY only.
