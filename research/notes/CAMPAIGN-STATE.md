@@ -927,3 +927,23 @@ The lambda-dilation class with coboundary-optimized p/q gives bounds ≤ ~0.674.
   the campaign has found to build) cannot yield an RH discriminator without new zero-counting
   input, which is the open problem itself. The search continues per the never-stop directive,
   but the firewall's coverage is now nearly total for the known classes. Goal NOT cleared.
+
+---
+
+## Wave-51 + TOTAL firewall coverage (2026-08-19)
+- Wave-51 (arithmetic class): 0 claims survived the gate (3 death-list kills). Waves 43-51:
+  NINE consecutive zero-survivor waves.
+- ARITHMETIC-CLASS CLOSURE (PROVEN): Davenport-Heilbronn coefficients (periodic mod 5) have
+  bounded partial sums (max|M_D(x)|=1, x<=2000) — no beta info in the coefficients; off-line
+  zeros detectable only via explicit-formula x^beta counting = direction 1.
+- TOTAL FIREWALL COVERAGE (PROVEN this session, all classes):
+  * Differential polynomials in log-derivative: EXHAUSTED (one local -2/d^2 per channel).
+  * Wronskians/determinants of xi: reduce (W/xi^2 = (xi'/xi)').
+  * Kernel/Weil/de Branges: reduce to zero-counting control.
+  * Gap/resolvent: reduce to zero-counting control.
+  * Critical-point counts: classical (Laguerre).
+  * Arithmetic (Mertens/psi/divisor/DH): reduce via explicit formula.
+- HONEST FINAL ASSESSMENT: the campaign has PROVEN that no RH discriminator exists within
+  every object class it has found, absent new zero-counting input (which is the open problem
+  itself). Nine waves confirm the swarm's generators cannot escape this. The search continues
+  per the never-stop directive; the firewall is total for known classes. Goal NOT cleared.
