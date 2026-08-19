@@ -1456,3 +1456,27 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   — the certificate question reduces to zero-gap control (classical barrier). Value is
   conceptual: it's the correct statement replacing the retracted on-line real-part defect,
   and it cleanly explains WHY the real-part channel is blind on the line (FE pair-cancellation).
+
+## GENUINE DISCRIMINATOR #2: Littlewood-Carleman J(T) = sum_{rho in strip}(beta-1/2) (2026-08-19)
+- OBJECT: J(T) = (1/2pi)[ int_-T^T (log|xi(sig1+it)| - log|xi(1/2+it)|) dt
+                    + int_{1/2}^{sig1} (arg xi(s+iT) - arg xi(s-iT)) ds ]  for sig1 > 1.
+- THEORY (Littlewood lemma, exact): J(T) = sum_{rho in [1/2,sig1]x[-T,T]} (beta_rho - 1/2).
+- Under RH: J(T) = 0 EXACTLY for all T (all beta = 1/2).
+- With planted FE pair (beta0, 1-beta0) at g0: the pair is SPLIT by the Re=1/2 boundary —
+  only the RIGHT member (beta0 > 1/2) lies in the strip [1/2, 2], so J(T) = (beta0-1/2) once
+  T > g0. NO pair-cancellation (unlike the on-line real-part defect).
+- VERIFIED (model): 100 on-line zeros + planted pair (0.8, 0.2) at g0=14.13: J(T) = 0.000
+  (T=10 < g0) then +0.300 (T=20,50 > g0) = exactly (0.8-0.5). Clean step.
+- Quadrature caveat: the arg terms need the CONTINUOUS branch (mp.arg principal-value jumps
+  corrupt it); fixed Gauss-Legendre misses log|xi| dips at zeros. Adaptive quad + continuous
+  arg needed (numerical detail, not theoretical).
+- HONEST LIMITS: (a) Littlewood lemma is classical (known); (b) J(T) is a finite-T check
+  (T -> infinity needed for RH; the limit J(inf) = sum_all (beta-1/2), which is 0 iff RH but
+  the infinite sum needs convergence control = the classical barrier); (c) for DISPROVING RH,
+  J(T) != 0 at any T with a careful quadrature would detect an off-line zero — same content
+  as zero-search but in exact-sum form.
+- VERDICT: genuine one-way discriminator (exact, computable with care, FE-pair-split so no
+  cancellation, world-separating), CHECKED NUMERICALLY (model), classical (Littlewood),
+  no new proof power (finite-T + convergence barrier).
+- This + Herglotz half-plane defect = the two genuine discriminators of the session; both
+  classical, both no-proof-power, both correctly replacing the retracted on-line defect.
