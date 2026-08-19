@@ -1418,3 +1418,26 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   NOT cancelling... CHECK NEEDED. The half-plane D_sigma(t) with sigma>1/2: pair contribution
   (sigma-beta)/[(sigma-beta)^2+u^2] + (sigma-(1-beta))/[(sigma-1+beta)^2+u^2] — this does NOT
   cancel (denominators differ) — MAY be a real discriminator. Probe it.
+
+## GENUINE DISCRIMINATOR: Herglotz half-plane defect Re(xi'/xi)(sigma+it) (2026-08-19)
+- OBJECT: for sigma > 1/2, H_sigma(t) = Re(xi'/xi)(sigma+it) = sum_rho (sigma-beta)/[(sigma-beta)^2+(t-g)^2].
+- CRITERION (exact, classical Herglotz/Nevanlinna): H_sigma(t) > 0 for ALL t  <=>  xi has no
+  zeros in Re(s) > sigma. As sigma -> 1/2+, the family {H_sigma > 0 for all sigma>1/2} <=> RH.
+- NOT the retracted on-line defect: the on-line (sigma=1/2) real-part defect PAIR-CANCELS
+  (beta, 1-beta FE pairs give (1/2-beta)/[..] + (1/2-(1-beta))/[..] = 0). Off the line,
+  sigma != 1/2, the pair terms have DIFFERENT denominators and do NOT cancel.
+- VERIFIED (all CHECKED NUMERICALLY):
+  * Real zeta, sigma=0.6/0.55/0.51, 300 random t in [1,120]: MIN = +4.68e-3/+2.34e-3/+4.68e-4
+    — strictly positive, scaling like (sigma-1/2) as RH predicts. No zeros with Re>0.51 among
+    first ~100 zeros (consistency).
+  * Model test (100 on-line zeros + planted FE pair (0.7,0.3) at g0=50): D dips to -4.98 at
+    t=50 (exactly at the planted zero), positive elsewhere. Clean separation.
+  * The earlier negative values at sigma=0.6 (t=0.5,5.0) were a WRONG-GAMMA artifact; the
+    correct Hadamard/xi-form defect is positive.
+- HONEST CAVEATS: (a) classical (Herglotz/Nevanlinna — certainly known); (b) no finite-check
+  proving power (need ALL sigma>1/2 AND all t — infinite); (c) for DISPROVING RH, one t with
+  H_sigma(t)<0 for some sigma>1/2 suffices (zero-detection in the right half-strip — same
+  content as the existing zero-search, but in a clean positivity form).
+- VERDICT: genuine one-way object for the campaign (exact sign criterion, computable,
+  world-separating, not in the stored blocklist), CHECKED NUMERICALLY; novelty classical;
+  no proof power. This is the CORRECT version of the earlier retracted claim.
