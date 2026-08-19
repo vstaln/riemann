@@ -1334,3 +1334,27 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
 - Result: NO negative eigenvalue for Epstein; NO separation (both near-singular = finite-basis
   artifact, matching wave-25's Weil X-independence finding). g1-0 REFUTED by its own promised
   probe. Coordinator's INCONCLUSIVE-downgrade vindicated with data.
+
+## CRITICAL CORRECTION + NEW OBJECT: the real-part defect D(t) (2026-08-19)
+- CORRECTION to commit d644dd4: the identity Re(zeta'/zeta)(1/2+it) = log(pi)/2 - 0.5 Re psi(1/4+it/2)
+  is NOT "FE-forced zero-config". It is EXACTLY EQUIVALENT TO RH:
+    Re(zeta'/zeta)(1/2+it) - [log(pi)/2 - 0.5 Re psi(1/4+it/2)] = sum_rho (1/2 - beta_rho)/|s-rho|^2
+  On-line zero poles have Re(1/(s-rho)) = (sigma-1/2)/|s-rho|^2 = 0 at sigma=1/2. Off-line zeros
+  (beta != 1/2) give nonzero contributions. So D_zeta(t) == 0 for all t  <=>  RH.
+- VERIFIED: planted model Z(s)=zeta(s)(1+2^0.6 2^-s), planted zero at 0.6+i*pi/log2:
+  D_planted(t) = -10.35/-5.35/-0.45 at t = g0/g0+0.1/g0+1.0, matching -0.1/|s-rho0|^2
+  (exactly -10 at the zero). At large t: -0.42, NOT decaying (infinite planted family at
+  Re=0.6 keeps contributing). zeta side: D = 0 to 1e-41 (all tested zeros on line).
+- The 1e-13 "verification" of the identity only confirms the first ~1e5 zeros are on the line
+  (known); it is NOT a zero-config fact.
+- NEW OBJECT: D_zeta(t) = Re(zeta'/zeta)(1/2+it) - [log(pi)/2 - 0.5 Re psi(1/4+it/2)].
+  - Computable directly from zeta (no beta_k needed - not circular).
+  - Exact: D == 0 (all t) iff RH; nonzero in any planted world.
+  - Separates worlds NUMERICALLY (zeta 1e-41 vs planted 10^-1 to 10^1).
+  - Not a dipole detector in the stored sense: it's the REAL-part vanishing criterion,
+    the real-part analog of the explicit formula (which is imaginary-part based).
+  - CAVEAT (honest): numerically D_zeta(t) can only be measured at finitely many t; a single
+    nonzero measurement at any t would DISPROVE RH, but D == 0 at tested t is only consistency.
+    It is a genuine one-way discriminator (RH => D=0; not-RH => D != 0 somewhere).
+- This is the first survivor in the session: a real discriminator with the exact-identity
+  structure the search demanded, PLUS a correction of a prior mislabeled theorem.
