@@ -256,7 +256,10 @@ def make_idea_gen(idx: int):
         ]
         existing_ids = {x["id"] for x in state["ideas"]}
         out = [x for x in out if x["id"] not in existing_ids]
-        _write(state, f"ideas/idea-gen-{idx}.md", _dump_list(f"IDEAS (generator {idx})", [i["idea"] for i in state["ideas"] + out]))
+        # Write ONLY this generator's own ideas (not the accumulated state) —
+        # otherwise later generators imitate earlier ones (serial-imitation
+        # collapse: gens 2-5 added nothing in wave-45 because they echoed gen-1).
+        _write(state, f"ideas/idea-gen-{idx}.md", _dump_list(f"IDEAS (generator {idx})", [i["idea"] for i in out]))
         # NOTE: `ideas` channel uses operator.add reducer, so return ONLY the new
         # items — returning state+out would double-count (3 -> 9 -> 21 -> 45 -> 93).
         return {"ideas": out}

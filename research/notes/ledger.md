@@ -1722,3 +1722,22 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
 - VERDICT: discrete midpoint-sum of transverse curvature is NOT a discriminator. The
   continuous L(t) dip at the planted ordinate (wave-35, exact -2/delta^2) remains the real
   object; the accumulated-sum version is dead. LABEL: REFUTED (measured no sign flip).
+
+## Wave-45 outcome (2026-08-19) — 0 survivors, serial-imitation diagnosed+fixed
+- 6 generators, gate rejected 4 death-list ideas, verifier REFUTED g0-0 (no RH-false
+  control). Synthesis: CONJECTURED Hessian-of-Mellin-kernel negative-eigenvalue claim
+  (K_n(t)*exp(-t/gamma^2), n~gamma^2) — near-death-list (Hessian determinant is on the
+  death list), no control named in headline, judge passed it as CONJECTURED (defensible,
+  low value). 0 survivors; firewall intact.
+- ROOT-CAUSE FIX for residual collapse: generator files were written with ACCUMULATED
+  state (state["ideas"] + out) — later generators' files showed all prior ideas, and the
+  serial graph + dedup meant gens 2-5's imitations of gen-1 were deduped (empty diffs).
+  FIXED: write ONLY each generator's own ideas to its file. The prompt never exposed
+  siblings (only tried_levers), so the imitation was via the shared state write + the
+  model echoing the first generator's framing. Gen-1's "2D Potential Flow" ideas were the
+  only distinct content; 5/6 generators effectively collapsed or duplicated.
+- Honest assessment: the per-generator angle + per-node model fix reduced collapse but
+  did not eliminate it — the free-tier models converge on shared framing regardless of
+  angle prompts. The swarm's value remains in its VERIFIERS (which REFUTE correctly), not
+  its generators. Consistent with waves 43/44: generator collapse is a persistent LLM
+  behavior; adversarial verification is the only reliable component.
