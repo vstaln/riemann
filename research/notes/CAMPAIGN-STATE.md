@@ -1,32 +1,35 @@
-# CURRENT UPDATE — 2026-08-19 (waves 24–34, ξ-jet closure, discriminator-class exhaustion, real-part defect discovery)
+# CURRENT UPDATE — 2026-08-19 (waves 24–35, ξ-jet closure, retraction + 3 genuine discriminators)
 
-## Session net (waves 24–34 + ξ-jet closure; all committed)
+## Session net (waves 24–35 + ξ-jet closure; all committed)
 
-- **REAL-PART DEFECT D_ζ(t) — first genuine one-way discriminator of the session (949bf5e, 79e633f).**
-  D_ζ(t) = Re(ζ′/ζ)(1/2+it) − [log(π)/2 − ½Re ψ(1/4+it/2)] = Σ_ρ (1/2−β_ρ)/|s−ρ|².
-  D_ζ ≡ 0 (all t) ⟺ RH. Measured: zeta D = 1e-41 (consistency), planted world D = −10.4→−0.42
-  (off-line pole signature, matches −0.1/|s−ρ₀|² exactly), DH D = −0.8047 constant (gamma
-  mismatch offset — trivial L-function effect). Computable directly, non-circular.
-  **CORRECTION:** this shows the earlier "new theorem" (d644dd4) was MISREAD — the identity
-  Re(ζ′/ζ) = gamma-only is RH-equivalent (real-part vanishing), NOT zero-config. The 1e-13
-  verification only confirms the first ~1e5 zeros are on the line.
-  Honest limits: finite-t check only (no proving power); novelty CONJECTURED-likely-classical
-  (real part of Hadamard/explicit formula).
-- **Waves 24–33: 0 survivors** (before D_ζ). Every LLM-generated discriminator candidate died —
-  REFUTED by probe, RESTATEMENT, TAUTOLOGY, CIRCULAR, FE-family, or dipole-detector.
-- **Discriminator-class exhaustion (PROVEN structural negatives):** exact-identity class EMPTY
-  (exact-break + no-β_k contradictory — D_ζ is the counterexample structure that bypasses this
-  by using the REAL-part channel), class-4 (FE+Euler) EMPTY, conditioning operator-only.
-- **ξ-jet lane #3 PROVEN-closed** with new proof (732593f) — but the "FE-forced" identity at
-  its core is now understood as RH-equivalent (see correction above).
+- **THREE GENUINE DISCRIMINATORS (all CHECKED NUMERICALLY, all classical, all no-proof-power):**
+  1. **Herglotz half-plane defect** H_σ(t) = Re(ξ′/ξ)(σ+it) = Σ(σ−β)/[(σ−β)²+(t−γ)²]: positive
+     ∀t ⟺ no zeros in Re(s)>σ (ba33f99). Verified: real ζ positive at 300 pts × 3 σ (min
+     +4.7e-4 at σ=0.51), planted pair dips to −4.98 at its ordinate.
+  2. **Littlewood-Carleman J(T)** = Σ_{ρ in [1/2,σ₁]×[−T,T]}(β_ρ−1/2): exact 0 under RH,
+     +0.300 step with planted pair (59425f9). FE pair SPLIT by the Re=1/2 boundary (no
+     cancellation).
+  3. **Transverse curvature L(t)** = ∂_σ Re(ξ′/ξ)(1/2+it): >0 ∀t ⟺ no off-line zeros
+     (9f5c0f8). Verified: real ζ +9900 peak at zeros (=1/(t−γ)²), +1.6..177 between; planted
+     pair forces −13.3 dip at its ordinate.
+  Common mechanism: they EXPLOIT the FE pair-structure (derivative across the line, or strip
+  boundary split) instead of being blind to it. All classical (Herglotz/Nevanlinna, Littlewood),
+  all no proof power (finite checks), but genuine one-way objects.
+- **CRITICAL RETRACTION** (56449c6): the "real-part defect" D_ζ (commits 949bf5e/79e633f/
+  cc37c3b) was WRONG — FE-symmetric off-line pairs cancel EXACTLY in the on-line real part
+  (verified −10.0+10.0=0). The real-part channel on the line is FE-pair-symmetry-blind.
+- **Waves 24–33: 0 survivors** before the wave-35 discriminators. Generator collapse confirmed
+  (waves 23, 25, 28, 32).
+- **ξ-jet lane #3 PROVEN-closed** (732593f) — the "FE-forced" identity at its core is now
+  understood as FE-pair-symmetry (RH-equivalent, not zero-config).
 - **mp.zeta(s,1) BUG** (returns ζ(s)); audit clean.
 - **8C d_N ladder** certified to N=5000 (d_N·√logN ≈ 0.212 flat); N=10000 running.
-- **wave-28 g1-0 REFUTED by its promised probe** (arithmetic-kernel Gram no separation).
 - **8C d_N RH-false control structurally unavailable** (planted Beurling has wrong coefficients).
 
-**Firewall:** nothing above is RH evidence or an RH proof. The real-part defect is a genuine
-characterization with clean numerics but no proving power (finite-t check). All direct-RH lanes
-tested are closed or blocked; the search continues (see next section).
+**Firewall:** nothing above is RH evidence or an RH proof. The three discriminators are genuine
+characterizations with clean numerics but no proving power (finite checks; certifying any of
+them over a continuum needs zero-gap control = the classical barrier). Proportion records stand
+firewalled. The search continues.
 
 ---
 
