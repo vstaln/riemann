@@ -500,3 +500,4 @@ s=119 j=3958 k=968 G=4.658196e-4 f64-vs-dd=7.33e-13
 [prod 900] RESULT d_ref=8.117948325339e-2 d*sqrt(ln N)=0.211727 d_f64*sqrt(lnN)=0.211727 [flat-law band 0.21-0.22]
 [prod 900] END elapsed 157.4s
 [prod 10000] START
+  gram f64: 250/10000 rows
