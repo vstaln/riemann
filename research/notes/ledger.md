@@ -1711,3 +1711,14 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
 - Midpoint-resolvent channel: planted quartet makes Phi_k BIGGER (4 ordinates at g1 add
   positively), not a clean one-way sign flip — FE-pair-symmetry blindness reconfirmed in the
   midpoint channel (the -1043.9 violation was at the planted quartet's own collapsed midpoint).
+
+## Discrete transverse midpoint-sum probe (2026-08-19) — NEGATIVE (honest)
+- Candidate (c) sharpened: S = sum_k L(m_k) over adjacent-gap midpoints, L = transverse
+  curvature. HYPOTHESIS: planted pair's constant -2/delta^2 term accumulates across midpoints
+  -> S flips negative.
+- MEASURED: S_rh = +3.03/+9.72/+28.77/+49.58 vs S_planted = +3.13/+9.83/+28.89/+49.69 at
+  n_mid=5/10/20/29. NO FLIP. The -2/delta^2 term is constant while S_rh grows with n_mid
+  (positive 1/(t-g)^2 terms dominate); the discrete sum is FE-pair-insensitive.
+- VERDICT: discrete midpoint-sum of transverse curvature is NOT a discriminator. The
+  continuous L(t) dip at the planted ordinate (wave-35, exact -2/delta^2) remains the real
+  object; the accumulated-sum version is dead. LABEL: REFUTED (measured no sign flip).
