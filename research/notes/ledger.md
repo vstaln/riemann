@@ -1243,3 +1243,13 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   - 1st: 2Re((zeta'/zeta)')(1/2+it) measured = 2/(t-gamma)^2 with ratio 1.0000/1.0006/1.0709 at t-gamma = 0.01/0.1/1.0 — PURE zero-location content (double-pole coefficient, dipole detector). NOT FE-forced.
 - Reason: d/ds conj(f(s)) = conj(df/dsbar) with dsbar/ds = -1 on the line inserts a sign; the FE differentiates to a tautology for the real part, and the pole terms dominate.
 - CLOSES: any "higher real jet of log-zeta is FE-forced-dead" extension attempt is REFUTED — the higher jets carry EXACTLY the zero config (as dipole detectors, which never separate RH from RH-false worlds). The FE-forced kill applies to 0th-order real data only.
+
+## Class-4 (FE + Euler product together, exact break) structurally EMPTY (2026-08-19, PROVEN)
+- Claim: an object breaking BOTH FE and Euler product with a planted zero. Structural negative:
+  Euler product (abs convergence on Re(s)>1) forbids zeros there but ALLOWS planted zeros in
+  (1/2,1); FE forces the symmetric partner in (0,1/2). Every consistent planted world satisfies
+  both by construction. => NO object can break both simultaneously. The class is empty; this is
+  the content of RH itself. Closed before probing.
+- Similarly class-5 (rationality-class changes) is vacuous in practice: zero locations are
+  transcendental objects; no computable finite invariant changes rationality class under a
+  planted zero without already encoding beta_k.
