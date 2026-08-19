@@ -1263,3 +1263,13 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   NO world-separation content. Not a one-way discriminator by construction.
 - LENS 2 (Vasyunin-Krylov/Hautus) killed on sight: the claimed floor d_N^2 >= |1-s_0|^{-2}/(1-2 sigma_0)
   is NEGATIVE for sigma_0>1/2 (vacuous) and is the d_N story (blocklisted B-D coefficient energy).
+
+## wave-32 g1-2 nuance (verifier justification corrected, verdict kept)
+- Verifier g1-2 said: Mellin unitary preserves spectra, Carleson conditioning = truncation artifact.
+- Re-probe at dps=15: kappa = 8.28e7 / 4.49e17 / 2.00e18 at N=10/20/30 — EXPONENTIAL, real,
+  NOT a truncation artifact. The verifier's specific justification was WRONG.
+- But the REFUTED verdict SURVIVES for the correct reason: conditioning is operator-only,
+  no world-separation content (the |zeta|^2 profile is structurally identical across
+  L-functions). Killing reason is the discriminator-impossibility, not the truncation claim.
+- Lesson: even the verifiers' justifications need numeric scrutiny; the verdict was right,
+  the reason was half-right.
