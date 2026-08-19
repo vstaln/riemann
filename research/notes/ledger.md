@@ -1218,3 +1218,21 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   configuration info; (2) rung-2 kill (ledger); (3) G^2/H Cauchy fatality (zero proportion).
   DH control satisfied by construction (permitted inputs contain no off-line data). Lane #3
   STRUCTURALLY CLOSED — the strongest closure yet, new proof not just ledger citation.
+
+## agy wave-31 (2026-08-19) — forced with new frontier facts; all dead on TRIAGE (no probe needed)
+- Prompt fed the NEW PROVEN frontier facts (Re(zeta'/zeta) FE-forced zero-config-free; xi-jet
+  lane PROVEN-impossible; Im channel = dipole detector; wave-24..30 blocklist) and demanded
+  unexplored classes (exact-identity-vs-nonzero, higher correlations, unconditional arithmetic,
+  FE+Euler together, rationality-class). Results:
+  - C1 Stieltjes Hankel on zero moments: TAUTOLOGY — H_K is the moment matrix of the positive
+    measure sum delta(gamma_k^2); positive-definite for ANY positive measure, RH not needed.
+  - C2 prime cosh invariant R(k,p)=Re(p^(rho_k-1/2))/cos(gamma log p): CIRCULAR — computing
+    Re(p^(rho_k-1/2)) requires knowing beta_k = the answer. p^(rho_k) via explicit formula
+    requires the zeros themselves. Dead by construction.
+  - C3 topological nodal defect D(T)=N_zeros-N_signchanges: RESTATEMENT — "D(T)=0" is literally
+    the definition of RH (all zeros on the line). The classical Gram/nodal count.
+- META-CONFIRMATION: even when forced with the new proven frontier facts and the collapse-mode
+  blocklist, the LLM generator produced 3/3 dead candidates, one in each classic mode
+  (tautology, circularity, restatement). This is the strongest evidence yet that the LLM
+  generator adds no discriminator capability beyond what the verifiers kill — the swarm's value
+  is its hostile verifiers, not its generators.
