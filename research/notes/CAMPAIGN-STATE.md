@@ -873,3 +873,22 @@ The lambda-dilation class with coboundary-optimized p/q gives bounds ≤ ~0.674.
     to N=5000 (flat law 0.212).
 - Standing firewall: nothing is RH evidence; every discriminator is classical, finite-N
   consistency only, no continuum proof power. Goal NOT cleared.
+
+---
+
+## Waves 47 + five-direction firewall (2026-08-19)
+- Wave-47: 0 survivors (3 REFUTED; g0-0 fires-on-control kill working). Synthesis re-packaged
+  the exhausted curvature/Hessian channel. Waves 43-47: 0 survivors each.
+- THE FIREWALL IS NOW PROVEN FROM FIVE INDEPENDENT DIRECTIONS:
+  1. Gap-certificate verdict (PROVEN): density theorems bound off-line zeros only; Hadamard
+     tail grows like log t; verification = finite-height only. A continuum certificate IS RH.
+  2. FE-pair symmetry (PROVEN): on-line real parts are FE-blind (exact cancellation).
+  3. Derivative blindness (PROVEN): only the sigma-derivative breaks the pair (-2/d^2);
+     higher t-derivatives contribute +12/d^4 (same sign); transverse channel exhausted.
+  4. Integral washout (PROVEN): any global integral/sum of L is dominated by positive on-line
+     terms; L separates only pointwise.
+  5. Swarm adversarial verification (5 waves): every generated mechanism killed (missing
+     control, fires-on-control, fabrication, death-list).
+- Honest assessment: the swarm's generators are exhausted as a discovery engine (they re-package
+  closed channels); its verifiers are reliable. The search continues per the never-stop directive,
+  but the value of further waves is barrier documentation, not discovery. Goal NOT cleared.
