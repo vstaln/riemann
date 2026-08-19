@@ -55,3 +55,22 @@
 - ξ-jet closure: research/notes/xitower-jet-impossibility-2026-08-19.md.
 - Wave verdicts: research/waves/wave-28/final-verdict.md, wave-32/final-verdict.md.
 - 8C: tools/wave8c/results/hiN_log.txt (N=10000 running).
+
+## SUPPLEMENT (later same session) — correction + genuine discriminator
+
+1. **CRITICAL RETRACTION**: the session's earlier "first genuine one-way discriminator"
+   (real-part defect D_zeta, commits 949bf5e/79e633f/cc37c3b) was WRONG. The real-part defect
+   D_zeta(t) = Re(zeta'/zeta) - gamma = sum(1/2-beta)/|s-rho|^2 PAIR-CANCELS exactly for
+   FE-symmetric off-line zero pairs (verified -10.0 + 10.0 = 0 at all t). So D_zeta == 0 does
+   NOT imply RH; it holds in any FE-symmetric RH-false world. The planted model's nonzero D
+   was an FE-violation artifact. The real-part channel is FE-pair-symmetry-blind.
+
+2. **GENUINE DISCRIMINATOR (the correct version)**: the Herglotz half-plane defect
+   H_sigma(t) = Re(xi'/xi)(sigma+it) = sum_rho (sigma-beta)/[(sigma-beta)^2+(t-g)^2] for
+   sigma > 1/2. Off the line, FE pairs do NOT cancel (different denominators). Criterion
+   (classical Herglotz/Nevanlinna): H_sigma(t) > 0 for all t <=> no zeros in Re(s) > sigma;
+   the family over sigma > 1/2 is RH. VERIFIED: real zeta positive at 300 pts x sigma in
+   {0.6, 0.55, 0.51} (min +4.7e-4 at sigma=0.51, scaling like (sigma-1/2) as RH predicts);
+   planted FE pair (0.7, 0.3) at g0=50 dips to -4.98 exactly at t=50 (clean separation).
+   Classical (Herglotz/Nevanlinna — certainly known), no proof power (infinite checks),
+   CHECKED NUMERICALLY.
