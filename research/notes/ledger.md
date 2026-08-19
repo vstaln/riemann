@@ -1161,3 +1161,14 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   4-5 orders wrong, wrong direction). Wave-26 fully dead: C1 REFUTED, C2 INCONCLUSIVE
   (pole-contaminated), C3 REFUTED. Short-window average family (Bohr-Toeplitz/commutator/
   prime-fiber) tested 3 ways — no separation; real zeta fails its own condition.
+
+## agy wave-27 (2026-08-19) — 3 candidates, all dead; binding rule (no fabricated numbers) worked
+- **agy-wave27-adjudication-2026-08-19.md** — C1 Hardy-Sobolev transfer resolvent
+  RESTATEMENT (F/F(s+1/2) pole = zero location; radius-of-convergence family). C2 mollified
+  log-derivative curvature REFUTED (no separation: at DH zero t0=86.845 M_zeta=+0.065 vs
+  M_DH=+0.867 both positive; signs flip with t0; on-line zero wells = off-line wells, same
+  failure as wave-24 C1). C3 dyadic martingale ratio STRUCTURALLY DEAD (presupposes Euler
+  product -> undefined for DH/Epstein; can't separate Beurling worlds which have Euler
+  products; zeta side |R-1|~0.11-0.13 not 0). Cumulative lesson: LLM discriminators collapse
+  into (i) pole/zero-location restatements, (ii) dipole wells firing on BOTH worlds,
+  (iii) Euler-product presuppositions unable to separate Beurling worlds.
