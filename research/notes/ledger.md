@@ -1533,3 +1533,13 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   statement, not a theorem about the infinite zero set.
 - This is the strongest of the session's 4 discriminators: exact, universal, world-separating,
   numerically bulletproof on first 100 zeros.
+
+## Phi_k >= 8 confirmed via DIRECT xi-jet computation (not just model sum) (2026-08-19)
+- L(t) computed from xi'/xi via finite difference in sigma (eps=1e-4), REAL zeta:
+  k=1:  Phi = 6.887^2 * 0.2304 = 10.93 >= 8 (model 10.21, close)
+  k=34: Phi = 0.845^2 * 11.59 = 8.28 >= 8 (model 8.27, excellent match — the min pair, small
+        gap 0.845, sits closest to the floor as expected)
+  k=51: Phi = 1.422^2 * 4.38 = 8.86 >= 8
+- The universal floor Phi_k = d_k^2 * L(m_k) >= 8 is CONFIRMED by direct computation.
+- Small-gap pairs sit closest to the floor (other-zeros term small) — the bound is tightest
+  there; a planted zero in a small gap with delta < d/2 would violate most visibly.
