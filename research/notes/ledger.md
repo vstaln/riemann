@@ -1496,3 +1496,16 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   discriminator (exact sign flip, FE-consistent, world-separating).
 - Wave-35 net: C1 (transverse curvature) and C2 (Littlewood J(T)) both GENUINE, both verified,
   both classical/no-proof-power. Both correctly replace the retracted on-line defect.
+
+## wave-36 probes (2026-08-19) — Im-channel kill + Herglotz decay rate G(sigma)
+- Im-channel at sigma>1/2: NOT a discriminator. Im(xi'/xi)(sigma+it) = sum (t-g)/[(sigma-beta)^2+(t-g)^2]
+  is a superposition of Lorentzians; a planted FE pair just shifts it smoothly (diff -1.82/+1.82
+  odd about g0) — magnitude/shape difference only, no sign/zero structure. Matches the
+  dipole-detector collapse mode. CONFIRMED KILL.
+- Herglotz decay: G(sigma) = min_t H_sigma(t) measured (RH formula model, subsampled zeros):
+  G = 8.229e-4/8.229e-5/8.229e-6 at eps=1e-2/1e-3/1e-4 — EXACTLY linear in (sigma-1/2),
+  const 0.0823 set by the largest zero gaps. Positivity margin decays linearly; the constant
+  needs gap bounds (classical barrier) => no proof power, but a clean measurable window into
+  gap structure. CHECKED NUMERICALLY.
+- Net: the Herglotz family is now fully characterized (Re channel discriminates, Im doesn't,
+  decay is linear). All classical, no proof power.
