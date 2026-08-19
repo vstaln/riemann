@@ -1,35 +1,32 @@
-# CURRENT UPDATE — 2026-08-19 (waves 24–33, ξ-jet lane PROVEN-closed, all discriminator classes structurally empty or compute-walled)
+# CURRENT UPDATE — 2026-08-19 (waves 24–34, ξ-jet closure, discriminator-class exhaustion, real-part defect discovery)
 
-## Session net (waves 24–33 + ξ-jet closure; all committed)
+## Session net (waves 24–34 + ξ-jet closure; all committed)
 
-- **Waves 24–33: 0 survivors.** Every LLM-generated discriminator candidate died — REFUTED
-  by probe, RESTATEMENT (pole/zero detection, explicit-formula projections, nodal count =
-  definition of RH, inner-function-ness), TAUTOLOGY (moment matrix always PSD), CIRCULAR
-  (needs β_k to compute), FE-family (mixes ζ(s) with ζ(1−s̄)), or dipole-detector (fires on
-  both worlds).
-- **Wave-33 structural negative (PROVEN, closes the last class):** the exact-identity-vs-
-  nonzero class is EMPTY. The two requirements (exact break + no-β_k-needed) are mutually
-  contradictory: an exact break must encode the zero real parts (the answer), and any
-  β_k-free object is a restatement or dipole/magnitude detector. Similarly class-4
-  (FE+Euler together) is structurally EMPTY (every consistent planted world satisfies both
-  by construction). All one-way discriminator classes are now structurally empty or
-  compute-walled (DH control too slow for correlation probes).
-- **ξ-jet lane #3 PROVEN-closed with NEW PROOF (732593f, verified d644dd4):**
-  any (ξ,ξ′) jet certificate using jet positivity + Cauchy/weighted sums + explicit formula
-  has ZERO asymptotic content. Key new fact (independently verified to 1e-13):
-  **Re(ζ′/ζ)(1/2+it) = log(π)/2 − ½Re ψ(1/4+it/2)** — pure gamma-factor, ZERO dependence on
-  the zero configuration. Extension to higher jets REFUTED (50e0ba4): 2Re((ζ′/ζ)′) =
-  2/(t−γ)² — pure zero-location content (dipole detector), so FE-forced-ness is 0th-order only.
-- **mp.zeta(s,1) BUG** in this mpmath version (returns ζ(s), not ζ′). Audit clean: no
-  recorded verdict used it. Use mp.diff(mp.zeta, s, n) going forward.
-- **8C d_N ladder** certified to N=5000 (d_N·√logN ≈ 0.212 flat); N=10000 compute running.
-- **Wave-32 swarm:** 6/6 REFUTED; swarm self-rejected its synthesis; coordinator closed
-  (final-verdict.md). Verifier kills sharp (g0-1 index −1, g1-1 negative denominator); one
-  verifier justification corrected (Carleson kappa blowup is real, exponential — verdict
-  kept for the right reason: conditioning is operator-only).
+- **REAL-PART DEFECT D_ζ(t) — first genuine one-way discriminator of the session (949bf5e, 79e633f).**
+  D_ζ(t) = Re(ζ′/ζ)(1/2+it) − [log(π)/2 − ½Re ψ(1/4+it/2)] = Σ_ρ (1/2−β_ρ)/|s−ρ|².
+  D_ζ ≡ 0 (all t) ⟺ RH. Measured: zeta D = 1e-41 (consistency), planted world D = −10.4→−0.42
+  (off-line pole signature, matches −0.1/|s−ρ₀|² exactly), DH D = −0.8047 constant (gamma
+  mismatch offset — trivial L-function effect). Computable directly, non-circular.
+  **CORRECTION:** this shows the earlier "new theorem" (d644dd4) was MISREAD — the identity
+  Re(ζ′/ζ) = gamma-only is RH-equivalent (real-part vanishing), NOT zero-config. The 1e-13
+  verification only confirms the first ~1e5 zeros are on the line.
+  Honest limits: finite-t check only (no proving power); novelty CONJECTURED-likely-classical
+  (real part of Hadamard/explicit formula).
+- **Waves 24–33: 0 survivors** (before D_ζ). Every LLM-generated discriminator candidate died —
+  REFUTED by probe, RESTATEMENT, TAUTOLOGY, CIRCULAR, FE-family, or dipole-detector.
+- **Discriminator-class exhaustion (PROVEN structural negatives):** exact-identity class EMPTY
+  (exact-break + no-β_k contradictory — D_ζ is the counterexample structure that bypasses this
+  by using the REAL-part channel), class-4 (FE+Euler) EMPTY, conditioning operator-only.
+- **ξ-jet lane #3 PROVEN-closed** with new proof (732593f) — but the "FE-forced" identity at
+  its core is now understood as RH-equivalent (see correction above).
+- **mp.zeta(s,1) BUG** (returns ζ(s)); audit clean.
+- **8C d_N ladder** certified to N=5000 (d_N·√logN ≈ 0.212 flat); N=10000 running.
+- **wave-28 g1-0 REFUTED by its promised probe** (arithmetic-kernel Gram no separation).
+- **8C d_N RH-false control structurally unavailable** (planted Beurling has wrong coefficients).
 
-**Firewall:** nothing above is RH evidence or an RH proof. All direct-RH lanes tested are
-closed or blocked; the search continues (see next section).
+**Firewall:** nothing above is RH evidence or an RH proof. The real-part defect is a genuine
+characterization with clean numerics but no proving power (finite-t check). All direct-RH lanes
+tested are closed or blocked; the search continues (see next section).
 
 ---
 
