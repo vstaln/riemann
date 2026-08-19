@@ -20,13 +20,20 @@ Four candidates produced. **Result: NO survivor; probes settle 2 of 4.**
    G²/H Cauchy fatality (even full Gonek+Ng gives zero asymptotic proportion). Also a higher
    sibling of wave-23 agy-L3 (same Turán family), already REFUTED numerically. Do not fund.
 3. **C3 — Báez–Duarte energy center-of-mass** `V(N) = (1/d_N²)·Σ_{k≤N} k·a_k*²`,
-   claim V(N)/(N·log N) ≤ C with **C ≈ 0.182 flat**. **REFUTED — CHECKED NUMERICALLY.**
-   Probed on the certified k=1..N basis (my a* reproduces wave8c d_N exactly:
-   0.1510/0.1268/0.1192 at N=10/20/30, so the coefficients are right):
-   **V/(N·log N) = 19.2 → 25.8 → 30.5 (N=10/20/30)** — a factor ~150 above the claimed 0.182
-   and *rising*, not flat. C3's quantitative claim is false as stated. (Whether some other
-   weighted coefficient-energy separates RH from a planted-zero world is not settled by this;
-   but this specific object/constant is dead.)
+   claim V(N)/(N·log N) ≤ C with **C ≈ 0.182 flat**. **REFUTED AS STATED — CHECKED NUMERICALLY,
+   with a material nuance.** agy's LITERAL object (the 1/d_N²-normalized V): probed on the
+   certified k=1..N basis (d_N reproduces wave8c exactly: 0.1510/0.1268/0.1192 at
+   N=10/20/30), gives V/(N·log N) = 19.2 → 25.8 → 30.5 (N=10/20/30) — ~100x above the claimed
+   0.182 and *rising*, because 1/d_N² ~ log N multiplies in. So agy's stated object/constant is
+   REFUTED. **However**, the UNNORMALIZED coefficient-energy U(N)=Σ_{k≤N} k·a_k² (a different,
+   arguably more natural object) is roughly FLAT at U/(N·log N) ≈ 0.40–0.58 over N=10..40
+   (0.44,0.46,0.41,0.40,0.43,0.50,0.58) — i.e. U(N) ≈ c·N·log N with c≈0.45, which is the
+   growth-law shape agy INTENDED, just with a different constant than his 0.182. The last two
+   points (0.50,0.58) drift up, so N·logN vs N is not cleanly separated at N≤40; needs larger N
+   and the planted-zero control. VERDICT: agy's stated C3 object dead; a corrected
+   unnormalized coefficient-energy with its own growth law is a genuinely-new probe still open
+   (lane #5) — being tested with a planted-zero control by a background subagent
+   (e0173b1e).
 4. **C4 — Mellin–Möbius Hankel singularity radius** `R(K)=[det H_K/det H_{K−1}]^(−1/2K)`,
    claim R(K) > 1.45 → r_c = 2−sup Re ρ = 1.5. **RESTATEMENT (dead).** The radius of
    convergence of 1/ζ at s=2 is exactly 2 − (distance to nearest numerator singularity),

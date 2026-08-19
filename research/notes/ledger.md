@@ -1106,7 +1106,10 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   numerically unstable, returns ~1e29 spurious values, not usable as a discriminant. C2
   (4th-order Turan jet Phi>0) STRUCTURALLY DEAD (lane #3 PROVEN closed: rung-2 kill + G2/H
   Cauchy fatality; sibling of refuted agy-L3). C3 (B-D energy center-of-mass V(N)/(N log N)
-  <= C=0.182) REFUTED numerically: measured V/(N log N)=19.2->25.8->30.5 (N=10/20/30), ~150x
-  above claimed 0.182 and rising (validated B-D basis reproduces wave8c d_N exactly). C4
+  <= C=0.182) REFUTED AS STATED: agy's 1/d_N^2-normalized V/(N logN)=19.2->30.5 (N=10/20/30),
+  ~100x above 0.182 and rising. **Material nuance:** the UNNORMALIZED coefficient-energy
+  U(N)=sum k*a_k^2 is roughly FLAT at U/(N logN) ~ 0.40-0.58 (N=10..40), i.e. ~c*N*logN with
+  c~0.45 — the growth-law shape agy intended, different constant; not cleanly N-logN vs N at
+  N<=40, and no planted-zero control run. OPEN lane #5 probe (background subagent e0173b1e). C4
   (Mellin-Mobius Hankel radius) RESTATEMENT (radius of conv of 1/zeta at s=2 = pole-location
-  = RH restated). No survivor. Controls not reached (candidates died before meaningful control run).
+  = RH restated). No survivor as stated; corrected C3-object is the only genuinely new thread.
