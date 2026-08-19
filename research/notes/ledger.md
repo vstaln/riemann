@@ -1598,3 +1598,22 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
 - VERDICT: the "new math entirely" ask produced a fabricated formula and a topological
   repackaging of zero-counting. Generator collapse + structural exhaustion confirmed for the
   Nth time. No survivor.
+
+## Wave-40: critical-point count discriminator — VERIFIED, but Laguerre-classical (2026-08-19)
+- OBJECT: count of real critical points of Xi(t) = xi(1/2+it) in each inter-zero interval
+  (gamma_k, gamma_{k+1}). Xi real on the line; its zeros = on-line zeta zeros; critical points
+  = zeros of Xi'(t) (sign changes of Xi').
+- REAL ZETA: all 27 gaps of first 28 zeros have EXACTLY 1 critical point each (Rolle: >= 1
+  odd; RH structure: exactly 1). CHECKED NUMERICALLY.
+- MODEL (on-line zeros + planted FE pair (delta, g0) in a gap): critical pts in containing
+  gap = 2 (for delta=0.3/0.5, g0 anywhere). The pair's positive-definite factor
+  ((it-delta)^2+g0^2)((it+delta)^2+g0^2) adds a wiggle -> extra critical point.
+- SO: "exactly 1 critical point per gap" <-> no off-line pairs = RH-consistent; a planted
+  pair -> 2. Integer-valued, computable, world-separating.
+- HONEST CLASSICAL STATUS: this is the LAGUERRE THEOREM family (zeros of xi real <-> zeros
+  of xi' real and interleaving). "Count = 1 per gap" is a finite-N version of RH <-> xi has
+  only real zeros. The discriminator is a cleaner computational form of a classical
+  equivalence — NOT new math, no proof power beyond the classical theorem (which itself
+  doesn't prove RH). It joins the Herglotz family as a genuine-but-classical discriminator.
+- NET: wave-40 no new proof power; the object is a Laguerre-family reformulation, verified
+  cleanly. The search's structural wall (finite-N consistency vs continuum proof) holds.
