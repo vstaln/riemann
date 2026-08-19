@@ -847,3 +847,29 @@ The lambda-dilation class with coboundary-optimized p/q gives bounds ≤ ~0.674.
   fallbacks dead; the two genuinely-open lanes (8C sharp-rate, ξ-jet certificate) probed to
   their honest limits (consistency-level only / PROVEN-closed). Goal NOT cleared (RH not proven).
 - **Firewall intact:** nothing this session is RH evidence; every claim labeled.
+
+---
+
+## Waves 44-46 (swarm machinery fixed, 2026-08-19) — 0 survivors each, firewall intact
+- Swarm fixes verified working end-to-end (961498c + follow-ups): per-generator distinct
+  angles (6 lenses), per-node distinct free models, death-list gate, adversarial verifiers
+  (control-mandatory + fabrication-kill), judge rejecting unsupported synthesis.
+- Wave-44: 6/6 diverse, gate 4 rejects, 3 REFUTED (missing control), judge rejected synthesis
+  (Weil/Slepian drift). Wave-45: g0-0 REFUTED (no control), Hessian-Mellin synthesis low-value;
+  serial-imitation file leak fixed (own-ideas-only writes). Wave-46: 6 distinct angles confirmed,
+  3 REFUTED (control/fabrication kills), judge rejected incomplete synthesis.
+- NEW PROVEN results this session:
+  * Transverse curvature planted pair contribution EXACTLY -2/delta^2 (PROVEN derivation +
+    numeric 2.7e-10); L_pair(0) = -22.222... exact.
+  * Higher-derivative FE-blindness: 4th t-derivative pair contribution +12/delta^4 (PROVEN,
+    same sign as on-line) -> transverse curvature is the UNIQUE low-order FE symmetry-breaker.
+  * Weighted-L integrals and discrete midpoint sums of L do NOT flip sign on planted (constant
+    -2/d^2 swamped by growing positive on-line contribution) -> L separates only pointwise;
+    the channel is exhausted.
+  * Gap-certificate verdict: routes A (density) / B (Hadamard tail) provably reduce to
+    zero-counting control = open problem; route C (verification) gives PROVEN finite-height
+    certificate, consistency-only. A continuum certificate IS a proof of RH.
+  * 8C: N>5000 closed (cubic interval-work, 16.5h for consistency point); ladder certified
+    to N=5000 (flat law 0.212).
+- Standing firewall: nothing is RH evidence; every discriminator is classical, finite-N
+  consistency only, no continuum proof power. Goal NOT cleared.
