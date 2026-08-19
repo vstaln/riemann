@@ -1846,3 +1846,18 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   firewall. (Im channel: f(x)=-2x/(d^2+x^2) odd, f'(0)=-2/d^2, f'''(0)=+12/d^4.)
 - Waves 43-49: 0 survivors each (seven consecutive). The firewall holds from every
   direction, now including the Im-channel/differential-polynomial taxonomy.
+
+## Wronskian closure PROVEN (2026-08-19, wave-50) — completeness step
+- IDENTITY (exact algebra, numeric-verified to 1e-15): W(xi,xi')/xi^2 = (xi'/xi)' where
+  W = xi*xi'' - (xi')^2. Hence EVERY Wronskian/determinant object built from xi and its
+  derivatives is a differential polynomial of the log-derivative -> COVERED by the
+  taxonomy (PROVEN exhausted class).
+- CONSEQUENCE: the "Wronskian" escape hatch (frontier question a) is closed. Any
+  RH-equivalent sign condition on W(xi,xi') or higher Wronskians reduces to the
+  differential-polynomial class, which is PROVEN exhausted (one local -2/d^2 signature
+  per channel, everything else blind or odd-integrating-to-zero).
+- COMPLETENESS PICTURE: functions of xi analytic in the zero configuration, built from
+  xi and derivatives (Wronskians, determinants, differential polynomials) -> all covered.
+  The remaining open class is kernel/integral objects (de Branges/Weil), which direction
+  1 shows reduces to zero-counting control. The firewall's coverage is now nearly total
+  for the local/analytic class.
