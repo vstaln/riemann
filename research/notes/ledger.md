@@ -1695,3 +1695,19 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
 - Honest status: 8C ladder CLOSED at N=5000 (certified); N>5000 beyond compute budget
   under the cubic fill. A quadratic fill would need gcd-class structure exploitation
   (future infra work, not funded now). No new data point this session from 8C.
+
+## Transverse-curvature exact planted prediction (2026-08-19, wave-45 probe)
+- PROVEN by direct derivation: for an off-line FE pair (1/2+-delta at ordinate g), the
+  transverse curvature L(t)=d/ds Re(xi'/xi)(s+it) at s=1/2, t=g contributes EXACTLY -2/delta^2
+  (sigma-derivative breaks the pair symmetry: (x^2-d^2)/(x^2+d^2)^2 summed over the pair =
+  2(x^2-d^2)/D^2 -> -2/d^2 at x=0).
+- Measured: L_planted(g1) = -22.17 vs -2/0.3^2 = -22.222 (x=1e-3 offset accounts for the 7e-4
+  gap; at x=0 exact). RH world: L_rh(g1) = +1e6 (on-line zero 1/(t-g)^2 dominates). Weighted
+  integrals I_planted < I_rh for w=1 and w=1/(1+t^2) (-2319/-11.5 diffs).
+- HONEST STATUS: this is the SAME transverse-curvature discriminator verified in wave-35
+  (9f5c0f8, "planted pair -> -13.3 dip"); the new probe adds the EXACT -2/delta^2 derivation
+  and the weighted-integral consistency check. NOT a new object. The differential channel is
+  real but classical (finite-N consistency only, same firewall).
+- Midpoint-resolvent channel: planted quartet makes Phi_k BIGGER (4 ordinates at g1 add
+  positively), not a clean one-way sign flip — FE-pair-symmetry blindness reconfirmed in the
+  midpoint channel (the -1043.9 violation was at the planted quartet's own collapsed midpoint).
