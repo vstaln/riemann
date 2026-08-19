@@ -1273,3 +1273,13 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   L-functions). Killing reason is the discriminator-impossibility, not the truncation claim.
 - Lesson: even the verifiers' justifications need numeric scrutiny; the verdict was right,
   the reason was half-right.
+
+## wave-32 ξ'-winding numeric check (Poincare-Hopf/Speiser consistency, 2026-08-19)
+- Probed: winding of xi'(s) around boxes avoiding the critical line, t in [1,30].
+- LEFT [0.01,0.49]x[1,30]: winding = 0 (consistent with Speiser: no xi' zeros in Re<1/2 <=> RH).
+- RIGHT [0.51,0.99]x[1,30]: winding = 0 (no xi' zeros in right strip at this scale).
+- Verdict: CONSISTENCY-LEVEL only. The winding mechanism IS the Speiser equivalence
+  (blocklisted restatement family). Confirms the verifier's g0-1 kill (hydrodynamic index
+  argument structurally wrong: no interior stagnation point with index +1 appears; the
+  Poincare-Hopf index of the vector field doesn't trap anything in finite boxes).
+- Not a discriminator; recorded as consistency evidence for the Speiser structure.
