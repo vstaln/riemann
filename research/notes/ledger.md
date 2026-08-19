@@ -1627,3 +1627,24 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
 - HONEST: both are Laguerre-family consistency checks — genuine but classical, no proof power.
   The off-line critical-point scan is a finite-region zero-search for xi'-zeros (restatement-
   adjacent: it's checking the Laguerre equivalence's predictions on known-consistent data).
+
+## Swarm infrastructure fixes (2026-08-19, wave-44) — root causes addressed
+- PROBLEM: wave-43 swarm (6 gen / 4 exec / 4 ver) produced IDENTICAL ideas across all 6
+  generators (generator collapse at scale); gate weak (only tried_levers substring, no
+  death-list); verifier LLM-only; free endpoint 429ed (deepseek-v4-flash-free exhausted).
+- FIXES (committed to tools/swarm_langgraph/swarm.py):
+  1. Per-generator UNIQUE angles (6 lens assignments: HESSIAN/ARCHIMEDEAN, TOPOLOGICAL-INDEX,
+     GAP-STRUCTURE, ARITHMETIC-DUALITY, CONTROL/BLASCHKE, FRAME/INFO-THEORY) + hard uniqueness
+     instruction + per-angle ban words.
+  2. Per-node distinct MODELS (--models arg; llms dict keyed by model id; generators/executors/
+     verifiers each get their own model). Root cause of collapse: shared client + same prompt.
+  3. Death-list GATE: DEATH_PATTERNS classifier (d_N, winding/argument-principle, explicit-
+     formula residues, Herglotz, Laguerre, Weil/Li/Gram/Jensen, zero-search, dipole-wells,
+     Euler-product moments, hyperdeterminant, cosh/nodal/Hankel/Turan) + sibling-dedup.
+  4. Adversarial VERIFIER: mandatory checks (control named or REFUTED; fires-on-control kill;
+     derived-not-fabricated; honest label; death-list kill).
+- WORKING FREE MODELS verified: hy3-free, nemotron-3-ultra-free, nemotron-3.5-lightning-free,
+  laguna-s-2.1-free (deepseek-v4-flash-free + mimo-v2.5-free 429; paid models 401 no credits).
+- WAVE-44 (running): 6/6 diverse ideas, gate rejected 4 death-list ideas, verifiers REFUTED 3
+  (all missing RH-false control). Synthesis drifted back to closed Weil/Slepian (swarm
+  convergence limitation). Verdicts so far: all REFUTED for missing control — firewall intact.

@@ -205,55 +205,40 @@ def planner_node(state: SwarmState, config) -> dict:
 def make_idea_gen(idx: int):
     def node(state: SwarmState, config) -> dict:
         cfg = config["configurable"]
-        llm = cfg["llm"]
+        llm = cfg["llms"].get(cfg["gen_models"][idx % len(cfg["gen_models"])], cfg["llm"])
         task = state["tasks"][idx % len(state["tasks"])]
-        if idx == 4:
-            prompt = (
-                "PURE CROSS-DOMAIN TRANSFER. For this task, produce 3 ideas where "
-                "EACH one imports a mechanism from a DIFFERENT non-math domain. "
-                "For each: (1) name the domain and the solved problem there; "
-                "(2) abstract BOTH problems to structural essence and show the "
-                "isomorphism (operators, kernels, inequalities); (3) state the "
-                "exact transportable step as a PROOF-SHAPED move (a lemma with a "
-                "named known theorem it reduces to); (4) state where the analogy "
-                "BREAKS (the boundary test — the part that does not transfer is "
-                "where the proof must be done by hand); (5) the ONE cheap "
-                "Rust/rug check (f64 <1min or one bounded MPFR solve) that would "
-                "change belief, and what each outcome means. Candidate domains: "
-                "statistical mechanics / transfer matrices, ODE disconjugacy "
-                "(Kamenev-Hartman-Wintner), signal processing / moment problems, "
-                "control theory / Hurwitz stability, random matrix / spectral "
-                "theory, information theory / frames, biology / immunology "
-                "(discovery-through-diversity), economics / mechanism design "
-                "(incentives-as-positivity). Do not repeat: "
-                f"{state['tried_levers'][:15]}.\nTASK: {task}\n"
-                'Reply ONLY JSON: {"ideas": ["idea1", "idea2", "idea3"]}'
-            )
-        else:
-            prompt = (
-                "Generate 3 diverse CONJECTURED research ideas for this task, each "
-                "THROUGH A DIFFERENT S4H LENS, and each stated as a PROOF-SHAPED move: "
-                "a lemma to prove, a structure to exhibit, an inequality with a "
-                "candidate mechanism, a reduction to a named known theorem. Never a "
-                "compute grind and never a restatement. At least ONE of the three "
-                "ideas MUST import a mechanism from a NON-mathematics domain (physics, "
-                "signal processing, control theory, statistical mechanics, information "
-                "theory, biology, optimization) by structural analogy — name the "
-                "domain, the solved problem there, and the exact transferable step. "
-                "The three lenses: "
-                "(1) ASSUMPTION-EXCAVATOR: name the hidden assumption this lever "
-                "silently relies on, then state the move that removes or proves it; "
-                "(2) CROSS-DOMAIN ANALOGY: name a solved problem in another domain "
-                "whose operator, kernel, or inequality structure is isomorphic to "
-                "this one, and state the transportable step; "
-                "(3) CONSTRAINT-HARDNESS-TESTING: state the apparent wall, then the "
-                "move that either proves the wall is real or routes around it. "
-                "Each idea must end with: the ONE cheap Rust/rug check (f64 <1min, or "
-                "one bounded MPFR solve) that would change belief, and what each "
-                "outcome would mean. Do not repeat: "
-                f"{state['tried_levers'][:15]}.\nTASK: {task}\n"
-                'Reply ONLY JSON: {"ideas": ["idea1", "idea2", "idea3"]}'
-            )
+        # PER-GENERATOR DISTINCT ANGLE (fix: all generators shared the same prompt
+        # -> identical outputs under rate-limited fallback). Each generator now gets
+        # a unique lens pair + a hard uniqueness instruction.
+        GEN_ANGLES = [
+            ("HESSIAN/ARCHIMEDEAN", "assumption-excavator on the gamma-factor background + a TOTAL-POSITIVITY move", "total-positivity, Polya-Laguerre, log-concavity"),
+            ("TOPOLOGICAL-INDEX", "cross-domain analogy to 2D fluid dynamics / Poincare-Hopf index conservation", "Poincare-Hopf, winding, index, vortex"),
+            ("GAP-STRUCTURE", "constraint-hardness-testing on the zero-gap barrier; exact gap-gap correlation objects", "gap, spacing, midpoint, resolvent"),
+            ("ARITHMETIC-DUALITY", "assumption-excavator on Baez-Duarte / Mellin bases; dual witnesses, Hardy-space", "Baez-Duarte, Mellin, dual, Hardy"),
+            ("CONTROL/BLASHKE", "cross-domain analogy to control theory / non-minimum-phase zeros / Blaschke factors", "Blaschke, all-pass, Poisson-Bode, H-infinity"),
+            ("FRAME/INFO-THEORY", "cross-domain analogy to frame theory / information theory / tight frames", "frame, information, entropy, tight-frame"),
+        ]
+        angle, lens_desc, ban_words = GEN_ANGLES[idx % len(GEN_ANGLES)]
+        prompt = (
+            f"You are generator {idx}. Your UNIQUE angle this wave: {angle} — {lens_desc}. "
+            f"Other generators are covering: {[a for a,_,_ in GEN_ANGLES if a != angle]}. "
+            "You MUST produce ideas that ONLY your angle can see. Do NOT produce any idea "
+            "that another generator's angle would produce. Produce 2 ideas, each: "
+            "(1) a PROOF-SHAPED move (a lemma to prove, a structure to exhibit, a reduction "
+            "to a named known theorem); (2) the EXACT computable statement (what to evaluate, "
+            "at what N/T, in what precision); (3) the RH-false control (Davenport-Heilbronn, "
+            "Epstein, or planted FE pair) and the EXACT predicted value there (derived, or "
+            "say 'must be measured' honestly); (4) the label (PROVEN-able / CONJECTURED / "
+            "measurement-probe); (5) the ONE cheap Rust/rug check (<1min) that would change "
+            "belief and what each outcome means. "
+            f"NEVER use these (death list): {ban_words}, d_N floors, winding/argument-principle "
+            "zero-counts, explicit-formula residue extraction, zero-search, Herglotz-family "
+            "objects, midpoint resolvent floors, critical-point counts (all classical or "
+            "closed). State which UNIQUE angle you're using and why your idea is not on the "
+            "death list.\n"
+            f"TASK: {task}\nDo not repeat: {state['tried_levers'][:10]}.\n"
+            'Reply ONLY JSON: {"ideas": ["idea1", "idea2"]}'
+        )
         raw = _safe_invoke(llm, prompt)
         ideas = _read_json(raw).get("ideas", [])
         # agy (the idea co-author) returns markdown candidates, not the JSON
@@ -262,8 +247,8 @@ def make_idea_gen(idx: int):
             import re as _re
             ideas = [_re.sub(r"^#{1,6}\s*", "", s).strip()
                      for s in _re.split(r"(?=^#{1,6}\s*Candidate)", raw, flags=_re.M)
-                     if "Candidate" in s][:3]
-        ideas = [str(i) for i in ideas if str(i).strip()][:3]
+                     if "Candidate" in s][:2]
+        ideas = [str(i) for i in ideas if str(i).strip()][:2]
         out = [
             {"id": f"g{idx}-{j}", "generator": f"idea-gen-{idx}", "task": task,
              "idea": i, "label": "CONJECTURED"}
@@ -284,11 +269,40 @@ def make_idea_gen(idx: int):
 
 def gate_node(state: SwarmState, config) -> dict:
     tried = " | ".join(state["tried_levers"]).lower()
+    # Death-list classifier: reject ideas whose mechanism is a known-collapse class
+    # (all PROVEN dead or classical-only in prior waves). Root-cause fix for the
+    # swarm re-emitting dead classes.
+    DEATH_PATTERNS = [
+        "d_n", "d_n^2", "projection defect", "baez-duarte" ,"beurling",  # d_N bounds (d_N^2<=1 kills divergence; B-D lane closed)
+        "winding", "argument principle", "index theorem", "poincare-hopf",  # zero-counting restatements
+        "residue extraction", "contour shift", "explicit formula",  # explicit-formula restatements
+        "herglotz", "nevanlinna", "transverse curvature", "midpoint", "gap-resolvent",  # classical Herglotz family
+        "critical point", "laguerre", "interleav",  # Laguerre family
+        "zero search", "locat", "pole", "root-find",  # zero-location restatements
+        "dipole", "log-derivative curvature", "hessian determinant",  # dipole-well / local curvature
+        "euler product", "prime martingale", "scale orthogonality",  # Euler-product presuppositions
+        "weil", "li coefficient", "gram spectral", "jensen", "li_k",  # closed positivity families
+        "hankel radius", "turan", "prime-zeta",  # closed families
+        "hyperdeterminant", "tensor",  # FE-family
+        "cosh invariant", "stieltjes hankel", "nodal",  # tautology/circular/restatement
+        "hardy space", "blaschke", "all-pass",  # wave-43 already-collapsed control/Baschke
+    ]
     accepted = []
+    seen = set()
     for idea in state["ideas"]:
         hay = idea["idea"].lower()
+        # death-list kill
+        if any(p in hay for p in DEATH_PATTERNS):
+            _write(state, f"gate-rejects.md", _dump_list("GATE REJECTS (death-list)", [idea["idea"][:200]]))
+            continue
+        # tried-lever duplicate kill
         if any(t in hay for t in tried.split(" | ") if len(t) > 8):
-            continue  # duplicate of a tried lever -> drop
+            continue
+        # sibling-dedup (same idea text from collapsed generators)
+        norm = " ".join(hay.split())[:400]
+        if norm in seen:
+            continue
+        seen.add(norm)
         accepted.append(idea)
     return {"accepted": accepted}
 
@@ -300,7 +314,7 @@ def gate_node(state: SwarmState, config) -> dict:
 def make_executor(idx: int):
     def node(state: SwarmState, config) -> dict:
         cfg = config["configurable"]
-        llm = cfg["llm"]
+        llm = cfg["llms"].get(cfg["exec_models"][idx % len(cfg["exec_models"])], cfg["llm"])
         slice_ = state["accepted"][idx::cfg["executors"]]
         new_claims = []
         for idea in slice_:
@@ -339,22 +353,32 @@ def make_executor(idx: int):
 def make_verifier(idx: int):
     def node(state: SwarmState, config) -> dict:
         cfg = config["configurable"]
-        llm = cfg["llm"]
+        llm = cfg["llms"].get(cfg["ver_models"][idx % len(cfg["ver_models"])], cfg["llm"])
         # Only verify claims not yet verified (idempotent across resumes/rounds)
         already = {v["claim_id"] for v in state["verdicts"]}
         slice_ = [c for c in state["claims"][idx::cfg["verifiers"]] if c["idea_id"] not in already]
         new_verdicts = []
         for c in slice_:
             prompt = (
-                "Adversarially re-derive this claim from scratch. Try to break it: "
-                "is the label honest? is there a script behind numbers? Does the "
-                "same mechanism also 'prove' an RH-false model (planted-zero "
-                "Beurling, Davenport-Heilbronn, Epstein class-2, pow2/squares "
-                "Nyman system)? If the move fires on a control, it is wrong. "
+                "Adversarially re-derive this claim from scratch. Try to break it. "
+                "MANDATORY checks in order: "
+                "(1) CONTROL: does the claim NAME its RH-false control (Davenport-"
+                "Heilbronn, Epstein class-2, planted FE pair)? If NO control is named, "
+                "verdict REFUTED (no discriminator). "
+                "(2) Does the mechanism also 'prove' an RH-false model? If the move "
+                "fires on a control world, it is wrong (REFUTED). "
+                "(3) Is the predicted number DERIVED or 'must be measured'? A claimed "
+                "gap with no derivation and no script is a fabrication (REFUTED). "
+                "(4) Is the label honest (PROVEN-able vs CONJECTURED vs measurement)? "
+                "(5) Is the mechanism on the death list (d_N bounds, winding/"
+                "argument-principle, explicit-formula residues, Herglotz-family, "
+                "Laguerre-family, zero-search, dipole-wells, Euler-product moments, "
+                "Weil/Li/Gram/Jensen)? Any of those: REFUTED (classical or closed). "
+                "Never weaken a validator. "
                 "Reply "
                 'ONLY JSON: {"verdict": "VERIFIED|REFUTED|INCONCLUSIVE", '
-                '"evidence": "one sentence"}. Never weaken a validator.\n'
-                f"CLAIM: {c['claim'][:800]}\nLABEL: {c['label']}\nSCRIPT: {c['script']}"
+                '"evidence": "one sentence naming the control or the kill"}.\n'
+                f"CLAIM: {c['claim'][:900]}\nLABEL: {c['label']}\nSCRIPT: {c['script']}"
             )
             raw = _read_json(_safe_invoke(llm, prompt))
             new_verdicts.append({
@@ -536,17 +560,43 @@ def main():
     ap.add_argument("--rust-timeout", type=int, default=300)
     ap.add_argument("--frontier", type=str, default=None)
     ap.add_argument("--model", type=str, default="deepseek-v4-flash-free")
+    ap.add_argument("--models", type=str, default=None,
+                    help="comma-separated model ids cycled across generators/executors/verifiers "
+                         "(fix: per-node models prevent generator collapse under a shared client)")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
     wave = args.wave or _next_wave()
-    cfg = {
-        "llm": make_llm(args.model),
-        "generators": args.generators,
-        "executors": args.executors,
-        "verifiers": args.verifiers,
-        "rust_timeout": args.rust_timeout,
-    }
+    if args.models:
+        models = [m.strip() for m in args.models.split(",") if m.strip()]
+        # distinct client per model id: diversity is the root-cause fix for collapse
+        llms = {m: make_llm(m) for m in dict.fromkeys(models)}
+        gen_models = [models[i % len(models)] for i in range(args.generators)]
+        exec_models = [models[(args.generators + i) % len(models)] for i in range(args.executors)]
+        ver_models = [models[(args.generators + args.executors + i) % len(models)] for i in range(args.verifiers)]
+        cfg = {
+            "llm": make_llm(args.model),  # default/planner/synth
+            "gen_models": gen_models,
+            "exec_models": exec_models,
+            "ver_models": ver_models,
+            "llms": llms,
+            "generators": args.generators,
+            "executors": args.executors,
+            "verifiers": args.verifiers,
+            "rust_timeout": args.rust_timeout,
+        }
+    else:
+        cfg = {
+            "llm": make_llm(args.model),
+            "gen_models": [args.model] * args.generators,
+            "exec_models": [args.model] * args.executors,
+            "ver_models": [args.model] * args.verifiers,
+            "llms": {},
+            "generators": args.generators,
+            "executors": args.executors,
+            "verifiers": args.verifiers,
+            "rust_timeout": args.rust_timeout,
+        }
     graph = build_graph(cfg)
     if args.dry_run:
         print("Graph compiles. Nodes:", [n for n in graph.compile().get_graph().nodes])
@@ -554,7 +604,10 @@ def main():
 
     with SqliteSaver.from_conn_string(str(RIEMANN / "research" / "waves" / "swarm.sqlite")) as checkpointer:
         app = graph.compile(checkpointer=checkpointer)
-        thread = {"configurable": {"thread_id": f"wave-{wave}", "llm": cfg["llm"], "generators": cfg["generators"],
+        thread = {"configurable": {"thread_id": f"wave-{wave}", "llm": cfg["llm"],
+                                   "gen_models": cfg["gen_models"], "exec_models": cfg["exec_models"],
+                                   "ver_models": cfg["ver_models"], "llms": cfg["llms"],
+                                   "generators": cfg["generators"],
                                    "executors": cfg["executors"], "verifiers": cfg["verifiers"],
                                    "rust_timeout": cfg["rust_timeout"]}}
         existing = checkpointer.get_tuple({"configurable": {"thread_id": f"wave-{wave}"}})
