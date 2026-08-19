@@ -8,3 +8,57 @@ N= 20 d_N=0.12682300 d_N*sqrt(logN)=0.219508 delta=d^2*logN=0.048184 W=2.484672e
    monotone: d_N <= d_15  (0.12682300113447006 <= 0.13338336905168793)  = True
 N= 25 d_N=0.12307023 d_N*sqrt(logN)=0.220803 delta=d^2*logN=0.048754 W=3.222686e+01 V(N)=2.127708e+03 V/(N logN)=26.4404
    monotone: d_N <= d_20  (0.12307022917389929 <= 0.12682300113447006)  = True
+N= 30 d_N=0.11919202 d_N*sqrt(logN)=0.219818 delta=d^2*logN=0.048320 W=4.421297e+01 V(N)=3.112113e+03 V/(N logN)=30.5002
+   GATE N=30: |d-certified|=2.20e-08  PASS=True
+   monotone: d_N <= d_25  (0.1191920219920856 <= 0.12307022917389929)  = True
+N= 35 d_N=0.11390978 d_N*sqrt(logN)=0.214784 delta=d^2*logN=0.046132 W=6.195603e+01 V(N)=4.774870e+03 V/(N logN)=38.3717
+   monotone: d_N <= d_30  (0.11390978177687865 <= 0.1191920219920856)  = True
+N= 40 d_N=0.11164143 d_N*sqrt(logN)=0.214424 delta=d^2*logN=0.045977 W=8.626253e+01 V(N)=6.921041e+03 V/(N logN)=46.9048
+   monotone: d_N <= d_35  (0.11164142513695983 <= 0.11390978177687865)  = True
+N= 45 d_N=0.10862244 d_N*sqrt(logN)=0.211930 delta=d^2*logN=0.044914 W=1.010186e+02 V(N)=8.561741e+03 V/(N logN)=49.9810
+   monotone: d_N <= d_40  (0.10862244007332451 <= 0.11164142513695983)  = True
+N= 50 d_N=0.10793710 d_N*sqrt(logN)=0.213487 delta=d^2*logN=0.045577 W=1.130600e+02 V(N)=9.704371e+03 V/(N logN)=49.6131
+   monotone: d_N <= d_45  (0.10793710437713087 <= 0.10862244007332451)  = True
+
+== growth-law fits (OLS on log-log) ==
+V ~ N^a:      a=1.9327  rms_resid(log)=0.0977  R2=0.99010
+W ~ N^a:      a=1.5265  rms_resid(log)=0.0946  R2=0.98521
+V~(N^2/logN): rms_resid(log)=0.0919  R2=0.66754  (slope 0 would mean exact law)
+V~(N logN):   rms_resid(log)=0.1048  R2=0.89589
+local exponent a_loc(N):
+   N= 15: a_loc=2.158  (V 4.42e+02->1.06e+03)
+   N= 20: a_loc=1.306  (V 1.06e+03->1.54e+03)
+   N= 25: a_loc=1.435  (V 1.54e+03->2.13e+03)
+   N= 30: a_loc=2.086  (V 2.13e+03->3.11e+03)
+   N= 35: a_loc=2.777  (V 3.11e+03->4.77e+03)
+   N= 40: a_loc=2.780  (V 4.77e+03->6.92e+03)
+   N= 45: a_loc=1.806  (V 6.92e+03->8.56e+03)
+   N= 50: a_loc=1.189  (V 8.56e+03->9.70e+03)
+rows CSV (N,d,d2,W,V):
+   10,0.15104104,2.28133948e-02,1.008867e+01,4.422256e+02
+   15,0.13338337,1.77911231e-02,1.887569e+01,1.060961e+03
+   20,0.12682300,1.60840736e-02,2.484672e+01,1.544803e+03
+   25,0.12307023,1.51462813e-02,3.222686e+01,2.127708e+03
+   30,0.11919202,1.42067381e-02,4.421297e+01,3.112113e+03
+   35,0.11390978,1.29754384e-02,6.195603e+01,4.774870e+03
+   40,0.11164143,1.24638078e-02,8.626253e+01,6.921041e+03
+   45,0.10862244,1.17988345e-02,1.010186e+02,8.561741e+03
+   50,0.10793710,1.16504185e-02,1.130600e+02,9.704371e+03
+
+== PLANTED-ZERO CONTROL (beta=0.7) - honest report ==
+PROVEN (Báez-Duarte iff d_N->0 <==> RH [campaign contract] + monotone d_N, nested spans):
+  RH-false world => d_N does NOT tend to 0; d_N decreases to d_inf=dist(1,cl(span))>0.
+  Real-world certified law d_N*sqrt(log N) ~ 0.212 FLAT is then violated: planted
+  signature d_N*sqrt(log N) ~ d_inf*sqrt(log N) -> +inf (unbounded divergence) whereas
+  the real world is bounded-flat. => genuinely different growth signature at the d level.
+CONJECTURED (Mellin/coefficient-runaway; NOT computed numerically - building the true
+  planted Beurling Gram is infeasible in this budget):
+  real d_N^2 ~ 0.045/log N (flat delta), so V(N)=W(N)/d_N^2 carries an extra ~log N
+  multiplier in the real world; in the planted world 1/d_N^2 saturates at d_inf^-2, and
+  coefficients a_k* must fight the pole of 1/zeta at s=0.7 under the Mellin transport
+  (Dirichlet polynomials are entire), driving runaway weighted energy W(N).
+  A planted V(N) trajectory was NOT computed; the V-axis prediction is CONJECTURED, not run.
+
+Label matrix: d_N/V(N)/W(N) real-world numbers: CHECKED NUMERICALLY; certified gates: PROVEN;
+BD iff: PROVEN (literature/campaign contract); planted d-axis divergence: PROVEN;
+planted V-axis behavior: CONJECTURED.

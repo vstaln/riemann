@@ -1120,3 +1120,11 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   a NEW separator (true planted Gram, generalized-prime inner products) NOT computed;
   trajectory CONJECTURED. ABANDONED: consistency-only, restatement-risk, not a new one-way
   discriminant. Lane #5 stays open for genuinely new objects.
+
+## Wave 24 (2026-08-19) — agy batch B, 0 survivors
+- **final.md** — C1 midpoint Hessian H>=4/gap^2 REFUTED (DH control: 0/9 violate — proves too
+  much; my first probe had a sign bug, corrected before adjudicating). C2 B-D binom-sum formula
+  WRONG (0.896/1.339/1.529 vs certified 0.151/0.127/0.119; "0.106=0.5*0.212" numerology). C3
+  explicit-formula L^2 defect RESTATEMENT (explicit formula itself). C4 Q_3 cross-kurtosis
+  REFUTED (0.684/0.705/0.719 at T=100/200/300, not 0.200, rising; |Q-0.2| grows 0.48->0.52).
+  Swarm: deepseek endpoint weekly-limit 429, zero ideas. All claims labeled, controls run.
