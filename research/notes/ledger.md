@@ -1324,3 +1324,13 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
 - VERDICT: 8C d_N control remains "stated, not run" — for a STRUCTURAL reason (no available model
   preserves the BD coefficient structure while planting a zero). The real-world d_N flat law stands
   as CHECKED NUMERICALLY only.
+
+## wave-28 g1-0 PROBED and REFUTED (2026-08-19) — the promised run finally executed
+- g1-0 claim: Weil explicit-form arithmetic kernel Gram has lambda_min(Epstein) < 0 while
+  lambda_min(zeta) > 0 (representation-number resonance, h=2 class-character modulation).
+- Probe (Gaussian basis, arithmetic kernel sum_n a(n)/sqrt(n) G_j(log n) G_k(log n),
+  a=Lambda for zeta, a=r_Q for Epstein x^2+5y^2; N=15, nmax=20000):
+  lambda_min(zeta) = +1.36e-11, lambda_min(Epstein) = +9.67e-13 — BOTH positive (near-zero).
+- Result: NO negative eigenvalue for Epstein; NO separation (both near-singular = finite-basis
+  artifact, matching wave-25's Weil X-independence finding). g1-0 REFUTED by its own promised
+  probe. Coordinator's INCONCLUSIVE-downgrade vindicated with data.
