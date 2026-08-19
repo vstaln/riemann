@@ -760,3 +760,22 @@ The lambda-dilation class with coboundary-optimized p/q gives bounds ≤ ~0.674.
 - Landscape saturation: CHECKED NUMERICALLY (lattice floor search + grid-8000 verification)
 - In-class ceiling 0.6818: from prior session, unrestricted p/q
 - RH: OPEN; proportion-on-the-line only; NOT RH evidence
+
+## Session net 2026-08-19 (μ* probe + 8C + ξ-tower verified)
+
+- **Direction-2 soundstate 2×2 covariance SDP (working-goal named lever): DEAD, numerically
+  confirmed.** direction2-mustar-probe-2026-08-19.md: decisive 2×2-minor (Re f, Im f′/θ′)
+  λ₂/λ₁ shrinks 0.0657→0.0111 (Y=1..1000) → matrix minorant 2nd channel ~0 variance at
+  constraint level → μ* ≥ 1, no matrix minorant beats scalar (c₁*=0.753296, 0.6725).
+  Confirms batch-2 CLOSURE. Honest nuance: full 4×4 cov is rank-4 (top eig 50-63% trace),
+  so "matrix has no structure" phrasing overstrong; constraint-collapse survives. No RH content.
+- **8C finite-N correction law: MEASURED flat.** 8c-correction-law-2026-08-19.md: δ(N)=d_N²·logN
+  flat 0.0448-0.0525 (N=10..5000), gentle O(1/logN) bend, NOT O(1/√logN) sub-diffusive;
+  reinforces wave-23 agy L2 refutation; sharp-rate c≈0.212 reproduced. Consistency-only.
+- **ξ-tower G²/H Cauchy route: PROVEN fatal** (already in xitower-G-explicitformula): even at
+  full Gonek+Ng conj, N_s ≥ G²/H ~ (9/π⁶C₂)T/logT = zero asymptotic proportion (Cauchy needs
+  equal weights); rung-2 kill PROVEN (κ₁^(2)=4.57≫κ₁^(1)=1.14). Tower lane structurally CLOSED.
+- **Net: no surviving new one-way RH object.** The working goal's named lever + all named
+  fallbacks dead; the two genuinely-open lanes (8C sharp-rate, ξ-jet certificate) probed to
+  their honest limits (consistency-level only / PROVEN-closed). Goal NOT cleared (RH not proven).
+- **Firewall intact:** nothing this session is RH evidence; every claim labeled.
