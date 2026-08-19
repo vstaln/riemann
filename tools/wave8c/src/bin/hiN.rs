@@ -79,6 +79,49 @@ fn lcm(a: u64, b: u64) -> u64 {
 }
 
 // intervals (alpha,beta,floor(alpha/j),floor(alpha/k)) covering [1,1+L]  (copied from main.rs)
+// intervals by linear merge of the two arithmetic progressions j,2j,... and k,2k,...
+// (no sort, no per-element allocation). With scratch re-used across calls, this is
+// the difference between a malloc-choked cubic fill and a memory-friendly one.
+fn intervals_into(
+    j: u64, k: u64, l: u64,
+    pts: &mut Vec<u64>,
+    ivs: &mut Vec<(u64, u64, u64, u64)>,
+) {
+    let end = 1 + l;
+    pts.clear();
+    ivs.clear();
+    // linear merge of multiples of j and k in (1, end]
+    let mut mj = j; // first multiple of j > 1
+    let mut mk = k;
+    if mj == 1 { mj = 2 * j; }
+    if mk == 1 { mk = 2 * k; }
+    loop {
+        if mj > end && mk > end { break; }
+        if mj < mk {
+            pts.push(mj);
+            mj += j;
+        } else if mk < mj {
+            pts.push(mk);
+            mk += k;
+        } else { // equal -> dedup
+            pts.push(mj);
+            mj += j;
+            mk += k;
+        }
+    }
+    let mut cur = 1u64;
+    for &p in pts.iter() {
+        if p > cur {
+            ivs.push((cur, p, cur / j, cur / k));
+            cur = p;
+        }
+    }
+    if cur < end {
+        ivs.push((cur, end, cur / j, cur / k));
+    }
+}
+
+// Original sort-based intervals kept for validation harnesses.
 fn intervals(j: u64, k: u64, l: u64) -> Vec<(u64, u64, u64, u64)> {
     let end = 1 + l;
     let mut pts: Vec<u64> = Vec::with_capacity(((l / j) + (l / k) + 2) as usize);
@@ -389,15 +432,15 @@ fn pm(mode: PMode, l: u64) -> usize {
     }
 }
 
-fn gram_f64(j: u64, k: u64, z: &[f64], mode: PMode) -> f64 {
+fn gram_f64(j: u64, k: u64, z: &[f64], mode: PMode, scratch: &mut GramScratch) -> f64 {
     let l = lcm(j, k);
     let pmax = pm(mode, l).min(z.len());
-    let ivs = intervals(j, k, l);
+    let ivs = &scratch.ivs;
     let lf = l as f64;
     let jf = j as f64;
     let kf = k as f64;
     let mut total = 0.0f64;
-    for &(x1, x2, ai, bi) in &ivs {
+    for &(x1, x2, ai, bi) in ivs.iter() {
         let a = x1 as f64;
         let b = x2 as f64;
         let aif = ai as f64;
@@ -876,6 +919,21 @@ fn tri_solve_mpfr(l: &[SyncFloat], b: &[Float], n: usize) -> Vec<Float> {
 }
 
 // ---------------- threaded Gram fill (f64, lower triangle) ----------------
+// Reusable per-thread scratch: kills the per-element heap allocation that made the
+// Gram fill malloc-choked (cubic wall, ~13 elems/s/thread at N=10000).
+struct GramScratch {
+    pts: Vec<u64>,
+    ivs: Vec<(u64, u64, u64, u64)>,
+}
+impl GramScratch {
+    fn new() -> Self {
+        Self { pts: Vec::new(), ivs: Vec::new() }
+    }
+    fn prep(&mut self, j: u64, k: u64, l: u64) {
+        intervals_into(j, k, l, &mut self.pts, &mut self.ivs);
+    }
+}
+
 fn gram_fill_f64(n: usize, z: &[f64], mode: PMode) -> Vec<f64> {
     let mut g = vec![0.0f64; n * (n + 1) / 2];
     let base = SendPtr(g.as_mut_ptr());
@@ -887,22 +945,28 @@ fn gram_fill_f64(n: usize, z: &[f64], mode: PMode) -> Vec<f64> {
             let next = &next;
             let done = &done;
             let base = SendPtr(base.0);
-            s.spawn(move || loop {
-                let i = next.fetch_sub(1, Ordering::Relaxed);
-                if i == 0 || i > (1usize << 63) {
-                    break;
-                }
-                let i = i - 1;
-                let ji = (i + 1) as u64;
-                for k in 0..=i {
-                    let v = gram_f64(ji, (k + 1) as u64, z, mode);
-                    unsafe {
-                        *base.at(ij_flat(i, k)) = v;
+            s.spawn(move || {
+                let mut scratch = GramScratch::new();
+                loop {
+                    let i = next.fetch_sub(1, Ordering::Relaxed);
+                    if i == 0 || i > (1usize << 63) {
+                        break;
                     }
-                }
-                let d = done.fetch_add(1, Ordering::Relaxed) + 1;
-                if d % 250 == 0 {
-                    eprintln!("  gram f64: {}/{} rows", d, n);
+                    let i = i - 1;
+                    let ji = (i + 1) as u64;
+                    for k in 0..=i {
+                        let kj = (k + 1) as u64;
+                        let l = lcm(ji, kj);
+                        scratch.prep(ji, kj, l);
+                        let v = gram_f64(ji, kj, z, mode, &mut scratch);
+                        unsafe {
+                            *base.at(ij_flat(i, k)) = v;
+                        }
+                    }
+                    let d = done.fetch_add(1, Ordering::Relaxed) + 1;
+                    if d % 250 == 0 {
+                        eprintln!("  gram f64: {}/{} rows", d, n);
+                    }
                 }
             });
         }
@@ -1060,8 +1124,11 @@ fn phase_validate() {
             for k in 1..=j {
                 let gm = gram_mpfr_direct(j, k, &zmp_direct, PMode::Adaptive(31.0));
                 let gd = gram_dd(j, k, &wtab, PMode::Adaptive(31.0), None);
-                let gf_a = gram_f64(j, k, &zf, PMode::Adaptive(17.0));
-                let gf_32 = gram_f64(j, k, &zf, PMode::Fixed(32));
+                let mut scratch = GramScratch::new();
+                let l = lcm(j, k); scratch.prep(j, k, l);
+                let gf_a = gram_f64(j, k, &zf, PMode::Adaptive(17.0), &mut scratch);
+                scratch.prep(j, k, l);
+                let gf_32 = gram_f64(j, k, &zf, PMode::Fixed(32), &mut scratch);
                 let mpv = gm.to_f64();
                 if j == 1 && k == 1 {
                     g11_p32 = gf_32;
@@ -1152,12 +1219,14 @@ fn phase_validate() {
     {
         let idx = |i: usize| 1u64 << i;
         let mut last = 0.0;
+        let mut scratch = GramScratch::new();
         for m in 8..=14usize {
             let n = m + 1;
             let mut g = vec![0.0f64; n * (n + 1) / 2];
             for i in 0..n {
                 for k in 0..=i {
-                    g[ij_flat(i, k)] = gram_f64(idx(i), idx(k), &zf, PMode::Adaptive(17.0));
+                    let l = lcm(idx(i), idx(k)); scratch.prep(idx(i), idx(k), l);
+                    g[ij_flat(i, k)] = gram_f64(idx(i), idx(k), &zf, PMode::Adaptive(17.0), &mut scratch);
                 }
             }
             let b: Vec<f64> = (0..n).map(|i| b_f64(idx(i))).collect();
@@ -1233,7 +1302,9 @@ fn phase_prod(n: usize) {
         for s in 0..120 {
             let j = (1 + (rnd() * n as f64) as u64).min(n as u64);
             let k = (1 + (rnd() * j as f64) as u64).min(j);
-            let gf = gram_f64(j, k, &zf, PMode::Adaptive(17.0));
+            let mut scratch = GramScratch::new();
+            let l = lcm(j, k); scratch.prep(j, k, l);
+            let gf = gram_f64(j, k, &zf, PMode::Adaptive(17.0), &mut scratch);
             let gd = gram_dd(j, k, &wtab, PMode::Adaptive(31.0), None);
             let rel = (gf - gd.to_f64()).abs() / gd.to_f64().abs().max(1e-300);
             worst_fd = worst_fd.max(rel);
@@ -1297,7 +1368,9 @@ fn phase_sample(n: usize) {
     for s in 0..120 {
         let j = 1 + (rnd() * n as f64) as u64;
         let k = 1 + (rnd() * j as f64) as u64;
-        let gf = gram_f64(j, k, &zf, PMode::Adaptive(17.0));
+        let mut scratch = GramScratch::new();
+        let l = lcm(j, k); scratch.prep(j, k, l);
+        let gf = gram_f64(j, k, &zf, PMode::Adaptive(17.0), &mut scratch);
         let gd = gram_dd(j, k, &wtab, PMode::Adaptive(31.0), None);
         let rel = (gf - gd.to_f64()).abs() / gd.to_f64().abs().max(1e-300);
         eprintln!("s={} j={} k={} G={:.6e} f64-vs-dd={:.2e}", s, j, k, gd.to_f64(), rel);
@@ -1418,7 +1491,9 @@ fn phase_selftest() {
     println!("== G_11 three ways ==");
     let zmp_direct = z_table_mpfr_direct(PMAX);
     let wtab = dd_wtab(&zmp_direct);
-    let g11_f = gram_f64(1, 1, &zf, PMode::Adaptive(17.0));
+    let mut scratch = GramScratch::new();
+    scratch.prep(1, 1, 1);
+    let g11_f = gram_f64(1, 1, &zf, PMode::Adaptive(17.0), &mut scratch);
     let g11_d = gram_dd(1, 1, &wtab, PMode::Adaptive(31.0), None);
     let g11_m = gram_mpfr_direct(1, 1, &zmp_direct, PMode::Adaptive(31.0));
     println!("G_11 f64={:.16e} dd={} mpfr={}", g11_f, dd_to_mpfr(g11_d), g11_m);

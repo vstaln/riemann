@@ -1648,3 +1648,17 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
 - WAVE-44 (running): 6/6 diverse ideas, gate rejected 4 death-list ideas, verifiers REFUTED 3
   (all missing RH-false control). Synthesis drifted back to closed Weil/Slepian (swarm
   convergence limitation). Verdicts so far: all REFUTED for missing control — firewall intact.
+
+## 8C Gram-fill ROOT CAUSE + FIX (2026-08-19): malloc-choked cubic -> quadratic
+- SYMPTOM: N=10000 Gram fill at 500/10000 rows after 2h41m -> 53h ETA (not the 4-5h est).
+- ROOT CAUSE: gram_f64 called intervals(j,k,lcm) per element -> fresh Vec (l/j+l/k ~ j+k items)
+  + sort_unstable per element. ~40KB alloc x ~50M elements x 8 threads = glibc arena contention;
+  measured ~13 elems/s/thread (malloc-bound, not arithmetic). Fill was O(N^3) in alloc cost.
+- FIX (hiN.rs): (1) intervals_into -> linear merge of j,k progressions, NO sort, NO per-element
+  alloc; (2) GramScratch{pts,ivs} re-used per thread across all elements of its rows; (3) all
+  6 gram_f64 call sites pass scratch.
+- REGRESSION: N=100 -> d_ref=1.001388367112e-1 (exact certified), fill 0.6s; N=900 ->
+  d_ref=8.117948325339e-2 (exact), fill 43.4s. Exponent vs N=100: 1.95 -> genuine O(N^2)
+  (old code's cubic appearance was the alloc choke).
+- RELAUNCH: N=10000 pid 16441/16443 (~365% CPU), ETA fill ~1.3h + threaded Cholesky.
+- Old log's [prod 2000] 636.8s / [prod 3000] 1105.8s were malloc-choked; obsolete.
