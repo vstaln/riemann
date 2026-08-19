@@ -1091,3 +1091,11 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
 - LEVER STATUS: DEAD (leader-confirmed). Goal fallbacks also dead: T-2 Gonek trace (fatal+
   fabricated), GS-2026 (no C<2), Bui-Heath-Brown (no route clears p₀). Advance to 8C
   Báez-Duarte sharp rate / ξ-jet certificate — NOT the dead named list.
+
+## 8C finite-N correction law — MEASURED flat (2026-08-19)
+- **8c-correction-law-2026-08-19.md** — frontier lane #2(b): δ(N)=d_N²·log N is essentially
+  flat 0.0448-0.0525 over N=10..5000 (certified MPFR), small N=10 bump; fits give asymptotic
+  δ∞≈0.042 (1/logN) or 0.037 (1/sqrt logN), a gentle O(1/logN) bend, NOT a clean O(1/sqrt logN)
+  sub-diffusive law. Consistent with wave-23 agy L2 refutation. d_N·√logN ≈ 0.212 flat =
+  sharp-rate constant reproduced. Consistency-level; RH-false Beurling control stated not run.
+- LEVER STATUS: 8C sharp-rate lane remains open-but-consistency-only; no new one-way object.
