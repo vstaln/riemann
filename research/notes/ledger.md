@@ -1128,3 +1128,14 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   explicit-formula L^2 defect RESTATEMENT (explicit formula itself). C4 Q_3 cross-kurtosis
   REFUTED (0.684/0.705/0.719 at T=100/200/300, not 0.200, rising; |Q-0.2| grows 0.48->0.52).
   Swarm: deepseek endpoint weekly-limit 429, zero ideas. All claims labeled, controls run.
+
+## Wave 25 (2026-08-19) — LangGraph swarm, FIXED infrastructure, 0 survivors
+- **final-verdict.md** — swarm ran end-to-end after fixes: endpoint -> free tier
+  (deepseek-v4-flash-free), agy CLI fallback when free tier 429s, markdown-Candidate
+  parsing. 6 ideas/6 claims/6 verdicts, exhausted, final rejected (unverified asymptotics).
+  All claims CONJECTURED method notes (Rust checks PROPOSED, none executed). Verifier kills:
+  g0-0 Turan power-sums fire on DH (counts not Euler products) + Paley-Wiener violation;
+  g1-1 finite Pick positivity can't certify continuous HB (DH-positive when nodes miss);
+  g0-1 Beurling-Malliavin density can't separate DH; g0-2 fixed prime cutoff blinds to
+  prime-depth barrier; g1-2 kernel tail diverges log across T logT nodes + fires on DH/
+  Epstein-2. g1-0 INCONCLUSIVE. No survivor; firewall intact; goal not cleared.
