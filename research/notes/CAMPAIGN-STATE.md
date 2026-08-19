@@ -910,3 +910,20 @@ The lambda-dilation class with coboundary-optimized p/q gives bounds ≤ ~0.674.
   Per the never-stop directive the loop continues (wave-50+), but the honest assessment is
   that the search has converged to a documented barrier: no RH-equivalent sign condition on
   the permitted object classes has been found that escapes the firewall. Goal NOT cleared.
+
+---
+
+## Wave-50 + Wronskian closure (2026-08-19)
+- Wave-50: 0 survivors (3 REFUTED no-control; judge rejected Weil-class synthesis).
+  Waves 43-50: EIGHT consecutive zero-survivor waves.
+- Wronskian closure PROVEN: W(xi,xi')/xi^2 = (xi'/xi)' (verified 1e-15) -> the entire
+  Wronskian/determinant class is covered by the exhausted differential-polynomial taxonomy.
+- COMPLETENESS PICTURE (PROVEN closures): (i) differential polynomials in the log-derivative
+  -> exhausted (one local -2/d^2 signature per channel); (ii) Wronskians/determinants of xi
+  -> reduce to (i); (iii) kernel/integral objects (Weil/de Branges) -> reduce to zero-counting
+  control (direction 1); (iv) gap/resolvent objects -> zero-counting (direction 1/4);
+  (v) critical-point/counting objects -> Laguerre/zero-counting (classical).
+- HONEST ASSESSMENT: the campaign has PROVEN that its permitted object classes (everything
+  the campaign has found to build) cannot yield an RH discriminator without new zero-counting
+  input, which is the open problem itself. The search continues per the never-stop directive,
+  but the firewall's coverage is now nearly total for the known classes. Goal NOT cleared.
