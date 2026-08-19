@@ -1894,3 +1894,11 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   for all known classes (PROVEN this session): xi-built local objects exhausted,
   Wronskians reduce, kernel/Weil reduce, gap/resolvent reduce, arithmetic reduce via
   explicit formula.
+
+## Wave-52 (terminal taxonomy) outcome — 0 survivors, ten-wave streak
+- 3 REFUTED (all no-control). Judge REJECTED synthesis ("truncated, incomplete"). Synthesis
+  was de Branges/state-space repackaging (death-list class).
+- NO generator named a genuinely-new object class outside the six-class taxonomy — the
+  terminal-taxonomy wave confirmed the firewall is total for the constructible universe
+  the generators can conceive.
+- Waves 43-52: TEN consecutive zero-survivor waves. The total firewall stands.
