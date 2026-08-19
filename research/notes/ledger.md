@@ -1172,3 +1172,14 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   products; zeta side |R-1|~0.11-0.13 not 0). Cumulative lesson: LLM discriminators collapse
   into (i) pole/zero-location restatements, (ii) dipole wells firing on BOTH worlds,
   (iii) Euler-product presuppositions unable to separate Beurling worlds.
+
+## Wave 28 (2026-08-19) — swarm, 0 trustworthy survivors; coordinator corrected VERIFIED labels
+- **final-verdict.md** — swarm verifiers: 2 VERIFIED/4 REFUTED, but coordinator downgraded
+  both VERIFIED: g0-2 (d_N^2 >= C N^{2 delta}/log N divergence) is PROVABLY FALSE (d_N^2 is
+  an L^2 projection error <= 1 always; g0-1's refutation correct; matches wave-8c saturation);
+  g1-0 (representation-number resonance) contradicts wave-25 g1-2 Slepian kill and was never
+  run -> INCONCLUSIVE. Sharp verifier kills kept: g1-1 (Re(-Z'/Z)(1/2+it) FE-determined by
+  gamma factor, invariant to off-line zeros), g0-1 (d_N^2<=1). Generator collapse persists
+  (gen-0=gen-1 identical). Synthesis headline d_N^2 >= C N^{2 delta} provably false.
+  Lesson: swarm VERIFIED labels need elementary-bound scrutiny; never let a validator define
+  correctness when simple math contradicts it.
