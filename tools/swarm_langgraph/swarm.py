@@ -41,7 +41,11 @@ from typing_extensions import TypedDict
 RIEMANN = Path("/home/vstaln/riemann")
 WAVES = RIEMANN / "research" / "waves"
 NOTES = RIEMANN / "research" / "notes"
-BASE_URL = "https://opencode.ai/zen/go/v1"
+# FREE-tier OpenCode Zen endpoint (deepseek-v4-flash-free) — the paid GO tier
+# (/zen/go/v1) hits the weekly usage cap; the free tier works with the same key.
+# This is the same provider pi itself runs on (PI_PROVIDER=commandcode,
+# PI_MODEL=deepseek/deepseek-v4-flash, free bridge -> opencode.ai/zen/v1).
+BASE_URL = "https://opencode.ai/zen/v1"
 
 # Session key supplied by user (deepseek v4 flash, max reasoning). Falls back to
 # inherited env when present, so normal launches keep working too.
@@ -50,10 +54,10 @@ SESSION_KEY = "sk-NmmWJsRyrj5zzHei7CHEzYr1a711Na9QO09LCcDQDhfnnvHqTxbrvcTmD0fJah
 PROMPT_HARDENING = "Answer immediately with no internal deliberation. "
 
 
-def make_llm(model: str = "deepseek-v4-flash") -> ChatOpenAI:
+def make_llm(model: str = "deepseek-v4-flash-free") -> ChatOpenAI:
     return ChatOpenAI(
         base_url=BASE_URL,
-        api_key=SESSION_KEY,  # session key wins for this campaign (user directive)
+        api_key=os.environ.get("OPENCODE_API_KEY") or SESSION_KEY,  # env key preferred (fresh), session key fallback
         model=model,
         temperature=0.4,
         timeout=240,
@@ -81,7 +85,42 @@ def _safe_invoke(llm: ChatOpenAI, prompt: str) -> str:
         finally:
             pool.shutdown(wait=False)  # never block on a hung worker
         _time.sleep(2 + 6 * attempt)
+    # FALLBACK: if the shared LLM endpoint is capped/unavailable (wave-24 failure
+    # mode: weekly GoUsageLimitError -> all nodes silently produced "(none)"),
+    # degrade to the agy CLI when available, instead of emitting an unusable
+    # sentinel that the callers then parse as empty.
+    if os.environ.get("AGY_FALLBACK", "1") == "1":
+        fallback = _agy_invoke(prompt)
+        if fallback:
+            print(f"[swarm] agy fallback produced {len(fallback)} chars", flush=True)
+            return fallback
     return f"[LLM unavailable: {type(last).__name__ if last else 'empty'}]"
+
+
+def _agy_invoke(prompt: str) -> str:
+    """Best-effort agy CLI fallback for idea generation when the shared LLM is
+    down. agy is the same co-author tool used for direct batches; here it is
+    used as a degraded generator. Self-contained prompts only (no repo paths:
+    agy hangs on agentic tool-search)."""
+    import tempfile
+    import subprocess as sp
+    try:
+        with tempfile.NamedTemporaryFile("w", suffix=".txt", delete=False) as f:
+            f.write(prompt)
+            pf = f.name
+        out_path = f"{pf}.out"
+        r = sp.run(["bash", "/home/vstaln/riemann/tools/agy_run.sh", pf, "240"],
+                   capture_output=True, text=True, timeout=280,
+                   env={**os.environ, "AGY_RUN_OUT": out_path})
+        if r.returncode != 0:
+            print(f"[swarm] agy fallback rc={r.returncode}", flush=True)
+            return ""
+        if os.path.exists(out_path):
+            return Path(out_path).read_text()
+        return ""
+    except Exception as exc:
+        print(f"[swarm] agy fallback error: {type(exc).__name__}: {str(exc)[:80]}", flush=True)
+        return ""
 
 
 def _read_json(text: str) -> dict:
@@ -488,7 +527,7 @@ def main():
     ap.add_argument("--max-rounds", type=int, default=2)
     ap.add_argument("--rust-timeout", type=int, default=300)
     ap.add_argument("--frontier", type=str, default=None)
-    ap.add_argument("--model", type=str, default="deepseek-v4-flash")
+    ap.add_argument("--model", type=str, default="deepseek-v4-flash-free")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
