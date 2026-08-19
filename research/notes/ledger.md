@@ -1293,3 +1293,19 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   confirms g0-1; Carleson kappa 8e7->2e18 exponential REAL (verifier's truncation claim wrong,
   verdict kept — conditioning is operator-only). Generator collapse 5th consecutive wave.
 - final-verdict.md written (swarm finalizer still churning on rate limits; coordinator closed).
+
+## agy wave-33 — exact-identity class CLOSED as structurally empty (2026-08-19)
+- C1 Calogero-Moser Lax F_CM = Tr((L-L*)(L-L*)*): CIRCULAR — needs the zero coordinates
+  {rho_k}={beta_k+i gamma_k} as INPUT, i.e. beta_k = the answer. "F=0 iff all zeros on line"
+  is RH in different clothes.
+- C2 Hardy-Hankel F_HH = Tr(H_u* H_u), u(t)=Xi(t-i)/Xi(t+i): RESTATEMENT — "u inner
+  (Hankel=0)" IS "no zeros in Im(z)>0" = RH rephrased; evaluating Xi(t±i) uses the full xi
+  which encodes the zeros (the "no zero locations needed" claim is false).
+- STRUCTURAL NEGATIVE (PROVEN): the exact-identity-vs-nonzero class is EMPTY for the same
+  reason class-4 was empty — any exact identity separating the worlds must encode the zero
+  real parts (beta_k), which IS the answer. The two surviving requirements (exact break +
+  no beta_k needed) are mutually contradictory: an exact break requires beta_k to be in the
+  input, and any beta_k-free object is a restatement or a dipole/magnitude detector.
+- This closes the last unexplored class. The LLM generator now provably cannot produce a
+  survivor within its own class constraints; the search's honest state is: all one-way
+  discriminator classes are structurally empty or compute-walled.
