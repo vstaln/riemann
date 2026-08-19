@@ -1,6 +1,6 @@
 # CURRENT UPDATE — 2026-08-19 (waves 24–38, ξ-jet closure, retraction + 4 discriminators + resolvent hierarchy)
 
-## Session net (waves 24–38 + ξ-jet closure; all committed)
+## Session net (waves 24–44 + ξ-jet closure; all committed)
 
 - **RESOLVENT INEQUALITY HIERARCHY (strongest structural finding, 9223563):**
   Φ_k^(2r) = d_k^(2r)·Σ_n 1/(m_k−γ_n)^(2r) ≥ 2^(2r+1) for every adjacent zero pair, all r≥1
@@ -31,6 +31,40 @@
 genuine exact characterizations with clean numerics but no proving power (finite-N consistency;
 certifying over a continuum needs gap bounds = the classical barrier). Proportion records stand
 firewalled. The search continues.
+
+---
+
+## Swarm wave-44 + 8C Gram-fill fix (2026-08-19, same session)
+
+- **Swarm infrastructure fixed (root causes, committed 961498c):**
+  1. Generator collapse (identical outputs) → per-generator UNIQUE angles (6 lens assignments:
+     HESSIAN/ARCHIMEDEAN, TOPOLOGICAL-INDEX, GAP-STRUCTURE, ARITHMETIC-DUALITY, CONTROL/BLASCHKE,
+     FRAME/INFO-THEORY) + per-node DISTINCT models (--models arg).
+  2. Rate-limit collapse → root cause: deepseek-v4-flash-free exhausted. Working free models
+     verified: hy3-free, nemotron-3-ultra-free, nemotron-3.5-lightning-free, laguna-s-2.1-free
+     (deepseek/mimo 429; paid models 401 no credits).
+  3. Weak gate → death-list classifier (DEATH_PATTERNS: d_N, winding, explicit-formula residues,
+     Herglotz, Laguerre, Weil/Li/Gram/Jensen, zero-search, dipole-wells, Euler-product, tensors,
+     Hankel/Turan, cosh/nodal) + sibling-dedup.
+  4. Weak verifier → mandatory checks: control named or REFUTED; fires-on-control kill;
+     derived-not-fabricated; honest label; death-list kill.
+- **Wave-44 outcome (0 survivors, firewall intact):** 6/6 diverse ideas (no collapse), gate
+  rejected 4 death-list ideas, verifiers REFUTED 3 claims (all missing RH-false control),
+  judge REJECTED synthesis ("numerical bounds without supporting scripts, incomplete claim").
+  The machinery now works end-to-end: diverse gen → death-list gate → adversarial verifiers →
+  judge. Synthesis drifted to closed Weil/Slepian (convergence limitation; judge caught it).
+- **8C Gram-fill root cause FIXED (15bb60a):** malloc-choked cubic → quadratic. Per-element
+  intervals() built fresh Vec + sort (l/j+l/k ~ j+k items, ~40KB alloc × 50M elements × 8
+  threads = glibc arena contention; ~13 elems/s/thread). Fix: intervals_into linear merge (no
+  sort, no alloc) + per-thread GramScratch reuse. Regression N=100 (0.1001388367112) and
+  N=900 (8.117948325339e-2) EXACT; exponent 1.95 → genuine O(N²); N=10000 fill ETA 53h→1.3h.
+  N=10000 relaunched (pid 16441/16443).
+- **Gap-certificate subagent** (weakest-link probe): whether largest-gap structure admits any
+  provable unconditional bound usable as a certificate input (routes A: density theorems,
+  B: Hadamard-product tail, C: numerical verification). First dispatch lost its answer
+  (context death); redone with write-early discipline. Expected verdict (per the classical
+  barrier): A/B reduce to zero-counting control = open problem; C gives a PROVEN finite-height
+  certificate (verified intervals up to T) that is consistency-only, not a proof.
 
 ---
 
