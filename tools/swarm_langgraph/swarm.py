@@ -465,20 +465,20 @@ def gate_node(state: SwarmState, config) -> dict:
     # transfer target (Weil, Li, Beurling, Turan, de Branges) are exempt. Verifier
     # does the real adversarial kill with full context.
     DEATH_PATTERNS = [
-        "winding", "argument principle", "index theorem", "poincare-hopf",
-        "residue extraction", "contour shift",
+        # Narrow gate (fix 5): verifier is the real adversarial referee; gate is
+        # cheap pre-filter. Broad substrings like winding/argument-principle/
+        # dipole/tensor/laguerre fire inside disclaimers ("Avoids winding...") and
+        # inside RH-false control descriptions ("Off-axis dipole at beta0=0.92").
+        # Those caused wave-97 to kill all 8 agy ideas (0 accepted). Keep only
+        # unambiguously dead bare lanes that never appear in disclaimers.
         "herglotz", "nevanlinna", "transverse curvature", "gap-resolvent",
-        "critical point", "laguerre", "interleav",
-        "dipole", "log-derivative curvature",
-        # "hessian determinant" removed 2026-08-20 fix 4: killed legitimate
-        # HESSIAN/ARCHIMEDEAN gamma-curvature ideas (wave-79 g0-1) via substring
-        # "det Hess log|xi|" heat-map. Keep verifier-stage check for bare dipole-well.
-        # "euler product" removed 2026-08-20 fix 4: killed Hessian splitting lemma
-        # (wave-79 g0-0) which used "explicit Euler product majorant" only as a
-        # bound for zeta'/zeta inside the Jensen-Hessian hybrid, not as bare lane.
+        # "critical point", "laguerre", "interleav", "dipole", "winding",
+        # "argument principle", "index theorem", "poincare-hopf",
+        # "residue extraction", "contour shift", "log-derivative curvature",
+        # "tensor" — removed fix 5: too broad, see wave-97 gate audit.
         "prime martingale", "scale orthogonality",
         "gram spectral", "hankel radius", "prime-zeta",
-        "hyperdeterminant", "tensor",
+        "hyperdeterminant",
         "cosh invariant", "stieltjes hankel", "nodal",
         # NOTE: removed broad killers that fire inside legitimate hybrid positives:
         # "d_n"/"baez-duarte"/"beurling"/"blaschke"/"hardy space"/"all-pass"
@@ -492,14 +492,14 @@ def gate_node(state: SwarmState, config) -> dict:
     seen = set()
     for idea in state["ideas"]:
         raw_hay = idea["idea"]
-        # Strip the disclaimer sentence ("WHY NOT DEATH LIST: ...") before checking —
+        # Strip the disclaimer sentence ("WHY NOT (ON) DEATH LIST: ...") before checking —
         # ideas disclaim death-list terms with "No X, No Y" and would be killed by
         # substring search if we keep that section. The disclaimer is not mechanism.
         # Also strip JSON fields why_not_death_list / why_not_other for same reason.
         hay_for_gate = raw_hay
-        # remove WHY NOT DEATH LIST block (case-insensitive) up to next period or next field
+        # remove WHY NOT (ON) DEATH LIST block (case-insensitive) — must handle "WHY NOT ON DEATH LIST"
         import re as _re_gate
-        hay_for_gate = _re_gate.sub(r"WHY NOT DEATH LIST:[^\n]*", "", hay_for_gate, flags=_re_gate.I)
+        hay_for_gate = _re_gate.sub(r"WHY NOT(?: ON)? DEATH LIST:[^\n]*", "", hay_for_gate, flags=_re_gate.I)
         hay_for_gate = _re_gate.sub(r"why_not_death[^\"]*\"[^\"]*\"", "", hay_for_gate, flags=_re_gate.I)
         # also if idea is JSON string, parse and keep only mechanism fields for gate
         try:
@@ -933,7 +933,7 @@ def main():
                                    "ver_models": cfg["ver_models"], "llms": cfg["llms"],
                                    "generators": cfg["generators"],
                                    "executors": cfg["executors"], "verifiers": cfg["verifiers"],
-                                   "rust_timeout": cfg["rust_timeout"]}}
+                                   "rust_timeout": cfg["rust_timeout"], "agy": cfg.get("agy", False)}}
         existing = checkpointer.get_tuple({"configurable": {"thread_id": f"wave-{wave}"}})
         if existing is not None:
             print(f"Resuming wave {wave} from checkpoint {existing.config['configurable']['checkpoint_id'][:8]}...")
