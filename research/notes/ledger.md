@@ -2044,3 +2044,6 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
 
 ## Wave-57 — direct thinker high-T sweep CHECKED (2026-08-20, inline opencode, muse-spark-1.2)
 - E(c=0.75+i·t,r0.2)=0 at t=30,50,70,90,100 (dmin 0.23-1.19 >0.2, no interior zero) CHECKED 800-pt 25dps. Planted at g1 E=1.386 (r0.2, d0.05) and 0.875 (r0.12, log 2.4) CHECKED. Jensen PROVEN, high-T holds, r tunable. Label: CHECKED+PROVEN, finite-height.
+
+## Wave-58 — direct thinker r-sweep CHECKED (2026-08-20, inline opencode, muse-spark-1.2)
+- r sweep at c=0.75+ig1 d0.05: r0.20 E1.386=log4, 0.15 1.098=log3, 0.12 0.875=log2.4, 0.08 0.470=log1.6, 0.06 0.182=log1.2 CHECKED 800-pt 25dps Jensen PROVEN. r→d+ still >0, β-resolution d=0.05. Label: CHECKED+PROVEN, grid tradeoff r↓→Δt↓.
