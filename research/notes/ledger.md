@@ -1990,3 +1990,12 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
 - SYNTHETIC CONFIRMATION: corrected synthetic world (REPLACE on-line zero, not ADD pair)
   reproduces the violation (H=-1.776 at s=0.6 ordinate) and sigma*<=beta0. The earlier
   synthetic bug (double-counting) is documented.
+
+## Epstein class-2 control check (2026-08-19) — INCONCLUSIVE
+- Attempted Epstein d=5 as an RH-false control with a clean FE. Result: my xi_E(s)/xi_E(1-s)
+  also shows t-varying phase (0.22, -3.10, -0.74, +1.20 at t=5,10,15,20) — NOT FE-symmetric.
+  Cause: truncated lattice sum breaks symmetry / wrong completed-function factor.
+- LESSON CONFIRMED: building clean FE-symmetric RH-false controls is genuinely hard. The
+  planted world (split a real-xi pair) remains the ONLY verified control. DH and Epstein
+  constructions must pass the FE-phase check (constant phase) before Herglotz output is
+  trusted — neither does in my constructions. INCONCLUSIVE (not a discriminator result).
