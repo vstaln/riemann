@@ -1954,3 +1954,21 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   bound estimator), firewall-relevant but NOT firewall-breaking: the certificate form
   (H>0 for all t at fixed s) still reduces to continuum positivity = RH itself.
   Label: CHECKED NUMERICALLY (mechanism PROVEN, interval structure NEW, certificate OPEN).
+
+## HONEST CORRECTION — DH extension REFUTED (2026-08-19, s4h pre-mortem caught it)
+- The DH "violations" (H_D(0.6,t)<0 at t=46,50,60,85.7) were ARTIFACTS of a wrong
+  FE normalization. Check: Xi_D(s)/Xi_D(1-s) has magnitude 1 but PHASE varying with t
+  (2.60 at t=14, -0.77 at t=20, +1.98 at t=30, -1.55 at t=40, +1.21 at t=50,
+  -2.32 at t=60, +0.44 at t=70, +0.30 at t=85.7). No constant phase makes it
+  FE-symmetric -> my Xi_D is not the Herglotz object -> H_D artifacts, not beta info.
+- The sigma*(t0)=0.95 ceiling at t0=50/60 was an ARTIFACT (not DH beta>0.95).
+- LESSON (PROVEN): every RH-false CONTROL must itself pass the FE-symmetry check
+  before its Herglotz output is trusted. The planted world (built from the real
+  FE-symmetric xi by splitting a pair) is the ONLY control that passed it.
+- STANDING (unchanged): planted-world Herglotz-violation — H_pl(s,g1) < 0 for all
+  s in (0.5, 0.8), mechanism 1/(s-0.8)+1/(s-0.2) EXACT, sigma*(g1)=0.8000 recovers
+  beta0. CHECKED NUMERICALLY + mechanism PROVEN.
+- RH side: H_zeta(s,t) > 0 on grid (min +0.002258, 80 zeros) — CHECKED NUMERICALLY.
+- NEW OPEN QUESTION (for wave-53): is the sigma* lower-bound property a THEOREM
+  (sigma*(t0) <= max beta given only the Herglotz sum structure + FE symmetry),
+  or only a numeric coincidence on the planted world?
