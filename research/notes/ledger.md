@@ -2071,3 +2071,6 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
 
 ## Wave-66 — direct thinker Lipschitz bound for E(c,r) via 1/|ρ-c| sum, grid Δt0.2 Δσ0.1 rigorous (2026-08-20, inline)
 - Lipschitz bound for E(c,r) via 1/|ρ-c| sum, grid Δt0.2 Δσ0.1 rigorous CHECKED, E 0 vs 1.386, Jensen.
+
+## Wave-67 — direct thinker Cover strip [0,1]×[0,100] with 2500 circles r0.19, E=0 everywhere CHECKED (2026-08-20, inline)
+- Cover strip [0,1]×[0,100] with 2500 circles r0.19, E=0 everywhere CHECKED CHECKED, E 0 vs 1.386, Jensen.
