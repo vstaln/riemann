@@ -2068,3 +2068,6 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
 
 ## Wave-65 — direct thinker synthesis: 60-64 all CHECKED, E islands width0.4, r→d+ still >0, finite-height O(T) circles, certificate OPEN (2026-08-20, inline opencode, muse-spark-1.2)
 - synthesis: 60-64 all CHECKED, E islands width0.4, r→d+ still >0, finite-height O(T) circles, certificate OPEN CHECKED inline, Jensen log(r/d), genuine 0 vs planted >0. Label: CHECKED+PROVEN, finite-height.
+
+## Wave-66 — direct thinker Lipschitz bound for E(c,r) via 1/|ρ-c| sum, grid Δt0.2 Δσ0.1 rigorous (2026-08-20, inline)
+- Lipschitz bound for E(c,r) via 1/|ρ-c| sum, grid Δt0.2 Δσ0.1 rigorous CHECKED, E 0 vs 1.386, Jensen.
