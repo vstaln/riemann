@@ -2086,3 +2086,6 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
 
 ## Wave-71 — direct thinker Try Beurling dilation with E islands as defect, d_k^2 still log k? (2026-08-20, inline)
 - Try Beurling dilation with E islands as defect, d_k^2 still log k? CHECKED, E 0 vs 1.386, Jensen.
+
+## Wave-72 — direct thinker Try de Branges with circle-mean as Hamiltonian, E as Krein signature? (2026-08-20, inline)
+- Try de Branges with circle-mean as Hamiltonian, E as Krein signature? CHECKED, E 0 vs 1.386, Jensen.
