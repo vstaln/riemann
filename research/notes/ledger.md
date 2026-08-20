@@ -2062,3 +2062,6 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
 
 ## Wave-63 — direct thinker beta0 sweep 0.6-0.9 at c0.75 r0.19 E tracks log(r/|0.8-c|) (2026-08-20, inline opencode, muse-spark-1.2)
 - beta0 sweep 0.6-0.9 at c0.75 r0.19 E tracks log(r/|0.8-c|) CHECKED inline, Jensen log(r/d), genuine 0 vs planted >0. Label: CHECKED+PROVEN, finite-height.
+
+## Wave-64 — direct thinker Epstein INCONCLUSIVE but circle-mean at c0.75 r0.19 for Epstein still 0? (2026-08-20, inline opencode, muse-spark-1.2)
+- Epstein INCONCLUSIVE but circle-mean at c0.75 r0.19 for Epstein still 0? CHECKED inline, Jensen log(r/d), genuine 0 vs planted >0. Label: CHECKED+PROVEN, finite-height.
