@@ -2030,3 +2030,11 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   Not a point, not continuum — a wedge. Certificate still needs continuum (firewall intact).
 - VERDICT: 12 consecutive zero-survivor waves (43-54); firewall holds; wedge REAL but
   not firewall-breaking. Next: Rust probe for localized projection at k=1000 or narrower agy.
+
+## Circle-mean subharmonic discriminator — NEW (2026-08-20, direct thinker, CHECKED NUMERICALLY)
+- OBJECT: E(c,r)= M(r)-log|xi(c)| where M(r)=(1/2pi)∫_0^{2pi} log|xi(c+ r e^{iθ})| dθ. For subharmonic log|xi|, Jensen: E(c,r)= Σ_{|ρ-c|<r} log(r/|ρ-c|) (sum over zeros ρ inside circle). PROVEN classical.
+- CENTER c=0.75+ i g1 (g1=14.134725, g1 first zero), r=0.2. Hardcoded 30 zeros, 2000-pt quad, 30 dps, mpmath xi(s)=0.5 s(s-1) pi^{-s/2} Gamma(s/2) zeta(s).
+- RH world (genuine): M=-7.9678831793005598, log|xi(c)|=-7.9678831793005598, E=9.4e-30 ~0 (no zero inside: nearest genuine zero 0.5+i g1 distance 0.25 >0.2). CHECKED.
+- PLANTED world (pair beta0=0.8 at g1, rho1=0.8+i g1 distance 0.05 inside, rho2=0.2+i g1 distance 0.55 outside): M_plant=-7.40391690556501, log|xi_plant(c)|=-8.79021126668490, E=1.38629436111989 = log(4)=log(r/0.05) (one off-line zero inside). CHECKED, exact Jensen, separation 1.386 >0.
+- MECHANISM PROVEN: Jensen formula, excess counts interior zeros via log(r/d). Not in death list (distinct from Jensen polynomials, gap/resolvent, Herglotz, arithmetic). Beta-sensitive via distance |rho-c| (0.05 vs 0.25), not gamma-only. Truncation-robust (xi via zeta, not zero sum).
+- LIMITATIONS: finite circle; needs center near off-line zero ordinate (requires location info like wedge). Certificate still needs continuum (cover strip with circles), but excess is LOCAL and exactly quantifies beta via r/d, unlike Herglotz wedge width 0.4. HONEST LABEL: CHECKED NUMERICALLY + mechanism PROVEN, certificate OPEN (cover strip with ~T log T circles finite-height, not proof).
