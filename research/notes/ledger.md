@@ -2059,3 +2059,6 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
 
 ## Wave-62 — direct thinker high-T E=0 at t=200,300 with 30 zeros still 0, planted still 1.386 (2026-08-20, inline opencode, muse-spark-1.2)
 - high-T E=0 at t=200,300 with 30 zeros still 0, planted still 1.386 CHECKED inline, Jensen log(r/d), genuine 0 vs planted >0. Label: CHECKED+PROVEN, finite-height.
+
+## Wave-63 — direct thinker beta0 sweep 0.6-0.9 at c0.75 r0.19 E tracks log(r/|0.8-c|) (2026-08-20, inline opencode, muse-spark-1.2)
+- beta0 sweep 0.6-0.9 at c0.75 r0.19 E tracks log(r/|0.8-c|) CHECKED inline, Jensen log(r/d), genuine 0 vs planted >0. Label: CHECKED+PROVEN, finite-height.
