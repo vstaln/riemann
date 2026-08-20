@@ -19,13 +19,13 @@ OUT="${AGY_RUN_OUT:-/tmp/agy_run.out}"
 if [ ! -s "$PROMPT_FILE" ]; then echo "ERROR: prompt file empty/missing: $PROMPT_FILE" >&2; exit 2; fi
 
 # Pre-check auth cheaply (avoids wasting a long timeout on an auth prompt).
-if ! timeout 60 agy --print "Say OK only." >/dev/null 2>&1; then
+if ! timeout 60 agy --effort high -p "Say OK only." >/dev/null 2>&1; then
   echo "AGY_AUTH_FAIL: agy not authenticated (or endpoint down). User must re-auth." >&2
   exit 3
 fi
 
 echo "AGY_RUN: invoking agy --print (timeout ${TIMEOUT}s)..." >&2
-timeout "$TIMEOUT" agy --print "$(cat "$PROMPT_FILE")" > "$OUT" 2> "$OUT.err"
+timeout "$TIMEOUT" agy --effort high -p "$(cat "$PROMPT_FILE")" > "$OUT" 2> "$OUT.err"
 rc=$?
 if [ $rc -ne 0 ]; then
   echo "AGY_RUN_FAIL: rc=$rc. stderr tail:" >&2

@@ -38,6 +38,9 @@ from langgraph.checkpoint.sqlite import SqliteSaver
 from langgraph.graph import END, START, StateGraph
 from typing_extensions import TypedDict
 
+# agy as own pi session: one-shot high-effort via agy CLI (good at single prompts)
+AGY_EFFORT = "high"  # agy only knows low|medium|high; map xhigh->high
+
 RIEMANN = Path("/home/vstaln/riemann")
 WAVES = RIEMANN / "research" / "waves"
 NOTES = RIEMANN / "research" / "notes"
@@ -289,6 +292,17 @@ class SwarmState(TypedDict):
 # Node: PLANNER
 # ---------------------------------------------------------------------------
 
+def _invoke_pi(prompt: str, cfg: dict, llm) -> str:
+    # agy as own pi session: one-shot high-effort, good at single prompts
+    if cfg.get("agy"):
+        out = _agy_invoke(prompt)
+        if out.strip():
+            print(f"[swarm] pi-agy one-shot {len(out)} chars", flush=True)
+            return out
+        print(f"[swarm] pi-agy empty, fallback to muse", flush=True)
+    return _safe_invoke(llm, prompt)
+
+
 def planner_node(state: SwarmState, config) -> dict:
     cfg = config["configurable"]
     llm = cfg["llm"]
@@ -305,7 +319,7 @@ def planner_node(state: SwarmState, config) -> dict:
         f"FRONTIER:\n{state['frontier'][:2500]}\n"
         'Reply ONLY JSON: {"tasks": ["spec1", "spec2", ...]}'
     )
-    tasks = _read_json(_safe_invoke(llm, prompt)).get("tasks", [])
+    tasks = _read_json(_invoke_pi(prompt, cfg, llm)).get("tasks", [])
     tasks = [str(t) for t in tasks if str(t).strip()][:n]
     _write(state, "tasks.md", _dump_list("TASKS", tasks))
     return {"tasks": tasks or [f"Re-derive the standing frontier claim: {state['frontier'][:300]}"]}
@@ -318,7 +332,18 @@ def planner_node(state: SwarmState, config) -> dict:
 def make_idea_gen(idx: int):
     def node(state: SwarmState, config) -> dict:
         cfg = config["configurable"]
+        use_agy = bool(cfg.get("agy"))
         llm = cfg["llms"].get(cfg["gen_models"][idx % len(cfg["gen_models"])], cfg["llm"])
+        # agy one-shot pi-session for idea-gen if --agy (good at single prompts)
+        def _invoke(prompt: str) -> str:
+            if use_agy:
+                # agy as own pi session: --effort high (-p) one-shot, self-contained JSON
+                out = _agy_invoke(prompt)
+                if out.strip():
+                    print(f"[swarm] idea_gen_{idx} agy one-shot {len(out)} chars", flush=True)
+                    return out
+                print(f"[swarm] idea_gen_{idx} agy empty, falling back to muse", flush=True)
+            return _safe_invoke(llm, prompt)
         task = state["tasks"][idx % len(state["tasks"])]
         # PER-GENERATOR DISTINCT ANGLE — each angle is now anchored to a real s4h skill
         # (project-local .pi/skills/; hooks demand ≥1 s4h skill per brief). The lens
@@ -368,7 +393,7 @@ def make_idea_gen(idx: int):
             'Reply ONLY JSON: {"ideas": [{"text": "idea1 full text (include (1)-(5) and WHY NOT DEATH LIST)", "rust_cmd": "cargo run --bin ... or empty", "label": "CONJECTURED", "s4h_skill": "s4h-..."}, {"text": "idea2...", "rust_cmd": "...", "label": "...", "s4h_skill": "..."}], "s4h_skill": "..."}  '
             'Legacy string array {"ideas": ["idea1","idea2"]} also accepted but rust_cmd will be empty.'
         )
-        raw = _safe_invoke(llm, prompt)
+        raw = _invoke(prompt)
         parsed = _read_json(raw)
         ideas_raw = parsed.get("ideas", [])
         # agy (the idea co-author) returns markdown candidates, not the JSON
@@ -606,7 +631,7 @@ def make_verifier(idx: int):
                 '"evidence": "one sentence naming the control or the kill"}.\n'
                 f"CLAIM: {c['claim'][:900]}\nLABEL: {c['label']}\nSCRIPT: {c['script']}"
             )
-            raw = _read_json(_safe_invoke(llm, prompt))
+            raw = _read_json(_invoke_pi(prompt, cfg, llm))
             v = (raw.get("verdict") or "INCONCLUSIVE").strip().upper()
             if v not in ("VERIFIED", "REFUTED", "INCONCLUSIVE"):
                 v = "INCONCLUSIVE"
@@ -642,7 +667,7 @@ def judge_node(state: SwarmState, config) -> dict:
         '{"scores": [{"claim_id": "...", "score": 7, "rationale": "..."}]}.\n'
         + "\n".join(f"{c['idea_id']} [{c.get('label','')}]: {c['claim'][:600]} cmd={c.get('cmd','')[:120]}" for c in verified)
     )
-    scores = _read_json(_safe_invoke(llm, prompt)).get("scores", [])
+    scores = _read_json(_invoke_pi(prompt, cfg, llm)).get("scores", [])
     _write(state, "score.md", _dump_list("SCORES", [f"{s.get('claim_id')}: {s.get('score')} — {s.get('rationale','')}" for s in scores]))
     return {"scores": scores}
 
@@ -667,7 +692,7 @@ def synthesizer_node(state: SwarmState, config) -> dict:
         "Honesty labels mandatory. If no CHECKED NUMERICALLY + VERIFIED survivor, say so explicitly — do not inflate CONJECTURED/INCONCLUSIVE to a result.\n"
         + "\n".join(_claim_line(c) for c in state["claims"][:6])
     )
-    synthesis = _safe_invoke(llm, prompt)
+    synthesis = _invoke_pi(prompt, cfg, llm)
     _write(state, "synthesis.md", f"# Wave {state['wave']} synthesis (round {state['round']})\n\n{synthesis}")
     return {"synthesis": synthesis}
 
@@ -685,7 +710,7 @@ def critique_node(state: SwarmState, config) -> dict:
         '{"accept": true|false, "reason": "one sentence"}.\n'
         f"SYNTHESIS: {state['synthesis'][:4000]}"
     )
-    raw = _read_json(_safe_invoke(llm, prompt))
+    raw = _read_json(_invoke_pi(prompt, cfg, llm))
     return {"critique": {"accept": bool(raw.get("accept")), "reason": str(raw.get("reason", ""))}}
 
 
@@ -855,12 +880,15 @@ def main():
     ap.add_argument("--models", type=str, default=None,
                     help="comma-separated model ids cycled across generators/executors/verifiers "
                          "(fix: per-node models prevent generator collapse under a shared client)")
+    ap.add_argument("--agy", action="store_true",
+                    help="idea-gen uses agy --effort high -p one-shot (own pi session, good at single prompts) instead of commandcode/muse")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
     if args.frontier_file:
         args.frontier = Path(args.frontier_file).read_text()
     wave = args.wave or _next_wave()
+    agy = bool(args.agy)
     if args.models:
         models = [m.strip() for m in args.models.split(",") if m.strip()]
         # distinct client per model id: diversity is the root-cause fix for collapse
@@ -878,6 +906,7 @@ def main():
             "executors": args.executors,
             "verifiers": args.verifiers,
             "rust_timeout": args.rust_timeout,
+            "agy": agy,
         }
     else:
         cfg = {
@@ -890,6 +919,7 @@ def main():
             "executors": args.executors,
             "verifiers": args.verifiers,
             "rust_timeout": args.rust_timeout,
+            "agy": agy,
         }
     graph = build_graph(cfg)
     if args.dry_run:
