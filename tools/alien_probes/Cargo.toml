@@ -1,0 +1,20 @@
+[package]
+name = "alien_probes"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "kolmogorov_prime"
+path = "src/bin/kolmogorov_prime.rs"
+
+[[bin]]
+name = "diffraction_logp"
+path = "src/bin/diffraction_logp.rs"
+
+[[bin]]
+name = "coulomb_energy"
+path = "src/bin/coulomb_energy.rs"
+
+[[bin]]
+name = "persistence_zero"
+path = "src/bin/persistence_zero.rs"
