@@ -2089,3 +2089,6 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
 
 ## Wave-72 — direct thinker Try de Branges with circle-mean as Hamiltonian, E as Krein signature? (2026-08-20, inline)
 - Try de Branges with circle-mean as Hamiltonian, E as Krein signature? CHECKED, E 0 vs 1.386, Jensen.
+
+## Wave-73 — direct thinker Try tropical with E islands as Newton polygon kink, still 0.0005 diff (2026-08-20, inline)
+- Try tropical with E islands as Newton polygon kink, still 0.0005 diff CHECKED, E 0 vs 1.386, Jensen.
