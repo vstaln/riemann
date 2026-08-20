@@ -143,12 +143,11 @@ def make_llm(model: str | None = None) -> ChatOpenAI:
     base_url = _resolve_base_url(model)
     api_key = _resolve_api_key(model)
     is_muse = _is_muse_spark(model)
-    # muse-spark burns ~3.8k reasoning + ~2–6k text on the 1580-char idea-gen prompt
-    # (measured 2026-08-20: 4k max_tokens -> finish=length content=0, 8k -> content~10k).
-    # Keep 8k for muse-spark, 4k for deepseek; keep low reasoning for muse (budget).
-    max_tok = 8000 if is_muse else 4000
-    # muse-spark timeout 120 (observed reasoning+text ~6–7.5k tok); deepseek 90 is fine.
-    tm = 120 if is_muse else 90
+    # muse-spark: xhigh thinking (user requested). 2026-08-20: 4k -> finish=length 0, 8k -> ~10k content at low effort.
+    # xhigh needs ~6-9k reasoning + 6k text, so 16k budget. Keep deepseek at 4k.
+    max_tok = 16000 if is_muse else 4000
+    # xhigh timeout 180 (reasoning heavy); deepseek 90 is fine.
+    tm = 180 if is_muse else 90
     kwargs: dict = dict(
         base_url=base_url,
         api_key=api_key,
@@ -159,7 +158,8 @@ def make_llm(model: str | None = None) -> ChatOpenAI:
         max_tokens=max_tok,
     )
     if any(x in model for x in ("muse-spark", "deepseek", "gpt-5", "o1", "o3", "reasoning")):
-        kwargs["reasoning_effort"] = "low"
+        # user set steeringMode:all defaultThinkingLevel:xhigh — use xhigh budget
+        kwargs["reasoning_effort"] = "xhigh"
     return ChatOpenAI(**kwargs)
 
 
