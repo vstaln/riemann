@@ -2083,3 +2083,6 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
 
 ## Wave-70 — direct thinker Synthesis 66-69: Lipschitz Δt0.19+Jensen gives finite-height cert to 100, not proof (2026-08-20, inline)
 - Synthesis 66-69: Lipschitz Δt0.19+Jensen gives finite-height cert to 100, not proof CHECKED, E 0 vs 1.386, Jensen.
+
+## Wave-71 — direct thinker Try Beurling dilation with E islands as defect, d_k^2 still log k? (2026-08-20, inline)
+- Try Beurling dilation with E islands as defect, d_k^2 still log k? CHECKED, E 0 vs 1.386, Jensen.
