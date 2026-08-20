@@ -1972,3 +1972,21 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
 - NEW OPEN QUESTION (for wave-53): is the sigma* lower-bound property a THEOREM
   (sigma*(t0) <= max beta given only the Herglotz sum structure + FE symmetry),
   or only a numeric coincidence on the planted world?
+
+## THEOREMS PROVEN — Herglotz-violation discriminator upgraded (2026-08-19, s4h closure)
+- T1 (PROVEN, classical Herglotz contrapositive): H_s(t0) < 0 ==> exists off-line zero
+  with beta > s. Proof: H_s(t0) = sum_rho (s-beta)/[(s-beta)^2+(t0-g)^2]; if ALL beta <= s
+  then every term >= 0 (non-negative numerator, positive denominator), sum >= 0. Contrapositive.
+- T2 (PROVEN, trivial): sigma*(t0) = sup{s : H_s(t0) < 0} <= max_rho beta_rho. Proof: for
+  s >= max beta every term >= 0 -> H_s(t0) > 0. The beta-lower-bound estimator is a
+  THEOREM, not a numeric coincidence.
+- NEW OBJECT (CHECKED NUMERICALLY): the interval-of-sigma violation — planted world has
+  H_s(g1) < 0 for an INTERVAL s in (0.5, 0.8), mechanism 1/(s-0.8)+1/(s-0.2) exact;
+  sigma*(g1) = 0.8000 recovers beta0 to 4dp. RH world: H_s(t) > 0 on grid (min +0.002258).
+- RELATION TO ZERO-COUNTING (direction 1): H<0 at fixed (s,t0) is a beta-THRESHOLD detector
+  (T1 gives beta > s) — zero-counting counts zeros in a box and never yields beta values.
+  The interval structure is new info. BUT the certificate form (H_s(t)>0 for all t at fixed
+  s) still reduces to continuum positivity = RH itself (firewall intact).
+- SYNTHETIC CONFIRMATION: corrected synthetic world (REPLACE on-line zero, not ADD pair)
+  reproduces the violation (H=-1.776 at s=0.6 ordinate) and sigma*<=beta0. The earlier
+  synthetic bug (double-counting) is documented.
