@@ -2080,3 +2080,6 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
 
 ## Wave-69 — direct thinker 2D ballot: E islands are isolated, no percolation, measure 0 (2026-08-20, inline)
 - 2D ballot: E islands are isolated, no percolation, measure 0 CHECKED, E 0 vs 1.386, Jensen.
+
+## Wave-70 — direct thinker Synthesis 66-69: Lipschitz Δt0.19+Jensen gives finite-height cert to 100, not proof (2026-08-20, inline)
+- Synthesis 66-69: Lipschitz Δt0.19+Jensen gives finite-height cert to 100, not proof CHECKED, E 0 vs 1.386, Jensen.
