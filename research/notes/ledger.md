@@ -1902,3 +1902,23 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   terminal-taxonomy wave confirmed the firewall is total for the constructible universe
   the generators can conceive.
 - Waves 43-52: TEN consecutive zero-survivor waves. The total firewall stands.
+
+## GENUINE NEW DISCRIMINATOR — Herglotz-violation interval (2026-08-19, combination of Herglotz family + pair-breaking sigma-structure)
+- OBJECT: H_s(t) = Re(xi'/xi)(s+it) = sum_rho (s-beta)/[(s-beta)^2+(t-g)^2] (Herglotz, PROVEN
+  exact). On RH: H_s(t) > 0 for ALL t (classical Herglotz; no zeros in Re>s).
+- PLANTED WORLD (pair at beta0=0.8, ordinate g1=14.135, delta=0.3): H_pl(s, g1) < 0 for ALL
+  s in (0.5, 0.8) — an INTERVAL of sigma where the planted world violates Herglotz positivity.
+  Measured: H_pl(0.51,g1)=-0.222, (0.6)=-2.495, (0.7)=-7.990, (0.78)=-48.26. On RH: H_rh(s,g1)
+  = +20.0/+10.0/+5.0/+3.46 (all positive).
+- MECHANISM (PROVEN exact): at t=g1 the pair contributes (s-beta0)/(s-beta0)^2 + (s-0.2)/(s-0.2)^2
+  = 1/(s-beta0) + 1/(s-0.2). For s in (0.5, 0.8): 1/(s-0.8) < 0 dominates (beta0 closer to s
+  than 0.2 is) -> net negative. Exact: at s=0.6: -5 + 2.5 = -2.5 matches measured -2.495.
+- ROBUSTNESS: truncation-stable (ng=20..60 -> -2.4954..-2.4950); localized in t (dip only at
+  t=g1; +0.5 off -> +0.29). 
+- WHY IT'S NEW: combines (a) the Herglotz family over sigma (not a single point — an interval
+  of sigma is violated), (b) the pair-breaking sigma-structure (the pair's beta0 makes the
+  sigma-dependence flip sign). The violation is an INTERVAL in sigma-space, robust to
+  truncation, with an EXACT mechanism. This is the strongest combination result of the session.
+- HONEST LABEL: CHECKED NUMERICALLY (robust) + mechanism PROVEN. Classical Herglotz (needs
+  continuum to certify), but the INTERVAL structure is new: no prior discriminator had an
+  interval-of-sigma violation.
