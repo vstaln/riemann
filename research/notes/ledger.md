@@ -2041,3 +2041,6 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
 
 ## Wave-56 — direct thinker, circle-mean sweep CHECKED (2026-08-20, muse-spark-1.2, no swarm)
 - Sweep c=0.75+i·t r=0.2: E=0 at dt±0.30,±0.20, E=0.235 at ±0.15, 0.581 at ±0.10, 1.386 at 0 (log(r/d) with d=√(0.05²+dt²)). CHECKED 1200-pt 25dps, Jensen PROVEN, width 0.4 matches wedge. Swarm killed (tokens out), wave written by thinker, 0 swarm survivors but direct discriminator refined. Label: CHECKED+PROVEN, certificate OPEN (grid Δt=0.2 finite-height).
+
+## Wave-57 — direct thinker high-T sweep CHECKED (2026-08-20, inline opencode, muse-spark-1.2)
+- E(c=0.75+i·t,r0.2)=0 at t=30,50,70,90,100 (dmin 0.23-1.19 >0.2, no interior zero) CHECKED 800-pt 25dps. Planted at g1 E=1.386 (r0.2, d0.05) and 0.875 (r0.12, log 2.4) CHECKED. Jensen PROVEN, high-T holds, r tunable. Label: CHECKED+PROVEN, finite-height.
