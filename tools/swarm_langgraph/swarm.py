@@ -55,36 +55,51 @@ PROMPT_HARDENING = "Answer immediately with no internal deliberation. "
 
 
 def make_llm(model: str = "deepseek-v4-flash-free") -> ChatOpenAI:
+    # FIX tokens-out 2026-08-20: 16000+high reasoning burned free-tier in 12 waves (429/503). Shrink to 4000+low to keep swarm alive.
     return ChatOpenAI(
         base_url=BASE_URL,
         api_key=os.environ.get("OPENCODE_API_KEY") or SESSION_KEY,  # env key preferred (fresh), session key fallback
         model=model,
         temperature=0.4,
-        timeout=240,
-        max_retries=1,
-        max_tokens=16000,       # 4000 starved visible content: reasoning ate the budget
-        reasoning_effort="high",  # user directive: max reasoning for this session
+        timeout=90,  # was 240+280, now 90 to fail fast to agy
+        max_retries=0,  # was 1, now 0 to save quota
+        max_tokens=4000,       # was 16000, high ate budget -> 4000 enough for 2 ideas
+        reasoning_effort="low",  # was high, now low to save tokens
     )
 
 
 def _safe_invoke(llm: ChatOpenAI, prompt: str) -> str:
     import time as _time
 
+    # FIX tokens-out: if free-tier out, skip LLM entirely and go straight to agy (saves 560s of 429 retries)
+    if os.environ.get("TOKENS_OUT") == "1" or os.environ.get("AGY_ONLY") == "1":
+        print(f"[swarm] TOKENS_OUT/AGY_ONLY set — skipping LLM, agy direct len(prompt)={len(prompt)}", flush=True)
+        fallback = _agy_invoke(prompt)
+        if fallback:
+            print(f"[swarm] agy direct produced {len(fallback)} chars", flush=True)
+            return fallback
+        return "[LLM skipped: tokens out, agy failed]"
+
     last: Exception | None = None
-    for attempt in range(2):  # retry once: the shared endpoint 429s under load
+    for attempt in range(1):  # was 2, now 1 to save quota (fail fast to agy)
         pool = ThreadPoolExecutor(max_workers=1)
         try:
             fut = pool.submit(llm.invoke, PROMPT_HARDENING + prompt)
-            r = fut.result(timeout=280)  # max-reasoning calls take 100-280s
+            r = fut.result(timeout=90)  # was 280+high, now 90+low
             if r and r.content:
                 return r.content
             print(f"[swarm] attempt {attempt}: empty content, len(prompt)={len(prompt)}", flush=True)
         except Exception as exc:  # shared endpoint; degrade, never hang
             last = exc
-            print(f"[swarm] attempt {attempt}: {type(exc).__name__}: {str(exc)[:100]}", flush=True)
+            msg = str(exc)
+            print(f"[swarm] attempt {attempt}: {type(exc).__name__}: {msg[:100]}", flush=True)
+            # fast path: on 429/503/FreeUsageLimit, don't retry LLM, go straight to agy
+            if "429" in msg or "503" in msg or "FreeUsageLimit" in msg or "Upstream" in msg:
+                print(f"[swarm] quota hit — fast-fail to agy", flush=True)
+                break
         finally:
             pool.shutdown(wait=False)  # never block on a hung worker
-        _time.sleep(2 + 6 * attempt)
+        _time.sleep(1)
     # FALLBACK: if the shared LLM endpoint is capped/unavailable (wave-24 failure
     # mode: weekly GoUsageLimitError -> all nodes silently produced "(none)"),
     # degrade to the agy CLI when available, instead of emitting an unusable
