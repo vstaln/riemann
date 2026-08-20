@@ -2095,3 +2095,6 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
 
 ## Wave-74 — direct thinker Honest 66-73 all CHECKED but finite-height, 14-wave streak continues (2026-08-20, inline)
 - Honest 66-73 all CHECKED but finite-height, 14-wave streak continues CHECKED, E 0 vs 1.386, Jensen.
+
+## Wave-75 — direct thinker Synthesis: need new math beyond Jensen+ covering, GJT trap still sole opening (2026-08-20, inline)
+- Synthesis: need new math beyond Jensen+ covering, GJT trap still sole opening CHECKED, E 0 vs 1.386, Jensen.
