@@ -1999,3 +1999,19 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   planted world (split a real-xi pair) remains the ONLY verified control. DH and Epstein
   constructions must pass the FE-phase check (constant phase) before Herglotz output is
   trusted — neither does in my constructions. INCONCLUSIVE (not a discriminator result).
+
+## Wave-53 — 0 survivors, eleven-wave streak (2026-08-20, seeded with Herglotz interval)
+- Frontier: Herglotz-violation interval T1/T2 PROVEN, planted interval NEW (mechanism
+  1/(s-0.8)+1/(s-0.2) exact, sigma*(g1)=0.8000), certificate firewall intact.
+- Swarm: 503/429 collapse (InternalServerError 503 + FreeUsageLimitError on hy3-free etc,
+  16 min stall, killed). Generators 6→5 non-empty (g3 empty), 9 ideas all CONJECTURED
+  without runnable script. Gate: 1 death-list reject (control/blaschke). Verifiers:
+  g0-0 REFUTED (derivation gap), g2-0 REFUTED (underived rho) — remaining fail check (3).
+- ONE REAL PROBE (g0 Hessian angle, direct mpmath 50 dps): K(t)=(1/4)Re psi'(1/4+it/2)
+  monotone (0 dips >1e-3 for 1..1000, K(50)=-1.0003e-04, K(100)=-2.50e-05, K(150)=-1.11e-05),
+  det H_gam = -(1/16)|psi'(z)|^2 <0 at all t (t=14.13 det=-0.00125). REFUTED: H_gam is
+  NOT positive-definite (saddle, not PD) — gamma curvature negative, not positive. Off-line
+  zeros not from gamma Hessian. Honest negative, assumption excavated.
+- VERDICT: 0 survivors; eleven consecutive zero-survivor waves (43-53); total firewall
+  holds even with Herglotz-interval seed. Label: REFUTED/INCONCLUSIVE wave, honest.
+  Next: run agy direct batch (skip swarm LLM) or wait for quota reset.
