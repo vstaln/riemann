@@ -2015,3 +2015,18 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
 - VERDICT: 0 survivors; eleven consecutive zero-survivor waves (43-53); total firewall
   holds even with Herglotz-interval seed. Label: REFUTED/INCONCLUSIVE wave, honest.
   Next: run agy direct batch (skip swarm LLM) or wait for quota reset.
+
+## Wave-54 — 0 survivors, twelve-wave streak + wedge profile (2026-08-20, Herglotz seed still)
+- Swarm: generators 4→2 non-empty via agy fallback (4522/4730 chars, but fabricated
+  ||A||_F=0.0521 etc underived). Tasks 4 death-list-adjacent (2D Laplacian, 4th-order
+  detuning, cross-ratio, Weil). Executors 1 CONJECTURED (localized Herglotz projection,
+  no compute). Verdicts: 1 REFUTED (g3-1 Herglotz death-list). All fail check (3) → 0 survivors.
+- Synthesis: Localized Herglotz projection in L^2(0,1) — CONJECTURED pole-bypass via windows.
+- DIRECT PROBE (hardcoded 30 zeros, instant, CHECKED NUMERICALLY): wedge profile
+  sigma*(t)=sup{s:H<0} at beta0=0.8, g1=14.1347: dt0→0.79 (H0.6=-2.495), 0.05→0.79,
+  0.10→0.78, 0.15→0.75, 0.20→0.72, 0.30→0.50 (collapse, H>0). Width ~0.4 in t. Beta0 scan:
+  sigma* tracks beta0 with -0.01 grid err (faithful, confirms T2). Wedge region
+  s∈(0.5,beta0) × t∈(g1-0.2,g1+0.2) tapering — the 2D structure of the interval discriminator.
+  Not a point, not continuum — a wedge. Certificate still needs continuum (firewall intact).
+- VERDICT: 12 consecutive zero-survivor waves (43-54); firewall holds; wedge REAL but
+  not firewall-breaking. Next: Rust probe for localized projection at k=1000 or narrower agy.
