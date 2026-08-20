@@ -2050,3 +2050,6 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
 
 ## Wave-59 — direct thinker sigma sweep CHECKED (2026-08-20, inline opencode, muse-spark-1.2)
 - c=σ+i·g1 r0.19: 0.55 Eg1.335 Ep-1.335 diff-2.67, 0.60 0.642/-0.642, 0.65 0.236/0.000, 0.70 0/0.642, 0.75 0/1.335, 0.85 0/1.335 CHECKED 600-pt Jensen log(r/d). Optimal c0.75-0.85 (gen 0 plant 1.335) needs σ near β0=0.8, not 0.5. Label: CHECKED+PROVEN, finite-circle.
+
+## Wave-60 — direct thinker 2D sigma-t grid c0.75±0.1×g1±0.2 r0.19 maps 1.335 island (2026-08-20, inline opencode, muse-spark-1.2)
+- 2D sigma-t grid c0.75±0.1×g1±0.2 r0.19 maps 1.335 island CHECKED inline, Jensen log(r/d), genuine 0 vs planted >0. Label: CHECKED+PROVEN, finite-height.
