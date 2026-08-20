@@ -2074,3 +2074,6 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
 
 ## Wave-67 — direct thinker Cover strip [0,1]×[0,100] with 2500 circles r0.19, E=0 everywhere CHECKED (2026-08-20, inline)
 - Cover strip [0,1]×[0,100] with 2500 circles r0.19, E=0 everywhere CHECKED CHECKED, E 0 vs 1.386, Jensen.
+
+## Wave-68 — direct thinker Jensen with 100 zeros, E still 0 at t=500,1000 high-T (2026-08-20, inline)
+- Jensen with 100 zeros, E still 0 at t=500,1000 high-T CHECKED, E 0 vs 1.386, Jensen.
