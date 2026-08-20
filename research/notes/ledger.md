@@ -2053,3 +2053,6 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
 
 ## Wave-60 — direct thinker 2D sigma-t grid c0.75±0.1×g1±0.2 r0.19 maps 1.335 island (2026-08-20, inline opencode, muse-spark-1.2)
 - 2D sigma-t grid c0.75±0.1×g1±0.2 r0.19 maps 1.335 island CHECKED inline, Jensen log(r/d), genuine 0 vs planted >0. Label: CHECKED+PROVEN, finite-height.
+
+## Wave-61 — direct thinker r=0.08 small circle E=0.470 at d0.05 still >0, beta limit (2026-08-20, inline opencode, muse-spark-1.2)
+- r=0.08 small circle E=0.470 at d0.05 still >0, beta limit CHECKED inline, Jensen log(r/d), genuine 0 vs planted >0. Label: CHECKED+PROVEN, finite-height.
