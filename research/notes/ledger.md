@@ -1922,3 +1922,35 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
 - HONEST LABEL: CHECKED NUMERICALLY (robust) + mechanism PROVEN. Classical Herglotz (needs
   continuum to certify), but the INTERVAL structure is new: no prior discriminator had an
   interval-of-sigma violation.
+
+## Herglotz-violation discriminator — FULL HONEST VERIFICATION (2026-08-19, s4h-driven)
+- (A) Herglotz identity H_s(t) = Re(xi'/xi)(s+it) = sum_rho (s-beta)/[(s-beta)^2+(t-g)^2]:
+  PROVEN (classical). Contrapositive: H_s(t0)<0 for some (s>1/2, t0) ==> exists off-line
+  zero with beta > s ==> RH FALSE. (The sum can be negative even with no zero NEAR t0:
+  many beta>s zeros spread out pull it negative — H is a GLOBAL beta-threshold detector.)
+- (B) RH world (real zeta): H_zeta(s,t) > 0 on grid (s in {0.51..0.9}, t in 14..80),
+  min = +0.002258 at (s=0.51, t=17) — positive everywhere, consistent with RH + Herglotz.
+  CHECKED NUMERICALLY (80 zeros).
+- (C) Planted world (pair beta0=0.8, ordinate g1): H_pl(s, g1) < 0 for ALL s in (0.5, 0.8)
+  — interval violation. sigma*(g1) = sup{s:H<0} = 0.8000 EXACT (recovers beta0 to 4dp).
+  Off-ordinate: sigma*(g1+0.1)=0.7827, sigma*(g1+0.3)=0.5 (violation collapses fast).
+  Mechanism PROVEN exact: pair term = 1/(s-0.8) + 1/(s-0.2), negative for s in (0.5,0.8).
+  CHECKED NUMERICALLY (truncation-stable ng=20..60).
+- (D) DH control (real RH-false): H_D(0.6, t) < 0 at t=46,50,60,85.7 (truncation-stable
+  N=30k..150k to 4 digits). sigma*(t0): 0.95 (ceiling) at t0=50,60; 0.7515 at t0=85.7.
+  Interpretation: DH has off-line zeros with beta > 0.6 at many ordinates; the onset
+  saturating 0.95 ceiling at t0=50/60 indicates beta near/above 0.95 there (DH variants
+  have zeros up to beta~0.96+). Consistent with Herglotz contrapositive (DH is RH-false).
+  CHECKED NUMERICALLY.
+- WHAT'S NEW vs zero-counting (direction 1): H is a beta-THRESHOLD/lower-bound detector
+  (the sigma-onset sigma*(t0) lower-bounds the max beta among off-line zeros), no zero
+  locations needed. Zero-counting counts zeros in a box; it never yields beta values.
+- HONEST LIMITATIONS: (i) sigma* at off-ordinate t0 under-estimates beta0 (lower bound,
+  not exact); (ii) exactness only at the ordinate (which requires location info);
+  (iii) RH-side positivity verified only on a finite grid (finite-height consistency,
+  not a continuum proof — a continuum certificate IS a proof of RH, still open);
+  (iv) DH onset saturates the 0.95 bisection ceiling at some t0 (true beta may be higher).
+- VERDICT: a GENUINE new discriminator object (interval-of-sigma violation + beta-lower-
+  bound estimator), firewall-relevant but NOT firewall-breaking: the certificate form
+  (H>0 for all t at fixed s) still reduces to continuum positivity = RH itself.
+  Label: CHECKED NUMERICALLY (mechanism PROVEN, interval structure NEW, certificate OPEN).
