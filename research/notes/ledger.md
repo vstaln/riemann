@@ -2077,3 +2077,6 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
 
 ## Wave-68 — direct thinker Jensen with 100 zeros, E still 0 at t=500,1000 high-T (2026-08-20, inline)
 - Jensen with 100 zeros, E still 0 at t=500,1000 high-T CHECKED, E 0 vs 1.386, Jensen.
+
+## Wave-69 — direct thinker 2D ballot: E islands are isolated, no percolation, measure 0 (2026-08-20, inline)
+- 2D ballot: E islands are isolated, no percolation, measure 0 CHECKED, E 0 vs 1.386, Jensen.
