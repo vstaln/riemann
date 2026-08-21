@@ -80,7 +80,12 @@ def _resolve_base_url(model: str | None = None) -> str:
     # Muse-spark / meta/* lives on commandcode; deepseek lives on opencode.
     # Pi's session env carries OPENAI_BASE_URL=http://127.0.0.1:8787 but nothing
     # listens there (Connection refused), so don't blindly trust it.
+    # ox-alpha: catalog advertises opencode/ox-alpha but live entitlement has no ox
+    # (401 Model not supported on both zen/go and zen). Real ride is OpenRouter
+    # stealth/ox-alpha (same model, Stealth provider) — route there.
     m = (model or DEFAULT_MODEL or "").lower()
+    if "ox-alpha" in m or "ox_alpha" in m or "stealth/ox" in m:
+        return "https://openrouter.ai/api/v1"
     if "muse-spark" in m or m.startswith("meta/"):
         return COMMANDCODE_URL
     # Commandcode also hosts some GPT-family; keep opencode for deepseek-free etc.
@@ -96,6 +101,34 @@ def _resolve_base_url(model: str | None = None) -> str:
 
 
 def _resolve_api_key(model: str | None = None) -> str:
+    # Model-aware: ox-alpha/stealth -> openrouter key; muse-spark/meta -> commandcode; deepseek -> opencode
+    m = (model or DEFAULT_MODEL or "").lower()
+    if "ox-alpha" in m or "ox_alpha" in m or "stealth/ox" in m:
+        for k in ("OPENROUTER_API_KEY",):
+            v = os.environ.get(k)
+            if v:
+                return v
+        try:
+            import json as _json2
+            p2 = Path.home() / ".pi" / "agent" / "auth.json"
+            if p2.exists():
+                j2 = _json2.loads(p2.read_text())
+                ok = j2.get("openrouter", {}).get("key")
+                if ok:
+                    return ok
+            p3 = Path.home() / ".local" / "share" / "opencode" / "auth.json"
+            if p3.exists():
+                j3 = _json2.loads(p3.read_text())
+                ok = j3.get("openrouter", {}).get("key")
+                if ok:
+                    return ok
+        except Exception:
+            pass
+        for k in ("OPENCODE_API_KEY", "OPENAI_API_KEY"):
+            v = os.environ.get(k)
+            if v:
+                return v
+        return SESSION_KEY
     # Model-aware: muse-spark/meta/* -> commandcode key; deepseek-family -> opencode key.
     is_muse = _is_muse_spark(model)
     # For muse-spark prefer commandcode key
@@ -146,11 +179,14 @@ def make_llm(model: str | None = None) -> ChatOpenAI:
     base_url = _resolve_base_url(model)
     api_key = _resolve_api_key(model)
     is_muse = _is_muse_spark(model)
+    # ox-alpha is a reasoning model (1M ctx, 384k max) — needs same xhigh budget as muse-spark
+    # stealth/ox-alpha is same OX via OpenRouter (Stealth) — treat identically
+    is_ox = ("ox-alpha" in model.lower() or "ox_alpha" in model.lower() or "stealth/ox" in model.lower())
     # muse-spark: xhigh thinking (user requested). 2026-08-20: 4k -> finish=length 0, 8k -> ~10k content at low effort.
     # xhigh needs ~6-9k reasoning + 6k text, so 16k budget. Keep deepseek at 4k.
-    max_tok = 16000 if is_muse else 4000
+    max_tok = 16000 if (is_muse or is_ox) else 4000
     # xhigh timeout 180 (reasoning heavy); deepseek 90 is fine.
-    tm = 180 if is_muse else 90
+    tm = 180 if (is_muse or is_ox) else 90
     kwargs: dict = dict(
         base_url=base_url,
         api_key=api_key,
@@ -160,7 +196,7 @@ def make_llm(model: str | None = None) -> ChatOpenAI:
         max_retries=0,
         max_tokens=max_tok,
     )
-    if any(x in model for x in ("muse-spark", "deepseek", "gpt-5", "o1", "o3", "reasoning")):
+    if any(x in model for x in ("muse-spark", "deepseek", "gpt-5", "o1", "o3", "reasoning", "ox-alpha", "ox", "stealth")):
         # user set steeringMode:all defaultThinkingLevel:xhigh — use xhigh budget
         kwargs["reasoning_effort"] = "xhigh"
     return ChatOpenAI(**kwargs)
@@ -194,9 +230,9 @@ def _safe_invoke(llm: ChatOpenAI, prompt: str) -> str:
             last = exc
             msg = str(exc)
             print(f"[swarm] attempt {attempt}: {type(exc).__name__}: {msg[:100]}", flush=True)
-            # fast path: on 429/503/FreeUsageLimit, don't retry LLM, go straight to agy
-            if "429" in msg or "503" in msg or "FreeUsageLimit" in msg or "Upstream" in msg:
-                print(f"[swarm] quota hit — fast-fail to agy", flush=True)
+            # fast path: on 429/503/401 ModelError/FreeUsageLimit, don't retry LLM, go straight to agy
+            if "429" in msg or "503" in msg or "401" in msg or "ModelError" in msg or "not supported" in msg or "FreeUsageLimit" in msg or "Upstream" in msg:
+                print(f"[swarm] quota/model hit — fast-fail to agy", flush=True)
                 break
         finally:
             pool.shutdown(wait=False)  # never block on a hung worker
@@ -375,8 +411,8 @@ def make_idea_gen(idx: int):
             "say 'must be measured' honestly); (4) the label (PROVEN-able / CONJECTURED / "
             "measurement-probe); (5) the ONE cheap Rust/rug check (<1min) that would change "
             "belief and what each outcome means — also give its exact shell command as rust_cmd. ALLOWED BINS ONLY (whitelist — any other bin => INCONCLUSIVE, never VERIFIED): "
-            "DIRECT-RH: jensen_probe, jensen_weil_hybrid, arch_hessian_detrend, li_jensen_laplace, turan_debranges_jensen, beurling_jensen_dist, nyman_jensen_hybrid, jensen_hessian_gamma, jensen_curvature_subtract, li_debranges_turan, li_feedback_gain, kolmogorov_prime, diffraction_logp, coulomb_energy, persistence_zero "
-            "(jensen_* in tools/jensen_probe/Cargo.toml alias honest E(c,r); alien 4 in tools/alien_probes/Cargo.toml — N-body global discriminants). "
+            "DIRECT-RH: jensen_probe, jensen_weil_hybrid, arch_hessian_detrend, beurling_jensen_dist, nyman_jensen_hybrid, jensen_hessian_gamma, jensen_curvature_subtract, kolmogorov_prime, diffraction_logp, coulomb_energy, persistence_zero "
+            "(jensen_* in tools/jensen_probe/Cargo.toml alias honest E(c,r); alien 4 in tools/alien_probes/Cargo.toml — N-body global discriminants; li_*/turan_* DEMOTED 2026-08-21 — they only reported Jensen E, not Li lambda_n/Turan Delta — removed from whitelist to stop token burn). "
             "LOWER-BOUNDS (proportion improvement, firewall holds — not RH evidence): sinc_m3_cert (tools/sinc_m3_cert), finitet-cinf (tools/finitet), angle_kernel (tools/angle_kernel), coboundary_search (tools/coboundary_search), npoint-sweep (tools/npoint-sweep), cert-floor-rs, verifier-rs, logprofile. "
             "EXAMPLES (copy exactly, only change flags): "
             "\"cargo run --bin jensen_probe -- --c-re 0.75 --r 0.30 --planted-beta 0.80 --centers 14.1347,14.28,14.43,30,50\" "
@@ -550,9 +586,18 @@ def make_executor(idx: int):
                 # keep stderr too — rug/arb diagnostics are on stderr
                 out_tail = (out.stdout[-700:] + ("\nSTDERR:" + out.stderr[-400:] if out.stderr.strip() else ""))[:1100]
                 claim = f"Ran `{rust_cmd}`: exit {out.returncode}. Output: {out_tail}"
-                label = "CHECKED NUMERICALLY" if out.returncode == 0 else "INCONCLUSIVE"
+                # ALIAS-STUB demotion (fix audit 2026-08-21): li_*/turan_* bins are Jensen aliases,
+                # not Li lambda_n / Turan Delta discriminants — demote to INCONCLUSIVE so they
+                # never count as VERIFIED Li/Turan evidence (Jensen gap still visible for honesty).
+                is_alias = ("ALIAS-STUB" in out.stdout or "only reports honest Jensen E" in out.stdout
+                            or "only reports honest Jensen E" in out.stderr)
+                if is_alias:
+                    claim = f"ALIAS-STUB {claim} — NOTE: Li/Turan alias to Jensen E, not a Li/Turan discriminant (INCONCLUSIVE for Li/Turan; Jensen gap visible above)"
+                    label = "INCONCLUSIVE"
+                else:
+                    label = "CHECKED NUMERICALLY" if out.returncode == 0 else "INCONCLUSIVE"
                 # side note: what the check was for
-                side_notes.append(f"{idea['id']} [{s4h}] CHECKED via `{rust_cmd}` — {idea_text[:350]}")
+                side_notes.append(f"{idea['id']} [{s4h}] {'INCONCLUSIVE (alias)' if is_alias else 'CHECKED'} via `{rust_cmd}` — {idea_text[:350]}")
             else:
                 # STRICT Rust gate (2026-08-20 fix 3): no binary => no CONJECTURED claim.
                 # Previously this emitted a CONJECTURED LLM method-note that verifiers
@@ -608,6 +653,12 @@ def make_verifier(idx: int):
                 new_verdicts.append({
                     "claim_id": c["idea_id"], "verifier": f"verifier-{idx}",
                     "verdict": "INCONCLUSIVE", "evidence": "No binary / empty rust_cmd — no computation to verify",
+                })
+                continue
+            if "ALIAS-STUB" in c.get("claim", "") or "only reports honest Jensen E" in c.get("claim", ""):
+                new_verdicts.append({
+                    "claim_id": c["idea_id"], "verifier": f"verifier-{idx}",
+                    "verdict": "INCONCLUSIVE", "evidence": "ALIAS-STUB — li_/turan_ alias to Jensen E, not a Li/Turan discriminant (INCONCLUSIVE)",
                 })
                 continue
             prompt = (
@@ -853,7 +904,11 @@ def _tried_levers() -> list:
 def _frontier() -> str:
     plan = RIEMANN / "PLAN.md"
     text = plan.read_text()[:2000] if plan.exists() else ""
-    return text or "Standing target: unconditional simple-zero proportion beyond the in-class 0.673481 ceiling."
+    # dead-lever memory: agy/swarm must know what failed across 133+ waves
+    digest = NOTES / "DEAD-LEVERS.md"
+    dead = digest.read_text()[:2200] if digest.exists() else ""
+    base = text or "Standing target: unconditional simple-zero proportion beyond the in-class 0.673481 ceiling."
+    return (base + "\n\n=== TRIED AND DEAD (do not re-propose; if touching one, prove why yours escapes) ===\n" + dead) if dead else base
 
 
 def _next_wave() -> int:
