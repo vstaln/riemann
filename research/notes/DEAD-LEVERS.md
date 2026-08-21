@@ -31,3 +31,9 @@ Details: research/notes/cert-bug-2026-08-21.md. Do NOT cite 0.00703 / 0.6735633 
 
 ## RULE
 Any new idea must state which of these it avoids and why its missing analytic input (Lipschitz bound / error budget / asymptotic regime) is provable where the above failed.
+
+## 2026-08-21 battery adjudication (agy b1-b8)
+- KILLED [PROVEN]: Beurling defect residue lemma d_N^2(beta0)>=C/N^{2(1-beta0)} — the "zeta(rho0)=0 kills zeta*P_N" residue justification does not apply (b3).
+- UPGRADED to CHECKED NUMERICALLY: Weil-truncated-inside-Jensen with prime-error budget |R|<0.01 for X>=808 (independently rechecked: bound sum 0.002753 at X=808; oscillatory R(100)=+0.005595 vs claimed 0.006123) (b1). Single test function = single scalar inequality only; RH-below-T needs dense Galerkin family (Bombieri 2000 Thm 10).
+- LIVE: lambda_n spectral phases to n=1e5 via O(N) phasor recurrence, variable z=1-1/rho (b4); finite Galerkin Q_N negative-eigenvalue test.
+- CONFIRMED DEAD: de Branges HB obstruction (b7); two-case covering stays conditional (b2).
