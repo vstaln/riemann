@@ -1,0 +1,56 @@
+li_lambda_spectral n_max=10000 zeros=100000 gamma_max=74980.9 plant=none |z3|=-
+    1  lam=      0.023096  lit=0.023096  plant_delta=             -  lam_planted=             -
+    2  lam=      0.092345  lit=0.092346  plant_delta=             -  lam_planted=             -
+    3  lam=      0.207638  lit=0.207639  plant_delta=             -  lam_planted=             -
+    4  lam=      0.368790  lit=-  plant_delta=             -  lam_planted=             -
+    5  lam=      0.575541  lit=-  plant_delta=             -  lam_planted=             -
+    6  lam=      0.827564  lit=-  plant_delta=             -  lam_planted=             -
+    7  lam=      1.124457  lit=-  plant_delta=             -  lam_planted=             -
+    8  lam=      1.465752  lit=-  plant_delta=             -  lam_planted=             -
+    9  lam=      1.850911  lit=-  plant_delta=             -  lam_planted=             -
+   10  lam=      2.279333  lit=2.279340  plant_delta=             -  lam_planted=             -
+   20  lam=      8.769252  lit=-  plant_delta=             -  lam_planted=             -
+   50  lam=     43.530944  lit=-  plant_delta=             -  lam_planted=             -
+  100  lam=    118.603165  lit=-  plant_delta=             -  lam_planted=             -
+  250  lam=    407.692089  lit=-  plant_delta=             -  lam_planted=             -
+  500  lam=    991.884849  lit=-  plant_delta=             -  lam_planted=             -
+  750  lam=   1637.164350  lit=-  plant_delta=             -  lam_planted=             -
+ 1000  lam=   2325.992266  lit=-  plant_delta=             -  lam_planted=             -
+ 1250  lam=   3042.802848  lit=-  plant_delta=             -  lam_planted=             -
+ 1500  lam=   3791.569261  lit=-  plant_delta=             -  lam_planted=             -
+ 1750  lam=   4560.631941  lit=-  plant_delta=             -  lam_planted=             -
+ 2000  lam=   5351.517263  lit=-  plant_delta=             -  lam_planted=             -
+ 2250  lam=   6142.508579  lit=-  plant_delta=             -  lam_planted=             -
+ 2500  lam=   6947.282177  lit=-  plant_delta=             -  lam_planted=             -
+ 2750  lam=   7784.264148  lit=-  plant_delta=             -  lam_planted=             -
+ 3000  lam=   8616.678975  lit=-  plant_delta=             -  lam_planted=             -
+ 3250  lam=   9471.775326  lit=-  plant_delta=             -  lam_planted=             -
+ 3500  lam=  10331.611763  lit=-  plant_delta=             -  lam_planted=             -
+ 3750  lam=  11189.505957  lit=-  plant_delta=             -  lam_planted=             -
+ 4000  lam=  12069.519393  lit=-  plant_delta=             -  lam_planted=             -
+ 4250  lam=  12946.763801  lit=-  plant_delta=             -  lam_planted=             -
+ 4500  lam=  13846.447773  lit=-  plant_delta=             -  lam_planted=             -
+ 4750  lam=  14739.154232  lit=-  plant_delta=             -  lam_planted=             -
+ 5000  lam=  15637.637097  lit=-  plant_delta=             -  lam_planted=             -
+ 5250  lam=  16553.293301  lit=-  plant_delta=             -  lam_planted=             -
+ 5500  lam=  17478.015863  lit=-  plant_delta=             -  lam_planted=             -
+ 5750  lam=  18389.066529  lit=-  plant_delta=             -  lam_planted=             -
+ 6000  lam=  19313.434455  lit=-  plant_delta=             -  lam_planted=             -
+ 6250  lam=  20251.681401  lit=-  plant_delta=             -  lam_planted=             -
+ 6500  lam=  21189.121695  lit=-  plant_delta=             -  lam_planted=             -
+ 6750  lam=  22127.454646  lit=-  plant_delta=             -  lam_planted=             -
+ 7000  lam=  23076.999301  lit=-  plant_delta=             -  lam_planted=             -
+ 7250  lam=  24016.634697  lit=-  plant_delta=             -  lam_planted=             -
+ 7500  lam=  24987.342213  lit=-  plant_delta=             -  lam_planted=             -
+ 7750  lam=  25938.424664  lit=-  plant_delta=             -  lam_planted=             -
+ 8000  lam=  26910.214636  lit=-  plant_delta=             -  lam_planted=             -
+ 8250  lam=  27870.653680  lit=-  plant_delta=             -  lam_planted=             -
+ 8500  lam=  28834.781428  lit=-  plant_delta=             -  lam_planted=             -
+ 8750  lam=  29817.819152  lit=-  plant_delta=             -  lam_planted=             -
+ 9000  lam=  30786.824812  lit=-  plant_delta=             -  lam_planted=             -
+ 9250  lam=  31772.165273  lit=-  plant_delta=             -  lam_planted=             -
+ 9500  lam=  32761.526278  lit=-  plant_delta=             -  lam_planted=             -
+ 9750  lam=  33754.748432  lit=-  plant_delta=             -  lam_planted=             -
+10000  lam=  34731.566529  lit=-  plant_delta=             -  lam_planted=             -
+VALIDATION: lambda_1/2/3/10 above must match lit (6dp) => spectral engine check by eye vs lit column
+LABEL: values CHECKED NUMERICALLY; positivity for ALL n remains NOT proven (Li criterion iff RH).

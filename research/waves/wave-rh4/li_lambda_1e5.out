@@ -1,0 +1,21 @@
+li_lambda_1e5 n_max=100000 J=100000 gamma_cutoff=74980.922970159532
+data note: the supplied file ends near 74980.9, not 500000; all loaded zeros were used
+real global_min n=1 lambda=0.023095647958
+real first_negative=NONE
+real anchor n=1000 lambda=2325.992266418907
+real anchor n=5000 lambda=15637.637097125576
+real anchor n=5155 lambda=16201.760806417515
+real anchor n=5156 lambda=16205.216942565874
+real anchor n=10000 lambda=34731.566529233714
+real anchor n=100000 lambda=472190.551505977812
+plant beta=0.85 gamma=14.13472514 |z_growing|=1.001750106741
+plant first_negative=5155
+plant anchor n=5155 lambda=-153.354778987810
+plant anchor n=5156 lambda=-247.914947738172
+plant anchor n=100000 lambda=-8181549018571031689123217936246309967809622594851957472057341138320266100736.000000000000
+plant permanently_negative_suffix_through_scan=99994 (finite-range statement only)
+omitted_zero_count=INFINITE (the data set is finite; exact ordinates beyond cutoff are not loaded)
+[CONJECTURED] Riemann-von Mangoldt-density estimate sum_{gamma>T} 4/(4gamma^2+1) ~= 2.204774418822e-5
+[CONJECTURED] using |sin(n theta)| <= n|sin(theta)| gives omitted on-line tail magnitude <= n^2 times that estimate; at n=100000: 220477.441882164858
+CHECKED NUMERICALLY: finite f64 scan only; no claim that lambda_n >= 0 globally and no RH proof.
+elapsed_seconds=14.528

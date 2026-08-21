@@ -36,6 +36,7 @@ Any new idea must state which of these it avoids and why its missing analytic in
 - KILLED [PROVEN]: Beurling defect residue lemma d_N^2(beta0)>=C/N^{2(1-beta0)} — the "zeta(rho0)=0 kills zeta*P_N" residue justification does not apply (b3).
 - UPGRADED to CHECKED NUMERICALLY: Weil-truncated-inside-Jensen with prime-error budget |R|<0.01 for X>=808 (independently rechecked: bound sum 0.002753 at X=808; oscillatory R(100)=+0.005595 vs claimed 0.006123) (b1). Single test function = single scalar inequality only; RH-below-T needs dense Galerkin family (Bombieri 2000 Thm 10).
 - LIVE: lambda_n spectral phases to n=1e5 via O(N) phasor recurrence, variable z=1-1/rho (b4); finite Galerkin Q_N negative-eigenvalue test.
+- CHECKED NUMERICALLY (wave RH-4B): the spectral Li scan used all J=100000 supplied zeros (cutoff gamma=74980.923, not 500000), found no negative lambda_n through n=100000, and the beta0=0.85 quadruplet fired at n=5155 then stayed negative only from n=99994 through this finite scan. This finite f64 result is not an RH proof; do not repeat it without extending data/rigor.
 - CONFIRMED DEAD: de Branges HB obstruction (b7); two-case covering stays conditional (b2).
 
 ## 2026-08-21 wave-rh4(A) — Speiser/DH control (Lane D, ranking.md)
