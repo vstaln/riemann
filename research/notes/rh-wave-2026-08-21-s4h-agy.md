@@ -39,3 +39,20 @@ Every local discriminant (Jensen, Coulomb, diffraction, persistence) fires on pl
 2. **λ_n to n≈4000 in f128/rug** — watch the plant drive λ_n negative (control firing in-range would validate the Li mechanism end-to-end).
 3. **Prove-or-abandon Lipschitz L** for E on the σ=0.75 line (if unprovable non-circularly, close levers A/D as ABANDONED-with-reason).
 4. Verify or discard the NB residue lemma formula.
+
+## BLAST ADDENDUM (same session, spectral engine + Weil tool)
+
+### 5. SPECTRAL PHASE ENGINE — Li control FIRES IN-RANGE (session headline)
+New bin `li_lambda_spectral.rs`: on-line identity 1−1/ρ = e^{2iθ}, θ=arctan(1/(2γ)) ⟹ pair term Φ_n(γ)=4sin²(nθ); λ_n = Σⱼ 4sin²(nθ_j) + tail. No cancellation, O(N) phasor recurrence per n.
+- **CROSS-VALIDATED**: λ₁=0.023096, λ₂=0.092346, λ₃=0.207639, λ₁₀=2.279340 (6dp lit match) AND λ₄=0.368791, λ₅=0.575543 identical to the independent binomial engine `li_lambda_real`. Two implementations, one answer.
+- **RH-FALSE CONTROL FIRES (CHECKED NUMERICALLY)**: plant β0=0.85 @14.1347 ⟹ **λ₂₅₇₆ < 0** (first negative), dip magnitude grows to 7.4e5 by n=4000 while real-world λ_n stays positive throughout (λ₄₀₀₀=12079.5). Predicted crossing n≈2700 (envelope) / 3300 (agy) — actual 2576. Runtime 0.82s for the full n=4000 scan.
+- **What this proves**: the Li mechanism — PROVEN equivalent to RH (Li's theorem) — is implemented correctly end-to-end and discriminates a real-world from an RH-false world exactly as the theory demands. **What it does NOT prove**: RH. Real-world λ_n ≥ 0 for ALL n is RH itself; we verified n≤4000 only. The plant is synthetic.
+
+### 6. Weil truncated evaluation (lever C, first number)
+`weil_prime_sum` (agy's commit cf83374, wired into jensen_probe): W_X = **0.39058731** > 0 at T=50, X=10⁶, σ=1, t0=50 (9ms). Matches q1's hand prediction 0.39059.
+- **INFLATED LABEL REJECTED**: tool prints "R_max 5.10e-17 (rigorously proven)" — that is machine-epsilon of the last computed term, NOT the analytic tail bound (q1's derived budget gives order 1e-1 at these parameters). W_X value CHECKED NUMERICALLY; the tail-bound claim stays CONJECTURED until the q1 derivation is independently verified. Single φ member positive = zero RH evidence (family richness open).
+
+### Updated next actions
+1. Independent verification of the q1 prime-error budget (the W_X positivity claim is vacuous without it).
+2. λ_n real-world scan extension: n→10⁵ with the spectral engine (cheap) — pushes the "positivity checked" boundary; still evidence-only.
+3. Two-case covering detection formalization (far-from-line finite-L catch vs near-line log spike) — the salvage after the L=0.19 refutation.

@@ -65,3 +65,11 @@ path = "src/bin/jensen_lipschitz.rs"
 opt-level = 3
 lto = true
 
+
+[[bin]]
+name = "li_lambda_spectral"
+path = "src/li_lambda_spectral.rs"
+
+[[bin]]
+name = "weil_prime_sum"
+path = "src/weil_prime_sum.rs"
