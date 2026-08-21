@@ -1,0 +1,58 @@
+[package]
+name = "jensen_probe"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+[[bin]]
+name = "jensen_probe"
+path = "src/main.rs"
+
+[[bin]]
+name = "jensen_hessian_gamma"
+path = "src/main.rs"
+
+[[bin]]
+name = "jensen_curvature_subtract"
+path = "src/main.rs"
+
+[[bin]]
+name = "nyman_jensen_hybrid"
+path = "src/main.rs"
+
+[[bin]]
+name = "jensen_weil_hybrid"
+path = "src/main.rs"
+
+[[bin]]
+name = "li_jensen_laplace"
+path = "src/main.rs"
+
+[[bin]]
+name = "beurling_jensen_dist"
+path = "src/main.rs"
+
+[[bin]]
+name = "turan_debranges_jensen"
+path = "src/main.rs"
+
+[[bin]]
+name = "arch_hessian_detrend"
+path = "src/main.rs"
+
+[[bin]]
+name = "li_debranges_turan"
+path = "src/main.rs"
+
+[[bin]]
+name = "li_feedback_gain"
+path = "src/main.rs"
+
+[[bin]]
+name = "beurling_defect_floor"
+path = "src/beurling_defect_floor.rs"
+
+[profile.release]
+opt-level = 3
+lto = true
