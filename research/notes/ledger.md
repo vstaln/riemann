@@ -2098,3 +2098,12 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
 
 ## Wave-75 — direct thinker Synthesis: need new math beyond Jensen+ covering, GJT trap still sole opening (2026-08-20, inline)
 - Synthesis: need new math beyond Jensen+ covering, GJT trap still sole opening CHECKED, E 0 vs 1.386, Jensen.
+
+---
+## 2026-08-21 — RECORD RETIRED & RE-CERTIFIED (cert-bug)
+- **RETIRED**: eps=0.00703 → 0.67356334799462276907825507156842728993505158837078861022540884 (2026-08-18). Certificate invalid: `tangent_lower` LDL-on-entrywise-lower-bounds convexity test unsound. Exact counterexample at record params: g=(8082,8069,11965,8040,4227,4244)/4000, F_B=0.00689927317391 < 0.00703 (float + arb + mpmath-40 all agree).
+- **SOUND RE-CERTIFICATION** (verifier fixed w/ Gershgorin certificate; interval+pressure prunes unchanged): eps=**0.00689** verified=true @ (α=1.464, λ=1.15, tawan p/q), grid 4000, 8,259,964 nodes. Counterexample caps eps<0.0068993.
+- **NEW HONEST RECORD [PROVEN, sound verifier]**: N₀(T)/N(T) ≥ **0.6734729658195391** (m=155); upper edge of certified window gives ≤0.6734790.
+- "Breakthrough" 0.6751272603 from joint max-min was an artifact of the same bug — DEAD.
+- Dual ceiling 0.68182868746 and distinct-proportion 0.8367817 UNAFFECTED.
+- Full analysis: research/notes/cert-bug-2026-08-21.md. Commit c6a8f5e.
