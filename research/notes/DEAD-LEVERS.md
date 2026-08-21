@@ -37,3 +37,14 @@ Any new idea must state which of these it avoids and why its missing analytic in
 - UPGRADED to CHECKED NUMERICALLY: Weil-truncated-inside-Jensen with prime-error budget |R|<0.01 for X>=808 (independently rechecked: bound sum 0.002753 at X=808; oscillatory R(100)=+0.005595 vs claimed 0.006123) (b1). Single test function = single scalar inequality only; RH-below-T needs dense Galerkin family (Bombieri 2000 Thm 10).
 - LIVE: lambda_n spectral phases to n=1e5 via O(N) phasor recurrence, variable z=1-1/rho (b4); finite Galerkin Q_N negative-eigenvalue test.
 - CONFIRMED DEAD: de Branges HB obstruction (b7); two-case covering stays conditional (b2).
+
+## 2026-08-21 wave-rh4(A) — Speiser/DH control (Lane D, ranking.md)
+- Ran speiser_dh_control (jensen_probe bin): DH f' scan σ∈[0.05,0.5], t∈[10,120], Nmax=2000.
+  Strongest |f'| min at 0.42+85.70i, |f'|=0.0968 — matches canonical Voronin DH zero height ~85.7i;
+  the proposal's claimed 14.12 saddle did NOT appear (confirms ranking.md's UNVERIFIED flag).
+- Winding: DH f'=1 on circle r=0.15 [CHECKED NUMERICALLY]; truncated ζ'-analog control=0 —
+  discriminator NOT broken; RH-false control fires.
+- NOT CERTIFIED: Dirichlet remainder bound 0.80 >> 10%|f'| at Nmax=2000 (ratio 8.3). Task's literal
+  bound Σ|r|ln n n^{-0.05} DIVERGES. Verdict FAIL-on-certification; winding-1 is indication only.
+- Status: Speiser-transfer-for-DH stays CONJECTURED. Lever remains LIVE pending certified re-run
+  (functional-equation eval or N>=1e6 + interval arithmetic). Do not re-run as-is (same-lever rule).

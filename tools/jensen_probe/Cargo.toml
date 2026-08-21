@@ -61,14 +61,21 @@ path = "src/li_lambda.rs"
 name = "jensen_lipschitz"
 path = "src/bin/jensen_lipschitz.rs"
 
+[[bin]]
+name = "speiser_dh_control"
+path = "src/bin/speiser_dh_control.rs"
+
 [profile.release]
 opt-level = 3
 lto = true
 
-
 [[bin]]
 name = "li_lambda_spectral"
 path = "src/li_lambda_spectral.rs"
+
+[[bin]]
+name = "li_lambda_1e5"
+path = "src/li_lambda_1e5.rs"
 
 [[bin]]
 name = "weil_prime_sum"
