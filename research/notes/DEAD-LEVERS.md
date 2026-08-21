@@ -62,3 +62,15 @@ Any new idea must state which of these it avoids and why its missing analytic in
 - Status: lever UPGRADED from indication-only (wave-rh4 A: remainder 0.80 >> |f′|) to certified.
   Do NOT re-run truncated variants (same-lever rule). Next: rigor transfer / interval arithmetic
   if a proof-grade claim is ever needed; Speiser-transfer-for-DH stays CONJECTURED.
+
+## 2026-08-21 night — wave RH-4b results
+- CERTIFIED [CHECKED NUMERICALLY-RIGOROUS]: DH f′ left-strip zero at 0.42+85.70i inside r=0.15
+  (Euler-Maclaurin engine, per-point bound 3.2e−11 vs min|f′|=1.049, winding 1; ζ′ control winding 0).
+  Correct DH functional equation derived: f(s)=W(s)f(1−s), W(s)=(5/π)^{1/2−s}Γ(1−s/2)/Γ((s+1)/2)
+  (task-proposed X REJECTED numerically). Commit 791f7ac.
+- λ_n real world clean through n=100000 (J=100k zeros); plant fires n=5155, permanently negative n≥99994. Commit e0395b4.
+- LEDGERED CONJECTURE (lane E, agy): Uniform Hadamard Deficit Conjecture (UHDC) — for t≥14,
+  0<σ<1/2, dist(s,{ρ})≥1/log t: Re(ζ′/ζ)(s)>0. Honest label: proving it unconditionally is
+  RH-hard; value is as an interval-arithmetic-verifiable refinement target.
+- INCONCLUSIVE: sound eps=0.00700 cert at grid 8000 / 60M nodes (node-limit). Sound record stays
+  eps=0.00695 → 0.6735117054871194.
