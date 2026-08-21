@@ -74,15 +74,22 @@ class KernelArb:
             return 0.0
         return math.nextafter(low * low, -math.inf)
 
+    def w_second_enclosure_on_cell(self, index, grid):
+        """Rigorous [lower, upper] enclosure of w'' on cell index (floats)."""
+        cell = arb(fmpq(2 * index + 1, 2 * grid), fmpq(1, 2 * grid))
+        k, k1, k2 = self.kernel_derivatives(cell)
+        second = 2 * (k1 * k1 + k * k2) / self.k0sq
+        lo = math.nextafter(float(second.lower()), -math.inf)
+        up = math.nextafter(float(second.upper()), math.inf)
+        return lo, up
+
     def w_second_lower_on_cell(self, index, grid):
         """Rigorous lower bound of w'' = (k^2/k0^2)'' on cell index."""
-        cell = arb(fmpq(2 * index + 1, 2 * grid), fmpq(1, 2 * grid))
-        pi = arb.pi()
-        # k, k', k''
-        k, k1, k2 = self.kernel_derivatives(cell)
-        # w = k^2/k0^2; w'' = 2(k1^2 + k k2)/k0^2
-        second = 2 * (k1 * k1 + k * k2) / self.k0sq
-        return math.nextafter(float(second.lower()), -math.inf)
+        return self.w_second_enclosure_on_cell(index, grid)[0]
+
+    def w_second_upper_on_cell(self, index, grid):
+        """Rigorous upper bound of w'' on cell index."""
+        return self.w_second_enclosure_on_cell(index, grid)[1]
 
     def kernel_derivatives(self, x):
         """Arb enclosures of K, K', K'' at ball x."""
@@ -198,9 +205,11 @@ def verify_floor(kernel, weights, pressure, q, target, grid=4000,
     print(f"  kernel table built in {time.time()-t0:.1f}s sha={table_sha256(table)[:16]}")
     ranges = RangeMinimum(table)
     t0 = time.time()
-    second_table = [kernel.w_second_lower_on_cell(i, grid) for i in range(cell_count)]
-    print(f"  second-derivative table built in {time.time()-t0:.1f}s")
-    second_ranges = RangeMinimum(second_table)
+    second_lo = [kernel.w_second_lower_on_cell(i, grid) for i in range(cell_count)]
+    second_up = [kernel.w_second_upper_on_cell(i, grid) for i in range(cell_count)]
+    print(f"  second-derivative tables (lo+up) built in {time.time()-t0:.1f}s")
+    second_ranges = RangeMinimum(second_lo)          # range-min of w''
+    second_ranges_negup = RangeMinimum([-u for u in second_up])  # range-max of w''
 
     target_upper = _up(target)
     pressure_lower = _down(pressure)
@@ -308,7 +317,7 @@ def verify_floor(kernel, weights, pressure, q, target, grid=4000,
         if use_tangent:
             tl = tangent_lower(box, kernel, weights, pressure, grid,
                                pressure_coeffs, nearest_coeffs, cap_scheme,
-                               second_ranges)
+                               second_ranges, second_ranges_negup)
             if tl is not None and tl >= arb(target):
                 pruned_tangent += 1
                 continue
@@ -335,12 +344,20 @@ def verify_floor(kernel, weights, pressure, q, target, grid=4000,
 
 def tangent_lower(box, kernel, weights, pressure, grid,
                   pressure_coeffs, nearest_coeffs, cap_scheme,
-                  second_ranges=None):
+                  second_ranges=None, second_ranges_negup=None):
     """Arb convex-tangent lower bound; None if convexity not certified.
 
-    Certifies the Hessian of F as positive definite (exact LDL in arb),
-    then lower-bounds F by its tangent plane at the box midpoint minus the
-    gradient-radius Lipschitz term.
+    SOUND convexity certificate (2026-08-21 fix; the previous LDL-on-lower-bounds
+    certificate was INVALID: M built from entrywise lower bounds of w'' can be PD
+    while the true Hessian is indefinite, since H = M + N with N >= 0 entrywise
+    does not preserve positive definiteness — e.g. M=I, N=[[0,2],[2,0]]).
+
+    Sound test (Weyl/Gershgorin): with H the true interval Hessian,
+        lambda_min(H) >= min_i( H_ii^lo - sum_{j!=i} |H_ij|^up ) > 0
+    where H_ii^lo uses w'' lower bounds (all coefficients positive) and
+    |H_ij|^up uses max(|w''_lo|, |w''_up|) over the covering spans.
+    Only when this holds is F convex on the box and the tangent plane at the
+    midpoint minus the gradient-radius term a valid lower bound.
     """
     q = len(box)
     pair_list = sorted(weights)
@@ -350,45 +367,49 @@ def tangent_lower(box, kernel, weights, pressure, grid,
         low_prefix.append(low_prefix[-1] + low)
         high_prefix.append(high_prefix[-1] + high)
 
-    # --- Hessian: F = sum_i p_i g_i + sum_{i<j} a_ij w(y_j-y_i)
-    #     (plus q_i w(g_i) in coboundary mode).
-    #     d^2/dg_a dg_b of w(y_j - y_i) contributes w''(y_j-y_i) on the
-    #     block a,b in [i, j-1].
-    terms = []
-    heuristic = [[0.0] * q for _ in range(q)]
+    def span_lo(left, right):
+        return second_ranges.query(left, right)
+
+    def span_absup(left, right):
+        lo = second_ranges.query(left, right)
+        up = -second_ranges_negup.query(left, right)
+        return max(abs(lo), abs(up))
+
+    if second_ranges is None or second_ranges_negup is None:
+        return None
+
+    # --- interval Hessian bounds
+    diag_lo = [0.0] * q
+    off_abs = [[0.0] * q for _ in range(q)]
     for i, j in pair_list:
         span = j - i
         left = low_prefix[j] - low_prefix[i]
         right = high_prefix[j] - high_prefix[i] + span - 1
-        if second_ranges is None or right >= second_ranges.length:
+        if right >= second_ranges.length:
             return None
-        s2 = second_ranges.query(left, right)
-        if s2 == float("-inf"):
+        if span_lo(left, right) == float("-inf"):
             return None
-        scalar = _down(weights[(i, j)] * (s2 if s2 >= 0 else 0.0))
-        # For signed second derivatives we need upper bounds too; simplify:
-        # use the lower bound of w'' times the weight (weight >= 0), but
-        # for negative w'' the scalar is negative -> use weight * s2.
-        scalar = _down(weights[(i, j)] * s2)
-        terms.append((i, span, scalar))
-        for row in range(i, i + span):
-            for column in range(i, i + span):
-                heuristic[row][column] += scalar
+        a_ij = weights[(i, j)]
+        s_lo = _down(a_ij * span_lo(left, right))
+        s_abs = _up(a_ij * span_absup(left, right))
+        for a in range(i, i + span):
+            diag_lo[a] += s_lo
+            for b in range(i, i + span):
+                if a != b:
+                    off_abs[a][b] += s_abs
     if cap_scheme == "coboundary":
         for i in range(q):
             low_i, high_i = box[i]
-            if second_ranges is None or high_i >= second_ranges.length:
+            if high_i >= second_ranges.length:
                 return None
-            s2 = second_ranges.query(low_i, high_i)
-            if s2 == float("-inf"):
+            if span_lo(low_i, high_i) == float("-inf"):
                 return None
-            scalar = _down(nearest_coeffs[i] * s2)
-            terms.append((i, 1, scalar))
-            heuristic[i][i] += scalar
+            diag_lo[i] += _down(nearest_coeffs[i] * span_lo(low_i, high_i))
 
-    # exact positive-definite LDL in arb
-    if not _arb_ldl_positive(terms, q):
-        return None
+    # SOUND positive-definiteness certificate (Gershgorin-type)
+    for i in range(q):
+        if diag_lo[i] - sum(off_abs[i]) <= 0:
+            return None
 
     # tangent plane at midpoint
     midpoints = [fmpq(low + high + 1, 2 * grid) for low, high in box]

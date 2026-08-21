@@ -1,3 +1,15 @@
+## ⚠️ 2026-08-21 CERTIFICATION BUG (READ FIRST)
+
+The formerly-claimed record **0.6735633479946228 (eps=0.00703) is RETIRED — invalid certificate**.
+`tangent_lower` in verify_coboundary_floor.py certified convexity from entrywise lower bounds of w''
+(LDL on M ≻ 0), which does NOT imply the true Hessian is PD. Exact counterexample at RECORD params:
+g=(8082,8069,11965,8040,4227,4244)/4000 gives F_B=0.00689927 < 0.00703 (confirmed float + arb + mpmath 40-digit).
+Sound verifier (fixed, Gershgorin certificate): eps=0.00689 verified=true → honest record
+**N₀(T)/N(T) ≥ 0.6734729658**. The "joint max-min breakthrough to 0.6751273" was an artifact of the same bug — DEAD.
+Details: research/notes/cert-bug-2026-08-21.md. Do NOT cite 0.00703 / 0.6735633 / 0.6751 anywhere.
+
+---
+
 # DEAD LEVERS — standing digest for agy/swarm prompts (append to every ideation prompt)
 # Source: 133+ wave audit + hooks/agents.md death list + 2026-08-21 session. Keep <2KB.
 
