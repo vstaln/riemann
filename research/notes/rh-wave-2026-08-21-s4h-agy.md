@@ -56,3 +56,7 @@ New bin `li_lambda_spectral.rs`: on-line identity 1−1/ρ = e^{2iθ}, θ=arctan
 1. Independent verification of the q1 prime-error budget (the W_X positivity claim is vacuous without it).
 2. λ_n real-world scan extension: n→10⁵ with the spectral engine (cheap) — pushes the "positivity checked" boundary; still evidence-only.
 3. Two-case covering detection formalization (far-from-line finite-L catch vs near-line log spike) — the salvage after the L=0.19 refutation.
+
+### 7. RETRACTION + CORRECTION (adversarial audit b8 caught it)
+The earlier "control fires at n=2576" was an ARTIFACT: the plant used z = 1−1/(ρ_p−1) instead of the correct Keiper-Li variable **z = 1−1/ρ**. Audit verified: (a) Lipschitz L=5√11/9 algebra fully sound; (b) spectral identity 4sin²(nθ) exact for z=1−1/ρ; (c) true planted growing base is the reflected quadruplet member |z₃| = |ρ_p/(1−ρ_p)| = **1.001750** (not 1.0032).
+**Corrected result (li_lambda_spectral fixed):** local dip at n≈87–91 confirmed (matches binomial engine's n=90); **CONTROL FIRES AT n=5155** (λ₅₁₅₅ < 0, real world positive throughout, 2.1s scan to n=8000). The false n=2576 claim is retracted.
