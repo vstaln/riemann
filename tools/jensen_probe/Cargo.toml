@@ -55,8 +55,13 @@ path = "src/beurling_defect_floor.rs"
 
 [[bin]]
 name = "li_lambda_real"
-path = "src/li_lambda_real.rs"
+path = "src/li_lambda.rs"
+
+[[bin]]
+name = "jensen_lipschitz"
+path = "src/bin/jensen_lipschitz.rs"
 
 [profile.release]
 opt-level = 3
 lto = true
+
