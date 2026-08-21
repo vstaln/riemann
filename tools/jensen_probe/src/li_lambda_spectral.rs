@@ -57,22 +57,30 @@ fn main() {
     // tail: Riemann-von Mangoldt density integral beyond gamma_N
     let tail = |n: usize| (n as f64).powi(2) / (2.0 * std::f64::consts::PI * g_max) * ((g_max / (2.0 * std::f64::consts::PI)).ln() + 1.0);
 
-    // planted phasor z = 1 - 1/(rho_p - 1)
-    let (zr, zi) = if with_plant {
-        let w_re = pb - 1.0; let w_im = pg; // rho_p - 1
-        let d = w_re * w_re + w_im * w_im;
-        (1.0 - w_re / d, w_im / d) // 1 - conj(w)/|w|^2 ... 1/w = conj(w)/|w|^2; z = 1 - 1/w
-    } else { (0.0, 0.0) };
-    let zmod = (zr * zr + zi * zi).sqrt();
+    // planted phasor: CORRECT Li variable z = 1 - 1/rho (audit b8: 1-1/(rho-1) was a sign error).
+    // Functional-equation quadruplet {rho_p, conj, 1-rho_p, 1-conj}: pair sum 4 - 2Re(z1^n) - 2Re(z3^n)
+    // z1 = (rho_p - 1)/rho_p (|z1|<1), z3 = 1/z1 (|z3|>1, the growing base)
+    let (z1r, z1i, z3r, z3i) = if with_plant {
+        let pr = pb; let pi = pg;                       // rho_p
+        let d1 = pr * pr + pi * pi;                     // |rho_p|^2
+        // z1 = (rho_p - 1)/rho_p
+        let z1r = ((pr - 1.0) * pr + pi * pi) / d1;
+        let z1i = (pi * pr - (pr - 1.0) * pi) / d1;     // ((pr-1) + i pi)(pr - i pi)/d1
+        let m2 = z1r * z1r + z1i * z1i;                 // |z1|^2
+        (z1r, z1i, z1r / m2, -z1i / m2)                 // z3 = 1/z1
+    } else { (0.0, 0.0, 0.0, 0.0) };
+    let z3mod = (z3r * z3r + z3i * z3i).sqrt();
 
-    println!("li_lambda_spectral n_max={} zeros={} gamma_max={:.1} plant={} |z|={:.6}",
+    println!("li_lambda_spectral n_max={} zeros={} gamma_max={:.1} plant={} |z3|={:.6}",
              n_max, gammas.len(), g_max,
-             if with_plant { format!("{}+{}i", pb, pg) } else { "none".into() }, zmod);
+             if with_plant { format!("{}+{}i", pb, pg) } else { "none".into() }, if with_plant { format!("{:.6}", z3mod) } else { "-".into() });
 
     // iterate phasors: e_j^{i n theta_j} via recurrence; z^n via recurrence
     let mut cos_nt: Vec<f64> = vec![1.0; thetas.len()];
     let mut sin_nt: Vec<f64> = vec![0.0; thetas.len()];
     let (mut zc, mut zs) = (1.0f64, 0.0f64);
+    let m2_1 = z1r * z1r + z1i * z1i;
+    let mut m21 = 1.0f64; // |z1|^{2n}
     let lit: [(usize, f64); 4] = [(1, 0.023096), (2, 0.092346), (3, 0.207639), (10, 2.279340)];
     let mut first_neg = 0usize;
     let mut max_dip = 0.0f64;
@@ -89,12 +97,14 @@ fn main() {
         lam += tail(n);
         let mut lam_p = lam;
         if with_plant {
-            let zc_n = zc; // capture before update
-            let zs_n = zs;
-            let zc1 = zc * zr - zs * zi;
-            let zs1 = zc * zi + zs * zr;
+            let z1c_n = zc; let z1s_n = zs; // z1^n before update
+            let zc1 = zc * z1r - zs * z1i;
+            let zs1 = zc * z1i + zs * z1r;
             zc = zc1; zs = zs1;
-            let plant_pair = 2.0 - 2.0 * zc_n; // 2 - 2 Re(z^n)
+            // z3 = 1/z1 => z3^n = conj(z1^n)/|z1|^{2n}; track |z1|^{2n} via running product
+            m21 *= m2_1;
+            // exact: Re(z3^n) = Re(conj(z1^n)) / |z1|^{2n} = Re(z1^n)/m21
+            let plant_pair = 4.0 - 2.0 * z1c_n - 2.0 * (z1c_n / m21);
             lam_p = lam + plant_pair;
             if plant_pair < 0.0 && (plant_pair).abs() > max_dip { max_dip = plant_pair.abs(); }
             if lam_p < 0.0 && first_neg == 0 { first_neg = n; }
