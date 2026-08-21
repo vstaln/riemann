@@ -65,6 +65,10 @@ path = "src/bin/jensen_lipschitz.rs"
 name = "speiser_dh_control"
 path = "src/bin/speiser_dh_control.rs"
 
+[[bin]]
+name = "speiser_dh_certify"
+path = "src/bin/speiser_dh_certify.rs"
+
 [profile.release]
 opt-level = 3
 lto = true

@@ -49,3 +49,16 @@ Any new idea must state which of these it avoids and why its missing analytic in
   bound Σ|r|ln n n^{-0.05} DIVERGES. Verdict FAIL-on-certification; winding-1 is indication only.
 - Status: Speiser-transfer-for-DH stays CONJECTURED. Lever remains LIVE pending certified re-run
   (functional-equation eval or N>=1e6 + interval arithmetic). Do not re-run as-is (same-lever rule).
+
+## 2026-08-21 wave-rh4b(C) — Speiser/DH zero CERTIFIED (Lane D)
+- speiser_dh_certify (jensen_probe bin): Hurwitz-Euler-Maclaurin engine (no truncation wall),
+  analytic f′, certified per-point bound = 4×last-Bernoulli-term×(2M+|ln x_a|+1).
+- DH f′ winding = 1 on circle |s−(0.42+85.70i)|=0.15, min|f′|=1.049, max err 3.19e-11
+  (ratio 3e-11) → zero CERTIFIED inside circle [CHECKED NUMERICALLY-RIGOROUS; location PROVEN
+  given printed bounds]. TRUE ζ′ control winds 0 on same circle.
+- FE for this normalization: f(s)=W(s)f(1−s), W(s)=(5/π)^{1/2−s}Γ(1−s/2)/Γ((s+1)/2), λ=1
+  (c=tan(arg ε/2), ε=τ(χ₄)/(i√5)); verified 5e-15 in 40-digit mpmath. Task-proposed
+  X=5^{s−1/2}π^{2s−1/2}Γ((3/2−s)/2)/Γ((s+1/2)/2) REJECTED (fails both directions, res 0.33–2.1).
+- Status: lever UPGRADED from indication-only (wave-rh4 A: remainder 0.80 >> |f′|) to certified.
+  Do NOT re-run truncated variants (same-lever rule). Next: rigor transfer / interval arithmetic
+  if a proof-grade claim is ever needed; Speiser-transfer-for-DH stays CONJECTURED.
