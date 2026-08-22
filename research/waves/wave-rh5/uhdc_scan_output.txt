@@ -1,0 +1,17 @@
+uhdc_scan EM_M=24 selfcheck_zeta2_abs=4.441e-16 bound=5.620e-12 cross_N64_N128=8.101e-14 combined_bound=1.802e-9
+grid sigma=0.05..0.45 step=.05 t=14..70000 step=2 included=207210 excluded=107736
+minimum Re(zeta'/zeta)=-3.335930407273e1 +/- 4.999e-5 at s=0.45+22016.0i nearest_zero=22016.777035398292 distance=0.778642
+centered=Re(zeta'/zeta)-0.5log(t/2pi): min=-37.440128 max=-0.953284 mean=-11.885891 first_third_mean=-10.282548 last_third_mean=-13.065963
+hist[ 0] [-37.440128,-33.791444) = 4
+hist[ 1] [-33.791444,-30.142759) = 1
+hist[ 2] [-30.142759,-26.494075) = 1
+hist[ 3] [-26.494075,-22.845390) = 6
+hist[ 4] [-22.845390,-19.196706) = 9
+hist[ 5] [-19.196706,-15.548022) = 1243
+hist[ 6] [-15.548022,-11.899337) = 113410
+hist[ 7] [-11.899337,-8.250653) = 82918
+hist[ 8] [-8.250653,-4.601968) = 8915
+hist[ 9] [-4.601968,-0.953284) = 703
+violations=207210 uncertain=0
+first_violation s=0.05+16.0i value=-6.281573984651e-1 bound=4.057e-10 distance=1.918789 mpmath40=MANUAL RECHECK REQUIRED
+VERDICT: FAIL — UHDC refuted on scanned grid [CHECKED NUMERICALLY]

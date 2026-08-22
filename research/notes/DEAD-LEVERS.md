@@ -74,3 +74,13 @@ Any new idea must state which of these it avoids and why its missing analytic in
   RH-hard; value is as an interval-arithmetic-verifiable refinement target.
 - INCONCLUSIVE: sound eps=0.00700 cert at grid 8000 / 60M nodes (node-limit). Sound record stays
   eps=0.00695 → 0.6735117054871194.
+
+## 2026-08-21 wave-rh5(E) — UHDC interval scan
+- REFUTED [CHECKED NUMERICALLY]: the ledgered Uniform Hadamard Deficit Conjecture as stated,
+  `Re(zeta'/zeta)(sigma+it)>0` away from zeros, fails at all 207210 included grid points for
+  sigma=0.05..0.45 and t=14..70000 step 2 after excluding distance <3/log(t). First failure:
+  0.05+16i, value -0.6281573984651 +/-4.06e-10, zero distance 1.918789; minimum -33.3593.
+- Rust EM probe: `tools/jensen_probe/src/bin/uhdc_scan.rs`; runtime ~40s. N=64/128 cross-check
+  at first failure agrees to 8.10e-14 within combined quotient bounds 1.80e-9. Independent 40-digit
+  mpmath recheck INCONCLUSIVE (module unavailable). Do not repeat the same grid/sign convention;
+  a reversed sign or completed-zeta background formulation is a distinct future conjecture.
