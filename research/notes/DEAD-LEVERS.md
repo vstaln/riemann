@@ -177,3 +177,8 @@ printed (err/min ≤ ~3e-4 worst). Contiguity machine-verified across segment lo
 **ζ′ zero-free on σ∈[0.001,0.49], t∈[10,41250]** (sliver 0.49–0.5 honestly excluded).
 NOTE: shard4 header claims bands=[40500,50000] but certified only to 41250 (time-limit stop) —
 do not cite 50000. speiser_zeta_strip.rs now parameterized (STRIP_T_LO/HI/TMAX_SECS).
+
+## Speiser frontier T=41250 → T=80000 [CHECKED NUMERICALLY-RIGOROUS]
+3 segments, 137 bands all winding_total=0, zero failures, DH control per pipeline.
+**ζ′ zero-free on σ∈[0.001,0.49], t∈[10,80000]** contiguous (machine-verified segment chain).
+Next push launched: [80000→125000].
