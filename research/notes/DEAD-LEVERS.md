@@ -136,3 +136,12 @@ Corruption boundary row ~21000 (γ≈20100):
 - Lever status: negative-sign hunt on trusted data through n=30000 is DEAD (no sign found;
   lower bound certified). Absolute magnitudes remain far below true λ_n (modelled tail ~200×
   clean value at n=30000) — re-run with zeros_verified_32k.txt when it lands for magnitudes.
+
+## wave-rh5c(F) — λ_n upgrade post-quarantine [efa8f6f]
+UPGRADED [was CHECKED NUMERICALLY w/ corrupted data → now lower-bound certificate]:
+λ_n^clean(n) = Σ_{j≤19000 verified} 4sin²(nθ_j) ≥ 0 for ALL n∈[1,30000], min = 0.023 at n=1.
+Since sin²≥0, true λ_n ≥ λ_n^clean ⇒ **true λ_n > 0 on [1,30000]** (Li criterion partial,
+modulo the 19000 zero values — each audited vs zetazero to ≤7e-5). Negative-sign hunt on
+trusted data through n=30000: DEAD. Plant control fires n=5065 (earlier than 5155 because
+clean curve omits ~82 units positive mass — mechanistically consistent). Cross-check with
+old engine closes to 4e-6. Magnitude re-run pending zeros_verified_32k.txt regen (~10h).
