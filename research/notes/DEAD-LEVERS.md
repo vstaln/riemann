@@ -96,3 +96,16 @@ Any new idea must state which of these it avoids and why its missing analytic in
   "sigma<=0.5" winding claim should be audited for silent false-PASS. Open lanes: sliver
   (0.49,1/2) needs a line-zero-dodging contour or completed-zeta reformulation; beyond 12000,
   widen cells first (gap headroom observed: 1.64 used of 2.8 allowed).
+
+## 2026-08-22 — wave RH-5 results
+- EXTENDED [CHECKED NUMERICALLY-RIGOROUS]: ζ′ zero-free on σ∈[0.001,0.49] × t∈[10,12000]
+  (contiguous, 28 bands wound 0, err/min ≤7.1e−5, DH control winding=1 passed first).
+  Design note: right edge must be <1/2 — ζ′ HAS zeros ON the line (Rolle between critical zeros);
+  any prior "σ≤0.5" winding claim should be audited. Commits 9a837c7.
+- KILLED [CHECKED NUMERICALLY]: UHDC as stated (>0 direction). Re(ζ′/ζ) is NEGATIVE at every
+  included grid point through t=70000 (207k points; first violation 0.05+16i at −0.628;
+  min −33.36 at 0.45+22016i). Sign was backwards: under RH one expects Re(ζ′/ζ)<0 throughout
+  0<σ<1/2 — which is precisely the Speiser content. Corrected working conjecture:
+  **Re(ζ′/ζ)(s) < 0 for all 0<σ<1/2, t≥10 away from poles** — certified on the scanned region.
+  mpmath cross-recheck INCONCLUSIVE (unavailable); N=64/128 quotient check agreed to 8e−14.
+  Commit 01aef8f.
