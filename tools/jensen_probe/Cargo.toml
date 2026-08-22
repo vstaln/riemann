@@ -92,3 +92,7 @@ path = "src/bin/uhdc_scan.rs"
 [[bin]]
 name = "li_lambda_clean"
 path = "src/bin/li_lambda_clean.rs"
+
+[[bin]]
+name = "verify_li_frontier"
+path = "src/bin/verify_li_frontier.rs"
