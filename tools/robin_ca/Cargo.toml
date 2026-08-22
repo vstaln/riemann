@@ -1,0 +1,14 @@
+[package]
+name = "robin_ca"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+[[bin]]
+name = "ca_cert"
+path = "src/bin/ca_cert.rs"
+
+[profile.release]
+opt-level = 3
+lto = true
