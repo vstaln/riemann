@@ -169,3 +169,11 @@ here 42/42 + 40/40 random-zero controls, err/min~1e-12 [CHECKED NUMERICALLY].
 - DONE (not dead): R(n)<1 on all 1.70e8 non-increasing-exponent candidates <=10^60, max_R=0.9868 at n~10^59.1 [CHECKED NUMERICALLY]. Coverage = tested candidates only.
 - Boundary caveat (alive lever): max_R at range edge; extending bound to 10^100+ would tighten the margin but R->1 along records means no fixed-gap certificate exists this way.
 - Killed sub-approach: priority-queue CA generator with epsilon-transitions sits on the UNPROVEN Alaoglu-Erdos tie lemma (non-unique factorizations possible) — replaced by superset enumeration; do not resurrect the PQ generator without an explicit tie-handling proof.
+
+## wave-rh7+ — Speiser frontier T=12000 → T=41250 [CHECKED NUMERICALLY-RIGOROUS]
+12 certified segments (4 parallel shards + 3 gap-fillers + 3 extended-budget chains), every band
+winding_total=0, DH control validated per pipeline, spot-doubling checks passed, per-band bounds
+printed (err/min ≤ ~3e-4 worst). Contiguity machine-verified across segment logs.
+**ζ′ zero-free on σ∈[0.001,0.49], t∈[10,41250]** (sliver 0.49–0.5 honestly excluded).
+NOTE: shard4 header claims bands=[40500,50000] but certified only to 41250 (time-limit stop) —
+do not cite 50000. speiser_zeta_strip.rs now parameterized (STRIP_T_LO/HI/TMAX_SECS).
