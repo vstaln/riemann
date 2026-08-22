@@ -88,3 +88,59 @@ mandated by the task for the independent 40-digit recheck wave-rh5 marked INCONC
 Verdict (draft, to finalize): L is a genuine RH-difficulty open problem; the pairing
 reframing ("RH ⟺ deep-left kernels never dominate the always-negative partners") is the
 sharpest known form. Ranked next actions in §7.
+
+---
+
+## §6 COMPLETION (2026-08-22, coordinator; decomposition numerically verified)
+
+### The decomposition (D) is now VERIFIED [CHECKED NUMERICALLY, mpmath-40]
+
+ζ′/ζ(s) = B(s) + Σ_{γ>0} [1/(s−ρ_γ) + 1/(s−0.5+iγ)]   (on-line zeros; symmetric regularization)
+B(s) = −1/s − 1/(s−1) + ½log π − ½ψ(s/2)
+
+Verified at s=0.05+16i (truth −0.628157398465, decomposition −0.628138, residual = tail beyond
+γ_max — consistent with ∫_G^∞ density estimate), s=0.3+1000i, s=0.25+50000i. Two sign errors
+found and fixed during verification (B(s) log π sign; lower-half zero partners omitted in first
+attempt). The formula as printed reproduces ground truth to tail-truncation level.
+
+### THE HOLE, stated in one paragraph
+
+For σ<1/2, EVERY term of (D) is negative — EXCEPT the first kernel 1/(s−ρ) for any hypothetical
+zero with β<σ. Under RH all terms are negative and Re(ζ′/ζ)<0 follows instantly (this direction
+is PROVEN, §3b). So:
+
+    RH  ⟺  no off-line zero's positive kernel contribution ever overcomes the negative background
+
+and the missing estimate is: a per-height bound showing Σ_{β_j<σ} (σ−β_j)/((σ−β_j)²+(t−γ_j)²)
+stays below |Re B(s)| + (always-negative partners). No existing zero-density theorem is pointwise
+in t (Huxley/Motohashi average over t). THIS is the exact object a proof must supply.
+
+### Why the obvious attacks die (all checked this session)
+
+- Zero-density (Huxley A(1−σ) exponent): averages in t; a single deep-left zero at one height
+  is exactly what density bounds cannot exclude pointwise. DEAD for this purpose.
+- Montgomery/GOE pair correlation: statistics of gaps, not locations. DEAD pointwise.
+- Carneiro–Chandee |S(t)| bounds: control arg ζ on the line, not off-line log-derivative. INSUFFICIENT.
+- Digamma-dominance alone: background is ~−½log(t/2π) → −∞; the danger is a NEARBY deep-left
+  zero, whose kernel ~1/d blows up any fixed background margin. So the lemma is equivalent to
+  bounding how close to σ=0 a zero can sit at each height — which is RH itself. CLOSED LOOP.
+  (This is the precise sense in which the lane is RH-hard: the loop closes at t-dependence.)
+
+### What a proof would have to look like (honest structural assessment)
+
+Any successful proof via this lane must break the loop with an ingredient that is NOT
+equivalent to RH. The only known ingredients with that shape:
+1. A positivity/norm interpretation making the zero-sum a square (Weil/Li style — this is
+   exactly the λ_n program; our certified λ_n>0 on [1,10⁶] is the finite verification of it).
+   The infinite statement λ_n ≥ 0 ∀n remains the full RH — no free lunch.
+2. A spectral identity: ξ as determinant/diagonal of a self-adjoint operator with controlled
+   spectrum (Hilbert–Pólya). No candidate operator with PROVEN spectrum exists.
+3. A new analytic inequality for ζ in the strip that current mathematics cannot express —
+   i.e., a genuinely new idea, which by definition cannot be scheduled.
+
+### Standing verdict [honest]
+
+The lane is correctly formulated, numerically verified, and RH-hard by structural necessity.
+Every finite verification (λ_n>0 to 10⁶; strip-free to T=12000; Robin to 10⁶⁰) is a real,
+cumulative brick. None is the wall. The wall needs ingredient 1, 2, or 3 above — and the
+program continues on all three fronts because the charter says the search never stops.
