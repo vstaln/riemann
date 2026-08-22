@@ -84,3 +84,15 @@ Any new idea must state which of these it avoids and why its missing analytic in
   at first failure agrees to 8.10e-14 within combined quotient bounds 1.80e-9. Independent 40-digit
   mpmath recheck INCONCLUSIVE (module unavailable). Do not repeat the same grid/sign convention;
   a reversed sign or completed-zeta background formulation is a distinct future conjecture.
+
+## 2026-08-21 wave-rh5(D) — zeta' left-strip certification extended
+- EXTENDED (same lever, not new): Hurwitz-EM argument-principle certification of the zeta'
+  left strip now covers [0.001,0.49] x [5000,12000] — all 28 bands wind 0, max arg gap
+  <=1.64<2.8, err/min<=7.1e-5, spot-doubling worst ratio 7.1e-3; DH control circle wound 1.
+  Contiguous with wave-8B [10,5000] => zero-free [10,12000] GIVEN printed bounds
+  [CHECKED NUMERICALLY-RIGOROUS]. Bin speiser_zeta_strip.rs (probe mode available). Commit wave-rh5(D).
+- DO NOT re-run [10,5000] with this engine (same-lever rule). Do NOT build rectangles with
+  right edge at sigma=0.5: zeta' provably has zeros ON the line (Hardy+Rolle); any prior
+  "sigma<=0.5" winding claim should be audited for silent false-PASS. Open lanes: sliver
+  (0.49,1/2) needs a line-zero-dodging contour or completed-zeta reformulation; beyond 12000,
+  widen cells first (gap headroom observed: 1.64 used of 2.8 allowed).
