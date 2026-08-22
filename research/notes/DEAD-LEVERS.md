@@ -145,3 +145,13 @@ modulo the 19000 zero values — each audited vs zetazero to ≤7e-5). Negative-
 trusted data through n=30000: DEAD. Plant control fires n=5065 (earlier than 5155 because
 clean curve omits ~82 units positive mass — mechanistically consistent). Cross-check with
 old engine closes to 4e-6. Magnitude re-run pending zeros_verified_32k.txt regen (~10h).
+
+## wave-rh6(B) — λ_n frontier extended to n=10⁶ [PROVEN-as-lower-bound, modulo stated hypotheses]
+`verify_li_frontier.rs` (commits this session): B(n) = λ_clean_lo(n) + I_lo(n) − ε_platt(n) > 0
+for ALL n∈[1,10⁶]; global min 0.0921 at n=1. I_lo via closed-form tail bracket
+I=(n/π)[L·J(u₀)+K(u₀)] validated against mpmath-30 references (one-sided gate: closed may sit
+below truth by declared slack only). Control: planted β₀=0.85 → B=−3×10¹⁵ at n=20000, FIRED.
+Modulo: (a) 19000 zero values audited ≤7e-5; (b) on-line-below-H=3e12 per Platt–Trudgian
+(ε_S=0 is a declared hypothesis — discrete-to-smooth tail error NOT bounded).
+Debug trail caught 3 real bugs: kgrid 0/0 NaN, Si series ratio missing (2k−1) factor,
+slack-inside-scaling systematic low bias. All fixed via validator gates.
