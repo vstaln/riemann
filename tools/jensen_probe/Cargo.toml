@@ -84,3 +84,7 @@ path = "src/li_lambda_1e5.rs"
 [[bin]]
 name = "weil_prime_sum"
 path = "src/weil_prime_sum.rs"
+
+[[bin]]
+name = "uhdc_scan"
+path = "src/bin/uhdc_scan.rs"
