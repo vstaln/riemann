@@ -105,7 +105,7 @@ fn main() {
         .filter(|l| l.as_bytes().first().is_some_and(u8::is_ascii_digit))
         .filter_map(|l| l.split_whitespace().nth(1)?.parse().ok())
         .collect();
-    let tmax = 70000.0f64.min(*zeros.last().expect("zeros"));
+    let tmax = 17200.0f64.min(*zeros.last().expect("zeros")); // QUARANTINE: old file untrusted above gamma~17255 (commit fd74184)
     let (mut included, mut excluded, mut violations, mut uncertain) =
         (0usize, 0usize, 0usize, 0usize);
     let (mut minq, mut mine, mut mins, mut mint, mut mind, mut ming) =

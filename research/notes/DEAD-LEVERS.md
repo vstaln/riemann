@@ -121,3 +121,6 @@ Corruption boundary row ~21000 (γ≈20100):
 - ROOT CAUSE: RS-g0 scanner step-0.1 grid missed close pairs above t≈20000; file remains sorted,
   so consumers fail silently. Fix: tools/data/zeros_verified_32k.txt (mpmath zetazero, dps=25)
   regenerating; CONVENTIONS.md quarantines old file above γ≈20100.
+- UHDC RE-RUN on trusted range only (t≤17200, commit-restricted bin): STILL FAILS — 47079
+  violations, first 0.05+16i at −0.6281573984651 (independently confirmed mpmath-40 earlier).
+  Kill no longer depends on corrupted rows.
