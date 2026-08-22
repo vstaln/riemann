@@ -155,3 +155,12 @@ Modulo: (a) 19000 zero values audited ≤7e-5; (b) on-line-below-H=3e12 per Plat
 (ε_S=0 is a declared hypothesis — discrete-to-smooth tail error NOT bounded).
 Debug trail caught 3 real bugs: kgrid 0/0 NaN, Si series ratio missing (2k−1) factor,
 slack-inside-scaling systematic low bias. All fixed via validator gates.
+
+wave-rh7(G) eta metrology: SPEC-LEVEL DEAD LEVER — winding of f' does NOT certify zeros of f.
+Task spec demanded wind(eta')=1 at each expected zero; argument principle gives winding(f)=
+zero count, but zeros of f' are generically displaced from zeros of f (at a factor-zero s0,
+eta'(s0)=g'(s0)zeta(s0)!=0). First run: wind(eta')=0 at ALL 42 expected zeros (k=2,4).
+Any engine or lane that certifies zero presence via wind(f') on a small contour is measuring
+critical points, not zeros — audit speiser_dh_certify.rs usage accordingly (its DH pass likely
+rode a genuine critical point, not the zero). Correct primitive: wind(eta_k)=count, certified
+here 42/42 + 40/40 random-zero controls, err/min~1e-12 [CHECKED NUMERICALLY].
