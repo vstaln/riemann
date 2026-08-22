@@ -137,7 +137,9 @@ fn main() {
         return;
     }
     let t0all = Instant::now();
-    let t_lo0 = 5000.0f64; let t_hi1 = 12000.0f64; const DT_BAND: f64 = 250.0;
+    let t_lo0 = std::env::var("STRIP_T_LO").ok().and_then(|v| v.parse().ok()).unwrap_or(5000.0f64);
+    let t_hi1 = std::env::var("STRIP_T_HI").ok().and_then(|v| v.parse().ok()).unwrap_or(12000.0f64);
+    const DT_BAND: f64 = 250.0;
     let nmax = (600.0 + (t_hi1 / 3.0).ceil()) as usize;
     let mut lnx = Vec::with_capacity(2 * nmax + 2);
     for n in 0..=2 * nmax { lnx.push((n as f64 + 1.0).ln()); }
@@ -169,7 +171,7 @@ fn main() {
     let mut frontier = t_lo0;
     let mut all_pass = true;
     for b in 0..nbands {
-        if t0all.elapsed().as_secs_f64() > 420.0 {
+        if t0all.elapsed().as_secs_f64() > std::env::var("STRIP_TMAX_SECS").ok().and_then(|v| v.parse().ok()).unwrap_or(420.0) {
             println!("TIME LIMIT reached at band {} — stopping, frontier={}", b, frontier);
             all_pass = false;
             break;
