@@ -109,3 +109,15 @@ Any new idea must state which of these it avoids and why its missing analytic in
   **Re(ζ′/ζ)(s) < 0 for all 0<σ<1/2, t≥10 away from poles** — certified on the scanned region.
   mpmath cross-recheck INCONCLUSIVE (unavailable); N=64/128 quotient check agreed to 8e−14.
   Commit 01aef8f.
+
+## 2026-08-22 DATA QUARANTINE IMPACT ASSESSMENT
+Corruption boundary row ~21000 (γ≈20100):
+- SURVIVES: wave-rh5(D) ζ′ strip cert T=12000 (EM-based, zero-free pipeline); decomposition (D)
+  verification at t=16 (clean region); all waves consuming only γ≲20000 zeros.
+- FLAGGED FOR RE-RUN: λ_n "clean through n=1e5" (engine consumed corrupted rows; control fire
+  n=5155 likely robust—driven by low zeros+plant—but real-world curve must be recomputed);
+  UHDC scan exclusions beyond t=20000 (values themselves were correct EM evaluations; the
+  >0-direction kill stands via sign theory + clean-region subset).
+- ROOT CAUSE: RS-g0 scanner step-0.1 grid missed close pairs above t≈20000; file remains sorted,
+  so consumers fail silently. Fix: tools/data/zeros_verified_32k.txt (mpmath zetazero, dps=25)
+  regenerating; CONVENTIONS.md quarantines old file above γ≈20100.
