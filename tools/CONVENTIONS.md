@@ -53,3 +53,12 @@ Points y_0..y_6 with y_0 = 0 and y_k = g_1 + ... + g_k (g_i ≥ 0, six gaps, uni
 
 PROVEN / CHECKED NUMERICALLY / CONJECTURED / ABANDONED / INCONCLUSIVE — as hooks/agents.md.
 Missing binary or node-limit ⇒ INCONCLUSIVE, never VERIFIED.
+
+## ⚠️ ZEROS DATA QUARANTINE (2026-08-22)
+`tools/data/zeros_rust_100k.txt` is **UNTRUSTED above γ≈20100** (row ~21000): the RS-g0 scanner
+progressively dropped zeros — drift vs mpmath zetazero reaches 27 units by row 58000 (audit
+/tmp/thresh.log). Clean below γ≈20100 (diffs <7e-5).
+Replacement being generated: `tools/data/zeros_verified_32k.txt` (mpmath zetazero, dps=25).
+Until it lands: any computation consuming zeros MUST restrict to γ≤20100 from the old file or
+use zetazero directly. Results that consumed corrupted rows (λ_n n≳? scan, UHDC t>20000
+exclusions) are flagged for re-run. Do not delete the old file (provenance).
