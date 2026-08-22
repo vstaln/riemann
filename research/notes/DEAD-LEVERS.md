@@ -124,3 +124,15 @@ Corruption boundary row ~21000 (γ≈20100):
 - UHDC RE-RUN on trusted range only (t≤17200, commit-restricted bin): STILL FAILS — 47079
   violations, first 0.05+16i at −0.6281573984651 (independently confirmed mpmath-40 earlier).
   Kill no longer depends on corrupted rows.
+
+## 2026-08-22 wave-rh5c(F) — λ_n clean-data rescan (rows 1..19000, γ≤17255)
+- Bin tools/jensen_probe/src/bin/li_lambda_clean.rs; full-file "clean through 1e5" claim
+  SUPERSEDED by certified-range version. [PROVEN] truncation direction: λ_true(n) ≥ λ_clean(n)
+  (sin²≥0), so nonnegativity of the clean scan certifies λ_n ≥ 0 on n∈[1,30000].
+- Result: min 0.023013 at n=1; all_nonnegative through n=30000. Plant control (β₀=0.85)
+  fires n=5065 (< expected ~5155, explained by omitted positive mass in clean curve).
+- Cross-check vs stored li_lambda_1e5.out at n=1000 closes to ~4e-6 after subtracting the
+  recomputed corrupted-row contribution (60.1382…) and kernel-bound add (22.0477…).
+- Lever status: negative-sign hunt on trusted data through n=30000 is DEAD (no sign found;
+  lower bound certified). Absolute magnitudes remain far below true λ_n (modelled tail ~200×
+  clean value at n=30000) — re-run with zeros_verified_32k.txt when it lands for magnitudes.
