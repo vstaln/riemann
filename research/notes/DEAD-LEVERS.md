@@ -164,3 +164,8 @@ Any engine or lane that certifies zero presence via wind(f') on a small contour 
 critical points, not zeros — audit speiser_dh_certify.rs usage accordingly (its DH pass likely
 rode a genuine critical point, not the zero). Correct primitive: wind(eta_k)=count, certified
 here 42/42 + 40/40 random-zero controls, err/min~1e-12 [CHECKED NUMERICALLY].
+
+## wave-rh7 Lane H (Robin CA/SA certifier) — 2026-08-23
+- DONE (not dead): R(n)<1 on all 1.70e8 non-increasing-exponent candidates <=10^60, max_R=0.9868 at n~10^59.1 [CHECKED NUMERICALLY]. Coverage = tested candidates only.
+- Boundary caveat (alive lever): max_R at range edge; extending bound to 10^100+ would tighten the margin but R->1 along records means no fixed-gap certificate exists this way.
+- Killed sub-approach: priority-queue CA generator with epsilon-transitions sits on the UNPROVEN Alaoglu-Erdos tie lemma (non-unique factorizations possible) — replaced by superset enumeration; do not resurrect the PQ generator without an explicit tie-handling proof.
