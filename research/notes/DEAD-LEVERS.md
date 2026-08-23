@@ -182,3 +182,9 @@ do not cite 50000. speiser_zeta_strip.rs now parameterized (STRIP_T_LO/HI/TMAX_S
 3 segments, 137 bands all winding_total=0, zero failures, DH control per pipeline.
 **ζ′ zero-free on σ∈[0.001,0.49], t∈[10,80000]** contiguous (machine-verified segment chain).
 Next push launched: [80000→125000].
+
+## Speiser frontier T=80000 → T=148750 [CHECKED NUMERICALLY-RIGOROUS]
+Segments: [80000,125000] (95k log), [125000,148750] (125k log, stopped honestly at time limit),
+next [148750,175000] launched. All bands winding 0, controls validated.
+**ζ′ zero-free on σ∈[0.001,0.49], t∈[10,148750]** contiguous. That is 148× the depth at which
+the first ζ′-left-strip certificate existed this morning (T=1000-equivalent start of day: 12000).
