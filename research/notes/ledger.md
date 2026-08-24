@@ -2119,3 +2119,39 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   over the 2026-08-21 sound record 0.6735117054871194.
 - True inf at this point ∈ [0.0079, 0.0080) — further ladder runs may extend.
 - Prior record-point ladder: eps=0.00700 remains INCONCLUSIVE at 60M+400M nodes (both grids).
+
+---
+## 2026-08-24 — RECORD RETIRED #2 (functional mismatch F_V vs F_T) — Devine/Circumjovial audit CONFIRMED
+- External one-page audit (Michael Devine, Circumjovial LLC) claimed the posted eps=0.0079 certificate bounds the WRONG functional. Settled on three independent lanes, all PROVEN:
+  1. CODE [PROVEN]: tools/verify_coboundary_floor.py sums ALL 21 pairs (`w_uniform` line 498, no span filter) PLUS q_i*w(g_i) separately (lines 268-279) => implements F_V. Notes: dispute-vstalin-code-2026-08-24.md
+  2. THEOREM [PROVEN]: Tawan local-to-global requires F_T (q_i REPLACE span-one; kSpanRationals[1]=0, loop span=2..6 in Tawan's own verify_coboundary.cpp). Notes: dispute-vstalin-tawan-2026-08-24.md
+  3. IDENTITY [CHECKED NUMERICALLY, mpmath dps=60]: F_V - F_T = (1/3)*sum_i w(g_i) exactly (0.000362273873459031 both evaluations) at witness g=(7993,4182,7967,8003,7971,4197)/4000.
+- **RETIRED: N0(T)/N(T) >= 0.6735471309049393 (2026-08-23, m=136)** and ALL coboundary-floor records certified via verify_coboundary_floor.py coboundary branch (incl. 2026-08-21 eps=0.00689 -> 0.6734729658195391 re-cert, same code path). F_V >= F_T strictly on the domain interior, so no F_T bound follows from any F_V certificate.
+- Residual INCONCLUSIVE: exact decimal reproduction of Devine's F_T=0.0077854336862... / F_V=0.0081469966113... blocked by unrecorded launcher env (VERIFY_* vars not persisted in cert_790.log); verdict robust across all candidate parameter readings (F_T < 0.0079 at the witness under every reading tested).
+- C21 OPTIMIZER ALSO AFFECTED: joint_c21.py F_B uses PAIRS21 (21 pairs incl y_0 distances) + q-terms => optimized the wrong objective too. Round-1 theta still usable as a starting point only.
+- SURVIVING floors meanwhile: Tawan published 0.6731929114731422 [PROVEN, his verifier]; Devine reports 0.673399 (his 72h/384-core run, unaudited by us).
+- RECOVERY PLAN: (1) patch verifier with span-one-mode flag, re-certify ladder under F_T at C21 theta; (2) C21 round 2 under corrected objective; (3) then ladder. Refs: floor-raise-options-2026-08-24.md.
+
+---
+## 2026-08-24 (cont.) — HONEST RESTART BASE BANKED (post-retirement)
+- F_T re-cert [PROVEN, interval verifier span1_mode=replaced]: eps=0.0070 verified=true, nodes=779,030 @ C21 theta (alpha=1.4263026187858052, lam=1.351623997475116). Log tmplogs/cert_F_T_700.log.
+- Headline chain [CHECKED NUMERICALLY mpmath dps=40]: N0(T)/N(T) >= **0.67296645387858** at m=151 (global argmax, checked m<=400+; H(alpha)=0.672498803148 confirmed). Earlier inline value 0.6729663177639583 was a conservative understatement (psum rounded); corrected per adversarial audit research/notes/fT-recert-adversarial-2026-08-24.md.
+- Patch adversarially audited: replaced-mode removes exactly the six span-one pairs, no silent F_V fallback, pruning cannot manufacture verified=true. SOUND.
+- Thresholds at current params: eps>=0.00735 beats Tawan 0.6731929; eps>=0.00766 beats Devine-reported 0.673399. Ladder climbing under F_T; C21 round-2 optimizer running on corrected objective (joint_c21_ft.py).
+
+---
+## 2026-08-24 (cont.) — ⚠️ HOLD on post-fix floors: q-mass condition UNRESOLVED
+- Tawan lemma (per dispute-vstalin-tawan-2026-08-24.md, quoting BELLMAN_COBBOUNDARY_PROOF.md L26-31): "sum(p)=1/320, sum(q)=2; longer-span coefficients still sum to 2." Span-one mass = 6*(1/3)=2 independent of alpha/kernel => F_T admissibility plausibly REQUIRES Sigma q_i = 2 exactly.
+- Banked runs cert_F_T_700 / cert_FT_0.0072 used VERIFY_LAMBDA=1.351623997475116 with VERIFY_Q*=raw_q => verifier q_coeff = lam*raw_q => Sigma q = 2.6987 != 2. Optimizer r2 winner (best_c21_theta.npy, joint_c21_ft.unpack) has Sigma q = 2*lam = 3.0903 != 2. BOTH potentially theorem-inadmissible.
+- Open question (FIRST ACTION next session): does the coboundary local-to-global lemma require Sigma q == 2 unconditionally (fixed span weights), or only Sigma q == removed-span-one-mass under the chosen normalization, or is q unconstrained with the telescoping absorbed elsewhere? Resolve from tawanerguo proof text + tools/CONVENTIONS.md; THEN either (a) re-run ladder with q renormalized to mass 2, or (b) document admissibility of lambda-scaled q with citation.
+- Until resolved: DO NOT cite 0.67296645387858 / 0.6730965989022086 as certified floors. Label: INADMISSIBILITY-SUSPECTED.
+
+---
+## 2026-08-24 (final) — HOLD RESOLVED -> post-fix floors RETIRED; mass conditions are HARD
+- Read BELLMAN_COBBOUNDARY_PROOF.md directly: F_B = F_0 + U(g2..g6) - U(g1..g5) is a coboundary; Sigma p / Sigma q=2 / span-mass=2 conditions are what make U telescope on periodic sequences — they license the block assembly itself. Not parameter choices.
+- Consequence: cert_F_T_700 (Sigma q=2.6987), cert_FT_0.0072 (idem), optimizer-r2 winner (Sigma q=3.0903) are ALL theorem-inadmissible => the 2026-08-24 "honest restart" numbers 0.67296645387858 / 0.6730965989022086 RETIRED (INADMISSIBLE, not merely suspected).
+- Surviving floors unchanged: Tawan published 0.6731929114731422 [PROVEN]; Devine-reported 0.673399 (unaudited by us).
+- NEXT SESSION FIRST ACTIONS (do-not-repeat guards attached):
+  1. Re-run ladder/optimizer ONLY over exact-mass coefficient sets: q as exact rationals with u+v+w=1 mirrored (Sigma q = 2 exactly, like Tawan's 31343/100000 + 1/3 + 105971/300000 = 1); resolve whether Sigma p is free-with-tax or pinned to 1/320 (read assembly step; if free, document why telescoping tolerates it BEFORE certifying).
+  2. Add mass-condition assertions to verify_coboundary_floor.py env branch (hard fail unless |Sigma q - 2| < 1e-12 and span masses preserved) — makes this bug class unrepresentable.
+  3. trmdy kernel-family sweep proceeds AFTER (kernel choice orthogonal to mass discipline).

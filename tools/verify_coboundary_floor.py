@@ -495,7 +495,10 @@ def main():
         max_nodes = int(os.environ.get("VERIFY_MAX_NODES", "8000000"))
         pressure = float(os.environ.get("VERIFY_PRESSURE", "1")) / 3000.0
         lam = float(os.environ.get("VERIFY_LAMBDA", "1"))
+        mode = os.environ.get("VERIFY_SPAN1_MODE", "added")
         w_uniform = {(i, j): 2.0 / (7 - (j - i)) for i in range(7) for j in range(i + 1, 7)}
+        if mode == "replaced":
+            w_uniform = {(i, j): v for (i, j), v in w_uniform.items() if j - i >= 2}
         p_coeff, q_coeff = None, None
         if "VERIFY_P1" in os.environ:
             p_raw = [float(os.environ[f"VERIFY_P{i}"]) for i in range(1, 7)]
@@ -504,6 +507,7 @@ def main():
             q_raw = [float(os.environ[f"VERIFY_Q{i}"]) for i in range(1, 7)]
             q_coeff = [lam * c for c in q_raw]
         ktw = cosine_kernel(alpha)
+        print(f"span1_mode={mode}")
         r = verify_floor(ktw, w_uniform, pressure, 6, target,
                          grid=grid, cap_scheme="coboundary",
                          pressure_coeffs=p_coeff, nearest_coeffs=q_coeff,

@@ -56,6 +56,16 @@ fn joint_bound(h: f64, eps: f64, m: f64, psum: f64) -> f64 {
     (h - tau) / (1.0 - b / m)
 }
 
+/// Record chain with sqrt-tail cap: bound = (H - tau)/(1 - B/m), mirroring joint_bound
+/// (which hard-codes q=6 and the cap phi_m) but with B = h_profile(eps*(m-q)),
+/// i.e. h(E) = E for E<=1 else 2*sqrt(E)-1.
+fn record_chain_sqrt_tail(h: f64, eps: f64, p: f64, m: f64, q: f64) -> f64 {
+    let a = eps * (m - q);
+    let b = h_profile(a);
+    let tau = p * (m - q) / m;
+    (h - tau) / (1.0 - b / m)
+}
+
 /// Master chain — port of cert_param_sweep.block_bound_master. cap: "h" | "phi".
 fn block_bound_master(h: f64, eps: f64, p: f64, m: f64, q: f64, cap: &str) -> f64 {
     let a = eps * (m - q);
@@ -68,6 +78,25 @@ fn block_bound_master(h: f64, eps: f64, p: f64, m: f64, q: f64, cap: &str) -> f6
 const TARGET: f64 = 0.6734808616745137;
 
 fn main() {
+    // subcommand: `cargo run -- chains <h> <eps> <psum>` — print record (phi_m cap) and
+    // record_sqrt_tail (h_profile cap) chains side by side over m in [40, 400].
+    let args: Vec<String> = std::env::args().collect();
+    if args.len() >= 5 && args[1] == "chains" {
+        let h: f64 = args[2].parse().unwrap();
+        let eps: f64 = args[3].parse().unwrap();
+        let psum: f64 = args[4].parse().unwrap();
+        println!("=== CHAINS side by side (m in [40,400]) h={h} eps={eps} psum={psum} ===");
+        println!("    m   |  record (phi_m cap)  |  record_sqrt_tail (h_profile cap) ");
+        let mut m: f64 = 40.0;
+        while m <= 400.0 + 1e-9 {
+            let q = 6.0_f64;
+            let rec = joint_bound(h, eps, m, psum);
+            let rec_t = record_chain_sqrt_tail(h, eps, psum, m, q);
+            println!(" {m:>5.0} |  {rec:.12}  |  {rec_t:.12}");
+            m += 1.0;
+        }
+        return;
+    }
     println!("cert-floor-rs — certification-floor chain (port of cert_floor_driver.py / cert_param_sweep.py)");
     println!("Honesty: [C] = CERTIFIED input eps (interval-verified elsewhere), chain arithmetic = f64 FLOAT-PROBE (not interval).\n");
 
