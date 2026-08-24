@@ -2107,3 +2107,15 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
 - "Breakthrough" 0.6751272603 from joint max-min was an artifact of the same bug — DEAD.
 - Dual ceiling 0.68182868746 and distinct-proportion 0.8367817 UNAFFECTED.
 - Full analysis: research/notes/cert-bug-2026-08-21.md. Commit c6a8f5e.
+
+---
+## 2026-08-23 — NEW SOUND RECORD (C21-corrected joint max-min + sound verifier)
+- Candidate from C21-corrected optimizer (first correct-objective optimization ever run):
+  α=1.4263026187858052, λ=1.351623997475116, raw_p=[895.6,1151.7,952.6,952.6,1151.7,895.6],
+  raw_q=[0.331829,0.323062,0.343351,0.343351,0.323062,0.331829].
+- **eps=0.0079 verified=true** (sound verifier post-c6a8f5e; grid 4000; 27,679,928 nodes;
+  pruned_interval 13,839,793; tangent 203 — all sound paths).
+- **NEW SOUND RECORD [PROVEN]: N₀(T)/N(T) ≥ 0.6735471309049393 (m=136)** — raise +3.54e-05
+  over the 2026-08-21 sound record 0.6735117054871194.
+- True inf at this point ∈ [0.0079, 0.0080) — further ladder runs may extend.
+- Prior record-point ladder: eps=0.00700 remains INCONCLUSIVE at 60M+400M nodes (both grids).
