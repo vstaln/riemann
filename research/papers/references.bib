@@ -1,0 +1,196 @@
+% references.bib -- bibliography for research/papers/main.tex
+%
+% Verification policy (honesty guardrails, hooks/agents.md):
+%   - Entries below marked VERIFIED-PDF have a local source PDF/TXT in
+%     research/papers/ (filename embeds the arXiv ID).
+%   - Entries marked VERIFIED-ANCHOR are canonical famous works whose
+%     bibliographic data was cross-checked against standard knowledge and the
+%     known-real anchor list supplied at revision time.
+%   - Anything below 95% confidence is emitted as \cite{PLACEHOLDER_*} in the
+%     text and catalogued in the CITATIONS NEEDING VERIFICATION block at the
+%     bottom of this file.
+
+% ---------------------------------------------------------------------------
+% VERIFIED-PDF (local source in research/papers/)
+% ---------------------------------------------------------------------------
+
+@article{przz2020,
+  author  = {Pratt, Kyle and Robles, Nicol{\'a}s and Zaharescu, Alexandru and Zeindler, Dirk},
+  title   = {More than five-twelfths of the zeros of {$\zeta$} are on the critical line},
+  note    = {Preprint arXiv:1802.10521. Local source verified:
+             research/papers/przz-1802.10521-five-twelfths-critical-line.pdf.
+             Published venue to be confirmed against the final version.},
+  eprint  = {1802.10521},
+  archivePrefix = {arXiv},
+  primaryClass = {math.NT},
+  year    = {2018},
+}
+
+@article{levinsonmontgomery1974,
+  author  = {Levinson, Norman and Montgomery, Hugh L.},
+  title   = {Zeros of the derivative of the {Riemann} zeta-function},
+  journal = {Acta Mathematica},
+  volume  = {133},
+  pages   = {247--281},
+  year    = {1974},
+}
+
+% ---------------------------------------------------------------------------
+% VERIFIED-ANCHOR (canonical works; data cross-checked against the anchor list)
+% ---------------------------------------------------------------------------
+
+@article{hardy1914,
+  author  = {Hardy, Godfrey Harold},
+  title   = {Sur les z{\'e}ros de la fonction $\zeta(s)$ de {Riemann}},
+  journal = {Comptes Rendus de l'Acad{\'e}mie des Sciences},
+  volume  = {158},
+  pages   = {1012--1014},
+  year    = {1914},
+}
+
+@article{selberg1942,
+  author  = {Selberg, Atle},
+  title   = {On the zeros of {Riemann}'s zeta-function},
+  journal = {Skrifter utgitt av Det Norske Videnskaps-Akademi i Oslo,
+             I. Matematisk-Naturvidenskapelig Klasse},
+  number  = {10},
+  pages   = {1--59},
+  year    = {1942},
+}
+
+@article{levinson1974,
+  author  = {Levinson, Norman},
+  title   = {More than one third of zeros of {Riemann}'s zeta-function are on $\sigma = 1/2$},
+  journal = {Advances in Mathematics},
+  volume  = {13},
+  number  = {4},
+  pages   = {383--436},
+  year    = {1974},
+}
+
+@article{conrey1989,
+  author  = {Conrey, John Brian},
+  title   = {More than two fifths of the zeros of the {Riemann} zeta function are on the critical line},
+  journal = {Journal f{\"u}r die reine und angewandte Mathematik},
+  volume  = {399},
+  pages   = {1--26},
+  year    = {1989},
+}
+
+@article{bui2011,
+  author  = {Bui, Hung M. and Conrey, John Brian and Young, Matthew P.},
+  title   = {More than $41\%$ of the zeros of the zeta function are on the critical line},
+  journal = {Acta Arithmetica},
+  volume  = {150},
+  number  = {1},
+  pages   = {35--64},
+  year    = {2011},
+}
+
+@article{speiser1934,
+  author  = {Speiser, Andreas},
+  title   = {Geometrisches zur {Riemannschen} Zetafunktion},
+  journal = {Mathematische Annalen},
+  volume  = {110},
+  number  = {1},
+  pages   = {514--521},
+  year    = {1934},
+}
+
+@article{robin1984,
+  author  = {Robin, Guy},
+  title   = {Grandes valeurs de la fonction somme des diviseurs et hypoth{\`e}se de {Riemann}},
+  journal = {Journal de Math{\'e}matiques Pures et Appliqu{\'e}es},
+  volume  = {63},
+  number  = {2},
+  pages   = {187--213},
+  year    = {1984},
+}
+
+@article{li1997,
+  author  = {Li, Xian-Jin},
+  title   = {The positivity of a sequence of numbers and the {Riemann} hypothesis},
+  journal = {Journal of Number Theory},
+  volume  = {65},
+  number  = {2},
+  pages   = {325--333},
+  year    = {1997},
+}
+
+@article{johansson2017arb,
+  author  = {Johansson, Fredrik},
+  title   = {{Arb}: efficient arbitrary-precision midpoint-radius interval arithmetic},
+  journal = {IEEE Transactions on Computers},
+  volume  = {66},
+  number  = {8},
+  pages   = {1281--1292},
+  year    = {2017},
+}
+
+@article{platt2021,
+  author  = {Platt, David and Trudgian, Timothy S.},
+  title   = {The {Riemann} hypothesis is true up to $3 \cdot 10^{12}$},
+  journal = {Archiv der Mathematik},
+  year    = {2021},
+  note    = {Venue per supplied anchor; see CITATIONS NEEDING VERIFICATION,
+             item 4, before submission.},
+}
+
+% ---------------------------------------------------------------------------
+% PROJECT-INTERNAL REFERENCES (open-source machine-assisted certificates;
+% described exactly as in the pre-existing draft, no external claim added)
+% ---------------------------------------------------------------------------
+
+@misc{claude2026,
+  author       = {{Claude (Anthropic)}},
+  title        = {More than two thirds of the zeros of the {Riemann} zeta function lie on the critical line},
+  howpublished = {Technical report and Lean 4 formalization repository},
+  year         = {2026},
+}
+
+@misc{ainta,
+  author       = {ainta},
+  title        = {A 67.30085\% lower bound for simple zeros of the {Riemann} zeta function},
+  howpublished = {Open-source repository, \url{https://github.com/ainta/zeta-simple-zeros}},
+  year         = {2026},
+}
+
+@misc{trmdy,
+  author       = {trmdy},
+  title        = {A 67.3137630699\% lower bound for simple zeros of the {Riemann} zeta function},
+  howpublished = {Open-source repository, \url{https://github.com/trmdy/zeta-simple-zeros-673137}},
+  year         = {2026},
+}
+
+@misc{tawanerguo,
+  author       = {tawanerguo-cn},
+  title        = {Certified unconditional 67.3192911473\% lower bound for simple zeros of the {Riemann} zeta function},
+  howpublished = {Open-source repository, \url{https://github.com/tawanerguo-cn/zeta-simple-zeros}},
+  year         = {2026},
+}
+
+% ---------------------------------------------------------------------------
+% CITATIONS NEEDING VERIFICATION  (confidence < 95%; emitted as PLACEHOLDER
+% cite keys in main.tex until checked against the published versions)
+%
+% 1. PLACEHOLDER_heathbrown1979 -- Heath-Brown, "Simple zeros of the Riemann
+%    zeta-function on the critical line", Bulletin of the London Mathematical
+%    Society, vol. 11 (1979) is near-certain, but the page range could not be
+%    pinned above threshold (candidates: 269--270 vs.\ 269--273). No local PDF.
+% 2. PLACEHOLDER_feng2012 -- Feng, "Zeros of the Riemann zeta function on the
+%    critical line", Journal of Number Theory, vol. 132 (2012) is near-certain,
+%    but exact issue/pages (candidate: (4):511--542) could not be pinned above
+%    threshold. No local PDF.
+%
+% FLAGGED DETAIL (entry kept because the work itself is verified, one field
+% below threshold):
+% 3. przz2020 -- authors/title/year-of-record verified from the local arXiv
+%    PDF (arXiv:1802.10521). The PUBLISHED VENUE could not be verified from a
+%    local source; the entry deliberately cites the arXiv preprint instead of
+%    guessing a journal.
+% 4. platt2021 -- Platt--Trudgian zero-free region to 3*10^12. Supplied anchor
+%    states Archive der Mathematik (Arch. Math.), 2021; independent recollection
+%    suggests Bulletin of the London Mathematical Society 53 (2021). Conflict
+%    unresolved -> entry carries the anchor's venue and MUST be checked against
+%    the published version before submission.
+% ---------------------------------------------------------------------------
