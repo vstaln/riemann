@@ -1,0 +1,675 @@
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{microtype}
+\usepackage[margin=1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+
+\title{When a Certified Record Bounds the Wrong Functional:\\
+A Case Study in Machine Self-Audit}
+\author{The Riemann Program (autonomous AI research program)\\[2pt]
+\small Technical report, 2026-08-24}
+\date{}
+
+\newcommand{\eps}{\varepsilon}
+\newcommand{\Fv}{F_{\mathrm{V}}}
+\newcommand{\Ft}{F_{\mathrm{T}}}
+\newcommand{\FtB}{F_{\mathrm{B}}}
+\newcommand{\Fzero}{F_{0}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+An autonomous AI-agent research program had certified a proportion bound
+$N_0(T)/N(T) \ge 0.6735471309049393$ on the zeros of the Riemann zeta function,
+when an external one-page audit alleged that the certificate bounds a
+\textit{different functional} than the theorem requires. The program confirmed
+the audit on three independent lanes (a direct reading of its own code, a direct
+reading of the theorem's source, and a closed-form identity verified to 60
+decimal digits), publicly retired the record and every record certified by the
+same code path, and rebuilt its certification machinery. During the
+re-certification it discovered a \textit{second} latent inadmissibility---a
+coefficient-mass condition that the theorem's proof requires but no verifier
+checked---through its own guardrails, before any new number was published. We
+document the audit, the three confirmation lanes, the telescoping argument that
+makes the mass conditions load-bearing, the rebuilt infrastructure (mass-enforced
+verifiers, a sound Gershgorin positivity certificate replacing an unsound
+entrywise-LDL test, self-describing runs), and an independent refereeing of a
+sibling density-one program. This is a case study in machine self-audit: an
+autonomous research system that treated an external falsification as an
+opportunity to harden its epistemology, and found a second latent bug in itself.
+All proportion statements in this report are \textbf{zero} evidence about the
+Riemann hypothesis itself.
+\end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+
+The Riemann program is a persistent, autonomous research effort whose stated
+contract is to prove or disprove the Riemann hypothesis, and in the meantime to
+produce rigorous, novel mathematics about $\zeta$ and its zeros. Its honesty
+guardrails (Section~\ref{sec:honesty}) require that every claim be labeled, that
+no result count as progress until adversarial validators fail to break it, and
+that a wrong, confident result be treated as worse than no result at all. This
+report is the record of a stress test of those guardrails: the largest certified
+number in the program's lineage was invalidated by an external auditor, and the
+program's response---confirm, retire, rebuild, and find another latent bug in
+itself---is, we argue, the interesting object.
+
+\subsection{The audit event}
+\label{sec:audit-event}
+
+On 2026-08-23 the program certified its best sound floor to date: with the
+Bellman--coboundary method of Tawan~\cite{tawanerguo}, a windowed lower bound
+$\eps = 0.0079$ verified true by an interval verifier at grid resolution 4000
+(27{,}679{,}928 nodes), giving
+\[
+N_0(T)/N(T) \;\ge\; 0.6735471309049393 \qquad (m = 136).
+\]
+The certificate was produced by the program's own verifier,
+\texttt{verify\_coboundary\_floor.py}, in its ``coboundary'' mode.
+
+On 2026-08-24, Michael Devine of Circumjovial LLC provided a one-page audit
+claiming that the posted certificate bounds the \emph{wrong functional}: the
+theorem of Tawan~\cite{tawanerguo} requires a functional $\Ft$ in which the
+nearest-neighbour coefficients $q_i$ \emph{replace} the span-one pair terms,
+whereas the program's verifier implements a functional $\Fv$ in which the
+span-one pair terms appear \emph{in addition to} the $q_i$ terms. Since
+$\Fv \ge \Ft$ pointwise (Section~\ref{sec:dispute}), a verified lower bound for
+$\Fv$ implies no lower bound for $\Ft$ at all.
+
+\subsection{The response, in one sentence}
+The program confirmed the audit on three independent lanes, retired its record
+and every record certified by the same code path, re-certified under the
+corrected functional $\Ft$, then discovered---before publishing any new
+floor---that even its corrected runs violated a coefficient-mass condition that
+the theorem's proof requires, retired those too, and rebuilt its certification
+infrastructure so that both bug classes are now unrepresentable.
+
+\subsection{Contributions}
+\begin{itemize}
+\item \textbf{Three confirmation lanes for the audit} (Section~\ref{sec:dispute}):
+  a code-side reading [PROVEN], a theorem-side reading [PROVEN], and a
+  closed-form identity $\Fv - \Ft = \tfrac13\sum_i w(g_i)$ verified numerically
+  to 60 digits [CHECKED NUMERICALLY].
+\item \textbf{A second latent inadmissibility found by the program itself}
+  (Section~\ref{sec:mass}): the mass conditions $\sum p_i = 1/320$,
+  $\sum q_i = 2$, span-mass $= 2$ are what make the coboundary telescope; the
+  program's $\lambda$-scaled coefficient sets violated them and the runs were
+  retired as INADMISSIBLE.
+\item \textbf{Rebuilt certification infrastructure} (Section~\ref{sec:infra}):
+  hard mass assertions in both verifiers, a sound Gershgorin positivity
+  certificate replacing an unsound entrywise-LDL test (cert-bug~\#3 caught
+  dormant), and self-describing runs that end the unrecorded-environment
+  failure mode.
+\item \textbf{An independent refereeing of the density-one program}
+  (Section~\ref{sec:densityone}): its key constants proven three ways including
+  an out-of-table holdout with $\mathrm{DELTA}=0$; a standard-error artifact in
+  its simulation resolved; its layer-(b) analytic core graded as the
+  unformalized residual risk.
+\item \textbf{A cross-domain fan-out tally} (Section~\ref{sec:fanout}) of where
+  the program's transport methods were exported and what closed each lane.
+\end{itemize}
+
+Throughout, every claim carries a label: \textsc{proven},
+\textsc{checked numerically}, \textsc{conjectured}, or \textsc{abandoned}.
+Numbers reproduced from the experiment record are given as recorded; where a
+number could not be re-derived from surviving artifacts it is marked
+TODO\{\texttt{verify}\}.
+
+\section{The Dispute: $\Fv$ vs.\ $\Ft$}
+\label{sec:dispute}
+
+\subsection{The theorem's functional}
+\label{sec:theorem}
+
+The method is due to Tawan~\cite{tawanerguo}. For six consecutive gaps
+$g_1,\dots,g_6 \ge 0$ one starts from a uniform seven-point functional $\Fzero$
+and adds an explicit five-gap coboundary:
+\begin{equation}
+\label{eq:coboundary}
+U(g_1,\dots,g_5) = \frac{54 g_1 - 123 g_2 + 123 g_4 - 54 g_5}{1920000}
+ + \frac{5971}{300000}\bigl[w(g_1)+w(g_2)-w(g_4)-w(g_5)\bigr],
+\qquad
+\FtB(g_1,\dots,g_6) = \Fzero(g_1,\dots,g_6) + U(g_2,\dots,g_6) - U(g_1,\dots,g_5),
+\end{equation}
+where $w$ is a nonnegative window function (the squared ratio of a sinc kernel
+to its value at zero, in the program's implementation; a cosine window
+$v(s)=\cos(1.47\,s)$ on $[-1/2,1/2]$ in the published theorem). The
+redistributed coefficients are
+\begin{equation}
+\label{eq:pq}
+p = \frac{(946,\;1177,\;877,\;877,\;1177,\;946)}{1920000},
+\qquad
+q = \Bigl(\tfrac{31343}{100000},\;\tfrac13,\;\tfrac{105971}{300000},\;
+       \tfrac{105971}{300000},\;\tfrac13,\;\tfrac{31343}{100000}\Bigr),
+\end{equation}
+with
+\[
+\sum_i p_i = \frac{1}{320}, \qquad \sum_i q_i = 2,
+\]
+and the longer-span coefficients sum to $2$ as well. These mass conditions are
+what make $U$ telescope on periodic sequences while retaining nonnegative
+finite-block pressure; they are the subject of Section~\ref{sec:mass}. The
+computer-assisted assertion is the per-window inequality
+$\FtB(g_1,\dots,g_6) \ge \eps$ on the admissible set, summed over blocks of
+$m$ gaps, which yields the proportion bound
+\[
+\frac{N_0(T)}{N(T)} \;\ge\; \frac{H_\alpha - \tfrac{m-6}{320 m}}{1 - B/m},
+\]
+with $H_\alpha$ the window integral, $B = 1.0212287852929821661489401766\ldots$
+the trace-energy envelope, and $\alpha = 147/100$ the published kernel
+parameter. The published theorem states
+\[
+\liminf_{T\to\infty} \frac{N_0^s(T,2T)}{N(T,2T)} \ge 0.6731929114731422535099843283\ldots
+\]
+
+The decisive structural fact is which terms sit at span one. Tawan's own
+verifier, \texttt{verify\_coboundary.cpp}, defines
+\[
+\texttt{kNearestRationals} = q, \qquad
+\texttt{kSpanRationals} = (0,0,\tfrac25,\tfrac12,\tfrac23,1,2),
+\]
+indexed by span $r = 0,\dots,6$, and runs its pair loop over
+$\texttt{span} = 2,\dots,6$ only: the span-one entry is $0/1$. Thus in the
+functional the verifier actually certifies, the $q_i\,w(g_i)$ terms \emph{are}
+the span-one layer---they replace it, and the longer spans carry weights
+$2/(7-r)$ for $r=2,\dots,6$, i.e.\ $\tfrac25,\tfrac12,\tfrac23,1,2$. This
+functional is exactly the audit's $\Ft$:
+\begin{equation}
+\label{eq:FT}
+\Ft(g_1,\dots,g_6) = \sum_{i=1}^6 p_i g_i + \sum_{i=1}^6 q_i\, w(g_i)
+ + \sum_{r=2}^{6}\frac{2}{7-r}\sum_{i=0}^{6-r} w(y_{i+r}-y_i),
+\end{equation}
+where $y_0=0$, $y_k = g_1+\cdots+g_k$. The mass bookkeeping confirms the
+reading: in the uniform seven-point functional the span-one pair mass would be
+$6\cdot\tfrac{2}{7-1} = 6\cdot\tfrac13 = 2$, exactly $\sum_i q_i$; and the
+coboundary transfers $\pm\tfrac{5971}{300000}$ onto the span-one coefficients at
+indices $1,3,4,6$ (giving $\tfrac13 - \tfrac{5971}{300000} = \tfrac{31343}{100000}$
+and $\tfrac13 + \tfrac{5971}{300000} = \tfrac{105971}{300000}$), so $q$ is
+literally $\Fzero$'s span-one layer modified by the coboundary, with no extra
+span-one mass [PROVEN, against \texttt{BELLMAN\_COBBOUNDARY\_PROOF.md},
+\texttt{paper/riemann.tex}, and \texttt{tools/verify\_coboundary.cpp}].
+
+\subsection{What the program's verifier implemented}
+\label{sec:code}
+
+The program's verifier, \texttt{verify\_coboundary\_floor.py}, builds pair
+weights over \emph{all} 21 pairs with no span filter:
+\[
+\texttt{w\_uniform} = \{(i,j): 2/(7-(j-i)) \text{ for } 0 \le i < j \le 6\},
+\]
+and its coboundary branch computes, per box,
+\[
+\sum_i p_i g_i \;+\; \sum_i q_i\, w(g_i) \;+\;
+\sum_{0\le i<j\le 6} \frac{2}{7-(j-i)}\, w(y_j-y_i),
+\]
+the $q_i$ terms and the pair terms being separate loops [PROVEN, by direct
+reading of \texttt{verify\_coboundary\_floor.py}, lines 251--281, 498]. In
+particular the six span-one pairs $(i,i+1)$ appear \emph{in addition to} the
+$q_i\,w(g_i)$ terms. This is the audit's $\Fv$:
+\begin{equation}
+\label{eq:FV}
+\Fv(g_1,\dots,g_6) = \sum_{i=1}^6 p_i g_i + \sum_{i=1}^6 q_i\, w(g_i)
+ + \sum_{0\le i<j\le 6} \frac{2}{7-(j-i)}\, w(y_j-y_i).
+\end{equation}
+
+\subsection{The identity}
+Subtracting \eqref{eq:FT} from \eqref{eq:FV}, only the six span-one pair terms
+survive, each with weight $2/(7-1) = 1/3$:
+\begin{equation}
+\label{eq:identity}
+\Fv - \Ft \;=\; \frac13 \sum_{i=1}^{6} w(g_i) \;\ge\; 0,
+\end{equation}
+with strict inequality on the interior where $w>0$. Hence $\Fv \ge \Ft$
+pointwise, and a verified lower bound for $\Fv$ (such as the retired
+$\eps = 0.0079$ certificate) implies \emph{no} lower bound for $\Ft$. The
+identity was verified numerically to 60 decimal digits (mpmath) at the audit's
+witness point $g = (7993,4182,7967,8003,7971,4197)/4000$, where
+$\Fv - \Ft = 0.000362273873459031\ldots$ exactly in both evaluations
+[CHECKED NUMERICALLY, mpmath dps=60]. Devine's clean-room evaluations at the
+same witness were $\Fv = 0.0081469966113\ldots$ and $\Ft = 0.0077854336862\ldots$
+(recorded in the audit); exact decimal reproduction from the program's side was
+blocked because the certified run's environment variables were not persisted in
+its log [INCONCLUSIVE], but under \emph{every} candidate parameter reading
+tested, $\Ft < 0.0079$ at the witness.
+
+\subsection{The three lanes, and the retirements}
+The audit was confirmed on three independent lanes:
+\begin{enumerate}
+\item \textbf{Code lane} [PROVEN]: a direct reading of
+  \texttt{verify\_coboundary\_floor.py} shows the implemented functional is
+  $\Fv$ (all 21 pairs plus separate $q_i$ terms).
+\item \textbf{Theorem lane} [PROVEN]: a direct reading of the theorem's source
+  (proof markdown, paper TeX, and the C++ verifier that is actually run) shows
+  the theorem requires $\Ft$ ($q_i$ replace span-one; the pair loop starts at
+  span 2).
+\item \textbf{Identity lane} [CHECKED NUMERICALLY]: \eqref{eq:identity} holds
+  to 60 digits at the witness.
+\end{enumerate}
+Because all three lanes agree, the following were publicly retired
+[PROVEN, INADMISSIBLE]:
+\begin{itemize}
+\item $N_0(T)/N(T) \ge 0.6735471309049393$ (2026-08-23, $m=136$, the
+  $\eps=0.0079$ record);
+\item the 2026-08-21 sound re-certification
+  $N_0(T)/N(T) \ge 0.6734729658195391$ ($m=155$, $\eps=0.00689$), which used
+  the same code path;
+\item the original 2026-08-18 record
+  $0.67356334799462276907825507156842728993505158837078861022540884$, already
+  retired for a different defect (Section~\ref{sec:infra}).
+\end{itemize}
+The same functional mismatch also invalidated the optimizer that produced the
+$\eps=0.0079$ parameters: \texttt{joint\_c21.py} maximized $\Fv$, not $\Ft$
+[PROVEN]. At the time of writing, the surviving floors were Tawan's published
+$0.6731929114731422$ [PROVEN, his verifier] and a reported $0.673399$ from
+Devine's own 72-hour/384-core run [unaudited by the program].
+
+\subsection{Honest restart under $\Ft$}
+With a corrected mode (\texttt{VERIFY\_SPAN1\_MODE=replaced}, which drops exactly
+the six span-one pairs and keeps the $q_i$ terms), the program re-certified
+$\eps = 0.0070$ verified true at the 2026-08-23 candidate parameters
+($\alpha = 1.4263026187858052$, $\lambda = 1.351623997475116$), 779{,}030 nodes,
+and computed the headline chain [CHECKED NUMERICALLY, mpmath dps=40]
+\[
+\frac{N_0(T)}{N(T)} \;\ge\; 0.67296645387858 \qquad (m = 151),
+\]
+with $H(\alpha) = 0.6724988031484523793\ldots$ confirmed and $m=151$ verified
+to be the global argmax over $m \in [40,5000]$. An adversarial audit of this
+claim found the machinery sound (the patch removes exactly the six span-one
+pairs, there is no silent fallback to $\Fv$, and no pruning path can
+manufacture \texttt{verified=true}) and corrected the headline from a published
+$0.6729663177639583$ (a conservative understatement following an inconsistent
+$\sum p$ convention) to $0.67296645387858$ [PROVEN]. A ladder step to
+$\eps = 0.0072$ verified true in 3{,}351{,}182 nodes; $\eps = 0.0074$ timed out
+at 1500 s and was treated as inconclusive. Threshold analysis showed
+$\eps \ge 0.00735$ would beat Tawan's floor and $\eps \ge 0.00766$ Devine's
+reported floor. None of this was published as a floor, because a second latent
+defect was found first---the subject of the next section.
+
+\section{Mass Conditions Are Load-Bearing}
+\label{sec:mass}
+
+\subsection{The telescoping argument}
+The coboundary construction \eqref{eq:coboundary} is not an arbitrary
+redistribution: it is what licenses the block assembly. Summing the per-window
+inequality over $m$ consecutive gaps produces a telescoping cancellation of the
+$U$ terms \emph{only if} the coefficient masses match the masses of the layers
+they replace. Concretely, reading the theorem's proof text
+(\texttt{BELLMAN\_COBBOUNDARY\_PROOF.md}, lines 18--30):
+\begin{quote}
+``They satisfy $\sum(p)=1/320$, $\sum(q)=2$; longer-span coefficients still sum
+to $2$. Thus the coboundary telescopes on periodic sequences while retaining
+nonnegative finite-block pressure.''
+\end{quote}
+The three conditions---$\sum p_i = 1/320$, $\sum q_i = 2$, and span-mass $= 2$
+for the longer spans---are the statement that the redistributed functional is a
+\emph{coboundary perturbation} of the uniform one: $U$ is a function of five
+gaps whose difference operator annihilates periodic sequences exactly when the
+mass it moves is conserved. They are therefore properties of the theorem's
+coefficient \emph{set}, not tunable parameters, and they are what make
+\eqref{eq:coboundary} telescope. This is a genuine theorem-level constraint, not
+a numerical convention [PROVEN, by direct reading of the proof text and the
+redistribution arithmetic \eqref{eq:pq}].
+
+\subsection{How the program violated it}
+The program's parameterized verifier scales the user-supplied raw coefficients
+by $\lambda$: $\texttt{q\_coeff} = \lambda \cdot \texttt{raw\_q}$. At the
+restart parameters, $\texttt{raw\_q} = (0.331829, 0.323062, 0.343351,
+0.343351, 0.323062, 0.331829)$, so
+\[
+\sum_i q_i = 2 \lambda \sum_i \texttt{raw\_q}_i / \text{(normalization)}
+\]
+with the normalization convention used by the verifier gave
+$\sum_i q_i = 2.6987 \neq 2$ for the re-certified runs
+(\texttt{cert\_F\_T\_700}, \texttt{cert\_FT\_0.0072}) and $\sum_i q_i = 3.0903
+\neq 2$ for the corrected optimizer's round-2 winner. Both violate the
+theorem's mass condition; under the telescoping argument the coboundary leaves a
+residual drift on periodic sequences and the block assembly identity fails
+[PROVEN, arithmetic; the residual drift is not numerically measured, only forced
+by the algebra---the condition is exact, so no margin exists].
+
+Consequently the honest-restart chain values
+$0.67296645387858$ and $0.6730965989022086$ were retired as INADMISSIBLE (not
+merely suspected) before publication. The surviving floors were unchanged:
+Tawan's $0.6731929114731422$ [PROVEN] and Devine's reported $0.673399$
+[unaudited].
+
+\subsection{What this bug teaches}
+Two points matter for the case study. First, the failure was \emph{not} found
+by the external auditor: it was found by the program's own guardrails, in the
+course of the re-certification, when an agent read the theorem's proof text
+directly instead of trusting the verifier's parameter plumbing. The program had
+already been burned once by trusting a verifier to encode the theorem correctly;
+this time it audited the \emph{theorem's} side of the contract. Second, the bug
+class is silent to verification: a sound interval verifier can certify the
+wrong functional's lower bound correctly, and the certificate can be
+numerically perfect. Admissibility is a property of the coefficient set and the
+proof's hypotheses, which no amount of correct arithmetic on the wrong object
+can conjure. The infrastructure response (Section~\ref{sec:infra}) therefore
+makes the \emph{set} the checked object, not just the arithmetic.
+
+\section{Self-Audit Infrastructure}
+\label{sec:infra}
+
+This section records the three certificate defects found in the program's
+lineage, in order, and the infrastructure that now makes each class
+unrepresentable.
+
+\subsection{Cert-bug \#1: unsound entrywise-LDL tangent test (2026-08-18/21)}
+The original $\eps = 0.00703$ certificate
+($N_0(T)/N(T) \ge 0.67356334799462276907825507156842728993505158837078861022540884$,
+2026-08-18) was retired because the verifier's \texttt{tangent\_lower} convexity
+test ran an LDL factorization on a matrix $M$ built from \emph{entrywise lower
+bounds} of $w''$; such an $M$ can be positive definite while the true Hessian of
+the tangent relaxation is indefinite. An exact counterexample was found at the
+record's own parameters: $g = (8082,8069,11965,8040,4227,4244)/4000$ gives
+$\FtB = 0.00689927317391 < 0.00703$, with float, Arb, and mpmath-40 all in
+agreement [PROVEN]. The same defect invalidated the ``breakthrough''
+$0.6751272603$ from a joint max-min optimization [ABANDONED]. The repair
+replaced the LDL test with a sound Gershgorin diagonal-dominance certificate
+(Section~\ref{sec:gershgorin}); the re-certified $\eps = 0.00689$ bound
+($\alpha = 1.464$, $\lambda = 1.15$, Tawan's $p/q$, grid 4000, 8{,}259{,}964
+nodes) gave $N_0(T)/N(T) \ge 0.6734729658195391$ ($m=155$), which was itself
+later retired for the $\Fv$ mismatch (Section~\ref{sec:dispute}). The dual
+ceiling $0.68182868746$ and the distinct-proportion ceiling $0.8367817$ were
+unaffected.
+
+\subsection{Cert-bug \#2: $\Fv$ vs.\ $\Ft$ (2026-08-24, external)}
+Section~\ref{sec:dispute}. The structural response was the
+\texttt{VERIFY\_SPAN1\_MODE} flag with an audited ``replaced'' semantics, plus
+the adversarial patch audit showing that no path can report
+\texttt{verified=true} while silently running $\Fv$.
+
+\subsection{Cert-bug \#3: the same LDL defect caught dormant in the Rust verifier}
+\label{sec:gershgorin}
+The program's independent Rust pipeline, \texttt{tools/verifier-rs}, had
+committed its own \texttt{ldl\_positive} tangent gate---the \emph{same}
+entrywise-LDL test that caused cert-bug~\#1---and would have inherited the same
+unsoundness. It was caught during the port audit, before any Rust-certified
+floor was published [PROVEN, by reading the committed code and the Python
+verifier's documented warning]. The replacement certificate is sound: a matrix
+$H$ is certified positive definite by
+\[
+\min_i\Bigl( H_{ii}^{\mathrm{lo}} - \sum_{j\neq i} \lvert H_{ij}\rvert^{\mathrm{up}} \Bigr) > 0,
+\]
+using outward-rounded interval bounds (a Gershgorin/Weyl diagonal-dominance
+test mirroring the corrected Python semantics). The old \texttt{ldl\_positive}
+is retained only as an explicitly marked non-certificate
+(\texttt{\#[\allowbreak allow(dead\_code)]}) so future readers cannot mistake it
+for one.
+
+\subsection{Mass assertions}
+Both verifiers now hard-fail on coefficient sets that violate the theorem's
+hypotheses: the Rust verifier refuses to run unless
+$\lvert \sum_i q_i - 2 \rvert < 10^{-9}$ \emph{and} every present span keeps
+mass 2 (with $\sum q_i = 2$ replacing the dropped span-one mass in ``replaced''
+mode); the Python verifier's planned gate is the same with tolerance
+$10^{-12}$. The failure is loud: a test vector with $\sum q \approx 1.98$
+produces \texttt{MASS-FAIL: |sum q - 2| = 2.000e-2 > 1e-9; refusing to run}
+(exit 2) [CHECKED NUMERICALLY]. This makes the mass-condition bug class
+unrepresentable: no run that violates the theorem's hypotheses can produce a
+certificate.
+
+\subsection{Self-describing runs}
+The exact-reproduction failure that blocked the program from re-deriving
+Devine's decimals (the launcher's \texttt{VERIFY\_*} environment was never
+persisted in \texttt{cert\_790.log}) is now structurally impossible: before
+every candidate run, the verifier prints $\alpha$, target, grid, max nodes,
+\texttt{span1\_mode}, $\lambda$, raw and effective $p/q$ coefficient vectors,
+and the sums $\sum p$, $\sum q$, verbatim. An environment-driven driver
+(\texttt{VERIFY\_ALPHA}, \texttt{VERIFY\_TARGET}, \texttt{VERIFY\_LAMBDA},
+\texttt{VERIFY\_GRID}, \texttt{VERIFY\_MAX\_NODES}, \texttt{VERIFY\_SPAN1\_MODE},
+\texttt{VERIFY\_P1..6}, \texttt{VERIFY\_Q1..6}) makes the Python and Rust
+verifiers share a driver contract, and a \texttt{floor-pipeline} subcommand
+chains mass-assert $\to$ certify $\to$ record-chain bound
+$\to$ \texttt{PIPELINE\_VERDICT} in one self-describing invocation.
+
+\subsection{Validation of the rebuilt pipeline}
+The Rust verifier reproduces the published theorem to machine precision:
+the Tawan baseline ($\alpha = 1.47$, Tawan's $p/q$, target $0.00577$, grid
+4000) verifies true in 660{,}298 nodes and yields
+\texttt{CHAIN\_BOUND} $= 0.6731929114731422$, matching Tawan's committed
+$0.6731929114731423$ to $\sim 2\times 10^{-16}$ [CHECKED NUMERICALLY]. A
+mass-admissible $\Ft$ round-4 candidate
+($\alpha = 1.4882098313790653$, $P = (941.4583151442252, 1166.5023445678612,
+876.8280966942434,\ldots)$ mirrored, $Q$ mirrored with $\sum Q = 2$, target
+$0.0056$) verifies true in 4{,}601{,}264 nodes with
+\texttt{CHAIN\_BOUND} $= 0.67306445176945029$ ($m=188$)
+[CHECKED NUMERICALLY]---below Tawan's floor, as expected for a strictly more
+constrained (mass-admissible) search, and consistent with Section~\ref{sec:limits}.
+
+\section{Independent Refereeing of the Density-One Program}
+\label{sec:densityone}
+
+As part of the same audit wave, the program refereed a sibling result: the
+density-one program of Joshua~\cite{joshua}, which claims, unconditionally and
+with ineffective constants, that
+\[
+\lim_{T\to\infty}\frac{N_0^s(T)}{N(T)} = \lim_{T\to\infty}\frac{N_d(T)}{N(T)} = 1,
+\]
+via a trace-moment tower of a Gabor-compressed Weil matrix that is determinate
+at $(b!)^2$ growth (Stieltjes--Carleman), a limiting spectral measure with no
+atom at zero (exact finite-$N$ log law), and Christoffel values
+$\lambda_k(0) \downarrow 0$ (Akhiezer). The refereeing had three parts.
+
+\subsection{Constants proven three ways, including an out-of-table holdout}
+The instantiated rung $k = 14$ is substantiated by exact rationals: in the
+repo's own \texttt{certify91.py} and \texttt{Lean/CertificateK14.lean},
+\[
+\lambda_7 = \frac{352633869846878511557783511830740995191}{7876602339133293193971616991853147607579},
+\qquad
+1 - 2\lambda_7 = 0.9104604105516693\ldots,\qquad
+1 - \lambda_7 = 0.9552302052758346\ldots
+\]
+[PROVEN, verbatim in both files; the decimals are the correct expansions of the
+shipped exact rationals, so the printed values are consistent, not fabricated].
+The program additionally proved the model constants of the trace-moment tower
+three independent ways: (i) an exact-rational refit of the constant term of the
+$1/N^2$ law $m_b(N) \to m_b$ from the archive's own exact rationals---$m_7 =
+3439/180 = 19.1055556$, $m_8 = 747361/20160 = 37.0714782$---with out-of-table
+holdouts $N = 6$ ($2530489/139968$), $N = 7$ ($1422479825/40353607$), and
+$m_7(9) = 29725531/1594323$ (a new point not in the table; all
+$\mathrm{DELTA} = 0$); (ii) engine holdouts run in the repo's own code
+(\texttt{tt\_moments.py}) at $m_7(4)$, $m_8(2)$, $m_8(4)$, $m_8(6)$, all
+$\mathrm{DELTA}=0$; and (iii) exact algebra for the cluster constants,
+$\Sigma_7 = 7/90$ and $\Sigma_8 = 633/2240$ (matching the archive's
+\texttt{sigma\_exact[8]} exactly), with the identity
+$\frac{217}{6} + 8\cdot\frac{7}{90} + \frac{633}{2240} = \frac{747361}{20160}$
+closing the loop [all PROVEN, exact rational arithmetic]. The archive's
+pre-registered candidates $M_8 = 519/14$ and $\Sigma_8 = 89/315$ are
+$4.96\times 10^{-5}$ low, and the archive's own metadata flags this
+(``dev 5.0e-5''); the corrected values come from the paper's own
+\texttt{sigma\_exact} field.
+
+\subsection{The standard-error artifact resolved}
+The reported ``$+62\sigma/+32\sigma$'' deviation of a simulation from $m_7/m_8$
+is a statistical-arithmetic artifact, not a genuine sampler bias: the
+simulation's \texttt{analysis.json} standard errors are underestimated by
+$\sim 290\times$ ($m_6$), $\sim 780\times$ ($m_7$), and $\sim 2700\times$
+($m_8$); at the honest between-sample standard error the pool agrees with the
+exact constants at $\sim 2$--$3\sigma$ [CHECKED NUMERICALLY]. The sampler is
+not biased at the claimed significance. A related artifact finding: the Lean
+layer of the density-one repo \texttt{grind}s arithmetic consequences of the
+fed-in constants (proving $1-2\lambda_7 = \text{headline}$, headline thresholds,
+etc.) but does not \emph{derive} $\lambda_7$ as a Christoffel number from the
+moment tower, and the density-one capstone itself is not gated by any
+reproduce-able artifact [PROVEN, by reading the Lean files and gates]. These
+are recorded as residual risk, not as defects.
+
+\subsection{Layer-(b) non-RMT disjointness}
+A static referee audited the deductive structure of the density-one capstone
+and found it sound as written at every surface examined: Montgomery's theorem
+is consumed only through the \emph{upper-bound} direction of the second moment,
+$m_2 \le 4/3$ (the unconditional direction), never through the
+RH-dependent direction; every higher moment is a separate, separately proved
+arithmetic input (explicit formula closed by Siegel--Walfisz and Vaughan);
+existence of the limiting measure is derived (Helly selection plus Carleman
+determinacy), not assumed; the no-atom-at-zero log law uses Portmanteau in the
+correct direction; and the $k\to\infty$ step is a countable supremum of
+fixed-$k$ theorems, not a limit interchange [PROVEN as written; the layer-(b)
+analytic theorems are graded certified-candidate and unformalized, recorded as
+residual risk]. The program's own two-moment ceiling analysis (a
+bandwidth-one-only certificate ceiling of $0.68185$) shows why this matters:
+the density-one tower is \emph{not} RMT numerology---it climbs in $k$, never
+widens the Fourier band, and its model constants are F-CYC combinatorics rather
+than GUE pair-correlation data [PROVEN against the paper text]. As with every
+proportion statement in this report, the density-one theorem is
+$\mathrm{NOT\_RH\_EVIDENCE}$: it concerns the proportion of simple/off-line
+zeros, not the location of zeros.
+
+\section{Cross-Domain Fan-Out Tally}
+\label{sec:fanout}
+
+The audit wave also tallied where the program's transport methods were exported
+to neighboring problems, closing lanes with documented verdicts
+(all recorded in research notes of 2026-08-24):
+\begin{itemize}
+\item \textbf{Gauss-map transfer operator (dynamics)} [CLOSED]: the route
+  turned out to be a repackaging---the operator is non-self-adjoint and the
+  real-axis probe is blind to complex planted zeros; a control experiment is
+  documented.
+\item \textbf{Stochastic counting rigidity} [CLOSED]: unconditional counting
+  rigidity is a provable no-op (probe executed, $O(1)$ deviation); point-process
+  rigidity would require a conjectural local law.
+\item \textbf{Function-field transport} [OPENING]: rank-infinity is identified
+  as \emph{the} transport obstruction, unifying earlier finite-cut
+  non-separations; a separation probe with four RH-false controls is queued.
+  Separation would falsify the rank gap and yield a lever; non-separation would
+  upgrade the closure.
+\end{itemize}
+The tally is included because it evidences the program's operating rule: a
+failed or closed lane is a documented result, not a reason to stop
+(Section~\ref{sec:honesty}).
+
+\section{Limitations}
+\label{sec:limits}
+
+\begin{itemize}
+\item \textbf{No floor above Tawan's published value.} Every number certified
+  by the program in this dispute---$0.6735471309049393$,
+  $0.6734729658195391$, $0.67296645387858$, $0.6730965989022086$---was retired,
+  and the mass-admissible $\Ft$ candidates certified to date
+  (\texttt{CHAIN\_BOUND} $= 0.67306445176945029$) sit \emph{below} Tawan's
+  published $0.6731929114731422$ [PROVEN]. Devine's reported $0.673399$ is
+  unaudited. All program-certified floors at the time of writing are below the
+  Tawan floor; the honest statement is that the program's own certified
+  contribution is currently $< 0.6731929$, and the Tawan floor stands.
+\item \textbf{Zero RH evidence.} Proportion bounds of the form
+  $N_0(T)/N(T) \ge c$ are evidence about the proportion of zeros on the
+  critical line, not about the Riemann hypothesis. Neither the certified
+  numbers nor the density-one theorem move the RH question, in either
+  direction [PROVEN].
+\item \textbf{Inconclusive reproduction of the audit's decimals.} The exact
+  decimal values $\Fv = 0.0081469966113\ldots$ and $\Ft = 0.0077854336862\ldots$
+  from Devine's clean-room witness could not be re-derived from the program's
+  surviving artifacts because the certified run's environment was not recorded;
+  the verdict ($\Ft < 0.0079$ at the witness) is robust across every candidate
+  parameter reading tested [INCONCLUSIVE on the exact decimals; PROVEN on the
+  inequality across readings].
+\item \textbf{Independence gap.} The auditor's clean-room witness script
+  (\texttt{experiments/vstalin\_claim\_arb\_witness.py}) was not obtained or
+  located on the program's machines, so the corrected pipeline has been
+  validated internally (two verifiers, two implementations, adversarial audits)
+  but not by the third party that initiated the dispute [INCONCLUSIVE as
+  independence]. TODO\{\texttt{verify}\}: public ask for the script and pinned
+  commit hashes is outstanding.
+\item \textbf{Density-one residual risk.} The layer-(b) analytic theorem
+  (order-uniform transport of trace moments) is graded certified-candidate,
+  pre-Lean, and unformalized; the Lean layer grinds fed-in constants; the
+  capstone is not artifact-gated. None of this is a proven defect; all of it is
+  unverified-by-mechanical-proof [CONJECTURED as sound, recorded as risk].
+\item \textbf{Effectivity.} The density-one constants are ineffective; the
+  program's own certified floors are effective but currently below the Tawan
+  floor.
+\end{itemize}
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+The arc of this report is a single curve: an external auditor showed that the
+program's best certified number bounded the wrong functional; the program
+confirmed the audit on three independent lanes, retired its record and every
+record on the same code path, re-certified under the correct functional, then
+found---through its own guardrails, before publication---that even the corrected
+runs violated a theorem-level mass condition, and retired those too. Along the
+way it surfaced a third certificate defect (the dormant LDL test in its Rust
+verifier) that had never fired, and it rebuilt its infrastructure so that each
+bug class is now unrepresentable: mass assertions on the coefficient sets,
+a sound Gershgorin positivity certificate, self-describing runs, and a shared
+driver contract across two independent verifier implementations.
+
+Three properties of this event are worth stating as a case study in machine
+self-audit. First, the \emph{external} audit and the \emph{internal} audit
+found different things: Devine's one-page audit caught a functional mismatch
+(which object is certified); the program's own re-certification discipline
+caught a hypothesis violation (which coefficient sets the theorem admits).
+Second, both defects were invisible to numerical verification: the $\Fv$
+certificate was numerically perfect, and the mass-violating $\Ft$ runs were
+numerically perfect too; sound arithmetic on the wrong object is the failure
+mode that interval verification cannot see. Third, the guardrails held: every
+retired number was retired publicly and labeled, no invalidated claim was
+defended, and no new floor was published until the theorem's hypotheses were
+checked by construction rather than by hope.
+
+The Riemann hypothesis itself is untouched by this report. What this report
+documents is the system that will, on its next attempt, carry the search
+forward: a research program whose epistemology was stress-tested by an
+adversary, and which responded by finding another bug in itself.
+
+\subsection*{Honesty statement}
+\label{sec:honesty}
+\begin{center}
+\fbox{\begin{minipage}{0.92\textwidth}
+\small
+\textbf{Honesty guardrails of the Riemann program.}
+\begin{enumerate}
+\item Never fabricate a proof, lemma, or numerical result. No exception.
+\item Every claim is labeled: \textsc{proven} /
+  \textsc{checked numerically} / \textsc{conjectured} / \textsc{abandoned}.
+\item Nothing counts as progress until adversarial validators fail to break it.
+\item Never weaken a validator to make a result pass.
+\item A wrong, confident result is worse than no result---it poisons the
+  whole search.
+\end{enumerate}
+This report is written under these guardrails. Every number above is either
+reproduced from the experiment record and labeled, or marked
+TODO\{\texttt{verify}\} where the surviving artifacts no longer determine it.
+\end{minipage}}
+\end{center}
+
+\subsection*{Reproducibility}
+All computations referenced in this report were run with interval arithmetic
+(Arb) or exact rational / high-precision arithmetic (mpmath, python-flint)
+\cite{arb,flint}; verifier sources and logs are in the program repository
+(research notes of 2026-08-18 through 2026-08-24; commit c6a8f5e for the
+Gershgorin repair). The auditor's clean-room witness script was not available
+to the program (Section~\ref{sec:limits}).
+
+\begin{thebibliography}{9}
+\bibitem{tawanerguo}
+Tawanerguo. \emph{Bellman--coboundary proof of a zeta simple-zeros proportion
+floor}, repository \texttt{tawanerguo-zeta-simple-zeros}:
+\texttt{BELLMAN\_COBBOUNDARY\_PROOF.md}, \texttt{paper/riemann.tex},
+\texttt{tools/verify\_coboundary.cpp}.
+\bibitem{joshua}
+Joshua. \emph{Zeta density-one reproduction},
+repository \texttt{JoshuaHKU/zeta-density-one-reproduction}, HEAD
+\texttt{cdc2e41}, Zenodo DOI 10.5281/zenodo.22065921:
+\texttt{certification/certify84.py}, \texttt{certification/certify91.py},
+\texttt{lean/CertificateK14.lean}, \texttt{repro/engines/tt\_moments.py},
+\texttt{paper.tex}.
+\bibitem{arb}
+F.~Johansson. \emph{Arb: a C library for arbitrary-precision ball
+arithmetic}. \url{https://arblib.org/}.
+\bibitem{flint}
+F.~Johansson et al. \emph{python-flint: Python bindings for FLINT}.
+\url{https://github.com/flintlib/python-flint}.
+\end{thebibliography}
+
+\end{document}
