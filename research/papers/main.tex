@@ -406,7 +406,7 @@ Existing methods exhibit essential structural obstacles:
 \item \textbf{Carneiro--Chandee Bounds:} Sharp bounds on $|S(t)|$ control $\arg\zeta(1/2+it)$ on the critical line, not off-line log-derivatives.
 \item \textbf{Singular Pointwise Explosion:} As $d \to 0$, the single-zero kernel $(\sigma - \beta)/[(\sigma - \beta)^2 + d^2]$ scales as $1/(\sigma - \beta) \to \infty$, which overwhelms any fixed logarithmic background $\frac{1}{2}\log(t/2\pi)$.
 \end{enumerate}
-Therefore, proving $Z(s) < |\Ree B(s)|$ pointwise in $t$ requires an a priori exclusion of off-line zeros at that exact height—which is equivalent to RH itself \textbf{[PROVEN structural loop]}.
+Therefore, proving $Z(s) < |\Ree B(s)|$ pointwise in $t$ requires an a priori exclusion of off-line zeros at that exact height---which is equivalent to RH itself \textbf{[PROVEN structural loop]}.
 \end{proof}
 
 \subsection{Rigorous Zero-Free Left Strip: $[0.001, 0.49] \times [10, 175000]$}
@@ -524,7 +524,7 @@ Robin demonstrated that any counterexample to (\ref{eq:robin_def}) must be a Col
 where $p_k$ is the $k$-th prime. To avoid the unproven Alaoglu--Erd\H{o}s tie lemma required by priority-queue CA generators, we implemented an exhaustive depth-first search over the strict superset of all integers $n \le 10^{60}$ with non-increasing prime exponent sequences.
 
 \subsection{Exhaustive Verification Results}
-The computation \texttt{tools/robin\_ca/src/bin/ca_cert.rs} evaluated $R(n)$ using the log-space representation:
+The computation \texttt{tools/robin\_ca/src/bin/ca\_cert.rs} evaluated $R(n)$ using the log-space representation:
 \begin{equation}
  \log R(n) = \sum_{k=1}^m \left[ \log\left(1 - p_k^{-(a_k+1)}\right) - \log\left(1 - p_k^{-1}\right) \right] - \gamma - \log(\log\log n).
 \end{equation}
@@ -582,7 +582,7 @@ To prevent any ambiguity regarding what is established versus what remains open,
  \sum_{\beta_j < \sigma} \frac{\sigma - \beta_j}{(\sigma - \beta_j)^2 + (t - \gamma_j)^2} < |\Ree B(\sigma + it)| + \sum_{\text{partners}} \frac{1 - \sigma - \beta_j}{(1 - \sigma - \beta_j)^2 + (t - \gamma_j)^2}.
 \end{equation}
 \end{quote}
-Because an off-line zero at distance $d \to 0$ introduces a kernel singularity $\sim 1/d$ that dominates the logarithmic Archimedean margin $|\Ree B(s)| \approx \frac{1}{2}\log(t/2\pi)$, any proof of this estimate must establish $d > 0$ for all hypothetical zeros—which is the Riemann Hypothesis itself (cf.\ Theorem~\ref{thm:hardness_loop}).
+Because an off-line zero at distance $d \to 0$ introduces a kernel singularity $\sim 1/d$ that dominates the logarithmic Archimedean margin $|\Ree B(s)| \approx \frac{1}{2}\log(t/2\pi)$, any proof of this estimate must establish $d > 0$ for all hypothetical zeros---which is the Riemann Hypothesis itself (cf.\ Theorem~\ref{thm:hardness_loop}).
 
 \section{Reproducibility and Repository Architecture}
 
