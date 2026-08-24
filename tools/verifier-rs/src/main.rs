@@ -417,6 +417,7 @@ struct CellBounds {
     first_lower: f64,
     first_upper: f64,
     second_lower: f64,
+    second_upper: f64,
 }
 
 struct KernelDerivsCell {
@@ -524,6 +525,7 @@ impl CosineKernel {
             first_lower: first.lo.to_f64_round(Round::Down).next_down(),
             first_upper: first.hi.to_f64_round(Round::Up).next_up(),
             second_lower: second.lo.to_f64_round(Round::Down).next_down(),
+            second_upper: second.hi.to_f64_round(Round::Up).next_up(),
         }
     }
     /// Rigorous value/first derivative of w = (K/K0)^2 at a POINT x. Returns
@@ -647,6 +649,12 @@ fn sum_firsts(b: &BBox) -> i64 { b.coords.iter().map(|&(l, _)| l).sum() }
 /// pivots are certified strictly positive. Matrix entries are point intervals
 /// built from the (lower-bound) scalars; every operation is outward-rounded,
 /// so a true return certifies positive-definiteness of the minorant matrix.
+/// Interval LDL (mirror of Python _arb_ldl_positive). Returned for possible
+/// reuse; NOTE it is NOT a sound PD certificate (see hessian_pd_gershgorin in
+/// block.rs — Python proved the entrywise-lower-bound LDL can be PD while the
+/// true Hessian is indefinite), so it must not be used to license a tangent
+/// prune. Retained only as dead reference; remove if it rots.
+#[allow(dead_code)]
 fn ldl_positive(matrix: &[Vec<Iv>], q: usize) -> bool {
     let mut lower = vec![vec![Iv::point(0.0); q]; q];
     let mut diagonal = vec![Iv::point(0.0); q];
@@ -721,24 +729,203 @@ fn bench_point_eval() {
              dt * 1e9 / iters as f64);
 }
 
+fn build_weights(span1_mode: &str) -> HashMap<(usize, usize), f64> {
+    let mut w = HashMap::new();
+    for i in 0..7i64 {
+        for j in (i + 1)..7i64 {
+            let span = j - i;
+            if span1_mode == "replaced" && span == 1 { continue; }
+            w.insert((i as usize, j as usize), 2.0 / (7.0 - span as f64));
+        }
+    }
+    w
+}
+
+/// HARD mass conditions (ledger 2026-08-24 final): |sum q - 2| < 1e-9 AND every
+/// present span keeps its design mass (2). Refuses to run otherwise — makes the
+/// launcher-encoding bug class unrepresentable (a mangled P/Q vector or a bad
+/// span1_mode flips at least one of these before any node is spent).
+fn assert_mass_conditions(q_coeff: &[f64], span1_mode: &str) -> Result<(), String> {
+    let sum_q: f64 = q_coeff.iter().sum();
+    if (sum_q - 2.0).abs() > 1e-9 {
+        return Err(format!(
+            "MASS-FAIL: |sum q - 2| = {:.3e} > 1e-9 (sum q = {:.17}); refusing to run",
+            (sum_q - 2.0).abs(), sum_q));
+    }
+    let w = build_weights(span1_mode);
+    for span in 1..=6i64 {
+        let design: f64 = if span1_mode == "replaced" && span == 1 { 0.0 } else { 2.0 };
+        let mass: f64 = w.iter().filter(|((i, j), _)| (*j - *i) as i64 == span)
+            .map(|(_, v)| *v).sum();
+        if (mass - design).abs() > 1e-9 {
+            return Err(format!(
+                "MASS-FAIL: span {span} mass {mass} != design {design} (mode={span1_mode}); refusing to run"));
+        }
+    }
+    Ok(())
+}
+
+fn print_params(alpha: f64, target: f64, grid: i64, max_nodes: u64, span1_mode: &str,
+                lam: f64, p_raw: &[f64], q_raw: &[f64], p_coeff: &[f64], q_coeff: &[f64]) {
+    println!("--- verifier-rs candidate (self-describing) ---");
+    println!("alpha      = {:.17}", alpha);
+    println!("target     = {:.17}", target);
+    println!("grid       = {grid}");
+    println!("max_nodes  = {max_nodes}");
+    println!("span1_mode = {span1_mode}   (added = F_V, replaced = F_T)");
+    println!("lambda     = {:.17}", lam);
+    for i in 0..q_raw.len() {
+        println!("p_raw[{i}] = {:.17}", p_raw[i]);
+    }
+    for i in 0..q_raw.len() {
+        println!("q_raw[{i}] = {:.17}", q_raw[i]);
+    }
+    for i in 0..p_coeff.len() {
+        println!("p_coeff[{i}] = {:.17}", p_coeff[i]);
+    }
+    for i in 0..q_coeff.len() {
+        println!("q_coeff[{i}] = {:.17}", q_coeff[i]);
+    }
+    let sum_p: f64 = p_coeff.iter().sum();
+    let sum_q: f64 = q_coeff.iter().sum();
+    println!("sum p = {:.17}   sum q = {:.17}", sum_p, sum_q);
+    println!("--- end candidate ---");
+}
+
+/// Verify one coboundary candidate. Runs self-describing echo, mass assertions,
+/// then the B&B; returns the raw status line "{"verified": ...}".
+fn verify_one(alpha: f64, target: f64, grid: i64, max_nodes: u64, span1_mode: &str,
+              lam: f64, p_raw: &[f64], q_raw: &[f64],
+              p_coeff: &[f64], q_coeff: &[f64], use_tangent: bool) -> String {
+    if let Err(e) = assert_mass_conditions(q_coeff, span1_mode) {
+        eprintln!("{e}");
+        std::process::exit(2);
+    }
+    print_params(alpha, target, grid, max_nodes, span1_mode, lam, p_raw, q_raw, p_coeff, q_coeff);
+    let weights = build_weights(span1_mode);
+    verify_floor(alpha, &weights, 1.0 / 3000.0, 6, target, grid, "coboundary",
+                 Some(p_coeff), Some(q_coeff), Some(max_nodes), use_tangent)
+}
+
+/// Record-chain bound, port of cert-floor-rs::joint_bound/record_chain
+/// (tawanerguo chain: bound = (H(alpha) - tau)/(1 - B/m), q=6). Returns
+/// (best_bound, argmax_m) over m in [m0, m1]. Honesty: f64 FLOAT-PROBE of the
+/// chain only; the floor certification lives in verify_one above.
+fn record_chain_bound(alpha: f64, eps: f64, psum: f64, m0: f64, m1: f64) -> (f64, f64) {
+    let a = alpha;
+    let i0 = 2.0 * (a / 2.0).sin() / a;
+    let i2 = 0.5 + a.sin() / (2.0 * a);
+    let c_const = (a / 2.0).sin() / a + 2.0 * (a / 2.0).cos() / (a * a);
+    let jv = -2.0 * i2 / (a * a) + c_const * i0;
+    let c = i0 * i0 / (i2 + jv);
+    let h = 2.0 - 1.0 / c;
+    let phi_m = |am: f64, mm: f64| -> f64 {
+        if am <= mm / (mm - 1.0) { am }
+        else { 2.0 * ((mm - 1.0) * am / mm).sqrt() - 1.0 + am / mm }
+    };
+    let mut best = (f64::NEG_INFINITY, 0.0f64);
+    let mut m = m0;
+    while m <= m1 + 1e-9 {
+        let bm = phi_m(eps * (m - 6.0), m);
+        let tau = psum * (m - 6.0) / m;
+        let bound = (h - tau) / (1.0 - bm / m);
+        if bound > best.0 { best = (bound, m); }
+        m += 1.0;
+    }
+    (best.0, best.1)
+}
+
+fn floor_pipeline(args: &[String]) {
+    // floor-pipeline <alpha> <target> <p1 p2 p3 p4 p5 p6> <q1 q2 q3 q4 q5 q6>
+    //              [--spans added|replaced] [--grid N] [--max-nodes N] [--chain-m0 N] [--chain-m1 N]
+    if args.len() < 14 {
+        eprintln!("usage: verifier-rs floor-pipeline <alpha> <target> <p1..p6> <q1..q6> [--spans added|replaced] [--grid N] [--max-nodes N] [--chain-m0 N] [--chain-m1 N]");
+        std::process::exit(2);
+    }
+    let alpha: f64 = args[0].parse().expect("alpha");
+    let target: f64 = args[1].parse().expect("target");
+    let p_raw: Vec<f64> = args[2..8].iter().map(|s| s.parse().expect("p")).collect();
+    let q_raw: Vec<f64> = args[8..14].iter().map(|s| s.parse().expect("q")).collect();
+    let mut span1_mode = "added";
+    let mut grid: i64 = 4000;
+    let mut max_nodes: u64 = 8_000_000;
+    let mut m0 = 40.0;
+    let mut m1 = 600.0;
+    let mut i = 14;
+    while i < args.len() {
+        match args[i].as_str() {
+            "--spans" => { span1_mode = &args[i + 1]; i += 2; }
+            "--grid" => { grid = args[i + 1].parse().expect("grid"); i += 2; }
+            "--max-nodes" => { max_nodes = args[i + 1].parse().expect("max-nodes"); i += 2; }
+            "--chain-m0" => { m0 = args[i + 1].parse().expect("m0"); i += 2; }
+            "--chain-m1" => { m1 = args[i + 1].parse().expect("m1"); i += 2; }
+            _ => { eprintln!("unknown flag {}", args[i]); std::process::exit(2); }
+        }
+    }
+    let lam = 1.0; // floor-pipeline takes final (lambda-applied) p/q by design
+    let p_coeff: Vec<f64> = p_raw.iter().map(|c| lam * c / 1_920_000.0).collect();
+    let q_coeff: Vec<f64> = q_raw.iter().map(|c| lam * c).collect();
+    let use_tangent = std::env::var("VRS_NO_TANGENT").is_err();
+    let r = verify_one(alpha, target, grid, max_nodes, span1_mode, lam,
+                       &p_raw, &q_raw, &p_coeff, &q_coeff, use_tangent);
+    println!("VERIFY_RESULT {r}");
+    let verified = r.contains("\"verified\": True");
+    let psum: f64 = p_coeff.iter().sum(); // = sum P_raw / 1920000 (tau through tau)
+    let (bound, best_m) = record_chain_bound(alpha, target, psum, m0, m1);
+    println!("CHAIN_BOUND {bound:.17} (argmax m = {best_m:.0}, psum = {psum:.17}, H(alpha) chain)");
+    println!("PIPELINE_VERDICT: {}   (verify={} bound={:.17})",
+             if verified { "PASS" } else { "FAIL" }, if verified { "true" } else { "false" }, bound);
+}
+
 fn main() {
     if std::env::var("VRS_BENCH_POINT").is_ok() {
         bench_point_eval();
         return;
     }
+    let args: Vec<String> = std::env::args().collect();
+    // floor-pipeline subcommand: candidate -> verify -> chain bound -> verdict
+    if args.len() >= 2 && args[1] == "floor-pipeline" {
+        floor_pipeline(&args[2..]);
+        return;
+    }
+    let use_tangent = std::env::var("VRS_NO_TANGENT").is_err();
+    println!("use_tangent={use_tangent}");
+
+    // Env-parameterized mode (python-verifier-compatible driver): VERIFY_ALPHA +
+    // VERIFY_TARGET + optional VERIFY_LAMBDA/VERIFY_GRID/VERIFY_MAX_NODES/
+    // VERIFY_SPAN1_MODE/VERIFY_P1..P6/VERIFY_Q1..Q6.
+    if std::env::var("VERIFY_TARGET").is_ok() && std::env::var("VERIFY_ALPHA").is_ok() {
+        let alpha: f64 = std::env::var("VERIFY_ALPHA").unwrap().parse().expect("VERIFY_ALPHA");
+        let target: f64 = std::env::var("VERIFY_TARGET").unwrap().parse().expect("VERIFY_TARGET");
+        let grid: i64 = std::env::var("VERIFY_GRID").ok().and_then(|s| s.parse().ok()).unwrap_or(4000);
+        let max_nodes: u64 = std::env::var("VERIFY_MAX_NODES").ok().and_then(|s| s.parse().ok()).unwrap_or(8_000_000);
+        let lam: f64 = std::env::var("VERIFY_LAMBDA").ok().and_then(|s| s.parse().ok()).unwrap_or(1.0);
+        let span1_mode = std::env::var("VERIFY_SPAN1_MODE").unwrap_or_else(|_| "added".to_string());
+        let p_raw: Vec<f64> = (1..=6).map(|i| std::env::var(format!("VERIFY_P{i}")).ok()
+            .map(|s| s.parse().unwrap_or(0.0)).unwrap_or(0.0)).collect();
+        let q_raw: Vec<f64> = (1..=6).map(|i| std::env::var(format!("VERIFY_Q{i}")).ok()
+            .map(|s| s.parse().unwrap_or(0.0)).unwrap_or(0.0)).collect();
+        let p_coeff: Vec<f64> = p_raw.iter().map(|c| lam * c / 1_920_000.0).collect();
+        let q_coeff: Vec<f64> = q_raw.iter().map(|c| lam * c).collect();
+        let r = verify_one(alpha, target, grid, max_nodes, &span1_mode, lam,
+                           &p_raw, &q_raw, &p_coeff, &q_coeff, use_tangent);
+        let psum: f64 = p_coeff.iter().sum();
+        let (bound, best_m) = record_chain_bound(alpha, target, psum, 40.0, 600.0);
+        println!("VERIFY_RESULT {r}");
+        println!("CHAIN_BOUND {bound:.17} (argmax m = {best_m:.0}, psum = {psum:.17})");
+        return;
+    }
+
+    // Legacy builtin acceptance cases (F_V, span1=added, matches prior behavior).
+    if let Some(s) = std::env::var("VRS_SELF_DESCRIBE").ok() {
+        if s == "1" { println!("note: legacy cases use span1_mode=added (F_V)"); }
+    }
     let p_raw: [f64; 6] = [946.0, 1177.0, 877.0, 877.0, 1177.0, 946.0];
     let q_raw: [f64; 6] = [31343.0 / 100000.0, 1.0 / 3.0, 105971.0 / 300000.0,
                            105971.0 / 300000.0, 1.0 / 3.0, 31343.0 / 100000.0];
-    let use_tangent = std::env::var("VRS_NO_TANGENT").is_err();
-    println!("use_tangent={use_tangent}");
     let selected = std::env::var("VRS_CASE").ok();
-    // CASE A (record): alpha=1.464, p=1/3000, target=0.0062 -> True
     if selected.as_deref().map_or(true, |s| s == "A") { run_case("A", 1.464, 1.0 / 3000.0, 0.0062, 1.0, &p_raw, &q_raw, use_tangent); }
-    // CASE B (ceiling): same, target=0.0063 -> False
     if selected.as_deref().map_or(true, |s| s == "B") { run_case("B", 1.464, 1.0 / 3000.0, 0.0063, 1.0, &p_raw, &q_raw, use_tangent); }
-    // CASE C (dilation): p,q scaled by lambda=1.10, pressure=1.10/3000,
-    // target=0.0066774 -> True
     if selected.as_deref().map_or(true, |s| s == "C") { run_case("C", 1.464, 1.10 / 3000.0, 0.0066774, 1.10, &p_raw, &q_raw, use_tangent); }
-    // CASE D (new candidate): p,q scaled by lambda=1.15, record pressure convention, target=0.00698 -> True
     if selected.as_deref().map_or(true, |s| s == "D") { run_case("D", 1.464, 1.0 / 3000.0, 0.00698, 1.15, &p_raw, &q_raw, use_tangent); }
 }

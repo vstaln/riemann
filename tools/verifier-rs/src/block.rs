@@ -6,6 +6,7 @@ struct SearchCtx {
     kernel: CosineKernel,
     ranges: RangeMinimum,
     second_ranges: RangeMinimum,
+    second_upper_ranges: RangeMaximum,
     first_ranges: RangeMinimum,
     first_upper_ranges: RangeMaximum,
     weights: HashMap<(usize, usize), f64>,
@@ -94,6 +95,60 @@ fn table_point_bounds(ctx: &SearchCtx, x: &Iv) -> Option<(f64, Iv)> {
     Some((value_lower, derivative))
 }
 
+/// SOUND convexity certificate (Gershgorin/Weyl), mirroring current Python
+/// `tangent_lower`. With H the true interval Hessian on the box,
+///   lambda_min(H) >= min_i( H_ii^lo - sum_{j!=i} |H_ij|^up ) > 0
+/// only licensees the tangent plane as a valid lower bound. H_ii^lo uses w''
+/// LOWER bounds (all coefficients positive); |H_ij|^up uses max(|w''_lo|,|w''_up|)
+/// over the covering spans. Returns true iff every diagonal dominance test
+/// passes with a strictly positive margin. (NOT the entrywise-lower-bound LDL
+/// of the old port, which Python proved INVALID: M >= 0 entrywise with M PD does
+/// not imply the true Hessian is PD.)
+fn hessian_pd_gershgorin(ctx: &SearchCtx, box_: &BBox) -> bool {
+    let q = box_.coords.len();
+    let mut low_prefix = vec![0i64];
+    let mut high_prefix = vec![0i64];
+    for &(lo, hi) in &box_.coords {
+        low_prefix.push(low_prefix.last().unwrap() + lo);
+        high_prefix.push(high_prefix.last().unwrap() + hi);
+    }
+    let mut diag_lo = vec![0.0f64; q];
+    let mut off_abs = vec![vec![0.0f64; q]; q];
+    for &(i, j) in &ctx.pair_list {
+        let span = j - i;
+        let left = low_prefix[j] - low_prefix[i];
+        let right = high_prefix[j] - high_prefix[i] + span as i64 - 1;
+        if right < 0 || right as usize >= ctx.second_ranges.length { return false; }
+        let s_lo = ctx.second_ranges.query(left as usize, right as usize);
+        if s_lo == f64::NEG_INFINITY { return false; }
+        let s_up = ctx.second_upper_ranges.query(left as usize, right as usize);
+        let s_abs = s_lo.abs().max(s_up.abs());
+        let a_ij = ctx.weights[&(i, j)];
+        let s_lo_scaled = next_down(a_ij * s_lo);
+        let s_abs_scaled = next_up(a_ij * s_abs);
+        for a in i..i + span {
+            diag_lo[a] += s_lo_scaled;
+            for b in i..i + span {
+                if a != b { off_abs[a][b] += s_abs_scaled; }
+            }
+        }
+    }
+    if ctx.cap_scheme == "coboundary" {
+        for i in 0..q {
+            let (lo_i, hi_i) = box_.coords[i];
+            if hi_i as usize >= ctx.second_ranges.length { return false; }
+            let s_lo = ctx.second_ranges.query(lo_i as usize, hi_i as usize);
+            if s_lo == f64::NEG_INFINITY { return false; }
+            let qn = next_down(ctx.nearest_coeffs.as_ref().unwrap()[i]);
+            diag_lo[i] += next_down(qn * s_lo);
+        }
+    }
+    for i in 0..q {
+        if diag_lo[i] - off_abs[i].iter().sum::<f64>() <= 0.0 { return false; }
+    }
+    true
+}
+
 fn tangent_lower_point(box_: &BBox, ctx: &SearchCtx) -> Option<Iv> {
     let q = box_.coords.len();
     let mut low_prefix = vec![0i64];
@@ -102,38 +157,7 @@ fn tangent_lower_point(box_: &BBox, ctx: &SearchCtx) -> Option<Iv> {
         low_prefix.push(low_prefix.last().unwrap() + lo);
         high_prefix.push(high_prefix.last().unwrap() + hi);
     }
-    let mut terms: Vec<(usize, usize, f64)> = Vec::new();
-    for &(i, j) in &ctx.pair_list {
-        let span = j - i;
-        let left = low_prefix[j] - low_prefix[i];
-        let right = high_prefix[j] - high_prefix[i] + span as i64 - 1;
-        if right < 0 || right as usize >= ctx.second_ranges.length { return None; }
-        let s2 = ctx.second_ranges.query(left as usize, right as usize);
-        if s2 == f64::NEG_INFINITY { return None; }
-        let scalar = next_down(ctx.weights[&(i, j)] * s2);
-        terms.push((i, span, scalar));
-    }
-    if ctx.cap_scheme == "coboundary" {
-        for i in 0..q {
-            let (low_i, high_i) = box_.coords[i];
-            if high_i as usize >= ctx.second_ranges.length { return None; }
-            let s2 = ctx.second_ranges.query(low_i as usize, high_i as usize);
-            if s2 == f64::NEG_INFINITY { return None; }
-            let scalar = next_down(ctx.nearest_coeffs.as_ref().unwrap()[i] * s2);
-            terms.push((i, 1usize, scalar));
-        }
-    }
-    let mut matrix = vec![vec![Iv::point(0.0); q]; q];
-    for &(start, span, coefficient) in &terms {
-        let c = Iv::point(coefficient);
-        for row in start..start + span {
-            for column in start..start + span {
-                let sum = matrix[row][column].add(&c);
-                matrix[row][column] = sum;
-            }
-        }
-    }
-    if !ldl_positive(&matrix, q) { return None; }
+    if !hessian_pd_gershgorin(ctx, box_) { return None; }
 
     // tangent plane at midpoint
     let mut midpoints = Vec::with_capacity(q);
@@ -199,38 +223,7 @@ fn tangent_lower_cell(box_: &BBox, ctx: &SearchCtx) -> Option<Iv> {
         low_prefix.push(low_prefix.last().unwrap() + lo);
         high_prefix.push(high_prefix.last().unwrap() + hi);
     }
-    let mut terms: Vec<(usize, usize, f64)> = Vec::new();
-    for &(i, j) in &ctx.pair_list {
-        let span = j - i;
-        let left = low_prefix[j] - low_prefix[i];
-        let right = high_prefix[j] - high_prefix[i] + span as i64 - 1;
-        if right < 0 || right as usize >= ctx.second_ranges.length { return None; }
-        let s2 = ctx.second_ranges.query(left as usize, right as usize);
-        if s2 == f64::NEG_INFINITY { return None; }
-        let scalar = next_down(ctx.weights[&(i, j)] * s2);
-        terms.push((i, span, scalar));
-    }
-    if ctx.cap_scheme == "coboundary" {
-        for i in 0..q {
-            let (low_i, high_i) = box_.coords[i];
-            if high_i as usize >= ctx.second_ranges.length { return None; }
-            let s2 = ctx.second_ranges.query(low_i as usize, high_i as usize);
-            if s2 == f64::NEG_INFINITY { return None; }
-            let scalar = next_down(ctx.nearest_coeffs.as_ref().unwrap()[i] * s2);
-            terms.push((i, 1usize, scalar));
-        }
-    }
-    let mut matrix = vec![vec![Iv::point(0.0); q]; q];
-    for &(start, span, coefficient) in &terms {
-        let c = Iv::point(coefficient);
-        for row in start..start + span {
-            for column in start..start + span {
-                let sum = matrix[row][column].add(&c);
-                matrix[row][column] = sum;
-            }
-        }
-    }
-    if !ldl_positive(&matrix, q) { return None; }
+    if !hessian_pd_gershgorin(ctx, box_) { return None; }
 
     // Tangent plane at the midpoint, using rigorous precomputed cell bounds.
     // The scalar value_lo is a lower bound; gradient remains an interval.
@@ -381,7 +374,7 @@ fn worker(ctx: &SearchCtx, shared: &Mutex<Vec<BBox>>, stop: &AtomicBool,
 }
 
 fn build_derivative_tables_parallel(kernel: &CosineKernel, cell_count: i64, grid: i64)
-    -> (Vec<f64>, Vec<f64>, Vec<f64>) {
+    -> (Vec<f64>, Vec<f64>, Vec<f64>, Vec<f64>) {
     let requested = std::env::var("VRS_TABLE_THREADS").ok()
         .and_then(|s| s.parse::<usize>().ok()).unwrap_or_else(|| {
             std::thread::available_parallelism().map(|n| n.get()).unwrap_or(1)
@@ -409,9 +402,10 @@ fn build_derivative_tables_parallel(kernel: &CosineKernel, cell_count: i64, grid
     });
     let bounds: Vec<CellBounds> = slots.into_iter().flatten().flatten().collect();
     let second = bounds.iter().map(|b| b.second_lower).collect();
+    let second_upper = bounds.iter().map(|b| b.second_upper).collect();
     let first_lower = bounds.iter().map(|b| b.first_lower).collect();
     let first_upper = bounds.iter().map(|b| b.first_upper).collect();
-    (second, first_lower, first_upper)
+    (second, second_upper, first_lower, first_upper)
 }
 
 fn build_table_parallel(kernel: &CosineKernel, cell_count: i64, grid: i64, second: bool) -> Vec<f64> {
@@ -463,7 +457,7 @@ fn verify_floor(alpha: f64, weights: &HashMap<(usize, usize), f64>, pressure: f6
     println!("  kernel table built in {:.1}s", t_table.elapsed().as_secs_f64());
     let ranges = RangeMinimum::new(&table);
     let t_second = std::time::Instant::now();
-    let (second_table, first_lower_table, first_upper_table) =
+    let (second_table, second_upper_table, first_lower_table, first_upper_table) =
         build_derivative_tables_parallel(&kernel, cell_count, grid);
     println!("  derivative tables built in {:.1}s", t_second.elapsed().as_secs_f64());
     if std::env::var("VRS_DEBUG").is_ok() {
@@ -471,8 +465,22 @@ fn verify_floor(alpha: f64, weights: &HashMap<(usize, usize), f64>, pressure: f6
         println!("  DEBUG: second_table len={} (-inf count={}) first6={:?} last3={:?}",
                  second_table.len(), nneg, &second_table[0..6.min(second_table.len())],
                  &second_table[second_table.len().saturating_sub(3)..]);
+        println!("  DEBUG: second_upper first6={:?} last3={:?}",
+                 &second_upper_table[0..6.min(second_upper_table.len())],
+                 &second_upper_table[second_upper_table.len().saturating_sub(3)..]);
+        for probe in [3701usize, 5000, 6874, 8000, 49434] {
+            if probe < second_table.len() {
+                println!("  DEBUG: cell[{probe}] w''_lo={} w''_up={}",
+                         second_table[probe], second_upper_table[probe]);
+            }
+        }
+        // sample the second-derivative w''_lo over a 1000-col window near the band
+        let wlo_min = second_table[4000..9000].iter().cloned().fold(f64::INFINITY, f64::min);
+        let wlo_max = second_table[4000..9000].iter().cloned().fold(f64::NEG_INFINITY, f64::max);
+        println!("  DEBUG: band cells[4000..9000] w''_lo in [{wlo_min}, {wlo_max}]");
     }
     let second_ranges = RangeMinimum::new(&second_table);
+    let second_upper_ranges = RangeMaximum::new(&second_upper_table);
     let first_ranges = RangeMinimum::new(&first_lower_table);
     let first_upper_ranges = RangeMaximum::new(&first_upper_table);
     let target_upper = next_up(target);
@@ -529,6 +537,7 @@ fn verify_floor(alpha: f64, weights: &HashMap<(usize, usize), f64>, pressure: f6
         kernel,
         ranges,
         second_ranges,
+        second_upper_ranges,
         first_ranges,
         first_upper_ranges,
         weights: weights.clone(),
