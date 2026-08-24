@@ -31,3 +31,9 @@ nohup.out
 **/swarm.sqlite*
 **/campaign.sqlite*
 research/waves/wave-*/
+
+# junk purge 2026-08-24
+research/external-results/*/.venv/
+research/lean-zeta-23/.lake/build/
+tools/data/zeros_rust_924k.txt
+tmplogs/
