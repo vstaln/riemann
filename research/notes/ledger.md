@@ -2155,3 +2155,9 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
   1. Re-run ladder/optimizer ONLY over exact-mass coefficient sets: q as exact rationals with u+v+w=1 mirrored (Sigma q = 2 exactly, like Tawan's 31343/100000 + 1/3 + 105971/300000 = 1); resolve whether Sigma p is free-with-tax or pinned to 1/320 (read assembly step; if free, document why telescoping tolerates it BEFORE certifying).
   2. Add mass-condition assertions to verify_coboundary_floor.py env branch (hard fail unless |Sigma q - 2| < 1e-12 and span masses preserved) — makes this bug class unrepresentable.
   3. trmdy kernel-family sweep proceeds AFTER (kernel choice orthogonal to mass discipline).
+
+---
+## 2026-08-24 (cross-domain fan-out) — dynamics/stochastic CLOSED, funcfield OPENING D1 queued
+- xdom-dynamics: Gauss-map transfer operator route = repackaging (non-self-adjoint, real-axis probe blind to complex planted zeros). CLOSED with control experiment documented.
+- xdom-stochast: unconditional counting rigidity = provable no-op (probe executed, O(1) deviation); point-process rigidity needs conjectural local law. CLOSED.
+- xdom-funcfield [CONJECTURED claim, CHECKED-NUMERICALLY footprint]: rank-infinity is THE transport obstruction (unifies wave-25 finite-cut non-separations). QUEUED NEXT SESSION: D1 adaptive-growing-basis separation probe (<20 min Rust, reuses wave25 probe + barrier_zoo, 4 RH-false controls) — separation falsifies the rank-gap AND yields a lever; non-separation => "numerically universal" closure upgrade. File: research/notes/xdom-funcfield-2026-08-24.md.
