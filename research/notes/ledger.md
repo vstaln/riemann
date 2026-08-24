@@ -2167,3 +2167,8 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
 - git-filter-repo purged from all history: vendored .venv dirs (external-results), lean-zeta-23/.lake/build artifacts, tools/data/zeros_rust_924k.txt. .git 242MB -> 127MB.
 - ALL COMMIT HASHES BEFORE 2026-08-25 CHANGED. Ledger references to old hashes (c6a8f5e, 4a6ec89, etc.) refer to PRE-REWRITE history, preserved at remote branch backup-pre-rewrite-20260824.
 - Post-rewrite commits start at the "chore: sweep in remaining notes" commit onward.
+
+---
+## 2026-08-25 — FT4 ascent verdict: eps=0.0056 is this candidate's wall
+- Ascending ladder on round-4 winner: 0.0056 verified (banked, bound 0.67306445176945); 0.0058 unresolved at 30M-node cap; 0.0060/0.0062 fail (FT4b). True inf ∈ [0.0056, 0.0058).
+- NEXT SESSION: optimizer round 5 warm-started from best_ft4_theta.npy ∪ Tawan exact point, SMALL steps, mass-2 + psum≈1/320 pinned; certify winners directly via tools/verifier-rs floor-pipeline (independent + self-describing). Target: admissible candidate whose wall exceeds eps=0.00577 (Tawan's certified rung).
