@@ -1,15 +1,23 @@
 # Riemann Program
 
-> ## 🏆 Current certified record (2026-08-23)
+> ## ⚠️ Record RETIRED (2026-08-24) after external audit
 >
-> **N₀(T)/N(T) ≥ 0.6735471309049393** — the proven proportion of nontrivial zeros of ζ(s) that are
-> simple and lie on the critical line (κ* = liminf N₀ˢ/N). This **exceeds the 0.6725 constant of the
-> 2026 Anthropic/Claude result** ("More than two thirds…", Montgomery–Taylor window) by +1.05×10⁻³.
+> An independent audit (M. Devine / Circumjovial) showed our verifier certified the wrong
+> functional: F_V = Σp·g + Σq·w(g) + all-21-pair terms, while Tawan's local-to-global theorem
+> requires F_T (span-one pairs REPLACED by the q_i). Confirmed on three lanes (code, theorem,
+> algebraic identity — see `research/notes/dispute-vstalin-*-2026-08-24.md`). A second latent
+> issue (coefficient mass conditions Σq = 2 are hard telescoping hypotheses) retired the
+> post-fix re-certifications as well.
 >
-> Certificate: eps = 0.0079 block-inequality floor, verified by Arb interval-arithmetic branch-and-bound
-> with Gershgorin convexity certificates (27,679,928 nodes, sound prune paths only).
-> Parameters: α = 1.4263026187858052, λ = 1.351623997475116, raw_p/raw_q in
-> `research/papers/main.tex` §5. Paper: **`research/papers/main.pdf`** (17 pp, compiled from `main.tex`).
+> **Surviving floors:** Tawan published **0.6731929114731422** [PROVEN, his own verifier];
+> Devine reports **0.673399** (unaudited by us).
+>
+> **Our best theorem-admissible certified floor:** N₀(T)/N(T) ≥ **0.67306445176945**
+> (eps=0.0056, exact-mass coefficients, independent Rust verifier `tools/verifier-rs`,
+> mass assertions enforced; m=188). Ladder climbing under mass discipline.
+>
+> Recovery plan + full retirement trail: `research/notes/ledger.md` (2026-08-24 entries),
+> `research/notes/floor-raise-options-2026-08-24.md`.
 >
 > Also certified this week: ζ′ zero-free on σ∈[0.001,0.49] for t∈[10,175,000] (Speiser lane) ·
 > Li λₙ > 0 for n ≤ 10⁶ · Robin σ(n) bound clean through n = 10⁶⁰.
