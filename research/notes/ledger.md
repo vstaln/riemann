@@ -2211,3 +2211,9 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
    => PATTERN (three independent probes now): global moment statistics are INSENSITIVE to single local zero violations at practical depth. Equivalence lane = global statements with poor local resolution.
    Cross-probe consistency: DELTA-lambda_1(offline) = +0.00497507 matches jensen_honest_probe's DELTA exactly.
    NOTE: prompt formula f_n was wrong (false-flags true zeta); correct per-zero h_n(rho)=1-(rho/(rho-1))^n — caught by worker, documented.
+
+---
+## 2026-08-25 night II — Turan pointwise TYPE_SEPARATES (first positive)
+4. Turan/log-xi'' pointwise [CHECKED NUMERICALLY]: L_R=(log R)''=-SUM 1/(s-p)^2 + SUM 1/(s-m)^2 EXACT analytic; base=(log xi_true)'' group-invariant. OFF-line beta=0.9 implant drives P negative at sigma=0.30/0.70 (sigma-sign-zigzag) while ON-line displacement stays positive at all sampled sigma — 4/4 separation off-critical, ratio 1.20. On-line sign does NOT separate (0/4).
+   => FIRST type-sensitive statistic of the program: pointwise curvature sees what moments cannot. Caveats: single height gamma_1, off-critical only, no proof claimed.
+   QUEUED: multi-height stability scan; antiderivative derivativization; connect zigzag to half-disc mirror mechanism.
