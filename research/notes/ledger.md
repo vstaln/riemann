@@ -2242,3 +2242,10 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
    CONSISTENCY: matches lr-profile-theorem exactly (LINE uniformly positive, OFF edge-negative/mid-positive with crossings c*sqrt(sqrt5-2)).
 11. Zero-position tomography [PROVEN, pure-R regime]: exact recovery beta_hat=1/2+|sigma*-1/2|/sqrt(sqrt5-2) from L_R crossing location sigma*; |beta_hat-beta|<=5.2e-6 at t0=gamma_1; condition number C=c^3(3-sqrt5)^2/(4*sqrt5)=4.176e-3 (|B'|=492.8 at crossing), first-order verified <1.2% overshoot. Crossings exist for ALL c>0 (never vanish, t0-independent) -- detection floor is grid+noise, not height.
    Bridge to real-xi observation (unknown smooth base, sampling density) labeled CONJECTURED in note. Committed 5005f78.
+
+---
+## 2026-08-26 — ATTACK CHAIN ASSEMBLED: named conjecture FV (Off-line Visibility)
+12. Negativity-program chain (research/notes/negativity-attack-draft-2026-08-26.md): (W)<=>L [PROVEN] -> L<=>per-height exclusion [PROVEN] -> exclusion <= FV-contrapositive [MISSING BRIDGE] -> FV <= paired-Hadamard sign [PROVEN] + crossing N=1 [CHECKED beta=0.9/gamma_1] + deformation separation theorem [PROVEN all t0>=gamma_1] -> N=0 per band certifiable [machinery PROVEN, not yet run on real xi'].
+    FV: every off-line zeta-zero at gamma_0 forces an xi'-zero into Re<1/2 within |Im-gamma_0|<=8. Contrapositive = per-height non-averaged exclusion lemma L -- the zeta'-negativity program's named missing ingredient.
+    STATUS: 5 PROVEN / 1 CHECKED / 2 MISSING. Honest gaps: single regime probed, base-swamping unquantified, beta->1/2+ edge unknown.
+    NEXT (<1h each): FV parameter-range extension; run N-counting machinery on real xi'; beta->1/2 edge analysis.
