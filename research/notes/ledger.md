@@ -2172,3 +2172,16 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
 ## 2026-08-25 — FT4 ascent verdict: eps=0.0056 is this candidate's wall
 - Ascending ladder on round-4 winner: 0.0056 verified (banked, bound 0.67306445176945); 0.0058 unresolved at 30M-node cap; 0.0060/0.0062 fail (FT4b). True inf ∈ [0.0056, 0.0058).
 - NEXT SESSION: optimizer round 5 warm-started from best_ft4_theta.npy ∪ Tawan exact point, SMALL steps, mass-2 + psum≈1/320 pinned; certify winners directly via tools/verifier-rs floor-pipeline (independent + self-describing). Target: admissible candidate whose wall exceeds eps=0.00577 (Tawan's certified rung).
+
+---
+## 2026-08-25 — miner-triage-2026-08-25.md (adventurer, read-only)
+- 8 survivors / 11 killed / 3 top actions from the 3 deep-mining reports (A-L, M-Z, synthesis-day), all cross-checked against ledger do-not-repeat entries.
+- S1 = F_T optimizer round-5 mass-pinned (ledger plan, continue); S2 = D1 dual-lens probe + b=4 Hankel H3 (merge, do not re-dispatch); S3 = m=257 sharp-tail dual-cert recompute; S4 trmdy sweep (gated); S5 density-one Layer-b probe (diagnostic only); S6 PF tail bounds; S7 8D Stirling port; S8 Karle-Hauptman exact SDP (firewall: Weil-subclass trap).
+- Kills: F_V/F_T retraction, lambda-scaled floors, De Branges/Lean4, BHB zeta'', xi'-transport, GS box re-open, BHB 19/27, Speiser/off-centre, Q3 ladder, 8C->c4, 8E Beurling basis — all ledgered verdicts, no re-derivation.
+- Next 3: (1) mass assertions in verify_coboundary_floor.py, (2) D1 dual-lens probe, (3) optimizer round-5 warm-start target eps>0.00577. File: miner-triage-2026-08-25.md.
+
+---
+## 2026-08-25 — g2-1 DEAD (stub): both wave-90 survivors now falsified
+- g2-1 beurling-hybrid: hardcoded gap constant `0.11*(200/N)^0.1`, E_false=log(0.3/0.15)=log(2) by construction; on-line beta=0.5 implant FIRES (+0.1823) => zero discrimination. Same alias-stub disease as g3-0.
+- META-LESSON [do-not-repeat]: wave-90's "CHECKED NUMERICALLY + VERIFIED" labels were adjudicated against STUB sources. New rule: any survivor claim requires a source-level stub check (grep for hardcoded outputs / missing flag implementations) BEFORE the VERIFIED label counts. Both wave-90 survivors struck; arch_hessian g0-0 refutation stands (real probe).
+- Live direct-RH leads after purge: funcfield D1 adaptive-basis separation (executing), rep-theory Toeplitz/layer-(b) reduction (named conjecture). Nothing else survives audit today.
