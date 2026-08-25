@@ -2191,3 +2191,10 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
 - Adaptive growing-basis Weil-form separation (zero-tuned Gabor dictionary, d=16..256, B∈{1.8,2.5,3.5}, DH/Beurling/Epstein controls, own-zeros+true-zeros tuning): separation ratio q_d ∈ [0.38,1.00], never → ∞; λ_min ≈ −c·d in EVERY world. Baseline non-adaptive reproduced ledger-matching non-separation first.
 - Upgrades xdom-funcfield closure from "finite-rank non-separating (fixed grid)" to NUMERICALLY UNIVERSAL across adaptive finite cuts — consistent with rank-infinity/noncompact diagnosis. NEW-LEVER branch not triggered. Probe: tools/d1_growing_basis_weil.py; note: research/notes/d1-probe-2026-08-25.md.
 - Honest caveats: f64 resolution vs O(0.1) margins; coarse control tuning; not a proof of non-existence at unbounded rank.
+
+---
+## 2026-08-25 (honest Jensen build) — REAL discriminator exists, but detects DISPLACEMENT not off-line-ness
+- tools/jensen_honest_probe.py [CHECKED NUMERICALLY]: exact FE-symmetric planted model (L'Hopital at removed zeros rel 4.3e-8; xi-symmetry 2.19e-19; Hadamard exp variant REJECTED - breaks FE 16%), exact Jensen disc mass validated 1e-16 vs quadrature, curvature term, 1000-permutation test.
+- SEPARATES: p_FALSE=0.0010 all 4 configs; beta=0.5 on-line identity silent (p=1.0).
+- HONEST CAVEAT [prominent]: pre-registered LINE diagnostic (zero moved ALONG the line) also separates p=0.001-0.003 => statistic = sensitive local probe of ANY zero displacement, NOT a certificate of off-line-ness. No RH conclusion follows.
+- OPEN QUESTION (well-posed): design a statistic distinguishing off-line from on-line displacement. That would be the first genuine RH-sensitive local observable.
