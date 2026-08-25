@@ -2226,3 +2226,14 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
    NEXT: prove L_R sigma-profile separation in closed form (elementary).
 8. Speiser literature audit [PARTIALLY_KNOWN]: RH<=>xi' zeros on line = classical folklore (converse unpinned; verify Conrey 1983/Ivic). PLAUSIBLY NEW: crossing count N=1 localized Re~0.4526, paired-Hadamard single-factor inertia lemma, per-height deformation framing -- which matches EXACTLY the tool shape speiser-negativity-program.md lists as its missing RH-difficulty ingredient. Davenport-Heilbronn contrast confirmed: mechanism is completed-zeta-FE-specific.
    NOVELTY GUARDRAIL: N=1 is CHECKED NUMERICALLY in one regime only; novelty claim withheld pending citation verification.
+
+---
+## 2026-08-25 night III — FIRST NEW THEOREM of the direct-RH lane [PROVEN]
+9. L_R sigma-profile separation theorem (research/notes/lr-profile-theorem-2026-08-25.md):
+   For beta=0.9, delta=0.3, EVERY t0>=gamma_1:
+   Re L_LINE(sigma+it0) >= 2.6134 > 0 on (0,1)\\{1/2};
+   Re L_OFF(sigma+it0) < 0 on (0,0.3055]U[0.6945,1) and > 0 on [0.3058,0.6942]\\{1/2}.
+   Every inequality exact rational/algebraic, certified margins >=19x far-term bound; generalizes to all beta in (1/2,1), delta>0.
+   Proof core: B_OFF=(-a^4-4c^2a^2+c^4)/(a^2(a^2-c^2)^2), crossings |sigma-1/2|=c*sqrt(sqrt5-2); LINE main term manifestly positive with monotone log-derivative.
+   MEANING: FE-consistent off-line vs on-line zero displacements have PROVABLY distinct second-log-derivative signatures, uniformly in height. First rigorous type-separation result of the displacement lane.
+   SCOPE GUARDRAIL: separates implant contributions (pure R); turning into an RH TEST requires localized scanning (signal/base ~ O(1/log t) decays) -- discriminability proven, detection algorithm not yet.
