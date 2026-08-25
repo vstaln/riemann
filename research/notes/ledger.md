@@ -2198,3 +2198,9 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
 - SEPARATES: p_FALSE=0.0010 all 4 configs; beta=0.5 on-line identity silent (p=1.0).
 - HONEST CAVEAT [prominent]: pre-registered LINE diagnostic (zero moved ALONG the line) also separates p=0.001-0.003 => statistic = sensitive local probe of ANY zero displacement, NOT a certificate of off-line-ness. No RH conclusion follows.
 - OPEN QUESTION (well-posed): design a statistic distinguishing off-line from on-line displacement. That would be the first genuine RH-sensitive local observable.
+
+---
+## 2026-08-25 evening probes — Toeplitz naive route DEAD (proven); half-disc INCONCLUSIVE
+1. Toeplitz T4 instantiation [PROVEN, exact]: moment->Fourier map fails provably (|a1|<=a0 vs m2=4/3>1); det T4(CUE)=-5/81<0 under natural identification; alternating-sign fingerprint lands on EXTREMAL side (negative-symbol signature). CUE m4=346/105 admits NO finite-atom representation. => cheap BO route dead; genuine kernel-eigenfunction formulation remains NOT_FORMULATED and is now the ONLY path for layer-(b) via Toeplitz.
+2. Half-disc asymmetry [CHECKED NUMERICALLY, INCONCLUSIVE]: mirror-map fixed-point mechanism EXACT (on-line zeros excluded from both half-sums, verified 1e-12), but dominant term = geometry baseline responding to displacement magnitude; effect ratio off/on=1.41 only. Second independent confirmation: Jensen-type probes detect displacement, not off-line-ness.
+   NEXT IDEA (queued): normalize by exact no-implant baseline (computable from true zeros) to isolate implant contribution; or synthetic mirror-function control.
