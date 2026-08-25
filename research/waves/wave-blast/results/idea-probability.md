@@ -20,7 +20,7 @@ the only Python run was an Arb *semantics check* of the kernel, clearly labelled
 
 ## 0. The exact object being certified (units matter!)
 
-The certified record is `bound = 0.673262865534356` at
+The certified record is `bound = 0.673262865534356` at [RETIRED 2026-08-24]
 `alpha = 1.49, p = 1/1320 (psum = 6/1320 = 1/220), m = 133, eps = 8060e-6`, window
 `v(s) = cos(alpha·s)`. The rigorous verifier (`verify_cos7.py`) certifies:
 
@@ -327,7 +327,7 @@ already implemented (`idea-probability` binary + `guecheck`).
 
 - **PROVEN:** GUE eigenvalues are simple a.s. (standard RMT); `P(F < eps)=0/100k` under
   GUE MC; the deterministic support min 0.008584 (Rust search, reproducible).
-- **CHECKED NUMERICALLY:** record bound reproduction (0.673262865534356, matches
+- **CHECKED NUMERICALLY:** record bound reproduction (0.673262865534356, matches [RETIRED 2026-08-24]
   mpmath); H(1.49)=0.672421886096447; support-min search (multiple seeds, uniform scan
   + 10M random + descent → 0.0085837); simplex boundary min 0.016332; eps→bound sweep;
   base-rate 12000/12000; Wigner tail 5.10e-5; MC min-gap 0.0131; rigidity
@@ -373,4 +373,4 @@ cd /home/opc/riemann/tools/beat673 && uv run --with python-flint python3 -c "...
 0.00806 is at 94% of the deterministic support ceiling (min F ≈ 0.008584, headroom
 1.065×), so the eps knob is nearly exhausted (+0.000336 max) and the probability lens
 redirects effort to H/psum/two-tone windows; 10 CONJECTURED ideas (I-P1..I-P10) quantify
-each path against the record 0.6732628655.**
+each path against the record 0.6732628655.** [RETIRED 2026-08-24]

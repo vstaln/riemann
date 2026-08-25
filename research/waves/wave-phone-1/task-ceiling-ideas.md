@@ -1,7 +1,7 @@
 # Task: NEW-OBJECT IDEATION — break the 0.6818 ceiling
 
 You are an IDEA GENERATOR in the Riemann swarm. Context, verified:
-- The certified record is 0.6732628655 (67.3263% of nontrivial zeros on the critical line), α=1.49, psum=1/220, m=133, floor F≥0.00806.
+- The certified record is 0.6732628655 (67.3263% of nontrivial zeros on the critical line), α=1.49, psum=1/220, m=133, floor F≥0.00806. [RETIRED 2026-08-24]
 - The (α, psum) family is EXHAUSTED: the leader sits at the true minimum of the F functional (0.00806 certifies, 0.008065 fails). Sharp boundary proven.
 - The in-class ceiling is 0.68183123 (LP dual, certificate r(x)=1−x attains p₀ + 1/(6·256²); Lean-verified modulo one numerically-checked enclosure). The whole rank–trace/Weil-compression class CANNOT exceed it.
 - The program's history lesson (research/notes/): tight class limits break by NEW OBJECTS, never by sharper inequalities in the class. The beyond-α=1 wall is closed from every direction tried (mean pair sums, variance, matrix inequalities, CLT inputs, even RH itself does not move the ceiling).

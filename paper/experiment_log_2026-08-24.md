@@ -6,7 +6,7 @@ On 2026-08-24 the project discovered that every prior coboundary-floor record ha
 ## Experiments Run
 
 ### 1. Devine audit confirmation (3 lanes)
-- **Claim tested:** The posted eps=0.0079 certificate (record 0.6735471309049393) bounds the WRONG functional; external one-page audit by Michael Devine (Circumjovial LLC).
+- **Claim tested:** The posted eps=0.0079 certificate (record 0.6735471309049393) bounds the WRONG functional; external one-page audit by Michael Devine (Circumjovial LLC). [RETIRED 2026-08-24]
 - **Setup:** Three independent lanes: (1) read of the repo verifier code, (2) read of Tawan's theorem/source across proof markdown + paper TeX + the actual C++ verifier, (3) an mpmath dps=60 identity evaluation.
 - **Key result:** All three lanes agree — [PROVEN].
   - Lane 1 CODE: `tools/verify_coboundary_floor.py` sums ALL 21 pairs (`w_uniform` line 498, no span filter) PLUS `q_i·w(g_i)` separately (lines 268-279) ⇒ implements F_V, not F_T. [PROVEN]
@@ -15,8 +15,8 @@ On 2026-08-24 the project discovered that every prior coboundary-floor record ha
 - **Files:** research/notes/ledger.md (2026-08-24 entry, lane 1); research/notes/dispute-vstalin-tawan-2026-08-24.md (lane 2 theorem, verbatim source quote).
 - **Surprising finding:** A verifier certifying F_V as written DOUBLE-COUNTS the span-one mass (2+2=4, not 2) and does not match Tawan's theorem — the posted 72h/384-core Devine value 0.673399 (reported) is for F_T and thus not comparable to an F_V certificate.
 
-### 2. Retirement of 0.6735471309049393
-- **Claim tested:** The 2026-08-23 sound record N₀(T)/N(T) ≥ 0.6735471309049393 (m=136, eps=0.0079 verified=true, 27,679,928 nodes).
+### 2. Retirement of 0.6735471309049393 [RETIRED 2026-08-24]
+- **Claim tested:** The 2026-08-23 sound record N₀(T)/N(T) ≥ 0.6735471309049393 (m=136, eps=0.0079 verified=true, 27,679,928 nodes). [RETIRED 2026-08-24]
 - **Setup:** Because the certified functional is F_V and the theorem needs F_T, and F_V ≥ F_T strictly on the domain interior, no F_T bound follows from any F_V certificate.
 - **Key result:** RETIRED. The 2026-08-23 record (m=136) and ALL coboundary-floor records certified via the same `verify_coboundary_floor.py` coboundary branch are withdrawn, including the 2026-08-21 sound re-certification eps=0.00689 → 0.6734729658195391 (same code path). [PROVEN logical consequence]
 - **Files:** research/notes/ledger.md (2026-08-24 record-retired entry; 2026-08-21, 2026-08-23 entries for the retired values).

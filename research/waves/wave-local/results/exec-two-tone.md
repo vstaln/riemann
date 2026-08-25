@@ -60,7 +60,7 @@ cos alpha=1.47: J_num=0.266645172001 J_an=0.266645172001 dJ=5.551e-17 | H_num=0.
 cos alpha=1.49: J_num=0.264962417451 J_an=0.264962417451 dJ=1.665e-16 | H_num=0.672421886096 H_an=0.672421886096 dH=2.220e-16
 cos alpha=1.5:  J_num=0.264115313808 J_an=0.264115313808 dJ=2.776e-16 | H_num=0.672398862599 H_an=0.672398862599 dH=0
 H(1.49) numeric = 0.6724218860964  reference = 0.6724218860964  diff=4.774e-14
-bound(eps=0.00806, m=133, alpha=1.49, psum=1/220) = 0.6732628655343562  record = 0.6732628655343560  diff=2.220e-16
+bound(eps=0.00806, m=133, alpha=1.49, psum=1/220) = 0.6732628655343562  record = 0.6732628655343560  diff=2.220e-16 [RETIRED 2026-08-24]
 resolution: H(1.49) n=48 = 0.6724218860964  diff(96 vs 48) = 2.220e-16
 ```
 
@@ -68,7 +68,7 @@ resolution: H(1.49) n=48 = 0.6724218860964  diff(96 vs 48) = 2.220e-16
   to ≤2.8×10⁻¹⁶ (f64 ULP level).
 - **H(1.49) = 0.6724218860964 reproduces the certified reference to 4.8×10⁻¹⁴** (f64 limit;
   mpmath gives 4×10⁻⁴¹ for the analytic-vs-kinksplit agreement at higher precision).
-- The full bound reproduces the certified record 0.6732628655343560 to 2.2×10⁻¹⁶ (1 ULP in f64).
+- The full bound reproduces the certified record 0.6732628655343560 to 2.2×10⁻¹⁶ (1 ULP in f64). [RETIRED 2026-08-24]
 - 48-pt vs 96-pt quadrature agree to 2.2×10⁻¹⁶ ⇒ resolution converged.
 
 ## 4. Top-10 two-tone candidates (from the sweep, eps = 0.00806 CONJECTURED)
@@ -118,7 +118,7 @@ from elsewhere (the ε functional / more exotic window families, per ceiling-gra
 
 ```
 psum      eps     m     bound                  beats record?
-1/220     0.00806 133   0.6732628655343560     (= record, reproduction)
+1/220     0.00806 133   0.6732628655343560     (= record, reproduction) [RETIRED 2026-08-24]
 1/300     0.00806 135   0.6745091758911242     yes (CONJECTURED eps)
 1/220     0.00830 133   0.6734164908644640     yes (CONJECTURED eps)
 1/220     0.00900 120   0.6738652602746451     yes (CONJECTURED eps)
@@ -138,7 +138,7 @@ interval verifier, not of this window computation.** So:
 | Claim | Label | Evidence |
 |---|---|---|
 | H(1.49) = 0.6724218860964 | CHECKED NUMERICALLY | two-tone validate: diff 4.8e-14 vs reference; J analytic vs kink-split ≤2.8e-16 |
-| bound reproduction 0.6732628655343562 | CHECKED NUMERICALLY | two-tone validate: diff 2.2e-16 vs record |
+| bound reproduction 0.6732628655343562 | CHECKED NUMERICALLY | two-tone validate: diff 2.2e-16 vs record | [RETIRED 2026-08-24]
 | max two-tone H = classic constant (c=0 optimum) | CHECKED NUMERICALLY | cosmax/fine/wide scans, all ≤ 0.672500703679 |
 | two-tone family cannot raise H above classic constant | CONJECTURED (explanatory) | numeric evidence only; no proof the Hessian is ≤0 everywhere |
 | top-10 bounds beat record | CONJECTURED | arithmetic CHECKED; requires eps certifiable at the claimed level |

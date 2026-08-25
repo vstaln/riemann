@@ -2,7 +2,7 @@
 
 ## Mission
 The certified world record lower bound on the proportion of simple zeros on the critical line:
-**0.673262865534356014645368000853343519319712248**
+**0.673262865534356014645368000853343519319712248** [RETIRED 2026-08-24]
 config: (α = 1.49, psum = 1/220, m = 133, eps = 0.00806). Your job:
 1. Independently re-verify the headline claim.
 2. Find any CERTIFIED config that beats it (the max-certified-eps question).
@@ -22,10 +22,10 @@ config: (α = 1.49, psum = 1/220, m = 133, eps = 0.00806). Your job:
 - Phone Python for anything light: `proot-distro login ubuntu -- python3` (mpmath 1.4.1, numpy 2.3.5 available).
 
 ## The work (CHECKED NUMERICALLY, script + command cited)
-1. **Re-verify the headline**: find and re-run the certified machinery on the laptop (final_leader.py / verify_H.py / tools/bound-sweep). Confirm bound = 0.673262865534356… exactly, and that eps=0.00806 certifies while 0.008065 fails (re-run that boundary yourself).
+1. **Re-verify the headline**: find and re-run the certified machinery on the laptop (final_leader.py / verify_H.py / tools/bound-sweep). Confirm bound = 0.673262865534356… exactly, and that eps=0.00806 certifies while 0.008065 fails (re-run that boundary yourself). [RETIRED 2026-08-24]
 2. **Attack the eps floor** (THE key question — bound is monotone increasing in eps): is the 0.008065 failure a genuine analytic floor or an artifact of the verifier's box-splitting? Try to certify eps = 0.00807, 0.0081 at (α=1.49, psum=1/220, m=133) with a different box strategy or interval split. Record the failing box and what it bounds.
-3. **Certified bound sweep**: psum ∈ {1/220, 1/225, 1/240}, m ∈ {130,…,140}, α ∈ {1.45,…,1.53} — using CERTIFIED eps values only (conjectured eps does not count). Max certified bound? Anything > 0.6732628655?
-4. **Adversarial formula check**: re-derive τ and B for m=133; is there ANY (eps ≤ certified max) where the bound formula fails to reproduce 0.6732628655?
+3. **Certified bound sweep**: psum ∈ {1/220, 1/225, 1/240}, m ∈ {130,…,140}, α ∈ {1.45,…,1.53} — using CERTIFIED eps values only (conjectured eps does not count). Max certified bound? Anything > 0.6732628655? [RETIRED 2026-08-24]
+4. **Adversarial formula check**: re-derive τ and B for m=133; is there ANY (eps ≤ certified max) where the bound formula fails to reproduce 0.6732628655? [RETIRED 2026-08-24]
 
 ## Deliverable
 `research/waves/wave-phone-2/results/attack-record.md` — verdict, max certified eps, max certified bound, all numbers with scripts+commands. Labels: PROVEN / CHECKED NUMERICALLY / CONJECTURED / INCONCLUSIVE.

@@ -57,7 +57,7 @@ Window cos(1.49·u) (the record's α), own asymptotic constant 2−c₁.₄₉ =
    Q(cos²·1)≈1.333 at T=5000 — the pair-sum deficit persists at heights ~10⁴, consistent with
    the CONJECTURED zero-statistics origin (attack-finitet-cinf.md §7).
 4. **Framing caveat (honesty):** this probe measures the *idealized* functional's gap vs ITS OWN
-   T→∞ constant. The certified record 0.6732628655 comes from the refined
+   T→∞ constant. The certified record 0.6732628655 comes from the refined [RETIRED 2026-08-24]
    bound=(H−τ)/(1−B/m), H(1.49)=0.6724218860964 — different arithmetic. The idealized probe
    establishes the kernel-class direction (overshoot, safe) but does NOT directly certify the
    record's margin; that is the VERIFIER role's job.

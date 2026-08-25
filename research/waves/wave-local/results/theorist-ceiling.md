@@ -1,7 +1,7 @@
-# THEORIST — Ceiling Analysis of the Rank–Trace Simple-Zeros Bound (0.6732628655343560)
+# THEORIST — Ceiling Analysis of the Rank–Trace Simple-Zeros Bound (0.6732628655343560) [RETIRED 2026-08-24]
 
 **Date:** 2026-08-11 (round 2.5 follow-up). **Author:** THEORIST agent (Riemann swarm).
-**Scope:** what limits the certified lower bound **0.6732628655343560** (simple zeros on the
+**Scope:** what limits the certified lower bound **0.6732628655343560** (simple zeros on the [RETIRED 2026-08-24]
 critical line) for the rank–trace family, and what its theoretical ceiling is.
 
 All claims are labeled **PROVEN** (verified numerically against the real kernel + algebra),
@@ -26,7 +26,7 @@ bound = (H − τ) / (1 − B/m)
 
 **Record config (CERTIFIED, reproduced exactly by this agent's Rust scan, diff 0.0e0):**
 α = 1.49, p = 1/1320 per gap (psum = 1/220), eps = 0.00806 (sharp: 0.008065–0.00807 fails),
-m = 133, H(1.49) = 0.6724218860964 → **bound = 0.6732628655343560**.
+m = 133, H(1.49) = 0.6724218860964 → **bound = 0.6732628655343560**. [RETIRED 2026-08-24]
 
 ---
 
@@ -196,7 +196,7 @@ inequality, is what blocks 0.7.
 - The wall is the **kernel's overlap structure** (eps_max(p) frontier), not the
   rank–trace inequality: the inequality gives the form, the kernel gives the ceiling.
 
-RESULT: CEILING ≈ 0.67342 (CONJECTURED) — the record 0.6732628655343560 sits ~1.6e-4 below the family's constrained ceiling; 2/3 already beaten, 0.7 unreachable because the F6 kernel floor caps eps at ~0.007-0.008 while H is capped at H(√2)=0.6725007; the binding constraint is eps, whose true infimum is the only remaining headroom (certify the eps_max(p) frontier next).
+RESULT: CEILING ≈ 0.67342 (CONJECTURED) — the record 0.6732628655343560 sits ~1.6e-4 below the family's constrained ceiling; 2/3 already beaten, 0.7 unreachable because the F6 kernel floor caps eps at ~0.007-0.008 while H is capped at H(√2)=0.6725007; the binding constraint is eps, whose true infimum is the only remaining headroom (certify the eps_max(p) frontier next). [RETIRED 2026-08-24]
 
 ## ⚠️ CORRECTED STATUS (2026-08-12, after the retraction)
 The certified eps values cited above (0.00806 etc.) were produced by the buggy

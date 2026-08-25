@@ -1,7 +1,7 @@
 # Task: ANALOGY ENGINE — Delsarte/LP and random-matrix transplants for the zero-proportion problem
 
 You are a THEORIST in the Riemann swarm. Context, verified:
-- Certified record 0.6732628655 (67.33% of nontrivial zeros on the critical line), in-class ceiling 0.68183123, family exhausted.
+- Certified record 0.6732628655 (67.33% of nontrivial zeros on the critical line), in-class ceiling 0.68183123, family exhausted. [RETIRED 2026-08-24]
 - The program's unified bound model: bound = (H − τ)/(1 − B/m) with H = 2 − 1/c, c = I₀²/(I₂+J) for the cosine window, B = Φ_m(ε(m−6)), τ = psum·(m−6)/m. The ceiling certificate r(x) = 1 − x is an LP-dual object.
 - The rank–trace + Sylvester (1,1)-block argument compresses Weil's Hermitian form; Montgomery's second moment is the input on the prime side.
 - Your program's prior findings: the beyond-α=1 wall is closed from every direction tried; the 2/3 deficit is arithmetic (pair-correlation content), the certificate is a "rigidity meter".

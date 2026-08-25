@@ -1,7 +1,7 @@
 # RANDOM-ENTRY IDEA BLAST — wave-blast, idea-random
 
 **Role:** idea-generator (s4h-creativity-random-entry) · **Date:** 2026-08-12
-**Target:** the certified simple-zeros record **0.6732628655343560** (67.3263%);
+**Target:** the certified simple-zeros record **0.6732628655343560** (67.3263%); [RETIRED 2026-08-24]
 open questions Q1 (7-pt functional form / per-block→liminf passage), Q2 (closed forms
 of ε-floors), Q3 (ladder limit), Q4 (in-class ceiling 0.6818), Q5 (online transfer).
 **Method:** de Bono random entry — 16 fresh, deliberately unrelated physical objects;
@@ -437,7 +437,7 @@ tr Ψ grows 0.330 → 2.287 → 5.550 (3→7→13 atoms, CHECKED NUMERICALLY, pr
 
 - All numeric claims above are CHECKED NUMERICALLY (f64, deterministic; script +
   exact command cited). None are interval-certified.
-- The certified constants (H0, 3-pt, 7-pt, record 0.6732628655343560) are from the
+- The certified constants (H0, 3-pt, 7-pt, record 0.6732628655343560) are from the [RETIRED 2026-08-24]
   notes (PROVEN there); this run adds *empirical* statistics on real zeros, not new
   certified bounds.
 - **Known limitation:** the empirical slack numbers (1180×, 4213×, 99.8%, corr −0.776,

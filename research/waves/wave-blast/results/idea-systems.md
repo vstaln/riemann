@@ -32,8 +32,8 @@ A  = eps·(m-6) ;  B = Phi(A,m)  [A if A <= m/(m-1), else 2·sqrt((m-1)A/m)-1+A/
 tau = psum·(m-6)/m ;  bound = (H - tau)/(1 - B/m)
 ```
 
-**Output (`sens`):** `bound = 0.673262865534356` — exact match to the certified
-`0.67326286553435601465` (mpmath 50 dps) to all printed digits.
+**Output (`sens`):** `bound = 0.673262865534356` — exact match to the certified [RETIRED 2026-08-24]
+`0.67326286553435601465` (mpmath 50 dps) to all printed digits. [RETIRED 2026-08-24]
 Script: `tools/beat673/sens/src/lib.rs`; command:
 `cd /home/opc/riemann/tools/beat673/sens && cargo build --release && ./target/release/sens`.
 Cross-build (spec's RUST-FIRST mandate): `RUSTFLAGS="-C linker=rust-lld
@@ -292,7 +292,7 @@ capacity check and subdivision to q>6; sweep n in Rust first. Effort: high.
 
 | configuration | bound |
 |---------------|-------|
-| record (cosine, H(1.49)) | 0.6732628655 |
+| record (cosine, H(1.49)) | 0.6732628655 | [RETIRED 2026-08-24]
 | cosine H_max (alpha*=1.414) | 0.6733423 (+0.000079) |
 | H = 2/3 ideal window, same tax/amp | 0.66746 (worse! H must beat 2/3 − tau) |
 | H = 2/3, tau→0, amp ×1.05 | 0.7018 |
@@ -329,7 +329,7 @@ cross-target is built for CI, not for this host (`Exec format error` on this arc
 
 | claim | Rust output | mpmath (50 dps) | agree |
 |-------|-------------|-----------------|-------|
-| bound @ record | 0.673262865534356 | 0.67326286553435601465 | 16 digits |
+| bound @ record | 0.673262865534356 | 0.67326286553435601465 | 16 digits | [RETIRED 2026-08-24]
 | d(bnd)/dα | −0.002163 | −0.002162846875 | 11 sig |
 | d(bnd)/deps | +0.642817 | +0.642816967439 | 11 sig |
 | d(bnd)/dm | ~0 (−2.0e-8) | −1.9824e-8 | yes |

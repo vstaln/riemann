@@ -1,4 +1,4 @@
-# ROLE 4 — VERIFIER: adversarial analysis — can dropped finite-T terms flip 0.6732628655?
+# ROLE 4 — VERIFIER: adversarial analysis — can dropped finite-T terms flip 0.6732628655? [RETIRED 2026-08-24]
 
 **Executed by:** orchestrator (inline) — Agent tool unavailable; VERIFIER role executed inline.
 Labels per `hooks/agents.md`. All arithmetic CHECKED NUMERICALLY by
@@ -8,7 +8,7 @@ mpmath 80 digits). Finite-T measurements from `results/executor-finitet-probe.py
 ## 1. The certificate is T-free (PROVEN, by inspection + arithmetic)
 
 ```
-bound = (H − τ)/(1 − B/m) = 0.673262865534356…   (reproduced to 4.8e-14 by script)
+bound = (H − τ)/(1 − B/m) = 0.673262865534356…   (reproduced to 4.8e-14 by script) [RETIRED 2026-08-24]
   H(1.49) = 0.6724218860964     (window value, verified to 1.7e-41)
   τ = psum·(m−6)/m, psum=1/220, m=133            (exact rational)
   B = Φ_m(ε(m−6)), ε ← certified floor F ≥ 0.00806 (Arb interval verifier)
@@ -67,6 +67,6 @@ at the window level — the cosine already is the optimum.** The only P6 opening
 different kernel × block-mollifier combination optimizing the *block* functional (bound=(H−τ)/(1−B/m)),
 which has not been probed at finite T (open).
 
-RESULT: CONJECTURED — 0.6732628655 is robust to finite-T (dropped terms positive/safe at all
+RESULT: CONJECTURED — 0.6732628655 is robust to finite-T (dropped terms positive/safe at all [RETIRED 2026-08-24]
 T≤5000, flip needs ≥6.995e-5 negative error at T→∞, none seen); the sensitive lever is B/m
 (margin 1.0e-4), and the block-functional finite-T probe is the outstanding check.

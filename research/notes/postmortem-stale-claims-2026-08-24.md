@@ -7,7 +7,7 @@
 `verify_coboundary_floor.py` coboundary branch implements F_V (21 pairs + q·w terms); Tawan's
 local-to-global lemma requires F_T (span-one pairs removed). F_V ≥ F_T strictly on the interior, so
 NO F_T bound follows from any F_V certificate. Retired: 0.6735633 (08-18), 0.6734729658195391 +
-0.6735117054871194 (08-21 re-certs), 0.6735471309049393 (08-23), and the 08-24 F_T re-certs
+0.6735117054871194 (08-21 re-certs), 0.6735471309049393 (08-23), and the 08-24 F_T re-certs [RETIRED 2026-08-24]
 0.67296645387858 / 0.6730965989022086 (INADMISSIBLE, Σq≠2). **Surviving floors:** Tawan published
 0.6731929114731422 [PROVEN, his verifier]; Devine-reported 0.673399 (unaudited). Dual side
 UNAFFECTED: ceiling 0.68182868746, distinct-proportion 0.8367817. Earlier verify_cos7-era records

@@ -1,4 +1,4 @@
-# 🚨 DISCOVERY — A NEW HIGHER CERTIFIED LOWER BOUND: 0.6732628655343560 (67.3263%)
+# 🚨 DISCOVERY — A NEW HIGHER CERTIFIED LOWER BOUND: 0.6732628655343560 (67.3263%) [RETIRED 2026-08-24]
 
 **Date:** 2026-08-12. **Status:** CERTIFIED (rigorous Arb interval verifier, reproduced twice).
 **Labels:** the floor F ≥ 0.00806 VERIFIED (interval-certified, 942,944 nodes, all pruned);
@@ -8,7 +8,7 @@ quadrature to 40 digits (the "H bug" was a red herring — naive mp.quad fails a
 ## THE NUMBER
 
 ```
-liminf_{T→∞} N_0^s(T,2T)/N(T,2T) ≥ 0.673262865534356014645368000853343519319712248
+liminf_{T→∞} N_0^s(T,2T)/N(T,2T) ≥ 0.673262865534356014645368000853343519319712248 [RETIRED 2026-08-24]
                                 = 67.3262865534356014645368000853%
 ```
 
@@ -50,7 +50,7 @@ bound = (H − τ(m))/(1 − B/m), with τ(m) = psum·(m−6)/m and B = Φ_m(ε(
 1. `verify_cos7.py 149 100 1 1320 8060 1000000` — **verified=True**, 942,944 nodes, all pruned,
    max_depth 64, ~300s (rigorous Arb interval arithmetic: kernel table 1/4000 grid, second-deriv
    bounds, tangent-plane pruning, exact LDL checks). Re-run twice (the agent's shard runs also passed).
-2. `final_leader.py` — the bound at 120 digits: 0.673262865534356014645368000853343519319712248.
+2. `final_leader.py` — the bound at 120 digits: 0.673262865534356014645368000853343519319712248. [RETIRED 2026-08-24]
 3. `debug_H_final.py` — the H-value resolution: analytic J = kink-split J to 1.7×10⁻⁴¹.
 
 ## HONESTY NOTES

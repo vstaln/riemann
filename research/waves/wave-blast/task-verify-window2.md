@@ -21,7 +21,7 @@ PROVEN / CHECKED NUMERICALLY (script+command) / CONJECTURED / ABANDONED / INCONC
 Never fabricate. A wrong confident result is worse than none.
 
 ## The task
-Implement in Rust the H-functional for two-tone windows v(s)=cos(a s)+c cos(b s) on [-1/2,1/2] (generalize the I0, I2, J integrals; derive them symbolically or numerically with rigorous bounds). Sweep (a, b, c, psum, m) to find configurations beating 0.6732628655343560. The H functional is the lever — a window with higher H(alpha) directly raises the bound. Report top candidates + the H values. CONJECTURED until interval-verified.
+Implement in Rust the H-functional for two-tone windows v(s)=cos(a s)+c cos(b s) on [-1/2,1/2] (generalize the I0, I2, J integrals; derive them symbolically or numerically with rigorous bounds). Sweep (a, b, c, psum, m) to find configurations beating 0.6732628655343560. The H functional is the lever — a window with higher H(alpha) directly raises the bound. Report top candidates + the H values. CONJECTURED until interval-verified. [RETIRED 2026-08-24]
 
 ## Deliverable
 Write your deliverable to ~/riemann/research/waves/wave-blast/results/verify-window2.md (create the dir if needed). The repo root on THIS machine is $HOME/riemann — use the absolute path. with your full

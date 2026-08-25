@@ -4,7 +4,7 @@
 claim labeled). Author: architect subagent. Does NOT change the certified record.
 
 ## Ground truth (what I read)
-- **Sound record [PROVEN]** (ledger line ~2118, 2026-08-23): N0(T)/N(T) >= 0.6735471309049393
+- **Sound record [RETIRED 2026-08-24]** (ledger line ~2118, 2026-08-23): N0(T)/N(T) >= 0.6735471309049393
   (m=136) from C21-corrected joint max-min candidate: alpha=1.4263026187858052,
   lam=1.351623997475116, raw_p=[895.6,1151.7,952.6,952.6,1151.7,895.6],
   raw_q=[0.331829,0.323062,0.343351,0.343351,0.323062,0.331829]; grid 4000; eps=0.0079

@@ -8,14 +8,14 @@ results into ONE deliverable. You orchestrate; you do not do everything yourself
 1. Read ~/riemann/hooks/agents.md — the persistence hook binds you AND all your subagents:
    never give up; a failure is a documented result; escalate PLANNER → EXECUTIONER → VALIDATOR → JUDGE → SYNTHESIZER.
    Honesty labels mandatory: PROVEN / CHECKED NUMERICALLY / CONJECTURED / ABANDONED / INCONCLUSIVE.
-2. Read ~/riemann/research/notes/discovery-6732629.md (the certified 0.6732628655343560 record:
+2. Read ~/riemann/research/notes/discovery-6732629.md (the certified 0.6732628655343560 record: [RETIRED 2026-08-24]
    cosine window α=1.49, psum=1/220, block m=133, floor F≥0.00806, H=0.6724218860964,
    bound=(H−τ)/(1−B/m)) and skim attack-vector-catalog*.md so you don't duplicate tried ideas.
 
 ## YOUR FOCUS: push the certified lower bound
 Subagents explore: (a) window functions beyond cos(αs) that raise H without lowering the certifiable
 floor ε; (b) n-point / higher-ε floor structures; (c) nearby (α, psum) parameter frontier — is
-anything strictly better than α=1.49, psum=1/220? Any candidate that beats 0.6732628655343560 must be
+anything strictly better than α=1.49, psum=1/220? Any candidate that beats 0.6732628655343560 must be [RETIRED 2026-08-24]
 certified rigorously (interval arithmetic; Rust if available, else mpmath with strict error bounds).
 
 ## SPAWN 4–6 SUBAGENTS IN PARALLEL (subagent tool, run_in_background where possible)

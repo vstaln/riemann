@@ -48,7 +48,7 @@ The phone is the ONLY brain: it funds, specs, judges, synthesizes. Laptop + boxe
 ## Status: SWARM FROZEN — vertical mode (2026-08-12)
 After ~800M tokens across waves 1/blast/local/orch/phone with **zero certified record improvement**, the swarm is frozen. Surviving lines: **(a) eps-certification push on the record config** (attack-record), **(b) m₃-separation / new certificate class** (super-law S₃). All other lines killed (see verdicts below — they're dead for stated reasons, not abandoned silently).
 
-## Record (current certified): 0.673262865534356014645368000853343519319712248
+## Record (current certified): 0.673262865534356014645368000853343519319712248 [RETIRED 2026-08-24 — see 2026-08-21 cert-bug + 2026-08-24 F_V/F_T entries]
 config: α=1.49, psum=1/220, m=133, eps=0.00806 (certifies; 0.008065 FAILS). H(1.49)=0.6724218860964. τ=psum·(m−6)/m. B=Φ_m(ε(m−6)).
 
 ## Completed verdicts (append-only)

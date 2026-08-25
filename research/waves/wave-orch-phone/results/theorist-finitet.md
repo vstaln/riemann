@@ -7,7 +7,7 @@ Labels per `hooks/agents.md`. Lever sensitivities from `results/verifier-finitet
 
 ## 1. Where the constant comes from (the lever map)
 
-The record 0.6732628655 = (H − τ)/(1 − B/m) is assembled from three levers:
+The record 0.6732628655 = (H − τ)/(1 − B/m) is assembled from three levers: [RETIRED 2026-08-24]
 
 | lever | value | role | T-sensitivity |
 |---|---|---|---|

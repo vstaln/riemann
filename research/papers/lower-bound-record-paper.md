@@ -13,7 +13,7 @@ $$\liminf_{T\to\infty}\;\frac{N^{*}_{0}(T,2T)}{N(T,2T)} \;\ge\; \boxed{0.6732654
 
 where $N(T,2T)$ counts the nontrivial zeros $\rho=\beta+i\gamma$ of $\zeta$ with $T<\gamma\le 2T$ (with multiplicity) and $N^{*}_{0}(T,2T)$ counts the distinct such zeros with $\beta=\tfrac12$, i.e. the **simple-on-line** fraction, in the terminology of the companion paper [C26]. The bound sharpens the previous record
 
-$$0.673262865534356014645368000853343519319712248$$
+$$0.673262865534356014645368000853343519319712248$$ [RETIRED 2026-08-24]
 
 by **+2.5709611675074345×10⁻⁶** (CHECKED NUMERICALLY, mpmath 120 digits).
 
@@ -38,7 +38,7 @@ The present record is not a new method: it is the same certified two-moment mach
 The bound is $\text{bound}=(H-\tau)/(1-B/m)$ [D26, discovery-6732629]. $H$ is a ground-state (window) constant from a cosine test function $v(s)=\cos(\alpha s)$, $\alpha=149/100$; $\tau=p_{\rm sum}(m-6)/m$ is a rational "tax" from the total pressure $p_{\rm sum}$; $A=\varepsilon(m-6)$ converts the certified floor $\varepsilon$ into a moment argument; $B=\Phi_m(A)$ is the moment-correction term; $m$ is a block size. Lower $p_{\rm sum}$ lowers $\tau$ (good) but lowers the achievable $\varepsilon$ (bad); the certified optimum is $p_{\rm sum}=1/220$, $\alpha=149/100$, $m=133$.
 
 ### 2.3 The eps-frontier idea
-For fixed $(\alpha,p_{\rm sum},m)$ the bound is *monotone increasing in $\varepsilon$* (CHECKED NUMERICALLY at $m=133$: $0.00806\to0.6732628655$, $0.008065\to0.6732660791$, $0.00807\to0.6732692918$, $0.0081\to0.6732885476$). Hence the whole game is: **certify the largest $\varepsilon$ such that the in-band floor $F\ge\varepsilon$**. This is what the interval-arithmetic verifier does, and it is where the previous record stopped ($\varepsilon=0.00806$).
+For fixed $(\alpha,p_{\rm sum},m)$ the bound is *monotone increasing in $\varepsilon$* (CHECKED NUMERICALLY at $m=133$: $0.00806\to0.6732628655$, $0.008065\to0.6732660791$, $0.00807\to0.6732692918$, $0.0081\to0.6732885476$). Hence the whole game is: **certify the largest $\varepsilon$ such that the in-band floor $F\ge\varepsilon$**. This is what the interval-arithmetic verifier does, and it is where the previous record stopped ($\varepsilon=0.00806$). [RETIRED 2026-08-24]
 
 ### 2.4 The artifact question
 A skeptic's objection: the verifier works on a fixed uniform-span grid (4000). Perhaps the terminal failure region is an artifact of that grid, and a finer grid would certify a larger $\varepsilon$. Section 5 answers this **numerically in the negative**: the certified floor is grid-independent.
@@ -139,7 +139,7 @@ The record is not a lucky point; it is the certified maximum over the family of 
 
 $$\text{bound}=\frac{H-\tau}{1-B/m}=0.67326543649552352207990181282271996377681849486392$$
 
-**Old record:** $0.673262865534356014645368000853343519319712248$ (at $\varepsilon=0.00806$, discovery-6732629).
+**Old record:** $0.673262865534356014645368000853343519319712248$ (at $\varepsilon=0.00806$, discovery-6732629). [RETIRED 2026-08-24]
 **Gain:** $+2.5709611675074345\times10^{-6}$.
 **In percentage:** $67.326543649552352207990181282271996377681849486392\%$.
 
@@ -161,7 +161,7 @@ Every certified step above $\varepsilon=0.00806$ yields an immediate improvement
 ## 9. References
 
 - **[C26]** — *More than two thirds of the zeros of the Riemann zeta function lie on the critical line* (companion paper; $N(T,2T)$, $N_0^{*}(T,2T)$, simple-on-line terminology; optimized test family constant 0.6725; Weil-form + Sylvester inertia + rank–trace argument).
-- **[D26]** — `research/notes/discovery-6732629.md` — discovery note for the original record $0.6732628655\ldots$ at $\varepsilon=0.00806$: floor $F\ge0.00806$ interval-verified at 942,944 nodes, max_depth 64, ~300 s; bound arithmetic at 120 digits.
+- **[D26]** — `research/notes/discovery-6732629.md` — discovery note for the original record $0.6732628655\ldots$ at $\varepsilon=0.00806$: floor $F\ge0.00806$ interval-verified at 942,944 nodes, max_depth 64, ~300 s; bound arithmetic at 120 digits. [RETIRED 2026-08-24]
 - **Attack record** — `research/waves/wave-phone-2/results/attack-record.md` — the new record, the certified eps-frontier (8063/8064 TRUE, 8066+ FALSE), the $m$-sweep, the sweeps at other certified eps, and the artifact probe (Results 1–5, incl. terminal boxes and the grid-scaling identity).
 - **Two-tone refutation** — `research/waves/wave-local/results/exec-two-tone.md` — the two-tone window sweep: $c=0$ optimal, $H\le0.672500703679412$ (classic constant), family refuted as a lever.
 - **Verifier** — `verify_cos7.py` (410 lines, Arb via python-flint; canonical copy in `tools/`, working copy `/tmp/combine/verify_cos7.py`). Command form: `verify_cos7.py 149 100 1 1320 <eps·10⁶> 1000000 - <GRID>`.

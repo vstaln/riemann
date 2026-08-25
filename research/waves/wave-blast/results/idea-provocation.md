@@ -7,7 +7,7 @@ evaluate them, extract the serious mathematical kernel and a concrete test. 12 p
 Rust probe or a defined test.
 **Deliverable path:** `research/waves/wave-blast/results/idea-provocation.md`.
 **Honesty:** every number below was produced by a script I ran; labels per hooks/agents.md. The record constant
-**0.6732628655343560** (67.3263%) is reproduced to machine precision by `src/bin/provoke.rs` (R0) and cross-checked
+**0.6732628655343560** (67.3263%) is reproduced to machine precision by `src/bin/provoke.rs` (R0) and cross-checked [RETIRED 2026-08-24]
 in mpmath (`scratch/paircorr/sqrt2_bound.py`).
 
 ---
@@ -19,11 +19,11 @@ ask what the world would look like if it were true, and keep only the serious ke
 the certified record. The record against which every provocation is priced:
 
 **Certified record (this project):** `(H(α) − τ)/(1 − B/m)` at α = 1.49, psum = 1/220, m = 133, eps = 0.00806
-gives **0.6732628655343560** — H(1.49) = 0.672421886096447, τ = (m−6)/m·psum = 0.004340396446, B/m = 0.007695918116.
+gives **0.6732628655343560** — H(1.49) = 0.672421886096447, τ = (m−6)/m·psum = 0.004340396446, B/m = 0.007695918116. [RETIRED 2026-08-24]
 Verified two independent ways:
 
-- `cd research/waves/wave-blast/results/provocation && cargo build --release --target x86_64-unknown-linux-musl && ./target/x86_64-unknown-linux-musl/release/provoke` → `R0 record bound ... = 0.673262865534356`, abs diff = 0.000e0.
-- `/usr/bin/python3 scratch/paircorr/sqrt2_bound.py` (mpmath 40-digit) → `bound = 0.673262865534356015`.
+- `cd research/waves/wave-blast/results/provocation && cargo build --release --target x86_64-unknown-linux-musl && ./target/x86_64-unknown-linux-musl/release/provoke` → `R0 record bound ... = 0.673262865534356`, abs diff = 0.000e0. [RETIRED 2026-08-24]
+- `/usr/bin/python3 scratch/paircorr/sqrt2_bound.py` (mpmath 40-digit) → `bound = 0.673262865534356015`. [RETIRED 2026-08-24]
 - H(√2) = 0.672500703679412 = Theorem-D constant to 1.1e-16 (same probe R0) — the window maximum is the Anthropic
   constant. The record's α = 1.49 *gives up* ~7.9e-5 of H (H(1.49) = 0.67242) but buys a much higher
   certified eps floor: at α = 1.49 the certified eps is 0.00806 against a numeric floor L(1.49) ≈ 0.00587
@@ -523,7 +523,7 @@ directly test the two most provocative claims ("RH false" / "curve, not line").
 
 ## 14. Honesty footer
 
-- **PROVEN:** the record arithmetic (provoke.rs R0 reproduces 0.6732628655343560 to machine precision;
+- **PROVEN:** the record arithmetic (provoke.rs R0 reproduces 0.6732628655343560 to machine precision; [RETIRED 2026-08-24]
   H(√2) = 0.67250070367941164573 to 1.1e-16); the mod-1 equidistribution D* and max_gap (R3); the
   phase-drift non-detection (R2: slope −1.12e-9, |t| = 1.05); the 2/3-already-certified statement (eps→0 bound
   = 0.668081489651, mpmath, and the R1 map); H(1.49) = 0.672421886096447; τ and B/m decompositions.

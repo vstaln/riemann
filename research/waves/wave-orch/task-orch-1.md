@@ -41,4 +41,4 @@ After collecting subagent results, write YOUR synthesis to
 Print at end: RESULT: <status> — <one-line summary>
 
 ## YOUR SPECIFIC FOCUS
-push the certified bound: subagents explore window functions, n-point generalizations, and higher eps floors in Rust; verify any candidate that beats 0.6732628655343560 with tools/beat673/verify_cos7.py
+push the certified bound: subagents explore window functions, n-point generalizations, and higher eps floors in Rust; verify any candidate that beats 0.6732628655343560 with tools/beat673/verify_cos7.py [RETIRED 2026-08-24]

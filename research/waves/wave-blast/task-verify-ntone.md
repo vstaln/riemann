@@ -21,7 +21,7 @@ PROVEN / CHECKED NUMERICALLY (script+command) / CONJECTURED / ABANDONED / INCONC
 Never fabricate. A wrong confident result is worse than none.
 
 ## The task
-The bound used n=7 (6 gaps). trmdy mentioned n=9/11. Implement the n-point generalized deduction (F_n(g) = p sum g_i + sum_{i<j} a_ij w(y_j-y_i) >= eps, uniform weights a_ij = 2/(n-(j-i))) in Rust, sweep (n, eps, m, alpha, psum), and find configurations beating 0.6732628655343560. Read research/ladder-f-family/threshold.py for the exact formula. Report top candidates.
+The bound used n=7 (6 gaps). trmdy mentioned n=9/11. Implement the n-point generalized deduction (F_n(g) = p sum g_i + sum_{i<j} a_ij w(y_j-y_i) >= eps, uniform weights a_ij = 2/(n-(j-i))) in Rust, sweep (n, eps, m, alpha, psum), and find configurations beating 0.6732628655343560. Read research/ladder-f-family/threshold.py for the exact formula. Report top candidates. [RETIRED 2026-08-24]
 
 ## Deliverable
 Write your deliverable to ~/riemann/research/waves/wave-blast/results/verify-ntone.md (create the dir if needed). The repo root on THIS machine is $HOME/riemann — use the absolute path. with your full

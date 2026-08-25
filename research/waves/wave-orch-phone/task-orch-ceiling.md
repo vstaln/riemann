@@ -11,7 +11,7 @@ and SYNTHESIZE their results into ONE deliverable.
    documented beyond-α=1 dead ends (mean pair sums, variance, matrix inequalities, CLT inputs).
 
 ## CONTEXT (verified)
-- Certified record 0.6732628655; the (α, psum) family is EXHAUSTED (true minimum of F proven:
+- Certified record 0.6732628655; the (α, psum) family is EXHAUSTED (true minimum of F proven: [RETIRED 2026-08-24]
   0.00806 certifies, 0.008065 fails).
 - In-class ceiling 0.68183123 (LP-dual certificate r(x)=1−x; the rank–trace/Weil-compression class
   cannot exceed it).

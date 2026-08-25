@@ -50,14 +50,29 @@
 \begin{document}
 \maketitle
 
+\begin{center}
+\fbox{\parbox{0.93\linewidth}{\small
+\textbf{Retraction notice (2026-08-24).} The record
+$N_0(T)/N(T) \ge 0.6735471309049393$ ($m=136$, $\eps=0.0079$) claimed in % [RETIRED 2026-08-24]
+this paper was RETIRED on 2026-08-24.  The certificate bounded the wrong
+functional: the posted verifier adds span-one terms $\tfrac13\sum_i w(g_i)$ on
+top of all 21 pair terms (the $F_V$ functional), while the coboundary
+treatment requires the $q_i$ to \emph{replace} span-one pairs (the $F_T$
+functional).  Since $F_V \ge F_T$ strictly on the domain interior, no $F_T$
+bound follows from any $F_V$ certificate.  All \textbf{[PROVEN]} labels on
+this record in the body below are therefore void.  See
+\texttt{research/notes/ledger.md} (2026-08-21 cert-bug and 2026-08-24
+F$_V$/F$_T$ entries).}}
+\end{center}
+
 \begin{abstract}
-By machine-certified interval-arithmetic proof, we establish the unconditional bound
-$\liminf_{T\to\infty} \Nc(T)/\N(T) \ge 0.6735471309049393$
+By machine-certified interval-arithmetic proof, we established (claim RETIRED 2026-08-24) the unconditional bound
+$\liminf_{T\to\infty} \Nc(T)/\N(T) \ge 0.6735471309049393$ \textbf{[RETIRED 2026-08-24]}
 on the proportion of nontrivial zeros of the Riemann zeta function $\zeta(s)$ that are both simple and lie on the critical line, raising the previously published unconditional record (five twelfths, Pratt--Robles--Zaharescu--Zeindler) by more than twenty-five percentage points, and we certify three further finite verifications: strict zero-freeness of $\zeta'(s)$ on $\sigma\in[0.001,0.49]\times t\in[10,175000]$; positivity of Li's coefficients $\lambda_n>0$ for all $n\in[1,10^6]$ as an audited lower-bound certificate under stated truncation hypotheses; and validity of Robin's inequality across all $169{,}866{,}665$ non-increasing-exponent candidate integers up to $n\le 10^{60}$.
 These problems resist classical attack because the proportion problem has advanced only incrementally since Hardy, Selberg, Levinson, and Conrey, because pointwise dominance arguments in the Speiser program collapse structurally into the full Riemann Hypothesis, and because each finite certificate must be sound in both its mathematics and its implementation.
 We proceed via a variational coboundary objective over six normalized consecutive zero gaps whose uniform floor is certified by Gershgorin-convexity branch-and-bound search in Arb interval arithmetic; via rigorous Euler--Maclaurin argument-principle winding counts gated by Davenport--Heilbronn and Dirichlet-$\eta$ metrology controls; and via audited clean sums over validated critical-line zeros combined with exact closed-form analytic tail brackets.
 Every claim carries an explicit epistemic label, and the verification stack was hardened by an adversarial red-team loop that uncovered and retired an unsound LDL-decomposition convexity test and an unpinned pair-sum convention discrepancy ($S_1$ vs.\ $C_{21}$); no finite verification presented here proves the Riemann Hypothesis, which remains entirely open.
-Our most remarkable number is the certified constant $0.6735471309049393$, achieved at block size $m=136$ with certified coboundary floor $\eps = 0.0079$.
+Our most remarkable number was the certified constant $0.6735471309049393$ \textbf{[RETIRED 2026-08-24]}, achieved at block size $m=136$ with certified coboundary floor $\eps = 0.0079$; the certificate was later found to bound the wrong functional (see retraction notice).
 \end{abstract}
 
 \begin{center}
@@ -94,9 +109,9 @@ derived from a stability-enhanced Gram-matrix trace inequality and a variational
 \subsection{Summary of Contributions}
 In this paper, we present four primary mathematical results alongside a methodological study of automated proof validation:
 \begin{enumerate}[label=\textbf{(\arabic*)}]
-\item \textbf{Sound Proportion Record [PROVEN]:} We establish the unconditional bound
+\item \textbf{Proportion Record [RETIRED 2026-08-24]:} We established (claim retired 2026-08-24) the unconditional bound
 \[
- \liminf_{T\to\infty}\frac{\Nc(T)}{\N(T)} \ge 0.6735471309049393,
+ \liminf_{T\to\infty}\frac{\Nc(T)}{\N(T)} \ge 0.6735471309049393, \qquad \text{\textbf{[RETIRED 2026-08-24]}}
 \]
 certified at block size $m=136$ with local coboundary floor $\eps = 0.0079$ via a sound Gershgorin-verified branch-and-bound verifier targeting the canonical 21-pair objective $C_{21}$.
 \item \textbf{The Adversarial Re-Audit Case Study:} We document the discovery, isolation, and correction of an unsound convexity test in the earlier verification codebase: an LDL decomposition applied to entrywise lower bounds of the Hessian, which failed because $M \succ 0$ and $N \ge 0$ (entrywise) does not imply $M+N \succ 0$. We also resolve an unpinned pair-sum convention discrepancy ($S_1$ 15-pair vs.\ $C_{21}$ 21-pair) that initially masqueraded as a concrete counterexample.
@@ -105,12 +120,12 @@ certified at block size $m=136$ with local coboundary floor $\eps = 0.0079$ via 
 \item \textbf{Robin's Inequality on Colossally Abundant Candidates [CHECKED NUMERICALLY]:} We enumerate all $169{,}866{,}665$ integers with non-increasing prime exponent sequences up to $10^{60}$, proving that the Robin ratio $R(n) < 1$ holds throughout, with a maximum of $0.9868460162$ at $n \approx 10^{59.1350}$.
 \end{enumerate}
 
-\noindent\textbf{In one sentence: using adversarially-audited interval-arithmetic provers, this paper raises the unconditional lower bound on the proportion of simple zeros of $\zeta$ on the critical line to $0.6735471309049393$ and certifies three further finite frontiers (Speiser strip, Li criterion, Robin inequality), while documenting why such machine certificates require continuous red-team re-audit.}
+\noindent\textbf{In one sentence: using adversarially-audited interval-arithmetic provers, this paper claimed to raise the unconditional lower bound on the proportion of simple zeros of $\zeta$ on the critical line to $0.6735471309049393$ \textbf{[RETIRED 2026-08-24]}, and certifies three further finite frontiers (Speiser strip, Li criterion, Robin inequality), while documenting why such machine certificates require continuous red-team re-audit.}
 
 \begin{figure}[ht]
 \centering
 \includegraphics[width=\linewidth]{figures/frontier_growth.pdf}
-\caption{The two computational frontiers advanced in this work. Panel (a): certified lower bounds on the proportion $\kappa^*$ of simple critical-line zeros, from the published literature baseline of Pratt--Robles--Zaharescu--Zeindler (black), the unrefereed Claude 2026 report (yellow), successive open-source machine certificates (light blue), to the theorem of this work (red, $0.6735471309049393$), against the linear-programming class ceiling $0.68183$ (dashed purple). Panel (b): growth of the rigorously scanned zero-free strip for $\zeta'(s)$ on $\sigma \in [0.001, 0.49]$ from height $T = 12{,}000$ to $T = 175{,}000$ between August 21 and August 23, 2026.}
+\caption{The two computational frontiers advanced in this work. Panel (a): certified lower bounds on the proportion $\kappa^*$ of simple critical-line zeros, from the published literature baseline of Pratt--Robles--Zaharescu--Zeindler (black), the unrefereed Claude 2026 report (yellow), successive open-source machine certificates (light blue), to the (since-retired) theorem of this work (red, $0.6735471309049393$ \textbf{[RETIRED 2026-08-24]}), against the linear-programming class ceiling $0.68183$ (dashed purple). Panel (b): growth of the rigorously scanned zero-free strip for $\zeta'(s)$ on $\sigma \in [0.001, 0.49]$ from height $T = 12{,}000$ to $T = 175{,}000$ between August 21 and August 23, 2026.}
 \label{fig:frontier}
 \end{figure}
 
@@ -304,10 +319,10 @@ Evaluating the concave envelope (\ref{eq:envelope}), the window functional (\ref
  \tau(136) &= \frac{1.351623997475116}{320} \times \frac{130}{136} = 0.0040375835221943.
 \end{align*}
 This yields the unconditional theorem:
-\begin{theorem}[Certified Proportion Record]\label{thm:proportion_record}
-Unconditionally, the proportion of nontrivial zeros of the Riemann zeta function that are simple and on the critical line satisfies:
+\begin{theorem}[Retired Proportion Record (2026-08-24)]\label{thm:proportion_record}
+The following claim was established by machine certificate but is RETIRED (2026-08-24; the certificate bounded the wrong functional, $F_V$ instead of $F_T$):
 \begin{equation}
- \liminf_{T\to\infty}\frac{\Nc(T)}{\N(T)} \ge 0.6735471309049393 \quad \text{\textbf{[PROVEN]}}.
+ \liminf_{T\to\infty}\frac{\Nc(T)}{\N(T)} \ge 0.6735471309049393 \quad \text{\textbf{[RETIRED 2026-08-24]}}.
 \end{equation}
 \end{theorem}
 
@@ -322,11 +337,11 @@ Claude / Anthropic (2026) \cite{claude2026} & Stability Gram trace & Reported (u
 ainta (2026) \cite{ainta} & 7-point variational & Computer certificate & $0.673008527928$ \\
 trmdy (2026) \cite{trmdy} & 9/11-point variational & Computer certificate & $0.673137630699$ \\
 tawanerguo (2026) \cite{tawanerguo} & Coboundary envelope & Computer certificate & $0.673192911473$ \\
-Early Swarm (2026) & Parameter tuning & Computer certificate & $0.673262865534$ \\
+Early Swarm (2026) & Parameter tuning & Computer certificate & $0.673262865534$ \\ % [RETIRED 2026-08-24]
 Retired candidate (2026) & LDL lower bounds & \textbf{RETIRED [UNSOUND]} & \emph{0.673563347995} \\
 Sound Base (2026) & Gershgorin B\&B & Sound cert.\ [PROVEN] & $0.673472965820$ \\
 Sound Mid (2026) & Gershgorin B\&B & Sound cert.\ [PROVEN] & $0.673511705487$ \\
-\textbf{This Work (Theorem~\ref{thm:proportion_record})} & \textbf{$C_{21}$ + Gershgorin} & \textbf{Sound cert.\ [PROVEN]} & \textbf{0.673547130905} \\
+\textbf{This Work (Theorem~\ref{thm:proportion_record})} & \textbf{$C_{21}$ + Gershgorin} & \textbf{RETIRED 2026-08-24 (F$_V$/F$_T$ error)} & \textbf{0.673547130905} \\
 \midrule
 Theoretical Class Ceiling & LP Dual bound & Dual bound [PROVEN] & $0.681828687460$ \\
 \bottomrule
@@ -558,7 +573,7 @@ Beyond the per-row caveats, four classes of load-bearing hypotheses deserve expl
 \toprule
 Mathematical Claim & Epistemic Status & Load-Bearing Hypotheses / Caveats \\
 \midrule
-Proportion $\kappa^* \ge 0.6735471309$ & \textbf{PROVEN} & None (unconditional; certified by Arb B\&B). \\
+Proportion $\kappa^* \ge 0.6735471309$ & \textbf{RETIRED 2026-08-24} & F$_V$-vs-F$_T$ functional error; see ledger.md 2026-08-24 entries. \\
 Class Ceiling $0.6818286874$ & \textbf{PROVEN} & Linear programming duality of the $F_B$ functional. \\
 LDL convexity flaw & \textbf{PROVEN} & Counterexample $M=I, N=[[0,2],[2,0]]$ ($H$ indefinite). \\
 $C_{21}$ vs.\ $S_1$ objective distinction & \textbf{PROVEN} & 21-pair vs.\ 15-pair code inspection and exact eval. \\

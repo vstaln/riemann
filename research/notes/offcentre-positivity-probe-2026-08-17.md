@@ -103,7 +103,7 @@ satisfies all those bounds (that IS the ceiling theorem). Consistent. No claim h
 Do NOT re-launch off-centre positivity — ledger it. Live levers remain: M4-proper (r′),
 sinc-convention m₃ certificate LP, the k<1 count. The window ceiling 0.6725 is a subclass
 convention (L1 lever-miner B1: gap 0.6725→0.6818 PROVEN-open); the certified record
-0.6732628655… already lives in the gap.
+0.6732628655… [RETIRED 2026-08-24] already lives in the gap.
 
 ## Assumptions
 

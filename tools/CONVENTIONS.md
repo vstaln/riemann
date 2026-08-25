@@ -4,15 +4,30 @@
 definitions. Any deviation = bug, not variant. (Root cause of the 2026-08-21 false counterexample
 was an unpinned pair-set convention — see research/notes/cert-bug-2026-08-21.md.)**
 
-## 1. F_B block inequality objective (the ONLY certified object)
+## 1. Replaced-span F_T objective (the theorem-relevant object) — re-pinned 2026-08-24
+
+**The 21-pair F_B block below is F_V — RETIRED, NON-CERTIFYING.** The 2026-08-23 record
+(0.6735471309049393, m=136) was RETIRED 2026-08-24: the posted verifier added span-one terms
+(1/3)Σw(g_i) on top of all 21 pair terms (F_V), while the coboundary treatment requires the q_i
+to REPLACE span-one pairs (F_T). F_V ≥ F_T strictly on the domain interior, so NO F_T bound
+follows from any F_V certificate. Do not certify anything against the F_V block below.
 
 Points y_0..y_6 with y_0 = 0 and y_k = g_1 + ... + g_k (g_i ≥ 0, six gaps, units: mean zero-spacing).
 
-    F_B(g) = Σ_{i=1..6} p_i g_i  +  Σ_{i=1..6} q_i w(g_i)
-           + Σ_{0≤i<j≤6} a_ij w(y_j − y_i)          ← **21 pairs, INCLUDING i=0 (distances from y_0=0)**
+    F_V(g) = Σ_{i=1..6} p_i g_i  +  Σ_{i=1..6} q_i w(g_i)
+           + Σ_{0≤i<j≤6} a_ij w(y_j − y_i)          ← **21 pairs, INCLUDING i=0 (distances from y_0=0) — RETIRED**
 
 - a_ij = 2/(7−(j−i)) for ALL 21 pairs (i from 0!). 15-pair variants ("S1") are FORBIDDEN —
   they evaluate a different function and proved nothing about the certified one.
+
+**Theorem-relevant replaced-span F_T conventions (pin these):**
+- q_i REPLACE span-one pairs: the q_i w(g_i) terms substitute for the diagonal span-one terms
+  w(g_i); they are NOT added on top of them.
+- Span masses ≤ 2, with DOWNWARD-ROUNDED weights (sound side).
+- Σ q ≤ 2 is a HARD constraint.
+- Σ p is free, with an actual-sum tax per the covering argument: Σp is accounted by the true
+  sum of the chosen p_i, not by a nominal budget.
+- Kernel and verifier-cutoff conventions below remain in force for F_T (unchanged).
 - Parameterization: p_i = λ·raw_i/1_920_000 (Σraw=6000 ⇒ Σp=λ/320); q_i = λ·q_raw_i (q scales by λ).
 - Kernel: w(x) = (K(x)/K(0))², K(x) = ½[sinc((α−2πx)/2) + sinc((α+2πx)/2)], sinc(u)=sin(u)/u.
 - Verifier cutoff: w-terms tabled for x ≤ target·3000; beyond that terms DROP (sound: w ≥ 0).

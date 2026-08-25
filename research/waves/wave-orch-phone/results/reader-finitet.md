@@ -13,7 +13,7 @@ NOT re-derived here.
 ## 1. The certificate (from discovery-6732629.md, CHECKED NUMERICALLY there)
 
 ```
-liminf_{T→∞} N₀ˢ(T,2T)/N(T,2T) ≥ 0.6732628655343560
+liminf_{T→∞} N₀ˢ(T,2T)/N(T,2T) ≥ 0.6732628655343560 [RETIRED 2026-08-24]
 bound = (H − τ)/(1 − B/m)
   H = H(α=1.49) = 0.6724218860964        (window value, verified to 1.7e-41 vs kink-split quadrature)
   τ = psum·(m−6)/m,  psum = 1/220,  m = 133

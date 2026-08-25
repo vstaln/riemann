@@ -1,4 +1,4 @@
-# 🚨 RETRACTION — the 0.6732628655343560 record is INVALID (kernel double-normalization bug)
+# 🚨 RETRACTION — the 0.6732628655343560 record is INVALID (kernel double-normalization bug) [RETIRED 2026-08-24]
 
 **Date:** 2026-08-12. **Status:** RETRACTED — PROVEN defect.
 **Labels:** every number below is CHECKED NUMERICALLY (exact Arb interval runs, cited).
@@ -31,7 +31,7 @@ The certified eps=0.00806 was for the INFLATED functional. The true floor ≈ 0.
 | 0.00780 | 0.673094780550133 |
 
 The corrected bound **0.673088 < trmdy 0.6731376 < tawanerguo 0.6731929**.
-**The record 0.6732628655343560 does not survive.**
+**The record 0.6732628655343560 does not survive.** [RETIRED 2026-08-24]
 The session's new bound 0.6732666023780 (eps=8224/1e6 at psum=1/215) is ALSO INVALID
 — same buggy verifier.
 

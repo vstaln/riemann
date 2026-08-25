@@ -5,7 +5,7 @@ You are an EXECUTOR agent in the Riemann swarm. This is the SINGLE HIGHEST-VALUE
 ## MANDATORY first steps
 1. Read /home/vstaln/riemann/hooks/agents.md — persistence hook: NEVER give up; a failure is a documented result; try a different route.
 2. Read /home/vstaln/.pi/agent/skills/s4h-constraint/SKILL.md and s4h-investigation/SKILL.md.
-3. Read /home/vstaln/riemann/research/notes/discovery-6732629.md — the record: bound 0.6732628655343560 from (alpha=1.49, psum=1/220, m=133, eps=0.00806).
+3. Read /home/vstaln/riemann/research/notes/discovery-6732629.md — the record: bound 0.6732628655343560 from (alpha=1.49, psum=1/220, m=133, eps=0.00806). [RETIRED 2026-08-24]
 
 ## THE FINDING TO CERTIFY (from exec-two-tone.md)
 The two-tone executor found: window v(s) = cos(1.407s) + 0.005·cos(2.53s), psum=1/300, m=135 gives

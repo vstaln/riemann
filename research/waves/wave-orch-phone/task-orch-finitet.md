@@ -10,7 +10,7 @@ and SYNTHESIZE their results into ONE deliverable.
    (skim), and the README's open problem P6.
 
 ## CONTEXT (verified)
-- The certified record 0.6732628655 uses the C∞ cosine kernel v(s)=cos(1.49·s) on [−1/2,1/2] with
+- The certified record 0.6732628655 uses the C∞ cosine kernel v(s)=cos(1.49·s) on [−1/2,1/2] with [RETIRED 2026-08-24]
   pressure psum=1/220 and block m=133; bound=(H−τ)/(1−B/m), H(1.49)=0.6724218860964.
 - Open problem P6: the finite-T error terms differ between C∞ kernels and hard-cutoff kernels.
   The program has notes on finite-T behavior (attack-finitet*, finitet-cinf) — read them to learn

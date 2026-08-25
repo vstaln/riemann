@@ -11,7 +11,7 @@ functional.
 3. Read /home/vstaln/riemann/research/notes/discovery-6732629.md and /home/vstaln/riemann/research/waves/wave-local/results/theorist-ceiling.md (the ceiling analysis: family max ~0.6734212, eps is binding).
 
 ## THE CONTEXT
-- Record: bound 0.6732628655343560, alpha=1.49, psum=1/220, m=133, eps=0.00806, n=7 (6 gaps).
+- Record: bound 0.6732628655343560, alpha=1.49, psum=1/220, m=133, eps=0.00806, n=7 (6 gaps). [RETIRED 2026-08-24]
 - The n-point generalized deduction (from trmdy's proof, research/ladder-f-family/threshold.py):
   F_n(g) = p·sum g_i + sum_{i<j} a_ij·w(y_j-y_i) >= eps (all g >= 0), uniform weights a_ij = 2/(n-(j-i)),
   span capacities exactly 2.
@@ -24,7 +24,7 @@ functional.
 1. Read research/ladder-f-family/threshold.py fully — understand the n-point bound formula exactly.
 2. Build a Rust tool (new dir /home/vstaln/riemann/tools/npoint-sweep/) that implements:
    - The n-point bound(n, eps, m, alpha, p) for n in {7, 8, 9, 11, 13, 15}
-   - The required eps to beat 0.6732628655343560 for each (n, m, alpha, psum)
+   - The required eps to beat 0.6732628655343560 for each (n, m, alpha, psum) [RETIRED 2026-08-24]
    - The constrained ceiling: with eps = kappa(p)·p (kappa ~ 10.7 from the F6 minimizer, CONJECTURED
      to hold for n-point too), what's the max bound over (n, m, alpha, psum)?
 3. Report: for which n does the bound meaningfully exceed 0.67342? What eps would be needed?

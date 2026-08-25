@@ -2,7 +2,7 @@
 
 **Task:** `task-npoint.md` — highest-value structural test. Build `tools/npoint-sweep/`
 (Rust), implement the n-point bound for n ∈ {7,8,9,11,13,15}, find eps* to beat the
-record 0.6732628655343560 at (α=1.49, m=133), sweep max bound over (m, α, psum), and
+record 0.6732628655343560 at (α=1.49, m=133), sweep max bound over (m, α, psum), and [RETIRED 2026-08-24]
 numerically estimate the F_n infimum for n=9,11 to determine whether the per-point
 floor rises or falls with n.
 
@@ -43,7 +43,7 @@ RESULT: NEGATIVE — the n-point generalization does not break the ceiling; the
 
 - `hooks/agents.md` — research charter, honesty guardrails, never-give-up clause.
 - `s4h-constraint`, `s4h-investigation` skills.
-- `discovery-6732629.md` — the record 0.6732628655343560, certified floor F ≥ 0.00806.
+- `discovery-6732629.md` — the record 0.6732628655343560, certified floor F ≥ 0.00806. [RETIRED 2026-08-24]
 - `theorist-ceiling.md` — family ceiling ≈ 0.6734212; eps is the binding constraint.
 - `threshold.py` — n-point formula, form A.
 - `final_leader.py`, `verify_cos7.py`, `cert_floor_scan.py`, `float_sweep_fast.py`,

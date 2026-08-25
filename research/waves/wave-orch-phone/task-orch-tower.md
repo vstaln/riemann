@@ -14,7 +14,7 @@ and SYNTHESIZE their results into ONE deliverable.
 - Program open problems: P5 = the derivative tower (ξ′, ξ″, …) certificates; the "ladder" is the
   program's cumulative-verification structure; the LIT sweep is a literature sweep on simple zeros
   and related quantities.
-- The certified record 0.6732628655 stands; the (α, psum) family is exhausted; ceiling 0.6818.
+- The certified record 0.6732628655 stands; the (α, psum) family is exhausted; ceiling 0.6818. [RETIRED 2026-08-24]
 
 ## YOUR FOCUS: (a) derivative-tower certificates and (b) the literature sweep
 Subagents: (a) THEORIST/EXECUTOR: can derivatives of the completed ξ (ξ′, ξ″) yield certificate

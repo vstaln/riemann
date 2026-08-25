@@ -41,4 +41,4 @@ After collecting subagent results, write YOUR synthesis to
 Print at end: RESULT: <status> — <one-line summary>
 
 ## YOUR SPECIFIC FOCUS
-adversarial audit: subagents try to BREAK the record 0.6732628655343560 and the whole rank-trace machinery — find the weakest link, refute or confirm
+adversarial audit: subagents try to BREAK the record 0.6732628655343560 and the whole rank-trace machinery — find the weakest link, refute or confirm [RETIRED 2026-08-24]

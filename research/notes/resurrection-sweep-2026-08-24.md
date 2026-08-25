@@ -17,7 +17,7 @@ Three independent lanes (ledger 2026-08-24, `dispute-*-2026-08-24.md`):
 
 Consequences that matter for resurrection:
 - Retired ALL coboundary-floor N0/N records certified through the F_V code path (last:
-  N0/N >= 0.6735471309049393, 2026-08-23, m=136). Honest F_T restart base banked:
+  N0/N >= 0.6735471309049393, 2026-08-23, m=136). Honest F_T restart base banked: [RETIRED 2026-08-24]
   **eps=0.0070 verified=true at only 779,030 nodes => N0/N >= 0.67296645387858 (m=151).**
 - The C21 optimizer `joint_c21.py` also maximized the wrong objective (PAIRS21, all 21 pairs).
   Round-1 theta is now only a *starting point*; round-2 (`joint_c21_ft.py`/`c21_ft_opt.py`)

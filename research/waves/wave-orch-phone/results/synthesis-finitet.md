@@ -7,7 +7,7 @@ graph was one step from complete. This note merges the 5 role files. Honesty lab
 recomputed here** (ponytail rung 1: the role files agree on every shared number; executor
 cross-validates prior notes' HS2 to all printed digits, verifier reproduces the record to 4.8e-14).
 
-Record under test: **bound = (H − τ)/(1 − B/m) = 0.6732628655343560…**, H(1.49) = 0.6724218860964,
+Record under test: **bound = (H − τ)/(1 − B/m) = 0.6732628655343560…**, H(1.49) = 0.6724218860964, [RETIRED 2026-08-24]
 τ = (1/220)·(m−6)/m with m=133, B = Φ_m(ε(m−6)) with certified ε ≥ 0.00806 (Arb interval verifier).
 
 ---
@@ -53,7 +53,7 @@ mollifiers) says the deficit shrinks, never flips. And the probes measure the *i
 functional vs its own constant, not the block-refined functional; a refined-functional probe at
 larger T is the outstanding check.
 
-**Single best answer to P6:** *the record 0.6732628655 is CONJECTURED robust to finite T — the
+**Single best answer to P6:** *the record 0.6732628655 is CONJECTURED robust to finite T — the [RETIRED 2026-08-24]
 certificate is T-free by construction, every measured finite-T error (T ≤ 5000, both windows) is
 positive/safe and an order of magnitude too large to hide a flip, and no mechanism produces a
 negative T→∞ error; the honest ceiling on certainty is the unprobed o_χ(1) bound, provable with
@@ -91,6 +91,6 @@ wrong, but because no number exists. Any future P5 claim must re-run a fixed `fi
   asymptote of Δ and the block-functional probe outstanding — INCONCLUSIVE).
 - Derivative-tower probe: **INCONCLUSIVE** (bug, crashed, no output).
 
-RESULT: CONJECTURED — the 0.6732628655 certificate is T-free and finite-T robust at all measured
+RESULT: CONJECTURED — the 0.6732628655 certificate is T-free and finite-T robust at all measured [RETIRED 2026-08-24]
 heights (safe-direction overshoot, flip needs ≥7e-5 negative error at T→∞, none seen); the
 derivative-tower probe is INCONCLUSIVE due to the mpc-vs-int bug (no numbers produced).

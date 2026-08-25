@@ -1,4 +1,4 @@
-# ATTACK RECORD — record 0.673262865534356… (eps-max push + artifact probe)
+# ATTACK RECORD — record 0.673262865534356… (eps-max push + artifact probe) [RETIRED 2026-08-24]
 
 **Session:** wave-phone-2 / executor attack-record. **Start:** 2026-08-12 (after mobile-data loss of prior run).
 **Mission:** (1) resolve the eps boundary at grid=4000 (8065 certify/fail?), (2) artifact probe: does a finer grid (6000/8000) move the certified max eps, (3) recompute bound at any improved certified eps, (4) adversarial formula re-check at m=133.
@@ -19,10 +19,10 @@ Command: `proot-distro login ubuntu -- bash -lc 'cd ~/riemann/.../scripts && pyt
 - H(1.49) = 0.67242188609644747281039838018029596113320575516194…
 - τ = (1/220)(127/133) = 0.00434039644565960355434039644565960355434… (rational, diff 0)
 - A = 0.00806·127 = 1.02362; B = Φ_133(A) = 1.023557109402758221390751244754121476959… (A > 127/126 = 1.00794, so the sqrt branch applies: B = 2√((m−1)A/m) − 1 + A/m)
-- bound = (H−τ)/(1−B/m) = 0.6732628655343560146453680008533435193197122483889…
+- bound = (H−τ)/(1−B/m) = 0.6732628655343560146453680008533435193197122483889… [RETIRED 2026-08-24]
 - HEADLINE REPRODUCED to all 42 printed digits; residual vs printed value 3.889e-46 = truncation of the note's 120-digit print, not a formula failure.
-- Monotone in eps at m=133 confirmed: 0.00806→0.6732628655, 0.008065→0.6732660791, 0.00807→0.6732692918, 0.00808→0.6732757142, 0.0081→0.6732885476, 0.00813→0.6733077692, 0.00816→0.6733269567.
-- Any certified eps > 0.00806 → bound > 0.6732628655 immediately (per-eps gain ~ +3.2e-4).
+- Monotone in eps at m=133 confirmed: 0.00806→0.6732628655, 0.008065→0.6732660791, 0.00807→0.6732692918, 0.00808→0.6732757142, 0.0081→0.6732885476, 0.00813→0.6733077692, 0.00816→0.6733269567. [RETIRED 2026-08-24]
+- Any certified eps > 0.00806 → bound > 0.6732628655 immediately (per-eps gain ~ +3.2e-4). [RETIRED 2026-08-24]
 
 ## Verifier runs (laptop nohup, grid artifact probe) — LAUNCHED, results pending
 `/tmp/combine/attack_run.sh` on pc-jump via pc-jump (nohup, crash-proof), log `/tmp/combine/attack_results.txt`:

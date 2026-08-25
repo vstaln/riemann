@@ -13,7 +13,7 @@ PROVEN / CHECKED NUMERICALLY with source. Nothing here asserts a new theorem.
 
 ## 0. The certified record this catalog must respect (do not re-derive)
 
-- **The record the swarm targets:** 0.6732628655343560 (the wave-blast task's certified target;
+- **The record the swarm targets:** 0.6732628655343560 (the wave-blast task's certified target; [RETIRED 2026-08-24]
   swarm spec `tools/swarm/gen-specs.py`). The three independently-verified external mechanisms:
   ainta 7-point stability **0.673008527927**, trmdy trig-window + √-tail block **0.673137630699**,
   tawanerguo Bellman coboundary **0.673192911473142**. [CHECKED NUMERICALLY — `verify-tawanerguo-bellman.md`,
@@ -54,7 +54,7 @@ analysis). Most of my 15 transfers are (b)+(d), with honest kill criteria.
 | Real zeros: pair-count C(1.0) vs GUE datum | 0.992273 vs 1.000 (finite-N noise) | `analogy` (B1) |
 | Real zeros: C(1.5) vs GUE | 1.714727 vs 1.500 (+0.215) | `analogy` (B1) |
 | d(bound)/d(eps) at the record (α=1.49, m=133) | +0.626 per unit eps | `analogy` (E3) |
-| eps needed for 0.6732628655343560 at m=133 | 0.005877 (record used 0.00806 — arithmetic slack; whether eps=0.00806 *verifies* at α=1.49 is the separate interval-certification task of `verify-eps`) | `analogy` (E4) |
+| eps needed for 0.6732628655343560 at m=133 | 0.005877 (record used 0.00806 — arithmetic slack; whether eps=0.00806 *verifies* at α=1.49 is the separate interval-certification task of `verify-eps`) | `analogy` (E4) | [RETIRED 2026-08-24]
 | bound vs m (block size) at fixed eps=0.00806 | max 0.674630 at m=133; 0.674215 at m=257 | `analogy` (E2b) |
 | Nearest-neighbor (span-1) share of the floor's pair energy | **0.863 (clustered) / 0.931 (uniform)** | `flip` (F3) |
 | Floor's single-coordinate sensitivity dF/dg | −0.068 (g[1]) vs +0.005 (g[0]) — sign-alternating | `flip` (F1b) |

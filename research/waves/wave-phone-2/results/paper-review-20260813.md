@@ -21,7 +21,7 @@ This file is the SINGLE SOURCE OF TRUTH for the review/publish phase. Restore fr
 
 ### A. Theorem 1 script mismatch (verifier, adversarial flag)
 `scripts/attack_bound_check.py` does NOT literally print 0.6732660791400006829.
-- Its hardcoded headline uses eps=8060, psum=1/220 → 0.6732628655 (OLD record).
+- Its hardcoded headline uses eps=8060, psum=1/220 → 0.6732628655 (OLD record). [RETIRED 2026-08-24]
 - Its sweep uses float 0.008065 → 0.6732660791400006824, diverges at digit 19 (...829 vs ...824).
 - Paper's value reproduced only by exact-rational 8065/1e6, matches ledger.md to 37 digits.
 - **Number is CORRECT, but cited script does not literally produce it. FIX: update script to compute eps=8065e-6 exact-rational and print it.**

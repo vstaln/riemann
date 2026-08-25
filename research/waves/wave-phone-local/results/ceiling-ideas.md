@@ -5,7 +5,7 @@
 
 ## 0. Honest map (what the ceiling is, from the verified notes — cited, not re-derived)
 
-- Record 0.6732628655 (α=1.49, psum=1/220, m=133, floor F≥0.00806; the (α,psum) family is EXHAUSTED at the true minimum of F) [discovery-6732629.md].
+- Record 0.6732628655 (α=1.49, psum=1/220, m=133, floor F≥0.00806; the (α,psum) family is EXHAUSTED at the true minimum of F) [discovery-6732629.md]. [RETIRED 2026-08-24]
 - In-class ceiling 0.6818312305953419 = p₀ + 1/(6·256²), attained by the exact-rational certificate r(x)=1−x against the near-CUE 256-law (p₀=0.68182868746…, |E(1)|=2.543·10⁻⁶); Lean-proven modulo EnclOK (INCONCLUSIVE, not refuted; family private) [attack-ceiling.md, close-inclass-gap.md, lpdual, rgl].
 - Only positive-priced input: the beyond-1 form-factor RANGE, dv*/dA = 0.6363/A³ (M2); everything proven (m₃ ≥ 2, min-gap, integrality, fluctuations, variance, Selberg-CLT) is either matched by the 256-law/super-law or priced ≤ 0 [attack-pricing-sheet.md §5–6].
 - Window for ζ: cosine is the proven global minimizer of Q; the ξ′ lane has its own windows (quartic beats cosine for ξ′) [attack-kernel.md, attack-xiprime.md].

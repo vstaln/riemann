@@ -37,12 +37,12 @@ Output (`/tmp/moment3`, from `tools/moment/src/main.rs`; command
 `cd /home/opc/riemann/tools/moment && rustc -O --edition 2021 src/main.rs -o /tmp/moment3 && /tmp/moment3`):
 
 ```
-RECORD: bound=0.6732628655 m=133
+RECORD: bound=0.6732628655 m=133 [RETIRED 2026-08-24]
 H(1.49) = 0.67242188609644749   (independent Python re-check matched to 1e-15)
 ```
 
 The repo's own `final_leader.py` (run with `uv run --with mpmath python3 final_leader.py`)
-prints `bound = 0.673262865534356014645368000853343519319712248` — **agreement to all
+prints `bound = 0.673262865534356014645368000853343519319712248` — **agreement to all [RETIRED 2026-08-24]
 printed digits.** The 67.3263% figure in the task title is this bound.
 
 Also independently derived H(1.49) in pure Python (float64) as `0.6724218860964475`,
@@ -88,7 +88,7 @@ The repo's `tools/beat673/` implements a **different, unconditional, moment-base
 a rank-trace second-moment inequality `||P+Q||_F² ≥ 4 tr(P+Q) − 3r − 4b + tr Psi(M)` with
 a cosine window `v(s)=cos(αs)`, a 7-point gap-block structure, a certified local 6-gap
 floor `F ≥ eps = 0.00806`, and a Bellman/Phi block-defect cap. It certifies
-**0.6732628655 unconditionally** (no RH, no narrow-box assumption). This is *above* the
+**0.6732628655 unconditionally** (no RH, no narrow-box assumption). This is *above* the [RETIRED 2026-08-24]
 pair-correlation 2/3 under no assumption, and it beats 2/3 *on its own*.
 
 **So the current state of the swarm's own record: the 41.6% wall is already blown through;
@@ -422,7 +422,7 @@ was set by locking the cheap win then attacking the structural ceiling.
 
 ## 6. Honesty labels summary
 
-- PROVEN (reproduced to all digits): the certified record 0.6732628655, H(1.49)=0.6724218861,
+- PROVEN (reproduced to all digits): the certified record 0.6732628655, H(1.49)=0.6724218861, [RETIRED 2026-08-24]
   H_max=0.672500703679 @ alpha*=√2 (mpmath 60-dps ternary search this session; the repo's
   `frontier` binary: 0.672500703092 @ 1.4140), d(bound)/dH≈1.008, d(bound)/deps≈0.644 at
   record, eps-gain decay 0.574→0.483 at optimal m, mechanism boundary 0.6736364,
@@ -487,5 +487,5 @@ RESULT: DONE — historical failure analysis shows every RH-proportion wall is s
 alpha* certification (I-H3), non-uniform weights (I-H4), span-dependent floors (I-H5),
 n-point blocks (I-H6), 4th-moment denominator (I-H7), pair-correlation hybrid (I-H8),
 probabilistic floors (I-H9), boundary-first (I-H10) — all quantified against the
-certified record 0.6732628655. (H_max re-derived this session: 0.672500703679 @
+certified record 0.6732628655. (H_max re-derived this session: 0.672500703679 @ [RETIRED 2026-08-24]
 alpha*=sqrt(2), correcting the earlier coarse-grid value 0.672499192 @ 1.425.)

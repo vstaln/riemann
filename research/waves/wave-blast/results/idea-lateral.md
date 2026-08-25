@@ -54,7 +54,7 @@ mirror; it changes what we believe.**
 **Scripts/commands:**
 - H/bound arithmetic: `/usr/bin/python3 - <<'EOF'` (mpmath 50d) and
   `cd scratch/lateral/rs && cargo build --release --target x86_64-unknown-linux-musl && ./target/x86_64-unknown-linux-musl/release/lateral_probe`
-  → H(1.49)=0.67242188609644747281; bound(1/220,0.00806,m=133)=0.67326286553435601463 (matches paper);
+  → H(1.49)=0.67242188609644747281; bound(1/220,0.00806,m=133)=0.67326286553435601463 (matches paper); [RETIRED 2026-08-24]
   bound(1/320,0.0067,m=160)=0.6737583043181956.
 - Verifier failure: `cd scratch/verify-eps && /usr/bin/python3 -c "verify_floor(cosine_kernel(1.49),
   W_UNIFORM, 1/1320, 6, 0.00806, cap_scheme='coboundary', pressure_coeffs=P_COEFF,

@@ -1,11 +1,11 @@
-# Task: INDEPENDENT VERIFIER — break or confirm the 0.6732628655 record
+# Task: INDEPENDENT VERIFIER — break or confirm the 0.6732628655 record [RETIRED 2026-08-24]
 
 You are an ADVERSARIAL VERIFIER in the Riemann swarm, running from a fresh, independent context.
 Your job is to TRY TO BREAK the certified claim below — not to reproduce it by copying code.
 If you cannot break it, you confirm it with your own independent implementation.
 
 ## The claim under attack (from the swarm's record, 2026-08-12)
-The certified lower bound liminf_{T→∞} N₀ˢ(T,2T)/N(T,2T) ≥ **0.673262865534356014645368000853343519319712248**
+The certified lower bound liminf_{T→∞} N₀ˢ(T,2T)/N(T,2T) ≥ **0.673262865534356014645368000853343519319712248** [RETIRED 2026-08-24]
 was obtained with:
 - Window: cosine kernel v(s) = cos(α·s) on [−1/2, 1/2], α = 1.49
 - Pressure: p = 1/1320 per gap, total psum = 6/1320 = 1/220

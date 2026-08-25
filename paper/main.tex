@@ -36,11 +36,26 @@ Riemann zeta function on the critical line}}
 \begin{document}
 \maketitle
 
+\begin{center}
+\fbox{\parbox{0.91\linewidth}{\small
+\textbf{Retraction notice (2026-08-24).} The record
+$0.6732628655343560\ldots$ claimed in this paper was RETRACTED on
+2026-08-24.  The certificate bounded the wrong functional: the posted
+verifier adds span-one terms $\tfrac13\sum_i w(g_i)$ on top of all 21 pair
+terms (the $F_V$ functional), while the coboundary treatment requires the
+$q_i$ to \emph{replace} span-one pairs (the $F_T$ functional);
+$F_V \ge F_T$ strictly on the domain interior, so no $F_T$ bound follows from
+any $F_V$ certificate.  The kernel double-normalization defect that produced
+this record was itself identified earlier (retracted 2026-08-12).  The
+theorem as stated does not stand; see \texttt{research/notes/ledger.md}
+(2026-08-21 cert-bug and 2026-08-24 F$_V$/F$_T$ entries).}}
+\end{center}
+
 \begin{abstract}
-We certify an unconditional lower bound
+We certified (claim RETRACTED 2026-08-24) an unconditional lower bound
 \[
  \liminf_{T\to\infty}\frac{\Nc(T,2T)}{\N(T,2T)}
- \ge 0.673262865534356014645\ldots,
+ \ge 0.673262865534356014645\ldots, \qquad \text{\textbf{[RETRACTED 2026-08-24]}}
 \]
 i.e.\ $67.3262865534356014645\ldots\%$ of the nontrivial zeros of the Riemann
 zeta function are \emph{simple and on the critical line}.  This improves the
@@ -77,12 +92,13 @@ $T<\operatorname{Im}\rho\le 2T$, with multiplicity, and let
 $\Nc(T,2T)$ count those that are \emph{simple} and lie on the critical line
 $\Re s=\tfrac12$.
 
-\begin{theorem}[Certified simple-on-line proportion]\label{thm:main}
-Without assuming the Riemann hypothesis or any other unproved hypothesis about
-the zeros of $\zeta$,
+\begin{theorem}[Retracted simple-on-line proportion (2026-08-24)]\label{thm:main}
+The following claim was certified but is RETRACTED (2026-08-24; $F_V$ vs.\ $F_T$
+functional error):
 \begin{equation}
  \liminf_{T\to\infty}\frac{\Nc(T,2T)}{\N(T,2T)}
- \ge 0.673262865534356014645368000853343519319712248\ldots
+ \ge 0.673262865534356014645368000853343519319712248\ldots % [RETIRED 2026-08-24]
+ \qquad \text{\textbf{[RETRACTED 2026-08-24]}}
  \label{eq:bound}
 \end{equation}
 Equivalently, at least $67.3262865534356014645368000853\ldots\%$ of the
@@ -103,7 +119,7 @@ Anthropic (2026), Theorem D \cite{claude2026} & $0.6725007036794116$ & --- \\
 ainta \cite{ainta} (7-point stability) & $0.6730085279277797$ & $+5.1\times10^{-4}$ \\
 trmdy \cite{trmdy} (9/11-point) & $0.6731376306993445$ & $+1.3\times10^{-4}$ \\
 tawanerguo \cite{tawanerguo} (Bellman coboundary) & $0.6731929114731422$ & $+5.5\times10^{-5}$ \\
-\textbf{this work} & \textbf{$0.6732628655343560$} & \textbf{$+7.0\times10^{-5}$} \\
+\textbf{this work (RETRACTED 2026-08-24)} & \textbf{$0.6732628655343560$} & \textbf{$+7.0\times10^{-5}$} \\
 \bottomrule
 \end{tabular}
 \caption{The ladder of certified lower bounds for the simple-on-line fraction.
@@ -302,7 +318,7 @@ The final evaluation (\texttt{final\_leader.py}, 120-digit mpmath):
 \[
  H(1.49) = 0.6724218860964\ldots,\qquad
  \frac{\Nc}{\N}\ge \frac{0.6724218860964 - 0.0043403964}{1 - 0.0076959181}
- = 0.6732628655343560\ldots .
+ = 0.6732628655343560\ldots \qquad \text{\textbf{[RETRACTED 2026-08-24]}} .
 \]
 The same certificate was re-run twice (the agent's two-shard run and an
 independent full re-run in this session), both
