@@ -2204,3 +2204,10 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
 1. Toeplitz T4 instantiation [PROVEN, exact]: moment->Fourier map fails provably (|a1|<=a0 vs m2=4/3>1); det T4(CUE)=-5/81<0 under natural identification; alternating-sign fingerprint lands on EXTREMAL side (negative-symbol signature). CUE m4=346/105 admits NO finite-atom representation. => cheap BO route dead; genuine kernel-eigenfunction formulation remains NOT_FORMULATED and is now the ONLY path for layer-(b) via Toeplitz.
 2. Half-disc asymmetry [CHECKED NUMERICALLY, INCONCLUSIVE]: mirror-map fixed-point mechanism EXACT (on-line zeros excluded from both half-sums, verified 1e-12), but dominant term = geometry baseline responding to displacement magnitude; effect ratio off/on=1.41 only. Second independent confirmation: Jensen-type probes detect displacement, not off-line-ness.
    NEXT IDEA (queued): normalize by exact no-implant baseline (computable from true zeros) to isolate implant contribution; or synthetic mirror-function control.
+
+---
+## 2026-08-25 night — Li harness NO_FLAG; lever-4 first rung complete
+3. Li coefficients [PROVEN exactness + CHECKED]: DELTA-lambda_n computable EXACTLY from four moved zeros (log-product telescoping B-L identity, dps=30); lambda_1(true)=0.0230957 validated 3 ways (7e-32 vs closed form). OFFLINE beta=0.9 implant RAISES lambda_n — NO_FLAG any n<=60, all 12 t0 positions, both conventions. Flag exists by Li's theorem but at n*~4.4e3 (CONJECTURED est). On-line controls also silent.
+   => PATTERN (three independent probes now): global moment statistics are INSENSITIVE to single local zero violations at practical depth. Equivalence lane = global statements with poor local resolution.
+   Cross-probe consistency: DELTA-lambda_1(offline) = +0.00497507 matches jensen_honest_probe's DELTA exactly.
+   NOTE: prompt formula f_n was wrong (false-flags true zeta); correct per-zero h_n(rho)=1-(rho/(rho-1))^n — caught by worker, documented.
