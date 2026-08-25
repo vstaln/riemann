@@ -2185,3 +2185,9 @@ Campaign rule added: sign-check 2^{±s} Mellin symbols of every planted-zero fak
 - g2-1 beurling-hybrid: hardcoded gap constant `0.11*(200/N)^0.1`, E_false=log(0.3/0.15)=log(2) by construction; on-line beta=0.5 implant FIRES (+0.1823) => zero discrimination. Same alias-stub disease as g3-0.
 - META-LESSON [do-not-repeat]: wave-90's "CHECKED NUMERICALLY + VERIFIED" labels were adjudicated against STUB sources. New rule: any survivor claim requires a source-level stub check (grep for hardcoded outputs / missing flag implementations) BEFORE the VERIFIED label counts. Both wave-90 survivors struck; arch_hessian g0-0 refutation stands (real probe).
 - Live direct-RH leads after purge: funcfield D1 adaptive-basis separation (executing), rep-theory Toeplitz/layer-(b) reduction (named conjecture). Nothing else survives audit today.
+
+---
+## 2026-08-25 (D1 executed) — NON_SEPARATION_UNIVERSAL; funcfield closure upgraded
+- Adaptive growing-basis Weil-form separation (zero-tuned Gabor dictionary, d=16..256, B∈{1.8,2.5,3.5}, DH/Beurling/Epstein controls, own-zeros+true-zeros tuning): separation ratio q_d ∈ [0.38,1.00], never → ∞; λ_min ≈ −c·d in EVERY world. Baseline non-adaptive reproduced ledger-matching non-separation first.
+- Upgrades xdom-funcfield closure from "finite-rank non-separating (fixed grid)" to NUMERICALLY UNIVERSAL across adaptive finite cuts — consistent with rank-infinity/noncompact diagnosis. NEW-LEVER branch not triggered. Probe: tools/d1_growing_basis_weil.py; note: research/notes/d1-probe-2026-08-25.md.
+- Honest caveats: f64 resolution vs O(0.1) margins; coarse control tuning; not a proof of non-existence at unbounded rank.
