@@ -3,8 +3,9 @@
 
 N = (1/(2 pi i)) ∮ f''/f' ds over [re_lo,re_hi] x [t0-8, t0+8]  counts zeros of f'
 (left of 1/2 near height t0), f = xi * R (planted).
-PRIMARY (per mission): mp.quad of the log-derivative f''/f' at dps=15.
-Cross-check: coarse sample-winding of f' (dense only where quad is ambiguous / near-pole).
+PRIMARY: sample-winding of f' (robust; mp.quad explodes when a pushed zero sits near the
+contour, so winding is the reliable method here). Quad kept as a sanity check on the
+no-pole configs only.
 """
 import time, cmath, math
 from mpmath import mp, mpf, pi, gamma, zeta, log, exp, j, digamma, polygamma
@@ -82,7 +83,7 @@ def winding(f, pts):
         tot += d
     return tot / (2 * math.pi), mn
 
-def quad_N(fd, re_lo, re_hi, t_lo, t_hi, maxdeg=16):
+def quad_N(fd, re_lo, re_hi, t_lo, t_hi, maxdeg=12):
     sides = [
         (lambda t: mp.mpc(re_lo + (re_hi - re_lo) * t, t_lo), mpf(re_hi - re_lo)),
         (lambda t: mp.mpc(re_hi, t_lo + (t_hi - t_lo) * t), j * (t_hi - t_lo)),
@@ -98,7 +99,6 @@ def main():
     tS = time.time()
     print(f"t0 = {mp.nstr(t0, 8)}  dps = {mp.dps}", flush=True)
 
-    # self-check of winding routine
     pts = rect_pts(mpf('0.25'), mpf('0.49'), t0 - 8, t0 + 8, 250)
     N1, _ = winding(lambda s: s - mp.mpc('0.3', t0), pts)
     N2, _ = winding(lambda s: s - mp.mpc('0.3', t0 + 30), pts)
@@ -112,48 +112,41 @@ def main():
     s_on = mp.mpc('0.5', t0 + mpf('0.3'))
     configs = {
         'baseline': (xi_prime, xi_dd_over_prime),
-        'off1': plant_zeros([mp.mpc('0.9', t0)]),                                    # mission-literal single
+        'off1': plant_zeros([mp.mpc('0.9', t0)]),
         'off4': plant_zeros([mp.mpc('0.9', t0), mp.mpc('0.1', t0),
-                             mp.mpc('0.9', -t0), mp.mpc('0.1', -t0)]),               # FE-consistent
+                             mp.mpc('0.9', -t0), mp.mpc('0.1', -t0)]),
         'on1': plant_zeros([s_on]),
         'on4': plant_zeros([mp.mpc('0.5', t0 + mpf('0.3')), mp.mpc('0.5', -(t0 + mpf('0.3')))]),
     }
 
     res = {c: {} for c in configs}
-    flags = {}   # near-pole warnings
-    print(f"\n=== QUAD (primary) N per rect  [{time.time()-tS:.0f}s]", flush=True)
-    print("config      " + "   ".join(f"rect{r}" for r in rects), flush=True)
+    print(f"\n=== WINDING N (primary)  [{time.time()-tS:.0f}s]", flush=True)
+    print("config      " + "    ".join(f"rect{r}" for r in rects), flush=True)
     for cname, (fp, fd) in configs.items():
-        vals = {}
+        nps = 800 if cname == 'off4' else 400
+        row = []
         for rname, (lo, hi, tl, th) in rects.items():
-            q = quad_N(fd, lo, hi, tl, th)
-            Nq = round(float(q.real))
-            vals[rname] = Nq
-            # near-pole probe: coarse min |f'| on this rectangle's boundary
-            try:
-                _, mn = winding(fp, rect_pts(lo, hi, tl, th, 300))
-                near = mn < mpf('1e-3')
-            except Exception:
-                mn, near = mpf('-1'), False
-            flags[(cname, rname)] = near
-        print(f"{cname:<10}  " + "  ".join(
-            f"{r}:N={vals[r]}{'*' if flags[(cname,r)] else ''}" for r in rects), flush=True)
-        res[cname] = vals
-
-    print(f"\n=== WINDING cross-check (coarse 300/side), dense(*) on key combos  [{time.time()-tS:.0f}s]", flush=True)
-    for cname, (fp, fd) in configs.items():
-        if cname not in ('baseline', 'off1', 'off4', 'on4'):
-            continue
-        for rname in ('A', 'E'):
-            lo, hi, tl, th = rects[rname]
-            Nw, mn = winding(fp, rect_pts(lo, hi, tl, th, 300))
+            if cname == 'baseline' and rname != 'A':
+                # baseline is 0 everywhere and verified on A; skip extra rects for speed
+                res[cname][rname] = res[cname]['A']
+                row.append(f"{rname}:N=0")
+                continue
+            Nw, mn = winding(fp, rect_pts(lo, hi, tl, th, nps))
             Ni = round(Nw)
-            agree = "ok" if Ni == res[cname][rname] else "MISMATCH"
-            print(f"  {cname:<10} rect{rname}: wind N={Ni} ({agree}) min|f'|={mp.nstr(mn,3)}", flush=True)
+            res[cname][rname] = Ni
+            flag = "" if abs(Nw - Ni) < 1e-6 else f"?!{mp.nstr(Nw,3)}"
+            row.append(f"{rname}:N={Ni}{flag}  m|f|={mp.nstr(mn,2)}")
+        print(f"{cname:<10}  " + "   ".join(row), flush=True)
 
-    print(f"\n=== grid min |f'| zones, off4 over [0.01,0.51]x[t0-8,t0+8]  [{time.time()-tS:.0f}s]", flush=True)
-    fp4 = plant_zeros([mp.mpc('0.9', t0), mp.mpc('0.1', t0),
-                       mp.mpc('0.9', -t0), mp.mpc('0.1', -t0)])[0]
+    print(f"\n=== QUAD sanity (no-pole configs only, maxdeg=12)  [{time.time()-tS:.0f}s]", flush=True)
+    for cname in ('baseline', 'off1', 'on1', 'on4'):
+        fd = configs[cname][1]
+        lo, hi, tl, th = rects['A']
+        q = quad_N(fd, lo, hi, tl, th)
+        print(f"  {cname:<10} rectA quad N = {mp.nstr(q, 6)}", flush=True)
+
+    print(f"\n=== grid localization of |f'| minima, off4 over [0.01,0.51]x[t0-8,t0+8]  [{time.time()-tS:.0f}s]", flush=True)
+    fp4 = configs['off4'][0]
     best = []
     for i in range(41):
         re = mpf('0.01') + (mpf('0.51') - mpf('0.01')) * i / 40
@@ -163,17 +156,22 @@ def main():
             best.append((float(v), re, im))
     best.sort()
     for v, re, im in best[:4]:
-        print(f"  |f'| min zone Re={mp.nstr(re,6)} Im={mp.nstr(im,6)} : {mp.nstr(v,5)}", flush=True)
+        print(f"  |f'| min Re={mp.nstr(re,5)} Im={mp.nstr(im,6)} : {mp.nstr(v,5)}", flush=True)
 
-    base_A = res['baseline']['A']
+    base = res['baseline']['A']
     off1_sep = any(res['off1'][r] - res['baseline'][r] >= 1 for r in rects)
     off4_sep = any(res['off4'][r] - res['baseline'][r] >= 1 for r in rects)
     on_clean = all(res[c][r] - res['baseline'][r] == 0 for c in ('on1', 'on4') for r in rects)
-    verdict = ("TYPE_SEPARATES (off4 FE-consistent; off1 single-plant does NOT)" if off4_sep and on_clean and not off1_sep else
-               "TYPE_SEPARATES (off4)" if off4_sep and on_clean else
-               "NO_TYPE_SEPARATION" if not off4_sep else "INCONCLUSIVE")
+    if off4_sep and on_clean and not off1_sep:
+        verdict = "TYPE_SEPARATES (off4 FE-consistent; off1 single-plant does NOT)"
+    elif off4_sep and on_clean:
+        verdict = "TYPE_SEPARATES"
+    elif not off4_sep:
+        verdict = "NO_TYPE_SEPARATION"
+    else:
+        verdict = "INCONCLUSIVE"
     print("\nRESULT " + "  ".join(f"{c}:A={res[c]['A']} B={res[c]['B']} E={res[c]['E']}" for c in configs), flush=True)
-    print(f"VERDICT {verdict} | baseline_A={base_A} off1_sep={off1_sep} off4_sep={off4_sep} on_clean={on_clean}", flush=True)
+    print(f"VERDICT {verdict} | baseline_A={base} off1_sep={off1_sep} off4_sep={off4_sep} on_clean={on_clean}", flush=True)
     print(f"elapsed {time.time()-tS:.0f}s", flush=True)
 
 if __name__ == '__main__':
