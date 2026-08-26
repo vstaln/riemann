@@ -10,7 +10,7 @@ window [0.25,0.49] x [gamma_k +- 4] at n=2000/side.
 Also records per band: min over left-edge samples of Re(xi'/xi) (negativity margin, < 0
 under RH) and wall-clock. dps = 15, n = 2000/side (mission spec).
 """
-import time, cmath, math
+import time, cmath, math, sys
 from mpmath import mp, mpf, pi, gamma, zeta, log, exp, j, digamma, polygamma
 
 mp.dps = 15
@@ -80,7 +80,8 @@ def main():
     tS = time.time()
     print(f"dps={mp.dps} n=2000/side rect [0.25,0.49]x[gamma_k +- 8]", flush=True)
     rows = []
-    for k in range(1, 7):
+    nbands = int(sys.argv[1]) if len(sys.argv) > 1 else 6
+    for k in range(1, nbands + 1):
         g = mp.zetazero(k)
         # cheap machinery self-check: winding of (s - c) inside the band rect = 1, shifted = 0
         pts = rect_pts(mpf('0.25'), mpf('0.49'), g - 8, g + 8, 400)
